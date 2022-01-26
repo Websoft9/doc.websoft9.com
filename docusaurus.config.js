@@ -76,7 +76,7 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Docs6',
             items: [
               {
                 label: 'Tutorial',
