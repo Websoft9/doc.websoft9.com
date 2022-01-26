@@ -15,7 +15,6 @@ const config = {
   favicon: 'img/favicon.ico',
   organizationName: 'facebook', // Usually your GitHub org/user name.
   projectName: 'docusaurus', // Usually your repo name.
-
   i18n: {
     defaultLocale: 'zh-cn',
     locales: ['zh-cn', 'en'],
@@ -67,7 +66,7 @@ const config = {
 
           {
             href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
+            label: 'GitHub2',
             position: 'right',
           },
         ],
@@ -117,6 +116,7 @@ const config = {
         ],
         copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       },
+ 
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
