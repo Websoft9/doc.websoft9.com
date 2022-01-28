@@ -1,12 +1,16 @@
 # Azure
 
-Websoft9 已经在 Azure Marketplace 上提供了多款镜像（**Azure的映像就是镜像**），覆盖常用的云场景，满足各种企业的需求。
+Websoft9 在Azure的云市场上提供了丰富的应用和解决方案，用户可以通过购买的方式实现自动化安装部署。
 
->  是不是想了解有哪些镜像呢？点击 [此处](https://azuremarketplace.microsoft.com/en-us/marketplace/apps?page=1&search=websoft9) 查看 Websoft9 在 Azure 上发布的所有镜像。
+- [Websoft9 on Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=vmlab&page=1)
 
-那么如何在 Azure 上使用这些镜像呢？有三种方法：
+> 我们是全球为数不多能够支持中英文产品和服务的云原生技术商。
 
-## Marketplace部署
+## 安装
+
+一旦您注册了Azure的账号，您可以通过如下多种方式安装我们的产品：
+
+### Marketplace部署
 
 1. 访问 [Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps) 网站
 
@@ -26,7 +30,7 @@ Websoft9 已经在 Azure Marketplace 上提供了多款镜像（**Azure的映像
 
 
 
-## Portal部署
+### Portal部署
 
 1. 登录到Azure后台门户（Portal），点击“创建资源”，等同于通过后台进入Marketplace
 
@@ -37,7 +41,7 @@ Websoft9 已经在 Azure Marketplace 上提供了多款镜像（**Azure的映像
 
 
 
-## VM部署
+### VM部署
 
 1. 登录到Azure后台门户（Portal），点击“虚拟机”，
    ![创建虚拟机](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-vm-websoft9.png)
@@ -51,4 +55,4 @@ Websoft9 已经在 Azure Marketplace 上提供了多款镜像（**Azure的映像
 4. 选择一个你所需的镜像，开始部署
 
 
-除了镜像订阅部署之外，你还可以通过我们发布到 [Github 上 自动化部署脚本](https://github.com/websoft9)，来实现自动部署。
+## 安装后

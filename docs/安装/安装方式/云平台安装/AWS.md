@@ -1,12 +1,17 @@
 # AWS
 
-[Websoft9](https://www.websoft9.com) 已经在 AWS Marketplace 上提供了多款镜像（**AWS 称镜像为 AMIs**），覆盖常用的云场景，已经收到用户的良好反馈。
 
->  是不是想了解有哪些优质的镜像呢？点击 [此处](https://aws.amazon.com/marketplace/seller-profile?id=c639a579-182c-4d30-8578-4d4d89fba658) 查看Websoft9在AWS上发布的所有镜像。
+Websoft9 在 AWS 的云市场上提供了丰富的应用和解决方案，用户可以通过购买的方式实现自动化安装部署。
 
-那么如何在AWS上使用这些镜像呢？有两种方法：
+- [Websoft9 on Azure](https://aws.amazon.com/marketplace/seller-profile?id=c639a579-182c-4d30-8578-4d4d89fba658)
 
-## Marketplace部署
+> 我们是全球为数不多能够支持中英文产品和服务的云原生技术商。
+
+## 安装
+
+一旦您注册了 AWS 的账号，您可以通过如下多种方式安装我们的产品：
+
+### Marketplace部署
 
 1. 访问 [AWS Marketplace](https://aws.amazon.com/marketplace) 网站
 
@@ -36,7 +41,7 @@
 8. 等待几分钟，EC2创建完成后，镜像会作为EC2实例的系统盘启动，即镜像自动部署到实例中
 
 
-## EC2部署
+### EC2部署
 
 1. 登录到AWS管理控制台，点击“EC2”，
    ![进入ec2控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-ec2-websoft9.png)
@@ -56,4 +61,4 @@
 6. 等待几分钟，EC2创建完成后，镜像会作为EC2实例的系统盘启动，即镜像自动部署到实例中
 
 
-> 除了镜像订阅部署之外，你还可以通过我们发布到 [Github](https://github.com/websoft9)上的 Ansible 脚本，来实现自动部署。
+## 安装后
