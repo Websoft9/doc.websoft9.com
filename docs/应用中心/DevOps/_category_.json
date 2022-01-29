@@ -1,11 +1,11 @@
 {
   "position": 3,
-  "label": "应用中心",
+  "label": "DevOps",
   "collapsible": true,
-  "collapsed": true,
+  "collapsed": false,
   "className": "red",
   "link": {
     "type": "generated-index",
-    "title": "应用中心"
+    "title": "DevOps"
   }
 }

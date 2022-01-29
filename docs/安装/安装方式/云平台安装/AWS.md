@@ -3,7 +3,7 @@
 
 Websoft9 在 AWS 的云市场上提供了丰富的应用和解决方案，用户可以通过购买的方式实现自动化安装部署。
 
-- [Websoft9 on Azure](https://aws.amazon.com/marketplace/seller-profile?id=c639a579-182c-4d30-8578-4d4d89fba658)
+- [Websoft9 on AWS](https://aws.amazon.com/marketplace/seller-profile?id=c639a579-182c-4d30-8578-4d4d89fba658)
 
 > 我们是全球为数不多能够支持中英文产品和服务的云原生技术商。
 
@@ -59,6 +59,16 @@ Websoft9 在 AWS 的云市场上提供了丰富的应用和解决方案，用户
    ![创建EC2](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-createdec2-chooseinstances-websoft9.png)
 
 6. 等待几分钟，EC2创建完成后，镜像会作为EC2实例的系统盘启动，即镜像自动部署到实例中
+
+### 部署非默认版本
+
+每个商品支持多个版本，默认为最新版本，也可以通过下面的步骤修改版本：
+
+1. 选择镜像时，先点击【Previous version】链接
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-subs-odoo-websoft9.png)
+
+2. 通过【Software version】下拉菜单选择你所需的版本
+  ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-subs-odoooldversion-websoft9.png)
 
 
 ## 安装后

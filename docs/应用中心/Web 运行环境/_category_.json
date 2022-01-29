@@ -1,4 +1,11 @@
 {
-  "label": "Web 运行环境",
-  "position": 3
+  "position": 3,
+  "label": "Web运行环境",
+  "collapsible": true,
+  "collapsed": false,
+  "className": "red",
+  "link": {
+    "type": "generated-index",
+    "title": "Web运行环境"
+  }
 }

@@ -1,3 +1,11 @@
 {
-  "position": 7
+  "position": 6,
+  "label": "基础组件",
+  "collapsible": true,
+  "collapsed": true,
+  "className": "red",
+  "link": {
+    "type": "generated-index",
+    "title": "基础组件"
+  }
 }
