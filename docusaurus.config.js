@@ -122,9 +122,9 @@ const config = {
         darkTheme: darkCodeTheme,
       },
       tableOfContents: {
-		    minHeadingLevel: 2,
-		    maxHeadingLevel: 6
-		  },
+	minHeadingLevel: 2,
+	maxHeadingLevel: 6
+      },
       algolia: {
         appId: '7OW3EQLSSO',
         apiKey: 'cdde477c72a2c884c51e7c28219a839a',
