@@ -19,7 +19,7 @@ const config = {
     defaultLocale: 'zh-cn',
     locales: ['zh-cn', 'en'],
   },
-
+  plugins: [require.resolve("@cmfcmf/docusaurus-search-local")],
   presets: [
     [
       'classic',
@@ -42,7 +42,6 @@ const config = {
       }),
     ],
   ],
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -124,13 +123,6 @@ const config = {
       tableOfContents: {
 	minHeadingLevel: 2,
 	maxHeadingLevel: 6
-      },
-      algolia: {
-        appId: '7OW3EQLSSO',
-        apiKey: 'cdde477c72a2c884c51e7c28219a839a',
-        indexName: 'websoft9',
-        contextualSearch: true,
-        searchParameters: {}
       }
     }),
 };
