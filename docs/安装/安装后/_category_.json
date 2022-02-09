@@ -1,0 +1,11 @@
+{
+  "position": 3,
+  "label": "安装后",
+  "collapsible": true,
+  "collapsed": true,
+  "className": "red",
+  "link": {
+    "type": "generated-index",
+    "title": "安装后"
+  }
+}

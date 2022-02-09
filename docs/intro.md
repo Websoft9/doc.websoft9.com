@@ -1,35 +1,13 @@
 ---
 sidebar_position: 1
+slug: /
 ---
 
 # 导读
 
-Let's discover **Docusaurus in less than 5 minutes**.
+欢迎阅读 Websoft9 产品文档。我猜如下可能是您最需要的内容：
 
-## Getting Started
+* 所有应用：一个页面中查看所有应用
+* 账号密码：查看应用的账号密码之方法
 
-Get started by **creating a new site**.
-
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**:
-
-```shell
-npm init docusaurus@latest my-website classic
-```
-
-## Start your site
-
-Run the development server:
-
-```shell
-cd my-website
-
-npx docusaurus start
-```
-
-Your site starts at `http://localhost:3000`.
-
-Open `docs/intro.md` and edit some lines: the site **reloads automatically** and displays your changes.
+如果文档无法解决您的问题，您可以联系我们的[在线客服](./helpdesk)或[提交工单](https://www.websoft9.com/cn/ticket)
