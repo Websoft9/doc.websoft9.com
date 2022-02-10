@@ -1,0 +1,170 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar1.category.安装": {
+    "message": "安装",
+    "description": "The label for category 安装 in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.云平台安装": {
+    "message": "云平台安装",
+    "description": "The label for category 云平台安装 in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.云平台安装.link.generated-index.title": {
+    "message": "云平台安装",
+    "description": "The generated-index page title for category 云平台安装 in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.安装后": {
+    "message": "安装后",
+    "description": "The label for category 安装后 in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.安装后.link.generated-index.title": {
+    "message": "安装后",
+    "description": "The generated-index page title for category 安装后 in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.应用中心": {
+    "message": "应用中心",
+    "description": "The label for category 应用中心 in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.应用中心.link.generated-index.title": {
+    "message": "应用中心",
+    "description": "The generated-index page title for category 应用中心 in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.DevOps": {
+    "message": "DevOps",
+    "description": "The label for category DevOps in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.DevOps.link.generated-index.title": {
+    "message": "DevOps",
+    "description": "The generated-index page title for category DevOps in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.Jenkins": {
+    "message": "Jenkins",
+    "description": "The label for category Jenkins in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.GitLab": {
+    "message": "GitLab",
+    "description": "The label for category GitLab in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.Web运行环境": {
+    "message": "Web运行环境",
+    "description": "The label for category Web运行环境 in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.Web运行环境.link.generated-index.title": {
+    "message": "Web运行环境",
+    "description": "The generated-index page title for category Web运行环境 in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.java": {
+    "message": "java",
+    "description": "The label for category java in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.node": {
+    "message": "node",
+    "description": "The label for category node in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.php": {
+    "message": "php",
+    "description": "The label for category php in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.可视化": {
+    "message": "可视化",
+    "description": "The label for category 可视化 in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.解决方案": {
+    "message": "解决方案",
+    "description": "The label for category 解决方案 in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.行业方案": {
+    "message": "行业方案",
+    "description": "The label for category 行业方案 in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.通用方案": {
+    "message": "通用方案",
+    "description": "The label for category 通用方案 in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.订阅": {
+    "message": "订阅",
+    "description": "The label for category 订阅 in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.平台订单": {
+    "message": "平台订单",
+    "description": "The label for category 平台订单 in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.平台订单.link.generated-index.title": {
+    "message": "平台订单",
+    "description": "The generated-index page title for category 平台订单 in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.管理员指南": {
+    "message": "管理员指南",
+    "description": "The label for category 管理员指南 in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.基础组件": {
+    "message": "基础组件",
+    "description": "The label for category 基础组件 in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.基础组件.link.generated-index.title": {
+    "message": "基础组件",
+    "description": "The generated-index page title for category 基础组件 in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.Linux": {
+    "message": "Linux",
+    "description": "The label for category Linux in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.Windows": {
+    "message": "Windows",
+    "description": "The label for category Windows in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.语言": {
+    "message": "语言",
+    "description": "The label for category 语言 in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.基础平台": {
+    "message": "基础平台",
+    "description": "The label for category 基础平台 in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.云平台": {
+    "message": "云平台",
+    "description": "The label for category 云平台 in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.AWS": {
+    "message": "AWS",
+    "description": "The label for category AWS in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.Azure": {
+    "message": "Azure",
+    "description": "The label for category Azure in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.华为云": {
+    "message": "华为云",
+    "description": "The label for category 华为云 in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.腾讯云": {
+    "message": "腾讯云",
+    "description": "The label for category 腾讯云 in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.阿里云": {
+    "message": "阿里云",
+    "description": "The label for category 阿里云 in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.应用集成": {
+    "message": "应用集成",
+    "description": "The label for category 应用集成 in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.故障": {
+    "message": "故障",
+    "description": "The label for category 故障 in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.开发者贡献": {
+    "message": "开发者贡献",
+    "description": "The label for category 开发者贡献 in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.架构师合作": {
+    "message": "架构师合作",
+    "description": "The label for category 架构师合作 in sidebar tutorialSidebar1"
+  },
+  "sidebar.tutorialSidebar1.category.常见问题": {
+    "message": "常见问题",
+    "description": "The label for category 常见问题 in sidebar tutorialSidebar1"
+  }
+}

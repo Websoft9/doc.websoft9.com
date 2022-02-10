@@ -1,3 +1,11 @@
 {
-  "position": 2
+  "position": 2,
+  "label": "云平台安装",
+  "collapsible": true,
+  "collapsed": true,
+  "className": "red",
+  "link": {
+    "type": "generated-index",
+    "title": "云平台安装"
+  }
 }

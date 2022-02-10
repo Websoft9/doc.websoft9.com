@@ -6,15 +6,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
+  title: 'Websoft9 知识库',
   tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://support.websoft9.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'Websoft9', // Usually your GitHub org/user name.
+  projectName: 'document', // Usually your repo name.
   i18n: {
     defaultLocale: 'zh-cn',
     locales: ['zh-cn', 'en'],
@@ -28,13 +28,13 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/websoft9/doc.websoft9.com/tree/main/docs',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/websoft9/doc.websoft9.com/tree/main/blog',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -46,7 +46,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'Websoft9',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -56,12 +56,16 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: '文档',
           },
 
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/blog', label: '日志', position: 'left'},
 
-            {type: 'localeDropdown', position: 'right',},
+          {to: '/app', label: '应用中心', position: 'left'},
+
+          {to: '/community', label: '开源社区', position: 'left'},
+
+          {type: 'localeDropdown', position: 'right',},
 
           {
             href: 'https://github.com/facebook/docusaurus',
@@ -74,46 +78,78 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs6',
+            title: '产品与服务',
             items: [
               {
-                label: 'Tutorial',
+                label: '应用',
                 to: '/docs/intro',
               },
+              {
+                label: '解决方案',
+                to: '/docs/intro',
+              },
+              {
+                label: '行业',
+                to: '/docs/intro',
+              },
+
+              {
+                label: '技术服务',
+                to: '/docs/intro',
+              },
+              {
+                label: '分发服务',
+                to: '/docs/intro',
+              },
+
+
             ],
           },
           {
-            title: 'Community',
+            title: '技术支持',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: '文档 ',
+                href: '/',
+              },
+
+              {
+                label: 'FAQ ',
+                href: '/docs/faq',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: '7×24 工单',
+                href: 'https://www.websoft9.com/cn/ticket',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: '人工支持',
+                href: 'https://www.websoft9.com/cn/contact',
               },
             ],
           },
           {
-            title: 'More',
+            title: '资源',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: '博客',
+                to: 'https://blog.websoft9.com',
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/websoft9',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+
+        logo: {
+          alt: 'Facebook Open Source Logo',
+          src: 'img/logo.svg',
+          width: 160,
+          height: 51,
+          href: 'https://opensource.facebook.com',
+        },
+        copyright: `Copyright ©2014- ${new Date().getFullYear()} 长沙网久软件有限公司 备案：湘ICP备16009117号`,
       },
  
       prism: {

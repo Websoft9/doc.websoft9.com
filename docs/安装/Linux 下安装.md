@@ -60,9 +60,10 @@ sudo systemctl start docker
 
 ## 开始安装
 
-如果您不具备以上所需的 Docker, Git, Ansible 等环境，我们推荐使用我们的一键自动安装脚本。
 
-### 安装脚本
+### 脚本安装
+
+如果您不具备以上所需的 Docker, Git, Ansible 等环境，推荐使用我们**脚本安装**。
 
 ```
 sudo wget -N https://raw.githubusercontent.com/Websoft9/StackHub/main/docker-installer.sh; sudo bash docker-installer.sh -r akeneo
@@ -78,8 +79,9 @@ sudo wget -N https://raw.githubusercontent.com/Websoft9/StackHub/main/docker-ins
 
 ### 离线安装
 
-针对无法访问 Internet 的政府或等保用户，我们即将提供了离线安装包服务。
+针对无法访问 Internet 的政企用户或等保用户，我们即将提供了离线安装包服务。
 
 ### 个性化安装
+用户朋友可能存在个性化的安装需求，例如：GitLab + Jenkins 集成为 GitOps 方案。  
+我们非常乐意提供这种解决方案式的安装与集成[人工服务](../helpdesk)。  
 
-支持根据需要提供按需服务（付费）的人工安装服务。
