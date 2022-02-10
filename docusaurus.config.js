@@ -7,19 +7,39 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Websoft9 知识库',
-  tagline: 'Dinosaurs are cool',
+  tagline: '简化开源软件的安装、集成和运维',
   url: 'https://support.websoft9.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'Websoft9', // Usually your GitHub org/user name.
-  projectName: 'document', // Usually your repo name.
+  projectName: 'doc.websoft9.com', // Usually your repo name.
   i18n: {
     defaultLocale: 'zh-cn',
     locales: ['zh-cn', 'en'],
   },
-  plugins: [require.resolve("@cmfcmf/docusaurus-search-local")],
+  plugins: [
+      require.resolve("@cmfcmf/docusaurus-search-local"),
+    [
+      'content-docs',
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      ({
+        id: 'community',
+        path: 'community',
+        routeBasePath: 'community',
+        editUrl: ({locale, versionDocsDirPath, docPath}) => {
+          if (locale !== 'en') {
+            return `https://crowdin.com/project/docusaurus-v2/${locale}`;
+          }
+          return `https://github.com/facebook/docusaurus/edit/main/website/${versionDocsDirPath}/${docPath}`;
+        },
+        sidebarPath: require.resolve('./sidebarsCommunity.js'),
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+      }),
+    ],
+  ],
   presets: [
     [
       'classic',
@@ -59,9 +79,9 @@ const config = {
             label: '文档',
           },
 
-          {to: '/blog', label: '日志', position: 'left'},
+          {to: '/api', label: 'API', position: 'left'},
 
-          {to: '/app', label: '应用中心', position: 'left'},
+          {to: '/blog', label: '公告', position: 'left'},
 
           {to: '/community', label: '开源社区', position: 'left'},
 
