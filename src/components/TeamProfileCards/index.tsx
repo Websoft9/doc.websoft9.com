@@ -79,78 +79,60 @@ export function ActiveTeamRow(): JSX.Element {
   return (
     <div className="row">
       <TeamProfileCardCol
-        name="Alexey Pyltsyn"
-        githubUrl="https://github.com/lex111">
-        <Translate id="team.profile.Alexey Pyltsyn.body">
-          Obsessed open-source enthusiast 👋 Eternal amateur at everything 🤷‍♂️
-          Maintainer of Russian docs on PHP, React, Kubernetes and much more 🧐
+        name="Xu Wei"
+        githubUrl="https://github.com/qiaofeng1227">
+        <Translate id="team.profile.Xu Wei.body">
+          Websoft9 创始人之一，老黄牛。80 后码农 🤷‍♂️，写的代码与自己白头发一样多，但无怨无悔。
         </Translate>
       </TeamProfileCardCol>
       <TeamProfileCardCol
-        name="Joel Marcey"
-        githubUrl="https://github.com/JoelMarcey"
-        twitterUrl="https://twitter.com/joelmarcey">
-        <Translate id="team.profile.Joel Marcey.body">
-          Docusaurus founder and now ever grateful Docusaurus cheerleader to
-          those who actually write code for it.
+        name="Darren Chen"
+        githubUrl="https://github.com/chendelin1982">
+        <Translate id="team.profile.Darren Chen.body">
+          Websoft9 创始人之一，资深企业软件行业从业者，云原生爱好者。虽然年龄在 35 岁以上，但仍然在努力贡献代码。
         </Translate>
       </TeamProfileCardCol>
       <TeamProfileCardCol
-        name="Sébastien Lorber"
-        githubUrl="https://github.com/slorber"
-        twitterUrl="https://twitter.com/sebastienlorber">
-        <Translate
-          id="team.profile.Sebastien Lorber.body"
-          values={{
-            website: <WebsiteLink to="https://sebastienlorber.com/" />,
-            devto: <Link to="https://dev.to/sebastienlorber">Dev.to</Link>,
-          }}>
-          {
-            'React lover since 2014. Freelance, helping Facebook ship Docusaurus v2. He writes regularly, on his {website} and {devto}.'
-          }
+        name="Morning Tan"
+        githubUrl="https://github.com/morning-tan">
+        <Translate id="team.profile.Morning Tan.body">
+          开源软件爱好者，本项目中主要从事测试工作。
         </Translate>
       </TeamProfileCardCol>
       <TeamProfileCardCol
-        name="Sida Chen"
-        githubUrl="https://github.com/Josh-Cena"
-        twitterUrl="https://twitter.com/SidaChen63">
-        <Translate id="team.profile.Sida Chen.body">
-          Student from Shanghai, China. Enthusiastic open-source project
-          creator, but never actually works hard on those projects he created.
-        </Translate>
-      </TeamProfileCardCol>
-      <TeamProfileCardCol
-        name="Yangshun Tay"
-        githubUrl="https://github.com/yangshun"
-        twitterUrl="https://twitter.com/yangshunz">
-        <Translate id="team.profile.Yangshun Tay.body">
-          Full Front End Stack developer who likes working on the Jamstack.
-          Working on Docusaurus made him Facebook&apos;s unofficial part-time
-          Open Source webmaster, which is an awesome role to be in.
+        name="Lao Zhou"
+        githubUrl="https://github.com/laozhou0731">
+        <Translate id="team.profile.Lao Zhou.body">
+          开源软件教育先行者，本项目中主要从事文档维护工作。
         </Translate>
       </TeamProfileCardCol>
     </div>
   );
 }
 
+export function ActiveArchitectRow(): JSX.Element {
+  return (
+    <div className="row">
+      <TeamProfileCardCol
+        name="Liu Guanghui"
+        githubUrl="https://github.com/guanghui">
+        <Translate id="team.profile.Liu Guanghui.body">
+          资深架构师，曾在 OPPO 从事企业架构 20 年，经历完整的 ERP，MES，WMS，电商，OA等典型企业应用。
+        </Translate>
+      </TeamProfileCardCol>
+    </div>
+  );
+}
+
+
 export function HonoraryAlumniTeamRow(): JSX.Element {
   return (
     <div className="row">
       <TeamProfileCardCol
-        name="Endilie Yacop Sucipto"
-        githubUrl="https://github.com/endiliey"
-        twitterUrl="https://twitter.com/endiliey">
-        <Translate id="team.profile.Endilie Yacop Sucipto.body">
-          Maintainer @docusaurus · 🔥🔥🔥
-        </Translate>
-      </TeamProfileCardCol>
-      <TeamProfileCardCol
-        name="Wei Gao"
-        githubUrl="https://github.com/wgao19"
-        twitterUrl="https://twitter.com/wgao19">
-        <Translate id="team.profile.Wei Gao.body">
-          🏻‍🌾 Work in progress React developer, maintains Docusaurus, writes
-          docs and spams this world with many websites.
+        name="Zengxc"
+        githubUrl="https://github.com/zengxc-1996">
+        <Translate id="team.profile.Zengxc.body">
+          早起核心维护者之一，目前仍关注项目，并做出贡献🔥🔥🔥
         </Translate>
       </TeamProfileCardCol>
     </div>
@@ -161,112 +143,35 @@ export function StudentFellowsTeamRow(): JSX.Element {
   return (
     <div className="row">
       <TeamProfileCardCol
-        name="Anshul Goyal"
-        githubUrl="https://github.com/anshulrgoyal"
-        twitterUrl="https://twitter.com/ar_goyal">
+        name="Brendan"
+        githubUrl="https://github.com/dudeisbrendan03"
+        twitterUrl="https://twitter.com/NameNotBrendan">
         <Translate
-          id="team.profile.Anshul Goyal.body"
-          values={{
-            websiteLink: (
-              <Link href="https://anshulgoyal.dev/">
-                <Translate id="team.profile.Anshul Goyal.body.websiteLink.label">
-                  website
-                </Translate>
-              </Link>
-            ),
-          }}>
-          {
-            'Fullstack developer who loves to code and try new technologies. In his free time, he contributes to open source, writes blog posts on his {websiteLink} and watches Anime.'
-          }
+          id="team.profile.Brendan.body">
+          Infra Engineer in Greater Manchester. Studying MSc @ Lancaster        </Translate>
+      </TeamProfileCardCol>
+
+      <TeamProfileCardCol
+        name="Junhao"
+        githubUrl="https://github.com/hnczhjh">
+        <Translate id="team.profile.Junhao.body">
+          RedHat Engineer CA, Studing at ChangSha colleage
         </Translate>
       </TeamProfileCardCol>
+
       <TeamProfileCardCol
-        name="Drew Alexander"
-        githubUrl="https://github.com/drewbi">
-        <Translate id="team.profile.Drew Alexander.body">
-          Developer and Creative, trying to gain the skills to build whatever he
-          can think of.
+        name="Biao Yang"
+        githubUrl="https://github.com/hotHeart48156">
+        <Translate id="team.profile.Biao Yang.body">
+          Hot heart and smart developer
         </Translate>
       </TeamProfileCardCol>
+
       <TeamProfileCardCol
-        name="Fanny Vieira"
-        githubUrl="https://github.com/fanny"
-        twitterUrl="https://twitter.com/fannyvieiira">
-        <Translate
-          id="team.profile.Fanny Vieira.body"
-          values={{
-            blogLink: (
-              <Link href="https://dev.to/fannyvieira">
-                <Translate id="team.profile.Fanny Vieira.body.blogLink.label">
-                  her blog
-                </Translate>
-              </Link>
-            ),
-            spotifyLink: (
-              <Link href="https://open.spotify.com/user/anotherfanny">
-                <Translate id="team.profile.Fanny Vieira.body.spotifyLink.label">
-                  Spotify playlists
-                </Translate>
-              </Link>
-            ),
-          }}>
-          {
-            'Fanny got started with web development in high school, building a project for the school kitchen. In her free time she loves contributing to Open Source, occasionally writing on {blogLink} about her experiences, cooking, and creating {spotifyLink}.'
-          }
-        </Translate>
-      </TeamProfileCardCol>
-      <TeamProfileCardCol
-        name="Sam Zhou"
-        githubUrl="https://github.com/SamChou19815"
-        twitterUrl="https://twitter.com/SamChou19815">
-        <Translate
-          id="team.profile.Sam Zhou.body"
-          values={{
-            websiteLink: (
-              <Link href="https://developersam.com">
-                <Translate id="team.profile.Anshul Goyal.body.websiteLink.label">
-                  website
-                </Translate>
-              </Link>
-            ),
-            samLangLink: (
-              <Link href="https://samlang.developersam.com/">
-                <Translate id="team.profile.Sam Zhou.body.samLangLink.label">
-                  programming language
-                </Translate>
-              </Link>
-            ),
-            miniReactLink: (
-              <Link href="https://github.com/SamChou19815/mini-react">
-                <Translate id="team.profile.Sam Zhou.body.miniReactLink.label">
-                  mini React
-                </Translate>
-              </Link>
-            ),
-          }}>
-          {
-            'Sam started programming in 2011 and built his {websiteLink} in 2015. He is interested in programming languages, dev infra and web development, and has built his own {samLangLink} and {miniReactLink}.'
-          }
-        </Translate>
-      </TeamProfileCardCol>
-      <TeamProfileCardCol
-        name="Tan Teik Jun"
-        githubUrl="https://github.com/teikjun"
-        twitterUrl="https://twitter.com/teik_jun">
-        <Translate id="team.profile.Tan Teik Jun.body">
-          Open-source enthusiast who aims to become as awesome as the other
-          humans on this page. Working on Docusaurus brought him closer to his
-          goal. 🌱
-        </Translate>
-      </TeamProfileCardCol>
-      <TeamProfileCardCol
-        name="Nisarag Bhatt"
-        githubUrl="https://github.com/FocalChord"
-        twitterUrl="https://twitter.com/focalchord_">
-        <Translate id="team.profile.Nisarag Bhatt.body">
-          Fullstack web developer who loves learning new technologies and
-          applying them! Loves contributing to open source as well as writing
-          content articles and tutorials.
+        name="QiuJiaHon"
+        githubUrl="https://github.com/orgs/Websoft9/people/QiuJiaHon">
+        <Translate id="team.profile.QiuJiaHon.body">
+          Studing at Hunan Normal University
         </Translate>
       </TeamProfileCardCol>
     </div>
