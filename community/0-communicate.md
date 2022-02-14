@@ -10,18 +10,15 @@ Websoft9 有超过数千名开发者的社群。
 
 在加入 Docusaurus 社群前，请先阅读我们采用的标准化[参与者公约](https://www.contributor-covenant.org/)，期望所有社区成员都遵守该准则。
 
-## Stack Overflow {#stack-overflow}
+## 论坛
 
-Stack Overflow 是一个很受欢迎的编程问答论坛。您可以提问代码问题，也可了解如何解决特定错误。 您可以查看与 **Docusaurus** 相关的[现有问题](https://stackoverflow.com/questions/tagged/docusaurus)或[自己提问](https://stackoverflow.com/questions/ask?tags=docusaurus)！
+考虑论坛的维护问题，暂时没有上线论坛
 
-## 讨论区 {#discussion-forums}
+## 聊天
 
-There are many online forums for discussion about best practices and application architecture as well as the future of Docusaurus. 若您有一个可被解答的编程问题，发到 Stack Overflow 上更为适合。
+聊天虽然沟通效率不高，但通过聊天可以增强开发者之间的关系
 
-- [Docusaurus 在线聊天](https://discord.gg/docusaurus)
-  - [#help-and-questions](https://discord.gg/fwbcrQ3dHR) - 用户帮助
-  - [#contributors](https://discord.gg/6g6ASPA) - 贡献帮助
-- [Reddit 上的 Docusaurus 社群](https://www.reddit.com/r/docusaurus/)
+- [QQ 群](https://qm.qq.com/cgi-bin/qm/qr?k=NmnEtXJYJmDJG5tCbGWeY9d6xkfamnAz&jump_from=webapi)
 
 ## 功能建议 {#feature-requests}
 
