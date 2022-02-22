@@ -1,0 +1,11 @@
+{
+  "position": 12,
+  "label": "数据与分析",
+  "collapsible": true,
+  "collapsed": false,
+  "className": "red",
+  "link": {
+    "type": "generated-index",
+    "title": "数据与分析"
+  }
+}

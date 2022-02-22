@@ -1,11 +1,11 @@
 {
-  "position": 3,
-  "label": "DevOps",
+  "position": 9,
+  "label": "人工智能",
   "collapsible": true,
   "collapsed": false,
   "className": "red",
   "link": {
     "type": "generated-index",
-    "title": "DevOps"
+    "title": "人工智能"
   }
 }

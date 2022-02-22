@@ -79,7 +79,7 @@ const config = {
             label: '文档',
           },
 
-          {to: '/api', label: 'API', position: 'left'},
+          {to: '/docs/api', label: 'API', position: 'left'},
 
           {to: '/blog', label: '公告', position: 'left'},
 

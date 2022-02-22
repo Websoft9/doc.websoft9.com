@@ -1,11 +1,11 @@
 {
-  "position": 3,
-  "label": "DevOps",
+  "position": 16,
+  "label": "云管理",
   "collapsible": true,
   "collapsed": false,
   "className": "red",
   "link": {
     "type": "generated-index",
-    "title": "DevOps"
+    "title": "云管理"
   }
 }

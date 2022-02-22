@@ -1,11 +1,11 @@
 {
-  "position": 3,
-  "label": "DevOps",
+  "position": 11,
+  "label": "市场营销",
   "collapsible": true,
   "collapsed": false,
   "className": "red",
   "link": {
     "type": "generated-index",
-    "title": "DevOps"
+    "title": "市场营销"
   }
 }
