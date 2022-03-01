@@ -2,7 +2,7 @@
   "position": 7,
   "label": "企业管理",
   "collapsible": true,
-  "collapsed": false,
+  "collapsed": true,
   "className": "red",
   "link": {
     "type": "generated-index",

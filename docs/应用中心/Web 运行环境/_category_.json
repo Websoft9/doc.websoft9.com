@@ -2,7 +2,7 @@
   "position": 3,
   "label": "Web 运行环境",
   "collapsible": true,
-  "collapsed": false,
+  "collapsed": true,
   "className": "red",
   "link": {
     "type": "generated-index",

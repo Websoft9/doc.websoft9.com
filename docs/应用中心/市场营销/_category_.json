@@ -2,7 +2,7 @@
   "position": 11,
   "label": "市场营销",
   "collapsible": true,
-  "collapsed": false,
+  "collapsed": true,
   "className": "red",
   "link": {
     "type": "generated-index",

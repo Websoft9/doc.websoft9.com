@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@vuepress/shared-utils": "^1.0.2"
+  }
+}

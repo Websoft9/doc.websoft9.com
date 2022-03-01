@@ -1,0 +1,11 @@
+{
+  "position": 1,
+  "label": "虚拟桌面",
+  "collapsible": true,
+  "collapsed": true,
+  "className": "red",
+  "link": {
+    "type": "generated-index",
+    "title": "虚拟桌面"
+  }
+}

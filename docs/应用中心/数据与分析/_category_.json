@@ -2,7 +2,7 @@
   "position": 12,
   "label": "数据与分析",
   "collapsible": true,
-  "collapsed": false,
+  "collapsed": true,
   "className": "red",
   "link": {
     "type": "generated-index",

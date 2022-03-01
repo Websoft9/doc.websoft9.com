@@ -88,8 +88,8 @@ const config = {
           {type: 'localeDropdown', position: 'right',},
 
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub2',
+            href: 'https://github.com/websoft9',
+            label: 'GitHub',
             position: 'right',
           },
         ],

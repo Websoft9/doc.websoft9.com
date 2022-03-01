@@ -2,7 +2,7 @@
   "position": 14,
   "label": "协作与生产力",
   "collapsible": true,
-  "collapsed": false,
+  "collapsed": true,
   "className": "red",
   "link": {
     "type": "generated-index",

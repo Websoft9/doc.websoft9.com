@@ -2,7 +2,7 @@
   "position": 10,
   "label": "设计与创作",
   "collapsible": true,
-  "collapsed": false,
+  "collapsed": true,
   "className": "red",
   "link": {
     "type": "generated-index",

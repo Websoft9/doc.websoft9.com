@@ -1,8 +1,8 @@
 {
-  "position": 15,
+  "position": 20,
   "label": "行业",
   "collapsible": true,
-  "collapsed": false,
+  "collapsed": true,
   "className": "red",
   "link": {
     "type": "generated-index",
