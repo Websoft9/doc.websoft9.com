@@ -1,4 +1,37 @@
 {
+  "team.profile.websiteLinkLabel": {
+    "message": "website"
+  },
+  "team.profile.Xu Wei.body": {
+    "message": "Websoft9 创始人之一，老黄牛。80 后码农 🤷‍♂️，写的代码与自己白头发一样多，但无怨无悔。"
+  },
+  "team.profile.Darren Chen.body": {
+    "message": "Websoft9 创始人之一，资深企业软件行业从业者，云原生爱好者。虽然年龄在 35 岁以上，但仍然在努力贡献代码。"
+  },
+  "team.profile.Morning Tan.body": {
+    "message": "开源软件爱好者，本项目中主要从事测试工作。"
+  },
+  "team.profile.Lao Zhou.body": {
+    "message": "开源软件教育先行者，本项目中主要从事文档维护工作。"
+  },
+  "team.profile.Liu Guanghui.body": {
+    "message": "资深架构师，曾在 OPPO 从事企业架构 20 年，经历完整的 ERP，MES，WMS，电商，OA等典型企业应用。"
+  },
+  "team.profile.Zengxc.body": {
+    "message": "早起核心维护者之一，目前仍关注项目，并做出贡献🔥🔥🔥"
+  },
+  "team.profile.Brendan.body": {
+    "message": "Infra Engineer in Greater Manchester. Studying MSc @ Lancaster"
+  },
+  "team.profile.Junhao.body": {
+    "message": "RedHat Engineer CA, Studing at ChangSha colleage"
+  },
+  "team.profile.Biao Yang.body": {
+    "message": "Hot heart and smart developer"
+  },
+  "team.profile.QiuJiaHon.body": {
+    "message": "Studing at Hunan Normal University"
+  },
   "theme.ErrorPageContent.title": {
     "message": "This page crashed.",
     "description": "The title of the fallback page when the page crashed"
@@ -192,60 +225,27 @@
     "description": "The label alongside a tag list"
   },
   "cmfcmf/d-s-l.searchBar.placeholder": {
-    "message": "Search...",
+    "message": "搜索...",
     "description": "Placeholder shown in the searchbar"
   },
   "cmfcmf/d-s-l.searchBar.clearButtonTitle": {
-    "message": "Clear",
+    "message": "清除",
     "description": "Title of the button to clear the current search input"
   },
   "cmfcmf/d-s-l.searchBar.detachedCancelButtonText": {
-    "message": "Cancel",
+    "message": "取消",
     "description": "Text of the button to close the detached search window"
   },
   "cmfcmf/d-s-l.searchBar.submitButtonTitle": {
-    "message": "Submit",
+    "message": "搜索",
     "description": "Title of the button to submit a new search"
   },
   "cmfcmf/d-s-l.searchBar.noResults": {
-    "message": "No results found.",
+    "message": "无搜索结果",
     "description": "message shown if no results are found"
   },
   "theme.tags.tagsPageTitle": {
     "message": "Tags",
     "description": "The title of the tag list page"
-  },
-  "team.profile.websiteLinkLabel": {
-    "message": "website"
-  },
-  "team.profile.Xu Wei.body": {
-    "message": "Websoft9 创始人之一，老黄牛。80 后码农 🤷‍♂️，写的代码与自己白头发一样多，但无怨无悔。"
-  },
-  "team.profile.Darren Chen.body": {
-    "message": "Websoft9 创始人之一，资深企业软件行业从业者，云原生爱好者。虽然年龄在 35 岁以上，但仍然在努力贡献代码。"
-  },
-  "team.profile.Morning Tan.body": {
-    "message": "开源软件爱好者，本项目中主要从事测试工作。"
-  },
-  "team.profile.Lao Zhou.body": {
-    "message": "开源软件教育先行者，本项目中主要从事文档维护工作。"
-  },
-  "team.profile.Liu Guanghui.body": {
-    "message": "资深架构师，曾在 OPPO 从事企业架构 20 年，经历完整的 ERP，MES，WMS，电商，OA等典型企业应用。"
-  },
-  "team.profile.Zengxc.body": {
-    "message": "早起核心维护者之一，目前仍关注项目，并做出贡献🔥🔥🔥"
-  },
-  "team.profile.Brendan.body": {
-    "message": "Infra Engineer in Greater Manchester. Studying MSc @ Lancaster"
-  },
-  "team.profile.Junhao.body": {
-    "message": "RedHat Engineer CA, Studing at ChangSha colleage"
-  },
-  "team.profile.Biao Yang.body": {
-    "message": "Hot heart and smart developer"
-  },
-  "team.profile.QiuJiaHon.body": {
-    "message": "Studing at Hunan Normal University"
   }
 }

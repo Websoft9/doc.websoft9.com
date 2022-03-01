@@ -12,6 +12,8 @@ $ yarn
 
 ```
 $ npm run start -- --host 0.0.0.0  --port 3002
+$ npm run start -- --host 0.0.0.0  --port 3002  --locale en
+$ yarn run write-translations -- --locale zh-cn
 ```
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
