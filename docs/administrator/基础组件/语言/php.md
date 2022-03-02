@@ -126,6 +126,44 @@ eAccelerator
 
 ## 开发工具
 
+## PHP on Windows
+
+Windows系统下的IIS环境，安装了多版本的PHP，可以直接修改php配置文件，也可以通过图形化界面操作：
+
+### 切换PHP版本
+
+选择需要管理PHP版本的网站，然后打开PHP Manager，点击“Change PHP Version”，重启IIS后生效
+
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/iis-changephpver-websoft9.png)
+
+> 注意：PHP版本影响范围为一个网站或网站中的应用程序，没有整个IIS全局PHP版本设置，这样大大的方便了多版本的应用访问。
+
+### php.ini修改
+
+1.远程桌面到Windows服务器，直接编辑php.ini（_C:\websoft9\php-\*\php.ini_ ），修改对应的参数值（“\#”在前的项表示没有启用，需要删除“\#”后启用），保存
+
+```
+//修改文件大小对应的参数
+post_max_size = 16M
+upload_max_filesize = 16M
+
+//修改系统最大响应时间对应的参数
+max_execution_time = 90
+
+//修改最大内存限制对应的参数
+memory_limit – Minimum: 256M
+```
+
+2.重启IIS
+
+
+
+### 安装PHP扩展
+
+1. 选择需要管理PHP版本的网站，然后打开PHP Manager，点击“Add an Extension”![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/iis-addphp-websoft9.png)
+2. 弹出的对话框中上传php扩展文件（.dll）
+3. 重启IIS后生效
+
 ## 问题
 
 #### PHP extension 与 PHP Package有什么区别？

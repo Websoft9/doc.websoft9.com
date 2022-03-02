@@ -1,0 +1,11 @@
+{
+  "position": 5,
+  "label": "客户体验",
+  "collapsible": true,
+  "collapsed": true,
+  "className": "red",
+  "link": {
+    "type": "generated-index",
+    "title": "客户体验"
+  }
+}
