@@ -9,7 +9,7 @@ export default function HomepageSearch() {
       <div class="hero__title">
         <h1 class="hero__title">搜索文档中的任何内容</h1>
         <div class="row justify-content-center">
-      <form action="/search/" method="get" class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
+      <form action="/search/" method="get" class="col-xs-8 col-sm-offset-6 col-sm-6 col-md-offset-6 col-md-6 col-lg-offset-6 col-lg-4">
         <input
           id="st-search-input"
           class="form-control"

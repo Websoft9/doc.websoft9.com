@@ -1,11 +1,11 @@
 {
-  "position": 20,
-  "label": "虚拟桌面",
+  "position": 2,
+  "label": "开发运维",
   "collapsible": true,
   "collapsed": true,
   "className": "red",
   "link": {
     "type": "generated-index",
-    "title": "虚拟桌面"
+    "title": "开发运维效率工具"
   }
 }
