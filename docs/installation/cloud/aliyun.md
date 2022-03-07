@@ -1,3 +1,7 @@
+---
+slug: /installation/alibabacloud
+---
+
 # 阿里云
 
 Websoft9 在阿里云的云市场上提供了丰富的应用和解决方案，用户可以通过购买的方式实现自动化安装部署。

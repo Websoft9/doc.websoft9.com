@@ -1,3 +1,8 @@
+---
+slug: /installation/aws
+---
+
+
 # AWS
 
 

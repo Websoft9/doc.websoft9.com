@@ -1,3 +1,7 @@
+---
+slug: /setup/https
+---
+
 # 配置 SSL/HTTPS
 
 配置HTTPS访问的前置条件：
