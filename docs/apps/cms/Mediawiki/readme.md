@@ -1,8 +1,8 @@
 ---
 sidebar_position: 1
-slug: /ghost
+slug: /mediawiki
 tags:
-  - Ghost
+  - Mediawiki
   - CMS
   - 建站系统
   - 博客系统

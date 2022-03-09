@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-slug: /superset/study
+slug: /metabase/study
 tags:
   - Metabase
   - 大数据分析

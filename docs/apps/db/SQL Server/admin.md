@@ -1,126 +1,66 @@
 ---
 sidebar_position: 2
-slug: /bt/admin
+slug: /sqlserver/admin
 tags:
-  - BT
-  - 宝塔面板
-  - 运行环境
+  - SQL Server
+  - Cloude Native Database
 ---
-
 
 # 维护参考
 
 ## 系统参数
 
-BT 预装包包含 BT 运行所需一序列支撑软件（简称为“组件”），下面列出主要组件名称、安装路径、配置文件地址、端口、版本等重要的信息。
+SQLServer 预装包包含 SQLServer 运行所需一序列支撑软件（简称为“组件”），下面列出主要组件名称、安装路径、配置文件地址、端口、版本等重要的信息。
 
 ### 路径
 
-#### Linux 版
+#### SQLServer
 
-*   安装目录：*/www/server*
-*   网站目录：*/www/wwwroot/default*
-*   Apache目录：*/www/server/httpd*
-*   Nginx目录：*/www/server/nginx*
-*   MySQL目录：*/www/server/mysql*
-*   PHP目录：*/www/server/php*
-*   Redis目录：*/www/server/redis*
-*   Memcached目录：/usr/local/memcached*
-*   日志目录：*/www/wwwlogs*
+以SQL Server 2014为例，集成包中包括 SQL Server 2014 数据库引擎和 SQL Server Management Studio Express，具体包括：
 
-访问方式：Web面板
+* 操作系统： Windows Server系统
+* 软件版本： SQL Server2014 R2 SP2 Express Edition,SQL Server Management Studio, Microsoft .Net Framework 4.6,IIS7
+* 软件目录： C:\Program Files\Microsoft SQL Server
+* 数据库引擎数据目录：C:\Program Files (x86)\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA
 
-#### Windows 版
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver2014/sqlserver2014-install-websoft9.png)
 
-*   安装目录：*C:\BtSoft\ServerAdmin*
-*   网站目录：*C:\wwwroot*
-*   MySQL 目录：*C:\BtSoft\mysql*
-*   Apache 日志文件：*C:\BtSoft\apache\logs*
+#### 其他
 
-访问方式：Web面板 或 服务器客户端
+除了 SQLServer Management Studio 之外，目前没有安装其他核心组件
 
 ### 端口号
 
 在云服务器中，通过 **[安全组设置](https://support.websoft9.com/docs/faq/zh/tech-instance.html)** 来控制（开启或关闭）端口是否可以被外部访问。 
 
-通过命令`netstat -tunlp` 看查看相关端口，下面列出可能要用到的端口：
+本环境可能需要开启的端口如下：
 
-| 名称 | 端口号 | 用途 |  必要性 |
+| 类型 | 端口号 | 用途 |  必要性 |
 | --- | --- | --- | --- |
-| HTTP | 80 | 通过 HTTP 访问你的网站 | 必须 |
-| HTTPS | 443 | 通过 HTTPS 访问你的网站 | 可选 |
-| BT| 8888 | 访问 宝塔 Linux 版的管理界面 | 必须 |
-| MySQL | 3306 | 远程连接 MySQL | 可选 |
+| TCP | 80/443 | 通过 HTTP/HTTPS 访问网站 | 可选 |
+| TCP | 1433 | 远程访问 SQLServer | 可选 |
 
 ### 版本号
 
-组件版本号可以宝塔控制台查看。
+组件版本号可以通过云市场商品页面查看。但部署到您的服务器之后，组件会自动进行更新导致版本号有一定的变化，故精准的版本请登录云服务器查看
 
 ### 服务
 
-使用由Websoft9提供的 BT 部署方案，可能需要用到的服务如下：
+使用由Websoft9提供的 SQLServer 部署方案，可能需要用到的服务如下：
 
-#### BT 启停
+#### SQLServer
 
-通过控制台，启动和关闭 BT 面板  
+进入Windows的系统管理管理，将mssqlserver服务设置为自动启动或手动启动。参考下图：
 
-![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btlinux/bt-disablebt-websoft9.png)
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver2008express/sqlserver-services-websoft9.png)
 
-或运行命令
+也可以使用cmd工具，通过命令的方式启动或关闭数据库
 
-```shell
-sudo service bt start
-sudo service bt stop
-sudo service bt restart
+*   快速启动命令：net start mssqlserver
+*   关闭服务：net stop mssqlserver
+*   SQL Server 管理器打开的命令是：ssms
 
-## 删除（慎用）
-service bt stop && chkconfig --del bt && rm -f /etc/init.d/bt && rm -rf /www/server/panel
-```
-
-
-#### Apache
-
-```shell
-##For Ubuntu&Debian
-sudo systemctl start apache2
-sudo systemctl stop apache2
-sudo systemctl restart apache2
-sudo systemctl status apache2
-
-##For Centos&Redhat
-sudo systemctl start httpd
-sudo systemctl stop httpd
-sudo systemctl restart httpd
-sudo systemctl status httpd
-```
-
-
-#### Nginx
-
-```shell
-sudo systemctl start nginx
-sudo systemctl stop nginx
-sudo systemctl restart nginx
-sudo systemctl status nginx
-```
-
-#### PHP-FPM
-
-```shell
-systemctl start php-fpm
-systemctl stop php-fpm
-systemctl restart php-fpm
-systemctl status php-fpm
-```
-
-#### MySQL&MariaDB
-
-```shell
-sudo systemctl start mysql
-sudo systemctl stop mysql
-sudo systemctl restart mysql
-sudo systemctl status mysql
-```
+#### IIS
 
 ## 备份
 
@@ -154,209 +94,127 @@ sudo systemctl status mysql
 ```
 通用的手动备份操作步骤如下：
 
-1. 通过 WinSCP 将网站目录**压缩后**再完整的下载到本地
-2. 导出 BT 数据库
-3. 将程序文件、数据文件和数据库文件放到同一个文件夹，根据日期命名
-4. 备份工作完成
+1. 访问SQLServer企业管理器，在需要备份的数据库上点右键，选择任务->备份，弹出备份数据库窗口。 
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-backup-websoft9.png)
+2. 根据备份向导逐步完成备份工作
+通用的手动备份操作步骤如下：
 
-###  BT自动备份
+1. 访问SQLServer企业管理器，在需要备份的数据库上点右键，选择任务->备份，弹出备份数据库窗口。 
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-backup-websoft9.png)
+2. 根据备份向导逐步完成备份工作
 
-宝塔提供的计划任务功能，可以实现自动网站的自动备份
+### SQLServer Express 自动备份
 
-![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btwin/bt-taskbackup-websoft9.png)
+SQL Server Express的数据库由于没有SQL Server Agent服务，所以也就不支持维护计划功能，自动备份数据库就成了一个十分麻烦的问题。
+
+#### 如何实现SQLServer Express自动备份？
+
+经过研究，我们建议采用第三方工具 [SQL Backup Master](https://www.sqlbackupmaster.com/)  实现自动备份。SQL Backup Master 是一款免费可靠的 SQL Server 数据库备份工具，主要特性:
+
+* 支持完整备份,差异备份,事务日志备份
+* 简单强大的计划任务
+* 内置邮件通知
+* 支持备份到本地/网络文件夹/网络存储
+* 支持备份到FTP/SFTP/FTPS服务器
+* 支持备份到Dropbox，Google Drive，Box，Amazon S3，OneDrive和Azure
+* 支持操作系统: Windows 10, 8, 7, Vista 和 Windows Server 2008/2012/2016
+* 支持SQL Server版本 : SQL Server 2017, 2016, 2014, 2012, 2008, 2005
+
+
+#### SQL Backup Master使用教程
+
+1. 从官网下载安装好 SQL Server Master ,双击运行程序.
+2. 创建数据库备份任务
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-bak-websoft9.png)
+3. 选择数据库,并连接数据库 
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-bak2-websoft9.png.png)
+4. 选择需要备份的数据库,并进行设置
+	![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-bak3-websoft9.png)
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-bak4-websoft9.png)
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-bak5-websoft9.png.png)
+ 5. 设置计划任务
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-bak6-websoft9.png)
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-bak7-websoft9.png)
+    
+ 6. 保存设置
+ 	![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-bak8-websoft9.png)
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-bak9-websoft9.png)
+    
+####  备选方案
+
+除了使用SQL Backup Master这个工具之外，也可以采用服务器系统的任务计划和备份数据库的存储过程来实现，参考下面三篇文章：
+
+* [How to schedule and automate backups of SQL Server databases in SQL Server Express](https://support.microsoft.com/en-us/kb/2019698)
+* [创建 SQL Server Express自动备份数据库功能](http://shiyousan.com/post/635612483753095970)
+* [在windows server 2012中实现SQL SERVER EXPRESS自动备份数据库](http://shiyousan.com/post/635615192184858364)
+
 
 ## 恢复
 
-
 ## 升级
 
-### 系统级更新
+SQLServer 完整的更新升级包括：系统级更新（操作系统和运行环境）和 SQLServer 程序升级两种类型
 
-运行一条更新命令，即可完成系统级（包含rethinkdb小版本更新）更新：
-
-``` shell
-#For Ubuntu&Debian
-apt update && apt upgrade -y
-
-#For Centos&Redhat
-yum update -y
-```
-> 本部署包已预配置一个用于自动更新的计划任务。如果希望去掉自动更新，请删除对应的 Cron
-
-### Window 系统
+### Windows 更新
 
 Windows服务器的更新与本地电脑类似，手动找到更新管理程序，设置自动下载自动更新即可。
 
-### 宝塔升级
+### SQLServer更新
 
-#### 宝塔内核升级
+SQLServer更新只能是卸载旧版本，然后下载最新的安装包重新安装
 
-宝塔提供了一键在线升级功能，只要根据系统提示，点击升级按钮即可完成升级
-
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/btlinux/bt-update001-websoft9.png)
-
-#### 环境组件升级
-
-宝塔在使用中一般会安装大量的软件或组件，包括：php，mysql，phpmyadmin等，
-
-![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btwin/bt-win-intallhj-websoft9.png)
-
-升级请参考官方教程《[宝塔-软件管理](https://www.kancloud.cn/chudong/bt2017/424281)》
 
 ## 故障处理
 
-此处收集使用 BT 过程中最常见的故障，供您参考
+此处收集使用 SQLServer 过程中最常见的故障，供您参考
 
 > 大部分故障与云平台密切相关，如果你可以确认故障的原因是云平台造成的，请参考[云平台文档](https://support.websoft9.com/docs/faq/zh/tech-instance.html)
 
-#### 导入SQL出现乱码？
+#### 应用程序无法连接SQLServer数据库？
 
-问：用宝塔里边的上传导入SQL，导入的SQL都是乱码！如果使用PHPMyAdmin就不会
+当您在安装应用程序的时候，首先保证数据库密码和用户名没有错，请确保登录界面服务器名称需要填写成您的`云服务器名称或(local)`。
 
-答：不同的数据库客户端工具默认的编码格式可能有差异，宝塔里也可以使用phpmyadmin工具。
+服务器名称获取方法：“这台电脑”右键>“属性”中的“计算机名”。
 
-#### 网站数量过多，服务经常自动重启
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver2008express/sqlserver-servnames-websoft9.png)
 
-问：一台服务器网站数量100个，发现服务经常自动重启
+#### 错误：媒体集有 2 个媒体簇，但只提供了 1 个？
 
-答：一台服务器上管理网站的数量请勿超过20个，否则初始资源不充裕的情况下会导致内存和CPU消耗殆尽，从而服务自动重启。理论上，一个网站最少需要0.5G的内存容量，如果有20个网站话，最低是16G内存。
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-backuperror001-websoft9.png)
 
-#### Apache or Nginx 服务无法启动？
-
-最常见的原因是配置文件语法错误，具体请通过分析日志文件定位原因
-
-#### 数据库服务无法启动
-
-数据库服务无法启动最常见的问题包括：磁盘空间不足，内存不足，配置文件错误。  
-建议先通过命令进行排查  
-
-```shell
-# 查看磁盘空间
-df -lh
-
-# 查看内存使用
-free -lh
-```
-
-#### 宝塔的登录地址不对？
-
-待研究
+问题原因：这个不是数据库自身的故障，而是备份的用法有问题。  
+解决办法：去掉一个备份文件，每次备份在已有备份中覆盖即可
 
 ## 常见问题
 
+#### SQLServer Express 是否包含自动备份功能？
 
-#### BT 支持多语言吗？
+不包含，但本部署包提供了一个免费的自动备份软件，参考本文档的 [SQLServer自动备份](/zh/solution-backup.md#sqlserver-express-自动备份)相关章节
 
-支持中英文语言，但需要在部署之前选定语言，即安装中文版或英文版
+#### SQL Server Management Studio 是否支持浏览器访问？
 
-#### BT Windows 面板支持哪些操作系统？
+SQL Server Management Studio 托管一个 Microsoft Internet Explorer 版本。 此 Web 浏览器允许您浏览 URL，并查看 MSDN Library 帮助主题，而无需离开 SQL Server Management Studio。 您可以通过指向视图菜单上的 Web 浏览器，然后单击显示浏览器来访问 Web 浏览器。 参考：https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-web-browser?view=sql-server-ver15
 
-支持 Windows Server 2008/2012/2016/2019 64位
+#### SQLServer各个发行版有什么功能区别？
 
-#### 宝塔的账号绑定是必须的吗？
+以SQLServer2016为例，介绍 SQL Server的各个版本的差异
 
-不是。您可以直接访问： *http://服务器公网IP:8888/soft* 绕开绑定。
+| 版本 | 定义                                                         |
+| :-------------- | :----------------------------------------------------------- |
+| Enterprise      | 作为高级版本，SQL Server Enterprise 版提供了全面的高端数据中心功能，性能极为快捷、虚拟化不受限制，还具有端到端的商业智能，可为关键任务工作负荷提供较高服务级别，支持最终用户访问深层数据。 |
+| Standard        | SQL Server Standard 版提供了基本数据管理和商业智能数据库，使部门和小型组织能够顺利运行其应用程序并支持将常用开发工具用于内部部署和云部署，有助于以最少的 IT 资源获得高效的数据库管理。 |
+| Web             | 对于 Web 主机托管服务提供商和 Web VAP 而言，SQL Server Web 版本是一项总拥有成本较低的选择，它可针对从小规模到大规模 Web 资产等内容提供可伸缩性、经济性和可管理性能力。 |
+| 开发人员        | SQL Server Developer 版支持开发人员基于 SQL Server构建任意类型的应用程序。 它包括 Enterprise 版的所有功能，但有许可限制，只能用作开发和测试系统，而不能用作生产服务器。 SQL Server Developer 是构建 SQL Server 和测试应用程序的人员的理想之选。 |
+| Express 版本    | Express 版本是入门级的免费数据库，是学习和构建桌面及小型服务器数据驱动应用程序的理想选择。 它是独立软件供应商、开发人员和热衷于构建客户端应用程序的人员的最佳选择。 如果您需要使用更高级的数据库功能，则可以将 SQL ServerExpress 无缝升级到其他更高端的 SQL Server版本。 SQL Server Express LocalDB 是 Express 的一种轻量级版本，它具备 Express 的所有可编程性功能，但在用户模式下运行，还具有零配置快速安装和必备组件要求较少的特点。 |
 
-#### 宝塔 Linux 版 VS 宝塔 Window 版？
+#### 是否可以关闭SQLServer的账号密码登录模式？
 
-下面按照操作系统的不同，将宝塔的功能清单做一个对比说明，供您参考：
+可以，关闭之后保留Windows身份登录模式即可
 
-|  功能  |  Linux  |  Windows  |
-| --- | --- | --- |
-| 应用服务   |  Apache, Nginx, Tomcat, OpenLiteSpeed  | Apache, Nginx, IIS   |
-|  程序语言  |   PHP5.2-php8.0, Java, Node |   PHP5.2-php8.0, Node |
-|   FTP |  Pure-Ftpd  |  FileZilla Server |
-|   数据库 |  MySQL, MongoDB  |  MySQL, SQLServer Express, MongoDB  |
-|  数据库工具  | phpMyAdmin   |  phpMyAdmin  |
-|  缓存  |  Redis, Memcached  |  Redis, Memcached   |
-| 外部存储接口    |  七牛云，阿里云，又拍云，FTP存储空间  | 阿里云，又拍云，FTP存储空间   |
-|  插件 |   宝塔运维，宝塔安全登录，云解析，PHP守护，宝塔跑分，宝塔一键迁移等 |  宝塔运维，宝塔安全登录，宝塔-主服务，宝塔一键部署源码，宝塔一键迁移等   |
-|  其他  |  Linux工具箱, Docker  | ImageMagick，Windows设置工具   |
+#### SQLServer Express 版本是否可以升级到 SQLServer 企业版？
 
-> 建议选更稳定可靠的 宝塔 Linux 版
+可以，参考官方提供的方案：[升级到 SQL Server 的其他版本（安装程序）](https://docs.microsoft.com/zh-cn/sql/database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup?view=sql-server-ver15)
 
-#### 宝塔能帮我做什么？是必须的吗？
-
-**从业务场景的角度看**，宝塔适合多网站、多用户管理，即您的服务器上管理多个网站，每个网站属于不同的用户/客户，这种情况下，宝塔非常管用。
-
-**从技术的角度上看**，如果您有如下的技术需求，宝塔是可以帮助您的：
-
-* 需要服务器支持PHP多版本，甚至Java，.NET共存（虽然不建议这样做）
-* 不擅长通过修改配置文件去实现多网站、https等设置
-* 不擅长设置多个FTP
-* 希望可以监控服务器运行状态（CPU、内存、流量监控图表等）
-* 希望通过可视化解决管理防火墙和端口更改
-* 希望通过可视化界面计划任务设置
-* 希望常见的服务器软件可以在线安装
-
-总之，如果在技术配置上有可视化需求的您，您会觉得宝塔是很贴心的工具。
-
-但需要注意的是，对运行服务器来说，环境越简单、所安装的软件越少、网站数量越少，服务运行就更加稳定可靠。万事万物都不完美，宝塔良好的用户体验和全面覆盖性，也是有代价的。
-
-> 总结：宝塔是很好用的，但是宝塔不是必须的
-
-#### 宝塔可以管理多少网站？
-
-宝塔官方并没有关于网站数量上限的说明。但从实际运维经验来看，建议一台使用宝塔的云服务器上最好不要超过20个网站。
-
-
-#### 如果没有域名是否可以部署 BT？
-
-可以
-
-#### 是否有可视化的数据库管理工具？
-
-宝塔安装 LAMP 或 LNMP 的时候默认安装 phpMyAdmin
-
-#### 宝塔 Windows 面板的桌面客户端有什么作用？
-
-![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btwin/bt-wintools-websoft9.png)
-
-主要用于配置域名、安装授权、重置密码、启停宝塔服务等。
-
-
-#### 是否可以修改 BT 的源码路径？
+#### 是否可以修改SQLServer的源码路径？
 
 不可以
-
-#### 如何修改上传的文件所属用户（组）和读写权限?
-
-通过宝塔后台的文件管理修改权限  
-![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btlinux/bt-quanxian-websoft9.png)
-
-
-#### 用 phpMyAdmin 还是 BT 后台管理数据库？
-
-虽然宝塔有数据库管理功能，但实际上数据库管理是一件复杂而严谨的事情，与 MySQL 最匹配的可视化管理工具是 phpMyAdmin，建议使用 phpMyAdmin 完成如下操作：
-
-*   数据导入与导出
-*   修改数据库密码
-*   增加用户
-*   修改字符集
-*   SQL语言的运用
-
-#### 为什么 BT 防火墙设置没有生效？
-
-宝塔的【安全】>【防火墙】设置中，有灵活的服务器操作系统的端口设置功能。但不建议通过此处设置端口，为什么呢？  
-
-当我们在云服务器上使用宝塔的时候，云服务器厂商的安全组中已经有了端口设置，且云厂商安全组的设置优先级大于宝塔防火墙对应的设置。
-
-例如：在宝塔中开放了80端口，而安全组中80端口是关闭，最终结果80端口仍然是关闭的。即宝塔中设置与否，不起决定作用，所以还是不设置为好。
-
-#### BT 面板奔溃了怎么办？
-
-宝塔面板会奔溃吗？任何软件都会出问题
-宝塔奔溃的几率大吗？不大，但需要预防
-
-宝塔是面板，面板工具都是调用操作系统层面的东西。对应宝塔奔溃之后的处理，需要掌握如下知识点：
-
-*   宝塔的基础环境安装在哪里？是否可用？
-*   数据库是否可用？
-*   网站文件在哪里？
-*   是否能够实现快速备份
-
-掌握以上几点，也许能够力挽狂澜
-
-#### 可以使用BT网站搬家功能吗？
-
-请勿轻易使用任何形式的一站搬家这样的功能

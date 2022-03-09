@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-slug: /superset/admin
+slug: /metabase/admin
 tags:
   - Metabase
   - 大数据分析

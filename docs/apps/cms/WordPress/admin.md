@@ -300,6 +300,10 @@ WordPress 内核升级非常简单，当进入后台之后系统会提示需要�
 
 > 大部分故障与云平台密切相关，如果你可以确认故障的原因是云平台造成的，请参考[云平台文档](https://support.websoft9.com/docs/faq/zh/tech-instance.html)
 
+####  WordPress 出现病毒导致乱码？
+
+由于被广泛使用，导致安全漏洞被无限放大，其中WordPress网站被[植入第三方代码](././administrator/security/emergency#insertcode)是最常见的安全故障。 
+
 #### WordPress 数据库服务无法启动
 
 数据库服务无法启动最常见的问题包括：磁盘空间不足，内存不足，配置文件错误。  

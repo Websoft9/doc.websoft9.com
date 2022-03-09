@@ -6,54 +6,26 @@ slug: /faq
 # 热门问题
 
 
-下面列出的问题主要偏重于**技术问题**，如果您需要了解的是**非技术问题**，请参考[此处](/zh/bz-faq.md)。
+下面列出的问题主要偏重于**技术问题**，如果您需要了解的是**非技术问题**，请参考[此处](./faq/business)。
 
-## 产品有帮助文档吗？
+## 如何找到产品帮助文档？
 
-我们为每一个镜像产品都提供了在线文档，请查看[所有文档](https://support.websoft9.com/zh/alldocs.html)
+我们为每一个上架的产品都提供了在线文档，[查看](./apps)所有文档
 
 ## 服务器账号密码是什么？
 
-**Linux**
-
-* 主机地址：服务公网IP地址
-* 连接方式：云控制台在线SSH 或 SFTP客户端工具 或 SSH客户端工具
-* 管理员密码：创建服务器的时候自行设置，若不记得密码需要通过**云控制台**重置。
-* 管理员账号：不同的云平台有一定的差异
-
-   |  云平台   |  管理员账号   | 其他|  
-   | --- | --- | --- |  
-   |  Azure   |  创建服务器的时候自行设置   | [如何开启root账户？](https://support.websoft9.com/docs/azure/zh/server-login.html#示例2：启用系统root账号) |  
-   |  AWS Centos 系统   |  centos   | [如何开启root账户？](https://support.websoft9.com/docs/aws/zh/server-login.html#示例2：启用系统root账号) |  
-   |  AWS AmazonLinux 系统   | ec2-user   | [如何开启root账户？](https://support.websoft9.com/docs/aws/zh/server-login.html#示例2：启用系统root账号) |  
-   |  AWS Ubuntu 系统  |  ubuntu   | [如何开启root账户？](https://support.websoft9.com/docs/aws/zh/server-login.html#示例2：启用系统root账号)  |  
-   |  阿里云，华为云，腾讯云   |  root   | |  
-
-
-**Windows**
-
-* 主机地址：服务公网IP地址
-* 连接方式：云控制台在线管理 或 远程桌面工具
-* 管理员密码：创建服务器的时候自行设置，若不记得密码需要通过**云控制台**重置。
-* 管理员账号：不同的云平台有一定的差异
-
-   |  云平台   |  管理员账号   |
-   | --- | --- |
-   |  Azure   |  创建服务器的时候自行设置   |
-   |  AWS，阿里云，华为云，腾讯云   |  administrator   |
+不同的云平台有不同的账号，详情[查看](./setup/credentials)
 
 ## 怎么连接/登录云服务器？
 
-请查阅：本文档的[《云服务器操作》](/zh/tech-instance.md)章节
+参考本文档[《云服务器操作》](./setup/vm)章节
 
 ## 服务器连不上？
 
 服务器连不上有两个最常见的原因：
 
-* 安全组端口没有开启（Windows服务器对应的端口是：3389，Linux对应的端口是：22）
-* 服务器无法连接互联网
-
-如果无法自行解决问题，请联系云厂商的客服
+1. 安全组端口没有开启（Windows服务器对应的端口是：3389，Linux对应的端口是：22），需登录云控制台自行开启
+2. 服务器无法连接互联网，需发工单寻求云平台的技术支持
 
 ## 如何通过 FTP 上传文件？
 

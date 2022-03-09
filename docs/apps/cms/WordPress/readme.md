@@ -14,67 +14,45 @@ tags:
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-product-screenshot.png)
 
-## 演示
-
 WordPress 官方提供了大量免费的主题和插件，你可以在线查看演示或安装
 
 - [官方插件演示](https://wordpress.org/plugins/)
 - [官方主题演示](https://wordpress.org/themes/)
 
 
-在云服务器上部署 WordPress 预装包之后，请参考下面的步骤快速入门。
+
 
 ## 准备
+
+在云服务器上部署 WordPress 预装包之后，还需完成如下准备方可进入初始化向导
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:80** 端口是否开启
 3. 若想用域名访问 WordPress，请先到 **域名控制台** 完成一个域名解析
 
-
-## 账号密码
-
-使用WordPress，可能会用到的几组账号密码如下：
-
-### WordPress
-
-在初始化安装的时候由用户自行设置
-
-### MySQL
-
-* 管理员账号：*`root`*
-* 管理员密码：存储在您的服务器指定文件中   
-
-  - Linux 系统  
-
-     **密码存储路径**：*/credentials/password.txt*    
-     **获取方式**： 建议通过云控制台的命令终端，运行下图**红框**所示命令，获取数据库密码   
-     ![运行cat命令](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/catdbpassword-websoft9.png)
-
-  - Windows 系统  
-
-     **密码存储路径**：*C:/credentials/password.txt*     
-     **获取方式**： 远程桌面到服务器，打开此文件即可   
-
-  **注意**：若服务器上不存在 password.txt 文件，那么数据库密码是 `123456`。此时务必修改为强密码，类似于：f@N7eUUm25xAjP!$ ，这样有助于提高数据库的安全性，减少数据库密码被破解的风险。
-
-> 需要登录MySQL，请参考 [MySQL可视化管理](#MySQL-数据管理)
-
 ## WordPress 安装向导
 
 1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*https://域名* 或 *https://Internet IP*, 进入安装向导  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wp01.png)
+
 2. 选择语言后，进入 WordPress 安装要求说明，点击“现在就开始”进入下一步 
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-install001-websoft9.png)
+
 3. 系统进入数据库连接信息安装项，请填写数据库连接信息（[不知道账号密码？](/zh/stack-accounts.md#mysql)） 
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-install002-websoft9.png)
+
 4. 数据库验证通过后，系统提示正式“进行安装” 
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-install003-websoft9.png)
+
 5. 设置您的管理员账号、密码和邮箱， 点击“安装WordPress”; 
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-install004-websoft9.png)
+
 6. 恭喜，成功安装 
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-install005-websoft9.png)
+
 7. 进入后台（http//域名或IP/wp-admin），试试WordPress的功能 
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-install006-websoft9.png)
+
 8. WordPress的安装已经全部完成。
 
 > 需要了解更多WordPress的使用，请参考官方文档：[WordPress Documentation](https://wordpress.org/support/)
@@ -259,100 +237,6 @@ WordPress相比Discuz来说更为流行，以Wordpress为主页是大多数用�
 1. 使用phpMyAdmin（登录账号请使用discuz所用到的数据库账号）登录，验证你填写的数据库账号是否与实际匹配
 2. 请到服务器上删除./data/install.lock文件
 3. 通过网址：*https://ip/discuz/install* 或 *https://域名/install* 重装（一定要加上/install）
-
-## WordPress&PHPWind 安装向导
-
-WordPress&PHPWind 预装包部署后，浏览器访问：*https://服务器公网ip/9panel* 开始安装向导。
-
-**注意**：应用是否通过域名访问，Linux系统 或 Windows系统，对应的安装步骤不同，请选择合适的方案：
-
-### 方式一：通过IP访问
-
-如果不打算使用域名访问网站，而是通过IP地址访问网站，安装非常简单：
-
-* WordPress 安装入口：*https://服务器公网IP*，进入 [WordPress 安装向导](/zh/stack-installation.md#wordpress-安装向导)
-* PHPWind 安装入口：*https://服务器公网IP/phpwind*，进入 [PHPWind 安装向导](https://support.websoft9.com/docs/lamp/installation/zh/phpwind.html#phpwind-初始化安装向导)
-
-### 方式二：共用一个域名访问
-
-共用一个域名（假设域名为www.abc.com），类似：
-
-* *https://www.abc.com*   访问 WordPress
-* *https://www.abc.com/phpwind*   访问 PHPWind
-
-这种情况下的安装步骤如下：
-
-1. 登录到域名管理面板，完成解析域名，确保域名解析成功
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/domain-websoft9.png)
-2. 分别完成安装向导
-   - 本地浏览器访问：*https://www.abc.com*   开始 [WordPress 安装向导](/zh/stack-installation.md#wordpress-安装向导)
-   - 本地浏览器访问：*https://www.abc.com/phpwind*   开始 [PHPWind 安装向导](https://support.websoft9.com/docs/lamp/installation/zh/phpwind.html#phpwind-初始化安装向导)
-
-### 方式三：分别配置域名（LAMP版）
-
-给 WordPress 和 PHPWind 分别配置不同的域名，例如：
-
-* *https://wordpress.abc.com*  配置给 WordPress
-* *https://phpwind.abc.com*    配置给 PHPWind
-
-> LAMP版即表明你是的服务器是 Linux 系统，请使用 WinSCP 连接服务器  
-
-此场景下对应的安装步骤如下：
-
-1. 登录到域名管理面板，分别完成域名解析（增加一个A记录到服务器公网IP地址），参考下图：
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/domain-websoft9.png)
-2. 确保域名解析已经成功
-3. 通过 WinSCP 连接服务器，进入*/etc/httpd/conf.d*目录，修改域名的配置文件，绑定各自的域名。 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress-discuz/wpdz-vhostconf-1-websoft9.png)
-   - WordPress 域名绑定：请修改“vhost.conf”中的域名信息，然后保存
-   - PHPWind 域名绑定：请修改“phpwind.conf.范例”中的域名信息，保存后再去掉“.范例”后缀使之生效
-4. 使用 WinSCP 重启服务 或 云控制台重启服务器
-   ```
-   systemctl restart httpd
-   ```
-5. 分别完成安装向导
-   - 本地浏览器访问：*https://wordpress.abc.com*   开始 [WordPress 安装向导](/zh/stack-installation.md#wordpress-安装向导)
-   - 本地浏览器访问：*https://phpwind.abc.com*   开始 [PHPWind 安装向导](https://support.websoft9.com/docs/lamp/installation/zh/phpwind.html#phpwind-初始化安装向导)
-
-### 方式三：分别配置域名（WAMP版）
-
-给 WordPress 和 PHPWind 分别配置不同的域名，例如：
-
-* *https://wordpress.abc.com*  配置给 WordPress
-* *https://phpwind.abc.com*    配置给 PHPWind
-
-> WAMP 版即表明你是的服务器是 Windows 系统，请使用 远程桌面工具 连接服务器  
-
-此场景下对应的安装步骤如下：
-
-1. 登录到域名管理面板，分别完成域名解析（增加一个A记录到服务器公网IP地址），参考下图：
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/domain-websoft9.png)
-2. 请检验域名解析是否成功
-3. 远程到Windows服务器，进行域名配置文件 **http-vhosts.conf** 修改，具体操作如下：
-   - 单击（鼠标左键）绿色的 WAMPserver 图标，依次点击：【Apache】>【http-vhosts.conf】 
-   - 将标注红框的 ServerName 值换成您自己的域名 
-   - 保存后修改 
-     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress-discuz/wordpressdiscuz-domain-1-websoft9.png)
-4. 退出 WAMPserver 
-5. 重新启动WAMPServer，单击（鼠标左键）绿色的 WAMPserver 按钮，点击“重新启动所有服务”
-6. 分别完成安装向导
-   - 本地浏览器访问：*https://wordpress.abc.com*   开始 [WordPress 安装向导](/zh/stack-installation.md#wordpress-安装向导)
-   - 本地浏览器访问：*https://phpwind.abc.com*   开始 [PHPWind 安装向导](https://support.websoft9.com/docs/lamp/installation/zh/phpwind.html#phpwind-初始化安装向导)
-
----
-
-### FAQ
-
-#### 如何删除引导页面？
-
-打开IP地址显示的是引导页面，引导页面的作用是为了在镜像首次安装的时候给用户以有效提醒。
-
-请到 */data/wwwroot/default* 目录中删除引导页面相关的内容。删除的时候，一定要保留 wordpress 和 phpwind 文件夹，删除后请清除浏览器缓存，这样引导页面就不会出现了
-
-#### 为什么默认打开是 WordPress？
-
-WordPress相比PHPWind来说更为流行，以Wordpress为主页是大多数用户可能的选择。Wordpress对应的配置文件是vhost.conf，可以自行修改
-
 
 ## 常用操作
 
@@ -1059,29 +943,6 @@ WordPress使用OSS有两种方式，第一种是通过OSS客户端上传文件�
 3. 填写好备案号相关信息，增加链接，并分别点击【回车符】按钮和【保存】按钮
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-beian.png)
 4. 刷新网页看效果
-
-### 安全处理
-
-#### 代码植入处理
-
-WordPress 由于被广泛使用，导致安全漏洞被无限放大，其中WordPress网站被植入第三方代码是最常见的安全故障。
-
-* 源码中植入非常明显的代码
-* 源码中植入难以察觉的代码
-* 数据库中被植入
-
-经过实践，下面介绍一种简单有效的处理办法
-
-1. 通过在线安全检查网站[sitecheck.sucuri.net](https://sitecheck.sucuri.net)进行排查，初步定义被植入的内容
-2. 登录WordPress后台，安装安全插件[Wordfence Scan Enabled](https://wordpress.org/plugins/wordfence/)
-3. 运行Wordfence Scan Enabled，启动网站健康检查
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-wordfence-websoft9.png)
-4. 对于“Critical”标记的结果，手工一一处理
-
-> 其他扫描工具：
-> 1. Quttera Web Malware Scanner 
-> 2. Anti-Malware Security and Brute-Force Firewall  
-
 
 ### MySQL 数据管理
 

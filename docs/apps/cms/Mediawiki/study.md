@@ -1,8 +1,8 @@
 ---
 sidebar_position: 3
-slug: /ghost/study
+slug: /mediawiki/study
 tags:
-  - Ghost
+  - Mediawiki
   - CMS
   - 建站系统
   - 博客系统

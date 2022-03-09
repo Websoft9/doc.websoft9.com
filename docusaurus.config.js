@@ -10,10 +10,12 @@ const config = {
   tagline: '简化开源软件的安装、集成和运维',
   url: 'https://support.websoft9.com',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
+  onDuplicateRoutes: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'Websoft9', // Usually your GitHub org/user name.
+  deploymentBranch: 'gh-pages',
   projectName: 'doc.websoft9.com', // Usually your repo name.
   i18n: {
     defaultLocale: 'zh-cn',
@@ -65,6 +67,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      autoCollapseSidebarCategories: true,
       navbar: {
         title: 'Websoft9',
         logo: {
@@ -178,7 +181,7 @@ const config = {
       },
       tableOfContents: {
 	minHeadingLevel: 2,
-	maxHeadingLevel: 6
+	maxHeadingLevel: 4
       }
     }),
 };

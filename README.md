@@ -18,6 +18,12 @@ $ yarn run write-translations -- --locale zh-cn
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
+### Update
+有两个方案：
+
+方案1： yarn upgrade @docusaurus/core@latest @docusaurus/preset-classic@latest
+方案2：修改 package.json 文件中的版本至指定版本号，然后运行 `yarn install`，再运行 `npx docusaurus --version` 查询版本
+
 ### Build
 
 ```

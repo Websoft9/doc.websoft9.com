@@ -1,0 +1,5 @@
+position: 4
+label: "IT 架构"
+collapsible: true
+collapsed: true
+className: "red"
