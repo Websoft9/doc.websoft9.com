@@ -1,5 +1,5 @@
-position: 20
-label: "云桌面"
+position: 2
+label: "升级"
 collapsible: true
 collapsed: true
 className: "red"

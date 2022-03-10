@@ -1,3 +1,8 @@
+---
+sidebar_position: 1
+slug: /iis
+---
+
 # IIS
 
 IIS即Windows®Server的Internet信息服务，它是一种灵活，安全和可管理的Web服务器，用于托管Web上的任何内容。 从媒体流到Web应用程序，IIS的可扩展和开放的架构已经准备好处理最苛刻的任务。由于IIS的可视化配置界面，使得在此环境中增加和管理网站变得非常容易。

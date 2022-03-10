@@ -1,5 +1,5 @@
-position: 20
-label: "云桌面"
+position: 9
+label: "基础组件"
 collapsible: true
 collapsed: true
 className: "red"

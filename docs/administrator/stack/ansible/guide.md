@@ -6,26 +6,18 @@ tags:
   - DevOps
 ---
 
-# 快速入门
+# 指南
 
 [Ansible](https://wansible.com) 是一个易读非常好的自动化运维开发语言以及技术体系，它基于 Python，提供数千个管理基础设施的模块，用户无需深厚的技术背景，也可以完成服务器部署、网络配置、云资源管理等相关的工作。它自动化能力，可大大降低技术复杂性，帮助企业减少重复劳动，让聪明的人专注于核心业务。
 
 ![ansible](https://libs.websoft9.com/Websoft9/DocsPicture/zh/ansible/ansible-guis-websoft9.png)
 
-在云服务器上部署 Ansible 预装包之后，请参考下面的步骤快速入门。
 
-## 准备
+## 场景
 
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:22** 端口是否开启
+### 快速体验
 
-## 账号密码
-
-通过**SSH**连接云服务器，运行 `sudo cat /credentials/password.txt` 命令，查看所有相关账号和密码
-
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/catdbpassword-websoft9.png)
-
-## Ansible 安装向导
+如果您安装了 Ansible 镜像，参考如下步骤快速体验：
 
 1. 使用 SSH 连接到服务器，运行 `ansible -h` 命令，查看帮助信息
    ```

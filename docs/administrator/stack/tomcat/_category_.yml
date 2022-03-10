@@ -1,5 +1,5 @@
-position: 20
-label: "云桌面"
+position: 5
+label: "Tomcat"
 collapsible: true
 collapsed: true
 className: "red"
