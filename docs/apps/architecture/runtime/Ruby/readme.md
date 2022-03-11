@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-slug: /ruby
+slug: /runtime/ruby
 tags:
   - Ruby
   - 运行环境
