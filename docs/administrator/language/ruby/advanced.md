@@ -15,6 +15,23 @@ ansible-playbook role_ruby/tests/test.yml
 
 ### 升级
 
+#### Patch 升级
+
+Ruby 基于 RVM 部署，小版本的更新非常简单
+
+```
+rvm upgrade 1.9.2-p136 1.9.2-p180
+rvm upgrade ree-2011.01 ree-2011-02
+```
+
+#### 版本升级
+
+例如需将 Ruby 2.5 升级到 Ruby 2.6，实际上等于新安装
+
+```
+rvm install 2.6
+```
+
 ### 扩展
 
 ## 概念与原理
@@ -26,6 +43,15 @@ Maven 是一个项目管理工具，可以对 Java 项目进行构建、依赖�
 ### RVM
 
 RVM 是一个用于安装和管理多版本 Ruby 的命令行工具，虽然不是 Ruby 官方出品，但非常流行。
+
+### 隔离环境
+
+有两种隔离环境的解决方案：
+
+* RVM Gemset
+* Bundler
+
+经过实验验证，bundle 可以很方便的将项目所需的软件包安装到项目目录中。  
 
 ## 问题
 

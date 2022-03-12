@@ -320,3 +320,7 @@ chown -R superset.superset /data/wwwroot/superset
 find /data/wwwroot/superset -type d -exec chmod 750 {} \;
 find /data/wwwroot/superset -type f -exec chmod 640 {} \;
 ```
+
+#### 是否支持 google authentication 或 OKTA based authentication (OIDC)?
+
+SuperSet 默认只提供了邮件登录，更多登录方式使用需参考其框架文档：[Flask-AppBuilder](https://flask-appbuilder.readthedocs.io/en/latest/security.html#supported-authentication-types)
