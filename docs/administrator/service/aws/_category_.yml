@@ -1,5 +1,5 @@
-position: 4
-label: "Ruby"
+position: 2
+label: "AWS"
 collapsible: true
 collapsed: true
 className: "red"

@@ -96,3 +96,21 @@ rails s -b 0.0.0.0
 #### 可执行目录下没有 gem, ruby 文件或链接？
 
 本项目通过 RVM 安装，通过 `source /etc/profile.d/rvm.sh` 实现 gem, ruby 等命令的全局化。
+
+#### 如何将 Ruby 包安装到项目目录下？
+
+```
+# 安装第三方包到项目 vendor/bundle 目录
+bundle install --deployment
+
+# 安装所有包到项目目录
+bundle install --path=$(pwd)
+```
+
+#### 一个 rails 框架可以部署几个应用？
+
+有待研究。建议部署部署一个。
+
+#### 如何使用 gem 设定 rails 包的默认版本？
+
+#### Gemfile.local 与 Gemfile 有什么区别？

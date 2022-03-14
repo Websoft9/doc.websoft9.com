@@ -5,11 +5,13 @@ slug: /ruby
 
 # 指南
 
+[Ruby](https://www.ruby-lang.org/)是一门开源的动态编程语言，注重简洁和效率。Ruby 的句法优雅，读起来自然，写起来舒适。它由日本人发明，混合了多门语言（Perl、Smalltalk、Eiffel、Ada 和 Lisp），创造出了一种兼具函数式编程和命令式编程特色的新语言。
+
 ## 场景
 
 ### RubyGems 包管理{#gems}
 
-#### gem 源更换
+**gem 源更换**
 
 rubygems.org 存放在 Amazon S3 上，有时由于网络问题导致无法安装
 
@@ -32,10 +34,6 @@ bundle config mirror.https://rubygems.org https://gems.ruby-china.com/
 
 > gemfile 中也可以指定源，这样就无需全局设置
 
-### Web 框架{#framework}
-
-#### Rails
-
 ### Ruby 版本变更{#version}
 
 Ruby 的多版本管理非常灵活。
@@ -43,12 +41,79 @@ Ruby 的多版本管理非常灵活。
 * RVM 支持多个 Ruby 版本安装和切换（包括默认设置）
 * 每个 Ruby 版本下，都可以通过 gem 安装同一个包的多个版本
 
+
+### Web 框架{#framework}
+
+#### Rails{#rails}
+
+Rails 是 Ruby 生态中流行的 Web 应用程序开发框架。目的是通过解决快速开发中的共通问题，简化 Web 应用的开发。
+
+Rails 依赖如下组件：  
+
+* Ruby
+* SQLite3
+* Node.js
+* Yarn
+
+**安装**
+
+```
+# 安装 rails 5.0 和 最新版本
+gem install rails --version=5.0
+gem install rails
+
+# 查询已安装的 rails
+gem list | grep rails
+
+结果：rails (6.1.3.2, 5.0.7.2, 5.0.0)
+
+# 指定一个 rails 版本去创建项目
+
+rails _5.0.0_ new myproject5
+
+# 指定 RailS 应用程序的端口
+rails s -p 3000
+```
+
+安装完 Rails，本地浏览器访问：*http://服务器公网IP地址:3000* 即可访问：  
+
+![Ruby Rails](https://libs.websoft9.com/Websoft9/DocsPicture/zh/ruby/ruby-railsgui-websoft9.png)
+
+
+#### Sinatra{#sinatra}
+
 ## 参数
 
 ### 路径{#path}
 
-Java 安装目录： */data/java*  
-Java 日志目录： */data/logs/java*  
+基于 [RVM](https://rvm.io/)预装 Ruby 以及所需的其他软件包：[gem](https://rubygems.org/), rake, bundler，对于的路径：  
+
+Ruby 安装目录： */usr/local/rvm/rubies/ruby-version*  
+Ruby 命令命令： */usr/local/rvm/rubies/ruby-2.4.10/bin*  
+RVM 安装目录： */usr/local/rvm*  
+Ruby 网站目录： */data/wwwroot*  
+
+> version 为版本号，例如：2.4.10。gem, bundler 等工具与版本强相关
+
+### 版本号{#checkversion}
+
+下面的命令用于查看 Ruby 相关的版本号
+
+```
+ruby -v
+bundler -v
+gem -v
+rails -v
+```
+
+### 服务{#service}
+
+```
+sudo systemctl start rails
+sudo systemctl stop rails
+sudo systemctl restart rails
+sudo systemctl status rails
+```
 
 ### 命令行{#cmd}
 
@@ -336,11 +401,3 @@ Usage: ruby [switches] [--] [programfile] [arguments]
   -h              show this message, --help for more info
 ```
 
-### 服务{#service}
-
-```
-sudo systemctl start rails
-sudo systemctl stop rails
-sudo systemctl restart rails
-sudo systemctl status rails
-```
