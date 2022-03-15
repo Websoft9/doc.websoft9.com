@@ -22,7 +22,7 @@ slug: /setup/vm
 
 如果你只需连接服务器，且已经准备好了服务器的管理员账号密码、公网IP地址等信息，可以参考下面的通用教程开始连接服务器。
 
-### 连接 Linux
+### 连接 Linux{#connectlinux}
 
 推荐使用 SFTP工具去连接Linux。SFTP是使用SSH协议的FTP模式，也称之为安全增强型的FTP。SFTP工具是Linux用户最喜欢的一种操作方式。  
 
@@ -74,7 +74,7 @@ WinSCP是自带命令运行功能的，虽然命令功能仅限于运行非交�
 
 > 通过Winscp打开Putty操作与直接打开putty没有区别
 
-### 连接 Windows
+### 连接 Windows{#connectwindows}
 
 可以通过本地电脑的远程桌面工具 (MSTSC) 连接 Window 服务器。具体步骤如下：
 

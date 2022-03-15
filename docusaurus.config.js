@@ -68,7 +68,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      autoCollapseSidebarCategories: true,
+      autoCollapseSidebarCategories: false,
       navbar: {
         title: 'Websoft9',
         logo: {

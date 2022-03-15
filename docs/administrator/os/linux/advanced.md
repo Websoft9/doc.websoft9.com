@@ -2,33 +2,9 @@
 
 Linux系统博大精深，学习Linux的资料浩瀚如大海。本文档不打算再做重复造轮子的事情，我们尽量根据实践中很常见的**技术要点**进行讲解，同时列出一些操作范例：
 
-## 发行版
+## 核心要点
 
-Linux 内核最初只是由芬兰人林纳斯·托瓦兹（Linus Torvalds）在赫尔辛基大学上学时出于个人爱好而编写的。后面Linux发展成为一个强大的生态体系，慢慢的就有一些专业公司基于内核再组合了一些应用软件，形成了多种分支，也就是发行版。
-
-目前市面上较知名的发行版有：Ubuntu、RedHat、CentOS、Debian、Fedora、SuSE、OpenSUSE、Arch Linux、SolusOS 等。
-
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/linux/linux-distro-websoft9.png)
-
-这些版本并非完全独立，它们之前有着共同的家族关系：
-
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/linux/linux-family-websoft9.jpg)
-
-虽然版本繁多，实际上最流行的是：CentOS和Ubuntu这个两个发行版。
-
-* Redhat, Fedora, CentOS 由 Redhat 驱动
-* Debian 是完全社区驱动，Ubuntu 是公司驱动，商业上没有关联关系
-
-## 安装
-
-如果你没有使用云服务器或虚拟机，就需要安装Linux。下面只大体介绍Linux系统的安装流程：
-
-* 下载Linux系统（一般是ISO文件）
-* 制作启动盘
-* 开机进入图形化的交互式安装界面
-* 安装完成
-
-## 启动
+### 启动过程分析
 
 Linux系统的启动过程分为如下几个阶段：
 
@@ -59,13 +35,13 @@ Linux系统的启动过程分为如下几个阶段：
 
 7. 用户登录系统：用户登录使用Linux
 
-## 目录结构
+### 文件目录结构
 
 通过下面的一张图（右键在新窗口中打开，图片效果更好），我们了解Linux系统的目录结构
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/linux/linux-folders-websoft9.jpg)
 
-## 编码与字体
+### 编码与字体
 
 一个字符（不管是中文还是英文，或是其它文字）在计算机里都是以0101这样数字存放的，编码就是某个字符是以一个什么数字存放在计算机里的。  
 
@@ -83,7 +59,7 @@ Linux系统的启动过程分为如下几个阶段：
 同样的文件内容，在屏幕上的输出同时取决于用什么编码和字体。
 
 
-### 查看编码
+##### 查看编码
 
 我们在Linux中输入 `locale` 命令，会得到如下的结果：
 
@@ -107,7 +83,7 @@ LC_ALL=
 
 en_US.UTF-8 是 UTF-8 的子集，也就是说en_US.UTF-8也是支持中文字符的。区别在于zh_US.UTF-8能够支持更多的汉语特殊字符。
 
-### 修改编码
+##### 修改编码
 
 如果想切换操作系统的默认显示的语言，就必须修改默认的编码。  
 
@@ -125,7 +101,7 @@ dpkg-reconfigure locales
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/linux/linux-localescn-websoft9.png)
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/linux/linux-localescndef-websoft9.png)
 
-### 字体
+##### 字体管理
 
 我们在实际操作中发现即使当前是en_US.UTF-8编码，如果安装下面的命令后，操作系统便可以正常显示中文。
 
@@ -138,9 +114,9 @@ yum groupinstall "fonts"
 
 > 最后我们来总结：字符编码就是把二进制字节码文件转成计算机能够懂的文字；字体就是把计算机中的文字转换成人能够看懂的图像
 
-## 磁盘管理
+### 磁盘管理
 
-### 存储类型
+#### 存储类型
 
 Linux 支持多种接口类型的存储设备：
 
@@ -173,11 +149,11 @@ vda    253:0    0  40G  0 disk
 
 TYPE 项中的：disk 表示磁盘， part 表示分区， lvm 
 
-### 分区
+#### 分区
 
 磁盘分区可用区域，例如将一块SSD磁盘划分：sda1、sda2、sda3、sda4等4个分区。  
 
-#### 分区类型
+##### 分区类型
 
 在Linux系统下，磁盘的分区大致可以分为三类，分别为**主分区、扩展分区和逻辑分区**。
 
@@ -205,7 +181,7 @@ Disk identifier: 0x000c5246
 
 其中：Disk label type: dos 表示 MBR 分区，相对应 Disklabel type: gpt 就表示 GPT 分区类型。  
 
-#### 分区扩容
+##### 分区扩容
 
 实践中，我们要对云服务器的系统盘进行扩容，除了先通过云控制台购买更大的磁盘空间之外，还需要进行如下的操作：
 
@@ -223,7 +199,7 @@ Disk identifier: 0x000c5246
    resize2fs /dev/vda1  
    ```
 
-#### LVM
+##### LVM
 
 LVM 是一个新的磁盘虚拟化管理技术，将多个**真实的物理分区**虚拟为一个**逻辑上物理分区**，以便更多的对磁盘进行伸缩和备份。  
 
@@ -332,7 +308,7 @@ $ lvdisplay
    xfs_growfs  <LV's Path>
    ```
 
-### 格式化
+#### 格式化
 
 格式化指将磁盘分区格式化成不同的文件系统，以方便操作系统集中组织和管理文件。
 
@@ -340,7 +316,7 @@ $ lvdisplay
 #将/dev下的 sda5 磁盘格式化为 ext2 的格式类型
 mkfs.ext2 /dev/sda5
 ```
-### 挂载
+#### 挂载
 
 对于Linux系统来说，挂载是将格式化后的分区与系统中的目录匹配起来，使得访问这个目录就相当于访问这个分区。
 
@@ -348,7 +324,7 @@ mkfs.ext2 /dev/sda5
 #将 /dev/sda5 挂载到 test 中
 mount /dev/sda5/test
 ```
-### 文件系统
+#### 文件系统
 
 Linux除支持Ext4文件系统外，还支持其他各种不同的文件系统，例如集群文件系统以及加密文件系统等。Linux将各种不同文件系统的操作和管理纳入到一个统一的框架中，使得用户程序可以通过同一个文件系统界面，也就是同一组系统调用，能够对各种不同的文件系统以及文件进行操作。这样，用户程序就可以不关心各种不同文件系统的实现细节，而使用系统提供的统一、抽象、虚拟的文件系统界面。这种统一的框架就是所谓的虚拟文件系统转换（Virtual Filesystem Switch），一般简称虚拟文件系统 (VFS)。虚拟文件系统描述如下所示：
 
@@ -382,11 +358,11 @@ none   binfmt_misc         0       0         0   -  /proc/sys/fs/binfmt_misc
 sunrpc  rpc_pipefs         0       0         0   -  /var/lib/nfs/rpc_pipefs
 ```
 
-## 用户管理
+### 用户管理
 
 Linux系统是一种典型的多用户系统，不同的用户处于不同的地位，拥有不同的权限。
 
-### 账号
+##### 账号
 
 任何一个要使用系统的用户，都必须首先向系统管理员申请一个账号，然后以这个账号的身份进入系统。
 
@@ -402,7 +378,7 @@ Linux系统是一种典型的多用户系统，不同的用户处于不同的地
 
 用户组的管理涉及用户组的添加、删除和修改。组的增加、删除和修改实际上就是对/etc/group文件的更新。
 
-### 权限
+##### 权限
 
 划分用户最主要的目录就是为了分配权限，让具有不同权限的用户做不同的事情。  
 
@@ -410,7 +386,7 @@ Linux系统是一种典型的多用户系统，不同的用户处于不同的地
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/linux/ls-s-websoft9.png)
 
-### 密码与秘钥对
+##### 密码与秘钥对
 
 密码是用户登录Linux系统的凭证，一个用户名对应有配套的密码，这个密码由服务器掌管。
 
@@ -426,7 +402,7 @@ Linux系统是一种典型的多用户系统，不同的用户处于不同的地
 
 
 
-## 包和仓库
+### 软件包
 
 Linux生态中的软件包资源非常丰富，从某种程度上看，用户是否熟练的下载安装以及更新这些包，决定了能够为所在的企业创作的价值的大小。
 
@@ -445,7 +421,7 @@ Linux生态中的软件包资源非常丰富，从某种程度上看，用户是
 
 本章主要讨论和研究Linux系统的包管理机制、实践方案。
 
-### 仓库
+#### 仓库
 
 多个软件包存储在一个集中位置，就称之为仓库「repository」，这种以仓库方式集中存放，有利于软件开发者或包维护者进行管理。
 
@@ -467,7 +443,7 @@ Linux生态中的软件包资源非常丰富，从某种程度上看，用户是
 
 仓库越来越多，自然就诞生了跨仓库的搜索引擎，类似 [pkgs](https://pkgs.org/) 便可以检索主流的仓库的包，节省了用户寻找的时间。
 
-#### 仓库源
+##### 仓库源
 
 下面我们列出全球比较流行的仓库：
 
@@ -505,7 +481,7 @@ yum -y install yum-utils
 yum-config-manager --enable remi-php70
 ```
 
-#### 安装仓库
+##### 安装仓库
 
 安装仓库通俗的讲，就是将仓库的网址（地址）信息写入到服务器的指定文件夹（文件）中。类似我们为了方便自己购物，将不同的购物网站的网站收藏到浏览器是一个道理。
 
@@ -565,14 +541,14 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-$releasever-$ba
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/linux/installwithyum-websoft9.jpg)
 
 
-#### 自建仓库
+##### 自建仓库
 
 在安装MySQL的时候，我们就发现，MySQL官方提供了自己的仓库以供用户使用。也就意味着，仓库是可以自行建设的。
 
 参考：[《配置本地Yum仓库》](https://www.runoob.com/linux/linux-yum.html)
 
 
-### 管理包
+#### 管理包
 
 虽然大多数流行的 Linux 发行版在包管理工具、方式和形式都大同小异，但却还是有平台差异：
 
@@ -594,7 +570,7 @@ CentOS、Fedora 及 Red Hat 系列 Linux 使用RPM包文件，并使用yum命令
 在最新的 Fedora 版本中，yum命令已被dnf取代进行包管理。
 
 
-#### 更新本地数据库
+##### 更新本地数据库
 
 大多数 Linux 都使用本地数据库来存储远程可用的包仓库列表，所以在安装或升级包之前最好更新（同步）一下这个数据库。
 
@@ -604,7 +580,7 @@ CentOS、Fedora 及 Red Hat 系列 Linux 使用RPM包文件，并使用yum命令
 |     CentOS      |  yum check-update   |
 |     Fedora      |  dnf check-update   |
 
-#### 升级已安装的包
+##### 升级已安装的包
 
 在没有包管理方式时，要升级并保持 Linux 已装软件处在最新版本上是一个巨大的工程，管理员和用户不得不手动跟踪上游软件版本变化及安全警告。在有了包管理系统之后，只需几条命令便可保持软件最新。
 
@@ -615,7 +591,7 @@ CentOS、Fedora 及 Red Hat 系列 Linux 使用RPM包文件，并使用yum命令
 |     CentOS      |      sudo yum update      |                                      |
 |     Fedora      |     sudo dnf upgrade      |                                      |
 
-#### 查找/搜索软件包
+##### 查找/搜索软件包
 
 大多数 Linux 桌面版本都提供用户可搜索和安装软包的界面，这是找寻和安装软件的最佳方法。但对于追求效率和服务器管理员来说，使用命令行工具查找/搜索软件包才是正途。
 
@@ -628,7 +604,7 @@ CentOS、Fedora 及 Red Hat 系列 Linux 使用RPM包文件，并使用yum命令
 |     Fedora      |    dnf search 搜索内容    |                            |
 |                 |  dnf search all 搜索内容  | 搜索所有内容，包括包描述。 |
 
-#### 查看某个软件包信息
+##### 查看某个软件包信息
 
 在决定安装哪个包之前，我们往往都需要查看该软件包的详细说明。包的说明文件中通常包括：包名、版本号及依赖列表等元数据，可以使用如下命令来查看。
 
@@ -684,7 +660,7 @@ License     : MPLv1.1 and MIT and ASL 2.0 and BSD
 Description : RabbitMQ is an open source multi-protocol messaging broker.
 ```
 
-#### 从软件仓库安装包
+##### 从软件仓库安装包
 
 一旦我们知道某个软件包的名称之后，便可以使用如下命令从软件仓库安装包。
 
@@ -702,7 +678,7 @@ Description : RabbitMQ is an open source multi-protocol messaging broker.
 |                 |   sudo dnf install 包1 包2 …   | 安装所有列出的包 |
 |                 |    sudo dnf install -y 包名    | 无需提示直接安装 |
 
-#### 从本地文件系统直接安装包
+##### 从本地文件系统直接安装包
 
 很多时候，我们在进行测试或从某个地方直接拿到软件包之后需要从本地文件系统直接安装包。Debian 及衍生系统可以使用 **dpkg** 进行安装，CentOS 和 Fedora 系统使用 **yum** 和 **dnf** 命令进行安装。
 
@@ -713,7 +689,7 @@ Description : RabbitMQ is an open source multi-protocol messaging broker.
 |     CentOS      |              sudo yum install 包名.rpm              |                             |
 |     Fedora      |              sudo dnf install 包名.rpm              |                             |
 
-#### 移除已安装的包
+##### 移除已安装的包
 
 包管理器知道哪些文件是由哪个包提供的，所以卸载不需要的软件包之后可以获得一个干净的系统。
 
@@ -724,7 +700,7 @@ Description : RabbitMQ is an open source multi-protocol messaging broker.
 |     CentOS      |   sudo yum remove 包名   |                        |
 |     Fedora      |   sudo dnf erase 包名    |                        |
 
-#### 锁定软件包版本
+##### 锁定软件包版本
 
 有些时候，我们在对系统进行更新操作时，不需要对某些软件包进行升级操作，要把该包锁定在某个特定版本下。这个时候我们就需要用到相关的插件，以yum为例：
 
@@ -741,7 +717,7 @@ yum versionlock gcc-*
 ```
 上述配置不允许将gcc软件包升级到大于执行锁定时安装的软件包的版本。
 
-### 制作包
+#### 制作包
 
 我们知道 rpm/deb 包都是存储在仓库中的可以运行的包，使得我们安装软件非常的简单和方便。  
 
@@ -751,7 +727,7 @@ yum versionlock gcc-*
 
 下面我们以 RPM 包为例，详细介绍制作过程（[参考来源](https://rpm-packaging-guide.github.io/)）。
 
-#### 知识
+##### 知识
 
 **安装颗粒度**
 
@@ -836,7 +812,7 @@ Makefile 顾名思义是 `make` 时所需的一个编排文件，如果用不着
 **交叉编译**
 
 
-### 工具
+#### 生态工具
 
 在云计算发展的今天，包管理丰富多彩。在实践中，有一些非常好用好玩的工具：
 
@@ -847,28 +823,28 @@ Makefile 顾名思义是 `make` 时所需的一个编排文件，如果用不着
 * Snap包:https://snapcraft.io/
 * Flatpak包：https://www.flatpak.org/
 
-### 按发行版
+#### 发行版特别说明
 
 下面总结主流 Linux 发行版上的包管理相关的独特性
 
-#### RedHat
+##### RedHat
 
 RedHat 系统免费，但是仓库需要订阅。  
 
 下面重点介绍 RedHat 如何使用 CentOS-base 仓库的方案
 
-#### CentOS
+##### CentOS
 
 CentOS 是 RedHat 的同步办法，完全免费。
 
-#### Debian
+##### Debian
 
 Debian 官方仓库的软件包非常丰富，版本更新及时。  
 Debian 也可以使用 Ubuntu 社区的仓库，例如：[ppa](https://launchpad.net/ubuntu/+ppas)，但是使用 `apt-add-repository --yes --update ppa:ansible/ansible` 增加仓库软件包的时候，默认会增加 Ubuntu 最新版本的地址。  
 
-#### Ubuntu
+##### Ubuntu
 
-#### OracleLinux
+##### OracleLinux
 
 [OracleLinux](http://yum.oracle.com/) 是 RedHat 家族的分支，与 CentOS 非常类似，但完全基于 RedHat 内核。  
 
@@ -901,7 +877,7 @@ oraclelinux-developer-release-el7.x86_64                           1.0-5.el7    
 oraclelinux-release-el7.x86_64                                     1.0-12.1.el7                       ol7_latest
 ```
 
-#### AmazonLinux
+##### AmazonLinux
 
 AmazonLinux 官方对其发行版的性质描述非常少，似乎刻意回避。实际上，AmazonLinux 也是 RedHat 家族的分支，非常类似 CentOS。  
 
@@ -914,120 +890,9 @@ AmazonLinux 官方对其发行版的性质描述非常少，似乎刻意回避�
 
 所以，建议删除以上两个官方默认仓库的优先级设置，把安装的自主权交还给 yum。
 
+### 文件管理
 
-### 常见问题
-
-#### 下载的RPM包中可否包含其他RPM包的依赖地址？
-
-可以，这是很常见的场景
-
-#### 仓库文件(例如：/etc/yum.repos.d/docker-ce.repo) 是仓库的最小单元吗？
-
-不是，最小单元是文件中的每个[]维护的信息：
-
-```
-[docker-ce-stable]
-name=Docker CE Stable - $basearch
-baseurl=https://download.docker.com/linux/centos/7/$basearch/stable
-enabled=1
-gpgcheck=1
-gpgkey=https://download.docker.com/linux/centos/gpg
-```
-
-实际上，我们可以把 /etc/yum.repos.d 下所有的文件合并成一个文件
-
-#### yum install 如何排除某个仓库？
-
-运行如下的命令，参数 --disablerepo 的值是 repo 文件中仓库单元的名称，不是 repo 文件的名称。
-
-```
-yum install docker --disablerep="docker-ce-stable"
-```
-
-#### yum 安装时 priority=* 的逻辑？
-
-优先级设置是双刃剑：
-
-* priority=10 优先级低于 priority=9，即数字越小优先级高
-* 依赖会从优先级较高的仓库中寻找：如果找到的版本不匹配，系统就会报错；如果找不到所需的软件，系统会从优先级较低的仓库中继续寻找
-* 优先级设置会导致依赖的安装难以匹配最佳
-
-#### rpm -ivh ×××.rpm 和yum install ×××.rpm 安装命令有什么区别？
-
-rpm 安装只针对单个rpm文件安装，不会安装相关的依赖；yum install 安装会安装rpm包以及所需的依赖
-
-#### .noarch.rpm 和 .x64_64.rpm 包有什么区别？
-
-.noarch 是通用的rpm包，其中没有二进制文件和库文件，就是说与服务器硬件和操作系统版没有太大的关系，通常用于安装一个脚本或仓库地址  
-.x64_64 是包含二进制等文件的安装包，与服务器CPU类型有关，通常用于安装某个软件  
-
-#### 在两个仓库中存在通一个软件包，yum/apt如何处理其中的优先级关系？
-
-Linux 发行版比较多，同时还有很多个人或组织维护了某些特定用途的安装/升级源。Yum Priorities 插件可以用来强制保护源。它通过给各个源设定不同的优先级，使得系统管理员可以将某些源（比如 Linux 发行版的官方源）设定为最高优先级，从而保证系统的稳定性（同时也可能无法更新到其它源上提供的软件最新版本）。
-
-1. 安装优先级插件
-    ```
-    rpm -q yum-priorities
-    ```
-2. 编辑 /etc/yum.repos.d/目录下的*.repo 文件来设置优先级
-    ```
-    [base]
-    name=CentOS-$releasever – Base
-    baseurl=http://mirror.centos.org/centos/$releasever/os/$basearch/
-    gpgcheck=0
-    priority=1
-    ```
-
-#### 本地的rpm/deb数据库中是否包含已安装的软件的仓库来源地址？
-
-#### 如何查看软件所需的依赖？
-
-以RabbitMQ为例，命令以及结果如下：
-```
-[root@iZ8vb7it5p19lxxol367u0Z rpm]# yum deplist rabbitmq-server
-Loaded plugins: fastestmirror
-Loading mirror speeds from cached hostfile
-package: rabbitmq-server.noarch 3.8.3-1.el7
-  dependency: /bin/sh
-   provider: bash.x86_64 4.2.46-33.el7
-  dependency: /usr/bin/env
-   provider: coreutils.x86_64 8.22-24.el7
-  dependency: config(rabbitmq-server) = 3.8.3-1.el7
-   provider: rabbitmq-server.noarch 3.8.3-1.el7
-  dependency: erlang >= 21.3
-   provider: erlang.x86_64 22.3.2-1.el7
-  dependency: logrotate
-   provider: logrotate.x86_64 3.8.6-17.el7
-  dependency: socat
-   provider: socat.x86_64 1.7.3.2-2.el7
-  dependency: systemd
-   provider: systemd.x86_64 219-67.el7_7.4
-```
-
-> yum deplist 命令与被查询的软件包是否安装没有关系，即没有被安装的软件包也可以查询其依赖
-
-
-#### yum list 获取是软件清单是实时的还是缓存？
-
-#### 如何解压 rpm 包？
-
-#### 什么是 SCL 源？
-
-SoftwareCollections.org 是为 Red Hat Enterprise Linux，Fedora，CentOS 和 Scientific Linux 创建软件集合（SCL）的项目的所在地。您可以在此处创建和托管软件集合，以及与管理 SCL 的开发者建立联系。SCL 是在保证不与原有软件冲突的情况下运行的，也就意味着用户默认 Bash 是无法调用 ，如果想开机自动调用 SCL， 需要设置好环境变量。
-
-#### 什么是 IUS 源？
-
-IUS is a community project that provides RPM packages for newer versions of select software for Enterprise Linux distributions.IUS只为RHEL和CentOS这两个发行版提供较新版本的rpm包。如果在os或epel找不到某个软件的新版rpm，软件官方又只提供源代码包的时候，可以来ius源中找，几乎都能找到。
-
-#### 什么是 https://buildlogs.centos.org/？
-
-This server contains a mix of raw/unsigned packages and/or build logs
-It should be used mainly for testing purposes
-
-
-## 文件管理
-
-### 拥有者
+##### 拥有者
 
 规定文件只能被指定用户访问访问  
 
@@ -1038,7 +903,7 @@ It should be used mainly for testing purposes
 chown -R nginx.nginx /data/wwwroot
 ```
 
-### 权限
+##### 权限
 
 Linux系统对不同的用户访问同一文件（包括目录文件）的权限做了不同的规定。  
 
@@ -1052,7 +917,7 @@ find /data/wwwroot/default -type f -exec chmod 640 {} \;
 find /data/wwwroot/default -type d -exec chmod 750 {} \;
 ```
 
-### 操作
+##### 操作
 
 对文件典型操作包括：
 
@@ -1070,7 +935,7 @@ less 一页一页的显示文件内容+往前翻页
 head 只显示头几行  
 tail 只显示尾几行  
 
-### 目录
+##### 目录
 
 接下来我们就来看几个常见的处理目录的命令吧：
 
@@ -1083,29 +948,19 @@ cp: 复制文件或目录
 rm: 移除文件或目录
 mv: 移动文件与目录，或修改文件与目录的名称
 
-## Linux与云计算
 
-在当前的云计算领域，毫无疑问Linux系统是最重要的基石。  
 
-掌握了Linux就等于拿到了云计算领域的入场券。
-
-## Linux命令
-
-Linux命令是对Linux系统进行管理的命令。对于Linux系统来说，无论是CPU、内存、磁盘驱动器、键盘、鼠标，还是用户等都是文件，Linux系统管理的命令是它正常运行的核心，与之前的DOS命令类似。
-
-更多命令参考：[《Linux命令大全》](https://man.linuxde.net/)
-
-## 软（硬）连接
+### 软（硬）连接
 
 Linux中的软连接和硬连接很常用，下面分别介绍。
 
-### 软连接
+#### 软连接
 
 软连接是指向另外一个文件的文件，类似Windows中的快捷方式文件。  
 
 如何才能知道哪些文件是软连接文件呢？
 
-#### 查询软连接
+##### 查询软连接
 
 我们先进入etc目录，然后列出文件（以re关键词作为结果筛选）
 
@@ -1139,7 +994,7 @@ lrwxrwxrwx 1 root root      23 Dec 25 16:08 vtrgb -> /etc/alternatives/vtrgb
 
 了解了什么是软连接之后，我们就可以自己动手进行软连接的相关操作：
 
-#### 创建软连接
+##### 创建软连接
 
 ```
 cd /root
@@ -1147,7 +1002,7 @@ ln -s /usr/share/zoneinfo/Asia/Shanghai2 mysoftlink
 file mysoftlink
 ```
 
-#### 删除软连接
+##### 删除软连接
 
 ```
 rm -rf mysoftlink
@@ -1161,7 +1016,7 @@ rm -rf mysoftlink
 4. 软连接文件的数据库中存储的是路径信息，而非真正的数据
 5. 软连接可能是多级嵌套的，例如：B连接A，C连接B，D连接C
 
-### 硬连接
+#### 硬连接
 
 硬连接相对于软连接来说，理解会困难一点点。硬连接是把不同的文件名对应到同一个存储块节点上。  
 
@@ -1185,7 +1040,7 @@ ln /data/mymedia.mp4  mymedia2.mp4
 > 硬链接与域名管理中的同一个网站，用A记录配置上两个域名是同类原理。  
 软连接与域名管理中的cname解析是同类原理。
 
-## 环境变量
+### 环境变量
 
 环境变量即操作系统的变量。环境变量非常灵活，在实际使用过程中需要深刻理解几个关键要点：环境变量作用域、环境变量存放处以及存储环境变量的文件的开机启动顺序。
 
@@ -1204,7 +1059,7 @@ export varname
 alias
 ```
 
-## 进程
+### 进程
 
 进程是操作系统的资源管理和调度单元。
 
@@ -1321,7 +1176,7 @@ systemd─┬─NetworkManager─┬─dhclient
 
 临时守护进程无法直接面对请求事件，只能被 **xinetd** 这个超级守护进程分配任务。
 
-## Systemd
+### Systemd
 
 [Systemd](https://www.freedesktop.org/software/systemd/man/systemd.unit.html) 是 Linux 系统中最新的初始化系统（init），它主要的设计目标是克服 sysvinit 固有的缺点，提高系统的启动速度。  
 
@@ -1382,7 +1237,7 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/docker.service 
 当然，直接把 httpd.service 文件拷贝到 /etc/systemd/system 也能起到同样的效果。
 
 
-### 维护命令
+##### 维护命令
 
 监控和控制 Systemd 主要使用的指令是`systemctl`。主要是从来看系统状态、服务状态，以及管理系统和服务。
 
@@ -1403,7 +1258,7 @@ systemctl —failed
 systemctl list-unit-files
 ```
 
-### 配置单元
+##### 配置单元
 
 一个单元配置文件可以描述如下内容之一：系统服务（.service）、挂载点（.mount）、sockets（.sockets） 、系统设备（.device）、交换分区（.swap）、文件路径（.path）、启动目标（.target）、由 systemd 管理的计时器（.timer）。
 
@@ -1428,7 +1283,7 @@ systemctl在enable、disable、mask子命令里面增加了--now选项，可以�
 重新载入整个systemd的系统配置并扫描unit文件的变动：$ systemctl daemon-reload
 ```
 
-### 配置文件
+##### 配置文件
 
 一个服务怎么启动，完全由它的配置文件决定。下面就来看，配置文件有些什么内容。
 
@@ -1454,8 +1309,8 @@ RestartSec=42s
 [Install]
 WantedBy=multi-user.target
 ```
-#### [Unit]区域
-#### [Service]区域
+###### [Unit]区域
+###### [Service]区域
 
 Service区块定义如何启动当前服务。
 
@@ -1480,7 +1335,7 @@ ExecStartPost字段：启动服务之后执行的命令
 ExecStopPost字段：停止服务之后执行的命令
 ```
 
-#### [Install]区域
+###### [Install]区域
 
 Install区块，定义如何安装这个配置文件，即怎样做到开机启动。
 
@@ -1573,11 +1428,275 @@ $ sudo journalctl --vacuum-size=1G
 $ sudo journalctl --vacuum-time=1years
 ```
 
-### 常见问题
+### 命令与 Shell 编程
 
-#### 服务文件名中@代表什么意思，例如：name@.service?
+#### 命令
 
-“@”提示符是Systemd的一个高级功能，@可以被实际的参数替换。举一个例子可以更好的说明其作用：
+Linux命令是对Linux系统进行管理的命令。对于Linux系统来说，无论是CPU、内存、磁盘驱动器、键盘、鼠标，还是用户等都是文件，Linux系统管理的命令是它正常运行的核心，与之前的DOS命令类似。
+
+更多命令参考：[《Linux命令大全》](https://man.linuxde.net/)
+
+
+Shell 是一个用 C 语言编写的程序，它是用户使用 Linux 的桥梁。Shell 既是一种命令语言，又是一种程序设计语言。
+
+通俗的说：用户向Linux发送Shell命令（或多个命令组成的程序体）来控制Linux，故 Shell 也是一种应用程序，这个应用程序提供了一个界面，用户通过这个界面访问操作系统内核的服务。
+
+#### 解释器
+
+Shell 编程跟 JavaScript、php 编程一样，只要有一个能编写代码的文本编辑器和一个能解释执行的脚本解释器就可以了。
+
+Linux 的 Shell 种类众多，常见的有：
+
+* Bourne Shell（/usr/bin/sh或/bin/sh）
+* Bourne Again Shell（/bin/bash）
+* Debian Almquist Shell(dash)
+* C Shell（/usr/bin/csh）
+* K Shell（/usr/bin/ksh）
+* Shell for Root（/sbin/sh）
+
+其中，bash和dash是目前广泛使用的解释器。
+
+#### 语法
+
+Shell有着面向过程的程序设计常见的语法体系，包括：
+
+* 变量
+* 函数
+* 流程控制
+* 输入输出
+* 数组
+* 运算符
+
+Shell语法并不复杂，边学边用就能掌握。
+
+#### 运行脚本
+
+Shell脚本可以保存为 .sh 文件后运行，也可以直接在Linux交互式命令中运行
+
+加入我们编写了一段Shell程序，内容如下
+```
+if [ $(ps -ef | grep -c "ssh") -gt 1 ]; then echo "true"; fi
+```
+将上面的代码保存为 test.sh，并 cd 到相应目录，然后选择如下的一种执行命令的方式：
+
+```
+#方式一：./ 执行脚本
+chmod +x ./test.sh  #使脚本具有执行权限
+./test.sh  #执行脚本
+
+#方式二：直接用解释器执行脚本
+/bin/sh test.sh
+
+#方式三：直接用解释器执行脚本
+bash test.sh
+
+#方式四：直接在交互式命令上中运行一段Shell程序
+if [ $(ps -ef | grep -c "ssh") -gt 1 ]; then echo "true"; fi
+
+```
+
+
+## 常见问题
+
+#### Linux 有哪些专业认证体系？
+
+Linux认证指获得专业Linux培训后通过考试得到的资格。国际上广泛承认的Linux认证有LinuxProfessionalInstitute（简称为LPI）、SairLinux和GNU、Linux+和RedHatCertifiedEngineer。
+
+以RedHat为例，主要的认证等级包括：
+
+| 认证考试 | 认证培训课程编号               | 认证培训课程名称   |
+| -------- | ------------------------------ | ------------------ |
+| RHCSA    | RH124,RH135                    | 红帽认证系统管理员 |
+| RHCE     | RH254                          | 红帽认证工程师     |
+| RHCA     | RH401,RH436,RH423,RH442,RHS333 | 红帽认证架构师     |
+
+
+#### 字符编码的原理？
+
+Ubuntu参考：https://help.ubuntu.com/community/Locale
+
+
+#### 如何查询当前服务器的连接数？
+```
+ps aux | grep httpd | wc -l
+```
+
+#### Linux 系统有哪些时间？
+
+```
+$ timedatectl status
+Local time: Tue 2021-11-23 10:08:06 CST
+Universal time: Tue 2021-11-23 02:08:06 UTC
+RTC time: Tue 2021-11-23 10:08:04
+    Time zone: Asia/Shanghai (CST, +0800)
+    NTP enabled: yes
+    NTP synchronized: yes
+    RTC in local TZ: yes
+    DST active: n/a
+```
+
+* Local time: 你自己手表上的时间
+* Universal time：世界统一时间
+* Real Time Clock：RTC, CMOS or BIOS clock
+* System clock：系统时间，开机的时候读取 RTC 时间
+
+NTP 是指网络时间服务，用于校对时间。 
+
+#### Linux 有哪些发行版？
+
+Linux 内核最初只是由芬兰人林纳斯·托瓦兹（Linus Torvalds）在赫尔辛基大学上学时出于个人爱好而编写的。后面Linux发展成为一个强大的生态体系，慢慢的就有一些专业公司基于内核再组合了一些应用软件，形成了多种分支，也就是发行版。
+
+目前市面上较知名的发行版有：Ubuntu、RedHat、CentOS、Debian、Fedora、SuSE、OpenSUSE、Arch Linux、SolusOS 等。
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/linux/linux-distro-websoft9.png)
+
+这些版本并非完全独立，它们之前有着共同的家族关系：
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/linux/linux-family-websoft9.jpg)
+
+虽然版本繁多，实际上最流行的是：CentOS和Ubuntu这个两个发行版。
+
+* Redhat, Fedora, CentOS 由 Redhat 驱动
+* Debian 是完全社区驱动，Ubuntu 是公司驱动，商业上没有关联关系
+
+
+#### Linux 系统有哪些特殊字符？
+
+```
+#   ;   ;;      .      ,       /       \       'string'|       
+!   $   ${}   $?      $$   $*  "string"*     **   ?   :   
+^   $#   $@    `command`{}  []   [[]]   ()    (())  ||   
+&&       {xx,yy,zz,...}~   ~+   ~-    &   \<...\>   +   
+-        %=   ==   != 
+```
+
+#### Linux 安装流程？
+
+如果你没有使用云服务器或虚拟机，就需要安装Linux。下面只大体介绍Linux系统的安装流程：
+
+* 下载Linux系统（一般是ISO文件）
+* 制作启动盘
+* 开机进入图形化的交互式安装界面
+* 安装完成
+
+#### .repo 文件是什么？
+
+以 Docker 为例：/etc/yum.repos.d/docker-ce.repo，其内容如下
+
+```
+[docker-ce-stable]
+name=Docker CE Stable - $basearch
+baseurl=https://download.docker.com/linux/centos/7/$basearch/stable
+enabled=1
+gpgcheck=1
+gpgkey=https://download.docker.com/linux/centos/gpg
+```
+
+所以，我们可以把 /etc/yum.repos.d 下所有的文件合并成一个文件
+
+#### yum install 如何排除某个仓库？
+
+运行如下的命令，参数 --disablerepo 的值是 repo 文件中仓库单元的名称，不是 repo 文件的名称。
+
+```
+yum install docker --disablerep="docker-ce-stable"
+```
+
+#### yum 安装时 priority=* 的逻辑？
+
+优先级设置是双刃剑：
+
+* priority=10 优先级低于 priority=9，即数字越小优先级高
+* 依赖会从优先级较高的仓库中寻找：如果找到的版本不匹配，系统就会报错；如果找不到所需的软件，系统会从优先级较低的仓库中继续寻找
+* 优先级设置会导致依赖的安装难以匹配最佳
+
+#### rpm -ivh 和 yum install 有什么区别？
+
+rpm 安装只针对单个rpm文件安装，不会安装相关的依赖；yum install 安装会安装rpm包以及所需的依赖
+
+#### .noarch.rpm 和 .x64_64.rpm 区别？
+
+.noarch 是通用的rpm包，其中没有二进制文件和库文件，就是说与服务器硬件和操作系统版没有太大的关系，通常用于安装一个脚本或仓库地址  
+.x64_64 是包含二进制等文件的安装包，与服务器CPU类型有关，通常用于安装某个软件  
+
+#### 一个软件包在多个仓库中出现，优先级？
+
+Linux 发行版比较多，同时还有很多个人或组织维护了某些特定用途的安装/升级源。Yum Priorities 插件可以用来强制保护源。它通过给各个源设定不同的优先级，使得系统管理员可以将某些源（比如 Linux 发行版的官方源）设定为最高优先级，从而保证系统的稳定性（同时也可能无法更新到其它源上提供的软件最新版本）。
+
+1. 安装优先级插件
+    ```
+    rpm -q yum-priorities
+    ```
+2. 编辑 /etc/yum.repos.d/目录下的*.repo 文件来设置优先级
+    ```
+    [base]
+    name=CentOS-$releasever – Base
+    baseurl=http://mirror.centos.org/centos/$releasever/os/$basearch/
+    gpgcheck=0
+    priority=1
+    ```
+
+#### 本地的仓库数据库中是是否包含源地址？
+
+是的
+
+#### 如何查看软件所需的依赖？
+
+以RabbitMQ为例，命令以及结果如下：
+```
+[root@iZ8vb7it5p19lxxol367u0Z rpm]# yum deplist rabbitmq-server
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+package: rabbitmq-server.noarch 3.8.3-1.el7
+  dependency: /bin/sh
+   provider: bash.x86_64 4.2.46-33.el7
+  dependency: /usr/bin/env
+   provider: coreutils.x86_64 8.22-24.el7
+  dependency: config(rabbitmq-server) = 3.8.3-1.el7
+   provider: rabbitmq-server.noarch 3.8.3-1.el7
+  dependency: erlang >= 21.3
+   provider: erlang.x86_64 22.3.2-1.el7
+  dependency: logrotate
+   provider: logrotate.x86_64 3.8.6-17.el7
+  dependency: socat
+   provider: socat.x86_64 1.7.3.2-2.el7
+  dependency: systemd
+   provider: systemd.x86_64 219-67.el7_7.4
+```
+
+> yum deplist 命令与被查询的软件包是否安装没有关系，即没有被安装的软件包也可以查询其依赖
+
+
+#### yum list 结果是本地换成吗？
+
+不是
+
+#### 如何解压 rpm 包？
+
+使用 `rpmextract` 这个工具
+
+#### 什么是 SCL 源？
+
+SoftwareCollections.org 是为 Red Hat Enterprise Linux，Fedora，CentOS 和 Scientific Linux 创建软件集合（SCL）的项目的所在地。您可以在此处创建和托管软件集合，以及与管理 SCL 的开发者建立联系。SCL 是在保证不与原有软件冲突的情况下运行的，也就意味着用户默认 Bash 是无法调用 ，如果想开机自动调用 SCL， 需要设置好环境变量。
+
+#### 什么是 IUS 源？
+
+IUS is a community project that provides RPM packages for newer versions of select software for Enterprise Linux distributions.IUS只为RHEL和CentOS这两个发行版提供较新版本的rpm包。如果在os或epel找不到某个软件的新版rpm，软件官方又只提供源代码包的时候，可以来ius源中找，几乎都能找到。
+
+#### buildlogs.centos.org 是什么？
+
+This server contains a mix of raw/unsigned packages and/or build logs
+It should be used mainly for testing purposes
+
+#### Linux 与云计算有什么关系？
+
+在当前的云计算领域，毫无疑问Linux系统是最重要的基石。  
+
+掌握了Linux就等于拿到了云计算领域的入场券。
+
+#### Systemd 服务名中的 @ 是什么？
+
+例如：name@.service。 “@”提示符是Systemd的一个高级功能，@可以被实际的参数替换。举一个例子可以更好的说明其作用：
 
 通过 Docker 部署了MySQL和Nginx，假如我们需要为这两个应用增加service文件，正常的处理方式是写两个服务单元，但如果我们学会使用@的话，一个单元就可以搞定
 
@@ -1610,92 +1729,3 @@ systemctl enable contaner@mysql.service
 
 可以，其类似于程序设计里面的类与对象的关系
 
-### 范例
-
-#### 自动关机
-
-需求：每天晚上20:00服务器自动关机
-
-```
-[Unit]
-Description=shutdown linux service
-
-[Service]
-Type=oneshot
-ExecStart=/usr/sbin/shutdown -h 20:00
-
-[Install]
-WantedBy=multi-user.target
-```
-
-## Shell编程
-
-Shell 是一个用 C 语言编写的程序，它是用户使用 Linux 的桥梁。Shell 既是一种命令语言，又是一种程序设计语言。
-
-通俗的说：用户向Linux发送Shell命令（或多个命令组成的程序体）来控制Linux，故 Shell 也是一种应用程序，这个应用程序提供了一个界面，用户通过这个界面访问操作系统内核的服务。
-
-### 解释器
-
-Shell 编程跟 JavaScript、php 编程一样，只要有一个能编写代码的文本编辑器和一个能解释执行的脚本解释器就可以了。
-
-Linux 的 Shell 种类众多，常见的有：
-
-* Bourne Shell（/usr/bin/sh或/bin/sh）
-* Bourne Again Shell（/bin/bash）
-* Debian Almquist Shell(dash)
-* C Shell（/usr/bin/csh）
-* K Shell（/usr/bin/ksh）
-* Shell for Root（/sbin/sh）
-
-其中，bash和dash是目前广泛使用的解释器。
-
-### 语法
-
-Shell有着面向过程的程序设计常见的语法体系，包括：
-
-* 变量
-* 函数
-* 流程控制
-* 输入输出
-* 数组
-* 运算符
-
-Shell语法并不复杂，边学边用就能掌握。
-
-### 运行脚本
-
-Shell脚本可以保存为 .sh 文件后运行，也可以直接在Linux交互式命令中运行
-
-加入我们编写了一段Shell程序，内容如下
-```
-if [ $(ps -ef | grep -c "ssh") -gt 1 ]; then echo "true"; fi
-```
-将上面的代码保存为 test.sh，并 cd 到相应目录，然后选择如下的一种执行命令的方式：
-
-```
-#方式一：./ 执行脚本
-chmod +x ./test.sh  #使脚本具有执行权限
-./test.sh  #执行脚本
-
-#方式二：直接用解释器执行脚本
-/bin/sh test.sh
-
-#方式三：直接用解释器执行脚本
-bash test.sh
-
-#方式四：直接在交互式命令上中运行一段Shell程序
-if [ $(ps -ef | grep -c "ssh") -gt 1 ]; then echo "true"; fi
-
-```
-
-## 认证
-
-Linux认证指获得专业Linux培训后通过考试得到的资格。国际上广泛承认的Linux认证有LinuxProfessionalInstitute（简称为LPI）、SairLinux和GNU、Linux+和RedHatCertifiedEngineer。
-
-以RedHat为例，主要的认证等级包括：
-
-| 认证考试 | 认证培训课程编号               | 认证培训课程名称   |
-| -------- | ------------------------------ | ------------------ |
-| RHCSA    | RH124,RH135                    | 红帽认证系统管理员 |
-| RHCE     | RH254                          | 红帽认证工程师     |
-| RHCA     | RH401,RH436,RH423,RH442,RHS333 | 红帽认证架构师     |
