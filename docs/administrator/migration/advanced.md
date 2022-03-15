@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-slug: /backup/advanced
+slug: /migration/advanced
 ---
 
 # 进阶

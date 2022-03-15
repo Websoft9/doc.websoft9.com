@@ -1,8 +1,56 @@
 ---
-sidebar_position: 13
+sidebar_position: 1
+slug: /dns
 ---
 
-# HTTPS
+# 指南
+
+## 场景
+
+### 域名解析与绑定
+
+域名的目的是通过一段容易识别的文字段来指向服务器上的网站。如果没有域名，网站就只能通过IP地址访问，这样不便于记忆和识别。
+给网站配上域名访问有两个步骤：
+
+1. 域名解析：域名解析需要通过域名控制台操作
+2. 域名绑定：域名绑定需要连接到云服务器，修改云服务器上**虚拟主机配置文件**中的域名项：
+
+虚拟主机配置文件在哪里呢？ 要根据所使用的 HTTP 服务器而定，一般说来：
+
+* Apache 的虚拟主机配置文件地址：*/etc/httpd/conf.d/vhost.conf*
+* Nginx 的虚拟主机配置文件地址：*/etc/nginx/conf.d/default.conf*
+
+## 域名配置步骤
+
+为了使网站可以通过域名访问，配置域名分为两个步骤：
+
+*   **域名解析**：在域名的控制台上做一个将域名（或子域名）指向IP的操作(下图示例)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/domain-websoft9.png)
+
+*   **域名绑定**：域名绑定指一台服务器在多网站部署的时候，通过**虚拟主机配置文件**，将每个域名绑定到其对应的网站目录，从而达到每个网站都可以通过域名访问且相会不会干扰的效果。
+
+下面是一个虚拟配置文件范例（LAMP环境）：
+
+   ~~~ 
+<VirtualHost *:80>
+ServerName www.mydomain.com
+ServerAlias other.mydomain.com
+DocumentRoot "/data/wwwroot/default/mysite2"
+ErrorLog "/var/log/httpd/www.mydomain.com_error_apache.log"
+CustomLog "/var/log/httpd/www.mydomain.com_apache.log" common
+<Directory "/data/wwwroot/default/mysite1">
+Options Indexes FollowSymlinks
+AllowOverride All
+Require all granted
+</Directory>
+</VirtualHost>
+   ~~~
+
+通过修改配置文件中域名相关的值（ServerName,ServerAlias等）实现绑定域名
+
+> 配置文件主要包括域名与网站的对应的关系，即某个域名应该对应访问哪个目录。如果服务器上有多个网站，就必须对应多个配置文件。
+
+### HTTPS
 
 配置HTTPS访问的前置条件：
 
@@ -12,7 +60,7 @@ sidebar_position: 13
 
 具体以上条件后，便可以登录服务器配置HTTPS。此处提供两种方案，请根据实际情况选择：
 
-## 方案一：自动免费证书配置
+#### 方案一：自动免费证书配置
 
 Websoft9的镜像默认安装了 [Let's Encrypt](https://letsencrypt.org/) 免费的证书部署软件，只需一条命令就可以启动证书部署.
 
@@ -32,7 +80,7 @@ Websoft9的镜像默认安装了 [Let's Encrypt](https://letsencrypt.org/) 免�
 
 4.  以上步骤操作完成后,certbot将会自动配置好证书,浏览器访问域名检查是否配置成功。生成的网站证书存放目录：`/etc/letsencrypt/live/`
 
-## 方案二：自行上传证书配置
+#### 方案二：自行上传证书配置
 
 下面详细说明上传证书的配置方案：
 
@@ -93,99 +141,6 @@ Websoft9的镜像默认安装了 [Let's Encrypt](https://letsencrypt.org/) 免�
     ```
 ---
 
-## 证书FAQ
+## 参数
 
-#### 为什么设置成功，显示“与此网站建立的连接并非完全安全”？
 
-首选明确一点即您的HTTPS设置是成功的，只是由于网站中存在包含 http访问的静态文件 或 外部链接等，导致浏览器告警您的网站并非完全安全。
-
-#### 向云平台申请证书的注意事项
-
-*   免费证书只能用于单个域名,例如: buy.example.com,或next.buy.example.com,
-*   example.com是通配符域名方式，不能用于申请免费证书
-*   申请证书的时候，请先解析好域名，有些证书会绑定域名对应的IP地址，即一旦申请后，IP地址不能更换，否则证书不可用
-
-#### CDN/全站加速开启HTTPS
-
-需要根据云平台参考文档设置。一般来说，此场景下有两个地方需要设置 HTTPS：
-
-1. CDN/全站加速的控制台需设置 HTTPS
-2. 服务器中的应用需设置 HTTPS
-
-需要注意的是，两端 HTTPS 必须使用同一套证书。
-
-#### Apache 实现 HTTP 自动跳转到 HTTPS 页面
-
-建议在网站根目录下的.htacesss文件中增加redirect规则
-
-```
-# 全部跳转
-RewriteEngine On
-RewriteCond %{SERVER_PORT} 80
-RewriteRule ^(.*)$ https://www.yourdomain.com/$1 [R,L]
-
-# 指定域名跳转
-RewriteEngine On
-RewriteCond %{HTTP_HOST} ^yourdomain\.com [NC]
-RewriteCond %{SERVER_PORT} 80
-RewriteRule ^(.*)$ https://www.yourdomain.com/$1 [R,L]
-
-# 指定某个目录跳转
-RewriteEngine On
-RewriteCond %{SERVER_PORT} 80
-RewriteCond %{REQUEST_URI} folder
-RewriteRule ^(.*)$ https://www.yourdomain.com/folder/$1 [R,L]
-```
-
-#### Nginx 实现 HTTP 自动跳转到 HTTPS 页面
-
-建议在 Nginx 虚拟主机配置文件对应的网站配置段中增加跳转项 `if...`
-
-```
-server
-{
-     listen 80;
-     server_name www.websoft9.com;
-     index readme.html index.html index.htm;
-     root  /data/nas/www.websoft9.com;
-     error_log /var/log/nginx/www.websoft9.com-error.log crit;
-     access_log  /var/log/nginx/www.websoft9.com-access.log;
-     include conf.d/extra/*.conf;  
-    
-    # HTTP to HTTPS
-    if ($scheme = http) {
-        return 301 https://$host$request_uri;
-    } 
-
-    listen 443 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/www.websoft9.com/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/www.websoft9.com/privkey.pem; # managed by Certbot
-    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
-    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot  
-}
-
-```
-
-#### Android 无法使用HTTPS，而IOS可以？
-
-确保SSLCertificateChainFile已设置对应的证书文件
-
-#### IP 地址可以申请证书吗？
-
-不可以，且没有任何意义。
-
-#### Docker 应用如何部署 HTTPS？
-
-我们的方案中，不建议在容器内部设置 HTTPS，而是通过宿主机的 HTTP 服务器（Nginx/Apache等）在端口转发的模式下配置 HTTPS。
-
-#### 中文域名如何使用HTTPS
-
-使用中文域名先要将中文域名在[国互联网络信息中心](http://www.cnnic.cn/jczyfw/zwym/zgymzcjsy/201206/t20120612_26523.htm)转码，例如：
-输入的域名串是: 久.club
-经过转码后变成了: xn--3iQ.club
-需要注意的是：
-
-- 在域名解析过程中，使用中文域名 久.club 解析到服务器 IP 
-- 在 Apache 或 Nginx 配置中使用 转码域名 xn--3iQ.club
-
-在申请SSL证书时用 xn--3iQ.club 域名申请，然后进行配置即可。

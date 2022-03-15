@@ -1,5 +1,5 @@
-position: 20
-label: "行业"
+position: 6
+label: "存储"
 collapsible: true
 collapsed: true
 className: "red"

@@ -1,8 +1,13 @@
-# 应急处理
+---
+sidebar_position: 1
+slug: /security
+---
 
-本章列出常见的安全问题以及对应的处理方案，供应急参考：  
+# 指南
 
-## 代码植入{#insertcode}
+## 场景 
+
+### 代码植入问题处理{#insertcode}
 
 代码植入是一种通过将【病毒代码】插入到应用程序正常代码中间的一种伪装方式
 
@@ -23,3 +28,9 @@
 > 其他扫描工具：
 > 1. Quttera Web Malware Scanner 
 > 2. Anti-Malware Security and Brute-Force Firewall  
+
+### HTTPS 设置{#https}
+
+参考：[域名 HTTPS 设置](./dns#https)
+
+## 参数

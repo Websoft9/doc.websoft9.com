@@ -1,8 +1,9 @@
 ---
 sidebar_position: 1
+slug: /troubleshooting
 ---
 
-# 故障速查
+# 指南
 
 #### SFTP无法登录？
 

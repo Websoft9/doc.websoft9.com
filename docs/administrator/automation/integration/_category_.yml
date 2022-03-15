@@ -1,5 +1,5 @@
-position: 6
-label: "安全"
+position: 3
+label: "集成"
 collapsible: true
 collapsed: true
 className: "red"
