@@ -15,7 +15,7 @@ jobs:
           
       - name: Create docs by template
         run: |
-          docpath=$(cat docs/_list)
+          docpath=$(cat docs/_list | tr '[A-Z]' '[a-z]')
           trademark=$(cat docs/_list |awk -F/ '{print $NF}')
           appname=$(cat docs/_list |awk -F/ '{print $NF}' | tr '[A-Z]' '[a-z]')
           mkdir -p docs/$docpath
