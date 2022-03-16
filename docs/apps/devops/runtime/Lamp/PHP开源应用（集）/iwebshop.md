@@ -1,4 +1,3 @@
-
 ---
 slug: /lamp/installation/zh/iwebshop
 ---

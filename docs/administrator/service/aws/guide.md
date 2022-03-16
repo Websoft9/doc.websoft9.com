@@ -128,7 +128,7 @@ sudo passwd root
 
 6. 等待几分钟，EC2创建完成后，镜像会作为EC2实例的系统盘启动，即镜像自动部署到实例中
 
-### 创建秘钥对
+### 创建秘钥对{#keypair}
 
 在创建EC2时，AWS要求使用秘钥对登录，下面是创建秘钥对步骤
 
@@ -139,6 +139,7 @@ sudo passwd root
    ![秘钥对名称](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-keypsname-websoft9.png)
    
 3. 将秘钥对文件 myKey.pem 保存到本地电脑
+
 ### 调整配置
 
 EC2的配置可以随时调整，具体操作如下：
@@ -278,7 +279,7 @@ AWS中对EC2实现备份的基本原理就是对EC2所属的磁盘做自动快�
 
 4. 根据提示完成后续操作
 
-### 安全组{#security}
+### 安全组{#securitygroup}
 
 安全组是管理EC2端口的功能，端口是服务器上应用程序与外部访问出入访问的通道。下面以**开启80端口为例**，为您介绍安全组的使用
 

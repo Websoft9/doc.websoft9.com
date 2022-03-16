@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+slug: /alibabacloud/advanced
 ---
 
 # 进阶

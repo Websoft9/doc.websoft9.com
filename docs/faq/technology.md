@@ -215,7 +215,7 @@ access_log  /var/log/nginx/example.yourdomain.com-access.log;
 
 以上提出的方案基本包括涵盖全部场景，但详细操作需根据具体的应用而定。
 
-#### 网站访问很慢？
+#### 网站访问很慢？{#siteslow}
 
 网站慢最常见的原因包括如下几个方面：
 

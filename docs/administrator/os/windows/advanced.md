@@ -1,3 +1,8 @@
+---
+sidebar_position: 2
+slug: /windows/advanced
+---
+
 # 进阶
 
 ## 核心原理

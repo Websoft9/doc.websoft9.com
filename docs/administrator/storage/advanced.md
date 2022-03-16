@@ -5,7 +5,7 @@ slug: /storage/advanced
 
 # 进阶
 
-## 原理与概念
+## 概念与原理
 
 ### 对象存储
 
@@ -13,4 +13,4 @@ slug: /storage/advanced
 
 ### 分布式存储
 
-## 问题解答
+## 问题

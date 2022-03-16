@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+slug: /huaweicloud/advanced
 ---
 
 # 进阶

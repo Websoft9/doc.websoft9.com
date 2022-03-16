@@ -1,3 +1,8 @@
+---
+sidebar_position: 2
+slug: /linux/advanced
+---
+
 # 进阶
 
 Linux系统博大精深，学习Linux的资料浩瀚如大海。本文档不打算再做重复造轮子的事情，我们尽量根据实践中很常见的**技术要点**进行讲解，同时列出一些操作范例：
@@ -1729,3 +1734,23 @@ systemctl enable contaner@mysql.service
 
 可以，其类似于程序设计里面的类与对象的关系
 
+#### 磁盘满了如何查询哪些文件比较大？
+
+```
+# 查看当前目录下各文件、文件夹的大小
+du -h –max-depth=1 *
+
+# 查询当前目录总大小
+du -sh
+
+# 显示直接子目录文件及文件夹大小统计值
+du -h –max-depth=0 *
+```
+
+#### 如何查询 Linux 服务器日志？
+
+运行命令`tailf /var/log/messages`
+
+#### 服务启动失败怎么办？
+
+当linux服务启动失败的时候，系统会提示我们使用 `journalctl -xe` 命令来查询详细信息，定位服务不能启动的原因。

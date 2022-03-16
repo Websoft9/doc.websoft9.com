@@ -227,7 +227,7 @@ CVM的配置可以[调整](https://cloud.tencent.com/document/product/213/2178)�
 2. 在实例的管理页面，选择待转换 IP 的云服务器行，单击【更多】>【IP/网卡】>【更换公网IP】，如下图所示：
    ![更换操作](https://libs.websoft9.com/Websoft9/DocsPicture/zh/qcloud/qcloud-changepip-websoft9.png)
 
-### 安全组{#security}
+### 安全组{#securitygroup}
 
 安全组是管理云服务器端口的功能，端口是服务器上应用程序与外部访问出入访问的通道。下面以**开启80端口为例**，为您介绍安全组的使用
 

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+slug: /aws/advanced
 ---
 
 # 进阶
