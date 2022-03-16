@@ -20,7 +20,7 @@ jobs:
           appname=$(cat docs/_list |awk -F/ '{print $NF}' | tr '[A-Z]' '[a-z]')
           mkdir -p docs/$docpath
           pip install Jinja2 jinja2-cli
-          jinja2 template/docs/zh/app/readme.jinja2 -D appname=$appname trademark=$trademark > docs/$docpath/readme.md
+          jinja2 template/docs/zh/app/readme.jinja2 -D appname=$appname -D trademark=$trademark > docs/$docpath/readme.md
           jinja2 template/docs/zh/app/admin.jinja2 -D appname=$appname > docs/$docpath/admin.md
           jinja2 template/docs/zh/app/_category_.jinja2 -D  trademark=$trademark > docs/$docpath/_category_.md
           jinja2 template/docs/zh/app/study.jinja2 -D appname=$appname > docs/$docpath/study.md
