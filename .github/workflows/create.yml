@@ -17,13 +17,25 @@ jobs:
         run: |
           docpath=$(cat docs/_list | tr '[A-Z]' '[a-z]')
           trademark=$(cat docs/_list |awk -F/ '{print $NF}')
+          doc_type=$(cat docs/_list |awk -F/ '{print $1}')
           appname=$(cat docs/_list |awk -F/ '{print $NF}' | tr '[A-Z]' '[a-z]')
-          mkdir -p docs/$docpath
-          pip install Jinja2 jinja2-cli
-          jinja2 template/docs/zh/app/readme.jinja2 -D appname=$appname -D trademark=$trademark > docs/$docpath/readme.md
-          jinja2 template/docs/zh/app/admin.jinja2 -D appname=$appname > docs/$docpath/admin.md
-          jinja2 template/docs/zh/app/_category_.jinja2 -D  trademark=$trademark > docs/$docpath/_category_.md
-          jinja2 template/docs/zh/app/study.jinja2 -D appname=$appname > docs/$docpath/study.md
+          mkdir -p docs/$docpath        
+          if [ ! -d docpath]; then
+            pip install Jinja2 jinja2-cli
+            template_path=""
+            if [ doc_type == "app" ]; then
+              template_path="template/docs/zh/app"
+            else
+              template_path="template/docs/zh/administrator"
+            fi
+            for file in $(ls $template_path | grep ".jinja2")
+              do
+                jinja2 $template_app/$file -D appname=$appname -D trademark=$trademark > docs/$docpath/$file.md
+              done
+            echo "documentation create success"
+          else
+            echo "documentation is exist"
+          fi
           
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
