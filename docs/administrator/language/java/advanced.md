@@ -1,3 +1,7 @@
+---
+slug: /java/advanced
+---
+
 # 进阶
 
 ## 安装

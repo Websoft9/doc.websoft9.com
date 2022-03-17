@@ -36,7 +36,7 @@ configure arguments:
 
 
 
-## 配置原理
+## 配置
 
 ### 配置文件
 
@@ -144,7 +144,7 @@ server{ } 改动务必准确无误，任何错误的修改都会导致服务器�
 |  ssl_certificate  | HTTPS 证书路径  |  设置 HTTPS 访问时必填 |
 |  ssl_certificate_key  | HTTPS 证书秘钥路径   |  设置 HTTPS 访问时必填 |
 
-## 核心模块原理
+## 核心模块
 
 Nginx 采用模块化设计机制，各个模块协作共同完成处理任务。主要模块分类：
 
@@ -312,6 +312,7 @@ Nginx公司还有企业级的商业产品：
 * NGINX Amplify  
 * NGINX WAF  
 
+
 #### Nginx 有哪些延伸项目？
 
 基于Nginx的著名开源项目包括：
@@ -356,4 +357,65 @@ NginxStatus 显示的内容意思如下：
 * writing -- nginx 返回给客户端的 Header 信息数。
 * waiting -- 开启 keep-alive 的情况下，这个值等于 active - (reading + writing)，意思就是 Nginx 已经处理完正在等候下一次请求指令的驻留连接。
 
+#### 如何为HTML, CSS, JS 开启 Gzip？
 
+默认情况下 Nginx 并没有开启 Gzip，需将如下代码添加到虚拟主机配置文件中
+
+```
+gzip on;
+gzip_types application/xml application/json text/css text/javascript application/javascript;
+gzip_vary on;
+gzip_comp_level 6;
+gzip_min_length 500;
+```
+
+#### 如何修改上传的 Nginx 文件权限?
+
+```
+# 拥有者
+chown -R nginx.nginx /data/wwwroot/
+# 读写执行权限
+find /data/wwwroot/ -type d -exec chmod 750 {} \;
+find /data/wwwroot/ -type f -exec chmod 640 {} \;
+```
+
+#### 如何启用或禁用 Nginx 模块？
+
+不支持模块启用或关闭
+
+## 故障速查
+
+#### 网站显示重定向错误？
+
+打开Nginx虚拟主机配置文件，检查网站对应的 server{} 配置段内容，分析其中的重定向规则，找到其中的死循环。
+
+#### phpMyAdmin 出现 Error during session...错误？
+
+Error during session start; please check your PHP and/or webserver log file and configure your PHP installation properly. Also ensure that cookies are enabled in your browser. session_start(): open(SESSION_FILE, O_RDWR) failed: Permission denied (13)
+
+**问题原因**：系统更新后，PHP 的 session.save_path 路径目录的权限设置不正确。  
+**解决方案**：打开WinSCP，运行如下命令即可
+~~~
+chown -R root:nginx /var/lib/php/session
+echo 'chown nginx. -R /var/lib/php' >> /etc/cron.daily/0yum-daily.cron
+~~~
+
+#### 重启 Nginx 服务显示 *No spaces...*
+
+出现此信息的时候，重启服务是成功的。
+
+#### 413 Request Entity Too Large
+
+这是由于上传文件大小超过了Nginx默认设置，因此需要修改 Nginx 这个限制：
+
+1. 使用 WinSCP 远程连接服务器
+2. 编辑 [Nginx 虚拟机主机配置文件](/zh/stack-components.md#nginx)
+3. 插入一行 `client_max_body_size 0;` 解除上传文件限制的配置项
+   ```
+   server {
+    listen 80;
+    server_name _;
+    client_max_body_size 0; #解除上传文件限制
+    ...
+   ```
+4. 保存并[重启 Nginx 服务](/zh/admin-services.md#nginx)

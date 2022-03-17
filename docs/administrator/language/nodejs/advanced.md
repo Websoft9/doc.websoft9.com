@@ -1,3 +1,6 @@
+---
+slug: /nodejs/advanced
+---
 # 进阶
 
 [Node.js](https://nodejs.org/) 是一个基于 Chrome JavaScript 的运行时平台， 用于方便地搭建响应速度快、易于扩展的网络应用。Node.js 使用事件驱动， 非阻塞I/O 模型而得以轻量和高效，非常适合在分布式设备上运行数据密集型的实时应用。  
@@ -150,3 +153,7 @@ TypeScript 是 JavaScript 的超集，简单说 TypeScript 具有更丰富的语
 #### NPM broken？
 
 尝试运行 `npm cache clean` 命令，若仍然没有解决问题，需更新或重装 NPM
+
+#### 如何安装和管理多个 Node 版本？
+
+使用 [NVM](https://github.com/creationix/nvm) 。 它可以避免权限错误，并解决更新 Node.js 和 npm 的复杂性。

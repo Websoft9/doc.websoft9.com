@@ -1,3 +1,7 @@
+---
+slug: /apache/advanced
+---
+
 # 进阶
 
 ## 安装
@@ -99,18 +103,20 @@ LoadModule vhost_alias_module modules/mod_vhost_alias.so
 Apache HTTP Server在安全性方面有良好记录，并且开发人员社区高度关注安全性问题。但是，不可避免的是，某些问题（无论大小）都会在发布后在软件中发现。因此，保持对软件更新的了解至关重要。如果您直接从Apache获得HTTP Server的版本，我们强烈建议您订阅[Apache HTTP Server](http://httpd.apache.org/lists.html#http-announce)公告列表，在其中可以随时了解新版本和安全更新。
 
 
-## 配置原理
+## 原理
+
+### 配置
 
 Apache HTTP Sever 提供了灵活的配置项，以帮助用户适用各种业务场景。
 
-### 配置文件
+#### 配置文件
 
 * 主配置文件：*/etc/httpd/conf/httpd.conf*
 * 扩展配置文件：*/etc/httpd/conf.d/*.conf*
 
 当Apache启动时，会加载/etc/httpd/conf.d/目录中的所有以.conf结尾的文件，做为配置文件来使用，所以管理员可以将配置推荐写在.conf中，如果将配置项写入主配置文件，系统升级时，配置项还要重新修改一遍，如果写在扩展配置项，则不存在此问题，同时也可以从繁杂的主配置文件中脱离出来。
 
-### 配置项
+#### 配置项
 
 | 配置项 | 说明                                  |
 | ------- | ---------------------------------------------- |
@@ -145,9 +151,9 @@ Apache HTTP Sever 提供了灵活的配置项，以帮助用户适用各种业�
 2. Apache的配置规则是 **后出现,先应用** 后面的出现的配置会覆盖前面的。
 3. 以上配置都应该在扩展配置里面覆盖更改或增加;
 
-## 核心模块原理
+### 核心模块
 
-### 多处理
+#### 多处理
 
 Apache HTTP 服务器被设计为一个功能强大，并且灵活的 web 服务器， 可以在很多平台与环境中工作。不同平台和不同的环境往往需要不同的特性，或可能以不同的方式实现相同的特性最有效率。  
 
@@ -217,7 +223,7 @@ LoadModule mpm_prefork_module modules/mod_mpm_prefork.so
 * [《Apache 工作的三种模式：Prefork、Worker、Events》](https://www.jianshu.com/p/2de515e958d6)
 * [《青蛙学Linux—Apache的MPM模式和httpd-mpm.conf》](https://www.cnblogs.com/yu2006070-01/p/10303808.html)
 
-### 代理
+#### 代理
 
 Apache中的代理即 mod_proxy 模块，它用于  URL的转发，即具有代理的功能。应用此功能，可以很方便的实现同 Tomcat 等应用服务器的整合，甚至可以很方便的实现 Web 集群的功能。 
 
@@ -238,7 +244,7 @@ proxy_wstunnel_module (shared)
 ```
 Apache代理使用详情参考：[《Apache模块mod_proxy》](http://httpd.apache.org/docs/2.4/mod/mod_proxy.html)
 
-### 日志
+#### 日志
 
 为了有效地管理Web服务器，有必要获取有关服务器的活动和性能以及可能发生的任何问题的反馈。Apache HTTP Server提供了非常全面和灵活的日志记录功能。
 
@@ -271,7 +277,7 @@ Apache 访问日志在实际工作中非常有用，比较典型的例子是进�
 
 日志条目中的第一项是消息的日期和时间。接下来是产生消息的模块（在这种情况下为核心）和消息的严重性级别。紧随其后的是遇到该条件的进程的进程ID，如果合适，还包括线程ID。接下来，我们有发出请求的客户地址。最后是详细的错误消息，在这种情况下，该错误消息表示请求的文件不存在。
 
-### SSL/TLS 加密
+#### SSL/TLS 加密
 
 Apache SSL/TLS 依赖于mod_ssl模块，这个模块基于OpenSSL，它使用安全套接字层和传输层安全协议提供了强加密。
 下图是典型的使用 SSL 加密的网页认证连接流程：
@@ -290,4 +296,49 @@ Listen 443
     SSLCertificateKeyFile "/path/to/www.example.com.key"
 </VirtualHost>
 ```
+
+## 问题
+
+#### 如何取消 Apache Test 页面？
+
+使用 # 号将: */etc/httpd/conf.d/welcome.conf* 中的所有内容全部注释掉，然后重启 Apache 服务
+
+#### mod_php 模块与 php-fpm 冲突吗？ 
+
+Apache 默认会安装 mod_php 模块。如果采用 php-fpm 服务来解析PHP文件，mod_php 不会与之冲突。
+
+#### 如何启用或禁用 Apache 模块？
+
+以伪静态模块为例：
+
+1. 打开 [Apache模块配置文件](../apache#path)，找到 *LoadModule rewrite_module modules/mod_rewrite.so*
+2. 通过“#”作为注释来开启或禁用此模块
+
+#### Apache 虚拟主机配置文件是什么？
+
+虚拟主机配置文件是 Apache 用于管理多个网站的**配置段集合**
+
+* 路径为：*/etc/httpd/conf.d/vhost.conf*。  
+* 每个配置段的形式为： `<VirtualHost *:80> ...</VirtualHost>`，有多少个网站就有多少个配置段
+
+#### 重启 Apache 服务显示 *No spaces...*
+
+出现此信息的时候，重启服务是成功的。
+
+解决方案:
+
+```
+echo "fs.inotify.max_user_watches=262144" >> /etc/sysctl.conf 
+
+sysctl -p
+```
+
+#### 命令 `httpd -t` 报错 [so:warn] [pid 14645] AH01574: module ssl_module is already loaded
+
+问题原因：mod_ssl 重复加载   
+解决方案：检查下面两个文件，找到 mod_ssl 字段，注释其中一个
+
+  * /etc/httpd/conf.modules.d/00-base.conf
+  * /etc/httpd/conf.modules.d/00-ssl.conf 
+
 

@@ -1,3 +1,7 @@
+---
+slug: /php/advanced
+---
+
 # 进阶
 
 ## 安装

@@ -120,6 +120,22 @@ ErrorDocument 404 /404.txt
 5. 重启 [Apache 服务](/zh/admin-services.md#apache)
 
 
+
+### 拒绝通过 IP 访问应用
+
+编辑网站的 Apache 虚拟主机配置段为如下格式，其中 xxx.xxx.xxx.xxx 表示服务器 IP 地址
+
+```
+NameVirtualHost  xxx.xxx.xxx.xxx
+<virtualhost  xxx.xxx.xxx.xxx:80>
+ServerName   xxx.xxx.xxx.xxx
+<Directory />
+Order Allow,Deny
+Deny from all
+</Directory>
+</virtualhost>
+```
+
 ### 设置 Apache 并发连接数{#connections}
 
 有大量访问的时候速度很慢，或403错误后反复刷新才能访问等问题，可能是性能造成的。  
@@ -151,7 +167,7 @@ ErrorDocument 404 /404.txt
    </IfModule>
    ```
 
-### HTTP跳转HTTPS{#httptohttps}
+### HTTP 跳转 HTTPS{#httptohttps}
 
 **方案一：修改.htaccess文件**
 
@@ -219,38 +235,10 @@ ServerName win.websoft9.com
 DocumentRoot "/data/wwwroot/default/site"
 ...
 ```
-### 禁用IP访问,防止恶意解析
-------------------------------------------------
-1. 给指定网站程序设置域名
-2.  将一下内容加入 `/etc/httpd/conf/httpd.conf` 的末尾或者在 `/etc/httpd/conf.d/` 目录下新建一个 `deny-ip.conf`的文件将内容写入
-     ```
-    <VirtualHost *:80>
-       ServerName 服务器IP地址
-       <Location />
-            Order Allow,Deny
-            Deny from all
-       </Location>
-     </VirtualHost>
 
-    <VirtualHost *:443>
-        ServerName 服务器IP地址
-        SSLEngine on
-        SSLCertificateFile /etc/pki/tls/certs/localhost.crt
-        SSLCertificateKeyFile /etc/pki/tls/private/localhost.key
-        <Location />
-          Order Allow,Deny
-          Deny from all
-        </Location>
-     </VirtualHost>
-    ```
-3. 重启 apache
-   ```
-   systemctl restart httpd
-   ```
+### 设置缓存，提升性能
 
-### 设置缓存，加速网站
-
-Apache HTTP服务器提供了一系列缓存功能，这些缓存功能旨在以各种方式提高服务器的性能。
+Apache HTTP 服务器提供了一系列缓存功能，这些缓存功能旨在以各种方式提高服务器的性能。
 
 详情参考官方文档：[缓存指南](http://httpd.apache.org/docs/2.4/caching.html)
 
@@ -501,9 +489,20 @@ sudo docker stats apache
 
 ### VirtualHost 模板{#virtualHost}
 
-Apache中的虚拟主机是通过 VirtualHost 进行配置的，下面是常见的模板
+Apache中的虚拟主机是通过 VirtualHost 进行配置的，下表是 VirtualHost  核心参数：
 
-#### HTTP VirtualHost 标准模板
+|  VirtualHost 项  |  作用说明  |  必要性 |
+| --- | --- | --- |
+|  ServerName  |  主域名   |  必须填写 |
+|  ServerAlias  |   辅域名 |  可以不填或删除 |
+|  DocumentRoot |  网站存放目录，同下  | 务必准确无误 |
+|  Directory |  网站存放目录，同上  |  务必准确无误 |
+|  ErrorLog  | 错误日志路径，系统会根据定义的路径产生相关日志文件   |  可以不填或删除 |
+|  CustomLog  | 访问日志路径，系统会根据定义的路径产生相关日志文件  |  可以不填或删除 |
+
+下面是常见的 VirtualHost  模板，适用于各种 Apache 应用场景：
+
+#### HTTP VirtualHost 标准模板{#wwwtemplate}
 
 ```
 <VirtualHost *:80>
@@ -520,7 +519,7 @@ Require all granted
 </VirtualHost>
 ```
 
-#### HTTP  Alias 模板
+#### HTTP  Alias 模板{#aliastemplate}
 
 ```
 Alias /path /data/wwwroot/zdoo
@@ -531,7 +530,7 @@ Require all granted
 </Directory>
 ```
 
-#### HTTP Proxy 模板
+#### HTTP Proxy 模板{#proxytemplate}
 
 下面是一个包含了 Proxy 的虚拟主机配置文件，其中应用程序运行在8069端口，通过转发配置域名访问。
 
@@ -549,7 +548,7 @@ ProxyPassReverse / http://172.21.172.27:8069/
 </VirtualHost>
 ```
 
-#### HTTPS VirtualHost 模板
+#### HTTPS VirtualHost 模板{#httpstemplate}
 
 ```
 <VirtualHost *:443>

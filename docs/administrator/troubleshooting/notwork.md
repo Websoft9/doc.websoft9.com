@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-slug: /troubleshooting/failure
+slug: /troubleshooting/notwork
 ---
 
 # 组件失效故障

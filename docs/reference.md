@@ -10,6 +10,11 @@ sidebar_position: 20
 
 * 《Linux系统安全：纵深防御、安全扫描与入侵检测》胥峰著
 * 《Docker 技术入门与实践》 杨宝华等著
+* 《第一本 Docker 书》，James Turnbull 著，李兆海 刘斌 巨震 译
+* 《Docker 技术入门与实战 第三版》，杨保华 戴王剑 曹亚仑 编著
+* [《菜鸟教程：Docker》](https://www.runoob.com/docker/docker-tutorial.html)
+* [Docker Questions](https://dockerquestions.com/) 一个有偿的 Docker 问答网站，已包含5万+个公开问题
+
 
 ## 博客
 

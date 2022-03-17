@@ -16,6 +16,29 @@ Nginx 在网站工作过程中，起着非常重要的作用。下面列出一�
 
 ### 域名绑定{#domain}
 
+当服务器上只有一个网站时，不做域名绑定也可以访问网站。但从安全和维护考量，**域名绑定**不可省却。
+
+以示例网站为例，域名绑定操作步骤如下：
+
+1. 确保域名解析已经生效  
+2. 使用 SFTP 工具登录云服务器
+2. 修改 [Nginx虚拟机主机配置文件](/zh/stack-components.md#nginx)，将其中的 **server_name** 项的值修改为你的域名
+   ```text
+   server
+   {
+   listen 80;
+   server_name www.example.com;  # 此处修改为你的域名
+   index index.html index.htm index.php;
+   root  /data/wwwroot/www.example.com;
+   ...
+   }
+   ```
+3. 保存配置文件，重启 [Nginx 服务](/zh/admin-services.md#nginx)
+
+### Nginx 配置可视化生成
+
+Nginx 配置文件可以通过[此工具](https://www.digitalocean.com/community/tools/nginx)可视化生成。
+
 ### 设置伪静态{#rewrite}
 
 设置 Nginx 伪静态有三个步骤：
@@ -41,7 +64,17 @@ Nginx 在网站工作过程中，起着非常重要的作用。下面列出一�
 
 ### 设置默认首页顺序
 ### 设置 IP 白名单/黑名单
-### 防止恶意解析
+
+### 设置 HTTP 跳转到 HTTPS？
+
+在网站对应的 server{} 配置段中增加规则即可：
+
+```
+ if ($scheme != "https") 
+    {
+    return 301 https://$host$request_uri;
+    }
+```
 
 ### 设置最大打开文件数{#maxopenfile}
 
@@ -59,7 +92,7 @@ Nginx 在网站工作过程中，起着非常重要的作用。下面列出一�
 
 ### 状态监控{#monitor}
 
-定义了一个 location ~ ^/NginxStatus/，这样通过 http://localhost/NginxStatus/ 就可以监控到 Nginx 的运行信息，显示的内容如下：
+定义一个 location ~ ^/NginxStatus/，通过 http://localhost/NginxStatus/ 就可以监控到 Nginx，运行结果：
 
 ```
 Active connections: 70 
@@ -99,7 +132,7 @@ expires max;
 expires off;
 ```
 
-### 连接语言运行环境{#language}
+### 连接程序运行时{#language}
 
 Nginx 可以作为常见的开发语言的 Web 服务器，集成数据库、应用容器，最后形成一个完整的应用运行环境，例如：Nginx+PHP，Nginx+Tomcat+Java等
 
@@ -246,21 +279,16 @@ nginx -g directives #设置配置文件外的全局指令
 在不同的操作系统下，Nginx对应的服务启停如下：
 
 ```
-#CentOS/Redhat/Fedora
-systemctl start httpd
-systemctl stop httpd
-systemctl restart httpd
-systemctl status httpd
-
-# Ubutnu/Debian
-systemctl start apache2
-systemctl stop apache2
-systemctl restart apache2
-systemctl status apache2
+sudo systemctl start nginx
+sudo systemctl stop nginx
+sudo systemctl restart nginx
+sudo systemctl status nginx
 ```
-### VirtualHost 模板{#template}
+### server 模板{#template}
 
-#### HTTP VirtualHost 模板
+server 模板即 Nginx 虚拟主机配置文件的模板。  
+
+#### HTTP server 模板{#wwwtemplate}
 
 ```
 server
@@ -279,9 +307,9 @@ server
         }
 ```
 
-#### HTTP Alias 模板
+#### HTTP Alias 模板{#aliastemplate}
 
-请将下面 Alias 模板插入到 default.conf 中已存在的 server{} 段中，并修改其中的 location,alias 
+Alias 模板插入到 default.conf 中已存在的 server{} 段中，并修改其中的 location,alias 
 
       ```
       location /mysite2
@@ -301,25 +329,36 @@ server
 
       注意：Alias 模板只能插入到 server{} 配置段中
 
-#### HTTPS VirtualHost 模板
 
-HTTPS 配置项 到对应的 HTTP server{ } 段落中
+#### HTTP Proxy 模板{#proxytemplate}
 
 ```
-#-----HTTPS template start------------
-listen 443 ssl; 
-ssl_certificate /data/cert/xxx.crt;
-ssl_certificate_key /data/cert/xxx.key;
-ssl_session_timeout 5m;
-ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
-ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE;
-ssl_prefer_server_ciphers on;
-#-----HTTPS template end------------
+server {
+    listen 80;
+    server_name _;
+    location / {
+        proxy_pass  http://127.0.0.1:3000;
+        proxy_redirect     off;
+        proxy_set_header   Host             $host;
+        proxy_set_header   X-Real-IP        $remote_addr;
+        proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
+        proxy_next_upstream error timeout invalid_header http_500 http_502 http_503 http_504;
+        proxy_max_temp_file_size 0;
+        proxy_connect_timeout      90;
+        proxy_send_timeout         90;
+        proxy_read_timeout         90;
+        proxy_buffer_size          4k;
+        proxy_buffers              4 32k;
+        proxy_busy_buffers_size    64k;
+        proxy_temp_file_write_size 64k;
+   }
+   include extra/*.conf;
+}
 ```
 
-#### HTTP Proxy 模板
+有多少个网站，就需要在 default.conf 中增加同等数量的 server 配置项。
 
-Proxy_pass反向代理，用的是nginx的Proxy模块。下面是常见的 Proxy 方式：
+Proxy_pass反向代理，用的是 nginx 的 Proxy 模块。下面是常见的 Proxy 方式：
 
 ```
 第一种：
@@ -348,4 +387,20 @@ location /proxy/ {
     proxy_pass http://127.0.0.1/aaa;
 }
 代理到URL：http://127.0.0.1/aaatest.html
+```
+
+#### HTTPS server 模板{#httpstemplate}
+
+HTTPS 配置项 到对应的 HTTP server{ } 段落中
+
+```
+#-----HTTPS template start------------
+listen 443 ssl; 
+ssl_certificate /data/cert/xxx.crt;
+ssl_certificate_key /data/cert/xxx.key;
+ssl_session_timeout 5m;
+ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE;
+ssl_prefer_server_ciphers on;
+#-----HTTPS template end------------
 ```

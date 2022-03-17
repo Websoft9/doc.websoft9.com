@@ -10,6 +10,13 @@ slug: /nodejs
 
 ## 场景
 
+### 开启外网访问
+
+开启 Node 应用的外网访问，主要通过 --host 实现，--port 可以指定端口
+
+```
+npm run start -- --host 0.0.0.0  --port 3002
+```
 
 ### 框架{#framework}
 

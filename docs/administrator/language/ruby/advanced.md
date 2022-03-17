@@ -1,3 +1,7 @@
+---
+slug: /ruby/advanced
+---
+
 # 进阶
 
 ## 安装

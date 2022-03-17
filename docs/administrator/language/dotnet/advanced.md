@@ -1,3 +1,7 @@
+---
+slug: /dotnet/advanced
+---
+
 # 进阶
 
 [Node.js](https://nodejs.org/) 是一个基于 Chrome JavaScript 的运行时平台， 用于方便地搭建响应速度快、易于扩展的网络应用。Node.js 使用事件驱动， 非阻塞I/O 模型而得以轻量和高效，非常适合在分布式设备上运行数据密集型的实时应用。  

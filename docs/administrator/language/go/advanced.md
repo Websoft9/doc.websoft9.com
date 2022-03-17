@@ -1,3 +1,7 @@
+---
+slug: /go/advanced
+---
+
 # 进阶
 
 [Go](https://golang.google.cn/) 语言也称 Golang，兼具效率、性能、安全、健壮等特性。它的主要目标是“兼具 Python 等动态语言的开发速度和 C/C++ 等编译型语言的性能与安全性”。
