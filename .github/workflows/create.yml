@@ -18,7 +18,7 @@ jobs:
           trademark=$(cat docs/_list |awk -F/ '{print $NF}')
           doc_type=$(cat docs/_list |awk -F/ '{print $1}')
           appname=$(cat docs/_list |awk -F/ '{print $NF}' | tr '[A-Z]' '[a-z]')
-          if [ ! -d docpath]; then
+          if [ ! -d $docpath]; then
             mkdir -p docs/$docpath
             pip install Jinja2 jinja2-cli
             template_path=""
