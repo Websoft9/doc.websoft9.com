@@ -253,7 +253,8 @@ uWSGI 目录： */etc/uwsgi.d*
 
 ### Gunicorn
 
-## 问题
+
+## 问题解答
 
 #### 如何找到 Python 资源？
 
@@ -297,7 +298,40 @@ For python3.x, default encoding is UTF-8
 
 In a CPython interpreter, bytecode is fed to PVM (Python Virtual Machine) which is responsible for running your code.
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/python/python-interpreter-websoft9.png)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/python/python-interpreter-websoft9.png)  
+
+#### Python 有那些编译器？
+
+* [CPython](http://www.python.org/) is the reference implementation of Python, written in C. 
+* [PyPy](http://pypy.org/) is a Python interpreter implemented in a restricted statically-typed subset of the Python language called RPython. 
+* [Jython](http://www.jython.org/) is a Python implementation that compiles Python code to Java bytecode which is then executed by the JVM (Java Virtual Machine). 
+* [IronPython](http://ironpython.net/) is an implementation of Python for the .NET framework. 
+* [Python for .NET](http://pythonnet.github.io/) is a package which provides near seamless integration of a natively installed Python installation with the .NET Common Language Runtime (CLR).
+
+#### 什么是 ".egg" file？
+Python Eggs are a way of bundling additional information with a Python project, that allows the project's dependencies to be checked and satisfied at runtime, as well as allowing projects to provide plugins for other projects.
+
+#### 什么是 virtualenv？
+virtualenv is a tool to create isolated Python environments. virtualenv homepage and documentation. [http://www.virtualenv.org/en/latest/](http://www.virtualenv.org/en/latest/)
+
+#### Python 多版本如何安装网站？
+
+可以，创建隔离环境的时候指定具体版本，例如：
+
+```
+python3.8 -m venv --system-site-packages "/data/wwwroot/yoursite1"
+```
+
+#### 为什么需要创建隔离环境？
+
+避免不同的应用对同一个 Python 软件包有不同的版本冲突，隔离环境完美解决此问题
+
+#### 一个 django 环境支持多个 django 项目？
+
+可以
+
+
+## 故障速查
 
 #### 执行 django 启动命令报错？
 
@@ -319,18 +353,4 @@ ERROR: Command errored out with exit status 1:
 ```
 
 错误原因：  
-解决方案：  
-
-#### Python 有那些编译器？
-
-* [CPython](http://www.python.org/) is the reference implementation of Python, written in C. 
-* [PyPy](http://pypy.org/) is a Python interpreter implemented in a restricted statically-typed subset of the Python language called RPython. 
-* [Jython](http://www.jython.org/) is a Python implementation that compiles Python code to Java bytecode which is then executed by the JVM (Java Virtual Machine). 
-* [IronPython](http://ironpython.net/) is an implementation of Python for the .NET framework. 
-* [Python for .NET](http://pythonnet.github.io/) is a package which provides near seamless integration of a natively installed Python installation with the .NET Common Language Runtime (CLR).
-
-#### 什么是 ".egg" file？
-Python Eggs are a way of bundling additional information with a Python project, that allows the project's dependencies to be checked and satisfied at runtime, as well as allowing projects to provide plugins for other projects.
-
-### 什么是 virtualenv？
-virtualenv is a tool to create isolated Python environments. virtualenv homepage and documentation. [http://www.virtualenv.org/en/latest/](http://www.virtualenv.org/en/latest/)
+解决方案：

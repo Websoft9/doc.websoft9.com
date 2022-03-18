@@ -34,7 +34,7 @@ bundle config mirror.https://rubygems.org https://gems.ruby-china.com/
 
 > gemfile 中也可以指定源，这样就无需全局设置
 
-### Ruby 版本变更{#version}
+### Ruby 版本变更{#changeversion}
 
 Ruby 的多版本管理非常灵活。
 

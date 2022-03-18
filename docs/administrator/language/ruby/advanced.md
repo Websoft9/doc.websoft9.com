@@ -115,6 +115,10 @@ bundle install --path=$(pwd)
 
 有待研究。建议部署部署一个。
 
+#### rvm 安装后如何立即生效？
+
+`rvm export -p`
+
 #### 如何使用 gem 设定 rails 包的默认版本？
 
 #### Gemfile.local 与 Gemfile 有什么区别？

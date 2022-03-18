@@ -63,6 +63,10 @@ LEMP 就是 LNMP，是不同的用户采用的不同名称而已
 已经内置了部分常用网站的伪静态规则文件，进入目录可以查看
 ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/lnmp-multi/lnmp-rewrite-1-websoft9.png)
 
+#### Python 应用环境中的框架安装方式？
+
+采用虚拟环境安装
+
 
 ## 故障速查
 
@@ -77,7 +81,7 @@ chown -R nginx.nginx /data/wwwroot
 
 一般是 server{ } 中虚拟主机的目录位置不正确导致
 
-#### 新增网站访问异常，且导致其他网站访问异常？
+#### 新增网站访问异常，且导致其他网站异常？
 
 一般是 server{ } 中虚拟主机的目录位置不正确导致 Nginx 无法启动
 

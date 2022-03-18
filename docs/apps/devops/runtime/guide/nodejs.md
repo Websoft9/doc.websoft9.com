@@ -7,9 +7,9 @@ tags:
   - 运行环境
 ---
 
-# Node.js
+# Node.js 应用
 
-## 安装 Node.js 网站
+## 安装 Node.js 应用
 
 在 Node.js 环境上安装一个网站（应用），也就是我们常说的增加一个虚拟主机。
 
@@ -67,7 +67,7 @@ tags:
 
 ## 维护 Node.js 环境
 
-参考本文档：[Node.js 指南](../nodejs) 和 [Node.js 进阶](../nodejs/advanced) 
+参考本文档：[《Node.js 指南》](../nodejs) 和 [《Node.js 进阶》](../nodejs/advanced) 
 
 
 

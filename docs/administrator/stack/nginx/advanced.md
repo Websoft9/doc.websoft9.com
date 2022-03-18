@@ -144,7 +144,7 @@ server{ } 改动务必准确无误，任何错误的修改都会导致服务器�
 |  ssl_certificate  | HTTPS 证书路径  |  设置 HTTPS 访问时必填 |
 |  ssl_certificate_key  | HTTPS 证书秘钥路径   |  设置 HTTPS 访问时必填 |
 
-## 核心模块
+## 模块
 
 Nginx 采用模块化设计机制，各个模块协作共同完成处理任务。主要模块分类：
 

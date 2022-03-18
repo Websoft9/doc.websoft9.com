@@ -17,7 +17,7 @@ mvn archetype:generate -DgroupId=com.companyname.automobile -DartifactId=trucks 
 
 ### Web 框架{#framework}
 
-### JDK 版本变更{#version}
+### JDK 版本变更{#changeversion}
 
 
 ## 参数

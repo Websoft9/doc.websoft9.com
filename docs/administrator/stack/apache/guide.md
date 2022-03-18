@@ -40,8 +40,8 @@ Apache 在网站工作过程中，起着非常重要的作用。下面列出一�
 
 使用和设置 Apache 伪静态有三个步骤：
 
-1.  打开 [Apache模块配置文件](/zh/stack-components.md#apache)，检查 Rewrite 模块是否启用（LAMP 环境默认已经开启 Rewirte）
-2.  保证 [Apache 虚拟主机配置文件](/zh/stack-components.md#apache)中 VirtualHost 配置段中增加 AllowOverride All
+1.  打开 [Apache模块配置文件](#path)，检查 Rewrite 模块是否启用（LAMP 环境默认已经开启 Rewirte）
+2.  保证 [Apache 虚拟主机配置文件](#path)中 VirtualHost 配置段中增加 AllowOverride All
 3.  给需要使用伪静态的网站的根目录中增加.htaccess文件，并在其中配置伪静态规则
 
 **范例：重定向**

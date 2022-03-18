@@ -241,6 +241,7 @@ Nginx 广泛被用于 Ruby 应用程序的 HTTP 前端，而 Ruby 应用程序�
 
 **CentOS/RedHat/Fedora**
 
+Nginx 配置文件目录： */etc/nginx/conf.d*  
 Nginx 虚拟主机配置文件：*/etc/nginx/conf.d/default.conf*  
 Nginx 主配置文件： */etc/nginx/nginx.conf*  
 Nginx 日志文件： */var/log/nginx*  
@@ -250,7 +251,10 @@ Nginx 伪静态规则目录： */etc/nginx/conf.d/rewrite*
 
 Nginx 虚拟主机配置文件：*/etc/nginx/sites-available/default*  
 Nginx 主配置文件：*/etc/nginx/nginx.conf*  
-Nginx 日志文件：*/var/log/nginx/*
+Nginx 日志文件：*/var/log/nginx/*   
+
+
+.default 结尾的文件是配置范例文件
 
 ### 命令行{#cmd}
 
@@ -292,42 +296,79 @@ server 模板即 Nginx 虚拟主机配置文件的模板。
 
 ```
 server
-       {
-        listen 80;
-        server_name mysite2.yourdomain.com;
-        index index.html index.htm index.php;
-        root  /data/wwwroot/mysite2;
-        error_log /var/log/nginx/mysite2.yourdomain.com-error.log crit;
-        access_log  /var/log/nginx/mysite2.yourdomain.com-access.log;
-        include conf.d/extra/*.conf;
+    {
+    listen 80;
+    server_name yourdomain.com-error.log;
+    index index.html index.jsp index.php;
+    root  /data/wwwroot/yoursite;
+    error_log /var/log/nginx/yourdomain.com-error.log-error.log crit;
+    access_log  /var/log/nginx/yourdomain.com-error.log-access.log;
+    include conf.d/extra/*.conf;
 
-        ## Includes one of your Rewrite rules if you need, examples
-        # include conf.d/rewrite/wordpress.conf;
-        # include conf.d/rewrite/joomla.conf;
-        }
+    ## Includes one of your Rewrite rules if you need, examples
+    # include conf.d/rewrite/wordpress.conf;
+    # include conf.d/rewrite/joomla.conf;
+    }
+include extra/*.conf;
+
+#------------- SSL Start --------------
+
+#------------- SSL End  ---------------
+}
+``` 
+
+#### HTTP uwsgi 模板{#uwsgitemplate}
+
 ```
+server {
+    listen 80;
+    server_name yoursite1.yourdomain.com;
 
+    location / {
+        include uwsgi_params;
+        uwsgi_read_timeout 3600;
+        uwsgi_pass 127.0.0.1:8001;
+        }
+
+    location  ~/static/ {
+        expires 30d;
+        autoindex on; 
+        add_header Cache-Control private;
+        root /data/wwwroot/mydjango/mysite1; 
+        }
+
+    error_log /var/log/nginx/yourdomain.com-error.log error;
+    access_log  /var/log/nginx/yourdomain.com-access.log;
+
+    include extra/*.conf;
+    
+    #------------- SSL Start --------------
+
+    #------------- SSL End  ---------------
+    }
+```
 #### HTTP Alias 模板{#aliastemplate}
 
 Alias 模板插入到 default.conf 中已存在的 server{} 段中，并修改其中的 location,alias 
 
-      ```
-      location /mysite2
-      {
-       alias /data/wwwroot/mysite2;
-       index index.php index.html;
-       location ~ ^/mysite2/.+\.php$ {
-        alias /data/wwwroot/mysite2;
-        fastcgi_pass  unix:/dev/shm/php-fpm-default.sock;
-        fastcgi_index  index.php;
-        fastcgi_param  SCRIPT_FILENAME /data/wwwroot/$fastcgi_script_name;
-        include        fastcgi_params; }
-      include conf.d/extra/*.conf;
-      }
-      ```
-      ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/lnmp/lnmp-insertalias-websoft9.png)
+```
+location /mysite2
+{
+alias /data/wwwroot/mysite2;
+index index.php index.html;
+location ~ ^/mysite2/.+\.php$ {
+alias /data/wwwroot/mysite2;
+fastcgi_pass  unix:/dev/shm/php-fpm-default.sock;
+fastcgi_index  index.php;
+fastcgi_param  SCRIPT_FILENAME /data/wwwroot/$fastcgi_script_name;
+include        fastcgi_params; }
+include conf.d/extra/*.conf;
+}
+```
 
-      注意：Alias 模板只能插入到 server{} 配置段中
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/lnmp/lnmp-insertalias-websoft9.png)
+
+注意：Alias 模板只能插入到 server{} 配置段中
 
 
 #### HTTP Proxy 模板{#proxytemplate}
@@ -335,13 +376,16 @@ Alias 模板插入到 default.conf 中已存在的 server{} 段中，并修改�
 ```
 server {
     listen 80;
-    server_name _;
+    server_name yoursite1.yourdomain.com;
     location / {
-        proxy_pass  http://127.0.0.1:3000;
+        proxy_pass  http://127.0.0.1:8001;
         proxy_redirect     off;
         proxy_set_header   Host             $host;
         proxy_set_header   X-Real-IP        $remote_addr;
         proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
+        proxy_set_header   X-Forwarded-Proto $scheme;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection upgrade;
         proxy_next_upstream error timeout invalid_header http_500 http_502 http_503 http_504;
         proxy_max_temp_file_size 0;
         proxy_connect_timeout      90;
@@ -351,10 +395,17 @@ server {
         proxy_buffers              4 32k;
         proxy_busy_buffers_size    64k;
         proxy_temp_file_write_size 64k;
-   }
-   include extra/*.conf;
 }
-```
+error_log /var/log/nginx/yourdomain.com-error.log error;
+access_log  /var/log/nginx/yourdomain.com-access.log;
+
+include extra/*.conf;
+
+#------------- SSL Start --------------
+
+#------------- SSL End  ---------------
+}
+``` 
 
 有多少个网站，就需要在 default.conf 中增加同等数量的 server 配置项。
 

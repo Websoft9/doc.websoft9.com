@@ -7,6 +7,7 @@ slug: /go
 
 ## 场景
 
+### Golang 版本变更{#changeversion}
 
 ### 框架{#framework}
 
