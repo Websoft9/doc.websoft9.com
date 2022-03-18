@@ -14,7 +14,7 @@ jobs:
           
       - name: Create docs by template
         run: |
-          docpath=$(cat docs/_list | tr '[A-Z]' '[a-z]')
+          docpath=docs/"$(cat docs/_list | tr '[A-Z]' '[a-z]')"
           trademark=$(cat docs/_list |awk -F/ '{print $NF}')
           doc_type=$(cat docs/_list |awk -F/ '{print $1}')
           appname=$(cat docs/_list |awk -F/ '{print $NF}' | tr '[A-Z]' '[a-z]')
@@ -29,7 +29,8 @@ jobs:
             fi
             for file in $(ls $template_path | grep ".jinja2")
               do
-                jinja2 $template_app/$file -D appname=$appname -D trademark=$trademark > docs/$docpath/$file.md
+                newfile=docs/$docpath/"$(echo $file | cut -d. -f1)".md
+                jinja2 $template_path/$file -D appname=$appname -D trademark=$trademark > newfile
               done
             echo "documentation create success"
           else
