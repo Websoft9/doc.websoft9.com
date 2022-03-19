@@ -133,7 +133,6 @@ tags:
 参考本文档相关专题章节：
 
 * [Java 指南](../java) 和 [Java 进阶](../java/advanced) 
-* [Tomcat 指南](../java) 和 [Tomcat 进阶](../tomcat/advanced) 
 
 
 

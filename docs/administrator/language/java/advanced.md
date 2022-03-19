@@ -6,7 +6,7 @@ slug: /java/advanced
 
 ## 安装
 
-### 安装
+### 安装 JDK
 
 使用 Ansible 可以很方便安装由 Websoft9 提供的多版本 JDK 安装：  
 
@@ -14,6 +14,17 @@ slug: /java/advanced
 git clone https://github.com/websoft9/role_jdk
 ansible-playbook role_jdk/tests/test.yml
 ```
+
+### 安装 Tomcat
+
+使用 Ansible 可以很方便安装由 Websoft9 提供的多版本 Tomcat 安装：  
+
+```
+git clone https://github.com/websoft9/role_tomcat
+ansible-playbook role_tomcat/tests/test.yml
+```
+
+### 安装 Jetty
 
 ### 升级
 
