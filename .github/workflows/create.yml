@@ -9,7 +9,7 @@ jobs:
     name: Create docs automaticlly
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@master
         name: Check out code
           
       - name: Create docs by template
