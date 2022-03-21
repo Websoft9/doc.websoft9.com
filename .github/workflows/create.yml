@@ -41,3 +41,4 @@ jobs:
         with:
           commit_message: commit newest docs
           push_options: --force
+          branch: main
