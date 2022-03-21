@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
         with:
-          token: ${{ github.token }}
+          token: ${{ secrets.all_token }}
           ref: ${{ github.head_ref }}
         name: Check out code
         
