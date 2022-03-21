@@ -39,7 +39,9 @@ jobs:
             echo "documentation is exist"
           fi
 
-      - name: Commit & Push changes
-        uses: github-actions-x/commit@v2.8
+      - name: Push to protected branch
+        uses: CasperWA/push-protected@v2
         with:
-         files: docs/*
+          token: ${{ secrets.ACCESS_TOKEN }}
+          branch: main
+          unprotect_reviews: true
