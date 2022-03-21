@@ -4,6 +4,7 @@ on:
     branches: [ main ]
     paths: 
       - 'docs/_list'
+      - '.github/workflows/create.yml'
 jobs:
   build:
     name: Create docs automaticlly
