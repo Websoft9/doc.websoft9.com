@@ -41,3 +41,6 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: commit newest docs
+          push_options: --force
+          commit_options: '--no-verify --signoff'
+          branch: main
