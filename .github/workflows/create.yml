@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
         with:
-          token: ${{ secrets.ACCESS_TOKEN }}
+          token: ${{ github.token }}
           ref: ${{ github.head_ref }}
         name: Check out code
 
@@ -47,5 +47,5 @@ jobs:
       - name: Commit & Push changes
         uses: actions-js/push@master
         with:
-          github_token: ${{ secrets.ACCESS_TOKEN }}
+          github_token: ${{ github.token }}
           author_name: ${{ github.actor }}
