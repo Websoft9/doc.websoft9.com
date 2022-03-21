@@ -37,10 +37,10 @@ jobs:
           else
             echo "documentation is exist"
           fi
-          
-      - uses: stefanzweifel/git-auto-commit-action@v4
+
+      - name: Push latest repo
+        uses: github-actions-x/commit@v2.8
         with:
-          commit_message: commit newest docs
-          push_options: --force
-          commit_options: '--no-verify --signoff'
-          branch: main
+          github-token: ${{ secrets.ACCESS_TOKEN }}
+          push-branch: main
+          commit-message: 'commit newest docs'
