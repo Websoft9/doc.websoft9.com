@@ -41,5 +41,3 @@ jobs:
 
       - name: Commit & Push changes
         uses: github-actions-x/commit@v2.8
-        with:
-          github-token: ${{ secrets.ACCESS_TOKEN }}
