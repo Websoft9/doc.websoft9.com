@@ -15,8 +15,6 @@ jobs:
           token: ${{ github.token }}
           ref: ${{ github.head_ref }}
         name: Check out code
-
-
         
       - name: Create docs by template
         run: |
@@ -47,5 +45,5 @@ jobs:
       - name: Commit & Push changes
         uses: actions-js/push@master
         with:
-          github_token: ${{ github.token }}
+          github_token: ${{ github.all_token }}
           author_name: ${{ github.actor }}
