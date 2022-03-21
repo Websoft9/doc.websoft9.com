@@ -30,7 +30,7 @@ jobs:
             for file in $(ls $template_path | grep ".jinja2")
               do
                 newfile=docs/$docpath/"$(echo $file | cut -d. -f1)".md
-                jinja2 $template_path/$file -D appname=$appname -D trademark=$trademark > newfile
+                jinja2 $template_path/$file -D appname=$appname -D trademark=$trademark > $newfile
               done
             echo "documentation create success"
           else
