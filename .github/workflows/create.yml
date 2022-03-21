@@ -40,7 +40,6 @@ jobs:
           fi
 
       - name: Commit & Push changes
-        uses: actions-js/push@master
+        uses: github-actions-x/commit@v2.8
         with:
-          github_token: ${{ secrets.ACCESS_TOKEN }}
-          author_name: ${{ github.actor }}
+          github-token: ${{ secrets.ACCESS_TOKEN }}
