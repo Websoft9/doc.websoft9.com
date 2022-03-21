@@ -10,8 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+          ref: ${{ github.head_ref }}
         name: Check out code
-          
+
+
+        
       - name: Create docs by template
         run: |
           docpath=docs/"$(cat docs/_list | tr '[A-Z]' '[a-z]')"
