@@ -38,9 +38,7 @@ jobs:
             echo "documentation is exist"
           fi
 
-      - name: Push latest repo
-        uses: github-actions-x/commit@v2.8
+      - name: Commit & Push changes
+        uses: actions-js/push@master
         with:
-          github-token: ${{ secrets.ACCESS_TOKEN }}
-          push-branch: main
-          commit-message: 'commit newest docs'
+          github_token: ${{ secrets.ACCESS_TOKEN }}
