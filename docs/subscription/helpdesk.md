@@ -10,8 +10,7 @@ Websoft9专注于安装部署、配置和运维相关技术问题，类似您企
 
 ## 范围
 
-![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/supportmind-websoft9.png
-)
+![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/supportmind-websoft9.png)
 
 
 说明：
@@ -78,7 +77,7 @@ Websoft9在主流的云市场上发布了按需购买的高级服务产品，我
 
 #### 你们的正常上班时间是？
 
-周一至周五 / 8:30--17:30 是我们标准的工作时间，此时间区间客服可以做到实时响应。
+周一至周五 / 8:00--17:30 是我们标准的工作时间，此时间区间客服可以做到实时响应。
 
 #### 有时候联系不上？
 

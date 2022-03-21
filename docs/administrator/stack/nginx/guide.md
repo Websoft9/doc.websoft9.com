@@ -35,6 +35,20 @@ Nginx 在网站工作过程中，起着非常重要的作用。下面列出一�
    ```
 3. 保存配置文件，重启 [Nginx 服务](/zh/admin-services.md#nginx)
 
+### 修改网站目录{#changepath}
+
+原理同上，仅需修改 `root` 对应的值即可修改网站目录
+
+```
+server
+{
+listen 80;
+server_name example.yourdomain.com;
+index index.html index.htm index.php;
+root  /data/wwwroot/example;...
+}
+```
+
 ### Nginx 配置可视化生成
 
 Nginx 配置文件可以通过[此工具](https://www.digitalocean.com/community/tools/nginx)可视化生成。

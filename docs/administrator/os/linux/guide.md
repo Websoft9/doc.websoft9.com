@@ -9,9 +9,19 @@ slug: /linux
 
 ### 连接 Linux
 
-最常见的方式是使用SSH工具连接Linux，SSH工具包括：Putty,Xshell,WinSCP等  
+常见 Linux 连接方式包括：
 
-如果使用云服务器，云厂商一般都会提供在线的SSH工具
+* SSH 连接
+* SFTP 连接
+* RDP 连接
+* VNC 连接
+* Telnet 连接
+
+其中 SSH 和 SFTP 是最常见的两种连接方式。热门的连接工具包括：WinSCP, Putty, Xshell, Tabby, MobaXterm 等
+
+如果不想安装这些工具到本地电脑，也可以使用云平台提供的 Web 版在线连接工具。  
+
+我们推荐使用 WinSCP，同时提供了[配套的说明文档](./setup/vm#connectlinux)。  
 
 ### 安装 FTP
 

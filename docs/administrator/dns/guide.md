@@ -7,53 +7,51 @@ slug: /dns
 
 ## 场景
 
-### 域名备案
+### 域名五步设置{#domain}
 
-服务器地区在中国大陆的对应的域名需要备案，备案是纯粹的**商务流程活动**，没有任何技术门槛，建议用户自行完成：
+#### 域名注册{#domainreg}
+
+通过域名服务商注册（购买）一个自己喜欢且符合网站特征的域名。
+
+#### 域名实名制认证{#domainauth}
+
+域名注册完成之后，还需要提供个人或公司法人证件进行域名所有者的实名制认证。  
+
+#### 域名备案{#domainbei}
+
+备案是中国大陆的一项法规，域名用于中国大陆地区的服务器访问必须备案。也就是说向政府监管部门提供：**网站存放的详细信息**
+
+备案是纯粹的**商务流程活动**，没有任何技术门槛，建议用户自行完成：
 
 * 购买服务器满足云平台的免费备案要求，就可以由云平台供备案服务。
 * 备案过程请通过云平台的**备案系统**全程操作
 * 云平台提供 7*24 域名备案咨询服务
 
-### 域名解析与绑定
+#### 域名解析{#domainresolve}
 
-如果没有域名，网站就只能通过IP地址访问，这样不便于记忆和识别。
+我们知道，网站如果通过 IP 地址访问，这样不便于记忆和识别。域名解析的作用是通过一段**容易识别的文字段**来指向服务器的**IP地址**。类似：abc.com 指向 80.123.9.11 
 
-可见，域名的作用是通过一段**容易识别的文字段**来指向服务器的**IP地址**。类似：abc.com 指向 80.123.9.11 
-
-为了使网站可以通过域名访问，配置域名分为两个步骤：
-
-1.  **域名解析**：在域名的控制台上做一个将域名（或子域名）指向 IP (下图示例)
+下面是是一个域名解析的范例：通过域名的控制台，将域名（或子域名）指向 IP：  
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/domain-websoft9.png)
 
-2.   **域名绑定**：在**虚拟主机配置文件**中，将每个域名绑定到对应的网站目录（服务器只有一个网站，域名绑定步骤可不做）
 
-### 修改虚拟主机配置文件
+#### 域名绑定{#domainbind}
 
-上面说到，需要通过修改虚拟主机配置文件来绑定域名
+上面的域名解析避免了直接使用 IP 地址，但域名配置还差最后一步。  
 
-虚拟主机配置文件在哪里呢？ 要根据所使用的 Web 服务器而定（[查看对应的路径](#path)）
+我们设想一个很常见的情况：有多个域名解析到同一个服务器时，服务器是如何区分并提供不同域名所需资源的？
 
-下面是一个虚拟配置文件范例（Apache）：
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/apache/apache-vhostui-websoft9.png)
 
-   ~~~ 
-    <VirtualHost *:80>
-    ServerName www.mydomain.com
-    ServerAlias other.mydomain.com
-    DocumentRoot "/data/wwwroot/default/mysite2"
-    ErrorLog "/var/log/httpd/www.mydomain.com_error_apache.log"
-    CustomLog "/var/log/httpd/www.mydomain.com_apache.log" common
-    <Directory "/data/wwwroot/default/mysite1">
-    Options Indexes FollowSymlinks
-    AllowOverride All
-    Require all granted
-    </Directory>
-    </VirtualHost>
-   ~~~
+其实这个问题就是**域名绑定**要做的工作。通过修改服务器中的 Web  服务器的 **虚拟主机配置文件**，即可实现域名绑定。  
 
-通过修改配置文件中域名相关的值（ServerName,ServerAlias等）实现绑定域名。
+具体参考对应的指南：  
 
-如果服务器上有多个网站，就必须对应多个 `<VirtualHost *:80> ... </VirtualHost>` 配置段。
+* [Apache 域名绑定](./apache#domain)
+* [Nginx  域名绑定](./nginx#domain)
+* [Caddy 域名绑定](./caddy#domain)
+* [Traefik 域名绑定](./traefik#domain)
+* [IIS 域名绑定](./iis#domain)
 
 ### HTTPS 基本设置{#https}
 
