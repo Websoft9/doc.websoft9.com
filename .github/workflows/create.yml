@@ -11,7 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        name: Check out code
+	      with:
+		     token: ${{ secrets.PROTECTED_TOKEN }}
         
       - name: Create docs by template
         run: |
@@ -38,11 +39,7 @@ jobs:
           else
             echo "documentation is exist"
           fi
-          git add -A
-          git commit -m "Create docs automaticlly"
 
-      - name: Push to protected branch
-        uses: CasperWA/push-protected@v2
+      - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          token: ${{ secrets.PROTECTED_TOKEN }}
-          branch: main
+          commit_message: Templating README
