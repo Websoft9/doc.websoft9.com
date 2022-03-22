@@ -44,4 +44,3 @@ jobs:
         with:
           token: ${{ secrets.PROTECTED_TOKEN }}
           branch: main
-          unprotect_reviews: true
