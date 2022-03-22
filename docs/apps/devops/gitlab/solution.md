@@ -1,6 +1,6 @@
 ---
-sidebar_position: 3
-slug: /gitlab/study
+sidebar_position: 2
+slug: /gitlab/solution
 tags:
   - Gitlab
   - DevOps

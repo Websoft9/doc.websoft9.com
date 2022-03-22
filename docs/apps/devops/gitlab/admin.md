@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 slug: /gitlab/admin
 tags:
   - Gitlab
@@ -291,7 +291,7 @@ GitLab Community Edition (CE) 升级到同版本的 GitLab Enterprise Edition �
 以上操作更详细说明请参考官方文档：[Updating Community Edition to Enterprise Edition](https://docs.gitlab.com/omnibus/update/README.html#updating-community-edition-to-enterprise-edition)
 
 
-## 故障处理
+## 故障速查
 
 我们收集使用 GitLab 过程中最常见的故障，供您参考：
 
@@ -322,6 +322,11 @@ free -lh
 ```
 
 ## 常见问题
+
+#### 没有购买 License 是否可以使用 GitLab 企业版？
+
+如果安装了 GitLab 企业版，在没有导入 License 的情况下使用的是 社区版的所有功能。[GitLab-EE vs GitLab-CE](https://about.gitlab.com/install/ce-or-ee/)
+
 
 #### GitLab支持多语言吗？
 

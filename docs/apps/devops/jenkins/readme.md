@@ -72,13 +72,13 @@ tags:
 
 ## Jenkins 常用操作
 
-### 安装插件
+### 安装插件{#installplugin}
 
 登录Jenkins，依次打开：【【Manage Jenkins】>【Plugins Manager】
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins_installemailplugin-websoft9.png)
 
-### 配置 SMTP
+### 配置 SMTP{#smtp}
 
 下面以提供设置 Jenkins 发邮件的简要步骤：
 
@@ -91,3 +91,49 @@ tags:
 ![Jenkins SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins_configuresmtp-websoft9.png)
 
 4. 测试邮件是否可以发送
+
+## 参数
+
+**[通用参数表](../setup/parameter)** 中可查看 Nginx, Java, Docker, MySQL 等 Jenkins 应用中包含的基础架构组件路径、版本、端口等参数。 
+
+下面仅列出 Jenkins 本身的参数：
+
+### 端口
+
+| 端口号 | 用途                                          | 必要性 |
+| ------ | --------------------------------------------- | ------ |
+| 8080   | Jenkins 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
+
+
+### 版本
+
+```shell
+jenkins -v
+```
+
+### 服务
+
+```shell
+sudo systemctl start | stop | restart | status jenkins
+```
+
+### 命令行
+
+Jenkins 提供 CLI 客户端和 SSH CLI [两种方式](https://www.jenkins.io/zh/doc/book/managing/cli/)，下面是推荐的 客户端 CLI：
+
+```shell
+java -jar jenkins-cli.jar [-s JENKINS_URL] [global options...] command [command options...] [arguments...]
+```
+
+### API
+
+Jenkins 提供可供远程访问的 [类似 REST API](https://www.jenkins.io/doc/book/using/remote-access-api/) 以便更好的实现自动化。
+```
+curl JENKINS_URL/job/JOB_NAME/buildWithParameters \
+  --user USER:TOKEN \
+  --data id=123 --data verbosity=high
+```
+
+同时，也提供了 Java, Python, Ruby 等语言的 API SDK 开发包。 
+
+
