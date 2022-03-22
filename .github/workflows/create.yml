@@ -11,9 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-	      with:
-		     token: ${{ secrets.PROTECTED_TOKEN }}
-        
+        with:
+          token: ${{ secrets.PROTECTED_TOKEN }}
+        name: Checkout code
+
       - name: Create docs by template
         run: |
           docpath=docs/"$(cat docs/_list | tr '[A-Z]' '[a-z]')"
