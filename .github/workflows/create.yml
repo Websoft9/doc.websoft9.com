@@ -42,6 +42,6 @@ jobs:
       - name: Push to protected branch
         uses: CasperWA/push-protected@v2
         with:
-          token: "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"
+          token: ${{ secrets.PROTECTED_TOKEN }}
           branch: main
           unprotect_reviews: true
