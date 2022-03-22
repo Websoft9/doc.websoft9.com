@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          token: ${{ secrets.PROTECTED_TOKEN }}
+          token: ${{ secrets.MYGITHUB_ADMIN_TOKEN }}
         name: Checkout code
 
       - name: Create docs by template
