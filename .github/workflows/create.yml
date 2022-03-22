@@ -43,7 +43,7 @@ jobs:
         uses: Amraneze/push-to-protected-branch@v1.5.0
         with:
           repository: ${{ github.repository }}
-          branch_name: ${{ github.ref_name }}
+          branch_name: main
           github_token: ${{ secrets.PROTECTED_TOKEN }}
           commit_message: 'commit documentation'
           files_to_commit: 'docs/apps/db/mysql2/*.md'
