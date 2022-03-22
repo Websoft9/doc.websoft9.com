@@ -43,6 +43,7 @@ jobs:
         uses: Amraneze/push-to-protected-branch@v1.5.0
         with:
           repository: ${{ github.repository }}
+          create_tag: false
           branch_name: ${{ github.ref_name }}
           github_token: ${{ secrets.PROTECTED_TOKEN }}
           commit_message: 'commit documentation'
