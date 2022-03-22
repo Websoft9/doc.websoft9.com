@@ -10,7 +10,7 @@ jobs:
     name: Create docs automaticlly
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
         name: Check out code
         
       - name: Create docs by template
@@ -43,3 +43,5 @@ jobs:
         uses: CasperWA/push-protected@v2
         with:
           token: "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"
+          branch: main
+          unprotect_reviews: true
