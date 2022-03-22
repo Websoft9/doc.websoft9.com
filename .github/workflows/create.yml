@@ -40,7 +40,10 @@ jobs:
           fi
 
       - name: Push to protected branch
-        uses: CasperWA/push-protected@v2
+        uses: Amraneze/push-to-protected-branch@latest
         with:
-          token: ${{ secrets.PROTECTED_TOKEN }}
-          branch: main
+          repository: ${{ github.repository }}
+          branch_name: ${{ github.ref_name }}
+          github_token: ${{ secrets.PROTECTED_TOKEN }}
+          commit_message: 'commit documentation'
+          files_to_commit: 'docs/apps/db/mysql2/*.md'
