@@ -40,7 +40,7 @@ jobs:
           fi
 
       - name: Push to protected branch
-        uses: Amraneze/push-to-protected-branch@latest
+        uses: Amraneze/push-to-protected-branch@v1.5.0
         with:
           repository: ${{ github.repository }}
           branch_name: ${{ github.ref_name }}
