@@ -38,13 +38,11 @@ jobs:
           else
             echo "documentation is exist"
           fi
+          git add -A
+          git commit -m "Create docs automaticlly"
 
       - name: Push to protected branch
-        uses: Amraneze/push-to-protected-branch@v1.5.0
+        uses: CasperWA/push-protected@v2
         with:
-          repository: ${{ github.repository }}
-          create_tag: false
-          branch_name: ${{ github.ref_name }}
-          github_token: ${{ secrets.PROTECTED_TOKEN }}
-          commit_message: 'commit documentation'
-          files_to_commit: 'docs/apps/db/mysql2/*.md'
+          token: ${{ secrets.PROTECTED_TOKEN }}
+          branch: main
