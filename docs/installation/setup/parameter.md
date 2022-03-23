@@ -28,23 +28,41 @@ Websoft9 将各个应用和组件的目录到一个约定的目录中，大大�
 | 22 | Linux 服务器 SSH 端口 | 可选 |
 | 3389 | Windows 服务器 RDP 端口 | 可选 |
 | 9090/9091 | 数据库可视化界面端口 | 可选 |
+| 9000 | Docker 可视化管理系统 Portainer | 可选 |
 
 ## 服务{#service}
 
-Linux 系统中，服务主要是通过 `systemcl` 命令进行管理（启动，停止，重启，状态）。
+服务主要是通过 `systemcl` 和 `docker` 命令进行管理（启动，停止，重启，状态）。
 
-比较常见的服务包括：  
+常见的 Systemd 服务有：  
 
 ```
 sudo systemctl start | top | restart | status docker
 sudo systemctl start | top | restart | status apache
 sudo systemctl start | top | restart | status nginx
 sudo systemctl start | top | restart | status mysql
+sudo systemctl start | top | restart | status postgresql
+sudo systemctl start | top | restart | status mongod
 ```
+
+常见的 Docker 服务有：  
+
+```
+sudo docker start | stop | restart | stats portainer
+sudo docker start | stop | restart | stats phpmyadmin
+sudo docker start | stop | restart | stats adminmongo
+sudo docker start | stop | restart | stats pgadmin
+sudo docker start | stop | restart | stats redis
+sudo docker start | stop | restart | stats sqlite
+sudo docker start | stop | restart | stats memcached
+```
+
 
 ## 版本{#version}
 
-组件版本号可以通过云市场商品页面查看。但部署到您的服务器之后，组件会自动进行更新导致版本号有一定的变化，故精准的版本号请通过在服务器上运行命令查看：
+虽然产品页面可查看版本，但您服务器中的组件可能会不断升级，故精准的版本号请通过在服务器上运行命令查看：
+
+##### 通用
 
 ```
 # Check all components version
@@ -53,8 +71,18 @@ sudo cat /data/logs/install_version.txt
 # Linux Version
 lsb_release -a
 
+# Docker version
+docker -v
+```
+
+##### 数据库
+
+```
 # MongoDB version
 mongo --version
+
+# PostgreSQL version:
+psql --version
 
 # MySQL version
 mysql -V
@@ -62,7 +90,11 @@ mysql -V
 # Redis version
 redis-server -v
 
+```
 
+##### Web 服务器
+
+```
 # Apache version on Centos
 httpd -v
 
@@ -78,10 +110,11 @@ nginx -v
 # List Installed Nginx Modules
 nginx -V
 
+```
 
-# Docker version
-docker -v
+##### 程序环境
 
+```
 # Java version
 java -v
 
@@ -102,5 +135,4 @@ npm -v
 
 # yarn version
 yarn --version
-
 ```

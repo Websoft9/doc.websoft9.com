@@ -23,9 +23,7 @@ tags:
 
 ## GitLab 初始化向导
 
-本步骤是用户首次接触软件的时间点（万事开头难）。若碰到障碍，请第一时刻联系 **[技术支持](./helpdesk)** 或参阅 [FAQ](./faq#setup)
-
-下面是 Jenkins 初始化向导的具体步骤：
+### 详细步骤
 
 1. 本地电脑浏览器访问：*http://域名* 或 *http://服务器公网IP*，进入初始化页面 
    ![GitLab 登录](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-login-websoft9.png)
@@ -48,6 +46,18 @@ tags:
 7. [设置 GitLab 仓库地址](#setrepourl)
 
 > 需要了解更多 GitLab 的使用，请参考官方文档：[GitLab Documentation](https://docs.gitlab.com/omnibus/README.html)
+
+### 出现问题？
+
+若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
+
+**GitLab能打开，但总是出现 502 错误？**  
+
+参阅：[此处](./gitlab/admin#502)
+
+**GitLab 每次启动需等1分钟才能使用？**  
+
+参阅：[此处](./gitlab/admin#502)
 
 ## GitLab 使用入门
 
@@ -174,12 +184,221 @@ GitLab 仓库的 HTTPS 不等同于 GitLab 自身的 HTTPS，前置还需额外�
 
    ```
 
-## 异常处理
+## 参数
 
-#### GitLab能打开，但总是出现502错误？
+**[通用参数表](../setup/parameter)** 中可查看 Docker, Portainer 等 GitLab 应用中包含的基础架构组件路径、版本、端口等参数。 
 
-GitLab 所需内存最低为 4G，若服务器配置太低会出现 502 错误
+下面是一个简化的架构图，可用于了解 GitLab 的组件架构。
 
-#### GitLab 新装或重启后，需要等待1分钟才能使用？
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/architecture_simplified.png)
 
-对于单核CPU的服务器，GitLab 中的 Unicorn and Sidekiq 服务最少需要一分钟的启动时间
+-nginx：静态web服务器。  
+-gitlab-shell：用于处理Git命令和修改authorized keys列表。  
+-gitlab-workhorse: 轻量级的反向代理服务器。  
+-logrotate：日志文件管理工具。  
+-postgresql：数据库。  
+-redis：缓存数据库。  
+-sidekiq：用于在后台执行队列任务（异步执行）。  
+-unicorn：An HTTP server for Rack applications，GitLab Rails应用是托管在这个服务器上面的。
+
+GitLab 包含数十种组件([查看](https://docs.gitlab.com/ee/development/architecture.html#component-list))，通过 */opt/gitlab/version-manifest.txt* 查看服务器上所有组件名称和版本
+
+### 路径{#path}
+
+##### GitLab
+
+GitLab 配置文件： */etc/gitlab/gitlab.rb*    
+GitLab 及所有组件配置： */opt/gitlab*  
+GitLab Repository 存储目录： */var/opt/gitlab/git-data*  
+GitLab 备份目录： */var/opt/gitlab/backups*
+
+##### Unicorn
+
+Unicorn 日志目录： */var/log/gitlab/unicorn*  
+
+##### Sidekiq
+
+Unicorn 日志目录： */var/log/gitlab/sidekiq*
+
+##### Nginx
+
+Nginx 日志目录: */var/log/gitlab/nginx*  
+Nginx 配置文件: */var/opt/gitlab/nginx/conf/nginx.conf*  
+GitLab 核心 Nginx 配置文件:  */var/opt/gitlab/nginx/conf/gitlab-http.conf*
+
+##### PostgreSQL
+
+PostgreSQL 安装目录： */var/opt/gitlab/postgresql*  
+PostgreSQL 日志目录: */var/log/gitlab/postgresql*   
+PostgreSQL-Exporter 日志目录： */var/log/gitlab/postgres-exporter*  
+PostgreSQL 数据目录： */var/opt/gitlab/postgresql/data*
+
+##### Redis
+
+Redis 安装目录： */var/opt/gitlab/redis*  
+Redis 日志目录： */var/log/gitlab/redis*
+
+### 端口{#port}
+
+暂无特殊端口
+
+### 版本
+
+```shell
+gitlab-ctl status  | grep gitlab-workhorse
+```
+
+### 服务
+
+GitLab 提供的（[gitlab-ctl ](https://docs.gitlab.com/omnibus/maintenance/README.html#get-service-status)）可以很方便的管理各个组件的服务：
+
+```shell
+sudo gitlab-ctl start | stop | restart | status reconfigure nginx
+sudo gitlab-ctl start | stop | restart | status reconfigure unicorn
+sudo gitlab-ctl start | stop | restart | status reconfigure sidekiq
+sudo gitlab-ctl start | stop | restart | status reconfigure postgresql
+sudo gitlab-ctl start | stop | restart | status reconfigure redis
+```
+
+GitLab 自身的启动/停止，是通过 Systemd 服务来管理的：
+
+```shell
+systemctl start | stop | restart | status gitlab-runsvdir.service
+```
+
+### 命令行
+
+GitLab 提供了命令行工具 `gitlab-ctl` 用于全面管理和配置 GitLab
+
+```
+$ gitlab-ctl -h
+
+I don't know that command.
+omnibus-ctl: command (subcommand)
+check-config
+  Check if there are any configuration in gitlab.rb that is removed in specified version
+deploy-page
+  Put up the deploy page
+diff-config
+  Compare the user configuration with package available configuration
+get-redis-master
+  Get connection details to Redis master
+prometheus-upgrade
+  Upgrade the Prometheus data to the latest supported version
+remove-accounts
+  Delete *all* users and groups used by this package
+reset-grafana
+  Reset Grafana instance to its initial state by removing the data directory
+set-grafana-password
+  Reset admin password for Grafana
+upgrade
+  Run migrations after a package upgrade
+upgrade-check
+  Check if the upgrade is acceptable
+General Commands:
+  cleanse
+    Delete *all* gitlab data, and start from scratch.
+  help
+    Print this help message.
+  reconfigure
+    Reconfigure the application.
+  show-config
+    Show the configuration that would be generated by reconfigure.
+  uninstall
+    Kill all processes and uninstall the process supervisor (data will be preserved).
+Service Management Commands:
+  graceful-kill
+    Attempt a graceful stop, then SIGKILL the entire process group.
+  hup
+    Send the services a HUP.
+  int
+    Send the services an INT.
+  kill
+    Send the services a KILL.
+  once
+    Start the services if they are down. Do not restart them if they stop.
+  restart
+    Stop the services if they are running, then start them again.
+  service-list
+    List all the services (enabled services appear with a *.)
+  start
+    Start services if they are down, and restart them if they stop.
+  status
+    Show the status of all the services.
+  stop
+    Stop the services, and do not restart them.
+  tail
+    Watch the service logs of all enabled services.
+  term
+    Send the services a TERM.
+  usr1
+    Send the services a USR1.
+  usr2
+    Send the services a USR2.
+Gitlab Geo Commands:
+  geo
+    Interact with Geo
+  geo-replication-pause
+    Replication Process
+  geo-replication-resume
+    Replication Process
+  promote-db
+    Promote secondary PostgreSQL database
+  promote-to-primary-node
+    Promote to primary node
+  promotion-preflight-checks
+    Run preflight checks for promotion to primary node
+  replicate-geo-database
+    Replicate Geo database
+  set-geo-primary-node
+    Make this node the Geo primary
+Pgbouncer Commands:
+  pgb-console
+    Connect to the pgbouncer console
+  pgb-kill
+    Send the "resume" command to pgbouncer
+  pgb-notify
+    Notify pgbouncer of an update to its database
+  pgb-resume
+    Send the "resume" command to pgbouncer
+  pgb-suspend
+    Send the "suspend" command to pgbouncer
+Database Commands:
+  get-postgresql-primary
+    Get connection details to the PostgreSQL primary
+  patroni
+    Interact with Patroni
+  pg-password-md5
+    Generate MD5 Hash of user password in PostgreSQL format
+  pg-upgrade
+    Upgrade the PostgreSQL DB to the latest supported version
+  revert-pg-upgrade
+    Run this to revert to the previous version of the database
+  set-replication-password
+    Set database replication password
+  write-pgpass
+    Write a pgpass file for the specified user
+Consul Commands:
+  consul
+    Interact with the gitlab-consul cluster
+Container Registry Commands:
+  registry-garbage-collect
+    Run Container Registry garbage collection.
+Let's Encrypt Commands:
+  renew-le-certs
+    Renew the existing Let's Encrypt certificates
+Gitaly Commands:
+  praefect
+    Interact with Gitaly cluster
+Backup Commands:
+  backup-etc
+    Backup GitLab configuration [options]
+```
+
+### API
+
+GitLab 提供[多种 API](https://docs.gitlab.com/ee/api/) 方式，包括：REST API, SCIM API, GraphQL API
+
+```
+curl "https://gitlab.example.com/api/v4/projects"
+```

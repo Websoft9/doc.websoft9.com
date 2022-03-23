@@ -94,6 +94,28 @@ Ansible 官网文档有一章专门的 [Testing Strategies](https://docs.ansible
 
 ### 并发设置
 
+### 安装 Role{#installrole}
+
+Websoft9 提供基于 Ansible  role 的基础组件（[清单](https://github.com/websoft9?q=role&type=all&language=&sort=)），包括：Apache, Nginx, PHP, MySQL, JDK 等数十种。
+
+下面以安装 LAMP 环境为范例：
+
+1. SSH 连接云服务器，运行如下的脚本
+   ```
+   # MySQL
+   git clone https://github.com/Websoft9/role_mysql.git
+   ansible-playbook role_mysql/tests/test.yml
+
+   # PHP
+   git clone https://github.com/Websoft9/role_php.git
+   ansible-playbook role_php/tests/test.yml
+
+   # Apache
+   git clone https://github.com/Websoft9/role_apache.git
+   ansible-playbook role_apache/tests/test.yml
+   ```
+2. 运行过程中，可以选择所需的版本
+
 ## 参数
 
 ### 路径{#path}

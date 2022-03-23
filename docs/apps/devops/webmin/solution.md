@@ -1,13 +1,13 @@
 ---
-sidebar_position: 3
-slug: /webmin/study
+sidebar_position: 2
+slug: /webmin/solution
 tags:
   - Webmin
   - 虚拟桌面
   - Web 可视化 Linux 管理员工具
 ---
 
-# 原理学习
+# 场景方案
 
 ## 模块
 

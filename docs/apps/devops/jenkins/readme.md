@@ -27,9 +27,7 @@ tags:
 
 ## Jenkins 初始化向导
 
-本步骤是用户首次接触软件的时间点（万事开头难）。若碰到障碍，请第一时刻联系 **[技术支持](./helpdesk)** 或参阅 [FAQ](./faq#setup)
-
-下面是 Jenkins 初始化向导的具体步骤：
+### 详细步骤
 
 1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://Internet IP*, 进入初始化页面
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins-installstart-websoft9.png)
@@ -46,6 +44,10 @@ tags:
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins-installusers-websoft9.png)
 
 > 需要了解更多 Jenkins 的使用，请参考官方文档：[Jenkins 用户文档中心](https://www.jenkins.io/zh/doc/)
+
+### 碰到问题？
+
+若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
 
 ## Jenkins 使用入门
 
