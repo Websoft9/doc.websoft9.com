@@ -8,6 +8,23 @@ tags:
 
 # 维护参考
 
+## PostgreSQL 容器操作
+
+AWX 预装包中内置 PostgreSQL 容器，需要登录容器后使用命令对 PostgreSQL 进行操作。
+
+1. 使用 SSH 登录服务器后，运行`docker ps`命令获取 awx-postresql 容器ID
+  ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/awx/awx-getcontainerid-websoft9.png)
+
+2. 进入 awx-postgresql 容器
+
+   ```
+   docker exec -it 2ca9ad211678 /bin/bash
+   ```
+4. 运行上面的命令后，就进入了容器命令操作界面
+
+5. 接下来可以使用命令操作 PostgreSQL 
+
+
 ## 系统参数
 
 PostgreSQL 预装包包含 PostgreSQL 运行所需一序列支撑软件（简称为“组件”），下面列出主要组件名称、安装路径、配置文件地址、端口、版本等重要的信息。

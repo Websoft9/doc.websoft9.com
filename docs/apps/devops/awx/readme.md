@@ -16,44 +16,36 @@ tags:
 ## 准备
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:80** 端口是否开启
-3. 若想用域名访问 AWX，请先到 **域名控制台** 完成一个域名解析
+2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
+3. 在服务器中查看 AWX 的 **[默认管理员账号和密码](./setup/credentials#getpw)**  
+4. 若想用域名访问  AWX，务必先完成 **[域名五步设置](./dns#domain)** 过程
 
-## 账号密码
+## AWX 初始化向导
 
-通过**SSH**连接云服务器，运行 `sudo cat /credentials/password.txt` 命令，查看所有相关账号和密码
+### 详细步骤
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/catdbpassword-websoft9.png)
-
-下面列出可能需要用到的几组账号密码：
-
-### AWX
-
-管理员用户名：`admin`  
-管理员密码： 存储在您的服务器指定文件中：*/credentials/password.txt*
-
-### PostgreSQL
-
-本部署方案中，PostgreSQL 采用 Docker 部署：
-
-* 管理员账号：*`postgres`*
-* 管理员密码：存储在您的服务器指定文件中：*/credentials/password.txt*
-
-## AWX 安装向导
-
-1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://公网IP*, 进入 AWX 登录页面
+1. 使用本地电脑浏览器访问网址：*http://域名* 或 *http://公网IP*, 进入 AWX 登录页面
    ![AWX登录页面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/awx/awx-login-websoft9.png)
 
-3. 输入用户名和密码[（不知道密码？）](/zh/stack-accounts.md)，登录到 AWX 后台管理界面
+3. 输入用户名和密码[（不知道密码？）](./setup/credentials#getpw)，登录到 AWX 后台管理界面
    ![AWX后台界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/awx/awx-gui-websoft9.png)
 
 4. 此时，AWX 安装部署已经验证通过
 
-> 需要了解更多AWX的使用，请参考：[Ansible Tower Documentation](https://docs.ansible.com/ansible-tower/).
+> 需要了解更多 AWX 的使用，请参考：[Ansible Tower Documentation](https://docs.ansible.com/ansible-tower/).
 
-## AWX 入门向导
+### 出现问题？
 
-现在开始针对于**如何使用 AWX 可视化运行 Ansible 项目**进行完整的实战操作说明：
+若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
+
+**Jenkins 能打开，但总是出现 502 错误？**  
+
+参阅：[此处](./gitlab/admin#502)
+
+
+## AWX 使用入门
+
+下面以 **使用 AWX 可视化运行 Ansible 项目** 作为一个任务，帮助用户快速入门：
 
 ### 概念
 
@@ -110,75 +102,13 @@ tags:
 
 ## 常用操作
 
-### 域名绑定
+### 修改 URL
 
-绑定域名的前置条件是：AWX已经可以通过解析后的域名访问。  
+ **[域名五步设置](./dns#domain)** 完成后，需登录 AWX，依次打开：【Settings】>【System】， 修改默认的 URL
 
-虽然如此，从服务器安全和后续维护考量，**域名绑定**步骤不可省却  
-
-AWX 域名绑定操作步骤：
-
-1. 使用 SFTP 登录云服务器
-2. 修改 [Nginx 配置文件](/zh/stack-components.md#nginx)，将其中的 **server_name** 项的值 *localhost* 修改为你的域名
-   ```text
-   ...
-      server_name    localhost; # 改为自定义域名
-   ...
-   ```
-3. 保存配置文件，重启[ Nginx 服务](/zh/admin-services.md#nginx)
-   ```
-   sudo docker pause awx_web
-   ```
-4. 登录AWX，依次打开：【Settings】>【System】，修改下图的 URL 地址
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/awx/awx-seturl-websoft9.png)
 
-### SSL/HTTPS
-
-网站完成域名绑定且可以通过HTTP访问之后，方可设置HTTPS。
-
-AWX 预装 SSL 设置，但需要开启并上传证书。  
-
-#### 前置条件
-
-1. 云控制台已经开启安全组443端口
-2. 完成域名解析
-3. 申请了可用的CA证书
-
-#### 配置方案
-
-AWX 采用的是 Docker 部署，同时也设置 Nginx 作为转发，所以有两种 HTTPS 设置方案。
-
-#### Nginx 中配置（推荐）
-
-#### 自动部署
-
-如果没有申请证书，只需在服务器中运行一条命令`sudo certbot`便可以启动免费证书**自动**申请和部署
-
-```
-sudo certbot
-```
-
-#### 手动部署
-
-如果你已经申请了证书，只需三个步骤，即可完成 HTTPS 配置
-
-1. 将申请的证书、 证书链文件和秘钥文件上传到 */data/cert* 目录
-2. 打开虚拟主机配置文件：*/etc/nginx/conf.d/default.conf* ，插入**HTTPS 配置段** 到 *server{ }* 中
- ``` text
-   #-----HTTPS template start------------
-   listen 443 ssl; 
-   ssl_certificate /data/cert/xxx.crt;
-   ssl_certificate_key /data/cert/xxx.key;
-   ssl_trusted_certificate /data/cert/chain.pem;
-   ssl_session_timeout 5m;
-   ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
-   ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE;
-   ssl_prefer_server_ciphers on;
-   #-----HTTPS template end------------
-   ```
-3. 重启[Nginx服务](/zh/admin-services.md#nginx)
-
-#### 容器中配置
+### 容器中配置 SSL/HTTPS
 
 通过向 AWX 容器持久化存储目录增加证书的方式来配置 HTTPS，具体如下：
 
@@ -219,170 +149,15 @@ sudo certbot
 
 ### 配置 SMTP
 
-大量用户实践反馈，使用**第三方 SMTP 服务发送邮件**是一种最稳定可靠的方式。  
+1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
 
-请勿尝试在服务器上安装sendmail等发邮件方案，因为邮件系统的路由配置受制与域名、防火墙、路由等多种因素制约，导致不稳定、不易维护、诊断故障困难。
-
-下面以**网易邮箱**为例，提供设置 AWX 发邮件的步骤：
-
-1. 在网易邮箱管理控制台获取 SMTP 相关参数
-   ```
-   SMTP host: smtp.163.com
-   SMTP port: 465 or 994 for SSL-encrypted email
-   SMTP Authentication: must be checked
-   SMTP Encryption: must SSL
-   SMTP username: websoft9@163.com
-   SMTP password: #wwBJ8    //此密码不是邮箱密码，是需要通过163邮箱后台设置去获取的授权码
-   ```
 2. 登录 AWX控制台，打开：【ADMINISTRATION】>【NOTIFICATIONS】
+
 3. 新建一个 Notification 模板，选择【电子邮件】，填写相关 SMTP 参数
    ![AWX SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/zh/awx/awx-smtp-websoft9.png)
 
-> 更多邮箱设置（QQ邮箱，阿里云邮箱，Gmail，Hotmail等）以及无法发送邮件等故障之诊断，请参考由Websoft9提供的 [SMTP 专题指南](https://support.websoft9.com/docs/faq/zh/tech-smtp.html)
 
-### 负载均衡
-
-通过负载均衡处理多台 AWX 并行工作，对于大型企业来说这是一种很常见的部署方案。
-
-AWX是基于Docker部署，处理web的容器名称为：awx_web
-
-### 使用外部PostgreSQL
-
-默认安装下，使用的是Docker版本的PostgreSQL数据库，并设置了持久化存储。  
-
-如果你想将数据库更换为外部PostgreSQL数据库（自建或云数据库），请参考如下步骤：
-
-1. 备份好已有的AWX数据
-2. 进入到AWX的配置文件夹
-   ```
-   cd /data/.awx
-   ```
-2. 删除目前AWX项目的所有容器
-   ```
-   cd /data/.awx
-   docker-compose -f docker-compose.yml down -v
-   ```
-3. 修改 *docker-compose.yml* 文件，去掉两处 *depends_on:* 项中的 *- postgres*，并删除 *postgres: ...* 整段，最后文件的内容如下： 
-   ```
-   version: '2'
-   services:
-
-     web:
-       image: ansible/awx_web:11.2.0
-       container_name: awx_web
-       depends_on:
-         - redis
-         - memcached
-       ports:
-         - "80:8052"
-       hostname: awxweb
-       user: root
-       restart: unless-stopped
-       volumes:
-         - supervisor-socket:/var/run/supervisor
-         - rsyslog-socket:/var/run/awx-rsyslog/
-         - rsyslog-config:/var/lib/awx/rsyslog/
-         - "/data/.awx/SECRET_KEY:/etc/tower/SECRET_KEY"
-         - "/data/.awx/environment.sh:/etc/tower/conf.d/environment.sh"
-         - "/data/.awx/credentials.py:/etc/tower/conf.d/credentials.py"
-         - "/data/.awx/nginx.conf:/etc/nginx/nginx.conf:ro"
-         - "/data/.awx/redis_socket:/var/run/redis/:rw"
-         - "/data/.awx/memcached_socket:/var/run/memcached/:rw"
-       environment:
-         http_proxy: 
-         https_proxy: 
-         no_proxy: 
-
-     task:
-       image: ansible/awx_task:11.2.0
-       container_name: awx_task
-       depends_on:
-         - redis
-         - memcached
-         - web
-       hostname: awx
-       user: root
-       restart: unless-stopped
-       volumes:
-         - supervisor-socket:/var/run/supervisor
-         - rsyslog-socket:/var/run/awx-rsyslog/
-         - rsyslog-config:/var/lib/awx/rsyslog/
-         - "/data/.awx/SECRET_KEY:/etc/tower/SECRET_KEY"
-         - "/data/.awx/environment.sh:/etc/tower/conf.d/environment.sh"
-         - "/data/.awx/credentials.py:/etc/tower/conf.d/credentials.py"
-         - "/data/.awx/redis_socket:/var/run/redis/:rw"
-         - "/data/.awx/memcached_socket:/var/run/memcached/:rw"
-       environment:
-         http_proxy: 
-         https_proxy: 
-         no_proxy: 
-         SUPERVISOR_WEB_CONFIG_PATH: '/supervisor.conf'
-
-     redis:
-       image: redis
-       container_name: awx_redis
-       restart: unless-stopped
-       environment:
-         http_proxy: 
-         https_proxy: 
-         no_proxy: 
-       command: ["/usr/local/etc/redis/redis.conf"]
-       volumes:
-         - "/data/.awx/redis.conf:/usr/local/etc/redis/redis.conf:ro"
-         - "/data/.awx/redis_socket:/var/run/redis/:rw"
-         - "/data/.awx/memcached_socket:/var/run/memcached/:rw"
-
-     memcached:
-       image: "memcached:alpine"
-       container_name: awx_memcached
-       command: ["-s", "/var/run/memcached/memcached.sock", "-a", "0666"]
-       restart: unless-stopped
-       environment:
-         http_proxy: 
-         https_proxy: 
-         no_proxy: 
-       volumes:
-         - "/data/.awx/memcached_socket:/var/run/memcached/:rw"
-
-   volumes:
-     supervisor-socket:
-     rsyslog-socket:
-     rsyslog-config:
-
-   ```
-4. 修改 */data/.awx/credentials.py* 文件中数据库账号信息，确保为外部PostgreSQL的连接信息
-   ```
-      DATABASES = {
-       'default': {
-           'ATOMIC_REQUESTS': True,
-           'ENGINE': 'django.db.backends.postgresql',
-           'NAME': "awx",
-           'USER': "awx",
-           'PASSWORD': "yourpassword",
-           'HOST': "pgm-j6cr72qyfadij3980o.pg.rds.websoft9.com",
-           'PORT': "1433",
-       }
-   }
-
-   BROADCAST_WEBSOCKET_SECRET = "al9mLS4tWTlmX1owN1FyOElJWDY="
-   ```
-5. 修改 */data/.awx/environment.sh* 文件中数据库账号信息，确保为外部PostgreSQL的连接信息
-   ```
-   DATABASE_USER=awx
-   DATABASE_NAME=awx
-   DATABASE_HOST=pgm-j6cr72qyfadij3980o.pg.rds.websoft9.com
-   DATABASE_PORT=1433
-   DATABASE_PASSWORD=yourpassword
-   AWX_ADMIN_USER=admin
-   AWX_ADMIN_PASSWORD=password
-
-   ```
-6. 重新创建容器
-   ```
-   docker-compose -f docker-compose.yml up -d
-   ```
-
-### 额外变量
+### 增加额外变量
 
 AWX 支持从项目之外注入所需的变量，它是通过**额外变量**机制实现，一方面可以增加变量的多样性，另外可以绕过 Ansible 项目中的交互式。  
 
@@ -396,18 +171,72 @@ AWX 支持从项目之外注入所需的变量，它是通过**额外变量**机
 
 详情参考官方文档 [Create a Survey](https://docs.ansible.com/ansible-tower/latest/html/userguide/job_templates.html#ug-surveys)
 
-## 异常处理
+## 参数
 
-#### 浏览器打开IP地址，无法访问 AWX（白屏没有结果）？
 
-您的服务器对应的安全组80端口没有开启（入规则），导致浏览器无法访问到服务器的任何内容
+**[通用参数表](../setup/parameter)** 中可查看 Nginx, Docker, PostgreSQL 等 AWX 应用中包含的基础架构组件路径、版本、端口等参数。 
 
-#### 本部署包采用的哪个数据库来存储 AWX 数据？
+通过运行`docker ps`，可以查看到 AWX 运行时所有的 Container：
 
-PostgreSQL Docker
+```bash
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+e240ed8209cd        awx_task:1.0.0.8    "/tini -- /bin/sh ..."   2 minutes ago       Up About a minute   8052/tcp                             awx_task
+1cfd02601690        awx_web:1.0.0.8     "/tini -- /bin/sh ..."   2 minutes ago       Up About a minute   0.0.0.0:443->8052/tcp                 awx_web
+55a552142bcd        memcached:alpine    "docker-entrypoint..."   2 minutes ago       Up 2 minutes        11211/tcp                            memcached
+84011c072aad        rabbitmq:3          "docker-entrypoint..."   2 minutes ago       Up 2 minutes        4369/tcp, 5671-5672/tcp, 25672/tcp   rabbitmq
+97e196120ab3        postgres:9.6        "docker-entrypoint..."   2 minutes ago       Up 2 minutes        5432/tcp                             postgres
+```
 
-#### AWX 是否支持 Ansible Galaxy？
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/awx/awx-setgalax-websoft9.png)
+下面仅列出 AWX 本身的参数：
 
-支持，参考官方文档 [Ansible Galaxy Support](https://docs.ansible.com/ansible-tower/latest/html/userguide/projects.html#ug-galaxy)
+### 路径{#path}
+
+AWX 配置文件目录 */data/.awx*  
+awx_postgres 挂载的目录：*/var/lib/postgresql/data*  
+awx_postgres 数据持久存储：*/data/pgdocker*
+awx_rabbitmq 挂载的目录：*/var/lib/rabbitmq*  
+awx_web 挂载的目录：*/var/lib/nginx*   
+awx_task 挂载的目录：*/var/lib/nginx* 
+
+### 端口
+
+无特殊端口
+
+### 版本
+
+```shell
+sudo docker inspect awx_web
+```
+
+### 服务
+
+```shell
+#AWX-主程序
+sudo docker start | stop | restart | pause | stats awx_task
+
+#AWX-Web界面
+sudo docker start | stop | restart | pause | stats awx_web
+
+sudo docker start | stop | restart | pause | stats awx_rabbitmq
+sudo docker start | stop | restart | pause | stats awx_postgres
+sudo docker start | stop | restart | pause | stats awx_memcached
+```
+
+### 命令行
+
+先运行  `pip install ansible-tower-cli` 安装 [AWX CLI ](https://docs.ansible.com/ansible-tower/latest/html/towercli/usage.html#installation)，然后配置使用
+
+```
+tower-cli config host http://<new-awx-host.example.com>
+tower-cli config username <user>
+tower-cli config password <pass>
+tower-cli send assets.json
+tower-cli user list 
+```
+更多参考：[ AWX CLI on AWX Github](https://github.com/ansible/awx/tree/devel/awxkit/awxkit/cli/docs)
+
+
+### API
+
+[Ansible Tower API Guide](https://docs.ansible.com/ansible-tower/latest/html/towerapi/index.html)

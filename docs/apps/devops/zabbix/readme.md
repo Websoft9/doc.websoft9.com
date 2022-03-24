@@ -13,34 +13,19 @@ tags:
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zabbix/zabbix-gui-websoft9.png)
 
 
-在云服务器上部署 Zabbix 预装包之后，请参考下面的步骤快速入门。
+部署 Websoft9 提供的 Zabbix 之后，请参考下面的步骤快速入门。
 
 ## 准备
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:80** 端口是否开启
-3. 若想用域名访问 Zabbix，请先到 **域名控制台** 完成一个域名解析
+2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
+3. 在服务器中查看 Zabbix 的 **[默认管理员账号和密码](./setup/credentials#getpw)**  
+4. 若想用域名访问  Zabbix，务必先完成 **[域名五步设置](./dns#domain)** 过程
 
-## 账号密码
 
+## Zabbix 初始化向导
 
-通过**SSH**连接云服务器，运行 `sudo cat /credentials/password.txt` 命令，查看所有相关账号和密码
-
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/catdbpassword-websoft9.png)
-
-下面列出可能需要用到的几组账号密码：
-
-### Zabbix
-
-* 管理员用户名：`Admin`  
-* 管理员密码：存储在您的服务器中的文件中 */credentials/password.txt*  
-
-### MySQL
-
-* 管理员账号：*`root`*
-* 管理员密码：存储在您的服务器中的文件中 */credentials/password.txt*  
-
-## Zabbix 安装向导
+### 详细步骤
 
 1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入登录界面
    ![Zabbix 登录界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zabbix/zabbix-login-websoft9.png)
@@ -52,7 +37,11 @@ tags:
    ![Zabbix 更换语言](https://libs.websoft9.com/Websoft9/DocsPicture/en/zabbix/zabbix-changelang-websoft9.png)  
    ![Zabbix 更换语言](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zabbix/zabbix-dashboardzh-websoft9.png)
 
-## Zabbix 入门向导
+### 出现问题？
+
+若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题。
+
+## Zabbix 使用入门
 
 下面继续上一节，通过连接一个客户端的实际应用场景，帮助用户快速入门。  
 
@@ -74,83 +63,12 @@ tags:
 
 > 需要了解更多 Zabbix 的使用，请参考官方文档：[Zabbix Documentation](https://www.zabbix.com/documentation/current/)
 
-## 常用操作
-
-### 域名绑定
-
-绑定域名的前置条件是：已经完成域名解析（登录域名控制台，增加一个A记录指向服务器公网IP）  
-
-完成域名解析后，从服务器安全和后续维护考量，需要完成**域名绑定**：
-
-Zabbix 域名绑定操作步骤：
-
-1. 使用 SFTP 工具登录云服务器
-
-2. 修改 [虚拟机主机配置文件](/zh/stack-components.md#nginx)，将其中的域名相关的值
-   ```text
-   server_name    localhost; # 改为自定义域名
-   ```
-   
-3. 保存配置文件，[重启 Nginx 服务](/zh/admin-services.md#nginx)
-
-
-Zabbix 预装包，已安装Web服务器 SSL 模块和公共免费证书方案 [Let's Encrypt](https://letsencrypt.org/) ，并完成预配置。因此，除了虚拟主机配置文件之外，HTTPS 设置则不需要修改 Nginx 其他文件。
-
-### SSL/HTTPS
-
-必须完成[域名绑定](#域名绑定)且可通过 HTTP 访问 Zabbix ，才可以设置 HTTPS。
-
-#### 自动部署
-
-如果没有申请证书，只需在服务器中运行一条命令`sudo certbot`便可以启动免费证书**自动**申请和部署
-
-```
-sudo certbot
-```
-
-#### 手动部署
-
-如果你已经申请了证书，只需三个步骤，即可完成 HTTPS 配置
-
-1. 将申请的证书、 证书链文件和秘钥文件上传到 */data/cert* 目录
-2. 打开虚拟主机配置文件：*/etc/nginx/conf.d/default.conf* ，插入**HTTPS 配置段** 到 *server{ }* 中
- ``` text
-   #-----HTTPS template start------------
-   listen 443 ssl; 
-   ssl_certificate /data/cert/xxx.crt;
-   ssl_certificate_key /data/cert/xxx.key;
-   ssl_trusted_certificate /data/cert/chain.pem;
-   ssl_session_timeout 5m;
-   ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
-   ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE;
-   ssl_prefer_server_ciphers on;
-   #-----HTTPS template end------------
-   ```
-3. 重启[Nginx服务](/zh/admin-services.md#nginx)
-
-#### 专题指南
-
-若参考上面的**快速指南**仍无法成功设置HTTPS访问，请阅读由Websoft9提供的 [《HTTPS 专题指南》](https://support.websoft9.com/docs/faq/zh/tech-https.html#nginx)
-
-《HTTPS 专题专题》方案包括：HTTPS前置条件、HTTPS 配置段模板及故障诊断等具体方案。
+## Zabbix 常用操作
 
 ### SMTP
 
-大量用户实践反馈，使用**第三方 SMTP 服务发送邮件**是一种最稳定可靠的方式。  
+1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
 
-请勿在服务器上安装sendmail等邮件系统，因为邮件系统的路由配置受制与域名、防火墙、路由等多种因素制约，非常不稳定，且不易维护、诊断故障很困难。
-
-下面以**网易邮箱**为例，提供设置 Zabbix 发邮件的步骤：
-
-1. 在网易邮箱管理控制台获取 SMTP 相关参数
-   ```
-   SMTP host: smtp.163.com
-   SMTP port: 465 or 994 for SSL-encrypted email
-   SMTP Authentication: must be checked
-   SMTP Encryption: must SSL
-   SMTP username: websoft9@163.com
-   SMTP password: #wwBJ8    //此密码不是邮箱密码，是需要通过163邮箱后台设置去获取的授权码
-   ```
 2. 登录到 Zabbix 后台，完成 SMTP 参数设置  
   
    - 依次打开：【管理】>【报警媒介类型】，选择【Email】
@@ -159,32 +77,8 @@ sudo certbot
      ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zabbix/zabbix-smtpsetting-websoft9.png) 
 
 3. 自测是否可以发送邮件
-     
-> 更多邮箱设置（QQ邮箱，阿里云邮箱，Gmail，Hotmail等）以及无法发送邮件等故障之诊断，请参考由Websoft9提供的 [SMTP 专题指南](https://support.websoft9.com/docs/faq/zh/tech-smtp.html)
 
-
-### 更换数据库
-
-默认部署方案中，采用的是本地安装的 MySQL 数据库。如果您打算更换数据库，请参考如下步骤：
-
-1. 导出 zabbix, zabbix-proxy 数据库
-
-2. 使用 SFTP 连接到服务器，编辑与数据库连接相关的两个文件
-
-   * /data/wwwroot/zabbix/.env_db_mysql_proxy
-   * /data/wwwroot/zabbix/.env_db_mysql
-
-3. 分别修改两个文件中的数据库连接信息，保存
-
-4. 重新运行容器后生效
-   ```
-   cd /data/wwwroot/zabbix
-   sudo docker compose up -d
-   ```
-
-5. 导入备份数据到新的数据库中
-
-### 多语言
+### 设置多语言
 
 Zabbix 默认已经内置多种语言包，非常方便进行在线切换。
 
@@ -196,7 +90,7 @@ Zabbix 默认已经内置多种语言包，非常方便进行在线切换。
 
 > 如果语言为灰色状态,参考官方字符编码安装方案：[How to install locale](https://zabbix.org/wiki/How_to/install_locale)
 
-### 安装客户端
+### 安装 Zabbix 客户端
 
 1. 安装 [Zabbix-agent](https://www.zabbix.com/download?zabbix=5.0&os_distribution=centos&os_version=7&db=mysql&ws=apache) 
    ```shell
@@ -226,7 +120,7 @@ Zabbix 默认已经内置多种语言包，非常方便进行在线切换。
 
 如果用户忘记了密码，需要通过修改数据库相关字段来重置密码：
 
-1. 登录 [phpMyAdmin](/zh/admin-mysql.md)，进入 Zabbix 数据库
+1. 登录 phpMyAdmin，进入 Zabbix 数据库
 
 2. 在 SQL 窗口运行重置密码的命令
    ```
@@ -234,22 +128,73 @@ Zabbix 默认已经内置多种语言包，非常方便进行在线切换。
    ```
 
 
-## 异常处理
+## 参数
 
-#### 浏览器无法访问 Zabbix（白屏没有结果）？
+**[通用参数表](../setup/parameter)** 中可查看 Nginx, Docker, MySQL 等 Zabbix 应用中包含的基础架构组件路径、版本、端口等参数。 
 
-您的服务器对应的安全组 80 端口没有开启（入规则），导致浏览器无法访问到服务器的任何内容
+本部署方案中的 Zabbix 采用 Docker部署，运行 `docker ps` 查看运行的容器。
 
-#### 端口已经开启，*http://服务器公网IP* 仍然无法访问 Zabbix？
+```
+$ docker ps
+CONTAINER ID   IMAGE                                              COMMAND                  CREATED       STATUS                 PORTS                                         NAMES
+18540fbd8378   zabbix/zabbix-web-apache-mysql:centos-5.2-latest   "docker-entrypoint.sh"   7 hours ago   Up 7 hours (healthy)   0.0.0.0:80->8080/tcp, 0.0.0.0:443->8443/tcp   zabbix-web
+ed7551e10595   zabbix/zabbix-agent:centos-5.2-latest              "/sbin/tini -- /usr/…"   7 hours ago   Up 7 hours             0.0.0.0:10050->10050/tcp                      zabbix-agent
+584c72d4110c   zabbix/zabbix-server-mysql:centos-5.2-latest       "/sbin/tini -- /usr/…"   7 hours ago   Up 7 hours             0.0.0.0:10051->10051/tcp                      zabbix-server
+cacb13aa8f36   zabbix/zabbix-java-gateway:centos-5.2-latest       "docker-entrypoint.s…"   7 hours ago   Up 7 hours             0.0.0.0:10052->10052/tcp                      zabbix-java-gateway
+7f86df1ec563   zabbix/zabbix-snmptraps:centos-5.2-latest          "/usr/sbin/snmptrapd…"   7 hours ago   Up 7 hours             0.0.0.0:162->1162/udp                         zabbix-snmptraps
+01bf45e40f13   phpmyadmin/phpmyadmin                              "/docker-entrypoint.…"   8 hours ago   Up 8 hours             0.0.0.0:9090->80/tcp                          phpmyadmin
 
-您使用的非容器部署方案，请参考[此处](/zh/stack-installationold.md)
+```
 
-#### 本部署包采用的哪个数据库来存储 Zabbix 数据？
+下面列出 Zabbix 本身的参数：
 
-MySQL
+### 路径{#path}
 
-#### 是否可以采用云厂商提供的 RDS 来存储 Zabbix 数据？
+Zabbix 安装目录: */data/zabbix*  
+Zabbix 配置文件（环境变量）: */data/zabbix/.env.xxx*    
+Zabbix 持久存储：*/data/wwwroot/zabbix/zbx_env  
+Zabbix-Web 数据库配置：*/data/wwwroot/zabbix/.env_db_mysql*  
+Zabbix-Proxy 数据库配置：*/data/wwwroot/zabbix/.env_db_mysql_proxy*   
 
-不建议
 
+### 端口
+
+| 端口号 | 用途                                          | 必要性 |
+| ------ | --------------------------------------------- | ------ |
+| 9006   | Zabbix 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
+
+
+### 版本
+
+```shell
+docker images |grep zabbix-server
+```
+
+### 服务
+
+```shell
+sudo docker start | stop | restart | stats  zabbix-server
+sudo docker start | stop | restart | stats  zabbix-web
+sudo docker start | stop | restart | stats  zabbix-proxy
+sudo docker start | stop | restart | stats  zabbix-server
+```
+
+### 命令行
+
+Jenkins 提供 CLI 客户端和 SSH CLI [两种方式](https://www.jenkins.io/zh/doc/book/managing/cli/)，下面是推荐的 客户端 CLI：
+
+```shell
+java -jar jenkins-cli.jar [-s JENKINS_URL] [global options...] command [command options...] [arguments...]
+```
+
+### API
+
+Jenkins 提供可供远程访问的 [类似 REST API](https://www.jenkins.io/doc/book/using/remote-access-api/) 以便更好的实现自动化。
+```
+curl JENKINS_URL/job/JOB_NAME/buildWithParameters \
+  --user USER:TOKEN \
+  --data id=123 --data verbosity=high
+```
+
+同时，也提供了 Java, Python, Ruby 等语言的 API SDK 开发包。 
 

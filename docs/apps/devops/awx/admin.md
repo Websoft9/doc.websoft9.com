@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 slug: /awx/admin
 tags:
   - AWX
@@ -8,170 +8,150 @@ tags:
 
 # 维护参考
 
+## 使用外部 PostgreSQL
 
-## 系统参数
+默认安装下，使用的是Docker版本的PostgreSQL数据库，并设置了持久化存储。  
 
-AWX 预装包包含 AWX 运行所需一序列支撑软件（简称为“组件”），下面列出主要组件名称、安装路径、配置文件地址、端口、版本等重要的信息。
+如果你想将数据库更换为外部PostgreSQL数据库（自建或云数据库），请参考如下步骤：
 
-## 组件
+1. 备份好已有的AWX数据
+2. 进入到AWX的配置文件夹
+   ```
+   cd /data/.awx
+   ```
+2. 删除目前AWX项目的所有容器
+   ```
+   cd /data/.awx
+   docker-compose -f docker-compose.yml down -v
+   ```
+3. 修改 *docker-compose.yml* 文件，去掉两处 *depends_on:* 项中的 *- postgres*，并删除 *postgres: ...* 整段，最后文件的内容如下： 
+   ```
+   version: '2'
+   services:
 
-#### PostgreSQL
+     web:
+       image: ansible/awx_web:11.2.0
+       container_name: awx_web
+       depends_on:
+         - redis
+         - memcached
+       ports:
+         - "80:8052"
+       hostname: awxweb
+       user: root
+       restart: unless-stopped
+       volumes:
+         - supervisor-socket:/var/run/supervisor
+         - rsyslog-socket:/var/run/awx-rsyslog/
+         - rsyslog-config:/var/lib/awx/rsyslog/
+         - "/data/.awx/SECRET_KEY:/etc/tower/SECRET_KEY"
+         - "/data/.awx/environment.sh:/etc/tower/conf.d/environment.sh"
+         - "/data/.awx/credentials.py:/etc/tower/conf.d/credentials.py"
+         - "/data/.awx/nginx.conf:/etc/nginx/nginx.conf:ro"
+         - "/data/.awx/redis_socket:/var/run/redis/:rw"
+         - "/data/.awx/memcached_socket:/var/run/memcached/:rw"
+       environment:
+         http_proxy: 
+         https_proxy: 
+         no_proxy: 
 
-AWX 预装包中内置 PostgreSQL 容器，需要登录容器后使用命令对 PostgreSQL 进行操作。
+     task:
+       image: ansible/awx_task:11.2.0
+       container_name: awx_task
+       depends_on:
+         - redis
+         - memcached
+         - web
+       hostname: awx
+       user: root
+       restart: unless-stopped
+       volumes:
+         - supervisor-socket:/var/run/supervisor
+         - rsyslog-socket:/var/run/awx-rsyslog/
+         - rsyslog-config:/var/lib/awx/rsyslog/
+         - "/data/.awx/SECRET_KEY:/etc/tower/SECRET_KEY"
+         - "/data/.awx/environment.sh:/etc/tower/conf.d/environment.sh"
+         - "/data/.awx/credentials.py:/etc/tower/conf.d/credentials.py"
+         - "/data/.awx/redis_socket:/var/run/redis/:rw"
+         - "/data/.awx/memcached_socket:/var/run/memcached/:rw"
+       environment:
+         http_proxy: 
+         https_proxy: 
+         no_proxy: 
+         SUPERVISOR_WEB_CONFIG_PATH: '/supervisor.conf'
 
-1. 使用 SSH 登录服务器后，运行`docker ps`命令获取 awx-postresql 容器ID
-  ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/awx/awx-getcontainerid-websoft9.png)
+     redis:
+       image: redis
+       container_name: awx_redis
+       restart: unless-stopped
+       environment:
+         http_proxy: 
+         https_proxy: 
+         no_proxy: 
+       command: ["/usr/local/etc/redis/redis.conf"]
+       volumes:
+         - "/data/.awx/redis.conf:/usr/local/etc/redis/redis.conf:ro"
+         - "/data/.awx/redis_socket:/var/run/redis/:rw"
+         - "/data/.awx/memcached_socket:/var/run/memcached/:rw"
 
-2. 进入 awx-postgresql 容器
+     memcached:
+       image: "memcached:alpine"
+       container_name: awx_memcached
+       command: ["-s", "/var/run/memcached/memcached.sock", "-a", "0666"]
+       restart: unless-stopped
+       environment:
+         http_proxy: 
+         https_proxy: 
+         no_proxy: 
+       volumes:
+         - "/data/.awx/memcached_socket:/var/run/memcached/:rw"
+
+   volumes:
+     supervisor-socket:
+     rsyslog-socket:
+     rsyslog-config:
 
    ```
-   docker exec -it 2ca9ad211678 /bin/bash
+4. 修改 */data/.awx/credentials.py* 文件中数据库账号信息，确保为外部PostgreSQL的连接信息
    ```
-4. 运行上面的命令后，就进入了容器命令操作界面
+      DATABASES = {
+       'default': {
+           'ATOMIC_REQUESTS': True,
+           'ENGINE': 'django.db.backends.postgresql',
+           'NAME': "awx",
+           'USER': "awx",
+           'PASSWORD': "yourpassword",
+           'HOST': "pgm-j6cr72qyfadij3980o.pg.rds.websoft9.com",
+           'PORT': "1433",
+       }
+   }
 
-5. 接下来可以使用命令操作 PostgreSQL 
+   BROADCAST_WEBSOCKET_SECRET = "al9mLS4tWTlmX1owN1FyOElJWDY="
+   ```
+5. 修改 */data/.awx/environment.sh* 文件中数据库账号信息，确保为外部PostgreSQL的连接信息
+   ```
+   DATABASE_USER=awx
+   DATABASE_NAME=awx
+   DATABASE_HOST=pgm-j6cr72qyfadij3980o.pg.rds.websoft9.com
+   DATABASE_PORT=1433
+   DATABASE_PASSWORD=yourpassword
+   AWX_ADMIN_USER=admin
+   AWX_ADMIN_PASSWORD=password
 
-> 阅读Websoft9提供的 [《PostgreSQL教程》](https://support.websoft9.com/docs/postgresql/zh/) ，掌握更多的PostgreSQL实用技能：修改密码、导入/导出数据、创建用户、开启或关闭远程访问、日志配置等
-
-
-### 路径
-
-本项目基于Docker安装，下面主要列出Docker有关的参数：
-
-#### Docker Container
-
-通过运行`docker ps`，可以查看到AWX运行时所有的Container：
-
-```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
-e240ed8209cd        awx_task:1.0.0.8    "/tini -- /bin/sh ..."   2 minutes ago       Up About a minute   8052/tcp                             awx_task
-1cfd02601690        awx_web:1.0.0.8     "/tini -- /bin/sh ..."   2 minutes ago       Up About a minute   0.0.0.0:443->8052/tcp                 awx_web
-55a552142bcd        memcached:alpine    "docker-entrypoint..."   2 minutes ago       Up 2 minutes        11211/tcp                            memcached
-84011c072aad        rabbitmq:3          "docker-entrypoint..."   2 minutes ago       Up 2 minutes        4369/tcp, 5671-5672/tcp, 25672/tcp   rabbitmq
-97e196120ab3        postgres:9.6        "docker-entrypoint..."   2 minutes ago       Up 2 minutes        5432/tcp                             postgres
-```
-
-#### Docker Volume
-
-使用 *sudo docker volume ls* 查询所有 volumes，其中：
-
-awx_postgres 挂载的目录：*/var/lib/postgresql/data*  
-awx_rabbitmq 挂载的目录：*/var/lib/rabbitmq*  
-awx_web 挂载的目录：*/var/lib/nginx*   
-awx_task 挂载的目录：*/var/lib/nginx* 	
+   ```
+6. 重新创建容器
+   ```
+   docker-compose -f docker-compose.yml up -d
+   ```
 
 
-#### Docker
+## 负载均衡
 
-Docker 根目录: */var/lib/docker*  
-Docker 镜像目录: */var/lib/docker/image*   
-Docker 存储卷：*/var/lib/docker/volumes*  
-Docker daemon.json 文件：默认没有创建，请到 */etc/docker* 目录下根据需要自行创建
-
-#### Docker Compose
-
-本环境使用 Docker Compose 作为容器编排（调度）工具，用于管理多个容器的启动和服务连接。
-
-Docker Compose 命令位置：*/usr/local/bin/docker-compose*  
-Docker Compose 配置目录 */data/.awx*  
-
-#### PostgreSQL
-
-PostgreSQL 数据持久存储：*/data/pgdocker*
-
-
-### 端口号
-
-下面是您在使用本镜像过程中，需要用到的端口号，请通过 [云控制台安全组](https://support.websoft9.com/docs/faq/zh/tech-instance.html)进行设置
-
-| 名称 | 端口号 | 用途 |  必要性 |
-| --- | --- | --- | --- |
-| PostgreSQL | 5432 | TCP访问PostgreSQL | Optional |
-| PgAdmin | 9090 | 可视化访问PostgreSQL | Optional |
-| HTTP | 80 | 通过http访问AWX | 必须 |
-| HTTPS | 443 | 通过https访问AWX | 可选 |
-
-### 版本号
-
-组件版本号可以通过云市场商品页面查看。但部署到您的服务器之后，组件会自动进行更新导致版本号有一定的变化，故精准的版本号请通过在服务器上运行命令查看：
-
-```shell
-# Linux Version
-lsb_release -a
-
-# Python Version
-python --version
-
-# Docker Version
-docker -v
-
-# Docker image lists(includes version)
-sudo docker images
-
-# Docker Compose Version
-docker-compose --version
-```
-
-### 服务
-
-使用由Websoft9提供的AWX部署方案，可能需要用到的服务如下：
-
-#### Docker Compose
-
-```shell
-#创建容器
-sudo docker-compose up
-#创建容器并重建有变化的容器
-sudo docker-compose up -d
-```
-
-#### Docker
-
-```shell
-sudo systemctl start docker
-sudo systemctl restart docker
-sudo systemctl stop docker
-sudo systemctl status docker
-```
-
-#### AWX 容器
-
-> 终止命令 `stop` 会从进程中释放容器的资源，但不会删除容器
-
-```shell
-#AWX-主程序
-sudo docker pause awx_task
-sudo docker stop awx_task
-sudo docker restart awx_task
-
-#AWX-Web界面
-sudo docker pause awx_web
-sudo docker stop awx_web
-sudo docker restart awx_web
-
-#RabbitMQ
-sudo docker pause awx_rabbitmq
-sudo docker stop awx_rabbitmq
-sudo docker restart awx_rabbitmq
-
-#PostgreSQL
-sudo docker pause awx_postgres
-sudo docker stop awx_postgres
-sudo docker restart awx_postgres
-
-#PostgreSQL
-sudo docker pause awx_Memcached
-sudo docker stop awx_Memcached
-sudo docker restart awx_Memcached
-```
-
-## 备份
-
-## 恢复
+通过负载均衡处理多台 AWX 并行工作，对于大型企业来说这是一种很常见的部署方案。
 
 ## 升级
 
-升级AWX通过重新安装来完成。
+升级 AWX 通过重新安装来完成。
 
 1. 使用SSH登录服务器
 2. 进入到 */data/awx/* 目录，从 Github 更新AWX源码
@@ -192,34 +172,21 @@ sudo docker restart awx_Memcached
    ```
 
 
-## 故障处理
+## 故障速查
 
-此处收集使用 AWX 过程中最常见的故障，供您参考
+除以下列出的 Jenkins 故障问题之外， [通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案。 
 
-> 大部分故障与云平台密切相关，如果你可以确认故障的原因是云平台造成的，请参考[云平台文档](https://support.websoft9.com/docs/faq/zh/tech-instance.html)
-
-#### 已经通过AWX安装了环境的受控端主机，更换镜像后，再次连接会报错？
+#### 受控端更换镜像后，AWX 再次连接报错？
 
 找到主机缓存文件：*/var/lib/awx/.ssh/known_hosts*，删除其中的历史记录即可
-
-#### 数据库服务无法启动
-
-数据库服务无法启动最常见的问题包括：磁盘空间不足，内存不足，配置文件错误。  
-建议先通过命令进行排查  
-
-```shell
-# 查看磁盘空间
-df -lh
-
-# 查看内存使用
-free -lh
-```
 
 #### 登录界面显示"is updating"？
 
 等待更新完成后，重启服务器，再访问
 
-#### 创建项目选择手动（SCM 类型）提示 "WARNING: There are no available playbook directories in /var/lib/awx/projects...."？
+#### 创建项目选择手动（SCM 类型）提示 "WARNING..."？
+
+错误信息：WARNING: There are no available playbook directories in /var/lib/awx/projects....  
 
 原因：AWX容器的项目路径没有挂在到宿主机上  
 方案：将/var/lib/awx/projects 映射到宿主机目录  /data/wwwroot/awx/projects
@@ -245,18 +212,18 @@ free -lh
    docker-compose up -d
    ```
 
-#### 能够正常进入 AWX 控制台，但无法运行 Job？
+#### 可进入 AWX 控制台，但无法运行 Job？
 
 很有可能是 awx_redis 容器没有正常运行导致，通过命令 `docker ps` 查看 awx_redis 运行状态
 
 
-## 常见问题 
+## 问题解答
 
 #### AWX支持多语言吗？
 
 支持[多种语言](https://docs.ansible.com/ansible-tower/latest/html/release-notes/supported_locales.html)，包括中文。它不提供语言切换菜单，而是自动适用浏览器首选语言。
 
-#### AWX是如何与PostgreSQL连接的？
+#### AWX是如何与 PostgreSQL 连接的？
 
 容器内部连接，即容器编排
 
@@ -274,32 +241,25 @@ free -lh
 
 http://AWX Server Internet IP/api/
 
-#### 如果没有域名是否可以部署 AWX？
+#### AWX 是否支持 Ansible Galaxy？
 
-可以，访问`http://服务器公网IP` 即可
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/awx/awx-setgalax-websoft9.png)
 
-#### 数据库 Postgres 用户对应的密码是多少？
+支持，参考官方文档 [Ansible Galaxy Support](https://docs.ansible.com/ansible-tower/latest/html/userguide/projects.html#ug-galaxy)
 
-密码存放在服务器相关文件中：`/credentials/password.txt`
+#### AWX 的命令行是什么？
 
-#### 是否有可视化的数据库管理工具？
+awx 是 AWX 和 Red Hat Ansible Tower 的官方命令行客户端。它：
 
-为了安全考虑，没有提供可视化的数据库管理工具
+* 使用与 AWX HTTP API一致的命名和结构
+* 提供一致的输出格式和可选的机器可解析格式
+* 在可能的范围内，自动检测AWX和Red Hat Ansible Tower多个版本的API版本，可用的端点和功能支持。
 
-#### 是否可以修改AWX的源码路径？
+潜在的用途包括：
 
-采用 Docker 安装，不可以修改
+* 配置和启动作业/剧本
+* 检查作业运行的状态和输出
+* 管理组织，用户，团队等对象。
 
-#### 部署和安装有什么区别？
+更多详情请参考官方文档：[《AWX命令行界面》](https://docs.ansible.com/ansible-tower/latest/html/towercli/index.html)
 
-部署是将一序列软件按照不同顺序，先后安装并配置到服务器的过程，是一个复杂的系统工程。  
-安装是将单一的软件拷贝到服务器之后，启动安装向导完成初始化配置的过程。  
-安装相对于部署来说更简单一些。 
-
-#### 云平台是什么意思？
-
-云平台指提供云计算服务的平台厂家，例如：Azure,AWS,阿里云,华为云,腾讯云等
-
-#### 实例，云服务器，虚拟机，ECS，EC2，CVM，VM有什么区别？
-
-没有区别，只是不同厂家所采用的专业术语，实际上都是云服务器

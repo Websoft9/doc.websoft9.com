@@ -96,7 +96,7 @@ tags:
 
 ## 参数
 
-**[通用参数表](../setup/parameter)** 中可查看 Nginx, Java, Docker, MySQL 等 Jenkins 应用中包含的基础架构组件路径、版本、端口等参数。 
+**[通用参数表](./setup/parameter)** 中可查看 Nginx, Java, Docker, MySQL 等 Jenkins 应用中包含的基础架构组件路径、版本、端口等参数。 
 
 下面仅列出 Jenkins 本身的参数：
 

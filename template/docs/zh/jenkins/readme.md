@@ -58,7 +58,7 @@ tags:
 
 ## Jenkins 使用入门
 
-我们通过一个目标范例【Github 上的项目通过 Jenkins 自动构建部署】来指导您快速入门：
+下面以 **Github 上的项目通过 Jenkins 自动构建部署** 作为一个任务，帮助用户快速入门：
 
 1. 在 GitHub设置 Personal access tokens，用于 Jenkins 连接
  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins-wizard2-websoft9.png)
@@ -106,6 +106,8 @@ tags:
 **[通用参数表](../setup/parameter)** 中可查看 Nginx, Java, Docker, MySQL 等 Jenkins 应用中包含的基础架构组件路径、版本、端口等参数。 
 
 下面仅列出 Jenkins 本身的参数：
+
+### 路径{#path}
 
 ### 端口
 
