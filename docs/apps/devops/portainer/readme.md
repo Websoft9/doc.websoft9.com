@@ -8,13 +8,18 @@ tags:
 
 # 快速入门
 
-[Portainer](https://www.portainer.io) 是一个可视化的Docker操作界面，提供状态显示面板、应用模板快速部署、容器镜像网络数据卷的基本操作（包括上传下载镜像，创建容器等操作）、事件日志显示、容器控制台操作、Swarm集群和服务等集中管理和操作、登录用户管理和控制等功能。功能十分全面，基本能满足中小型单位对容器管理的全部需求。
+[Portainer](https://www.portainer.io) 是一个可视化的 Docker 操作界面，提供状态显示面板、应用模板快速部署、容器镜像网络数据卷的基本操作（包括上传下载镜像，创建容器等操作）、事件日志显示、容器控制台操作、Swarm集群和服务等集中管理和操作、登录用户管理和控制等功能。功能十分全面，基本能满足中小型单位对容器管理的全部需求。
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/docker/portainer/portainer-sc001-websoft9.png)
 
-在云服务器上部署 Portainer 预装包之后，请参考下面的步骤快速入门。
+部署 Websoft9 提供的 Portainer 之后，请参考下面的步骤快速入门。
+
 
 ## 准备
+
+1. 在云控制台获取您的 **服务器公网IP地址** 
+2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:9000** 端口已经开启
+3. 若想用域名访问  Portainer，务必先完成 **[域名五步设置](./dns#domain)** 过程
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 如果使用 Portainer，请在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:9000** 端口是否开启
@@ -28,46 +33,44 @@ tags:
     sudo ln -s docker-runc-current docker-runc
     ~~~
 
-## 账号密码
-
-Portainer 第一次使用，仅需自行设置账号和密码
 
 ## Portainer 初始化向导
 
-### 检测 Docker 安装
+### 详细步骤
 
 1. 使用 SSH 连接服务器，运行下面的命令，查看 Docker 的安装信息和运行状态
    ```
    sudo docker info
    sudo systemctl status docker
    ```
-2. 运行服务状态查询命令，Docker 正常运行会得到 " Active: active (running)... " 的反馈
+   运行服务状态查询命令，Docker 正常运行会得到 " Active: active (running)... " 的反馈
 
-### 登录 Portainer
 
-如果部署了 Portainer，请参考如下的初始化步骤：
-
-1. 通过本地浏览器访问：*http://服务器公网IP:9000*， 直接进入 Portainer 界面
+2. 通过本地浏览器访问：*http://服务器公网IP:9000*， 直接进入 Portainer 界面
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/docker/portainer/portainer-login-websoft9.png)
 
-2. 设置管理员账号密码，点击【Create user】
+3. 自行设置管理员账号密码，点击【Create user】
 
-3. 选择【Local】作为镜像连接选项，然后点击【Connect】
+4. 选择【Local】作为镜像连接选项，然后点击【Connect】
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/docker/portainer/portainer-loginconnect-websoft9.png)
 
-4. 进入Portainer后台管理界面，点击Local项目就可以开始使用Portainer
+5. 进入Portainer后台管理界面，点击Local项目就可以开始使用Portainer
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/docker/portainer/portainer-bkselect-websoft9.png)
 
-5. 通过 Portainer 查看运行容器，你会发现 Portainer 本身也是运行在容器中的
+6. 通过 Portainer 查看运行容器，你会发现 Portainer 本身也是运行在容器中的
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/docker/portainer/portainer-pcontainer-websoft9.png)
 
 > 需要了解更多 Docker 的使用，请参考官方文档：[Docker Documentation](https://docs.docker.com/)
 
-## Portainer 入门向导
+### 出现问题？
+
+若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
+
+## Portainer 使用入门
 
 下面以部署一个 WordPress 网站为场景，描述 Portainer 的使用：  
 
-### 部署MySQL容器
+### 部署 MySQL 容器
 
 下面详细介绍通过 Portainer 部署MySQL：
 
@@ -85,12 +88,11 @@ Portainer 第一次使用，仅需自行设置账号和密码
 
 3. 点击 Deploy the container 创建容器；
     
-4. 如果服务器安全组的3306端口已经开放，现在就可以在本地通过远程连接 MySQL 数据库
-   > MySQL8远程访问测试失败，报错：Authentication plugin caching_sha_password cannot be loaded...
+4. 如果服务器安全组的 3306 端口已经开放，现在就可以在本地通过远程连接 MySQL 数据库
 
-### 部署WordPress容器
+### 部署 WordPress 容器
 
-下面详细介绍通过 Portainer 部署WordPress以及使用上一步的MySQL作为数据存储：
+下面详细介绍通过 Portainer 部署 WordPress 以及使用上一步的 MySQL 作为数据存储：
 
 1. 登录 Portainer ，打开【Containers】>【Add container】
    ![createcontainer](http://libs.websoft9.com/Websoft9/DocsPicture/zh/potainer/portainer-addcontainer-websoft9.png)
@@ -115,27 +117,14 @@ Portainer 第一次使用，仅需自行设置账号和密码
   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-install003-websoft9.png)
 
 
-### 进阶实战：Nginx 容器实现端口转发
+### Nginx 容器绑定域名
 
-以上一章节中的 Wordpress 网站作为示例，在 WordPress 部署完成后，需要在浏览器内输入 *http://公网IP地址：端口* 的形式访问网站，但我们不加端口就能访问域名，所以这时就要用到 Nginx 的端口转发功能。
+以上一章节中的 Wordpress 网站作为示例，在 WordPress 部署完成后，需要在浏览器内输入 *http://公网IP地址：端口* 的形式访问网站，但我们不加端口就能访问域名，所以这时就要用到 Nginx 的端口转发功能。  
 
-要实现这个需求，有三个部署：部署Nginx容器，部署 FileBrowser 容器，
-
-#### 部署Nginx容器
-
-下面详细介绍通过 Portainer 部署 Nginx：
-
-1. 登录 Portainer ，打开【Containers】>【Add container】
-   ![createcontainer](http://libs.websoft9.com/Websoft9/DocsPicture/zh/potainer/portainer-addcontainer-websoft9.png)
-
-2. 按照下图创建 Nginx 容器；
-   ![nginx-1](http://libs.websoft9.com/Websoft9/DocsPicture/zh/potainer/portainer-nginx-1-websoft9.png)
-
-3. 回到容器列表，点击刚刚创建的 Nginx 容器，可进入到容器详情页，往下可看到 **volueme** 信息，记录下 **/etc/nginx 目录** 对应的 volume 的值。
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/potainer/portainer-nginx-volume-websoft9.png)
+我们使用使用一款可视化的 Nginx 管理器：[Nginx Proxy Manager](https://hub.docker.com/r/jc21/nginx-proxy-manager)
 
 
-#### 部署 FileBrowser 容器
+### FileBrowser 容器管理文件
 
 1. 进入到 Portainer 页面，选择左边的 **App Templates** 选项，往下找到 **File browser** 容器模板，单击选择；
     ![filebowser-1](http://libs.websoft9.com/Websoft9/DocsPicture/zh/potainer/portainer-filebrowser-1-websoft9.png)
@@ -146,120 +135,53 @@ Portainer 第一次使用，仅需自行设置账号和密码
 4. 按照下图，将 File browser 的 volume 值修改为 和 Nginx 的 volume 值相同；
     ![filebowser-4](http://libs.websoft9.com/Websoft9/DocsPicture/zh/potainer/portainer-filebrowser-4-websoft9.png)
 
+## Portainer 常用操作
 
-#### 设置 Nginx 配置文件实现端口转发
+#### 运行容器命令
 
-1. 打开第二步中创建的 File Browser 网站（hhtp://公网ip:端口），账号密码为 **admin/admin**，登录到 File Browser;
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/potainer/portainer-filebrowser-5-websoft9.png)
-2. 进入 **conf.d** 目录，双击 **default.conf** 文件，将原来的配置删除，修改为如下图所示内容：
-    ~~~
-    upstream wordpress {
-        server 159.138.6.145:32773;
-    }
+在此以连接到 MySQL 容器为例进行说明：
 
-    server {
-        listen 80;
-        server_name  test.example.top; #绑定域名
-    
-        location / {
-        proxy_pass http://wordpress;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header Via "nginx";
-        }
-    }
-    ~~~
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/potainer/portainer-nginx-2-websoft9.png)
-    >[danger] 注意：请将 **server_name** 改为自己的域名，**proxy_pass** 改为自己网站容器的 **IP:端口号**
-3. 到容器列表重启 Nginx 容器，现在就可以在浏览器地址栏输入域名直接访问自己的网站了。
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/potainer/portainer-proxysuccess-websoft9.png)
-
-> 修改完 Nginx 的配置文件后，File Browser 容器可选择继续保留使用或删除。
+1. 返回到容器列表，点击下图中 MySQL 的 **Quick actions** 一栏下的 **>_** 图标；
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/potainer/portainer-containerlist-websoft9.png)
+2. 在新打开的页面，点击 **Connetc** 按钮，连接到容器；
+    ![](http://libs-websoft9-com.oss-cn-qingdao.aliyuncs.com/Websoft9/DocsPicture/zh/potainer/portainer-createdatabase-websoft9.png)
+3. 接下来就可以在命令窗口中输入```mysql -uroot -ppassword;"```,其中 “password” 为您在自己设置的数据库密码，这样就可以开始使用数据库命令对 MySQL 进行管理了；
 
 
-#### 进阶实战：Portainer 设置 HTTPS
+## 参数
 
-1. 参考 [安装File Browser容器](portainer/solution/filebrowser.md) 章节新建 File Browser 容器；
-    > 注意设置 File Browser 的 volume 。
+**[通用参数表](../setup/parameter)** 中可查看 Docker 等 Portainer 应用中包含的基础架构组件路径、版本、端口等参数。 
 
-2. 在浏览器打开 File Browser ，新建一个名为 **cert** 文件夹，将证书上传至 cert；
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/potainer/portainer-ssl-1-websoft9.png)
+下面仅列出 Portainer 本身的参数：
 
-3.修改 Nginx 的配置文件,注意将 IP 和域名改成自己的服务器 IP 和域名；    
+### 路径{#path}
 
-    upstream portainer {
-    server 159.138.6.145:9000;
-    }
-
-    server {
-        listen 80;
-        listen 443 ssl;
-        server_name  test.websoft9.top;
-
-        ssl_certificate /etc/nginx/cert/cert-1540972394298_test.websoft9.top.crt;
-        ssl_certificate_key /etc/nginx/cert/cert-1540972394298_test.websoft9.top.key;
- 
-        location / {
-        proxy_pass http://portainer;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header Via "nginx";
-        }
-    }
-   
-
- ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/potainer/portainer-ssl-2-websoft9.png)
-   >[warning] 如果证书路径和图中不同，请将图中证书路径改为自己的证书所在路径，并将证书名改为自己的证书名。
-4. 在容器列表中重启 Nginx 容器使配置生效，就可以在浏览器内使用 https://域名 访问 Portainer 了。
-5. 如果想要达到访问 http 自动跳转到 https 的效果，请将配置改成如下所示：
-
-        upstream portainer {
-        server 159.138.6.145:9000;
-        }
-
-        server {
-            listen 80;
-            listen 443 ssl;
-            server_name  test.websoft9.top;
-    
-        ssl_certificate /etc/nginx/cert/cert-1540972394298_test.websoft9.top.crt;
-        ssl_certificate_key /etc/nginx/cert/cert-1540972394298_test.websoft9.top.key;
-        
-        if ($scheme != "https") {
-    	return 301 https://$host$request_uri;
-    	}
-    
-        location / {
-        proxy_pass http://portainer;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header Via "nginx";
-        }
-        }
+Portainer 数据卷：*/var/lib/docker/volumes/portainer_data/_data*   
 
 
-## 异常处理
+### 端口
 
-#### 浏览器无法访问 Portainer（白屏）？
+| 端口号 | 用途                                          | 必要性 |
+| ------ | --------------------------------------------- | ------ |
+| 9000   | 通过 HTTP 访问 Portainer  | 必选   |
 
-您的服务器对应的安全组9000端口没有开启（入规则），导致浏览器无法它
 
-#### 采用何种方式安装 Portainer？
+### 版本
 
-采用 Docker 安装
+```shell
+sudo docker respect portainer
+```
 
-#### 服务器中没有Portainer，如何安装？
+### 服务
 
-可以将服务器当前镜像更换为Portainer镜像，也可以在当前镜像的基础通过命令安装
+```shell
+sudo docker start | restart | stop | stats portainer
+```
 
-    ~~~
-    #通过命令安装 Portainer
+### 命令行
 
-    docker volume create portainer_data
-    docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
-    cd /usr/libexec/docker/
-    sudo ln -s docker-runc-current docker-runc
-    ~~~
+[Portainer CLI](https://docs.portainer.io/v/ce-2.9/advanced/cli)
+
+### API
+
+[Portainer API](https://docs.portainer.io/v/ce-2.9/api/docs)

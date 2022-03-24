@@ -76,71 +76,26 @@ passwd 'your password'
 
 下面以 **通过 Webmin 安装一个 WordPress 网站作**为一个任务，帮助用户快速入门：  
 
-### 准备环境
+> 需提前将域名解析至服务器
 
-WordPress 基于PHP 和 MySQL 技术栈，web 服务器使用Apache 。本部署方案中默认已经安装 Apache，还缺少 PHP 和 MySQL。  
-
-PHP 和 MySQL 的安装是比较麻烦的，所幸，我们可以使用 Websoft9 提供的自动化脚本完成安装
-
-> 可能会因网络原因，git clone 从 github 站下载时会有异常，可以多尝试几次
-
-1. 运行下面的命令，安装 PHP，本次安装的 WordPress 是 5.8 ，需要 PHP7.4 支持，因此版本选择 7.4 
-   ```
-   git clone https://github.com/Websoft9/role_php.git
-   ansible-playbook role_php/tests/test.yml
-   ```
-
-2. 运行下面的命令，安装 MySQL，其中版本选择 5.7
-   ```
-   git clone https://github.com/Websoft9/role_mysql.git
-   ansible-playbook role_mysql/tests/test.yml
-   ```
-   > 请记住 MySQL 安装时设置的登录密码。如没有设置，默认密码为：123456 ，请及时修改为更为复杂的强密码。
-
-3. 登录到 Webmin 后台，点击左侧菜单下方的【刷新模块】按钮，在【服务器】菜单下可以看到【MySQL数据库服务器】
-
-
-### 上传源码
-
-先下载 WordPress 到本地，然后上传、解压、修改文件权限。
-
-1. 通过菜单打开【Tools】>【File Manager】 选择进入/data/wwwroot 目录，点击“File”下拉菜单，选择“Upload to current directory”完成wordpress压缩包上传：
-
-   ![Webmin 上传](http://libs.websoft9.com/Websoft9/DocsPicture/zh/webmin/wb01.png)
-
-
-### 配置虚拟主机
-
-配置虚拟主机，需提前将域名解析到服务器。解析成功后，参考下面配置完成虚拟主机设置：
-
-1. 打开菜单【服务器】 > 【Apache服务器】，点击“Create virtual host”。
-
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/webmin/wb08.png)
-
-2. 点击右上角按钮，使域名设置生效：
-
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/webmin/wb09.png)
-
-3. 本地浏览器访问：http://域名，测试 WordPress
-
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/webmin/wb10.png)
-
-### 配置数据库
-
-为 WordPress 连接数据库。
-通过FTP工具（这里是用 WinSCP）连接到服务器，找到 WordPress 的配置文件 /data/wwwroot/wordpress/wp-config.php，修改数据库连接信息（** 密码是上面安装MySQL时设置的密码 **），并保存。
-
-   ![Webmin 连接数据库](http://libs.websoft9.com/Websoft9/DocsPicture/zh/webmin/wb071.png)
-
+1. 安装 PHP，MySQL 环境 （[参考](./ansible#installrole)）
+2. 本地下载 WordPress 源码上传至服务器 */data/wwwroot* 目录，然后在线解压（[参考](#file)）
+3. 修改解压后的文件夹拥有者为 www（[参考](#file)）
+4. 打开[数据库管理](#db)界面，增加一个名称为 wordpress 的数据库
+5. 通过修改 WordPress 的配置文件中数据库相关项目 */data/wwwroot/wordpress/wp-config.php*  
+6. 为 WordPress 网站创建一个虚拟主机（[参考](#apachevhost)）
+7. 本地浏览器访问：http://域名，测试 WordPress
 
 ## 常用操作
 
 ### 安装组件
 
-Webmin 应用中除预装 Apache, Docker 之外，没有安装其他组件。  
+Webmin 应用中除预装 Apache, Docker 之外，没有安装其他组件。 
+
+可通过 Websoft9 提供的 [自动化组件项目](./ansible#installrole) 来安装所需的各种组件：PHP, JDK, Ruby, MySQL 等
 
 
-### 配置 Apache 虚拟主机
+### 配置 Apache 虚拟主机{#apachevhost}
 
 Webmin 中可以直接通过可视化的方式配置多个 Apache 虚拟主机，具体如下：  
 
@@ -159,7 +114,7 @@ Webmin 中可以直接通过可视化的方式配置多个 Apache 虚拟主机�
 
    ![Webmin Apache](https://libs.websoft9.com/Websoft9/DocsPicture/zh/webmin/webmin-apache-vhost-conf-websoft9.png)
 
-### 文件管理
+### 文件管理{#file}
 
 通过【Tools】 > 【File Manage】菜单可以进行文件管理，如文件的上传、下载等
 
@@ -198,7 +153,7 @@ Webmin 中可以直接通过可视化的方式配置多个 Apache 虚拟主机�
 
    ![Webmin File](https://libs.websoft9.com/Websoft9/DocsPicture/zh/webmin/webmin-user-websoft9.png)
 
-### 数据库管理
+### 数据库管理{#db}
 
 Webmin 提供了可视化的 MySQL 数据库管理界面，可以很方面的创建和管理数据库：  
 
@@ -272,4 +227,9 @@ sudo systemctl start | stop | restart | status webmin
 
 ### 命令行
 
+Webmin 没有提供命令行程序
+
 ### API
+
+参考:[Webmin API](https://doxfer.webmin.com/Webmin/The_Webmin_API)
+

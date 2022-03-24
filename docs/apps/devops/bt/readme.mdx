@@ -1,0 +1,274 @@
+---
+sidebar_position: 1
+slug: /bt
+tags:
+  - BT
+  - 宝塔面板
+  - 运行环境
+---
+
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# 快速入门
+
+BT（宝塔）面板**可视化**的服务器管理软件，支持一键LAMP/LNMP/监控/网站/FTP/数据库/JAVA等100多项服务器管理功能。可以通过 Web 端轻松管理服务器，提升运维效率。例如：管理网站、管理文件、图表化监控、计划任务等功能。
+
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btlinux/bt-linux_pc.png)
+
+部署 Websoft9 提供的 BT 之后，请参考下面的步骤快速入门。
+
+## 准备
+
+1. 在云控制台获取您的 **服务器公网IP地址** 
+2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:8888** 端口已经开启
+3. 若想用域名访问  BT，务必先完成 **[域名五步设置](./dns#domain)** 过程
+
+## 宝塔初始化向导
+
+### 详细步骤
+
+BT 部署到你的服务器后，即可开始使用：
+
+1. 使用本地浏览器访问：*http://服务器公网IP:8888* ，进入登录页面  
+   ![BT 登录界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/btlinux/bt-login-websoft9.png)
+
+2. 输入默认账号密码（用户名：`administrator`  密码：`admin123`），进入宝塔后台
+   ![BT 后台界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/btlinux/bt-console-websoft9.png)
+
+3. 如果出现下面的绑定宝塔账号提示，访问：*http://服务器公网IP:8888/soft* 即可绕开
+   ![BT 后台界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/btwin/bt-registerneed-websoft9.png)
+
+  > 绑定宝塔官方账号不是必须的步骤
+
+4. 先升级成 BT 最新版本
+
+5. 搭建所需的环境
+
+### 异常处理
+
+若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
+
+## 宝塔使用入门
+
+下面以 **通过 BT 安装一个 WordPress 网站** 作为一个任务，帮助用户快速入门：
+
+主要步骤包括：①上传网站代码->②修改文件系统用户权限->③配置域名（非必要）->④增加网站对应的数据库（非必要）->⑤完成安装向导
+
+1.  打开宝塔Web界面-->网站-->添加站点，完成必要的配置，并牢记相关账号和密码
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btwin/bt-deploysite001-websoft9.png)
+
+    * 域名必须填写
+    * 建议创建FTP（如不创建，通过使用宝塔的在线文件管理）
+    * 创建数据库
+    * 选择程序和版本
+
+3.  上传文件到网站目录或上传压缩包到目录后解压；
+6.  到云控制台中完成域名解析
+8.  打开网址 http://您的域名 ,即可开始进行wordpress配置。
+
+
+## 常用操作
+
+### 搭建环境
+
+宝塔默认会推荐一个组合的安装套件，如果套件合适你的需求，可以安装它：
+
+1. 确定所需的套件，在套件界面上选择组件版本，例如：PHP7.4, MySQL 5.6
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btlinux/bt02.png)
+
+2. 组件选择完成后，点击【一键安装】，耐心等待安装直至结束
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btlinux/bt03.png) 
+
+初始化安装之外的安装，都可以通过【软件商店（管理）】去安装更多的组件。
+
+* 宝塔 Linux 面板之【软件商店】
+  ![宝塔 Linux 软件商店](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btlinux/bt-linuxapps-websoft9.png) 
+
+* 宝塔 Windows 面板之【软件管理】
+  ![宝塔 Windows 软件管理](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btwin/bt-winapps-websoft9.png) 
+
+**示例1 安装Tomcat：** 打开宝塔【软件管理】>【运行环境】>【Tomcat】，点击【安装】即可  
+
+**示例1 安装Node.js：** 打开宝塔【软件管理】>【运行环境】>【PM2管理器】，点击【安装】即可
+
+
+### 管理文件
+
+我们知道文件管理主要包括：复制、粘贴、剪切、删除、重命名、压缩、刷新、新建文件、新建目录等操作：
+
+
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btwin/bt-filemanage-websoft9.png)
+
+可以进行新增、删除、编辑、解压、权限设置、压缩等几乎所有的操作
+
+
+### 设置 FTP
+
+当每个网站分属于不同的客户的时候，给每个网站分配对应的 FTP 是必要的：
+
+* 建立网站
+* 设置FTP账号
+* 下载FTP客户端，推荐Filezella
+* 连接FTP，上传文件
+
+若FTP无法正常连接，请根据以下说明排除错误
+1. 安全组的21端口是否打开
+2. 是否主动/被动模式都不能连接
+3. 宝塔中的防火墙设置禁止了21端口
+
+### 域名绑定
+
+绑定域名的前置条件是：已经完成域名解析（登录域名控制台，增加一个A记录指向服务器公网IP）  
+
+完成域名解析后，从服务器安全和后续维护考量，需要完成**域名绑定**：
+
+BT 域名绑定操作步骤：
+
+![](http://libs.websoft9.com/Websoft9/DocsPicture/en/bt/bt-setdns-websoft9.png)
+
+### 挂载数据盘
+
+宝塔镜像默认安装都在系统盘，如果您购买了额外的数据盘，如何挂载呢？
+
+1. 将数据盘格式化
+2. 面板设置-默认建站目录，将C:\wwwroot目录更改为数据盘对应的目录
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btwin/btwin-wwwroot-websoft9.png)
+
+注意：如果已有多个网站，建议先完成如下两个操作以不影响原网站：
+1. 先将wwwroot的数据备份下来
+2. 将原wwwroot中的文件拷贝到数据盘对应的目录
+3. 通过网站管理修改网站路径
+
+### 安装 PHP 扩展
+
+打开宝塔面板->软件管理，找到PHP，点击设置，我们会看到“安装扩展项”
+
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btwin/btwin-phpset-websoft9.png)
+
+安装完成后，请点击“PHP服务”重启服务
+
+### 设置 HTTPS
+
+宝塔中设置HTTPS两种方式，请根据您的实际情况进行选择：
+
+* 注册宝塔官方账号，绑定后一键完成HTTPS部署
+* 自行上传SSL证书，完成部署。（[官方帮助](https://www.bt.cn/bbs/thread-704-1-1.html)）
+
+> 宝塔SSL申请的是免费版TrustAsia DV SSL CA - G5(1年）
+
+### 管理日志
+
+登录宝塔面板->安全，会看到面板操作日志，点击“清空”按钮会清空所有操作记录
+
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btlinux/btlinux-panellogs-websoft9.png)
+
+
+### 管理数据库
+
+在宝塔面板中，尽量使用 phpMyAdmin 来管理数据库
+
+1. 进入宝塔面板-数据库，找到root密码和phpMyAdmin链接
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btlinux/bt-linux_phpmyadmin-websoft9.png)
+2. 点击“root密码”，设置好您的默认密码
+2. 点击phpMyAdmin，输入root和对应的密码，然后登录到系统中
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-logincn-websoft9.png)
+
+> 阅读Websoft9提供的 [《MySQL教程》](https://support.websoft9.com/docs/mysql/zh/admin-phpmyadmin.html) ，掌握更多的MySQL实用技能：修改密码、导入/导出数据、创建用户、开启或关闭远程访问、日志配置等
+
+### 重置（修改）MySQL 密码
+
+对于宝塔面板来说，重置密码与修改密码是同样的操作。
+
+进入宝塔面板->数据库，点击“root密码”链接，修改后点击提交即可
+
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btlinux/btlinux-mysqlpw-websoft9.png)
+
+### 宝塔 Windows 服务端
+
+宝塔 Windows 版相对于 Linux 版本来说，提供了一个可视化的服务端工具。可用于修改端口、重置密码等操作。
+
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btwin/btwin-inti-websoft9.png)
+
+## 参数
+
+**[通用参数表](../setup/parameter)** 中可查看 Docker 等 BT 应用中包含的基础架构组件路径、版本、端口等参数。 
+
+下面仅列出 BT 本身的参数：
+
+### 路径{#path}
+
+<Tabs>
+<TabItem value="linuxpath" label="Linux" default>
+
+* 安装目录：*/www/server*  
+* 网站目录：*/www/wwwroot/default*  
+* Apache目录：*/www/server/httpd*  
+* Nginx目录：*/www/server/nginx*  
+* MySQL目录：*/www/server/mysql*  
+* PHP目录：*/www/server/php*  
+* Redis目录：*/www/server/redis*  
+* Memcached目录：*/usr/local/memcached*  
+* 日志目录：*/www/wwwlogs*
+
+</TabItem>
+
+<TabItem value="windowspath" label="Windows">
+
+* 安装目录：*C:\BtSoft\ServerAdmin*
+*   网站目录：*C:\wwwroot*
+*   MySQL 目录：*C:\BtSoft\mysql*
+*   Apache 日志文件：*C:\BtSoft\apache\logs*
+
+</TabItem>
+</Tabs>
+
+### 端口
+
+| 端口号 | 用途                                          | 必要性 |
+| ------ | --------------------------------------------- | ------ |
+| 8888   | 访问宝塔的端口 | 必须   |
+
+
+### 版本
+
+宝塔控制台查看
+
+### 服务
+
+```shell
+sudo /etc/init.d/nginx start | stop | restart | reload
+sudo /etc/init.d/apache start | stop | restart | reload
+sudo /etc/init.d/mysql start | stop | restart | reload
+sudo /etc/init.d/pure-ftpd start | stop | restart | reload
+sudo /etc/init.d/pure-ftpd start | stop | restart | reload
+sudo /etc/init.d/redis start | stop | restart | reload
+sudo /etc/init.d/memcached start | stop | restart | reload
+sudo /etc/init.d/php-fpm-{52|53|54|55|56|70|71|72|73|74} start | stop | restart | reload
+```
+
+### 命令行
+
+```
+$ bt
+===============宝塔面板命令行==================
+(1) 重启面板服务           (8) 改面板端口
+(2) 停止面板服务           (9) 清除面板缓存
+(3) 启动面板服务           (10) 清除登录限制
+(4) 重载面板服务           (11) 取消入口限制
+(5) 修改面板密码           (12) 取消域名绑定限制
+(6) 修改面板用户名         (13) 取消IP访问限制
+(7) 强制修改MySQL密码      (14) 查看面板默认信息
+(22) 显示面板错误日志      (15) 清理系统垃圾
+(23) 关闭BasicAuth认证     (16) 修复面板(检查错误并更新面板文件到最新版)
+(24) 关闭动态口令认证          (17) 设置日志切割是否压缩
+(25) 设置是否保存文件历史副本  (18) 设置是否自动备份面板
+(0) 取消                   (29) 取消访问设置验证
+
+```
+
+### API
+
+BT 没有提供 API
+
