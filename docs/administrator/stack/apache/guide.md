@@ -120,6 +120,34 @@ ErrorDocument 404 /404.txt
 5. 重启 [Apache 服务](/zh/admin-services.md#apache)
 
 
+### Require 指令控制外部访问{#require}
+
+[Require](https://httpd.apache.org/docs/2.4/mod/mod_authz_core.html#require) 指令用于控制外部访问，下面是常见的场景：  
+
+```
+<Directory xxx/www/yoursite>
+ 
+    <RequireAll>
+        # 允许所有
+        Require all granted
+        # 允许所有
+        Require all granted
+        # 仅允许本地
+        Require local
+        # 拒绝所有
+        Require all denied
+
+        # 只允许特需域名访问
+        Require host google.com
+
+        # 只允许特定 IP 段
+        Require ip 192.120 192.168.100 192.168.1.1
+
+    </RequireAll>
+ 
+</Directory>
+```
+
 
 ### 拒绝通过 IP 访问应用
 

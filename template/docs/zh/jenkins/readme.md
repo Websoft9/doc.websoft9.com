@@ -19,7 +19,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 Jenkins 的 **[默认管理员账号和密码](./setup/credentials#getpw)**  
+3. 在服务器中查看 Jenkins 的 **[默认账号和密码](./setup/credentials#getpw)**  
 4. 若想用域名访问  Jenkins，务必先完成 **[域名五步设置](./dns#domain)** 过程
 
 
@@ -104,6 +104,13 @@ tags:
 ## 参数
 
 **[通用参数表](../setup/parameter)** 中可查看 Nginx, Java, Docker, MySQL 等 Jenkins 应用中包含的基础架构组件路径、版本、端口等参数。 
+
+通过运行`docker ps`，可以查看到 Jenkins 运行时所有的 Container：
+
+```bash
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+```
+
 
 下面仅列出 Jenkins 本身的参数：
 

@@ -109,14 +109,14 @@ Zabbix 默认已经内置多种语言包，非常方便进行在线切换。
 
 常用的 Zabbix 重置密码相关的操作主要有修改密码和找回密码两种类型：
 
-#### 修改密码
+##### 修改密码
 
 1. 登录 Zabbix 后台，依次打开：【管理】>【用户】，编辑目标用户
   ![Zabbix 修改密码](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zabbix/zabbix-modifypw-websoft9.png)
 
 2. 点击【修改密码】
 
-#### 找回密码
+##### 找回密码
 
 如果用户忘记了密码，需要通过修改数据库相关字段来重置密码：
 

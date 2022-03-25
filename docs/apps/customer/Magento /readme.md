@@ -10,36 +10,22 @@ tags:
 
 [Magento](https://magento.com) 是全球知名的开源电子商务系统之一，采用php开发，使用Zend Framwork框架，支持B2C、B2B等应用场景。设计得非常灵活、健壮，具有模块化架构体系和丰富的功能组件，是企业级商城建设子首选系统。Magento易于与第三方应用系统无缝集成，可处理海量并发请求，方便通过配置和二次化开发建设一个多种用途、多渠道的电子商务门户。
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magentogui-websoft9.png)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magentogui-websoft9.png) 
 
 
-在云服务器上部署 Magento 预装包之后，请参考下面的步骤快速入门。
+部署 Websoft9 提供的 Magento 之后，请参考下面的步骤快速入门。
 
 ## 准备
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:80** 端口是否开启
-3. 若想用域名访问 Magento，请先到 **域名控制台** 完成一个域名解析
+2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
+3. 在服务器中查看 Magento 的 **[默认账号和密码](./setup/credentials#getpw)**  
+4. 若想用域名访问  Magento **[域名五步设置](./dns#domain)** 过程
 
-## 账号密码
 
-通过**SSH**连接云服务器，运行 `sudo cat /credentials/password.txt` 命令，查看所有相关账号和密码
+## Magento 初始化向导
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/catdbpassword-websoft9.png)
-
-下面列出可能需要用到的几组账号密码：
-
-### Magento
-
-* 管理员账号: `admin`
-* 管理员密码: 存储在您的服务器中的文件中 */credentials/password.txt*  
-
-### MySQL
-
-* 管理员账号：*`root`*
-* 管理员密码：存储在您的服务器中的文件中 */credentials/password.txt*  
-
-## Magento 安装向导
+### 详细步骤
 
 Magento 最新版本已经采用命令行完成了安装向导，即可直接使用：
 
@@ -49,140 +35,103 @@ Magento 最新版本已经采用命令行完成了安装向导，即可直接使
 2. 访问网址：*http://域名/admin* 或 *http://服务器公网IP/admin*，进入后台登陆页面  
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-login-websoft9.png)
 
-3. 输入用户名和密码[（不知道密码？）](#账号密码)，登录到 Magento 后台管理界面  
+3. 输入用户名和密码[获取解锁密码](./setup/credentials#getpw)，登录到 Magento 后台管理界面  
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-backend-websoft9.png)
 
-> 需要了解更多Magento的使用，请参考官方文档：[Magento Docs](https://magento.com/resources/technical)
+> 需要了解更多 Magento 的使用，请参考官方文档：[Magento 用户文档中心](https://magento.com/resources/technical)
 
-## Magento 入门向导
+### 出现问题？
 
-> 需要了解更多 Canvas 的使用，请参考官方文档：[Canvas Guides](https://community.canvaslms.com/community/answers/guides)
+若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
 
-## 常用操作
+**本部署包采用的哪个数据库来存储 Magento 数据**
 
-### 域名绑定
+安装在服务器上的 MySQL 数据库, 参阅：[MySQL 管理](#)
 
-绑定域名的前置条件是：已经完成域名解析（登录域名控制台，增加一个A记录指向服务器公网IP）  
+**采用云厂商提供的 RDS 来存储 Magento 数据**
 
-完成域名解析后，从服务器安全和后续维护考量，需要完成**域名绑定**：
-
-Magento 域名绑定操作步骤：
-
-1. 使用 SFTP 工具登录云服务器
-2. 修改 [虚拟机主机配置文件](/维护参考.md#apache)，将其中的域名相关的值
-   ```text
-   #### Magento(LAMP) bind domain #### 
-
-     <VirtualHost *:80>
-     ServerName  www.mydomain.com # 修改成您的实际域名
-     DocumentRoot "/data/wwwroot/magento"
-     ...
-     
-   #### Magento(LNMP) bind domain #### 
-
-     server {
-      listen 80;
-      server_name magento.example.com; # 修改成您的实际域名
-     ...
-
-   ```
-3. 保存配置文件，[重启服务](/维护参考.md#apache-1)
-4. 通过SSH连接云服务器，运行下面的CLI命令
-   ```shell
-   cd /data/wwwroot/magento
-   php bin/magento config:set web/unsecure/base_url http://www.mydomain.com/ # 修改成您的实际域名，必须以 / 结束
-   php bin/magento config:set web/secure/base_url http://www.mydomain.com/ # 修改成您的实际域名，必须以 / 结束
-   ```
-
-### SSL/HTTPS
-
-必须完成[域名绑定](/zh/solution-more.md)且可通过 HTTP 访问 Magento ，才可以设置 HTTPS。
-
-Magento 预装包，已安装Web服务器 SSL 模块和公共免费证书方案 [Let's Encrypt](https://letsencrypt.org/) ，并完成预配置。因此，除了虚拟主机配置文件之外，HTTPS 设置则不需要修改 Nginx 其他文件。
-
-#### 快速指南
-
-不管使用下面2种的哪种部署，在设置完服务器配置后，必须要完成Magento自身的配置，通过执行下面的命令：
+执行下面命令可以更换 Magento 所使用的数据库
 
 ```
-cd /data/wwwroot/magento
-php bin/magento setup:store-config:set --use-secure=1 --use-secure-admin=1 --base-url-secure="https://www.yourdomain.com/"
-php bin/magento cache:flush  #将基础URL更改为https并刷新缓存
+magento setup:config:set --db-host=DB-HOST --db-name=DB-NAME --db-user=DB-USER --db-engine=DB-ENGINE --db-password=DB-PASSWORD
 ```
 
-#### 自动部署
+**Cron job问题处理（Windows）**
 
-如果没有申请证书，只需在服务器中运行一条命令`sudo certbot`便可以启动免费证书**自动**申请和部署
+Windows下安装 Magento 后，若出现 **One or more indexers are invalid. Make sure your Magento cron job is running** 的提示,请执行以下步骤:
 
-```
-sudo certbot
-```
+1. 双击右下角xampp界面,点击shell按钮打开命令行窗口;
+2. 输入 `php htdocs\magento\bin\magento indexer:reindex` 即可；
+3. 回到magento界面，刷新页面，该问题即可解决。
 
-#### 手动部署
+## Magento 使用入门
 
-如果你已经申请了证书，只需下面几个步骤，即可完成 HTTPS 配置
+下面以 **使用 Magento 构建在线商城** 作为一个任务，帮助用户快速入门：
 
-#### Magento(LAMP)
 
-Magento(LAMP) 即运行环境采用 **Apache** 作为 Web Server  
+## Magento 常用操作
 
-1. 将申请的证书、 证书链文件和秘钥文件上传到 */data/cert* 目录
-2. 打开虚拟主机配置文件： */etc/httpd/conf.d/vhost.conf* 
-3. 将如下的 **HTTPS 配置段模板**  `<VirtualHost *:443>--</VirtualHost>` 插入到`vhost.conf` 文件中
-   ``` text
-   #-----HTTPS template start------------
-   <VirtualHost *:443>
-    ServerName  magento.yourdomain.com
-    DocumentRoot "/data/wwwroot/magento"
-    #ErrorLog "logs/magento.yourdomain.com-error_log"
-    #CustomLog "logs/magento.yourdomain.com-access_log" common
-    <Directory "/data/wwwroot/magento">
-    Options Indexes FollowSymlinks
-    AllowOverride All
-    Require all granted
-    </Directory>
-    SSLEngine on
-    SSLCertificateFile  /data/cert/magento.yourdomain.com.crt
-    SSLCertificateKeyFile  /data/cert/magento.yourdomain.com.key
-    SSLCertificateChainFile  /data/cert/magento.yourdomain.com_chain.crt
-    </VirtualHost>
-   #-----HTTPS template end------------
-   ```
-4. 修改 ServerName, SSLCertificateFile, SSLCertificateKeyFile等参数的值
-5. 保存， [重启 Apache 服务](/维护参考.md#apache-1)
+### 安装插件{#installplugin}
 
-#### Magento(LNMP)
+建议通过 Magento 后台在线安装扩展：
 
-Magento(LMP) 即运行环境采用 **Nginx** 作为 Web Server  
+1. 确保你的 Magento 已经[连接到官方的 Marketplace](/zh/stack-installation.html#连接-magento-marketplace)
+2. 在 Marketplace 找到您需要的扩展或主题，购买完成，点击【Install】
+3. 登录 Magento 后台，打开：【SYSTEM】>【Web Setup Wizard】>【System Configration】 
+4. 在左侧菜单栏选择【EXTENSION MANAGER】，单击【Refresh】 将购买信息同步到网站，然后通过【Review and Install】查看
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-theme-1-websoft9.png)
+   > Refresh 可能会出现同步失败，请多次刷新
 
-1. 将申请的证书、 证书链文件和秘钥文件上传到 */data/cert* 目录
-2. 打开虚拟主机配置文件：*/etc/nginx/conf.d/default.conf* ，插入**HTTPS 配置段** 到 Magento 的 *server{ }* 中
- ``` text
-   #-----HTTPS template start------------
-   listen 443 ssl; 
-   ssl_certificate /data/cert/xxx.crt;
-   ssl_certificate_key /data/cert/xxx.key;
-   ssl_trusted_certificate /data/cert/chain.pem;
-   ssl_session_timeout 5m;
-   ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
-   ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE;
-   ssl_prefer_server_ciphers on;
-   #-----HTTPS template end------------
-   ```
-3. 修改 ssl_certificate, ssl_certificate_key 的值
-4. 保存，[重启 Nginx 服务](/维护参考.md#nginx-1)
+5. 在列表内选择插件或主题，即可进行安装；
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-theme-2-websoft9.png)
+6. 安装时会进行系统环境检查，条件全面满足才可以开始安装
+7. 安装过程时间较长且报错，请查看[故障原因](/zh/else-troubleshooting.html#magento-在线升级或在线安装插件报错？)
 
-#### 专题指南
+### 连接 Magento Marketplace{#marketplace}
 
-若参考上面的**快速指南**仍无法成功设置HTTPS访问，请阅读由Websoft9提供的 [《HTTPS 专题指南》](https://support.websoft9.com/docs/faq/zh/tech-https.html#nginx)
+安装 Magento 后，建议把你安装的 Magento 系统与 Magento 官方的 Marketplace 资源进行在线连接，这样便可以使用 Marketplace 上的大量资源
 
-HTTPS专题指南方案包括：HTTPS前置条件、HTTPS 配置段模板、注意事项、详细步骤以及故障诊断等具体方案。
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setuptools-websoft9.png)  
 
-### SMTP
+1. 到官方 [注册 Magento 账号](https://account.magento.com/applications/customer/login)
+2. 登录 Marketplace，打到My Profile 的 Access Keys 页面新建一个自己的 Access Key; 
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-1-websoft9.png)  
+3. 保存 Access Key
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-savemykey-websoft9.png)  
+4. 登录自己的 Magento 后台，依次打开：【SYSTEM】> 【Web Setup Wizard】
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-websetupwz-websoft9.png) 
+5. 在【System config】设置项中输入你在 Marketplace 上获取的 Access Key
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setmkkey-websoft9.png) 
+6. 成功保存，连接成功
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setmkkeyss-websoft9.png) 
+7. 连接后，就可以很方便的使用 Marketplace 上的资源
+
+### Magento 安装中文包{#setlanguage}
+
+中文包 zh_Hans_CN 已经存在 */data/wwwroot/Magento/vendor/magento/language-zh_hans_cn* 目录下  
+
+需要启用中文请完成如下两个步骤：
+
+1.  如果你希望你的前台是中文，进入到Magento管理员界面，后台 Stores > Configuration > General > Local 中设置Local为Chinese(China)
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setlan-websoft9.png)
+2.  如果你希望你的账户后台是中文，那么请在管理员页面右上角点击你的账户 Account Setting > Interface Local 中设置 Interface Local 为Chinese（China）
+
+### Magento Cache
+
+Cache（缓存）是 Magento 的一项重要设置：
+
+1. 登录 Magento 后台，依次打开：【System】>【Tools】> 【Cache Management】
+2. 选择需要刷新的缓存
+3. 点击【Flush Magento Cache】和【Flush Cache Storage】开始刷新
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-flushcache-websoft9.png)
+4. 也可以取消一些页面的缓存设置
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-dscache-websoft9.png)
+
+### 配置 SMTP{#smtp}
 
 大量用户实践反馈，使用**第三方 SMTP 服务发送邮件**是一种最稳定可靠的方式。  
 
-请勿在服务器上安装sendmail等邮件系统，因为邮件系统的路由配置受制与域名、防火墙、路由等多种因素制约，非常不稳定，且不易维护、诊断故障很困难。
+请勿在服务器上安装 sendmail 等邮件系统，因为邮件系统的路由配置受制与域名、防火墙、路由等多种因素制约，非常不稳定，且不易维护、诊断故障很困难。
 
 下面以**网易邮箱**为例，提供设置 Magento 发邮件的步骤：
 
@@ -195,7 +144,7 @@ HTTPS专题指南方案包括：HTTPS前置条件、HTTPS 配置段模板、注�
    SMTP username: websoft9@163.com
    SMTP password: #wwBJ8    //此密码不是邮箱密码，是需要通过163邮箱后台设置去获取的授权码
    ```
-2. 确保你的 Magento 已经[连接到官方 Marketplace](/zh/stack-installation.html#连接-magento-marketplace)
+2. 确保你的 Magento 已经[连接到官方 Marketplace](#marketplace)
 3. 使用 SSH 工具登录到服务器，使用命令方式安装 Magento SMTP 扩展
    ```
     cd /data/wwwroot/magento` 
@@ -220,101 +169,247 @@ HTTPS专题指南方案包括：HTTPS前置条件、HTTPS 配置段模板、注�
    - 按照下图设置邮箱：  
      ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-5-websoft9.png)
      
-> 更多邮箱设置（QQ邮箱，阿里云邮箱，Gmail，Hotmail等）以及无法发送邮件等故障之诊断，请参考由Websoft9提供的 [SMTP 专题指南](https://support.websoft9.com/docs/faq/zh/tech-smtp.html)
+> 更多邮箱设置（QQ邮箱，阿里云邮箱，Gmail，Hotmail等）以及无法发送邮件等故障之诊断，请参考由Websoft9提供的 [SMTP 专题指南](./automation/smtp)
 
+### 配置域名{#dns}
 
-### Magento 安装扩展
+1. 先配置 web 服务器 Apache 或 Nginx ：参考 **[域名五步设置](./dns#domain)** 过程，
 
-建议通过 Magento 后台在线安装扩展：
+2. 再配置 Magento 参数：通过SSH连接云服务器，运行下面的 CLI 命令进行参数配置
+   
+   ```shell
+   cd /data/wwwroot/magento
+   php bin/magento config:set web/unsecure/base_url http://www.mydomain.com/ # 修改成您的实际域名，必须以 / 结束
+   php bin/magento config:set web/secure/base_url http://www.mydomain.com/ # 修改成您的实际域名，必须以 / 结束
+   ```
 
-1. 确保你的 Magento 已经[连接到官方的 Marketplace](/zh/stack-installation.html#连接-magento-marketplace)
-3. 在 Marketplace 找到您需要的扩展或主题，购买完成，点击【Install】
-4. 登录 Magento 后台，打开：【SYSTEM】>【Web Setup Wizard】>【System Configration】 
-5. 在左侧菜单栏选择【EXTENSION MANAGER】，单击【Refresh】 将购买信息同步到网站，然后通过【Review and Install】查看
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-theme-1-websoft9.png)
-   > Refresh 可能会出现同步失败，请多次刷新
+### 配置 HTTPS{#https}
 
-6. 在列表内选择插件或主题，即可进行安装；
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-theme-2-websoft9.png)
-7. 安装时会进行系统环境检查，条件全面满足才可以开始安装
-8. 安装过程时间较长且报错，请查看[故障原因](/zh/else-troubleshooting.html#magento-在线升级或在线安装插件报错？)
+1. 先配置 web 服务器 ： **[HTTPS 配置](./dns#https)**
 
-### 连接 Magento Marketplace
-
-安装 Magento 后，建议把你安装的 Magento 系统与 Magento 官方的 Marketplace 资源进行在线连接，这样便可以使用 Marketplace 上的大量资源
-
-![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setuptools-websoft9.png)  
-
-1. 到官方 [注册 Magento 账号](https://account.magento.com/applications/customer/login)
-2. 登录 Marketplace，打到My Profile 的 Access Keys 页面新建一个自己的 Access Key; 
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-1-websoft9.png)  
-3. 保存 Access Key
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-savemykey-websoft9.png)  
-4. 登录自己的 Magento 后台，依次打开：【SYSTEM】> 【Web Setup Wizard】
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-websetupwz-websoft9.png) 
-5. 在【System config】设置项中输入你在 Marketplace 上获取的 Access Key
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setmkkey-websoft9.png) 
-6. 成功保存，连接成功
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setmkkeyss-websoft9.png) 
-7. 连接后，就可以很方便的使用 Marketplace 上的资源
-
-### Magento 安装中文包
-
-中文包 zh_Hans_CN 已经存在 */data/wwwroot/Magento/vendor/magento/language-zh_hans_cn* 目录下  
-
-需要启用中文请完成如下两个步骤：
-
-1.  如果你希望你的前台是中文，进入到Magento管理员界面，后台 Stores > Configuration > General > Local 中设置Local为Chinese(China)
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setlan-websoft9.png)
-2.  如果你希望你的账户后台是中文，那么请在管理员页面右上角点击你的账户 Account Setting > Interface Local 中设置 Interface Local 为Chinese（China）
-
-### Magento Cache
-
-Cache（缓存）是 Magento 的一项重要设置：
-
-1. 登录 Magento 后台，依次打开：【System】>【Tools】> 【Cache Management】
-2. 选择需要刷新的缓存
-3. 点击【Flush Magento Cache】和【Flush Cache Storage】开始刷新
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-flushcache-websoft9.png)
-4. 也可以取消一些页面的缓存设置
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-dscache-websoft9.png)
-
-
-### MySQL 数据管理
-
-Magento 预装包中内置 MySQL 及可视化数据库管理工具 `phpMyadmin` ，使用请参考如下步骤：
-
-1. 登录云控制台，[开启服务器安全组9090端口](https://support.websoft9.com/docs/faq/zh/tech-instance.html)
-2. 本地浏览器 Chrome 或 Firefox 访问：*http://服务器公网IP:9090*，进入phpMyAdmin
-  ![登录phpMyadmin](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-logincn-websoft9.png)
-3. 输入数据库用户名和密码([不知道密码？](/zh/stack-accounts.md))
-4. 开始管理数据库
-  ![phpMyadmin](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-adddb-websoft9.png)
-
-> 阅读Websoft9提供的 [《MySQL教程》](https://support.websoft9.com/docs/mysql/zh/) ，掌握更多的MySQL实用技能：修改密码、导入/导出数据、创建用户、开启或关闭远程访问、日志配置等
-
-## 异常处理
-
-#### 浏览器打开IP地址，无法访问 Magento（白屏没有结果）？
-
-您的服务器对应的安全组80端口没有开启（入规则），导致浏览器无法访问到服务器的任何内容
-
-#### 本部署包采用的哪个数据库来存储 Magento 数据？
-
-安装在服务器上的 MySQL 数据库
-
-#### 是否可以采用云厂商提供的 RDS 来存储 Magento 数据？
-
-可以，执行下面命令可以更换 Magento 所使用的数据库
+2. 再配置 Magento 参数：通过SSH连接云服务器，运行下面的 CLI 命令进行参数配置
 
 ```
-magento setup:config:set --db-host=DB-HOST --db-name=DB-NAME --db-user=DB-USER --db-engine=DB-ENGINE --db-password=DB-PASSWORD
+cd /data/wwwroot/magento
+php bin/magento setup:store-config:set --use-secure=1 --use-secure-admin=1 --base-url-secure="https://www.yourdomain.com/"
+php bin/magento cache:flush  #将基础URL更改为https并刷新缓存
 ```
 
-#### Cron job问题处理（Windows）
+## 参数{#parameter}
 
-Windows下安装 Magento 后，若出现 **One or more indexers are invalid. Make sure your Magento cron job is running** 的提示,请执行以下步骤:
+**[通用参数表](../setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 Magento 应用中包含的基础架构组件路径、版本、端口等参数。 
 
-1. 双击右下角xampp界面,点击shell按钮打开命令行窗口;
-2. 输入 `php htdocs\magento\bin\magento indexer:reindex` 即可；
-3. 回到magento界面，刷新页面，该问题即可解决。
+通过运行`docker ps`，可以查看到 Magento 运行时所有的 Container：
+
+```bash
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+```
+
+
+下面仅列出 Magento 本身的参数：
+
+### 路径{#path}
+
+Magento 安装目录： */data/wwwroot/magento*  
+Magento 配置文件： */data/wwwroot/magento/app/etc/env.php*  
+
+> Magento 配置文件中包含数据库连接信息，更改了 MySQL 数据库账号密码，此处也需要对应修改
+
+### 端口{#port}
+
+| 端口号 | 用途                                          | 必要性 |
+| ------ | --------------------------------------------- | ------ |
+| 80   | 通过 HTTP 访问 Magento | 必要   |
+| 443   | 通过 HTTPS 访问 Magento | 可选   |
+| 3306   | 用于远程连接 MySQL | 可选   |
+
+
+### 版本{#version}
+
+```shell
+sudo cat /data/logs/install_version.txt
+```
+
+### 服务{#service}
+
+```shell
+
+```
+
+### 命令行{#cli}
+
+Magento提供了强大CLI工具 `magento`，需要带路径使用：  
+例如，**sudo /data/wwwroot/magento/bin/magento**
+
+```
+$ /data/wwwroot/magento/bin/magento
+Magento CLI 2.4.2
+
+Usage:
+  command [options] [arguments]
+
+Options:
+  -h, --help            Display this help message
+  -q, --quiet           Do not output any message
+  -V, --version         Display this application version
+      --ansi            Force ANSI output
+      --no-ansi         Disable ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+Available commands:
+  help                                                 Displays help for a command
+  list                                                 Lists commands
+ admin
+  admin:user:create                                    Creates an administrator
+  admin:user:unlock                                    Unlock Admin Account
+ app
+  app:config:dump                                      Create dump of application
+  app:config:import                                    Import data from shared configuration files to appropriate data storage
+  app:config:status                                    Checks if config propagation requires update
+ braintree
+  braintree:migrate                                    Migrate stored cards from a Magento 1 database
+ cache
+  cache:clean                                          Cleans cache type(s)
+  cache:disable                                        Disables cache type(s)
+  cache:enable                                         Enables cache type(s)
+  cache:flush                                          Flushes cache storage used by cache type(s)
+  cache:status                                         Checks cache status
+ catalog
+  catalog:images:resize                                Creates resized product images
+  catalog:product:attributes:cleanup                   Removes unused product attributes.
+ cms
+  cms:wysiwyg:restrict                                 Set whether to enforce user HTML content validation or show a warning instead
+ config
+  config:sensitive:set                                 Set sensitive configuration values
+  config:set                                           Change system configuration
+  config:show                                          Shows configuration value for given path. If path is not specified, all saved values will be shown
+ cron
+  cron:install                                         Generates and installs crontab for current user
+  cron:remove                                          Removes tasks from crontab
+  cron:run                                             Runs jobs by schedule
+ customer
+  customer:hash:upgrade                                Upgrade customer's hash according to the latest algorithm
+ deploy
+  deploy:mode:set                                      Set application mode.
+  deploy:mode:show                                     Displays current application mode.
+ dev
+  dev:di:info                                          Provides information on Dependency Injection configuration for the Command.
+  dev:profiler:disable                                 Disable the profiler.
+  dev:profiler:enable                                  Enable the profiler.
+  dev:query-log:disable                                Disable DB query logging
+  dev:query-log:enable                                 Enable DB query logging
+  dev:source-theme:deploy                              Collects and publishes source files for theme.
+  dev:template-hints:disable                           Disable frontend template hints. A cache flush might be required.
+  dev:template-hints:enable                            Enable frontend template hints. A cache flush might be required.
+  dev:template-hints:status                            Show frontend template hints status.
+  dev:tests:run                                        Runs tests
+  dev:urn-catalog:generate                             Generates the catalog of URNs to *.xsd mappings for the IDE to highlight xml.
+  dev:xml:convert                                      Converts XML file using XSL style sheets
+ dotdigital
+  dotdigital:connector:automap                         Auto-map data fields
+  dotdigital:connector:enable                          Add Dotdigital API credentials and enable the connector
+  dotdigital:migrate                                   Migrate data into email_ tables to sync with Engagement Cloud
+  dotdigital:sync                                      Run syncs to populate email_ tables before importing to Engagement Cloud
+  dotdigital:task                                      Run dotdigital module tasks on demand
+ downloadable
+  downloadable:domains:add                             Add domains to the downloadable domains whitelist
+  downloadable:domains:remove                          Remove domains from the downloadable domains whitelist
+  downloadable:domains:show                            Display downloadable domains whitelist
+ encryption
+  encryption:payment-data:update                       Re-encrypts encrypted credit card data with latest encryption cipher.
+ i18n
+  i18n:collect-phrases                                 Discovers phrases in the codebase
+  i18n:pack                                            Saves language package
+  i18n:uninstall                                       Uninstalls language packages
+ indexer
+  indexer:info                                         Shows allowed Indexers
+  indexer:reindex                                      Reindexes Data
+  indexer:reset                                        Resets indexer status to invalid
+  indexer:set-dimensions-mode                          Set Indexer Dimensions Mode
+  indexer:set-mode                                     Sets index mode type
+  indexer:show-dimensions-mode                         Shows Indexer Dimension Mode
+  indexer:show-mode                                    Shows Index Mode
+  indexer:status                                       Shows status of Indexer
+ info
+  info:adminuri                                        Displays the Magento Admin URI
+  info:backups:list                                    Prints list of available backup files
+  info:currency:list                                   Displays the list of available currencies
+  info:dependencies:show-framework                     Shows number of dependencies on Magento framework
+  info:dependencies:show-modules                       Shows number of dependencies between modules
+  info:dependencies:show-modules-circular              Shows number of circular dependencies between modules
+  info:language:list                                   Displays the list of available language locales
+  info:timezone:list                                   Displays the list of available timezones
+ inventory
+  inventory:reservation:create-compensations           Create reservations by provided compensation arguments
+  inventory:reservation:list-inconsistencies           Show all orders and products with salable quantity inconsistencies
+ inventory-geonames
+  inventory-geonames:import                            Download and import geo names for source selection algorithm
+ maintenance
+  maintenance:allow-ips                                Sets maintenance mode exempt IPs
+  maintenance:disable                                  Disables maintenance mode
+  maintenance:enable                                   Enables maintenance mode
+  maintenance:status                                   Displays maintenance mode status
+ media-content
+  media-content:sync                                   Synchronize content with assets
+ media-gallery
+  media-gallery:sync                                   Synchronize media storage and media assets in the database
+ module
+  module:config:status                                 Checks the modules configuration in the 'app/etc/config.php' file and reports if they are up to date or not
+  module:disable                                       Disables specified modules
+  module:enable                                        Enables specified modules
+  module:status                                        Displays status of modules
+  module:uninstall                                     Uninstalls modules installed by composer
+ newrelic
+  newrelic:create:deploy-marker                        Check the deploy queue for entries and create an appropriate deploy marker.
+ queue
+  queue:consumers:list                                 List of MessageQueue consumers
+  queue:consumers:start                                Start MessageQueue consumer
+ remote-storage
+  remote-storage:sync                                  Synchronize media files with remote storage.
+ sampledata
+  sampledata:deploy                                    Deploy sample data modules for composer-based Magento installations
+  sampledata:remove                                    Remove all sample data packages from composer.json
+  sampledata:reset                                     Reset all sample data modules for re-installation
+ security
+  security:recaptcha:disable-for-user-forgot-password  Disable reCAPTCHA for admin user forgot password form
+  security:recaptcha:disable-for-user-login            Disable reCAPTCHA for admin user login form
+  security:tfa:google:set-secret                       Set the secret used for Google OTP generation.
+  security:tfa:providers                               List all available providers
+  security:tfa:reset                                   Reset configuration for one user
+ setup
+  setup:backup                                         Takes backup of Magento Application code base, media and database
+  setup:config:set                                     Creates or modifies the deployment configuration
+  setup:db-data:upgrade                                Installs and upgrades data in the DB
+  setup:db-declaration:generate-patch                  Generate patch and put it in specific folder.
+  setup:db-declaration:generate-whitelist              Generate whitelist of tables and columns that are allowed to be edited by declaration installer
+  setup:db-schema:upgrade                              Installs and upgrades the DB schema
+  setup:db:status                                      Checks if DB schema or data requires upgrade
+  setup:di:compile                                     Generates DI configuration and all missing classes that can be auto-generated
+  setup:install                                        Installs the Magento application
+  setup:performance:generate-fixtures                  Generates fixtures
+  setup:rollback                                       Rolls back Magento Application codebase, media and database
+  setup:static-content:deploy                          Deploys static view files
+  setup:store-config:set                               Installs the store configuration. Deprecated since 2.2.0. Use config:set instead
+  setup:uninstall                                      Uninstalls the Magento application
+  setup:upgrade                                        Upgrades the Magento application, DB data, and schema
+ store
+  store:list                                           Displays the list of stores
+  store:website:list                                   Displays the list of websites
+ theme
+  theme:uninstall                                      Uninstalls theme
+ varnish
+  varnish:vcl:generate                                 Generates Varnish VCL and echos it to the command line
+ yotpo
+  yotpo:reset                                          Reset Yotpo sync flags &/or configurations
+  yotpo:sync                                           Sync Yotpo manually (reviews module)
+  yotpo:update-metadata                                Manually send platform metadata to Yotpo
+```
+
+### API
+
+Magento API 支持 REST（表述性状态传递）和 SOAP（简单对象访问协议）。 在 Magento 2 中，REST 和 SOAP 的 Web API 覆盖范围是相同的。
+
+参考[官方文档](https://devdocs.magento.com/guides/v2.2/get-started/bk-get-started-api.html)
+
+

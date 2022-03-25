@@ -322,7 +322,14 @@ journalctl -u mysql
    
 > 官方参考链接：https://www.drupal.org/docs/8/install/trusted-host-settings
 
-## 常见问题
+## 故障速查
+
+#### Drupal安装后系统提示如下的安全漏洞
+settings.php 中的 trusted_host_patterns 设置未配置。这可能导致安全漏洞。强烈建议您配置此项。
+解决方案：更多详情请参见 [防止 HTTP HOST 头攻击。](https://www.drupal.org/node/1992030)
+
+
+## 问题解答
 
 #### Drupal 支持多语言吗？
 
