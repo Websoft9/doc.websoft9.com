@@ -1,0 +1,5 @@
+position: 4
+label: "Kafka"
+collapsible: true
+collapsed: true
+className: "red"

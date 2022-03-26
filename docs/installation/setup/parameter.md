@@ -17,6 +17,8 @@ Websoft9 将各个应用和组件的目录到一个约定的目录中，大大�
 * */data/config* 配置统一目录，例如 Apache  配置
 * */data/logs* 配置统一目录，例如 网站日志
 
+运行 `whereis` 命令可以查看原始的安装路径。  
+
 ## 管理数据库{#managedb}
 
 ## 端口{#port}
@@ -47,6 +49,7 @@ sudo systemctl start | top | restart | status docker
 sudo systemctl start | top | restart | status apache
 sudo systemctl start | top | restart | status nginx
 sudo systemctl start | top | restart | status mysql
+sudo systemctl start | top | restart | status php-fpm
 sudo systemctl start | top | restart | status postgresql
 sudo systemctl start | top | restart | status mongod
 ```

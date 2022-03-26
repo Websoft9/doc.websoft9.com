@@ -9,19 +9,24 @@ tags:
 
 # 维护参考
 
+## 场景
+
 ### 升级
 
 Webmin 提供了可视化的在线升级功能，升级非常方便
 
 ![升级](https://libs.websoft9.com/Websoft9/DocsPicture/zh/webmin/webmin-upgrade-websoft9.png)
 
+### 卸载
+
+暂无方案
 
 ## 故障速查
 
 除以下列出的 Webmin 故障问题之外， [通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案。 
 
 
-## 常见问题
+## 问题解答
 
 #### Webmin 是否支持多语言？
 

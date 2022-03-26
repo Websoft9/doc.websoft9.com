@@ -13,21 +13,54 @@ Cockpit 是 RedHat 维护的 Linux 服务器面板工具。它具备很强的开
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cockpit/cockpit-gui-websoft9.png)
 
-## 准备{#preparation}
+部署 Websoft9 提供的 Cockpit 之后，请参考下面的步骤快速入门。
 
-## 账号密码{#credentials}
+## 准备
 
-## Cockpit 安装向导{#wizard}
+1. 在云控制台获取您的 **服务器公网IP地址** 
+2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:9099** 端口已经开启
+4. 若想用域名访问  Cockpit，务必先完成 **[域名五步设置](./dns#domain)** 过程
 
-## Cockpit  入门向导{#quickstart}
+## Cockpit 初始化向导{#wizard}
+
+### 详细步骤
+
+### 出现问题？
+
+若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题。
+
+## Cockpit  使用入门{#quickstart}
 
 ## 常用操作{#guide}
 
-本应用界面中最常见的操作指南
+## 参数
 
-### SMTP 设置
-### 插件
+**[通用参数表](../setup/parameter)** 中可查看 Nginx, Docker 等 Cockpit 应用中包含的基础架构组件路径、版本、端口等参数。 
 
-## 异常处理{#exception}
+下面仅列出 Cockpit 本身的参数：
 
-#### 问题1
+### 路径{#path}
+
+### 端口
+
+| 端口号 | 用途                                          | 必要性 |
+| ------ | --------------------------------------------- | ------ |
+| 9099   | Cockpit 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
+
+
+### 版本
+
+```shell
+
+```
+
+### 服务
+
+```shell
+sudo systemctl start | stop | restart | status cockpit
+```
+
+### 命令行
+
+### API
+

@@ -202,9 +202,4 @@ sudo cat /data/logs/install_version.txt
 
 ### 参考{#ref}
 
-支撑 PrestaShop 运行的环境组件包括：PHP, MySQL, Apache or Nginx等，请根据不同的部署包分别查看对应的手册，完成更多配置。
-
-| 部署包名称 | 说明| 参考项 |
-| --- | --- | --- |
-| PrestaShop(LAMP) | Apache+MySQL+PHP on Linux | [《LAMP管理员手册》](https://support.websoft9.com/docs/lamp/zh) |
-| PrestaShop(LNMP)| Nginx+MySQL+PHP on Linux |[《LNMP管理员手册》](https://support.websoft9.com/docs/lnmp/zh)|
+[《PHP运行环境》](./runtime/php) 
