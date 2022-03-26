@@ -8,7 +8,9 @@ tags:
 
 # 维护指南
 
-## 备份与恢复
+## 场景
+
+### 备份与恢复
 
 本节提供Magento在线备份方案，请提前在云控制台做好必备的快照备份。
 
@@ -23,7 +25,7 @@ tags:
    - 找到：【System】>【Backup Settings】，设置计划任务
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-bkschedulesets-websoft9.png)
 
-## 升级
+### 升级
 
 Magento 可以通过两种方式升级：后台升级界面和 Composer 升级命令。  
 

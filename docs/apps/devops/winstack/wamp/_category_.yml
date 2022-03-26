@@ -1,5 +1,5 @@
-position: 6
-label: "全能堆栈（IIS）"
+position: 2
+label: "WAMP"
 collapsible: true
 collapsed: true
 className: "red"

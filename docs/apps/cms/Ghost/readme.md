@@ -15,40 +15,19 @@ tags:
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/ghost/ghostui.jpg)
 
 
-在云服务器上部署 Ghost 预装包之后，请参考下面的步骤快速入门。
+部署 Websoft9 提供的 Ghost 之后，请参考下面的步骤快速入门。
 
 ## 准备
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:80** 端口是否开启
-3. 若想用域名访问 Ghost，请先到 **域名控制台** 完成一个域名解析
+2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
+3. 在服务器中查看 Ghost 的 **[默认账号和密码](./setup/credentials#getpw)**  
+4. 若想用域名访问  Ghost **[域名五步设置](./dns#domain)** 过程
 
 
-## 账号密码
+## Ghost 初始化向导
 
-通过**SSH**连接云服务器，运行 `sudo cat /credentials/password.txt` 命令，查看所有相关账号和密码
-
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/catdbpassword-websoft9.png)
-
-下面列出可能需要用到的几组账号密码：
-
-### Ghost
-
-在初始化安装的时候由用户自行设置
-
-### MySQL
-
-* 管理员账号：*`root`*
-* 管理员密码：存储在您的服务器指定文件中（ */credentials/password.txt* ）
-   ![运行cat命令](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/catdbpassword-websoft9.png)
-
-  建议通过云控制台的命令终端，运行`cat /credentials/password.txt` 获取数据库密码（参上图）
-
-  **注意**：旧版本 Ghost 上，不存在 password.txt 文件，其数据库密码是 `123456`。请在初始化安装之前务必将数据库密码修改成复杂密码，这样有助于提高数据库的安全性。
-
-> 需要登录MySQL，请参考 [MySQL可视化管理](#MySQL-数据管理)
-
-## Ghost 安装向导
+### 详细步骤
 
 1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://Internet IP*, 进入前台界面
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/ghost/ghost-bootpage-websoft9.png)
@@ -59,126 +38,27 @@ tags:
 3. 开始创建管理员账号，以邮箱地址为用户名，密码不要设置过于简单  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/ghost/ghost-register002-websoft9.png)
 
-4. 使用 SFTP工具连接服务器，修改 [Nginx 虚拟主机](/zh/stack-components.md#nginx)配置文件，绑定域名（如果想采用域名，此步骤必做）
-   ```
-    listen 80;
-    server_name ghost.yourdomain.com;
-   ```
-
-5. 使用 SFTP工具连接服务器，修改 [Ghost 配置文件](/zh/stack-components.md#ghost)中的 URL 域名地址（同上）
-   ```
-   {
-   "url": "http://ghost.yourdomain.com",
-   "server": {
-      "port": 2368,
-      "host": "0.0.0.0"
-   },
-   ```
-6. 运行相关命令，重启以下服务后以上设置才生效
-   ```
-   sudo systemctl restart nginx
-   cd /data/wwwroot/ghost && sudo docker-compose up -d && sudo docker restart ghost
-   ```
-
 > 需要了解更多 Ghost 的使用，请参考官方文档：[Ghost Documentation](https://docs.ghost.org/docs)
 
-## Ghost 入门向导
+### 出现问题？
 
-Coming soon...
+若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
 
-## 常用操作
+## Ghost 使用入门
 
-### 配置
+下面以 **使用 Ghost 构建博客** 作为一个任务，帮助用户快速入门：
+
+
+## Ghost 常用操作
+
+### 配置 Ghost
 
 官方提供了很多配置方案，参考：[Tutorials](https://ghost.org/tutorials/) 和 [FAQ](https://ghost.org/faq/)
 
-### 域名绑定
+### 配置 SMTP{#smtp}
 
-当服务器上只有一个网站时，不做域名绑定也可以访问网站。但从安全和维护考量，**域名绑定**不可省却。
+1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
 
-以示例网站为例，域名绑定操作步骤如下：
-
-1. 确保域名解析已经生效  
-2. 使用 SFTP工具连接服务器，修改 [Nginx 虚拟主机](/维护参考.md#nginx)配置文件，绑定域名（如果想采用域名，此步骤必做）
-   ```
-    listen 80;
-    server_name ghost.yourdomain.com;
-   ```
-
-3. 使用 SFTP工具连接服务器，修改 [Ghost 配置文件](/维护参考.md#ghost)中的 URL 域名地址（同上）
-   ```
-   {
-   "url": "http://ghost.yourdomain.com",
-   "server": {
-      "port": 2368,
-      "host": "0.0.0.0"
-   },
-   ```
-4. 运行相关命令，重启以下服务后以上设置才生效
-   ```
-   sudo systemctl restart nginx
-   cd /data/wwwroot/ghost && sudo docker-compose up -d && sudo docker restart ghost
-   ```
-
-### SSL/HTTPS
-
-必须完成[域名绑定](/zh/solution-more.md)且可通过 HTTP 访问 Ghost ，才可以设置 HTTPS。
-
-Ghost 预装包，已安装Web服务器 SSL 模块和公共免费证书方案 [Let's Encrypt](https://letsencrypt.org/) ，并完成预配置。因此，除了虚拟主机配置文件之外，HTTPS 设置则不需要修改 Nginx 其他文件。
-
-#### 自动部署
-
-如果没有申请证书，只需在服务器中运行一条命令`sudo certbot`便可以启动免费证书**自动**申请和部署
-
-```
-sudo certbot
-```
-
-#### 手动部署
-
-如果你已经申请了证书，只需三个步骤，即可完成 HTTPS 配置
-
-1. 将申请的证书、 证书链文件和秘钥文件上传到 */data/cert* 目录
-2. 打开虚拟主机配置文件：*/etc/nginx/conf.d/default.conf* ，插入**HTTPS 配置段** 到 *server{ }* 中
- ``` text
-   #-----HTTPS template start------------
-   listen 443 ssl; 
-   ssl_certificate /data/cert/xxx.crt;
-   ssl_certificate_key /data/cert/xxx.key;
-   ssl_trusted_certificate /data/cert/chain.pem;
-   ssl_session_timeout 5m;
-   ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
-   ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE;
-   ssl_prefer_server_ciphers on;
-   #-----HTTPS template end------------
-   ```
-3. 重启Nginx服务
-
-#### 专题指南
-
-若参考上面的**简易步骤**仍无法成功设置HTTPS访问，请阅读由Websoft9提供的 [《HTTPS 专题指南》](https://support.websoft9.com/docs/faq/zh/tech-https.html#nginx)
-
-HTTPS专题指南方案包括：HTTPS前置条件、HTTPS 配置段模板、注意事项、详细步骤以及故障诊断等具体方案。
-
-### SMTP
-
-大量用户实践反馈，使用**第三方 SMTP 服务发送邮件**是一种最稳定可靠的方式。  
-
-请勿在服务器上安装sendmail等邮件系统，因为邮件系统的路由配置受制与域名、防火墙、路由等多种因素制约，非常不稳定，且不易维护、诊断故障很困难。  
-
-Ghost 以[Nodemailer](https://github.com/nodemailer) 作为邮件发送的模块，并预设 Gmail, QQ, SendGrid 等[二十多种](https://github.com/nodemailer/nodemailer/tree/0.7/#well-known-services-for-smtp)邮箱服务配置。
-
-下面以**QQ邮箱**为例，提供设置 Ghost 发邮件的步骤：
-
-1. 在 QQ 邮箱管理控制台获取 SMTP 相关参数
-   ```
-   SMTP host: smtp.qq.com
-   SMTP port: 465 or 994 for SSL-encrypted email
-   SMTP Authentication: must be checked
-   SMTP Encryption: must SSL
-   SMTP username: 45745412@qq.com
-   SMTP password: #wwBJ8    //此密码不是邮箱密码，是需要通过 QQ 邮箱后台设置去获取的授权码
-   ```
 2. 修改 Ghost 配置文件 mail 相关配置段。特别注意的是 "from" 与 "user" 必须一致，否则邮件无法发送。
    ```
       "mail": {
@@ -216,9 +96,41 @@ Ghost 以[Nodemailer](https://github.com/nodemailer) 作为邮件发送的模块
    ```
    cd /data/wwwroot/ghost && docker-compose up -d && docker restart ghost
    ```
+
 4. 登录 Ghost 后台，打开：【Manage】>【Staff】，通过【Invite People】 测试邮箱可用性
 
-### 个性化
+### 配置域名{#dns}
+
+参考： **[域名五步设置](./dns#domain)** 
+
+1. 使用 SFTP工具连接服务器，修改 [Nginx 虚拟主机](../nginx#domain配置文件，绑定域名（如果想采用域名，此步骤必做）
+   ```
+    listen 80;
+    server_name ghost.yourdomain.com;
+   ```
+
+2. 使用 SFTP工具连接服务器，修改 [Ghost 配置文件](#path)中的 URL 域名地址（同上）
+   ```
+   {
+   "url": "http://ghost.yourdomain.com",
+   "server": {
+      "port": 2368,
+      "host": "0.0.0.0"
+   },
+   ```
+
+3. 运行相关命令，重启以下服务后以上设置才生效
+   ```
+   sudo systemctl restart nginx
+   cd /data/wwwroot/ghost && sudo docker-compose up -d && sudo docker restart ghost
+   ```
+
+### 配置 HTTPS{#https}
+
+参考： **[HTTPS 配置](./dns#https)**
+
+
+### Ghost 个性化
 
 #### 菜单
 
@@ -275,25 +187,52 @@ Ghost 支持网站向客户以订阅的方式售卖文章，是知识付费创�
 2. 分别对 Enable members, Connect to Stripe, Subscription pricing 等项进行设置
   ![Ghost 代码插入](https://libs.websoft9.com/Websoft9/DocsPicture/en/ghost/ghost-setsubs-websoft9.png)
 
-### MySQL 数据管理
 
-Ghost 预装包中内置 MySQL 及可视化数据库管理工具 `phpMyadmin` ，使用请参考如下步骤：
+## 参数{#parameter}
 
-1. 登录云控制台，[开启服务器安全组80端口](https://support.websoft9.com/docs/faq/zh/tech-instance.html)
-2. 本地浏览器 Chrome 或 Firefox 访问：*http://服务器公网IP/phpmyadmin*，进入phpMyAdmin
-  ![登录phpMyadmin](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-logincn-websoft9.png)
-3. 输入数据库用户名和密码([不知道密码？](#账号密码))
-4. 开始管理数据库
-  ![phpMyadmin](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-adddb-websoft9.png)
+**[通用参数表](../setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 Ghost 应用中包含的基础架构组件路径、版本、端口等参数。 
 
-> 阅读Websoft9提供的 [《MySQL教程》](https://support.websoft9.com/docs/mysql/zh/admin-phpmyadmin.html) ，掌握更多的MySQL实用技能：修改密码、导入/导出数据、创建用户、开启或关闭远程访问、日志配置等
+通过运行`docker ps`，可以查看到 Ghost 运行时所有的 Container：
 
-## 异常处理
+```bash
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+```
 
-#### 浏览器打开IP地址，无法访问 Ghost（白屏没有结果）？
 
-您的服务器对应的安全组 80 端口没有开启（入规则），导致浏览器无法访问到服务器的任何内容
+下面仅列出 Ghost 本身的参数：
 
-#### 本部署方案是采用什么方式部署 Ghost？
+### 路径{#path}
 
-采用 Docker 安装 Ghost，数据库存放在服务器的 MySQL 中
+Ghost 安装目录： */data/wwwroot/ghost/content*  
+Ghost 配置文件： */data/wwwroot/ghost/config.production.json*  
+Ghost 容器编排文件： */data/wwwroot/ghost/docker-compose.yml*  
+
+
+### 端口{#port}
+
+| 端口号 | 用途                                          | 必要性 |
+| ------ | --------------------------------------------- | ------ |
+| 8080   | Ghost 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
+
+
+### 版本{#version}
+
+```shell
+sudo cat /data/logs/install_version.txt
+```
+
+### 服务{#service}
+
+```shell
+sudo systemctl start | stop | restart | status ghost
+
+# you can use the following CMD to manage Ghost container
+sudo docker exec -it ghost /bin/bash
+
+```
+
+### 命令行{#cli}
+
+### API
+
+### 参考{#ref}

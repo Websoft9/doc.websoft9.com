@@ -159,15 +159,9 @@ tags:
 
 除以下列出的 WampServer 故障问题之外， [通用故障处理](../troubleshooting) 、 [Apache 故障速查](../apache/advanced#troubleshooting) 专题章节提供了更多的故障方案。 
 
-##### 修改 httpd-vhosts.conf 文件之后，Apache 服务无法启动？
+#### 修改[虚拟主机](../wampserver#path)后，Apache 无法启动？
 
 一般是 VirtualHost 中虚拟主机的目录位置不正确导致
-
-#### 找不到示例网站？
-
-历史版本中历史网站路径与文档中描述有差异  
-历史版本的示例网站路径为：C:\websoft9\wampstack\www
-
 
 ## 常见问题
 
@@ -192,7 +186,7 @@ prefork
 
 参考：[Apache Require](../apache#require)
 
-#### 通过 SFTP 上传网站源码后是否需要修改拥有者权限？
+#### 上传的文件是否需修改拥有者权限？
 
 不需要，WampServer 会自动修正
 

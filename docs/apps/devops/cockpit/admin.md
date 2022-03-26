@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 slug: /cockpit/admin
 tags:
   - 故障
@@ -9,7 +9,9 @@ tags:
 
 # 维护参考
 
-## Cockpit 子目录配置域名
+## 场景
+
+### 子目录配置域名
 
 Cockpit 配置域名有一定的特殊之处（[方案来源](https://caddy.community/t/example-cockpit/8283)）：
 
@@ -33,6 +35,8 @@ example.com {
 }
 ```
 
-## 故障处理{#troubleshooting}
-## 常见问题{#faq}
-## 参数{#parameter}
+## 故障速查
+
+除以下列出的 Cockpit 故障问题之外， [通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案。 
+
+## 问题解答

@@ -515,7 +515,7 @@ sudo docker restart apache
 sudo docker stats apache
 ```
 
-### VirtualHost 模板{#virtualHost}
+### VirtualHost 模板{#virtualhost}
 
 Apache中的虚拟主机是通过 VirtualHost 进行配置的，下表是 VirtualHost  核心参数：
 

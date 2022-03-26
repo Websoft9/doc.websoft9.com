@@ -19,29 +19,12 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:80** 和 **TCP:8080** 端口是否开启
-3. 若想用域名访问 Knowage，请先到 **域名控制台** 完成一个域名解析
+3. 在服务器中查看 Knowage 的 **[默认账号和密码](./setup/credentials#getpw)** 
+4. 若想用域名访问 Knowage，务必先完成**[域名五步设置](./dns#domain)** 过程
 
-## 账号密码
+## Knowage 初始化向导
 
-通过**SSH**连接云服务器，运行 `sudo cat /credentials/password.txt` 命令，查看所有相关账号和密码
-
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/catdbpassword-websoft9.png)
-
-下面列出可能需要用到的几组账号密码：
-
-### Knowage
-
-* 管理员账号: `biadmin`
-* 管理员密码: 存储在您的服务器中的文件中 */credentials/password.txt*  
-
-### MariaDB
-
-* 管理员账号：*`root`*
-* 管理员密码：存储在您的服务器中的文件中 */credentials/password.txt*  
-
-> 需要登录MariaDBL，请参考 [MySQL可视化管理](#mariadb-数据管理)
-
-## Knowage 安装向导
+### 详细步骤
 
 1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://Internet IP*, 进入登录界面
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/knowage/knowage-login-websoft9.png)
@@ -59,7 +42,12 @@ tags:
 
 > 需要了解更多 Knowage 的使用，请参考官方文档：[Knowage Documentation](https://knowage-suite.readthedocs.io/)
 
-## Knowage 入门向导
+
+### 出现问题？
+
+若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
+
+## Knowage 使用入门
 
 下面我们以一个完整的示例（**可视化呈现订单中不同国家的订单总额**），介绍如何使用 Knowage 快速分析数据。
 
@@ -100,139 +88,213 @@ tags:
 
 ![knowage](https://libs.websoft9.com/Websoft9/blog/tmp/knowage/zh/knowage-analysis5-websoft9.png)
 
+## Knowage 常用操作
 
-## 常用操作
+## 参数
 
-### 域名绑定
+**[通用参数表](./setup/parameter)** 中可查看 Nginx, Docker, MariaDB 等 Knowage 应用中包含的基础架构组件路径、版本、端口等参数。 
 
-当服务器上只有一个网站时，不做域名绑定也可以访问网站。但从安全和维护考量，**域名绑定**不可省却。
 
-以示例网站为例，域名绑定操作步骤如下：
+### 路径{#path}
 
-1. 确保域名解析已经生效  
-2. 使用 SFTP 工具登录云服务器
-3. 修改 [Nginx虚拟机主机配置文件](/维护参考.md#nginx)，将其中的 **server_name** 项的值修改为你的域名
-   ```text
-   server
-   {
-   listen 80;
-   server_name www.example.com;  # 此处修改为你的域名
-   ...
-   }
-   ```
-4. 保存配置文件，重启 [Nginx 服务](/维护参考.md#nginx-1)
-
-### SSL/HTTPS
-
-须完成[域名绑定](#域名绑定)且可通过 HTTP 访问 Knowage ，才可以设置 HTTPS。
-
-Knowage 预装包，已安装Web服务器 SSL 模块和公共免费证书方案 [Let's Encrypt](https://letsencrypt.org/) ，并完成预配置。因此，除了虚拟主机配置文件之外，HTTPS 设置则不需要修改 Nginx 其他文件。
-
-#### 自动部署
-
-如果没有申请证书，只需在服务器中运行一条命令`sudo certbot`便可以启动免费证书**自动**申请和部署
+本项目采用 Docker 安装，运行 `docker ps` 可以查看所有相关的容器：
 
 ```
-sudo certbot
+CONTAINER ID   IMAGE                                              COMMAND                  CREATED        STATUS                 PORTS                               NAMES
+3b30d327e903   mariadb:10.3                                       "docker-entrypoint.s…"   2 hours ago    Up 2 hours             0.0.0.0:3307->3306/tcp              knowage-mariadb-server
+a28572948615   knowagelabs/knowage-server-docker:8.0.0-SNAPSHOT   "./entrypoint.sh ./a…"   2 hours ago    Up 2 hours (healthy)   0.0.0.0:8080->8080/tcp              knowage-server
+90d49e9971bf   mariadb:10.3                                       "docker-entrypoint.s…"   2 hours ago    Up 2 hours             3306/tcp                            knowage-mariadb-cache
+fa5d3ce16865   knowagelabs/knowage-python-docker:8.0.0-SNAPSHOT   "./entrypoint.sh gun…"   2 hours ago    Up 2 hours (healthy)   5000/tcp                            knowage-python
+7fbfe56727d5   knowagelabs/knowage-r-docker:8.0.0-SNAPSHOT        "./entrypoint.sh r k…"   2 hours ago    Up 2 hours (healthy)   5001/tcp                            knowage-r
 ```
 
-#### 手动部署
+### Knowage server
 
-如果你已经申请了证书，只需三个步骤，即可完成 HTTPS 配置
-
-1. 将申请的证书、 证书链文件和秘钥文件上传到 */data/cert* 目录
-2. 打开虚拟主机配置文件：*/etc/nginx/conf.d/default.conf* ，插入**HTTPS 配置段** 到 *server{ }* 中
- ``` text
-   #-----HTTPS template start------------
-   listen 443 ssl; 
-   ssl_certificate /data/cert/xxx.crt;
-   ssl_certificate_key /data/cert/xxx.key;
-   ssl_trusted_certificate /data/cert/chain.pem;
-   ssl_session_timeout 5m;
-   ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
-   ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE;
-   ssl_prefer_server_ciphers on;
-   #-----HTTPS template end------------
-   ```
-3. 重启[Nginx服务](/维护参考.md#nginx-1)
-
-#### 专题指南
-
-若参考上面的**简易步骤**仍无法成功设置HTTPS访问，请阅读由Websoft9提供的 [《HTTPS 专题指南》](https://support.websoft9.com/docs/faq/zh/tech-https.html#nginx)
-
-HTTPS专题指南方案包括：HTTPS前置条件、HTTPS 配置段模板、注意事项、详细步骤以及故障诊断等具体方案。
-
-### MariaDB 数据管理
-
-Knowage 预装包中内置 MariaDB 及可视化数据库管理工具 `phpMyadmin` ，使用请参考如下步骤：
-
-1. 登录云控制台，[开启服务器安全组9090端口](https://support.websoft9.com/docs/faq/zh/tech-instance.html)
-
-2. 本地浏览器 Chrome 或 Firefox 访问：*http://服务器公网IP:9090*，进入phpMyAdmin
-  ![登录phpMyadmin](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-logincn-websoft9.png)
-
-3. 输入数据库用户名和密码([不知道密码？](#账号密码))
-
-4. 开始管理数据库
-  ![phpMyadmin](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-adddb-websoft9.png)
-
-> 阅读Websoft9提供的 [《MariaDB教程》](https://support.websoft9.com/docs/mariadb/zh/admin-phpmyadmin.html) ，掌握更多的 MariaDB 实用技能：修改密码、导入/导出数据、创建用户、开启或关闭远程访问、日志配置等
-
-### 密码管理
-
-修改密码即通过已有的密码正常登录系统后，再重新设置一个新密码；  
-重置密码即忘记了登录密码，需要通过特殊的手段重新设置一个密码。
-
-#### 修改密码
-
-以管理员用户 biadmin 为例，介绍如何修改密码
-
-1. 登录 Knowage 后台
-2. 依次打开：【Profile Management】>【Users Management】 修改密码
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/knowage/knowage-changepw-websoft9.png)
-
-#### 重置密码
-
-以管理员用户 biadmin 为例，介绍如何重置密码
-
-1. 使用 phpMyAdmin 登录数据库，找到`knowage_ce`库下的 `SBI_USER`表，删除其中的【biadmin】整行
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/knowage/knowage-deletedbbiadmin-websoft9.png)
-
-2. 重启容器服务
-   ```
-   sudo docker restart knowage-server
-   ```
-
-3. 进入到 knowage-server容器，查看密码
-   ```
-   docker exec -it knowage-server bash
-   cat /home/knowage/apache-tomcat/webapps/knowage/WEB-INF/conf/config/internal_profiling.xml | grep "password"
-   ```
-
-### 多语言
-
-Knowage 支持多语言（不包含中文），下面介绍如何切换语言：
-
-1. 登录 Knowage 后台
-
-2. 打开左侧菜单的：【KNOWAGE ADMINISTRATOR】>【Languages】，设置你所需的语言
-
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/knowage/knowage-setlanguages-websoft9.png)
+Knowage-Server 资源目录：*/data/wwwroot/knowage/resources*  
 
 
-## 异常处理
+### 端口{#port}
 
-#### 浏览器打开IP地址，无法访问 Knowage（白屏没有结果）？
+Knowage server的默认端口是8080
 
-您的服务器对应的安全组**80端口**没有开启（入规则），导致浏览器无法访问到服务器的任何内容
+### 版本
 
-#### Knowage 服务启动失败？
+```shell
+# Check all components version
+sudo cat /data/logs/install_version.txt
 
-请确保数据库连接信息准确无误
+# Linux Version
+lsb_release -a
 
-#### 为什么通过IP地址直接可以访问 Knowage？
+# Nginx  Version
+nginx -V
 
-本项目已经通过 Nginx 设置了端口转发
+# Docker Version
+docker -v
+
+# MariaDB version
+
+docker inspect knowage-mariadb-server | grep "MARIADB_VERSION"
+
+# Knowage Version
+docker images |grep knowagelabs |awk '{print $2}' |head -1 |cut -d- -f1
+```
+
+### 服务
+
+GitLab 提供的（[gitlab-ctl ](https://docs.gitlab.com/omnibus/maintenance/README.html#get-service-status)）可以很方便的管理各个组件的服务：
+
+```shell
+sudo gitlab-ctl start | stop | restart | status reconfigure nginx
+sudo gitlab-ctl start | stop | restart | status reconfigure unicorn
+sudo gitlab-ctl start | stop | restart | status reconfigure sidekiq
+sudo gitlab-ctl start | stop | restart | status reconfigure postgresql
+sudo gitlab-ctl start | stop | restart | status reconfigure redis
+```
+
+GitLab 自身的启动/停止，是通过 Systemd 服务来管理的：
+
+```shell
+systemctl start | stop | restart | status gitlab-runsvdir.service
+```
+
+### 命令行
+
+GitLab 提供了命令行工具 `gitlab-ctl` 用于全面管理和配置 GitLab
+
+```
+$ gitlab-ctl -h
+
+I don't know that command.
+omnibus-ctl: command (subcommand)
+check-config
+  Check if there are any configuration in gitlab.rb that is removed in specified version
+deploy-page
+  Put up the deploy page
+diff-config
+  Compare the user configuration with package available configuration
+get-redis-master
+  Get connection details to Redis master
+prometheus-upgrade
+  Upgrade the Prometheus data to the latest supported version
+remove-accounts
+  Delete *all* users and groups used by this package
+reset-grafana
+  Reset Grafana instance to its initial state by removing the data directory
+set-grafana-password
+  Reset admin password for Grafana
+upgrade
+  Run migrations after a package upgrade
+upgrade-check
+  Check if the upgrade is acceptable
+General Commands:
+  cleanse
+    Delete *all* gitlab data, and start from scratch.
+  help
+    Print this help message.
+  reconfigure
+    Reconfigure the application.
+  show-config
+    Show the configuration that would be generated by reconfigure.
+  uninstall
+    Kill all processes and uninstall the process supervisor (data will be preserved).
+Service Management Commands:
+  graceful-kill
+    Attempt a graceful stop, then SIGKILL the entire process group.
+  hup
+    Send the services a HUP.
+  int
+    Send the services an INT.
+  kill
+    Send the services a KILL.
+  once
+    Start the services if they are down. Do not restart them if they stop.
+  restart
+    Stop the services if they are running, then start them again.
+  service-list
+    List all the services (enabled services appear with a *.)
+  start
+    Start services if they are down, and restart them if they stop.
+  status
+    Show the status of all the services.
+  stop
+    Stop the services, and do not restart them.
+  tail
+    Watch the service logs of all enabled services.
+  term
+    Send the services a TERM.
+  usr1
+    Send the services a USR1.
+  usr2
+    Send the services a USR2.
+Gitlab Geo Commands:
+  geo
+    Interact with Geo
+  geo-replication-pause
+    Replication Process
+  geo-replication-resume
+    Replication Process
+  promote-db
+    Promote secondary PostgreSQL database
+  promote-to-primary-node
+    Promote to primary node
+  promotion-preflight-checks
+    Run preflight checks for promotion to primary node
+  replicate-geo-database
+    Replicate Geo database
+  set-geo-primary-node
+    Make this node the Geo primary
+Pgbouncer Commands:
+  pgb-console
+    Connect to the pgbouncer console
+  pgb-kill
+    Send the "resume" command to pgbouncer
+  pgb-notify
+    Notify pgbouncer of an update to its database
+  pgb-resume
+    Send the "resume" command to pgbouncer
+  pgb-suspend
+    Send the "suspend" command to pgbouncer
+Database Commands:
+  get-postgresql-primary
+    Get connection details to the PostgreSQL primary
+  patroni
+    Interact with Patroni
+  pg-password-md5
+    Generate MD5 Hash of user password in PostgreSQL format
+  pg-upgrade
+    Upgrade the PostgreSQL DB to the latest supported version
+  revert-pg-upgrade
+    Run this to revert to the previous version of the database
+  set-replication-password
+    Set database replication password
+  write-pgpass
+    Write a pgpass file for the specified user
+Consul Commands:
+  consul
+    Interact with the gitlab-consul cluster
+Container Registry Commands:
+  registry-garbage-collect
+    Run Container Registry garbage collection.
+Let's Encrypt Commands:
+  renew-le-certs
+    Renew the existing Let's Encrypt certificates
+Gitaly Commands:
+  praefect
+    Interact with Gitaly cluster
+Backup Commands:
+  backup-etc
+    Backup GitLab configuration [options]
+```
+
+### API
+
+GitLab 提供[多种 API](https://docs.gitlab.com/ee/api/) 方式，包括：REST API, SCIM API, GraphQL API
+
+```
+curl "https://gitlab.example.com/api/v4/projects"
+```
+
 
 
 

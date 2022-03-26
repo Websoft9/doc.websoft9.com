@@ -1,365 +1,210 @@
 ---
-sidebar_position: 2
-slug: /prestashop/admin
+sidebar_position: 1
+slug: /prestashop
 tags:
-  - Scratch
+  - PrestaShop
   - 电子商务
 ---
 
-# 维护参考
+# 快速入门
 
-## 系统参数
+[PrestaShop](https://prestashop.com) 是一款全功能、跨平台的免费开源电子商务解决方案，采用PHP+MySQL开发。始于2008年，发展迅速，全球已超过四万家网店采用Prestashop进行部署。Prestashop基于Smarty引擎编程设计，模块化设计，扩展性强，能轻易实现多种语言，多种货币浏览交易，支持Paypal等几乎所有的支付手段，是外贸网站建站的不错选择。
 
-PrestaShop 预装包包含 PrestaShop 运行所需一序列支撑软件（简称为“组件”），下面列出主要组件名称、安装路径、配置文件地址、端口、版本等重要的信息。
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/pretashopui-websoft9.png)
 
-### 路径
 
-#### PrestaShop
+部署 Websoft9 提供的 PrestaShop 之后，请参考下面的步骤快速入门。
+
+## 准备
+
+1. 在云控制台获取您的 **服务器公网IP地址** 
+2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
+3. 在服务器中查看 PrestaShop 的 **[默认账号和密码](./setup/credentials#getpw)**  
+4. 若想用域名访问  PrestaShop **[域名五步设置](./dns#domain)** 过程
+
+
+## PrestaShop 初始化向导
+
+### 详细步骤
+
+1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://Internet IP*, 就进入引导首页  
+
+   可能会有小版本的升级提醒，建议点击【yes,please!】
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-installupdate-websoft9.png)
+   
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-language-websoft9.png)
+
+2. 选择语言，接受许可协议，继续下一步
+
+3. 安装进入管理员账号设置界面，牢记之，点击“下一步”
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-adminconf-websoft9.png)
+
+4. 安装进入数据库配置界面（[不知道数据库密码？](./setup/credentials#getpw)）然后点击”保存”
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-dbconfig-websoft9.png)
+
+5. 系统安装成功，分别进入后台和前台体验
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-installss-websoft9.png)
+
+6. 登录后台，系统提示删除intall文件夹
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-delinstall-websoft9.png)
+
+7. 使用WinSCP登录到服务器，进入 */data/wwwroot/prestashop*，删除 **install** 文件夹
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-delinstallftp-websoft9.png)
+
+8. 删除完成后，点击第六步的后台链接，开始体验后台（请牢记后台地址）
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-login-websoft9.png)
+
+9.  登录成功，体验后台
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-backend-websoft9.png)
+
+> 需要了解更多 PrestaShop 的使用，请参考官方文档：[PrestaShop Docs](https://www.prestashop.com/en/resources/documentations)
+
+### 出现问题？
+
+若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
+
+## PrestaShop 使用入门
+
+下面以 **使用 PrestaShop 构建在线商城** 作为一个任务，帮助用户快速入门：
+
+
+## PrestaShop 常用操作
+
+### PrestaShop Modules
+
+Modules 是 PrestaShop 功能扩展，Modules 可以即插即用
+
+1. 登录 PrestaShop 后台，
+2. 依次打开：【Modules】>【Module Catalog】，找到所需的插件，点击【Install】开始安装
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-installmd-websoft9.png)
+3. 依次打开：【Modules】>【Module Manager】，找到所需的插件，点击【Upgrade】即可在线升级
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-upgrademodules-websoft9.png)
+
+### 连接 PrestaShop Marketplace{#marketplace}
+
+安装 PrestaShop 后，建议把你安装的 PrestaShop 系统与 PrestaShop 官方的 Marketplace 资源进行在线连接，这样便可以在线使用 Marketplace 上的大量资源
+
+1. 登录 PrestaShop 后台
+2. 依次打开：【Modules】>【Module Manager】，点击【Connect to Addons marketplace】
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-connectmk-websoft9.png)  
+3. 开始注册账号
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-registeraccount-websoft9.png)  
+4. 注册完成后，登录连接
+5. 连接后，就可以很方便的使用 Marketplace 上的资源
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/prestashop-marketplace-websoft9.png)
+
+### PrestaShop 安装语言包{#setlanguage}
+
+Prestashop的多语言支持非常的成熟，系统在后台内置一套多语言体系，只需要选择对应的语言，在线导入到您的 PrestaShop 系统即可。
+
+#### 导入语言
+
+1. 登录Prestashop后台，依次打开：【国际】>【本地化】，进入设置界面
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-setlanguage-websoft9.png)
+2. 选择一个语言包，点击本项之右下角【上传】图标，完成在线导入
+3. 选择【语言】选项卡，我们就可以看到成功导入的语言包
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-alllanguage-websoft9.png) 
+
+> 每次导入一个新的语言包，系统会自动为此语言生成一个伪静态规则。如果您的某个语言的伪静态设置出现问题导致了 Redirect（重定向），可以删除这个语言，然后重新导入一次即可。
+
+#### 删除语言
+
+1. 登录Prestashop后台，依次打开：【国际】>【本地化】>【语言】，编辑您需要的语言
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-dellanguage001-websoft9.png)
+2. 将语言的状态修改为“否”，然后保存
+3. 回到【语言】选项开，找到已经打叉的语言，删除之即可
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-dellanguage002-websoft9.png)
+
+### PrestaShop 维护模式{#maintenance}
+
+登录 PrestaShop 后台，打开：【Shop Parameters】>【General】>【Maintenance】，设置维护模式
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-mantmode-websoft9.png)
+
+
+### 配置 SMTP{#smtp}
+
+1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
+2. 登录到 PrestaShop 后台，完成 SMTP 参数设置  
+  
+   - 依次打开：【配置】>【高级参数】>【邮箱】，选择第二项【设置我的SMTP参数】
+     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-smtp-1-websoft9.png)
+   - 准确的填写你的 SMTP 参数
+     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-smtp-2-websoft9.png) 
+
+3. 发送测试邮件
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-smtp-3-websoft9.png)
+     
+
+### 配置域名{#dns}
+
+参考： **[域名五步设置](./dns#domain)** 
+
+如果 PrestaShop 需要更换域名，具体操作如下：
+
+1. 完成域名解析和域名绑定
+2. 将 PrestaShop [设置为维护模式](#maintenance)
+3. 打开 PrestaShop 的配置文件（[路径参考](#path)），修改其中与域名有关的内容
+4. 登录 PrestaShop 后台，打开：【Shop Parameters】>【Traffic&SEO】，修改它
+  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-seturl-websoft9.png)
+
+### 配置 HTTPS{#https}
+
+参考： **[HTTPS 配置](./dns#https)**
+
+### PrestaShop 导入数据
+
+登录 PrestaShop 后台，打开：【Advanced Parameters】>【Import】，导入所需的数据
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-importdb-websoft9.png)
+
+
+## 参数{#parameter}
+
+**[通用参数表](../setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 PrestaShop 应用中包含的基础架构组件路径、版本、端口等参数。 
+
+通过运行`docker ps`，可以查看到 PrestaShop 运行时所有的 Container：
+
+```bash
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+```
+
+
+下面仅列出 PrestaShop 本身的参数：
+
+### 路径{#path}
 
 PrestaShop 安装目录： */data/wwwroot/prestashop*  
 PrestaShop 配置文件： */data/wwwroot/prestashop/app/config/parameters.php*  
 
-> PrestaShop 配置文件中包含数据库连接信息，更改了 MySQL 数据库账号密码，此处也需要对应修改
 
-#### PHP
+### 端口{#port}
 
-PHP 配置文件： */etc/php.ini*  
-PHP Modules 配置文件目录： */etc/php.d*
+| 端口号 | 用途                                          | 必要性 |
+| ------ | --------------------------------------------- | ------ |
+| 80   | 通过 HTTP 访问 PrestaShop | 必要   |
+| 443   | 通过 HTTPS 访问 PrestaShop | 可选   |
+| 3306   | 用于远程连接 MySQL | 可选   |
 
-#### Apache
-
-PrestaShop on LAMP, the Web Server is Apache  
-
-Apache 虚拟主机配置文件：*/etc/httpd/conf.d/vhost.conf*  
-Apache 主配置文件： */etc/httpd/conf/httpd.conf*  
-Apache 日志文件： */var/log/httpd*  
-Apache 模块配置文件： */etc/httpd/conf.modules.d/00-base.conf*
-
-#### Nginx
-
-PrestaShop on LEMP, the Web Server is Nginx  
-
-Nginx 虚拟主机配置文件：*/etc/nginx/sites-available/default.conf*  
-Nginx 主配置文件： */etc/nginx/nginx.conf*  
-Nginx 日志文件： */var/log/nginx/*
-
-#### MYSQL
-
-MySQL 安装路径: */usr/local/mysql*  
-MySQL 数据文件 */data/mysql*  
-MySQL 配置文件: */etc/my.cnf*    
-MySQL 可视化管理地址: *http://服务器公网IP:9090*，用户名和密码请见 [账号密码](/zh/stack-accounts.md) 章节。
-
-#### phpMyAdmin
-
-phpMyAdmin installation directory: */data/apps/phpmyadmin*  
-phpMyAdmin configuration file: */data/apps/phpmyadmin/config.inc.php*   
-phpMyAdmin vhost configuration file: */etc/httpd/conf.d/phpMyAdmin.conf* or */etc/nginx/php.conf*  
-
-#### Redis
-
-Redis configuration file: */etc/redis.conf*  
-Redis data directory: */var/lib/redis*  
-Redis logs file: */var/log/redis/redis.log*
-
-
-### 端口号
-
-在云服务器中，通过 **[安全组设置](https://support.websoft9.com/docs/faq/zh/tech-instance.html)** 来控制（开启或关闭）端口是否可以被外部访问。 
-
-本应用建议开启的端口如下：
-
-| 名称 | 端口号 | 用途 |  必要性 |
-| --- | --- | --- | --- |
-| HTTP | 80 | 通过 HTTP 访问 PrestaShop | 必须 |
-| HTTPS | 443 | 通过 HTTPS 访问 PrestaShop | 可选 |
-| MySQL | 3306 | 远程连接 MySQL | 可选 |
-| HTTP | 9090 | phpMyAdmin 访问端口| 可选 |
-
-### 版本号
-
-组件版本号可以通过云市场商品页面查看。但部署到您的服务器之后，组件会自动进行更新导致版本号有一定的变化，故精准的版本号请通过在服务器上运行命令查看：
+### 版本{#version}
 
 ```shell
-# Check all components version
 sudo cat /data/logs/install_version.txt
-
-# Linux Version
-lsb_release -a
-
-# PHP Version
-php -v
-
-# List Installed PHP Modules
-php -m
-
-# Apache version on Centos
-httpd -v
-
-# Apache version on Ubuntu
-apache2 -v
-
-# List Installed Apache Modules
-apachectl -M
-
-# Nginx version
-nginx -v
-
-# List Installed Nginx Modules
-nginx -V
-
-# MySQL version:
-mysql -V
-
-# Redis version
-redis-server -v
 ```
 
-### 服务
-
-使用由Websoft9提供的 PrestaShop 部署方案，可能需要用到的服务如下：
-
-#### Apache
+### 服务{#service}
 
 ```shell
-#For Centos&Redhat
-sudo systemctl start httpd
-sudo systemctl stop httpd
-sudo systemctl restart httpd
-sudo systemctl status httpd
-
-#For Ubuntu&Debian
-sudo systemctl start apache2
-sudo systemctl stop apache2
-sudo systemctl restart apache2
-sudo systemctl status apache2
-```
-
-#### Nginx
-
-```shell
-sudo systemctl start nginx
-sudo systemctl stop nginx
-sudo systemctl restart nginx
-sudo systemctl status nginx
-```
-
-#### PHP-FPM
-```shell
-systemctl start php-fpm
-systemctl stop php-fpm
-systemctl restart php-fpm
-systemctl status php-fpm
-```
-
-#### MySQL
-
-```shell
-sudo systemctl start mysql
-sudo systemctl stop mysql
-sudo systemctl restart mysql
-sudo systemctl status mysql
-```
-
-#### Redis
-```shell
-sudo systemctl star redis
-sudo systemctl stop redis
-sudo systemctl restart redis
-sudo systemctl status redis
-```
-
-## 备份
-
-### 全局自动备份
-
-所有的云平台都提供了全局自动备份功能，基本原理是基于**磁盘快照**：快照是针对于服务器的磁盘来说的，它可以记录磁盘在指定时间点的数据，将其全部备份起来，并可以实现一键恢复。
 
 ```
-- 备份范围: 将操作系统、运行环境、数据库和应用程序
-- 备份效果: 非常好
-- 备份频率: 按小时、天、周备份均可
-- 恢复方式: 云平台一键恢复
-- 技能要求：非常容易
-- 自动化：设置策略后全自动备份
-```
 
-不同云平台的自动备份方案有一定的差异，详情参考 [云平台备份方案](https://support.websoft9.com/docs/faq/zh/tech-instance.html)
+### 命令行{#cli}
 
-### 程序手工备份
+### API
 
-程序手工本地备份是通过**下载应用程序源码和导出数据库文件**实现最小化的备份方案。
+### 参考{#ref}
 
-下面以列表的方式介绍这种备份：
-```
-- 备份范围: 数据库和应用程序
-- 备份效果: 一般
-- 备份频率: 一周最低1次，备份保留30天
-- 恢复方式: 重新导入
-- 技能要求：非常容易
-- 自动化：无
-```
-通用的手动备份操作步骤如下：
+支撑 PrestaShop 运行的环境组件包括：PHP, MySQL, Apache or Nginx等，请根据不同的部署包分别查看对应的手册，完成更多配置。
 
-1. 通过 WinSCP 将网站目录（*/data/wwwroot/prestashop*）**压缩后**再完整的下载到本地
-2. 通过 phpMyAdmin 导出 PrestaShop 数据库
-  ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/prestashop-dbexport-websoft9.png)
-3. 将程序文件、数据文件和数据库文件放到同一个文件夹，根据日期命名
-4. 备份工作完成
-
-### PrestaShop 后台备份
-
-PrestaShop 提供了后台数据库备份功能
-
-1. 登录 PrestaShop 后台
-2. 依次打开：【Advanced Parameters】>【DB backup】
-  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-dbbackup-websoft9.png)
-3. 创建一个备份，然后下载到本地
-
-
-## 恢复
-
-
-## 升级
-
-### 系统级更新
-
-运行一条更新命令，即可完成系统级（包含rethinkdb小版本更新）更新：
-
-``` shell
-#For Ubuntu&Debian
-apt update && apt upgrade -y
-
-#For Centos&Redhat
-yum update -y
-```
-> 本部署包已预配置一个用于自动更新的计划任务。如果希望去掉自动更新，请删除对应的 Cron
-
-
-### PrestaShop 升级
-
-Prestashop 自动备份是通过一个名称为“1-Click Upgrade”的插件实现的，具体步骤如下：
-
-1. 登录 PrestaShop 后台，打开【Modules Catalog】，搜索“upgrade”，安装备份插件
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-upgrade001-websoft9.png)
-2. 安装完成后，点击“配置”，进入模块设置界面
-3. 根据设置建议，将系统置为维护模式（maintenance mode）
-4. 点击【Upgrade PrestaShop now】按钮，开始升级
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-upgrade002-websoft9.png)
-5. 升级过程中首先会下载最新的安装包，受制于网络因素，这个过程可能会比较慢。
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-upgrade003-websoft9.png)
-6. 升级过程的例外情况
-   - 如果下载新版本这个步骤无法完成，需要多次尝试
-   - 若出现 “you don't have permission...ajax-upgradetab.php” 的错误提示，升级失败，暂无解决办法
-
-> 与升级有关的更多方案，请参考官方文档：[PrestaShop Backup](https://doc.prestashop.com/display/PS16/Manual+update)
-
-### PrestaShop Module 升级
-
-PrestaShop 提供了在线插件升级能力
-
-1. 登录 PrestaShop 后台，打开【Modules Catalog】
-2. 找到需要升级的插件，点击【Upgrade】即可在线升级
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-upgrademodules-websoft9.png)
-
-
-## 故障处理
-
-
-此处收集使用 PrestaShop 过程中最常见的故障，供您参考
-
-> 大部分故障与云平台密切相关，如果你可以确认故障的原因是云平台造成的，请参考[云平台文档](https://support.websoft9.com/docs/faq/zh/tech-instance.html)
-
-#### Prestashop 重定向错误？
-
-多语言下，重定向错误比较常见。例如：打开您的Prestashop商店中文版会出现重定向
-
-处理办法：
-1. 分析网站根目录下的 `.htaccess` 文件，看看有没有死循环规则
-2. 进入后台先删除中文，然后再重新导入中文。重新导入的时候，Prestashop会自动生成伪静态规则，覆盖您网站根目录的 `.htaccess` 文件
-
-
-#### 修改了数据库密码 PrestaShop 不能访问？
-
-若已完成 PrestaShop 安装向导，再通过 phpMyAdmin 修改数据库密码，PrestaShop 就会连不上数据库
-
-需要修改 [PrestaShop 配置文件](/zh/stack-components.html#prestashop) 对应的数据库 password 参数即可。
-
-#### Apache httpd 服务无法启动？
-
-请通过分析日志文件定位原因： */var/log/httpd*
-
-#### 网站重定向错误？
-
-
-#### 数据库服务无法启动
-
-数据库服务无法启动最常见的问题包括：磁盘空间不足，内存不足，配置文件错误。  
-建议先通过命令进行排查  
-
-```shell
-# 查看磁盘空间
-df -lh
-
-# 查看内存使用
-free -lh
-```
-
-## 常见问题
-
-#### PrestaShop 支持多语言吗？
-
-支持多语言（包含中文），通过[后台设置](/zh/solution-more.html#prestashop-语言包)即可
-
-#### 为什么要连接 PrestaShop Marketplace？
-
-只有连接PrestaShop Marketplace，才可以使用其资源。连接教程[参考](/zh/stack-installation.html#连接-prestashop-marketplace)
-
-#### PrestaShop(LAMP)，PrestaShop(LNMP)等商品括号中的 LAMP,LNMP 是什么意思？
-
-LAMP和LNMP代表支持 PrestaShop 运行所对应的基础环境，具体参考[环境说明](/zh/admin-runtime.html)
-
-#### 是否可以使用云平台的 RDS 作为 PrestaShop 的数据库？
-
-可以，修改 [PrestaShop 配置文件](/zh/stack-components.html#prestashop) 即可
-
-#### PrestaShop能在Windows服务器上运行吗？
-
-可以，但是我们推荐在运行 PrestaShop 效率更高的 Linux 服务器上运行
-
-#### PrestaShop数据库连接配置信息在哪里？
-
-数据库配置信息 [PrestaShop 配置文件](/zh/stack-components.html#prestashop)中
-
-#### 如果没有域名是否可以部署 PrestaShop？
-
-可以，访问`http://服务器公网IP` 即可
-
-#### 数据库 root 用户对应的密码是多少？
-
-密码存放在服务器相关文件中：`/credentials/password.txt`
-
-#### 是否有可视化的数据库管理工具？
-
-有，内置phpMyAdmin，访问地址：http://服务器公网IP/phpmyadmin
-
-#### 如何禁止phpMyAdmin访问？
-
-连接服务器，编辑 phpMyAdmin 配置文件，将其中的 Require all granted 更改为 Require ip 192.160.1.0，然后重启 Apache 服务
-
-#### 是否可以修改 PrestaShop 的源码路径？
-
-可以，通过修改 [虚拟主机配置文件](/zh/stack-components.md#prestashop)中相关参数
-
-#### 如何修改上传的文件权限?
-
-```shell
-#PrestaShop(LAMP)
-chown -R apache.apache /data/wwwroot
-
-#PrestaShop(LEMP)
-chown -R nginx.nginx /data/wwwroot
-
-find /data/wwwroot -type d -exec chmod 750 {} \;
-find /data/wwwroot -type f -exec chmod 640 {} \;
-```
+| 部署包名称 | 说明| 参考项 |
+| --- | --- | --- |
+| PrestaShop(LAMP) | Apache+MySQL+PHP on Linux | [《LAMP管理员手册》](https://support.websoft9.com/docs/lamp/zh) |
+| PrestaShop(LNMP)| Nginx+MySQL+PHP on Linux |[《LNMP管理员手册》](https://support.websoft9.com/docs/lnmp/zh)|
