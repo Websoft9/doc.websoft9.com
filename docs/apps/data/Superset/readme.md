@@ -188,7 +188,7 @@ Superset 配置SMTP发邮件的步骤：
 
 ## 参数
 
-**[通用参数表](./setup/parameter)** 中可查看 Nginx, Docker, MariaDB 等 Knowage 应用中包含的基础架构组件路径、版本、端口等参数。 
+**[通用参数表](./setup/parameter)** 中可查看 Nginx, Docker, MariaDB 等 Superset 应用中包含的基础架构组件路径、版本、端口等参数。 
 
 
 ### 路径{#path}

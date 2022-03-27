@@ -182,4 +182,3 @@ GitLab 使用的 Peer Authentication 方式连接 PostgreSQL, 没有设置数据
 #### 可否修改 GitLab Repository 存储目录？
 
 可以，参考：[Repository storage paths](https://docs.gitlab.com/ee/administration/repository_storage_paths.html)
-
