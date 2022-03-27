@@ -19,16 +19,20 @@ tags:
 
 #### Superset 容器中安装数据库驱动报错？
 
-错误信息：ERROR: Could not install packages due to an OSError: [Errno 13] Permission denied: '/home/superset'
-Check the permissions.  
-问题原因：权限不足  
-解决方案：以 root 用户进入容器 `docker exec -it --user root superset_app bash`，然后再安装驱动  
+**现象描述**：ERROR: Could not install packages due to an OSError: [Errno 13] Permission denied: '/home/superset'
+Check the permissions.    
 
-#### Superset 密码正确，但仍然登录失败？
+**原因分析**：权限不足
 
-问题描述：用户名和密码完全正确，但 Superset 仍然登录失败，错误信息 Invalid login, Please try again  
-问题原因：暂时未知  
-解决方案：重启所有 Superset 容器 `cd /data/wwwroot/superset && docker-compose restart` 
+**解决方案**：以 root 用户进入容器 `docker exec -it --user root superset_app bash`，然后再安装驱动  
+
+#### Superset 密码正确，但仍然登录失败？{#loginfail}
+
+**现象描述**：用户名和密码完全正确，但 Superset 仍然登录失败，错误信息 Invalid login, Please try again   
+
+**原因分析**：暂时未知
+
+**解决方案**：重启所有 Superset 容器 `cd /data/wwwroot/superset && docker-compose restart` 
 
 ## 问题解答
 

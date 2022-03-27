@@ -51,19 +51,7 @@ tags:
 
 **Superset 密码正确，但仍然登录失败？**  
 
-重启所有 Superset 容器
-
-```
-cd /data/wwwroot/superset && docker-compose restart
-```
-
-**Superset 容器中安装数据库驱动报错？** 
-
-```
-错误信息：ERROR: Could not install packages due to an OSError: [Errno 13] Permission denied: '/home/superset' Check the permissions.  
-问题原因：权限不足  
-解决方案：以 root 用户进入容器 `docker exec -it --user root superset_app bash`，然后再安装驱动  
-```
+参阅：[此处](./Superset/admin#loginfail)
 
 ## Superset 使用入门
 
@@ -180,7 +168,7 @@ Superset 配置SMTP发邮件的步骤：
    SMTP username: websoft9@163.com
    SMTP password: #wwBJ8
    ```
-2. 修改/data/wwwroot/superset/superset_config.py，增加如下的 SMTP 配置段，设置好自己的参数。
+2. 修改/data/wwwroot/superset/docker/pythonpath_dev/superset_config.py，增加如下的 SMTP 配置段，设置好自己的参数。
    ```
    # smtp server configuration
    EMAIL_NOTIFICATIONS = True  # all the emails are sent using dryrun
@@ -297,5 +285,5 @@ Commands:
 
 ### API
 
-[Knowage API](https://knowage.docs.apiary.io) 采用REST API 2.0规范。Knowage REST API 旨在管理 Knowage 分析文档和数据集的生命周期。
+[Superset API](https://superset.apache.org/docs/api) 采用REST API 2.0规范。
 
