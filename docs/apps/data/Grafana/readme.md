@@ -13,7 +13,7 @@ tags:
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/grafana/grafana-dashboardui.png)
 
-在云服务器上部署 Grafana 预装包之后，请参考下面的步骤快速入门。
+部署 Websoft9 提供的  Grafana 之后，请参考下面的步骤快速入门。
 
 ## 准备
 

@@ -1,5 +1,5 @@
 position: 7
-label: "Parse"
+label: "Parse Server"
 collapsible: true
 collapsed: true
 className: "red"

@@ -49,7 +49,7 @@ tags:
 下面以 **收发消息** 作为一个任务，帮助用户快速入门：
 
 
-## 常用操作
+## RabbitMQ 常用操作
 
 下面以 Rabbimtq [官方文档](https://www.rabbitmq.com/documentation.html)为基础，提炼一些常用的操作供用户参考：  
 

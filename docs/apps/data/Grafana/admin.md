@@ -13,7 +13,7 @@ tags:
 
 除以下列出的 Grafana 维护场景问题之外， [管理员指南](../administrator) 专题提供了通用的维护方案：
 
-### Grafana升级
+### 升级
 
 请参考官方提供的升级文档：[Upgrading Grafana](https://grafana.com/docs/installation/upgrading/)
 
