@@ -11,8 +11,6 @@ tags:
 
 ## 场景
 
-除以下列出的 Superset 维护场景问题之外， [管理员指南](../administrator) 专题提供了通用的维护方案。
-
 ## 故障速查
 
 除以下列出的 Superset 故障问题之外， [通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案：
@@ -20,19 +18,19 @@ tags:
 #### Superset 容器中安装数据库驱动报错？
 
 **现象描述**：ERROR: Could not install packages due to an OSError: [Errno 13] Permission denied: '/home/superset'
-Check the permissions.    
+Check the permissions.
 
 **原因分析**：权限不足
 
-**解决方案**：以 root 用户进入容器 `docker exec -it --user root superset_app bash`，然后再安装驱动  
+**解决方案**：以 root 用户进入容器 `docker exec -it --user root superset_app bash`，然后再安装驱动
 
 #### Superset 密码正确，但仍然登录失败？{#loginfail}
 
-**现象描述**：用户名和密码完全正确，但 Superset 仍然登录失败，错误信息 Invalid login, Please try again   
+**现象描述**：用户名和密码完全正确，但 Superset 仍然登录失败，错误信息 Invalid login, Please try again
 
 **原因分析**：暂时未知
 
-**解决方案**：重启所有 Superset 容器 `cd /data/wwwroot/superset && docker-compose restart` 
+**解决方案**：重启所有 Superset 容器 `cd /data/wwwroot/superset && docker-compose restart`
 
 ## 问题解答
 
@@ -46,7 +44,7 @@ Check the permissions.
 sudo docker ps
 ```
 
-#### 是否可以通过命令行修改 Superset 后台密码？
+#### 可否通过命令行修改 Superset 后台密码？
 
 不支持，需登录控制台修改
 
@@ -60,7 +58,7 @@ sudo docker ps
 
 #### 是否有可视化的数据库管理工具？
 
-有，内置pgAdmin，访问地址：*http://服务器公网IP:9090*
+有，内置 pgAdmin，访问地址：_http://服务器公网 IP:9090_
 
 #### 如何以 root 身份进入容器运行命令？
 
@@ -78,6 +76,6 @@ find /data/wwwroot/superset -type d -exec chmod 750 {} \;
 find /data/wwwroot/superset -type f -exec chmod 640 {} \;
 ```
 
-#### 是否支持 google authentication 或 OKTA based authentication (OIDC)?
+#### 是否支持 Google Authentication？
 
 SuperSet 默认只提供了邮件登录，更多登录方式使用需参考其框架文档：[Flask-AppBuilder](https://flask-appbuilder.readthedocs.io/en/latest/security.html#supported-authentication-types)

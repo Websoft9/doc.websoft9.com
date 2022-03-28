@@ -15,7 +15,7 @@ tags:
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mediawiki/MediaWiki_UI.png)
 
 
-部署 Websoft9 提供的 MediaWiki 之后，请参考下面的步骤快速入门。
+部署 Websoft9 提供的 MediaWiki 之后，需完成如下的准备工作：
 
 ## 准备
 

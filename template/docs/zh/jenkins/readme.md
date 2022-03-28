@@ -135,6 +135,10 @@ jenkins -v
 sudo systemctl start | stop | restart | status jenkins
 ```
 
+### 网址
+
+Jenkins后台地址：URL/admin
+
 ### 命令行
 
 Jenkins 提供 CLI 客户端和 SSH CLI [两种方式](https://www.jenkins.io/zh/doc/book/managing/cli/)，下面是推荐的 客户端 CLI：
@@ -153,5 +157,3 @@ curl JENKINS_URL/job/JOB_NAME/buildWithParameters \
 ```
 
 同时，也提供了 Java, Python, Ruby 等语言的 API SDK 开发包。 
-
-

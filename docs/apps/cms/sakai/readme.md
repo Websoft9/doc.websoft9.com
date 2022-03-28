@@ -14,7 +14,7 @@ tags:
 ![](https://photogallery.oss.aliyuncs.com/photo/1904996544835414/undefined/ab4c28cc-5f11-49ec-aa09-ec512039b4f5.png)
 
 
-部署 Websoft9 提供的 Sakai 之后，请参考下面的步骤快速入门。
+部署 Websoft9 提供的 Sakai 之后，需完成如下的准备工作：
 
 ## 准备
 

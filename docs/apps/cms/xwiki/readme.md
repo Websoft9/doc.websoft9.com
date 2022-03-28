@@ -22,7 +22,7 @@ tags:
 - Groovy脚本支持等等
 
 
-部署 Websoft9 提供的 XWiki 之后，请参考下面的步骤快速入门。
+部署 Websoft9 提供的 XWiki 之后，需完成如下的准备工作：
 
 ## 准备
 

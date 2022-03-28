@@ -11,8 +11,6 @@ tags:
 
 ## 场景
 
-除以下列出的 Knowage 维护场景问题之外， [管理员指南](../administrator) 专题提供了通用的维护方案。
-
 ## 故障速查
 
 除以下列出的 Knowage 故障问题之外， [通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案。
@@ -33,7 +31,7 @@ Knowage 是 SpagoBI 更名后的产品
 
 #### 如果没有域名是否可以部署 Knowage？
 
-可以，直接通过：*http://服务器公网IP:8080/knowage* 或 *http://服务器公网IP* 访问即可
+可以，直接通过：_http://服务器公网 IP:8080/knowage_ 或 _http://服务器公网 IP_ 访问即可
 
 #### 数据库 root 用户对应的密码是多少？
 
@@ -41,7 +39,7 @@ Knowage 是 SpagoBI 更名后的产品
 
 #### 是否有可视化的数据库管理工具？
 
-有，内置phpMyAdmin，访问地址：*http://服务器公网IP:9090*
+有，内置 phpMyAdmin，访问地址：_http://服务器公网 IP:9090_
 
 #### 如何修改上传的文件权限?
 
@@ -52,4 +50,3 @@ chown -R knowage.knowage /data/wwwroot/knowage
 find /data/wwwroot/knowage -type d -exec chmod 750 {} \;
 find /data/wwwroot/knowage -type f -exec chmod 640 {} \;
 ```
-

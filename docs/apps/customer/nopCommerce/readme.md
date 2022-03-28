@@ -14,7 +14,7 @@ tags:
 ![](https://netmarket.oss.aliyuncs.com/product/f8b1e93e-fba8-4fe3-b349-2a393ac01aa8.png)
 
 
-部署 Websoft9 提供的 NopCommerce 之后，请参考下面的步骤快速入门。
+部署 Websoft9 提供的 NopCommerce 之后，需完成如下的准备工作：
 
 ## 准备
 

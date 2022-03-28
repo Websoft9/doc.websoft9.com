@@ -15,7 +15,7 @@ tags:
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuzq-guiweb-websoft9.png)
 
 
-部署 Websoft9 提供的 Discuz 之后，请参考下面的步骤快速入门。
+部署 Websoft9 提供的 Discuz 之后，需完成如下的准备工作：
 
 ## 准备
 
@@ -25,7 +25,7 @@ tags:
 4. 若想用域名访问  Discuz **[域名五步设置](./dns#domain)** 过程
 
 
-## Discuz!Q  初始化向导
+## Discuz!Q  初始化向导{#init}
 
 ### 详细步骤
 
