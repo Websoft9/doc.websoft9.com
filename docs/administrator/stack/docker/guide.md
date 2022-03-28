@@ -77,6 +77,17 @@ service --status-all
 service apache2 start | status | stop | restart
 ```
 
+### 重置容器{#resetcontainer}
+
+
+```
+cd /data/apps/appname
+docker-compose down -v
+docker-compose pull
+docker-compose up -d
+```
+
+
 ### 单容器升级
 
 以正在运行的 MySQL 容器为例，如果没有持久化卷，容器的升级步骤：
