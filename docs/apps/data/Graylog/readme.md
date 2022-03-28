@@ -24,6 +24,8 @@ tags:
 
 ## Graylog 初始化向导
 
+### 详细步骤
+
 1. 使用浏览器访问网址：**http://域名** or **http://服务器公网 IP**，进入 Graylog 登录界面
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/graylog/graylog-login-websoft9.png)
 
@@ -40,21 +42,14 @@ tags:
 
 正在编写
 
-## 常用操作
+## Graylog 常用操作
 
-### SMTP
+### 配置 SMTP
 
 Graylog 配置 SMTP 发邮件的步骤：：
 
-1. 管理控制台获取 SMTP 相关参数
-   ```
-   SMTP host: smtp.163.com
-   SMTP port: 465 or 994 for SSL-encrypted email
-   SMTP Authentication: must be checked
-   SMTP Encryption: must SSL
-   SMTP username: websoft9@163.com
-   SMTP password: #wwBJ8
-   ```
+1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
+
 2. 修改 Graylog 配置文件中的 Refer to [transport_email 参数](https://docs.graylog.org/en/3.3/pages/configuration/server.conf.html#email)
 
 3. 重启 Graylog 后生效
@@ -90,15 +85,27 @@ version: '2'
 
 同时，也支持直接修改配置文件 server.conf
 
-## 参数
+## Graylog 参数
 
-**[通用参数表](./setup/parameter)** 中可查看 Nginx, Docker, MariaDB 等 Graylog 应用中包含的基础架构组件路径、版本、端口等参数。
+Graylog 应用中包含 Nginx, Docker, MongoDB, Elasticsearch 等组件，可通过 **[通用参数表](../setup/parameter)** 查看路径、服务、端口等参数。
+
+通过运行`docker ps`，可以查看到 安装，Graylog 运行时所有的 Container：
+
+```
+CONTAINER ID   IMAGE                                                      COMMAND                  CREATED         STATUS                   PORTS                                                                                                                                                                                                                           NAMES
+dffc0d802a26   graylog/graylog:4.1                                        "/usr/bin/tini -- wa…"   2 minutes ago   Up 2 minutes (healthy)   0.0.0.0:1514->1514/tcp, 0.0.0.0:1514->1514/udp, :::1514->1514/tcp, :::1514->1514/udp, 0.0.0.0:12201->12201/tcp, 0.0.0.0:12201->12201/udp, :::12201->12201/tcp, :::12201->12201/udp, 0.0.0.0:9001->9000/tcp, :::9001->9000/tcp   graylog
+7c0a42a383c3   mongo:4.2                                                  "docker-entrypoint.s…"   2 minutes ago   Up 2 minutes             27017/tcp                                                                                                                                                                                                                       graylog-mongo
+f4cd00fc5f58   docker.elastic.co/elasticsearch/elasticsearch-oss:7.10.2   "/tini -- /usr/local…"   2 minutes ago   Up 2 minutes             9200/tcp, 9300/tcp                                                                                                                                                                                                              graylog-elasticsearch
+9497147a0263   mrvautin/adminmongo                                        "docker-entrypoint.s…"   8 minutes ago   Up 3 minutes             0.0.0.0:9091->1234/tcp, :::9091->1234/tcp                                                                                                                                                                                       adminmongo
+```
+
+下面仅列出 Graylog 本身的参数：
 
 ### 路径{#path}
 
-Graylog 安装路径: **/data/wwwroot/graylog**  
-Graylog 配置文件: **/data/wwwroot/volumes/graylog/config/server.conf**  
-Graylog 日志目录: **/data/wwwroot/volumes/graylog/log**
+Graylog 安装路径: /data/wwwroot/graylog  
+Graylog 配置文件: /data/wwwroot/volumes/graylog/config/server.conf  
+Graylog 日志目录: /data/wwwroot/volumes/graylog/log
 
 ### 端口{#port}
 
@@ -114,18 +121,6 @@ docker images |grep graylog/graylog |awk '{print $2}'
 ```
 
 ### 服务
-
-本项目采用 Docker 安装，运行 `docker ps` 可以查看所有相关的容器：
-
-```
-CONTAINER ID   IMAGE                                                      COMMAND                  CREATED         STATUS                   PORTS                                                                                                                                                                                                                           NAMES
-dffc0d802a26   graylog/graylog:4.1                                        "/usr/bin/tini -- wa…"   2 minutes ago   Up 2 minutes (healthy)   0.0.0.0:1514->1514/tcp, 0.0.0.0:1514->1514/udp, :::1514->1514/tcp, :::1514->1514/udp, 0.0.0.0:12201->12201/tcp, 0.0.0.0:12201->12201/udp, :::12201->12201/tcp, :::12201->12201/udp, 0.0.0.0:9001->9000/tcp, :::9001->9000/tcp   graylog
-7c0a42a383c3   mongo:4.2                                                  "docker-entrypoint.s…"   2 minutes ago   Up 2 minutes             27017/tcp                                                                                                                                                                                                                       graylog-mongo
-f4cd00fc5f58   docker.elastic.co/elasticsearch/elasticsearch-oss:7.10.2   "/tini -- /usr/local…"   2 minutes ago   Up 2 minutes             9200/tcp, 9300/tcp                                                                                                                                                                                                              graylog-elasticsearch
-9497147a0263   mrvautin/adminmongo                                        "docker-entrypoint.s…"   8 minutes ago   Up 3 minutes             0.0.0.0:9091->1234/tcp, :::9091->1234/tcp                                                                                                                                                                                       adminmongo
-```
-
-可以通过命令查看和启停相关容器：
 
 ```shell
 sudo docker  start | stop | restart | status graylog

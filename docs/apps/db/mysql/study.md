@@ -1,21 +1,20 @@
 ---
-sidebar_position: 3
-slug: /mariadb/study
+sidebar_position: 4
+slug: /mysql/study
 tags:
-  - MariaDB 
+  - MySQL
   - Cloude Native Database
 ---
 
 # 原理学习
 
-## 管理员知识点
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mariadb/mariadb-structure-websoft9.png)
 
-对于 MariaDB 管理员来说，需要掌握的知识要点包括：
+对于 MySQL/MariaDB 管理员来说，需要掌握的知识要点包括：
 
-* MariaDB 安装
-* SQL
+* MySQL/MariaDB 安装
+* SQL 语句
 * 基础概念：存储引擎、字符集
 * 可视化管理：使用 phpMyAdmin 等可视化工具管理数据库
 * 高级管理技术：升级、客户端工具使用、日志管理、备份恢复、监控
@@ -24,12 +23,6 @@ tags:
 
 下面，我们把以上要点做一个简单的阐述，希望对你的学习有一定的帮助。
 
-## 安装
-  
-对于 Windows 系统，官方提供了一键安装包和解压免安装包两种方式  
-对于 Linux 系统，官方提供了 rpm/deb 自动安装包和源码编译安装包两种方式。  
-
-Websoft9 云原生项目采用的是 rpm/deb 自动安装包的方式。
 
 ## SQL
 
@@ -280,7 +273,7 @@ mysqldump -u usename -p --all-database > all-database.sql
 
 ### 升级
 
-详情参考本文的 [更新升级](/zh/mariadb/admin) 章节。
+详情参考本文的 [更新升级](/zh/solution-upgrade.md) 章节。
 
 ### 管理工具
 
@@ -397,10 +390,6 @@ MariaDB 支持一台主库向多台从库进行复制，从库同时也可以作
 
 > 由于复制是异步的或半同步的，所以主从之间的数据总是存在一定的差距。
 
+
+
 ### 集群
-
-## 参阅
-
-本文档的撰写过程中，我们参考了大量的书籍和博客，下面列出主要来源：
-
-* 《深入浅出MariaDB 数据库开发、优化与维护管理（第二版）》 人民邮电出版社

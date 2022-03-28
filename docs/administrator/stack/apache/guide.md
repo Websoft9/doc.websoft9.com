@@ -149,7 +149,7 @@ ErrorDocument 404 /404.txt
 ```
 
 
-### 拒绝通过 IP 访问应用
+### 拒绝通过 IP 访问应用{#denyip}
 
 编辑网站的 Apache 虚拟主机配置段为如下格式，其中 xxx.xxx.xxx.xxx 表示服务器 IP 地址
 

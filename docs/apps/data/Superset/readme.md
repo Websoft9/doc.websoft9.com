@@ -79,9 +79,9 @@ tags:
 
 > 需要了解更多 Superset 的使用，请参考官方文档：[Superset documentation](https://superset.apache.org/docs/intro)
 
-## 常用操作
+## Superset 常用操作
 
-### Superset 安装数据库驱动
+### 安装数据库驱动
 
 Superset 支持数十种数据库，但 Superset Docker 镜像默认并没有安装[数据库的驱动](https://superset.apache.org/docs/databases/installing-database-drivers)（连接程序）。
 
@@ -100,7 +100,7 @@ pip install psycopg2
 
 更多驱动参考官方[Database dependencies](https://superset.apache.org/docs/databases/installing-database-drivers)
 
-### Superset 连接数据库
+### 连接数据库
 
 以 SQL Server 为例：
 
@@ -185,11 +185,11 @@ Superset 配置 SMTP 发邮件的步骤：
    sudo docker restart superset_app
    ```
 
-## 参数
+## Superset 参数
 
 Superset 应用中包含 Nginx, Docker, Redis 等组件，可通过 **[通用参数表](../setup/parameter)** 查看路径、服务、端口等参数。
 
-通过运行`docker ps`，可以查看到 Knowage 运行时所有的 Container：
+通过运行`docker ps`，可以查看到 Superset 运行时所有的 Container：
 
 ```
 CONTAINER ID   IMAGE                           COMMAND                  CREATED              STATUS                                 PORTS                               NAMES

@@ -22,7 +22,7 @@ sudo service apache2 start
 ```
 > 安装Apache的时候默认会安装核心特性与多处理模块(MPM)，其他的扩展模块可以后续自行安装。  
 
-### 安装模块
+### 安装模块{#moudle}
 
 安装 Apache HTTP Server 内核的同时，会默认安装一些模块，通过 `apachectl -M` 命令即可查看。
 
@@ -78,7 +78,7 @@ Loaded Modules:
 
 > 以上的源码编译安装方案来源于[此处](https://www.hugeserver.com/kb/install-enable-mod_evasive-apache-module-centos7/)
 
-### 启停模块
+### 启停模块{#moudlesconf}
 
 需要注意的是，安装过的所有模块并不会全部被启用，即安装模块与启用是有区别的，只有安装之后才能被启用，被启用的模块也可以让它停止运行。接下来，我们讲解如何启停模块。
 

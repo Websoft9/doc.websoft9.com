@@ -101,7 +101,7 @@ tags:
 
 ![knowage](https://libs.websoft9.com/Websoft9/blog/tmp/knowage/zh/knowage-model-websoft9.png)
 
-## 参数
+## Knowage 参数
 
 Knowage 应用中包含 Nginx, Docker, MariaDB 等组件，可通过 **[通用参数表](../setup/parameter)** 查看路径、服务、端口等参数。
 

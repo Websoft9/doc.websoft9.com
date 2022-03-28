@@ -11,9 +11,7 @@ tags:
 
 ## 场景
 
-除以下列出的 Graylog 维护场景问题之外， [管理员指南](../administrator) 专题提供了通用的维护方案：
-
-### 集群
+### Graylog 集群
 
 我们知道，Graylog 运行时，包括如下软件：
 
@@ -54,18 +52,16 @@ Graylog 支持如下最简答的部署方式：
 
 除以下列出的 Graylog 故障问题之外， [通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案：
 
-#### 提示 There is a node without any running inputs. This means ... ？
+#### 登录后告警和错误提示 ？
 
+**现象 1**：提示 There is a node without any running inputs. This means ... ？
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/graylog/graylog-nofiinput-websoft9.png)
-
 **原因**：这只是一个当前没有 input 的提醒，并非错误。  
 **方案**：新建一个本地的 input，即可消除此提醒
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/graylog/graylog-createinput-websoft9.png)
-
-#### Index rotation strategy null not found... ?
-
-磁盘可用空间低于 15% 的时候，会出现这个问题
+**现象 2**：提示 Index rotation strategy null not found... ?  
+**原因**：磁盘可用空间低于 15% 的时候，会出现这个问题  
+**方案**：释放冗余的文件或者增加服务器磁盘空间
 
 ## 常见问题
 
