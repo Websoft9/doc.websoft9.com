@@ -8,142 +8,27 @@ tags:
 
 # 维护参考
 
-## PostgreSQL 容器操作
+## 场景
 
-AWX 预装包中内置 PostgreSQL 容器，需要登录容器后使用命令对 PostgreSQL 进行操作。
+### 迁移
 
-1. 使用 SSH 登录服务器后，运行`docker ps`命令获取 awx-postresql 容器ID
-  ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/awx/awx-getcontainerid-websoft9.png)
+1. 备份 */data/postgresql/pgdata* 目录下的所有数据
+2. 根据不同的操作系统分别设置
 
-2. 进入 awx-postgresql 容器
+   * RedHat/CentOS  修改 **postgreql.service** 文件中数据目录的环境变量
+      ```
+      # 查看postgresql.service位置
+      systemctl cat postgreql.service 
 
-   ```
-   docker exec -it 2ca9ad211678 /bin/bash
-   ```
-4. 运行上面的命令后，就进入了容器命令操作界面
-
-5. 接下来可以使用命令操作 PostgreSQL 
-
-
-## 系统参数
-
-PostgreSQL 预装包包含 PostgreSQL 运行所需一序列支撑软件（简称为“组件”），下面列出主要组件名称、安装路径、配置文件地址、端口、版本等重要的信息。
-
-### 路径
-
-PostgreSQL 安装到 Linux 还是 Windows 系统，对应的路径有很大的差异，请根据实际情况参考：
-
-#### Linux
-
-##### PostgreSQL
-
-PostgreSQL 配置文件: */data/postgresql/config*   
-PostgreSQL 数据目录：*/data/postgresql/pgdata*   
-PostgreSQL 日志目录: */data/postgresql/log*  
-
-> 以上列出的是通过软连接创建的目录，请通过 `locate pg_hba.conf` 这样的命令查询更多文件路径信息
-
-##### phpPgAdmin 或 pgAdmin on Docker
-
-phpPgAdmin 或 pgAdmin 是采用 Docker 方式来安装的  
-
-> Docker 相关路径请查看我们编写的 [Docker 管理员手册](https://support.websoft9.com/docs/docker/zh/stack-components.html)
-
-#### Windows
-
-暂无
-
-### 端口号
-
-在云服务器中，通过 **[安全组设置](https://support.websoft9.com/docs/faq/zh/tech-instance.html)** 来控制（开启或关闭）端口是否可以被外部访问。 
-
-通过命令 `netstat -tunlp` 看查看相关端口，下面列出可能要用到的端口：
-
-| 名称 | 端口号 | 用途 |  必要性 |
-| --- | --- | --- | --- |
-| TCP | 9090 | 通过 HTTP 访问 phpPgAdmin | 可选 |
-| TCP | 5432 | 远程连接PostgreSQL | 可选 |
-
-### 版本号
-
-组件版本号可以通过云市场商品页面查看。但部署到您的服务器之后，组件会自动进行更新导致版本号有一定的变化，故精准的版本号请通过在服务器上运行命令查看：
-
-```shell
-# Check all components version
-sudo cat /data/logs/install_version.txt
-
-# Linux Version
-lsb_release -a
-
-# PostgreSQL version
-psql -V
-
-# PostgreSQL Version
-docker -v
-```
-
-### 服务
-
-使用由 Websoft9 提供的 PostgreSQL 部署方案，可能需要用到的服务如下：
-
-### Linux系统
-
-#### PostgreSQL
-```shell
-sudo systemctl start postgresql
-sudo systemctl restart postgresql
-sudo systemctl stop postgresql
-sudo systemctl status postgresql
-```
-
-#### Docker
-
-```shell
-sudo systemctl start docker
-sudo systemctl restart docker
-sudo systemctl stop docker
-sudo systemctl status docker
-```
-
-#### pgAdmin
-
-```shell
-sudo docker start pgadmin
-sudo docker restart pgadmin
-sudo docker stop pgadmin
-sudo docker stats pgadmin
-```
-
-
-#### phpPgAdmin
-
-```shell
-sudo docker start pgadmin
-sudo docker restart pgadmin
-sudo docker stop pgadmin
-sudo docker stats pgadmin
-```
-
-### Windows 系统
-
-Windows下的镜像采用操作系统的服务管理功能，来实现 PostgreSQL 的启动、停止和重启操作
-
-## 备份
-
-### 全局自动备份
-
-所有的云平台都提供了全局自动备份功能，基本原理是基于**磁盘快照**：快照是针对于服务器的磁盘来说的，它可以记录磁盘在指定时间点的数据，将其全部备份起来，并可以实现一键恢复。
-
-```
-- 备份范围: 将操作系统、运行环境、数据库和应用程序
-- 备份效果: 非常好
-- 备份频率: 按小时、天、周备份均可
-- 恢复方式: 云平台一键恢复
-- 技能要求：非常容易
-- 自动化：设置策略后全自动备份
-```
-
-不同云平台的自动备份方案有一定的差异，详情参考 [云平台备份方案](https://support.websoft9.com/docs/faq/zh/tech-instance.html)
+      # 在 postgresql.servce 中找到下面这行，修改之
+      Environment=PGDATA=/var/lib/pgsql/11/data/
+      ```
+   * Ubuntu  修改 **postgresql.conf** 文件中数据目录
+     ```
+     data_directory =
+     ```
+3. 恢复数据到新的目录
+4. 重启 PostgreSQL 服务
 
 ### PostgreSQL应用备份
 
@@ -312,3 +197,15 @@ PostgreSQL Server 是指 PostgreSQL 程序本体，而 PostgreSQL Client 指采�
 #### 推荐一些不错的学习资料？
 
 * [从pg_hba.conf文件谈谈postgresql的连接认证](https://www.cnblogs.com/flying-tiger/p/5983588.html?tdsourcetag=s_pcqq_aiomsg)
+
+#### 浏览器无法访问图形化界面（白屏没有结果）？
+
+您的服务器对应的安全组 9090 端口没有开启（入规则），导致浏览器无法它
+
+#### phpPgAdmin 或 pgAdmin 是如何安装的？
+
+采用 Docker 安装，保证 PostgreSQL 环境具有良好的隔离性。
+
+#### 为什么我的系统中没有 pgAdmin ？
+
+由于产品设计原因，我们从 2021年2月之后的产品中才包含 pgAdmin

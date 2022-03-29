@@ -13,32 +13,19 @@ tags:
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/tensorflow/tensowflow-gui-websoft9.jpg)
 
-
-在云服务器上部署 TensorFlow 预装包之后，请参考下面的步骤快速入门。
+部署 Websoft9 提供的 TensorFlow 之后，需完成如下的准备工作：
 
 ## 准备
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:6006** 端口是否开启
-3. 若想用域名访问 TensorFlow，请先到 **域名控制台** 完成一个域名解析
+2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:6006** 端口已经开启
+3. 在服务器中查看 TensorFlow 的 **[默认账号和密码](./setup/credentials#getpw)**  
+4. 若想用域名访问  TensorFlow **[域名五步设置](./dns#domain)** 过程
 
 
-## 账号密码
+## TensorFlow 初始化向导{#init}
 
-通过**SSH**连接云服务器，运行 `cat /credentials/password.txt` 命令，可以查看所有相关账号和密码
-
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/catdbpassword-websoft9.png)
-
-下面列出可能需要用到的几组账号密码：
-
-### TensorBoard
-
-* 管理员账号: `admin`
-* 管理员密码: 存储在您的服务器中的文件中 */credentials/password.txt*  
-
-> 本部署方案通过 [Nginx 验证访问](/维护参考.md#nginx)控制 TensorBoard 的访问
-
-## TensorFlow 安装向导
+### 详细步骤
 
 1. 使用 SSH 登录服务器后，查看 TensorFlow 服务状态
    ```
@@ -46,15 +33,24 @@ tags:
    ```
 2. 使用本地电脑的浏览器访问网址：*http://域名:6006* 或 *http://服务器公网IP:6006*, 进入登陆页面
 
-3. 输入账号密码（[不知道账号密码？](/zh/stack-accounts.md#rocketmq)），成功登录到 TensorBoard
+3. 输入账号密码（[不知道账号密码？](./setup/credentials#getpw)），成功登录到 TensorBoard
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/tensorflow/tensorflow-board-websoft9.png)
 
 > 需要了解更多 TensorFlow 的使用，请参考官方文档：[TensorFlow Documentation](https://www.tensorflow.org/learn)
 
 
-## TensorFlow 入门向导
+### 出现问题？
 
-下面通过运行一个 TensorFlow 范例，演示它的计算结果：
+若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
+
+**使用 TensorFlow 的时候为什么需要先 `source /data/apps/tensorflow/bin/activate`**
+
+本部署方案中 TensorFlow 使用的 Python 隔离环境安装
+
+
+## TensorFlow 使用入门
+
+下面以 **运行一个 TensorFlow 范例，演示它的计算结果** 作为一个任务，帮助用户快速入门：
 
 1. 使用 SSH 连接到服务器，运行下面的命令
    ```
@@ -66,7 +62,7 @@ tags:
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/tensorflow/tensorflow-simpletest-websoft9.png)
 
 
-## 常用操作
+## TensorFlow 常用操作
 
 ### 密码管理
 
@@ -76,17 +72,6 @@ tags:
 2. 重启 Nginx 服务后生效
    ```
    sudo systemctl restart nginx
-
-### CLI
-
-TensorFlow 提供了强大的的命令行工具 `tfx`，执行下列命令可安装：
-
-```
-source /data/apps/tensorflow/bin/activate
-pip install tfx
-```
-
- >tfx只支持到2.3.2，安装可能会导致TensorFlow版本降级
 
 ### 图形化工具
 
@@ -100,12 +85,58 @@ pip install tfx
 3. TensorBoard 工作台
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/tensorflow/tensorboard.gif)
 
-## 异常处理
+## 参数{#parameter}
 
-#### 浏览器打开IP地址，无法访问 TensorFlow（白屏没有结果）？
+**[通用参数表](../setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 TensorFlow 应用中包含的基础架构组件路径、版本、端口等参数。 
 
-您的服务器对应的安全组6006端口没有开启（入规则），导致浏览器无法访问到服务器的任何内容
+通过运行`docker ps`，可以查看到 TensorFlow 运行时所有的 Container：
 
-#### 使用 TensorFlow 的时候为什么需要先 `source /data/apps/tensorflow/bin/activate` ？
+```bash
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+```
 
-本部署方案中 TensorFlow 使用的 Python 隔离环境安装
+
+下面仅列出 TensorFlow 本身的参数：
+
+### 路径{#path}
+
+TensorFlow 安装目录： */data/apps/tensorflow*  
+TensorFlow 日志目录： */data/logs/tensorflow*  
+TensorFlow 配置目录： */data/apps/tensorflow/conf*  
+
+### 端口{#port}
+
+| 端口号 | 用途                                          | 必要性 |
+| ------ | --------------------------------------------- | ------ |
+| 6006   | 通过 HTTP 访问 TensorBoard | 可选   |
+
+
+
+### 版本{#version}
+
+```shell
+sudo cat /data/logs/install_version.txt
+```
+
+### 服务{#service}
+
+```shell
+sudo systemctl start | stop | restart tensorflow
+
+```
+
+### 命令行{#cli}
+
+TensorFlow 提供了强大的的命令行工具 `tfx`，执行下列命令可安装：
+
+```
+source /data/apps/tensorflow/bin/activate
+pip install tfx
+```
+
+ >tfx只支持到2.3.2，安装可能会导致TensorFlow版本降级
+
+### API
+
+### 参考{#ref}
+

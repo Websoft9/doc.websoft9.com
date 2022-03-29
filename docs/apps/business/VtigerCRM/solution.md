@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-slug: /suitecrm/solution
+slug: /vtiger/solution
 tags:
   - VtigerCRM
   - CRM

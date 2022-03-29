@@ -3,7 +3,7 @@ sidebar_position: 1
 slug: /mingdao
 tags:
   - 明道云
-  - IT 架构
+  - APaaS
   - 无代码平台
 ---
 
@@ -21,17 +21,19 @@ Websoft9 提供的是明道云私有部署的**免费版**。它相对于**标�
 > 当本文档无法完全找到所需的参考时，请务必阅读：[明道云官方文档](https://docs.pd.mingdao.com/)
 
 
+部署 Websoft9 提供的 明道云 之后，需完成如下的准备工作：
 
 ## 准备
 
-在云服务器上部署本软件之后，请参考下面的步骤快速入门。
-
 1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:38881** 和 **TCP:8880** 端口是否开启
-3. 若想用域名访问，请先到 **域名控制台** 完成一个域名解析
+2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的  **TCP:38881** 和 **TCP:8880**  端口已经开启
+3. 在服务器中查看 明道云 的 **[默认账号和密码](./setup/credentials#getpw)**  
+4. 若想用域名访问  明道云 **[域名五步设置](./dns#domain)** 过程
 
 
-## 明道云安装向导
+## 明道云 初始化向导{#init}
+
+### 详细步骤
 
 明道云安装向导包含三个过程：初始化、安装数据、设置管理员：
 
@@ -63,9 +65,35 @@ Websoft9 提供的是明道云私有部署的**免费版**。它相对于**标�
 
 > 需要了解更多 明道云 的使用，请参考：[明道云官方文档](https://help.mingdao.com/)
 
-## 明道云入门向导
+### 出现问题？
 
-明道云官方提供了非常贴心的教程和视频指南，赶快[学习](https://help.mingdao.com/)去吧
+若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
+
+
+**浏览器打开IP地址，无法访问 明道云（白屏没有结果）**
+
+您的服务器对应的安全组 38881 端口没有开启（入规则），导致浏览器无法访问到服务器的任何内容
+
+
+**访问地址的端口号可以不用 **8880** 吗**
+
+可以，但需要在云控制台安全组中，检查 **Inbound（入）规则** 下您所使用的端口确保开启
+
+
+**服务器重启后，服务器IP地址变化，导致工作流等一些服务无法使用**
+
+参考：[工作流无法使用](./mingdao/admin#workflow)
+
+**服务器重启后，程序打不开**
+
+参考：[程序打不开](./mingdao/admin#restart)
+
+
+## 明道云 使用入门
+
+下面以 **明道云 零代码构建企业管理系统** 作为一个任务，帮助用户快速入门：
+
+[教程和视频](https://help.mingdao.com/)
 
 ## 明道云定制服务
 
@@ -79,37 +107,29 @@ Websoft9 作为明道的合作伙伴，具备基于明道云的软件快速构�
 
 欢迎广大的客户朋友和行业合作[联系我们](./helpdesk#contact)。
 
-## 常用操作
+## 明道云 常用操作
+
 
 ### 维护
 
 请参考官方提供的：[《私有版维护文档》](https://docs.pd.mingdao.com/)，包括：短信设置、对象存储设置、网络访问、环境变量、服务管理等
 
-### 域名绑定
+### 配置 SMTP{#smtp}
 
-绑定域名的前置条件是：已经完成域名解析（登录域名控制台，增加一个A记录指向服务器公网IP）  
+1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
+   
+2. 登录明道云，打开右上角用户图标下的【系统配置】，点击【邮件服务设置】开始配置
+   ![明道云 SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mingdao/mingdao-smtp-websoft9.png)
 
-完成域名解析后，从服务器安全和后续维护考量，需要完成**域名绑定**：
+3. 完成设置
 
-明道云 域名绑定操作步骤：
+### 配置域名{#dns}
 
-1. 确保域名解析已经生效  
+参考： **[域名五步设置](./dns#domain)** 
 
-2. 使用 SFTP 工具登录云服务器
+### 配置 HTTPS{#https}
 
-3. 修改 [Nginx虚拟机主机配置文件](/zh/stack-components.md#nginx)，根据需要修改 **server_name** 和 **proxy_pass** 的值
-   ```text
-   server
-   {
-   listen 80;
-   server_name mingdao.yourdomain.com;  # 此处修改为你的域名
-       location / {
-        proxy_pass  http://127.0.0.1:8880; # 此处修改为你的端口
-   ...
-   }
-   ```
-
-4. 保存配置文件，重启 [Nginx 服务](/zh/admin-services.md#nginx)
+参考： **[HTTPS 配置](./dns#https)**
 
 ### 重置密码
 
@@ -125,113 +145,50 @@ Websoft9 作为明道的合作伙伴，具备基于明道云的软件快速构�
 
 方案有待完善
 
-### SSL/HTTPS
+## 参数{#parameter}
 
-必须完成[域名绑定](/zh/solution-more.md)且可通过 HTTP 访问 明道云 ，才可以设置 HTTPS。
+**[通用参数表](../setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 明道云 应用中包含的基础架构组件路径、版本、端口等参数。 
 
-明道云 预装包，已安装Web服务器 SSL 模块和公共免费证书方案 [Let's Encrypt](https://letsencrypt.org/) ，并完成预配置。因此，除了虚拟主机配置文件之外，HTTPS 设置则不需要修改 Nginx 其他文件。
+通过运行`docker ps`，可以查看到 明道云 运行时所有的 Container：
 
-#### 自动部署
-
-如果没有申请证书，只需在服务器中运行一条命令`sudo certbot`便可以启动免费证书**自动**申请和部署
-
-```
-sudo certbot
+```bash
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
 ```
 
-#### 手动部署
 
-如果你已经申请了证书，只需三个步骤，即可完成 HTTPS 配置
+下面仅列出 明道云 本身的参数：
 
-1. 将申请的证书、 证书链文件和秘钥文件上传到 */data/cert* 目录
-2. 打开虚拟主机配置文件：*/etc/nginx/conf.d/default.conf* ，插入**HTTPS 配置段** 到 *server{ }* 中
- ``` text
-   #-----HTTPS template start------------
-   listen 443 ssl; 
-   ssl_certificate /data/cert/xxx.crt;
-   ssl_certificate_key /data/cert/xxx.key;
-   ssl_trusted_certificate /data/cert/chain.pem;
-   ssl_session_timeout 5m;
-   ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
-   ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE;
-   ssl_prefer_server_ciphers on;
-   #-----HTTPS template end------------
-   ```
-3. 重启[Nginx服务](/zh/admin-services.md#nginx)
+### 路径{#path}
 
-#### 专题指南
+明道云目录： */data/wwwroot/mingdao*  
+明道云安装管理器目录： */data/wwwroot/mingdao/installer*  
+明道云持久化目录： */data/wwwroot/mingdao/volume*  
 
-若参考上面的**快速指南**仍无法成功设置HTTPS访问，请阅读由Websoft9提供的 [《HTTPS 专题指南》](https://support.websoft9.com/docs/faq/zh/tech-https.html#nginx)
+### 端口{#port}
 
-《HTTPS 专题专题》方案包括：HTTPS前置条件、HTTPS 配置段模板及故障诊断等具体方案。
-
-### SMTP
-
-大量用户实践反馈，使用**第三方 SMTP 服务发送邮件**是一种最稳定可靠的方式。  
-
-请勿在服务器上安装sendmail等邮件系统，因为邮件系统的路由配置受制与域名、防火墙、路由等多种因素制约，非常不稳定，且不易维护、诊断故障很困难。
-
-下面以**网易邮箱**为例，提供设置 明道云 发邮件的步骤：
-
-1. 在网易邮箱管理控制台获取 SMTP 相关参数
-   ```
-   SMTP host: smtp.163.com
-   SMTP port: 465 or 994 for SSL-encrypted email
-   SMTP Authentication: must be checked
-   SMTP Encryption: must SSL
-   SMTP username: websoft9@163.com
-   SMTP password: #wwBJ8    //此密码不是邮箱密码，是需要通过163邮箱后台设置去获取的授权码
-   ```
-2. 登录明道云，打开右上角用户图标下的【系统配置】，点击【邮件服务设置】开始配置
-   ![明道云 SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mingdao/mingdao-smtp-websoft9.png)
-
-3. 完成设置
-
-更多邮箱设置（QQ邮箱，阿里云邮箱，Gmail，Hotmail等）以及无法发送邮件等故障之诊断，请参考由Websoft9提供的 [SMTP 专题指南](https://support.websoft9.com/docs/faq/zh/tech-smtp.html)
+| 端口号 | 用途                                          | 必要性 |
+| ------ | --------------------------------------------- | ------ |
+| 38881   | HTTP 访问 明道云初始化页面 | 可选   |
+| 8880   | HTTP 访问 明道云后台（初始化完成后)  | 可选   |
 
 
-## 异常处理
+### 版本{#version}
 
-#### 浏览器打开IP地址，无法访问 明道云（白屏没有结果）？
-
-您的服务器对应的安全组 38881 端口没有开启（入规则），导致浏览器无法访问到服务器的任何内容
-
-#### 为什么采用单机部署？
-
-私有部署版虽然是一个单机部署方式，单其内部依然是一个微服务集合，所以为了保证容器内各服务进程的可用性，在容器内部预置了健康检查线程，当某服务出现故障时能自动恢复。
-
-#### 访问地址的端口号可以不用 **8880** 吗？
-
-可以，但需要在云控制台安全组中，检查 **Inbound（入）规则** 下您所使用的端口确保开启
-
-
-#### 服务器重启后，服务器IP地址变化，导致工作流等一些服务无法使用
-
-服务器IP变化后，需要修改 docker-compose 配置：
-打开 /data/mingdao/script/docker-compose.yaml，修改 ENV_MINGDAO_HOST 为新的IP，再用重启服务
-
-```
-version: '3'
-
-services:
-  app:
-    image: registry.cn-hangzhou.aliyuncs.com/mdpublic/mingdaoyun-community:2.10.1
-    environment:
-      ENV_MINGDAO_PROTO: "http"
-      ENV_MINGDAO_HOST: "123.57.218.118"  
-      ENV_MINGDAO_PORT: "8880"
-      COMPlus_ThreadPool_ForceMinWorkerThreads: 100
-      COMPlus_ThreadPool_ForceMaxWorkerThreads: 500
-    ports:
-      - 8880:8880
-    volumes:
-      - ./volume/data/:/data/
-      - ./volume/tmp/:/usr/local/MDPrivateDeployment/wwwapi/tmp/
-      - /usr/share/zoneinfo/Etc/GMT-8:/etc/localtime
-      - ../data:/data/mingdao/data
-
-  doc:
-    image: registry.cn-hangzhou.aliyuncs.com/mdpublic/mingdaoyun-doc:1.2.0
+```shell
+sudo cat /data/logs/install_version.txt
 ```
 
+### 服务{#service}
+
+```shell
+sudo systemctl start | stop | restart | status  mingdao
+```
+
+### 命令行{#cli}
+
+### API
+
+参考:[官方文档](https://docs.pd.mingdao.com/deployment/docker-compose/command.html)
+
+### 参考{#ref}
 
