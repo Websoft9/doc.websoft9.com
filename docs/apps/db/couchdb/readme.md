@@ -8,7 +8,7 @@ tags:
 
 # 快速入门
 
-[Apache CouchDB™](https://couchdb.apache.org/) 是一个原生 HTTP/JSON API 驱动的文档数据库。CouchDB 的目标具有高度可伸缩性，提供了高可用性和高可靠性，即使运行在容易出现故障的硬件上也是如此。
+[Apache CouchDB™](https://couchdb.apache.org/) 是一个原生 HTTP/JSON API 驱动的文档数据库，可以作为**后端即服务**使用。CouchDB 的目标具有高度可伸缩性，提供了高可用性和高可靠性，即使运行在容易出现故障的硬件上也是如此。
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/couchdb/couchdb-gui-websoft9.png)
 
@@ -24,83 +24,30 @@ tags:
 
 ## CouchDB 初始化向导
 
-1. 使用本地 Chrome 或 Firefox 访问网址：*http://域名/_utils* 或 *http://Internet IP/_utils*, 进入初始化页面
+### 详细步骤
+
+1. 使用本地电脑浏览器访问网址：*http://域名/_utils* 或 *http://服务器公网 IP/_utils*, 进入初始化页面
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/couchdb/couchdb-init-websoft9.png)
 
-2. 输入账号密码，成功登录到 CouchDB 后台  
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/couchdb/couchdb-bk-websoft9.png)
+2. 输入[账号密码](./setup/credentials#getpw)，成功登录到 CouchDB 后台  
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/couchdb/couchdb-admin-websoft9.png)
 
 3. 登录后通过：【Users】设置新密码  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/couchdb/couchdb-pw-websoft9.png)
 
+### 出现问题？
+
+若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题。
+
+## CouchDB 使用入门
+
 > 需要了解更多 CouchDB 的使用，请参考官方文档：[CouchDB Documentation](https://docs.couchdb.org)
-> 需要了解更多 MongoDB 的使用，请官方文档 [MongoDB Administration](https://docs.mongodb.com/manual/administration/)
 
 ## CouchDB 常用操作
 
-### 系统配置
-
-参考官方方案：https://docs.couchdb.org/en/latest/config/index.html
-
-### 域名绑定
-
-当服务器上只有一个网站时，不做域名绑定也可以访问网站。但从安全和维护考量，**域名绑定**不可省却。
-
-以示例网站为例，域名绑定操作步骤如下：
-
-1. 确保域名解析已经生效  
-2. 使用 SFTP 工具登录云服务器
-3. 修改 [Nginx虚拟机主机配置文件](/zh/stack-components.md#nginx)，将其中的 **server_name** 项的值修改为你的域名
-   ```text
-   server
-   {
-   listen 80;
-   server_name www.example.com;  # 此处修改为你的域名
-   index index.html index.htm index.php;
-   root  /data/wwwroot/www.example.com;
-   ...
-   }
-   ```
-4. 保存配置文件，重启 [Nginx 服务](/zh/admin-services.md#nginx)
-
-### SSL/HTTPS
-
-网站完成域名绑定且可以通过HTTP访问之后，方可设置HTTPS。
-
-Metabase预装包，已安装Web服务器 SSL 模块和公共免费证书方案 [Let's Encrypt](https://letsencrypt.org/) ，并完成预配置。
-
-> 除了虚拟主机配置文件之外，HTTPS设置无需修改Nginx任何文件
-
-#### 快速参考
-
-如果你想使用免费证书，只需在服务器中运行一条命令`certbot`就可以启动证书部署
-
-如果你已经申请了商业证书，只需三个步骤，即可完成HTTPS配置
-
-1. 将申请的证书、 证书链文件和秘钥文件上传到 */data/cert* 目录
-2. 打开虚拟主机配置文件：*/etc/nginx/conf.d/default.conf* ，插入**HTTPS 配置段** 到 *server{ }* 中
- ``` text
-   #-----HTTPS template start------------
-   listen 443 ssl; 
-   ssl_certificate /data/cert/xxx.crt;
-   ssl_certificate_key /data/cert/xxx.key;
-   ssl_session_timeout 5m;
-   ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
-   ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE;
-   ssl_prefer_server_ciphers on;
-   #-----HTTPS template end------------
-   ```
-3. 重启Nginx服务
-
-#### 详细指南
-
-若参考上面的**简易步骤**仍无法成功设置HTTPS访问，请阅读由Websoft9提供的 [《HTTPS 专题指南》](https://support.websoft9.com/docs/faq/zh/tech-https.html#nginx)
-
-HTTPS专题指南方案包括：HTTPS前置条件、HTTPS 配置段模板、注意事项、详细步骤以及故障诊断等具体方案。
-
 ### 开启远程访问
 
-1. 修改 CouchDB 配置文件 */opt/couchdb/etc/default.ini*
+1. 修改 CouchDB [配置文件](#path)
    ```
       将 bindIP 修改为 0.0.0.0 或 本地电脑公网IP
       #bind_address = 127.0.0.1
@@ -108,25 +55,8 @@ HTTPS专题指南方案包括：HTTPS前置条件、HTTPS 配置段模板、注�
    ```
    > 0.0.0.0 代表任意公网IP均可访问
 
-2. CouchDB
-   ```
-   systemctl restart couchdb
-   ```
+2. [重启 CouchDB 服务](#service)后生效
 
-### 密码管理
-
-#### 重置密码
-
-重置密码即已经忘记密码的情况下，通过特殊手段重新设置新密码的过程。
-
-1. 修改 CouchDB 配置文件 */opt/couchdb/etc/local.ini*，将下面的$new_password替换成新密码
-   ```
-   admin = $new_password
-   ```
-2. 重启 CouchDB 服务
-   ```
-   systemctl restart couchdb
-   ```
 
 ### 开启用户认证
 
@@ -141,10 +71,146 @@ HTTPS专题指南方案包括：HTTPS前置条件、HTTPS 配置段模板、注�
    ```
    systemctl restart couchdb
 
+### 重置密码
+
+已经忘记密码的情况下，需通过特殊方法重新设置新密码：  
+
+1. 修改 CouchDB [配置文件](#path)，将下面的$new_password替换成新密码
+   ```
+   admin = $new_password
+   ```
+2. [重启 CouchDB 服务](#service)后生效
 
 
-## 异常处理
+## CouchDB 参数
 
-#### 浏览器打开IP地址，无法访问 CouchDB（白屏没有结果）？
+CouchDB 应用中包含 Nginx, Docker 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。
 
-您的服务器对应的安全组80端口没有开启（入规则），导致浏览器无法访问到服务器的任何内容
+通过运行`docker ps`，可以查看到 CouchDB 运行时所有的 Container：
+
+```bash
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+```
+
+
+下面仅列出 CouchDB 本身的参数：
+
+### 路径{#path}
+
+CouchDB 配置文件： */opt/couchdb/etc/default.ini* 和 */opt/couchdb/etc/local.ini*  
+CouchDB 安装目录： */data/couchdb*  
+CouchDB 日志目录： */data/logs/couchdb*  
+
+### 网址
+
+CouchDB 控制台： *http://域名/_utils*  
+
+### 端口
+
+| 端口号 | 用途                                          | 必要性 |
+| ------ | --------------------------------------------- | ------ |
+| 5984   | CouchDB 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
+
+
+### 版本
+
+```shell
+cat path/couchdb/releases/*/couchdb.rel  |sed -n 3p | awk -F '"' '{print $4}'
+```
+
+### 服务
+
+```shell
+sudo systemctl start | stop | restart | status couchdb
+```
+
+### 命令行
+
+CouchDB 是 API 驱动的数据库，官方没有提供额外的 CLI，而是建议用户通过 `curl` 的方式操作数据。  
+
+### API
+
+CouchDB 是 [API](https://docs.couchdb.org/en/stable/api/index.html) 驱动的数据库，天生为 API 而生。它的请求格式包括：  
+
+- GET：要求指定的物品。与普通的HTTP请求一样，URL的格式定义了返回的内容。使用CouchDB，它可以包括静态项目，数据库文档以及配置和统计信息。在大多数情况下，信息以JSON文档的形式返回。
+
+- HEAD：该HEAD方法用于获取GET没有响应主体的请求的HTTP标头。
+
+- POST：上传数据。在CouchDBPOST中，用于设置值，包括上载文档，设置文档值和启动某些管理命令。
+
+- PUT：用于放置指定的资源。在CouchDBPUT中用于创建新对象，包括数据库，文档，视图和设计文档。
+
+- DELETE：删除指定的资源，包括文档，视图和设计文档。
+
+
+运行命令 `curl http://URL:5984/_active_tasks` 访问，将返回查询结果。
+
+```Request
+GET /_active_tasks HTTP/1.1
+Accept: application/json
+Host: localhost:5984
+```
+
+```Response
+HTTP/1.1 200 OK
+Cache-Control: must-revalidate
+Content-Length: 1690
+Content-Type: application/json
+Date: Sat, 10 Aug 2013 06:37:31 GMT
+Server: CouchDB (Erlang/OTP)
+
+[
+    {
+        "changes_done": 64438,
+        "database": "mailbox",
+        "pid": "<0.12986.1>",
+        "progress": 84,
+        "started_on": 1376116576,
+        "total_changes": 76215,
+        "type": "database_compaction",
+        "updated_on": 1376116619
+    },
+    {
+        "changes_done": 14443,
+        "database": "mailbox",
+        "design_document": "c9753817b3ba7c674d92361f24f59b9f",
+        "pid": "<0.10461.3>",
+        "progress": 18,
+        "started_on": 1376116621,
+        "total_changes": 76215,
+        "type": "indexer",
+        "updated_on": 1376116650
+    },
+    {
+        "changes_done": 5454,
+        "database": "mailbox",
+        "design_document": "_design/meta",
+        "pid": "<0.6838.4>",
+        "progress": 7,
+        "started_on": 1376116632,
+        "total_changes": 76215,
+        "type": "indexer",
+        "updated_on": 1376116651
+    },
+    {
+        "checkpointed_source_seq": 68585,
+        "continuous": false,
+        "doc_id": null,
+        "doc_write_failures": 0,
+        "docs_read": 4524,
+        "docs_written": 4524,
+        "missing_revisions_found": 4524,
+        "pid": "<0.1538.5>",
+        "progress": 44,
+        "replication_id": "9bc1727d74d49d9e157e260bb8bbd1d5",
+        "revisions_checked": 4524,
+        "source": "mailbox",
+        "source_seq": 154419,
+        "started_on": 1376116644,
+        "target": "http://mailsrv:5984/mailbox",
+        "type": "replication",
+        "updated_on": 1376116651
+    }
+]
+```
+
