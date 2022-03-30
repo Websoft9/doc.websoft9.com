@@ -8,7 +8,8 @@ tags:
 
 # 快速入门
 
-[PostgreSQL](https://www.postgresql.org/) 是一个功能强大的开源对象关系数据库系统（RDBMS），经过30多年的积极开发，在可靠性，功能强大和性能方面赢得了极高的声誉。
+[PostgreSQL](https://www.postgresql.org/) 社区志愿者开发的开源关系型数据库系统，它源于 UC Berkeley 大学 1977 年的 Ingres 计划。它稳定可靠，有很多前言的技术特征，并且性能卓越，在数据完整性和正确性方面赢得了良好的市场声誉。
+
 
 ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/postgresql/pgadmin4-websoft9.png)
 
@@ -47,7 +48,11 @@ tags:
 
 3. 使用可视化管理工具 pgAdmin 
 
-## 常用操作
+### 出现问题？
+
+若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题。
+
+## PostgreSQL 常用操作
 
 ### 设置远程访问{#remote}
 
@@ -87,29 +92,12 @@ ALTER USER postgres WITH PASSWORD 'postgres';
 #exit psql
 \q
 ```
-### 客户端工具
 
-#### DBeaver
-#### 
+### 图形化工具{#pgadmin}
 
-#### Navicat
+可以采用 PostreSQL 官方提供的[pgAdmin](https://www.pgadmin.org/) 或[第三方客户端工具](./tools#dbclient)在本地管理数据库。
 
-Navicat 是一个商业版的桌面数据库 GUI 工具。 待[设置 PostgreSQL 远程连接](#remote)后，可开始使用：
-
-1. 打开 Navicat Premium，点击顶部菜单栏， 【文件】>【新建连接】>【PostgreSQL】
-
-2. 自定义连接名，将 localhost 更改为数据库服务器公网IP地址
-  ![navicat](http://libs.websoft9.com/Websoft9/DocsPicture/zh/postgresql/navicate-newconnection-websoft9.png)
-
-3. 输入账号和密码
-
-3. 点击“测试连接”，系统提示：连接成功 ! 即表示成功连接
-
-### Web 图形化工具：pgAdmin{#pgadmin}
-
-[pgAdmin](https://www.pgadmin.org/) 是一款功能丰富、开源免费的 PostgreSQL 图形化客户端工具。它支持 Linux, Unix, Mac, Windows 等多种桌面操作系统。  
-
-pgAdmin4 使用 Python 和 Javascript / jQuery 构建。可以在桌面上调用浏览器运行，也支持基于 Web 直接在浏览器运行。
+pgAdmin 支持 Linux, Unix, Mac, Windows 等多种桌面操作系统，它采用**调用浏览器**运行，所以它既是 Web 端，也是客户端。  
 
 本节介绍 pgAdmin 连接和管理数据库等常见操作
 
@@ -183,11 +171,15 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 ### 路径{#path}
 
-PostgreSQL 配置文件: */data/postgresql/config*   
+PostgreSQL 配置文件目录: */data/postgresql/config*   
 PostgreSQL 数据目录：*/data/postgresql/pgdata*   
 PostgreSQL 日志目录: */data/postgresql/log*  
 
-> 以上列出的是通过软连接创建的目录，请通过 `locate pg_hba.conf` 这样的命令查询更多文件路径信息
+PostgreSQL 有两个重要的全局配置文件：
+
+* postgresql.conf 主要负责配置文件位置、资源限制、集群负责等
+* pg_hba.conf 主要负责客户端的连接和认证
+
 
 ### 端口
 

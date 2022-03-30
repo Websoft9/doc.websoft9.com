@@ -15,43 +15,24 @@ tags:
 ![Seafile界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-gui-websoft9.png)
 
 
-在云服务器上部署 Seafile 预装包之后，请参考下面的步骤快速入门。
+部署 Websoft9 提供的 Seafile 之后，需完成如下的准备工作：
 
 ## 准备
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:80** 和 **TCP:9002** 端口是否开启
-3. 若想用域名访问 Seafile，请先到 **域名控制台** 完成一个域名解析
-
-> 9002 是用于文档预览和编辑的 OnlyOffice Document Server 服务所需的端口。
-
-## 账号密码
-
-通过**SSH**连接云服务器，运行 `sudo cat /credentials/password.txt` 命令，查看所有相关账号和密码
-
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/catdbpassword-websoft9.png)
-
-下面列出可能需要用到的几组账号密码：
-
-### Seafile
-
-管理员用户名：`me@example.com`  
-管理员密码： 存储在您的服务器指定文件中：*/credentials/password.txt*
-
-### MariaDB/MySQL
-
-* 管理员账号：*`root`*
-* 管理员密码：存储在您的服务器指定文件中（ */credentials/password.txt* ）
-
-> 需要登录MySQL，请参考 [MySQL可视化管理](#mysql-数据管理)
+2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 和 **TCP:9002**  端口已经开启
+3. 在服务器中查看 Seafile 的 **[默认账号和密码](./setup/credentials#getpw)**  
+4. 若想用域名访问  Seafile **[域名五步设置](./dns#domain)** 过程
 
 
-## Seafile 安装向导
+## Seafile 初始化向导{#init}
+
+### 详细步骤
 
 1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://公网IP*, 进入Seafile登录页面
    ![Seafile登录页面](http://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-login-websoft9.png)
 
-2. 输入用户名和密码[（查看）](/zh/stack-accounts.md)，登录到Seafile后台管理界面
+2. 输入用户名和密码[（查看）](./setup/credentials#getpw))，登录到Seafile后台管理界面
    ![Seafile后台界面](http://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-bk-websoft9.png)
 
 3. 设置（检查） Seafile 的真实主机地址（**必选项，否则无法使用文件上传功能**）
@@ -74,9 +55,23 @@ tags:
 cp seafile-license.txt /data/wwwroot/seafile/seafile-data/seafile/
 docker restart seafile
 ```
-## Seafile 入门向导
 
-Seafile 是一款开源的企业云盘，作为企业云盘，主要用于网络存储和管理文件，以及文件共享和协同办公。在使用 Seafile 时，有如下常规操作：
+
+
+### 出现问题？
+
+若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
+
+**Seafile 是否支持在线文档编辑与预览**
+
+镜像预装了 OnlyOffice Document Server，可以通过配置实现在线文档编辑与预览，[参考](./seafile/solution#onlyoffice)
+
+
+## Seafile 使用入门
+
+下面以 **Seafile 构建企业网盘系统** 作为一个任务，帮助用户快速入门：
+
+Seafile 是一款开源的企业网盘，作为企业网盘，主要用于网络存储和管理文件，以及文件共享和协同办公。在使用 Seafile 时，有如下常规操作：
 
 - 用户和分组管理，用于用户管理，和成员分组统一管理
 - 文件和文件库管理，用于文件的管理和分类，并通过查看文件的历史信息了解文件的版本变更
@@ -84,7 +79,7 @@ Seafile 是一款开源的企业云盘，作为企业云盘，主要用于网络
 
 下面我们通过创建资料库、创建文件、编辑文件、设置权限、用户共享等操作，来熟悉 Seafile 的使用。
 
-### 添加文件
+**添加文件**
 
 下面我们介绍如何添加和编辑文件：
 
@@ -98,7 +93,7 @@ Seafile 是一款开源的企业云盘，作为企业云盘，主要用于网络
 
    ![Seafile编辑文件](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-editfile1-websoft9.png)
 
-### 用户管理
+**用户管理**
 
 下面我们介绍如何创建用户和群组：
 
@@ -114,7 +109,7 @@ Seafile 是一款开源的企业云盘，作为企业云盘，主要用于网络
 
    ![Seafile用户分组](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-addusertogroup-websoft9.png)
 
-### 文件共享
+**文件共享**
 
 下面我们介绍如何给另外一个用户共享自己的文件：
 
@@ -129,7 +124,7 @@ Seafile 是一款开源的企业云盘，作为企业云盘，主要用于网络
 
    > 在选择用户时，需输入用户名，系统自动查找匹配
 
-### 读写共享文件
+**读写共享文件**
 
 下面我们演示用户如何读写其他人共享过来的文件：
 
@@ -145,17 +140,42 @@ Seafile 是一款开源的企业云盘，作为企业云盘，主要用于网络
    ![查看共享文件版本信息](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-viewfileinfo-websoft9.png)
 
 
-## 常用操作
+## Seafile 常用操作
 
-### 域名绑定
+### 配置 SMTP{#smtp}
 
-绑定域名的前置条件是：完成域名解析，且 Seafile 可以通过域名访问
+1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
+   
+2. 使用 SFTP 连接服务器，编辑 Seafile 配置文件 [seahub_settings.py](#path)，插入邮箱配置段
+   ```
+   EMAIL_USE_SSL = True
+   EMAIL_HOST = 'smtp.163.com'
+   EMAIL_HOST_USER = 'websoft9@163.com'
+   EMAIL_HOST_PASSWORD = 'Auth_Code'  //此密码不是邮箱密码，是需要通过163邮箱后台设置去获取的授权码
+   EMAIL_PORT = '465'
+   DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+   SERVER_EMAIL = EMAIL_HOST_USER
+   ```
+   参考官方文档：[发送邮件提醒](https://manual-cn-origin.seafile.com/config/sending_email)
 
-虽然如此，从服务器安全和后续维护考量，**域名绑定**步骤不可省却  
+3. 重启 Seafile 容器服务
+   ```
+   sudo docker restart seafile
+   ```
 
-Seafile 域名绑定操作步骤：
+### 如何将邮件通知签名 "Seafile 团队" 修改成自己的签名？
 
-1. 使用 SFTP 登录云服务器，修改 [Docker-compose 配置文件](/维护参考.md#docker-compose)，将其中的 **SEAFILE_SERVER_HOSTNAME** 项的值为你的域名
+Seafile 采用[邮件模板](https://manual-cn-origin.seafile.com/config/customize_email_notifications)进行邮件内容规范化，【Seafile 团队】在邮件模板文件中对应的是【site_name】字段，即网站名称。因此，只需登录到 Seafile 修改网站名称即可。  
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-sitename-email-websoft9.png)
+
+### 配置域名{#dns}
+
+参考： **[域名五步设置](./dns#domain)** 
+
+完成上述基本操作后，需要修改 Seafile 配置，完成域名绑定：
+
+1. 使用 SFTP 登录云服务器，修改 [Docker-compose 配置文件](#path)，将其中的 **SEAFILE_SERVER_HOSTNAME** 项的值为你的域名
+   
    ```text
     - SEAFILE_SERVER_HOSTNAME=seafile.example.com  # Specifies your host name.
    ```
@@ -164,20 +184,24 @@ Seafile 域名绑定操作步骤：
    sudo cd /data && docker-compose up -d
    ```
 
-### SSL/HTTPS
+### 更换域名
+
+如果 Seafile 需要更换域名，请参考[域名配置](#dns)
+
+### 配置 HTTPS{#https}
 
 网站完成域名绑定且可以通过HTTP访问之后，方可设置HTTPS。
 
 Seafile预装包已内置 SSL 模块方案，需要根据自己的域名进行设置方可使用
 
-#### 前置条件
+**前置条件**
 
 1. 在云控制台开启 **TCP:443** 端口
 2. 完成域名解析，确保 Seafile 可以通过域名访问
 3. 登录 Seafile 后台，修改主机地址
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-seturl-websoft9.png)
 
-#### 基本设置
+**基本设置**
 
 Seafile 默认支持 [Let's Encrypt](https://letsencrypt.org/) 免费证书自动部署方案，只需如下几步设置：
 
@@ -198,128 +222,50 @@ Seafile 默认支持 [Let's Encrypt](https://letsencrypt.org/) 免费证书自�
 
 以上方案是对 Seafile 官方文档：[向Let's encrypt申请SSL证书](https://manual-cn-origin.seafile.com/deploy/deploy_with_docker#xiang-lets-encrypt-shen-qing-ssl-zheng-shu)的实践解读，验证可用
 
-##### 常见问题
+**常见问题**
 
-##### 设置HTTPS之后，Seafile 容器无法启动？
+1. 设置HTTPS之后，Seafile 容器无法启动？
 
 先运行 `sudo docker logs seafile` 查看日志文件，然后根据日志逐步排查错误
 
-##### 没有域名是否可以设置 Seafile HTTPS？
+2. 没有域名是否可以设置 Seafile HTTPS？
 
 不可以，即如果 SEAFILE_SERVER_HOSTNAME 处设置为IP地址，会导致 Seafile 无法启动
 
-##### 是否支持自己上传证书？
+3. 是否支持自己上传证书？
 
 支持，具体参考[官方文档](https://manual-cn-origin.seafile.com/deploy/deploy_with_docker#xiang-lets-encrypt-shen-qing-ssl-zheng-shu)
 
-### SMTP
-
-大量用户实践反馈，使用**第三方 SMTP 服务发送邮件**是一种最稳定可靠的方式。  
-
-请勿尝试在服务器上安装sendmail等发邮件方案，因为邮件系统的路由配置受制与域名、防火墙、路由等多种因素制约，导致不稳定、不易维护、诊断故障困难。
-
-下面以**网易邮箱**为例，提供设置 Seafile 发邮件的步骤：
-
-1. 在网易邮箱管理控制台获取 SMTP 相关参数
-
-2. 使用 SFTP 连接服务器，编辑 Seafile 配置文件 [seahub_settings.py](/zh/stack-components.md#seafile)，插入邮箱配置段
-   ```
-   EMAIL_USE_SSL = True
-   EMAIL_HOST = 'smtp.163.com'
-   EMAIL_HOST_USER = 'websoft9@163.com'
-   EMAIL_HOST_PASSWORD = 'Auth_Code'  //此密码不是邮箱密码，是需要通过163邮箱后台设置去获取的授权码
-   EMAIL_PORT = '465'
-   DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-   SERVER_EMAIL = EMAIL_HOST_USER
-   ```
-   参考官方文档：[发送邮件提醒](https://manual-cn-origin.seafile.com/config/sending_email)
-
-3. 重启 Seafile 容器服务
-   ```
-   sudo docker restart seafile
-   ```
-
-> 更多邮箱设置（QQ邮箱，阿里云邮箱，Gmail，Hotmail等）以及无法发送邮件等故障之诊断，请参考由Websoft9提供的 [SMTP 专题指南](https://support.websoft9.com/docs/faq/zh/tech-smtp.html)
-
-
-#### 如何将邮件通知签名 "Seafile 团队" 修改成自己的签名？
-
-Seafile 采用[邮件模板](https://manual-cn-origin.seafile.com/config/customize_email_notifications)进行邮件内容规范化，【Seafile 团队】在邮件模板文件中对应的是【site_name】字段，即网站名称。因此，只需登录到 Seafile 修改网站名称即可。  
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-sitename-email-websoft9.png)
-
 ### Seafile 文档预览与编辑
 
-Seafile 开源版支持集成 OnlyOffice Document Server 作为 Office 格式的文档预览与编辑，且本部署方案默认安装 OnlyOffice Document Server，无需设置即可使用
-
-#### 前置条件
-
-1. 在云控制台安全组中，检查 **TCP:9002** 端口是否开启
-2. 使用本地电脑浏览器测试文档服务是否可用：*http://服务器公网IP:9002*，会看到 OnlyOffice Document Server 正在运行的提示 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/onlyoffice/onlyoffice-dkisrunning-websoft9.png)
-   
-   > 如果 OnlyOffice Document Server 设置好了 HTTPS 访问，请使用 9003 端口
-
-#### 配置
-
-1. 使用 SFTP 连接服务器，编辑 Seafile 配置文件/opt/seafile-data/seafile/conf/seahub_settings.py
-2. 插入下面的模板（或对已经存在的模板进行修改）
-   ```
-   # Enable Only Office
-   ENABLE_ONLYOFFICE = True
-   VERIFY_ONLYOFFICE_CERTIFICATE = False
-   ONLYOFFICE_APIJS_URL = 'http://example.seafile.com:9002/web-apps/apps/api/documents/api.js'
-   ONLYOFFICE_FILE_EXTENSION = ('doc', 'docx', 'ppt', 'pptx', 'xls', 'xlsx', 'odt', 'fodt', 'odp', 'fodp', 'ods', 'fods')
-   ONLYOFFICE_EDIT_FILE_EXTENSION = ('docx', 'pptx', 'xlsx')
-   ```
-   > ONLYOFFICE_APIJS_URL 字段中的 **example.seafile.com** 地址请更改为你的服务器公网IP地址或域名。如果 OnlyOffice 已启用 https，URL地址改成 https 开头
-
-3. 重启 Seafile 容器服务
-   ```
-   sudo docker restart seafile
-   ```
-
-4. 打开 Seafile 控制台，试一试预览或编辑文档
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-onlyofficepr-websoft9.png)
-
-### MySql 数据管理
-
-Nextcloud 预装包中内置 MySQL 及可视化数据库管理工具 `phpMyadmin` ，使用请参考如下步骤：
-
-1. 登录云控制台，[开启服务器安全组80端口](https://support.websoft9.com/docs/faq/zh/tech-instance.html)
-2. 本地浏览器 Chrome 或 Firefox 访问：*http://服务器公网IP:9090*，进入phpMyAdmin
-  ![登录phpMyadmin](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-logincn-websoft9.png)
-3. 输入数据库用户名和密码([不知道密码？](/zh/stack-accounts.md))
-4. 开始管理数据库
-  ![phpMyadmin](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-adddb-websoft9.png)
-
-> 阅读Websoft9提供的 [《MySQL教程》](https://support.websoft9.com/docs/mysql/zh/admin-phpmyadmin.html) ，掌握更多的MySQL实用技能：修改密码、导入/导出数据、创建用户、开启或关闭远程访问、日志配置等
+[参考配置](./seafile/solution#onlyoffice)
 
 ### Docker-compose 配置文件
 
-使用 SFTP 登录云服务器，修改 [Docker-compose 配置文件](/维护参考.md#docker-compose)，可以完成常见的维护工作：
+使用 SFTP 登录云服务器，修改 [Docker-compose 配置文件](#path)，可以完成常见的维护工作：
 > 修改 Docker-compose 配置文件后，运行命令 `sudo cd /data && docker-compose up -d` 后生效
 
 ### 管理员密码
 
 实际工作中，我们可能会 **修改** 或 **找回** Seafile 管理员密码
 
-#### 修改Seafile管理员密码？
+ **修改Seafile管理员密码**
 
 1. 以管理员账号登录后台
 2. 依次打开：【设置】>【更新】，编辑需要修改密码的账号
 3. 修改密码后提交，退出后新密码生效 
    ![Seafile 修改密码](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-modifypw-websoft9.png)
 
-#### 找回 Seafile 管理员密码？
+**找回 Seafile 管理员密码**
 
 若不记得 Seafile 管理员密码，可以通过如下两个方式找回
 
-##### 方案一：通过邮件找回密码
+方案一：通过邮件找回密码
 
 Seafile可以通过发送邮件找回密码，但前提条件是您的 Seafile 已经配置好SMTP
 ![Seafile 找回密码](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-forgetpw-websoft9.png)
 
-##### 方案二：修改数据库中的密码字段
+方案二：修改数据库中的密码字段
 
 如果不能发邮件，请登录数据库管理面板 phpMyAdmin 进行修改
 
@@ -330,22 +276,58 @@ Seafile可以通过发送邮件找回密码，但前提条件是您的 Seafile �
 3. 点击【执行】
 4. 新的密码为`123456`
 
+## 参数{#parameter}
 
-## 异常处理
+**[通用参数表](./setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 Seafile 应用中包含的基础架构组件路径、版本、端口等参数。 
 
-#### 浏览器打开IP地址，无法访问 Seafile（白屏没有结果）？
+通过运行`docker ps`，可以查看到 Seafile 运行时所有的 Container：
 
-您的服务器对应的安全组80端口没有开启（入规则），导致浏览器无法访问到服务器的任何内容
+```bash
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+```
 
-#### 本部署包采用的哪个数据库来存储 Seafile 数据？
 
-MariaDB/MySQL on Docker
+下面仅列出 Seafile 本身的参数：
 
-#### 为什么使用 Docker 安装 Seafile？
+### 路径{#path}
 
-是官方推荐的安装方式
+Seafile 存储目录： */data/wwwroot/seafile/seafile-data*  
+Seafile docker-compose 文件路径： */data/wwwroot/seafile/docker-compose.yml*  
+Seafile 日志目录： */data/wwwroot/seafile/seafile-data/logs*
 
-#### 默认是否支持文档预览与编辑？
+seafile-memcached 存储目录： */data/wwwroot/seafile/seafile-data*  
+seafile-memcached docker-compose 文件路径： */data/wwwroot/seafile/docker-compose.yml*  
+seafile-memcached 日志目录： */data/wwwroot/seafile/seafile-data/logs*
 
-支持
+seafile-elasticsearch 存储目录： */data/wwwroot/seafile/seafile-elasticsearch*  
+seafile-elasticsearch docker-compose 文件路径： */data/wwwroot/seafile/docker-compose.yml*  
+seafile-elasticsearch 日志目录： */data/wwwroot/seafile/seafile-data/logs*
+
+> Seafile配置文件包括 seahub_settings.py, seafile.conf等
+
+### 端口{#port}
+
+| 端口号 | 用途                                          | 必要性 |
+| ------ | --------------------------------------------- | ------ |
+| 80   | 通过 HTTP 访问 Seafile | 可选   |
+| 9002 | 通过 http访问 OnlyOffice Document Server on Docker | 可选 |
+| 9003 | 通过 https访问 OnlyOffice Document Server | 可选 |
+
+### 版本{#version}
+
+```shell
+sudo cat /data/logs/install_version.txt
+```
+
+### 服务{#service}
+
+```shell
+sudo docker start | stop | restart onlyofficedocumentserver
+```
+
+### 命令行{#cli}
+
+### API
+
+### 参考{#ref}
 

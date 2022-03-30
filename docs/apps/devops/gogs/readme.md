@@ -57,7 +57,7 @@ tags:
 
 ## 参数
 
-**[通用参数表](../setup/parameter)** 中可查看 Nginx, Docker, MySQL 等 Gogs 应用中包含的基础架构组件路径、版本、端口等参数。 
+Gogs 应用中包含 Nginx, Docker, MySQL 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。 
 
 下面仅列出 Gogs 本身的参数：
 

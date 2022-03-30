@@ -28,9 +28,15 @@ df -lh
 # 查看内存使用
 free -lh
 
-# 查看日志
+# 查看容器日志
 docker logs appname
+
+# 查看服务状态和日志
+systemctl status appname
+journalctl -u appname
 ```
+
+#### 如何查看错误日志？
 
 ## 故障分类（按类型）
 

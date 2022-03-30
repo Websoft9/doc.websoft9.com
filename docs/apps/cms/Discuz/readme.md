@@ -25,30 +25,7 @@ tags:
 4. 若想用域名访问  Discuz **[域名五步设置](./dns#domain)** 过程
 
 
-## Discuz!Q  初始化向导{#init}
-
-### 详细步骤
-
-1. 本地电脑浏览器访问网址：*http://域名/install* 或 *http://服务器公网IP/install*, 进入安装向导界面
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuzq-wizard-websoft9.png)
-
-2. 设置站点名称、数据库连接和管理员账号，其中**数据库连接无需修改**，然后点击【下一步】
-  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuzq-setting-websoft9.png)
-
-3. 安装完成，手机扫描右侧二维码可以进入移动端页面。  
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuzq-installok-websoft9.png)
-
-4. 本地电脑浏览器访问网址：输入*http://域名/admin* 或 *http://Internet IP/admin*, 进入登录页面
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuzq-admin-websoft9.png)
-
-5. 输入账号密码（[不知道账号密码？](./setup/credentials#getpw)），成功登录到 Discuz!Q 后台 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuzq-index-websoft9.png)
-    
-6. 其他设置：微信公众号，小程序，微信支付等
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuzq-waychat-websoft9.png)
-
-
-## Discuz  初始化向导
+## Discuz 初始化向导{#init}
 
 ### 详细步骤
 
@@ -135,10 +112,6 @@ Discuz 有非常强大生态，大量在线安装模板、插件，您通过登�
 
 > 声明：Websoft9 不擅长 Discuz 具体功能的使用，更无法提供此类问题指出。请自行参阅 [Discuz 官方论坛](http://www.discuz.net/forum.php) 完成你要做的吧
 
-### DiscuzQ 修改数据库配置
-
-DiscuzQ 安装目录下的 *config/config.php* 存储数据库连接信息，可以通过此文件来应对数据库账号信息发送变化。
-
 ### Discuz 修改数据库配置
 
 在你的 Discuz 安装目录下，有三个与数据库相关的配置文件：
@@ -168,7 +141,7 @@ Discuz 密码忘记了，怎么找回？ 如下方案经过实践可用：
 
 ### Discuz 集成 WordPress
 
-参考[此处](https://support.websoft9.com/docs/wordpress/zh/solution-more.html##wordpress-与-discuz-集成)
+参考[此处](./wordpress/solution#wordpress-discuz)
 
 ### Discuz 更换默认 Logo
 
@@ -237,7 +210,7 @@ Discuz论坛安装完成后，想使连接里面显示文章名，应怎么开�
 
 ## 参数{#parameter}
 
-**[通用参数表](../setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 Discuz 应用中包含的基础架构组件路径、版本、端口等参数。 
+**[通用参数表](./setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 Discuz 应用中包含的基础架构组件路径、版本、端口等参数。 
 
 通过运行`docker ps`，可以查看到 Discuz 运行时所有的 Container：
 

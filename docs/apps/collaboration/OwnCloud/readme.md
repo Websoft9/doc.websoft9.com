@@ -15,43 +15,20 @@ tags:
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-gui-websoft9.jpg)
 
 
-## 演示
 
-ownCloud 官网提供了演示环境，您可以直接[访问演示地址](https://demo.owncloud.org/login)
-
-> 免责说明：此处仅提供 ownCloud 官方的演示地址，不保证与 Websoft9 镜像功能完全一致，若演示过程中若需要填写个人资料、获取Cookie、显示广告等，这些都是官方行为，由此产生的安全问题与我司无关。若您在演示中进行了付费，即表明您愿意接受官方提供的付费服务，由此产生的可能存在的商业纠纷与我们司无关。
-
-
-在云服务器上部署 ownCloud 预装包之后，请参考下面的步骤快速入门。
+部署 Websoft9 提供的 ownCloud 之后，需完成如下的准备工作：
 
 ## 准备
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:80** 和 **TCP:9002** 端口是否开启
-3. 若想用域名访问 ownCloud，请先到 **域名控制台** 完成一个域名解析
-
-## 账号密码
-
-通过**SSH**连接云服务器，运行 `sudo cat /credentials/password.txt` 命令，查看所有相关账号和密码
-
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/catdbpassword-websoft9.png)
-
-下面列出可能需要用到的几组账号密码：
-
-### ownCloud
-
-在初始化安装的时候由用户自行设置
-
-### MySQL
-
-* 管理员账号：*`root`*
-* 管理员密码：存储在您的服务器中的文件中 */credentials/password.txt*  
+2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 和 **TCP:9002**  端口已经开启
+3. 在服务器中查看 ownCloud 的 **[默认账号和密码](./setup/credentials#getpw)**  
+4. 若想用域名访问  ownCloud **[域名五步设置](./dns#domain)** 过程
 
 
-> 需要登录MySQL，请参考 [MySQL可视化管理](#mysql-数据管理)
+## ownCloud 初始化向导{#init}
 
-
-## ownCloud 安装向导
+### 详细步骤
 
 1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://Internet IP*, 就进入引导首页
 
@@ -61,131 +38,42 @@ ownCloud 官网提供了演示环境，您可以直接[访问演示地址](https
 3. 选择 OwnCloud 的数据库存储方式，建议选择【MySQL】    
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-installdb001-websoft9.png)
 
-4. 填写 MySQL 数据库连接信息（[不知道账号密码？](/zh/stack-accounts.html#mysql)）  
+4. 填写 MySQL 数据库连接信息（[不知道账号密码？](./setup/credentials#getpw)）  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-installdb002-websoft9.jpg)
 
 5. 点击【Flish Setup】，完成安装，获得安装成功的提示，开始体验后台
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-installcomplete-websoft9.png)
 
-6. [设置文档预览与编辑](/zh/solution-more.md#owncloud-文件预览与编辑)功能（非必要）
+6. [设置文档预览与编辑](./owncloud/solution#onlyoffice)功能（非必要）
 
 > 需要了解更多 ownCloud 的使用，请参考官方文档：[ownCloud admin_manual](https://doc.owncloud.org/server/admin_manual/)
 
-## 常用操作
 
-### 域名绑定
 
-绑定域名的前置条件是：已经完成域名解析（登录域名控制台，增加一个A记录指向服务器公网IP）  
+### 出现问题？
 
-完成域名解析后，从服务器安全和后续维护考量，需要完成**域名绑定**：
+若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
 
-ownCloud 域名绑定操作步骤：
+**ownCloud 是否支持采用对象存储作为网盘使用**
 
-1. 使用 SFTP 工具登录云服务器
-2. 修改 [虚拟机主机配置文件](/zh/stack-components.html#apache)，将其中的域名相关的值
-   ```text
-   #### ownCloud(LAMP) bind domain #### 
+支持，但需要额外配置，[参考](#oss)
 
-     <VirtualHost *:80>
-     ServerName  www.mydomain.com # 修改成您的实际域名
-     DocumentRoot "/data/wwwroot/owncloud"
-     ...
-     
-   #### ownCloud(LNMP) bind domain #### 
+**ownCloud 是否支持在线文档编辑与预览**
 
-     server {
-      listen 80;
-      server_name owncloud.example.com; # 修改成您的实际域名
-     ...
+镜像预装了 OnlyOffice Document Server，可以通过配置实现在线文档编辑与预览，[参考](./owncloud/solution#onlyoffice)
 
-   ```
-3. 保存配置文件，[重启服务](/维护参考.md#apache-1)
 
-### SSL/HTTPS
+## ownCloud 使用入门
 
-网站完成域名绑定且可以通过HTTP访问之后，方可设置HTTPS。
+下面以 **ownCloud 构建企业网盘系统** 作为一个任务，帮助用户快速入门：
 
-ownCloud 预装包，已安装Web服务器 SSL 模块和公共免费证书方案 [Let's Encrypt](https://letsencrypt.org/) ，并完成预配置。
 
-> 除了虚拟主机配置文件之外，HTTPS设置无需修改Nginx任何文件
+## ownCloud 常用操作
 
-#### 快速参考
+### 配置 SMTP{#smtp}
 
-如果你想使用免费证书，只需在服务器中运行一条命令`certbot`就可以启动证书部署
-
-如果你已经申请了商业证书，只需三个步骤，即可完成HTTPS配置
-
-#### ownCloud(LAMP)
-
-ownCloud(LAMP) 即运行环境采用 **Apache** 作为 Web Server  
-
-1. 将申请的证书、 证书链文件和秘钥文件上传到 */data/cert* 目录
-2. 打开虚拟主机配置文件： */etc/httpd/conf.d/vhost.conf* 
-3. 将如下的 **HTTPS 配置段模板**  `<VirtualHost *:443>--</VirtualHost>` 插入到`vhost.conf` 文件中
-   ``` text
-   #-----HTTPS template start------------
-   <VirtualHost *:443>
-    ServerName  owncloud.yourdomain.com
-    DocumentRoot "/data/wwwroot/owncloud"
-    #ErrorLog "logs/owncloud.yourdomain.com-error_log"
-    #CustomLog "logs/owncloud.yourdomain.com-access_log" common
-    <Directory "/data/wwwroot/owncloud">
-    Options Indexes FollowSymlinks
-    AllowOverride All
-    Require all granted
-    </Directory>
-    SSLEngine on
-    SSLCertificateFile  /data/cert/owncloud.yourdomain.com.crt
-    SSLCertificateKeyFile  /data/cert/owncloud.yourdomain.com.key
-    </VirtualHost>
-   #-----HTTPS template end------------
-   ```
-4. 修改 ServerName, SSLCertificateFile, SSLCertificateKeyFile等参数的值
-5. 保存， [重启 Apache 服务](/维护参考.md#apache-1)
-
-#### ownCloud(LEMP)
-
-ownCloud(LEMP) 即运行环境采用 **Nginx** 作为 Web Server  
-
-1. 将申请的证书、 证书链文件和秘钥文件上传到 */data/cert* 目录
-2. 打开虚拟主机配置文件：*/etc/nginx/conf.d/default.conf* ，插入**HTTPS 配置段** 到 ownCloud 的 *server{ }* 中
- ``` text
-   #-----HTTPS template start------------
-   listen 443 ssl; 
-   ssl_certificate /data/cert/xxx.crt;
-   ssl_certificate_key /data/cert/xxx.key;
-   ssl_session_timeout 5m;
-   ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
-   ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE;
-   ssl_prefer_server_ciphers on;
-   #-----HTTPS template end------------
-   ```
-3. 修改 ssl_certificate, ssl_certificate_key 的值
-4. 保存，[重启 Nginx 服务](/维护参考.md#nginx-1)
-
-#### 专题指南
-
-若参考上面的**快速指南**仍无法成功设置HTTPS访问，请阅读由Websoft9提供的 [《HTTPS 专题指南》](https://support.websoft9.com/docs/faq/zh/tech-https.html#nginx)
-
-HTTPS专题指南方案包括：HTTPS前置条件、HTTPS 配置段模板、注意事项、详细步骤以及故障诊断等具体方案。
-
-### SMTP
-
-大量用户实践反馈，使用**第三方 SMTP 服务发送邮件**是一种最稳定可靠的方式。  
-
-请勿在服务器上安装sendmail等邮件系统，因为邮件系统的路由配置受制与域名、防火墙、路由等多种因素制约，非常不稳定，且不易维护、诊断故障很困难。
-
-下面以**网易邮箱**为例，提供设置 ownCloud 发邮件的步骤：
-
-1. 在网易邮箱管理控制台获取 SMTP 相关参数
-   ```
-   SMTP host: smtp.163.com
-   SMTP port: 465 or 994 for SSL-encrypted email
-   SMTP Authentication: must be checked
-   SMTP Encryption: must SSL
-   SMTP username: websoft9@163.com
-   SMTP password: #wwBJ8    //此密码不是邮箱密码，是需要通过163邮箱后台设置去获取的授权码
-   ```
+1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
+   
 2. 登录OwnCloud后，打开【admin】>【设置】>【个人】>【常规】，填写发件邮箱地址
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-smtp-1-websoft9.png)
 
@@ -200,24 +88,30 @@ HTTPS专题指南方案包括：HTTPS前置条件、HTTPS 配置段模板、注�
     * 输入该邮箱地址的SMTP服务的授权码或密码；
     * 存储凭据；
 
-3. 点击“发送邮件”即可测试SMTP是否设置正确。
-     
-> 更多邮箱设置（QQ邮箱，阿里云邮箱，Gmail，Hotmail等）以及无法发送邮件等故障之诊断，请参考由Websoft9提供的 [SMTP 专题指南](https://support.websoft9.com/docs/faq/zh/tech-smtp.html)
+4. 点击“发送邮件”即可测试SMTP是否设置正确。
 
-### ownCloud 更换域名
+### 配置域名{#dns}
+
+参考： **[域名五步设置](./dns#domain)** 
+
+### 更换域名
 
 如果 ownCloud 需要更换域名，具体操作如下：
 
 1. 完成新的域名解析和域名绑定
-2. 修改 [OwnCloud 配置文件](/zh/stack-components.html#owncloud)中的域名值
+2. 修改 [ownCloud 配置文件](#path)中的域名值
    ```
-   'overwrite.cli.url' => 'owncloud.yourdomain.com', # 修改为新域名
+    'overwrite.cli.url' => 'owncloud.yourdomain.com', # 修改为新域名
    ```
-2. [重启 PHP-FPM 服务](/zh/admin-services.html#php-fpm)后生效
+3. [重启 PHP-FPM 服务](./setup/parameter#service)后生效
+
+### 配置 HTTPS{#https}
+
+参考： **[HTTPS 配置](./dns#https)**
 
 ### ownCloud 设置语言
 
-登录owncloud，在后台 【Personal】>【General】中设置语言
+登录 owncloud，在后台 【Personal】>【General】中设置语言
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-zh-websoft9.png)
 
@@ -235,17 +129,7 @@ Owncloud [Marketplace](https://marketplace.owncloud.com/) 包含大量的扩展�
 
 > 除了下载安装之外，也可以通过 ownCloud 后台在线安装 Marketplace 应用
 
-### ownCloud 集成 LDAP
-
-当企业网盘与多个人使用的时候，用户需要与内部域控集成，以保证用户可以通过Windows账号集成。
-
-OwnCloud提供了 LDAP 集成工具，具体参考官方方案：*[User Authentication with LDAP](https://doc.owncloud.org/server/admin_manual/configuration/user/user_auth_ldap.html)*
-
-### ownCloud 命令行工具-OCC
-
-OCC命令是OwnCloud的命令行界面。您可以使用OCC执行许多常见的服务器操作，例如安装和升级OwnCloud，管理用户，加密，密码，LDAP设置等。
-
-### ownCloud 连接外部存储
+### ownCloud 连接外部存储{#oss}
 
 ownCloud 支持多种流行的企业存储服务，具体使用步骤如下：
 
@@ -259,6 +143,7 @@ ownCloud 支持多种流行的企业存储服务，具体使用步骤如下：
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-auth_mechanism-websoft9.png)
 
 更多详情参考官方文档：[External Storage](https://doc.owncloud.org/server/admin_manual/configuration/files/external_storage/index.html)
+
 
 ### ownCloud 数据转移
 
@@ -274,7 +159,7 @@ ownCloud 的程序和数据文件默认均存在系统盘，你要转移到数�
 3. 新建一个 */data/wwwroot/owncloud2* 文件夹
 4. 初始化数据盘，并将数据盘 **mount** 到新建的 *owncloud2* 文件夹
 5. 将 */data/wwwroot/owncloud* 下的数据全部拷贝到 */data/wwwroot/owncloud2*  
-6. 修改 OwnCloud [虚拟主机配置文件](/维护参考.md#apache) 的路径
+6. 修改 OwnCloud [虚拟主机配置文件](./apache#virtualhost) 的路径
 7. 启动服务后生效
    ```
    systemctl start httpd
@@ -290,7 +175,7 @@ ownCloud 的程序和数据文件默认均存在系统盘，你要转移到数�
 3. 新建一个 */data/wwwroot/owncloud2* 文件夹
 4. 将对象存储的 bucket **mount** 到新建的 *owncloud2* 文件夹
 5. 将 */data/wwwroot/owncloud* 下的数据全部拷贝到 */data/wwwroot/owncloud2*  
-6. 修改 OwnCloud [虚拟主机配置文件](/zh/stack-components.html#apache) 的路径
+6. 修改 OwnCloud [虚拟主机配置文件](./apache#virtualhost) 的路径
 7. 启动服务后生效
    ```
    systemctl start httpd
@@ -299,61 +184,50 @@ ownCloud 的程序和数据文件默认均存在系统盘，你要转移到数�
 
 > 以上两种数据转移方案中，**mount** 操作对新手来说是几乎是不可能独立完成的任务。另外，如果转移的数据超过10G，会存在拷贝失败的风险
 
-### ownCloud 文件预览与编辑
 
-ownCloud 自身是不能对 Office 文件进行预览或编辑的，需要集成外部的 Office 文档编辑和预览服务才可以具备这样的功能。  
+## 参数{#parameter}
 
-Websoft9 提供的 ownCloud 部署包内置了 OnlyOffice Document Server(Docker版) ，此软件为 OwnCloud 提供文档预览与编辑服务，具体设置步骤如下：
+**[通用参数表](./setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 ownCloud 应用中包含的基础架构组件路径、版本、端口等参数。 
 
-1. 在云控制台安全组中，检查 **TCP:9002** 端口是否开启
+通过运行`docker ps`，可以查看到 ownCloud 运行时所有的 Container：
 
-2. 使用本地电脑浏览器测试文档服务是否可用：打开网址：*http://服务器公网IP:9002*，会看到 OnlyOffice Document Server 正在运行的提示 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/onlyoffice/onlyoffice-dkisrunning-websoft9.png)
-   
-   > 如果计划使用 HTTPS 访问 OnlyOffice Document Server，需给它绑定域名并设置 HTTPS
-
-2. 登录到 OwnCloud ，单击左上角进入【Market】页面
-	![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-preview-1-websoft9.png)
-
-3. 找到【ONLYOFFICE】插件，安装它
-
-4. 打开：【admin】>【设置】>【...Additional】，对 ONLYOFFICE 插件进行如图所示的设置([更多说明](https://api.onlyoffice.com/editors/owncloud))
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-preview-2-websoft9.png)
-
-   > 图中 Document Editing Service address 处应修改为**服务器公网IP:9002**
-
-5. 返回到首页，刷新或重新登录，然后单击 Office 文件即可在线预览和编辑。
-
-### MySQL 数据管理
-
-ownCloud 预装包中内置 MySQL 及可视化数据库管理工具 `phpMyadmin` ，使用请参考如下步骤：
-
-1. 登录云控制台，[开启服务器安全组80端口](https://support.websoft9.com/docs/faq/zh/tech-instance.html)
-2. 本地浏览器 Chrome 或 Firefox 访问：*http://服务器公网IP:9090*，进入phpMyAdmin
-  ![登录phpMyadmin](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-logincn-websoft9.png)
-3. 输入数据库用户名和密码([不知道密码？](/zh/stack-accounts.md))
-4. 开始管理数据库
-  ![phpMyadmin](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-adddb-websoft9.png)
-
-> 阅读Websoft9提供的 [《MySQL教程》](https://support.websoft9.com/docs/mysql/zh/admin-phpmyadmin.html) ，掌握更多的MySQL实用技能：修改密码、导入/导出数据、创建用户、开启或关闭远程访问、日志配置等
+```bash
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+```
 
 
-## 异常处理
+下面仅列出 ownCloud 本身的参数：
 
-#### 浏览器打开IP地址，无法访问 ownCloud（白屏没有结果）？
+### 路径{#path}
 
-您的服务器对应的安全组80端口没有开启（入规则），导致浏览器无法访问到服务器的任何内容
+ownCloud 安装目录： */data/wwwroot/owncloud*  
+ownCloud 配置文件： */data/wwwroot/owncloud/config/config.php*  
 
-#### 本部署包采用的哪个数据库来存储 ownCloud 数据？
+### 端口{#port}
 
-是MySQL
+| 端口号 | 用途                                          | 必要性 |
+| ------ | --------------------------------------------- | ------ |
+| 80   | 通过 HTTP 访问 ownCloud | 可选   |
+| 9002 | OnlyOffice Document Server on Docker | 可选 |
 
-#### 是否可以采用云厂商提供的 RDS 来存储 ownCloud 数据？
 
-可以
+### 版本{#version}
 
-#### ownCloud 是否支持采用对象存储作为网盘使用？
+```shell
+sudo cat /data/logs/install_version.txt
+```
 
-支持，但需要额外配置
+### 服务{#service}
 
+```shell
+sudo docker start | stop | restart onlyofficedocumentserver
+```
+
+### 命令行{#cli}
+
+OCC命令是OwnCloud的命令行界面。您可以使用OCC执行许多常见的服务器操作，例如安装和升级OwnCloud，管理用户，加密，密码，LDAP设置等。
+
+### API
+
+### 参考{#ref}
 

@@ -35,7 +35,7 @@ Cockpit 是 RedHat 维护的 Linux 服务器面板工具。它具备很强的开
 
 ## 参数
 
-**[通用参数表](../setup/parameter)** 中可查看 Nginx, Docker 等 Cockpit 应用中包含的基础架构组件路径、版本、端口等参数。 
+Cockpit 应用中包含 Nginx, Docker 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。  
 
 下面仅列出 Cockpit 本身的参数：
 

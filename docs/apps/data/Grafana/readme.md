@@ -92,7 +92,7 @@ tags:
 
 ## Grafana 参数
 
-Grafana 应用中包含 Nginx, SQLite 等组件，可通过 **[通用参数表](../setup/parameter)** 查看路径、服务、端口等参数。
+Grafana 应用中包含 Nginx, SQLite 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。
 
 下面仅列出 Grafana 本身的参数：
 

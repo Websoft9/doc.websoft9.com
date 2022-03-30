@@ -13,9 +13,9 @@ tags:
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins_is_the_hub_CD_Devops.png)  
 
 
-部署 Websoft9 提供的 Jenkins 之后，请参考下面的步骤快速入门。
-
 ## 准备
+
+部署 Websoft9 提供的 Jenkins 之后，需完成如下的准备工作：
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
@@ -103,7 +103,7 @@ tags:
 
 ## Jenkins 参数
 
-Jenkins 应用中包含 Nginx, Docker, MongoDB, adminMongo 等组件，可通过 **[通用参数表](../setup/parameter)** 查看路径、服务、端口等参数。
+Jenkins 应用中包含 Nginx, Docker, MongoDB, adminMongo 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 Jenkins 运行时所有的 Container：
 
@@ -116,12 +116,18 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 ### 路径{#path}
 
+* Jenkins 配置文件： */data/apps/jenkins/config.yml*
+
 ### 端口
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
 | 8080   | Jenkins 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
 
+
+### 网址
+
+* Jenkins 后台地址： *URL:端口/administrator*
 
 ### 版本
 
@@ -134,10 +140,6 @@ jenkins -v
 ```shell
 sudo systemctl start | stop | restart | status jenkins
 ```
-
-### 网址
-
-Jenkins后台地址：URL/admin
 
 ### 命令行
 
@@ -157,3 +159,5 @@ curl JENKINS_URL/job/JOB_NAME/buildWithParameters \
 ```
 
 同时，也提供了 Java, Python, Ruby 等语言的 API SDK 开发包。 
+
+

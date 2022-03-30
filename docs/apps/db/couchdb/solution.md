@@ -1,6 +1,6 @@
 ---
-sidebar_position: 3
-slug: /couchdb/study
+sidebar_position: 2
+slug: /couchdb/solution
 tags:
   - CouchDB
   - Cloud Native Database

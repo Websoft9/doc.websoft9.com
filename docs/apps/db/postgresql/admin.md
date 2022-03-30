@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 slug: /postgresql/admin
 tags:
   - PostgreSQL
@@ -39,23 +39,6 @@ PostgreSQL上的应用备份有多种[备份方案](https://www.postgresql.org/d
 * 数据库文件目录直接复制
 
 其中数据库文件目录直接复制等同于服务器快照备份，无需重复再做。
-
-## 恢复
-
-## 升级
-
-### 系统级更新
-
-运行一条更新命令，即可完成系统级更新：
-
-``` shell
-#For Ubuntu&Debian
-apt update && apt upgrade -y
-
-#For Centos&Redhat
-yum update -y
-```
-> 本部署包已预配置一个用于自动更新的计划任务。如果希望去掉自动更新，请删除对应的Cron
 
 ### PostgreSQL 更新升级
 
@@ -112,30 +95,7 @@ Report bugs to <pgsql-bugs@postgresql.org>.
 
 ## 故障处理
 
-此处收集使用 PostgreSQL 过程中最常见的故障，供您参考
-
-> 大部分故障与云平台密切相关，如果你可以确认故障的原因是云平台造成的，请参考[云平台文档](https://support.websoft9.com/docs/faq/zh/tech-instance.html)
-
-#### 导入数据库报错？
-
-查看脚本里面是否有创建数据库的脚本
-
-#### 数据库服务无法启动
-
-数据库服务无法启动最常见的问题包括：磁盘空间不足，内存不足，配置文件错误。  
-建议先通过命令进行排查  
-
-```shell
-# 查看磁盘空间
-df -lh
-
-# 查看内存使用
-free -lh
-
-# 查看服务状态和日志
-systemctl status postgresql
-journalctl -u postgresql
-```
+除以下列出的 PostgreSQL 故障问题之外， [通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案。 
 
 #### 运行 psql 命令显示 "cannot be run as root Failure, exiting"？
 
@@ -146,9 +106,46 @@ sudo -i -u postgres
 
 ## 常见问题
 
-#### phpPgAdmin 与 pgAdmin 哪个更好？
+#### 什么是 PostgreSQL 的 Client 和 Server？
 
-pgAdmin
+PostgreSQL Server 是指 PostgreSQL 程序本体，而 PostgreSQL Client 指采用TCP协议用于连接程序本地的客户端工具。  
+
+它们是两个完全不同的程序，也就是说它们并需要同时安装到同一台服务上。
+
+#### PostgreSQL 有默认数据库吗？
+
+有，名称为 postgres
+
+#### PostgreSQL 支持哪些数据类型？
+
+PostgreSQL 支持官方的数据类型，包括：数据、JASON、JSONB 以及几何类型，还可以使用 SQL 命令创建自定义类型
+
+#### PostgreSQL  C/S 架构组成部分？
+
+PostgreSQL 本身是一个 C/S 架构的程序，即包括客户端程序和服务器程序。
+
+* 客户端程序：psql, clusterdb, pgAdmin等
+* 服务器程序：initdb, pg_ctl, postgres, postmaster, pg_upgrade等
+
+#### PostgreSQL 有几种连接方式？
+
+PostgreSQL 允许四种[连接方式](https://www.cnblogs.com/flying-tiger/p/5983588.html?tdsourcetag=s_pcqq_aiomsg)，包括：
+
+* local: 基于 Unix 域套接字的连接方法，域套接字是进程间的一种非网络通信机制，效率高，安全可靠
+* host: 基于 TCP/IP 的连接，允许非 SSL 连接，默认值只允许 localhost 本地连接。
+* hostssl: 基于 TCP/IP 的 SSL 加密连接
+* hostnossl: 基于 TCP/IP 的非 SSL 连接
+
+#### PostgreSQL 有几种认证方法？
+
+PostgreSQL 常见的[认证方法](https://www.postgresql.org/docs/current/auth-methods.html)包括：
+
+* reject: 拒绝某一网段的少数特定主机
+* md5: 双种MD5加密
+* password: 明文密码
+* scram-sha-256: 基于SASL的加密认证，是 PostgreSQL 最安全的认证方式，但不支持 10 以下的版本
+* trust： 完全信任
+* peer：基于 unix socket 免密连接
 
 #### pgAdmin 支持多语言吗？
 
@@ -157,55 +154,3 @@ pgAdmin
 #### pgAdmin 是什么类型的客户端？
 
 pgAdmin 是通过浏览器访问的客户端，即使在 Windows 下安装，也是间接调用浏览器来访问的
-
-#### 什么是 PostgreSQL 的 Client 和 Server？
-
-PostgreSQL Server 是指 PostgreSQL 程序本体，而 PostgreSQL Client 指采用TCP协议用于连接程序本地的客户端工具。  
-
-它们是两个完全不同的程序，也就是说它们并需要同时安装到同一台服务上。
-
-#### PostgreSQL 安装后有默认数据库吗？
-
-有，名称为 postgres
-
-#### 是否可以修改 PostgreSQL 根目录？
-
-可以，但不建议修改，除非你需要将数据库整体迁移到数据盘
-
-#### 数据库 postgres 用户对应的密码是多少？
-
-密码存放在服务器相关文件中：`/credentials/password.txt`
-
-#### 是否有可视化的数据库管理工具？
-
-有，采用 Docker 部署的 phpPgAdmin 或 pgAdmin，通过：*http://服务器公网IP:9090* 访问
-
-#### 部署和安装有什么区别？
-
-部署是将一序列软件按照不同顺序，先后安装并配置到服务器的过程，是一个复杂的系统工程。  
-安装是将单一的软件拷贝到服务器之后，启动安装向导完成初始化配置的过程。  
-安装相对于部署来说更简单一些。 
-
-#### 云平台是什么意思？
-
-云平台指提供云计算服务的平台厂家，例如：Azure,AWS,阿里云,华为云,腾讯云等
-
-#### 实例，云服务器，虚拟机，ECS，EC2，CVM，VM有什么区别？
-
-没有区别，只是不同厂家所采用的专业术语，实际上都是云服务器
-
-#### 推荐一些不错的学习资料？
-
-* [从pg_hba.conf文件谈谈postgresql的连接认证](https://www.cnblogs.com/flying-tiger/p/5983588.html?tdsourcetag=s_pcqq_aiomsg)
-
-#### 浏览器无法访问图形化界面（白屏没有结果）？
-
-您的服务器对应的安全组 9090 端口没有开启（入规则），导致浏览器无法它
-
-#### phpPgAdmin 或 pgAdmin 是如何安装的？
-
-采用 Docker 安装，保证 PostgreSQL 环境具有良好的隔离性。
-
-#### 为什么我的系统中没有 pgAdmin ？
-
-由于产品设计原因，我们从 2021年2月之后的产品中才包含 pgAdmin

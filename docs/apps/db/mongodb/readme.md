@@ -1,91 +1,181 @@
 ---
-sidebar_position: 3
-slug: /mongodb/study
+sidebar_position: 1
+slug: /mongodb
 tags:
   - MongoDB
   - Cloud Native Database
 ---
 
-# 原理学习
+# 快速入门
 
-## 概念
-
-### NoSQL
-
-NoSQL 即 Not only SQL的简称，并非 Not SQL，也即意味着 NoSQL 数据库也有着类似 SQL 的查询概念。 NoSQL 是一个包罗万象的术语，涵盖了除传统的关系型数据库（RDBMS）之外的所有数据库。NoSQL 试图放弃关系型数据库的传统结构，让开发人员能够以更接近系统数据流需求的方式实现模型。当前有多种不同的 NoSQL 技术，包括：
-
-* 文档存储数据库
-* 健/值数据库
-* 列存储数据库
-* 图存储数据库
-
-MongoDB 就属于文档存储数据库的杰出代表。文档数据库采用面向文档的方法存储数据，其背后的理念是，可以将单个实体的所有数据存放在一个文档中，而文档以**集合**的形式组合起来。  
-
-MongoDB 采用 BSON（一种轻量级的二进制JSON）格式存储数据，每个文档最大不能超过16MB，避免查询占用太多内存或频繁访问文件系统，因此性能非常高。
+[MongoDB](https://www.mongodb.com/zh) 是通用、基于文档的分布式数据库，帮助现代应用程序开发人员迎接云时代的到来。它在类似 JSON 的文档内存储数据。这种面对数据的数据存储方法非常自然，比传统的排/列模型更加直观和强大。MongoDB 也是一个真正的具有全套工具的数据平台，能帮助开发人员、分析师和数据科学家等各类人群更方便地处理数据。
 
 ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/mongodb-gui-websoft9.png)
 
-### SQL vs MongoDB
 
-The basic concepts in mongodb are document, collection, and databases. let's take SQL as an example to help you better understand MongoDB.
+## 准备
 
-| SQL Term/concept | MongoDB Term/concept | explain |
-| :--- | :--- | :--- |
-| database | database | Database Instance |
-| table | collection | databae table/collection |
-| row | document | table row/document |
-| column | field | Data field/domain |
-| index | index | index |
-| table joins |   | MongoDB no this |
-| primary key | primary key | keyPrimary key, MongoDB automatically sets the _id field as the primary key |
+部署 Websoft9 提供的 MongoDB 之后，需完成如下的准备工作：
 
-Through the example below, we can also understand some concepts in Mongo more intuitively:
+1. 在云控制台获取您的 **服务器公网IP地址** 
+2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 TCP：**27017 和 9091** 端口已经开启
+3. 在服务器中查看 MongoDB 的 **[默认账号和密码](./setup/credentials#getpw)**  
+4. 若想用域名访问  MongoDB，务必先完成 **[域名五步设置](./dns#domain)** 过程
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/nosqlvssql-websoft9.png)
+## MongoDB 初始化向导
+
+### 详细步骤
+
+部署 MongoDB 之后，依次完成下面的步骤，验证其可用性：
+
+1. 使用 SSH 连接 MongoDB 所在的服务器，运行下面的命令，查看 MongoDB 的安装信息和运行状态
+   ```
+   sudo systemctl status mongod
+   ```
+    MongoDB 正常运行会得到 " Active: active (running)... " 的反馈
+
+2. 运行 `mongo` 命令（MongoDB Shell）
+   ~~~
+   mongo
+
+   ---
+   MongoDB shell version v4.0.18
+   connecting to: mongodb://127.0.0.1:27017/?gssapiServiceName=mongodb
+   Implicit session: session { "id" : UUID("e5c50eca-e51b-482e-b0bd-24edc2d1e433") }
+   MongoDB server version: 4.0.18
+   Welcome to the MongoDB shell.
+   For interactive help, type "help".
+   For more comprehensive documentation, see
+         http://docs.mongodb.org/
+   Questions? Try the support group
+         http://groups.google.com/group/mongodb-user
+   ~~~
+
+3. 分别列出默认数据库和用户
+   ```
+   # 列出所有数据库
+   show dbs
+
+   # 切换到 admin 数据库，列出所有用户
+   use admin
+   show users
+   ```
+
+### 出现问题？
+
+若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题。
+
+**MongoDB 默认启用账号认证吗？**  
+没有，请修改配置文件 /etc/mongod.conf，将 authorization 字段设置为 enabled
 
 
-### MongoDB 数据类型
+## MongoDB 入门指南
 
-MongoDB 的数据类型非常类似 JavaScript 对象。
+> 需要了解更多 MongoDB 的使用，请官方文档 [MongoDB Administration](https://docs.mongodb.com/manual/administration/)
 
-**字符串** - 这是用于存储数据的最常用的数据类型。MongoDB中的字符串必须为`UTF-8`。
+## MongoDB 常用操作
 
-**整型** - 此类型用于存储数值。 整数可以是`32`位或`64`位，具体取决于服务器。
+### 开启 MongoDB 远程访问
 
-**布尔类型** - 此类型用于存储布尔值(`true` / `false`)值。
+1. 修改 [MongDB 配置文件](#path)
+   ```
+   #1 将authorization由disabled设置为enabled
+   security:
+   authorization: enabled
 
-**双精度浮点数** - 此类型用于存储浮点值。
+   #2 将 bindIP 修改为 0.0.0.0 或 本地电脑公网IP
+   net:
+      port: 27017
+      bindIp: 0.0.0.0
+   ```
+   > 0.0.0.0 代表任意公网IP均可访问
 
-**最小/最大键** - 此类型用于将值与最小和最大`BSON`元素进行比较。
+2. 重启 [MongoDB 服务](#service)
 
-**数组** - 此类型用于将数组或列表或多个值存储到一个键中。
+### 开启 MongoDB 访问认证
 
-**时间戳** - `ctimestamp`，当文档被修改或添加时，可以方便地进行录制。
+为了方便试用，默认情况下 MongoDB 认证已关闭。所以，创建用户不需要登录。
 
-**对象** - 此数据类型用于嵌入式文档。
+打开 [MongoDB 配置文件](#path)，将 authorization字段改为 enabled 即启用认证。
 
-**对象** - 此数据类型用于嵌入式文档。
+```
+security:
+  authorization: disabled
+```
 
-**Null** - 此类型用于存储`Null`值。
+重启 [MongoDB 服务](#service)后生效
 
-**符号** - 该数据类型与字符串相同; 但是，通常保留用于使用特定符号类型的语言。
 
-**日期** - 此数据类型用于以UNIX时间格式存储当前日期或时间。您可以通过创建日期对象并将日，月，年的日期进行指定自己需要的日期时间。
 
-**对象ID** - 此数据类型用于存储文档的ID。
+### 图形化 Web 端（adminMongo）
 
-**二进制数据** - 此数据类型用于存储二进制数据。
+adminMongo 是一款在线web版工具，默认已经安装到了MongoDB部署方案中。
 
-**代码** - 此数据类型用于将JavaScript代码存储到文档中。
+使用 adminMongo 的前置条件：
 
-**正则表达式** - 此数据类型用于存储正则表达式。
+* 开启 MongoDB的访问认证
+* 开启服务器安全组 **TCP:9091** 端口
+
+以上条件准备好之后，就可以根据选择合适的图形化界面工
+
+1. 本地电脑浏览器访问：*http://服务器公网IP:9091* 打开adminMongo界面
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/adminmongo-connect001-websoft9.png)
+
+2. 以连接字符串为例（这里的IP地址是公网IP或本地IP）
+   ```
+   # 默认连接到config数据库，172.17.0.1为内网IP
+   mongodb://root:1cTFecwTEs@172.17.0.1:27017/admin
+   # 默认连接到config数据库
+   mongodb://root:1cTFecwTEs@40.114.115.58
+   # 默认连接到admin数据库
+   mongodb://root:1cTFecwTEs@40.114.115.58/admin
+   mongodb://parse:AxXFcV5zSz@40.114.115.58/parse
+   ```
+3. 开始连接
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/adminmongo-connect002-websoft9.png)
+
+4. 连接成功，进入 adminMongo 控制面板
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/adminmongo-connect003-websoft9.png)
+
+6. 使用完成后，请删除连接
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/adminmongo-connect004-websoft9.png)
+
+更多可选的 Web 端：
+
+- [mongo-express](https://github.com/mongo-express/mongo-express) - Web-based admin interface built with Express
+- [mongoadmin](https://github.com/thomasst/mongoadmin) - Admin interface built with Django
+- [mongri](https://github.com/dongri/mongri) - Web-based user interface written in JavaScript
+- [Rockmongo](https://github.com/iwind/rockmongo) - PHPMyAdmin for MongoDB, sort of
+
+
+### 图形化客户端
+
+推荐使用官方出品的：[MongoDB Compass Community](https://www.mongodb.com/download-center/compass) 作为客户端工具管理 MongoDB：
+
+1. [下载](https://www.mongodb.com/products/compass)并安装 MongoDB Compass
+
+2. 填写准确的字段，连接 MongoDB
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/mongodbcompass001-websoft9.png)
+
+3. 连接成功，进入控制台
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/mongodbcompass002-websoft9.png)
+
+更多可选的客户端：
+
+- [dbKoda](https://www.dbkoda.com/) - Cross-platform and open-source IDE
+- [MongoHub](https://github.com/jeromelebel/MongoHub-Mac) - Mac native client
+- [Mongotron](http://mongotron.io/) - Cross-platform and open-source client built with Electron
+- [NoSQLBooster](https://nosqlbooster.com/) - Feature-rich but easy-to-use cross-platform IDE (formerly MongoBooster)
+- [Nosqlclient](https://github.com/nosqlclient/nosqlclient) - Cross-platform, self hosted and easy to use management tool (formerly Mongoclient)
+- [Robo 3T](https://github.com/Studio3T/robomongo) - Free, native and cross-platform shell-centric GUI (formerly Robomongo)
+- [Studio 3T](https://studio3t.com/) - Cross-platform GUI, stable and powerful (formerly MongoChef)
+
 
 ### 规划数据模型
 
 MongoDB 作为一种数据库，与传统的 RDBMS 的使用方式也有相似之处，即规划数据模型，建立数据库范式。只有这种，才能更好的发挥数据库的性能。  
 
 ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mongodb/mongodb-datamodel-websoft9.png)
-
 
 数据规划的主要设计要点包括：
 
@@ -96,9 +186,172 @@ MongoDB 作为一种数据库，与传统的 RDBMS 的使用方式也有相似�
 * 规划索引、分片和复制
 * 规划数据生命周期
 
-## 配置
 
-### 启动
+### 命令速查
+
+下面列出最常用的 MongoDB 命令供用户参考：  
+
+##### 显示、创建和切换数据库
+
+```shell
+
+> show dbs
+admin     0.000GB
+config    0.000GB
+local     0.000GB
+
+# 创建test数据库（如果不存在test数据库，就会自动创建它）
+> use test
+switched to db test
+
+# 显示当前数据库
+> db
+test
+
+# 显示当前所有用户数据
+> show users
+
+#3 插入数据到数据库
+> db.test.insert({"name":"company"})
+WriteResult({ "nInserted" : 1 })
+```
+
+
+##### 删除数据库
+```
+> show dbs
+admin     0.000GB
+config    0.000GB
+local     0.000GB
+test      0.000GB
+websoft9  0.000GB
+
+> use test
+switched to db test
+> use test
+> db.dropDatabase()
+{ "dropped" : "test", "ok" : 1 }
+> show dbs
+admin     0.000GB
+config    0.000GB
+local     0.000GB
+websoft9  0.000GB
+```
+
+##### 创建管理员账号
+
+```
+> mongo
+> use admin
+switched to db admin
+> db.createUser( { user: "webs_admin", pwd: "websoft9", roles: ["userAdminAnyDatabase"] } )
+Successfully added user: { "user" : "webs_admin", "roles" : [ "userAdminAnyDatabase" ] }
+
+
+# 显示账号
+> show users
+{
+        "_id" : "admin.webs_admin",
+        "user" : "webs_admin",
+        "db" : "admin",
+        "roles" : [
+                {
+                        "role" : "userAdminAnyDatabase",
+                        "db" : "admin"
+                }
+        ],
+        "mechanisms" : [
+                "SCRAM-SHA-1",
+                "SCRAM-SHA-256"
+        ]
+}
+```
+
+
+### 密码管理
+
+#### 修改密码
+
+参考下面的命令，修改已经创建的管理员账号root的密码
+
+```
+mongo admin --u root --p YOURPASSWORD
+MongoDB shell version v4.0.18
+connecting to: mongodb://127.0.0.1:27017/?gssapiServiceName=mongodb
+> db = db.getSiblingDB('admin')
+admin
+> db.changeUserPassword("root", "NEWPASSWORD")
+> exit
+```
+
+#### 重置密码
+
+重置密码即已经忘记密码的情况下，通过特殊手段重新设置新密码的过程。
+
+1. 修改 MongoDB 配置文件 *etc/mongod.conf*，将authorization由disabled设置为enabled
+   ```
+   security:
+   authorization: disabled
+
+   ```
+2. 重启 MongoDB 服务
+   ```
+   systemctl restart mongod
+   ```
+3. 重新设置密码
+   ```
+   mongo
+   > db = db.getSiblingDB('admin')
+   admin
+   > db.changeUserPassword("root", "NEWPASSWORD")
+   ```
+
+4. 重复第1步，但将 authorization 由 enabled 设置为 disabled
+
+5. 重启 MongoDB 服务
+
+## MongoDB 参数
+
+MongoDB 应用中包含 Docker,  adminMongo 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。
+
+通过运行`docker ps`，可以查看到 MongoDB 运行时所有的 Container：
+
+```bash
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+```
+
+下面仅列出 MongoDB 本身的参数：
+
+### 路径{#path}
+
+MongoDB 数据目录: */var/lib/mongodb*   
+MongoDB 配置文件: */etc/mongod.conf*   
+MongoDB 日志文件: */var/log/mongodb*   
+
+### 端口{#port}
+
+| 端口号 | 用途                                          | 必要性 |
+| ------ | --------------------------------------------- | ------ |
+| 9091   | HTTP 访问 adminMongo	 | 可选   |
+| 27017   | MongoDB Server | 可选   |
+
+### 版本
+
+```shell
+mongodb -V
+```
+
+### 服务{#service}
+
+
+```shell
+sudo systemctl start | stop | restart | status mongod
+sudo docker start | stop | restart | stats adminmongo
+```
+
+### 命令行{#cmd}
+
+#### 服务端
 
 安装MongoDB后，启动 bin 目录下的可执行文件 mongod 就可以启动 MongoDB 服务，如果你配置了 Systemd，也可以通过 `systemctl start mongod` 以后台的形式启动 MongoDB。  
 
@@ -323,12 +576,17 @@ storage:
       enabled: true
 ```
 
-### MongoDB shell
+#### 客户端
 
-MongoDB shell 是一个可执行文件，位于安装路径的 bin 目录下，执行 `mongo` 命令即可启动 MongoDB shell。它是基于 JavaScript 语法的，即可以使用 JavaScript 语法与数据库进行交付。
+MongoDB Shell 是 MongoDB 自带的一个交互式 JavaScript shell，让您能够访问、配置和管理MongoDB数据库、用户等。使用这个shell可执行各种任务，从设置用户账户到创建数据库，再到查询数据库内容，无所不包。
 
 ```
-[root@mongodb-test-centos7 ~]# mongo
+# log in Mongo Shell without authenticating
+mongo
+
+# log in Mongo Shell witt authenticating
+mongo admin --username root -p
+
 MongoDB shell version v4.0.18
 connecting to: mongodb://127.0.0.1:27017/?gssapiServiceName=mongodb
 Implicit session: session { "id" : UUID("e808b886-30db-41dd-9464-40b52f041107") }
@@ -364,208 +622,6 @@ MongoDB shell 有两种方式与数据库进行交互：
 * 命令行交互式操作
 * 运行存放在文件中的命令脚本（例如：shell_script.js）
 
+### API
 
-### 账户和访问控制
-
-MongoDB 支持账号访问控制方式，也支持 Kerberos, LDAP 等外部身份验证机制。本章我们只介绍账户方式相关的四个关键要点：
-
-#### 数据库、用户和角色
-
-通过阅读下面的代码理解用户、数据库和角色的关系
-```
-use reporting
-db.createUser(
-  {
-    user: "reportsUser",
-    pwd: "12345678",
-    roles: [
-       { role: "read", db: "reporting" },
-       { role: "read", db: "products" },
-       { role: "read", db: "sales" },
-       { role: "readWrite", db: "accounts" }
-    ]
-  }
-)
-```
-对MongoDB来说，每个用户都存在一个数据库中（区别于MySQL中所有的用户存储在一个系统数据库中）  
-
-系统默认，会自动创建 admin 数据库，这是一个特殊数据库，提供了普通数据库没有的功能，对于具备全局管理权限的数据库用户，必须存储在这个 admin 数据中。
-
-#### 启用认证
-
-创建了用户，并不会要求登录，只有开启了认证才会要求登录访问数据库。
-
-打开MongoDB配置文件：*/etc/mongod.conf*，将authorization字段改为 enabled 即启用认证。
-
-```
-security:
-  authorization: disabled
-```
-
-为了方便试用，默认情况下认证已关闭。
-
-
-## 使用
-
-### 应用程序访问
-
-MongoDB支持主流的开发程序直接访问，包括：PHP、Java、Python、Node.js等
-
-### 工具
-
-MongoDB 官方提供了更多的工具，包括：
-
-**MongoDB Atlas Open Service Broker**  
-Learn how you can use the Atlas Open Service Broker to deploy Atlas clusters and manage database users from within Kubernetes.
-
-**MongoDB BI Connector**  
-Reference guide for the MongoDB BI Connector. Learn how you can use business intelligence tools and SQL to query data stored in MongoDB.
-
-**MongoDB Charts**  
-Reference guide for MongoDB Charts. Learn how to create visualizations of MongoDB data quickly and easily.
-
-**MongoDB Command Line Interface**  
-Learn how to use the MongoDB Command Line Interface to quickly interact with your MongoDB deployments for easier testing and scripting.
-
-**MongoDB Compass**  
-Reference guide for MongoDB Compass. Learn to use MongoDB Compass's graphical user interface to view and analyze data stored in MongoDB.
-
-**MongoDB Database Tools**  
-Tools for interfacing with a MongoDB cluster, such as importing/exporting data.
-
-**MongoDB Kafka Connector**  
-Learn how to persist data from Kafka topics as a data sink into MongoDB as well as publish changes from MongoDB into Kafka topics as a data source.
-
-**MongoDB Kubernetes Operator**  
-Learn how you can use the Kubernetes Operator to run MongoDB Enterprise on Kubernetes and configure Cloud or Ops Manager for backup and monitoring.
-
-**MongoDB Spark Connector**  
-Reference guide for the MongoDB Spark Connector. Learn how you can use MongoDB with Apache Spark.
-
-## MongoDB shell
-
-MongoDB Shell 是 MongoDB 自带的一个交互式 JavaScript shell，让您能够访问、配置和管理MongoDB数据库、用户等。使用这个shell可执行各种任务，从设置用户账户到创建数据库，再到查询数据库内容，无所不包。
-
-### 启动 MongoDB shell
-
-使用 Websoft9 提供的 MongoDB 部署方案，默认已经配置好了环境变量。只需登录服务器，运行`mongo`命令，即可进入 MongoDB shell
-
-```shell
-# log in Mongo Shell without authenticating
-mongo
-
-# log in Mongo Shell witt authenticating
-mongo admin --username root -p
-
-
-MongoDB Enterprise > help
-        db.help()                    help on db methods
-        db.mycoll.help()             help on collection methods
-        sh.help()                    sharding helpers
-        rs.help()                    replica set helpers
-        help admin                   administrative help
-        help connect                 connecting to a db help
-        help keys                    key shortcuts
-        help misc                    misc things to know
-        help mr                      mapreduce
-
-        show dbs                     show database names
-        show collections             show collections in current database
-        show users                   show users in current database
-        show profile                 show most recent system.profile entries with time >= 1ms
-        show logs                    show the accessible logger names
-        show log [name]              prints out the last segment of log in memory, 'global' is default
-        use <db_name>                set current database
-        db.foo.find()                list objects in collection foo
-        db.foo.find( { a : 1 } )     list objects in foo where a == 1
-        it                           result of the last line evaluated; use to further iterate
-        DBQuery.shellBatchSize = x   set default number of items to display on shell
-        exit                         quit the mongo shell
-
-```
-
-
-### 常见命令
-
-#### 显示、创建和切换数据库
-
-```shell
-
-> show dbs
-admin     0.000GB
-config    0.000GB
-local     0.000GB
-
-# 创建test数据库（如果不存在test数据库，就会自动创建它）
-> use test
-switched to db test
-
-# 显示当前数据库
-> db
-test
-
-# 显示当前所有用户数据
-> show users
-
-#3 插入数据到数据库
-> db.test.insert({"name":"company"})
-WriteResult({ "nInserted" : 1 })
-```
-
-
-#### 删除数据库
-```
-> show dbs
-admin     0.000GB
-config    0.000GB
-local     0.000GB
-test      0.000GB
-websoft9  0.000GB
-
-> use test
-switched to db test
-> use test
-> db.dropDatabase()
-{ "dropped" : "test", "ok" : 1 }
-> show dbs
-admin     0.000GB
-config    0.000GB
-local     0.000GB
-websoft9  0.000GB
-```
-
-#### 创建管理员账号
-
-```
-> mongo
-> use admin
-switched to db admin
-> db.createUser( { user: "webs_admin", pwd: "websoft9", roles: ["userAdminAnyDatabase"] } )
-Successfully added user: { "user" : "webs_admin", "roles" : [ "userAdminAnyDatabase" ] }
-
-
-# 显示账号
-> show users
-{
-        "_id" : "admin.webs_admin",
-        "user" : "webs_admin",
-        "db" : "admin",
-        "roles" : [
-                {
-                        "role" : "userAdminAnyDatabase",
-                        "db" : "admin"
-                }
-        ],
-        "mechanisms" : [
-                "SCRAM-SHA-1",
-                "SCRAM-SHA-256"
-        ]
-}
-```
-
-## 参考
-
-本文档在写作过程中，一方面来源于实践，另一方面参考了大量书籍、资料和文献，感谢 MongoDB 生态中各种优秀的技术传播者
-
-下面列出主要参考书目：
-* [《菜鸟教程：MongoDB》](https://www.runoob.com/mongodb/mongodb-tutorial.html)
+[MongoDB Drivers API Documentation](https://api.mongodb.com/)

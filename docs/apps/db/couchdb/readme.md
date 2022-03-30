@@ -8,31 +8,21 @@ tags:
 
 # 快速入门
 
-[CouchDB](https://couchdb.apache.org/) 是一个开源的面向文档的数据库管理系统，可以通过 RESTful JavaScript Object Notation (JSON) API 访问。 CouchDB 的目标具有高度可伸缩性，提供了高可用性和高可靠性，即使运行在容易出现故障的硬件上也是如此。
+[Apache CouchDB™](https://couchdb.apache.org/) 是一个原生 HTTP/JSON API 驱动的文档数据库。CouchDB 的目标具有高度可伸缩性，提供了高可用性和高可靠性，即使运行在容易出现故障的硬件上也是如此。
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/couchdb/couchdb-gui-websoft9.png)
 
-在云服务器上部署 CouchDB 预装包之后，请参考下面的步骤快速入门。
-
 ## 准备
 
+部署 Websoft9 提供的 CouchDB 之后，需完成如下的准备工作：
+
 1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:80** 端口是否开启
-3. 若想用域名访问 CouchDB，请先到 **域名控制台** 完成一个域名解析
-
-## 账号密码
-
-通过**SSH**连接云服务器，运行 `cat /credentials/password.txt` 命令，可以查看所有相关账号和密码
-
-下面列出可能需要用到的几组账号密码：
-
-### CouchDB
-
-* 管理员账号: `admin`
-* 管理员密码: 存储在您的服务器中的文件中 */credentials/password.txt*  
+2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
+3. 在服务器中查看 CouchDB 的 **[默认账号和密码](./setup/credentials#getpw)**  
+4. 若想用域名访问  CouchDB，务必先完成 **[域名五步设置](./dns#domain)** 过程
 
 
-## CouchDB 安装向导
+## CouchDB 初始化向导
 
 1. 使用本地 Chrome 或 Firefox 访问网址：*http://域名/_utils* 或 *http://Internet IP/_utils*, 进入初始化页面
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/couchdb/couchdb-init-websoft9.png)
@@ -46,7 +36,7 @@ tags:
 > 需要了解更多 CouchDB 的使用，请参考官方文档：[CouchDB Documentation](https://docs.couchdb.org)
 > 需要了解更多 MongoDB 的使用，请官方文档 [MongoDB Administration](https://docs.mongodb.com/manual/administration/)
 
-## 常用操作
+## CouchDB 常用操作
 
 ### 系统配置
 

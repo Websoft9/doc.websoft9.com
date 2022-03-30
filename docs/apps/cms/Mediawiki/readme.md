@@ -167,7 +167,7 @@ Mediawiki 默认并不可以上传文件，需要启动文件上传功能
 
 ## 参数{#parameter}
 
-**[通用参数表](../setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 MediaWiki 应用中包含的基础架构组件路径、版本、端口等参数。 
+**[通用参数表](./setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 MediaWiki 应用中包含的基础架构组件路径、版本、端口等参数。 
 
 通过运行`docker ps`，可以查看到 MediaWiki 运行时所有的 Container：
 

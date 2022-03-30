@@ -87,7 +87,7 @@ version: '2'
 
 ## Graylog 参数
 
-Graylog 应用中包含 Nginx, Docker, MongoDB, Elasticsearch 等组件，可通过 **[通用参数表](../setup/parameter)** 查看路径、服务、端口等参数。
+Graylog 应用中包含 Nginx, Docker, MongoDB, Elasticsearch 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 安装，Graylog 运行时所有的 Container：
 

@@ -184,7 +184,7 @@ php bin/magento cache:flush  #将基础URL更改为https并刷新缓存
 
 ## 参数{#parameter}
 
-**[通用参数表](../setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 Magento 应用中包含的基础架构组件路径、版本、端口等参数。 
+**[通用参数表](./setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 Magento 应用中包含的基础架构组件路径、版本、端口等参数。 
 
 通过运行`docker ps`，可以查看到 Magento 运行时所有的 Container：
 

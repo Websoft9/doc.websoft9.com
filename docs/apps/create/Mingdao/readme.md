@@ -147,7 +147,7 @@ Websoft9 作为明道的合作伙伴，具备基于明道云的软件快速构�
 
 ## 参数{#parameter}
 
-**[通用参数表](../setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 明道云 应用中包含的基础架构组件路径、版本、端口等参数。 
+**[通用参数表](./setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 明道云 应用中包含的基础架构组件路径、版本、端口等参数。 
 
 通过运行`docker ps`，可以查看到 明道云 运行时所有的 Container：
 

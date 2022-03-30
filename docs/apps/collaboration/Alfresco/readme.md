@@ -121,7 +121,7 @@ Alfresco 开机启动最少需要 10 分钟，请耐心等待
 
 ## 参数{#parameter}
 
-**[通用参数表](../setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 Alfresco 应用中包含的基础架构组件路径、版本、端口等参数。 
+**[通用参数表](./setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 Alfresco 应用中包含的基础架构组件路径、版本、端口等参数。 
 
 通过运行`docker ps`，可以查看到 Alfresco 运行时所有的 Container：
 

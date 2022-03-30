@@ -10,7 +10,7 @@ tags:
 
 # 场景方案
 
-Nextcloud 可以与其他的软件平台**集成**一起使用，解决 构建企业ERP系统 过程中的各种[场景问题](https://nextcloud.com/industries/)。
+Nextcloud 可以与其他的软件平台**集成**一起使用，解决 构建企业网盘系统 过程中的各种[场景问题](https://nextcloud.com/industries/)。
 
 ## 集成 ONLYOFFICE Doc 实现文档编辑{#onlyoffice}
 

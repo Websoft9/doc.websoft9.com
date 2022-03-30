@@ -115,7 +115,7 @@ ZenTao 提供了 [插件市场](https://www.zentao.net/extension-browse.html) �
 
 ## ZenTao 参数
 
-ZenTao 应用中包含 Apache, Docker, MySQL 等组件，可通过 **[通用参数表](../setup/parameter)** 查看路径、服务、端口等参数。
+ZenTao 应用中包含 Apache, Docker, MySQL 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。
 
 下面仅列出 ZenTao 本身的参数：
 

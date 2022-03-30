@@ -3,7 +3,7 @@ sidebar_position: 2
 slug: /runtime/admin
 ---
 
-# 维护参考
+# 维护指南
 
 ## 常见问题
 

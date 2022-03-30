@@ -76,6 +76,24 @@ Nginx 配置文件可以通过[此工具](https://www.digitalocean.com/community
 
 伪静态的常见场景包括：重定向、隐藏页面后缀名等。
 
+
+### .auth_basic 认证{#authbasic}
+
+Nginx 转发应用时，可以启动 auth_basic  功能为应用设置额外的账号和密码：
+
+1. 编辑 Nginx 验证访问控制文件： */etc/nginx/.htpasswd/htpasswd.conf* 中的密码
+2. 重启 Nginx 服务后生效
+   ```
+   sudo systemctl restart nginx
+   ```
+
+也可以直接通过命令行修改：  
+
+```
+htpasswd -b /etc/nginx/.htpasswd admin new_password
+```
+
+
 ### 设置默认首页顺序
 ### 设置 IP 白名单/黑名单
 
