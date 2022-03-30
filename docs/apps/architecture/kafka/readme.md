@@ -34,7 +34,7 @@ bash /opt/kafka/bin/kafka-configs.sh
 
 ## Kafka 使用入门
 
-[Kafka Quickstart](https://kafka.apache.org/quickstart) 或以 **Github 上的项目通过 Jenkins 自动构建部署** 作为一个任务，帮助用户快速入门：
+[Kafka Quickstart](https://kafka.apache.org/quickstart) 或以 **Github 上的项目通过 Kafka 自动构建部署** 作为一个任务，帮助用户快速入门：
 
 
 ## Kafka 常用操作

@@ -134,7 +134,7 @@ RethinkDB 可视化控制台是它的重要组成部分，是其重要的产品�
 
 RethinkDB 应用中包含 Nginx, Docker 等组件，可通过 **[通用参数表](../setup/parameter)** 查看路径、服务、端口等参数。
 
-通过运行`docker ps`，可以查看到 Jenkins 运行时所有的 Container：
+通过运行`docker ps`，可以查看到 RethinkDB 运行时所有的 Container：
 
 ```bash
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES

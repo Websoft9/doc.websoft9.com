@@ -105,7 +105,7 @@ tags:
 
 Jenkins 应用中包含 Nginx, Docker, MongoDB, adminMongo 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。
 
-通过运行`docker ps`，可以查看到 Jenkins 运行时所有的 Container：
+通过运行 `docker ps`，可以查看到 Jenkins 运行时所有的 Container：
 
 ```bash
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES

@@ -109,7 +109,7 @@ ActiveMQ 日志目录： */opt/apache-activemq/data/activemq.log*
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
-| 8161   | HTTP 访问 Jenkins Web 界面 | 可选   |
+| 8161   | HTTP 访问 ActiveMQ Web 界面 | 可选   |
 | 5672   | amqp | 可选   |
 
 
