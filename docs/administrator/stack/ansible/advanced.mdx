@@ -691,9 +691,9 @@ ansible-server console
 
 连接服务器，编辑 [phpMyAdmin 配置文件](/zh/stack-components.md#phpmyadmin)，将其中的 `Require all granted` 更改为 `Require ip 192.160.1.0`，然后重启 Apache 服务
 
-#### 是否可以修改Ansible的源码路径？
+#### python_interpreter=auto 时的选择逻辑？
 
-不可以
+参考：[Interpreter Discovery](https://docs.ansible.com/ansible/latest/reference_appendices/interpreter_discovery.html)
 
 ## 故障速查
 

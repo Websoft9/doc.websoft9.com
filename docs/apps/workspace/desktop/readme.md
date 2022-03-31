@@ -25,7 +25,12 @@ Windows 10, Windows 11 等桌面连接参考相关章节：[连接 Windows](./se
 
 ### 连接 Linux 桌面
 
-连接 Linux 桌面主要有两种方式：XRDP 和 VNC 模式，推荐使用 XRDP
+连接 Linux 桌面主要有两种方式：XRDP 和 VNC 模式，推荐使用 XRDP（[Why?](https://cloudzy.com/rdp-vs-vnc-remote-desktop-comparison/)）
+
+|         | 速度 | 实现原理     | 多用户           | 平台                           | 安全协议   |
+| ------- | ---- | ------------ | ---------------- | ------------------------------ | ---------- |
+| **RDP** | 快 | 计算资源共享 | 继承操作系统用户 | Linux, Windows, macOS, Android | SSL/TLS    |
+| **VNC** | 慢 | 屏幕贡献     | 没有用户         | Linux, Windows, macOS          | SSH tunnel |
 
 #### XRDP 连接
 
@@ -127,3 +132,10 @@ systemctl restart vnc
 #### 使用秘钥对是否可以连接桌面？
 
 不可以，请先使用 **SSH** 登录服务器后，运行 `passwd` 命令为用户设置登录密码
+
+#### RDP 为什么比 VNC 更快？
+
+VNC 原理：服务器端渲染图像后，再把图像传输到客户端直接显示  
+RDP 原理：服务器端传送**渲染图像的指令**，再传输到客户端经过**显卡计算**后显示  
+
+标准的服务器没有显卡（GPU），故服务器渲染图像只能使用CPU，效率非常低。同时，传输图像比传输指令耗费的带宽更大。

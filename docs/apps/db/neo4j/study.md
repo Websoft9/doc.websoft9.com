@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 slug: /neo4j/study
 tags:
   - Neo4j 
@@ -34,6 +34,8 @@ Neo4j 是目前主流的图数据库（graph database）产品，图数据库用
 
 可能有些同学有疑问，难道关系也需要用到数据库来管理？当然，看看下面的场景：
 
+### 应用场景
+
 * **社交领域**：Facebook, Linkedin 分析每个用户的好友信息，进一步管理社交关系，实现好友推荐
 * **零售领域**：零售商和电商平台构建商品之间的关系模型链（读读[《啤酒与尿布》](https://book.douban.com/subject/3283973/)），便于做商品推荐
 * **金融领域**：从用户手机通讯录或爬取社交关系，为用户构建一个关系网画像，便于风控和催收
@@ -64,7 +66,7 @@ Neo4j 是目前主流的图数据库（graph database）产品，图数据库用
 
 学术上属性图的基本概念：一个属性图是由顶点（Vertex），边（Edge），标签（Lable），关系类型和属性（Property）组成的**有向图**。
 
-### 数据库
+### 数据库特征
 
 Neo4j 作为一个数据库管理系统，与其他数据库管理系统有非常类似的基本[数据库定义](https://neo4j.com/docs/operations-manual/current/manage-databases/introduction/)
 
@@ -130,53 +132,3 @@ Neo4j Fabric 类型视图的概念，使用单个Cypher查询在多个数据库�
 ## 性能
 
 参考官方文档：[Performance](https://neo4j.com/docs/operations-manual/current/performance/)
-
-## CLI
-
-Neo4j 通过了一系列的命令行工具，用于管理服务、导入数据、分析数据，详情参考：[Neo4j Tools](https://neo4j.com/docs/operations-manual/current/tools/)
-
-### Cypher Shell
-
-Neo4j 提供了默认的命令行工具[Cypher Shell](https://neo4j.com/docs/operations-manual/current/tools/cypher-shell/)，Cypher Shell用于运行查询和执行管理任务。它通过加密的二进制协议Bolt进行通信。
-
-```
-root@neo4j-test:~# cypher-shell
-username: neo4j
-password: *****
-Connected to Neo4j 3.5.14 at bolt://localhost:7687 as user neo4j.
-Type :help for a list of available commands or :exit to exit the shell.
-Note that Cypher queries must end with a semicolon.
-neo4j>
-```
-
-### neo4j-admin
-
-[Neo4j Admin](https://neo4j.com/docs/operations-manual/current/tools/neo4j-admin/) is the primary tool for managing your Neo4j instance. It is a command-line tool that is installed as part of the product and can be executed with a number of commands. Some of the commands are described in more detail in separate sections.
-
-```
-$ neo4j-admin help
-Usage: neo4j-admin [-hV] [COMMAND]
-Neo4j database administration tool.
-  -h, --help      Show this help message and exit.
-  -V, --version   Print version information and exit.
-Commands:
-  help                  Displays help information about the specified command
-  memrec                Print Neo4j heap and pagecache memory settings recommendations.
-  dump                  Dump a database into a single-file archive.
-  store-info            Print information about a Neo4j database store.
-  report                Produces a zip/tar of the most common information needed for remote assessments.
-  load                  Load a database from an archive created with the dump command.
-  check-consistency     Check the consistency of a database.
-  import                Import a collection of CSV files.
-  set-default-admin     Sets the default admin user.
-                        This user will be granted the admin role on startup if the system has no roles.
-  set-initial-password  Sets the initial password of the initial admin user ('neo4j'). And removes the requirement to
-                          change password on first login.
-```
-
-### neo4j
-
-```
-$neo4j -h
-Usage: neo4j { console | start | stop | restart | status | version }
-```
