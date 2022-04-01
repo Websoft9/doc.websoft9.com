@@ -37,6 +37,7 @@ Websoft9 将各个应用和组件的目录到一个约定的目录中，大大�
 | 5432| PostgreSQL 数据库端口 | 可选 |
 | 27017 | MongoDB 数据库端口 | 可选 |
 | 6379 | Redis 数据库端口 | 可选 |
+| 9200 | Elasticsearch 数据库端口 | 可选 |
 
 ## 服务{#service}
 

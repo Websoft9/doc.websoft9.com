@@ -10,14 +10,13 @@ tags:
 
 # 快速入门
 
-[Ghost](https://ghost.org) 是一个开源的博客系统，界面简洁、现代、美观，代码优雅。其核心理念是帮助知识创业者以订阅的方式向读者出售知识。系统采用 Node.js 开发，前端和后端完全分离，运行速度非常快。
+[Ghost](https://ghost.org) 是一款功能强大的知识内容变现软件，供新媒体创作者围绕其内容发布、分享和发展业务。它配备了现代工具来构建网站、发布内容、发送时事通讯并向会员提供付费订阅。
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/ghost/ghostui.jpg)
-
-
-部署 Websoft9 提供的 Ghost 之后，需完成如下的准备工作：
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/ghost/ghost-dsgui-websoft9.png)
 
 ## 准备
+
+部署 Websoft9 提供的 Ghost 之后，需完成如下的准备工作：
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
@@ -29,10 +28,10 @@ tags:
 
 ### 详细步骤
 
-1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://Internet IP*, 进入前台界面
+1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入前台界面
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/ghost/ghost-bootpage-websoft9.png)
 
-2. 访问网址：*http://域名/ghost* 或 *http://Internet IP/ghost*, 进入后台
+2. 访问网址：*http://域名/ghost* 或 *http://服务器公网IP/ghost*, 进入后台
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/ghost/ghost-register001-websoft9.png)
 
 3. 开始创建管理员账号，以邮箱地址为用户名，密码不要设置过于简单  

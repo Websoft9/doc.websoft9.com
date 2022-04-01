@@ -45,7 +45,7 @@ tags:
 6. 进入Marketplace，扩展更多的功能
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-app-websoft9.png)
    
-7. 浏览器访问网址：*https://Internet IP:9002* 查看是否安装 **OnlyOffice Document Server**
+7. 浏览器访问网址：*https://服务器公网IP:9002* 查看是否安装 **OnlyOffice Document Server**
    ![](http://libs-websoft9-com.oss-cn-qingdao.aliyuncs.com/Websoft9/DocsPicture/zh/onlyoffice/onlyoffice-documentserver-websoft9.png)
 
 8. [设置文档预览与编辑](./nextcloud/solution#onlyoffice)功能（非必要）

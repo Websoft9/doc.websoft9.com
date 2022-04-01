@@ -26,13 +26,13 @@ tags:
 
 ### 详细步骤
 
-1. 使用本地浏览器访问网址：_http://域名_ 或  *http://Internet IP*，进入登陆页面（如果页面不是登陆页面，请按照步骤 3-7 操作）
+1. 使用本地浏览器访问网址：_http://域名_ 或  *http://服务器公网IP*，进入登陆页面（如果页面不是登陆页面，请按照步骤 3-7 操作）
    ![Metabase登陆界面](https://libs.websoft9.com/Websoft9/DocsPicture/en/metabase/metabase-login-websoft9.png)
 
 2. 输入邮件地址和密码[（不知道密码？）](./setup/credentials#getpw)，登录到 Metabase 后台管理界面
    ![Metabase后台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/metabase/metabase-dashborad-websoft9.png)
 
-3. 使用本地浏览器访问网址：_http://域名_ 或  *http://Internet IP*, 就进入了软件的引导首页
+3. 使用本地浏览器访问网址：_http://域名_ 或  *http://服务器公网IP*, 就进入了软件的引导首页
    ![Metabase初始化页面](https://libs.websoft9.com/Websoft9/DocsPicture/en/metabase/metabase-start-websoft9.png)
 
 4. 软件的加载速度比较慢，耐心等待 1-3 分钟，直至出现如下的界面。

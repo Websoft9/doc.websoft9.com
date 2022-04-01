@@ -12,6 +12,37 @@ tags:
 
 ## 场景
 
+### WordPress 使用外部图片
+
+当 WordPress 的图片超过 500 张的时候，建议将图片存放到外部对象存储中（OSS），实现图片与主程序分离，加速网站访问。  
+
+1. 通过OSS的客户端工具，上传图片到对象存储
+
+2. 获取对象存储中图片的地址，类似：
+   ```
+   https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-product-screenshot.png
+   ```
+3. 登录Wordpress后台，依次打开：页面编辑-插入多媒体，将图片插入到WordPress系统中
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aliyun/aliyun-oss-adresstowp-websoft9.png)
+
+### WordPress 集成对象存储
+
+所谓 WordPress 与 对象存储集成实际上就是：将对象存储挂载到 WordPress 的 wp-upload 文件夹上。
+
+挂载 OSS 的操作并不简单，下面**OSS Upload 插件** 为例说明挂载的方法：  
+
+
+1. 准备对象存储集成所需的：Bucket，读写权限、URL、**Access Key**和**Secret Key**
+
+2. WordPress后台，安装 **OSS Upload** 插件并启用
+   
+   ![OSS](https://libs.websoft9.com/Websoft9/blog/tmp/wordpress/zh/wordpress-oss-plugin-websoft9.png)
+   
+3. 对 OSS Upload 插件进行配置，关联将要连接的对象存储
+
+4. 设置资源本地备份与同步
+  ![OSS](https://libs.websoft9.com/Websoft9/blog/tmp/wordpress/zh/wordpress-oss2-websoft9.png)
+
 ### 备份与恢复
 
 WordPress插件库中有数量众多的备份插件，我们推荐使用：[UpdraftPlus WordPress Backup Plugin ](https://wordpress.org/plugins/updraftplus/)
@@ -26,7 +57,10 @@ WordPress插件库中有数量众多的备份插件，我们推荐使用：[Updr
 
 ### 升级
 
-WordPress 升级包括：WordPress 内核升级、插件升级和主题升级。这三者都可以通过 WordPress 后台进行在线升级，下图是升级提醒：  
+升级之前必须备份，这个是基本素养。  
+
+WordPress 升级包括：内核升级、插件升级和主题升级。这三者都可以通过 WordPress 后台进行在线升级，下图是升级提醒：  
+
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-upgrade-websoft9.png)
 
 由于这三者分别属于不同的开发者，升级后可能会导致不兼容的现象。具体表现有：
@@ -41,7 +75,7 @@ WordPress 升级包括：WordPress 内核升级、插件升级和主题升级。
 
 ##### 一键升级
 
-WordPress 内核升级非常简单，当进入后台之后系统会提示需要升级，点击升级即可（ 特别注意：Wordpress应用程序升级之前务必进行完整备份，以保证备份出现差错之后能够复原。）
+WordPress 内核升级非常简单，当进入后台之后系统会提示需要升级，点击升级即可。
 
  ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-wordpresscoreupdate-websoft9.png)
 
@@ -71,51 +105,87 @@ WordPress 内核升级非常简单，当进入后台之后系统会提示需要�
 2. 通过 【WordPress 后台】>【外观】>【主题】>【添加】>【上传主题】的方式，完成主题安装
    ![Wordpress 上传主题](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-addthemes-websoft9.png)
 
+
+### 代码植入处理{#insertcode}
+
+WordPress 由于被广泛使用，导致安全漏洞被无限放大，其中WordPress网站被植入第三方代码是最常见的安全故障。
+
+* 源码中植入非常明显的代码
+* 源码中植入难以察觉的代码
+* 数据库中被植入
+
+经过实践，下面介绍一种简单有效的处理办法
+
+1. 通过在线安全检查网站[sitecheck.sucuri.net](https://sitecheck.sucuri.net)进行排查，初步定义被植入的内容
+2. 登录WordPress后台，安装安全插件[Wordfence Scan Enabled](https://wordpress.org/plugins/wordfence/)
+3. 运行Wordfence Scan Enabled，启动网站健康检查
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-wordfence-websoft9.png)
+4. 对于“Critical”标记的结果，手工一一处理
+
+其他扫描工具：
+
+1. Quttera Web Malware Scanner 
+2. Anti-Malware Security and Brute-Force Firewall  
+
 ## 故障速查
 
-####  WordPress 出现病毒导致乱码？
+#### 配置HTTPS后，网站部分资源无法加载？{#httpsmore}
 
-由于被广泛使用，导致安全漏洞被无限放大，其中WordPress网站被[植入第三方代码](././administrator/security/emergency#insertcode)是最常见的安全故障。 
+在完成 https 的配置后，可能会出现网站无法加载 css 等静态文件，特别是是对于经过二次开发过的 WordPress 会更为常见。
 
-#### WordPress 数据库服务无法启动
+问题原因及对策
 
-数据库服务无法启动最常见的问题包括：磁盘空间不足，内存不足，配置文件错误。  
-建议先通过命令进行排查  
+1. 特殊插件导致？ 某些插件自带 HTTPS 开关，需要根据实际情况开启或关闭。 
+2. 开了 CDN 服务？ 编辑 WordPress 根目录下的 **wp-config.php** 文件，增加如下代码
 
-```shell
-# 查看磁盘空间
-df -lh
+    ```
+       define('FORCE_SSL_ADMIN', true);
+       define('FORCE_SSL_LOGIN', true);
+       $_SERVER['HTTPS'] = 'ON';
+       define( 'CONCATENATE_SCRIPTS', false );
+    ```
 
-# 查看内存使用
-free -lh
-```
+#### 网站访问 “....并非完全安全”？
 
-#### WordPress运行中，频繁出现数据库连接错误？
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/avada/https-notallsafe-websoft9.png)
 
-诊断原因：可能性最大的原因是内存不足导致数据库运行异常
-解决方案：增加内存+启用CDN
+原因是由于 WordPress 网页中含有一部分 HTTP 开头的图片等静态链接资源，需要手工逐一修改
+
+####  出现病毒导致乱码？
+
+由于被广泛使用，导致 WordPress 安全漏洞被无限放大，其中WordPress网站被[植入第三方代码](#insertcode)是最常见的安全故障。 
+
+#### 频繁出现数据库连接错误？
+
+诊断原因：可能性最大的原因是内存不足导致 WordPress 数据库运行异常  
+解决方案：增加内存+启用CDN  
 
 > CDN可以在给网站加速的同时，大大降低服务器内存的开销
 
-#### WordPress上传图片出错？
+#### 上传图片出错？
 
-WordPress上传文件出错，有几种可能性：  
+WordPress上传文件出错，有几种可能性： 
+
 1. 图片大小超过服务器限定的要求  
 解决方案：请参考本章环境管理-&gt;PHP配置中的修改上传文件大小  
+
 2. 图片实际的格式与后缀不一致。  
 解决方案：例如一个 WordPress9.jpg的图片的真实格式是Wordpress9.jpeg，上传的时候会报错，如果把后缀改为jpeg，上传正常。实际上，真实格式与后缀不一致的时候，在Windows系统的文件中也不会有预览效果
+
 3. 权限问题（IIS中比较常见）
 
-#### WordPress出现解决正在执行例行维护请一分钟后回来
+#### 正在执行例行维护请一分钟后回来？
 
 出现这个提示的原因是在网站Wordpress安装目录下生成了.maintenance文件
 
 * 如果存在将其删除即可,恢复正常. 
 * 如果不存在,那么新建一个.maintenance，内容为空白，刷新，恢复正常后再删除它
 
-#### WordPress不能发送邮件的原因
+#### 不能发送邮件？
 
-WordPress默认是通过mail\(\)函数发送邮件，必须要求服务器本身配置好了邮件功能。实际中，将服务器改造成邮件服务器，是一件非常复杂的工作，且难以维护。因此，建议安装一个SMTP插件来解决发送邮件问题：WP-Mail-SMTP
+WordPress 默认是通过mail()函数发送邮件，必须要求服务器本身配置好了邮件功能。  
+
+实际中，将服务器改造成邮件服务器，是一件非常复杂的工作，且难以维护。因此，建议安装一个SMTP插件来解决发送邮件问题：WP-Mail-SMTP
 
 #### WordPress 5.0 换回老版”Classic Editor”经典编辑器
 

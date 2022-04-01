@@ -75,7 +75,7 @@ Graylog 支持如下最简答的部署方式：
 
 #### 如何访问 Graylog API?
 
-访问的 URL 为：_https://Internet IP:9001/api/api-browser/global/index.html_。缺少 /global/index.html 是无法访问的
+访问的 URL 为：_https://服务器公网IP:9001/api/api-browser/global/index.html_。缺少 /global/index.html 是无法访问的
 
 #### 如果没有域名是否可以部署 Graylog？
 

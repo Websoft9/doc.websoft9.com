@@ -30,7 +30,7 @@ tags:
 
 #### 社区版
 
-1. 使用本地 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://Internet IP*, 进入初始化页面
+1. 使用本地 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入初始化页面
    ![Odoo 社区版初始化页面](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-startcreatedb-websoft9.png)
 
 2. 填写好所有参数，点击【create database】按钮，开始初始化安装。
@@ -43,7 +43,7 @@ tags:
 
 部署 Odoo 企业版后，根据镜像引导页获取试用授权，便可以免费试用一个月。
 
-1. 使用本地 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://Internet IP*, 进入欢迎页面
+1. 使用本地 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入欢迎页面
   ![Odoo 欢迎页面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/odoo/odoo-eewelcome-websoft9.png)
 
 2. 获取授权后，登录云服务器，运行如下命令解锁企业版

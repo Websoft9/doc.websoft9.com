@@ -31,4 +31,4 @@ yum/apt 安装方式
 
 #### 是否有可视化的管理工具？
 
-默认开启 HAProxy Statistics Report 可视化界面，访问：*http://Internet IP:1080/haproxy* 即可
+默认开启 HAProxy Statistics Report 可视化界面，访问：*http://服务器公网IP:1080/haproxy* 即可

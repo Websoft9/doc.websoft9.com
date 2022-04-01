@@ -27,7 +27,7 @@ tags:
 
 ### 详细步骤
 
-1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://Internet IP*, 就进入了Scratch
+1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 就进入了Scratch
 ![Scratch初始化页面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/scratch/scratch-gui-websoft9.png)
 
 2. Scratch首次加载数据超过20M，如果您的网络带宽不足的话，加载会很慢，耐心等待

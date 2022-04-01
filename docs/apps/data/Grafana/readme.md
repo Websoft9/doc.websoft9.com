@@ -26,7 +26,7 @@ tags:
 
 ### 详细步骤
 
-1. 使用本地电脑的浏览器访问网址：_http://域名_ 或  *http://Internet IP*, 就进入登录页面
+1. 使用本地电脑的浏览器访问网址：_http://域名_ 或  *http://服务器公网IP*, 就进入登录页面
    ![Grafana 登录](https://libs.websoft9.com/Websoft9/DocsPicture/en/grafana/grafana-login-websoft9.png)
 
 2. 输入默认的用户名和密码（[查看](/zh/stack-accounts.md#grafana)），系统会提示修改密码

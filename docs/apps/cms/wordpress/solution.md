@@ -119,72 +119,8 @@ WordPress相比Discuz来说更为流行，以Wordpress为主页是大多数用�
 1. 使用phpMyAdmin（登录账号请使用discuz所用到的数据库账号）登录，验证你填写的数据库账号是否与实际匹配
 2. 请到服务器上删除./data/install.lock文件
 3. 通过网址：*https://ip/discuz/install* 或 *https://域名/install* 重装（一定要加上/install）
-
-## WordPress 使用对象存储{#wordpress-oss}
-
-当WordPress的图片超过500张的时候，建议将图片存放到对象存储中（一般称之为OSS）  
-
-WordPress使用OSS有两种方式，第一种是通过OSS客户端上传文件，然后在WordPress中调用；第二种是将OSS与WordPress集成，通过WordPress后台上传的文件就自动存放到OSS中。
-
-### 手工上传文件到 OSS（推荐）
-
-1. 通过OSS的客户端工具，上传图片到对象存储
-2. 获取对象存储中图片的地址，地址一般类似如下：
-   ```
-   https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-product-screenshot.png
-   ```
-3. Wordpress后台-页面编辑-插入多媒体，将图片插入到WordPress系统中
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aliyun/aliyun-oss-adresstowp-websoft9.png)
-
-### WordPress 与 OSS 集成
-
-1. 将OSS挂载到 WordPress 的 wp-upload 文件夹
-2. 每次通过 WordPress 上传的文件，就自动存放到了OSS 中
-
-> 挂载 OSS 的操作比较复杂，需要用户自主研究
-
-### WordPress 使用阿里云 OSS 对象储存
-
-下面以阿里云OSS对象存储为例，介绍在WordPress中使用OSS，实现WordPress后台的页面或文章使用资源时自动上传到OSS，并关联使用。具体的操作分两步：在阿里云OSS管理中创建Bucket存储空间；在WordPress后台中配置OSS。
-
-1. 创建 Bucket存储空间
-
-   进入阿里云控制台，可通过菜单的【产品与服务】>【对象存储 OSS】进入OSS控制台，然后点击创建 Bucket按钮创建存储空间，如图：
-   ![OSS](https://libs.websoft9.com/Websoft9/blog/tmp/wordpress/zh/oss-websoft9.png)
-   
-   创建 Bucket 存储空间
-   ![OSS](https://libs.websoft9.com/Websoft9/blog/tmp/wordpress/zh/oss-bucket-websoft9.png)
-   ![OSS](https://libs.websoft9.com/Websoft9/blog/tmp/wordpress/zh/oss-bucket2-websoft9.png)
-   
-   > 1、【地域】建议与服务器所在地就近选择，如果使用的是阿里云的服务器，建议选择和服务器同区域，这样可以通过内网互通节约上传流量成本，同时上传速度也快很多的。
-   > 
-   > 2、【读写权限】选择【公共读】，这样可以实现图片正常访问。
-
-   ![OSS](https://libs.websoft9.com/Websoft9/blog/tmp/wordpress/zh/oss-bucket3-websoft9.png)
-   > 通过【概述】查看OSS存储空间对外的访问URL，通过【传输管理】-【域名管理】可以通过CNAME域名解析，将一个更加友好的域名，如 images.websoft9.com ，指向默认的URL。
-
-2. WordPress后台OSS配置
-
-   进入 WordPress 后台，进入【插件】管理，下载阿里云 OSS Upload 插件并启用
-   
-   ![OSS](https://libs.websoft9.com/Websoft9/blog/tmp/wordpress/zh/wordpress-oss-plugin-websoft9.png)
-   
-   对 OSS Upload 插件进行配置，使之关联阿里云的OSS对象存储
-   
-   ![OSS](https://libs.websoft9.com/Websoft9/blog/tmp/wordpress/zh/wordpress-oss-websoft9.png)
-   ![OSS](https://libs.websoft9.com/Websoft9/blog/tmp/wordpress/zh/oss-bucket3-websoft9.png)
-   
-   > **Access Key**和**Secret Key**登录阿里云后台获取：点击阿里云右上角用户头像，选择**accesskeys**，然后创建好AccessKey
-   > 
-   > 在阿里云的OSS管理界面的【概述】【访问域名】【外网访问】获取相关访问链接和地域节点。配置后点击【地域节点】下方的【测试一下】查看网络连通及读写操作，出现“写入正常, 读取正常, 删除正常”，表示配置成功。
-
-  设置资源本地备份与同步。建议勾选，在网站的前期配置和文件同步过程中，可避免图片丢失无法恢复的问题。
   
-  设置完成后点击【保存更改】按钮，然后可以再点击【上传整个本地存储目录】来同步文件到OSS，这个过程可能需要些时间，同步完成后，网站前台页面的图片可以正常访问，表示配置成功。
-  ![OSS](https://libs.websoft9.com/Websoft9/blog/tmp/wordpress/zh/wordpress-oss2-websoft9.png)
-  
-
-## WordPress 使用 Avada 主题建站{#wordpress-avada}
+## Avada 主题指南{#avada}
 
 Avada是一款在热门的WordPress主题，设计简单大方，支持所见即所得的可视化编辑与页面布局，内置超过20个免费模板，能够基于模板快速构建网站。Avada在Themeforest上累计销量超过37万次，其他下载和二次分发不计其数。适用于企业站和相册站、电商站、博客站。
 

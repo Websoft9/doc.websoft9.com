@@ -38,7 +38,7 @@ tags:
 3. 安装完成，手机扫描右侧二维码可以进入移动端页面。  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuzq-installok-websoft9.png)
 
-4. 本地电脑浏览器访问网址：输入*http://域名/admin* 或 *http://Internet IP/admin*, 进入登录页面
+4. 本地电脑浏览器访问网址：输入*http://域名/admin* 或 *http://服务器公网IP/admin*, 进入登录页面
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuzq-admin-websoft9.png)
 
 5. 输入账号密码（[不知道账号密码？](./setup/credentials#getpw)），成功登录到 Discuz!Q 后台 

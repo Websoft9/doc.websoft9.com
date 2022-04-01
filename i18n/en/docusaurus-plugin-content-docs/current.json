@@ -4,7 +4,7 @@
     "description": "The label for version current"
   },
   "sidebar.tutorialSidebar1.category.安装": {
-    "message": "安装",
+    "message": "Installation",
     "description": "The label for category 安装 in sidebar tutorialSidebar1"
   },
   "sidebar.tutorialSidebar1.category.云平台安装": {
@@ -728,7 +728,7 @@
     "description": "The label for category API in sidebar docs"
   },
   "sidebar.docs.category.常见问题": {
-    "message": "常见问题",
+    "message": "FAQ",
     "description": "The label for category 常见问题 in sidebar docs"
   }
 }

@@ -31,7 +31,7 @@ WAMP 集成 PHP 环境，由 Bitnami  维护。它除 Apache,MySQL,PHP 之外，
 
 ### 详细步骤
 
-1. 使用电脑浏览器访问网址：*http://Internet IP/9panel*, 就进入引导页面9Panel
+1. 使用电脑浏览器访问网址：*http://服务器公网IP/9panel*, 就进入引导页面9Panel
 
    ![9panel](https://libs.websoft9.com/Websoft9/DocsPicture/en/wampserver/wampserver-9panelui.png)
 

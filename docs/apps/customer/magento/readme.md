@@ -8,7 +8,7 @@ tags:
 
 # 快速入门
 
-[Magento](https://magento.com) 是全球知名的开源电子商务系统之一，采用php开发，使用Zend Framwork框架，支持B2C、B2B等应用场景。设计得非常灵活、健壮，具有模块化架构体系和丰富的功能组件，是企业级商城建设子首选系统。Magento易于与第三方应用系统无缝集成，可处理海量并发请求，方便通过配置和二次化开发建设一个多种用途、多渠道的电子商务门户。
+[Magento Open Source](https://business.adobe.com/products/magento/open-source.html) 是一个老牌的开源电子商务平台，它满足 B2C 电商入门所需的一切。
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magentogui-websoft9.png) 
 
@@ -44,25 +44,13 @@ Magento 最新版本已经采用命令行完成了安装向导，即可直接使
 
 若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
 
-**本部署包采用的哪个数据库来存储 Magento 数据**
-
-安装在服务器上的 MySQL 数据库, 参阅：[MySQL 管理](#)
-
-**采用云厂商提供的 RDS 来存储 Magento 数据**
+**想将 Magento 默认的 MySQL 数据库更换为自己的 RDS？**
 
 执行下面命令可以更换 Magento 所使用的数据库
 
 ```
 magento setup:config:set --db-host=DB-HOST --db-name=DB-NAME --db-user=DB-USER --db-engine=DB-ENGINE --db-password=DB-PASSWORD
 ```
-
-**Cron job问题处理（Windows）**
-
-Windows下安装 Magento 后，若出现 **One or more indexers are invalid. Make sure your Magento cron job is running** 的提示,请执行以下步骤:
-
-1. 双击右下角xampp界面,点击shell按钮打开命令行窗口;
-2. 输入 `php htdocs\magento\bin\magento indexer:reindex` 即可；
-3. 回到magento界面，刷新页面，该问题即可解决。
 
 ## Magento 使用入门
 
@@ -76,16 +64,22 @@ Windows下安装 Magento 后，若出现 **One or more indexers are invalid. Mak
 建议通过 Magento 后台在线安装扩展：
 
 1. 确保你的 Magento 已经[连接到官方的 Marketplace](/zh/stack-installation.html#连接-magento-marketplace)
+
 2. 在 Marketplace 找到您需要的扩展或主题，购买完成，点击【Install】
+
 3. 登录 Magento 后台，打开：【SYSTEM】>【Web Setup Wizard】>【System Configration】 
+
 4. 在左侧菜单栏选择【EXTENSION MANAGER】，单击【Refresh】 将购买信息同步到网站，然后通过【Review and Install】查看
+
     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-theme-1-websoft9.png)
+
    > Refresh 可能会出现同步失败，请多次刷新
 
-5. 在列表内选择插件或主题，即可进行安装；
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-theme-2-websoft9.png)
+5. 在列表内选择插件或主题，即可进行安装
+
 6. 安装时会进行系统环境检查，条件全面满足才可以开始安装
-7. 安装过程时间较长且报错，请查看[故障原因](/zh/else-troubleshooting.html#magento-在线升级或在线安装插件报错？)
+
+7. 安装过程时间较长且报错，请查看[故障原因](./magento/admin##updateerror)
 
 ### 连接 Magento Marketplace{#marketplace}
 
@@ -94,29 +88,36 @@ Windows下安装 Magento 后，若出现 **One or more indexers are invalid. Mak
 ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setuptools-websoft9.png)  
 
 1. 到官方 [注册 Magento 账号](https://account.magento.com/applications/customer/login)
+
 2. 登录 Marketplace，打到My Profile 的 Access Keys 页面新建一个自己的 Access Key; 
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-1-websoft9.png)  
+
 3. 保存 Access Key
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-savemykey-websoft9.png)  
+
 4. 登录自己的 Magento 后台，依次打开：【SYSTEM】> 【Web Setup Wizard】
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-websetupwz-websoft9.png) 
+
 5. 在【System config】设置项中输入你在 Marketplace 上获取的 Access Key
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setmkkey-websoft9.png) 
+
 6. 成功保存，连接成功
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setmkkeyss-websoft9.png) 
+
 7. 连接后，就可以很方便的使用 Marketplace 上的资源
 
-### Magento 安装中文包{#setlanguage}
+### 安装中文包{#setlanguage}
 
-中文包 zh_Hans_CN 已经存在 */data/wwwroot/Magento/vendor/magento/language-zh_hans_cn* 目录下  
+中文包 zh_Hans_CN 已经存在 [Magento 多语言目录](#path)中 
 
 需要启用中文请完成如下两个步骤：
 
 1.  如果你希望你的前台是中文，进入到Magento管理员界面，后台 Stores > Configuration > General > Local 中设置Local为Chinese(China)
     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setlan-websoft9.png)
+
 2.  如果你希望你的账户后台是中文，那么请在管理员页面右上角点击你的账户 Account Setting > Interface Local 中设置 Interface Local 为Chinese（China）
 
-### Magento Cache
+### 刷新缓存
 
 Cache（缓存）是 Magento 的一项重要设置：
 
@@ -158,11 +159,11 @@ Cache（缓存）是 Magento 的一项重要设置：
      ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-5-websoft9.png)
      
 
-### 配置域名{#dns}
+### 域名额外配置（修改 URL） {#dns}
 
-1. 先配置 web 服务器 Apache 或 Nginx ：参考 **[域名五步设置](./dns#domain)** 过程，
+**[域名五步设置](./dns#domain)** 完成后，需设置 Magento URL:
 
-2. 再配置 Magento 参数：通过SSH连接云服务器，运行下面的 CLI 命令进行参数配置
+通过SSH连接云服务器，运行下面的 CLI 命令进行参数配置
    
    ```shell
    cd /data/wwwroot/magento
@@ -170,11 +171,9 @@ Cache（缓存）是 Magento 的一项重要设置：
    php bin/magento config:set web/secure/base_url http://www.mydomain.com/ # 修改成您的实际域名，必须以 / 结束
    ```
 
-### 配置 HTTPS{#https}
+### HTTPS 额外设置{#https}
 
-1. 先配置 web 服务器 ： **[HTTPS 配置](./dns#https)**
-
-2. 再配置 Magento 参数：通过SSH连接云服务器，运行下面的 CLI 命令进行参数配置
+**[标准 HTTPS 配置](./dns#https)** 完成后，还需运行下面的 CLI 命令进行配置：
 
 ```
 cd /data/wwwroot/magento
@@ -184,7 +183,7 @@ php bin/magento cache:flush  #将基础URL更改为https并刷新缓存
 
 ## 参数{#parameter}
 
-**[通用参数表](./setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 Magento 应用中包含的基础架构组件路径、版本、端口等参数。 
+Magento 应用中包含Apache, Nginx, Docker, MySQL, phpMyAdmin, Varnish, RabbitMQ, Elasticsearch等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 Magento 运行时所有的 Container：
 
@@ -199,37 +198,32 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 Magento 安装目录： */data/wwwroot/magento*  
 Magento 配置文件： */data/wwwroot/magento/app/etc/env.php*  
+Magento 多语言目录： */data/wwwroot/magento/vendor/magento/language-zh_hans_cn*   
+Magento 命令行工具：* /data/wwwroot/magento/bin/magento*  
+
 
 > Magento 配置文件中包含数据库连接信息，更改了 MySQL 数据库账号密码，此处也需要对应修改
 
 ### 端口{#port}
 
-| 端口号 | 用途                                          | 必要性 |
-| ------ | --------------------------------------------- | ------ |
-| 80   | 通过 HTTP 访问 Magento | 必要   |
-| 443   | 通过 HTTPS 访问 Magento | 可选   |
-| 3306   | 用于远程连接 MySQL | 可选   |
-
+无特殊端口
 
 ### 版本{#version}
 
 ```shell
-sudo cat /data/logs/install_version.txt
+magento -V
 ```
 
 ### 服务{#service}
 
 ```shell
-
+systemctl start | stop | restart | status magento
 ```
 
 ### 命令行{#cli}
 
-Magento提供了强大CLI工具 `magento`，需要带路径使用：  
-例如，**sudo /data/wwwroot/magento/bin/magento**
-
 ```
-$ /data/wwwroot/magento/bin/magento
+$ /data/wwwroot/magento/bin/magento list
 Magento CLI 2.4.2
 
 Usage:
@@ -398,7 +392,3 @@ Available commands:
 Magento API 支持 REST（表述性状态传递）和 SOAP（简单对象访问协议）。 在 Magento 2 中，REST 和 SOAP 的 Web API 覆盖范围是相同的。
 
 参考[官方文档](https://devdocs.magento.com/guides/v2.2/get-started/bk-get-started-api.html)
-
-### 参考{#ref}
-
-[《PHP运行环境》](./runtime/php) 

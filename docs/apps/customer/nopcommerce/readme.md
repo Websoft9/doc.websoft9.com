@@ -9,14 +9,13 @@ tags:
 
 # 快速入门
 
-[nopCommerce]([nopcommerce.com](https://www.nopcommerce.com))是.NET领域最优质的企业级商城平台，适合每个商家的需要：它强大的企业和小型企业网站遍布世界各地的公司销售实体和数字商品。nopCommerce是一个透明且结构良好的解决方案，它结合了开源和商业软件的最佳特性。在全球拥有数万名开发者，为你提供源源不断的插件扩展。
+[nopCommerce](https://nopcommerce.com/zh) 基于 .NET 技术的 100% 开源的企业级电子商务系统，它集成了 1,500+ 插件，主题，语言包。它满足中小企业以及大型企业的电商场景，支持多供应商和多商店功能（B2B和B2C）。
 
 ![](https://netmarket.oss.aliyuncs.com/product/f8b1e93e-fba8-4fe3-b349-2a393ac01aa8.png)
 
+## 准备
 
 部署 Websoft9 提供的 NopCommerce 之后，需完成如下的准备工作：
-
-## 准备
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
@@ -28,7 +27,7 @@ tags:
 
 ### 详细步骤
 
-1. 本地浏览器访问：**[http://域名](http://域名)** 或 **[http://公网IP](http://公网IP)** 进入安装向导（首选域名访问方式安装）
+1. 本地浏览器访问：*http://域名* 或 *http://服务器公网IP* 进入安装向导
     
 2. 选择语言，设置管理员账号信息， 填写数据库信息（默认账号密码是：sa/websoft9!）  
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/nopcommerce/nopcommerce-install-websoft9.png)
@@ -38,15 +37,12 @@ tags:
 4. 安装成功后，您会看到如下界面  
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/nopcommerce/nopcommerce-front-websoft9.png)
 
-5. 进入后台管理： **http://域名/Admin**  或  **http://公网IP/Admin**
+5. 访问[后台地址](#path)，开始管理 NopCommerce
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/nopcommerce/nopcommerce-backend-websoft9.png)
-
-> **Tomcat Virtual Host Manager默认账号和密码**：*tomcat/tomcat* 
-> 管理地址：[http://127.0.0.1:8080](http://127.0.0.1:8080)
 
 ### 出现问题？
 
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
+若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题。
 
 ## NopCommerce 使用入门
 
@@ -102,6 +98,10 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 | 80   | 通过 HTTP 访问 NopCommerce | 必要   |
 | 443   | 通过 HTTPS 访问 NopCommerce | 可选   |
 
+### 网址
+
+NopCommerce 后台地址： *http://URL/Admin*  
+
 ### 版本{#version}
 
 ```shell
@@ -115,6 +115,3 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 ### 命令行{#cli}
 
 ### API
-
-### 参考{#ref}
-

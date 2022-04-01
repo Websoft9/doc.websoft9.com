@@ -26,7 +26,7 @@ tags:
 
 ### 详细步骤
 
-1. 使用本地电脑的浏览器访问网址：_http://域名/knowage_ 或  *http://Internet IP/knowage*, 进入登录界面
+1. 使用本地电脑的浏览器访问网址：_http://域名/knowage_ 或  *http://服务器公网IP/knowage*, 进入登录界面
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/knowage/knowage-login-websoft9.png)
 
    > 也可以通过 http://公网 IP:8080/knowage 访问本应用

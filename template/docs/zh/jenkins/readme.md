@@ -101,6 +101,28 @@ tags:
 
 4. 测试邮件是否可以发送
 
+### 域名额外配置（修改 URL） {#dns}
+
+**[域名五步设置](./dns#domain)** 完成后，需设置 Jenkins URL:
+
+通过SSH连接云服务器，运行下面的 CLI 命令进行参数配置
+   
+   ```shell
+   cd /data/wwwroot/jenkins
+   php bin/jenkins config:set web/unsecure/base_url http://www.mydomain.com/ # 修改成您的实际域名，必须以 / 结束
+   php bin/jenkins config:set web/secure/base_url http://www.mydomain.com/ # 修改成您的实际域名，必须以 / 结束
+   ```
+
+### HTTPS 额外设置{#https}
+
+**[标准 HTTPS 配置](./dns#https)** 完成后，还需运行下面的 CLI 命令进行配置：
+
+```
+cd /data/wwwroot/jenkins
+php bin/jenkins setup:store-config:set --use-secure=1 --use-secure-admin=1 --base-url-secure="https://www.yourdomain.com/"
+php bin/jenkins cache:flush  #将基础URL更改为https并刷新缓存
+```
+
 ## Jenkins 参数
 
 Jenkins 应用中包含 Nginx, Docker, MongoDB, adminMongo 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。

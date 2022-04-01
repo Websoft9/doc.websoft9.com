@@ -241,7 +241,7 @@ tags:
 
 #### AWX API 地址是多少？
 
-http://AWX Server Internet IP/api/
+http://AWX Server 服务器公网IP/api/
 
 #### AWX 是否支持 Ansible Galaxy？
 

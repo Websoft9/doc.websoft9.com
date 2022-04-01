@@ -29,7 +29,7 @@ tags:
 
 ### 详细步骤
 
-1. 使用本地 Chrome 或 Firefox 浏览器访问网址：*http://Internet IP/9panel*, 就进入引导页面9Panel
+1. 使用本地 Chrome 或 Firefox 浏览器访问网址：*http://服务器公网IP/9panel*, 就进入引导页面9Panel
    ![9panel](https://libs.websoft9.com/Websoft9/DocsPicture/en/wampserver/wampserver-9panelui.png)
 
 2. 通过 9Panel 可以快速了解镜像基本情况，管理数据库，找到帮助文档，寻求人工支持

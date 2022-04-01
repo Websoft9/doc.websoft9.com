@@ -1,11 +1,9 @@
 ---
 sidebar_position: 3
-slug: /kodcloud/admin
+slug: /iredmail/admin
 tags:
-  - KodCloud
-  - 网盘
-  - 知识管理
-  - 团队协作
+  - iRedMail
+  - 企业邮箱
 ---
 
 # 维护指南
