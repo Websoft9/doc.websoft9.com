@@ -8,9 +8,11 @@ tags:
 
 # 维护指南
 
+本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../installation/setup/) 相关章节。
+
 ## 场景
 
-### 备份与恢复
+### 在线备份
 
 通过安装 Joomla 扩展，可以实现后台在线备份：
 
@@ -27,7 +29,7 @@ tags:
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-restore-websoft9.
 
 
-### 升级
+### 在线升级
 
 Joomla 提供了非常人性化的在线升级方案，根据系统的更新提示完成升级
 
@@ -56,56 +58,11 @@ Joomla 提供了非常人性化的在线升级方案，根据系统的更新提�
 
 除以下列出的 Joomla 故障问题之外， [通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案。 
 
-#### Joomla 重定向错误？
-
-多语言下，重定向错误比较常见。例如：打开您的 Joomla 中文版会出现重定向错误
-
-处理办法：分析网站根目录下的 `.htaccess` 文件，看看有没有死循环规则
-
-#### 修改了数据库密码 Joomla 不能访问？
-
-若已完成 Joomla 安装向导，再通过 phpMyAdmin 修改数据库密码，Joomla 就会连不上数据库  
-
-需要修改 [Joomla 配置文件](../joomla#path) 对应的数据库 password 参数即可。
-
-
 ## 问题解答
 
 #### Joomla 支持多语言吗？
 
 支持多语言（包含中文），建议在初始化安装的时候安装多语言
-
-#### Joomla(LAMP)，Joomla(LNMP)等商品括号中的 LAMP,LNMP 是什么意思？
-
-LAMP和LNMP代表支持 Joomla 运行所对应的基础环境，具体参考[环境说明](./runtime/php)
-
-#### 是否可以使用云平台的 RDS 作为 Joomla 的数据库？
-
-可以，修改 [Joomla 配置文件](../joomla#path) 即可
-
-#### Joomla能在 Windows 服务器上运行吗？
-
-可以，但是我们推荐在运行 Joomla 效率更高的 Linux 服务器上运行
-
-#### Joomla数据库连接配置信息在哪里？
-
-数据库配置信息 [Joomla 配置文件](../joomla#path)中
-
-#### 如果没有域名是否可以部署 Joomla？
-
-可以，访问`http://服务器公网IP` 即可
-
-#### 数据库 root 用户对应的密码是多少？
-
-密码存放在服务器相关文件中：`/credentials/password.txt`
-
-#### 是否有可视化的数据库管理工具？
-
-有，内置phpMyAdmin，访问地址：http://服务器公网IP:9090
-
-#### 如何禁止phpMyAdmin访问？
-
-连接服务器，编辑 phpMyAdmin 配置文件，将其中的 Require all granted 更改为 Require ip 192.160.1.0，然后重启 Apache 服务
 
 #### 在组件中如何加载其他扩展的语言文件?
 
@@ -129,6 +86,6 @@ LAMP和LNMP代表支持 Joomla 运行所对应的基础环境，具体参考[环
 
 上面的代码没有什么好解释的。需要什么扩展就将extension变量赋值即可。
 
-#### 是否可以修改 Joomla 的源码路径？
+#### 如何设置数据库默认连接？
 
-可以，通过修改 [虚拟主机配置文件](../apache#virtualHost)中相关参数
+向文件 *path/joomla/installation/model/forms/database.xml* 中，添加 default="xxxx" 即可

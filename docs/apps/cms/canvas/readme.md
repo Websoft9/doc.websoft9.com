@@ -12,10 +12,9 @@ tags:
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/canvas/canvas-gui-websoft9.png)
 
+## 准备
 
 部署 Websoft9 提供的 Canvas 之后，需完成如下的准备工作：
-
-## 准备
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
@@ -58,9 +57,9 @@ Canvas 对服务器的配置要求极高，最低配置为2核8G
 
 ## Canvas 常用操作
 
-### 初始化 Canvas
+### 重置 Canvas 至初始状态
 
-如果你忘记了管理员密码，又无法通过邮件找回密码，就只能初始化 Canvas。
+如果你忘记了 Canvas  管理员密码，又无法通过邮件找回密码，重置至 Canvas 初始状态。
 
 使用 SSH 连接服务器，运行下面的命令后，就可以使用账号：help@websoft9.com/websoft9 登录。
 
@@ -95,33 +94,22 @@ Canvas 对服务器的配置要求极高，最低配置为2核8G
 
 3. 给 Canvas [配置域名](./dns#domain)，并确保可以访问
 
-   > 配置域名很重要，否则即使收到邮件，里面的链接也无法打开。如果没有配置 SSL 证书，打开链接时会有安全提示，忽略即可。
+   > 配置域名很重要，否则即使收到邮件，里面的链接也无法打开。
 
-4. 重启 Apache 服务
+4. 给 Canvas [配置 HTTPS 访问](./dns#https)（可选），否则打开邮件中的链接时会有安全提示
+
+4. 重启 Apache 服务后生效
    ```
-   systemctl restart apache
+   sudo systemctl restart apache
    ```
-     
 
 > 很多用户反馈，Canvas部署在中国大陆之外（比如香港）区域，方可成功发出邮件。原因未知。
 
-### 配置域名{#dns}
-
-参考： **[域名五步设置](./dns#domain)** 
 
 ### Canvas 更换域名
 
-如果 Canvas 需要更换域名，具体操作如下：
+如果 Canvas 需要更换域名，除[ Canvas 配置文件](#path)之外，还需修改 Canvas 根目录下 `.htaccess` 中域名有关的值。  
 
-1. 完成新的域名解析和域名绑定
-2. 检查 [Canvas 配置文件](#path)中的域名值
-3. 检查 Canvas 根目录下 `.htaccess` 文件中域名值
-4. [重启 PHP-FPM 服务](./setup/parameter#service)后生效
-
-
-### 配置 HTTPS{#https}
-
-参考： **[HTTPS 配置](./dns#https)**
 
 ### Canvas 安装插件{#plugin}
 
@@ -144,7 +132,7 @@ Canvas 对服务器的配置要求极高，最低配置为2核8G
 
 ## 参数{#parameter}
 
-**[通用参数表](./setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 Canvas 应用中包含的基础架构组件路径、版本、端口等参数。 
+Canvas 应用中包含 Ruby, Node.js, Apache, Passenger, Docker, Redis, PostgreSQL, PgAdmin 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 Canvas 运行时所有的 Container：
 
@@ -160,28 +148,24 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 Canvas 安装目录： */data/wwwroot/canvas*  
 Canvas 日志目录： */data/wwwroot/canvas/log*  
 Canvas 配置目录： */data/wwwroot/canvas/config*  
-
+Canvas 域名配置文件：*/data/wwwroot/canvas/config/domain.yml*  
 
 ### 端口{#port}
 
-| 端口号 | 用途                                          | 必要性 |
-| ------ | --------------------------------------------- | ------ |
-| 8080   | Canvas 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
-
+无特殊端口
 
 ### 版本{#version}
 
-```shell
-sudo cat /data/logs/install_version.txt
-```
+控制台查看
 
 ### 服务{#service}
 
 ```shell
-sudo systemctl start | stop | restart | status ghost
+# 通过 Apache 服务启停来管理 Canvas
+sudo systemctl start | stop | restart | status apache
 
-# you can use the following CMD to manage Canvas container
-sudo docker exec -it ghost /bin/bash
+# Canvas Job
+sudo systemctl start | stop | restart | status canvas-init
 ```
 
 ### 命令行{#cli}
@@ -192,6 +176,4 @@ Passenger 应用服务器提供了命令行工具 `passenger`
 
 ### API
 
-### 参考{#ref}
-
- [《PHP运行环境》](./runtime/php) 
+[Canvas API Documentation](https://community.canvaslms.com/t5/Academic-Benchmarks-Basics/API-Documentation-Overview/ta-p/474357)

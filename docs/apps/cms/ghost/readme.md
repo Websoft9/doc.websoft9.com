@@ -37,7 +37,7 @@ tags:
 3. 开始创建管理员账号，以邮箱地址为用户名，密码不要设置过于简单  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/ghost/ghost-register002-websoft9.png)
 
-> 需要了解更多 Ghost 的使用，请参考官方文档：[Ghost Documentation](https://docs.ghost.org/docs)
+> 需要了解更多 Ghost 的使用，参考官方：[Tutorials](https://ghost.org/tutorials/) 和 [FAQ](https://ghost.org/faq/)
 
 ### 出现问题？
 
@@ -49,10 +49,6 @@ tags:
 
 
 ## Ghost 常用操作
-
-### 配置 Ghost
-
-官方提供了很多配置方案，参考：[Tutorials](https://ghost.org/tutorials/) 和 [FAQ](https://ghost.org/faq/)
 
 ### 配置 SMTP{#smtp}
 
@@ -98,17 +94,11 @@ tags:
 
 4. 登录 Ghost 后台，打开：【Manage】>【Staff】，通过【Invite People】 测试邮箱可用性
 
-### 配置域名{#dns}
+### 域名额外配置（修改 URL） {#dns}
 
-参考： **[域名五步设置](./dns#domain)** 
+**[域名五步设置](./dns#domain)** 完成后，需设置 Ghost 的 URL:  
 
-1. 使用 SFTP工具连接服务器，修改 [Nginx 虚拟主机](../nginx#domain配置文件，绑定域名（如果想采用域名，此步骤必做）
-   ```
-    listen 80;
-    server_name ghost.yourdomain.com;
-   ```
-
-2. 使用 SFTP工具连接服务器，修改 [Ghost 配置文件](#path)中的 URL 域名地址（同上）
+1. 修改 [Ghost 配置文件](#path)中的 URL 域名地址（同上）
    ```
    {
    "url": "http://ghost.yourdomain.com",
@@ -118,18 +108,14 @@ tags:
    },
    ```
 
-3. 运行相关命令，重启以下服务后以上设置才生效
+2. 重启服务后生效
    ```
    sudo systemctl restart nginx
    cd /data/wwwroot/ghost && sudo docker-compose up -d && sudo docker restart ghost
    ```
 
-### 配置 HTTPS{#https}
 
-参考： **[HTTPS 配置](./dns#https)**
-
-
-### Ghost 个性化
+### 功能设置
 
 #### 菜单
 
@@ -189,7 +175,7 @@ Ghost 支持网站向客户以订阅的方式售卖文章，是知识付费创�
 
 ## 参数{#parameter}
 
-**[通用参数表](./setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 Ghost 应用中包含的基础架构组件路径、版本、端口等参数。 
+Ghost 应用中包含 Apache, Docker, MySQL 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。  
 
 通过运行`docker ps`，可以查看到 Ghost 运行时所有的 Container：
 
@@ -216,24 +202,18 @@ Ghost 容器编排文件： */data/wwwroot/ghost/docker-compose.yml*
 
 ### 版本{#version}
 
-```shell
-sudo cat /data/logs/install_version.txt
-```
+控制塔查看
 
 ### 服务{#service}
 
 ```shell
-sudo systemctl start | stop | restart | status ghost
-
-# you can use the following CMD to manage Ghost container
-sudo docker exec -it ghost /bin/bash
-
+sudo docker start | stop | restart | stats ghost
 ```
 
 ### 命令行{#cli}
 
+[Ghost CLI](https://ghost.org/docs/ghost-cli/)
+
 ### API
 
-### 参考{#ref}
-
-[《PHP运行环境》](./runtime/php) 
+[Content API](https://ghost.org/docs/content-api/)

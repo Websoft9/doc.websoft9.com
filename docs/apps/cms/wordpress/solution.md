@@ -12,18 +12,11 @@ tags:
 
 WordPress 可以与其他的软件平台**集成**一起使用，解决 构建内容管理 过程中的各种[场景问题](#)。
 
-## WordPress 与 Discuz 论坛集成{#wordpress-discuz}
-
-搭建网站时很有可能遇到这样的问题：使用WordPress搭建了页面，又使用Discuz搭建了一个论坛，两者的用户数据存在不同的数据库中，这样就无法统一整理了。
-
-为了解决这一问题，可以使用 Discuz 提供的 [UCenter插件](https://wordpress.org/plugins/ucenter-integration/) 功能来将两者的用户数据进行统一整合。
-
-> Wordpress与Discuz集成是一件复杂的事情，UCenter插件方案我们在WordPress4.6版本上测试可用，其他版本没有测试过。
-
+## WordPress 与 Discuz 双应用{#wordpress-discuz}
 
 WordPress&Discuz 预装包部署后，浏览器访问：*https://服务器公网ip/9panel* 开始安装向导。
 
-**注意**：应用是否通过域名访问，Linux系统 或 Windows系统，对应的安装步骤不同，请选择合适的方案：
+**注意**：应用是否通过域名访问，对应的安装步骤不同，请选择合适的方案：
 
 ### 方式一：通过IP访问
 
@@ -43,28 +36,28 @@ WordPress&Discuz 预装包部署后，浏览器访问：*https://服务器公网
 
 1. 登录到域名管理面板，完成解析域名，确保域名解析成功
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/domain-websoft9.png)
+
 2. 分别完成安装向导
    - 本地浏览器访问：*https://www.abc.com*   开始 [WordPress 安装向导](../wordpress#init)
    - 本地浏览器访问：*https://www.abc.com/discuz*   进入 [Discuz 安装向导](../discuz#init))
 
-### 方式三：分别配置域名（LAMP版）
+### 方式三：分别配置域名
 
 给 WordPress 和 Discuz 分别配置不同的域名，例如：
 
 * *https://wordpress.abc.com*  配置给 WordPress
 * *https://discuz.abc.com*    配置给 Discuz
 
-> LAMP版即表明你是的服务器是 Linux 系统，请使用 WinSCP 连接服务器  
-
 此场景下对应的安装步骤如下：
 
-1. 登录到域名管理面板，分别完成域名解析（增加一个A记录到服务器公网IP地址），参考下图：
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/domain-websoft9.png)
-2. 确保域名解析已经成功
+1. 确保域名解析成功
+
 3. 通过 WinSCP 连接服务器，进入*/etc/httpd/conf.d*目录，修改域名的配置文件，绑定各自的域名。 
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress-discuz/wpdz-vhostconf-1-websoft9.png)
+
    - WordPress域名绑定：请修改“vhost.conf”里面的域名信息，然后保存
    - Discuz域名绑定：请修改“discuz.conf.范例”里面的域名信息，保存后再去掉“.范例”后缀使之生效
+
 4. 使用 WinSCP 重启服务 或 云控制台重启服务器
    ```
    systemctl restart httpd
@@ -72,33 +65,6 @@ WordPress&Discuz 预装包部署后，浏览器访问：*https://服务器公网
 5. 分别完成安装向导
    - 本地浏览器访问：*https://wordpress.abc.com*   进入 [WordPress 安装向导](../wordpress#init)
    - 本地浏览器访问：*https://discuz.abc.com*   进入 [Discuz 安装向导](../discuz#init))
-
-### 方式四：分别配置域名（WAMP版）
-
-给 WordPress 和 Discuz 分别配置不同的域名，例如：
-
-* *https://wordpress.abc.com*  配置给 WordPress
-* *https://discuz.abc.com*    配置给 Discuz
-
-> WAMP 版即表明你是的服务器是 Windows 系统，请使用 远程桌面工具 连接服务器  
-
-此场景下对应的安装步骤如下：
-
-1. 登录到域名管理面板，分别完成域名解析（增加一个A记录到服务器公网IP地址），参考下图：
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/domain-websoft9.png)
-2. 请检验域名解析是否成功
-3. 远程到Windows服务器，进行域名配置文件 **http-vhosts.conf** 修改，具体操作如下：
-   - 单击（鼠标左键）绿色的 WAMPserver 图标，依次点击：【Apache】>【http-vhosts.conf】 
-   - 将标注红框的 ServerName 值换成您自己的域名 
-   - 保存后修改 
-     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress-discuz/wordpressdiscuz-domain-1-websoft9.png)
-4. 退出 WAMPserver 
-5. 重新启动WAMPServer，单击（鼠标左键）绿色的 WAMPserver 按钮，点击“重新启动所有服务”
-6. 分别完成安装向导
-   - 本地浏览器访问：*https://wordpress.abc.com*   进入 [WordPress 安装向导](../wordpress#init)
-   - 本地浏览器访问：*https://discuz.abc.com*   进入 [Discuz 安装向导](../discuz#init))
-
----
 
 ### FAQ
 
@@ -134,10 +100,9 @@ Avada安装和下载有两种方式，请根据实际情况选择合适您的方
 
 * [阿里云WordPress镜像（含Aavad中文主题包）](https://market.aliyun.com/products/53616009/cmjj011415.html)
 * [腾讯云WordPress镜像（含Avada中文主题包）](https://market.cloud.tencent.com/products/1515#)
-* [华为云WordPress镜像（含Aavad中文主题包）](https://app.huaweicloud.com/all/?q=YXZhZGE)
-方式二：到themeforest.net购买原版
+* [华为云WordPress镜像（含Aavad中文主题包）](https://app.huaweicloud.com/all/?q=YXZhZGE)  
 
-购买地址：https://themeforest.net/item/avada-responsive-multipurpose-theme/2833226
+方式二：到themeforest.net 购买[原版](https://themeforest.net/item/avada-responsive-multipurpose-theme/2833226)  
 
 方式三：在Websoft9下载主题自行安装
 * [Avada 7.1.1 官方原版下载](https://libs.websoft9.com/apps/wordpress/avada7.1.1-en.zip)

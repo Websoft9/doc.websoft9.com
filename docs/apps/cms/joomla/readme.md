@@ -8,14 +8,13 @@ tags:
 
 # 快速入门
 
-[Joomla](https://joomla.org) 是全球三大开源内容管理系统之一（CMS），占据全球5%的建站市场。其拥有高度的可定制性和电子商务方面的优势，一旦突破最初的学习瓶颈之后，你可以用它进行广泛的Web应用开发，简直是无所不能。目前是由Open Source Matters（见扩展阅读）这个开放源码组织进行开发与支持，Joomla实际有两个开源的部分：一个是Joomla CMS（Joomla内容管理系统），它是网站的一个基础管理平台；另一个是Joomla Platform（Joomla框架）。
+[Joomla](https://joomla.org) 是一个 100% 开源的老牌建站系统（CMS），它占据全球 6% 的 CMS 市场。它拥有良好的社区，提供超过 6,500 个经过验证的扩展和高质量模板。  
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-gui-websoft9.jpg)
 
+## 准备
 
 部署 Websoft9 提供的 Joomla 之后，需完成如下的准备工作：
-
-## 准备
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
@@ -27,7 +26,7 @@ tags:
 
 ### 详细步骤
 
-1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 就进入引导首页
+1. 使用本地电脑的浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 就进入引导首页
 
 2. 选择一门语言，并设置站点名称
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-wizard1-websoft9.png)
@@ -68,7 +67,7 @@ tags:
 
 ## Joomla 常用操作
 
-### 配置 SMTP{#smtp}
+### Joomla 配置 SMTP{#smtp}
 
 1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
 
@@ -88,16 +87,6 @@ tags:
 
 4. 设置完成后，点击【发送测试邮件】，测试可用性
      
-
-### 配置域名{#dns}
-
-参考： **[域名五步设置](./dns#domain)** 
-
-
-### 配置 HTTPS{#https}
-
-参考： **[HTTPS 配置](./dns#https)**
-
 ### Joomla 多语言{#setlang}
 
 Joomla 支持多语言，下面是安装并设置多语言的主要步骤：
@@ -139,14 +128,14 @@ Joomla 后台提供了缓存管理功能，参考下图：
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-cache-websoft9.png)
 
-### Joomla 重置管理员密码{#setpwd}
+### Joomla 重置密码{#setpwd}
 
 如果忘记了管理员密码，可以参考 [此处](https://docs.joomla.org/How_do_you_recover_or_reset_your_admin_password%3F/zh-cn) 重置密码
 
 
 ## 参数{#parameter}
 
-**[通用参数表](./setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 Joomla 应用中包含的基础架构组件路径、版本、端口等参数。 
+Joomla 应用中包含 Nginx, Apache, Docker, MySQL, PHP 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。 
 
 通过运行`docker ps`，可以查看到 Joomla 运行时所有的 Container：
 
@@ -165,9 +154,7 @@ Joomla 配置文件： */data/wwwroot/joomla/configuration.php*
 
 ### 端口{#port}
 
-| 端口号 | 用途                                          | 必要性 |
-| ------ | --------------------------------------------- | ------ |
-| 8080   | Joomla 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
+无特殊端口
 
 
 ### 版本{#version}
@@ -179,16 +166,13 @@ sudo cat /data/logs/install_version.txt
 ### 服务{#service}
 
 ```shell
-sudo systemctl start | stop | restart | status ghost
-
-# you can use the following CMD to manage Joomla container
-sudo docker exec -it ghost /bin/bash
+sudo docker start | stop | restart | stats joomla
 ```
 
 ### 命令行{#cli}
 
+无
+
 ### API
 
-### 参考{#ref}
-
- [《PHP运行环境》](./runtime/php) 
+[Joomla! API Documentation](https://api.joomla.org/)

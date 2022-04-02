@@ -10,7 +10,7 @@ tags:
 
 # 快速入门
 
-[WordPress](https://wordpress.org) 简称 WP，它是一个企业级开源 CMS（内容管理/建站系统），全球互联网上有 34% 的网站都基于 WordPress 构建，它的影响力无与伦比。WordPress 因易用性、易扩展性（ 插件 、模板、二次开）形成了完美的生态体系。  
+[WordPress](https://wordpress.org) 简称 WP，它是一个企业级开源 CMS（内容管理/建站系统），因易用性、易扩展性（ 插件 、模板、二次开）形成了完美的生态体系。全球互联网上有 34% 的网站都基于 WordPress 构建，它的影响力无与伦比。  
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-product-screenshot.png)
 
@@ -208,20 +208,8 @@ WordPress 默认支持大部分图片等文件格式的上传，但也有一些�
 
 WordPress 官方仅提供简单外观的背后有着数十万社区驱动的精美主题：  
 
-#### 寻找主题
-
-1. 通过WordPress后台-外观-主题-添加，在线获取WordPress主题库的主题 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-addthemes-websoft9.png)
-2. 通过百度等搜索“WordPress主题”，淘到自己喜欢的主题
-3. 通过主题交易市场购买美轮美奂的主题，例如：themeforest.net
-
-#### 安装主题
-
 1. 方式一：通过WordPress后台-外观-主题-添加，后台上传主题安装（推荐）
 2. 方式二：通过FTP工具，将主题文件上传到 */wp-content/theme* 目录下
-
-#### 赠送主题
-
-- [Avada 主题](./wordpress/solution#avada)
 
 ### WooCommerce 支付配置
 
@@ -231,7 +219,7 @@ WooCommerce 官方提供了 主题市场和插件市场 以扩展 WooCommerce �
 
 WooCommerce 默认提供了国外主流的支付插件，下面重点介绍中国本地化支付的两个支付配置
 
-#### 支付宝即时到账支付
+##### 支付宝即时到账支付
 
 1. 申请支付宝商家账户，申请开通即时到账；
 
@@ -240,7 +228,7 @@ WooCommerce 默认提供了国外主流的支付插件，下面重点介绍中�
 3. 在商城中配置支付宝参数。配置界面如下：
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/plugins/woocommerce/intallalipay-websoft9.png)
 
-#### 微信扫描支付
+##### 微信扫描支付
 
 WooCommerce微信支付插件使用非常简单，只需要如下步骤，就可以让你的WordPress商城添加微信支付功能。
 
@@ -295,7 +283,7 @@ WordPress可以通过发送邮件找回密码，但前提条件是您的 WordPre
 
 ## 参数{#parameter}
 
-WordPress 应用中包含 Nginx, Apache, Docker, MySQL, phpMyAdmin 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。
+WordPress 应用中包含 PHP, Nginx, Apache, Docker, MySQL, phpMyAdmin 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。
 
 **[通用参数表](./setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 WordPress 应用中包含的基础架构组件路径、版本、端口等参数。 
 

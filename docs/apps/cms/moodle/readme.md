@@ -8,14 +8,15 @@ tags:
 
 # 快速入门
 
-[Moodle](https://moodle.com) 是一个开源的在线教育系统（慕课）。采用PHP+Mysql开发，界面友好，符合SCORM/AICC标准。以功能强大、而界面简单、精巧而著称。它是eLearning技术先驱，是先进在线教学理念和实践的集大成者，已成为全球大中学院校建立开放式课程系统的首选软件。主要模块：课程管理、作业模块、聊天模块、投票模块、论坛模块、测验模块、资源模块、问卷调查模块、互动评价（workshop）。Moodle具有先进的教学理念，创设的虚拟学习环境中有三个维度：技术管理维度、学习任务维度和社会交往维度，以社会建构主义教学法为其设计的理论基础，它提倡师生或学生彼此间共同思考，合作解决问题。
+[Moodle LMS](https://moodle.com) 是一个开源的在线教育系统（慕课）。它符合 SCORM/AICC标准，功能强大、界面简单精巧。Moodle具有先进的教学理念，创设的包含技术管理、学习任务和社交三个虚拟学习维度，提倡师生或学生彼此间共同思考，合作解决问题。它是先进在线教学理念和实践的集大成者，已成为全球大中学院校建立开放式课程系统的首选软件。  
+
+主要模块：课程管理、作业模块、聊天模块、投票模块、论坛模块、测验模块、资源模块、问卷调查模块、互动评价（workshop）
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodlegui-websoft9.jpg)
 
+## 准备
 
 部署 Websoft9 提供的 Moodle 之后，需完成如下的准备工作：
-
-## 准备
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
@@ -80,15 +81,6 @@ tags:
 
 4. 点击【Test outgoing mail configuration】测试设置
 
-### 配置域名{#dns}
-
-参考： **[域名五步设置](./dns#domain)** 
-
-
-### 配置 HTTPS{#https}
-
-参考： **[HTTPS 配置](./dns#https)**
-
 ### 向 Moodle 注册你的网站{#register}
 
 Moodle 初始化安装完成之后，建议注册成为 Moodle 官方网站的会员，注册好处包括：升级通知，课程共享，在线安装插件等
@@ -111,12 +103,17 @@ Moodle 初始化安装完成之后，建议注册成为 Moodle 官方网站的�
 ### Moodle 客户端{#client}
 
 1. 以管理身份登录 Moodle 后台
+
 2. 依次打开：【网站管理】>【移动应用程序】>【移动设备设置】
    ![moodle-apps](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-app-1-websoft9.jpg)
+
 3. 将【为移动设备启用网络服务】设为 **启用** 状态；
    ![moodle-apps](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-app-2-websoft9.jpg)
+
 4. 保存设置；
+
 5. 安装 [Moodle 手机客户端](https://download.moodle.org/mobile/)
+
 6. 打开后在地址栏输入 Moodle 的访问地址，就可以开始使用移动端
    ![moodle-apps](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-mobile-websoft9.png)
 
@@ -184,7 +181,7 @@ Moodle 主题实际上是一个插件，因此需要安装新主题，必须通�
 
 下面介绍通过数据库找回密码的方案：
 
-1. 登录 [phpMyAdmin](#)，并找到你的网站数据库下的 *mdl_user*表
+1. 登录 [phpMyAdmin](./setup/parameter#managedb)，并找到你的网站数据库下的 *mdl_user*表
 
   ![Moodle user表](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-phpmyadminuser-websoft9.png)
 
@@ -193,7 +190,7 @@ Moodle 主题实际上是一个插件，因此需要安装新主题，必须通�
 3. 点击【执行】，新的密码就被重置为`admin`
 
 
-## 参数{#parameter}
+## Moodle 参数{#parameter}
 
 **[通用参数表](./setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 Moodle 应用中包含的基础架构组件路径、版本、端口等参数。 
 
@@ -221,23 +218,23 @@ Moodle 配置文件： */data/wwwroot/moodle/config.php*
 
 ### 版本{#version}
 
-```shell
-sudo cat /data/logs/install_version.txt
-```
+控制台查看
 
 ### 服务{#service}
 
 ```shell
-sudo systemctl start | stop | restart | status ghost
-
-# you can use the following CMD to manage Moodle container
-sudo docker exec -it ghost /bin/bash
+sudo docker start | stop | restart | stats moodle
 ```
 
 ### 命令行{#cli}
 
+[Administration via command line](https://docs.moodle.org/311/en/Administration_via_command_line)
+
+```
+$ cd /path/to/your/moodle/dir
+$ sudo -u apache /usr/bin/php admin/cli/somescript.php --params
+$ sudo -u apache /usr/bin/php admin/cli/install.php --help
+```
 ### API
 
-### 参考{#ref}
-
-[《PHP运行环境》](./runtime/php) 
+[Core APIs](https://docs.moodle.org/dev/Core_APIs)

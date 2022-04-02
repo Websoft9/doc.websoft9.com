@@ -40,6 +40,12 @@ rvm install 2.6
 
 ## 概念与原理
 
+### Phusion passenger
+
+[Phusion passenger](https://www.phusionpassenger.com/) 是被广泛应用于 Ruby 的应用程序服务器，它与 Nginx 或 Apache 配合一起为 Ruby 提供高性能的 Web 应用方案。它处理 HTTP 请求，管理进程和资源，并启用管理、监控和问题诊断。乘客非常易于使用，使生产中的部署更加容易并且具有可扩展性。
+
+Phusion passenger 除了支持 Ruby 之外，也可用于 Python, Node, Meteor 等应用程序。  
+
 ### RubyGems 
 
 Maven 是一个项目管理工具，可以对 Java 项目进行构建、依赖管理。

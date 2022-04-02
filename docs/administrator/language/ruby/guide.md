@@ -9,6 +9,10 @@ slug: /ruby
 
 ## 场景
 
+### Passenger 使用
+
+
+
 ### RubyGems 包管理{#gems}
 
 **gem 源更换**
@@ -95,6 +99,9 @@ Ruby 网站目录： */data/wwwroot*
 
 > version 为版本号，例如：2.4.10。gem, bundler 等工具与版本强相关
 
+Passenger 安装目录：*/usr/lib/ruby/vendor_ruby/phusion_passenger*  
+Passenger 配置文件：*/etc/apache2/mods-enabled/passenger.conf*  
+
 ### 版本号{#checkversion}
 
 下面的命令用于查看 Ruby 相关的版本号
@@ -104,18 +111,23 @@ ruby -v
 bundler -v
 gem -v
 rails -v
+passenger -v
 ```
 
 ### 服务{#service}
 
 ```
-sudo systemctl start rails
-sudo systemctl stop rails
-sudo systemctl restart rails
-sudo systemctl status rails
+sudo systemctl start | stop | restart | status rails
+sudo systemctl start | stop | restart | status passenger
 ```
 
 ### 命令行{#cmd}
+
+#### passenger
+
+```
+$ passenger -h
+```
 
 #### gem
 

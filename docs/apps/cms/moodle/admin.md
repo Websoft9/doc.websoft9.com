@@ -8,9 +8,11 @@ tags:
 
 # 维护指南
 
+本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../installation/setup/) 相关章节。
+
 ## 场景
 
-### 备份与恢复
+### 在线备份
 
 课程是 Moodle 最重要的资源，Moodle 后台提供了自动备份课程的功能
 
@@ -24,7 +26,7 @@ tags:
 4. 依次打开：【网站管理】>【报表】>【备份】，查看备份执行情况
   ![Moodle 查看备份](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-coursebkrp-websoft9.png)
 
-### 升级
+### 命令行升级
 
 Moodle 官方提供了多种升级方式（[Moodle Upgrading](https://docs.moodle.org/37/en/Upgrading)），包括上传代码升级和命令升级等方式。  
 
@@ -55,42 +57,19 @@ Moodle 官方提供了多种升级方式（[Moodle Upgrading](https://docs.moodl
 
 支持，类似 Wordpress 在线安装插件，不过 Moodle 需要提前到官方注册一个账号
 
+
+#### Moodle 开源版提供 APP？
+
+有待进一步调查
+
 #### Moodle 能上传多媒体文件吗？
 
 可以
 
-#### Moodle(LAMP)，Moodle(LNMP)等商品括号中的 LAMP,LNMP 是什么意思？
+#### Moodle 旗下有哪些产品？
 
-LAMP和LNMP代表支持Moodle运行所对应的基础环境，具体参考[环境说明](../moodle#ref)
-
-#### 是否可以使用云平台的 RDS 作为 Moodle 的数据库？
-
-可以，修改 Moodle 根目录下的配置文件 `config.php` 即可
-
-#### Moodle能在Windows服务器上运行吗？
-
-可以，但是我们推荐在运行 Moodle 效率更高的 Linux 服务器上运行
-
-#### Moodle数据库连接配置信息在哪里？
-
-数据库配置信息在Moodle安装目录下的 *config.php* 中，[查阅安装目录路径](../moodle#path)
-
-#### 如果没有域名是否可以部署 Moodle？
-
-可以，访问`http://服务器公网IP` 即可
-
-#### 数据库 root 用户对应的密码是多少？
-
-密码存放在服务器相关文件中：`/credentials/password.txt`
-
-#### 是否有可视化的数据库管理工具？
-
-有，内置phpMyAdmin，访问地址：http://服务器公网IP/phpmyadmin
-
-#### 如何禁止phpMyAdmin访问？
-
-连接服务器，编辑 phpMyAdmin 配置文件，将其中的 Require all granted 更改为 Require ip 192.160.1.0，然后重启 Apache 服务
-
-#### 是否可以修改Moodle的源码路径？
-
-可以，通过修改 [虚拟主机配置文件](../apache#virtualHost)中相关参数
+* Moodle LMS：开源的在线学习系统
+* Moodle Workplace：Moodle LMS + 高级功能，不开源
+* MoodleCloud：Moodle LMS 托管服务，即 SaaS 版
+* Moodle App：移动端
+* MoodleNet：共享和管理开放教育资源

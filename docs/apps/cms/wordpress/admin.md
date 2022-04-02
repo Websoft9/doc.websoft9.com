@@ -10,7 +10,24 @@ tags:
 
 # 维护指南
 
+本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../installation/setup/) 相关章节。
+
 ## 场景
+
+### WordPress 维护 10 大原则
+
+为了使 WordPress 运行更有效率，方便维护、方便迁移，我们在实践中总结了需要注意的 10 个要点：
+
+1. 上传图片尽量不超过100k/张
+2. 如果总图片数量超过500张，建议将图片放到对象存储中，实现动静分离，也便于维护
+3. 所有图片名称为英文
+4. 新闻的图片大小比例最好为600:400，保证统一性。每篇新闻都要配套图片，美观大方，便于展示
+5. 所有页面、新闻 URL 地址均采用英文
+6. 后台账号的密码要复杂一些
+7. 轮播 Banner 不超过3张
+8. 插件数量不超过20个，不用的插件务必卸载，以避免插件冲突而导致网站不可用
+9. 网站内容为王，请将精力集中于内容的更新、知识库的建立
+10. 视频等大文件请放到其他存储中
 
 ### WordPress 使用外部图片
 
@@ -79,7 +96,7 @@ WordPress 内核升级非常简单，当进入后台之后系统会提示需要�
 
  ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-wordpresscoreupdate-websoft9.png)
 
-##### 手动升级
+##### 手动升级{#mupgrade}
 
 有的时候，由于网络原因，在线一键升级不可用，那么就需要手工升级
 
@@ -145,7 +162,7 @@ WordPress 由于被广泛使用，导致安全漏洞被无限放大，其中Word
        define( 'CONCATENATE_SCRIPTS', false );
     ```
 
-#### 网站访问 “....并非完全安全”？
+#### HTTPS 访问 “....并非完全安全”？
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/avada/https-notallsafe-websoft9.png)
 
@@ -187,26 +204,24 @@ WordPress 默认是通过mail()函数发送邮件，必须要求服务器本身�
 
 实际中，将服务器改造成邮件服务器，是一件非常复杂的工作，且难以维护。因此，建议安装一个SMTP插件来解决发送邮件问题：WP-Mail-SMTP
 
-#### WordPress 5.0 换回老版”Classic Editor”经典编辑器
+#### 网络不通导致无法升级？
 
-Wordpress5.0之后的版本，编辑器与之前有了明显的区别。这里不探讨编辑器孰优孰劣，我们发现编辑器升级之后，用户的主题无法适应新的编辑器，导致做不到可视化编辑。如果您希望主题可以可视化编辑，您必须启用经典编辑器。启用的方法非常简单，安装“Classic Editor”这个插件即可
+WordPress 升级包地址也是国外的。有时候由于网络原因，升级地址不可用。如果您迫切需要升级，请参考：[WordPress手工升级文档](#mupgrade)
 
-#### WordPress 后台升级网络不通，官网也打不开？
+#### 管理员失去权限，无法正常登录后台？
 
-WordPress是国外的网站，后台升级地址也是国外的，如果网站打不开，后台升级同样就无法进行。如果您迫切需要升级，请参考我们的[WordPress手工升级文档](/zh/solution-upgrade.md#手动升级)
+WordPress 的后台管理是分权限的，而最高权限是超级管理员。当wordpress管理员因失去权限无法正常进入后台，可以通过进入PhpMyAdmin数据库管理工具，来进行权限恢复：
 
-#### WordPress 管理员失去权限，无法正常登录后台？
-
-WordPress的后台管理是分权限的，而最高权限是超级管理员。当wordpress管理员因失去权限无法正常进入后台，可以通过进入PhpMyAdmin数据库管理工具，来进行权限恢复：
 * 登录数据库管理工具phpMyAdmin:  http:// 服务器ip/phpMyAdmin/
 * 找到跟用户相关的数据表：wp_users和wp_usermeta;
 * 先进入wp_users,查看自己的管理员用户名，超级管理员用户id一般都是1，不是就修改；
 * 再进入wp_usermeta表，找到wp_user_level，wp_capabilities字段。如果对应账号wp_user_level的值不是10 ，请修改为10（超级管理员一半都是10，最高权   限）；查看wp_capabilities值，如果里面不是 “administrator”，可以直接改成：a:1:{s:13:"administrator";b:1;} ；
 * 重新登录。
 
-#### Wordpress导入一个演示数据显示 You don't have permission to access /wp-admin/admin.php on this server?
+#### Wordpress 导入演示数据没权限？
 
-待研究
+错误信息： You don't have permission to access /wp-admin/admin.php on this server?  
+解决方案：待研究
 
 
 ## 问题解答
@@ -219,41 +234,9 @@ WordPress的后台管理是分权限的，而最高权限是超级管理员。�
 
 可以，全球34%的网站都是基于 WordPress 构建
 
-#### WordPress(LAMP)，WordPress(LNMP)等商品括号中的 LAMP,LNMP 是什么意思？
-
-LAMP和LNMP代表支持WordPress运行所对应的基础环境，具体参考[环境说明](./runtime/php)
-
-#### 是否可以使用云平台的 RDS 作为 WordPress 的数据库？
-
-可以，修改 WordPress 根目录下的配置文件 `wp-config.php` 即可
-
-#### WordPress能在Windows服务器上运行吗？
-
-可以，但是我们推荐在运行 WordPress 效率更高的 Linux 服务器上运行
-
-#### WordPress数据库连接配置信息在哪里？
-
-数据库配置信息在WordPress安装目录下的 *wp-config.php* 中，[查阅安装目录路径](../wordpress#path)
-
 #### 如果没有域名是否可以部署 WordPress？
 
 可以，访问`http://服务器公网IP` 即可
-
-#### 数据库 root 用户对应的密码是多少？
-
-密码存放在服务器相关文件中：`/credentials/password.txt`（Linux） 或 服务器桌面（Windows）
-
-#### 是否有可视化的数据库管理工具？
-
-有，内置phpMyAdmin，访问地址：http://服务器公网IP/phpmyadmin
-
-#### 如何禁止phpMyAdmin访问？
-
-连接服务器，编辑 phpMyAdmin 配置文件，将其中的 Require all granted 更改为 Require ip 192.160.1.0，然后重启 Apache 服务
-
-#### 是否可以修改WordPress的源码路径？
-
-可以，通过修改 [虚拟主机配置文件](../apache#virtualHost)中相关参数
 
 #### WordPress 登录后台如何使用 SSL？
 
@@ -281,3 +264,7 @@ chown -R nginx.nginx /data/wwwroot
 find /data/wwwroot -type d -exec chmod 750 {} \;
 find /data/wwwroot -type f -exec chmod 640 {} \;
 ```
+
+#### 换回 Classic Editor 经典编辑器？
+
+Wordpress5.0 之后的版本，编辑器与之前有了明显的区别。这里不探讨编辑器孰优孰劣，我们发现编辑器升级之后，用户的主题无法适应新的编辑器，导致做不到可视化编辑。如果您希望主题可以可视化编辑，您必须启用经典编辑器。启用的方法非常简单，安装“Classic Editor”这个插件即可
