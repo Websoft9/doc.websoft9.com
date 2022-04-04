@@ -29,7 +29,7 @@ tags:
 1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入登录页面
    ![canvas 登录](https://libs.websoft9.com/Websoft9/DocsPicture/zh/canvas/canvas-login-websoft9.png)
 
-2. 输入账号密码（[不知道账号密码？](/zh/stack-accounts.md#canvas)），成功登录到 Canvas 后台  
+2. 输入账号密码（[不知道账号密码？](./setup/credentials#getpw)），成功登录到 Canvas 后台  
    ![canvas 后台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/canvas/canvas-console001-websoft9.png)
 
 3. 依次打开：【管理员】>【设置】>【账户设置】设置语言  
@@ -46,7 +46,7 @@ tags:
 
 若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
 
-**Canvas 访问速度很慢**
+**Canvas 访问速度很慢？**
 
 Canvas 对服务器的配置要求极高，最低配置为2核8G
 
@@ -61,7 +61,7 @@ Canvas 对服务器的配置要求极高，最低配置为2核8G
 
 如果你忘记了 Canvas  管理员密码，又无法通过邮件找回密码，重置至 Canvas 初始状态。
 
-使用 SSH 连接服务器，运行下面的命令后，就可以使用账号：help@websoft9.com/websoft9 登录。
+使用 SSH 连接服务器，重置环境变量后开始初始化：
 
 ```
   export RAILS_ENV=production
@@ -72,13 +72,13 @@ Canvas 对服务器的配置要求极高，最低配置为2核8G
   cd /data/wwwroot/canvas; bundle exec rake db:initial_setup
 ```
 
-> 初始化可能会删除历史数据，建议先做备份
+> 为防止初始化删除历史数据，建议先做备份
 
 ### 配置 SMTP{#smtp}
 
 1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
 
-2. 使用 SSH 登录服务器，修改 */data/wwwroot/canvas/config/outgoing_mail.yml* 文件后保存
+2. 使用 SSH 登录服务器，修改[邮件配置文件](#path)文件后保存
    ```
    production:
    address: smtp.163.com
@@ -149,6 +149,7 @@ Canvas 安装目录： */data/wwwroot/canvas*
 Canvas 日志目录： */data/wwwroot/canvas/log*  
 Canvas 配置目录： */data/wwwroot/canvas/config*  
 Canvas 域名配置文件：*/data/wwwroot/canvas/config/domain.yml*  
+Canvas 域名配置文件：*/data/wwwroot/canvas/config/outgoing_mail.yml*  
 
 ### 端口{#port}
 

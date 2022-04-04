@@ -10,14 +10,13 @@ tags:
 
 # 快速入门
 
-[MediaWiki](https://www.mediawiki.org) 是全球著名的开源wiki程序，采用 PHP+MySQL 开发。适合用于构建百科、知识库、在线文档、个人笔记等应用。超过数万个站点使用，大名鼎鼎的“维基百科”网站是基于这个软件而构建。MediaWiki的开发得到维基媒体基金会的支持。MediaWiki的最大作用在于对知识的归档，可用于构建企业/个人知识库，WIKI系统的思想是经过越多的人的编辑，结果就越趋于正确（完美）。
+[MediaWiki](https://www.mediawiki.org) 是大名鼎鼎的“维基百科”网站开源的 Wiki 程序。适合用于构建百科、知识库、在线文档、个人笔记等应用。MediaWiki的最大作用在于对知识的归档，可用于构建企业/个人知识库，Wiki 系统的思想是经过越多的人的编辑，结果就越趋于正确（完美）。
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mediawiki/MediaWiki_UI.png)
 
+## 准备
 
 部署 Websoft9 提供的 MediaWiki 之后，需完成如下的准备工作：
-
-## 准备
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
@@ -70,14 +69,9 @@ tags:
 
 下面以 **使用 MediaWiki 构建知识管理系统** 作为一个任务，帮助用户快速入门：
 
-
 ## MediaWiki 常用操作
 
-### MediaWiki 配置设置{#conf}
-
-主要通过修改 LocalSettings.php 文件来对 MediaWiki 进行设置，而 LocalSettings.php 文件
-
-### 配置 SMTP{#smtp}
+### MediaWiki 配置 SMTP{#smtp}
 
 1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
 
@@ -116,15 +110,6 @@ tags:
 7. 重启 [PHP-FPM 服务](./setup/parameter#service)后生效
 
 8. 测试是否可以发邮件
-
-### 配置域名{#dns}
-
-参考： **[域名五步设置](./dns#domain)** 
-
-
-### 配置 HTTPS{#https}
-
-参考： **[HTTPS 配置](./dns#https)**
 
 ### MediaWiki 安装扩展{#plugin}
 
@@ -167,9 +152,9 @@ Mediawiki 默认并不可以上传文件，需要启动文件上传功能
 
 ## 参数{#parameter}
 
-**[通用参数表](./setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 MediaWiki 应用中包含的基础架构组件路径、版本、端口等参数。 
+**[通用参数表](./setup/parameter)** 中可查看 PHP, Nginx, Apache, Docker, MySQL 等 MediaWiki 应用中包含的基础架构组件路径、版本、端口等参数。 
 
-通过运行`docker ps`，可以查看到 MediaWiki 运行时所有的 Container：
+通过运行 `docker ps`，可以查看到 MediaWiki 运行时所有的 Container：
 
 ```bash
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
@@ -186,30 +171,22 @@ MediaWiki 配置文件： */data/wwwroot/mediawiki/LocalSettings.php*
 
 ### 端口{#port}
 
-| 端口号 | 用途                                          | 必要性 |
-| ------ | --------------------------------------------- | ------ |
-| 8080   | MediaWiki 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
-
+无特殊端口
 
 ### 版本{#version}
 
-```shell
-sudo cat /data/logs/install_version.txt
-```
+控制台查看
 
 ### 服务{#service}
 
 ```shell
-sudo systemctl start | stop | restart | status ghost
-
-# you can use the following CMD to manage MediaWiki container
-sudo docker exec -it ghost /bin/bash
+sudo docker start | stop | restart | stats mediawiki
 ```
 
 ### 命令行{#cli}
 
+无
+
 ### API
 
-### 参考{#ref}
-
- [《PHP运行环境》](./runtime/php) 
+[API:Main_page](https://www.mediawiki.org/wiki/API:Main_page/zh)

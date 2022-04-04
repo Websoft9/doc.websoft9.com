@@ -5,19 +5,18 @@ tags:
   - Discuz
   - CMS
   - 建站系统
-  - 博客系统
+  - 博客系统 
 ---
 
 # 快速入门
 
-[Discuz](https://www.discuz.net)是开源的论坛社区系统，诞生于2001年6月，目前已经演进为 [DiscuzQ](https://discuz.com/)，它拥有完全开源、提供丰富接口、前后端分离、轻量化、数据独立可控、敏捷上云、快速变现七大能力。
+Discuz 是老牌的论坛社区系统（也称之为 DiscuzX），诞生于2001年6月，后被腾讯公司收购。Discuz 生态经久不衰，基于它可以搭建社区论坛、知识付费网站、视频直播点播站、企业网站、同城社区、小程序、APP、图片素材站，游戏交流站，电商购物站、小说阅读、博客、拼车系统、房产信息、求职招聘、婚恋交友等等绝大多数类型的网站
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuzq-guiweb-websoft9.png)
-
-
-部署 Websoft9 提供的 Discuz 之后，需完成如下的准备工作：
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/ds06.png)
 
 ## 准备
+
+部署 Websoft9 提供的 Discuz 之后，需完成如下的准备工作：
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
@@ -40,12 +39,10 @@ tags:
 4.  选择需要安装的程序组，建议选择【全新安装】，然后点击【下一步】。  
     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/ds03.png)
 
-5.  配置数据库连接信息：默认项已经可用，即直接点击【下一步】而不做任何修改便可以完成连接。   
+5.  配置数据库连接信息：请直接点击【下一步】完成连接。（**请不做任何修改**）   
     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/ds04.png)
 
-    > 预装的 MySQL 数据库信息（[查看数据库密码](./setup/credentials#getpw)）
-
-6.  安装完成后的界面如下
+6.  安装完成后的界面如下  
     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/ds05.png)
 
 7.  进入论坛后，可以通过右上角登录对论坛进行管理。
@@ -60,8 +57,8 @@ tags:
 如果数据库名称、数据库账号与数据库密码填写与实际不符合，安装就会失败，显示“Discuz! Database Error”错误，具体解决办法：
 
 1. 使用 phpMyAdmin 连接数据库，验证填写的数据库账号是否与实际匹配
-2. 到服务器上删除./data/install.lock文件
-3. 通过网址 *http://服务器公网IP/discuz/install* 或 *http://域名/install* 重装
+2. 删除 Discuz 目录下的 *data/install.lock* 文件
+3. 本地浏览器访问： *http://服务器公网IP/discuz/install* 或 *http://域名/install* 重装
 
 
 ## Discuz 使用入门
@@ -91,18 +88,9 @@ tags:
 4. 测试，如出现如图所示的对话框则证明 SMTP 设置正确，另外，如果出现该对话框却在收件箱内没有邮件，请到垃圾邮件列表查看
 	![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuz-smtp-3-websoft9.png)
      
-
-### 配置域名{#dns}
-
-参考： **[域名五步设置](./dns#domain)** 
-
 ### Discuz 更换域名
 
 Discuz 更换域名非常繁琐，参考论坛上的热心帖子：[discuz! X3 更改域名全程记录](https://www.discuz.net/thread-3528253-1-1.html)
-
-### 配置 HTTPS{#https}
-
-参考： **[HTTPS 配置](./dns#https)**
 
 ### Discuz 模板/主题/应用中心使用
 
@@ -114,13 +102,9 @@ Discuz 有非常强大生态，大量在线安装模板、插件，您通过登�
 
 ### Discuz 修改数据库配置
 
-在你的 Discuz 安装目录下，有三个与数据库相关的配置文件：
+在你的 Discuz 安装目录下，有三个与数据库相关的[配置文件](#path)
 
-- config/config_global.php
-- config/config_ucenter.php
-- uc_server/data/config.inc.php
-
-一旦你修改了初始化安装所用的的数据库信息，你需要配套修改以上三个文件以适用新的数据库配置
+一旦数据库连接信息变化，你需要配套修改以上三个文件以适用新的数据库配置。
 
 ### Discuz 重置管理员密码
 
@@ -138,10 +122,6 @@ Discuz 密码忘记了，怎么找回？ 如下方案经过实践可用：
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuz-ucpwlogin-websoft9.png)
 6. 通过【用户管理】中修改管理员密码
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuz-ucentermodifyadmin-websoft9.png)
-
-### Discuz 集成 WordPress
-
-参考[此处](./wordpress/solution#wordpress-discuz)
 
 ### Discuz 更换默认 Logo
 
@@ -210,7 +190,7 @@ Discuz论坛安装完成后，想使连接里面显示文章名，应怎么开�
 
 ## 参数{#parameter}
 
-**[通用参数表](./setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 Discuz 应用中包含的基础架构组件路径、版本、端口等参数。 
+**[通用参数表](./setup/parameter)** 中可查看 PHP, Nginx, Apache, Docker, MySQL 等 Discuz 应用中包含的基础架构组件路径、版本、端口等参数。 
 
 通过运行`docker ps`，可以查看到 Discuz 运行时所有的 Container：
 
@@ -225,34 +205,30 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 Discuz 安装目录： */data/wwwroot/discuz*  
 Discuz 配置文件： */data/wwwroot/discuz/upload/config/config_global_default.php*  
-
+Discuz 数据库相关配置文件：  
+- config/config_global.php
+- config/config_ucenter.php
+- uc_server/data/config.inc.php
 
 ### 端口{#port}
 
-| 端口号 | 用途                                          | 必要性 |
-| ------ | --------------------------------------------- | ------ |
-| 8080   | Discuz 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
+无特殊端口
 
 
 ### 版本{#version}
 
-```shell
-sudo cat /data/logs/install_version.txt
-```
+控制台查看
 
 ### 服务{#service}
 
 ```shell
-sudo systemctl start | stop | restart | status ghost
-
-# you can use the following CMD to manage Discuz container
-sudo docker exec -it ghost /bin/bash
+sudo docker start | stop | restart | stats discuz
 ```
 
 ### 命令行{#cli}
 
+无
+
 ### API
 
-### 参考{#ref}
-
- [《PHP运行环境》](./runtime/php) 
+无

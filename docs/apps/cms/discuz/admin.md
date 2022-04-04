@@ -14,7 +14,7 @@ tags:
 
 ## 场景
 
-### 备份与恢复
+### 在线备份与恢复
 
 Discuz 后台提供了非常简单实用的在线备份功能，使用方法如下：
 
@@ -28,9 +28,9 @@ Discuz 后台提供了非常简单实用的在线备份功能，使用方法如�
 
 ### 升级
 
-Discuz 需要手工上传升级包方可升级，也就是说升级对普通用户来说有点难。  
+Discuz 需要手工上传升级包方可升级，这项工作对普通用户来说非常有挑战性。  
 
-Discuz官方提供了一个简易的升级方案，[查看详情](https://gitee.com/Discuz/DiscuzX/wikis/%E5%8D%87%E7%BA%A7%E6%96%B9%E6%B3%95?sort_id=9978)
+Discuz 官方提供了一个：[升级参考](https://gitee.com/Discuz/DiscuzX/wikis/%E5%8D%87%E7%BA%A7%E6%96%B9%E6%B3%95?sort_id=9978)
 
 
 ## 故障速查
