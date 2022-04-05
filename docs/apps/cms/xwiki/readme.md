@@ -8,23 +8,13 @@ tags:
 
 # 快速入门
 
-[XWiki](https://www.xwiki.org/xwiki/bin/view/Main/WebHome)是一个使用Java编写的开源Wiki引擎，XWiki自称其为“第二代wiki”。它支持一些受欢迎的特性如：
-- 内容管理（浏览／编辑／预览／保存）
-- 支持附件
-- 版本控制
-- 全文本搜索
-- 权限管理
-- 使用Hibernate进行数据存储
-- RSS输出与显示外部的RSS feeds
-- 多语言支持
-- 提供XML/RPC的API
-- WYSIWYG HTML编辑器
-- Groovy脚本支持等等
+[XWiki](https://www.xwiki.org/xwiki/bin/view/Main/WebHome) 是一个 100% 开源的企业级 Wiki 系统，超过 600 个扩展：应用程序、宏、皮肤、插件、主题等。
 
-
-部署 Websoft9 提供的 XWiki 之后，需完成如下的准备工作：
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/xwiki/xwiki-gui-websoft9.png)
 
 ## 准备
+
+部署 Websoft9 提供的 XWiki 之后，需完成如下的准备工作：
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
@@ -36,39 +26,35 @@ tags:
 
 ### 详细步骤
 
-1. 本地浏览器访问：http://域名 或 http://公网IP 进入安装向导（镜像刚部署上去会出先 502的错误,是因为xwiki还未启动造成,等待几分钟即可）
+1. 本地浏览器访问：http://域名 或 http://公网IP 进入安装向导
 
-2. xwiki初始化
+2. Xwiki 开始初始化，耐心等待  
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/xwiki/xwiki-initializing-websoft9.png)
 
-3. 安装向导,点击 "Continue" 进入下一步
+3. 正式进入【安装向导】，点击【Continue】进入下一步
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/xwiki/xwiki-install-wizard-websoft9.png)
 
-4. 设置管理员用户信息,填写信息后点击 " Register and login"
+4. 设置管理员用户信息，牢记账号密码
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/xwiki/xwiki-set-admin.png)
-
-5. 确认注册安装xwiki,点击 "Continue" 进入下一步
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/xwiki/xwiki-admin-install-websoft9.png)
 
-6. (**注意:此步骤不能跳过,否则无法使用**) 安装插件模块, 如果显示空白 ,等待十几秒,选择"XWiki Standard Flavor" 后点击 "Install this flavor" 进行安装
+5. 安装可选的预制模板之一（标准版和演示版），**此步骤不能跳过,否则无法使用**
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/xwiki/xwiki-install-flavor1-websoft9.png)
-
-7. 确认安装Flavor,点击 "Install" 进行安装
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/xwiki/xwiki-install-flavor2-websoft9.png)
-
-8. 安装flavor
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/xwiki/xwiki-install-flavor3-websoft9.png)
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/xwiki/xwiki-install-flavor4-websoft9.png)
 
-9. flavor安装完成,点击 "Continue" 进入下一步
-     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/xwiki/xwiki-install-flavor4-websoft9.png)
-
-10. xwiki 安装完成 ,点击 "Continue" 完成最后步骤
+10. 预制模板安装完成后，点击【Continue】完成最后步骤
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/xwiki/xwiki-install-complete-websoft9.png)
 
 
 ### 出现问题？
 
 若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
+
+**访问出现 502 错误？**  
+
+主要原因是 XWiki 还未启动造成，需等待 1-2分钟再试。
 
 ## XWiki 使用入门
 
@@ -77,19 +63,9 @@ tags:
 
 ## XWiki 常用操作
 
-### 配置 SMTP{#smtp}
-
-### 配置域名{#dns}
-
-参考： **[域名五步设置](./dns#domain)** 
-
-### 配置 HTTPS{#https}
-
-参考： **[HTTPS 配置](./dns#https)**
-
 ## 参数{#parameter}
 
-**[通用参数表](./setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 XWiki 应用中包含的基础架构组件路径、版本、端口等参数。 
+XWiki 应用中包含 Java, Nginx, Solr, Tomcat, Docker, MySQL 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 XWiki 运行时所有的 Container：
 
@@ -102,10 +78,10 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 ### 路径{#path}
 
-xwiki 配置文件目录: */etc/xwiki/*
-xwiki 程序目录: */usr/lib/xwiki*
-xwiki 相关插件/组件目录: */var/lib/xwiki*
-xwiki 数据库配置文件: */etc/xwiki/hibernate.cfg.xml*
+xwiki 配置文件目录: */etc/xwiki/*  
+xwiki 程序目录: */usr/lib/xwiki*  
+xwiki 相关插件/组件目录: */var/lib/xwiki*  
+xwiki 数据库配置文件: */etc/xwiki/hibernate.cfg.xml*  
 
 ### 端口{#port}
 
@@ -116,9 +92,6 @@ xwiki 数据库配置文件: */etc/xwiki/hibernate.cfg.xml*
 
 ### 版本{#version}
 
-```shell
-sudo cat /data/logs/install_version.txt
-```
 
 ### 服务{#service}
 
@@ -128,7 +101,3 @@ sudo cat /data/logs/install_version.txt
 ### 命令行{#cli}
 
 ### API
-
-### 参考{#ref}
-
- [《PHP运行环境》](./runtime/php) 

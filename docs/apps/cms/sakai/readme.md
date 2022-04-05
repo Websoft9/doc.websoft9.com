@@ -9,14 +9,13 @@ tags:
 
 # 快速入门
 
-[Sakai](赛课)是一个自由、开源的在线协作和学习环境，是一个类似于 Moodle 的课程管理、学习管理系统，以及虚拟学习环境。
+[Sakai](https://github.com/sakaiproject/sakai) ，中文名“赛课”，它是一个 100% 开源的在线学习系统。它被广泛用于学习、教学、研究和协作。  
 
-![](https://photogallery.oss.aliyuncs.com/photo/1904996544835414/undefined/ab4c28cc-5f11-49ec-aa09-ec512039b4f5.png)
-
-
-部署 Websoft9 提供的 Sakai 之后，需完成如下的准备工作：
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sakai/sakai-gui-websoft9.png)
 
 ## 准备
+
+部署 Websoft9 提供的 Sakai 之后，需完成如下的准备工作：
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
@@ -32,8 +31,6 @@ tags:
 
 2. 输入账号和密码（[查看](./setup/credentials#getpw)），登录
 
-  > Sakai管理员用户名：admin  管理员密码：admin
-  > [danger] 默认的 “123456” 请务必修改为强密码，类似于：f@N7eUUm25xAjP!$ ，这样有助于提高数据库的安全性，减少数据库密码被破解的风险。
 
 ### 出现问题？
 
@@ -46,19 +43,10 @@ tags:
 
 ## Sakai 常用操作
 
-### 配置 SMTP{#smtp}
-
-### 配置域名{#dns}
-
-参考： **[域名五步设置](./dns#domain)** 
-
-### 配置 HTTPS{#https}
-
-参考： **[HTTPS 配置](./dns#https)**
 
 ## 参数{#parameter}
 
-**[通用参数表](./setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 Sakai 应用中包含的基础架构组件路径、版本、端口等参数。 
+Sakai 应用中包含 Java, Nginx, Tomcat, Docker, MySQL 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。 
 
 通过运行`docker ps`，可以查看到 Sakai 运行时所有的 Container：
 
@@ -71,8 +59,8 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 ### 路径{#path}
 
-Sakai 安装目录：*/usr/local/tomcat/webapps*
-Sakai 配置目录: */usr/local/tomcat/sakai/sakai.properties*
+Sakai 安装目录：*/usr/local/tomcat/webapps*  
+Sakai 配置目录: */usr/local/tomcat/sakai/sakai.properties*  
 
 ### 端口{#port}
 
@@ -95,7 +83,3 @@ sudo cat /data/logs/install_version.txt
 ### 命令行{#cli}
 
 ### API
-
-### 参考{#ref}
-
- [《PHP运行环境》](./runtime/php) 

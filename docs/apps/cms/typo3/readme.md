@@ -9,12 +9,13 @@ tags:
 
 # 快速入门
 
-[Typo3](https://typo3.org/) 是一个具有大型全球社区的开源企业内容管理系统，由TYPO3协会的大约900名成员支持,TYPO3被许多知名公司和组织使用。
+[Typo3](https://typo3.org/) 是一个由成熟社区驱动的**企业级** CMS，充满活力的专业社区和[商业生态伙伴](https://typo3.com/partners/professional-service-listing)为企业客户提供全面的服务。TYPO3 可以轻松的与数字资产管理、电子商务、翻译服务、营销自动化、分析等无缝[集成](https://typo3.com/partners/technology-partners)。
 
-
-部署 Websoft9 提供的 Typo3 之后，需完成如下的准备工作：
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/typo3-gui-websoft9.png)
 
 ## 准备
+
+部署 Websoft9 提供的 Typo3 之后，需完成如下的准备工作：
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
@@ -67,16 +68,6 @@ tags:
 
 ## Typo3 常用操作
 
-### 配置 SMTP{#smtp}
-
-### 配置域名{#dns}
-
-参考： **[域名五步设置](./dns#domain)** 
-
-### 配置 HTTPS{#https}
-
-参考： **[HTTPS 配置](./dns#https)**
-
 ### 扩展管理
 
 TYPO3 CMS 提供大量扩展，以增强系统功能。
@@ -101,7 +92,7 @@ TYPO3 CMS 的模板管理非常细致，能够对模板最小元素进行细微�
 
 ## 参数{#parameter}
 
-**[通用参数表](./setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 Typo3 应用中包含的基础架构组件路径、版本、端口等参数。 
+Typo3 应用中包含 PHP, Nginx, Apache, Docker, MySQL 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。 
 
 通过运行`docker ps`，可以查看到 Typo3 运行时所有的 Container：
 
@@ -118,26 +109,26 @@ TYPO3 网站目录： */data/wwwroot/typo3*
 
 ### 端口{#port}
 
-| 端口号 | 用途                                          | 必要性 |
-| ------ | --------------------------------------------- | ------ |
-| 8080   | Typo3 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
+无特殊端口
 
+### 网址
+
+后端：*http://URL/typo3*  
 
 ### 版本{#version}
 
-```shell
-sudo cat /data/logs/install_version.txt
-```
+控制台查看
 
 ### 服务{#service}
 
 ```shell
+sudo docker start | stop | restart | stats typo3
 ```
 
 ### 命令行{#cli}
 
+[Symfony Console Commands (cli)](https://docs.typo3.org/m/typo3/reference-coreapi/main/en-us/ApiOverview/CommandControllers/Index.html)
+
 ### API
 
-### 参考{#ref}
-
- [《PHP运行环境》](./runtime/php) 
+[TYPO3 API Documentation](https://api.typo3.org/)
