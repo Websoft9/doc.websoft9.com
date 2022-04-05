@@ -9,12 +9,13 @@ tags:
 
 # 快速入门
 
-[EspoCRM](https://www.dolibarr.org/)是一个知名的开源ERP/CRM系统，功能包括：产品与服务目录、库存管理、银行账户管理、客户名录、订单管理、商业建议书、合同管理、发票管理、发票与支付管理、制造费用单、运输等，即插即用。
+[EspoCRM](https://www.espocrm.com/demo/) 是一个开源的轻量级CRM，采用响应式设计，界面非常美观大方，能够自动适应PC、平板和手机访问。功能非常全面，包括销售自动化、市场、销售过程、文档、产品、合同、知识库和工作流等功能。支持字段和表单布局客制化，便于定制。
+![](http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/espocrm-gui-websoft9.jpg)
 
-
-部署 Websoft9 提供的 EspoCRM 之后，需完成如下的准备工作：
 
 ## 准备
+
+部署 Websoft9 提供的 EspoCRM 之后，需完成如下的准备工作：
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
@@ -81,20 +82,9 @@ EspoCRM支持第三方的SMTP发送邮件模式，具体如下：
 
 4. 设置完成后，请点击“Send Test Email”测试设置是否成功
 
-> 以上参数设置以163为例，不同SMTP提供商的设置略有差异，请务必明确您所使用的SMTP所要求的设置方
-
-### 配置域名{#dns}
-
-参考： **[域名五步设置](./dns#domain)** 
-
-### 配置 HTTPS{#https}
-
-参考： **[HTTPS 配置](./dns#https)**
-
-
 ## 参数{#parameter}
 
-**[通用参数表](./setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 EspoCRM 应用中包含的基础架构组件路径、版本、端口等参数。 
+EspoCRM 应用中包含 PHP, Apache, Docker, MySQL, phpMyAdmin 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。 
 
 通过运行`docker ps`，可以查看到 EspoCRM 运行时所有的 Container：
 
@@ -111,25 +101,23 @@ EspoCRM 路径:  */data/wwwroot/espocrm*
 
 ### 端口{#port}
 
-| 端口号 | 用途                                          | 必要性 |
-| ------ | --------------------------------------------- | ------ |
-| 8080   | EspoCRM 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
+无特殊端口
 
 
 ### 版本{#version}
 
-```shell
-sudo cat /data/logs/install_version.txt
-```
+控制台查看
 
 ### 服务{#service}
 
 ```shell
+sudo docker start | stop | restart | stats espocrm
 ```
 
 ### 命令行{#cli}
 
-### API
+[Console Commands](https://docs.espocrm.com/administration/commands/)
 
-### 参考{#ref}
+### API
+[EspoCRM REST API](https://docs.espocrm.com/development/api/)
 

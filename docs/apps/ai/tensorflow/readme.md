@@ -13,9 +13,9 @@ tags:
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/tensorflow/tensowflow-gui-websoft9.jpg)
 
-部署 Websoft9 提供的 TensorFlow 之后，需完成如下的准备工作：
-
 ## 准备
+
+部署 Websoft9 提供的 TensorFlow 之后，需完成如下的准备工作：
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:6006** 端口已经开启
@@ -43,7 +43,7 @@ tags:
 
 若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
 
-**使用 TensorFlow 的时候为什么需要先 `source /data/apps/tensorflow/bin/activate`**
+**使用 TensorFlow 的时候为什么需要先 `source /data/apps/tensorflow/bin/activate` ?**
 
 本部署方案中 TensorFlow 使用的 Python 隔离环境安装
 
@@ -66,20 +66,15 @@ tags:
 
 ### 密码管理
 
-本部署方案通过 Nginx 验证访问控制 TensorBoard 的访问，通过如下两个步骤修改密码：
+本部署方案通过 Nginx 验证访问控制 TensorBoard 的访问。修改密码的方案参考：[Nginx .auth_basic 认证](./nginx#authbasic)
 
-1. 编辑 Nginx 验证访问控制文件： */etc/nginx/.htpasswd/htpasswd.conf* 中的密码
-2. 重启 Nginx 服务后生效
-   ```
-   sudo systemctl restart nginx
+### 图形化工具 - TensorBoard
 
-### 图形化工具
-
-[TensorBoard](https://www.tensorflow.org/tensorboard/) 是 Tensorflow 的官方提供的可视化工具，它通过对 Tensoflow 程序运行过程中输出的日志文件进行可视化 Tensorflow 程序的运行状态。
+[TensorBoard](https://www.tensorflow.org/tensorboard/) 是 Tensorflow 的官方提供的可视化工具，它对 Tensorflow 日志文件进行程序状态的可视化分析。
 
 1. 使用本地电脑的浏览器访问网址：*http://域名:6006* 或 *http://服务器公网IP:6006*, 进入登陆页面
 
-2. 输入账号密码（[不知道账号密码？](#账号密码)），成功登录到 TensorBoard
+2. 输入账号密码（[不知道账号密码？](./setup/credentials#getpw)），成功登录到 TensorBoard
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/tensorflow/tensorflow-board-websoft9.png)
 
 3. TensorBoard 工作台
@@ -87,7 +82,7 @@ tags:
 
 ## 参数{#parameter}
 
-**[通用参数表](./setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 TensorFlow 应用中包含的基础架构组件路径、版本、端口等参数。 
+TensorFlow 应用中包含 Python, Nginx, Docker 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 TensorFlow 运行时所有的 Container：
 
@@ -115,7 +110,7 @@ TensorFlow 配置目录： */data/apps/tensorflow/conf*
 ### 版本{#version}
 
 ```shell
-sudo cat /data/logs/install_version.txt
+/data/apps/tensorflow/bin/tensorboard --version_tb
 ```
 
 ### 服务{#service}
@@ -138,5 +133,5 @@ pip install tfx
 
 ### API
 
-### 参考{#ref}
+[API Documentation](https://tensorflow.google.cn/api_docs)
 

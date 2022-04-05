@@ -9,12 +9,11 @@ tags:
 
 # 快速入门
 
-[Dolibarr](https://www.dolibarr.org/)是一个知名的开源ERP/CRM系统，功能包括：产品与服务目录、库存管理、银行账户管理、客户名录、订单管理、商业建议书、合同管理、发票管理、发票与支付管理、制造费用单、运输等，即插即用。
-
-
-部署 Websoft9 提供的 Dolibarr 之后，需完成如下的准备工作：
+[Dolibarr](https://www.dolibarr.org/) 开源的一体化、模块化的业务管理软件，它尝试通过一个  ERP/CRM， 包含企业管理中所需的全部功能：产品与服务目录、库存管理、银行账户、客户名录、订单、商业建议书、合同、发票、发票与支付、费用、运输等，即插即用。
 
 ## 准备
+
+部署 Websoft9 提供的 Dolibarr 之后，需完成如下的准备工作：
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
@@ -60,20 +59,9 @@ tags:
 
 ## Dolibarr 常用操作
 
-### 配置 SMTP{#smtp}
-
-### 配置域名{#dns}
-
-参考： **[域名五步设置](./dns#domain)** 
-
-### 配置 HTTPS{#https}
-
-参考： **[HTTPS 配置](./dns#https)**
-
-
 ## 参数{#parameter}
 
-**[通用参数表](./setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 Dolibarr 应用中包含的基础架构组件路径、版本、端口等参数。 
+Dolibarr 应用中包含 PHP, Apache, Docker, Docker, MySQL, phpMyAdmin 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 Dolibarr 运行时所有的 Container：
 
@@ -90,25 +78,22 @@ Dolibarr 路径:  */data/wwwroot/dolibarr*
 
 ### 端口{#port}
 
-| 端口号 | 用途                                          | 必要性 |
-| ------ | --------------------------------------------- | ------ |
-| 8080   | Dolibarr 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
-
+无特殊端口
 
 ### 版本{#version}
 
-```shell
-sudo cat /data/logs/install_version.txt
-```
+Dolibarr  控制台查看
 
 ### 服务{#service}
 
 ```shell
+sudo docker start | stop | restart | stats dolibarr
 ```
 
 ### 命令行{#cli}
 
+无
+
 ### API
 
-### 参考{#ref}
-
+[Module Web Services API REST](https://wiki.dolibarr.org/index.php?title=Module_Web_Services_API_REST_(developer))

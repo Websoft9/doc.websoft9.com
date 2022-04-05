@@ -9,7 +9,7 @@ tags:
 
 # 快速入门
 
-[明道云](https://www.mingdao.com/) 是一个无代码开发平台，它可以让企业的业务部门在**不需要编程序**的情况下，自行创作出完全符合实际需求的软件系统。
+[明道云](https://www.mingdao.com/) 是一个无代码开发平台（aPaas, No-Code, Low-Code），它可以让企业的业务部门在**不需要编程序**的情况下，自行创作出完全符合实际需求的软件系统。它的主要价值是：大大降低软件生产成本的同时，进一步提高软件交付的成功率。
 
 ![](https://alifile.mingdaocloud.com/wwwhome/dist/pack/static/src-common-mdfeature-img-2x-yy02.jpg)
 
@@ -18,12 +18,9 @@ Websoft9 提供的是明道云私有部署的**免费版**。它相对于**标�
 - 用户数不超过 30 个
 - 单个工作表最大行数 10 万行
 
-> 当本文档无法完全找到所需的参考时，请务必阅读：[明道云官方文档](https://docs.pd.mingdao.com/)
-
+## 准备
 
 部署 Websoft9 提供的 明道云 之后，需完成如下的准备工作：
-
-## 准备
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的  **TCP:38881** 和 **TCP:8880**  端口已经开启
@@ -31,7 +28,7 @@ Websoft9 提供的是明道云私有部署的**免费版**。它相对于**标�
 4. 若想用域名访问  明道云 **[域名五步设置](./dns#domain)** 过程
 
 
-## 明道云 初始化向导{#init}
+## 明道云初始化向导{#init}
 
 ### 详细步骤
 
@@ -89,11 +86,9 @@ Websoft9 提供的是明道云私有部署的**免费版**。它相对于**标�
 参考：[程序打不开](./mingdao/admin#restart)
 
 
-## 明道云 使用入门
+## 明道云使用入门
 
-下面以 **明道云 零代码构建企业管理系统** 作为一个任务，帮助用户快速入门：
-
-[教程和视频](https://help.mingdao.com/)
+明道云官方提供了非常不错的：[教程和视频](https://help.mingdao.com/)
 
 ## 明道云定制服务
 
@@ -107,10 +102,10 @@ Websoft9 作为明道的合作伙伴，具备基于明道云的软件快速构�
 
 欢迎广大的客户朋友和行业合作[联系我们](./helpdesk#contact)。
 
-## 明道云 常用操作
+## 明道云常用操作
 
 
-### 维护
+### 基础设置
 
 请参考官方提供的：[《私有版维护文档》](https://docs.pd.mingdao.com/)，包括：短信设置、对象存储设置、网络访问、环境变量、服务管理等
 
@@ -122,14 +117,6 @@ Websoft9 作为明道的合作伙伴，具备基于明道云的软件快速构�
    ![明道云 SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mingdao/mingdao-smtp-websoft9.png)
 
 3. 完成设置
-
-### 配置域名{#dns}
-
-参考： **[域名五步设置](./dns#domain)** 
-
-### 配置 HTTPS{#https}
-
-参考： **[HTTPS 配置](./dns#https)**
 
 ### 重置密码
 
@@ -147,12 +134,14 @@ Websoft9 作为明道的合作伙伴，具备基于明道云的软件快速构�
 
 ## 参数{#parameter}
 
-**[通用参数表](./setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 明道云 应用中包含的基础架构组件路径、版本、端口等参数。 
+明道云 应用中包含 Nginx, Docker 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。 
 
 通过运行`docker ps`，可以查看到 明道云 运行时所有的 Container：
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                                                                   COMMAND                  CREATED       STATUS       PORTS                       NAMES
+1100b00c55ec   registry.cn-hangzhou.aliyuncs.com/mdpublic/mingdaoyun-community:2.4.1   "/Housekeeper/main -…"   2 hours ago   Up 2 hours   0.0.0.0:8880->8880/tcp      script_app_1
+d6fa950fb107   registry.cn-hangzhou.aliyuncs.com/mdpublic/mingdaoyun-doc:1.2.0         "/bin/sh -c /app/ds/…"   2 hours ago   Up 2 hours   80/tcp, 443/tcp, 8000/tcp   script_doc_1
 ```
 
 
@@ -163,6 +152,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 明道云目录： */data/wwwroot/mingdao*  
 明道云安装管理器目录： */data/wwwroot/mingdao/installer*  
 明道云持久化目录： */data/wwwroot/mingdao/volume*  
+明道云容器配置文件： */data/wwwroot/mingdao/script/docker-compose.yaml*  
 
 ### 端口{#port}
 
@@ -174,21 +164,18 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 ### 版本{#version}
 
-```shell
-sudo cat /data/logs/install_version.txt
-```
+控制台查看
 
 ### 服务{#service}
 
 ```shell
-sudo systemctl start | stop | restart | status  mingdao
+sudo docker start | stop | restart | stats  mingdao
 ```
 
 ### 命令行{#cli}
 
+[常用命令](https://docs.pd.mingdao.com/deployment/docker-compose/command.html)
+
 ### API
 
-参考:[官方文档](https://docs.pd.mingdao.com/deployment/docker-compose/command.html)
-
-### 参考{#ref}
-
+[平台API介绍](https://help.mingdao.com/API1.html)

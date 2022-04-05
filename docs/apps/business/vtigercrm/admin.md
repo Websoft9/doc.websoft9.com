@@ -35,6 +35,8 @@ VtigerCRM 自身提供了升级功能和[升级文档](http://community.vtiger.c
 
 ## 故障速查
 
+除以下列出的 VtigerCRM 故障问题之外， [通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案。
+
 #### 更换服务器IP，VtigerCRM 无法访问？
 
 错误信息：*Invalid compiled template for 'modules/Install/Header.tpl'*  

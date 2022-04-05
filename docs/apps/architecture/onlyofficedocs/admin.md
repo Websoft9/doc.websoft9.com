@@ -16,7 +16,7 @@ slug: /onlyofficedocs/admin
 
 ## 问题解答
 
-#### ONLYOFFICE Docs 同时连接数规则？
+#### ONLYOFFICE Docs 同时连接数规则？{#onlyofficedocsmaxconn}
 
 ONLYOFFICE Docs 同时连接数是指用户在编辑模式下打开文档的数量。  
 例如，对于具有200个同时连接的许可证，一个用户可以打开200个文档，200个用户每个可以打开一个，50个用户每个可以打开4个文档等。  

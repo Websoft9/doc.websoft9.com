@@ -9,9 +9,9 @@ tags:
 
 # 快速入门
 
-[ONLYOFFICE Workspace](https://onlyoffice.com) 是一款集成了 Office 在线文档、电子邮件、事件、任务和客户关系管理工具的开源在线办公套件，适用于高效的团队管理和协作能力。 它可以当做 Office 365 或 Google Docs 的替代品，也可以当做一个内部企业门户应用（OA）。
+[ONLYOFFICE Workspace](https://onlyoffice.com) 是一款集成了 Office 在线文档、电子邮件、事件、任务和客户关系管理工具的开源软件，适用于高效的团队管理和协作能力。 它可以当做 Office 365 或 Google Docs 的替代品，也可以当做一个内部企业门户应用（OA）。
 
-> 为了便于书写，以下用 ONLYOFFICE 代指 ONLYOFFICE Workspace  
+> 为了便于表达，以下用 ONLYOFFICE 代指 ONLYOFFICE Workspace  
 
 
 ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/onlyoffice/onlyoffice-websoft9-001.png)
@@ -70,51 +70,23 @@ tags:
 
 若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
 
-**ONLYOFFICE 默认支持文档编辑与预览吗**
-
-默认已经配置好，无需任何设置即可使用
-
-**ONLYOFFICE 运行慢**
+**ONLYOFFICE 运行慢？**
 
 ONLYOFFICE 对内存要求比较高，建议最少 8G 内存
 
-**本应用是否可以对外提供文档编辑与预览服务**
-
-可以，*http://服务器公网IP:9002* 即服务地址
-
-
 ## ONLYOFFICE 使用入门
 
-下面以 **ONLYOFFICE 构建企业ERP** 作为一个任务，帮助用户快速入门：
+下面以 **ONLYOFFICE 构建集成邮件服务器** 作为一个任务，帮助用户快速入门：
 
 
 
 ## ONLYOFFICE 常用操作
 
-### Document Server
+### 文件预览与编辑
 
-本章适合使用了 Websoft9 提供的 ONLYOFFICE Document Server 部署方案（区别于 ONLYOFFICE）。
+本方案中默认包含文档中间件 [ONLYOFFICE Docs](./onlyofficedocs)，并已完成设置，无需任何设置即可在线编辑和预览文档。
 
-#### 组件
-
-包含：Nginx, ONLYOFFICE Document Server on Docker, Docker等三个组件。  
-
-Nginx 用于接受用户访问请求，然后转发给 ONLYOFFICE Document Server on Docker。  
-
-组件的详细信息参考 [*参数*](#path) 章节。
-
-#### 访问
-
-本地浏览器访问：*http://服务器公网IP:9002* 可看到 OnlyOffice Document Server 正在运行的提示。  
-![ONLYOFFICE Document Server is running](https://libs.websoft9.com/Websoft9/DocsPicture/zh/onlyoffice/onlyoffice-dkisrunning-websoft9.png)
-
-> 如果画面的提示不是*OnlyOffice Document Server is running*，则说明服务运行异常。
-
-### ONLYOFFICE 文件预览与编辑
-
-由 Websoft9 提供的 ONLYOFFICE 部署方案默认包含 ONLYOFFICE Document Server，并已完成设置，无需任何设置即可在线编辑和预览文档。
-
-下面展现文档预览与编辑的设置原理，仅供后续个性化修改参考：
+下面是 ONLYOFFICE 配置文件预览与编辑的设置界面，仅供后续个性化修改参考：
 
 * 登录到 ONLYOFFICE ，依次打开：【设置】>【集成】>【文件服务】，你可以看到预配置：
   ![ONLYOFFICE 文件服务](https://libs.websoft9.com/Websoft9/DocsPicture/zh/onlyoffice/onlyoffice-preview-websoft9.png)
@@ -124,11 +96,24 @@ Nginx 用于接受用户访问请求，然后转发给 ONLYOFFICE Document Serve
 
 > 请勿修改默认的文档配置，除非你打算采用其他文档服务替换它
 
-### ONLYOFFICE 设置语言
+### 设置语言
 
 登录 ONLYOFFICE，在后台 【设置】>【通用】>【自定义】中设置语言
 
 ![ONLYOFFICE 设置语言](https://libs.websoft9.com/Websoft9/DocsPicture/zh/onlyoffice/onlyoffice-lanuageset-websoft9.png)
+
+### 配置 SMTP{#smtp}
+
+1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
+   
+2. 登录 ONLYOFFICE 控制台，依次打开：【设置】>【集成】>【SMTP设置】
+
+3. 准确填写 SMTP 参数
+   ![ONLYOFFICE SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/zh/onlyoffice/onlyoffice-smtp-1-websoft9.png)
+
+   > 【主机登录】与【发件人电邮地址】必须保持一致，否则无法发送邮件。
+
+4. 点击【发送邮件测试】
 
 
 ### 重置密码
@@ -152,31 +137,10 @@ Nginx 用于接受用户访问请求，然后转发给 ONLYOFFICE Document Serve
 2. 打开 ONLYOFFICE 登录页面，点击【Forgot】开始通过邮件找回密码
   ![ONLYOFFICE 找回密码](https://libs.websoft9.com/Websoft9/DocsPicture/zh/onlyoffice/onlyoffice-forgetpw-websoft9.png)
 
-### 配置 SMTP{#smtp}
-
-1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
-   
-2. 登录 ONLYOFFICE 控制台，依次打开：【设置】>【集成】>【SMTP设置】
-
-3. 准确填写 SMTP 参数
-   ![ONLYOFFICE SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/zh/onlyoffice/onlyoffice-smtp-1-websoft9.png)
-
-   > 【主机登录】与【发件人电邮地址】必须保持一致，否则无法发送邮件。
-
-4. 点击【发送邮件测试】
-
-### 配置域名{#dns}
-
-参考： **[域名五步设置](./dns#domain)** 
-
-### 配置 HTTPS{#https}
-
-参考： **[HTTPS 配置](./dns#https)**
-
 
 ## ONLYOFFICE 参数{#parameter}
 
-ONLYOFFICE Workspace 应用中包含 Nginx, Docker, MySQL, phpMyAdmin, ONLYOFFICE Docs 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。
+ONLYOFFICE Workspace 应用中包含 Nginx, Docker, MySQL, phpMyAdmin, [ONLYOFFICE Docs](./onlyofficedocs) 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 ONLYOFFICE 运行时所有的 Container：
 
@@ -189,13 +153,9 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 ### 路径{#path}
 
-ONLYOFFICE Community Server存储目录： */data/wwwroot/communityserver*  
-ONLYOFFICE docker-compose 文件路径： */data/wwwroot/onlyoffice/docker-compose.yml*  
-ONLYOFFICE 日志目录： */data/wwwroot/onlyoffice/communityserver/logs*
-
-ONLYOFFICE Document Server存储目录： */data/apps/onlyofficedocumentserver*  
-ONLYOFFICE Docs docker-compose 文件路径： */data/apps/onlyofficedocumentserver/docker-compose.yml*  
-ONLYOFFICE 日志目录： */data/apps/onlyofficedocumentserver/logs*
+ONLYOFFICE Workspace存储目录： */data/wwwroot/communityserver*  
+ONLYOFFICE Workspace docker-compose 文件路径： */data/wwwroot/onlyoffice/docker-compose.yml*  
+ONLYOFFICE Workspace 日志目录： */data/wwwroot/onlyoffice/communityserver/logs*
 
 ### 端口{#port}
 
@@ -224,7 +184,9 @@ sudo docker start | stop | restart onlyofficedocs
 
 ### 命令行{#cli}
 
+无
+
 ### API
 
-### 参考{#ref}
+[ONLYOFFICE API](https://api.onlyoffice.com/)
 
