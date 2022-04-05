@@ -10,14 +10,13 @@ tags:
 
 # 快速入门
 
-[Discuz!Q](https://discuz.com/)是开源的论坛社区系统，它拥有完全开源、提供丰富接口、前后端分离、轻量化、数据独立可控、敏捷上云、快速变现七大能力。
+[Discuz!Q](https://discuz.com/) 是开源的论坛系统，用于构建知识付费、内容变现的圈子或私域流量应用。它拥有完全开源、提供丰富接口、前后端分离、轻量化、数据独立可控、敏捷上云、快速变现七大能力。
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuzq-guiweb-websoft9.png)
-
-
-部署 Websoft9 提供的 Discuz!Q 之后，需完成如下的准备工作：
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuzq/discuzq-guim-websoft9.webp)
 
 ## 准备
+
+部署 Websoft9 提供的 Discuz!Q 之后，需完成如下的准备工作：
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
@@ -29,10 +28,9 @@ tags:
 
 ### 详细步骤
 
-1. 本地电脑浏览器访问网址：*http://域名/install* 或 *http://服务器公网IP/install*, 进入安装向导界面
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuzq-wizard-websoft9.png)
+1. 本地电脑浏览器访问网址：*http://域名/install* 或 *http://服务器公网IP/install*, 进入初始化界面
 
-2. 设置站点名称、数据库连接和管理员账号，其中**数据库连接无需修改**，然后点击【下一步】
+2. 设置：数据库连接（**不建议做任何更改**）和管理员账号，然后点击【安装】进入下一步
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuzq-setting-websoft9.png)
 
 3. 安装完成，手机扫描右侧二维码可以进入移动端页面。  
@@ -48,8 +46,6 @@ tags:
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuzq-waychat-websoft9.png)
 
 
-
-
 ### 出现问题？
 
 若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
@@ -63,25 +59,9 @@ tags:
 ## Discuz!Q 常用操作
 
 
-### 配置域名{#dns}
-
-参考： **[域名五步设置](./dns#domain)** 
-
-
-### 配置 HTTPS{#https}
-
-参考： **[HTTPS 配置](./dns#https)**
-
-
-### Discuz!Q 修改数据库配置
-
-Discuz!Q 安装目录下的 *config/config.php* 存储数据库连接信息，可以通过此文件来应对数据库账号信息发送变化。
-
-
-
 ## 参数{#parameter}
 
-**[通用参数表](./setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 Discuz!Q 应用中包含的基础架构组件路径、版本、端口等参数。 
+Discuz!Q 应用中包含 Nginx, Docker, MySQL 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 Discuz!Q 运行时所有的 Container：
 
@@ -97,6 +77,9 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 Discuz!Q 安装目录： */data/wwwroot/discuzq*  
 Discuz!Q 配置文件： */data/wwwroot/discuzq/volumes/config/config.php*  
 
+### 网址
+
+Discuz!Q 后台地址： *http://URL/admin*  
 
 ### 端口{#port}
 
@@ -107,25 +90,18 @@ Discuz!Q 配置文件： */data/wwwroot/discuzq/volumes/config/config.php*
 
 ### 版本{#version}
 
-```shell
-sudo cat /data/logs/install_version.txt
-```
+控制台查看
 
 ### 服务{#service}
 
 ```shell
-sudo systemctl start | stop | restart | status ghost
-
-# you can use the following CMD to manage Discuz!Q container
-sudo docker exec -it ghost /bin/bash
+sudo docker start | stop | restart | stats discuzq
 ```
 
 ### 命令行{#cli}
 
+无
+
 ### API
 
 [官方API](https://discuz.com/api-docs/v1/)
-
-### 参考{#ref}
-
- [《PHP运行环境》](./runtime/php) 

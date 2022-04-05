@@ -79,6 +79,15 @@ journalctl -u appname
 
 #### Linux
 
+应用报错后，有如下几个可以分析日志的入口： 
+
+1. ERPNext 程序运行日志：*/data/logs/appname*
+2. 应用进程管理日志，运行 `systemctl status appname -l` 查看
+3. Nginx 日志：*/data/logs/nginx*
+4. Docker 容器日志： `docker status appname`
+
+检索关键词 **Failed** 或者 **error** 查看错误
+
 #### Windows
 
 按照下列图中所示，进入到 Windows 系统的**事件查看器**，选择 Windows 日志下的应用程序，然后在右侧的事件列表查看出现错误的应用程序，单击即可在下方弹出详细的错误信息，最后就可以根据错误原因来纠正错误。

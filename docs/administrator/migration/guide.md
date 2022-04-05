@@ -9,6 +9,32 @@ slug: /migration
 
 被迁移对象和目的地位置的组合，形成了多种多样的迁移场景。下面详细说明最常见的迁移场景：
 
+
+### Docker 数据库迁移到 RDS
+
+如果用户不喜欢使用服务器上安装的 MariaDB/MySQL，而希望迁移到云数据库中（RDS），大致流程：
+
+1. 备份已有数据库，并导入到 RDS 中（适合于 ERPNext 已经完成安装）
+
+2. 修改 [应用容器配置文件:/data/wwwroot/appname/.env](#path) 中的数据库相关信息
+   ```
+   DB_MRAIADB_USER=root
+   DB_MARIADB_PASSWORD=yourpassword
+   DB_MARIADB_HOST=mariadb
+   DB_MARIADB_PORT=3306
+   DB_MARIADB_VERSION=10.6
+   ```
+
+   > DB_MARIADB_HOST 设置为外部数据库地址
+
+3. 重新运行容器
+   ```
+   cd /data/wwwroot/erpnext
+   docker-compose up -d
+   ```
+
+4. 测试更改数据库后的连接可用性
+
 ### 迁移网站源码（本地）
 
 以将原目录 */data/wwwroot* 下的 **mysite1** 迁移到 */data2/wwwroot* 目标目录下为例，具体步骤如下：

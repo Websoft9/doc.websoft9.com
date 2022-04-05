@@ -9,21 +9,21 @@ tags:
 
 # 快速入门
 
-[ONLYOFFICE](https://onlyoffice.com) 是一款集成了文档、电子邮件、事件、任务和客户关系管理工具的开源在线办公套件。其文档管理功能实现了文档的在线编辑、在线预览和协同管理，可用于替代Office365或Google docs。另外，它还提供了CRM、项目管理等功能，非常合适作为企业内部的全员协作Office系统。  
+[ONLYOFFICE Workspace](https://onlyoffice.com) 是一款集成了 Office 在线文档、电子邮件、事件、任务和客户关系管理工具的开源在线办公套件，适用于高效的团队管理和协作能力。 它可以当做 Office 365 或 Google Docs 的替代品，也可以当做一个内部企业门户应用（OA）。
 
-ONLYOFFICE 包括三大套件：Community Server, Document Server and Mail Server，各司其职。
+> 为了便于书写，以下用 ONLYOFFICE 代指 ONLYOFFICE Workspace  
+
 
 ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/onlyoffice/onlyoffice-websoft9-001.png)
 
-
-部署 Websoft9 提供的 ONLYOFFICE 之后，需完成如下的准备工作：
-
 ## 准备
+
+部署 Websoft9 提供的 ONLYOFFICE Workspace 之后，需完成如下的准备工作：
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 ONLYOFFICE 的 **[默认账号和密码](./setup/credentials#getpw)**  
-4. 若想用域名访问  ONLYOFFICE **[域名五步设置](./dns#domain)** 过程
+3. 在服务器中查看 ONLYOFFICE Workspace 的 **[默认账号和密码](./setup/credentials#getpw)**  
+4. 若想用域名访问  ONLYOFFICE Workspace **[域名五步设置](./dns#domain)** 过程
 
 
 ## ONLYOFFICE 初始化向导{#init}
@@ -174,9 +174,9 @@ Nginx 用于接受用户访问请求，然后转发给 ONLYOFFICE Document Serve
 参考： **[HTTPS 配置](./dns#https)**
 
 
-## 参数{#parameter}
+## ONLYOFFICE 参数{#parameter}
 
-**[通用参数表](./setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 ONLYOFFICE 应用中包含的基础架构组件路径、版本、端口等参数。 
+ONLYOFFICE Workspace 应用中包含 Nginx, Docker, MySQL, phpMyAdmin, ONLYOFFICE Docs 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 ONLYOFFICE 运行时所有的 Container：
 
@@ -201,21 +201,25 @@ ONLYOFFICE 日志目录： */data/apps/onlyofficedocumentserver/logs*
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
-| 8080   | ONLYOFFICE 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
-| 9002   | ONLYOFFICE Document Server on Docker  | 可选   |
+| 9003   | ONLYOFFICE Workspace 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
+| 9002   | ONLYOFFICE docs  | 可选   |
 
 
 ### 版本{#version}
 
 ```shell
-sudo cat /data/logs/install_version.txt
+# ONLYOFFICE version
+onlyofficectl status | grep ONLYOFFICE*
+
+# ONLYOFFICE Community Server version
+docker image inspect onlyoffice/communityserver  | grep onlyoffice.community.version | sed -n 1p
 ```
 
 ### 服务{#service}
 
 ```shell
-sudo docker start | stop | restart onlyofficecommunityserver
-sudo docker start | stop | restart onlyofficedocumentserver
+sudo docker start | stop | restart onlyoffice
+sudo docker start | stop | restart onlyofficedocs
 ```
 
 ### 命令行{#cli}

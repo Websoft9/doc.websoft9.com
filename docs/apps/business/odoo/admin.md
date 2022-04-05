@@ -13,9 +13,11 @@ tags:
 
 ## 场景
 
-### 备份与恢复
+### 开启 PostgreSQL 远程连接
 
-### 升级
+Odoo 默认安装的 PostgreSQL 并不会启用数据库账号，官方解决方案：https://www.odoo.com/documentation/13.0/setup/deploy.html#postgresql
+
+### 在线升级
 
 Odoo 后台提供了在线升级能力，让升级工作变得非常简单。参考下面的步骤完成升级：
 
@@ -30,9 +32,11 @@ Odoo 后台提供了在线升级能力，让升级工作变得非常简单。参
 
 ## 故障速查
 
-#### 如何查看错误日志？
+除以下列出的 Odoo 故障问题之外， [通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案。 
 
-最简单的方式是通过SSH连接服务器，运行`odoo`这个命令，就会显示错误日志以及Odoo的运行情况
+#### 如何查看 Odoo 错误日志？
+
+最简单的方式是通过 SSH 连接服务器，运行`odoo`这个命令，就会显示错误日志以及 Odoo 的运行情况
 
 #### 恢复数据库、上传附件等操作，出现 “413 Request Entity Too Large” 错误？{#attachment}
 
@@ -49,24 +53,24 @@ Odoo 后台提供了在线升级能力，让升级工作变得非常简单。参
    ```
 4. 保存并[重启 Nginx 服务](../setup/parameter#service)
 
-#### 访问Odoo总是出现数据库设置提醒？
+#### Odoo 总出现数据库设置提醒？
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/odoo/odoo-setpasswodrem-websoft9.png)
 
 这个提醒的是要求你尽快给数据库设置一个高强度的管理员密码，如果不设置将面临很大的风险。一旦设置后，此界面就不会再弹出了
 
-#### 无法通过 SFTP 上传文件到Odoo程序目录问题
+#### SFTP 无法上传文件到 Odoo 目录？
 
-由于部分 Ubuntu系统 默认创建了默认用户名 ubuntu ,ubuntu为普通用户没有对odoo程序的源码或目录有操作的权限,需要执行一下命令:
+Linux 普通用户没有 Odoo 程序的源码或目录有操作的权限，需要执行以下命令:
 
 ```
 sudo chmod o+rw  /usr/lib/python2.x/dist-packages/odoo   # odoo10版本
 sudo chmod o+rw  /usr/lib/python3/dist-packages/odoo   # odoo11版本以上
 ```
 
-#### PDF无法打印中文
+#### PDF 无法打印中文
 
-Odoo11之前的版本，在使用Odoo打印功能时，下载的PDF文件只有英文，没有中文，导致打印不完整。
+Odoo11 之前的版本，在使用 Odoo 打印功能时，下载的PDF文件只有英文，没有中文，导致打印不完整。
 
 **问题原因**：系统环境里没有下载所需的中文字体
 
@@ -77,71 +81,69 @@ sudo apt-get install ttf-wqy-zenhei
 sudo apt-get install ttf-wqy-microhei
 ~~~
 
-#### Odoo 备份出现 Command pg_dump not found
-
+#### Command pg_dump not found？
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/odoo/odoo-backuperror-websoft9.png)
 
-原因：PostgreSQL的备份命令没有找到
-解决方案：需要进一步查看PostgreSQL安装问题，还是Odoo本身的问题
-
-#### 数据库服务无法启动
-
-数据库服务无法启动最常见的问题包括：磁盘空间不足，内存不足，配置文件错误。  
-建议先通过命令进行排查  
-
-```shell
-# 查看磁盘空间
-df -lh
-
-# 查看内存使用
-free -lh
-```
-
+现象：Odoo 备份数据时，报错：Command pg_dump not found  
+原因：PostgreSQL 的备份命令没有找到
+方案：需要进一步查看PostgreSQL安装问题，还是Odoo本身的问题
 
 
 ## 问题解答
 
-#### Odoo支持多语言吗？
+#### Odoo 支持多语言吗？
 
 支持多语言（包含中文），参考：[语言设置](../odoo#setlang)
 
-#### Odoo数据库连接配置信息在哪里？
+#### Odoo 数据库连接配置信息在哪里？
 
 Odoo 采用 [Peer Authentication](https://www.postgresql.org/docs/10/auth-methods.html#AUTH-PEER) 方式连接 PostgreSQL，即以操作系统用户登录数据库，无需密码。
 
-#### 为什么在设置面板看不到 Odoo 更新（Updates）操作功能？
+#### Odoo 控制台看不到更新提示？
 
 此功能只能在开发者模式下使用，请确保你的 Odoo 控制台是否已经切换成[开发者管理模式](../odoo#dev-mode)
 
 #### 如何删除 Odoo 演示数据？
 
-由于 Odoo 支持多企业组织方式，建议新增一个企业组织（不要勾选演示数据）后，再删除带演示的数据库。具体操作方式参考：[ Odoo 数据库管理](../odoo#dbadmin)
+没有直接上传的方案。由于 Odoo 支持多企业组织方式，建议新增一个企业组织（不要勾选演示数据）后，再删除带演示的数据库。具体操作方式参考：[ Odoo 数据库管理](../odoo#dbadmin)
 
 #### Odoo 是否可以导出 PDF 文件？
 
 可以。安装 Invoice, Purchase 等模块可以测试 print to PDF 功能
 ![Odoo 打印PDF](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-printtopdf-websoft9.png)
 
-#### 如果没有域名是否可以部署 Odoo？
-
-可以，访问`http://服务器公网IP` 即可
-
-#### Windows 版的 Odoo 的 PostgreSQL 用户对应的密码是多少？
-
-请在[账号密码](/zh/stack-components.md#postgresql)章节查看
-
 #### 是否有可视化的数据库管理工具？
 
 请直接通过 [Odoo 自带的数据库管理工具](../odoo#pgadmin)操作
 
-#### 是否可以修改Odoo的源码路径？
+#### Odoo 在中国有哪些实施商？
 
-不可以
+如果您需要Odoo的配置，咨询、实施和开发服务，请与专业的服务商联系。我们了解到的信息如下：
 
-#### 如何修改上传的文件权限?
+*   苏州远鼎 http://www.chinamaker.net/
+*   开源智造 http://www.oscg.cn/
+*   上海寰享网络科技有限公司 https://www.elico-corp.com/zh_CN/
+*   北京开远科技有限公司 https://www.kalway.cn/
+*   珠海市信莱德软件开发有限公司 http://www.zhsunlight.cn/
+*   成都欧督系统科技有限公司 http://www.odoostart.com/
+*   山西清水欧度信息技术有限公司  http://www.odooqs.com (54773801@qq.com)
 
-```shell
-chown -R nginx.nginx /data/wwwroot/
-find /data/wwwroot/ -type d -exec chmod 750 {} \;
-find /data/wwwroot/ -type f -exec chmod 640 {} \;
-```
+#### 有什么好的Odoo学习资源？
+
+* Odoo爱好者博客：https://alanhou.org/category/odoo/
+
+#### 贵司提供的企业版镜像包含授权吗？
+
+不包含授权，用户需要向Odoo官方订阅授权。  
+
+下面是关于试用、授权和费用的说明：
+
+* 镜像部署后，用户需向官方申请免费试用30天
+* 试用期之后，用户需向官方订阅商用授权以继续使用
+* 镜像费用不包含 Odoo 授权费用，Odoo 授权费用也不包含镜像费用
+* 镜像解决了用户的安装部署，订阅镜像一方面省去了安装麻烦，另外一方面可以在运维过程获得我们的技术支持
+* 总体费用 = 云服务器费用 + 镜像费用 + 企业版授权费用
+
+#### Odoo 社区版可以升级到企业版吗？
+
+可以，但需要提前订阅企业版授权

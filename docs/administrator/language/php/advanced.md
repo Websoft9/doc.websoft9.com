@@ -90,4 +90,3 @@ PHP Package是一种源码包，用户的项目若要用到源码包，需要通
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/iis-addphp-websoft9.png)
 2. 弹出的对话框中上传php扩展文件（.dll）
 3. 重启IIS后生效
-

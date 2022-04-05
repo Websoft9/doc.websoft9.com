@@ -9,12 +9,13 @@ tags:
 
 # 快速入门
 
-[VtigerCRM](https://vtiger.com)一套开源的客户关系管理系统(CRM)。基于SugarCRM开发的一个衍生版本。适合帮助中小企业从业务，从市场、销售、采购、库存、客服等全程跟踪客户，实现销售自动化，获取更多订单。  
+[Vtiger Community Edition](https://www.vtiger.com/open-source-crm/) 一套开源的客户关系管理系统(CRM)，它是基于 SugarCRM 开发的一个衍生版本。适合中小企业从业务、市场、销售、采购、库存、客服等全程跟踪客户，实现销售自动化，获取更多订单。  
 
-
-部署 Websoft9 提供的 VtigerCRM 之后，需完成如下的准备工作：
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/vtigercrm/vtigercrm-gui-websoft9.png)
 
 ## 准备
+
+部署 Websoft9 提供的 VtigerCRM 之后，需完成如下的准备工作：
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
@@ -70,35 +71,32 @@ tags:
 1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
    
 2. 打开VtigerCRM->设置按钮 > CRM Settings > Outgoing Server
+  ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-smtp-websoft9.png)
 
 3. 设置无误后，请点击“Send Test Email”进行测试以验证
-
-另外，SuiteCRM安装过程（第三步）也可以设置SMTP，参考下图：
-
-![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-smtp-websoft9.png)
-
-### 配置域名{#dns}
-
-参考： **[域名五步设置](./dns#domain)** 
-
-### 配置 HTTPS{#https}
-
-参考： **[HTTPS 配置](./dns#https)**
 
 ### 安装中文包
 
 VtigerCRM 支持多国语言，中文包安装方法如下：
 
-1.  到官方[MarketPlace](https://marketplace.vtiger.com/app/listings)-Language Pack下载Chinese 简体中文语言包
-2.  通过主菜单【Setting – CRM Setting – Module Management – Modules 】进入模块管理界面，点击右上角 “Import Module from Zip”按钮，进入导入模块管理界面，选择语言包进行导入。注意：导入页面这里有个 bug，导入时请直接选择语言包进行导入，不要勾选“ I accept with disclaimer and would like to proceed”否则无法导入。
-3.  右上角点击你的登录用户名->My Preferences-> Edit，点击 Language 后面的下拉框选择语言，然后保存
+1.  到官方 [MarketPlace](https://marketplace.vtiger.com/app/listings)-Language Pack 下载 Chinese 简体中文语言包
+
+2.  导入语言包：通过主菜单【Setting – CRM Setting – Module Management – Modules 】进入模块管理界面，点击右上角 “Import Module from Zip”按钮，进入导入模块管理界面，选择语言包进行导入。
+
+    > 注意：导入时请直接选择语言包进行导入，不要勾选“ I accept with disclaimer and would like to proceed”否则无法导入。
+
+3.  启用新的语言：右上角点击你的登录用户名->My Preferences-> Edit，点击 Language 后面的下拉框选择语言，然后保存
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/vtigercrm/change-language-websoft9.jpg)
 
-注意：语言包也可以通过官方扩展应用市场安装。在 VtigerCRM 右上角点齿轮图标进入后台设置界面，左侧菜单栏点击 Extension Store 进入官方扩展应用市场。点击应用市场右上角的 Login to Marketplace 登录或者注册应用市场。搜索 Chinese 找到简体中文语言包进行安装。
+### 连接 Marketplace
+
+在 VtigerCRM 右上角点齿轮图标进入后台设置界面，左侧菜单栏点击 Extension Store 进入官方扩展应用市场。点击应用市场右上角的 Login to Marketplace 登录或者注册应用市场。搜索 Chinese 找到简体中文语言包进行安装。
+
+注意：语言包也可以通过官方扩展应用市场安装。
 
 ## 参数{#parameter}
 
-**[通用参数表](./setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 VtigerCRM 应用中包含的基础架构组件路径、版本、端口等参数。 
+VtigerCRM 应用中包含 PHP, Nginx, Docker, MySQL, phpMyAdmin 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 VtigerCRM 运行时所有的 Container：
 
@@ -111,29 +109,29 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 ### 路径{#path}
 
-VtigerCRM 路径:  */data/wwwroot/vtigercrm*  
+VtigerCRM 目录:  */data/wwwroot/vtigercrm*   
+VtigerCRM 升级路径： *http://URL/migrate*
 
 ### 端口{#port}
 
-| 端口号 | 用途                                          | 必要性 |
-| ------ | --------------------------------------------- | ------ |
-| 8080   | VtigerCRM 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
+无特殊端口
 
 
 ### 版本{#version}
 
-```shell
-sudo cat /data/logs/install_version.txt
-```
+控制台查看
 
 ### 服务{#service}
 
 ```shell
+sudo docker start | stop | restart | stats vtigercrm
 ```
 
 ### 命令行{#cli}
 
+无
+
 ### API
 
-### 参考{#ref}
+[Server APIs](https://community.vtiger.com/help/vtigercrm/developers/server-apis.html)
 

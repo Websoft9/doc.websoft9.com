@@ -13,10 +13,9 @@ tags:
 
 ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-ui.png)
 
+## 准备
 
 部署 Websoft9 提供的 SuiteCRM 之后，需完成如下的准备工作：
-
-## 准备
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
@@ -28,18 +27,18 @@ tags:
 
 ### 详细步骤
 
-1. 本地浏览器访问：*http://域名* 或 *http://公网IP* 进入安装向导（首选域名访问方式）
+1. 本地浏览器访问：*http://域名* 或 *http://服务器公网IP* 进入安装向导
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-accept-websoft9.png)
 
-2. 环境检测会自动通过，选择Next进入下一步
+2. 环境检测会自动通过，选择【Next】进入下一步
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-check-websoft9.png)
 
 3. 系统进入配置数据库界面（[查看数据库账号密码](./setup/credentials#getpw)）。然后设置管理员账号，牢记之，点击“安装”
-
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-dbconf-websoft9.png)
-4. 系统进入安装过程，耐心等待，安装成功后系统会进行提示
 
+4. 系统进入安装过程，耐心等待，安装成功后系统会进行提示
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-login-websoft9.png)
+
 5. 开始体验后台
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-backend-websoft9.png)
 
@@ -70,14 +69,6 @@ tags:
 
 ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-smtp-websoft9.png)
 
-### 配置域名{#dns}
-
-参考： **[域名五步设置](./dns#domain)** 
-
-### 配置 HTTPS{#https}
-
-参考： **[HTTPS 配置](./dns#https)**
-
 ### 安装中文包
 
 SuiteCRM默认安装只有英文，需要中文或其他语言，需要下载语言包，然后通过后台进行安装，以中文为例，具体如下：
@@ -96,7 +87,7 @@ SuiteCRM默认安装只有英文，需要中文或其他语言，需要下载语
 
 ## 参数{#parameter}
 
-**[通用参数表](./setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 SuiteCRM 应用中包含的基础架构组件路径、版本、端口等参数。 
+SuiteCRM 应用中包含 PHP, Nginx, Apache, Docker, MySQL等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 SuiteCRM 运行时所有的 Container：
 
@@ -110,29 +101,27 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 ### 路径{#path}
 
 SuiteCRM 路径:  */data/wwwroot/suitecrm*  
-SuiteCRM 配置文件: */data/wwwroot/default/suitecrm/config.php*
+SuiteCRM 配置文件: */data/wwwroot/suitecrm/config.php*
 
 ### 端口{#port}
 
-| 端口号 | 用途                                          | 必要性 |
-| ------ | --------------------------------------------- | ------ |
-| 8080   | SuiteCRM 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
-
+无特殊端口
 
 ### 版本{#version}
 
-```shell
-sudo cat /data/logs/install_version.txt
-```
+控制台查看
 
 ### 服务{#service}
 
 ```shell
+sudo docker start | stop | restart | stats suitecrm
 ```
 
 ### 命令行{#cli}
 
+无
+
 ### API
 
-### 参考{#ref}
+[API Versions](https://docs.suitecrm.com/developer/api/)
 
