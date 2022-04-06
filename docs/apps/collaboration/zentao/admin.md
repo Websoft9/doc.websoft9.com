@@ -12,7 +12,7 @@ tags:
 
 ## 场景
 
-### 备份与恢复
+### 在线备份与恢复
 
 ZenTao 后台提供了非常简单实用的在线备份功能，使用方法如下：
 
@@ -27,7 +27,7 @@ ZenTao 后台提供了非常简单实用的在线备份功能，使用方法如�
 4. ZenTao 提供的回收站功能，也可以恢复手工删除的数据
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zentao/zentao-recycle-websoft9.png)
 
-### 升级
+### 手工升级
 
 ZenTao 通过手工上传代码的方式进行升级。在升级之前请做好服务器的快照备份，这个是必须的步骤，因为谁都无法保证升级 100% 成功。
 
@@ -40,22 +40,12 @@ ZenTao 通过手工上传代码的方式进行升级。在升级之前请做好�
 
 ## 故障速查
 
-除以下列出的 Superset 故障问题之外， [通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案：
-
-#### ZenTao 重定向错误？
-
-重定向错误比较常见。处理办法：分析网站根目录下的 `.htaccess` 文件，看看有没有死循环规则
+除以下列出的 Zentao 故障问题之外，[通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案：
 
 #### 密码输入错误多次被锁，怎么解决？
 
 1. 10 分钟后会自动解锁。
 2. 管理员登录，组织 → 用户 操作栏里有解锁按钮。
-
-#### 修改了数据库密码 ZenTao 不能访问？
-
-若已完成 ZenTao 安装向导，再通过 phpMyAdmin 修改数据库密码，ZenTao 就会连不上数据库
-
-需要修改 [ZenTao 配置文件](././#path) 对应的数据库 password 参数即可。
 
 ## 常见问题
 
@@ -74,52 +64,3 @@ ZenTao 通过手工上传代码的方式进行升级。在升级之前请做好�
 #### ZenTao 提供客户端吗？
 
 禅道手机客户端 IOS 版本和安卓版本， 专为禅道专业版和企业版用户提供。
-
-#### ZenTao 商品中的 LAMP,LNMP 有何含义？
-
-LAMP 和 LNMP 代表支持 ZenTao 运行所对应的基础环境，具体参考[环境说明](../php)
-
-#### 可否用云平台 RDS 作为 ZenTao 的数据库？
-
-可以，修改 [ZenTao 配置文件](././#path) 即可
-
-#### ZenTao 能在 Windows 服务器上运行吗？
-
-可以，但是我们推荐在运行 ZenTao 效率更高的 Linux 服务器上运行
-
-#### ZenTao 数据库连接配置信息在哪里？
-
-数据库配置信息 [ZenTao 配置文件](././#path)中
-
-#### 如果没有域名是否可以部署 ZenTao？
-
-可以，访问`http://服务器公网IP` 即可
-
-#### 数据库 root 用户对应的密码是多少？
-
-密码存放在服务器相关文件中：`/credentials/password.txt`
-
-#### 是否有可视化的数据库管理工具？
-
-有，内置 phpMyAdmin，访问地址：http://服务器公网 IP:9090
-
-#### 如何禁止 phpMyAdmin 访问？
-
-连接服务器，编辑 phpMyAdmin 配置文件，将其中的 Require all granted 更改为 Require ip 192.160.1.0，然后重启 Apache 服务
-
-#### 是否可以修改 ZenTao 的源码路径？
-
-可以，通过修改 虚拟主机配置文件中相关参数
-
-#### 如何修改上传的文件权限?
-
-```shell
-#ZenTao(LAMP)
-chown -R apache.apache /data/wwwroot
-
-#ZenTao(LNMP)
-chown -R nginx.nginx /data/wwwroot
-
-find /data/wwwroot -type d -exec chmod 750 {} \;
-find /data/wwwroot -type f -exec chmod 640 {} \;
-```
