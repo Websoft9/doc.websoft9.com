@@ -9,7 +9,9 @@ tags:
 
 # 快速入门
 
-[Dolibarr](https://www.dolibarr.org/) 开源的一体化、模块化的业务管理软件，它尝试通过一个  ERP/CRM， 包含企业管理中所需的全部功能：产品与服务目录、库存管理、银行账户、客户名录、订单、商业建议书、合同、发票、发票与支付、费用、运输等，即插即用。
+[Dolibarr](https://www.dolibarr.org/) 开源的一体化、模块化的业务管理软件，它尝试通过一个  ERP/CRM， 包含企业管理中所需的全部功能：产品与服务目录、库存管理、银行账户、客户名录、订单、商业建议书、合同、发票、发票与支付、费用、运输等，即插即用。   
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/dolibarr/dolibarr-gui-websoft9.webp)
 
 ## 准备
 

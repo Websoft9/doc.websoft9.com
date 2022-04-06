@@ -24,10 +24,10 @@ tags:
 
 ### 详细步骤
 
-1. 本地电脑浏览器访问：*http://服务器公网IP:9002* 可看到 OnlyOffice Document Server 正在运行的提示。  
+1. 本地电脑浏览器访问：*http://服务器公网IP:9002* 可看到 OnlyOffice Docs 正在运行的提示。  
    ![ONLYOFFICE Document Server is running](https://libs.websoft9.com/Websoft9/DocsPicture/zh/onlyoffice/onlyoffice-dkisrunning-websoft9.png)
 
-> 如果画面的提示不是*OnlyOffice Document Server is running*，则说明服务运行异常。
+> 如果画面的提示不是*OnlyOffice Docs is running*，则说明服务运行异常。
 
 2. 完成域名解析后，请针对不同的 Web 服务器下，完成对应的域名绑定操作。
 

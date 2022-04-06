@@ -29,7 +29,7 @@ tags:
 
 ### 详细步骤
 
-1. 使用本地浏览器访问网址：_http://域名_ 或  *http://服务器公网IP*, 就进入引导首页
+1. 使用本地浏览器访问网址： *http://域名* 或 *http://服务器公网IP*, 就进入引导首页
 
 2. 根据系统提示，选择语言，然后“开始安装”
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zentao/zentao-install001-websoft9.png)

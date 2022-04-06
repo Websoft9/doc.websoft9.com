@@ -64,7 +64,7 @@ docker restart seafile
 
 **Seafile 是否支持在线文档编辑与预览**
 
-镜像预装了 OnlyOffice Document Server，可以通过配置实现在线文档编辑与预览，[参考](./seafile/solution#onlyoffice)
+镜像预装了 OnlyOffice Docs，可以通过配置实现在线文档编辑与预览，[参考](./seafile/solution#onlyoffice)
 
 
 ## Seafile 使用入门
@@ -89,7 +89,7 @@ Seafile 是一款开源的企业网盘，作为企业网盘，主要用于网络
 
    ![Seafile添加文件](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-addfile-websoft9.png)
 
-2. 在线编辑文件（通过内置的 OnlyOffice Document Server 服务实现）
+2. 在线编辑文件（通过内置的 OnlyOffice Docs 服务实现）
 
    ![Seafile编辑文件](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-editfile1-websoft9.png)
 
@@ -310,8 +310,8 @@ seafile-elasticsearch 日志目录： */data/wwwroot/seafile/seafile-data/logs*
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
 | 80   | 通过 HTTP 访问 Seafile | 可选   |
-| 9002 | 通过 http访问 OnlyOffice Document Server on Docker | 可选 |
-| 9003 | 通过 https访问 OnlyOffice Document Server | 可选 |
+| 9002 | 通过 http访问 OnlyOffice Docs on Docker | 可选 |
+| 9003 | 通过 https访问 OnlyOffice Docs | 可选 |
 
 ### 版本{#version}
 

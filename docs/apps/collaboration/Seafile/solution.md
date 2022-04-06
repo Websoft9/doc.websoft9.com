@@ -16,15 +16,15 @@ Seafile 可以与其他的软件平台**集成**一起使用，解决 构建企�
 
 ### Seafile 文档预览与编辑
 
-Seafile 开源版支持集成 OnlyOffice Document Server 作为 Office 格式的文档预览与编辑，且本部署方案默认安装 OnlyOffice Document Server，无需设置即可使用
+Seafile 开源版支持集成 OnlyOffice Docs 作为 Office 格式的文档预览与编辑，且本部署方案默认安装 OnlyOffice Docs，无需设置即可使用
 
 #### 前置条件
 
 1. 在云控制台安全组中，检查 **TCP:9002** 端口是否开启
-2. 使用本地电脑浏览器测试文档服务是否可用：*http://服务器公网IP:9002*，会看到 OnlyOffice Document Server 正在运行的提示 
+2. 使用本地电脑浏览器测试文档服务是否可用：*http://服务器公网IP:9002*，会看到 OnlyOffice Docs 正在运行的提示 
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/onlyoffice/onlyoffice-dkisrunning-websoft9.png)
    
-   > 如果 OnlyOffice Document Server 设置好了 HTTPS 访问，请使用 9003 端口
+   > 如果 OnlyOffice Docs 设置好了 HTTPS 访问，请使用 9003 端口
 
 #### 配置
 

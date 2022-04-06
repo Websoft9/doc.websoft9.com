@@ -62,9 +62,9 @@ Elasticsearch 镜像支持用户名和密码的环境变量，因此非常方便
 
 支持，只需在 Kibana 配置文件中增加 `i18n.locale: "zh-CN"` 即可
 
-#### 本项目中 ELK 采用何种安装方式？
+#### ELK 采用何种安装方式？
 
-采用[官方提供 Docker 安装](https://github.com/elastic/dockerfiles)方式
+采用 [官方 Docker 镜像](https://github.com/elastic/dockerfiles) 安装方式
 
 #### ELK 采用哪种开源许可？
 
@@ -72,22 +72,4 @@ Elasticsearch 镜像支持用户名和密码的环境变量，因此非常方便
 
 #### Elasticsearch 全部免费吗？
 
-Elasticsearch 由之前的开源版+商业扩展包 xpack 组成。其中 xpack 基本功能免费，需要使用全部功能可以向官方申请 30 天的免费试用期，试用期结束后回归到基本功能或订阅。
-
-#### 如果没有域名是否可以部署 ELK？
-
-可以，访问`http://服务器公网IP` 即可
-
-#### 是否可以修改 ELK 的源码路径？
-
-可以
-
-#### 如何修改上传的文件权限?
-
-```shell
-# 拥有者
-chown -R nginx.nginx /data/wwwroot/
-# 读写执行权限
-find /data/wwwroot/ -type d -exec chmod 750 {} \;
-find /data/wwwroot/ -type f -exec chmod 640 {} \;
-```
+Elasticsearch 由之前的开源版+商业扩展包 xpack 组成。其中 xpack 基本功能免费，需要使用全部功能可以向官方申请 30 天的免费试用期，试用期结束后回归到基本功能或订阅。  

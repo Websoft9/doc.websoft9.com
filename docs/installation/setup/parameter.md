@@ -146,3 +146,10 @@ npm -v
 # yarn version
 yarn --version
 ```
+
+## 命令
+
+```
+# 查看所有容器
+sudo docker ps
+```

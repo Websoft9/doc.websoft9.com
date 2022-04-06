@@ -91,7 +91,7 @@ ONLYOFFICE 对内存要求比较高，建议最少 8G 内存
 * 登录到 ONLYOFFICE ，依次打开：【设置】>【集成】>【文件服务】，你可以看到预配置：
   ![ONLYOFFICE 文件服务](https://libs.websoft9.com/Websoft9/DocsPicture/zh/onlyoffice/onlyoffice-preview-websoft9.png)
 
-* 本地浏览器访问：*http://服务器公网IP:9002*，会看到 OnlyOffice Document Server 正在运行的提示 
+* 本地浏览器访问：*http://服务器公网IP:9002*，会看到 OnlyOffice Docs 正在运行的提示 
    ![ONLYOFFICE document is running ](https://libs.websoft9.com/Websoft9/DocsPicture/zh/onlyoffice/onlyoffice-dkisrunning-websoft9.png)
 
 > 请勿修改默认的文档配置，除非你打算采用其他文档服务替换它
