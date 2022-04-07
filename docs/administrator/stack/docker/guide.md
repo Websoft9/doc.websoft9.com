@@ -9,6 +9,18 @@ slug: /docker
 
 ## 场景
 
+### 安装命令{#install}
+
+如果您的服务器尚未安装 Docker，请使用如下命令安装它：
+
+```
+curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh
+curl -L "https://github.com/docker/compose/releases/download/1.29.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+ln -sf /usr/local/bin/docker-compose  /usr/bin
+sudo systemctl start docker
+```
+
 ### 镜像仓库加速{#imagespeed}
 
 如果从 Dockerhub 下载镜像镜像非常慢的话，就需要通过如下的方式修改仓库地址：

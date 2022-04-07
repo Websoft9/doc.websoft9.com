@@ -1,5 +1,6 @@
 ---
-slug: /installation/huaweicloud
+sidebar_position: 4
+slug: /install/huaweicloud
 ---
 
 # 华为云

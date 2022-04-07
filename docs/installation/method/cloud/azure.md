@@ -1,5 +1,6 @@
 ---
-slug: /installation/azure
+sidebar_position: 1
+slug: /install/azure
 ---
 
 # Azure

@@ -1,5 +1,6 @@
 ---
-slug: /installation/aws
+sidebar_position: 2
+slug: /install/aws
 ---
 
 

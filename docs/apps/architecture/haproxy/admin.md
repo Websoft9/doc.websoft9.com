@@ -15,7 +15,7 @@ tags:
 
 如果 yum/apt 更新后的版本无法满足您需求，请通过[源码编译安装](https://github.com/haproxy/haproxy/blob/master/INSTALL)您所需的版本
 
-## 故障速查
+## 故障排除
 
 除以下列出的 HAProxy 故障问题之外， [通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案。 
 

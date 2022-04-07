@@ -1,5 +1,6 @@
 ---
-slug: /installation/alibabacloud
+sidebar_position: 3
+slug: /install/alibabacloud
 ---
 
 # 阿里云

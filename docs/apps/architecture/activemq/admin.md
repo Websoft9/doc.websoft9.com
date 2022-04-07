@@ -32,7 +32,7 @@ ActiveMQ 主要采用二级制安装方式，其升级方案差不多等于安�
    ```
 4. 重启 [ActiveMQ服务](/zh/admin-services#activemq) 后升级完成
 
-## 故障速查
+## 故障排除
 
 除以下列出的 ActiveMQ 故障问题之外， [通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案。 
 

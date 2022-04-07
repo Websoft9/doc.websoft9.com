@@ -44,7 +44,7 @@ RocketMQ 升级等同于重新安装，下面介绍升级步骤：
     systemctl status mqbroker
     ```
 
-## 故障速查
+## 故障排除
 
 除以下列出的 [RocketMQ 故障](http://rocketmq.apache.org/docs/faq)问题之外， [通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案。 
 

@@ -63,7 +63,7 @@ magento setup:config:set --db-host=DB-HOST --db-name=DB-NAME --db-user=DB-USER -
 
 建议通过 Magento 后台在线安装扩展：
 
-1. 确保你的 Magento 已经[连接到官方的 Marketplace](/zh/stack-installation.html#连接-magento-marketplace)
+1. 确保你的 Magento 已经[连接到官方的 Marketplace](#marketplace)
 
 2. 在 Marketplace 找到您需要的扩展或主题，购买完成，点击【Install】
 

@@ -1,8 +1,8 @@
 ---
 sidebar_position: 1
-slug: /cells
+slug: /pydio
 tags:
-  - Cells
+  - Pydio Cells
   - 网盘
   - 知识管理
   - 团队协作
@@ -10,21 +10,22 @@ tags:
 
 # 快速入门
 
-Cells 是 [Pydio](pydio.com) 旗下一个功能强大在线文件管理系统（ECM），采用PHP+MySQL开发，用于构建自托管的企业网盘和云存储系统，支持多用户的文档协作、分享、设备同步。功能全面，包括：文档管理、用户管理、权限管理，甚至还有能够恢复删除的文件等功能，开源版支持的设备APP非常全面，包括：IOS、Android、Windows、OSX、Linux五个客户端同步APP。
+ [Pydio Cells](https://pydio.com/) 是自托管企业文档共享与协作 (DSC) 市场的开源软件。Pydio Cells 弥合了快速发展的开源软件和企业级解决方案之间的差距，为具有安全意识的组织提供了一个他们可以依靠的平台来共享文档和安全协作。
 
-![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/pydio/pydio-login-websoft9.png)
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/pydio/pydio-gui-websoft9.png)
 
-部署 Websoft9 提供的 Cells 之后，需完成如下的准备工作：
 
 ## 准备
 
+部署 Websoft9 提供的 Pydio Cells 之后，需完成如下的准备工作：
+
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 Cells 的 **[默认账号和密码](./setup/credentials#getpw)**  
-4. 若想用域名访问  Cells **[域名五步设置](./dns#domain)** 过程
+3. 在服务器中查看 Pydio Cells 的 **[默认账号和密码](./setup/credentials#getpw)**  
+4. 若想用域名访问  Pydio Cells **[域名五步设置](./dns#domain)** 过程
 
 
-## Cells 初始化向导{#init}
+## Pydio Cells 初始化向导{#init}
 
 ### 详细步骤
 
@@ -52,52 +53,35 @@ Cells 是 [Pydio](pydio.com) 旗下一个功能强大在线文件管理系统（
 
 若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
 
-**Cells 是否提供移动端**
 
-提供了移动端，[下载地址](https://pydio.com/en/download)
+## Pydio Cells 使用入门
 
-**Cells 默认是否可以编辑 Office 文档**
-
-不可以，需要自行配置文档预览服务器
-
-## Cells 使用入门
-
-下面以 **Cells 构建文档管理系统** 作为一个任务，帮助用户快速入门：
+下面以 **Pydio Cells 构建文档管理系统** 作为一个任务，帮助用户快速入门：
 
 
-## Cells 常用操作
+## Pydio Cells 常用操作
 
-### 配置域名{#dns}
-
-参考： **[域名五步设置](./dns#domain)** 
-
-### 配置 HTTPS{#https}
-
-参考： **[HTTPS 配置](./dns#https)**
 
 ## 参数{#parameter}
 
-**[通用参数表](./setup/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 Cells 应用中包含的基础架构组件路径、版本、端口等参数。 
+Pydio Cells 应用中包含 Nginx, Docker, MySQL, phpMyAdmin 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。
 
-通过运行`docker ps`，可以查看到 Cells 运行时所有的 Container：
+通过运行`docker ps`，可以查看到 Pydio Cells 运行时所有的 Container：
 
 ```bash
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
 ```
 
 
-下面仅列出 Cells 本身的参数：
+下面仅列出 Pydio Cells 本身的参数：
 
 ### 路径{#path}
 
-Cells 安装目录： */data/wwwroot/cells*  
+Pydio Cells 安装目录： */data/wwwroot/cells*  
 
 ### 端口{#port}
 
-| 端口号 | 用途                                          | 必要性 |
-| ------ | --------------------------------------------- | ------ |
-| 80  | 通过 HTTP 访问 Cells | 可选   |
-
+无特殊端口
 
 ### 版本{#version}
 
@@ -108,13 +92,14 @@ sudo cat /data/logs/install_version.txt
 ### 服务{#service}
 
 ```shell
-
-
+sudo docker start | stop | restart | stats pydio
 ```
 
 ### 命令行{#cli}
 
+[Cells Client](https://pydio.com/en/docs/developer-guide/cells-client)
+
 ### API
 
-### 参考{#ref}
+[API Documentation](https://pydio.com/en/docs/developer-guide)
 

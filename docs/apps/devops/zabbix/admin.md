@@ -8,7 +8,7 @@ tags:
 
 # 维护指南
 
-本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../installation/setup/) 相关章节。
+本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup/) 相关章节。
 
 ## 场景
 
@@ -57,7 +57,7 @@ Zabbix 升级原理非常简单：先拉取最新版本的 Zabbix 镜像，然�
 
 与升级有关的详细配置方案，请参考官方文档：[INSTALLATION FROM CONTAINERS](https://www.zabbix.com/documentation/5.0/manual/installation/containers)
 
-## 故障速查
+## 故障排除
 
 除以下列出的 Zabbix 故障问题之外， [通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案。 
 

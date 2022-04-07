@@ -8,13 +8,13 @@ tags:
 
 # 维护指南
 
-本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../installation/setup/) 相关章节。
+本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup/) 相关章节。
 
 ## 场景
 
 ### 备份
 
-本节提供Magento在线备份方案，请提前在云控制台做好必备的快照备份。
+本节提供 Magento 在线备份方案，请提前在云控制台做好必备的快照备份。
 
 1. 登录到 Magento 后台，依次打开：【System】>【System->Backup】，进入Magento的备份设置页面
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-backup-websoft9.png)
@@ -22,8 +22,10 @@ tags:
 2. 设置备份
    
 3. 建议将备份加入到计划任务中
+
    - 登录 Magento 后台，依次打开：【Stores】>【Configuration】
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-bkscheduleset-websoft9.png)
+
    - 找到：【System】>【Backup Settings】，设置计划任务
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-bkschedulesets-websoft9.png)
 
@@ -36,7 +38,7 @@ Magento 可以通过两种方式升级：后台升级界面和 Composer 升级�
 1. 以管理身份登录 Magento，依次打开：【System】>【Web Setup Wizard】>【System Upgrade】 
    ![Magento upgrade](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-sysupgradestart-websoft9.png)
 
-2. 如果没有[连接 Marketplace](/zh/stack-installation.html#连接-magento-marketplace)，系统会要求你输入 Access key
+2. 如果没有连接 Marketplace，系统会要求你输入 Access key
    ![Magento connect Marketplace](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-sysupgradestartkey-websoft9.png)
 
 3. 点击升级按钮，开始在线升级
@@ -47,7 +49,7 @@ Magento 可以通过两种方式升级：后台升级界面和 Composer 升级�
 更多更新操作请参考官方文档：[Magento Upgrade](https://devdocs.magento.com/guides/v2.3/comp-mgr/bk-compman-upgrade-guide.html)
 
 
-## 故障速查
+## 故障排除
 
 除以下列出的 Magento 故障问题之外， [通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案。 
 

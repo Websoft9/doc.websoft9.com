@@ -1,5 +1,5 @@
 position: 3
-label: "安装后"
+label: "安装后配置"
 collapsible: true
 collapsed: true
 className: "red"
