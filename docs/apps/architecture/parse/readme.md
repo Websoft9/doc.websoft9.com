@@ -19,7 +19,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 Parse Server 的 **[默认账号和密码](./setup/credentials#getpw)**  
+3. 在服务器中查看 Parse Server 的 **[默认账号和密码](./setup/credentials)**  
 
 
 ## Parse Server 初始化向导

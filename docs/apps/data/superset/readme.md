@@ -19,7 +19,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网 IP 地址**
 2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:80** 和 **TCP:9001** 端口是否开启
-3. 在服务器中查看 Superset 的 **[默认账号和密码](./setup/credentials#getpw)**
+3. 在服务器中查看 Superset 的 **[默认账号和密码](./setup/credentials)**
 4. 若想用域名访问 Superset，务必先完成**[域名五步设置](./dns#domain)** 过程
 
 ## Superset 初始化向导
@@ -29,7 +29,7 @@ tags:
 1. 使用本地电脑浏览器访问网址： *http://域名* 或  *http://服务器公网 IP*, 进入登录页面
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/superset/superset-login-websoft9.png)
 
-2. 输入账号密码（[不知道账号密码？](./setup/credentials#getpw)），成功登录到 Superset 后台  
+2. 输入账号密码（[不知道账号密码？](./setup/credentials)），成功登录到 Superset 后台  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/superset/superset-console-websoft9.png)
 
 3. 修改密码：【Superset Admin】>【Profiles】>【Reset my Password】

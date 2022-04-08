@@ -19,7 +19,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:6006** 端口已经开启
-3. 在服务器中查看 TensorFlow 的 **[默认账号和密码](./setup/credentials#getpw)**  
+3. 在服务器中查看 TensorFlow 的 **[默认账号和密码](./setup/credentials)**  
 4. 若想用域名访问  TensorFlow **[域名五步设置](./dns#domain)** 过程
 
 
@@ -33,7 +33,7 @@ tags:
    ```
 2. 使用本地电脑的浏览器访问网址：*http://域名:6006* 或 *http://服务器公网IP:6006*, 进入登陆页面
 
-3. 输入账号密码（[不知道账号密码？](./setup/credentials#getpw)），成功登录到 TensorBoard
+3. 输入账号密码（[不知道账号密码？](./setup/credentials)），成功登录到 TensorBoard
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/tensorflow/tensorflow-board-websoft9.png)
 
 > 需要了解更多 TensorFlow 的使用，请参考官方文档：[TensorFlow Documentation](https://www.tensorflow.org/learn)
@@ -74,7 +74,7 @@ tags:
 
 1. 使用本地电脑的浏览器访问网址：*http://域名:6006* 或 *http://服务器公网IP:6006*, 进入登陆页面
 
-2. 输入账号密码（[不知道账号密码？](./setup/credentials#getpw)），成功登录到 TensorBoard
+2. 输入账号密码（[不知道账号密码？](./setup/credentials)），成功登录到 TensorBoard
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/tensorflow/tensorflow-board-websoft9.png)
 
 3. TensorBoard 工作台

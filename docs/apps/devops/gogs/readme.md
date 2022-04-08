@@ -19,7 +19,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 Gogs 的 **[默认管理员账号和密码](./setup/credentials#getpw)**  
+3. 在服务器中查看 Gogs 的 **[默认管理员账号和密码](./setup/credentials)**  
 4. 若想用域名访问  Gogs，务必先完成 **[域名五步设置](./dns#domain)** 过程
 
 ## Gogs 安装向导
@@ -28,7 +28,7 @@ tags:
 
 1. 使用本地电脑浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入初始化页面
 
-2. 填写数据库连接信息（**[查看预装的数据库账号密码](./setup/credentials#getpw)** ）
+2. 填写数据库连接信息（**[查看预装的数据库账号密码](./setup/credentials)** ）
 
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-installdb-websoft9.png)
 

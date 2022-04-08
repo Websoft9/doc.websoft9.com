@@ -18,7 +18,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 PrestaShop 的 **[默认账号和密码](./setup/credentials#getpw)**  
+3. 在服务器中查看 PrestaShop 的 **[默认账号和密码](./setup/credentials)**  
 4. 若想用域名访问  PrestaShop **[域名五步设置](./dns#domain)** 过程
 
 
@@ -38,7 +38,7 @@ tags:
 3. 安装进入管理员账号设置界面，牢记之，点击“下一步”
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-adminconf-websoft9.png)
 
-4. 安装进入数据库配置界面（[不知道数据库密码？](./setup/credentials#getpw)）然后点击”保存”
+4. 安装进入数据库配置界面（[不知道数据库密码？](./setup/credentials)）然后点击”保存”
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-dbconfig-websoft9.png)
 
 5. 系统安装成功，分别进入后台和前台体验

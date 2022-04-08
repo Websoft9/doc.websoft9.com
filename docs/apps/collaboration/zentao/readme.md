@@ -18,7 +18,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网 IP 地址**
 2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:80** 端口是否开启
-3. 在服务器中查看 ZenTao 的 **[默认账号和密码](./setup/credentials#getpw)**
+3. 在服务器中查看 ZenTao 的 **[默认账号和密码](./setup/credentials)**
 4. 若想用域名访问 ZenTao，务必先完成**[域名五步设置](./dns#domain)** 过程
 
 ## ZenTao 初始化向导
@@ -33,7 +33,7 @@ tags:
 3. 安装进入环境检测页面，点击下一步
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zentao/zentao-install002-websoft9.png)
 
-4. 填写您的数据库参数（[查看数据库账号密码](./setup/credentials#getpw)）
+4. 填写您的数据库参数（[查看数据库账号密码](./setup/credentials)）
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zentao/zentao-install003-websoft9.png)
 
 5. 设置后台账号信息，请务必设置好并牢记之，然后“保存”（建议勾选导入 demo 数据，以便理解系统）

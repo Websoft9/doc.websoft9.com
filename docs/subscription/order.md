@@ -8,12 +8,12 @@ sidebar_position: 3
 
 ## 查询订单号
 
-每个云平台查询订单号的方式均不同，请阅读[云平台文档](/zh/tech-instance.md)
+每个云平台查询订单号的方式均不同，请阅读[云平台文档](../administrator/reference/service/)
 
 ## 开具发票
 
-开具发票（或账单）请登录到云平台索取，请阅读[云平台文档](/zh/tech-instance.md)  
-如果由于特殊原因不方便通过云平台操作，请通过Websoft9官网[在线提交发票](https://www.websoft9.com/apply-invoice)
+开具发票（或账单）请登录到云平台索取，请阅读[云平台文档](../administrator/reference/service/)  
+如果由于特殊原因不方便通过云平台操作，请通过Websoft9官网[在线提交发票](https://share.hsforms.com/1GJv3at4TRpOXm_YW_76OVg568t5)
 
 发票注意事项：
 

@@ -19,7 +19,7 @@ phpStudy 是一个中文界面的 PHP 环境集成包，支持 Apache+Nginx+Ligh
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 phpStudy 的 **[默认账号和密码](./setup/credentials#getpw)**  
+3. 在服务器中查看 phpStudy 的 **[默认账号和密码](./setup/credentials)**  
 4. 若想用域名访问  phpStudy，务必先完成 **[域名五步设置](./dns#domain)** 过程
 
 ## phpStudy 初始化向导

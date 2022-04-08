@@ -20,7 +20,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 和 **TCP:9002**  端口已经开启
-3. 在服务器中查看 Seafile 的 **[默认账号和密码](./setup/credentials#getpw)**  
+3. 在服务器中查看 Seafile 的 **[默认账号和密码](./setup/credentials)**  
 4. 若想用域名访问  Seafile **[域名五步设置](./dns#domain)** 过程
 
 
@@ -31,7 +31,7 @@ tags:
 1. 使用本地电脑浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入Seafile 登录页面
    ![Seafile登录页面](http://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-login-websoft9.png)
 
-2. 输入用户名和密码[（查看）](./setup/credentials#getpw)，登录到Seafile后台管理界面
+2. 输入用户名和密码[（查看）](./setup/credentials)，登录到Seafile后台管理界面
    ![Seafile后台界面](http://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-bk-websoft9.png)
 
 3. 设置（检查） Seafile 的真实主机地址（**必选项，否则无法使用文件上传功能**）

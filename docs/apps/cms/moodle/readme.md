@@ -20,7 +20,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 Moodle 的 **[默认账号和密码](./setup/credentials#getpw)**  
+3. 在服务器中查看 Moodle 的 **[默认账号和密码](./setup/credentials)**  
 4. 若想用域名访问  Moodle **[域名五步设置](./dns#domain)** 过程
 
 
@@ -36,7 +36,7 @@ tags:
 3. 选择数据库类型，默认为【改进的MySQL】，然后进入确认路径设置（保持默认设置），进入下一步 
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-install002-websoft9.png)
 
-4. 填写数据库连接信息，建议采用预装环境自带的 MySQL 数据库([不知道账号密码？](./setup/credentials#getpw账号密码))
+4. 填写数据库连接信息，建议采用预装环境自带的 MySQL 数据库([不知道账号密码？](./setup/credentials账号密码))
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-install003-websoft9.png)
 
 5. 经过几次确认后，安装进入环境检测步骤，继续后续步骤 

@@ -19,7 +19,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:1080** 端口已经开启
-3. 在服务器中查看 HAProxy 的 **[默认账号和密码](./setup/credentials#getpw)**  
+3. 在服务器中查看 HAProxy 的 **[默认账号和密码](./setup/credentials)**  
 4. 若想用域名访问 HAProxy，务必先完成 **[域名五步设置](./dns#domain)** 过程
 
 ## HAProxy 初始化向导
@@ -28,7 +28,7 @@ tags:
 
 1. 本地电脑浏览器访问网址：*http://域名:1080/haproxy* 或 *http://服务器公网IP:1080/haproxy*, 提示需要登录
 
-2. 输入账号密码（[不知道账号密码？](./setup/credentials#getpw)），成功登录到 Haproxy Statistics Report 后台  
+2. 输入账号密码（[不知道账号密码？](./setup/credentials)），成功登录到 Haproxy Statistics Report 后台  
 
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/haproxy/haproxy-statsgui-websoft9.png)
 

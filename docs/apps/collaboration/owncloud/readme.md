@@ -20,7 +20,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 和 **TCP:9002**  端口已经开启
-3. 在服务器中查看 ownCloud 的 **[默认账号和密码](./setup/credentials#getpw)**  
+3. 在服务器中查看 ownCloud 的 **[默认账号和密码](./setup/credentials)**  
 4. 若想用域名访问  ownCloud **[域名五步设置](./dns#domain)** 过程
 
 
@@ -36,7 +36,7 @@ tags:
 3. 选择 OwnCloud 的数据库存储方式，建议选择【MySQL】    
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-installdb001-websoft9.png)
 
-4. 填写 MySQL 数据库连接信息（[不知道账号密码？](./setup/credentials#getpw)）  
+4. 填写 MySQL 数据库连接信息（[不知道账号密码？](./setup/credentials)）  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-installdb002-websoft9.jpg)
 
 5. 点击【Flish Setup】，完成安装，获得安装成功的提示，开始体验后台

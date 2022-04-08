@@ -20,7 +20,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 Discuz!Q 的 **[默认账号和密码](./setup/credentials#getpw)**  
+3. 在服务器中查看 Discuz!Q 的 **[默认账号和密码](./setup/credentials)**  
 4. 若想用域名访问  Discuz!Q **[域名五步设置](./dns#domain)** 过程
 
 
@@ -39,7 +39,7 @@ tags:
 4. 本地电脑浏览器访问网址：输入*http://域名/admin* 或 *http://服务器公网IP/admin*, 进入登录页面
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuzq-admin-websoft9.png)
 
-5. 输入账号密码（[不知道账号密码？](./setup/credentials#getpw)），成功登录到 Discuz!Q 后台 
+5. 输入账号密码（[不知道账号密码？](./setup/credentials)），成功登录到 Discuz!Q 后台 
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuzq-index-websoft9.png)
     
 6. 其他设置：微信公众号，小程序，微信支付等

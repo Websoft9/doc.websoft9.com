@@ -1,0 +1,52 @@
+---
+sidebar_position: 1
+slug: /install/setup
+---
+
+import DocCardList from '@theme/DocCardList';
+import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
+
+
+# 安装后配置
+
+安装 Websoft9 的产品后，用户朋友最想做的事情肯定是立即能够看到软件的界面，投入使用。   
+
+但现实却是一个应用真正的能让用户快速使用上，它是需要一些必不可少的配置的：
+
+## 准备{#prepare}
+
+* [操作云服务器](../setup/vm)：连接服务器和操作云控制台、获取服务器公网IP、开启安全组端口等
+* [获取账号密码](../setup/credentials)：
+* [初始化向导](../apps)：本地浏览器访问 *http://服务器公网IP* 可进入初始化向导
+
+## 配置域名{#domain}
+
+配置域名最好早于**初始化向导**，这样可以避免修改应用的 URL。下面是**“域名五步”** 操作：
+
+1. [域名注册](../dns#domain)
+2. [域名实名制认证](../dns#domain)
+3. [域名备案](../dns#domain)
+4. [域名解析](../dns#domain)
+5. [域名绑定](../dns#domain)
+
+## 数据库{#db}
+
+* 管理默认数据库
+* 更换数据库
+
+## 安全{#security}
+
+* [配置  HTTPS](./https)：尽快完成 HTTPS 的设置，保护访问和数据传输安全
+
+## 通知设置
+
+* [SMTP](../automation/smtp)：配置 SMTP 以获得正确的电子邮件通知支持
+
+## 备份
+
+* [服务器备份](./backup)：在云控制台设置服务器的自动化备份策略（例如：快照备份）
+* [应用备份](./backup)：在应用的控制台设置自动化备份策略（参考每个应用的文档）
+
+## 扩展
+
+## 升级

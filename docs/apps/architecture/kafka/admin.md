@@ -192,3 +192,10 @@ bash /opt/kafka/bin/kafka-server-start.sh
 #### CMAK 中无法支持所需的 Kafka 版本？
 
 CMAK 并不是支持所有 Kafka 版本，具体以使用为准
+
+#### CMAK 连接 Kafaka2.4 以下报错？
+
+错误信息： Yikes! KeeperErrorCode = Unimplemented for /kafka-manager/mutex Try again. ([issue](https://github.com/yahoo/CMAK/issues/748))   
+解决方案： 暂无
+
+但出现上述错误的情景中，Zookeeper 客户端是可以连接 Zookeeper 服务端的  

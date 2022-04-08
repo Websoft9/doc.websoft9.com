@@ -19,7 +19,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:9092,2181** 端口已经开启
-3. 在服务器中查看 kafka 的 **[默认账号和密码](./setup/credentials#getpw)**  
+3. 在服务器中查看 kafka 的 **[默认账号和密码](./setup/credentials)**  
 4. 若想用域名访问  kafka ，务必先完成 **[域名五步设置](./dns#domain)** 过程
 
 ## Kafka 初始化向导
@@ -43,7 +43,7 @@ bash /opt/kafka/bin/kafka-configs.sh
 
 本预装包中内置 Kafka 可视化集群管理工具 [CMAK](https://github.com/yahoo/CMAK) ，使用请参考如下步骤：
 
-1. 本地浏览器 Chrome 或 Firefox 访问：*http://服务器公网IP:9091*，进入 CMAK 登录页面([不知道密码？](./setup/credentials#getpw))
+1. 本地浏览器 Chrome 或 Firefox 访问：*http://服务器公网IP:9091*，进入 CMAK 登录页面([不知道密码？](./setup/credentials))
 
 2. 成功登录后，开始新建集群
    ![创建kafka集群](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kafka/kafka-addcluster001-websoft9.png)
@@ -150,7 +150,11 @@ sudo docker start | stop | restart | stats cmak
 ### 命令行
 
 ```
+# kafka
 bin/kafka-console-consumer.sh --bootstrap-server youip:port --consumer.config consumer.properties --topic my-topic
+
+# ZooKeeper client
+zkCli.sh -server IP:2181
 ```
 
 ### API

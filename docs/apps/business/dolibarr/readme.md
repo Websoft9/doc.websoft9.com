@@ -19,7 +19,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 Dolibarr 的 **[默认账号和密码](./setup/credentials#getpw)**  
+3. 在服务器中查看 Dolibarr 的 **[默认账号和密码](./setup/credentials)**  
 4. 若想用域名访问  Dolibarr **[域名五步设置](./dns#domain)** 过程
 
 
@@ -31,7 +31,7 @@ tags:
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/dolibarr/dolibarr-check-websoft9.png)
 
 2. 完成通过许可协议、安装进入环境检测步骤，点击“Start”
-3. 安装进入数据库配置界面（[查看数据库账号密码](./setup/credentials#getpw)），然后点击”Next Step”
+3. 安装进入数据库配置界面（[查看数据库账号密码](./setup/credentials)），然后点击”Next Step”
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/dolibarr/dolibarr-dbconf-websoft9.png)
 
 4. 安装开始验证数据库可用性和安装过程，持续点击“Next Step”

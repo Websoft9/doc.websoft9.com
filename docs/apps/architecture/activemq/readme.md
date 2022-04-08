@@ -20,7 +20,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:8161** 端口已经开启
-3. 在服务器中查看 ActiveMQ 的 **[默认账号和密码](./setup/credentials#getpw)**  
+3. 在服务器中查看 ActiveMQ 的 **[默认账号和密码](./setup/credentials)**  
 4. 若想用域名访问  ActiveMQ，务必先完成 **[域名五步设置](./dns#domain)** 过程
 
 
@@ -31,7 +31,7 @@ tags:
 1. 使用本地电脑浏览器访问网址：*http://域名:8161* 或 *http://服务器公网IP:8161*, 进入初始化页面
    ![ActiveMQ初始化页面](http://libs.websoft9.com/Websoft9/DocsPicture/zh/activemq/activemq-login-websoft9.png)
 
-2. 点击【Manage ActiveMQ broker】登录 ActiveMQ 控制台 （[不知道账号密码？](./setup/credentials#getpw)）
+2. 点击【Manage ActiveMQ broker】登录 ActiveMQ 控制台 （[不知道账号密码？](./setup/credentials)）
    ![ActiveMQ控制台](http://libs.websoft9.com/Websoft9/DocsPicture/zh/activemq/activemq-logined-websoft9.png)
 
 

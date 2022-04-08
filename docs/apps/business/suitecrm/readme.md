@@ -19,7 +19,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 SuiteCRM 的 **[默认账号和密码](./setup/credentials#getpw)**  
+3. 在服务器中查看 SuiteCRM 的 **[默认账号和密码](./setup/credentials)**  
 4. 若想用域名访问  SuiteCRM **[域名五步设置](./dns#domain)** 过程
 
 
@@ -33,7 +33,7 @@ tags:
 2. 环境检测会自动通过，选择【Next】进入下一步
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-check-websoft9.png)
 
-3. 系统进入配置数据库界面（[查看数据库账号密码](./setup/credentials#getpw)）。然后设置管理员账号，牢记之，点击“安装”
+3. 系统进入配置数据库界面（[查看数据库账号密码](./setup/credentials)）。然后设置管理员账号，牢记之，点击“安装”
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-dbconf-websoft9.png)
 
 4. 系统进入安装过程，耐心等待，安装成功后系统会进行提示

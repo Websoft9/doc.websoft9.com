@@ -20,7 +20,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 和 **TCP:9002**  端口已经开启
-3. 在服务器中查看 Nextcloud 的 **[默认账号和密码](./setup/credentials#getpw)**  
+3. 在服务器中查看 Nextcloud 的 **[默认账号和密码](./setup/credentials)**  
 4. 若想用域名访问  Nextcloud **[域名五步设置](./dns#domain)** 过程
 
 
@@ -32,7 +32,7 @@ tags:
 
 2. 系统首先要求设置一个管理员账号，选择 Nextcloud 的数据库存储方式，建议选择【MySQL】    
 
-3. 填写 MySQL 数据库连接信息（[不知道账号密码？](./setup/credentials#getpw)）  
+3. 填写 MySQL 数据库连接信息（[不知道账号密码？](./setup/credentials)）  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-intall-websoft9.png)
 
 4. 点击“Flish Setup”，完成安装，获得安装成功的提示

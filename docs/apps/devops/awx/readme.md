@@ -17,7 +17,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 AWX 的 **[默认管理员账号和密码](./setup/credentials#getpw)**  
+3. 在服务器中查看 AWX 的 **[默认管理员账号和密码](./setup/credentials)**  
 4. 若想用域名访问  AWX，务必先完成 **[域名五步设置](./dns#domain)** 过程
 
 ## AWX 初始化向导
@@ -27,7 +27,7 @@ tags:
 1. 使用本地电脑浏览器访问网址：*http://域名* 或 *http://公网IP*, 进入 AWX 登录页面
    ![AWX登录页面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/awx/awx-login-websoft9.png)
 
-3. 输入用户名和密码[（不知道密码？）](./setup/credentials#getpw)，登录到 AWX 后台管理界面
+3. 输入用户名和密码[（不知道密码？）](./setup/credentials)，登录到 AWX 后台管理界面
    ![AWX后台界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/awx/awx-gui-websoft9.png)
 
 4. 此时，AWX 安装部署已经验证通过

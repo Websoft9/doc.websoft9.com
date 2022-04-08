@@ -19,7 +19,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 Magento 的 **[默认账号和密码](./setup/credentials#getpw)**  
+3. 在服务器中查看 Magento 的 **[默认账号和密码](./setup/credentials)**  
 4. 若想用域名访问  Magento **[域名五步设置](./dns#domain)** 过程
 
 
@@ -35,7 +35,7 @@ Magento 最新版本已经采用命令行完成了安装向导，即可直接使
 2. 访问网址：*http://域名/admin* 或 *http://服务器公网IP/admin*，进入后台登陆页面  
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-login-websoft9.png)
 
-3. 输入用户名和密码[获取解锁密码](./setup/credentials#getpw)，登录到 Magento 后台管理界面  
+3. 输入用户名和密码[获取解锁密码](./setup/credentials)，登录到 Magento 后台管理界面  
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-backend-websoft9.png)
 
 > 需要了解更多 Magento 的使用，请参考官方文档：[Magento 用户文档中心](https://magento.com/resources/technical)
