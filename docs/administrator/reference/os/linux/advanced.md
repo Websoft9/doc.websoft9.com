@@ -439,8 +439,7 @@ Linux生态中的软件包资源非常丰富，从某种程度上看，用户是
 例如：CentOS 可用的几个仓库有：
 
 * 官方仓库：[Ubuntu Packages](https://packages.ubuntu.com/)
-* SCL仓库
-* IUS仓库
+* SCL、EPEL、IUS 等第三方仓库  
 
 官方仓库中的软件包理论上最稳定可靠，其他仓库作为辅助。另外，像 Ubuntu 官方仓库网站提供了非常便捷的包检索页面，用户寻找包的效率远超过 apt search 的方式。
 
@@ -466,6 +465,17 @@ Linux生态中的软件包资源非常丰富，从某种程度上看，用户是
 | Centos altarch | http://mirror.centos.org/altarch/ | CentOS 额外平台的安装镜像和官方软件包仓库 |
 | IUS | https://ius.io/ | IUS（Inline with Upstream Stable）是一个社区项目，它旨在为 Linux 企业发行版提供可选软件的最新版 RPM 软件包。 |
 | ATOMIC | http://www.atomicorp.com/channels/atomic/ | Atomic源支持Fedora，RHEL和CentOS的YUM包管理。 |
+
+
+##### 仓库搜索引擎
+
+仓库搜索引擎是收录仓库的网站：  
+
+|  名称  | 地址 |             概要              |
+| :----: | :--: | :---------------------------: |
+| Linux Packages | https://linux-packages.com/ | 轻松找到有关 Linux 上所有软件包的信息，包括 Ubuntu、Centos、Arch、Debian... |
+
+
 
 以上是"大卖场"式的仓库源，实际上很多知名的开源软件，例如：MySQL,Apache等还提供自建的仓库，供用户使用。
 
