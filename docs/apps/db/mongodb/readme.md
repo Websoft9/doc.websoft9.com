@@ -20,7 +20,7 @@ tags:
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 TCP：**27017 和 9091** 端口已经开启
 3. 在服务器中查看 MongoDB 的 **[默认账号和密码](./setup/credentials)**  
-4. 若想用域名访问  MongoDB，务必先完成 **[域名五步设置](./dns#domain)** 过程
+4. 若想用域名访问  MongoDB，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
 
 ## MongoDB 初始化向导
 
@@ -275,7 +275,7 @@ Successfully added user: { "user" : "webs_admin", "roles" : [ "userAdminAnyDatab
 参考下面的命令，修改已经创建的管理员账号root的密码
 
 ```
-mongo admin --u root --p YOURPASSWORD
+mongo admin -u root -p YOURPASSWORD
 MongoDB shell version v4.0.18
 connecting to: mongodb://127.0.0.1:27017/?gssapiServiceName=mongodb
 > db = db.getSiblingDB('admin')

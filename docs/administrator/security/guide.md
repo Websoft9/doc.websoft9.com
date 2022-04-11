@@ -41,7 +41,7 @@ slug: /security
 
 ### HTTPS 设置{#https}
 
-参考：[域名 HTTPS 设置](./dns#https)
+参考：[域名 HTTPS 设置](./administrator/domain_https)
 
 ### Apache 提升DDOS防御力
  

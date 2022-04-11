@@ -20,7 +20,7 @@ tags:
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
 3. 在服务器中查看 ERPNext 的 **[默认账号和密码](./setup/credentials)**  
-4. 若想用域名访问  ERPNext **[域名五步设置](./dns#domain)** 过程
+4. 若想用域名访问  ERPNext **[域名五步设置](./administrator/domain_step)** 过程
 
 
 ## ERPNext 初始化向导{#init}
@@ -85,7 +85,7 @@ hostnamectl set-hostname erpnext
 
 ### 域名额外配置（修改 URL） {#dns}
 
-**[域名五步设置](./dns#domain)** 完成后，需设置 ERPNext 的 SITE_URL：
+**[域名五步设置](./administrator/domain_step)** 完成后，需设置 ERPNext 的 SITE_URL：
 
 1. 连接服务器，修改 ERPNext 容器环境变量文件：*/data/wwwroot/erpnext/.env*  
    

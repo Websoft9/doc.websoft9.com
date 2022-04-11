@@ -61,7 +61,7 @@ slug: /faq
 
 #### 如何给应用配置域名？
 
-参考本文档 **[配置域名](./dns#domain)** 的专题章节
+参考本文档 **[配置域名](./administrator/domain)** 的专题章节
 
 #### 如果没有域名是否可以部署 Jenkins？
 
@@ -133,7 +133,7 @@ slug: /faq
 sudo certbot
 ```
 
-配置 HTTP 过程中，仍然有一些不可预料的问题，详情参考本文档的 [HTTPS](./dns#https) 章节
+配置 HTTP 过程中，仍然有一些不可预料的问题，详情参考本文档的 [HTTPS](./administrator/domain_https) 章节
 
 #### 如何配置邮件发送（SMTP）？
 

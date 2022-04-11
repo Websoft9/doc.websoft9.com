@@ -20,7 +20,7 @@ tags:
 1. 在云控制台获取您的 **服务器公网 IP 地址**
 2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:80** 和 **TCP:9001** 端口是否开启
 3. 在服务器中查看 Superset 的 **[默认账号和密码](./setup/credentials)**
-4. 若想用域名访问 Superset，务必先完成**[域名五步设置](./dns#domain)** 过程
+4. 若想用域名访问 Superset，务必先完成**[域名五步设置](./administrator/domain_step)** 过程
 
 ## Superset 初始化向导
 

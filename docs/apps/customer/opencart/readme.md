@@ -19,7 +19,7 @@ tags:
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
 3. 在服务器中查看 OpenCart 的 **[默认账号和密码](./setup/credentials)**  
-4. 若想用域名访问  OpenCart **[域名五步设置](./dns#domain)** 过程
+4. 若想用域名访问  OpenCart **[域名五步设置](./administrator/domain_step)** 过程
 
 
 ## OpenCart 初始化向导
@@ -123,7 +123,7 @@ Opencart 2.0 使用vQmod机制安装扩展，需提前安装并启用vQmod，具
 
 ### 域名额外配置（修改 URL） {#dns}
 
-**[域名五步设置](./dns#domain)** 完成后，需设置 OpenCart URL:
+**[域名五步设置](./administrator/domain_step)** 完成后，需设置 OpenCart URL:
 
 1. 修改 OpenCart 根目录下的[配置文件](#path) `config.php`
    ```

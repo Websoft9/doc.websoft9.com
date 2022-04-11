@@ -22,7 +22,7 @@ tags:
 3. 其中 25 端口需要向云平台特别申请解封
 4. 下载一个用于运行命令的终端程序 MobaXterm （iRedMail 不支持在 putty 下运行，因此需要使用 MobaXterm）
 5. 下载 `/root/iRedMail/iRedMail.tips`文件，查看所有相关的账号：邮箱管理员、MySQL等
-6. 若想用域名访问  iRedMail **[域名五步设置](./dns#domain)** 过程
+6. 若想用域名访问  iRedMail **[域名五步设置](./administrator/domain_step)** 过程
 
 
 ## iRedMail 初始化向导{#init}

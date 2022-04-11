@@ -21,7 +21,7 @@ tags:
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
 3. 在服务器中查看 WordPress 的 **[默认账号和密码](./setup/credentials)**  
-4. 若想用域名访问  WordPress **[域名五步设置](./dns#domain)** 过程
+4. 若想用域名访问  WordPress **[域名五步设置](./administrator/domain_step)** 过程
 
 
 ## WordPress 初始化向导{#init}
@@ -104,7 +104,7 @@ tags:
 
 ### 域名额外配置（修改 URL）{#dns}
 
-**[域名五步设置](./dns#domain)** 完成后，需重置 WordPress URL:
+**[域名五步设置](./administrator/domain_step)** 完成后，需重置 WordPress URL:
 
 1. 登录 WordPress 后台，依次打开：【设置】>【常规】，将网站路径和安装路径设置为新的域名
    ![Wordpress 修改URL](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-modifyurls-websoft9.png)
@@ -117,7 +117,7 @@ tags:
 
 ### HTTPS 额外设置{#https}
 
-**[标准 HTTPS 配置](./dns#https)** 完成后，可能会遇到如下的异常情况：
+**[标准 HTTPS 配置](./administrator/domain_https)** 完成后，可能会遇到如下的异常情况：
 
 - [配置HTTPS后，网站部分资源无法加载？](./wordpress/admin#httpsmore)
 

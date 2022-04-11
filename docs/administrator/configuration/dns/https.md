@@ -1,73 +1,24 @@
 ---
-sidebar_position: 1
-slug: /dns
+sidebar_position: 3
+slug: /administrator/domain_https
 ---
 
-# 指南
-
-## 场景
-
-### 域名五步设置{#domain}
-
-#### 域名注册{#domainreg}
-
-通过域名服务商注册（购买）一个自己喜欢且符合网站特征的域名。
-
-#### 域名实名制认证{#domainauth}
-
-域名注册完成之后，还需要提供个人或公司法人证件进行域名所有者的实名制认证。  
-
-#### 域名备案{#domainbei}
-
-备案是中国大陆的一项法规，域名用于中国大陆地区的服务器访问必须备案。也就是说向政府监管部门提供：**网站存放的详细信息**
-
-备案是纯粹的**商务流程活动**，没有任何技术门槛，建议用户自行完成：
-
-* 购买服务器满足云平台的免费备案要求，就可以由云平台供备案服务。
-* 备案过程请通过云平台的**备案系统**全程操作
-* 云平台提供 7*24 域名备案咨询服务
-
-#### 域名解析{#domainresolve}
-
-我们知道，网站如果通过 IP 地址访问，这样不便于记忆和识别。域名解析的作用是通过一段**容易识别的文字段**来指向服务器的**IP地址**。类似：abc.com 指向 80.123.9.11 
-
-下面是是一个域名解析的范例：通过域名的控制台，将域名（或子域名）指向 IP：  
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/domain-websoft9.png)
-
-
-#### 域名绑定{#domainbind}
-
-上面的域名解析避免了直接使用 IP 地址，但域名配置还差最后一步。  
-
-我们设想一个很常见的情况：有多个域名解析到同一个服务器时，服务器是如何区分并提供不同域名所需资源的？
-
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/apache/apache-vhostui-websoft9.png)
-
-其实这个问题就是**域名绑定**要做的工作。通过修改服务器中的 Web  服务器的 **虚拟主机配置文件**，即可实现域名绑定。  
-
-具体参考对应的指南：  
-
-* [Apache 域名绑定](./apache#domain)
-* [Nginx  域名绑定](./nginx#domain)
-* [Caddy 域名绑定](./caddy#domain)
-* [Traefik 域名绑定](./traefik#domain)
-* [IIS 域名绑定](./iis#domain)
+# 给域名配置 HTTPS
 
 ### HTTPS 基本设置{#https}
 
 #### 前置条件
 
-配置HTTPS访问的前置条件：
+Websoft9 虽然预装 HTTPS 所需的环境，但配置 HTTPS 还有两个因素是用户需要完成的：  
 
-* 开启服务器安全组的443端口
-* 网站通过HTTP可正常访问
-* Web服务器已经安装SSL模块（Websoft9提供的所有镜像默认已经安装）
+* 开启服务器安全组的 443 端口
+* 网站可以通过 HTTP 的方式访问域名
 
-具体以上条件后，便可以登录服务器配置HTTPS。此处提供两种方案，请根据实际情况选择：
+具体以上条件后，便可以登录服务器配置 HTTPS。此处提供两种方案，请根据实际情况选择：
 
 #### 方案一：自动免费证书配置
 
-Websoft9的镜像默认安装了 [Let's Encrypt](https://letsencrypt.org/) 免费的证书部署软件，只需一条命令就可以启动证书部署.
+Websoft9 预制 [Let's Encrypt](https://letsencrypt.org/) 免费的证书部署程序，只需一条命令就可以启动证书部署.
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/certbot-ui-websoft9.png)
 
@@ -88,7 +39,8 @@ Websoft9的镜像默认安装了 [Let's Encrypt](https://letsencrypt.org/) 免�
 1. 将可用的证书上传到服务器证书目录：/data/cert（没有cert目录可以自己新建）
 
 2. 打开**虚拟主机配置文件**，插入 HTTP 配置段
-   * 以 Nginx 为例，虚拟主机配置文件为 */etc/nginx/conf.d/default.conf*，插入下面的**HTTPS template** 到对应的*server{  }*段落中
+
+   * 以 Nginx 为例，向虚拟主机配置文件 */etc/nginx/conf.d/default.conf* 中插入下方的 **HTTPS template** 到*server{  }*段落中
         ``` text
         #-----HTTPS template start------------
         listen 443 ssl; 
@@ -101,7 +53,7 @@ Websoft9的镜像默认安装了 [Let's Encrypt](https://letsencrypt.org/) 免�
         ssl_prefer_server_ciphers on;
         #-----HTTPS template end------------
         ```
-    * 以 Apache 为例，虚拟主机配置文件为 */etc/nginx/conf.d/default.conf*，插入下面的**HTTPS template** 到文件中
+    * 以 Apache 为例，向虚拟主机配置文件为 */etc/nginx/conf.d/default.conf* 中插入下面的 **HTTPS template** 到文件中
 
         ```
         #-----HTTPS template start------------
@@ -209,31 +161,46 @@ server
 中文域名很特殊，它仅在中国被使用。HTTPS 是不支持中文域名的，但如何设置证书呢？
 
 1. 在[中国互联网络信息中心](http://www.cnnic.cn/jczyfw/zwym/zgymzcjsy/201206/t20120612_26523.htm)转码。例如：`网久软件.com` 转码为 `xn--3iQsQ211JuqN.com`
-2. 域名解析：将中文域名解析直接解析到服务器 IP 地址
-3. 域名绑定：在虚拟主机配置文件中绑定 `xn--3iQsQ211JuqN.com`  
-4. 使用`certbot` 命令自动配置HTTPS 或 使用`xn--3iQsQ211JuqN.com`申请证书后在配置HTTPS
 
-### 向云平台申请证书
+2. 域名解析：将中文域名解析直接解析到服务器 IP 地址
+
+3. 域名绑定：在虚拟主机配置文件中绑定 `xn--3iQsQ211JuqN.com`  
+
+4. 使用 `certbot` 命令自动配置HTTPS 或 使用`xn--3iQsQ211JuqN.com`申请证书后再配置 HTTPS
+
+
+
+## 问题解答
+
+#### 向云平台申请免费证书要注意什么？
 
 *   免费证书只能用于单个域名，例如: buy.example.com 或 next.buy.example.com,
 *   example.com 是通配符域名方式，不能用于申请免费证书
 *   申请证书的时候，请先解析好域名，有些证书会绑定域名对应的 IP 地址，即一旦申请后，IP 地址不能更换，否则证书不可用
 
 
-## 参数
+#### Docker 应用如何部署 HTTPS？
 
-### 路径{#path}
+我们的方案中，不建议在容器内部设置 HTTPS，而是通过宿主机的 HTTP 服务器（Nginx/Apache等）在端口转发的模式下配置 HTTPS。
 
-虚拟主机配置文件：[Apache](./apache#path), [Nginx](./nginx#path) , [Caddy](./caddy#path)    
+#### IP 地址可以申请 HTTPS 吗？
+
+不可以，且没有任何意义。
+
+#### Android 无法使用HTTPS，而 iOS 可以？
+
+确保 SSLCertificateChainFile 已设置对应的证书文件
+
+#### HTTPS 设置成功，仍显示“与此网站建立的连接并非完全安全”？
+
+首选明确一点即您的HTTPS设置是成功的，只是由于网站中存在包含 http访问的静态文件 或 外部链接等，导致浏览器告警您的网站并非完全安全。
+
+#### Certbot 证书存放在哪里？
+
 Certbot 证书目录：*/etc/letsencrypt/live*
 
-### 端口{#port}
+#### 有哪些 Web Server 可方便支持 HTTPS？
 
-HTTPS 访问端口： 443  
-HTTP 访问端口： 80  
-
-### 服务{#service}
-
-配置域名，需重启 Web 服务器  
+主流的 Web Server 都可以很方便的支持，包括：[Apache](./apache#path), [Nginx](./nginx#path) , [Caddy](./caddy#path)    
 
 

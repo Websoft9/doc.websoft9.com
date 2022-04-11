@@ -19,7 +19,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 若想用域名访问 Jenkins，务必先完成 **[域名五步设置](./dns#domain)** 过程
+3. 若想用域名访问 Jenkins，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
 4. [获取](./setup/credentials) Jenkins 的默认管理员账号和密码  
 
     * 管理员账号: `admin`

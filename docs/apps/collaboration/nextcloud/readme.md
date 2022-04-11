@@ -21,7 +21,7 @@ tags:
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 和 **TCP:9002**  端口已经开启
 3. 在服务器中查看 Nextcloud 的 **[默认账号和密码](./setup/credentials)**  
-4. 若想用域名访问  Nextcloud **[域名五步设置](./dns#domain)** 过程
+4. 若想用域名访问  Nextcloud **[域名五步设置](./administrator/domain_step)** 过程
 
 
 ## Nextcloud 初始化向导{#init}
@@ -100,7 +100,7 @@ Nextcloud 支持移动端，使用步骤如下：
 
 ### 域名额外配置（修改 URL）{#dns}
 
-**[域名五步设置](./dns#domain)** 完成后，需设置 Nextcloud 的 URL:
+**[域名五步设置](./administrator/domain_step)** 完成后，需设置 Nextcloud 的 URL:
 
 1. 修改 [Nextcloud 配置文件](#path) 中的域名值
    ```

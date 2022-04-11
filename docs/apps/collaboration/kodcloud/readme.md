@@ -21,7 +21,7 @@ tags:
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
 3. 在服务器中查看 KodCloud 的 **[默认账号和密码](./setup/credentials)**  
-4. 若想用域名访问  KodCloud **[域名五步设置](./dns#domain)** 过程
+4. 若想用域名访问  KodCloud **[域名五步设置](./administrator/domain_step)** 过程
 
 
 ## KodCloud 初始化向导{#init}
@@ -30,19 +30,31 @@ tags:
 
 1. 本地浏览器访问：*http://域名* 或 *http://公网IP* 进入安装向导（首选域名访问方式）
 
-2. 在下面的界面设置 admin 管理员用户的密码
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kodcloud/kodcloud-setadminpw-websoft9.png)
+2. 系统初始化：通过简单的 3 步，完成系统的初始化 admin 管理员用户的密码
+    - 系统环境检测，选择【跳过】
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kodcloud/kodcloud-install1-websoft9.png)
+    
+    - 数据库配置，获取[账号密码](./setup/credentials)连接数据库
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kodcloud/kodcloud-install2-websoft9.png)
+    
+    - 设置管理员账号
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kodcloud/kodcloud-install3-websoft9.png)
 
-3.  设置管理员密码后，系统转到登录界面
+3. 设置管理员账号后，系统转到登录界面
     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kodcloud/kodcloud-login-websoft9.png)
 
-4.  登录成功，系统进入后台，如果有新版本，系统会提示是否自动更新。点击“自动更新”，系统会自动完成更换后要求重新登录
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kodcloud/kodcloud-updateauto-websoft9.png)
+4. 文件管理：登录成功，进入系统后台，默认进入【文件管理】界面，便于文件管理
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kodcloud/kodcloud-file-websoft9.png)
 
-5.  登录成功，进入后台，开始体验后台  
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kodcloud/kodcloud-backend-websoft9.png)
+5. 桌面管理：点击左边菜单【桌面】，进入系统桌面，常用工具放置在桌面
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kodcloud/kodcloud-home-websoft9.png)
 
-6. 进入后台，体验系统的完整功能
+6. 插件管理：点击桌面的【插件中心】，管理系统插件
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kodcloud/kodcloud-plugins-websoft9.png)   
+
+7. 系统设置：点击左下方个人图形，进入个人设置和系统设置（管理员），比如部门、成员、权限等等 
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kodcloud/kodcloud-system-websoft9.png)
+
 
 > 需要了解更多 KodCloud 的使用，请参考官方文档：[KodCloud Help](https://kodcloud.com/help/)
 

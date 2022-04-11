@@ -1,5 +1,5 @@
-position: 6
-label: "域名"
+position: 1
+label: "数据库"
 collapsible: true
 collapsed: true
 className: "red"

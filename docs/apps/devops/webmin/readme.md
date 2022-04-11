@@ -20,7 +20,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启  
-3. 若想用域名访问  Webmin，务必先完成 **[域名五步设置](./dns#domain)** 过程
+3. 若想用域名访问  Webmin，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
 4. 准备好服务器 root 密码（Webmin 直接使用服务器账号登录）
 
 
@@ -167,7 +167,7 @@ Webmin 提供了可视化的 MySQL 数据库管理界面，可以很方面的创
 
 ### 域名绑定
 
-完成 **[域名五步设置](./dns#domain)** 过程中的前四个步骤后，参考下面的步骤完成域名绑定：
+完成 **[域名五步设置](./administrator/domain_step)** 过程中的前四个步骤后，参考下面的步骤完成域名绑定：
 
 1. 登录 Webmin 控制台，打开：【Apache 服务器】>【编辑配置文件】
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/webmin/webmin-confapache001-websoft9.png)

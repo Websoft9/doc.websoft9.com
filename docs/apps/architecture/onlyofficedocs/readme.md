@@ -17,7 +17,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80,9002** 端口已经开启 
-3. 若想用域名访问  ONLYOFFICE Docs，务必先完成 **[域名五步设置](./dns#domain)** 过程
+3. 若想用域名访问  ONLYOFFICE Docs，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
 
 
 ## ONLYOFFICE Docs 初始化向导
@@ -44,7 +44,7 @@ tags:
 
 ### 绑定域名
 
-ONLYOFFICE Docs 绑定域名符合：**[域名五步设置](./dns#domain)** 。  
+ONLYOFFICE Docs 绑定域名符合：**[域名五步设置](./administrator/domain_step)** 。  
 
 但是 Apache 或 Nginx **虚拟主机配置文件**请采用下面的模板：
 
@@ -92,7 +92,7 @@ ONLYOFFICE Docs 绑定域名符合：**[域名五步设置](./dns#domain)** 。
 
 大多数情况下，调用 ONLYOFFICE Docs 的软件需要 ONLYOFFICE Docs 提供 HTTPS 服务，所以域名绑定后，需立即设置 HTTPS：
 
-1. 参考通用的 [HTTPS 配置指南](./dns#https)
+1. 参考通用的 [HTTPS 配置指南](./administrator/domain_https)
 
 2. 虚拟主机配置文件中增加下面的一行代码，使客户端和代理服务之间的连接所采用的传输协议
    ```

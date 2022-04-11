@@ -19,7 +19,7 @@ Cockpit 是 RedHat 维护的 Linux 服务器面板工具。它具备很强的开
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:9099** 端口已经开启
-4. 若想用域名访问  Cockpit，务必先完成 **[域名五步设置](./dns#domain)** 过程
+4. 若想用域名访问  Cockpit，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
 
 ## Cockpit 初始化向导{#wizard}
 

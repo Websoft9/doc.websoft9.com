@@ -28,7 +28,7 @@ tags:
 ### 详细步骤
 
 
-1. 由于 Parse 不可通过 IP 访问，故务完成 **[域名解析](./dns#domain)** 和 **[域名绑定](#binddomain)**
+1. 由于 Parse 不可通过 IP 访问，故务完成 **[域名解析](./administrator/domain_step)** 和 **[域名绑定](#binddomain)**
 
 2. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名*  就进入 Parse Dashboard 登录页面
 ![Parse Dashboard 登录](https://libs.websoft9.com/Websoft9/DocsPicture/en/parseserver/ParseServer-loginpage-websoft9.png)

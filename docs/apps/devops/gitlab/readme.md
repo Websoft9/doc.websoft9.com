@@ -19,7 +19,7 @@ tags:
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
 3. 在服务器中查看 GitLab 的 **[默认管理员账号和密码](./setup/credentials)**  
-4. 若想用域名访问  GitLab，务必先完成 **[域名五步设置](./dns#domain)** 过程
+4. 若想用域名访问  GitLab，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
 
 ## GitLab 初始化向导
 
@@ -113,7 +113,7 @@ tags:
 
 ### 设置 GitLab 仓库地址{#setrepourl}
 
-在初始化之前的 **[准备](#prepare)** 环节，如果您已经完成 **[域名五步设置](./dns#domain)**，GitLab 可以域名访问，但是 GitLab 仓库的网址还不是用户自己的域名。
+在初始化之前的 **[准备](#prepare)** 环节，如果您已经完成 **[域名五步设置](./administrator/domain_step)**，GitLab 可以域名访问，但是 GitLab 仓库的网址还不是用户自己的域名。
 
 因此，还需要参考下面的步骤[设置 GitLab 仓库地址](https://docs.gitlab.com/omnibus/settings/configuration.html#configuring-the-external-url-for-gitlab)：
 
