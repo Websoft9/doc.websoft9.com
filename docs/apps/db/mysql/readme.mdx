@@ -27,7 +27,7 @@ import TabItem from '@theme/TabItem';
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:3306,9090** 端口已经开启
-3. 在服务器中查看 MySQL/MariaDB 的 **[默认账号和密码](./setup/credentials)**  
+3. 在服务器中查看 MySQL/MariaDB 的 **[默认账号和密码](./user/credentials)**  
 4. 若想用域名访问  MySQL/MariaDB，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
 
 
@@ -48,7 +48,7 @@ import TabItem from '@theme/TabItem';
     ```
    MySQL 正常运行会得到 " Active: active (running)... " 的反馈
 
-3. 使用 root [账号密码](./setup/credentials) 登录 MySQL 服务端
+3. 使用 root [账号密码](./user/credentials) 登录 MySQL 服务端
     ~~~
     #假设初始密码是：123456
     mysql -uroot –p123456
@@ -185,7 +185,7 @@ expire_logs_days = 7     # Binary log expire time
 
   ![登录phpMyadmin](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-logincn-websoft9.png)
 
-2. 输入数据库用户名和密码([不知道密码？](./setup/credentials))
+2. 输入数据库用户名和密码([不知道密码？](./user/credentials))
 
 3. 登录成功后，可以管理任意数据库
 

@@ -19,7 +19,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 Sakai 的 **[默认账号和密码](./setup/credentials)**  
+3. 在服务器中查看 Sakai 的 **[默认账号和密码](./user/credentials)**  
 4. 若想用域名访问  Sakai **[域名五步设置](./administrator/domain_step)** 过程
 
 
@@ -29,7 +29,7 @@ tags:
 
 1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://公网ip/portal/*  
 
-2. 输入账号和密码（[查看](./setup/credentials)），登录
+2. 输入账号和密码（[查看](./user/credentials)），登录
 
 
 ### 出现问题？

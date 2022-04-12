@@ -19,7 +19,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网 IP 地址**
 2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:80** 和 **TCP:8080** 端口是否开启
-3. 在服务器中查看 Knowage 的 **[默认账号和密码](./setup/credentials)**
+3. 在服务器中查看 Knowage 的 **[默认账号和密码](./user/credentials)**
 4. 若想用域名访问 Knowage，务必先完成**[域名五步设置](./administrator/domain_step)** 过程
 
 ## Knowage 初始化向导
@@ -29,7 +29,7 @@ tags:
 1. 使用本地电脑的浏览器访问网址： *http://域名/knowage* 或  *http://服务器公网IP/knowage*, 进入登录界面
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/knowage/knowage-login-websoft9.png)
 
-2. 输入账号密码（[不知道账号密码？](./setup/credentials)），成功登录到 Knowage 后台  
+2. 输入账号密码（[不知道账号密码？](./user/credentials)），成功登录到 Knowage 后台  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/knowage/knowage-backend-websoft9.png)
 
 3. 打开【Profile Management】>【Users Management】 修改密码

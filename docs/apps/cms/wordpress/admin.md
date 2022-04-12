@@ -56,6 +56,7 @@ tags:
    ![OSS](https://libs.websoft9.com/Websoft9/blog/tmp/wordpress/zh/wordpress-oss-plugin-websoft9.png)
    
 3. 对 OSS Upload 插件进行配置，关联将要连接的对象存储
+   ![OSS](https://libs.websoft9.com/Websoft9/blog/tmp/wordpress/zh/wordpress-oss-websoft9.png)
 
 4. 设置资源本地备份与同步
   ![OSS](https://libs.websoft9.com/Websoft9/blog/tmp/wordpress/zh/wordpress-oss2-websoft9.png)

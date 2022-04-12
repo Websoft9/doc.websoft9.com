@@ -20,7 +20,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网 IP 地址**
 2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:80** 和 **TCP:9001** 端口是否开启
-3. 在服务器中查看 Metabase 的 **[默认账号和密码](./setup/credentials)**
+3. 在服务器中查看 Metabase 的 **[默认账号和密码](./user/credentials)**
 4. 若想用域名访问 Metabase，务必先完成**[域名五步设置](./administrator/domain_step)** 过程
 
 ## Metabase 初始化向导
@@ -30,7 +30,7 @@ tags:
 1. 使用本地浏览器访问网址： *http://域名* 或  *http://服务器公网IP*，进入登陆页面（如果页面不是登陆页面，请按照步骤 3-7 操作）
    ![Metabase登陆界面](https://libs.websoft9.com/Websoft9/DocsPicture/en/metabase/metabase-login-websoft9.png)
 
-2. 输入邮件地址和密码[（不知道密码？）](./setup/credentials)，登录到 Metabase 后台管理界面
+2. 输入邮件地址和密码[（不知道密码？）](./user/credentials)，登录到 Metabase 后台管理界面
    ![Metabase后台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/metabase/metabase-dashborad-websoft9.png)
 
 3. 使用本地浏览器访问网址：_http://域名_ 或  *http://服务器公网IP*, 就进入了软件的引导首页

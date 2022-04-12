@@ -20,7 +20,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 WordPress 的 **[默认账号和密码](./setup/credentials)**  
+3. 在服务器中查看 WordPress 的 **[默认账号和密码](./user/credentials)**  
 4. 若想用域名访问  WordPress **[域名五步设置](./administrator/domain_step)** 过程
 
 
@@ -34,7 +34,7 @@ tags:
 2. 选择语言后，进入 WordPress 安装要求说明，点击“现在就开始”进入下一步 
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-install001-websoft9.png)
 
-3. 系统进入数据库连接信息安装项，请填写数据库连接信息（[不知道账号密码？](./setup/credentials)） 
+3. 系统进入数据库连接信息安装项，请填写数据库连接信息（[不知道账号密码？](./user/credentials)） 
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-install002-websoft9.png)
 
 4. 数据库验证通过后，系统提示正式“进行安装” 

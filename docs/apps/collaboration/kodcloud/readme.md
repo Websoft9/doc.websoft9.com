@@ -20,7 +20,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 KodCloud 的 **[默认账号和密码](./setup/credentials)**  
+3. 在服务器中查看 KodCloud 的 **[默认账号和密码](./user/credentials)**  
 4. 若想用域名访问  KodCloud **[域名五步设置](./administrator/domain_step)** 过程
 
 
@@ -34,7 +34,7 @@ tags:
     - 系统环境检测，选择【跳过】
     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kodcloud/kodcloud-install1-websoft9.png)
     
-    - 数据库配置，获取[账号密码](./setup/credentials)连接数据库
+    - 数据库配置，获取[账号密码](./user/credentials)连接数据库
     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kodcloud/kodcloud-install2-websoft9.png)
     
     - 设置管理员账号

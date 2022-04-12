@@ -19,7 +19,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:5432,9090** 端口已经开启
-3. 在服务器中查看 PostgreSQL 的 **[默认账号和密码](./setup/credentials)**  
+3. 在服务器中查看 PostgreSQL 的 **[默认账号和密码](./user/credentials)**  
 4. 若想用域名访问  PostgreSQL，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
 
 
@@ -108,7 +108,7 @@ pgAdmin 支持 Linux, Unix, Mac, Windows 等多种桌面操作系统，它采用
 1. 本地电脑浏览器访问：*http://服务器公网IP:9090*，进入 pgAdmin
    ![登录pgAdmin](https://libs.websoft9.com/Websoft9/DocsPicture/zh/postgresql/pgadmin-loginui-websoft9.png)
 
-2. 输入 pgAdmin 管理员的用户名和密码([查看账号密码](./setup/credentials))之后，进入控制台
+2. 输入 pgAdmin 管理员的用户名和密码([查看账号密码](./user/credentials))之后，进入控制台
    ![pgAdmin 控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/postgresql/pgadmin-console-websoft9.png)
 
 #### pgAdmin 客户端

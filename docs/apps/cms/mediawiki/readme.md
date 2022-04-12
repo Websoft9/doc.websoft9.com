@@ -20,7 +20,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 MediaWiki 的 **[默认账号和密码](./setup/credentials)**  
+3. 在服务器中查看 MediaWiki 的 **[默认账号和密码](./user/credentials)**  
 4. 若想用域名访问  MediaWiki **[域名五步设置](./administrator/domain_step)** 过程
 
 
@@ -33,7 +33,7 @@ tags:
 2. 根据系统提示，点击“…Installation”进入安装界面，选择语言 
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mediawiki/mediawiki-install001-websoft9.png)
 
-3. 填写你的数据库配置信息([不知道账号密码？](./setup/credentials))，保存并继续; 
+3. 填写你的数据库配置信息([不知道账号密码？](./user/credentials))，保存并继续; 
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mediawiki/mediawiki-install002-websoft9.png)
 
 4. 选择数据库引擎和字符集设置，字符集建议选用UFT-8 

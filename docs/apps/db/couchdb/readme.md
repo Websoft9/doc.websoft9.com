@@ -18,7 +18,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 CouchDB 的 **[默认账号和密码](./setup/credentials)**  
+3. 在服务器中查看 CouchDB 的 **[默认账号和密码](./user/credentials)**  
 4. 若想用域名访问  CouchDB，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
 
 
@@ -29,7 +29,7 @@ tags:
 1. 使用本地电脑浏览器访问网址：*http://域名/_utils* 或 *http://服务器公网 IP/_utils*, 进入初始化页面
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/couchdb/couchdb-init-websoft9.png)
 
-2. 输入[账号密码](./setup/credentials)，成功登录到 CouchDB 后台  
+2. 输入[账号密码](./user/credentials)，成功登录到 CouchDB 后台  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/couchdb/couchdb-admin-websoft9.png)
 
 3. 登录后通过：【Users】设置新密码  

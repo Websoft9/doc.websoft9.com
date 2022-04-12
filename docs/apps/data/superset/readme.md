@@ -19,7 +19,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网 IP 地址**
 2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:80** 和 **TCP:9001** 端口是否开启
-3. 在服务器中查看 Superset 的 **[默认账号和密码](./setup/credentials)**
+3. 在服务器中查看 Superset 的 **[默认账号和密码](./user/credentials)**
 4. 若想用域名访问 Superset，务必先完成**[域名五步设置](./administrator/domain_step)** 过程
 
 ## Superset 初始化向导
@@ -29,7 +29,7 @@ tags:
 1. 使用本地电脑浏览器访问网址： *http://域名* 或  *http://服务器公网 IP*, 进入登录页面
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/superset/superset-login-websoft9.png)
 
-2. 输入账号密码（[不知道账号密码？](./setup/credentials)），成功登录到 Superset 后台  
+2. 输入账号密码（[不知道账号密码？](./user/credentials)），成功登录到 Superset 后台  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/superset/superset-console-websoft9.png)
 
 3. 修改密码：【Superset Admin】>【Profiles】>【Reset my Password】
@@ -89,7 +89,7 @@ Superset 支持数十种数据库，但 Superset Docker 镜像默认并没有安
 
 ```
 # 进入 Superset 容器，以 root 身份运行命令
-docker exec -it --user root superset_app bash
+sudo docker exec -it --user root superset-app bash
 
 # 范例：安装 MySQL 驱动
 pip install mysqlclient
@@ -106,7 +106,7 @@ pip install psycopg2
 
 ```
 # 进入 Superset 容器，以 root 身份运行命令
-docker exec -it -u root superset_app bash
+sudo docker exec -it -u root superset-app bash
 
 # 安装 MSSQL 驱动
 pip install pymssql
@@ -130,10 +130,10 @@ mssql+pymssql://username:password@server ip:port/database
 3. 运行下面的命令，更换 Superset 官方默认 Logo
 
    ```
-   docker cp /data/superset-logo-horiz.png superset_app:/app/superset/static/assets/images/superset-logo-horiz.png
+   docker cp /data/superset-logo-horiz.png superset-app:/app/superset/static/assets/images/superset-logo-horiz.png
    ```
 
-   > superset_app 为 SuperSet 容器名称。
+   > superset-app 为 SuperSet 容器名称。
 
 4. 刷新 Superset 后台页面，查看更换效果
 
@@ -159,7 +159,7 @@ Superset 配置 SMTP 发邮件的步骤：
 
 3. 重启 Superset 容器后生效
    ```
-   sudo docker restart superset_app
+   sudo docker restart superset-app
    ```
 
 ### 重置密码
@@ -227,11 +227,11 @@ docker exec -it superset_app /bin/bash -c 'cat /app/superset-frontend/package.js
 ### 服务
 
 ```shell
-sudo docker  start | stop | restart | status superset_app
-sudo docker  start | stop | restart | status superset_worker
-sudo docker  start | stop | restart | status superset_worker_beat
-sudo docker  start | stop | restart | status superset_db
-sudo docker  start | stop | restart | status superset_cache
+sudo docker  start | stop | restart | status superset-app
+sudo docker  start | stop | restart | status superset-worker
+sudo docker  start | stop | restart | status superset-worker_beat
+sudo docker  start | stop | restart | status superset-db
+sudo docker  start | stop | restart | status superset-cache
 ```
 
 ### 命令行
@@ -242,7 +242,7 @@ Superset 提供了强大的的命令行工具 `superset`
 
 ```
 # 登录到 Superset 容器
-docker exec -it superset_app bash
+docker exec -it superset-app bash
 
 # 运行 CLI 命令
 superset

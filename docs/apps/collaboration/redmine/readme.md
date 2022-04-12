@@ -18,7 +18,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 Redmine 的 **[默认账号和密码](./setup/credentials)**  
+3. 在服务器中查看 Redmine 的 **[默认账号和密码](./user/credentials)**  
 4. 若想用域名访问  Redmine **[域名五步设置](./administrator/domain_step)** 过程
 
 
@@ -28,7 +28,7 @@ tags:
 
 1. 使用本地 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入Redmine主页。
 
-2. 点击【登录】，进入系统（[不知道账号密码？](./setup/credentials)）
+2. 点击【登录】，进入系统（[不知道账号密码？](./user/credentials)）
    ![Redmine 密码](https://libs.websoft9.com/Websoft9/DocsPicture/zh/redmine/redmine-login-websoft9.png)
 
 3. 进入 Redmine 控制台，系统提示修改密码 

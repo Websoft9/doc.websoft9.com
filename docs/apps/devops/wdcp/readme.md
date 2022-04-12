@@ -18,7 +18,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80, 8080, 21** 端口已经开启
-3. 在服务器中查看 WDCP 的 **[默认账号和密码](./setup/credentials)**  
+3. 在服务器中查看 WDCP 的 **[默认账号和密码](./user/credentials)**  
 4. 若想用域名访问  WDCP，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
 
 
@@ -31,7 +31,7 @@ tags:
 
 1. 使用本地电脑浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入登录页面
 
-2. 输入默认账号密码（**[查看](./setup/credentials)** ），登录成功后，到 admin（右上角）->修改密码 
+2. 输入默认账号密码（**[查看](./user/credentials)** ），登录成功后，到 admin（右上角）->修改密码 
   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/wdcp/wdcp-adminpw-websoft9.png)
 * 修改密码后，请立即重新登录，以验证修改密码操作是成功的
 

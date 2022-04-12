@@ -21,7 +21,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 Pydio Cells 的 **[默认账号和密码](./setup/credentials)**  
+3. 在服务器中查看 Pydio Cells 的 **[默认账号和密码](./user/credentials)**  
 4. 若想用域名访问  Pydio Cells **[域名五步设置](./administrator/domain_step)** 过程
 
 
@@ -37,7 +37,7 @@ tags:
 3. 设置管理员账号，进入下一步
      ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/pydio/pydio-install002-websoft9.png)
 
-4. 选择Mysql数据库，填写数据库信息（[查看数据库账号密码](./setup/credentials)），点击“test db connection”进入下一步
+4. 选择Mysql数据库，填写数据库信息（[查看数据库账号密码](./user/credentials)），点击“test db connection”进入下一步
      ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/pydio/pydio-install003-websoft9.png)
 
 5. 进入高级设置，设置默认语言为“简体中文”，点击“Install Pydio”，开始安装

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-slug: /setup/vm
+slug: /user/vm
 ---
 
 import Tabs from '@theme/Tabs';

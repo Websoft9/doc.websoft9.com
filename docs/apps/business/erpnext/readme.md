@@ -19,7 +19,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 ERPNext 的 **[默认账号和密码](./setup/credentials)**  
+3. 在服务器中查看 ERPNext 的 **[默认账号和密码](./user/credentials)**  
 4. 若想用域名访问  ERPNext **[域名五步设置](./administrator/domain_step)** 过程
 
 
@@ -30,7 +30,7 @@ tags:
 1. 使用本地电脑 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入初始化页面
    ![erpnext安装登录](https://libs.websoft9.com/Websoft9/DocsPicture/zh/erpnext/erpnext-login-websoft9.png)
 
-2. 输入账号密码（[不知道账号密码？](./setup/credentials)），选择语言， 进入下一步 
+2. 输入账号密码（[不知道账号密码？](./user/credentials)），选择语言， 进入下一步 
    ![erpnext安装](https://libs.websoft9.com/Websoft9/DocsPicture/zh/erpnext/erpnext-language-websoft9.png)
 
 3. 根据安装向导依次完成后续步骤

@@ -18,7 +18,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 Joomla 的 **[默认账号和密码](./setup/credentials)**  
+3. 在服务器中查看 Joomla 的 **[默认账号和密码](./user/credentials)**  
 4. 若想用域名访问  Joomla **[域名五步设置](./administrator/domain_step)** 过程
 
 
@@ -34,7 +34,7 @@ tags:
 3. 填写用户，账号，邮件等信息，然后进入下一步
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-wizard2-websoft9.png)
 
-4. 填写您的数据库参数（[不知道账号密码？](./setup/credentials)），然后进入下一步
+4. 填写您的数据库参数（[不知道账号密码？](./user/credentials)），然后进入下一步
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-wizard3-websoft9.png)
 
 5. 安装成功，建议此时点击【特别推荐：安装语言】以安装更多语言以支持未来的多语言网

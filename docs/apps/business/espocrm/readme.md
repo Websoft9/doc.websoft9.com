@@ -19,7 +19,7 @@ tags:
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 EspoCRM 的 **[默认账号和密码](./setup/credentials)**  
+3. 在服务器中查看 EspoCRM 的 **[默认账号和密码](./user/credentials)**  
 4. 若想用域名访问  EspoCRM **[域名五步设置](./administrator/domain_step)** 过程
 
 
@@ -34,7 +34,7 @@ tags:
 2. 选择语言之后（中国支持非常好），系统进入环境检测步骤
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/espocrm/espocrm-check-websoft9.png)
 
-3. 然后点击“Install”，进入数据库参数设置界面（[查看数据库账号密码](./setup/credentials)）
+3. 然后点击“Install”，进入数据库参数设置界面（[查看数据库账号密码](./user/credentials)）
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/espocrm/espocrm-dbconf-websoft9.png)
 
 4. 数据库连接正确，点击“Next”进入管理员账号设置界面，填写管理员信息，牢记之，并进入下一步

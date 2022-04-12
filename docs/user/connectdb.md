@@ -1,9 +1,9 @@
 ---
-sidebar_position: 1
-slug: /administrator/connectdb
+sidebar_position: 3
+slug: /user/dbgui
 ---
 
-# 远程连接数据库
+# 可视化管理数据库
 
 连接数据库除了登录服务器以命令行形式连接之外，还可以使用本地电脑客户端和预装的 Web 在线工具连接 
 

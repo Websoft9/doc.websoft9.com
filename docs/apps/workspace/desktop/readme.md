@@ -21,7 +21,7 @@ Windows 桌面风格统一，而 Linux 桌面会根据不同的发行版而产�
 
 ### 连接 Windows 桌面
 
-Windows 10, Windows 11 等桌面连接参考相关章节：[连接 Windows](./setup/vm#connectwindows)
+Windows 10, Windows 11 等桌面连接参考相关章节：[连接 Windows](./user/vm#connectwindows)
 
 ### 连接 Linux 桌面
 

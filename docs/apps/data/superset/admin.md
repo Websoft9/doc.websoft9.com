@@ -24,7 +24,7 @@ Check the permissions.
 
 **原因分析**：权限不足
 
-**解决方案**：以 root 用户进入容器 `docker exec -it --user root superset_app bash`，然后再安装驱动
+**解决方案**：以 root 用户进入容器 `docker exec -it --user root superset-app bash`，然后再安装驱动
 
 #### Superset 密码正确，但仍然登录失败？{#loginfail}
 
@@ -43,7 +43,7 @@ Check the permissions.
 #### 如何以 root 身份进入容器运行命令？
 
 ```
-docker exec -it --user root superset_app bash
+docker exec -it --user root superset-app bash
 ```
 
 #### 如何修改上传的文件权限?
