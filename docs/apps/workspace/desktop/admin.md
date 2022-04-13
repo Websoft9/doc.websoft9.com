@@ -48,6 +48,16 @@ tags:
 
 主要是 [TigerVNC](https://github.com/TigerVNC/tigervnc)
 
+#### 是否能安装web浏览器？
+
+可以，以CentOS7安装Google Chrome为例：
+
+```
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+sudo yum localinstall google-chrome-stable_current_x86_64.rpm
+/usr/bin/google-chrome --no-sandbox
+```
+
 ## 参数
 
 ### 端口

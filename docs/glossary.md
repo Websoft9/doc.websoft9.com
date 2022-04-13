@@ -167,5 +167,4 @@ Web 客户端与服务端的双向通行协议，区别于 HTTP 的单向通讯
 
 #### Cloud-Init
 
-Cloud-Init 是一个开源工具，运行在云服务器实例内部的一个非常驻服务，在开机启动时执行，执行完成立即退出，不会监听任何端口。
-Websoft9的镜像和腾讯云的 Linux 公有镜像都预安装了 Cloud-Init 服务。由于 Cloud-Init 服务主要用于实现对 CVM 实例的初始化操作（例如，对 DNS，Hostname，IP 等信息的配置），以及执行一些用户在创建 CVM 实例时指定首次开机启动要执行的自定义脚本，因此需要以 root 用户运行 Cloud-Init 服务。
+[Cloud-Init](https://cloud-init.io/) 是一个开源工具，通过元数据，在启动时及其生命周期中控制和自定义您的云实例。
