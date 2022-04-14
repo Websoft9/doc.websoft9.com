@@ -76,7 +76,7 @@ hostnamectl set-hostname erpnext
 
 ### 配置 SMTP{#smtp}
 
-1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
+1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
    
 2. 登录 ERPNext控制台，在【设置】>【电子邮件域名】填写SMTP参数
 ![ERPNext SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/en/erpnext/erpnext-smtp-websoft9.png)

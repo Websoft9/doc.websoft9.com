@@ -130,7 +130,7 @@ Cache（缓存）是 Magento 的一项重要设置：
 
 ### 配置 SMTP{#smtp}
 
-1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数 
+1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数 
 
 2. 确保你的 Magento 已经[连接到官方 Marketplace](#marketplace)
 

@@ -111,7 +111,7 @@ Opencart 2.0 使用vQmod机制安装扩展，需提前安装并启用vQmod，具
 
 ### 配置 SMTP{#smtp}
 
-1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数 
+1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数 
 
 2. 登录到 OpenCart 后台，完成 SMTP 参数设置  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/opencart/opencart-smtp-websoft9.png)

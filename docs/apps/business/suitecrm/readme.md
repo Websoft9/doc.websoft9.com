@@ -59,7 +59,7 @@ tags:
 
 ### 配置 SMTP{#smtp}
 
-1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
+1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
    
 2. 打开SuiteCRM->Administartor->Admin->Email->Email Setting，打开邮件发送设置项（Outgoing Mail Configuration）
 

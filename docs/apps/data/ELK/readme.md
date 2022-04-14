@@ -138,7 +138,7 @@ Logstash 作为数据的采集者，它是如何将数据传输到 Elasticsearch
 
 ELK 配置 SMTP 发邮件的步骤：：
 
-1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
+1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
 
 2. 登录 ELK 控制台，依次打开：【Stack Management】>【Watcher】，增加一个 [Email Action](https://www.elastic.co/guide/en/elasticsearch/reference/current/actions.html)
 

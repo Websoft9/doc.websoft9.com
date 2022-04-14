@@ -66,7 +66,7 @@ tags:
 
 EspoCRM支持第三方的SMTP发送邮件模式，具体如下：
 
-1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
+1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
    
 2. 待EspoCRM安装完成后，点击右上角菜单->admin，点击Email项
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/espocrm/espocrm-smtp-1-websoft9.png)

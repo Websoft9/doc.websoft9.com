@@ -111,7 +111,7 @@ Websoft9 作为明道的合作伙伴，具备基于明道云的软件快速构�
 
 ### 配置 SMTP{#smtp}
 
-1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
+1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
    
 2. 登录明道云，打开右上角用户图标下的【系统配置】，点击【邮件服务设置】开始配置
    ![明道云 SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mingdao/mingdao-smtp-websoft9.png)

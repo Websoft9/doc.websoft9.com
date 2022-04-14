@@ -141,7 +141,7 @@ mssql+pymssql://username:password@server ip:port/database
 
 Superset 配置 SMTP 发邮件的步骤：
 
-1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
+1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
 
 2. 修改[Superset 配置文件](#path)，增加如下的 SMTP 配置段，设置好自己的参数。
 

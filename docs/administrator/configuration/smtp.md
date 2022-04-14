@@ -1,9 +1,9 @@
 ---
-sidebar_position: 3
-slug: /automation/smtp
+sidebar_position: 6
+slug: /administrator/smtp
 ---
 
-# SMTP
+# SMTP 发送邮件
 
 应用中发送邮件是一个很常见的功能。经过大量用户实践反馈，只推荐一种发邮件的方式，即安装邮件插调用第三方邮件系统的STMP相关账号来进行邮件发送。
 

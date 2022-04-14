@@ -83,7 +83,7 @@ tags:
 
 ### 配置 SMTP{#smtp}
 
-1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
+1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
    
 2. 登录 WordPress后台-设置-常规，设置好需要用于发件的邮件地址 
    

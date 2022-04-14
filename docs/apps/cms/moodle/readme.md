@@ -72,7 +72,7 @@ tags:
 
 ### 配置 SMTP{#smtp}
 
-1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
+1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
 
 2. 以管理员身份登录 Moodle控制台
 

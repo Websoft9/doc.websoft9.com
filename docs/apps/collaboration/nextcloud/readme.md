@@ -80,7 +80,7 @@ Nextcloud 支持移动端，使用步骤如下：
 
 ### 配置 SMTP{#smtp}
 
-1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
+1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
    
 2. 登录 Nextcloud 后，点击齿轮图标，打开【个人】设置页面，填写发件邮箱地址
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/nextcloud/nextcloud-smtp-2-websoft9.png)

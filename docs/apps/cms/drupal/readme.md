@@ -66,7 +66,7 @@ tags:
 
 ### 配置 SMTP{#smtp}
 
-1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
+1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
 
 2. 获取 [SMTP Authentication Support](https://www.drupal.org/project/smtp) 下载链接（Drupal 默认没有安装 SMTP 模块），在线安装
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-installsmtp-websoft9.png)

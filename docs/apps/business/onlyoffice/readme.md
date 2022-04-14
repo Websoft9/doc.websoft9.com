@@ -104,7 +104,7 @@ ONLYOFFICE 对内存要求比较高，建议最少 8G 内存
 
 ### 配置 SMTP{#smtp}
 
-1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
+1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
    
 2. 登录 ONLYOFFICE 控制台，依次打开：【设置】>【集成】>【SMTP设置】
 

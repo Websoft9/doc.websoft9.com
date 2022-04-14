@@ -58,7 +58,7 @@ tags:
 
 ### 配置 SMTP
 
-1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
+1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
 
 2. 修改[Grafana 配置文件](#path)，增加如下的 SMTP 配置段
 

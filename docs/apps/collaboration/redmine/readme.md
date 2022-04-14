@@ -74,7 +74,7 @@ Redmine 所需内存最低为2G，若服务器配置较低或并发访问超过�
 
 ### 配置 SMTP{#smtp}
 
-1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
+1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
 
 2. 通过 SFTP 连接服务器，修改 `configuration.yml` 文件，找到 “production:”, 在 production 下面添加并完善你的 SMTP 参数:  
    ```

@@ -67,7 +67,7 @@ tags:
 
 ### SMTP
 
-1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
+1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
 
 2. 登录到 Zabbix 后台，完成 SMTP 参数设置  
   

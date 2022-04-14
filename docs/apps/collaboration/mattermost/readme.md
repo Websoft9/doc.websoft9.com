@@ -69,7 +69,7 @@ tags:
 
 ### 配置 SMTP{#smtp}
 
-1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
+1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
 
 2. 登录 Mattermost控制台，打开【ENVIROMENT】>【SMTP】
    ![设置smtp](https://libs.websoft9.com/Websoft9/DocsPicture/en/mattermost/mattermost-smtp-websoft9.png)

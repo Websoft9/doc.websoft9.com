@@ -76,7 +76,7 @@ Canvas 对服务器的配置要求极高，最低配置为2核8G
 
 ### 配置 SMTP{#smtp}
 
-1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
+1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
 
 2. 使用 SSH 登录服务器，修改[邮件配置文件](#path)文件后保存
    ```

@@ -73,7 +73,7 @@ Alfresco 开机启动最少需要 10 分钟，请耐心等待
 
 ### 配置 SMTP{#smtp}
 
-1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
+1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
    
 2. 登录 Alfresco 控制台，设置 SMTP 参数（暂未找到具体方案）
 

@@ -69,7 +69,7 @@ tags:
 
 ### Joomla 配置 SMTP{#smtp}
 
-1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
+1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
 
 2. 登录 Joomla 后，打开：【系统管理】>【全局设置】>【服务器设置】，服务器邮件类型选择：SMTP
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-opensmtp-websoft9.png)

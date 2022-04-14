@@ -138,7 +138,7 @@ docker restart seafile
 
 ### 配置 SMTP{#smtp}
 
-1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
+1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
    
 2. 使用 SFTP 连接服务器，编辑 Seafile 配置文件 [seahub_settings.py](#path)，插入邮箱配置段
    ```

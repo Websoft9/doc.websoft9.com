@@ -131,7 +131,7 @@ Prestashop的多语言支持非常的成熟，系统在后台内置一套多语�
 
 ### 配置 SMTP{#smtp}
 
-1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
+1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
 
 2. 登录到 PrestaShop 后台，完成 SMTP 参数设置  
   

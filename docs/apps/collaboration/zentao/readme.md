@@ -62,7 +62,7 @@ tags:
 
 ZenTao 配置 SMTP 发邮件的步骤：
 
-1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
+1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
 
 2. 登录禅道，打开：【后台】>【通知】>【邮件】，选择 STMP 作为发信方式
 

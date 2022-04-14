@@ -87,7 +87,7 @@ tags:
 1. 安装 Jenkins的邮箱扩展插件 [Email Extension](https://plugins.jenkins.io/email-ext/)
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins_installemailplugin-websoft9.png)
 
-2. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
+2. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
 
 3. 登录 Jenkins 控制台，依次打开：【Manage Jenkins】>【Configure System】，填写 SMTP 参数
 ![Jenkins SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins_configuresmtp-websoft9.png)

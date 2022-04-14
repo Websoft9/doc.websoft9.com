@@ -52,7 +52,7 @@ tags:
 
 ### 配置 SMTP{#smtp}
 
-1. 在邮箱管理控制台获取 [SMTP](./automation/smtp) 相关参数
+1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
 
 2. 修改 Ghost 配置文件 mail 相关配置段。特别注意的是 "from" 与 "user" 必须一致，否则邮件无法发送。
    ```
