@@ -112,7 +112,7 @@ Alfresco 开机启动最少需要 10 分钟，请耐心等待
 
 ## 参数{#parameter}
 
-Alfresco 应用中包含 Nginx, Docker, PostgreSQL, pgAdmin 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。
+Alfresco 应用中包含 Nginx, Docker, PostgreSQL, pgAdmin 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 Alfresco 运行时所有的 Container：
 

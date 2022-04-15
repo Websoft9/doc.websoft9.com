@@ -136,7 +136,7 @@ XAMPP 环境的根目录是可以被修改的，具体只需2个步骤：
 
 ## 参数
 
-**[通用参数表](../setup/parameter)** 中可查看 Apache, MySQL 等 XAMPP 应用中包含的基础架构组件路径、版本、端口等参数。 
+**[通用参数表](../administrator/parameter)** 中可查看 Apache, MySQL 等 XAMPP 应用中包含的基础架构组件路径、版本、端口等参数。 
 
 下面仅列出 XAMPP 本身的参数：
 

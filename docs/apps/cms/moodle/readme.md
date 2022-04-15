@@ -181,7 +181,7 @@ Moodle 主题实际上是一个插件，因此需要安装新主题，必须通�
 
 下面介绍通过数据库找回密码的方案：
 
-1. 登录 [phpMyAdmin](./setup/parameter#managedb)，并找到你的网站数据库下的 *mdl_user*表
+1. 登录 [phpMyAdmin](./administrator/parameter#managedb)，并找到你的网站数据库下的 *mdl_user*表
 
   ![Moodle user表](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-phpmyadminuser-websoft9.png)
 
@@ -192,7 +192,7 @@ Moodle 主题实际上是一个插件，因此需要安装新主题，必须通�
 
 ## Moodle 参数{#parameter}
 
-Moodle 应用中包含 PHP, Nginx, Apache, Docker, MySQL 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。 
+Moodle 应用中包含 PHP, Nginx, Apache, Docker, MySQL 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
 
 通过运行`docker ps`，可以查看到 Moodle 运行时所有的 Container：
 

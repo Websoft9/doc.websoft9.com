@@ -84,7 +84,7 @@ EspoCRM支持第三方的SMTP发送邮件模式，具体如下：
 
 ## 参数{#parameter}
 
-EspoCRM 应用中包含 PHP, Apache, Docker, MySQL, phpMyAdmin 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。 
+EspoCRM 应用中包含 PHP, Apache, Docker, MySQL, phpMyAdmin 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
 
 通过运行`docker ps`，可以查看到 EspoCRM 运行时所有的 Container：
 

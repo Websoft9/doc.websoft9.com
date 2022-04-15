@@ -60,7 +60,7 @@ Oracle Database支持第三方可视化数据库管理工具，例如 Navicat,Ma
 
 ## Oracle Database 参数
 
-Oracle Database 应用中包含 Docker 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。
+Oracle Database 应用中包含 Docker 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
 通过运行 `docker ps`，可以查看到 Oracle Database 运行时所有的 Container：
 

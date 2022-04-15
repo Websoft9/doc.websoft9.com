@@ -122,7 +122,7 @@ RabbitMQ 配置TLS/SSL，需要以下4个步骤：
 
 ## 参数
 
-RabbitMQ 应用中包含 Docker 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。
+RabbitMQ 应用中包含 Docker 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
 下面仅列出 RabbitMQ 本身的参数：
 

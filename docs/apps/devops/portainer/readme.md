@@ -150,7 +150,7 @@ tags:
 
 ## 参数
 
-Portainer 应用中包含 Nginx, Docker 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。
+Portainer 应用中包含 Nginx, Docker 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
 下面仅列出 Portainer 本身的参数：
 

@@ -34,7 +34,7 @@ Canvas升级有点小复杂，详情参考官方升级文档：[Upgrading Canvas
 现象描述：文件上传后，下载出现"无法访问网站 找不到canvas.example.com服务器IP地址 "
 解决办法：
 
-1. 找到 [Apache 虚拟主机配置文件](../setup/parameter)，将 ServerName 值修改为实际域名
+1. 找到 [Apache 虚拟主机配置文件](../administrator/parameter)，将 ServerName 值修改为实际域名
 2. 找到 [Canvas 域名配置文件](../canvas#path)，将 production 配置节点的 **domain** 值修改为实际域名
 
 

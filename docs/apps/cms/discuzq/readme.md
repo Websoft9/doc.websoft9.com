@@ -61,7 +61,7 @@ tags:
 
 ## 参数{#parameter}
 
-Discuz!Q 应用中包含 Nginx, Docker, MySQL 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。
+Discuz!Q 应用中包含 Nginx, Docker, MySQL 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 Discuz!Q 运行时所有的 Container：
 

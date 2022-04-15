@@ -249,7 +249,7 @@ ALTER CURRENT USER SET PASSWORD FROM 'neo4j' TO 'neo4j123';
 
 ## Neo4j 参数
 
-Neo4j 应用中包含 Nginx, Neo4j-browser 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。
+Neo4j 应用中包含 Nginx, Neo4j-browser 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
 下面仅列出 Neo4j 本身的参数：
 

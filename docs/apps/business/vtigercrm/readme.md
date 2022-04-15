@@ -96,7 +96,7 @@ VtigerCRM 支持多国语言，中文包安装方法如下：
 
 ## 参数{#parameter}
 
-VtigerCRM 应用中包含 PHP, Nginx, Docker, MySQL, phpMyAdmin 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。
+VtigerCRM 应用中包含 PHP, Nginx, Docker, MySQL, phpMyAdmin 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 VtigerCRM 运行时所有的 Container：
 

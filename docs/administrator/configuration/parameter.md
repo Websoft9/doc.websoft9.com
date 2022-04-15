@@ -1,9 +1,9 @@
 ---
-sidebar_position: 5
-slug: /setup/parameter
+sidebar_position: 10
+slug: /administrator/parameter
 ---
 
-# 参数速查
+# 路径、端口和服务
 
 Websoft9 将各个应用和组件的目录到一个约定的目录中，大大的简化了用户维护：  
 

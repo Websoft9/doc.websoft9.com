@@ -224,7 +224,7 @@ WAMP 镜像中安装 composer 的方法步骤如下：
 
 ## 参数
 
-**[通用参数表](./setup/parameter)** 中可查看 Apache, Docker, MySQL 等 WAMP 应用中包含的基础架构组件路径、版本、端口等参数。 
+**[通用参数表](./administrator/parameter)** 中可查看 Apache, Docker, MySQL 等 WAMP 应用中包含的基础架构组件路径、版本、端口等参数。 
 
 下面仅列出 WAMP 本身的参数：
 
@@ -269,7 +269,7 @@ phpMyAdmin 虚拟主机配置文件: *C:\websoft9\wampstack\apps\phpmyadmin\conf
 
 ### 端口
 
-**[通用参数表](./setup/parameter)** 中可查看
+**[通用参数表](./administrator/parameter)** 中可查看
 
 ### 版本
 

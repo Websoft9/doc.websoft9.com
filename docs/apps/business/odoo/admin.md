@@ -51,7 +51,7 @@ Odoo 后台提供了在线升级能力，让升级工作变得非常简单。参
     client_max_body_size 0; #解除上传文件限制
     ...
    ```
-4. 保存并[重启 Nginx 服务](../setup/parameter#service)
+4. 保存并[重启 Nginx 服务](../administrator/parameter#service)
 
 #### Odoo 总出现数据库设置提醒？
 

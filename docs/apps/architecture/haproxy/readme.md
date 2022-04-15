@@ -100,7 +100,7 @@ listen  https_web 192.168.10.10:443
 
 ## 参数
 
-HAProxy 应用中包含 Docker 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。
+HAProxy 应用中包含 Docker 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
 下面仅列出 HAProxy 本身的参数：
 

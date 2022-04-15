@@ -116,7 +116,7 @@ Discuz 密码忘记了，怎么找回？ 如下方案经过实践可用：
    define('UC_FOUNDERPW','047099adb883dc19616dae0ef2adc5b6');
    define('UC_FOUNDERSALT','311254');
    ```
-3. [重启服务](./setup/parameter#service)
+3. [重启服务](./administrator/parameter#service)
 4. 此时 Ucenter 创始人的密码就变为: `123456789`
 5. 访问 *http://服务器公网IP/uc_server*，以`123456789`作为密码登录 Ucenter
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuz-ucpwlogin-websoft9.png)
@@ -169,7 +169,7 @@ Discuz论坛安装完成后，想使连接里面显示文章名，应怎么开�
 4. 在 Discuz 的根目录下，新建一个`.htaccess` 文件，将上面的模板内容拷贝进去，保存
    如果是Windows服务器，请选择【另存为】，文件类型选择【所有文件】，否则无法命名
   
-5. [重启服务](./setup/parameter#service) 后生效
+5. [重启服务](./administrator/parameter#service) 后生效
   
 ### Discuz 修改上传附件大小
 
@@ -190,7 +190,7 @@ Discuz论坛安装完成后，想使连接里面显示文章名，应怎么开�
 
 ## 参数{#parameter}
 
-**[通用参数表](./setup/parameter)** 中可查看 PHP, Nginx, Apache, Docker, MySQL 等 Discuz 应用中包含的基础架构组件路径、版本、端口等参数。 
+**[通用参数表](./administrator/parameter)** 中可查看 PHP, Nginx, Apache, Docker, MySQL 等 Discuz 应用中包含的基础架构组件路径、版本、端口等参数。 
 
 通过运行`docker ps`，可以查看到 Discuz 运行时所有的 Container：
 

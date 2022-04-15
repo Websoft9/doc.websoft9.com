@@ -21,6 +21,8 @@ df -hl
 # 查看 Docker 容器
 sudo docker ps -a
 
+# 查看端口
+netstat -tunlp
 ```
 
 ## 文件管理

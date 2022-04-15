@@ -147,7 +147,7 @@ Opencart 2.0 使用vQmod机制安装扩展，需提前安装并启用vQmod，具
 
 ## 参数{#parameter}
 
-OpenCart 应用中包含 Nginx, Apache, Docker, MySQL, phpMyAdmin 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。
+OpenCart 应用中包含 Nginx, Apache, Docker, MySQL, phpMyAdmin 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 OpenCart 运行时所有的 Container：
 

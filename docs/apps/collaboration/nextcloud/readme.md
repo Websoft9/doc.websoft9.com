@@ -191,7 +191,7 @@ Nextcloud 的程序和数据文件默认均存在系统盘，你要转移到数�
 
 ## 参数{#parameter}
 
-Nextcloud 应用中包含 PHP, Apache, Nginx, Docker, Redis, MySQL, phpMyAdmin, [ONLYOFFICE Docs](./onlyofficedocs) 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。  
+Nextcloud 应用中包含 PHP, Apache, Nginx, Docker, Redis, MySQL, phpMyAdmin, [ONLYOFFICE Docs](./onlyofficedocs) 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。  
 
 通过运行 `docker ps`，可以查看到 Nextcloud 运行时所有的 Container：
 

@@ -107,7 +107,7 @@ tags:
 
 6. 保存设置
 
-7. 重启 [PHP-FPM 服务](./setup/parameter#service)后生效
+7. 重启 [PHP-FPM 服务](./administrator/parameter#service)后生效
 
 8. 测试是否可以发邮件
 
@@ -152,7 +152,7 @@ Mediawiki 默认并不可以上传文件，需要启动文件上传功能
 
 ## 参数{#parameter}
 
-MediaWiki 应用中包含 PHP, Nginx, Apache, Docker, MySQL 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。 
+MediaWiki 应用中包含 PHP, Nginx, Apache, Docker, MySQL 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
 
 通过运行 `docker ps`，可以查看到 MediaWiki 运行时所有的 Container：
 

@@ -123,7 +123,7 @@ sudo -H -u erpnext bash -c "cd /data/wwwroot/frappe-bench && export GIT_PYTHON_R
 
 ## 参数{#parameter}
 
-ERPNext 应用中包含 Nginx, Redis, MariaDB, Docker 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。  
+ERPNext 应用中包含 Nginx, Redis, MariaDB, Docker 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。  
 
 通过运行`docker ps`，可以查看到 ERPNext 运行时所有的 Container：
 

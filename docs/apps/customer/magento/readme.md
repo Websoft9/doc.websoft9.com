@@ -183,7 +183,7 @@ php bin/magento cache:flush  #将基础URL更改为https并刷新缓存
 
 ## 参数{#parameter}
 
-Magento 应用中包含Apache, Nginx, Docker, MySQL, phpMyAdmin, Varnish, RabbitMQ, Elasticsearch等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。
+Magento 应用中包含Apache, Nginx, Docker, MySQL, phpMyAdmin, Varnish, RabbitMQ, Elasticsearch等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 Magento 运行时所有的 Container：
 

@@ -132,7 +132,7 @@ Canvas 对服务器的配置要求极高，最低配置为2核8G
 
 ## 参数{#parameter}
 
-Canvas 应用中包含 Ruby, Node.js, Apache, Passenger, Docker, Redis, PostgreSQL, PgAdmin 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。
+Canvas 应用中包含 Ruby, Node.js, Apache, Passenger, Docker, Redis, PostgreSQL, PgAdmin 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 Canvas 运行时所有的 Container：
 

@@ -82,7 +82,7 @@ tags:
 
 ## 参数{#parameter}
 
-TensorFlow 应用中包含 Python, Nginx, Docker 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。
+TensorFlow 应用中包含 Python, Nginx, Docker 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 TensorFlow 运行时所有的 Container：
 

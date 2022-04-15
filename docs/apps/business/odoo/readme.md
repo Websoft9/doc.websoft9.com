@@ -233,7 +233,7 @@ Odoo除了基础模块之外，通过[Odoo Apps 市场](https://www.odoo.com/app
 
 ## 参数{#parameter}
 
-Odoo 应用中包含 Nginx, Docker, PostgreSQL, pgAdmin, Python 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。
+Odoo 应用中包含 Nginx, Docker, PostgreSQL, pgAdmin, Python 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 Odoo 运行时所有的 Container：
 

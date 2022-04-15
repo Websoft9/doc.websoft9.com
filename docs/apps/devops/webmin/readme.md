@@ -187,7 +187,7 @@ Webmin 默认使用的是服务器 root 账号，修改服务器密码即修改 
 
 ## 参数
 
-Webmin 应用中包含 Apache, Docker 等组件，可通过 **[通用参数表](./setup/parameter)** 查看路径、服务、端口等参数。 
+Webmin 应用中包含 Apache, Docker 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
 
 下面仅列出 Webmin 本身的参数：
 
