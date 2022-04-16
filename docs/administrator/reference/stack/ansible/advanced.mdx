@@ -693,7 +693,17 @@ ansible-server console
 
 #### python_interpreter=auto 时的选择逻辑？
 
-参考：[Interpreter Discovery](https://docs.ansible.com/ansible/latest/reference_appendices/interpreter_discovery.html)
+Ansible 主控端有一个 Python interpreter 解析器的选择表，Ansible 会维护不同的操作系统发行版对应的选择。具体参考：[Interpreter Discovery](https://docs.ansible.com/ansible/latest/reference_appendices/interpreter_discovery.html)
+
+可以通过 Ansible 的 ansible_python_interpreter 变量修改默认值。  
+
+#### Ansible 有哪些内置变量？
+
+Ansible 有三种类型的内置变量：
+
+* 用于 ansible.cfg 配置的[系统变量（环境变量）](https://docs.ansible.com/ansible/latest/reference_appendices/config.html)
+* 用于工作过程的[特殊变量](https://docs.ansible.com/ansible/latest/reference_appendices/special_variables.html)
+* 收集到受控端的 [Facts 变量](https://docs.ansible.com/ansible/latest/user_guide/playbooks_vars_facts.html)
 
 ## 故障速查
 
@@ -712,5 +722,3 @@ python-urllib3 报错大部分情况下，通过 yum install python-urllib3 解�
 #### 账号准确无误，仍然无法连接受控机？
 
 清空服务器中的 */root/.ssh/known_hosts* 文件
-
-

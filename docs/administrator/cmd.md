@@ -58,4 +58,7 @@ systemctl restart apache
 # 系统升级
 yum update -y //升级所有包同时也升级软件和系统内核,-y当安装过程提示选择全部为"yes"
 yum upgrade -y //只升级所有包，不升级软件和系统内核,-y当安装过程提示选择全部为"yes"
+
+# 重启所有容器
+docker restart $(docker ps -a | awk '{ print $1}' | tail -n +2)
 ```
