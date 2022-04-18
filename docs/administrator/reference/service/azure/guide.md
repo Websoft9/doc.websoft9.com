@@ -284,7 +284,7 @@ Azure的磁盘管理中有几个特殊的概念，下面提前解释：
 创建虚拟机默认选项是创建动态IP，你也可以选择创建静态IP  
 ![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-createstaticip-websoft9.png)
 
-### 安全组{#security}
+### 安全组{#securitygroup}
 
 安全组是管理VM端口的功能，端口是服务器上应用程序与外部访问出入访问的通道。下面以**开启80端口为例**，为您介绍安全组的使用
 

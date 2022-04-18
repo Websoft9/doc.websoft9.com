@@ -43,7 +43,7 @@ Websoft9专注于安装部署、配置和运维相关技术问题，类似您企
 | --- | --- | --- | --- |
 | 工单（推荐） | 7×24 | 处理故障 | [访问工单系统](https://share.hsforms.com/1V3u-6EPoRgOKEdi9kSk12w568t5)|
 | 邮箱 | 7×24 | 处理故障，合作 | help@websoft9.com|
-| QQ群 | 5×8| 交流咨询 | [![Websoft9客服群](http://pub.idqqimg.com/wpa/images/group.png)](http://shang.qq.com/wpa/qunwpa?idkey=97f84fb81422d72ef343017e250275c565fdde58ae4d6e2cea2d22fdb0651215)（群号：128631425） |
+| 微信群 | 5×8| 交流咨询 | [![Websoft9客服群](http://pub.idqqimg.com/wpa/images/group.png)](http://shang.qq.com/wpa/qunwpa?idkey=97f84fb81422d72ef343017e250275c565fdde58ae4d6e2cea2d22fdb0651215)（群号：128631425） |
 | 微信（扫一扫） | 5×8| 交流咨询 | ![](https://libs.websoft9.com/websites/zh/wx-lz.png) ![](https://libs.websoft9.com/websites/zh/wx-cdl.png) |
 | 电话 | 7×8| 售前或紧急故障 | **0731-8957 2759**|
 

@@ -76,6 +76,10 @@ tags:
 
 支持，如果不能预览，请参考[Office设置](../seafile/solution#onlyoffice)
 
+#### Seafile 支持手机客户端吗？
+
+支持，[参考设置](../seafile#client)
+
 #### Seafile 功能分类？
 
 Seafile 是一款开源的企业网盘，作为企业网盘，主要用于网络存储和管理文件，以及文件共享和协同办公：

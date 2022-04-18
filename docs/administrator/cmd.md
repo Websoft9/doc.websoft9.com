@@ -61,4 +61,14 @@ yum upgrade -y //只升级所有包，不升级软件和系统内核,-y当安装
 
 # 重启所有容器
 docker restart $(docker ps -a | awk '{ print $1}' | tail -n +2)
+
+# 显示 tcp，udp 的端口和进程等相关情况。
+netstat -tunlp
+netstat -tunlp | grep 端口号
+
+# 查看服务器 22 端口的占用情况
+lsof -i:22
+
+# kill 端口对应的进程
+kill -9 PID
 ```

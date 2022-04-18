@@ -242,6 +242,22 @@ Seafile可以通过发送邮件找回密码，但前提条件是您的 Seafile �
 3. 点击【执行】
 4. 新的密码为`123456`
 
+### 使用客户端{#client}
+
+1. 到[官网](https://www.seafile.com/download/)下载客户端
+
+2. 获取客户端登录 SERVICE_URL ：登录到 Seafile 后台，点击右上方个人头像，进入【系统设置】获取 SERVICE_URL
+
+   ![Seafile](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-client-web-websoft9.jpg)
+
+3. 在手机上打开 Seafile 客户端，输入上面获取的 SERVICE_URL 和[账号](./user/credentials)，点击登录
+
+   ![Seafile](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-client-login-websoft9.jpg)
+
+4. 客户端主界面
+
+   ![Seafile](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-client-main-websoft9.jpg)
+
 ## 参数{#parameter}
 
 Seafile 应用中包含 Nginx, Docker, MySQL, phpMyAdmin, ONLYOFFICE docs, ElasticSearch 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
