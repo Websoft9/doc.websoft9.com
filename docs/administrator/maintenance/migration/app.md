@@ -1,11 +1,10 @@
 ---
-sidebar_position: 1
-slug: /migration
+sidebar_position: 2
+slug: /administrator/migration_app
 ---
 
-# 指南
+# 应用程序迁移
 
-## 场景
 
 被迁移对象和目的地位置的组合，形成了多种多样的迁移场景。下面详细说明最常见的迁移场景：
 

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-slug: /administration/changedb
+slug: /administration/db_change
 ---
 
 # 更换为外部数据库
