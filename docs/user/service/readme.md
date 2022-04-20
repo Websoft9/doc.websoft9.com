@@ -1,58 +1,24 @@
 ---
 sidebar_position: 2
-slug: /user/vm
+slug: /user/cloud
 ---
 
+import DocCardList from '@theme/DocCardList';
+import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 操作云服务器
+# 云服务指南
 
-部署和使用开源软件，需要掌握一些基本的云服务器相关操作。
+部署和使用开源软件，需要掌握主流的 IaaS、PaaS 平台的重要操作。例如：连接VM、管理文件、安全组设置、备份、增加磁盘等。 
 
-## 云平台指南
+Websoft9 提供了以下平台的快捷文档，便于用户参考：  
 
-针对云服务器我们有数十种操作技能需要掌握，而不同云平台有一定的差异，请参考下表：
-
-| 云平台                 | 常见操作            | 更多操作       |
-| ---------------------- | --------------------------- | --------------------------- |
-| Azure | <br />- 连接VM、管理文件、运行命令<br />- 修改安全组入方向<br /> - 云服务器自动备份<br />- 添加数据盘<br /> | [《Azure 云平台指南》](../azure) |
-| AWS | <br />- 连接EC2实例、管理文件、运行命令<br />- 修改安全组入方向<br /> - 云服务器自动备份<br />- 增加卷<br /> | [《AWS 云平台指南》](../aws) |
-| 阿里云 | <br />- 连接ECS云服务器、管理文件、运行命令<br />- 修改安全组入方向<br /> - 云服务器自动备份<br />- 增加数据盘<br /> | [《阿里云 云平台指南》](../alibabacloud) |
-| 华为云 | <br />- 连接ECS云服务器、管理文件、运行命令<br />- 修改安全组入方向<br /> - 云服务器自动备份<br />- 增加数据盘<br /> | [《华为云 云平台指南》](../huaweicloud) |
-| 腾讯云 | <br />- 连接云服务器、管理文件、运行命令<br />- 修改安全组入方向<br /> - 云服务器自动备份<br />- 增加数据盘<br /> | [《腾讯云 云平台指南》](../tencentcloud) |
-
-
-## 操作系统账号{#osacount}
-
-不同的云平台操作系统账号是不一样的，有的云平台可以在创建服务器时自定义用户名称，有的是固定用户名`root`。
-
-具体参考下面的表格：  
-
-<Tabs>
-  <TabItem value="linuxaccount" label="Linux" default>
-
-   |  云平台   |  管理员账号   | 其他|
-   | --- | --- | --- |
-   |  Azure   |  创建服务器的时候自行设置   | [如何开启root账户？](https://support.websoft9.com/docs/azure/zh/server-login.html#示例2：启用系统root账号) |
-   |  AWS   |  AmazonLinux:ec2  CentOS:centos  Ubuntu:ubuntu  Debian:admin   | [如何开启root账户？](https://support.websoft9.com/docs/aws/zh/server-login.html#示例2：启用系统root账号) |
-   |  阿里云，华为云，腾讯云   |  root   | |
-
-  </TabItem>
-  <TabItem value="windowsaccount" label="Windows">
-
-   |  云平台   |  管理员账号   | 其他|
-   | --- | --- | --- |
-   |  Azure   |  创建服务器的时候自行设置   |  |
-   |  AWS，阿里云，华为云，腾讯云   |   administrator    | |
-
-  </TabItem>
-</Tabs>
-
+<DocCardList items={useCurrentSidebarCategory().items}/>
 
 ## 连接服务器（通用）
 
-如果你准备好了服务器的管理员账号密码、公网IP地址等信息，可以参考下面的通用教程开始连接服务器。
+如果你准备好了服务器的[管理员账号](#osaccount)密码、公网IP地址等信息，可以参考下面的通用教程开始连接服务器。
 
 ### 连接 Linux{#connectlinux}
 
@@ -146,3 +112,29 @@ Putty 虽然可以单独运行，但把 Putty 集成到 WinSCP 上使用更加�
 #### 连接服务是所需的主机名（host）是？
 
 服务器公网 IP 地址
+
+#### 操作系统账号是什么？{#osaccount}
+
+不同的云平台操作系统账号是不一样的，有的云平台可以在创建服务器时自定义用户名称，有的是固定用户名`root`。
+
+具体参考下面的表格：  
+
+<Tabs>
+  <TabItem value="linuxaccount" label="Linux" default>
+
+   |  云平台   |  管理员账号   | 其他|
+   | --- | --- | --- |
+   |  Azure   |  创建服务器的时候自行设置   | [如何开启root账户？](https://support.websoft9.com/docs/azure/zh/server-login.html#示例2：启用系统root账号) |
+   |  AWS   |  AmazonLinux:ec2  CentOS:centos  Ubuntu:ubuntu  Debian:admin   | [如何开启root账户？](https://support.websoft9.com/docs/aws/zh/server-login.html#示例2：启用系统root账号) |
+   |  阿里云，华为云，腾讯云   |  root   | |
+
+  </TabItem>
+  <TabItem value="windowsaccount" label="Windows">
+
+   |  云平台   |  管理员账号   | 其他|
+   | --- | --- | --- |
+   |  Azure   |  创建服务器的时候自行设置   |  |
+   |  AWS，阿里云，华为云，腾讯云   |   administrator    | |
+
+  </TabItem>
+</Tabs>

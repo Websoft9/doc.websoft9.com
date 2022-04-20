@@ -70,6 +70,21 @@ tags:
 
 ## Moodle 常用操作
 
+### 域名额外配置（修改 URL）{#dns}
+
+**[域名五步设置](./administrator/domain_step)** 完成后，需重置 WordPress URL:
+
+1. 修改 Moodle [配置文件](#parameter)，将配置项 $CFG->wwwroot   = 'http://www.abc.com' 修改成域名;
+
+2. 保存后生效
+
+### HTTPS 额外设置{#https}
+
+**[标准 HTTPS 配置](./administrator/domain_https)** 完成后，可能会遇到如下的异常情况：
+
+- [配置HTTPS后，网站部分资源无法加载？](./wordpress/admin#httpsmore)
+
+
 ### 配置 SMTP{#smtp}
 
 1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数

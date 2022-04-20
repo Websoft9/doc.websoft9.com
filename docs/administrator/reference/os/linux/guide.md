@@ -158,24 +158,7 @@ Cron是一个Linux下的定时执行工具，可以在无需人工干预的情�
 
 日志是诊断故障的关键，大部分的问题都会在日志中留下“蛛丝马迹”。所以，学会分析日志是运维中最重要的技能之一。  
 
-先来一个热身，运行如下几个命令，感受日志系统的强大：  
-
-```
-# 查看 systemd 的错误日志，-p 支持 emerg alert err crit warning notice info debug 等值
-journalctl -p err
-
-# 查看指定服务的日志
-journalctl -u httpd
-
-# 查看内核日志
-journalctl -k
-
-# 查看脚本的日志
-journalctl /usr/bin/bash
-
-# 查看指定用户的日志
-journalctl UID=33 --since today
-```
+参考：[Linux 日志诊断](./troubleshooting#linux)
 
 ## 参数
 

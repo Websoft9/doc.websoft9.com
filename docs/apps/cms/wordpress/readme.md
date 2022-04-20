@@ -203,7 +203,7 @@ WordPress 默认支持大部分图片等文件格式的上传，但也有一些�
 | Smartideo | 业务应用 | 优酷等视频插入 | 免费 |
 | Essential Grid | 排版与布局 | 文章、页面网格工具 | 免费 |
 | Post Grid, List for WordPress – Content Views | 排版与布局 | 文档、页面调用工具 | 免费 |
-
+| Fat Rat Collect | 数据采集 | 批量采集文章数据的开源插件，采集含括微信、简书、知乎、列表详情等 | 免费 |
 ### 主题管理
 
 WordPress 官方仅提供简单外观的背后有着数十万社区驱动的精美主题：  
