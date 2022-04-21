@@ -26,7 +26,7 @@ slug: /troubleshooting/connection
 检查账号和密码是正确，请保证 **服务器安全组** 3389 端口是开启的，下图是排查方法  
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aliyun/aliyun-guzhangpaichu.png)
 
-#### *http://服务器公网IP* 无法打开初始化界面？
+#### *http://服务器公网IP* 无法打开初始化界面？{#blank}
 
 最常见的原因如下：
 
