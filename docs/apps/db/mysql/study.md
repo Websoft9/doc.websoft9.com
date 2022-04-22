@@ -273,7 +273,7 @@ mysqldump -u usename -p --all-database > all-database.sql
 
 ### 升级
 
-详情参考本文的 [更新升级](/zh/solution-upgrade.md) 章节。
+详情参考本文的 [更新升级](../mysql/admin#upgrade) 章节。
 
 ### 管理工具
 

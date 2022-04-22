@@ -82,7 +82,7 @@ ECS的配置可以调整，具体操作如下：
    ![调整配置](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-changeecsconfigure-websoft9.png)
 3. 依据相关的操作向导完成变更
 
-### 重装系统
+### 重装系统{#reinstallos}
 
 如果你想将服务器恢复到刚安装之时的状态，就需要用到**重装系统**操作。  
 重装操作系统提供以原镜像进行系统重装的功能

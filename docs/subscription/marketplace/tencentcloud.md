@@ -1,3 +1,8 @@
+---
+sidebar_position: 4
+slug: /marketplace/tencentcloud
+---
+
 # 腾讯云订单
 
 在腾讯云平台中，镜像部署完成后，就产生了相关的订单
@@ -32,7 +37,7 @@
 
 ### 退订镜像
 
-如果你想退订镜像，保留云服务器，只需通过[切换操作系统](/zh/stack-deployment.html#切换操作系统部署)操作即可  
+如果你想退订镜像，保留云服务器，只需通过[切换操作系统](../tencentcloud#reinstallos)操作即可  
 
 ### 退订人工服务
 

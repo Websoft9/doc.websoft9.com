@@ -1,3 +1,8 @@
+---
+sidebar_position: 1
+slug: /marketplace/azure
+---
+
 # Azure 订单
 
 在Azure平台中，镜像部署完成后，就产生了相关的订单
