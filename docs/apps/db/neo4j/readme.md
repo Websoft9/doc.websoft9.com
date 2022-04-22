@@ -133,7 +133,7 @@ Neo4j 社区版不支持 Roles，故显示为空
 
 1. Neo4j 所在的服务器的安全组，需开启 7687 端口
 
-2. 确保[Neo4j 配置文件](/zh/stack-components.md#neo4j) 中没有限制外网IP访问（默认 0.0.0.0 表示允许）
+2. 确保[Neo4j 配置文件](#path) 中没有限制外网IP访问（默认 0.0.0.0 表示允许）
    ```
    # With default configuration Neo4j only accepts local connections.
    # To accept non-local connections, uncomment this line:
@@ -171,7 +171,7 @@ Neo4j Browser 是开发人员与图形进行交互的工具。它是Neo4j数据�
 1. 本地浏览器访问：*http://域名* 或 *http://服务器公网IP*, 访问 Neo4j Browser
 ![Neo4j Browser](https://libs.websoft9.com/Websoft9/DocsPicture/zh/neo4j/neo4j-connectfirst-websoft9.png)
 
-2. 选择【bolt://】的URL模式，输入用户名和密码（[不知道密码？](/zh/stack-accounts.md)），可能还需提示立即修改密码
+2. 选择【bolt://】的URL模式，输入用户名和密码（[不知道密码？](./user/credentials)），可能还需提示立即修改密码
 ![修改Neo4j密码](https://libs.websoft9.com/Websoft9/DocsPicture/zh/neo4j/neo4j-snewpw-websoft9.png)
 
 > Pick neo4j:// for a routed connection, bolt:// for a direct connection to a DBMS. 选择 bolt:// 速度更快
@@ -228,7 +228,7 @@ ALTER CURRENT USER SET PASSWORD FROM 'neo4j' TO 'neo4j123';
    sudo systemctl stop neo4j
    ```
 
-2. 修改 [Neo4j 的配置文件](/zh/stack-components.md#neo4j)，将`#dbms.security.auth_enabled=false` 改成
+2. 修改 [Neo4j 的配置文件](#path)，将`#dbms.security.auth_enabled=false` 改成
    ```
    dbms.security.auth_enabled=false
    ```

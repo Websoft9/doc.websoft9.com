@@ -76,7 +76,7 @@ ErrorDocument 404 /404.txt
 
 1. 确保在安全组中已放通相应端口
 2. 使用 WinSCP 等工具登录云服务器
-3. 修改 [Apache虚拟机主机配置文件](/zh/stack-components.md#apache)，修改虚拟主机 ** VirtualHost ** 端口号
+3. 修改 [Apache虚拟机主机配置文件](#virtualhost)，修改虚拟主机 ** VirtualHost ** 端口号
    
    ```text
    <VirtualHost *:81>
@@ -117,7 +117,7 @@ ErrorDocument 404 /404.txt
   
    ```
 
-5. 重启 [Apache 服务](/zh/admin-services.md#apache)
+5. 重启 [Apache 服务](#service)
 
 
 ### Require 指令控制外部访问{#require}
@@ -372,9 +372,9 @@ DirectoryIndex index.php
 </IfModule>
 ```
 
-2. 停止 [PHP-FPM 服务](/zh/admin-services.md#PHP-FPM)
+2. 停止 [PHP-FPM 服务](./php#service)
 
-3. 保存并重启 [Apache 服务](/zh/admin-services.md#apache)
+3. 保存并重启 [Apache 服务](#service)
 
 #### Java
 

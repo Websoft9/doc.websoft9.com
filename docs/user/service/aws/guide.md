@@ -41,7 +41,7 @@ AWS[官方表示](https://docs.aws.amazon.com/zh_cn/AWSEC2/latest/UserGuide/conn
 
 ### 连接 EC2
 
-#### 连接 Linux
+#### 连接 Linux{#connectlinux}
 
 AWS 支持多种 Linux 的连接方式：
 

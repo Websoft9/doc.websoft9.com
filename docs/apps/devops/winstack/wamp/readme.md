@@ -50,7 +50,7 @@ WAMP 集成 PHP 环境，由 Bitnami  维护。它除 Apache,MySQL,PHP 之外，
 
 在 WAMP 环境上安装一个网站，也就是我们常说的增加一个虚拟主机。
 
-宏观上看，只需两个步骤：**上传网站代码** + [**虚拟机主机配置文件**](/维护参考.md#apache) **中增加 VirtualHost 配置段**
+宏观上看，只需两个步骤：**上传网站代码** + [**虚拟机主机配置文件**](#apache) **中增加 VirtualHost 配置段**
 
 > VirtualHost 又称之为虚拟主机配置段，每个网站必定在 **虚拟机主机配置文件** 中对应唯一配置段。
 
@@ -58,10 +58,10 @@ WAMP 集成 PHP 环境，由 Bitnami  维护。它除 Apache,MySQL,PHP 之外，
 
 安装网站之前，请了解如下几个要点，做好准备工作
 
-*  虚拟机主机配置文件：**C:\websoft9\wampstack\apache2\conf\bitnami\bitnami-apps-vhosts.conf* 
+*  [虚拟机主机配置文件](#path)：Apache vhost 配置文件 
 *  连接工具：使用 Windows自带的远程桌面工具 连接服务器
 *  域名：若需要使用域名，请确保备案后的域名成功解析到服务器IP
-*  数据库：网站安装向导过程中可能需要使用数据库，请使用 [phpMyAdmin 管理数据库](#mysql-数据管理)
+*  数据库：使用 [phpMyAdmin](#./mysql#phpmyadmin) 管理数据库
 
 有一个宏观认知之后，我们开始部署网站
 
@@ -76,25 +76,25 @@ WAMP 集成 PHP 环境，由 Bitnami  维护。它除 Apache,MySQL,PHP 之外，
 
 3. 将本地电脑上的网站源码上传到示例目录下
 
-4. 修改 [**虚拟机主机配置文件**](/维护参考.md#apache) 中已有 VirtualHost 配置段（[修改参考](/zh/solution-deployment.md#virtualhost)），实现绑定域名、修改网站目录名称等操作。
+4. 修改 [**虚拟机主机配置文件**](#apache) 中已有 VirtualHost 配置段，实现绑定域名、修改网站目录名称等操作。
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wamp/wamp-mddfvhost-websoft9.png)
    ::: warning
    如果不绑定域名、不修改网站目录名称，请跳过步骤4和5
    :::
-5. 保存 **虚拟机主机配置文件**，然后 [重启所有服务](/维护参考.md#apache-1)
+5. 保存 **虚拟机主机配置文件**，然后 [重启所有服务](#service)
 
 6. 本地浏览器访问：*http://域名* 或 *http://服务器公网IP* 即可访问您的网站
 
 ### 安装第二个网站
 
-从安装第二个网站开始，需要在 [**虚拟机主机配置文件**](/zh/stack-components.md#apache) 中增加对应的虚拟主机配置段，具体如下
+从安装第二个网站开始，需要在 [**虚拟机主机配置文件**](#apache) 中增加对应的虚拟主机配置段，具体如下
 
 1. 使用 远程桌面 连接服务器，在 C:\wwwroot 下新建一个网站目录，假设命令为“mysite2”
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wamp/wamp-addmysite2-websoft9.png)
 
 2. 将本地网站源文件上传到：*C:\wwwroot\mysite2* 
 
-3. 编辑 [**虚拟机主机配置文件**](/维护参考.md#apache) 文件
+3. 编辑 [**虚拟机主机配置文件**](#apache) 文件
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wamp/wamp-addmorevhostconfig-websoft9.png)
 
     根据是否通过域名访问，选择下面操作之一：
@@ -130,7 +130,8 @@ WAMP 集成 PHP 环境，由 Bitnami  维护。它除 Apache,MySQL,PHP 之外，
 	     Require all granted
 	    </Directory>
       ```
-4. 保存 [**虚拟机主机配置文件**](/维护参考.md#apache)，然后 [重启Apache服务](/维护参考.md#apache-1)
+4. 保存 [**虚拟机主机配置文件**](#apache)，然后 [重启Apache服务](#service)
+
 5. 根据有无域名，本地浏览器访问：*http://域名* 或 *http://服务器公网IP/sitename*  访问你的网站。
 
 
@@ -151,7 +152,7 @@ WAMP 集成 PHP 环境，由 Bitnami  维护。它除 Apache,MySQL,PHP 之外，
 
 ### Apache 配置
 
-Apache 配置主要通过修改 [虚拟主机配置文件](#path) 中的 [VirtualHost 指令](./apache#virtualHost)去实现各种需求。  
+Apache 配置主要通过修改 [虚拟主机配置文件](#path) 中的 [VirtualHost 指令](./apache#virtualhost)去实现各种需求。  
 
 #### 绑定域名
 
@@ -202,7 +203,7 @@ Apache 配置主要通过修改 [虚拟主机配置文件](#path) 中的 [Virtua
 
 在 WAMP 上安装和管理 PHP 扩展的通用步骤如下：
 
-1. 下载正确的 PHP 扩展文件（[注意事项](https://www.php.net/manual/zh/install.pecl.windows.php)），上传到服务器的 [PHP 扩展目录](/维护参考.md#php)
+1. 下载正确的 PHP 扩展文件（[注意事项](https://www.php.net/manual/zh/install.pecl.windows.php)），上传到服务器的 [PHP 扩展目录](#php)
 
 2. 通过修改 PHP 配置文件设置，开启或关闭扩展
    ```

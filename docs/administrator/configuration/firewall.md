@@ -13,7 +13,7 @@ slug: /administrator/firewall
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/linux/firewalld-gui-websoft9.png)
 
-## 安全组设置
+## 安全组设置{#security}
 
 但是为了简化安全使用，云平台通过一个可视化的管理界面--**安全组**，来实现与防火墙的同等功能。  
 

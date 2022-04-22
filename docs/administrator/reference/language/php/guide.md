@@ -136,7 +136,7 @@ PHP on Windows 配置文件：*C:\websoft9\php-\*\php.ini*
 针对不同的 PHP 环境有不同的服务启停模式：
 
 ```
-# PHP On Linux
+# PHP-FPM On Linux
 sudo systemctl start php
 sudo systemctl stop php
 sudo systemctl restart php

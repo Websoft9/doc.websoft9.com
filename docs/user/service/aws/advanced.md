@@ -13,13 +13,15 @@ AWS 提供了原生 API/CLI 。
 
 ## 问题解答
 
-#### 实例的登录账号是什么？
+#### 实例的登录账号密码是什么？ 
 
-密码是用户在创建实例的时候，AWS只支持秘钥对方式。Windows实例的账号名称是`Administrator`，Linux实例的账号名称参考本文档的 [账号密码-操作系统](/zh/stack-accounts.md) 相关章节
+Windows实例的账号名称是`Administrator`，Linux实例的账号与发行版相关，具体[参考](../user/cloud#osaccount)   
 
-AWS 默认情况下，root 账号是没有启用的，实际上我们可以想办法启用它。
+密码是用户在创建实例的时候，AWS 只支持秘钥对方式
 
-参考：[连接Linux-示例2 启用root账号](/zh/server-login.md)
+#### root 账号可用吗？
+
+root 账号默认启用的，实际上我们可以想办法启用它。参考：[启用root账号](../aws#connectlinux)
 
 #### 服务器的IP地址重启后发生变化怎么办？
 
@@ -27,7 +29,9 @@ AWS 默认情况下，root 账号是没有启用的，实际上我们可以想�
 
 #### 如何查看 Websoft9 在 AWS 上所有产品？
 
-通过 [Websoft9镜像库](https://aws.amazon.com/marketplace/seller-profile?id=c639a579-182c-4d30-8578-4d4d89fba658) 查看我们在AWS上的所有镜像，也可以通过搜索关键字“websoft9”列出
+* 方式一：通过 [Websoft9 店铺 on AWS](https://aws.amazon.com/marketplace/seller-profile?id=c639a579-182c-4d30-8578-4d4d89fba658) 查看
+
+* 方式二：AWS Marketplace 搜索关键字 **Websoft9** 列出
 
 #### 实例上的镜像是否可以更换？
 

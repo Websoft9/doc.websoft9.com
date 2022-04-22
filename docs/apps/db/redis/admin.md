@@ -104,7 +104,7 @@ Redis不是简单的键值存储，它实际上是一个数据结构服务器，
 
 #### 修改 RedisInsight 访问端口？
 
-编辑 [Nginx 虚拟主机配置文件](/zh/stack-components.md#nginx) 中的参数 `listen` 的值即重置密码。
+编辑 [Nginx 虚拟主机配置文件](../nginx#path) 中的参数 `listen` 的值即重置密码。
 
 ```
 server {
@@ -116,7 +116,7 @@ server {
 
 请检查服务器对应的安全组6379端口是否开启（入规则），且Redis配置文件中是否允许外部访问
 
-#### 本部署是否提供 Web 版的可视化管理工具？
+#### 是否提供 Web 版的可视化管理工具？
 
-已安装官方可视化管理工具：[RedisInsight](/zh/solution-gui.md)
+已安装官方可视化管理工具：[RedisInsight](../redis#redisinsight)
 

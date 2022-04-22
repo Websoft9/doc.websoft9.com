@@ -29,7 +29,7 @@ tags:
 1. 使用本地 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入登录页面
    ![code-server 登录界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/codeserver/codeserver-login-websoft9.png)
 
-2. 输入密码（[不知道账号密码？](/zh/stack-accounts.md#codeserver)），成功登录到 code-server 后台  
+2. 输入密码（[不知道账号密码？](./user/credentials)），成功登录到 code-server 后台  
    ![code-server 后台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/codeserver/codeserver-consolegui-websoft9.png)
 
 3. 在 code-server 界面上打开 workspace 文件夹  
@@ -39,7 +39,7 @@ tags:
 4. 打开 Terminal，查看系统环境（默认已安装 Node, Yarn等）
    ![code-server 打开Terminal](https://libs.websoft9.com/Websoft9/DocsPicture/zh/codeserver/codeserver-terminal-websoft9.png)
 
-5. 参考[配置环境](/zh/solution-runtime.md)章节，安装更多开发所需的组件。
+5. 安装更多开发所需的组件
 
 ### 出现问题？
 

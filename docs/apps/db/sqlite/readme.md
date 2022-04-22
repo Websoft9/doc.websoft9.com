@@ -39,7 +39,7 @@ tags:
    sqlite>
    ```
 
-3. 验证 [SQLite 可视化](/zh/solution-gui.md)管理工具
+3. 验证 [SQLite 可视化](#gui)管理工具
 
 > 需要了解更多 SQLite 的使用，请参考官方文档：[SQLite 教程](https://www.sqlite.net.cn/tutorial/2.html)
 
@@ -82,7 +82,7 @@ tags:
 ?>
 ```
 
-### 图形化工具
+### 图形化工具{#gui}
 
 本部署方案中预装 SQLite 数据库管理工具 `CloudBeaver` 。  
 

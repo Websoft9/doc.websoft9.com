@@ -119,7 +119,7 @@ RethinkDB 可视化控制台是它的重要组成部分，是其重要的产品�
 
 1. 使用本地电脑的浏览器访问网址：*http://服务器公网IP*，准备登陆 RethinkDB 控制台
 
-2. 输入用户名和密码（[不知道账号密码？](/zh/stack-accounts.md#rethinkdb)）
+2. 输入用户名和密码（[不知道账号密码？](./user/credentials)）
 
 3. 成功登录到 RethinkDB 后台  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rethinkdb/rethinkdb-ok-websoft9.png)

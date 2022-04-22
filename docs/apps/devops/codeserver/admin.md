@@ -35,7 +35,7 @@ code-server 容器默认已经运行 Node, Yarn, Git等工具，可以很方便�
 
 #### code-server 支持多账号吗？
 
-不支持，但我们在本部署包中提供了[多开发者方案](/zh/solution-more.md#多开发者)
+不支持
 
 #### code-server 支持扩展安装吗？
 

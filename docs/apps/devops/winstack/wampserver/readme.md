@@ -50,7 +50,7 @@ tags:
 
 在 WampServer 环境上安装一个网站，也就是我们常说的增加一个虚拟主机。
 
-宏观上看，只需两个步骤：**上传网站代码** + [**虚拟机主机配置文件（httpd-vhosts.conf）**](/维护参考.md#apache) **中增加 VirtualHost 配置段**
+宏观上看，只需两个步骤：**上传网站代码** + [**虚拟机主机配置文件（httpd-vhosts.conf）**](#apache) **中增加 VirtualHost 配置段**
 
 > VirtualHost 又称之为虚拟主机配置段，每个网站必定在 httpd-vhosts.conf 中对应唯一的 VirtualHost。
 
@@ -76,12 +76,12 @@ tags:
 
 3. 将本地电脑上的网站源码上传到示例目录下
 
-4. 修改 *httpd-vhosts.conf* 中已有 VirtualHost 配置段（[修改参考](/zh/solution-deployment.md#virtualhost)），实现绑定域名、修改网站目录名称等操作。
+4. 修改 *httpd-vhosts.conf* 中已有 VirtualHost 配置段，实现绑定域名、修改网站目录名称等操作。
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wampserver/wampserver-mddfvhost-websoft9.png)
    ::: warning
    如果不绑定域名、不修改网站目录名称，请跳过步骤4和5
    :::
-5. 保存 httpd-vhosts.conf，然后 [重启所有服务](/zh/admin-services.md)
+5. 保存 httpd-vhosts.conf，然后 [重启所有服务](#service)
 
 6. 本地浏览器访问：*http://域名* 或 *http://服务器公网IP* 即可访问您的网站
 
@@ -130,7 +130,7 @@ tags:
 	     Require all granted
 	    </Directory>
       ```
-4. 保存 httpd-vhosts.conf，然后 [重启所有服务](/zh/admin-services.md)
+4. 保存 httpd-vhosts.conf，然后 [重启所有服务](#service)
 5. 根据有无域名，本地浏览器访问：*http://域名* 或 *http://服务器公网IP/sitename*  访问你的网站。
 
 
@@ -208,7 +208,7 @@ WampServer 支持 PHP 版本在线切换
 
 在 WampServer 上安装和管理 PHP 扩展的通用步骤如下：
 
-1. 下载正确的 PHP 扩展文件（[注意事项](https://www.php.net/manual/zh/install.pecl.windows.php)），上传到服务器的 [PHP 扩展目录](/zh/stack-components.md#php)
+1. 下载正确的 PHP 扩展文件（[注意事项](https://www.php.net/manual/zh/install.pecl.windows.php)），上传到服务器的 [PHP 扩展目录](#php)
 
 2. 开启或关闭扩展
 
@@ -294,14 +294,14 @@ PHP 扩展启用或关闭，通过修改 PHP 配置文件实现
 MySQL 安装路径：*C:\websoft9\wampserver\bin\mysql*  
 MySQL 数据文件：*C:\websoft9\wampserver\bin\mysql\mysql5.x.x\data*  
 MySQL 配置文件：*C:\websoft9\wampserver\bin\mysql\mysql5.x.x\my.ini*    
-MySQL 可视化管理地址: *http://服务器公网IP/phpmyadmin*，用户名和密码请见 [账号密码](/zh/stack-accounts.md) 章节。
+MySQL 可视化管理地址: *http://服务器公网IP/phpmyadmin*，用户名和密码请见 [账号密码](./user/credentials) 章节。
 
 #### MariaDB
 
 MariaDB 安装路径：*C:\websoft9\wampserver\bin\mariadb*  
 MariaDB 数据文件：*C:\websoft9\wampserver\bin\mariadb\mariad10.x.x\data*  
 MariaDB 配置文件：*C:\websoft9\wampserver\bin\mariadb\mariad10.x.x\my.ini*    
-MariaDB 可视化管理地址: *http://服务器公网IP/phpmyadmin*，用户名和密码请见 [账号密码](/zh/stack-accounts.md) 章节。
+MariaDB 可视化管理地址: *http://服务器公网IP/phpmyadmin*，用户名和密码请见 [账号密码](./user/credentials) 章节。
 
 #### phpMyAdmin
 

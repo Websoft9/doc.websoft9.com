@@ -195,7 +195,7 @@ docker restart seafile
 
 Seafile 默认支持 [Let's Encrypt](https://letsencrypt.org/) 免费证书自动部署方案，只需如下几步设置：
 
-1. 使用 SFTP 连接服务器，编辑 [docker-compose 配置文件](/维护参考.md#docker-compose)
+1. 使用 SFTP 连接服务器，编辑 [docker-compose 配置文件](#path)
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-editconfig-websoft9.png)
 
 2. 修改（检查）配置文件并保存，确保三个核心参数符合如下要求

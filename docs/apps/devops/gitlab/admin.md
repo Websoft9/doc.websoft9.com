@@ -130,7 +130,7 @@ GitLab Community Edition (CE) 升级到同版本的 GitLab Enterprise Edition �
 
 **原因分析**：GitLab 有一个rack-attack安全机制。某种条件下（例如：公司大量并发访问 GitLab）rack-attack安全将你的 IP 错误地拦截，导致了从此不能访问 GitLab   
 
-**解决方案**：修改 [Gitlab 配置文件](/zh/stack-components.md#gitlab) 相关项
+**解决方案**：修改 [Gitlab 配置文件](../gitlab#path) 相关项
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-attachip-websoft9.png)
 

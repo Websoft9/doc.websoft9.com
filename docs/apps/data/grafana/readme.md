@@ -29,7 +29,7 @@ tags:
 1. 使用本地电脑的浏览器访问网址： *http://域名* 或  *http://服务器公网IP*, 就进入登录页面
    ![Grafana 登录](https://libs.websoft9.com/Websoft9/DocsPicture/en/grafana/grafana-login-websoft9.png)
 
-2. 输入默认的用户名和密码（[查看](/zh/stack-accounts.md#grafana)），系统会提示修改密码
+2. 输入默认的用户名和密码（[查看](./user/credentials)），系统会提示修改密码
    ![Grafana 强提示修改密码](https://libs.websoft9.com/Websoft9/DocsPicture/en/grafana/grafana-forcechangepw-websoft9.png)
 
 3. 登录到 Grafana 控制台页面  

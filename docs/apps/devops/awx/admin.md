@@ -223,11 +223,11 @@ tags:
 
 ## 问题解答
 
-#### AWX支持多语言吗？
+#### AWX 支持多语言吗？
 
 支持[多种语言](https://docs.ansible.com/ansible-tower/latest/html/release-notes/supported_locales.html)，包括中文。它不提供语言切换菜单，而是自动适用浏览器首选语言。
 
-#### AWX是如何与 PostgreSQL 连接的？
+#### AWX 是如何与 PostgreSQL 连接的？
 
 容器内部连接，即容器编排
 
@@ -239,7 +239,7 @@ tags:
 
 #### AWX 是否支持交互式变量？
 
-支持，参考[额外变量](/zh/solution-more.md#额外变量)章节
+支持
 
 #### AWX API 地址是多少？
 

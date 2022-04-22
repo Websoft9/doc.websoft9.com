@@ -126,7 +126,7 @@ pgAdmin 也支持本地电脑 Windows 客户端：
 
 登录到 pgAdmin 之后，就可以创建数据库连接来管理 PostgreSQL：
 
-1. 设置所需管理的 PostgreSQL 数据库连接信息([不知道密码？](/zh/stack-accounts.md#postgresql))
+1. 设置所需管理的 PostgreSQL 数据库连接信息([不知道密码？](./user/credentials))
   ![设置pgAdmin连接信息](https://libs.websoft9.com/Websoft9/DocsPicture/zh/postgresql/pgadmin-setconnection-websoft9.png)
 
 2. 成功连接

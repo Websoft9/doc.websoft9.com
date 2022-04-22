@@ -134,7 +134,7 @@ Redis 提供了身份访问控制 [ACL](https://redis.io/topics/acl) 功能，�
 
 3. 重启 Redis 服务后生效
 
-### 图形化管理（RedisInsight）
+### 图形化管理（RedisInsight）{#redisinsight}
 
 RedisInsight（[下载](https://redislabs.com/redisinsight/) | [Licence](https://redislabs.com/redis-insight-license-terms)）官方提供的基于浏览器运行的 Redis GUI 工具，支持 Windows，Linux和Mac OS系统运行。
 
@@ -150,7 +150,7 @@ RedisInsight 实现了多平台统一性，只要打开 RedisInsight 界面，�
 2. 选择【Connect to a Redis Server】
    ![选择RedisInsight连接方式](https://libs.websoft9.com/Websoft9/DocsPicture/zh/redis/redisinsight-connect001-websoft9.png)
 
-3. 输入连接信息（[不知道密码](/zh/stack-accounts.md#redis)）
+3. 输入连接信息（[不知道密码](./user/credentials)）
    ![登录RedisInsight](https://libs.websoft9.com/Websoft9/DocsPicture/zh/redis/redisinsight-connect002-websoft9.png)
    
    * HOST：localhost （推荐） 或 服务器公网IP（Redis已开启远程的状态）
@@ -195,7 +195,7 @@ Redis是一个字典结构的存储服务器，一个 Redis 实例对应多个�
  
 ### 重置密码
 
-编辑 [Redis 配置文件](/zh/stack-components.md#redis) 中的参数 `requirepass` 的值即重置密码。
+编辑 [Redis 配置文件](#path) 中的参数 `requirepass` 的值即重置密码。
 ```
 # Warning: since Redis is pretty fast an outside user can try up to
 # 150k passwords per second against a good box. This means that you should

@@ -12,7 +12,7 @@ tags:
 
 在 Java 环境上安装一个网站（应用），也就是我们常说的增加一个虚拟主机。
 
-全局上看，只需三个步骤：**上传网站代码** + **配置 Tomcat** + [**虚拟机主机配置文件**](/zh/stack-components.md#nginx) **中增加 server{} 配置段**
+全局上看，只需三个步骤：**上传网站代码** + **配置 Tomcat** + [**虚拟机主机配置文件**](../runtime#path) **中增加 server{} 配置段**
 
 > server{} 又称之为虚拟主机配置段，每个网站必定在 default.conf 中对应唯一的 server{}。
 
@@ -22,7 +22,7 @@ tags:
 
 系统中默认有示例网站，可以通过替换示例网站代码的方式安装第一个网站。
 
-> 如果不考虑修改示例网站，请阅读[安装第二个Java网站](/zh/solution-java.md#安装第二个java应用)。
+> 如果不考虑修改示例网站，请阅读[安装第二个Java网站](#installsecond)。
 
 1. 使用 WinSCP 连接服务器
 2. 删除示例目录下的所有文件，只保留目录（*/data/wwwroot/www.example.com*）
@@ -79,7 +79,7 @@ tags:
    chown www: -R /data/wwwroot/mysite2
    ```
 4. 编辑 Tomcat 配置文件 *server.xml* 文件   
-   新增 `<Host></Host>` 配置段，**插入**到 server.xml 中，并修改其中的 name, appBase, docBase, prefix等（[参数说明](/zh/solution-java.md#host-参数含义)）
+   新增 `<Host></Host>` 配置段，**插入**到 server.xml 中，并修改其中的 name, appBase, docBase, prefix等（[参数说明](../java#tomcattp)）
     ```
     # host segment template
     <Host name="mysite2.yourdomain.com" appBase="/data/wwwroot/mysite2" unpackWARs="true" autoDeploy="true">

@@ -187,7 +187,7 @@ bash /opt/kafka/bin/kafka-server-start.sh
 
 #### 是否提供了 Kafka 可视化管理工具？
 
-是的。参考 [CMAK](/zh/solution-gui.md)
+是的。参考 [CMAK](../kafka#gui)
 
 #### CMAK 中无法支持所需的 Kafka 版本？
 

@@ -39,7 +39,7 @@ bash /opt/kafka/bin/kafka-configs.sh
 
 ## Kafka 常用操作
 
-### 可视化工具
+### 可视化工具{#gui}
 
 本预装包中内置 Kafka 可视化集群管理工具 [CMAK](https://github.com/yahoo/CMAK) ，使用请参考如下步骤：
 

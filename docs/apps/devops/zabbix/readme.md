@@ -33,7 +33,7 @@ tags:
 2. 输入账号密码后登录到后台（[不知道账号密码？](#账号密码)）
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zabbix/zabbix-dashboard-websoft9.png)
 
-3. 打开用户管理界面，更换所需的语言（如果语言为灰色状态，参考[启用语言方案](/zh/solution-more.md#zabbix-多语言)）
+3. 打开用户管理界面，更换所需的语言（如果语言为灰色状态，参考[启用语言方案](#i18)）
    ![Zabbix 更换语言](https://libs.websoft9.com/Websoft9/DocsPicture/en/zabbix/zabbix-changelang-websoft9.png)  
    ![Zabbix 更换语言](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zabbix/zabbix-dashboardzh-websoft9.png)
 
@@ -78,7 +78,7 @@ tags:
 
 3. 自测是否可以发送邮件
 
-### 设置多语言
+### 设置多语言{#i18}
 
 Zabbix 默认已经内置多种语言包，非常方便进行在线切换。
 

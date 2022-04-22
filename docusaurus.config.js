@@ -10,6 +10,7 @@ const config = {
   tagline: '简化开源软件的安装、集成和运维',
   url: 'https://support.websoft9.com',
   baseUrl: '/',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   onDuplicateRoutes: 'warn',
   favicon: 'img/favicon.ico',

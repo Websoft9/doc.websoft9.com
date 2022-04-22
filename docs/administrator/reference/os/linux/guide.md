@@ -25,7 +25,7 @@ slug: /linux
 
 ### 安装 FTP
 
-安装FTP是比较繁琐的工作，具体参考：[FTP相关章节](/zh/admin-file.md#ftp)
+安装 FTP 是比较繁琐的工作，请自行寻找解决方案。  
 
 ### 初始化数据磁盘
 

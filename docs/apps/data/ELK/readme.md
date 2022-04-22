@@ -38,7 +38,7 @@ tags:
 1. 使用本地电脑浏览器访问网址： *http://域名* 或  *http://服务器公网 IP*, 进入 ELK 登录界面
    ![ELK 登录页面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-login-websoft9.png)
 
-2. 输入账号密码（[不知道账号密码？](/zh/stack-accounts.md#elk)），成功登录到 ELK 后台  
+2. 输入账号密码（[不知道账号密码？](./user/credentials)），成功登录到 ELK 后台  
    ![ELK 后台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-bkreminder-websoft9.png)
    ![ELK 控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-dashboard-websoft9.png)
 

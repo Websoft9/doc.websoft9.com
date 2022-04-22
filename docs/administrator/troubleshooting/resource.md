@@ -67,10 +67,11 @@ binlog主要用于出现没有备份的情况下，恢复数据库。但binlog�
 
 如果对自己的备份有信心，不需要binlog功能，参考如下步骤关闭之：
 
-1. 编辑 [MySQL 配置文件](/zh/stack-components.md#mysql)，注释掉 binlog 日志
+1. 编辑 [MySQL 配置文件](../mysql#path)，注释掉 binlog 日志
   ~~~
   #log-bin=mysql-bin  
   ~~~
+
 2. 重启 MySQL 服务
 
 #### 端口冲突？

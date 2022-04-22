@@ -671,26 +671,6 @@ systemctl stop ansible-server
 ansible-server console
 ```
 
-#### 是否可以通过命令行修改Ansible后台密码？
-
-可以，`rabbitmqctl change_password  admin newpassword`
-
-#### 如果没有域名是否可以部署 Ansible？
-
-可以，访问`http://服务器公网IP` 即可
-
-#### 数据库 root 用户对应的密码是多少？
-
-密码存放在服务器相关文件中：`/credentials/password.txt`
-
-#### 是否有可视化的数据库管理工具？
-
-有，内置phpMyAdmin，访问地址：*http://服务器公网IP:9090*
-
-#### 如何禁止外界访问phpMyAdmin？
-
-连接服务器，编辑 [phpMyAdmin 配置文件](/zh/stack-components.md#phpmyadmin)，将其中的 `Require all granted` 更改为 `Require ip 192.160.1.0`，然后重启 Apache 服务
-
 #### python_interpreter=auto 时的选择逻辑？
 
 Ansible 主控端有一个 Python interpreter 解析器的选择表，Ansible 会维护不同的操作系统发行版对应的选择。具体参考：[Interpreter Discovery](https://docs.ansible.com/ansible/latest/reference_appendices/interpreter_discovery.html)
@@ -706,10 +686,6 @@ Ansible 有三种类型的内置变量：
 * 收集到受控端的 [Facts 变量](https://docs.ansible.com/ansible/latest/user_guide/playbooks_vars_facts.html)
 
 ## 故障速查
-
-此处收集使用 Ansible 过程中最常见的故障，供您参考
-
-> 大部分故障与云平台密切相关，如果你可以确认故障的原因是云平台造成的，请参考[云平台文档](https://support.websoft9.com/docs/faq/zh/tech-instance.html)
 
 #### 如何查看错误日志？
 
