@@ -11,15 +11,15 @@ ONLYOFFICE Docs 可以与其他的软件平台**集成**一起使用，解决 �
 
 ### 与 ownCloud 集成
 
-* [ownCloud 集成  ONLYOFFICE Docs](./owncloud#onlyoffice)
+* [ownCloud 集成  ONLYOFFICE Docs](../owncloud/solution#onlyoffice)
 
 ### 与 Nextcloud 集成
 
-* [Nextcloud 集成  ONLYOFFICE Docs](./nextcloud#onlyoffice)
+* [Nextcloud 集成  ONLYOFFICE Docs](../nextcloud/solution#onlyoffice)
 
 ### 与 Seafile 集成
 
-* [Seafile 集成  ONLYOFFICE Docs](./seafile#onlyoffice)
+* [Seafile 集成  ONLYOFFICE Docs](../seafile/solution#onlyoffice)
 
 ### 与 Moodle 集成
 

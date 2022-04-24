@@ -195,7 +195,7 @@ IIS环境中部署网站主要分为5个步骤： **①**上传网站代码-&gt;
 
 ## 参数
 
-**[通用参数表](../administrator/parameter)** 中可查看 Nginx, Java, Docker, MySQL 等 全能环境（IIS） 应用中包含的基础架构组件路径、版本、端口等参数。 
+IIS 应用中包含 .NET, SQL Server 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
 下面仅列出 全能环境（IIS）本身的参数：
 

@@ -1,16 +1,24 @@
 ---
-sidebar_position: 3
+slug: /order
 ---
 
-# 订单
+import DocCardList from '@theme/DocCardList';
+import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-镜像安装到云服务器后，云平台系统就产生了对应的订单。订单是交易和服务凭证。
 
-## 查询订单号
+# 订单处理
+
+镜像安装到云服务器后，云平台系统就产生了对应的订单。订单是交易和服务凭证。  
+
+在平台上订阅 Websoft9 的产品，涉及：开具发票、查询订单、更换产品、退订等参考对应的文档：
+
+<DocCardList items={useCurrentSidebarCategory().items}/>
+
+## 查询订单号{#search}
 
 每个云平台查询订单号的方式均不同，请阅读[云平台订单](../subscription/marketplace/)
 
-## 开具发票
+## 开具发票{#invoice}
 
 开具发票（或账单）请登录到云平台索取，详情参阅：[云平台订单](../subscription/marketplace/)    
 
@@ -24,6 +32,6 @@ sidebar_position: 3
 * 我司为小规模纳税人，默认开具普通增值税发票。如果贵司财务要求专票，我司可以向您的财务提供客观原因证明
 * 对于超过1000元的单次发票申请，我们可以到税务局为您代开专票
 
-## 退订
+## 退订{#unsubscribe}
 
 我们在所有平台发布的产品，用户不满意，可以随时退订。退订后，系统返还未消费的所有费用。

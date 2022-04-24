@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-slug: /marketplace/tencentcloud
+slug: /tecentcloud/tencentcloud
 ---
 
 # 腾讯云订单

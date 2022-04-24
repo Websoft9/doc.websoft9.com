@@ -1,6 +1,7 @@
 ---
 slug: /nginx/advanced
 ---
+
 # 进阶
 
 ## 安装

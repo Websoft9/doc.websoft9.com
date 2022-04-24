@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-slug: /marketplace/alibabacloud
+slug: /order/alibabacloud
 ---
 
 # 阿里云订单

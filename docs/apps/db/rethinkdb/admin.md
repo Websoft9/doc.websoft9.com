@@ -63,7 +63,7 @@ rethinkdb repl --password-file /tmp/pw
 
 #### 可否命令行修改 RethinkDB 控制台密码？
 
-参考：[Nginx auth_basic](./nginx#authbasic)
+参考：[Nginx auth_basic](../nginx#authbasic)
 
 #### 通过端口可直接访问 RethinkDB 吗？
 

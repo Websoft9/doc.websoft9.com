@@ -100,7 +100,7 @@ Discuz 有非常强大生态，大量在线安装模板、插件，您通过登�
 
 > 声明：Websoft9 不擅长 Discuz 具体功能的使用，更无法提供此类问题指出。请自行参阅 [Discuz 官方论坛](http://www.discuz.net/forum.php) 完成你要做的吧
 
-### Discuz 修改数据库配置
+### Discuz 修改数据库配置{#modifydbconn}
 
 在你的 Discuz 安装目录下，有三个与数据库相关的[配置文件](#path)
 
@@ -190,7 +190,7 @@ Discuz论坛安装完成后，想使连接里面显示文章名，应怎么开�
 
 ## 参数{#parameter}
 
-**[通用参数表](./administrator/parameter)** 中可查看 PHP, Nginx, Apache, Docker, MySQL 等 Discuz 应用中包含的基础架构组件路径、版本、端口等参数。 
+Discuz 应用中包含 PHP, Nginx, Apache, Docker, MySQL 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。  
 
 通过运行`docker ps`，可以查看到 Discuz 运行时所有的 Container：
 

@@ -225,7 +225,7 @@ WAMP 镜像中安装 composer 的方法步骤如下：
 
 ## 参数
 
-**[通用参数表](./administrator/parameter)** 中可查看 Apache, Docker, MySQL 等 WAMP 应用中包含的基础架构组件路径、版本、端口等参数。 
+WAMP 应用中包含 Apache, Docker, MySQL 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
 下面仅列出 WAMP 本身的参数：
 

@@ -45,7 +45,7 @@ tags:
     </VirtualHost>
     ```
 
-7. 修改其中的 ServerName, DocumentRoot, ErrorLog, CusomLog, Directory等项的值（[修改参考](/zh/solution-deployment.html#virtualhost)），修改完成后保存
+7. 修改其中的 ServerName, DocumentRoot, ErrorLog, CusomLog, Directory等项的值（[修改参考](../apache#virtualhost)），修改完成后保存
 
 8. 重启所有服务 
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wampserver/wampserver-clicks-websoft9.png)
@@ -56,7 +56,7 @@ tags:
 
 ##### 将 MySQL 更改为临时免密模式
 
-1. 远程连接到服务器，打开 [MySQL 配置文件](/zh/stack-components.html#mysql)，在 [mysqld] 配置项中增加一行 `skip-grant-tables`，保存
+1. 远程连接到服务器，打开 [MySQL 配置文件](../wampserver#mysql)，在 [mysqld] 配置项中增加一行 `skip-grant-tables`，保存
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wamp/wamp-addconfigtomysqld-websoft9.png)
 
 2. 重启 MySQL 服务

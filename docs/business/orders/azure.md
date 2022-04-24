@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-slug: /marketplace/azure
+slug: /order/azure
 ---
 
 # Azure 订单

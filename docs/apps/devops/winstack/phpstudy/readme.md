@@ -139,7 +139,7 @@ Apache开启为静态的步骤如下：
 
 ## 参数
 
-**[通用参数表](../administrator/parameter)** 中可查看 Apache, MySQL 等 phpStudy 应用中包含的基础架构组件路径、版本、端口等参数。 
+phpStudy 应用中包含 Apache, PHP, MySQL 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
 下面仅列出 phpStudy 本身的参数：
 

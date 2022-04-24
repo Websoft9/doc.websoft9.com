@@ -21,20 +21,14 @@ tags:
 
 Memcached 客户端是用于与 Memcached-Server 进行通信的程序，Memcached 是通过 Telnet 来运行客户端命令的。
 
+#### Memcached 是否开启密码验证？
+
+没有开启
+
 #### Memcached 需要密码才能登录吗？
 
 无需设置密码验证
 
-#### Memcached-admin 账号密码怎么来的？
-
-通过 [Nginx auth_basic](./nginx#authbasic) 来设置
-
 #### 如何修改 Memcached-admin 控制台密码？
 
-参考： [Nginx auth_basic](./nginx#authbasic)
-
-### Memcached 是否开启密码验证？
-
-没有开启
-
-
+参考： [Nginx auth_basic](../nginx#authbasic)

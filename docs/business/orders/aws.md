@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-slug: /marketplace/aws
+slug: /order/aws
 ---
 
 # AWS 订单

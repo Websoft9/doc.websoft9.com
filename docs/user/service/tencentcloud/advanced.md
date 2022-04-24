@@ -49,7 +49,7 @@ slug: /tencentcloud/advanced
 
 云市场商品的发票由各服务商开具，如您需要申请开票，请在发票管理 > [云市场](https://console.cloud.tencent.com/expense/invoice?tab=CloudMarket) 页面申请，开取云市场发票，详情请参见 发票申请流程
 
-发票相关问题可以参考 [发票相关问题](/zh/business-order.html#发票)。
+发票相关问题可以参考 [发票相关问题](../order)。
 
 #### 重装系统很慢或者失败怎么办？
 

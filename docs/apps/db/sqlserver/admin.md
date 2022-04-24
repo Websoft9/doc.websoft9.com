@@ -134,7 +134,7 @@ SQL Server Management Studio (SSMS) 是用于管理任何 SQL 基础结构的集
 
 #### SQL Server Express 有自动备份功能吗？
 
-不包含，但本部署包提供了一个免费的自动备份软件，参考本文档的 [SQLServer自动备份](/zh/solution-backup.md#sqlserver-express-自动备份)相关章节
+不包含，但本部署包提供了一个免费的自动备份软件，参考本文档的 [SQLServer自动备份](#autobackup)相关章节
 
 #### 浏览器访问 Management Studio？
 

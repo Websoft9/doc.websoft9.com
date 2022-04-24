@@ -1,3 +1,8 @@
+---
+sidebar_position: 2
+slug: /iis/advanced
+---
+
 # 进阶
 
 IIS 即Windows®Server的 Internet 信息服务，它是一种灵活，安全和可管理的 Web 服务器。IIS 具备可视化配置界面，使得用户增加和管理网站变得非常容易。

@@ -25,21 +25,9 @@ Websoft9 客户成功团队从咨询、方案和技术支持全面的服务客�
 
 1. 技术支持范围包括：免费人工服务、文档指导服务
 2. 文档指导服务需要客户根据文档方案自行配置，若发现文档有问题或文档不完善，欢迎提出优化建议
-3. 未在**免费人工服务**范围中列出的内容，若购买一对一的[按需服务](#ondemandservice)
+3. 未在**免费人工服务**范围中列出的内容，若购买一对一的[按需服务](./buy/service)
 4. **付费镜像**用户可通过[人工服务渠道](#contact)（电话/微信/邮件/工单）获得人工支持
 5. **免费镜像**用户通过[Github提交issue](https://github.com/Websoft9) 获得改进
-
-
-## 按需服务{#ondemandservice}
-
-除免费人工支持服务之外，Websoft9 提供按需购买（即按次付费）的人工服务，帮助用户减轻配置和运维过程的挑战（[SOP 下载](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/sopservices-websoft9.pdf)）。  
-
-![高级服务范围](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/psupport-websoft9.png)
-
-如何购买按需服务呢？  
-
-- 阿里云、华为云、腾讯云等平台用户，在应用对应的云市场上购买我们的服务。
-- Azure，AWS等平台用户，请[联系](#contact)客户成功团队购买
 
 ## 联系方式{#contact}
 

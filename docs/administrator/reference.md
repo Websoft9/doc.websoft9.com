@@ -1,10 +1,11 @@
 ---
 sidebar_position: 20
+slug: /administrator/reference
 ---
 
-# 参考
+# 参考文献
 
-本文档编写中参考了大量的第三方资料
+本文档编写中参考了大量的第三方资料。  
 
 ## 图书
 

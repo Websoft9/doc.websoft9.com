@@ -102,7 +102,7 @@ WordPress 内核升级非常简单，当进入后台之后系统会提示需要�
 有的时候，由于网络原因，在线一键升级不可用，那么就需要手工升级
 
 1. [下载](https://github.com/WordPress/WordPress/tags)最新的 WordPress 版本，并解压
-2. 登录云服务器，进入 [WordPress 的根目录](/zh/stack-components.html#wordpress路径)
+2. 登录云服务器，进入 [WordPress 的根目录](../wordpress#path)
 3. 删除此目录下的 `wp-admin` 和 `wp-includes` 文件夹
 4. 上传本地解压后的 WordPress代码，有同名文件提醒的时候选择覆盖上传
 5. 重新访问WordPress，可能会出现下图所示的数据库升级步骤

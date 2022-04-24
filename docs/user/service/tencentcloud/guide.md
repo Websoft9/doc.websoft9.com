@@ -170,7 +170,7 @@ CVM的配置可以[调整](https://cloud.tencent.com/document/product/213/2178)�
 
 ### 系统盘扩容
 
-系统盘类型为云硬盘时，支持扩容系统盘，但仅允许通过对云服务器执行 [重装系统](../tencentcloud#reinstallos) 操作来实现。
+系统盘类型为云硬盘时，支持扩容系统盘，但仅允许通过对云服务器执行 [重装系统](#reinstallos) 操作来实现。
 
 ### 创建快照
 

@@ -47,14 +47,15 @@ websoft9为了优化用户体验，初始设定了随机密码；同时为了用
 
 重定向错误比较常见。处理办法：分析网站根目录下的 `.htaccess` 文件，看看有没有死循环规则
 
-#### Discuz 密码输入错误多次被锁，怎么解决？
+#### Discuz 密码被锁，怎么解决？
 
 1. 10分钟后会自动解锁。
 2. 管理员登录，组织→用户 操作栏里有解锁按钮。
 
 #### 修改了数据库密码 Discuz 不能访问？
 
-若已完成 Discuz 安装，后通过 phpMyAdmin 修改数据库密码，Discuz 就会连不上数据库。解决办法[参考](/zh/solution-more.html#discuz-修改数据库配置)
+问题： 若已完成 Discuz 安装，后通过 phpMyAdmin 修改数据库密码，Discuz 就会连不上数据库。  
+方案： 修改[数据库连接](../discuz#modifydbconn)信息  
 
 #### Discuz 出现“对不起，您的网站已被设置禁止下载此应用”问题
 
@@ -114,39 +115,3 @@ Discuz 官方说得很模糊，我们也拿不准是不是免费的
 #### Discuz 提供客户端吗？
 
 Discuz 官方没有提供，但应用中心有服务商提供了相关的扩展
-
-#### Discuz(LAMP)，Discuz(WAMP)等商品括号中的 LAMP,WAMP 是什么意思？
-
-LAMP和WAMP代表支持 Discuz 运行所对应的基础环境，具体参考[环境说明](./runtime/php)
-
-#### 是否可以使用云平台的 RDS 作为 Discuz 的数据库？
-
-可以，修改 [Discuz 配置文件](../discuz#path) 即可
-
-#### Discuz能在 Windows 服务器上运行吗？
-
-可以，但是我们推荐在运行 Discuz 效率更高的 Linux 服务器上运行
-
-#### Discuz数据库连接配置信息在哪里？
-
-数据库配置信息 [Discuz 配置文件](../discuz#path)中
-
-#### 如果没有域名是否可以部署 Discuz？
-
-可以，访问`http://服务器公网IP` 即可
-
-#### 数据库 root 用户对应的密码是多少？
-
-密码存放在服务器相关文件中：`/credentials/password.txt`
-
-#### 是否有可视化的数据库管理工具？
-
-有，内置phpMyAdmin，访问地址：http://服务器公网IP/phpmyadmin
-
-#### 如何禁止phpMyAdmin访问？
-
-连接服务器，编辑 phpMyAdmin 配置文件，将其中的 Require all granted 更改为 Require ip 192.160.1.0，然后重启 Apache 服务
-
-#### 是否可以修改 Discuz 的源码路径？
-
-可以，通过修改 [虚拟主机配置文件](../apache#virtualHost)中相关参数

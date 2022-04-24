@@ -1,5 +1,5 @@
-position: 5
-label: "订阅"
+position: 8
+label: "合作"
 collapsible: true
 collapsed: true
 className: "red"

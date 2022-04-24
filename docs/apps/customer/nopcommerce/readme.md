@@ -77,7 +77,7 @@ tags:
 
 ## 参数{#parameter}
 
-**[通用参数表](./administrator/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 NopCommerce 应用中包含的基础架构组件路径、版本、端口等参数。 
+NopCommerce 应用中包含 Nginx, .NET, Docker, MySQL 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 NopCommerce 运行时所有的 Container：
 

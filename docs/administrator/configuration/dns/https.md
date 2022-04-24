@@ -201,6 +201,6 @@ Certbot 证书目录：*/etc/letsencrypt/live*
 
 #### 有哪些 Web Server 可方便支持 HTTPS？
 
-主流的 Web Server 都可以很方便的支持，包括：[Apache](./apache#path), [Nginx](./nginx#path) , [Caddy](./caddy#path)    
+主流的 Web Server 都可以很方便的支持，包括：[Apache](../apache#path), [Nginx](../nginx#path) , [Caddy](../caddy#path)    
 
 

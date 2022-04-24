@@ -10,9 +10,9 @@ const config = {
   tagline: '简化开源软件的安装、集成和运维',
   url: 'https://support.websoft9.com',
   baseUrl: '/',
-  onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
-  onDuplicateRoutes: 'warn',
+  onBrokenLinks: 'error',
+  onBrokenMarkdownLinks: 'error',
+  onDuplicateRoutes: 'error',
   favicon: 'img/favicon.ico',
   organizationName: 'Websoft9', // Usually your GitHub org/user name.
   deploymentBranch: 'gh-pages',
@@ -106,24 +106,19 @@ const config = {
             items: [
               {
                 label: '应用',
-                to: '/docs/intro',
+                to: '/docs/apps',
               },
               {
                 label: '解决方案',
-                to: '/docs/intro',
+                to: '/docs/solution',
               },
-              {
-                label: '行业',
-                to: '/docs/intro',
-              },
-
               {
                 label: '技术服务',
-                to: '/docs/intro',
+                to: '/docs/helpdesk',
               },
               {
                 label: '分发服务',
-                to: '/docs/intro',
+                to: '/docs/helpdesk',
               },
 
 

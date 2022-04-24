@@ -36,7 +36,7 @@ tags:
 3. 选择数据库类型，默认为【改进的MySQL】，然后进入确认路径设置（保持默认设置），进入下一步 
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-install002-websoft9.png)
 
-4. 填写数据库连接信息，建议采用预装环境自带的 MySQL 数据库([不知道账号密码？](./user/credentials账号密码))
+4. 填写数据库连接信息，建议采用预装环境自带的 MySQL 数据库([不知道账号密码？](./user/credentials))
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-install003-websoft9.png)
 
 5. 经过几次确认后，安装进入环境检测步骤，继续后续步骤 

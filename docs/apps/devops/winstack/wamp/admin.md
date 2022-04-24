@@ -113,7 +113,7 @@ tags:
 
 1. 使用 **远程桌面** 连接服务器，停止 [Apache 服务](#apache)
 2. 将 ***mysite1*** 文件夹整体拷贝到目标位置 *d:\www*
-3. 修改 [虚拟主机配置文件](/zh/stack-components.html#apache) 中 mysite1 这个网站对应的 VirtualHost 配置段 DocumentRoot, Directory 项的值，并保存它
+3. 修改 [虚拟主机配置文件](../wamp#apache) 中 mysite1 这个网站对应的 VirtualHost 配置段 DocumentRoot, Directory 项的值，并保存它
 
    原地址：c:\wwwroot\mysite1  
    目标地址：d:\www\mysite1

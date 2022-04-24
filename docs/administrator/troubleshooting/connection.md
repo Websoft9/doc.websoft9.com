@@ -30,7 +30,7 @@ slug: /troubleshooting/connection
 
 最常见的原因如下：
 
-* 服务器[安全组**80** 端口](./security#group)没有开启
+* 服务器[安全组**80** 端口](../administrator/firewall#security)没有开启
 * 你所安装的镜像不支持此类访问
 * 安装的不是目标镜像
 * 你的服务器网络故障

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 5
-slug: /marketplace/huaweicloud
+slug: /huaweicloud/huaweicloud
 ---
 
 

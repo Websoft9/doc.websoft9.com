@@ -238,7 +238,7 @@ WAMPServer 镜像中安装 composer 的方法步骤如下：
 
 ## 参数
 
-**[通用参数表](../administrator/parameter)** 中可查看 Nginx, Java, Docker, MySQL 等 WampServer 应用中包含的基础架构组件路径、版本、端口等参数。 
+WampServer 应用中包含 Apache, PHP, phpMyAdmin, MySQL 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。  
 
 下面仅列出 WampServer 本身的参数：
 

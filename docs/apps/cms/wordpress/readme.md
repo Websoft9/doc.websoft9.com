@@ -285,8 +285,6 @@ WordPress可以通过发送邮件找回密码，但前提条件是您的 WordPre
 
 WordPress 应用中包含 PHP, Nginx, Apache, Docker, MySQL, phpMyAdmin 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
-**[通用参数表](./administrator/parameter)** 中可查看 Nginx, Apache, Docker, MySQL 等 WordPress 应用中包含的基础架构组件路径、版本、端口等参数。 
-
 通过运行`docker ps`，可以查看到 WordPress 运行时所有的 Container：
 
 ```bash

@@ -30,7 +30,7 @@ ActiveMQ 主要采用二级制安装方式，其升级方案差不多等于安�
    chmod 640  /opt/apache-activemq/examples/stomp/php/*
    chmod +x /opt/apache-activemq/bin/activemq
    ```
-4. 重启 [ActiveMQ服务](/zh/admin-services#activemq) 后升级完成
+4. 重启 [ActiveMQ服务](../activemq#service) 后升级完成
 
 ## 故障排除
 
