@@ -1,9 +1,9 @@
 ---
-sidebar_position: 8
-slug: /legal/library
+sidebar_position: 2
+slug: /legal/laws
 ---
 
-# 法律清单
+# 法律法规
 
 中国人民共和国相关的法律包括：[宪法](https://flk.npc.gov.cn/detail2.html?MmM5MDlmZGQ2NzhiZjE3OTAxNjc4YmY1YTQ4MzAwNGI%3D)、法律、行政法规、地方性法规。行政法规需要国务院总理签署国务院令，行政法规的效力仅次于宪法和法律，高于部门规章和地方性法规。
 
