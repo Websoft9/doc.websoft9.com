@@ -78,7 +78,7 @@ tags:
 
 ##### 将 MySQL 恢复为正常模式
 
-1. 打开 [MySQL 配置文件](/zh/stack-components.html#mysql)，在 [mysqld] 配置项中删除 `skip-grant-tables` 这一行
+1. 打开 [MySQL 配置文件](../wampserver#mysql)，在 [mysqld] 配置项中删除 `skip-grant-tables` 这一行
 2. 再次重启 MySQL 服务，此时密码已被重置为 `12345678`
 
 ### 更新 PHP 版本

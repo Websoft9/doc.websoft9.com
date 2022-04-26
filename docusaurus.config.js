@@ -162,11 +162,11 @@ const config = {
         ],
 
         logo: {
-          alt: 'Facebook Open Source Logo',
+          alt: 'Websoft9 Open Source Logo',
           src: 'img/logo.svg',
           width: 160,
           height: 51,
-          href: 'https://opensource.facebook.com',
+          href: 'https://www.websoft9.com',
         },
         copyright: `Copyright ©2014- ${new Date().getFullYear()} 长沙网久软件有限公司 备案：湘ICP备16009117号`,
       },

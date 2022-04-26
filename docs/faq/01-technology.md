@@ -96,7 +96,7 @@ slug: /faq
 2. 使用 dbForge, Navicat 等本地客户端工具
 3. 使用浏览器版的可视化管理工具（推荐）
 
-浏览器版的可视化管理工具包括：phpMyAdmin, phpPgAdmin, adminMongo等，详情参考[相关指引](./setup/credentials#dbacount)。
+浏览器版的可视化管理工具包括：phpMyAdmin, phpPgAdmin, adminMongo等，详情参考[相关指引](./user/dbgui)。
 
 #### 无法连接远程数据库？
 

@@ -27,7 +27,7 @@ Websoft9 每个应用都预装了默认数据库，并且这些数据库也按�
 
    - 非 Docker 应用，修改应用的配置文件（例如：WordPress 的 wp-config.php 文件）
 
-   - Docker 应用，修改 [.env 文件](../setup/parameter)中数据库相关的配置。例如：
+   - Docker 应用，修改 [.env 文件](../administrator/parameter)中数据库相关的配置。例如：
      ```
       DB_MRAIADB_USER=root
       DB_MARIADB_PASSWORD=yourpassword

@@ -15,6 +15,12 @@ PHP-FPM 用于管理 PHP 进程池，接受 Apache/Nginx 等 Web 服务器的请
 
 ### Web 框架{#framework}
 
+#### Symfony{#symfony}
+#### Laravel{#laravel}
+#### CodeIgniter{#codeigniter}
+#### ThinkPHP{#thinkphp}
+#### Yii 2{#yii}
+
 ### PHP 版本变更（Linux）{#changeversion}
 
 #### PHP 版本升级{#upgrade}

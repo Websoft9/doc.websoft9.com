@@ -21,7 +21,7 @@ slug: /linux
 
 如果不想安装这些工具到本地电脑，也可以使用云平台提供的 Web 版在线连接工具。  
 
-我们推荐使用 WinSCP，同时提供了[配套的说明文档](./user/vm#connectlinux)。  
+我们推荐使用 WinSCP，同时提供了[配套的说明文档](./user/cloud#connectlinux)。  
 
 ### 安装 FTP
 
