@@ -63,7 +63,9 @@ RVM 是一个用于安装和管理多版本 Ruby 的命令行工具，虽然不�
 
 经过实验验证，bundle 可以很方便的将项目所需的软件包安装到项目目录中。  
 
-## 问题
+## 故障速查{#troubleshooting}
+
+## 问题解答
 
 #### Gem, Bundler, Rake, Rails 是什么？
 

@@ -52,7 +52,7 @@ eAccelerator
 
 [phar](https://www.php.net/manual/zh/intro.phar.php) 扩展提供了一种将整个 PHP 应用程序放入称为“phar”（PHP 存档）的单个文件的方法，以便于分发和安装。
 
-## 故障速查
+## 故障速查{#troubleshooting}
 
 #### PHP 不支持 SMTP？
 

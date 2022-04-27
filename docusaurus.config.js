@@ -85,8 +85,6 @@ const config = {
 
           {to: '/docs/api', label: 'API', position: 'left'},
 
-          {to: '/blog', label: '公告', position: 'left'},
-
           {to: '/community', label: '开源社区', position: 'left'},
 
           {type: 'localeDropdown', position: 'right',},

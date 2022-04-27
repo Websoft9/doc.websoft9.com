@@ -1,3 +1,8 @@
+---
+sidebar_position: 2
+slug: /caddy/advanced
+---
+
 # 进阶
 
 ## 安装
@@ -30,4 +35,4 @@ sudo apt install caddy
 ## 问题解答
 
 
-## 故障速查
+## 故障速查{#troubleshooting}

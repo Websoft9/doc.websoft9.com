@@ -13,4 +13,4 @@ Traefik 是一个为了让部署微服务更加便捷而诞生的现代 HTTP 反
 
 ## 问题解答
 
-## 故障速查
+## 故障速查{#troubleshooting}

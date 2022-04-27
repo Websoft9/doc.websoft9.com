@@ -253,6 +253,29 @@ uWSGI 目录： */etc/uwsgi.d*
 
 ### Gunicorn
 
+## 故障速查{#troubleshooting}
+
+#### 执行 django 启动命令报错？
+
+错误信息：You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+
+解决方案：运行下面的命令后再启动项目  
+
+```
+python manage.py migrate
+```
+
+#### `pip install uwgsi` 报错？
+
+错误信息如下：  
+```
+ERROR: Command errored out with exit status 1:
+     command: /usr/bin/python3 -u -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-v02o0o80/uwsgi_6afc0c5595704f599e64e6aa41047052/setup.py'"'"'; __file__='"'"'/tmp/pip-install-v02o0o80/uwsgi_6afc0c5595704f599e64e6aa41047052/setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' install --record /tmp/pip-record-oovzq0ap/install-record.txt --single-version-externally-managed --compile --install-headers /usr/local/include/python3.6m/uwsgi
+```
+
+错误原因：  
+解决方案：
 
 ## 问题解答
 
@@ -329,28 +352,3 @@ python3.8 -m venv --system-site-packages "/data/wwwroot/yoursite1"
 #### 一个 django 环境支持多个 django 项目？
 
 可以
-
-
-## 故障速查
-
-#### 执行 django 启动命令报错？
-
-错误信息：You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
-Run 'python manage.py migrate' to apply them.
-
-解决方案：运行下面的命令后再启动项目  
-
-```
-python manage.py migrate
-```
-
-#### `pip install uwgsi` 报错？
-
-错误信息如下：  
-```
-ERROR: Command errored out with exit status 1:
-     command: /usr/bin/python3 -u -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-v02o0o80/uwsgi_6afc0c5595704f599e64e6aa41047052/setup.py'"'"'; __file__='"'"'/tmp/pip-install-v02o0o80/uwsgi_6afc0c5595704f599e64e6aa41047052/setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' install --record /tmp/pip-record-oovzq0ap/install-record.txt --single-version-externally-managed --compile --install-headers /usr/local/include/python3.6m/uwsgi
-```
-
-错误原因：  
-解决方案：

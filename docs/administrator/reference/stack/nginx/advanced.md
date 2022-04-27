@@ -387,7 +387,7 @@ find /data/wwwroot/ -type f -exec chmod 640 {} \;
 
 不支持模块启用或关闭
 
-## 故障速查
+## 故障速查{#troubleshooting}
 
 #### 网站显示重定向错误？
 
