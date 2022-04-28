@@ -1,6 +1,6 @@
 ---
 sidebar_position: 20
-slug: /administrator/reference
+slug: /refer
 ---
 
 # 参考文献

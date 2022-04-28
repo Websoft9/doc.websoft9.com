@@ -11,7 +11,15 @@ slug: /administrator/security_ddos
 
 ## Apache
 
-在 Apache 的 conf.d 目录下找到 mod_evasive.conf 文件，进行配置（根据网站安全实际需求来）
+使用 Apache 的 **mod_evasive** 模块，防止对 Apache 服务器的暴力攻击。它的工作原理是创建对异常的访问给与 403 响应。  
+
+典型的异常访问：  
+
+- 每秒请求同一页多次
+- 每秒对同一个孩子发出 50 多个并发请求
+- 暂时列入黑名单时提出任何要求
+
+具体实施方案：在 Apache 的 conf.d 目录下找到 mod_evasive.conf 文件，进行配置（根据网站安全实际需求来）
 
 ![](https://libs.websoft9.com/Websoft9/blog/zh/2020/12/Apache-403-mod_evasive-conf-websoft9.png)
 

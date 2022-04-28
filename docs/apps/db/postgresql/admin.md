@@ -93,7 +93,7 @@ or
 Report bugs to <pgsql-bugs@postgresql.org>.
 ```
 
-## 故障处理
+## 故障排除{#troubleshooting}
 
 除以下列出的 PostgreSQL 故障问题之外， [通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案。 
 
@@ -129,7 +129,7 @@ PostgreSQL 本身是一个 C/S 架构的程序，即包括客户端程序和服�
 
 #### PostgreSQL 有几种连接方式？
 
-PostgreSQL 允许四种[连接方式](https://www.cnblogs.com/flying-tiger/p/5983588.html?tdsourcetag=s_pcqq_aiomsg)，包括：
+PostgreSQL 允许四种[连接方式](https://www.cnblogs.com/flying-tiger/p/5983588.html?tdsourcetag=s_pcqq_aiomsg)，主要包括：
 
 * local: 基于 Unix 域套接字的连接方法，域套接字是进程间的一种非网络通信机制，效率高，安全可靠
 * host: 基于 TCP/IP 的连接，允许非 SSL 连接，默认值只允许 localhost 本地连接。

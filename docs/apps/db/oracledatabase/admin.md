@@ -12,7 +12,7 @@ tags:
 
 ## 场景
 
-## 故障排除
+## 故障排除{#troubleshooting}
 
 除以下列出的 Oracle Database 故障问题之外， [通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案。 
 

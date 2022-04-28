@@ -391,18 +391,7 @@ find /data/wwwroot/ -type f -exec chmod 640 {} \;
 
 #### 网站显示重定向错误？
 
-打开Nginx虚拟主机配置文件，检查网站对应的 server{} 配置段内容，分析其中的重定向规则，找到其中的死循环。
-
-#### phpMyAdmin 出现 Error during session...错误？
-
-Error during session start; please check your PHP and/or webserver log file and configure your PHP installation properly. Also ensure that cookies are enabled in your browser. session_start(): open(SESSION_FILE, O_RDWR) failed: Permission denied (13)
-
-**问题原因**：系统更新后，PHP 的 session.save_path 路径目录的权限设置不正确。  
-**解决方案**：打开WinSCP，运行如下命令即可
-~~~
-chown -R root:nginx /var/lib/php/session
-echo 'chown nginx. -R /var/lib/php' >> /etc/cron.daily/0yum-daily.cron
-~~~
+打开Nginx虚拟主机配置文件，检查网站对应的 server{} 配置段内容，分析其中的重定向规则，找到其中的死循环。  
 
 #### 重启 Nginx 服务显示 *No spaces...*
 
@@ -410,7 +399,7 @@ echo 'chown nginx. -R /var/lib/php' >> /etc/cron.daily/0yum-daily.cron
 
 #### 413 Request Entity Too Large
 
-这是由于上传文件大小超过了Nginx默认设置，因此需要修改 Nginx 这个限制：
+这是由于上传文件大小超过了 Nginx 默认设置，因此需要修改 Nginx 这个限制：
 
 1. 使用 WinSCP 远程连接服务器
 2. 编辑 [Nginx 虚拟机主机配置文件](../nginx#path)

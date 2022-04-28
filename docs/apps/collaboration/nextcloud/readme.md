@@ -188,6 +188,19 @@ Nextcloud 的程序和数据文件默认均存在系统盘，你要转移到数�
 
 > 以上两种数据转移方案中，**mount** 操作对新手来说是几乎是不可能独立完成的任务。另外，如果转移的数据超过10G，会存在拷贝失败的风险
 
+### 通过 WebDAV 连接 NextCloud
+
+NextCloud 支持 WebDAV 协议，用户可以通过 WebDAV 来连接并同步文件，比如在 Windows10 系统映射磁盘到 NextCloud，用于本地访问云盘文档。
+
+1. 获取 WebDav 连接 URL： 登录NextCloud，点击【文件】-【设置】获取 URL
+  > 注意：每个用户都有自己的 URL，使用对应的 URL 和用户名登录才能正确访问文件
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/nextcloud/nextcloud-webdavurl-websoft9.jpg)
+
+2. 配置本地连接：在 Windows10 【运行】regedit 命令，进入注册表，修改注册表项 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WebClient\Parameters，将 BasicAuthLevel 值设为 2 ，将 FileSizeLimitInBytes 值改成十进制 50000000
+3. 重启本地服务：打开 Windows PowerShell(管理员) 工具，输入命令 net start webclient 重启 webclient 服务
+4. 映射本地磁盘：右击【我的电脑】，选择【映射网络驱动器】， 复制第1步中的URL，确定。在弹出的登录界面，输入NextCloud 登录账号，完成连接。
+5. 完成上述操作，进入【我的电脑】，可以看见新添加的【网络位置盘符】，双击打开即可访问 NextCloud 远程文件。
 
 ## 参数{#parameter}
 

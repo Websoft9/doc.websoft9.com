@@ -45,7 +45,7 @@ tags:
 
 ## CouchDB 常用操作
 
-### 开启远程访问
+### 开启远程访问{#remote}
 
 1. 修改 CouchDB [配置文件](#path)
    ```

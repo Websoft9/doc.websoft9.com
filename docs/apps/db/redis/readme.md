@@ -78,7 +78,7 @@ tags:
 
 ## 常用操作
 
-### 远程访问控制
+### 远程访问控制{#remote}
 
 虽然不建议将 Redis 公开到 Internet 直接访问，但是有些特殊场景下，比如：使用 RedisInsight 客户端，就需要设置 Redis 的远程访问。  
 

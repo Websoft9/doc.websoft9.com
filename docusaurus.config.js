@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Websoft9 文档',
-  tagline: '简化开源软件的安装、集成和运维',
+  tagline: '重新定义开源服务，让云原生应用快速普及',
   url: 'https://support.websoft9.com',
   baseUrl: '/',
   onBrokenLinks: 'error',
@@ -72,7 +72,7 @@ const config = {
       navbar: {
         title: 'Websoft9',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Websoft9 Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -86,6 +86,8 @@ const config = {
           {to: '/docs/api', label: 'API', position: 'left'},
 
           {to: '/community', label: '开源社区', position: 'left'},
+
+          {to: '/docs/helpdesk', label: '技术支持', position: 'left'},
 
           {type: 'localeDropdown', position: 'right',},
 

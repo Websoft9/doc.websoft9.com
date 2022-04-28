@@ -17,7 +17,9 @@ slug: /administrator/firewall
 
 但是为了简化安全使用，云平台通过一个可视化的管理界面--**安全组**，来实现与防火墙的同等功能。  
 
-所以，一般使用云服务器的时候会关闭防火墙，用安全组替代它。不同的云平台安全组操作有一定的差异：  
+所以，一般使用云服务器的时候会关闭防火墙，用安全组替代它。
+
+安全组配置最常见的操作就是开启某一个端口，比如：TCP:80，详细设置参考：    
 
 * [Azure 安全组设置](../azure#securitygroup)
 * [AWS 安全组设置](../aws#securitygroup)
@@ -27,6 +29,37 @@ slug: /administrator/firewall
 
 ## 问题解答
 
-#### 如何判断端口是否放通？
+#### 如何判断已有服务的端口是否开放？
 
-除了检查本机防火墙和云控制台安全组之外，可以通过 **telnet** 去连接
+云控制台安全组可以查看所有端口的开放情况。  
+
+但是，登录云控制台查看会有一定的不便。针对**已经存在服务**的端口，可以通过 **nc** 或 **telnet** 去测试端口：
+
+* 使用 nc 命令测试
+
+    ```
+    # 成功
+    $ nc -zvw10 8.142.3.195 22
+    Connection to 8.142.3.195 22 port [tcp/*] succeeded!
+
+    # 失败
+    $ nc -zvw10 8.142.3.195 9091
+    nc: connect to 8.142.3.195 port 9093 (tcp) failed: Connection refused
+
+    ```
+
+
+* 使用 telnet 命令测试
+
+    ```
+    # 成功
+    $ telnet 8.142.3.195 22
+    Trying 8.142.3.195...
+    Connected to 8.142.3.195.
+    Escape character is '^]'.
+
+    # 失败
+    $ telnet 8.142.3.195 9091
+    Trying 8.142.3.195...
+    telnet: Unable to connect to remote host: Connection refused
+    ```

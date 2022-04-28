@@ -33,7 +33,7 @@ CloudBeaver 基于 Docker 部署，其升级流程：拉取镜像 > 删除容器
     ```
 
 
-## 故障排除
+## 故障排除{#troubleshooting}
 
 除以下列出的 CloudBeaver 故障问题之外， [通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案。 
 

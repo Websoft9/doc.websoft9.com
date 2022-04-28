@@ -11,13 +11,13 @@ slug: /user/dbgui
 
 在连接数据库时，请参考下表：
 
-| 名称                    | 用户名     | 数据库远程端口 | 可视化管理地址           |
-| ----------------------- | ---------- | ------------------------ | ------------------------ |
-| MySQL/Mariadb 其他      | root       | 3306   | http://服务器公网IP:9090       |
-| PostgreSQL              | postgres   | 5432 | http://服务器公网IP:9090       |
-| Mongodb                 | root | 27017 | http://服务器公网IP:9091       |
-| Oracle                  | system     | 1521 | 无                     |
-| SQLServer               | sa         | 1433     | 登录服务器，使用 SQL Server Management Server|
+| 名称                    | 用户名     | 数据库远程端口 | 可视化管理地址           | 开启远程   |
+| ----------------------- | ---------- | ------------------------ | ------------------------ | ------------------------ |
+| MySQL/Mariadb      | root       | 3306   | http://服务器公网IP:9090       |   [设置](../mysql#remote)     |
+| PostgreSQL              | postgres   | 5432 | http://服务器公网IP:9090       |   [设置](../postgresql#remote)     |
+| Mongodb                 | root | 27017 | http://服务器公网IP:9091       |   [设置](../mongodb#remote)     |
+| Oracle                  | system     | 1521 | 无                     |                      |
+| SQLServer               | sa         | 1433     | 登录服务器，使用 SQL Server Management Server| |
 
 ## Web 客户端管理
 

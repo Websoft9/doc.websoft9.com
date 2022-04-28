@@ -54,7 +54,7 @@ tags:
 
 RethinkDB 控制台默认没有提供登录认证，本部署方案采用了  [Nginx auth_bacic](./nginx#auth_basic) 作为登录认证方案
 
-### 远程访问
+### 远程访问{#remote}
 
 RethinkDB 远程访问的开关存储在：*/etc/rethinkdb/instances.d/instance.conf* 文件中。  
 

@@ -16,7 +16,7 @@ Websoft9 提供了以下平台的快捷文档，便于用户参考：
 
 <DocCardList items={useCurrentSidebarCategory().items}/>
 
-## 连接服务器（通用）
+## 连接服务器（通用）{#connect}
 
 如果你准备好了服务器的[管理员账号](#osaccount)密码、公网IP地址等信息，可以参考下面的通用教程开始连接服务器。
 

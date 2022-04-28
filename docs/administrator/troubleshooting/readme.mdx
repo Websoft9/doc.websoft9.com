@@ -8,61 +8,30 @@ import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 # 故障处理
 
-如果您是[付费客户](./docs/business/)，请随时联系我们的 [技术支持](./helpdesk) 创建 **专属服务群**，我们会组织专家团队帮助您解决故障。  
 
-如果您是开源用户，可以购买我们的单次技术服务解决故障，也可以自行解决故障。
-
-
-## 常见故障
-
-#### 应用服务无法启动？
-
-服务无法启动最常见的问题包括：磁盘空间不足，内存不足，配置文件错误。   
-
-建议先通过命令进行排查  
-
-```shell
-# 查看进程
-ps aux
-
-# 查看磁盘空间
-df -lh
-
-# 查看内存使用
-free -lh
-
-# 查看容器日志
-docker logs appname
-
-# 查看服务状态和日志
-systemctl status appname
-journalctl -u appname
-```
-
-#### 修改了数据库密码，应用不能访问？
-
-需要修改应用的 **配置文件** 对应的数据库 password 参数即可。
-
-#### 云服务器连不上？
-
-下图显示了无法连接云服务器的主要原因分类及出现概率，按照对应的原因进行排查：  
-
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/ecs-cannotconnect.jpeg)
-
-#### 如何查看错误日志？
-
-参阅: [日志诊断](#logs)
+我们对故障的定义：除了软件报错之外，一切给用户使用带来困扰的情景都可称之为故障（或问题）。  
 
 
-## 故障归集
+* 如果您是[付费客户](./docs/business/)，请随时联系我们的 [技术支持](./helpdesk) 创建 **专属服务群**，我们会组织专家团队帮助您解决故障。  
 
-除[应用](./apps)自身的故障之外，管理员还需关注支持应用的系统组件的故障：  
+* 如果您是开源用户，请到我们的 Github 上的[开源项目](https://github.com/websoft9)中提交 Issue 获取支持。  
+
+
+## 热门问题
+
+* [30个最常见的技术问题](./faq)
+* [商务问题](./business/faq)
+
+## 故障问题（汇总）
+
+除[应用](./apps)自身的故障问题之外，管理员还需关注支持应用的系统组件的故障：  
 
 | 组         | 组件                                                         |
 | ---------- | ------------------------------------------------------------ |
-| 程序环境   | [PHP](./php/advanced#troubleshooting), [Java](./java/advanced#troubleshooting), [Python](./python/advanced#troubleshooting), [Node](./node/advanced#troubleshooting), [Ruby](./ruby/advanced#troubleshooting), [Go](./go/advanced#troubleshooting), [.NET](./dotnet/advanced#troubleshooting) |
+| 程序环境   | [PHP](./php/advanced#troubleshooting), [Java](./java/advanced#troubleshooting), [Python](./python/advanced#troubleshooting), [Node](./nodejs/advanced#troubleshooting), [Ruby](./ruby/advanced#troubleshooting), [Go](./go/advanced#troubleshooting), [.NET](./dotnet/advanced#troubleshooting) |
 | Web Server | [Apache](./apache/advanced#troubleshooting), [Nginx](./nginx/advanced#troubleshooting), [IIS](./iis/advanced#troubleshooting), [Traefik](./traefik/advanced#troubleshooting), [Caddy](./caddy/advanced#troubleshooting) |
 | 基础架构   | [Docker](./docker/advanced#troubleshooting), [Ansible](./ansible/advanced#troubleshooting)  |
+| [数据库](./apps/db/)   | [MySQL/MariaDB](./mysql/admin#troubleshooting), [SQLSever](./sqlserver/admin#troubleshooting), [PostgreSQL](./postgresql/admin#troubleshooting), [MongoDB](./mongodb/admin#troubleshooting), [Redis](./redis/admin#troubleshooting) |
 | 操作系统   | [Linux](./linux/advanced#troubleshooting), [Windows](./windows/advanced#troubleshooting)  |
 
 

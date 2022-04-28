@@ -34,7 +34,7 @@ rethinkdb import -d [options]
 官方没有提供版本升级命令，只提供了一个升级后的数据迁移方案：[Migrating](https://rethinkdb.com/docs/migration/)
 
 
-## 故障处理
+## 故障排除{#troubleshooting}
 
 除以下列出的 RethinkDB 故障问题之外， [通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案。 
 
