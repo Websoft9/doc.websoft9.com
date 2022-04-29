@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 slug: /buy/service
 ---
 
@@ -12,5 +12,5 @@ slug: /buy/service
 
 如何购买按需服务呢？  
 
-- 阿里云、华为云、腾讯云等平台用户，在应用对应的云市场上购买我们的服务。
-- Azure，AWS等平台用户，请[联系](#contact)客户成功团队购买
+- 阿里云、华为云、腾讯云等平台用户，在对应的云市场上购买我们的服务。
+- Azure，AWS等平台用户，请[联系](../helpdesk#contact)客户成功团队购买
