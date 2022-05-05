@@ -1,0 +1,5 @@
+position: 2
+label: "安装方式"
+collapsible: true
+collapsed: true
+className: "red"

@@ -1,0 +1,5 @@
+position: 6
+label: "内容管理"
+collapsible: true
+collapsed: true
+className: "red"

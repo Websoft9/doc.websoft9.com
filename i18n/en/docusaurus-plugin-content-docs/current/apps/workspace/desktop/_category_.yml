@@ -1,0 +1,5 @@
+position: 1
+label: "原生桌面"
+collapsible: true
+collapsed: true
+className: "red"

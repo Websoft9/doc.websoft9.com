@@ -1,0 +1,26 @@
+{
+  "title": {
+    "message": "Websoft9",
+    "description": "The title in the navbar"
+  },
+  "item.label.文档": {
+    "message": "Docs",
+    "description": "Navbar item with label Docs"
+  },
+  "item.label.API": {
+    "message": "API",
+    "description": "Navbar item with label API"
+  },
+  "item.label.开源社区": {
+    "message": "Community",
+    "description": "Navbar item with label Community"
+  },
+  "item.label.技术支持": {
+    "message": "Support",
+    "description": "Navbar item with label Support"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}

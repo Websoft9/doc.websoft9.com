@@ -1,0 +1,117 @@
+---
+sidebar_position: 1
+slug: /python
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+# 指南
+
+
+
+## 场景
+
+### 配置 uWsgi
+
+uWsgi 可以作为 Python 应用程序服务器，结合 Nginx 部署网站。  
+
+1. 隔离环境中安装 uWsgi
+   ```
+   cd /data/wwwroot/mydjango && source bin/activate
+   pip install uwsgi
+   ```
+   > uWsgi 不能安装到全局环境中，否则无法管理隔离环境中的 Django 框架
+
+2. 在 */data/wwwroot/mydjango* 目录中新增一个 uWsgi 配置文件，命名为：django.ini 
+   ```
+   [uwsgi]
+   master        = true
+   protocol      = uwsgi
+   http          = 0.0.0.0:8001
+   wsgi-file     = mysite1/mysite1/wsgi.py
+   chdir         = /data/wwwroot/mydjango
+   buffer-size   = 8192
+   enable-threads= true
+   close-on-exec = true
+   uid           = nginx
+   gid           = nginx
+   ```
+
+3. 通过隔离环境中的 uWsgi 命令启动应用
+   ```
+   /data/wwwroot/mydjango/bin/uwsgi --ini /data/wwwroot/mydjango/django.ini
+   ```
+
+4. 本地浏览器访问：*http://服务器公网IP:8001* 便可以访问 Django 界面
+
+5. Nginx 配置 proxy 转发
+
+
+> 架构逻辑：**客户-uWsgi-Django**。同时，配置过程中把握好 django.ini 中的路径不要出错。
+
+### Python 版本变更{#changeversion}
+
+### 框架
+
+#### Django
+
+我们知道 `python manage.py runserver 0.0.0.0:8001` 可以访问 Django，但由于 runserver 只是 Django 框架中用于测试的 Web 服务器，在生产应用中需慎用。
+
+真正的 Django 生产应用如下图所示的架构：  
+
+![Python 生产环境架构](https://libs.websoft9.com/Websoft9/DocsPicture/zh/python/python-webhttpstructure001-websoft9.jpg)
+
+![Python 生产环境架构](https://libs.websoft9.com/Websoft9/DocsPicture/zh/python/python-webhttpstructure002-websoft9.jpg)
+
+![Python 生产环境架构](https://libs.websoft9.com/Websoft9/DocsPicture/zh/python/python-webhttpstructure003-websoft9.jpg)
+
+## 参数
+
+### 路径{#path}
+
+#### Python
+
+除了 Python3 之外，预装包中还安装了 Virtualenv, pip 等常用的 Python 工具。
+
+Python 应用目录： */data/wwwroot*  
+Python 框架目录： */data/apps*  
+Python 源码目录： */usr/lib/python*  
+Python 日志目录： */data/logs/python*  
+
+> 操作系统一般默认自带 Python2，部分操作系统默认也安装了 Python3
+
+#### Django
+
+
+Django 安装目录： */data/wwwroot/django*  
+Django systemctl 名称： *django.service*  
+
+### 版本号{#checkversion}
+
+下面的命令用于查看 Python 相关的版本号
+
+```shell
+# Python version
+python3 -V
+python -V
+
+# Django version
+/data/wwwroot/django/bin/pip show django
+``````
+
+### 服务{#service}
+
+Django 服务的管理方式如下：
+
+```shell
+systemctl start django
+systemctl stop django
+systemctl restart django
+systemctl status django
+```
+
+### 命令行{#cmd}
+
+主要包括 pip, django-admin, python 等命令

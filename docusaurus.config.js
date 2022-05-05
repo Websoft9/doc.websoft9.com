@@ -22,7 +22,7 @@ const config = {
     locales: ['zh-cn', 'en'],
   },
   plugins: [
-      require.resolve("@cmfcmf/docusaurus-search-local"),
+
     [
       'content-docs',
       /** @type {import('@docusaurus/plugin-content-docs').Options} */

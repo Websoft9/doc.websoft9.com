@@ -7,8 +7,6 @@ sidebar_position: 20
 
 本章列出使用镜像过程中所用到的 **客户端 或 Web 在线工具**：
 
-##
-
 ## 在线工具{#online}
 
 在线工具即打开浏览器即可访问的工具，区别于需要安装到本地电脑的客户端程序。
@@ -32,8 +30,6 @@ sidebar_position: 20
 | FileZilla Server  | 搭建FTP服务 | FTP服务器搭建工具    | Y        | [下载](https://filezilla-project.org/)                       |
 | TeamViewer        | 远程连接    | 远程桌面工具         | Y        | [下载](https://www.teamviewer.cn/cn/)                        |
 | 向日葵            | 远程连接    | 远程桌面工具         | Y        | [下载](https://sunlogin.oray.com/personal/)                  |
-| CyberChef            | 100+个网页工具集合  | “瑞士军刀”的在线工具       | Y        | [访问](https://gchq.github.io/CyberChef/)     |
-| Nginx Config            | Nginx 在线配置  | Nginx 在线设置配置文件      | Y        | [访问](https://www.digitalocean.com/community/tools/nginx)     |
 
 
 ### 管理数据库{#dbclient}

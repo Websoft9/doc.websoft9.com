@@ -1,0 +1,5 @@
+position: 2
+label: "云平台安装"
+collapsible: true
+collapsed: true
+className: "red"

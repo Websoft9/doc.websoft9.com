@@ -1,0 +1,5 @@
+position: 2
+label: "MySQL/MariaDB"
+collapsible: true
+collapsed: true
+className: "red"
