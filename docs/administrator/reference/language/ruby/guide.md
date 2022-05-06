@@ -11,8 +11,6 @@ slug: /ruby
 
 ### Passenger 使用
 
-
-
 ### RubyGems 包管理{#gems}
 
 **gem 源更换**
@@ -85,6 +83,8 @@ rails s -p 3000
 
 
 #### Sinatra{#sinatra}
+
+## 故障排除{#troubleshooting}
 
 ## 参数
 

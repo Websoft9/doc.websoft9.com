@@ -25,8 +25,6 @@ sudo npm install npm -g
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/dotnet/swimlane-architecture-framework.svg)
 
-## 故障速查{#troubleshoot}
-
 ## 问题解答
 
 #### 如何找到 .NET 资源？

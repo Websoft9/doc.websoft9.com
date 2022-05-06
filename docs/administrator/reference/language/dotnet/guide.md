@@ -19,6 +19,8 @@ slug: /dotnet
 #### Visual Studio
 #### Visual Studio Code
 
+## 故障排除{#troubleshooting}
+
 
 ## 参数
 

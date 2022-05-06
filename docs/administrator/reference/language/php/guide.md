@@ -126,6 +126,83 @@ Windows系统下的IIS环境，安装了多版本的PHP，可以直接修改php�
 
 2. 保存并重启 [PHP 服务](#service)
 
+#### 将 php-fpm 切换到 mod_php
+
+LAMP 默认使用 php-fpm 服务来解析PHP文件，如果想用 mod_php 解析 PHP 文件，请参照下面步骤：
+
+1. 使用 SFTP 工具修改 */etc/httpd/conf.d/php.conf* （如果该目录下有php.conf的备份文件，直接复制内容到php.conf）
+    ```
+    #
+    # The following lines prevent .user.ini files from being viewed by Web clients.
+    #
+    <Files ".user.ini">
+        <IfModule mod_authz_core.c>
+            Require all denied
+        </IfModule>
+        <IfModule !mod_authz_core.c>
+            Order allow,deny
+            Deny from all
+            Satisfy All
+        </IfModule>
+    </Files>
+
+    #
+    # Allow php to handle Multiviews
+    #
+    AddType text/html .php
+
+    #
+    # Add index.php to the list of files that will be served as directory
+    # indexes.
+    #
+    DirectoryIndex index.php
+
+    # mod_php options
+    <IfModule  mod_php7.c>
+        #
+        # Cause the PHP interpreter to handle files with a .php extension.
+        #
+        <FilesMatch \.(php|phar)$>
+            SetHandler application/x-httpd-php
+        </FilesMatch>
+
+        #
+        # Uncomment the following lines to allow PHP to pretty-print .phps
+        # files as PHP source code:
+        #
+        #<FilesMatch \.phps$>
+        #    SetHandler application/x-httpd-php-source
+        #</FilesMatch>
+
+        #
+        # Apache specific PHP configuration options
+        # those can be override in each configured vhost
+        #
+        php_value session.save_handler "files"
+        php_value session.save_path    "/var/lib/php/session"
+        php_value soap.wsdl_cache_dir  "/var/lib/php/wsdlcache"
+
+        #php_value opcache.file_cache   "/var/lib/php/opcache"
+    </IfModule>
+    ```
+
+2. 停止 [PHP-FPM 服务](#service)
+
+
+## 故障排除{#troubleshooting}
+
+#### PHP 不支持 SMTP？
+
+PHP 与 SMTP 相关的问题
+
+1.  需要了解你所使用的STMP功能是否调用了PHP软件包（或扩展类）
+
+   	* php官方提供的mail()类，这个类不支持SMTP验证
+    * php扩展包-[PHPMailer](https://github.com/PHPMailer/PHPMailer)，这个类功能比较全面
+
+2.  php_openss 版本过低或者没有安装，php_openssl 的 CA 证书缺失或异常
+
+
 ## 参数
 
 ### 路径{#path}

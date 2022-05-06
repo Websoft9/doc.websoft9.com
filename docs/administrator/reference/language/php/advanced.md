@@ -52,19 +52,6 @@ eAccelerator
 
 [phar](https://www.php.net/manual/zh/intro.phar.php) 扩展提供了一种将整个 PHP 应用程序放入称为“phar”（PHP 存档）的单个文件的方法，以便于分发和安装。
 
-## 故障速查{#troubleshoot}
-
-#### PHP 不支持 SMTP？
-
-PHP 与 SMTP 相关的问题
-
-1.  需要了解你所使用的STMP功能是否调用了PHP软件包（或扩展类）
-   	* php官方提供的mail()类，这个类不支持SMTP验证
-    * php扩展包-[PHPMailer](https://github.com/PHPMailer/PHPMailer)，这个类功能比较全面
-
-2.  php_openss版本过低或者没有安装，php_openssl的CA证书确实或异常
-
-
 ## 问题解答
 
 #### PHP extension 与 PHP Package 区别？

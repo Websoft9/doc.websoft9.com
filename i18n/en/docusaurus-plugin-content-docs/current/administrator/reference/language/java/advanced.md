@@ -48,8 +48,6 @@ Tomcat 是一个应用服务器中间件系统，用于运行基于 Java 的 Web
 
 Tomcat 是一个应用服务器中间件系统，用于运行基于 Java 的 Web 应用程序。
 
-## 故障速查{#troubleshoot}
-
 ## 问题解答
 
 #### JDK 与 JRE 有什么区别？

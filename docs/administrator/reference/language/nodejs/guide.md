@@ -32,6 +32,7 @@ npm run start -- --host 0.0.0.0  --port 3002
 #### Vuepress{#vuepress}
 #### Gatsby.js{#gatsby}
 
+## 故障排除{#troubleshooting}
 
 ## 参数
 
