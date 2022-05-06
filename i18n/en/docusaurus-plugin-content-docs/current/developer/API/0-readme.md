@@ -3,4 +3,4 @@ slug: /api
 ---
 # API
 
-即将推出
+Coming soon...

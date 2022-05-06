@@ -3,7 +3,7 @@ sidebar_position: 2
 slug: /linux/advanced
 ---
 
-# 进阶
+# Advanced
 
 Linux系统博大精深，学习Linux的资料浩瀚如大海。本文档不打算再做重复造轮子的事情，我们尽量根据实践中很常见的**技术要点**进行讲解，同时列出一些操作范例：
 

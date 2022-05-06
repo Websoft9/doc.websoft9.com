@@ -1,6 +1,6 @@
 ---
 sidebar_position: 5
-slug: /troubleshooting/softpower
+slug: /troubleshoot/softpower
 ---
 
 # 故障解决者的软实力

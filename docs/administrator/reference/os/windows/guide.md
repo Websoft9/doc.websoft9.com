@@ -123,3 +123,6 @@ Install-PackageProvider -Name NuGet -Force
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/windows/windows-ssui-websoft9.png)
 
+
+## 故障排除{#troubleshoot}
+

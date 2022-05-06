@@ -2,22 +2,21 @@
 sidebar_position: 1
 slug: /ansible
 tags:
-  - Ansible
+  - Configure Cloud
   - DevOps
 ---
 
 import AnsibleFacts from './_facts.md';
 
-# 指南
+# Guide
 
+## Tutorial
 
-## 场景
+### Ansible quick start
 
-### 快速体验
+If you have use Websoft9 Ansible, you can quick start it below:  
 
-如果您安装了 Ansible 镜像，参考如下步骤快速体验：
-
-1. 使用 SSH 连接到服务器，运行 `ansible -h` 命令，查看帮助信息
+1. Use SSH to connect Server, and run the command `ansible -h` to list all help
    ```
    usage: ansible [-h] [--version] [-v] [-b] [--become-method BECOME_METHOD]
                   [--become-user BECOME_USER] [-K] [-i INVENTORY] [--list-hosts]
@@ -41,7 +40,7 @@ import AnsibleFacts from './_facts.md';
 
    ```
 
-2. 运行 `ansible localhost -m setup` 命令，查看本机获取的系统信息
+2. Run the command `ansible localhost -m setup` to get the facts of machine
    ```
    localhost | SUCCESS => {
     "ansible_facts": {
@@ -75,32 +74,19 @@ import AnsibleFacts from './_facts.md';
         "ansible_bios_version": "seabios-1.9.1-qemu-project.org",
         ...
    ```
-4. 运行服务器上的 playbook 范例
+4. Run the playbook of Ansible
    ```
    cd /data/apps/ansible
    ansible-playbook -i hosts test.yml -c local
-   ```
+   ``` 
 
-4. 以上命令顺利运行，即表明 Ansible 验证通过
+### Use Role{#installrole}
 
+Websoft9 have maintenance some useful [Ansible role](https://github.com/websoft9?q=role&type=all&language=&sort=)）for you to install Apache, Nginx, PHP, MySQL, JDK easily.  
 
-### 代码分析与测试
+e.g  Install LAMP runtime by Ansible roles
 
-Ansible 的测试包括：静态代码分析和程序运行结果测试。  
-
-静态代码测试的主要目的是强制执行A​​nsible编码标准和要求。  
-
-Ansible 官网文档有一章专门的 [Testing Strategies](https://docs.ansible.com/ansible/2.9/reference_appendices/test_strategies.html)。  
-
-### 并发设置
-
-### 安装 Role{#installrole}
-
-Websoft9 提供基于 Ansible  role 的基础组件（[清单](https://github.com/websoft9?q=role&type=all&language=&sort=)），包括：Apache, Nginx, PHP, MySQL, JDK 等数十种。
-
-下面以安装 LAMP 环境为范例：
-
-1. SSH 连接云服务器，运行如下的脚本
+1. SSH to connect Server and run the below commands
    ```
    # MySQL
    git clone https://github.com/Websoft9/role_mysql.git
@@ -114,102 +100,78 @@ Websoft9 提供基于 Ansible  role 的基础组件（[清单](https://github.co
    git clone https://github.com/Websoft9/role_apache.git
    ansible-playbook role_apache/tests/test.yml
    ```
-2. 运行过程中，可以选择所需的版本
+2. You can select version for PHP, MySQL when you running these roles
 
-## 参数
+## Troubleshoot{#troubleshoot}
 
-### 路径{#path}
+#### No python-urllib3? 
 
-Ansible 配置文件： */etc/ansible/ansible.cfg*  
-Ansible 示例目录： */data/apps/ansible*  
+```
+yum install python-urllib3
+```
 
-> 可创建 ansible.cfg 到用户家目录或当前工作目录。优先级：当前工作目录 > 用户家目录 > etc 目录
+#### Can't connect hosts always?
 
+Try to clear */root/.ssh/known_hosts*  
 
-### 版本号{#version}
+## Parameters
+
+### Path{#path}
+
+Ansible configuration file: */etc/ansible/ansible.cfg*  
+Ansible sample directory: */data/apps/ansible*  
+
+### Version{#version}
 
 ```shell
 # Ansible  Version
 ansible --version
 ```
 
-### 命令行{#cmd}
+### CLI{#cmd}
 
-以下是 Ansible 命令行的完整列表。每个页面均包含对该实用程序的描述以及所支持参数的列表。
+Most users are familiar with ansible and ansible-playbook, but those are not the only utilities Ansible provides. Below is a complete list of Ansible utilities. Each page contains a description of the utility and a listing of supported parameters.
 
-- [ansible](https://docs.ansible.com/ansible/latest/cli/ansible.html)：主命令
-- [ansible-config](https://docs.ansible.com/ansible/latest/cli/ansible-config.html)：配置文件和配置项修改
-- [ansible-console](https://docs.ansible.com/ansible/latest/cli/ansible-console.html)：交互式运行 ansible 命令
-- [ansible-doc](https://docs.ansible.com/ansible/latest/cli/ansible-doc.html)：查询文档
-- [ansible-galaxy](https://docs.ansible.com/ansible/latest/cli/ansible-galaxy.html)：galaxy 项目库发布与下载
-- [ansible-inventory](https://docs.ansible.com/ansible/latest/cli/ansible-inventory.html)：主机清单管理
-- [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html)：运行 playbook 程序
-- [ansible-pull](https://docs.ansible.com/ansible/latest/cli/ansible-pull.html)：拉取并运行 playbook 程序
-- [ansible-vault](https://docs.ansible.com/ansible/latest/cli/ansible-vault.html)：加密处理
+- [ansible](https://docs.ansible.com/ansible/latest/cli/ansible.html)
+- [ansible-config](https://docs.ansible.com/ansible/latest/cli/ansible-config.html)
+- [ansible-console](https://docs.ansible.com/ansible/latest/cli/ansible-console.html)
+- [ansible-doc](https://docs.ansible.com/ansible/latest/cli/ansible-doc.html)
+- [ansible-galaxy](https://docs.ansible.com/ansible/latest/cli/ansible-galaxy.html)载
+- [ansible-inventory](https://docs.ansible.com/ansible/latest/cli/ansible-inventory.html)
+- [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html)
+- [ansible-pull](https://docs.ansible.com/ansible/latest/cli/ansible-pull.html)
+- [ansible-vault](https://docs.ansible.com/ansible/latest/cli/ansible-vault.html)
 
-ansible-playbook 是最常见的命令，也是运行程序的主要入口。  
-
-实际上，Ansible 也支持在一条命令中运行使用模块，实现我们的部署目标。  
-
-官方称这种命令的运行方式为 [Ad-doc](https://docs.ansible.com/ansible/2.9/user_guide/intro_adhoc.html)
-
-示例  
+ansible-playbook is the most popular command to run Ansible program, but Ansible have [Ad-doc](https://docs.ansible.com/ansible/2.9/user_guide/intro_adhoc.html) to run the single program:  
 
 ```
-# 打印本机磁盘信息
+# Print disk information
 ansible localhost -m command -a 'df -h'
 
-# 获取 facts 信息
+# Get facts
 ansible localhost -m setup
 
-# 连通性测试
+# Test ping
 ansible all -m ping
 
-# 本机上安装 docker-composer
+# Install docker-composer
 ansible localhost -m get_url -a "url=https://getcomposer.org/composer-stable.phar dest=/usr/bin/composer mode=0750"
 ```
 
-命令解释：
+### Configuration file{#cfg}
 
-* localhost/all：主机名/IP/分组
-* -m：指定模块（默认是command，所以可以把-m command这个去掉）
-* command/setup/ping：模块名称
-* -a：模块参数
-* 'df -h'：参数值
+You can use different [ansible.cfg](https://docs.ansible.com/ansible/latest/reference_appendices/config.html) for you Ansible
 
-### 配置文件{#cfg}
+- `ANSIBLE_CONFIG` (environment variable if set)
+- `ansible.cfg` (in the current directory)
+- `~/.ansible.cfg` (in the home directory)
+- `/etc/ansible/ansible.cfg`
 
-Ansible 支持多个位置存放 ansible.cfg 配置文件，包括：
+### Role resource
 
-* ./ansible.cfg 当前工作目录下的 ansible.cfg
-* ~/.ansible.cfg 当前用户家目录下的 .ansible.cfg
-* /etc/ansible/ansible.cfg 安装自动产生的 ansible.cfg
-* ANSIBLE_CONFIG 配置文件环境路径的环境变量
+Open source [Ansible role](https://github.com/search?q=org%3AWebsoft9+role) powered by Websoft9
 
-如果有多个配置文件怎么办？
-
-Ansible 有优先级原则：环境变量 > 当前工作目录 > 用户家目录 > etc
-
-
-下面是常用的配置项：
-
-| 项                | 说明                                                         | 示例                            |
-| ----------------- | ------------------------------------------------------------ | ------------------------------- |
-| log_path          | 日志文件地址，Ansible 默认不记录日志，需自定义             | log_path = /var/log/ansible.log |
-| inventory         | 资源清单（主机列表）文件位置                                 | inventory = /etc/ansible/hosts  |
-| library           | 模块目录，有默认值                                           | library = /usr/share/ansible    |
-| forks             | 工作进程最大值，默认值为 5                                   | forks = 10                      |
-| sudo_user         | 设置运行 Ansible 程序的默认用户                              | sudo_user = root                |
-| remote_port       | 远程主机的端口，用于连接被管理主机，默认值为 22              | remote_port = 22                |
-| host_key_checking | 是否检查 SSH 主机的秘钥，默认为 True。适用于同一台被管理主机秘钥发生变化的错误提示，如果不希望出现这种提示，可以设置本项为 False | host_key_checking = False       |
-| timeout           | 设置连接远程主机的 SSH 超时时间                              | timeout = 60                    |
-
-### Role 资源
-
-Websoft9 提供了包括 Apache,Nginx, MySQL 等数十个常见应用的自动化 [Ansible role](https://github.com/search?q=org%3AWebsoft9+role)， 100%开源，非常便于用户使用。
-
-
-### 环境变量{#facts}
+### Environment{#facts}
 
 <AnsibleFacts name="facts" />;
 

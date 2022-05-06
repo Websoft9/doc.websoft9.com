@@ -159,7 +159,7 @@ systemctl restart kafka
 
 ## 故障处理
 
-除以下列出的 Kafka 故障问题之外， [通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案：
+除以下列出的 Kafka 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案：
 
 #### Kafka服务无法启动？
 

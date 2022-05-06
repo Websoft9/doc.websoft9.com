@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-slug: /troubleshooting/method
+slug: /troubleshoot/method
 ---
 
 # 故障诊断三分法

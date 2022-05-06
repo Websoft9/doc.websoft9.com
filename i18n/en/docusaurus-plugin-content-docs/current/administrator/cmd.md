@@ -4,7 +4,7 @@ sidebar_position: 19
 
 # Linux Commands
 
-This is the Websoft9 Support Team’s collection of information regarding Linux, that they sometimes use while troubleshooting. It is listed here for transparency, and it may be useful for users with experience with Linux.
+This is the Websoft9 Support Team’s collection of information regarding Linux, that they sometimes use while troubleshoot. It is listed here for transparency, and it may be useful for users with experience with Linux.
 
 ## Version
 
@@ -69,13 +69,11 @@ cd /data/wwwroot
 
 # Modify the owner of user and group for directory
 chown -R nginx.nginx /data/wwwroot
+chmod u+x <file>
 
 # Modify the Read, Write and Excuse for directory
 find /data/wwwroot/default -type f -exec chmod 640 {} \
 find /data/wwwroot/default -type d -exec chmod 750 {} \
-
-# 修改文件权限
-chmod u+x <file>
 ```
 
 ## Search
@@ -135,17 +133,10 @@ systemctl restart apache
 yum update -y
 yum upgrade -y
 
-# 重启所有容器
+# Restart all containers
 docker restart $(docker ps -a | awk '{ print $1}' | tail -n +2)
 
-# 显示 tcp，udp 的端口和进程等相关情况。
-netstat -tunlp
-netstat -tunlp | grep 端口号
-
-# 查看服务器 22 端口的占用情况
-lsof -i:22
-
-# kill 端口对应的进程
+# kill process
 kill -9 PID
 
 # Print last lines in log file where 'n'
@@ -153,7 +144,7 @@ kill -9 PID
 tail -n /path/to/log/file
 ```
 
-## 资源
+## Resource
 
 ```
 # disk space info. The '-h' gives the data in human-readable values
@@ -184,14 +175,20 @@ strace -tt -T -f -y -yy -s 1024 -p <pid>
 ps auwx | grep puma | awk '{ print " -p " $2}' | xargs strace -tt -T -f -y -yy -s 1024 -o /tmp/puma.txt
 ```
 
-## 网络
+## Network
 
 ```
+# Display port and process from TCP, UDP 
+netstat -tunlp
+netstat -tunlp | grep PORT
+
+# Check the 22 Port
+lsof -i:22
+
 # Find the programs that are listening on ports
 netstat -plnt
 ss -plnt
 lsof -i -P | grep <port>
-
 
 # Show domain IP address
 dig +short example.com
@@ -227,7 +224,7 @@ systemd-resolve --status
 sudo tcpdump host www.example.com
 ```
 
-## 包管理
+## Package
 
 ```
 # Debian/Ubuntu
@@ -256,4 +253,3 @@ rpm -ivh <package_name>.rpm
 # Find an installed package
 rpm -qa | grep <package>
 ```
-

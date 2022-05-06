@@ -253,7 +253,7 @@ uWSGI 目录： */etc/uwsgi.d*
 
 ### Gunicorn
 
-## 故障速查{#troubleshooting}
+## 故障速查{#troubleshoot}
 
 #### 执行 django 启动命令报错？
 

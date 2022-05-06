@@ -10,9 +10,9 @@ tags:
 
 ## 场景
 
-## 故障排除{#troubleshooting}
+## 故障排除{#troubleshoot}
 
-除以下列出的 Memcached 故障问题之外， [通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案。 
+除以下列出的 Memcached 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
 
 
 ## 常见解答

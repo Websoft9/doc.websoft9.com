@@ -9,7 +9,7 @@ tags:
 
 # 指南
 
-Caddy是一款基于 Go 语言编写的强大且可扩展的平台，可以给你的站点、服务和应用程序提供服务。
+[Caddy](https://caddyserver.com/) 是一款基于 Go 语言编写的强大且可扩展的平台，可以给你的站点、服务和应用程序提供服务。
 
 ## 场景
 
@@ -32,6 +32,7 @@ file_server
 reverse_proxy /api/* 127.0.0.1:9005
 ```
 
+## 故障排除{#troubleshoot}
 
 ## 参数
 

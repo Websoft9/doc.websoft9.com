@@ -4,7 +4,7 @@ sidebar_position: 19
 
 # 常用命令
 
-可能需要用到的 Linux 命令（来源：[linux_cheat_sheet](https://docs.gitlab.com/ee/administration/troubleshooting/linux_cheat_sheet.html)）
+可能需要用到的 Linux 命令（来源：[linux_cheat_sheet](https://docs.gitlab.com/ee/administration/troubleshoot/linux_cheat_sheet.html)）
 
 ## 版本
 

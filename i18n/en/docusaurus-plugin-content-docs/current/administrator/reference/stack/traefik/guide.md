@@ -3,14 +3,16 @@ sidebar_position: 1
 slug: /traefik
 ---
 
-# 指南
+# Guide
 
-## 场景
+## Tutorial
 
-### 域名绑定{#binddomain}
+### Domain binding{#binddomain}
 
-## 参数
+## Troubleshoot{#troubleshoot}
 
-### 路径{#path}
-### 服务{#service}
-### 命令行{#cmd}
+## Parameters
+
+### Path{#path}
+### Service{#service}
+### CLI{#cmd}

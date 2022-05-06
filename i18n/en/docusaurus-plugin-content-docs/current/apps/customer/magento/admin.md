@@ -51,7 +51,7 @@ Magento 可以通过两种方式升级：后台升级界面和 Composer 升级�
 
 ## 故障排除
 
-除以下列出的 Magento 故障问题之外， [通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案。 
+除以下列出的 Magento 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
 
 #### Magento 在线升级或在线安装插件报错？{#updateerror}
 

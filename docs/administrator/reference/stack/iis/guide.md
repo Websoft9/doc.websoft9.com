@@ -147,6 +147,8 @@ HTTP 自动跳转至 HTTPS 的操作步骤如下：
 3. 设置 `example.com` 与 `www.example.cm` 的重定向关系
 
 
+## 故障排除{#troubleshoot}
+
 ## 参数
 
 ### 服务{#service}

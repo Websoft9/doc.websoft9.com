@@ -53,10 +53,10 @@ MySQL 到 MySQL 的迁移，可以通过数据的**导入导出**快速实现。
 
 但是，其他 DBMS 到 MySQL 的迁移最好是使用迁移工具，例如：[MySQL Workbench: Database Migration](https://www.mysql.com/products/workbench/migrate/)
 
-## 故障排除{#troubleshooting}
+## 故障排除{#troubleshoot}
 
 
-除以下列出的 MySQL 故障问题之外， [通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案。 
+除以下列出的 MySQL 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
 
 
 #### 导入数据库报错？

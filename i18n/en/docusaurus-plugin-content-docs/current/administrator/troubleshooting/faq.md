@@ -5,7 +5,7 @@ slug: /faq
 
 # 热门问题
 
-请根据您的工作场景参考对应的问题。如果找不到您所需的问题，请回到[故障主页](./troubleshooting)或联系[技术支持](./helpdesk)。  
+请根据您的工作场景参考对应的问题。如果找不到您所需的问题，请回到[故障主页](./troubleshoot)或联系[技术支持](./helpdesk)。  
 
 ## 初始化场景{#setup}
 
@@ -130,7 +130,7 @@ Nginx 的 502 错误全程为 “Nginx 502 Bad Gateway”。错误不在 Nginx �
 
 #### 如何查看错误日志？
 
-参阅: [日志诊断](./troubleshooting/logs)
+参阅: [日志诊断](./troubleshoot/logs)
 
 #### 端口被占用导致应用无法启动或报错？{#portconflict}
 

@@ -116,7 +116,6 @@ Visual Studio IDE 为了满足开发者一站式的体验，也集成了部署�
 
 所以，此处我们不再细说。  
 
-## 故障处理{#troubleshooting}
 
 ## 常见问题{#faq}
 

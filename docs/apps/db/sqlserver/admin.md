@@ -96,9 +96,9 @@ SQL Server Express的数据库由于没有SQL Server Agent服务，所以也就�
 
 * [在 Windows Server 2012中实现SQL SERVER EXPRESS自动备份数据库](http://shiyousan.com/post/635615192184858364)
 
-## 故障排除{#troubleshooting}
+## 故障排除{#troubleshoot}
 
-除以下列出的 SQL Server 故障问题之外， [通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案。 
+除以下列出的 SQL Server 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
 
 #### 应用程序无法连接 SQLServer数据库？
 

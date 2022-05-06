@@ -299,7 +299,7 @@ Apache可以作为常见的开发语言的 Web 服务器，集成数据库、应
 
 下面我们以常见的开发语言为例，分别介绍它们是如何与Apache一起工作的。
 
-#### PHP
+##### PHP
 
 Apache被广泛用于PHP环境，Apache有两种PHP处理机制：
 
@@ -376,7 +376,7 @@ DirectoryIndex index.php
 
 3. 保存并重启 [Apache 服务](#service)
 
-#### Java
+##### Java
 
 Apache HTTP Server 无法直接运行Java程序，而是与Tomcat一起组合去部署Java程序。
 
@@ -395,7 +395,7 @@ ProxyPass / http://localhost:8080/
 
 更多请参考：[《Apache HTTP Server 与 Tomcat 的三种连接方式介绍》](https://www.ibm.com/developerworks/cn/opensource/os-lo-apache-tomcat/)
 
-#### Python
+##### Python
 
 Apache HTTP Server 也可以用于Python环境，通过扩展模块mod_proxy_uwsgi，连接Python的uWSGI服务器或Gunicorn服务器，便可以解析Python程序。
 
@@ -422,7 +422,7 @@ Apache HTTP Server 也可以用于Python环境，通过扩展模块mod_proxy_uws
    ProxyPass / uwsgi://127.0.0.1:8080
    ```
 
-#### Node.js
+##### Node.js
 
 Apache HTTP Server 也可以用于Node.js环境，Apache HTTP Server 与 Node.js 最常见的连接方式是http_proxy，即利用 Apache 自带的 mod_proxy 模块使用代理技术来连接 Node.js。   
 
@@ -443,7 +443,34 @@ server {
 }
 ```
 
+## 故障排除{#troubleshoot}
 
+#### Apache 报错：You don't have permission to access/on this server
+
+解决办法：
+
+1.  检查网站目录的权限
+2.  配置虚拟主机配置文件是否有 "AllowOverride All   Require all granted" 相关内容
+
+#### 重启 Apache 服务显示 *No spaces...*
+
+出现此信息的时候，重启服务是成功的。
+
+解决方案:
+
+```
+echo "fs.inotify.max_user_watches=262144" >> /etc/sysctl.conf 
+
+sysctl -p
+```
+
+#### 命令 `httpd -t` 报错 [so:warn] [pid 14645] AH01574: module ssl_module is already loaded
+
+问题原因：mod_ssl 重复加载   
+解决方案：检查下面两个文件，找到 mod_ssl 字段，注释其中一个
+
+  * /etc/httpd/conf.modules.d/00-base.conf
+  * /etc/httpd/conf.modules.d/00-ssl.conf 
 
 ## 参数
 

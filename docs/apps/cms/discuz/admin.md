@@ -35,7 +35,7 @@ Discuz 官方提供了一个：[升级参考](https://gitee.com/Discuz/DiscuzX/w
 
 ## 故障排除
 
-除以下列出的 Discuz 故障问题之外， [通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案。 
+除以下列出的 Discuz 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
 
 #### Discuz后台系统首页的文件校验显示大量文件被修改，这是系统风险或网站漏洞吗？
 

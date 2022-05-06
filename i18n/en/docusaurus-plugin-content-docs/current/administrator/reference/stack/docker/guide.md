@@ -3,15 +3,15 @@ sidebar_position: 1
 slug: /docker
 ---
 
-# 指南
+# Guide
 
-[Docker](https://www.docker.com)  是轻量级虚拟化技术，可以在原生操作系统上虚拟出多个容器（虚拟机）。同时，Docker 配套镜像机制，可以将容器中所有程序和环境打包成“单一”文件，让软件的安装和运行无缝对接，彻底改变原来开发和运维工作的割裂问题。
+[Docker](https://www.docker.com) helps developers bring their ideas to life by conquering the complexity of app development.   
 
-## 场景
+## Tutorial
 
-### 安装命令{#install}
+### Install Docker{#install}
 
-如果您的服务器尚未安装 Docker，请使用如下命令安装它：
+You can install Docker and Compose by official script below if you have not install them:  
 
 ```
 curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh
@@ -21,76 +21,67 @@ ln -sf /usr/local/bin/docker-compose  /usr/bin
 sudo systemctl start docker
 ```
 
-### 镜像仓库加速{#imagespeed}
+### Set Docker Registry in China{#imagespeed}
 
-如果从 Dockerhub 下载镜像镜像非常慢的话，就需要通过如下的方式修改仓库地址：
+If you want to speed you docker image pull, you should set your Docker Registry: 
 
-1. 选择或获取你喜欢的国内镜像仓库（加速地址）
+1. Select your Docker Registry accelerated URL of China
    ```
-   #1 Docker 中文社区
+   #1 Docker china community
    https://registry.docker-cn.com
 
-   #2 网易仓库
+   #2 162 mirror
    http://hub-mirror.c.163.com
 
-   #3 腾讯仓库
+   #3 Tencent mirror
    https://mirror.ccs.tencentyun.com
-
-   #4 阿里云仓库
-   https://f53jxx8r.mirror.aliyuncs.com
    ```
-   > 上述阿里云仓库加速地址仅供参考，建议登录控制台后，从后台[获取](https://cr.console.aliyun.com/cn-zhangjiakou/instances/mirrors)获取
 
-2. 修改 */etc/docker/daemon.json* 文件（如果没有可以增加），插入下值
+2. Modify your */etc/docker/daemon.json* and add the below paragraph to it
     ```
+    # Single URL
     {
-      "registry-mirrors": ["https://f53jxx8r.mirror.aliyuncs.com"]
+      "registry-mirrors": ["http://hub-mirror.c.163.com"]
+    }
+
+    # Multiple URL
+    {
+      "registry-mirrors": ["https://registry.docker-cn.com","https://docker.mirrors.ustc.edu.cn","http://hub-mirror.c.163.com"]
     }
     ```
 
-3. 重启服务后生效
+3. Save and restart your Docker service
     ```
     sudo systemctl daemon-reload
     sudo systemctl restart docker
     ```
 
-4. Docker 支持配置多个仓库地址，类似：
-    ```
-    {
-      "registry-mirrors": ["https://registry.docker-cn.com","https://f53jxx8r.mirror.aliyuncs.com","https://docker.mirrors.ustc.edu.cn","http://hub-mirror.c.163.com"]
-    }
-    ```
+### Enable Docker API{#enableapi}
 
-### 远程 API 访问设置{enableapi}
-
-Docker 服务提供了丰富的 API 接口，默认只能在本地以 **socket** 通讯方式访问 API。
+By default, docker API just access by local socket 
 
 ```
 curl --unix-socket /var/run/docker.sock  http://docker/version
 ```
 
-如果需添加远程访问 [Docker API](https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-socket-option)，需修改 [Docker系统服务](#path)，然后在 **ExecStart** 这一行添加 `-H tcp://0.0.0.0:2375`
-
+If you want to enable remote [Docker API](https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-socket-option), you should modify [Docker system service]. 
 ```
 ExecStart=/usr/bin/dockerd -H fd://   --containerd=/run/containerd/containerd.sock -H tcp://0.0.0.0:2375
 ```
 
+### Check Service in Docker
 
-
-### 查看容器内部服务
-
-虽然容器内无法使用 systemctl 命令，但是可以使用 service 命令查看和管理服务
+You should know that we can't use systemctl command in Container, but you can use `service` command in Container
 
 ```
-# 查看所有服务状态
+# check all service at Container
 service --status-all
 
-# 管理服务
+# Manage service at Container
 service apache2 start | status | stop | restart
 ```
 
-### 重置容器{#resetcontainer}
-
+### Recreate Docker{#resetcontainer}
 
 ```
 cd /data/apps/appname
@@ -100,28 +91,27 @@ docker-compose up -d
 ```
 
 
-### 单容器升级
+### Upgrade single container
 
-以正在运行的 MySQL 容器为例，如果没有持久化卷，容器的升级步骤：
+Take the MySQL container as an example to show the upgrade steps:  
 
 ```
-#更新镜像
+# upgrade MySQL Docker image
 docker pull mysql
 
-#停止容器
+# stop your MySQL container
 docker stop my-mysql-container
 
-#删除容器
+# delete your MySQL container
 docker rm my-mysql-container
 
-#重载容器
-docker run --name=my-mysql-container --restart=always \
-  -e MYSQL_ROOT_PASSWORD=mypwd -v /my/data/dir:/var/lib/mysql -d mysql
+# Recreate your MySQL container use previous data
+docker run --name=my-mysql-container --restart=always -e MYSQL_ROOT_PASSWORD=mypwd -v /path/data/dir:/var/lib/mysql -d mysql
 ```
 
-### 多容器升级
+### Upgrade multiply container
 
-如果使用的是 Docker-Compose 启动的多个容器，升级只需运行如下三条命令：
+If you use Compose for multiply container, upgrade is very easy: 
 
 ```
 docker-compose down -v
@@ -129,58 +119,49 @@ docker-compose pull
 docker-compose up -d
 ```
 
-### Compose 文件附件初始化命令
+## Troubleshoot{#troubleshoot}
 
-有三种运行个性化命令的方式：
+#### Can't access application of container?{#noremote}
 
-* command 实现，例如：command: bundle exec thin -p 3000
-* entrypoint 实现，例如：entrypoint: /code/entrypoint.sh
-* 多容器共享数据卷实现
-  ```
-    superset-init:
-    image: *superset-image
-    container_name: superset_init
-    command: ["/app/docker/docker-init.sh"]
-    env_file: docker/.env-non-dev
-    depends_on: *superset-depends-on
-    user: "root"
-    volumes: *superset-volumes
+There are three possible reasons for this problem:
 
-  superset-worker:
-    image: *superset-image
-    container_name: superset_worker
-    command: ["/app/docker/docker-bootstrap.sh", "worker"]
-    env_file: docker/.env-non-dev
-    restart: unless-stopped
-    depends_on: *superset-depends-on
-    user: "root"
-    volumes: *superset-volumes
-  ```
+1. The port mapping is set incorrectly, causing the container to have no network
+2. The container does not have remote access
+3. The port is not enabled at Security Group 
+
+#### docker-containerd.socket: timeout?
+
+You should disable your SElinux before running Docker 
+
+#### Docker can't start at Windows?
+
+Please make sure you have not install any security software on Windows
 
 
-## 参数
+## Parameters
 
-### 路径{#path}
+### Path{#path}
 
-Docker 根目录: */var/lib/docker*  
-Docker 镜像目录: */var/lib/docker/image*   
-Docker daemon.json 文件：默认没有创建，请到 */etc/docker* 目录下根据需要自行创建   
-Portainer 数据卷：*/var/lib/docker/volumes/portainer_data/_data*    
-Docker 系统服务： */lib/systemd/system/docker.service*  
+Docker root directory: */var/lib/docker*  
+Docker image directory: */var/lib/docker/image*   
+Docker daemon.json: please create it when you need and save to to the directory */etc/docker*   
+Docker systemd service: */lib/systemd/system/docker.service*  
 
-### 端口{#port}
+### Port{#port}
 
-### 版本{#version}
+You should set port for Docker API
+
+### Version{#version}
 
 ```shell
 # Docker Version
 docker -v
 ```
-### 服务{#service}
+### Service{#service}
 
-使用由 Websoft9 提供的 Docker 部署方案，可能需要用到的服务如下：
+These commands you must know when you using the Websoft9
 
-#### Docker 系统服务
+#### Docker
 
 ```shell
 sudo systemctl start docker
@@ -189,56 +170,53 @@ sudo systemctl stop docker
 sudo systemctl status docker
 ```
 
-#### Docker-Compose 服务
+#### Docker-Compose
 
 ```
-#创建容器编排
+# Create multiply container
 sudo docker-compose up
 
-#创建容器编排并重建有变化的容器
+# Create multiply container at backend
 sudo docker-compose up -d
 
-#启动/重启
+# Mange all containers 
 sudo docker-compose start
 sudo docker-compose stop
 sudo docker-compose restart
 ```
 
-#### Docker 容器服务
+#### Docker container
 
-> 终止命令 `stop` 会从进程中释放容器的资源，但不会删除容器
+> The `stop` command will release system resource of container but not delete it
 
 ```shell
-#示例：mysql
+# e.g: mysql
 sudo docker pause mysql
 sudo docker stop mysql
 
-#示例：redis
+# e.g: redis
 sudo docker pause redis
 sudo docker stop redis
 ```
 
+### CLI{#cmd}
 
-### 命令行{#cmd}
-#### Docker 命令
+These commands is for you to manage Docker
 
-下面是使用 Docker 可能需要用到的常见命令
-~~~
-systemctl start/stop docker     运行/停止 docker 服务
-systemctl enable docker         使 docker 开机自启
-docker pull                     从镜像库拉取容器镜像
-docker ps                       查看正在运行的容器列表（可以看到容器ID，所映射的端口号等等）
-docker ps -a                    查看所有的容器（不管是否运行都能看到）
-docker start/stop CONTAINER ID  开始/停止容器（CONTAINER ID 是容器的ID）            
-docker rm CONTAINER ID          删除容器
-docker stop $(docker ps -aq)    停止所有容器
-docker rm $(docker ps -aq)      删除所有容器
-docker kill CONTAINER ID        直接关闭容器
-docker rmi $(docker images -q) -f 删除所有镜像
-docker images  # 查询已下载镜像
-~~~
+```
+systemctl start/stop docker     #start/stop docker service
+systemctl enable docker         #enable docker running when OS start
+docker pull                     #pull Docker image
+docker ps                       #list all running Containers 
+docker ps -a                    #list all Containers
+docker start/stop CONTAINER ID  #start/stop Container            
+docker rm CONTAINER ID          #delete Container by ID
+docker kill CONTAINER ID        #shut down Container
+docker images                   #list all images have been downloaded
+```
 
-更多详细命令
+#### Docker
+
 ```
 Usage:  docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 
@@ -347,7 +325,7 @@ Options:
   -w, --workdir string                 Working directory inside the container
 ```
 
-#### Docker Compose 命令
+#### Docker Compose 
 
 ```
 $docker-compose -h
@@ -413,9 +391,9 @@ Commands:
   version            Show version information and quit
 ```
 
-### 模板{#template}
+### Template{#template}
 
-#### docker-compose 模板
+#### docker-compose template
 
 ```
 services:
@@ -459,4 +437,32 @@ networks:
   front-tier: {}
   back-tier: {}
 ```
-#### dockerfile 模板
+#### dockerfile template
+
+```
+# syntax=docker/dockerfile:1
+FROM golang:1.16-alpine AS build
+
+# Install tools required for project
+# Run `docker build --no-cache .` to update dependencies
+RUN apk add --no-cache git
+RUN go get github.com/golang/dep/cmd/dep
+
+# List project dependencies with Gopkg.toml and Gopkg.lock
+# These layers are only re-built when Gopkg files are updated
+COPY Gopkg.lock Gopkg.toml /go/src/project/
+WORKDIR /go/src/project/
+# Install library dependencies
+RUN dep ensure -vendor-only
+
+# Copy the entire project and build it
+# This layer is rebuilt when a file changes in the project directory
+COPY . /go/src/project/
+RUN go build -o /bin/project
+
+# This results in a single layer image
+FROM scratch
+COPY --from=build /bin/project /bin/project
+ENTRYPOINT ["/bin/project"]
+CMD ["--help"]
+```

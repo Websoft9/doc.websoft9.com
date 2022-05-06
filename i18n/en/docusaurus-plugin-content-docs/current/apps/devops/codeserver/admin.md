@@ -14,7 +14,7 @@ tags:
 
 ## 故障排除
 
-除以下列出的 code-server 故障问题之外， [通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案。 
+除以下列出的 code-server 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
 
 #### code-server 创建文件权限不足？
 

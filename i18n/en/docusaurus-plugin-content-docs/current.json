@@ -500,12 +500,12 @@
     "description": "The label for category 故障问题 in sidebar docs"
   },
   "sidebar.docs.category.架构参考": {
-    "message": "架构参考",
-    "description": "The label for category 架构参考 in sidebar docs"
+    "message": "Architecture Reference",
+    "description": "The label for category Architecture Reference in sidebar docs"
   },
   "sidebar.docs.category.程序环境": {
-    "message": "程序环境",
-    "description": "The label for category 程序环境 in sidebar docs"
+    "message": "Language",
+    "description": "The label for category Language in sidebar docs"
   },
   "sidebar.docs.category.PHP": {
     "message": "PHP",
@@ -536,16 +536,16 @@
     "description": "The label for category .NET in sidebar docs"
   },
   "sidebar.docs.category.基础组件": {
-    "message": "基础组件",
-    "description": "The label for category 基础组件 in sidebar docs"
+    "message": "Components",
+    "description": "The label for category Components in sidebar docs"
   },
   "sidebar.docs.category.Docker": {
     "message": "Docker",
     "description": "The label for category Docker in sidebar docs"
   },
   "sidebar.docs.category.参考": {
-    "message": "参考",
-    "description": "The label for category 参考 in sidebar docs"
+    "message": "Fleet",
+    "description": "The label for category Fleet in sidebar docs"
   },
   "sidebar.docs.category.Apache": {
     "message": "Apache",
@@ -572,8 +572,8 @@
     "description": "The label for category Ansible in sidebar docs"
   },
   "sidebar.docs.category.操作系统": {
-    "message": "操作系统",
-    "description": "The label for category 操作系统 in sidebar docs"
+    "message": "Operating System",
+    "description": "The label for category Operating System in sidebar docs"
   },
   "sidebar.docs.category.Linux": {
     "message": "Linux",

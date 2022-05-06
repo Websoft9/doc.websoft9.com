@@ -2,44 +2,44 @@
 sidebar_position: 1
 slug: /caddy
 tags:
-  - Caddy
-  - Web 服务器
+  - HTTP
+  - Proxy
+  - Web Server
 ---
 
 
-# 指南
+# Guide
 
-Caddy是一款基于 Go 语言编写的强大且可扩展的平台，可以给你的站点、服务和应用程序提供服务。
+[Caddy](https://caddyserver.com/) is a powerful, enterprise-ready, open source web server with automatic HTTPS written in Go
 
-## 场景
+## Tutorial
 
-### 使用 API 配置 Caddy
+### Configure Caddy by API
 
-参考官方文档：https://caddyserver.com/docs/quick-starts/api
+Refer to: https://caddyserver.com/docs/quick-starts/api
 
-### 列出目录文件
+### List directory files
 
 ```
 file_server browse
 ```
 
-### 指定反代目录
-
-在实践中，我们可能只想对 API 请求使用反向代理，即基本路径为/api/
+### Reverse for Proxy
 
 ```
 file_server
 reverse_proxy /api/* 127.0.0.1:9005
 ```
 
+## Troubleshoot{#troubleshoot}
 
-## 参数
+## Parameters
 
-### 路径{#path}
+### Path{#path}
 
-Caddy 配置文件：*/etc/caddy/Caddyfile*  
+Caddy configuration file：*/etc/caddy/Caddyfile*   
 
-### 命令行{#cmd}
+### CLI{#cmd}
 
 ```
 $ caddy help
@@ -71,19 +71,19 @@ commands:
 
 ```
 
-### 服务{#service}
+### Service{#service}
 
 ```
 sudo systemctl start | stop | restart | status caddy
 ```
 
-### 模板{#template}
+### Templates{#template}
 
-Caddy 官方提供了[丰富的模板](https://caddy.community/c/wiki/13)供用户参考、学习和讨论。  
+Caddy have provide [Example](https://caddy.community/c/wiki/13) for different open source software.  
 
-这里列出几种典型的应用场景：
+Below is some template for you:  
 
-#### 域名 + 本地 php-fpm
+#### Domain + php-fpm
 
 ```
 domain.com {
@@ -94,10 +94,10 @@ domain.com {
 }
 ```
 
-#### 域名 + 代理
+#### Domain + proxy
 
 ```
-# 代理到本机
+# Proxy for localhost
 youdomain.example.com {
     reverse_proxy https://localhost:9090 {
         transport http {
@@ -106,7 +106,7 @@ youdomain.example.com {
     }
 }
 
-# 代理到容器
+# Proxy for Container
 collabora.example.com {
   encode gzip
 
@@ -119,7 +119,7 @@ collabora.example.com {
 
 ```
 
-#### IP + php-fpm 容器
+#### IP + php-fpm Container
 
 ```
 :80 {
@@ -130,7 +130,7 @@ collabora.example.com {
 }
 ```
 
-#### IP + 多端口访问
+#### IP + multiply port
 
 ```
 :8080 {

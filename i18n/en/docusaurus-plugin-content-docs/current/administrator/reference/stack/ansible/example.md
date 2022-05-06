@@ -3,7 +3,7 @@ sidebar_position: 3
 slug: /ansible/example
 ---
 
-# Tasks 范例
+# Tasks samples
 
 下面根据常用的场景列出一些代码的范例和技巧：
 

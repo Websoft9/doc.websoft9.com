@@ -1,8 +1,8 @@
 ---
 sidebar_position: 1
-slug: /developer/structure
+slug: /developer/architecture
 ---
 
-# 系统架构
+# Architecture
 
-Websoft9 以 Docker 为基础，全面采用微服务架构。    
+Websoft9 is based on Docker and Microservice architecture    

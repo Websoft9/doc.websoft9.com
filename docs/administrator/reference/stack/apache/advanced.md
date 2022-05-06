@@ -297,36 +297,6 @@ Listen 443
 </VirtualHost>
 ```
 
-## 故障速查{#troubleshooting}
-
-#### Apache 报错：You don't have permission to access/on this server
-
-解决办法：
-
-1.  检查网站目录的权限
-2.  配置虚拟主机配置文件是否有 "AllowOverride All   Require all granted" 相关内容
-
-#### 重启 Apache 服务显示 *No spaces...*
-
-出现此信息的时候，重启服务是成功的。
-
-解决方案:
-
-```
-echo "fs.inotify.max_user_watches=262144" >> /etc/sysctl.conf 
-
-sysctl -p
-```
-
-#### 命令 `httpd -t` 报错 [so:warn] [pid 14645] AH01574: module ssl_module is already loaded
-
-问题原因：mod_ssl 重复加载   
-解决方案：检查下面两个文件，找到 mod_ssl 字段，注释其中一个
-
-  * /etc/httpd/conf.modules.d/00-base.conf
-  * /etc/httpd/conf.modules.d/00-ssl.conf 
-
-
 ## 问题解答{#faq}
 
 #### 如何取消 Apache Test 页面？

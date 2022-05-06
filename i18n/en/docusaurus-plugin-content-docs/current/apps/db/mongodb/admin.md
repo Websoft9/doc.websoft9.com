@@ -42,9 +42,9 @@ tags:
 可以，通过修改 /etc/mongod.conf 配置文件
 
 
-## 故障排除{#troubleshooting}
+## 故障排除{#troubleshoot}
 
-除以下列出的 MongoDB 故障问题之外， [通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案。 
+除以下列出的 MongoDB 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
 
 #### MongoDB compass 无法连接数据库？
 

@@ -31,7 +31,7 @@ npm update -g  parse-dashboard
 
 ## 故障处理
 
-除以下列出的 Parse Server 故障问题之外， [通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案。 
+除以下列出的 Parse Server 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
 
 ## 常见问题
 

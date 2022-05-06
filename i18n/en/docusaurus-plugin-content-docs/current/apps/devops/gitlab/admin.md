@@ -122,7 +122,7 @@ GitLab Community Edition (CE) 升级到同版本的 GitLab Enterprise Edition �
 
 ## 故障排除
 
-除以下列出的 GitLab 故障问题之外， [通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案。  
+除以下列出的 GitLab 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。  
 
 ### 公司固定 IP 突然不能访问 Gitlab？
 

@@ -61,7 +61,7 @@ sudo systemctl start docker
     }
     ```
 
-### 远程 API 访问设置{enableapi}
+### 远程 API 访问设置{#enableapi}
 
 Docker 服务提供了丰富的 API 接口，默认只能在本地以 **socket** 通讯方式访问 API。
 
@@ -129,7 +129,7 @@ docker-compose pull
 docker-compose up -d
 ```
 
-### Compose 文件附件初始化命令
+### Docker-Compose 运行初始化命令
 
 有三种运行个性化命令的方式：
 
@@ -157,6 +157,24 @@ docker-compose up -d
     volumes: *superset-volumes
   ```
 
+## 故障排除{#troubleshoot}
+
+#### 容器应用无法远程访问？{#noremote}
+
+导致这个问题的可能原因有三点：
+
+1. 端口没有正确映射到宿主机
+2. 容器内部拒绝远程访问
+3. 服务器安全组对应的端口没有开放
+
+#### docker-containerd.socket: timeout?
+
+请关闭 SELinux，如果 SELinux 开启会导致 docker 无法启动。  
+
+#### Windows 中 Docker 无法启动？
+
+检查您的 Windows 是否安装了 360 之类的安全软件，如果有请卸载它。  
+
 
 ## 参数
 
@@ -169,6 +187,8 @@ Portainer 数据卷：*/var/lib/docker/volumes/portainer_data/_data*
 Docker 系统服务： */lib/systemd/system/docker.service*  
 
 ### 端口{#port}
+
+需要设置 Docker API 的端口
 
 ### 版本{#version}
 
@@ -460,3 +480,31 @@ networks:
   back-tier: {}
 ```
 #### dockerfile 模板
+
+```
+# syntax=docker/dockerfile:1
+FROM golang:1.16-alpine AS build
+
+# Install tools required for project
+# Run `docker build --no-cache .` to update dependencies
+RUN apk add --no-cache git
+RUN go get github.com/golang/dep/cmd/dep
+
+# List project dependencies with Gopkg.toml and Gopkg.lock
+# These layers are only re-built when Gopkg files are updated
+COPY Gopkg.lock Gopkg.toml /go/src/project/
+WORKDIR /go/src/project/
+# Install library dependencies
+RUN dep ensure -vendor-only
+
+# Copy the entire project and build it
+# This layer is rebuilt when a file changes in the project directory
+COPY . /go/src/project/
+RUN go build -o /bin/project
+
+# This results in a single layer image
+FROM scratch
+COPY --from=build /bin/project /bin/project
+ENTRYPOINT ["/bin/project"]
+CMD ["--help"]
+```

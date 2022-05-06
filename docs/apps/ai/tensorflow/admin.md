@@ -27,7 +27,7 @@ pip install -U TensorFlow
 
 ## 故障排除
 
-除以下列出的 TensorFlow 故障问题之外， [通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案。 
+除以下列出的 TensorFlow 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
 
 > 更多故障详细请参照[官方问题](https://www.tensorflow.org/install/errors)
 

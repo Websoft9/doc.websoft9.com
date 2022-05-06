@@ -3,9 +3,9 @@ sidebar_position: 2
 slug: /caddy/advanced
 ---
 
-# 进阶
+# Advanced
 
-## 安装
+## Install Caddy
 
 Caddy 提供了一个官方兼容性的二进制包，可以下载后直接运行。  
 当然，我们也可以采用下面的命令快速安装：
@@ -24,7 +24,7 @@ sudo apt update
 sudo apt install caddy
 ```
 
-## 原理
+## Concepts
 
 #### 匹配器标记
 
@@ -32,7 +32,4 @@ sudo apt install caddy
 2. /path 以正斜杠开头以匹配请求路径。
 3. @name 指定一个命名匹配器。
 
-## 问题解答
-
-
-## 故障速查{#troubleshooting}
+## FAQ

@@ -159,7 +159,7 @@ tags:
 
 ## 故障排除
 
-除以下列出的 WampServer 故障问题之外， [通用故障处理](../troubleshooting) 、 [Apache 故障排除](../apache/advanced#troubleshooting) 专题章节提供了更多的故障方案。 
+除以下列出的 WampServer 故障问题之外， [通用故障处理](../troubleshoot) 、 [Apache 故障排除](../apache#troubleshoot) 专题章节提供了更多的故障方案。 
 
 #### 修改[虚拟主机](../wampserver#path)后，Apache 无法启动？
 

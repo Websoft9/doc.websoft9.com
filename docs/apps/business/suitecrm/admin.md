@@ -15,7 +15,7 @@ tags:
 
 ## 故障排除
 
-除以下列出的 SuiteCRM 故障问题之外， [通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案。
+除以下列出的 SuiteCRM 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。
 
 #### SuiteCRM 安装向导连接数据库步骤，点击【Next】没有任何反应？
 

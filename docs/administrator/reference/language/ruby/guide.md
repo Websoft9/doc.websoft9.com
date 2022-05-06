@@ -286,7 +286,7 @@ Available commands:
       reset                   # remove all default and system settings
       snapshot                # backup/restore rvm installation
 
-  troubleshooting
+  troubleshoot
       config-get              # display values for RbConfig::CONFIG variables
       debug                   # additional information helping to discover issues
       export                  # set temporary env variable in the current shell

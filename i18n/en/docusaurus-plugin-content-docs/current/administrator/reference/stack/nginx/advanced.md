@@ -2,11 +2,11 @@
 slug: /nginx/advanced
 ---
 
-# 进阶
+# Advanced
 
-## 安装
+## Install Nginx
 
-### 安装内核
+### Install Nginx core
 
 安装 Nginx 有在线包安装和源码编译安装两种方式。其中在线安装通常称之为 yum/apt 安装，而源码安装即需要下载源码然后进行编译后方可使用。
 
@@ -22,9 +22,9 @@ sudo systemctl start nginx
 sudo apt install nginx
 sudo service nginx start
 ```
-### 安装模块
+### Install Nginx Module
 
-### 查看模块
+### List all modules
 
 通过 `nginx -V` 命令可以查看已经安装的所有 Nginx 模块。  
 
@@ -387,28 +387,3 @@ find /data/wwwroot/ -type f -exec chmod 640 {} \;
 
 不支持模块启用或关闭
 
-## 故障速查{#troubleshooting}
-
-#### 网站显示重定向错误？
-
-打开Nginx虚拟主机配置文件，检查网站对应的 server{} 配置段内容，分析其中的重定向规则，找到其中的死循环。  
-
-#### 重启 Nginx 服务显示 *No spaces...*
-
-出现此信息的时候，重启服务是成功的。
-
-#### 413 Request Entity Too Large
-
-这是由于上传文件大小超过了 Nginx 默认设置，因此需要修改 Nginx 这个限制：
-
-1. 使用 WinSCP 远程连接服务器
-2. 编辑 [Nginx 虚拟机主机配置文件](../nginx#path)
-3. 插入一行 `client_max_body_size 0;` 解除上传文件限制的配置项
-   ```
-   server {
-    listen 80;
-    server_name _;
-    client_max_body_size 0; #解除上传文件限制
-    ...
-   ```
-4. 保存并[重启 Nginx 服务](../nginx#service)

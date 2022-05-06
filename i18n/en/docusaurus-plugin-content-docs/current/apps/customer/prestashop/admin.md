@@ -57,7 +57,7 @@ PrestaShop 提供了在线 Module（模块）升级能力
 
 ## 故障排除
 
-除以下列出的 PrestaShop 故障问题之外， [通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案。 
+除以下列出的 PrestaShop 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
 
 #### Prestashop 重定向错误？
 

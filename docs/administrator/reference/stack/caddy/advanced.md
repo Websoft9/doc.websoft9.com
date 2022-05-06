@@ -33,6 +33,3 @@ sudo apt install caddy
 3. @name 指定一个命名匹配器。
 
 ## 问题解答
-
-
-## 故障速查{#troubleshooting}

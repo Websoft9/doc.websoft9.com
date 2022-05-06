@@ -3,153 +3,113 @@ sidebar_position: 1
 slug: /iis
 ---
 
-# 指南
+# Guide
 
-## 场景
+## Tutorial
 
-### 绑定域名{#binddomain}
+### Domain binding{#binddomain}
 
-IIS 中绑定域名的操作步骤如下：  
+If you want to deploy more than one site on IIS,this step is necessary
 
-1.  打开IIS，右键点击需配置域名的网站，选择【编辑绑定】，选择一个待绑定域名的网站后，点击【编辑】 按钮 
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/iis-adddomain001-websoft9.png)
+1. Remote to Windows Server, open your IIS
 
-2.  在主机名处填写域名，然后保存
-     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/iis-adddomain002-websoft9.png)
+2. IIS->Sites->Default Website(right click)->Edit Binding, select one host which is null,then Edit it
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/iis/iis-adddomain001-websoft9.png)
 
-3. 需要增加多个域名，请在第一步选择“添加”按钮
+3. Fill in your domain name in Host Name,then click 【OK】 button
 
-> 如果服务器上增加多个应用，本步骤是必要的
+4. Add more domain name to this site, please select the 【Add】 button on the step 1
 
 
-### 修改网站根目录
+### Change root directory
 
-在 IIS 中修改根目录是比较容易的：
+It is very easy for changing root directory on IIS:  
 
-1. 打开IIS，邮件点击Default Web Site，依次选择管理网站-高级设置
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/iis-changeroot-websoft9.png)
+1. IIS->Default Web Site(right click)->Manage Web Site->Advanced Settings
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/iis/iis-changeroot-websoft9.png)
 
-2. 将物理路径修改为新的路径即可（要提前将wwwroot内容拷贝到新目录）
+2. Modify a new the Physical path
 
-3. 重启IIS后生效
+3. Restart the IIS,then it’s OK
 
-### 设置伪静态{#rewrite}
+### Set rewrite{#rewrite} 
 
-IIS 中设置伪静态的主要操作步骤如下：  
+1. Make sure you have install **[URL rewrite](https://www.iis.net/downloads/microsoft/url-rewrite)** components at IIS
 
-1. 确保 IIS 安装了 **[URL重写](https://www.iis.net/downloads/microsoft/url-rewrite)** 组件
-
-2.  进入IIS后选择具体的网站，打开URL重写工具
+2. Enter to site settings and edit rewrite rules
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/iis-urlrew-websoft9.png)
 
-3.  依次添加规则
+3. Restart IIS
 
-4.  重启IIS后生效
+### Set SSL/HTTPS on IIS{#https}
 
-### 设置 HTTPS 访问{#https}
+#### Solution one: Upload your certs
 
-#### 方案一：上传证书
+1. Upload your certs to Server
 
-1. 上传用户自己的证书文件到服务器
-
-2. 找到 IIS 服务器证书导入功能入口，导入证书
+2. Import your certs at IIS
    ![1523428081837](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/IIS-SSL-TX3-websoft9.PNG)
    ![1523428307113](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/IIS-SSL-TX4-websoft9.png)
 
-3. 等待导入成功
+3. Waiting for importing successfully  
    ![1523428321945](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/IIS-SSL-TX5-websoft9.png)
 
-4. 打开网站的【绑定】功能，设置证书
+4. Open your site setting and set the certs for it  
    ![1523428488886](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/IIS-SSL-TX6-websoft9.png)
 
    ![f1523428617943](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/IIS-SSL-TX7-websoft9.png)
 
-5. 测试 HTTPS 访问
+5. Test your HTTPS access
 
-#### 方案二：自动化证书程序
+#### Solution two: Auto create certs
 
-采用自动化证书程序设置 HTTPS，也是一个非常不错的方案，它节省了证书申请和更新的实践
+You can use the free SSL/TLS Certificate Let's Encrypt, Let's Encrypt is a free, automated, and open Certificate Authority.
 
-#####  配置
+#####  Configure
 
-1. 下载 [win-acme](https://github.com/PKISharp/win-acme/releases) 到服务器，解压至  `C:\Program Files`
+1. Download [win-acme](https://github.com/PKISharp/win-acme/releases) to Server, and unzip to directory: `C:\Program Files`
 
     ![1523429808764](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/IIS-lets-encrypt3-websoft9.png)
 
-2. 双击 `letsencrypt.exe` 程序
+2. Run the `letsencrypt.exe`     
 
     ![1523429865345](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/IIS-lets-encrypt4-websoft9.png)
 
-3. 开始创建证书，第一个选型输入`N`  
+3. Start to configure certs, select `N` for the first selection   
 
    ![1523430024664](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/IIS-lets-encrypt5-websoft9.png)
 
-4. 参考下图继续完成后续步骤  
+4. Complete the next steps   
 
    ![1523430136570](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/IIS-lets-encrypt6-websoft9.png)  
    ![1523430270351](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/IIS-lets-encrypt7-websoft9.png)  
 
-5. 配置完成    
+5. Configure completely   
    ![1523430320474](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/IIS-lets-encrypt8-websoft9.png)
 
-6. 打开IIS，查看站点是否已经配置 HTTPS，并测试访问   
+6. Open IIS to check your HTTPS access   
    ![1523430359697](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/IIS-lets-encrypt9-websoft9.png)
 
-浏览器在测试SSL是否配置成功
 
+##### Renewals
 
-##### 续订
+win-acme support renewals, below is the steps:  
 
-win-acme 支持证书续订，具体步骤如下：
-
-1. 打开程序，输入 *L**   
+1. Run the win-acme, input *L** at the first selection  
   ![1523430513122](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/IIS-lets-encrypt10-websoft9.png)
 
-2. 选择需要自动续订证书的站点
+2. Select your site which want to renewal
    ![1523430937571](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/IIS-lets-encrypt11-websoft9.png)
 
-3. 自动续订成功
+3. Automatically renewal successfully
    ![1523431002175](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/IIS-lets-encrypt12-websoft9.png)
 
 
-### HTTP 跳转 HTTPS
+## Troubleshoot{#troubleshoot}
 
-HTTP 自动跳转至 HTTPS 的操作步骤如下：  
+## Parameters
 
-> 以下方案适用于通配证书。
-
-1. 确保 IIS 安装了 **[URL重写](https://www.iis.net/downloads/microsoft/url-rewrite)** 组件
-
-2. 在需要跳转的网站上，双击“url 重写”，设置自动跳转规则  
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/iis-urlrewrite-1-websoft9.png)
-
-3. 选择【空白规则】  
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/iis-urlrewrite-2-websoft9.png)  
-
-4. 添加 URL 重写规则  
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/iis-urlrewrite-3-websoft9.png) 
-
-5. 添加 HTTPS 通配规则  
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/iis-urlrewrite-4-websoft9.png)
-
-6. 添加 URL 重定向规则  
-     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/iis-urlrewrite-5-websoft9.png)
-
-7. 添加完成后，重启 IIS 服务，测试设置是否成功
-
-
-**注意：**
-
-如果域名 `www.example.com` 用的不是通配证书，还需要如下额外的操作：
-
-1. 在IIS中新建站点时，确保绑定域名 `example.com` 和  `www.example.cm`
-2. 进入 URL 重写模块，添加规则时选择**规范域名**
-3. 设置 `example.com` 与 `www.example.cm` 的重定向关系
-
-
-## 参数
-
-### 服务{#service}
+### Service{#service}
 
 IIS 中点击主机名称或 IIS 根目录，右侧的操作就会显示**启动、重启启动，停止**等操作
 

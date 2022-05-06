@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-slug: /troubleshooting/logs
+slug: /troubleshoot/logs
 ---
 
 # 日志诊断技术

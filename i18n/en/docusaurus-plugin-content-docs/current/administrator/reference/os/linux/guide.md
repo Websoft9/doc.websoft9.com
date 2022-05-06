@@ -3,11 +3,11 @@ sidebar_position: 1
 slug: /linux
 ---
 
-# 指南
+# Guide
 
-## 场景
+## Tutorial
 
-### 连接 Linux
+### Connect Linux
 
 常见 Linux 连接方式包括：
 
@@ -158,11 +158,6 @@ Cron是一个Linux下的定时执行工具，可以在无需人工干预的情�
 
 日志是诊断故障的关键，大部分的问题都会在日志中留下“蛛丝马迹”。所以，学会分析日志是运维中最重要的技能之一。  
 
-参考：[Linux 日志诊断](./troubleshooting#linux)
+参考：[Linux 日志诊断](./troubleshoot#linux)
 
-## 参数
-
-### 路径{#path}
-### 端口{#port}
-### 服务{#service}
-
+## Troubleshoot{#troubleshoot}

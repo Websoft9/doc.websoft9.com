@@ -13,8 +13,6 @@ IIS 即Windows®Server的 Internet 信息服务，它是一种灵活，安全和
 
 ## 问题解答
 
-## 故障速查{#troubleshooting}
-
 #### PHP 可以在 IIS 上运行吗？
 
 PHP 官方公告从 8.0 之后，将不再支持在 IIS 上运行。

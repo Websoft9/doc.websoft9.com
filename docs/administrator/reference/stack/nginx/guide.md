@@ -170,7 +170,7 @@ Nginx 可以作为常见的开发语言的 Web 服务器，集成数据库、应
 
 下面我们以常见的开发语言为例，分别介绍它们是如何与 Nginx 一起工作的。
 
-#### PHP
+##### PHP
 
 Nginx 主要与 PHP-FPM(PHP FastCGI Process Manager) 完成 PHP 应用程序的访问。  
 
@@ -178,7 +178,7 @@ Nginx 主要与 PHP-FPM(PHP FastCGI Process Manager) 完成 PHP 应用程序的�
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/nginx/nginx-phpfpmarch-websoft9.png)
 
-#### Java
+##### Java
 
 Nginx 无法直接运行Java程序，而是与Tomcat一起组合去部署Java程序。
 
@@ -209,7 +209,7 @@ server
 }
 ```
 
-#### Python
+##### Python
 
 Nginx 也可以用于Python环境，通过扩展模块mod_proxy_uwsgi，连接Python的uWSGI服务器或Gunicorn服务器，便可以解析Python程序。
 
@@ -236,7 +236,7 @@ Nginx 也可以用于Python环境，通过扩展模块mod_proxy_uwsgi，连接Py
    ProxyPass / uwsgi://127.0.0.1:8080
    ```
 
-#### Node
+##### Node
 
 Nginx 也可以用于Node.js环境，Nginx 与 Node.js 最常见的连接方式是http_proxy，即利用 Apache 自带的 mod_proxy 模块使用代理技术来连接 Node.js。   
 
@@ -257,11 +257,36 @@ server {
 }
 ```
 
-#### Ruby
+##### Ruby
 
 Nginx 广泛被用于 Ruby 应用程序的 HTTP 前端，而 Ruby 应用程序框架中（Rails）集成的应用服务器会将应用以端口的形式开放访问。
 所以，Nginx 只需采用转发即可连接 Ruby 程序。
 
+## 故障排除{#troubleshoot}
+
+#### 网站显示重定向错误？
+
+打开Nginx虚拟主机配置文件，检查网站对应的 server{} 配置段内容，分析其中的重定向规则，找到其中的死循环。  
+
+#### 重启 Nginx 服务显示 *No spaces...*
+
+出现此信息的时候，重启服务是成功的。
+
+#### 413 Request Entity Too Large
+
+这是由于上传文件大小超过了 Nginx 默认设置，因此需要修改 Nginx 这个限制：
+
+1. 使用 WinSCP 远程连接服务器
+2. 编辑 [Nginx 虚拟机主机配置文件](../nginx#path)
+3. 插入一行 `client_max_body_size 0;` 解除上传文件限制的配置项
+   ```
+   server {
+    listen 80;
+    server_name _;
+    client_max_body_size 0; #解除上传文件限制
+    ...
+   ```
+4. 保存并[重启 Nginx 服务](../nginx#service)
 
 ## 参数{#parameter}
 

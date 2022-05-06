@@ -2,7 +2,7 @@
 slug: /docker/composefile
 ---
 
-# Compose 文件
+# Compose file
 
 [Docker Compose](https://docs.docker.com/compose/) 是官方提供的编排工具，功能强大，简单易用。  
 

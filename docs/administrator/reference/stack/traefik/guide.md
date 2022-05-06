@@ -9,6 +9,8 @@ slug: /traefik
 
 ### 域名绑定{#binddomain}
 
+## 故障排除{#troubleshoot}
+
 ## 参数
 
 ### 路径{#path}

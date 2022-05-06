@@ -21,7 +21,7 @@ ELK 内置快照备份功能（阅读[官方文档](https://www.elastic.co/guide
 
 ## 故障排除
 
-除以下列出的 ELK 故障问题之外， [通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案。
+除以下列出的 ELK 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。
 
 #### Logstash 无法输出到 Elasticsearch？
 

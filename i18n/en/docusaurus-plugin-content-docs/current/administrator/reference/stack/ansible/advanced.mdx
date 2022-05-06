@@ -8,18 +8,17 @@ tags:
 
 import AnsibleCfg from './_cfg.md';
 
-# 进阶
+# Advanced
 
 [Ansible](https://wansible.com) 是一个易读非常好的自动化运维开发语言以及技术体系，它基于 Python，提供数千个管理基础设施的模块，用户无需深厚的技术背景，也可以完成服务器部署、网络配置、云资源管理等相关的工作。它自动化能力，可大大降低技术复杂性，帮助企业减少重复劳动，让聪明的人专注于核心业务。
 
 ![ansible](https://libs.websoft9.com/Websoft9/DocsPicture/zh/ansible/ansible-guis-websoft9.png)
 
+## Install Ansible
 
-## 安装
+### Install
 
-### 安装
-
-##### 主控端
+##### Control Node
 
 安装之前，需了解是否具备安装条件：
 
@@ -36,7 +35,7 @@ yum install ansible
 apt install ansible
 ```
 
-##### 受控端
+##### Managed node
 
 * 采用 SSH（默认为SFTP）与 Control Node 通信，如果SSH不可用，通过修改 ansible.cfg 更改通信协议
 * Python支持：Python 2 (version 2.6 or later) or Python 3 (version 3.5 or later).
@@ -684,13 +683,3 @@ Ansible 有三种类型的内置变量：
 * 用于 ansible.cfg 配置的[系统变量（环境变量）](https://docs.ansible.com/ansible/latest/reference_appendices/config.html)
 * 用于工作过程的[特殊变量](https://docs.ansible.com/ansible/latest/reference_appendices/special_variables.html)
 * 收集到受控端的 [Facts 变量](https://docs.ansible.com/ansible/latest/user_guide/playbooks_vars_facts.html)
-
-## 故障速查{#troubleshooting}
-
-#### Ansible 中经常会出现 python-urllib3 之类的报错，如何处理？
-
-python-urllib3 报错大部分情况下，通过 yum install python-urllib3 解决，而不是 pip install
-
-#### 账号准确无误，仍然无法连接受控机？
-
-清空服务器中的 */root/.ssh/known_hosts* 文件

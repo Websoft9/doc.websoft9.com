@@ -119,7 +119,7 @@ nvm which 5.0
 
 TypeScript 是 JavaScript 的超集，简单说 TypeScript 具有更丰富的语法特征。 
 
-## 故障速查{#troubleshooting}
+## 故障速查{#troubleshoot}
 
 ## 问题解答
 

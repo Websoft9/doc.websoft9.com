@@ -10,7 +10,6 @@ import AnsibleFacts from './_facts.md';
 
 # 指南
 
-
 ## 场景
 
 ### 快速体验
@@ -115,6 +114,16 @@ Websoft9 提供基于 Ansible  role 的基础组件（[清单](https://github.co
    ansible-playbook role_apache/tests/test.yml
    ```
 2. 运行过程中，可以选择所需的版本
+
+## 故障排除{#troubleshoot}
+
+#### Ansible 中经常会出现 python-urllib3 之类的报错，如何处理？
+
+python-urllib3 报错大部分情况下，通过 yum install python-urllib3 解决，而不是 pip install
+
+#### 账号准确无误，仍然无法连接受控机？
+
+清空服务器中的 */root/.ssh/known_hosts* 文件
 
 ## 参数
 

@@ -41,9 +41,9 @@ Neo4j 升级有一定的复杂性，请参考[官方升级文档](https://neo4j.
 5. 升级完成之后，恢复 `dbms.allow_upgrade=true`之前的 # 号
 
 
-## 故障排除{#troubleshooting}
+## 故障排除{#troubleshoot}
 
-除以下列出的 Neo4j 故障问题之外， [通用故障处理](../troubleshooting) 专题章节提供了更多的故障方案。 
+除以下列出的 Neo4j 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
 
 ## 问题解答
 
