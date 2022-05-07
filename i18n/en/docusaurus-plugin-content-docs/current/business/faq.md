@@ -85,3 +85,11 @@ slug: /business/faq
 #### 集成商可以转售 Websoft9 的产品吗？
 
 我们非常欢迎您转售我们的镜像，我们可以提供多达 40% 的返佣。
+
+#### What's Cloud Platform?
+
+Cloud platform refers to platform manufacturers that provide cloud computing services, such as: **Azure, AWS, Alibaba Cloud, HUAWEI CLOUD, Tencent Cloud**, etc.
+
+#### What is the difference between Instance, Cloud Server, Virtual Machine, ECS, EC2, CVM, and VM?
+
+No difference, just the terminology used by different manufacturers, actually cloud servers

@@ -3,52 +3,59 @@ sidebar_position: 1
 slug: /java
 ---
 
-# 指南
+# Guide
 
-## 场景
+This charter include JDK and Java application Server: Tomcat, Jetty
 
-### Maven 使用{#maven}
+## Tutorial
 
-下面是一个 Maven  构建的范例：
+### Use Maven{#maven}
+
+A sample to use Maven
 
 ```
 mvn archetype:generate -DgroupId=com.companyname.automobile -DartifactId=trucks -DarchetypeArtifactId=maven-archetype-webapp  -DinteractiveMode=false
 ```
 
-### Web 框架{#framework}
+### Web Framework{#framework}
 
-### JDK 版本变更{#changeversion}
+### Change JDK version{#changeversion}
 
-## 故障排除{#troubleshooting}
+## Troubleshoot{#troubleshoot}
 
-## 参数
+## Parameters
 
-### 路径{#path}
+### Path{#path}
 
-Java 安装目录： */data/java*  
-Java 日志目录： */data/logs/java*  
-Tomcat 安装目录： */usr/local/tomcat*    
-Tomcat 配置文件： */usr/local/tomcat/conf/server.xml*     
-Tomcat 建议网站目录： */data/wwwroot/*    
-Tomcat 日志目录： */var/log/tomcat*  
+Java installation directory:  */data/java*    
+Java logs directory:  */data/logs/java*    
 
-### 命令行{#cmd}
+Tomcat install directory: */usr/local/tomcat*    
+Tomcat configuration file: */usr/local/tomcat/conf/server.xml*     
+Tomcat logs: */var/log/tomcat*  
 
-下面列出常见的 Java 命令行工具，更多参考[官方文档](https://docs.oracle.com/javase/10/tools/tools-and-command-reference.htm)
+### CLI{#cmd}
 
-* javac：读取 Java 类和接口定义并将它们编译成字节码和类文件。
-* javap：反汇编一个或多个类文件。
-* javadoc：从 Java 源文件生成 API 文档的 HTML 页面。
-* java：启动 Java 应用程序。
-* appletviewer：启动 AppletViewer 并在 Web 浏览器之外运行小程序。
-* jar：为类和资源创建存档，并从存档中操作或恢复单个类或资源。
-* jlink：将一组模块及其依赖项组装和优化为自定义运行时映像。
-* jmod：创建 JMOD 文件并列出现有 JMOD 文件的内容。
-* jdeps：启动 Java 类依赖关系分析器。
-* jdeprscan：静态分析工具，用于扫描 jar 文件（或其他一些类文件的集合）以查找已弃用的 API 元素的使用情况。
+These tools from docs: [Tools and Commands Reference](https://docs.oracle.com/javase/10/tools/tools-and-command-reference.htm)  
 
+- **[javac](https://docs.oracle.com/javase/10/tools/javac.htm#GUID-AEEC9F07-CB49-4E96-8BC7-BCC2C7F725C9)**: You can use the `javac` tool and its options to read Java class and interface definitions and compile them into bytecode and class files.
+- **[javap](https://docs.oracle.com/javase/10/tools/javap.htm#GUID-BE20562C-912A-4F91-85CF-24909F212D7F)**: You use the `javap` command to disassemble one or more class files.
+- **[javadoc](https://docs.oracle.com/javase/10/tools/javadoc.htm)**: You use the `javadoc` tool and its options to generate HTML pages of API documentation from Java source files.
+- **[java](https://docs.oracle.com/javase/10/tools/java.htm#GUID-3B1CE181-CD30-4178-9602-230B800D4FAE)**: You can use the `java` command to launch a Java application.
+- **[appletviewer](https://docs.oracle.com/javase/10/tools/appletviewer.htm#GUID-43CF0B10-0BE3-48C6-B289-FD77952D4926)**: You use the `appletviewer` command to launch the AppletViewer and run applets outside of a web browser.
+- **[jar](https://docs.oracle.com/javase/10/tools/jar.htm#GUID-51C11B76-D9F6-4BC2-A805-3C847E857867)**: You can use the `jar` command to create an archive for classes and resources, and to manipulate or restore individual classes or resources from an archive.
+- **[jlink](https://docs.oracle.com/javase/10/tools/jlink.htm)**: You can use the `jlink` tool to assemble and optimize a set of modules and their dependencies into a custom runtime image.
+- **[jmod](https://docs.oracle.com/javase/10/tools/jmod.htm)**: You use the `jmod` tool to create JMOD files and list the content of existing JMOD files.
+- **[jdeps](https://docs.oracle.com/javase/10/tools/jdeps.htm#GUID-A543FEBE-908A-49BF-996C-39499367ADB4)**: You use the `jdeps` command to launch the Java class dependency analyzer.
+- **[jdeprscan](https://docs.oracle.com/javase/10/tools/jdeprscan.htm)**: You use the `jdeprscan` tool as a static analysis tool that scans a jar file (or some other aggregation of class files) for uses of deprecated API elements.
 
-### 服务{#service}
+### Version{#version}
+
+```
+java -v
+```
+
+### Service{#service}
 
 ```
 # Docker
@@ -57,14 +64,3 @@ sudo docker stop jdk
 sudo docker restart jdk
 sudo docker stats jdk
 ```
-
-### Tomcat 配置模板{#tomcattp}
-
-针对 Tomcat 下的 server.xml 文件中的 host 配置段，需要修改的参数说明如下：  
-
-|  host 项  |  作用说明  |  必要性 |
-| --- | --- | --- |
-|  name  |  域名   |  必须填写 |
-|  appBase |  war 包解压路径，例如：在 */data/wwwroot* 下解压 mysite2.war，系统就会自动产生 */data/wwwroot/mysite2* 网站目录  | 务必准确无误 |
-|  docBase |  网站存放目录，如果是war包，需带上后缀名，例如:`/data/wwwroot/mysite.war`  | 务必准确无误 |
-|  path |  访问路径，一般请保持默认为空  | 建议保持默认 |

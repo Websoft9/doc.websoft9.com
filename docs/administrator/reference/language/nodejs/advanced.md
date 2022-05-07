@@ -146,14 +146,6 @@ TypeScript 是 JavaScript 的超集，简单说 TypeScript 具有更丰富的语
 | npm install react --save-dev | yarn add react --dev |
 | npm update --save | yarn upgrade |
 
-#### NPM Prevent Permissions Errors？
-
-参考：[Fix NPM permissions](https://www.npmjs.com.cn/getting-started/fixing-npm-permissions/)
-
-#### NPM broken？
-
-尝试运行 `npm cache clean` 命令，若仍然没有解决问题，需更新或重装 NPM
-
 #### 如何安装和管理多个 Node 版本？
 
 使用 [NVM](https://github.com/creationix/nvm) 。 它可以避免权限错误，并解决更新 Node.js 和 npm 的复杂性。

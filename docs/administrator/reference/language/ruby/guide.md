@@ -84,7 +84,7 @@ rails s -p 3000
 
 #### Sinatra{#sinatra}
 
-## 故障排除{#troubleshooting}
+## 故障排除{#troubleshoot}
 
 ## 参数
 

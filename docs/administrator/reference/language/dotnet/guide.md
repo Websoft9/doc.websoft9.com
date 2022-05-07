@@ -5,7 +5,6 @@ slug: /dotnet
 
 # 指南
 
-[.NET](https://dotnet.microsoft.com/zh-cn) 是一个免费的、跨平台的、开源的开发者平台，用于构建许多不同类型的应用程序。借助 .NET，您可以使用多种语言、编辑器和库为 Web、移动、桌面、游戏和 IoT 进行构建。
 
 ## 场景
 
@@ -19,7 +18,7 @@ slug: /dotnet
 #### Visual Studio
 #### Visual Studio Code
 
-## 故障排除{#troubleshooting}
+## 故障排除{#troubleshoot}
 
 
 ## 参数

@@ -3,7 +3,7 @@ sidebar_position: 3
 slug: /troubleshoot/method
 ---
 
-# 故障诊断三分法
+# Rule of Thirds
 
 三分法：任何软件的故障只能在**资源瓶颈、连接障碍和组件失效** 三个方面之一或组合，除此之外便没有其他。  
 

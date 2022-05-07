@@ -3,108 +3,61 @@ sidebar_position: 1
 slug: /ruby
 ---
 
-# 指南
+# Guide
 
-[Ruby](https://www.ruby-lang.org/)是一门开源的动态编程语言，注重简洁和效率。Ruby 的句法优雅，读起来自然，写起来舒适。它由日本人发明，混合了多门语言（Perl、Smalltalk、Eiffel、Ada 和 Lisp），创造出了一种兼具函数式编程和命令式编程特色的新语言。
+[Ruby](https://www.ruby-lang.org/) is A dynamic, open source programming language with a focus on simplicity and productivity. 
 
-## 场景
+## Tutorial
 
-### Passenger 使用
+### Change RubyGems repo{#gems}
 
-### RubyGems 包管理{#gems}
-
-**gem 源更换**
-
-rubygems.org 存放在 Amazon S3 上，有时由于网络问题导致无法安装
+Sometimes, rubygems.org can't not access in China, or very slowly, you can RubyGems to Chinese mirror:  
 
 ```
-# 查询当前源，假设为：https://rubygems.org/
+# check repo
 gem sources -l
 
-# 删除当前源
+# delete repo
 gem sources --remove https://rubygems.org/
 
-# 安装替换源
+# install new repo
 gem sources -a https://gems.ruby-china.com/
 
-# 查询替换后的结果
-gem sources -l
-
-# bundle 源更换  
+# replace bundle repo 
 bundle config mirror.https://rubygems.org https://gems.ruby-china.com/
 ```
 
-> gemfile 中也可以指定源，这样就无需全局设置
+### Change Ruby version{#changeversion}
 
-### Ruby 版本变更{#changeversion}
-
-Ruby 的多版本管理非常灵活。
-
-* RVM 支持多个 Ruby 版本安装和切换（包括默认设置）
-* 每个 Ruby 版本下，都可以通过 gem 安装同一个包的多个版本
+You can use `rvm` to change Ruby version
 
 
-### Web 框架{#framework}
+### Web Framework{#framework}
 
 #### Rails{#rails}
 
-Rails 是 Ruby 生态中流行的 Web 应用程序开发框架。目的是通过解决快速开发中的共通问题，简化 Web 应用的开发。
-
-Rails 依赖如下组件：  
-
-* Ruby
-* SQLite3
-* Node.js
-* Yarn
-
-**安装**
-
-```
-# 安装 rails 5.0 和 最新版本
-gem install rails --version=5.0
-gem install rails
-
-# 查询已安装的 rails
-gem list | grep rails
-
-结果：rails (6.1.3.2, 5.0.7.2, 5.0.0)
-
-# 指定一个 rails 版本去创建项目
-
-rails _5.0.0_ new myproject5
-
-# 指定 RailS 应用程序的端口
-rails s -p 3000
-```
-
-安装完 Rails，本地浏览器访问：*http://服务器公网IP地址:3000* 即可访问：  
+Local computer browser to access Rails: *http://Server's Internet IP:3000*    
 
 ![Ruby Rails](https://libs.websoft9.com/Websoft9/DocsPicture/zh/ruby/ruby-railsgui-websoft9.png)
 
-
 #### Sinatra{#sinatra}
 
-## 故障排除{#troubleshooting}
+## Troubleshoot{#troubleshoot}
 
-## 参数
+## Parameters
 
-### 路径{#path}
+### Path{#path}
 
-基于 [RVM](https://rvm.io/)预装 Ruby 以及所需的其他软件包：[gem](https://rubygems.org/), rake, bundler，对于的路径：  
+Ruby install directory: */usr/local/rvm/rubies/ruby-version*  
+Ruby bin directory: */usr/local/rvm/rubies/ruby-2.4.10/bin*  
+RVM install directory:  */usr/local/rvm* 
 
-Ruby 安装目录： */usr/local/rvm/rubies/ruby-version*  
-Ruby 命令命令： */usr/local/rvm/rubies/ruby-2.4.10/bin*  
-RVM 安装目录： */usr/local/rvm*  
-Ruby 网站目录： */data/wwwroot*  
+> version is version number
 
-> version 为版本号，例如：2.4.10。gem, bundler 等工具与版本强相关
+Passenger install directory: */usr/lib/ruby/vendor_ruby/phusion_passenger*   
+Passenger configuration file: */etc/apache2/mods-enabled/passenger.conf*   
 
-Passenger 安装目录：*/usr/lib/ruby/vendor_ruby/phusion_passenger*  
-Passenger 配置文件：*/etc/apache2/mods-enabled/passenger.conf*  
-
-### 版本号{#checkversion}
-
-下面的命令用于查看 Ruby 相关的版本号
+### Version{#checkversion}
 
 ```
 ruby -v
@@ -114,14 +67,14 @@ rails -v
 passenger -v
 ```
 
-### 服务{#service}
+### Service{#service}
 
 ```
 sudo systemctl start | stop | restart | status rails
 sudo systemctl start | stop | restart | status passenger
 ```
 
-### 命令行{#cmd}
+### CLI{#cmd}
 
 #### passenger
 

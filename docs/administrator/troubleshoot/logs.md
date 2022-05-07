@@ -17,14 +17,11 @@ slug: /troubleshoot/logs
 
    ```
    # 指定服务日志
-   systemctl status appname
-   journalctl -u appname
+   systemctl status service_name
+   journalctl -u service_name
 
    # 查看 systemd 的错误日志，-p 支持 emerg alert err crit warning notice info debug 等值
    journalctl -p err
-
-   # 查看指定服务的日志
-   journalctl -u httpd
 
    # 查看内核日志
    journalctl -k
@@ -38,7 +35,7 @@ slug: /troubleshoot/logs
 
 3. Docker 容器日志查看方法
    ```
-   docker status appname
+   docker logs appname
    ```
 
 检索关键词 **Failed** 或者 **error** 查看错误

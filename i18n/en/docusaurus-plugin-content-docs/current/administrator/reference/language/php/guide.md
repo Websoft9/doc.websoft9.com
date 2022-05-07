@@ -7,18 +7,6 @@ slug: /php
 
 ## Tutorial
 
-### Use PHP-FPM{#fpm}
-
-### Use Composer{#compose}
-
-### Web Framework{#framework}
-
-#### Symfony{#symfony}
-#### Laravel{#laravel}
-#### CodeIgniter{#codeigniter}
-#### ThinkPHP{#thinkphp}
-#### Yii 2{#yii}
-
 ### Change PHP Version on Linux{#changeversion}
 
 #### PHP upgrade{#upgrade}
@@ -28,190 +16,85 @@ If you use Websoft9 LAMP/LNMP runtime, upgrade PHP by these steps:
 e.g: PHP5.6 to PHP7.0
 
 1. Connect your Server and run these commands
-```
-# disable the old PHP repo
-yum-config-manager --disable remi-php56  
+    ```
+    # disable the old PHP repo
+    yum-config-manager --disable remi-php56  
 
-# enable the new PHP repo
-yum-config-manager --enable remi-php70     
+    # enable the target PHP repo
+    yum-config-manager --enable remi-php70     
 
-# Upgrade it
-yum update -y
-```
+    # Upgrade it
+    yum update -y
+    ```
 
 
-2. 为了确保升级成功，请检查升级后的 PHP 版本
-```
-php -v
-```
-
-> 以上方案也适用于 PHP7.0->PHP7.2
+2. Check the PHP version after upgrading
+    ```
+    php -v
+    ```
 
 #### PHP downgrade{#downgrade}
 
-以PHP7.0降级到PHP5.6为例，具体步骤如下：
+e.g: PHP7.0 to PHP5.6
 
 ```
-//禁用当前7.0版本的下载源
+# disable the old PHP repo
 yum-config-manager --disable remi-php70
 
-//然后，启用需降级的版本 PHP56 源
+# enable the target PHP repo
 yum-config-manager --enable remi-php56     
 
-# 卸载PHP7.0
+# uninstall all PHP installed packages
 yum remove php-* -y
 
-# 安装主要的PHP模块
+# Install target PHP and modules
 yum -y install php-pecl-imagick php php-mysql php-common php-gd php-mbstring php-mcrypt php-devel php-xml php-pdo php-bcmath php-pear php-opcache php-ldap php-odbc php-xmlrpc php-json php-mysqlnd php-pdo php-pdo_dblib php-recode php-snmp php-soap php-pecl-zip php-curl php-imap
 
-# 安装其他包
+# Install other useful PHP packages by pear
 pear install Mail
 pear install net_smtp
 ```
 
 ### Change PHP Version on Windows{#versionwin}
 
-Windows系统下的IIS环境，安装了多版本的PHP，可以直接修改php配置文件，也可以通过图形化界面操作：
-
-选择需要管理PHP版本的网站，然后打开PHP Manager，点击“Change PHP Version”，重启IIS后生效
+Open the PHP Manager at IIS, change PHP version is very easy:  
 
 ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/iis-changephpver-websoft9.png)
-
-> 注意：PHP版本影响范围为一个网站或网站中的应用程序，没有整个IIS全局PHP版本设置，这样大大的方便了多版本的应用访问。
 
 
 ### Configure PHP{#config}
 
-在使用PHP网站的时候，你可能会碰到需要修改：上传文件大小、内存限制等参数。这个时候，就需要修改 PHP 的配置文件。  
+You can choose one of the options below to configure PHP:  
 
-有两种修改 PHP 配置的方案：
+* **php.ini**: global scope
+* **.htaccess**: site scope
 
-#### Modify php.ini{#ini}
 
-修改 php.ini 文件对全局生效。  
+### Web Framework{#framework}
 
-1. 使用 SFTP 工具修改 */etc/php.ini* 
-    ```shell
-    # 修改文件大小限制，注意数字后面需要带上单位M
-    post_max_size = 16M
-    upload_max_filesize = 16M
+#### Symfony{#symfony}
+#### Laravel{#laravel}
+#### CodeIgniter{#codeigniter}
+#### ThinkPHP{#thinkphp}
+#### Yii 2{#yii}
 
-    # 修改超时时间限制
-    max_execution_time = 90
-
-    # 修改内存限制
-    memory_limit – Minimum: 256M
-    ```
-2. 保存并重启 [PHP 服务](#service)
-
-#### Modify .htaccess{#htaccess}
-
-修改 .htaccess 文件对网站生效。  
-
-1. 使用 SFTP 工具修改**网站根目录**下的 .htaccess 文件（没有此文件可以自行创建），增加所需的配置项
-   ```
-   # File upload limit
-   php_value  post_max_size = 16M
-   php_value  upload_max_filesize = 16M
-
-   # Max Execution Time
-   php_value  max_execution_time = 90
-
-   # Memory Limit
-   php_value  memory_limit – Minimum: 256M
-   ```
-   > 同 php.ini 一样的参数
-
-2. 保存并重启 [PHP 服务](#service)
-
-### Switch php-fpm to mod_php
-
-LAMP 默认使用 php-fpm 服务来解析 PHP 文件，如果想用 mod_php 解析 PHP 文件，请参照下面步骤：
-
-1. 使用 SFTP 工具修改 */etc/httpd/conf.d/php.conf* （如果该目录下有php.conf的备份文件，直接复制内容到 php.conf）
-    ```
-    #
-    # The following lines prevent .user.ini files from being viewed by Web clients.
-    #
-    <Files ".user.ini">
-        <IfModule mod_authz_core.c>
-            Require all denied
-        </IfModule>
-        <IfModule !mod_authz_core.c>
-            Order allow,deny
-            Deny from all
-            Satisfy All
-        </IfModule>
-    </Files>
-
-    #
-    # Allow php to handle Multiviews
-    #
-    AddType text/html .php
-
-    #
-    # Add index.php to the list of files that will be served as directory
-    # indexes.
-    #
-    DirectoryIndex index.php
-
-    # mod_php options
-    <IfModule  mod_php7.c>
-        #
-        # Cause the PHP interpreter to handle files with a .php extension.
-        #
-        <FilesMatch \.(php|phar)$>
-            SetHandler application/x-httpd-php
-        </FilesMatch>
-
-        #
-        # Uncomment the following lines to allow PHP to pretty-print .phps
-        # files as PHP source code:
-        #
-        #<FilesMatch \.phps$>
-        #    SetHandler application/x-httpd-php-source
-        #</FilesMatch>
-
-        #
-        # Apache specific PHP configuration options
-        # those can be override in each configured vhost
-        #
-        php_value session.save_handler "files"
-        php_value session.save_path    "/var/lib/php/session"
-        php_value soap.wsdl_cache_dir  "/var/lib/php/wsdlcache"
-
-        #php_value opcache.file_cache   "/var/lib/php/opcache"
-    </IfModule>
-    ```
-
-2. 停止 [PHP-FPM 服务](#service)
-
-## Troubleshooting{#troubleshooting}
-
-#### Can't send mail from PHP runtime?
-
-1.  需要了解你所使用的STMP功能是否调用了PHP软件包（或扩展类）
-
-   	* php官方提供的mail()类，这个类不支持SMTP验证
-    * php扩展包-[PHPMailer](https://github.com/PHPMailer/PHPMailer)，这个类功能比较全面
-
-2.  php_openss 版本过低或者没有安装，php_openssl 的 CA 证书缺失或异常
-
+## Troubleshoot{#troubleshoot}
 
 ## Parameters
 
 ### Path{#path}
 
-PHP on Linux 配置文件：*/etc/php.ini* 
-PHP on Windows 配置文件：*C:\websoft9\php-\*\php.ini*
+PHP configuration file: */etc/php.ini*   
+PHP configuration file on Windows：*C:\websoft9\php-\*\php.ini*   
+PHP Modules configurations directory: */etc/php.d*   
 
 ### CLI{#cmd}
 
-主要有 php 和 composer 两个命令行
+* php
+* composer
+* pear
 
 ### Service{#service}
-
-针对不同的 PHP 环境有不同的服务启停模式：
 
 ```
 # PHP-FPM On Linux

@@ -460,44 +460,44 @@
     "description": "The label for category 管理员指南 in sidebar docs"
   },
   "sidebar.docs.category.配置": {
-    "message": "配置",
-    "description": "The label for category 配置 in sidebar docs"
+    "message": "Configuration",
+    "description": "The label for category Configuration in sidebar docs"
   },
   "sidebar.docs.category.域名": {
-    "message": "域名",
-    "description": "The label for category 域名 in sidebar docs"
+    "message": "Domain Name",
+    "description": "The label for category Domain Name in sidebar docs"
   },
   "sidebar.docs.category.数据库": {
-    "message": "数据库",
-    "description": "The label for category 数据库 in sidebar docs"
+    "message": "Database",
+    "description": "The label for category Database in sidebar docs"
   },
   "sidebar.docs.category.存储": {
-    "message": "存储",
-    "description": "The label for category 存储 in sidebar docs"
+    "message": "Storage",
+    "description": "The label for category Storage in sidebar docs"
   },
   "sidebar.docs.category.维护": {
-    "message": "维护",
-    "description": "The label for category 维护 in sidebar docs"
+    "message": "Maintenance",
+    "description": "The label for category Maintenance in sidebar docs"
   },
   "sidebar.docs.category.备份与恢复": {
-    "message": "备份与恢复",
-    "description": "The label for category 备份与恢复 in sidebar docs"
+    "message": "Backup & Restore",
+    "description": "The label for category Backup & Restore in sidebar docs"
   },
   "sidebar.docs.category.升级": {
-    "message": "升级",
-    "description": "The label for category 升级 in sidebar docs"
+    "message": "Upgrade",
+    "description": "The label for category Upgrade in sidebar docs"
   },
   "sidebar.docs.category.迁移": {
-    "message": "迁移",
-    "description": "The label for category 迁移 in sidebar docs"
+    "message": "Migration",
+    "description": "The label for category Migration in sidebar docs"
   },
   "sidebar.docs.category.安全": {
-    "message": "安全",
-    "description": "The label for category 安全 in sidebar docs"
+    "message": "Security",
+    "description": "The label for category Security in sidebar docs"
   },
   "sidebar.docs.category.故障问题": {
-    "message": "故障问题",
-    "description": "The label for category 故障问题 in sidebar docs"
+    "message": "Troubleshoot & FAQ",
+    "description": "The label for category Troubleshoot & FAQ in sidebar docs"
   },
   "sidebar.docs.category.架构参考": {
     "message": "Architecture Reference",

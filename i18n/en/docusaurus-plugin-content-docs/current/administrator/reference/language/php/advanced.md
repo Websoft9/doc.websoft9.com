@@ -2,7 +2,7 @@
 slug: /php/advanced
 ---
 
-# 进阶
+# Advanced
 
 ## 安装
 

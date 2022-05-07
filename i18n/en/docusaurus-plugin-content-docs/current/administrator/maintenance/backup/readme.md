@@ -6,19 +6,17 @@ slug: /administrator/backup
 import DocCardList from '@theme/DocCardList';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-# 备份恢复
+# Backup and Restore
 
-为了以防万一，如下的备份操作是必不可少的：
+Just in case, the following backup operations are essential:
 
-## 备份方式
-
-> 一定要养成备份的习惯，切莫存在侥幸心理
+## Backup Method
 
 <DocCardList items={useCurrentSidebarCategory().items}/>
 
-## 问题解答
+## FAQ
 
-#### 为什么需要备份？
+#### Why need a perfect backup?
 
 “信息系统根本无法长时间保持 100% 稳定的状态，任何系统都可能会出现故障，只是故障出现的概率不同、危害程度不同而已”。  
 

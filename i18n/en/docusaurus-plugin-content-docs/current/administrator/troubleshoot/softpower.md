@@ -3,7 +3,7 @@ sidebar_position: 5
 slug: /troubleshoot/softpower
 ---
 
-# 故障解决者的软实力
+# Troubleshooter's SoftPower 
 
 掌握了方法论，也只是解决故障的一个方面。实际上，还有一个方面与它是相辅相成的，那就是问题处理者的软实力。  
 

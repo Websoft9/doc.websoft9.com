@@ -32,7 +32,16 @@ npm run start -- --host 0.0.0.0  --port 3002
 #### Vuepress{#vuepress}
 #### Gatsby.js{#gatsby}
 
-## 故障排除{#troubleshooting}
+## 故障排除{#troubleshoot}
+
+#### NPM Prevent Permissions Errors？
+
+参考：[Fix NPM permissions](https://www.npmjs.com.cn/getting-started/fixing-npm-permissions/)
+
+#### NPM broken？
+
+尝试运行 `npm cache clean` 命令，若仍然没有解决问题，需更新或重装 NPM
+
 
 ## 参数
 

@@ -71,7 +71,7 @@ slug: /faq
 
 #### Nginx 出现 502 错误？{#nginx502}
 
-Nginx 的 502 错误全程为 “Nginx 502 Bad Gateway”。错误不在 Nginx 本身，而是 Nginx 转发的后端服务运行异常。  
+Nginx 的 502 错误全称为 “Nginx 502 Bad Gateway”。错误不在 Nginx 本身，而是 Nginx 转发的后端服务运行异常。  
 
 后端服务异常包括：
 

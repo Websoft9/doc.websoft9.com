@@ -14,7 +14,7 @@ slug: /go
 #### Gin{#gin}
 #### Beego{#beego}
 
-## 故障排除{#troubleshooting}
+## 故障排除{#troubleshoot}
 
 ## 参数
 

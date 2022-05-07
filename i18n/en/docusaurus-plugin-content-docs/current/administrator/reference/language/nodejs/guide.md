@@ -3,24 +3,21 @@ sidebar_position: 1
 slug: /nodejs
 ---
 
-# 指南
+# Guide
 
-我们知道 JavaScript 可以作为前端直接在浏览器端使用，也是以 [Node](https://nodejs.org/) 作为运行时的后端语言。  
-本文档围绕 JavaScript 作为后端的场景进行说明。
+## Tutorial
 
-## 场景
-
-### 开启外网访问
-
-开启 Node 应用的外网访问，主要通过 --host 实现，--port 可以指定端口
+### Enable remote access
 
 ```
 npm run start -- --host 0.0.0.0  --port 3002
 ```
 
-### Node 版本变更{#changeversion}
+### Change Node version{#changeversion}
 
-### 框架{#framework}
+use `nvm` command to change Node version
+
+### Framework{#framework}
 
 #### Express{#express}
 #### Vue{#vue}
@@ -32,22 +29,27 @@ npm run start -- --host 0.0.0.0  --port 3002
 #### Vuepress{#vuepress}
 #### Gatsby.js{#gatsby}
 
-## 故障排除{#troubleshooting}
+## Troubleshoot{#troubleshoot}
 
-## 参数
+#### NPM Prevent Permissions Errors？
 
-### 路径{#path}
+Refer to: [Fix NPM permissions](https://www.npmjs.com.cn/getting-started/fixing-npm-permissions/)
 
-与 Node 相关的组件目录如下：
+#### NPM broken？
 
-Node.js 模块目录: */usr/lib/node_modules*  
-Node.js 应用安装目录: */data/wwwroot*  
-Express 示例目录: */data/wwwroot/express.example.com*  
-Node.js 日志文件: */root/.pm2/pm2.log*  
+Try to run `npm cache clean` and you need to reinstall it if that not solved
 
-### 版本号{#checkversion}
+## Parameters
 
-下面的命令用于查看 Python 相关的版本号
+### Path{#path}
+
+Node.JS Global Modules Directory: */usr/lib/node_modules*    
+Node.js applicaton root directory: */data/wwwroot*    
+Express demo program: */data/wwwroot/express.example.com*    
+Node.JS Log file: */root/.pm2/pm2.log*    
+NVM directory: */opt/nvm*  
+
+### Version{#checkversion}
 
 ```shell
 # Node.js  Version
@@ -63,7 +65,7 @@ npm -v
 yarn --version
 ``````
 
-### 服务{#service}
+### Service{#service}
 
 ```shell
 # PM2
@@ -73,6 +75,10 @@ systemctl restart pm2-root
 systemctl status pm2-root
 ```
 
-### 命令行{#cmd}
+### CLI{#cmd}
 
-主要包括 node, nvm, npm, yarn, pm2 等命令
+* node
+* nvm
+* npm
+* yarn
+* pm2

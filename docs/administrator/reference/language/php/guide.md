@@ -189,7 +189,7 @@ LAMP 默认使用 php-fpm 服务来解析PHP文件，如果想用 mod_php 解析
 2. 停止 [PHP-FPM 服务](#service)
 
 
-## 故障排除{#troubleshooting}
+## 故障排除{#troubleshoot}
 
 #### PHP 不支持 SMTP？
 

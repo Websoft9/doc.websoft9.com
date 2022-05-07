@@ -4,20 +4,11 @@ slug: /dotnet/advanced
 
 # 进阶
 
-[Node.js](https://nodejs.org/) 是一个基于 Chrome JavaScript 的运行时平台， 用于方便地搭建响应速度快、易于扩展的网络应用。Node.js 使用事件驱动， 非阻塞I/O 模型而得以轻量和高效，非常适合在分布式设备上运行数据密集型的实时应用。  
+[.NET](https://dotnet.microsoft.com/zh-cn) 是一个免费的、跨平台的、开源的开发者平台，用于构建许多不同类型的应用程序。借助 .NET，您可以使用多种语言、编辑器和库为 Web、移动、桌面、游戏和 IoT 进行构建。
 
 ## 安装
 
-### 自动安装
-
 参阅[官方文档](https://docs.microsoft.com/zh-cn/dotnet/core/install/)
-
-### 升级
-
-```
-# 升级 NPM
-sudo npm install npm -g
-```
 
 ## 概念与原理
 

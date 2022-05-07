@@ -3,38 +3,34 @@ sidebar_position: 1
 slug: /go
 ---
 
-# 指南
+# Guide
 
-## 场景
+## Tutorial
 
-### Golang 版本变更{#changeversion}
+### Change Golang version{#changeversion}
 
-### 框架{#framework}
+### Framework{#framework}
 
 #### Gin{#gin}
 #### Beego{#beego}
 
-## 故障排除{#troubleshooting}
+## Troubleshoot{#troubleshoot}
 
-## 参数
+## Parameters
 
-### 路径{#path}
+### Path{#path}
 
-与 Go 相关的组件目录如下：
+Go directory: */usr/local/go*  
 
-Go 目录: */usr/local/go*  
-
-### 版本号{#checkversion}
-
-下面的命令用于查看 Go 相关的版本号
+### Version{#checkversion}
 
 ```shell
 # Go  Version
 go version
 ``````
 
-### 服务{#service}
+### Service{#service}
 
-### 命令行{#cmd}
+### CLI{#cmd}
 
-主要包括 go 等命令
+* go

@@ -2,30 +2,21 @@
 slug: /dotnet/advanced
 ---
 
-# 进阶
+# Advanced
 
-[Node.js](https://nodejs.org/) 是一个基于 Chrome JavaScript 的运行时平台， 用于方便地搭建响应速度快、易于扩展的网络应用。Node.js 使用事件驱动， 非阻塞I/O 模型而得以轻量和高效，非常适合在分布式设备上运行数据密集型的实时应用。  
+[.NET](https://dotnet.microsoft.com/zh-cn) is Free. Cross-platform. Open source. A developer platform for building all your apps.
 
-## 安装
+## Install .NET
 
-### 自动安装
+Refer to: [Install .NET](https://docs.microsoft.com/en-us/dotnet/core/install/)
 
-参阅[官方文档](https://docs.microsoft.com/zh-cn/dotnet/core/install/)
+## Concepts
 
-### 升级
-
-```
-# 升级 NPM
-sudo npm install npm -g
-```
-
-## 概念与原理
-
-### 体系架构
+### Architecture
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/dotnet/swimlane-architecture-framework.svg)
 
-## 问题解答
+## FAQ
 
 #### 如何找到 .NET 资源？
 
