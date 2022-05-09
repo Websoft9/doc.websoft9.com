@@ -3,21 +3,17 @@ sidebar_position: 1
 slug: /administrator/migration_server
 ---
 
-# 服务器整体迁移
+# Server Migration
 
-服务器整体迁移是从整个虚拟机层面保持不变的一种迁移要求，一般有如下两种情况：
+The overall server migration is a migration requirement that remains unchanged from the entire virtual machine level. Generally, there are two situations as follows:  
 
-## 跨区域迁移
+## Migrate to another Region in same Cloud
 
-跨区域迁移指的是在同一个云平台中，实现不同区域的迁移。  
+Just need to create image for your Server and copy image to new region, then create new Server for it.  
 
-这种迁移主要只需复制服务器自定义镜像到需迁移的区域，然后再基于镜像重新创建服务器即可。  
+## Migrate to another Cloud
 
-## 跨云迁移
-
-跨云迁移包括：将虚拟机迁移至不同的云平台或本地虚拟机上云。  
-
-跨云迁移的主要步骤如下：
+Migrate to another Cloud need these steps:  
 
 1. 针对目标云平台的要求，在待迁移的虚拟机上安装一系列所需的软件：Cloud-Init, virtio 驱动等
 2. 基于虚拟机创建镜像

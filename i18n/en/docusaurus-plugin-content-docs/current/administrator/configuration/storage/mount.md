@@ -3,7 +3,7 @@ sidebar_position: 4
 slug: /administrator/storage_mount
 ---
 
-# 数据盘挂载
+# Mount data disk
 
 用户在云平台购买数据盘并将其附加到指定的服务器之后，还需要下面的工作方可使用：
 

@@ -3,14 +3,16 @@ sidebar_position: 2
 slug: /administrator/storage_external
 ---
 
-# 外部存储转换为磁盘
+# Mount external storage
 
-外部存储是区别于服务器磁盘的一种第三方存储服务，它位于服务器之外。Websoft9 通过 [Rclone](https://rclone.org/) 将外部云存储挂载为网络磁盘。  
+External storage is a third-party storage service that is separate from server disks and resides outside the server.
 
-1. 准备好第三方存储
+Websoft9 use [Rclone](https://rclone.org/) to convert it:    
 
-2. 运行 `rclone config` 命令，配置
+1. Prepare your external storage
 
-具体使用参考：[rclone mount](https://rclone.org/commands/rclone_mount/)
+2. Run command `rclone config` to configure it
+
+Refer to: [rclone mount](https://rclone.org/commands/rclone_mount/)
 
 

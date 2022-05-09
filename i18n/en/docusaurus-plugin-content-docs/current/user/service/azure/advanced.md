@@ -3,15 +3,15 @@ sidebar_position: 3
 slug: /azure/advanced
 ---
 
-# 进阶
+# Advanced
 
-## 核心原理
+## Concept
 
 ### API/CLI
 
 Azure 提供了原生 API/CLI 。
 
-## 问题解答
+## FAQ
 
 #### 虚拟机的登录账号是什么？
 

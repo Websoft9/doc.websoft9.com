@@ -74,7 +74,7 @@ tags:
 SuiteCRM默认安装只有英文，需要中文或其他语言，需要下载语言包，然后通过后台进行安装，以中文为例，具体如下：
 
 1.  下载[中文语言包](https://crowdin.com/project/suitecrmtranslations/zh-CN) – 存到本地电脑上
-2.  以Admin身份进入SuiteCRM，进入 “Module loader”
+2.  以Admin身份进入SuiteCRM，进入 “admin-Admin Tools-Module loader”
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-lmodule-websoft9.png)
 3.  Upload file->Install it->Commit
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-linstall-websoft9.png)

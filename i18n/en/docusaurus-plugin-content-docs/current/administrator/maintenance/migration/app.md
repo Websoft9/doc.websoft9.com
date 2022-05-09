@@ -3,15 +3,15 @@ sidebar_position: 2
 slug: /administrator/migration_app
 ---
 
-# 应用程序迁移
+# Application Migration
 
 
-应用程序的迁移没有一个完全适合所有应用的精准方案，但应用的迁移规律是普适性的。  
+There is no precise solution for application migration that is completely suitable for all applications, but the migration law of applications is universal.
 
-应用的迁移主要是如下几个步骤：  
+The migration of the application mainly consists of the following steps:  
 
 
-## Docker 应用迁移  
+## Migrate Docker-based application 
 
 对于 Docker 应用来说，环境与操作系统被打包到一个【虚拟盒子】中，很容易被迁移。下面介绍具体步骤：
 
@@ -46,7 +46,7 @@ slug: /administrator/migration_app
    docker-compose up -d
    ```
 
-## 非 Docker 应用迁移
+## Migrate not Docker-based application 
 
 对于非 Docker 等应用来说，环境与应用是分离的，环境与操作系统是紧耦合的。意味着迁移环境难度很大，所以大部分时候用户会在目的地服务器上重新部署一致的环境。  
 
@@ -64,7 +64,7 @@ slug: /administrator/migration_app
 5. 测试迁移的结果
 
 
-## 迁移后续
+## Migration follow-up
 
 完成应用迁移之后，可能还有一些后续的工作：
 

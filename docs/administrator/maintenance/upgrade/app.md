@@ -5,7 +5,7 @@ slug: /administrator/upgrade_app
 
 # 应用程序升级
 
-应用程序除了自身通过 CLI 或在线升级方式之外，
+下面介绍两种应用程序升级的方式：  
 
 ## 在线升级
 

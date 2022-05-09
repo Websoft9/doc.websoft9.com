@@ -3,77 +3,68 @@ sidebar_position: 1
 slug: /administrator/domain_step
 ---
 
-# 域名五步设置
+# Five steps for Domain
 
-## 设置步骤
+## Five Steps
 
-与域名有关的配置有五个步骤，其中：  
+There five steps for configuring Domain for your application:   
 
-* 域名注册、域名实名制认证、域名备案和域名解析都是通过云控制台实现。
-* 域名绑定通过服务器端配置实现
+* Login your Domain provider to: Register domain, Verify domain, Record domain and Resolve domain
+* Connect your Server to **Binding domain**
 
-### 域名注册{#domainreg}
+### Register domain{#domainreg}
 
-通过域名服务商注册（购买）一个自己喜欢且符合网站特征的域名。
+Register a domain name you like and match the characteristics of your website through a domain name service provider.
 
-### 域名实名制认证{#domainauth}
+### Verify domain{#domainauth}
 
-域名注册完成之后，还需要提供个人或公司法人证件进行域名所有者的实名制认证。  
+After the domain name registration is completed, it is also necessary to provide personal or company legal person certificates for real-name authentication of the domain name owner. 
 
-### 域名备案{#domainbei}
+### Record domain{#domainbei}
 
-备案是中国大陆的一项法规，域名用于中国大陆地区的服务器访问必须备案。也就是说向政府监管部门提供：**网站存放的详细信息**
+Some special region (e.g  China) need to Record domain for government if you can to resolve domain to your website.  
 
-备案是纯粹的**商务流程活动**，没有任何技术门槛，建议用户自行完成：
+You can contact your Cloud platform to complete this business process.  
 
-* 购买服务器满足云平台的免费备案要求，就可以由云平台供备案服务。
-* 备案过程请通过云平台的**备案系统**全程操作
-* 云平台提供 7*24 域名备案咨询服务
+### Resolve domain{#domainresolve}
 
-### 域名解析{#domainresolve}
+Make your DNS or sub DNS point to a IP address of Server  
 
-域名解析的作用是通过一段**容易识别的文字段**来指向服务器的**IP地址**。类似：abc.com 指向 80.123.9.11，好处是便于识别。  
-
-下面是是一个域名解析的范例：在域名控制台，将域名（或子域名）指向 IP：  
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/domain-websoft9.png)
 
 
-### 域名绑定{#domainbind}
+### Binding domain{#domainbind}
 
-上面的域名解析避免了直接使用 IP 地址，但域名配置还差最后一步。  
-
-我们设想一个很常见的情况：有多个域名解析到同一个服务器时，服务器是如何区分并提供不同域名所需资源的？
+Binding your DNS to a special application directory by modify the **vhost configuration file** when their have more than two websites or applications on your Server.
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/apache/apache-vhostui-websoft9.png)
 
-其实这个问题就是**域名绑定**要做的工作。通过修改服务器中的 Web  服务器的 **虚拟主机配置文件**，即可实现域名绑定。  
+You can refer to different Web Server for it:  
 
-具体参考对应的指南：  
-
-* [Apache 域名绑定](../apache#domain)
-* [Nginx  域名绑定](../nginx#domain)
-* [Caddy 域名绑定](../caddy#domain)
-* [Traefik 域名绑定](../traefik#domain)
-* [IIS 域名绑定](../iis#domain)
+* [Binding domain on Apache](../apache#domain)
+* [Binding domain on Nginx](../nginx#domain)
+* [Binding domain on Caddy](../caddy#domain)
+* [Binding domain on Traefik](../traefik#domain)
+* [Binding domain on IIS](../iis#domain)
 
 
-## 问题解答
+## FAQ
 
-#### 什么是一级域名？二级域名？
+Here are the FAQs you may need:  
 
-当您成功注册了一个域名，就是拥有了一个一级域名，类似： abc.com ，
-通过一级域名，可以设置出无数个二级域名，类似：www.abc.com 或 help.abc.com
+#### First-level domain name Second-level domain name?
 
-> 如何设置二级域名？进入域名厂商提供的域名控制台设置。
+When you completed one Domain, you owned a first-level Domain Name, e.g abc.com  
+When you completed one DNS resolution for your website, e.g www.abc.com, this is a second-level Domain Name  
 
-#### 域名与服务器如何建立关联？
+#### How do domain and servers associate?
 
-域名需要通过A记录的方式解析到服务器才能与服务器建立关联，域名解析到服务器IP之后，服务器会通过“域名配置文件（虚拟主机文件）”来判断多个域名与多个网站之间的映射关系
+The domain name needs to be resolved to the server through the **A record** to establish an association with the server. After the domain name is resolved to the server IP, the server will use the "domain name configuration file (vhost file)" to determine the mapping relationship between multiple domain names and multiple websites
 
-#### 服务器如何识别域名的级别？
+#### How does the server recognize the level of the domain name?
 
-不管是一级域名还是二级域名，对服务器来说都是不同的域名，abc.com 和 www.abc.com 对服务器来说两个独立的域名，即服务器不识别域名的级别。
+abc.com and www.abc.com are different Domain Name for Cloud Server.
 
-#### 域名解析迟迟没有生效？{#effect}
+#### Domain resolution has not taken effect?{#effect}
 
-解析生效之后，本地访问可能由于缓存问题导致仍然没有生效，请清空浏览器缓存和 DNS 缓存
+After the resolution takes effect, local access may still not take effect due to cache problems, please clear the browser cache and DNS cache

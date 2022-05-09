@@ -3,7 +3,7 @@ sidebar_position: 3
 slug: /administrator/migration_db
 ---
 
-# 数据库迁移
+# Database Migration
 
 组织可能出于以下原因进行数据迁移：
 
@@ -15,6 +15,6 @@ slug: /administrator/migration_db
 
 数据库迁移很常见的运维工作，因此围绕数据库迁移有大量的工具和手段，具体参考数据库文档中相关章节。  
 
-* [SQL Server 迁移](../sqlserver/admin#migration)
-* [MySQL/MariaDB 迁移](../mysql/admin#migration)
-* [PostgreSQL 迁移](../postgresql/admin#migration)
+* [SQL Server Migration](../sqlserver/admin#migration)
+* [MySQL/MariaDB Migration](../mysql/admin#migration)
+* [PostgreSQL Migration](../postgresql/admin#migration)

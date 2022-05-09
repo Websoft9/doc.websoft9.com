@@ -4,11 +4,11 @@ import styles from './HomepageFeatures.module.css';
 
 const FeatureList = [
   {
-    title: '快速入门',
+    title: '应用中心',
     Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        通过 10 分钟，快速了解。
+        数百个应用的快速使用指南。
       </>
     ),
   },
@@ -22,41 +22,15 @@ const FeatureList = [
     ),
   },
   {
-    title: '应用中心',
+    title: '技术支持',
     Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        数百个应用的快速使用指南。
+        订阅客户，随时联系我们的客户成功团队吧
       </>
     ),
-  },
-  {
-    title: '应用中心',
-    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        数百个应用的快速使用指南。
-      </>
-    ),
-  },
-  {
-    title: '应用中心',
-    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        数百个应用的快速使用指南。
-      </>
-    ),
-  },
-  {
-    title: '应用中心',
-    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        数百个应用的快速使用指南。
-      </>
-    ),
-  },
+  }
+
 
 ];
 

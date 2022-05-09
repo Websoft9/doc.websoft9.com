@@ -3,53 +3,49 @@ sidebar_position: 3
 slug: /administrator/backup_app
 ---
 
-# 应用程序备份与还原
+# Application Backup
 
-与整个服务器备份不同的是，应用程序的备份主要备份应用相关的：源代码、配置文件、数据和数据库。  
+Unlike whole [server backups](../administrator/backup_server), application backups primarily backup application-related: source code, configuration files, data, and databases.  
 
-应用程序备份有两种途径：  
+There are two paths for application backup:  
 
-## 自动
+## Automation
 
-应用程序自身会提供自动备份工具（CLI 或 可视化界面）帮助用户实现有计划的自动备份。  
+The application itself provides automatic backup tools (CLI or GUI) to help users achieve planned automatic backups.  
 
-具体参考应用程序相关的章节。  
+For details, refer to the application-related chapters.  
 
-## 手动
+## Manual
 
-手动备份是通过**下载应用程序源码和导出数据库文件**去实现的一种最小化备份方式。虽然手动备份不是一个高效率的备份手段，但是在某些特殊情况下，也有其存在的价值。  
-
-```
-- 备份范围: 数据库和应用程序
-- 备份效果: 一般
-- 备份建议频率: 一周最低1次，备份保留30天
-- 恢复方式: 重新导入
-- 技能要求：中等技能
-- 自动化：无
-```
-
-根据应用的部署方式，采用不同的手动备份方案。  
-
-### Docker 应用
-
-如果应用是基于 Docker 部署，备份和恢复非常简单：  
+Manual backup for application is based on the **Exporting source code and database of application** to achieve a minimized backup scheme.
 
 ```
-# 备份
+- Backup scope: Source code and database of application
+- Backup effect: Good
+- Backup frequency: You can operate when you need
+- Recovery method: Import
+- Skill requirement: Easy 
+- Automation: manual
+```
+
+
+### Application based on Docker
+
+It is very easy for you backup application based on Docker
+
+```
+# backup
 docker-compose run --rm backup  
 
-## 恢复
+# restore
 docker-compose run --rm restore  
 ```
 
-### 非 Docker 应用
+### Application based on Linux
 
-如果是非 Docker 部署，手动备份通用的操作步骤如下：
+Below is the steps for you backup application based on Linux:  
 
-1. 通过 SFTP 将[应用程序目录](../administrator/parameter)**压缩后**再完整的下载到本地
-
-2. 通过[数据库管理工具](../user/dbgui)导出数据库
-
-3. 将程序文件和数据库文件放到同一个文件夹，根据日期命名
-
-4. 备份工作完成
+1. Just compression and download the entire */data/wwwroot/application** directory by SFTP 
+2. Export Database
+3. Put the source code file and database file in the same folder, named according to the date
+4. Backup completed

@@ -166,9 +166,9 @@ Putty 虽然可以单独运行，但把 Putty 集成到 WinSCP 上使用更加�
 
    |  云平台   |  管理员账号   | 其他|
    | --- | --- | --- |
-   |  Azure   |  创建服务器的时候自行设置   | [如何开启root账户？](https://support.websoft9.com/docs/azure/zh/server-login.html#示例2：启用系统root账号) |
-   |  AWS   |  AmazonLinux:ec2  CentOS:centos  Ubuntu:ubuntu  Debian:admin   | [如何开启root账户？](https://support.websoft9.com/docs/aws/zh/server-login.html#示例2：启用系统root账号) |
-   |  阿里云，华为云，腾讯云   |  root   | |
+   |  Azure   |  创建服务器的时候自行设置   | [如何开启root账户？](../azure#enableroot) |
+   |  AWS   |  AmazonLinux:ec2  CentOS:centos  Ubuntu:ubuntu  Debian:admin   | [如何开启root账户？](../aws#enableroot)|
+   |  阿里云，华为云，腾讯云   |  都是 root 除腾讯云 Ubuntu 之外(ubuntu)  | |
 
   </TabItem>
   <TabItem value="windowsaccount" label="Windows">

@@ -24,5 +24,10 @@ tags:
 
 **解决方案**：临时购买一台香港地区的Windows服务器，在这个服务器打开浏览器安装SuiteCRM即可
 
+#### 无法在 Studio 中编辑字段 ，报错：无法检索数据
+
+在SuiteCRM 8 中，通过 Admin → Studio → Accounts → Fields → 弹出错误 - 无法检索数据，可以通过修复文件文件解决：
+用下列文件替换SuiteCRM 目录中 public/legacy/modules/ModuleBuilder/views/view.modulefields.php 文件
+https://github.com/myfluxi/SuiteCRM-Core/blob/30e44d2fb786389236f98182d304dc0a7a00cb55/public/legacy/modules/ModuleBuilder/views/view.modulefields.php
 
 ## 问题解答

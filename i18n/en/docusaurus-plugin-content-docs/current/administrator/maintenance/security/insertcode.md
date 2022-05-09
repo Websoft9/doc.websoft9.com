@@ -3,7 +3,7 @@ sidebar_position: 1
 slug: /administrator/security_insertcode
 ---
 
-# 代码植入问题处理
+# Code inject defense
 
 代码植入是一种通过将【病毒代码】插入到应用程序正常代码中间的一种伪装方式
 

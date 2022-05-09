@@ -3,62 +3,60 @@ sidebar_position: 6
 slug: /administrator/smtp
 ---
 
-# SMTP 发送邮件
+# SMTP sheets
 
-应用中配置 SMTP 邮件发送功能是非常重要的设置，它可以用于密码找回和重要操作的通知。  
+Sending mail is a common feature for RabbitMQ. With a large number of users' practice and feedback, only one way is recommended, that is, using the **third-party SMTP service** to send the email.
 
-由于邮件系统的搭建非常复杂，其路由配置受制域名、防火墙、路由等多种因素制约，导致维护一个高可用的邮件系统非常困难。所以应用都建议集成第三方的 SMTP 服务来完成邮件通知功能。  
+> Do not try to install **Sendmail** or other Mail server software on your Cloud Server for sending mail
 
-## SMTP 配置
+## SMTP references
 
-下面是主流的邮箱提供商之 SMTP 服务设置（[来源](https://www.lifewire.com/search?q=smtp) ）
+The following is the SMTP service settings of mainstream email providers ([Source](https://www.lifewire.com/search?q=smtp))
 
-### QQ邮箱{#qq}
+### QQ mail
 
 - SMTP host: smtp.qq.com
 - SMTP port: 465 or 587 for SSL-encrypted email
 - SMTP Authentication: must be checked
 - SMTP Encryption: must SSL
 - SMTP username: email address
-- SMTP password: 这个密码不是邮箱密码，是需要通过QQ邮箱SMTP设置去获取的授权码
+- SMTP password: This is not password of you mail, it is an authorization code you need to apply
 
-> The above is for quick reference only. see the [QQ邮箱SMTP设置](https://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=166)
+> The above is for quick reference only. see the [QQ SMTP settings](https://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=166)
 
 
-### 163邮箱（网易）{#163}
+### 163 mail
 
 - SMTP host: smtp.163.com
 - SMTP port: 465 or 994 for SSL-encrypted email
 - SMTP Authentication: must be checked
 - SMTP Encryption: must SSL
 - SMTP username: email address
-- SMTP password: 这个密码不是邮箱密码，是需要通过163邮箱SMTP设置去获取的授权码
+- SMTP password: This is not password of you mail, it is an authorization code you need to apply
 
-> 以上仅供快速设置参考，更多详情查看官网文档：[163邮箱SMTP设置](https://help.163.com/09/1223/14/5R7P6CJ600753VB8.html?servCode=6010376)
+> The above is for quick reference only. see the [163 SMTP settings](https://help.163.com/09/1223/14/5R7P6CJ600753VB8.html?servCode=6010376)
 
 
-### 阿里云邮箱{#aliyun}
+### Aliyun mail
 
 - SMTP host: smtp.mxhichina.com
 - SMTP port: 465  for SSL-encrypted email
-- SMTP 身份认证: 必须勾选
-- SMTP 加密: 需启用SSL
+- SMTP Encryption: must SSL
 - SMTP username: email address
 - SMTP password: email password
 
->以上仅供快速设置参考，更多详情查看官网文档： [阿里云邮箱SMTP设置](https://help.aliyun.com/knowledge_detail/36576.html)
+> The above is for quick reference only. see the [Aliyun SMTP settings](https://help.aliyun.com/knowledge_detail/36576.html)
 
-### SendGrid{#sendgrid}
+### SendGrid
 
-
-To configure your application to send email through SendGrid’s SMTP service, use the settings below. Replace USERNAME with your SendGrid account username and PASSWORD with your SendGrid account password.<br />
+To configure your application to send email through SendGrid’s SMTP service, use the settings below. Replace USERNAME with your SendGrid account username and PASSWORD with your SendGrid account password.  
 
 - SMTP host: smtp.sendgrid.net
 - SMTP port: 25 or 587 for unencrypted/TLS email, 465 for SSL-encrypted email
 - SMTP username: USERNAME
 - SMTP password: PASSWORD
 
-### Gmail{#gmail}
+### Gmail
 
 - Gmail SMTP server address: **smtp.gmail.com**
 - Gmail SMTP username: **Your Gmail address** (e.g. _example@gmail.com_)
@@ -70,7 +68,7 @@ To configure your application to send email through SendGrid’s SMTP service, u
 > Remember that in addition to these email server settings, you need to let the email client receive/download mail from your Gmail account too. There's more information on that at the bottom of this page.
 
 
-### Outlook.com{#outlook}
+### Outlook.com
 
 - SMTP Server: smtp-mail.outlook.com
 - Username: Your full Outlook.com email address
@@ -78,7 +76,7 @@ To configure your application to send email through SendGrid’s SMTP service, u
 - SMTP Port	587
 - SMTP TLS/SSL Encryption Required	Yes
 
-### Hotmail{#hotmail}
+### Hotmail
 
 - **Hotmail SMTP Server**: smtp.live.com
 - **Hotmail SMTP Username**: Your complete Windows Live Hotmail email address (e.g. _me@hotmail.com_ or _me@live.com_)
@@ -86,7 +84,7 @@ To configure your application to send email through SendGrid’s SMTP service, u
 - **Hotmail SMTP Port**: 587
 - **Hotmail SMTP TLS/SSL Required**: yes
 
-### Yahoo Mail{#yahoo}
+### Yahoo Mail
 
 - Yahoo Mail SMTP server address: **smtp.mail.yahoo.com**
 - Yahoo Mail SMTP username: Your full [**Yahoo email address**](https://www.lifewire.com/forward-yahoo-mail-to-another-address-1174481) (including **@yahoo.com**)
@@ -97,7 +95,7 @@ To configure your application to send email through SendGrid’s SMTP service, u
 > These settings work with most desktop, mobile, and web email programs and services. After you set up Yahoo Mail in your preferred email client, the mail and your Yahoo folders appear in both locations: in Yahoo and in your preferred app or web interface, such as Gmail.
 
 
-### iCloud Mail{#icloud}
+### iCloud Mail
 
 - Server name:** smtp.mail.me.com**
 - SSL required: **Yes**
@@ -106,7 +104,7 @@ To configure your application to send email through SendGrid’s SMTP service, u
 - Username: Type your full iCloud email address.
 - Password: Type an app-specific iCloud Mail password.
 
-### Zoho Mail{#zoho}
+### Zoho Mail
 
 - Zoho Mail SMTP server address: **smtp.zoho.com**
 - Zoho Mail SMTP port: **465**
@@ -114,54 +112,28 @@ To configure your application to send email through SendGrid’s SMTP service, u
 - Zoho Mail SMTP user name: **Your** **Zoho Mail address** (example@zoho.com or your email address if you use Zoho Mail with your own domain)
 - Zoho Mail SMTP password: **Your** **Zoho Mail password**
 
-### Directmail{#derectmail}
+## SMTP diagnosis
 
-Directmail 是阿里云的邮件推送服务，相对于免费邮箱来说，自主性更强，同时更稳定可靠。   
+If you use the SMTP service provided by a third party (such as QQ mailbox, NetEase mailbox, etc.), the configuration is no problem, but you still cannot send mail. Please check the following questions:
 
-下面是Directmail的配置简要流程：
+1. Use the **telnet** to connect SMTP service to check it
 
-1. 登录阿里云邮件推送控制台，新增一个发信域名  
-   ![新增发信域名](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aliyun/aliyun-dmailadd-websoft9.png)
-
-2. 根据域名配置要求，在域名控制台完成对应的域名解析，并点击“验证”  
-   ![验证](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aliyun/aliyun-dmailverify-websoft9.png)
-
-3. 验证通过后，设置发信地址  
-   ![设置发信地址](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aliyun/aliyun-dmailsetsendm-websoft9.png)
-
-4. 如果需要接受用户的邮件回复，可以针对此发件地址配套一个回信地址。
-
-5. 完成所有配置后，您会得到一个如下的SMTP参数
-   ```
-   SMTP地址：smtpdm.aliyun.com 
-   SMTP用户名：norelpy@smtp.websoft9.cn
-   SMTP密码：*******
-   SMTP端口：465 需要启用ssl加密
-   SMTP端口：80 无需加密 
-   ```
-
-## SMTP 诊断
-
-如果使用第三方提供的SMTP服务（如qq邮箱、网易邮箱等），配置也没有问题，但是仍然无法发送邮件。请检查如下几个问题：
-
-1. 通过服务器的telnet工具，验证服务器是否可以连接SMTP服务
-
-> 注意：本地电脑Telnet测试成功，不代表服务器Telnet成功，因为您的服务器IP地址由于某些原因可能会被STMP服务器列入黑名单。
+> The successful Telnet test on the local computer does not mean that the server Telnet is successful, because your server IP address may be blacklisted by the STMP server for some reasons.
 
 ~~~
-//安装telnet
+//Install telnet
 yum install telnet -y
 
-//示例1：测试qq邮箱 端口有465和587
+//sample one：test QQ mail
 telnet smtp.qq.com 465
 
-//示例2：测试网易邮箱 端口有465和994
-telnet smtp.163.com 465
+//sample one：test Gmail mail
+telnet smtp.gmail.com 465
 
 ~~~
 
-出现 `220 smtp.*.com Esmtp *Mail Server `或 `Escape character is '^]'` 类似反馈，说明可以连接
+When you see the feedback code `220 smtp.*.com Esmtp *Mail Server ` or  `Escape character is '^]'`, it means connection is OK
 
-2.  服务器安全组（出设置）禁止外部访问
-3.  服务器系统iptables，firewall设置关闭了465等端口
-4.  OpenSSL版本过低或者没有安装或其CA证书异常
+2. The security group of Cloud Platform set the external access disabled
+3. You iptables or firewall disabled the 465 or 587 port which for mail
+4. OpenSSL version is low or CA certification have error

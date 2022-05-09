@@ -6,8 +6,8 @@ slug: /administrator/storage
 import DocCardList from '@theme/DocCardList';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-# 存储
+# Storage
 
-在本章中，你可以了解到与应用存储空间有关的各种配置：  
+In this chapter, you can learn about various configurations related to application storage: 
 
 <DocCardList items={useCurrentSidebarCategory().items}/>

@@ -3,7 +3,7 @@ sidebar_position: 2
 slug: /administrator/security_ddos
 ---
 
-# DDOS 防御
+# DDOS defense
 
 分布式拒绝服务攻击(DDoS)是目前黑客经常采用的攻击手段，它的原理是：利用合理的服务请求来占用过多的服务资源，从而导致流量消耗或服务器无法正常对外提供服务。  
 

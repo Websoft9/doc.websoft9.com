@@ -53,7 +53,7 @@ Websoft9 预制 [Let's Encrypt](https://letsencrypt.org/) 免费的证书部署�
         ssl_prefer_server_ciphers on;
         #-----HTTPS template end------------
         ```
-    * 以 Apache 为例，向虚拟主机配置文件为 */etc/nginx/conf.d/default.conf* 中插入下面的 **HTTPS template** 到文件中
+    * 以 Apache 为例，向虚拟主机配置文件为 */etc/httpd/conf.d/vhost.conf* 中插入下面的 **HTTPS template** 到文件中
 
         ```
         #-----HTTPS template start------------

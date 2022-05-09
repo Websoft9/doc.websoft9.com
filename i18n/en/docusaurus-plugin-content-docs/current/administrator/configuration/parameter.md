@@ -3,55 +3,51 @@ sidebar_position: 10
 slug: /administrator/parameter
 ---
 
-# 路径、端口和服务
+# Parameter sheet
 
-Websoft9 将各个应用和组件的目录到一个约定的目录中，大大的简化了用户维护：  
+The important information such as the installation directory path, configuration file path, port, version, etc. are listed below.
 
-## 目录与路径{#path}
+## Path and directory{#path}
 
-由 Websoft9 约定了统一的**数据、日志和配置文件**存放目录：
+A unified **data, log and configuration file** storage directory is agreed by Websoft9:
 
-* */data/wwwroot/appname*  存放应用本体，appname 即应用名称，例如：wordpress
-* */data/apps* 存放应用所需的支持工具，例如 phpmyadmin
-* */data/db* 数据库统一目录，例如 mysql
-* */data/config* 配置统一目录，例如 Apache  配置
-* */data/logs* 配置统一目录，例如 网站日志
+* */data/wwwroot/appname*: appname directory
+* */data/apps*: the same with appname directory
+* */data/db*: database directory
+* */data/config* : configuration file directory
+* */data/logs* logs directory
 
-运行 `whereis` 命令可以查看原始的安装路径。  
+## Port{#port}
 
-## 端口{#port}
+You can run the cmd `netstat -tunlp` to list all used ports, and we list the following most useful ports:     
 
-用户可以通过 `netstat -tunlp` 查看服务器上已经用到的端口。      
+### Common ports for application
 
-下面是最常见的端口，请根据实际情况到安全组中 **开启或关闭** 它们：
-
-### 应用访问
-
-| 端口号 | 用途 |  必要性 |
+| Number | Use |  Necessity |
 | --- | --- | --- |
-| 80 | 通过 HTTP 访问 应用 | 可选 |
-| 443 | 通过 HTTPS 访问 应用 | 可选 |
+| 80 | HTTP to access application | Optional |
+| 443 | HTTPS to access application | Optional |
 
-### 服务器连接
+### Common ports for Server
 
-| 端口号 | 用途 |  必要性 |
+| Number | Use |  Necessity |
 | --- | --- | --- |
-| 21 | Linux 服务器 FTP 端口 | 可选 |
-| 22 | Linux 服务器 SSH 端口 | 可选 |
-| 3389 | Windows 服务器 RDP 端口 | 可选 |
+| 21 | Linux FTP | Optional |
+| 22 | Linux SSH  | Optional |
+| 3389 | Windows RDP  | Optional |
 
-### 数据库管理
+### Common ports for Database
 
-参考：[可视化管理数据库](../user/dbgui)
+Refer to: [Database GUI](../user/dbgui)
 
 
-## 服务{#service}
+## Service{#service}
 
-在应用的维护和配置中，可能涉及到服务的启动，停止，重启，状态查询等操作。  
+These services you must know when you using Websoft9.   
 
-Websoft9 应用中有基于 Systemd 和 Docker 的两种类型的服务。   
+There are two types of services based on Systemd and Docker in Websoft9 applications.  
 
-### Systemd 服务
+### Systemd Service
 
 ```
 sudo systemctl start | top | restart | status docker
@@ -63,21 +59,21 @@ sudo systemctl start | top | restart | status postgresql
 sudo systemctl start | top | restart | status mongod
 ```
 
-### Docker 服务
+### Docker Service
 
-我们此处约定 Docker 服务等同于每一个运行中的容器。所以，只需运行 `sudo docker ps -a` 可以查看所有 Docker 的服务。  
+This section we agreed that container is the same with service, so you list all services by command `sudo docker ps -a` 
 
-下面是常见的 Docker 服务
+Below is some useful service for you:  
 
 ```
 $ sudo docker start | stop | restart | stats container_name
 
-# 数据库 GUI 工具
+# e.g Database GUI tools service
 sudo docker start | stop | restart | stats phpmyadmin
 sudo docker start | stop | restart | stats adminmongo
 sudo docker start | stop | restart | stats pgadmin
 
-# 数据库
+# e.g Database service
 sudo docker start | stop | restart | stats mysql
 sudo docker start | stop | restart | stats postgresql
 sudo docker start | stop | restart | stats redis
@@ -86,11 +82,11 @@ sudo docker start | stop | restart | stats memcached
 ```
 
 
-## 版本{#version}
+## Version{#version}
 
-虽然产品页面可查看版本，但您服务器中的组件可能会不断升级，故精准的版本号请通过在服务器上运行命令查看：
+You can see the version from product page of Marketplace. However, after being deployed to your server, the components will be automatically updated, resulting in a certain change in the version number. Therefore, the exact version number should be viewed by running the command on the server:
 
-##### 通用
+##### Common 
 
 ```
 # Check all components version
@@ -103,7 +99,7 @@ lsb_release -a
 docker -v
 ```
 
-##### 数据库
+##### Database
 
 ```
 # MongoDB version
@@ -120,7 +116,7 @@ redis-server -v
 
 ```
 
-##### Web 服务器
+##### Web Server
 
 ```
 # Apache version on Centos
@@ -140,7 +136,7 @@ nginx -V
 
 ```
 
-##### 程序环境
+##### Program languages
 
 ```
 # Java version

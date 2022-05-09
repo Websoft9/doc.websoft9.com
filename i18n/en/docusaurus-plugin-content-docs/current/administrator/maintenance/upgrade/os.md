@@ -3,24 +3,22 @@ sidebar_position: 1
 slug: /administrator/upgrade_os
 ---
 
-# 操作系统更新
+# System Update
 
-## Linux 更新{#linux}
+## Linux Update{#linux}
 
-Linux服务器以及组件的更新，只需要运行一条命令即可完成：  
+Run an update command to complete the system update:
 
-```
-# CentOS or Redhat
-sudo yum update -y
-
-# Ubuntu & Debian
+``` shell
+#For Ubuntu&Debian
 apt update && apt upgrade -y
-```
 
-> 建议用户将更新命令设置成**计划任务**，实现自动升级。  
+#For Centos&Redhat
+yum update -y --skip-broken
+``` 
 
-## Windows 更新{#windows}
+## Windows Update{#windows}
 
-Windows服务器的更新与本地电脑类似，手动找到更新管理程序，设置自动下载自动更新即可。
+The update of the Windows server is similar to that of the local computer. Manually find the update management program and set the automatic download automatic update.
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/windows/windows-upgrade-websoft9.png)

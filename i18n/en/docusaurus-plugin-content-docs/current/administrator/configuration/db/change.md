@@ -3,13 +3,13 @@ sidebar_position: 2
 slug: /administration/db_change
 ---
 
-# 更换为外部数据库
+# Use external database
 
-Websoft9 每个应用都预装了默认数据库，并且这些数据库也按照应用的要求进行了必要的个性化设置，确保用户可以直接使用。虽然如此，每个用户可能面临使用习惯、企业 IT 规范要求等不同的因素，导致需要更换默认数据库为用户自己的特定数据库。  
+Although there have installed database for Websoft9, but you maybe want to use an external database for you application for some reason.  
 
-下面介绍如何更换数据库更换为外部目标数据库：  
+This section will show you how to change default database to external database: 
 
-## 准备
+## Prepare
 
 更换为外部目标数据库，了解最少需要做好如下准备：
 
@@ -17,18 +17,16 @@ Websoft9 每个应用都预装了默认数据库，并且这些数据库也按�
 * 开启外部目标数据库类型的远程连接，确保可以被访问
 * 针对已初始化的应用，备份原有的数据库
 
-## 更换方式
+## Change database
 
-由于 Websoft9 提供的应用数量较多，这些应用的数据库连接入口方式大致有如下几种方式：
+You have main two ways to change your database according your application:  
 
-* 初始化向导可视化界面中自行填写
+* Change database at the **Installation wizard of GUI**
 
-* 配置文件
+* Change your database at your configuration file:  
 
-   - 非 Docker 应用，修改应用的配置文件（例如：WordPress 的 wp-config.php 文件）
-
-   - Docker 应用，修改 [.env 文件](../administrator/parameter)中数据库相关的配置。例如：
-     ```
+   - For Docker-based application, change it from  [.env file](../administrator/parameter) like below
+        ```
       DB_MRAIADB_USER=root
       DB_MARIADB_PASSWORD=yourpassword
       DB_MARIADB_HOST=mariadb
@@ -36,9 +34,11 @@ Websoft9 每个应用都预装了默认数据库，并且这些数据库也按�
       DB_MARIADB_VERSION=10.6
      ```
 
-## 更换后处理
+   - For not Docker-based application, change the configuration directly
 
-更换为外部目标数据库后，需导入备份的数据库，并测试可用性。  
+## Follow-up after Change database
+
+After changing to an external target database, you need to import the backup database and test the availability.
 
 
 

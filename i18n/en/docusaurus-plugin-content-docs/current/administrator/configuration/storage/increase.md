@@ -3,7 +3,7 @@ sidebar_position: 5
 slug: /administrator/storage_increase
 ---
 
-# 系统盘扩容
+# System disk expansion
 
 系统盘容量不足的时候，可通过云控制台给系统盘扩容（增加更多的空间）。  
 

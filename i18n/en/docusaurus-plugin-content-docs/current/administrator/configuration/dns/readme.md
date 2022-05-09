@@ -8,6 +8,6 @@ import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 # 域名
 
-在本章中，你可以了解到与域名配置有关的操作：  
+You can get the guide for Domain name from this charter:  
 
 <DocCardList items={useCurrentSidebarCategory().items}/>
