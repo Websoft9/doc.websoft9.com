@@ -3,81 +3,66 @@ sidebar_position: 1
 slug: /aws
 ---
 
-# 指南
+# Guide
 
-## 服务器管理
+## Manage EC2
 
-### 用户名{#username}
+### Start, Stop and Terminate
 
-AWS[官方表示](https://docs.aws.amazon.com/zh_cn/AWSEC2/latest/UserGuide/connection-prereqs.html)，AWS 针对于不同的操作系统（甚至发行版）其用户名是不一样的：
+You can change the instance state on EC2 console, including:
 
-- 对于 Amazon Linux 2 或 Amazon Linux AMI，用户名称是 ec2-user。
-- 对于 CentOS AMI，用户名称是 centos。
-- 对于 Debian AMI，用户名称是 admin 或 root。
-- 对于 Fedora AMI，用户名为 ec2-user 或 fedora。
-- 对于 RHEL AMI，用户名称是 ec2-user 或 root。
-- 对于 SUSE AMI，用户名称是 ec2-user 或 root。
-- 对于 Ubuntu AMI，用户名称是 ubuntu。
-- 对于Windows，用户名称是 Administrator。
+- Start
+- Stop
+- Reboot
+- Terminate
+- Recover
 
-如果 ec2-user 和 root 无法使用，请与 AMI 供应商核实。
+![aws EC2 state Websoft9](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-ec2state-websoft9.png)
+
+If you want to automatically recover the instance when it becomes impaired due to an underlying hardware failure or a problem that requires AWS involvement to repair, you need to enable [CloudWatch alarms](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-recover.html) previously.
 
 
-### 启动、停止和终止
 
-在EC2控制台可以对实例状态进行修改，包括：
 
-- 启动
-- 停止
-- 重启
-- 终止
-- 自动恢复
+### Connect EC2
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-ec2state-websoft9.png)
+#### For Linux{#connectlinux}
 
-> 终止=删除EC2
+Command is the basic operation of the Linux system. AWS supports three ways to connect by Command:
 
-自动恢复的前提，必须启用[CloudWatch功能](https://docs.aws.amazon.com/zh_cn/AWSEC2/latest/UserGuide/ec2-instance-recover.html)，在实例受损（由于发生基础硬件故障或需要 AWS 参与才能修复的问题）时自动恢复实例。
-
-### 连接 EC2
-
-#### 连接 Linux{#connectlinux}
-
-AWS 支持多种 Linux 的连接方式：
-
-| 方式                                                   | 操作说明                                                     |
+| Tool                                                  | Instructions                                                     |
 | ------------------------------------------------------ | ------------------------------------------------------------ |
-| 一个独立的SSH客户端                                    | 需要下载 [putty](https://putty.org/) 等客户端到本地电脑来连接服务器 |
-| 托管SSH客户端直接来自我的浏览器（Alpha）               | 从AWS控制台网页直接连接服务器，前置条件是服务器需要安装[EC2 Instance Connect](https://docs.aws.amazon.com/zh_cn/AWSEC2/latest/UserGuide/ec2-instance-connect-set-up.html) |
-| 直接从我的浏览器连接的 Java SSH 客户端（需要安装Java） | 从AWS控制台网页直接连接服务器，前置条件是浏览器需要**安装Java插件** |
+| A standalone SSH client                                  | Download [putty](https://putty.org/) and other SSH clients to local computer to connect to Linux. |
+| Hosting SSH client based on my browser (Alpha)               | Connect from AWS console website, the prerequisite is to install [EC2 Instance Connect](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-connect-set-up.html) on your instance. |
+| A Java SSH client directly connected from my browser（Java required） | Directly connect from AWS console website, the prerequisite is to **install Java plugin**. |
 
 
-我们以 “**托管SSH客户端直接来自我们的浏览器**” 为例描述如何连接Linux
+Taking **Hosting SSH client based on my browser** as an example, steps for how to connect to a Linux server are as follows:
 
-1. 参考[此处文档](https://docs.aws.amazon.com/zh_cn/AWSEC2/latest/UserGuide/ec2-instance-connect-set-up.html)，安装EC2 Instance Connect组件（Websoft9镜像默认已安装，忽略此步骤）
+1. Refer to [Set up EC2 Instance Connect](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-connect-set-up.html) to install EC2 Instance Connect module（For Websoft9 image, the module is installed by default, just skip this step.）
 
-2. 登录AWS云控制台，打开：实例->连接，选择第二种连接方式后，点击“Connect”按钮
-   ![命令行连接](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-connectmethods-websoft9.png)
+2. Login to AWS EC2 console, open 【Instance】> 【Connect】and choose the second way to connect.
+   ![command line](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-connectmethods-websoft9.png)
 
-3. 将打开一个窗口，并且您连接到实例。
+3. Click 【Connect】, a window opens and you are connected to the instance.
 
-通过命令行连接服务器之后，如下两个最常用的操作示例是需要掌握的：
+After you're connected to the server through command line, the following two most common examples of operations are required.
 
-##### 示例1：获取数据库密码
+##### Sample1: Get password
 
-为了安全考虑，用户每一次部署，都会生成唯一的随机数据库密码，存放在服务中。只需如下的一条命令，即可查看
+For security reasons, each time a user deploys, a unique random database password is generated and stored in the service. Just require the following command to view:
 
 ```shell
 sudo cat /credentials/password.txt
 
-//运行结果
+//result
 MySQL username:root
 MySQL Password:@qDg1Vq1!V
 ```
 
-##### 示例2：启用系统root账号{#enableroot}
+##### Sample2: Enable root user{#enableroot}
 
-AWS出于安全和法规要求，默认情况下没有开放Linux的root账号，只给用户提供了普通账号。如果您希望使用root账号，通过下面的步骤启用之：
+For security and regulatory requirements, AWS does not open the Linux root account by default, and only provides users with a common account. If you wish to use the root account, enable it by following the steps below:
 
 ```shell
 sudo su
@@ -86,93 +71,135 @@ sudo systemctl restart sshd
 sudo passwd root
 ```
 
-#### 连接 Windows
+#### For Windows
 
-在远程连接 Windows 服务器之前需要上传秘钥对获取密码，然后在使用 Windows 远程桌面工具连接：
+Before you use local computer's Remote client to connect Windows Server, you should complete these steps: 
 
-1. 登录AWS控制台，找到需要登录的服务器，点击“连接”在弹出的窗口中点击【Get Password】
-   ![AWS Get Password](http://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-winconnect-websoft9.png)
+1. Login to AWS console, choose the instance which you want to connect to, click 【Connect】 and then click 【Get Password】 in the pop-up window.
+   ![aws get password](http://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-winconnect-websoft9.png)
 
-2. 上传创建服务器的时候保存的**私钥**
-   ![AWS upload key pair](http://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-winconnectpw-websoft9.png)
+2. Upload the key pair stored locally.
+   ![aws upload key pairs](http://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-winconnectpw-websoft9.png)
 
-3. 点击【Decrypt Password】之后，密码解锁成功，并显示在界面上
-   ![AWS Descypt Password](http://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-winconnectgpw-websoft9.png)
-
-4.打开本地电脑的**远程桌面**工具连接 Windows
+3. Click 【Decrypt Password】, then the password will be displayed on the interface.
+   ![aws Decrypt Password](http://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-winconnectgpw-websoft9.png)
 
 
+### Create EC2
 
-### 创建 EC2
+The introduction below is about how to launch instance on AWS.  
 
-下面介绍 AWS 上服务器实例的创建方式（ AWS 称之为**启动实例**）。
+The basic condition for launching instance is to prepare a boot disk file for the system disk for the instance. The most common template file is image.  
 
-创建实例最基本的条件是需要给服务器准备一个系统盘的启动模板文件，这个模板最常见的表现形式就是镜像文件
+Steps below are about how to launch instance based on image:  
 
-下面介绍基于镜像创建云服务器的操作步骤：
+1. Login to AWS Management Console, and click 【EC2】.
+   ![log in](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-ec2-websoft9.png)
 
+2. Enter EC2 Dashboard, and click 【Launch Instance】to create Instance.
+   ![launch instance](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-addec2-websoft9.png)
 
-1. 登录到AWS管理控制台，点击“EC2”，
-   ![进入ec2控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-ec2-websoft9.png)
+3. When choosing AMIs, click 【View all public and private AMIs】 and search keyword "websoft9" to see the list of images.
+   ![choose image of Websoft9](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-ec2image-websoft9.png)
 
-2. 进入EC2控制面板，点击“启动实例”，即开始创建一个新的实例
-   ![启动实例](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-addec2-websoft9.png)
+4. Select the image you need.
 
-3. 在映像一栏，点击“浏览所有公用和专用映像”，然后搜索关键件词“websoft9”，列出相关镜像
-   ![选择Websoft9镜像](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-ec2image-websoft9.png)
+5. Finish the following steps, which require you to choose instance type, VPC, set key pair and more.
+   ![create instance](http://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-ec2createpw-websoft9.png)
 
-4. 选择一个你所需的镜像（以Odoo为例），开始创建EC2实例 
+6. Wait several minutes after completing creating EC2, and the image is started as the system disk of the instance, that is, the image is automatically deployed to the instance.
 
-5. 后续动作基本都会要求用户完成：选择实例类型、VPC、Key Pair等设置
-   ![选择Websoft9镜像](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-ec2createpw-websoft9.png)
+### Key Pair for EC2{#keypair}
 
-6. 等待几分钟，EC2创建完成后，镜像会作为EC2实例的系统盘启动，即镜像自动部署到实例中
+When launching instance, AWS requires key pair to log in. Steps for how to create key Pair are as follows:
 
-### 创建秘钥对{#keypair}
+1. Login to AWS console, open 【EC2 Dashboard】>【NETWORK & SECURITY】>【Key Pairs】and click 【Create Key Pair】.
+   ![create key pair](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-createkeyps-websoft9.png)
 
-在创建EC2时，AWS要求使用秘钥对登录，下面是创建秘钥对步骤
-
-1. 登录AWS控制台，打开：EC2 Dashboard->网络与安全->秘钥对，点击“**创建秘钥对**”按钮
-   ![创建秘钥对](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-createkeyps-websoft9.png)
-
-2. 为秘钥对命名，例如“myKey”
-   ![秘钥对名称](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-keypsname-websoft9.png)
+2. Name the key pair, such as "myKey".
+   ![name](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-keypsname-websoft9.png)
    
-3. 将秘钥对文件 myKey.pem 保存到本地电脑
+3. Store key pair file **myKey.pem** into the local computer.
 
-### 调整配置
+### Change EC2 Type
 
-EC2的配置可以随时调整，具体操作如下：
+Follow the steps below to change instance type：
 
-1. 登录到AWS控制台，停止实例
-2. 依次打开：操作->实例设置->更改实例类型
-   ![调整配置](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-configures-websoft9.png)
-3. 选择一个新的配置，启动实例
+1. Login to AWS console and stop the instance.
 
-### 获取日志
+2. Open 【Actions】>【Instance Settings】>【Change Instance Type】.
+   ![adjust configuration](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-configures-websoft9.png)
 
-EC2控制台可以方便的获取系统日志：
+3. Complete new settings, then start the instance.
 
-1. 登录到AWS控制台，停止实例
-2. 依次打开：操作->实例设置->获取系统日志
-   ![获取系统日志](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-getsyslogs-websoft9.png)
-3. 选择一个新的配置，启动实例
-   ![显示系统日志](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-syslogs-websoft9.png)
+### Get EC2 logs
+
+You can get system log on EC2 console：
+
+1. Login to AWS console and stop the instance.
+
+2. Open 【Actions】>【Instance Settings】>【Get System Log】.
+   ![get system log](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-getsyslogs-websoft9.png)
+3. Complete the new settings, then start the instance.
+   ![display system log](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-syslogs-websoft9.png)
 
 
-## 备份{#backup}
+### Backups EC2{#backup}
 
-AWS中，AWS Backup 就是用于备份AWS设施的专项服务
+We know that no one (organization) can guarantee that the EC2 will always be up and running. If EC2 fails to start or fails to connect, what would happen without backups? Is it worthwhile to try?
 
-1. 登录AWS控制台，打开：服务->存储->AWS Backup，创建一个备份计划 
-   ![AWS Backup服务](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-backupservices-websoft9.png)
-2. 在已有备份计划下，创建按需备份（即选择需要备份的云资源）
-   ![AWS Backup服务](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-backupres-websoft9.png)
-3. 资源类型为：EBS（磁盘），再选择一个列出的卷ID
-   ![AWS Backup服务](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-backupres2-websoft9.png)
-4. 完成其他备份设置
+If there is a backup, it can be restored, which greatly reduce the loss.
 
-同时，也可以使用快照备份的方式。  
+For AWS, to create backup for EC2 is based on automatic snapshot for the volume of EC2.
+
+There are two entries to create backups on AWS console:
+
+#### Snapshot Backup
+
+##### Automatic Backup
+
+1. Login to AWS console.  
+
+2. Open【EC2】>【ELASTIC BLOCK STORE】>【Lifecycle Manager】>【Create Snapshot Lifecycle Policy】.
+    ![Snapshot lifecycle policy](http://libs-websoft9-com.oss-cn-qingdao.aliyuncs.com/Websoft9/DocsPicture/en/aws/aws-snapshotauto-websoft9.png)  
+
+3. Follow the prompts to complete the settings.
+
+##### Manual Snapshot 
+
+Steps for manual snapshot on demand are as follows:
+
+1. Login to AWS console and open EC2 Dashboard.  
+
+2. Open 【ELASTIC BLOCK STORE】>【Volumes】 and choose volume to 【Create Snapshot】.
+   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-createsnapshot-websoft9.png)  
+
+3. Name the snapshot before creating.
+
+#### AWS Backup service
+
+AWS Backup is the specific backup service for AWS resources.
+
+1. Login to AWS console, open 【Services】>【Storage】>【AWS Backup】 and create Backup plan.
+   ![AWS Backup service](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-backupservices-websoft9.png)
+2. Choose to start from an existing plan and begin to create on-demand backup, that is, to choose the protected resources as you need.
+   ![AWS Backup service](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-backupres-websoft9.png) 
+
+3. Choose EBS (disk) as the resource type and choose the volume ID.
+   ![AWS Backup service](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-backupres2-websoft9.png) 
+   
+4. Complete the settings.
+
+### Upgrade EC2
+
+AWS offers [AWS Systems Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/) solution, which can help you automate collecting software inventory, patching applications OS, launching system VMs, and configuring Windows and Linux.
+
+1. Login to AWS Management Console and open 【AWS System Manager】 service.
+
+2. Open 【Instances & Nodes】>【Patch Manager】to enter the manage interface.
+![launch system manager](http://libs-websoft9-com.oss-cn-qingdao.aliyuncs.com/Websoft9/DocsPicture/en/aws/aws-sysmupdate-websoft9.png)
+
+3. Follow the guide to complete upgrading.
 
 ## 磁盘、快照与镜像
 

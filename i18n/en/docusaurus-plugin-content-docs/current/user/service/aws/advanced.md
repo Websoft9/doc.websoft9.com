@@ -3,15 +3,15 @@ sidebar_position: 3
 slug: /aws/advanced
 ---
 
-# 进阶
+# Advanced
 
-## 核心原理
+## Concepts
 
 ### API/CLI
 
 AWS 提供了原生 API/CLI 。  
 
-## 问题解答
+## FAQ + Troubleshoot
 
 #### 实例的登录账号密码是什么？ 
 

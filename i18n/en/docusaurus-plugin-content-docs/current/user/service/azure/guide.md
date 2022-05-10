@@ -5,54 +5,45 @@ slug: /azure
 
 # Guide
 
-## 服务器管理
+## Manage VM
 
-下面列出服务器管理常见的操作，在 CVM 控制台可以对实例状态进行修改，包括：
+The following lists the common operations of VM management, and the VM status can be modified in the Azure console, including:
 
-- 开机
-- 关机
-- 重启
-- 删除
-- 转包周期
-- 更新
+### Connect VM
 
-### 连接 VM
+The username and password or key pair is set by yourself when VM created. 
 
-Azure平台中，操作系统的账号和密码是创建虚拟机的时候自行设置的。图示：
+![img](http://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-createvmsshkey-websoft9.png)
 
-![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-vmsetpw-websoft9.png)
+Azure provides two web-based SSH tools that can be logged in without an account.
 
-其中，身份验证类型包括：密码和SSH公钥（秘钥对）两种方式。
+- Method 1: Log in to the Azure Portal, open the VM -> Operations, click "Run command"
 
-一般使用命令行（Command）连接 Azure，Azure提供了两种网页版SSH工具，无需账号即可登录。
+![Run command on Azure](https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-runcmd-websoft9.png)
 
-> 如果您不习惯使用云平台的提供的在线SSH命令行工具，下载SSH客户端工具（例如：[putty](https://putty.org/)），配置登录信息之后便可以连接Linux。
+- Method 1: Log in to the Azure Portal, open the VM -> Support+troubleshooting, click "Serial console"
 
-* 方法一：登录云控制台，打开虚拟机->操作，点击“运行命令”
+![Run command on Azure](https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-runcmd2-websoft9.png)
 
-![运行命令](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-runcmd-websoft9.png)
+> If you are not used to using the online SSH command line tool provided by the cloud platform, download the SSH client tool (e.g [putty](https://putty.org/)), configure the login information and then connect to Linux.
 
-* 方法二：登录云控制台，打开虚拟机->支持与疑难解答，点击“串行控制台“
+After connecting to the server through the command line, the following two most common examples for you:
 
-![运行命令](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-runcmd2-websoft9.png)
+##### Sample: Get database password
 
-通过命令行连接服务器之后，如下两个最常用的操作示例是需要掌握的：
-
-##### 示例1：获取数据库密码
-
-为了安全考虑，用户每一次部署，都会生成唯一的随机数据库密码，存放在服务中。只需如下的一条命令，即可查看
+For security reasons, each time a user deploys, a unique random database password is generated and stored in the service. Just require the following command to view:
 
 ```shell
-sudo cat /credentials/password.txt
+cat /credentials/password.txt
 
-//运行结果
+//result
 MySQL username:root
 MySQL Password:@qDg1Vq1!V
 ```
 
-##### 示例2：启用系统root账号{#enableroot}
+##### Sample: Enable the root account{#enableroot}
 
-Azure出于安全和法规要求，默认情况下没有开放Linux的root账号，只给用户提供了普通账号。如果您希望使用root账号，通过下面的步骤启用之：
+For security and regulatory requirements, Azure does not open the Linux root account by default, and only provides users with a common account. If you wish to use the root account, enable it by following the steps below:
 
 ```shell
 sudo su
@@ -61,249 +52,258 @@ sudo systemctl restart sshd
 sudo passwd root
 ```
 
-### 创建 VM
+### Create VM
 
-下面介绍Azure上虚拟机的创建方式。
+Here's how to create a VM on Azure.  
 
-创建虚拟机最基本的条件是需要给虚拟机准备一个系统盘的启动模板文件。这个模板文件有两种：一个是我们非常熟悉的镜像，另外一个是VHD（虚拟磁盘）文件。
+The most basic condition for creating a virtual machine is to prepare a boot disk file for the system disk for the virtual machine. There are two types of template files: one is a image that we are very familiar with, and the other is a VHD (virtual disk) file.  
 
-因此，创建VM也有两种方式：基于镜像创建和基于系统盘创建
+Therefore, there are two ways to create a VM: image-based creation and system-based disk creation.  
 
-#### 镜像创建
+#### Image-based Creation
 
-1. 登录Azure控制台，打开：虚拟机->添加，开始创建虚拟机
+1. Log in to the Azure Portal and open: VM -> Create a virtual machine
 
-2. 创建虚拟机的时候选择合适的镜像（这是最重要的步骤）
-   ![image.png](http://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-createvmbyimage-websoft9.png)
+2. Select the appropriate image when creating the VM (this is the most important step)
+   ![image.png](http://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-createvmbyimage-websoft9.png)
 
-   > 镜像来源有：官方镜像、云市场镜像和自定义镜像三种镜像来源。如果自定义镜像来源，磁盘就只能选择托管模式
+> Image sources are: official image, Marketplace image and Customized image. If you use the customized image source, the disk can only choose the hosting mode.
 
-3. 依次设置账号密码、网络、安全组等配置
+3. Set the account password, network, security group, etc.
 
-4. 查看 + 创建 通过之后，点击“创建”即可
+4. "Review + create" after you pass, click "Next"
 
-#### 系统盘创建
+#### VHD Creation
 
-1. 登录Azure控制台，打开“所有资源”，找到一个已经被解除绑定的磁盘
-   ![image.png](http://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-createvmbydisk-websoft9.png)
-2. 点击这个磁盘，对这个磁盘进行“创建VM”操作
-3. 依次设置账号密码、网络、安全组等配置
-4. 查看 + 创建 通过之后，点击“创建”即可
+1. Log in Azure Portal, click "All Resources", find a disk that has been unattached
+   ![image.png](http://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-createvmbydisk-websoft9.png)
+2. Click the "Create VM"
+3. Set the account password, network, security group, etc.
+4. "Review + create" after you pass, click "Next"
 
-#### 秘钥对
+#### Key pairs
 
-在创建VM的时候，有些用户喜欢采用秘钥对方式作为登录凭证
+When creating a VM, some users prefer to use the SSH key pair as the login credentials.
 
 ![image.png](http://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-createvmsshkey-websoft9.png)
 
-由于Azure需要自行提供SSH public key, 因此需要用户提前准备。
+Since Azure needs to provide its own SSH public key, it requires the user to prepare in advance.
 
-下面以PUTTYGEN(KEY GENERATOR FOR PUTTY ON WINDOWS)为例，说明如何创建SSH public key
+Take PUTTYGEN (KEY GENERATOR FOR PUTTY ON WINDOWS) as an example to illustrate how to create an SSH public key.
 
 1. Download and Install [PUTTYGEN](https://www.ssh.com/ssh/putty/windows/puttygen).
 
-2. Click "Generate"  
-![image.png](https://libs.websoft9.com/Websoft9/DocsPicture/en/putty/puttygen-generate-websoft9.png)
+2. Click "Generate"    
+   ![image.png](https://libs.websoft9.com/Websoft9/DocsPicture/en/putty/puttygen-generate-websoft9.png)
 
-3. Public key and Private key is OK, you can copy public to Azure(format starting with "ssh-rsa") ,and Save the public key and private key on your local computer for backups
+3. Public key and Private key is OK, you can copy public to Azure(format starting with "ssh-rsa") ,and Save the public key and private key on your local computer for backups  
    ![image.png](https://libs.websoft9.com/Websoft9/DocsPicture/en/putty/puttygen-generatesave-websoft9.png)
 
-4. When connect Linux on your local computer, you can use private key for authentication 
+4. When connect Linux on your local computer, you can use private key for authentication   
 
-### VM 更新
 
-Azure提供一套完整的[自动更新管理方案](https://aka.ms/updatemanagement)，
+### Upgrade VM
 
-1. 登录Azure门户，点击操作下面的“更新管理”。
-2. 为此VM启用更新
-![启用更新管理](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-enableupdate-websoft9.png)
-3. 耐心等待，系统会创建更新解决方案。点击“安全更新部署”开始设置自动更新策略
-   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-updateset-websoft9.png)
+Azure have provided a complete [Automatic upgrade solution](https://aka.ms/updatemanagement)
 
-### 调整配置
+1. Login Azure Portal, Click the "Update management" on Operation section, then "Enable" it
+  ![Enable update management](https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-enableupdate-websoft9.png)
+2. Wait for minutes and the Azure will create an update solution. Click "Schedule update deployment" to start set update policy
+   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-updateset-websoft9.png)
 
-VM配置是可以调整，登录到控制台，依次打开：设置->大小，点击“调整大小”按钮即可。
 
-![调整配置](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-configures-websoft9.png)
+### Resize VM
 
-### 重置 VM
+The VM size can be adjusted, login Azure Portal, and then open: Settings -> Size, click the "Resize" button.
 
-在一些特殊情况下，用户打算将VM恢复到初始状态，但希望保留所有VM的配置选项和关联资源均保留。这个时候，我们就需要用到“重新部署”的操作。
+![Resize VM](https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-configures-websoft9.png)
 
-1. 选择想要重新部署的 VM，然后选择“设置”边栏选项卡中的“重新部署”按钮。 可能需要向下滚动，查看包含“重新部署”按钮的“支持和故障排除” 部分，如以下示例所示：
-   ![重新部署](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-resetstart-websoft9.png)
-   
-2. 若要确认该操作，请选择“重新部署”按钮：
+### Redeploy VM
 
-   ![确认重置](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-resetbutton-websoft9.png)
+In some special cases, the user intends to restore the VM to its original state, but it is desirable to keep all VM configuration options and associated resources reserved. At this time, we need to use the "re-deployment" operation.
 
-3. VM 准备好重新部署时，该 VM 的“状态”会更改为“正在更新” ，如以下示例所示：
-   ![正在更新](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-resetupdate-websoft9.png)
+1. Select the VM and select the **Redeploy** in the Support+troubleshooting section
+  ![Re-deployment](https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-resetstart-websoft9.png)
+   
+2. To confirm the action, select the Redeploy button:
+  ![Confirm Reset](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-resetbutton-websoft9.png)
 
-4. VM 在新的 Azure 主机上启动时，“状态”将更改为“正在启动”，如以下示例所示：
-   ![正在启动](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-resetstarting-websoft9.png)
+3. When the VM is ready for redeployment, the VM's Status changes to Updating, as shown in the following example:
+   ![Updating](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-resetupdate-websoft9.png)
 
-5. VM 完成启动过程后，“状态”返回到“正在运行” ，这表示 VM 已成功重新部署：
-   ![正在运行](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-resetruning-websoft9.png)
+4. When the VM is started on a new Azure host, the Status changes to Starting, as shown in the following example:
+   ![Starting](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-resetstarting-websoft9.png)
 
+5. After the VM completes the boot process, the Status returns to Running, which indicates that the VM was successfully redeployed:
+   ![Running](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-resetruning-websoft9.png)
 
 
-### 备份 VM
+### Backup VM
 
-Azure中，控制台门户->存储->保管库服务就是用于备份VM的专项服务：
+We know that no one (organization) can guarantee that the VM will always be up and running. If the VM fails to start or fails to connect, what would happen without backups? Is this worthwhile to try?
 
-![保管库](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-backuprs-websoft9.png)
+If there is a backup, it can be restored to the state at the time of backup, greatly reducing the loss.
 
-下面我们针对已有VM和创建VM中如何设置备份，分别作出说明
+Azure Portal-> All service ->Storage, the "Recovery Services vaults" service is for backup of VM:
 
-#### 已有VM设置
+![Recovery Services vault](https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-backuprs-websoft9.png)
 
-对于已经创建的VM，设置自动备份策略请参考下图
 
-![设置备份](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-backupstart-websoft9.png)
 
-#### 创建VM设置
+Below we explain how to set up backups for existing VMs and create VMs.
 
-在创建VM之时，我们便可以设置自动备份方式
+#### Existing VM settings
 
-1. 创建VM，在管理选项卡下备份项，启用备份![启用备份](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-backupmanage-websoft9.png)
-2. 选择已经建立的保管库名称 或 新建一个保管库名称，然后设置备份策略
-   ![备份策略](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-backuppolicy-websoft9.png)
-3. 在预算允许的情况下，提高备份的频次是不错的选择
+For the VM that has been created, set the automatic backup strategy, please refer to the following figure.
 
+![set backcup](https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-backupstart-websoft9.png)
 
-## 磁盘、快照与镜像
+#### Create VM settings
 
-对于Azure平台来说，磁盘可以是单独的一种计算资源（单独创建、单独计费、单独管理等），同时也可以被集成到虚拟机，作为其中的一个组件。
+When creating a VM, we can set up automatic backup mode.
 
-之所以我们把磁盘、快照和镜像放在一起描述，是因为这三者有一定的关联，甚至说有互生关系。
+1. Create a VM, backup items under the Management tab, Enable backup
+   ![enable backup](https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-backupmanage-websoft9.png)
 
-Azure的磁盘管理中有几个特殊的概念，下面提前解释：
+2. Select an already created vault name or create a new vault name and set a backup policy
+   ![backup policy](https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-backuppolicy-websoft9.png)
 
-* 托管磁盘：托管由Azure公共存储来管理
-* 非托管磁盘：指磁盘只能由账号下的存储账号来管理，不作为一个独立资源对外
-* 存储账号：Azure的后台中提供了存储账号功能，所谓存储账号，即一个可以管理磁盘的入口。
+3. Increasing the frequency of backups is a good choice when budget allows.
 
-### 数据盘
+## Disk, Snapshot and Image
 
-我们知道数据盘是区别于系统盘的一种磁盘，主要用于存放数据。
+The reason we put Disk, snapshots and image together is because there is a certain relationship between the them, and even there is an alternate relationship.  
 
-#### 增加数据盘
+There are several special concepts in Azure's disk management, explained in advance:
 
-1. 登录Azure云控制台，找到所需操作的虚拟机
-2. 打开设置->磁盘，点击“添加数据磁盘”
-   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-addddisk-websoft9.png)
-3. 设置数据磁盘规格
-   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-addddisk2-websoft9.png)
-4. 登录到虚拟机，完成初始化磁盘操作
-    - Windows, 需要进入磁盘管理，请参考Azure官方文档 [初始化Windows磁盘](https://docs.microsoft.com/zh-cn/azure/virtual-machines/windows/attach-managed-disk-portal#initialize-a-new-data-disk)
-    - Linux，需要新磁盘进行分区、格式化和装载等操作，请参考请参考文档 [初始化Linux磁盘](https://docs.microsoft.com/zh-cn/azure/virtual-machines/linux/attach-disk-portal#connect-to-the-linux-vm-to-mount-the-new-disk) 
-5. Complete the above configuration to use the disk
+* Managed Disk: Hosted by Azure Public Store
+* Un-Managed disk: The disk can only be managed by the storage account under the account, not as an independent resource.
+* Storage account: Azure provides a storage account function, the so-called storage account, which is an entry that can manage the disk.
 
-#### 分离数据盘
+### Data Disk
 
-1. 在左侧菜单中，选择“虚拟机” 。
-2. 选择具有要分离的数据磁盘的虚拟机，并单击“停止” 以解除分配 VM。
-3. 在虚拟机窗格中，选择“磁盘” 。
-4. 在“磁盘” 窗格的顶部，选择“编辑” 。
-   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-ddiskds-websoft9.png)
-5. 在“磁盘” 窗格中，转到要分离的数据磁盘最右侧，并单击分离按钮。
-   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-ddiskds2-websoft9.png)
-6. 删除磁盘后，单击窗格顶部的“保存”。
-7. 在虚拟机窗格中，单击“概述” ，并单击窗格顶部的“开始” 按钮重启 VM。
+We know that a data disk is different from the system disk and is mainly used to store data.
 
-> 磁盘分离后，会保留在存储中，不会删除
+#### Add Data Disk
 
-### 容量增加
+1. Login Azure Portal, select the VM and Stop it
+2. Open the Setting->Disks of Stopped VM, click the button "Add data disk"
+   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-addddisk-websoft9.png)
+3. Set the disk name,size and other information
+   ![setting datadisk](https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-addddisk2-websoft9.png)
+4. Connect to OS to initialize disk
+    - Windows, please refer to Azure official documantation [Initialize Windows disk](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/attach-managed-disk-portal#initialize-a-new-data-disk)
+    - Linux, please refer to Azure official documantation [Initialize Linux disk](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/attach-disk-portal#connect-to-the-linux-vm-to-mount-the-new-disk)
+5. Finish adding data disk
 
-仅当未附加磁盘或取消分配所有者 VM 时，才可调整磁盘大小或更改帐户类型。
+#### Detach Data Disk
 
-![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-ddiskin-websoft9.png)
+1. Login Azure Portal, select the VM and Stop it
+3. Open the Setting->Disks of Stopped VM
+4. Click the "Edit" on the top of Disks page
+   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-ddiskds-websoft9.png)
+5. Then, click the detach icon like below
+   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-ddiskds2-websoft9.png)
+6. Once detach disk, please save it
+7. Start VM
 
-> 大多数情况下，磁盘只能增加大小，而不能降低大小
+> The disk detach didn't deleted, it remain in the storage account
 
-### 创建快照
+#### Change Size
 
-1. 登录到 [Azure 门户](https://portal.azure.com/)。
-2. 首先在左上角单击“所有服务” ，找到：计算->快照
-   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-snapshot-websoft9.png)
-3. 在“快照”边栏选项卡中，单击“添加” 或点击“创建快照”
-   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-createsnapshot-websoft9.png)
-4. 根据提示，完成从**源磁盘**到快照的创建过程
+You can change the Size or change the Account type of Data Disk when the disk is not mounted to VM
 
-### 创建镜像
+![img](https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-ddiskin-websoft9.png)
 
-前面讲过，基于快照可以创建镜像，基于虚拟机也可以创建镜像
+> In most times, the disk can only increase size, not reduce size.
 
-#### 虚拟机创建镜像
+### Create Snapshot
 
-1. 登录到 [Azure 门户](https://portal.azure.com/)。
-2. 打开需要创建镜像的虚拟机，点击“捕获”
-![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-vmtoimage-websoft9.png)
-3. 根据提示完成后续步骤
-4. 值得注意的是，捕获操作在创建镜像的同时也会删除虚拟机
+1. Login to [Azure Portal](https://portal.azure.com/)
+2. Open the All Services->Compute->Snapshots
+   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-snapshot-websoft9.png)
+3. Then, Click the "+Add" or "Create snapshot" in the Snapshots page
+   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-createsnapshot-websoft9.png)
+4. Follow the prompts to complete the creation from **source disk** to snapshot
 
-#### 快照创建镜像
+### Create Image
 
-1. 登录到 [Azure 门户](https://portal.azure.com/)。
-2. 首先在左上角单击“所有服务” ，找到：计算->快照
-   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-snapshot-websoft9.png)
-3. 系统会列出所有快照
-4. 选择所需的快照，对它进行创建镜像操作
+As mentioned earlier, image can be created based on snapshots, and image can be created based on VM.
 
+#### VM to Image
 
-## 网络与安全
+1. Login to [Azure Portal](https://portal.azure.com/)
+2. Open the VM, and click the "**Capture**" 
+   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-vmtoimage-websoft9.png)
+3. Follow the prompts to complete the next steps
+4. It's worth noting that the Capture operation also deletes the VM while creating the image.
 
-### 公网IP{#ip}
+#### Snapshot to Image
 
-**查看**
+1. Login to [Azure Portal](https://portal.azure.com/)
+2. Open the All Services->Compute->Snapshots
+   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-snapshot-websoft9.png)
+3. You can see all image listed
+4. Select the snapshot and create image for it
 
-1. 登录Azure控制台
-2. 打开要查看公网IP的虚拟机，我们会看到公网IP地址项
-   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-publicip-websoft9.png)
-3. 如果虚拟机没有公网IP地址项（或为空），就需要参考下一个小节挂载一个公网IP
 
-**挂载**
+## Network and Security
 
-当创建的虚拟机没有公网IP地址，只要有空闲（或新购）的公网IP地址，Azure控制台是可以给虚拟机挂载上公网IP地址的。具体操作步骤如下：
+### Public IP Address{#ip}
 
-1. 登录到Azure控制台
-2. 打开所需的虚拟机，查看：网络->网络接口
-   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-networkinterface-websoft9.png)
+**View it**  
 
-2. 在网络接口详情操作中，打开设置->IP配置，点击ipconfig1项
-   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-ipconfig-websoft9.png)
+1. Login Azure Portal
+2. In the Overview of VM, you can see the Public IP Address directly
+   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-publicip-websoft9.png)
+3. If the VM does not have a public IP address entry (or is empty), you need to refer to the next section to mount a public IP address.
 
-3. 对ipconfig1进行已有公网IP挂载操作
-   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-ipconfig1-websoft9.png)
-4. 如果没有公网IP可选，可以新建一个
-   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-createip-websoft9.png)
 
-**静态IP**
+**Mount it**  
 
-创建虚拟机默认选项是创建动态IP，你也可以选择创建静态IP  
-![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-createstaticip-websoft9.png)
+When the created VM does not have a public IP address, as long as there is a free (or newly purchased) public IP address, the Azure console can mount the public network IP address to the virtual machine. The specific steps are as follows:
 
-### 安全组{#securitygroup}
+1. Login Azure Portal
+2. Open the VM->Networking, then the Network Interface item
+   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-networkinterface-websoft9.png)
 
-安全组是管理VM端口的功能，端口是服务器上应用程序与外部访问出入访问的通道。下面以**开启80端口为例**，为您介绍安全组的使用
+2. On the details of Network Interface, open the "IP configuration" item and click the "ipconfig1"
+   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-ipconfig-websoft9.png)
 
-1. 打开VM->网络，首先显示的就是安全组配置
-   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-networkset-websoft9.png)
+3. Existing public network IP mount operation on ipconfig1
+   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-ipconfig1-websoft9.png)
 
-2. 点击“添加入站端口规则”，源端口范围填写*号，目标端口范围填写80，保存后生效
-   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-safegroup80-websoft9.png)
+4.If there is no public network IP option, you can create a new one.
+   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-createip-websoft9.png)
 
-3. 点击“保存”按钮即可生效
+**Static IP**
 
-## 域名{#domain}
+The default option for creating a VM is to create a dynamic IP. You can also choose to create a static IP.
 
-这里我们介绍一个Azure比较实用的域名功能：Azure针对于每个虚拟机提供了DNS服务。
+![img](https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-createstaticip-websoft9.png)
 
-当VM配置的是动态IP时，每次重启VM，IP地址都可能会发生变化，导致需要重新解析域名，给运维带来不必要的麻烦。Azure的DNS功能，就是帮我们避免这个问题的。
+### Security Group{#securitygroup}
 
-1. 在Azure门户打卡虚拟机->概述，找到DNS名称，点击“配置”
-   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-opendns-websoft9.png)
-2. 输入DNS标签，例如：mysite，点击保存
-   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-setdns-websoft9.png)
-3. 设置完成之后，通过域名：mysite.centralus.cloudapp.azure.com 就可以访问这台VM
+A security group is a function that manages a VM port, which is a channel for access application from external access. Let's take the port of **as an example** to introduce you to the use of security groups.
+
+1. Open your VM->Networking, you can see the Security Group setting of VM
+   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-networkset-websoft9.png)
+
+2. Click "Add inbound port rule" and input the rules like below
+   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-safegroup80-websoft9.png)
+
+3. Save it
+
+## Domain Name{#domain}
+
+General techniques such as applying for a domain name and resolving domain names are not discussed in this document.
+
+Here we introduce a more useful domain name feature of Azure: Azure provides DNS services for each virtual machine.
+
+When the VM is configured with a dynamic IP address, the IP address may change each time the VM is restarted. As a result, the domain name needs to be re-resolved, which brings unnecessary trouble to the operation and maintenance. Azure's DNS function is to help us avoid this problem.
+
+1. Login Azure Portal, Open the Overview of VM, Click the "Configure" of DNS name
+   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-opendns-websoft9.png)
+2. Input your DNS name label, e.g "mysite", then Save it
+   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-setdns-websoft9.png)
+3. Complete this setting, you can visit URL http://mysite.centralus.cloudapp.azure.com to this VM's applications

@@ -9,72 +9,63 @@ slug: /azure/advanced
 
 ### API/CLI
 
-Azure 提供了原生 API/CLI 。
+Refer to: [Azure API/CLI](https://docs.microsoft.com/en-us/cli/azure/)
 
-## FAQ
+## FAQ + Troubleshoot
 
-#### 虚拟机的登录账号是什么？
+If you have identified the problem for the reason is VM, refer to [Azure Virtual Machine Troubleshooting](https://docs.microsoft.com/en-us/azure/virtual-machines/troubleshooting/).
 
-虚拟机账号和密码是用户在创建虚拟机的时候，自行设置的。  
+#### What Is the Username of VM?
 
-#### 如何给存储配置CDN？
+It set by yourself when create VM
 
-创建CDN，然后再CDN中绑定存储账号即可
+#### How to enable the root user of Azure?
 
-#### 如何启用Linux系统的root账号？
+By default, the root account is not enabled on Azure, in fact we can find a way to enable it.
 
-Azure默认情况下，root账号是没有启用的，实际上我们参考：[启用root账号](../azure#enableroot)
+Refer to: [Linux Connect](../azure#enableroot) chapter of this documentation.
 
-#### 服务器的IP地址重启后发生变化怎么办？
+#### What should I do if the VM's IP address changes after it restarts?
 
-建议更改为静态IP或为服务器设置一个由Azure提供的DNS
+It is recommended to change to a static IP or set up a DNS provided by Azure for the server.
 
-#### 查看 Websoft9 在 Azure 上的所有产品？
+#### Can the image on the VM be replaced?
 
-通过 [Websoft9镜像库](https://azuremarketplace.microsoft.com/en-us/marketplace/apps?page=1&search=websoft9) 查看我们在Azure上的所有镜像，也可以通过搜索关键字“websoft9”列出
+No
 
-#### 虚拟机上的镜像是否可以更换？
+#### Can I use a temporary disk (/dev/sdb1) to store data?
 
-不可以
+Do not use a temporary disk (/dev/sdb1) to store data. It is only used for temporary storage. There is a risk of losing data that cannot be recovered.
 
-#### 可否使用临时磁盘 (/dev/sdb1) 存储数据？
+#### What are the format requirements for VM credentials ?
 
-不要使用临时磁盘 (/dev/sdb1) 存储数据。 它只是用于临时存储。 有丢失无法恢复的数据的风险。
+Refer to:[Azure username and password requirements](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/faq#what-are-the-username-requirements-when-creating-a-vm)
 
-#### 托管磁盘与非托管磁盘有什么区别？
+#### Can't create VM from your image which from Marketplace?
 
-托管磁盘即用户的磁盘属于Azure磁盘集群中的一部分，非托管磁盘是用户存储账号下的磁盘。
+We know using image or VHD to create VM is a reasonable operation for user on Azure Portal. But the Azure have a "issue" when image is from Marketplace for creating VM. If you delete your Wordpress VM and only retain the VHD, then create VM from VHD, you can also get the similar error.
 
-#### 创建 VM 时，用户名和密码有格式要求吗？
+Why this error?  I think when creating VM from your image, azure system will verify the subscription information of image, but azure portal have no selection for this
 
-Azure有较为明确的要求，具体参考[Azure用户名和密码要求](https://docs.microsoft.com/zh-cn/azure/virtual-machines/linux/faq#what-are-the-username-requirements-when-creating-a-vm)
+How to solve this?
 
-#### 如何批量恢复误删的 blob?
-
-下载[Microsoft Azure Storage Explorer](https://azure.microsoft.com/zh-cn/features/storage-explorer/)，安装连接登录后，参考下图恢复已删除的文件
-
-![Azure 批量恢复文件](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-storageexplorer-canceldel-websoft9.png)
-
-> 恢复过程中可能会报错，需反复重试多次
-
-#### 如何基于云市场来源的VHD磁盘创建VM？
-
-问题描述：基于云市场的 VHD 创建 VM 时，会出现报错。错误信息大意是没有包含云市场的plan。  
-
-解决方案：需要在编排模板的虚拟机属性中加入云市场镜像的计划，例如：
-
-```
-"plan": {
-                "name": "wordpress52-lemp72-centos76",
-                "publisher": "websoft9inc",
-                "product": "w9wordpress2"}
-```
-
-设置 Plan 之前，需通过 PowerShell 命令获取 plan
-
+1. Use Azure Powershell to get your image subscription plan of Marketplace
 ```
 PS Azure:\> az vm image list --offer w9wordpress2 --all --output table
 Offer         Publisher    Sku                          Urn                                                             Version
 ------------  -----------  ---------------------------  --------------------------------------------------------------  ---------
 w9wordpress2  websoft9inc  wordpress52-lemp72-centos76  websoft9inc:w9wordpress2:wordpress52-lemp72-centos76:5.2.20000  5.2.20000
 ```
+
+2. Create VM from your image, at the last step please download this template
+https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-dltemplate-websoft9.png
+
+3. Find the "resources" [  "properties[]" ]  item in the template, add the follow plan to properties[]
+```
+"plan": {
+                "name": "wordpress52-lemp72-centos76",
+                "publisher": "websoft9inc",
+                "product": "w9wordpress2"}
+```
+4. Save the template
+5. Click "Deploy"
