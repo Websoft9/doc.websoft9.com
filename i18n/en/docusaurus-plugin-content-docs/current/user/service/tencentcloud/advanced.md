@@ -3,7 +3,7 @@ sidebar_position: 3
 slug: /tencentcloud/advanced
 ---
 
-# 进阶
+# Advanced
 
 ## 核心原理
 

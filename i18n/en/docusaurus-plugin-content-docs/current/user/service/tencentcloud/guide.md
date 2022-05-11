@@ -3,7 +3,7 @@ sidebar_position: 1
 slug: /tencentcloud
 ---
 
-# 指南
+# Guide
 
 ## 服务器管理
 

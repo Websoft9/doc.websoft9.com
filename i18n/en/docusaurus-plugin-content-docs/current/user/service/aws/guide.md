@@ -156,7 +156,7 @@ There are two entries to create backups on AWS console:
 
 #### Snapshot Backup
 
-##### Automatic Backup
+##### Automatic Backup{#snapautobackup}
 
 1. Login to AWS console.  
 
@@ -201,155 +201,167 @@ AWS offers [AWS Systems Manager](https://docs.aws.amazon.com/systems-manager/lat
 
 3. Follow the guide to complete upgrading.
 
-## 磁盘、快照与镜像
+## Disk, Snapshot and Image
 
-之所以我们把磁盘、快照和镜像放在一起描述，是因为这三者有一定的关联，甚至说他们是一个事物的多种形态。  
+Key connection between snapshots and image are as follow:
 
-AWS中对EC2实现备份的基本原理就是对EC2所属的磁盘做自动快照。
+* A snapshot can be created based on the disk.
 
-### 卷（磁盘）
+  A snapshot is a "photographing" of a disk. As the name suggests, it is to back up the data of a disk at a certain point in time. It is a backup method.
 
-对于AWS平台来说，卷（磁盘）可以是单独的一种计算资源（单独创建、单独计费、单独管理等），同时也可以被集成到服务器实例，作为其中的一个组件。
+* A image can be created based on a snapshot, but the image cannot be directly converted into a snapshot.
 
-#### 增加卷
+* Based on the image, you can create an instance directly, and you can create a image directly based on the instance.  
 
-1. 登录AWS云控制台，打开EC2 Dashboard
-2. 点开ELASTIC BLOCK STORE下的“卷”操作，点击“创建卷”
-   ![创建卷](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-createvolume-websoft9.png)
-3. 设置卷类型，大小等，确认无误后开始创建
-   ![设置卷规格](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-createvolume2-websoft9.png)
-4. 将创建好的卷，挂载到EC2实例
-   ![挂载卷](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-volumeaddec2-websoft9.png)
-5. 登录到EC2实例，完成初始化磁盘操作，使卷可用：
-    - Windows, 请参考AWS官方文档 [使 Amazon EBS 卷可在 Windows 上使用](https://docs.aws.amazon.com/zh_cn/AWSEC2/latest/WindowsGuide/ebs-using-volumes.html)
-    - Linux，请参考请参考文档 [使 Amazon EBS 卷可在 Linux 上使用](https://docs.aws.amazon.com/zh_cn/AWSEC2/latest/UserGuide/ebs-using-volumes.html) 
-5. 完成所有设置后方可使用磁盘
+Summary: (volume --> snapshot) --> (image - instance)
 
-#### 分离卷
+### Volumes (Disk)
 
-将卷从EC2中解除绑定关系，操作如下
+For AWS, volume can be a separate computing resource (created separately, billed separately, managed separately, etc.) and can be integrated into an instance as a component.
 
-1. 登录AWS云控制台，打开EC2 Dashboard
-2. 在左侧菜单中，选择“实例” ，选择具有要分离的数据磁盘的实例，并单击“停止” 
-3. 点开ELASTIC BLOCK STORE下的“卷”操作，对所要解绑的卷进行“Detach Volume”操作
-   ![创建卷](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-detachvolume-websoft9.png)
+#### Create Volume
 
-> 磁盘分离后，会保留在存储中，不会被删除
+1. Login to AWS console and open EC2 Dashboard.
 
-#### 容量修改
+2. Open 【ELASTIC BLOCK STORE】>【Volumes】 to create volume.
+   ![create volume](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-createvolume-websoft9.png)
+   
+3. Complete volume type, size and other settings, then check before creating.
+   ![volume settings](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-createvolume2-websoft9.png)
+   
+4. Attach the volume created to the instance.
+   ![attach volume](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-volumeaddec2-1-websoft9.png)
+   
+   ![attach volume](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-volumeaddec2-2-websoft9.png)
+   
+5. Log in to the instance, and complete volume initialization to make it available.
+    - For Windows, view official document [Making an Amazon EBS volume available for use on Windows](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ebs-using-volumes.html)
+    - For Linux, view official document [Making an Amazon EBS volume available for use on Linux](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html) 
 
-当卷没有附加到EC2时，可以调整卷的容量
+6. Complete all settings and the volume is available.
 
-1. 登录AWS控制台，依次打开：EC2->ELASTIC BLOCK STORE->卷
-2. 选择所需修改的卷，依次打开：操作->修改
-   ![修改卷](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-ddiskin-websoft9.png)
-3. 设置新的大小
+#### Detach Volume
 
-> 大多数情况下，卷只能增加大小，而不能降低大小
+To detach volume from the instance, refer to the steps below:
 
-### 创建快照
+1. Login to AWS console and open EC2 Dashboard.  
 
-对于AWS来说，基于卷来创建快照
+2. Open 【Instances】, choose the instance from which the volume will be detached and click 【Stop】.  
 
-1. 登录到AWS控制台，打开EC2 Dashboard
-2. 打开ELASTIC BLOCK STORE下的卷功能，选择一个卷后，实现“创建”快照操作
-   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-createsnapshot-websoft9.png)
-3. 给快照命名后，开始创建
+3. Open【ELASTIC BLOCK STORE】>【Volumes】, choose the volume and click 【Detach Volume】.
+   ![detach volume](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-detachvolume-websoft9.png)
 
-### 创建镜像
+> The volume detached remains in the storage account and wouldn't be deleted.
 
-前面讲过，基于快照可以创建镜像，基于实例也可以创建镜像
+#### Modify Volume
 
-#### 实例创建镜像
+If the volume is not attached to instance, it can be modified.
 
-1. 登录到AWS控制台
-2. 打开需要创建镜像的实例，打开：操作->映像->创建镜像
-![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-ec2toimage-websoft9.png)
-3. 根据提示完成后续步骤
+1. Login to AWS console and open 【EC2->ELASTIC BLOCK STORE】>【Volumes】.  
 
-#### 快照创建镜像
+2. Choose the volume need to modify and open 【Actions】>【Modify Volume】.
+   ![modify volume](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-ddiskin-websoft9.png)  
 
-1. 登录到AWS控制台，进入EC2 Dashboard
-2. 找到ELASTIC BLOCK STORE下的快照功能，列出所有快照
-3. 选择所需的快照，对它进行创建镜像操作
-   ![打开快照](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-snapshot-websoft9.png)
+3. Set new size.
 
-### 自动快照策略
+> In most cases, the volume can only increase in size, but can not decrease.
 
-1. 登录AWS控制台
-2. 打开：EC2->ELASTIC BLOCK STORE->生命周期管理器，创建快照生命周期策略
-    ![创建快照生命周期策略](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-snapshotauto-websoft9.png)
-2. 根据提示完成快照策略设置
+### Create Snapshots
 
+For AWS, to create Snapshots based on the volume.
 
-## 网络与安全
+1. Login to the AWS console and open EC2 Dashboard.  
 
-### 公网 IP{#ip}
+2. Open 【ELASTIC BLOCK STORE】>【Volumes】 and choose volume to create Snapshot.
+   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-createsnapshot-websoft9.png)
 
-**查看 IP**
+3. Name the snapshot before creating.
 
-1. 登录AWS控制台
-2. 打开要查看公网IP的实例，我们会看到 **公有IP** 和 **公有DNS**
-   ![查看公网IP](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-getip-websoft9.png)
-3. 如果实例没有公网IP地址项（或为空），就需要参考下一个小节挂载一个公网IP
+### Create Image
 
-**挂载 IP**
+As mentioned before, image can be created based on snapshots, and instance.
 
-当创建的实例没有公网IP地址，只要有空闲（或新购）的公网IP地址，AWS控制台是可以给实例挂载上公网IP地址的。具体操作步骤如下：
+#### Instance to Image
 
-1. 登录到AWS控制台
-2. 打开所需的实例，查看：操作->联网->管理IP地址
-   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-manageip-websoft9.png)
+1. Login to AWS console.  
 
-3. 在管理IP地址操作栏中，点击“分配弹性IP”
-   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-assignip-websoft9.png)
+2. Choose the instance, and open 【Actions】>【Image】>【Create image】.
+![img](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-ec2toimage-websoft9.png)   
 
-4. 根据提示完成后续操作
+3. Follow the prompts to complete it.
 
-### 安全组{#securitygroup}
+#### Snapshots to Image
 
-安全组是管理EC2端口的功能，端口是服务器上应用程序与外部访问出入访问的通道。下面以**开启80端口为例**，为您介绍安全组的使用
+1. Login to the Aws console and open EC2 Dashboard.  
 
-1. 登录AWS控制台，打开EC2->实例
-2. 打开实例下的“描述”标签，然后点击安全组名称
-   ![ec2更改安全组](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-changesg-websoft9.png)
-3. 进入所属安全组的设置后，打开“入站”标签页，点击编辑
-   ![ec2更改安全组入](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-sfin-websoft9.png)
-4. 编辑入站规则，增加一个新的规则（下图以80为例）
-   ![ec2更改安全组入](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-set80sg-websoft9.png)
-3. 点击“保存”按钮即可生效
+2. Open 【ELASTIC BLOCK STORE】>【Create Snapshot】 and list all snapshots.
+3. Choose from the list of snapshots and create image based on it.
+   ![Snapshots](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-snapshot-websoft9.png)
 
-### AWS 更新服务
+## Network and Security
 
-AWS提供一套完整的[AWS Systems Manager](https://www.amazonaws.cn/systems-manager/)解决方案，可以帮助您自动收集软件清单、应用操作系统补丁、创建系统映像以及配置 Windows 和 Linux 操作系统。
+### Internet IP{#ip}
 
-1. 登录AWS门户，打开 **System Manager** 服务
+**View IP**  
 
-2. 找到【Instances & Nodes】>【Patch Manager】进入如下的相关管理界面
-![启用更新管理](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-sysmupdate-websoft9.png)
+1. Login to AWS console.  
 
-3. 根据向导开始更新
+2. Choose the instance, and you can see the **Public IP** and **Public DNS**.
+   ![View IP](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-getip-websoft9.png)  
+
+3. If the instance does not have a public IP address entry (or is empty), you need to refer to the next section to mount a public IP address.
 
 
-## 域名{#domain}
+**Mount IP**  
 
-这里我们介绍一个AWS比较实用的域名功能：AWS针对于每个实例提供了DNS服务。
+If the created instance does not have a public IP address, as long as there is a free (or newly purchased) public IP address, the AWS console can mount the public network IP address to the instance.The specific steps are as follows: 
 
-### EC2之DNS
+1. Login to AWS console.  
 
-AWS给每台EC2实例都配置了一个公有DNS
+2. Choose the instance and open 【Actions】>【Networking】>【Manage IP Addresses】.
+   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-manageip-websoft9.png)
 
-当EC2配置的是动态IP时，每次重启实例，IP地址都可能会发生变化，导致需要重新解析域名，给运维带来不必要的麻烦。AWS的DNS功能，就是帮我们避免这个问题的。
+3. Click 【Allocate an Elastic IP】.
+   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-assignip-websoft9.png)
 
-1. 在AWS门户，打开实例->描述
-   ![查看DNS](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-getip-websoft9.png)
-2. 找到公有DNS，复制下来
+4. Follow the prompts to complete the action.
+
+### Security Group{#securitygroup}
+
+A security group is a function of managing the EC2 port, which is a channel for access application from external access. Let's take **opening port 80** as an example to introduce you to the use of security groups.
+
+1. Login to AWS console and open 【EC2】>【Instances】.  
+
+2. Open 【Description】and then click the name of Security groups.
+   ![ec2 edit security group](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-changesg-websoft9.png)
+3. Enter the setting interface, click 【Inbound】and 【Edit】.
+   ![ec2 edit](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-sfin-websoft9.png)
+4. Edit inbound rule and add a new one.
+   ![ec2 edit rule](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-set80sg-websoft9.png)
+3. Save it.
+
+## Domain Name{#domain}
+
+General skill such as applying for a domain name and resolving domain names will not discussed in this document.  
+
+Here we introduce a more useful domain feature of AWS: AWS provides DNS services for each instance.  
+
+### DNS for EC2
+
+AWS provides public public DNS services for each instance.
+
+When the instance is configured with a dynamic IP address, the IP address may change each time the instance is restarted. As a result, the domain name needs to be re-resolved, which brings unnecessary trouble to the operation and maintenance. AWS's DNS function can help us avoid this problem.
+
+1. Login to AWS console and open 【Instance】>【Description】.
+   ![view DNS](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-getip-websoft9.png)  
+
+2. Copy the public DNS.
 
 ### Route 53
 
-Route 53就是AWS的域名购买、解析与管理平台，通过使用 Amazon Route 53，您可以注册新域、转移现有域、将域流量路由到 AWS 和外部资源，还可以监控您的资源的运行状况。
+Route 53 is the platform for applying domain, domain resolution and management. You can use Route 53 to register domain names, transfer existing domains, route traffic for your domains to your AWS and external resources and check the health of your resources.
 
-1. 在AWS门户，在联网与内容分发类别找到Route 53服务
-   ![打开Route 53](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-route53-websoft9.png)
-2. 开始域名相关操作
-   ![Route 53界面](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-route53start-websoft9.png)
+1. Login to AWS console and choose Route 53 in 【Networking & Content Delivery】.
+   ![Route 53](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-route53-websoft9.png)
+2. Start to manage domains.
+   ![Route 53](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-route53start-websoft9.png)
