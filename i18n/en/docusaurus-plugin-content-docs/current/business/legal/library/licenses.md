@@ -3,12 +3,12 @@ sidebar_position: 1
 slug: /legal/licenses
 ---
 
-# 开源许可
+# Licenses
 
-使用 Websoft9 产品时，涉及大量的开源软件，它们的开源许可如下：  
+When using Websoft9 products, a large amount of open source software is involved, and their open source licenses are as follows: 
 
 #### Websoft9
-- LGPL3.0 + 附加条款（不允许在公有云的云市场上售卖通过本项目安装后直接或间接制作的镜像。）
+- LGPL3.0 + Additional Terms: It is not allowed to publish free or paid image based on this repository in any Cloud platform's Marketplace.
 - https://github.com/Websoft9/ansible-template/blob/main/README-zh.md#license
 
 #### .NET Core

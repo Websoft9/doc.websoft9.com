@@ -3,93 +3,35 @@ sidebar_position: 9
 slug: /business/faq
 ---
 
-# 商务问题
+# Business FAQ
 
-下面是用户在购买镜像中常见的非技术问题：
+The following are common non-technical questions users have when you Subscribe Websoft9 Enterprise:
 
-#### 什么是镜像？
+#### What is Enterprise Subscription?
 
-镜像=操作系统+应用软件，是一个打包好的可以被云服务器一键安装的程序体。  
+Enterprise Subscription is mean **Enterprise product + Support + Security enhancement**.   
 
-#### 镜像中的操作系统是谁提供的？
+You can our **Enterprise Subscription** at the major [Cloud](../install/cloud).  
 
-镜像中的操作系统一般使用云平台提供的原生操作系统。
+#### What is image?
 
-#### 什么是云市场？
+Image is a packaged application and it environment, e.g docker iamge, VM image
 
-云市场（Marketplace）是由云平台提供的，汇聚了云平台的合作厂商的软件产品和各种技术服务。  
+User can running image for running application, no need any installation of application
 
-用户可以直接在云市场购买商品，然后由合作厂商提供对应的技术服务。  
+#### What's Cloud Platform Marketplace?
 
-交易和服务过程中，云平台主要作为中转作用，并承担监管的责任。
+Cloud Platform Marketplace provides access and information on solutions and services available from its partners. Customers (IT pros and developers) can discover, try to buy cloud software solutions built on or built for  Marketplace.  Marketplace catalog of 8,000+ listings provides Cloud building blocks, such as Virtual Machines (VMs), APIs, Solution Templates and managed applications, SaaS apps, containers, and consulting services.
 
-#### 镜像怎么付费？
+#### How to list all Websoft9 products on Marketplace?
 
-镜像是服务器的组件之一，一旦镜像被安装到服务器之后，镜像的计费（续费）可开始包含在服务器整体计费模型中的。
+Refer to: [Websoft9 on Marketplace](../buy/subscription#get)
 
-#### 镜像为什么收费？
 
-镜像收费不是针对其中开源软件收费，而是针对于我们与镜像配套的：知识库、人工服务、长期的更新迭代、用户体验改进等软件使用过程中的必要因素付费。  
+#### Can Websoft9 provide free support?
 
-如果镜像免费，我们将无任何收入来源以提供各种支持和知识。
+Yes, we provide free support for our Enterprise subscription customer
 
-#### 不续费还能用镜像吗？
+#### Can I resell your product?
 
-只要云服务器可用，镜像就可以使用。如果不需要云服务器，可以自定义一个镜像，下次需要使用的时候再基于自定义镜像重新创建服务器，此时镜像中的软件仍然可用。
-
-#### 不删除镜像会停止计费吗？
-
-删除镜像=将服务器当前的镜像更换成其他镜像。  
-
-如果不删除镜像，镜像会继续计费，直至删除为止。
-
-#### 如何更换（或重置）镜像？
-
-更换镜像即重装系统，适用于**镜像退订，产品更换**等场景。  
-
-重置镜像即恢复最初安装镜像的状态，适用于测试等场景。  
-
-阿里云、华为云和腾讯云等国内云平台支持对已有的服务器进行更换镜像的操作，而 Azure 和 AWS 不支持这种操作。  
-
-如果您需要更换（或重置）镜像，请参考：[《云服务器操作》](../user/cloud)  
-
-#### 买服务器和买镜像有先后关系吗？
-
-镜像与服务器具有互生关系，即两种都需要存在，才可以使用：
-
-* 如果你没有服务器，通过**云市场**购买镜像的同时，系统会进入服务器购买页面，即配套购买服务器；  
-* 如果你已有服务器，需要通过云控制台采用**更换镜像**的方式购买镜像。
-
-#### 镜像对服务器有什么要求？
-
-每个镜像商品我们会提供一个最低配置要求。最优的配置，需要自身根据业务及时调整。
-
-我们也总结了一些云服务器的购买经验，参考[此处](../user/cloud#howbuy)。
-
-#### 服务器是你们提供的吗？
-
-不是，我们公司不提供服务器，服务器是云厂商提供的，并归属在用户自己的云账号中。
-
-#### 购买镜像你们会提供培训吗？
-
-会，除了文档指导之外，我们也不定期推出视频或直播来指导用户使用。
-
-#### 软件功能能教我吗？
-
-我们聚焦于安装部署和故障技术支持。我们不擅长软件的功能，因此我们的技术支持范围是不包含功能层面的。
-
-#### 你们提供个性化部署方案吗？
-
-可以提供，包括：HTTP 优化，读写分离，集群，高可用性，容器化等多种解决方案。欢迎与我们 [联系](https://www.websoft9.com)
-
-#### 集成商可以转售 Websoft9 的产品吗？
-
-我们非常欢迎您转售我们的镜像，我们可以提供多达 40% 的返佣。
-
-#### What's Cloud Platform?
-
-Cloud platform refers to platform manufacturers that provide cloud computing services, such as: **Azure, AWS, Alibaba Cloud, HUAWEI CLOUD, Tencent Cloud**, etc.
-
-#### What is the difference between Instance, Cloud Server, Virtual Machine, ECS, EC2, CVM, and VM?
-
-No difference, just the terminology used by different manufacturers, actually cloud servers
+Yes, We very much welcome you to resell our product which we can 40% rebate for you.  

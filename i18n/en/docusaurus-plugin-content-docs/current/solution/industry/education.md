@@ -3,11 +3,11 @@ sidebar_position: 2
 slug: /solution/edu
 ---
 
-# 教育
+# Education
 
-开源软件在教育行业具有不可替代的地位。
-学生做研究，老师做教学，开源软件是最好的技术实现载体，也是同行交流的极佳媒介。  
-“全世界的爱好者共同参与一件有意义的事情”，在开源界这是很容易实现的。  
+Open source software has an irreplaceable position in the education industry.  
+Students do research, teachers do teaching, and open source software is the best technology implementation carrier and an excellent medium for peer communication.  
+"Enthusiasts all over the world participate in a meaningful thing", which is very easy to achieve in the open source world.  
 
-Websoft9 的产品汇聚了信息技术专业所需的200+个组件，应用，极大提升学生和老师的实践效率。  
+Websoft9's products bring together more than 200 components and applications required for information technology majors, which greatly improve the practical efficiency of students and teachers.
 

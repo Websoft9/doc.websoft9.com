@@ -3,266 +3,308 @@ sidebar_position: 1
 slug: /huaweicloud
 ---
 
-# 指南
+# Guide
 
-## 服务器管理
+This document is a simplified version of HUAWEI CLOUD official documentation, combined with the actual operation of the deployment, to help you quickly master The most basic skills.
 
-下面列出服务器管理常见的操作，在ECS控制台可以对实例状态进行修改，包括：
+## ECS
 
-- 开机
-- 关机
-- 重启
-- 删除
-- 转包周期
+You can manage the ECS on Console, includes:  
 
-删除适用于按量购买的服务器   
-转包周期，即按量付费模式转换成包年包月付费模式
+- Start
+- Stop
+- Restart
+- Delete
+- Modify ECS Specifications
 
-### 创建服务器
+Release ECS mean delete it, suitable for a pay-as-you-go instance that is not locked  
 
-1. 登录到华为云管理控制台->弹性云服务器ECS，点击“购买弹性云服务器”，
-   ![进入ecs控制台购买服务器](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-buyecs-websoft9.png)
-2. 选择计费模式、区域、规格等
-   ![选择ECS规格](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-guige-websoft9.png)
+### Create ECS
 
-   - 包年/包月：一口价包干付费制
-   - 按需付费：按小时付费，用一小时给一小时的钱
+1. Login to Console, open:【Cloud Server Console】>【Elastic Cloud Server】>【Buy ECS】
+   ![create ecs](https://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/huaweicloud-buyecs-websoft9.png)
 
-3. 在镜像一栏，有多种选择。
-   - 公共镜像：华为云官方提供的操作系统镜像
-   - 私有镜像：用户自己的镜像
-   - 共享镜像：其他人共享给用户的镜像
-   - 市场镜像：提供预装操作系统、应用环境和各类软件的优质第三方镜像。无需配置，可一键部署，满足建站、应用开发、可视化管理等个性化需求。
+2. Select the billing mode, instance type like these
+   ![type](https://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/huaweicloud-guige-websoft9.png)
 
-4. 如果选择镜像市场，可以通过搜索关键件词“网久”，列出我们相关镜像
-   ![选择Websoft9镜像](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-selectimage-websoft9.png)
+   - Subscription: Allows you to pay upfront and then use the service over a period of time.  
+   - Pay-As-You-Go: A billing method based on the amount of resources you actually use.  
+   - Preemptible Instance: A billing method based on the amount of resources you actually use. 
 
-4. 选择一个你所需的镜像，开始创建弹性云服务器
-5. 后续动作基本都会要求用户完成：网络和安全组、密码、公网带宽等设置，带宽建议按流量计费
-![选择带宽](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huawei-netwithpayasgo-websoft9.png)
-6. 等待几分钟，弹性云服务器创建完成后，镜像会作为服务器的系统盘启动，即镜像自动部署到实例中
+3. Select the **Image** step is very important
 
-### 创建秘钥对
+   - Public Image: Alibaba Cloud provides official public images. 
+   - Custom Image: Created from system snapshots of yourself
+   - Shared Image: Other user shared for you
+   - Marketplace Image: Alibaba Cloud Marketplace provides hundreds of high-quality third-party images that have undergone a strict review process.
 
-在创建弹性云服务器时，如下采用秘钥对作为登录凭证，需要提前创建秘钥对
+4. If you use the Marketplace Image, suggest use the search key "websoft9"
 
-1. 登录华为云控制台，打开：弹性云服务器->秘钥对，点击“**创建秘钥对**”按钮
-   ![创建秘钥对](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-createkeys-websoft9.png)
-2. 为秘钥对命名，例如“myKey”
-3. 点击确认后系统会自动将秘钥对文件 myKey.pem 保存到本地电脑
-4. 私钥只能下载一次，请妥善保管
+   ![search websoft9 image](https://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/huaweicloud-selectimage-websoft9.png)
 
-### 连接服务器
+4. Select the image you want to use
 
-华为云支持三种命令行连接方式：
+5. Go to next steps, include set Networking, System Configurations and so on
 
-| 方式                                                   | 操作说明                                                     |
-| ------------------------------------------------------ | ------------------------------------------------------------ |
-| 一个独立的 SSH 客户端                                    | 需要下载 [putty](https://putty.org/) 等客户端到本地电脑来连接服务器 |
-| 华为云管理控制台远程连接                                           | 在线连接工具，直接登录即可使用|
+6. Wait 2-3 minutes for the ECS running when completed these steps
 
+### Create Key Pairs
 
-我们以 “**管理控制台远程登录**” 为例描述如何连接Linux
+You should create **Key Pairs** before create ECS if you want to use Key Pairs for ECS connection
 
-1. 登录华为云控制台，找到需连接的弹性云服务器，点击“远程登录”
-   ![命令行连接](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-remoteconnectweb-websoft9.png)
-2. 进入管理终端
-   ![命令行连接](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-remoteconnectwebui-websoft9.png)
-3. 输入账号和密码，便可以使用管理控制台运行命令
+1. Login to Console, open:【Cloud Server Console】>【Key Pairs】
+   ![Key Pairs](https://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/huaweicloud-createkeys-websoft9.png)
 
-华为云 Windows 服务器支持[多种连接来源](ttps://support.huaweicloud.com/qs-ecs/zh-cn_topic_0092494193.html)，甚至移动端。
+2. Set the **SSH Key Pair Name** and select **Creation Mode**
 
+3. When you complete the creation, please download the ××××.pem to your local computer
 
-### 更改配置
+### Connect ECS
 
-ECS的配置可以调整，具体操作如下：
+The Command is the basic operation of the Linux system. HUAWEI CLOUD provides two web-based SSH tools that can be logged in without an account.
 
-1. 登录到华为云控制台，找到所需操作的云服务器
-2. 点击右侧的“升降配”，选择一种变更方案
-   ![调整配置](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-changeecsconfigure-websoft9.png)
-3. 依据相关的操作向导完成变更
+Log in to the HUAWEI CLOUD Console, open the ECS -> Operations, click "Remote Login"
 
-### 重装系统{#reinstallos}
+![Run command on HUAWEI CLOUD](http://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/hwcloud-runcmd-1-websoft9.png)
 
-如果你想将服务器恢复到刚安装之时的状态，就需要用到**重装系统**操作。  
-重装操作系统提供以原镜像进行系统重装的功能
+![Run command on HUAWEI CLOUD](http://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/hwcloud-runcmd-2-websoft9.png)
 
-1. 登录到华为云控制台，找到所需操作的云服务器
-2. 关机
-2. 依次打开：更多->重装系统  
-   ![重装系统](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-iniecs-websoft9.png)
-3. 根据系统提示完成后续步骤
-   ![重装系统详情](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-iniecsdetail-websoft9.png)
+![Run command on HUAWEI CLOUD](http://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/hwcloud-runcmd-3-websoft9.png)
 
-> 建议仔细理解**切换操作系统**和**重装系统**的差异 
 
+### Reset Password
 
-## 备份
+You can reset the ECS's password by the below method: 
 
-华为云上有提供自动 [**云备份服务**](https://www.huaweicloud.com/product/cbr.html)（Cloud Backup and Recovery，以下简称"CBR"）的自动备份方案。
+1. Login to HUAWEI CLOUD console, list the ECS
 
-> 自动备份区别于手动制作一个镜像实现备份。
+2. Open the menu:【More】>【Reset Password】
+   ![reset password](https://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/huaweicloud-resetpw-websoft9.png)
 
-![云备份](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-cbr-websoft9.png)
+3. Restart the ECS and it take effect
 
-华为云备份的基本原理是基于快照技术的数据保护，华为云备份针对业务场景，包含云服务器备份、云硬盘备份、应用备份、存储备份、VMware备份功能。
+### Modify ECS Specifications
 
-下面介绍云硬盘备份和云服务器备份两种方案：
+If you want to change the ECS configuration for business, you should Upgrade or Downgrade it
 
-### 云硬盘备份
+1. Login to HUAWEI CLOUD console, list the ECS
 
-云硬盘备份提供对云硬盘的基于快照技术的数据保护。
+2. Open the 【ModifySpecifications】menu of the target ECS
+   ![upgrade](https://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/huaweicloud-changeecsconfigure-websoft9.png)
 
-1. 登录到华为云备份服务控制台
-2. 购买云硬盘备份存储库
-   > 存储库是存放服务器和磁盘产生的备份副本的容器，您可以将服务器和磁盘绑定至存储库并绑定备份策略，为您的数据提供保障。
+3. You can choose from the following upgrade or downgrade schemes
 
-   ![云硬盘备份存储库](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-cbrbuydisks-websoft9.png)
+### Change/Reinstall OS
 
-3. 购买过程中可以立即选择所需备份的硬盘、设置备份策略，也可以跳过以后再设置
-   ![云硬盘备份存储库](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-cbrbuydiskss-websoft9.png)
+If you want to recover to ECS to the state of first installation, you need 【Change OS】operation: 
 
-2. 备份策略设置
-   ![云硬盘备份策略](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-cbrdiskpl-websoft9.png)
+1. Login to HUAWEI CLOUD console, list the ECS
 
-### 云服务器备份
+2. Stop your the target ECS
 
-云服务器备份提供对弹性云服务器和裸金属服务器的基于多云硬盘一致性快照技术的数据保护。
+2. Open the menu: 【More】>【Manage Image/Disk】>【Change OS】
+   ![Reset System disk](https://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/huaweicloud-iniecs-websoft9.png)
 
-1. 登录到华为云备份服务控制台
+3. Go to the next steps
 
-2. 购买云服务器备份存储库
-   ![云服务器备份存储库](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-cbrbuyecsbk-websoft9.png)
 
-3. 购买过程中可以立即选择所需备份的服务器、设置备份策略，也可以跳过以后再设置
-   ![云服务器备份存储库](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-cbrbuyecsbks-websoft9.png)
+## Backup
 
-2. 备份策略设置
-    ![云服务器备份策略](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-cbrecspl-websoft9.png)
+The best backup method is automatic backup, you can use the Snapshot function of HUAWEI CLOUD to backup your Disk automatically.  
 
-## 磁盘、快照与镜像
+You can use the HUAWEI CLOUD [**Cloud Backup and Recovery (CBR)**](https://support.huaweicloud.com/en-us/productdesc-cbr/cbr_01_0002.html) to backup your data.  
 
-对于华为云平台来说，云硬盘（磁盘）可以是单独的一种计算资源（单独创建、单独计费、单独管理等），同时也可以被集成到服务器实例，作为其中的一个组件。
+![Automatic backup](https://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/huaweicloud-cbr-websoft9.png)
 
-之所以我们把磁盘、快照和镜像放在一起描述，是因为这三者有一定的关联，甚至说有互生关系。
+You can backup your disk by the below methods:  
 
-> 华为云目前不支持快照创建镜像，也不支持磁盘创建服务器
+### Cloud Disk Backups
 
+Back up and restore cloud disks. You can use a cloud disk backup to restore data to a backup point or create a new disk.Backups of encrypted disks are automatically encrypted to ensure data security.
 
-### 创建快照
+1. Login to Console, go to: 【Recovery Console】>【Cloud Disk Backups】
 
-对于华为云来说，可以基于磁盘来创建快照
+2. Then click the button 【Buy Disk Backup Vault】
+   ![Buy Disk Backup Vault](https://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/huaweicloud-buydkbv-websoft9.png)
 
-1. 登录到华为云服务器控制台
-2. 在云硬盘列出所有磁盘，对需要操作的磁盘进行“创建快照”操作
-    ![创建快照](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-dkcreatesnapshot-websoft9.png)
-3. 根据提示完成后续操作
+3. You can select disks will be applied to this Backup Vault
+   ![Buy Disk Backup Vault](https://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/huaweicloud-buydkbv002-websoft9.png)
 
-### 创建镜像
+2. Suggest set the backup strategy 
+   ![set the backup strategy](https://libs-websoft9-com.oss-cn-qingdao.aliyuncs.com/Websoft9/DocsPicture/en/huaweicloud/huaweicloud-buydkbv003-websoft9.png)
+   
+   ![set the backup strategy](https://libs-websoft9-com.oss-cn-qingdao.aliyuncs.com/Websoft9/DocsPicture/en/huaweicloud/huaweicloud-buydkbv004-websoft9.png)
 
-华为云目前不支持快照创建镜像，仅支持服务器创建镜像
+### Cloud Server Backups
 
-1. 登录到华为云控制台->弹性云服务器，找到需要操作的目标服务器
-2. 依次打开：更多->创建镜像
-   ![创建自定义镜像](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-createimage-websoft9.png)
-3. 根据提示完成后续操作
+Back up and restore cloud servers, ensuring the security and consistency of your data.
 
-### 增加硬盘
+1. Login to Console, go to: 【Cloud Server Console】>【Cloud Server Backups】
 
-1. 登录到云服务器控制台，点击**云硬盘**下的**磁盘**
-2. 点击“购买磁盘”按钮
-   ![购买磁盘](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-createdisk-websoft9.png)
-3. 设置磁盘类型，大小等，确认无误后开始创建
-4. 将创建好的磁盘，挂载到ECS实例
-   ![挂载磁盘](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-attachdisk-websoft9.png)
-5. “磁盘挂载”执行成功后，需登录本实例对挂载的磁盘进行“初始化数据盘”的操作：
-    - Windows, 请参考华为云官方文档 [Windows初始化数据盘](https://support.huaweicloud.com/qs-ecs/zh-cn_topic_0030831989.html)
-    - Linux，请参考华为云官方文档 [Linux初始化数据盘](https://support.huaweicloud.com/qs-ecs/zh-cn_topic_0030831989.html) 
-5. 以上所有设置后方可使用磁盘
+2. Then click the button 【Buy Disk Backup Vault】
+   ![Buy Disk Backup Vault](https://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/huaweicloud-buydkbv-websoft9.png)
 
-### 卸载硬盘
+3. You can select Servers will be applied to this Backup Vault
+   ![Buy Disk Backup Vault](https://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/huaweicloud-cbrbuyecsbks-websoft9.png)
 
-将磁盘从ECS中解除绑定关系(卸载)，操作如下
+4. Suggest set the backup strategy 
 
-1. 登录到云服务器控制台，点击**云硬盘**下的**磁盘**
-2. 找到所需卸载的磁盘，依次打开：更多->卸载
-   ![卸载磁盘](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-ditachdisk-websoft9.png)
-3. 根据提示完成后续操作
 
-> 磁盘卸载后，会保留，不会被删除，可以被其他服务器挂载
+## Disk, Snapshot and Image
 
-### 磁盘扩容
+For HUAWEI CLOUD, [Elastic Volume Service (EVS)](https://support.huaweicloud.com/en-us/productdesc-evs/en-us_topic_0014580741.html) is cloud disk which is a component for ECS.  
 
-华为云支持在线扩容**系统盘**和**数据盘**，即无需重启ECS实例便可以完成扩容。
+![](https://support.huaweicloud.com/en-us/productdesc-evs/en-us_image_0205523160.png)
 
-1. 登录到服务器控制台，点击**云硬盘**下的**磁盘**
-2. 找到所需卸载的磁盘，点击“扩容”
-   ![修改卷](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-changedisks-websoft9.png)
-3. 根据提示完成后续操作
+### Create Snapshot
 
-> 磁盘只支持扩容，不支持减容。
+You can create snapshot for disk to backup
 
-## 网络与安全
+1. Login to Console, go to: 【Cloud Server Console】>【Elastic Volume Service	】>【Disk】
 
-### 查看公网 IP{#ip}
+2. Select one Disk which you want to create snapshot for it
+   ![Create snapshot](https://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/huaweicloud-dkcreatesnapshot-websoft9.png)
 
-1. 登录到华为云控制台->ECS
-2. 打开要查看公网IP的实例，我们会看到 **IP地址（公）** 
-   ![查看公网IP](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-getpublicip-websoft9.png)
-3. 如果实例没有公网IP地址项（或为空），需挂载一个弹性公网IP（[参考文档](https://help.aliyun.com/document_detail/72125.html)）
+3. Complete the next steps
 
-### 绑定弹性 IP
+### Create Image
 
-如果云服务器没有弹性IP，具体操作步骤如下：
+1. Login to Console, list all ECS from 【Cloud Server Console】
 
-1. 登录云服务器管理控制台。
-2. 点击服务器名称，进入服务器详情页面。
-3. 找到“弹性公网IP”标签，找到“绑定弹性公网IP”按钮
-   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-bindeip-websoft9.png)
-4. 根据提示完成后续操作
+2. Open the menu: 【More】>【Manage Image/Disk】>【Create Image】
+   ![Create Image](https://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/huaweicloud-createimage-websoft9.png)
+   
+3. Complete the next steps
 
-> 如果没有可用的弹性公网IP，需要实现购买弹性公网IP
+### Buy Disk
 
-### 安全组{#securitygroup}
+1. Login to Console, go to: 【Cloud Server Console】>【Elastic Volume Service 】>【Disk】
 
-安全组是管理云服务器端口的功能，端口是服务器上应用程序与外部访问出入访问的通道。下面以**开启80端口为例**，为您介绍安全组的使用
+2. Click 【Buy Disk】 button
+   ![购买磁盘](https://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/huaweicloud-createdisk-websoft9.png)
 
-1. 登录到华为云控制台->云服务器
-2. 华为云控制台-云服务器-点击主机ID链接，打开服务器详细信息页面
-3. 依次点击：安全组->更改安全组->管理安全组
-   ![ec2更改安全组](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-safegroup001-websoft9.png)
-3. 进入管理安全组页面->快速添加规则
-   ![ec2更改安全组入](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-safegroup002-websoft9.png)
-4. 选择 HTTP(80) 端口，点击确认完成设置
+3. Set the **Disk Type** and **Disk Size**
 
-> 以上设置方法是最为简单的一种，更多请参考[华为云官方安全组教程](https://support.huaweicloud.com/usermanual-ecs/zh-cn_topic_0030878383.html)进行更为安全、精准的设置。
+4. Attach the new disk to ECS
+   ![Attach Disk](https://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/huaweicloud-attachdisk-websoft9.png)
 
-## 域名{#domain}
+5. [Initialize an EVS Data Disk](https://support.huaweicloud.com/en-us/qs-evs/evs_01_0058.html)
 
-域名的目的是通过一段容易识别的文字段来指向服务器上的网站。如果没有域名，网站就只能通过IP地址访问，这样不便于记忆和识别。
+### Detach Disk
 
-为了使网站可以通过域名访问，有三个工作：
+You can detach a Disk which you don't want to use for a ECS
 
-### 域名解析
+1. Login to Console, go to: 【Cloud Server Console】>【Elastic Volume Service 】>【Disk】
 
-1. 购买域名(也称之为注册域名)，并完成实名制认证
-   ![域名购买](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-buydomain-websoft9.png)
-2. 登录华为云控制台，打开域名列表，在所需操作的域名上点击“解析”
-   ![解析域名](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-dns-websoft9.png)
-3. 增加一个A记录：将域名（或子域名）指向IP的操作(下图示例)
-   ![A记录解析](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-dnsrev-websoft9.png)
-2. 保存并等待生效
+2. Go to menu: 【More】>【Detach】
+   ![Detach Disk](https://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/huaweicloud-ditachdisk-websoft9.png)
 
-### 域名备案
+3. Complete the next steps
 
-华为云的备案政策简述：
+### Expand Disk
 
-- 购买服务器满足华为云的免费备案要求，就可以由华为云供备案服务。  
-- 备案过程请通过[华为云备案系统](https://beian.huaweicloud.com/)全程操作
-   ![A记录解析](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-dnsbeians-websoft9.png)
-- 备案是纯粹的商务流程活动，没有任何技术门槛，建议用户自行完成
-- 服务器地区在中国大陆的对应的域名需要备案
+You can resize your **System Disk** and **Data Disk** online by console
 
-> 华为云 7*24小时备案专线：4000 955 988 确保您的备案咨询能够得到及时回复
+> Resize most of time mean increase disk storage
 
+1. Login to Console, go to: 【Cloud Server Console】>【Elastic Volume Service 】>【Disk】
 
+2. Click the link 【Expand Capacity】
+   ![Expand Capacity](https://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/huaweicloud-changedisks-websoft9.png)
+   
+3. Complete the next steps
+
+## Network and Security
+
+### Check IP{#ip}
+
+[Elastic IP](https://support.huaweicloud.com/en-us/productdesc-eip/overview_0001.html) is the IP address for Internet access, that mean it the same with Internet IP
+
+1. Login to Console, list all ECS from【Cloud Server Console】
+
+2. You can get the **EIP** from the IP Address column
+   ![get EIP](https://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/hwcloud-getpublicip-websoft9.png)
+
+### Change IP
+
+1. Login to Console, list all ECS from【Cloud Server Console】
+
+2. Go to the detail page of ECS and click 【EIPs】 tab
+   ![change IP](https://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/huaweicloud-bindeip-websoft9.png)
+
+3. Click 【Bind EIP】 button to complete this solution
+
+### Security Group{#securitygroup}
+
+A [Security Group](https://support.huaweicloud.com/en-us/usermanual-ecs/en-us_topic_0140323157.html) acts as a virtual firewall for Elastic Compute Service (ECS) instances to control inbound and outbound traffic and improve security. You can use security groups and security group rules to define security domains in the cloud.  
+
+Below is a sample for you how to **Enable TCP:80** port on security group:  
+
+1. Login to console, lis all ECS by 【Cloud Server Console】>【Security Group】
+
+2. Add a rule or modify a rule
+
+   ![ecs Security Group](https://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/huaweicloud-safegroup001-websoft9.png)
+   ![ecs Security Group](https://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/huaweicloud-safegroup002-websoft9.png)
+
+4. Then, add a new rule by click the 【Add Rule】button授权对象一般为较为合适
+   ![ecs Security Group](https://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/hwcloud-safe80-websoft9.png)
+
+   - Destination set to **HTTP(80)**
+   - Source set to **0.0.0.0/0**
+
+5. Save it 
+
+## Domain Name{#domain}
+
+[Domains](https://support.huaweicloud.com/intl/en-us/dns/) is a domain name management platform that provides domain name registration, transaction, monitoring, and protection services. 
+
+Below steps is need for you to enable domains visit of your application:  
+
+### Resolve Domain 
+
+Resolve Domain mean that you set a mapping relations between domain and EI{}
+
+1. Buy your Domain and register it
+   ![Buy DNS](https://libs-websoft9-com.oss-cn-qingdao.aliyuncs.com/Websoft9/DocsPicture/en/huaweicloud/hwcloud-buydomain-websoft9.png)
+
+2. Login to DNS console, lis all domains
+   ![Add a record](https://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/huaweicloud-dns-websoft9.png)
+
+3. Add an **Add Record** for it
+   ![Add a record](https://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/huaweicloud-dnsrev-websoft9.png)
+
+2. Save it and wait for 2-10 minute, then your DNS is take effect
+
+### Binding Domain
+
+The precondition for binding a domain is that HUAWEI CLOUD can accessed by domain name.
+
+When there is only one website on the server, you can visit the website without binding domain. While considering the server security and subsequent maintenance, **Binding Domain** is necessary.
+
+Steps for binding HUAWEI CLOUD domain are as follows:
+
+1. Connect your Cloud Server;
+2. Modify **vhost configuration file**,and change the **server_name** and **proxy_pass** if you want.
+   ```text
+   server
+   {
+   listen 80;
+   server_name websoft9.yourdomain.com;  # Set your domain
+       location / {
+       proxy_pass  http://127.0.0.1:8880; # Set your port
+   ...
+   }
+   ```
+3. Restart Nginx service
+   ```
+   sudo systemctl restart nginx
+   ```
+
+### Domain Beian
+
+If you ECS is created in China, and you want to use Domain for application, you must complete the **Domain Beian** for Government governance.
+
+![Domain Beian](https://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/huaweicloud-dnsbeians-websoft9.png)
+
+Refer to: [Domain Beian](https://beian.huaweicloud.com)

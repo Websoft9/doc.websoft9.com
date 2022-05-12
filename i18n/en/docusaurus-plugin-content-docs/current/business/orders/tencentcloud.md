@@ -3,7 +3,7 @@ sidebar_position: 4
 slug: /tecentcloud/tencentcloud
 ---
 
-# 腾讯云订单
+# For Tencent Cloud
 
 在腾讯云平台中，镜像部署完成后，就产生了相关的订单
 

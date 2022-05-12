@@ -3,13 +3,13 @@ sidebar_position: 2
 slug: /solution/docs
 ---
 
-# 知识与文档
+# Docs and knowledge base
 
-企业 CEO 都非常重视知识沉淀和分享，但在实际运营过程中却发现存在如下常见的困扰：
+Enterprise CEOs attach great importance to knowledge accumulation and sharing, but in the actual operation process, they find the following common problems:
 
-* 一线员工知识提炼能力不足
-* 知识在跨部门协作的时出现滞后、不准确的情况
-* 人人都有副本，无法集中迭代知识
-* 内部知识库与外部知识库有大量重复部分
+* Insufficient knowledge extraction ability of front-line employees
+* Knowledge lags and inaccurate when collaborating across departments
+* Everyone has a copy, and it is impossible to centrally iterate knowledge
+* There is a lot of duplication between the internal knowledge base and the external knowledge base
 
-Websoft9 在运作中同样出现上述困扰，所幸，我们采用了不同的知识库平台最终让企业的知识很好的沉淀、积累。 
+The above problems are also encountered in Websoft9's operation. Fortunately, we have adopted different knowledge base platforms to finally allow the enterprise's knowledge to be well precipitated and accumulated.

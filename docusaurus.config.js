@@ -83,8 +83,6 @@ const config = {
             label: '文档',
           },
 
-          {to: '/docs/api', label: 'API', position: 'left'},
-
           {to: '/community', label: '开源社区', position: 'left'},
 
           {to: '/docs/helpdesk', label: '技术支持', position: 'left'},

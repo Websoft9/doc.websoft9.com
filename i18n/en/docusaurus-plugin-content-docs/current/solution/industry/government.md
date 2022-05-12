@@ -4,11 +4,10 @@ slug: /solution/gov
 ---
 
 
-# 政府
+# Government
 
-面向政府大数据中心提供开源软件方案，我们具有如下的能力：
+To provide open source software solutions for government big data centers, we have the following capabilities:
 
-* 安全等保
-* 信创适配
-* 离线部署
-* 现场交付
+* Security and other guarantees
+* Offline deployment
+* On-site delivery

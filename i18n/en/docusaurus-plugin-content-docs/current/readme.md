@@ -5,30 +5,36 @@ slug: /
 
 # Tutorials
 
-欢迎来到 Websoft9 文档。
+Welcome to GitLab documentation.  
 
-在这里，您可以访问 Websoft9 的完整文档，掌握云原生架构的技能，获得主流开源应用的使用知识。  
+Here you can access the complete documentation for Websoft9, the collection applications for the entire Cloud Native open source.  
 
-## 导航
+## Docs Index
 
-| 章节              | 描述                                                     |
+| Charter              | Description                                                     |
 | ----------------- | -------------------------------------------------------- |
-| [安装](./install) | 安装以及安装后的[账号密码](./user/credentials)获取、HTTPS 配置、域名绑定等指引 |
-| [应用中心](./apps) |  100+ 个开源应用的快速入门和配置指南  |
-| [解决方案](./solution)  |    基于多个开源应用的集成化解决方案，满足行业和业务场景需求  |
-| [购买与支持](./business)   |  付费使用 Websoft9 产品，获得企业级商业支持服务 |
-| [用户指南](./administrator)   |  应用生命周期管理、数据库管理以及云资源管理  |
-| [管理员指南](./administrator)   |  升级、备份等运维指南，数据、存储和安全配置指南  |
-| [故障问题](./faq)        |    常见的技术技术和故障问题   |
+| [Install](./install) | Install Websoft9 and setup after installation, includes: [get credential](./user/credentials), set HTTPS, set DNS |
+| [Application](./apps) |  300+ application quick start  |
+| [Solution](./solution)  |    Integrated solutions based on multiple open source applications to meet the needs of industries  |
+| [Subscription and Support](./business)   |  Pay for Websoft9 products and get enterprise-level commercial support services |
+| [User guide](./administrator)   |  Manage applications and data  |
+| [Administrator](./administrator)   |  Upgrade, backup and other operation and maintenance guide, data, storage and security configuration guide  |
+| [Troubleshoot + FAQ](./faq)        |    Common technical faq and problems   |
 
-## 热门话题
+## Popular topics
 
-* [账号密码是什么？](./user/credentials)
-* [如何配置 HTTPS？](./administrator/domain_https)
-* [联系人工支持](./helpdesk)
+Have a look at some of our most popular topics:  
 
-## 迁移至 Websoft9
+* [What is the username and password of application?](./user/credentials)
+* [How to configure HTTPS?](./administrator/domain_https)
+* [How to get the support of Websoft9?](./helpdesk)
 
-企业数字化的成功离不开灵活的使用各种开源技术。  
+## Migrate to Websoft9
 
-如果您的 IT 团队无法进行有效的技术支持，[订阅](./buy/subscription) Websoft9 的服务，享受商业级支持给您带来的效率提升和保障吧。  
+The success of enterprise digitalization is inseparable from the flexible use of various open source technologies.  
+
+If your IT team is unable to provide effective technical support, [Subscribe](./buy/subscription) Websoft9's services, and enjoy the efficiency and assurance brought by commercial-grade support.
+
+## Contributing to GitLab
+
+Websoft9 is open source, you can get the source code form [Websoft9 on Github](https://github.com/Websoft9) 

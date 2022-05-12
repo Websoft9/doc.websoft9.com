@@ -2,19 +2,19 @@
 sidebar_position: 1
 ---
 
-# 概要
+# About Solution
 
-解决方案是我们一类特殊的产品，它主要满足一类用户对多个开源软件的组合需求。例如：WordPress 建站 + Prestashop 电商
+A solution is a special product of our catalog, which mainly meets the combined needs of a class of users for multiple open source software. For example: WordPress website + Prestashop e-commerce
 
-我们非常愿意满足用户个性化的方案，如果您有相关需求，请随时联系我们：help@websoft9.com  
+We are very willing to meet users' personalized solutions, if you have related needs, please feel free to [contact us](../helpdesk#contact)
 
-我们可以通过如下的服务，满足用户个性化解决方案的需求：
+We can meet the needs of users' personalized solutions through the following services:
 
-* 需求梳理
-* 开源软件选型分析
-* 搭建演示环境
-* 连接与部署
-* 数据集成
-* 流程自动化开发
+* Requirements sorting
+* Analysis of open source software selection
+* Build a demo environment
+* Connect and deploy
+* Data integration
+* Process automation development
 
-同时，如果您是开源专家，我们很乐意与您合作开发解决方案。  
+Meanwhile, if you're an open source expert, we'd love to work with you to develop solutions.  

@@ -4,75 +4,45 @@ slug: /helpdesk
 description: Websoft9 客户成功团队从咨询、方案和技术支持全面的服务客户
 ---
 
-# 技术支持
+# Support
 
-## 客户成功
+## Customer Success Team
 
-Websoft9 客户成功团队从咨询、方案和技术支持全面的服务客户。我们的理念是：“消除技术复杂性，让客户工作更简单”。
+Websoft9 Customer Success Team serves customers comprehensively from consulting, solutions and technical support. Our philosophy is: "Remove technical complexity and make the customer's job easier".
 
-我们立志于成为用户的 **虚拟数字化专家团队** 的角色，向用户提供开源相关的咨询、部署、交付和连接集成服务，让全球中小企业能够平等的享受开源技术带来的生产力提升。    
+We aspire to be the user's **virtual digital expert team**, to provide users with open source-related consulting, deployment, delivery and connection integration services, so that global small and medium-sized enterprises can equally enjoy the productivity improvement brought by open source technology. 
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/cst-websoft9.png)
 
 
-## 支持范围
+## Support scope
 
-下图是 Websoft9 技术支持的范围和支持方式：  
+For Enterprise subscription customer, any issue, bug, bad user experience, you can get the support of Websoft9.  
 
-![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/supportmind-websoft9.png)
+## Contact us{#contact}
 
-
-说明：
-
-1. 技术支持范围包括：免费人工服务、文档指导服务
-2. 文档指导服务需要客户根据文档方案自行配置，若发现文档有问题或文档不完善，欢迎提出优化建议
-3. 未在**免费人工服务**范围中列出的内容，若购买一对一的[按需服务](./buy/service)
-4. **付费镜像**用户可通过[人工服务渠道](#contact)（电话/微信/邮件/工单）获得人工支持
-5. **免费镜像**用户通过[Github提交issue](https://github.com/Websoft9) 获得改进
-
-## 联系方式{#contact}
-
-有多种渠道可以联系我们的人工支持：
+It is recommended to contact us through the following channels:  
   
-| 支持渠道 | 服务时间 | 适用场景| 使用入口|
+| Channel | Time | Scenes| Access|
 | --- | --- | --- | --- |
-| 工单（推荐） | 7×24 | 处理故障 | [访问工单系统](https://share.hsforms.com/1V3u-6EPoRgOKEdi9kSk12w568t5)|
-| 邮箱 | 7×24 | 处理故障，合作 | help@websoft9.com|
-| 微信（扫一扫） | 5×8| 交流咨询 | ![](https://libs.websoft9.com/websites/zh/wx-lz.png) ![](https://libs.websoft9.com/websites/zh/wx-cdl.png) |
-| 电话 | 7×8| 售前或紧急故障 | **0731-8957 2759**|
+| Ticket | 7×24 | Customer Support | [Access Ticket System](https://share.hsforms.com/1V3u-6EPoRgOKEdi9kSk12w568t5)|
+| Email | 7×24 | Customer Support and Partnership | help@websoft9.com|
+| Wechat | 5×8| Consult | ![](https://libs.websoft9.com/websites/zh/wx-lz.png) ![](https://libs.websoft9.com/websites/zh/wx-cdl.png) |
+| Telephone | 7×8| Consult and emergency bug | **0731-8957 2759**|
 
 
-## 问题解答
+## FAQ
 
-#### 工单系统需要注册吗？
+#### Do I need to register Ticket System?
 
-可以注册，也可以不注册。
+No, you don't need to register it,   
 
 [![alt text](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/workorder-ui.png "title")](https://share.hsforms.com/1V3u-6EPoRgOKEdi9kSk12w568t5)
 
-#### 如何查看工单反馈？
+#### How to check or reply for Ticket System?
 
-如果不注册，请登录**邮箱**查看反馈并给予更多回复  
-如果注册，可以登录工单系统 或 登录邮箱 查看反馈并给予更多回复 
+Use email to reply 
 
-#### 7×8 / 7×24 是什么意思？
+#### What languages for Websoft9 support?
 
-7×8 即每周7天、每天8小时。同理，即每周7天、每天24小时
-
-#### 你们的标准客服支持时间是？
-
-周一至周六 的 8:00--17:30 是我们标准的工作时间。
-
-在此时间区间内，若您需要实时响应，请通过**微信或电话**联系我们。若接受 1 个小时内响应，请通过**工单和邮件** 联系我们。
-
-#### 非标准工作时间怎么获得支持？
-
-优先通过**工单和邮件** 联系我们，情况紧急也可以拨打电话。  
-
-#### 无法联系到人工？
-
-首先，我们可以向您保证：我们的客服成功团队时刻准备为用户服务，我们也非常乐意与用户沟通。  
-
-但有时候您没有联系到我们，可能是一些例外因素导致：电话占线或转接失败，午休，上厕所，消息没看到等。   
-
-此时，您可以等一会再联系或等待回复，也可以更换联系渠道再试。
+English, Chinese, Japanese

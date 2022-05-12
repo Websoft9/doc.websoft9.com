@@ -3,12 +3,12 @@ sidebar_position: 3
 slug: /solution/b2bcms
 ---
 
-# B2B 内容营销
+# B2B Marketech
 
-内容营销已经成为知识型和产品型企业扩大市场最有效的手段之一。  
+Content marketing has become one of the most effective means for knowledge-based and product-based companies to expand their markets.
 
-我们提供 B2B 内容营销的解决方案包括：
+Our solutions for B2B content marketing include:
 
-* 内容营销基础数据平台
-* 内容营销创造平台
-* 内容营销分发连接器
+* Content marketing basic data platform
+* Content Marketing Creation Platform
+* Content Marketing Distribution Connector

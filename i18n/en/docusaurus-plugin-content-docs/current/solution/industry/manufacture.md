@@ -3,12 +3,12 @@ sidebar_position: 1
 slug: /solution/manufacture
 ---
 
-# 制造
+# Manufacture
 
-产品制造业是一个非常复杂的供应链商业体。它具备完整的商流、信息流和物流得精准管控，数字化的水平决定企业的长远发展。  
+Product manufacturing is a very complex supply chain business entity. It has complete business flow, information flow and logistics for precise control, and the level of digitalization determines the long-term development of an enterprise.
 
-针对产品制造业，我们提供：
+For product manufacturing, we provide:
 
-* B2B 知识与内容营销咨询
-* 产品分类目录建设
-* 无代码开发咨询与外包服务
+* B2B knowledge and content marketing consulting
+* Product category catalog construction
+* No-code development consulting and outsourcing services

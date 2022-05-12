@@ -412,16 +412,16 @@
     "description": "The label for category Subscription in sidebar docs"
   },
   "sidebar.docs.category.订单处理": {
-    "message": "订单处理",
-    "description": "The label for category 订单处理 in sidebar docs"
+    "message": "Manage Subscription",
+    "description": "The label for category Manage Subscription in sidebar docs"
   },
   "sidebar.docs.category.法律合规": {
-    "message": "法律合规",
-    "description": "The label for category 法律合规 in sidebar docs"
+    "message": "Legal",
+    "description": "The label for category Legal in sidebar docs"
   },
   "sidebar.docs.category.清单": {
-    "message": "清单",
-    "description": "The label for category 清单 in sidebar docs"
+    "message": "Legal Fleet",
+    "description": "The label for category Legal Fleet in sidebar docs"
   },
   "sidebar.docs.category.用户指南": {
     "message": "User Guide",
