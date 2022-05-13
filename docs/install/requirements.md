@@ -27,7 +27,7 @@ Websoft9 支持在 Red Hat, CentOS, Debian, Ubuntu 等主流 Linux 发行版上�
 ### CPU
 
 * CPU 架构: Linux x86-64, ARM 32/64, x86/i686
-* CPU 核素：最低 1 核
+* CPU 核数：最低 1 核
 
 ### 内存
 

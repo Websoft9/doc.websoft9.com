@@ -22,8 +22,8 @@ const sidebars = {
        
     {
         type: 'link',
-        label: '日志', // 链接标签
-        href: '/community/changelog', // 内部路径
+        label: '联系我们', // 链接标签
+        href: './helpdesk#contact', // 内部路径
     }
 
     ]

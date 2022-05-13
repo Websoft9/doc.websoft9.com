@@ -1,6 +1,6 @@
 ---
 sidebar_position: 5
-slug: /huaweicloud/huaweicloud
+slug: /order/huaweicloud
 ---
 
 

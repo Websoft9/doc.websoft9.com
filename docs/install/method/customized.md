@@ -3,7 +3,6 @@ sidebar_position: 3
 slug: /install/customized
 ---
 
-
 # 定制化安装
 
 用户可能存在不同形式的定制化安装需求，包括：

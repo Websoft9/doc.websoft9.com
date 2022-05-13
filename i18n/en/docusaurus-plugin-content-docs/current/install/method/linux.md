@@ -4,26 +4,24 @@ slug: /install/linux
 ---
 
 
-# For Linux
+# For Linux  
 
-Websoft9 目前仅支持在 Linux 主机下安装。  
+## Automatic installation
 
-## 脚本安装
-
-如果您不具备以上所需的 Docker, Git, Ansible 等环境，推荐使用我们**脚本安装**。
+If you do not have the Docker, Git, Ansible and other environments required above, it is recommended to use our **Automatic installation** below:  
 
 ```
 sudo wget -N https://raw.githubusercontent.com/Websoft9/StackHub/main/docker-installer.sh; sudo bash docker-installer.sh -r akeneo
 ```
 
-## 手动安装
+## Manual installation
 
-1. 安装命令行工具 StackHub
-      ```
+1. Install Websoft9 CLI: StackHub
+   ```
    pip install stackhub
    ```
-2. 使用 stackhub 安装应用
+2. Use stackhub to install and manage application
 
-## 离线安装
+## Offline installation
 
-针对无法访问 Internet 的政企用户或等保用户，我们即将提供了离线安装包服务。
+We provide a complete offline installation package service for no network environment

@@ -5,73 +5,67 @@ slug: /install/huaweicloud
 
 # HUAWEI CLOUD
 
-Websoft9 在华为云的云市场上提供了丰富的应用和解决方案，用户可以通过购买的方式实现自动化安装部署。
+Websoft9 is Partner of HUAWEI Cloud Marketplace, you can install [Websoft9 product on HUAWEI Cloud](https://marketplace.huaweicloud.com/seller/e57458aa054b430fb2f82a066105f986) very conveniently.  
 
-- [Websoft9 on 华为云](https://marketplace.huaweicloud.com/seller/e57458aa054b430fb2f82a066105f986)
-- [Websoft9 on HUAWEI CLOUD](https://marketplace-intl.huaweicloud.com/seller/a0d01460031d46639391c78a61de9a0f)
+## Installation
 
-> 我们是全球为数不多能够支持中英文产品和服务的云原生技术商。
+How to deploy Websoft9 on HUAWEI Cloud? There are three methods:
 
-## 安装
+### By Marketplace
 
-一旦您注册了华为云的账号，您可以通过如下多种方式安装我们的产品：
+1. Login to [HUAWEI CLOUD Marketplace](https://marketplace.huaweicloud.com/intl) or [Websoft9 on HUAWEI CLOUD](https://marketplace.huaweicloud.com/intl/seller/a0d01460031d46639391c78a61de9a0f)
 
-### 云市场安装
+2. Search the keyword `websoft9`, list all the image of Websoft9
+   ![Search websoft9 image](https://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/huaweicloud-buy-websoft9.png) 
 
-1. 访问 [华为云云市场](https://marketplace.huaweicloud.com/all/?q=JXdlYnNvZnQ5JQ) 网站 或 [Websoft9店铺地址](https://marketplace.huaweicloud.com/seller/e57458aa054b430fb2f82a066105f986)
+3. Access to product detail page and click the 【Continue to Submit】 button
+   ![Buy websoft9 image](https://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/huaweicloud-buyimage-websoft9.png) 
 
-2. 搜索关键字"websoft9"，网站会列出所有相关的镜像
-   ![搜索Websoft9镜像](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-buy-websoft9.png) 
+4. Then you should start the process to get a suitable ECS for product
+   ![Buy websoft9 image](https://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/huaweicloud-buyproductecs-websoft9.png) 
 
-3. 点击您所需的产品，进入产品详情页后点击"立即购买"按钮 或点击“自定义云主机”
-   ![立即购买](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-buyimage-websoft9.png) 
-4. 接下来系统会自动要求购买一台新服务器：选择计费模式、规格、网络和安全组等设置
-5. 等待几分钟，ECS创建完成后，镜像会作为ECS实例的系统盘启动，即镜像自动部署到实例中
+5. When you complete the buy process, you have obtain an usable product and matched ECS 
 
 
-### 购买服务器安装
+### By creating ECS
 
-购买ECS或控制台创建实例过程中，可以选择Websoft9的镜像作为系统启动盘
+When you create a new ECS by Console, you can deploy Websoft9's image very easy
 
-1. 登录到华为云管理控制台->弹性云服务器ECS，点击“购买弹性云服务器”，
-   ![进入ecs控制台购买服务器](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-buyecs-websoft9.png)
-2. 在镜像一栏，选择镜像市场->从镜像市场获取更多选择（含操作系统）。
-3. 然后搜索关键件词“**网久**”，列出相关镜像
-   ![选择Websoft9镜像](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-selectimage-websoft9.png)
+1. Login to console, open【Cloud Server Console】>【Elastic Compute Service】>【Buy ECS】
+   ![create instance](https://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/huaweicloud-buyecs-websoft9.png)
 
-4. 选择一个你所需的镜像，开始创建ECS实例
-5. 后续动作基本都会要求用户完成：选择计费模式、规格、网络和安全组等设置
-6. 等待几分钟，ECS创建完成后，镜像会作为ECS实例的系统盘启动，即镜像自动部署到实例中
+2. At the 【Image】configuration, select the 【Marketplace Image】
+   ![Marketplace Image](https://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/huaweicloud-buyproductecs-websoft9.png)
 
-### 切换操作系统安装
+3. Search the keyword `websoft9`, list all the image of Websoft9
+   ![Search websoft9 image](https://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/huaweicloud-selectimage-websoft9.png)
 
-镜像除了可以在创建新服务器之时购买，针对已有服务器，也可以通过**切换操作系统**的方式使用镜像。
+4. Complete the next steps for running ECS
 
-> 需要注意的是，重装系统意味着系统数据全部会格式化，所以请注意做好数据的备份。
+5. When you complete the create process, you have obtain an usable product and matched ECS
 
-1. 登录到华为云管理控制台，在”实例“中先停止服务器，依次选择：更多->切换操作系统 
-   ![切换操作系统](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-changesysdisk-websoft9.png)
 
-2. 确认更换后，镜像类型选择“镜像市场”，然后输入搜索关键字“**网久**”，根据提示设置新密码
-   ![选择Websoft9镜像](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-changeimage-websoft9.png)
+### By replacing OS
 
-3. 请耐心等待几分钟，直至更换完成
+If you have a running ECS, you can also deploy our image buy **replacing System Disk**
 
-## 安装后
+> Replace System Disk will clear all data of system disk of ECS, make sure this is suitable for you
 
-### 获取服务器公网 IP
+1. Login to Console, Stop your ECS
 
-登录华为云控制台，打开 ECS，即可获取公网 IP 地址
+2. Then open:【More】>【Manage Image/Disk】>【Change OS】
+   ![Replace System Disk](https://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/huaweicloud-changesysdisk-websoft9.png)
 
-![IP](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-remoteconnectweb-websoft9.png)
+2. Start to list the images by searching 【websoft9】, then select one product you want to use
+   ![Replace System Disk](https://libs.websoft9.com/Websoft9/DocsPicture/en/huaweicloud/huaweicloud-changeimage-websoft9.png)
 
-### 查看已购买
+3. Set your new password and waiting for the ECS restarting
 
-1. 登录华为云控制台
-2. 在顶部的**费用**菜单下，打开“我的订单”
-   ![订单列表](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-odlists-websoft9.png)
-3. 点击“订单列表”
 
-   ![订单列表](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-odlists2-websoft9.png)
-2. 每个服务可以看到：付费方式，服务商，联系方式，使用指南等信息
+## After installation
+
+Here are a few resources you might want to check out after completing the installation on Cloud.
+
+* [Get the Internet IP of VM](../huaweicloud#ip)
+* [View purchased orders](../order/huaweicloud#listorders)
 

@@ -5,16 +5,11 @@ slug: /install/tencentcloud
 
 # Tencent Cloud
 
-Websoft9 在华为云的云市场上提供了丰富的应用和解决方案，用户可以通过购买的方式实现自动化安装部署。
+Websoft9 is Partner of Tencent Cloud Marketplace, you can install [Websoft9 product on Tencent Cloud](https://market.cloud.tencent.com/stores/1252192180) very conveniently.  
 
-- [Websoft9 on 腾讯云](https://market.cloud.tencent.com/stores/1252192180)
-
-> 我们是全球为数不多能够支持中英文产品和服务的云原生技术商。
-
-## 安装
+## Installation
 
 一旦您注册了腾讯云的账号，您可以通过如下多种方式安装我们的产品：
-
 
 ### 云市场部署
 
@@ -66,4 +61,9 @@ Websoft9 在华为云的云市场上提供了丰富的应用和解决方案，�
 
 4. 请耐心等待几分钟，直至更换完成
 
-## 安装后
+## After installation
+
+Here are a few resources you might want to check out after completing the installation on Cloud.
+
+* [Get the Internet IP of VM](../tencentcloud#ip)
+* [View purchased orders](../order/tencentcloud#listorders)

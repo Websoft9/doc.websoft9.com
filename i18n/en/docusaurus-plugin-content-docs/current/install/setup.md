@@ -9,48 +9,46 @@ import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 # Steps after installing
 
-安装 Websoft9 的产品后，用户朋友最想做的事情肯定是立即能够看到软件的界面，投入使用。   
+Here are a few resources you might want to check out after completing the installation.  
 
-但现实却是一个应用真正的能让用户快速使用上，它是需要一些必不可少的配置的：
+## Prepare{#prepare}
 
-## 准备{#prepare}
+* [Manage Server](../user/cloud): Connect Server, get Internet IP, enable port of Security Group.
+* [Get username and password](../user/credentials): Get credentials for your installation and setup. 
 
-* [操作云服务器](../user/cloud)：连接服务器和操作云控制台、获取服务器公网IP、开启安全组端口等
-* [获取账号密码](../user/credentials)：连接云服务器后，运行获取命令的命令
+## Configure Domain{#domain}
 
-## 配置域名{#domain}
+* [Five steps for DNS](../administrator/domain_step): Register Domain to binding Domain.
 
-* [域名五步](../administrator/domain_step)：域名注册、实名制认证、备案、解析、绑定等操作
+> You should complete Domain configure and modify the default URL before **Application initial Setup**
 
-> 配置域名是可选项，但建议在**初始化向导**之前配置域名，这样可以避免修改应用的 URL。
+## Application initial Setup
 
-## 初始化
+* [Initial Setup](../apps): Local computer to access URL: *http://Server's Internet IP* to start setup of application
 
-* [初始化向导](../apps)：本地浏览器访问 *http://服务器公网IP* 可进入初始化向导
+## Database{#db}
 
-## 数据库{#db}
+* [Manage Database](../user/dbgui): GUI tools for your database management.  
+* [Change default database](../administration/db_change): Change the default database of application.  
 
-* [管理默认数据库](../user/dbgui)：通过可视化界面管理数据库
-* [更换数据库](../administration/db_change)：用户可以将应用预制的数据库更换成其他 RDS
+## Security{#security}
 
-## 安全{#security}
+* [Configure HTTPS](../administrator/domain_https): Configure HTTPS for your application
 
-* [配置  HTTPS](../administrator/domain_https)：尽快完成 HTTPS 的设置，保护访问和数据传输安全
+## Notification
 
-## 通知
+* [SMTP](../administrator/smtp): Configure SMTP for email notification of application
 
-* [SMTP](../administrator/smtp)：配置 SMTP 以获得正确的电子邮件通知支持
+## Backup
 
-## 备份
+* [Server Backup](../administrator/backup_server): Backup your Cloud Server with automatic snapshots strategy on Cloud console
+* [Application Backup](../administrator/backup_app)：Set your application backup strategy at the backend of application
 
-* [服务器备份](../administrator/backup_server)：在云控制台设置服务器的自动化备份策略（例如：快照备份）
-* [应用备份](../administrator/backup_app)：在应用的控制台设置自动化备份策略（参考每个应用的文档）
+## Extension
 
-## 扩展
+* [Add more application](../user/app_create): Easily install more applications when the pre-installed applications cannot meet the needs
+* [Storage extension](../administrator/storage): Expansion of system disk, data disk and external object storage
 
-* [新增应用](../user/app_create)：预装的应用无法满足需求时，用户还可以很方便的安装更多应用
-* [存储扩展](../administrator/storage)：系统盘、数据盘和外部对象存储的扩展
+## Upgrade
 
-## 升级
-
-* [应用升级](../administrator/upgrade_app)：预装的应用无法满足需求时，参考升级指南
+* [Application upgrade](../administrator/upgrade_app): Upgrade your installed application

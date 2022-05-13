@@ -1,6 +1,6 @@
 ---
 sidebar_position: 5
-slug: /huaweicloud/huaweicloud
+slug: /order/huaweicloud
 ---
 
 
@@ -14,7 +14,7 @@ Websoft9 Enterprise subscription cost will be flexibly priced based on the numbe
 
 The Software Cost listed by the Plan+Pricing on the product page is the image pricing.  
 
-## List Subscriptions
+## List Subscriptions{#listorders}
 
 1. Login to HUAWEI Cloud Console
 2. Go to the top menu: 【Resources】>【My MarketPlace】, list all the Subscriptions

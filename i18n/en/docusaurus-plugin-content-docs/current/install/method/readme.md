@@ -4,23 +4,26 @@ slug: /install
 ---
 
 
-# 安装
+# Installation
 
-Websoft9 可以安装在大多数 GNU/Linux 发行版中，并与多个[云提供商](./install/cloud)镜像服务（购买即安装）。要从 Websoft9 获得最佳体验，您必须平衡性能、可靠性、易于管理（备份、升级和故障排除）以及托管成本。
+Websoft9 can be installed in most GNU/Linux distributions, and with several [Cloud providers](./buy/subscription#get). To get the best experience from Websoft9, you must balance performance, reliability, ease of administration (backups, upgrades, and troubleshooting), and the cost of hosting.
 
-## 要求
+## Requirements
 
-在安装 Websoft9 之前，请务必查看[系统要求](./install/requirements)。系统要求包括有关支持 Websoft9 的最低硬件、软件、数据库和其他要求的详细信息。
+Before you install Websoft9, be sure to review the [system requirements](./install/requirements). The system requirements include details about the minimum hardware, software, database, and additional requirements to support Websoft9.  
 
-## 选择一种安装方式
+## Choose the installation method
 
-| 安装方式     | 描述      | 何时选择      |
+Depending on your platform, select from the following available methods to install Websoft9:
+
+
+| Installation method     | Description      | When to choose     |
 | ------------------------- | ------------- | ----------------- |
-| [Linux 安装包](./install/linux)| 官方提供的一键安装包脚本| 用户具备一定的 Linux 基础，有能力维护 Websoft9 |
-| [云平台安装](./install/cloud)     | 基于云平台的镜像安装，全部通过云平台控制台的可视化界面进行镜像选择或购买，无需运行任何命令。 | 用户不具备系统运维能力或用户需要 Websoft9 提供专业支持服务 |
-| [定制化安装](./install/customized)       | 需联系 Websoft9 客户成功团队探讨个性化的安装方式             | 当前的安装条件不具备或当前没有满足用户需求的安装方案       |
+| [Linux package](./install/linux)| Official automatic install script| This method need user have Linux capabilities  |
+| [Install Websoft9 on Cloud providers](./install/cloud)     | Enterprise subscription by Cloud provider, it mean buy as installation |This method not need user have Linux capabilities and Websoft9 can provide Support for customer |
+| [Customized installation](./install/customized)       | Contact Websoft9 to deploy a customized installation  | If product not fully meet the requirements and you want to some personalized deployment services |
 
-## 后续步骤
+## Steps after installing Websoft9
 
-完成安装 Websoft9 的步骤后，您可以[配置您的应用](./install/setup)。
+After you complete the steps for installing Websoft9, you can [configure your application](./install/setup)
 

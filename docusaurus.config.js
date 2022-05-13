@@ -23,24 +23,6 @@ const config = {
   },
   plugins: [
 
-    [
-      'content-docs',
-      /** @type {import('@docusaurus/plugin-content-docs').Options} */
-      ({
-        id: 'community',
-        path: 'community',
-        routeBasePath: 'community',
-        editUrl: ({locale, versionDocsDirPath, docPath}) => {
-          if (locale !== 'en') {
-            return `https://crowdin.com/project/docusaurus-v2/${locale}`;
-          }
-          return `https://github.com/facebook/docusaurus/edit/main/website/${versionDocsDirPath}/${docPath}`;
-        },
-        sidebarPath: require.resolve('./sidebarsCommunity.js'),
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-      }),
-    ],
   ],
   presets: [
     [
@@ -82,8 +64,6 @@ const config = {
             position: 'left',
             label: '文档',
           },
-
-          {to: '/community', label: '开源社区', position: 'left'},
 
           {to: '/docs/helpdesk', label: '技术支持', position: 'left'},
 
