@@ -18,7 +18,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs">
-            快速入门 10分钟 ⏱️
+            所有文档
           </Link>
         </div>
       </div>
@@ -30,8 +30,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`文档与支持`}
+      description="Websoft9（网久软件） 文档与支持中心，通过全面文档以及高效的客户成功团队，快速解决用户在软件安装部署、配置和运维中遇到的问题 <head />">
 
       <HomepageHeader />
       <main>

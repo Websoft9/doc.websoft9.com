@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Websoft9 文档',
+  title: 'Websoft9',
   tagline: '重新定义开源服务，让云原生应用快速普及',
   url: 'https://support.websoft9.com',
   baseUrl: '/',

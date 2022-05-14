@@ -2,19 +2,20 @@
 slug: /community/donate
 ---
 
-# 赞助我们
+# Sponsor
 
-开源的发展离不开各种优秀的资源，当然也包括资金。Websoft9 乐意接受各种形式的赞助。  
+The development of open source is inseparable from various excellent resources, including funds of course. Websoft9 is happy to accept all forms of sponsorship.
 
-## 赞助方式
+## Sponsor Method
 
-- [进入](https://www.websoft9.com/cn/donate)
+- [Click here](https://www.websoft9.com/cn/donate)
 
-## 赞助鸣谢
+## Grateful
 
-感谢如下企业给与我们的直接或间接的赞助： 
+Thanks to the following companies for their direct or indirect sponsorship:
 
-- 阿里云
-- 华为云
-- 腾讯云
 - Azure
+- AWS
+- Alibaba Cloud
+- HUAWEI Cloud
+- Tencent Cloud

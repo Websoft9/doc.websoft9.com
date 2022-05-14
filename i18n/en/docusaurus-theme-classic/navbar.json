@@ -5,7 +5,7 @@
   },
   "item.label.文档": {
     "message": "Docs",
-    "description": "Navbar item with label Docs"
+    "description": "Navbar item with label 文档"
   },
   "item.label.API": {
     "message": "API",
@@ -17,7 +17,7 @@
   },
   "item.label.技术支持": {
     "message": "Support",
-    "description": "Navbar item with label Support"
+    "description": "Navbar item with label 技术支持"
   },
   "item.label.GitHub": {
     "message": "GitHub",

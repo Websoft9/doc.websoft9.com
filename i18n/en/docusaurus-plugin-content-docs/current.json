@@ -5,23 +5,23 @@
   },
   "sidebar.docs.category.安装": {
     "message": "Install",
-    "description": "The label for category Install in sidebar docs"
+    "description": "The label for category 安装 in sidebar docs"
   },
   "sidebar.docs.category.安装方式": {
     "message": "Installation methods",
-    "description": "The label for category Installation methods in sidebar docs"
+    "description": "The label for category 安装方式 in sidebar docs"
   },
   "sidebar.docs.category.云平台安装": {
     "message": "For Cloud",
-    "description": "The label for category Cloud Installation in sidebar docs"
+    "description": "The label for category 云平台安装 in sidebar docs"
   },
   "sidebar.docs.category.应用中心": {
     "message": "Applications",
-    "description": "The label for category Applications in sidebar docs"
+    "description": "The label for category 应用中心 in sidebar docs"
   },
   "sidebar.docs.category.开发运维": {
     "message": "DevOps",
-    "description": "The label for category DevOps in sidebar docs"
+    "description": "The label for category 开发运维 in sidebar docs"
   },
   "sidebar.docs.category.Jenkins": {
     "message": "Jenkins",
@@ -37,7 +37,7 @@
   },
   "sidebar.docs.category.BT 宝塔": {
     "message": "aaPanel",
-    "description": "The label for category aaPanel in sidebar docs"
+    "description": "The label for category BT 宝塔 in sidebar docs"
   },
   "sidebar.docs.category.Portainer": {
     "message": "Portainer",
@@ -65,11 +65,11 @@
   },
   "sidebar.docs.category.Web 应用环境": {
     "message": "Web Runtime",
-    "description": "The label for category Web Runtime in sidebar docs"
+    "description": "The label for category Web 应用环境 in sidebar docs"
   },
   "sidebar.docs.category.应用指南": {
     "message": "Deployment Guide",
-    "description": "The label for category Deployment Guide in sidebar docs"
+    "description": "The label for category 应用指南 in sidebar docs"
   },
   "sidebar.docs.category.Windows Stack": {
     "message": "Windows Stack",
@@ -93,7 +93,7 @@
   },
   "sidebar.docs.category.WinAllServer 全能": {
     "message": "WinAllServer Stack",
-    "description": "The label for category WinAllServer Stack in sidebar docs"
+    "description": "The label for category WinAllServer 全能 in sidebar docs"
   },
   "sidebar.docs.category.Cockpit": {
     "message": "Cockpit",
@@ -101,7 +101,7 @@
   },
   "sidebar.docs.category.云原生架构": {
     "message": "Architecture",
-    "description": "The label for category Architecture in sidebar docs"
+    "description": "The label for category 云原生架构 in sidebar docs"
   },
   "sidebar.docs.category.ActiveMQ": {
     "message": "ActiveMQ",
@@ -133,7 +133,7 @@
   },
   "sidebar.docs.category.客户成功": {
     "message": "Customer 360",
-    "description": "The label for category Customer 360 in sidebar docs"
+    "description": "The label for category 客户成功 in sidebar docs"
   },
   "sidebar.docs.category.Magento": {
     "message": "Magento",
@@ -153,7 +153,7 @@
   },
   "sidebar.docs.category.内容管理": {
     "message": "Web + CMS",
-    "description": "The label for category Web + CMS in sidebar docs"
+    "description": "The label for category 内容管理 in sidebar docs"
   },
   "sidebar.docs.category.WordPress": {
     "message": "WordPress",
@@ -205,7 +205,7 @@
   },
   "sidebar.docs.category.企业管理": {
     "message": "Business + Operation",
-    "description": "The label for category Business + Operation in sidebar docs"
+    "description": "The label for category 企业管理 in sidebar docs"
   },
   "sidebar.docs.category.Odoo": {
     "message": "Odoo",
@@ -237,7 +237,7 @@
   },
   "sidebar.docs.category.人工智能": {
     "message": "AI + Machine Learning",
-    "description": "The label for category AI + Machine Learning in sidebar docs"
+    "description": "The label for category 人工智能 in sidebar docs"
   },
   "sidebar.docs.category.TensorFlow": {
     "message": "TensorFlow",
@@ -249,7 +249,7 @@
   },
   "sidebar.docs.category.设计与创作": {
     "message": "Design + Creation",
-    "description": "The label for category Design & Creation in sidebar docs"
+    "description": "The label for category 设计与创作 in sidebar docs"
   },
   "sidebar.docs.category.Scratch": {
     "message": "Scratch",
@@ -261,7 +261,7 @@
   },
   "sidebar.docs.category.数据与分析": {
     "message": "Data Analysis",
-    "description": "The label for category Data Analysis in sidebar docs"
+    "description": "The label for category 数据与分析 in sidebar docs"
   },
   "sidebar.docs.category.Knowage": {
     "message": "Knowage",
@@ -289,7 +289,7 @@
   },
   "sidebar.docs.category.协作与生产力": {
     "message": "Collaboration",
-    "description": "The label for category Collaboration in sidebar docs"
+    "description": "The label for category 协作与生产力 in sidebar docs"
   },
   "sidebar.docs.category.Nextcloud": {
     "message": "Nextcloud",
@@ -389,7 +389,7 @@
   },
   "sidebar.docs.category.云桌面": {
     "message": "Cloud Workspace",
-    "description": "The label for category Cloud Workspace in sidebar docs"
+    "description": "The label for category 云桌面 in sidebar docs"
   },
   "sidebar.docs.category.原生桌面": {
     "message": "原生桌面",
@@ -397,43 +397,43 @@
   },
   "sidebar.docs.category.解决方案": {
     "message": "Solution",
-    "description": "The label for category Solution in sidebar docs"
+    "description": "The label for category 解决方案 in sidebar docs"
   },
   "sidebar.docs.category.行业方案": {
     "message": "By Industry",
-    "description": "The label for category By Industry in sidebar docs"
+    "description": "The label for category 行业方案 in sidebar docs"
   },
   "sidebar.docs.category.通用方案": {
     "message": "By Business",
-    "description": "The label for category By Business in sidebar docs"
+    "description": "The label for category 通用方案 in sidebar docs"
   },
   "sidebar.docs.category.购买与支持": {
     "message": "Subscription",
-    "description": "The label for category Subscription in sidebar docs"
+    "description": "The label for category 购买与支持 in sidebar docs"
   },
   "sidebar.docs.category.订单处理": {
     "message": "Manage Subscription",
-    "description": "The label for category Manage Subscription in sidebar docs"
+    "description": "The label for category 订单处理 in sidebar docs"
   },
   "sidebar.docs.category.法律合规": {
     "message": "Legal",
-    "description": "The label for category Legal in sidebar docs"
+    "description": "The label for category 法律合规 in sidebar docs"
   },
   "sidebar.docs.category.清单": {
     "message": "Legal Fleet",
-    "description": "The label for category Legal Fleet in sidebar docs"
+    "description": "The label for category 清单 in sidebar docs"
   },
   "sidebar.docs.category.用户指南": {
     "message": "User Guide",
-    "description": "The label for category User Guide in sidebar docs"
+    "description": "The label for category 用户指南 in sidebar docs"
   },
   "sidebar.docs.category.应用管理": {
     "message": "Manage Application",
-    "description": "The label for category Manage Application in sidebar docs"
+    "description": "The label for category 应用管理 in sidebar docs"
   },
   "sidebar.docs.category.云服务指南": {
     "message": "Cloud Service Guide",
-    "description": "The label for category Cloud Service Guide in sidebar docs"
+    "description": "The label for category 云服务指南 in sidebar docs"
   },
   "sidebar.docs.category.Azure": {
     "message": "Azure",
@@ -445,15 +445,15 @@
   },
   "sidebar.docs.category.阿里云": {
     "message": "Alibaba Cloud",
-    "description": "The label for category Alibaba Cloud in sidebar docs"
+    "description": "The label for category 阿里云 in sidebar docs"
   },
   "sidebar.docs.category.腾讯云": {
     "message": "Tencent Cloud",
-    "description": "The label for category Tencent Cloud in sidebar docs"
+    "description": "The label for category 腾讯云 in sidebar docs"
   },
   "sidebar.docs.category.华为云": {
     "message": "HUAWEI Cloud",
-    "description": "The label for category HUAWEI Cloud in sidebar docs"
+    "description": "The label for category 华为云 in sidebar docs"
   },
   "sidebar.docs.category.管理员指南": {
     "message": "Administrator",
@@ -461,51 +461,51 @@
   },
   "sidebar.docs.category.配置": {
     "message": "Configuration",
-    "description": "The label for category Configuration in sidebar docs"
+    "description": "The label for category 配置 in sidebar docs"
   },
   "sidebar.docs.category.域名": {
     "message": "Domain Name",
-    "description": "The label for category Domain Name in sidebar docs"
+    "description": "The label for category 域名 in sidebar docs"
   },
   "sidebar.docs.category.数据库": {
     "message": "Database",
-    "description": "The label for category Database in sidebar docs"
+    "description": "The label for category 数据库 in sidebar docs"
   },
   "sidebar.docs.category.存储": {
     "message": "Storage",
-    "description": "The label for category Storage in sidebar docs"
+    "description": "The label for category 存储 in sidebar docs"
   },
   "sidebar.docs.category.维护": {
     "message": "Maintenance",
-    "description": "The label for category Maintenance in sidebar docs"
+    "description": "The label for category 维护 in sidebar docs"
   },
   "sidebar.docs.category.备份与恢复": {
     "message": "Backup & Restore",
-    "description": "The label for category Backup & Restore in sidebar docs"
+    "description": "The label for category 备份与恢复 in sidebar docs"
   },
   "sidebar.docs.category.升级": {
     "message": "Upgrade",
-    "description": "The label for category Upgrade in sidebar docs"
+    "description": "The label for category 升级 in sidebar docs"
   },
   "sidebar.docs.category.迁移": {
     "message": "Migration",
-    "description": "The label for category Migration in sidebar docs"
+    "description": "The label for category 迁移 in sidebar docs"
   },
   "sidebar.docs.category.安全": {
     "message": "Security",
-    "description": "The label for category Security in sidebar docs"
+    "description": "The label for category 安全 in sidebar docs"
   },
   "sidebar.docs.category.故障问题": {
     "message": "Troubleshoot & FAQ",
-    "description": "The label for category Troubleshoot & FAQ in sidebar docs"
+    "description": "The label for category 故障问题 in sidebar docs"
   },
   "sidebar.docs.category.架构参考": {
     "message": "Architecture Reference",
-    "description": "The label for category Architecture Reference in sidebar docs"
+    "description": "The label for category 架构参考 in sidebar docs"
   },
   "sidebar.docs.category.程序环境": {
     "message": "Language",
-    "description": "The label for category Language in sidebar docs"
+    "description": "The label for category 程序环境 in sidebar docs"
   },
   "sidebar.docs.category.PHP": {
     "message": "PHP",
@@ -537,7 +537,7 @@
   },
   "sidebar.docs.category.基础组件": {
     "message": "Components",
-    "description": "The label for category Components in sidebar docs"
+    "description": "The label for category 基础组件 in sidebar docs"
   },
   "sidebar.docs.category.Docker": {
     "message": "Docker",
@@ -545,7 +545,7 @@
   },
   "sidebar.docs.category.参考": {
     "message": "Fleet",
-    "description": "The label for category Fleet in sidebar docs"
+    "description": "The label for category 参考 in sidebar docs"
   },
   "sidebar.docs.category.Apache": {
     "message": "Apache",
@@ -573,7 +573,7 @@
   },
   "sidebar.docs.category.操作系统": {
     "message": "Operating System",
-    "description": "The label for category Operating System in sidebar docs"
+    "description": "The label for category 操作系统 in sidebar docs"
   },
   "sidebar.docs.category.Linux": {
     "message": "Linux",
@@ -585,7 +585,7 @@
   },
   "sidebar.docs.category.开发者": {
     "message": "Developer",
-    "description": "The label for category Developer in sidebar docs"
+    "description": "The label for category 开发者 in sidebar docs"
   },
   "sidebar.docs.category.API": {
     "message": "API",
@@ -593,6 +593,10 @@
   },
   "sidebar.docs.link.联系我们": {
     "message": "Contact US",
-    "description": "The label for link Changelog in sidebar docs, linking to /helpdesk"
+    "description": "The label for link 联系我们 in sidebar docs, linking to ./helpdesk#contact"
+  },
+  "sidebar.docs.category.参与开源": {
+    "message": "Contribute",
+    "description": "The label for category Contribute in sidebar docs"
   }
 }
