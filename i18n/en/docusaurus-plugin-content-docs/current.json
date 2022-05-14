@@ -591,8 +591,8 @@
     "message": "API",
     "description": "The label for category API in sidebar docs"
   },
-  "sidebar.docs.link.日志": {
-    "message": "Changelog",
-    "description": "The label for link Changelog in sidebar docs, linking to /community/changelog"
+  "sidebar.docs.link.联系我们": {
+    "message": "Contact US",
+    "description": "The label for link Changelog in sidebar docs, linking to /helpdesk"
   }
 }

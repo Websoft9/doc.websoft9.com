@@ -10,11 +10,11 @@ slug: /community/donate
 
 - [进入](https://www.websoft9.com/cn/donate)
 
-## 企业赞助
+## 赞助鸣谢
 
-感谢如下企业给与我们的直接或间接的赞助
+感谢如下企业给与我们的直接或间接的赞助： 
 
 - 阿里云
 - 华为云
 - 腾讯云
-- 百度云
+- Azure
