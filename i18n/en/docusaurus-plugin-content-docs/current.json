@@ -393,7 +393,7 @@
   },
   "sidebar.docs.category.原生桌面": {
     "message": "Native Desktop",
-    "description": "The label for category Native Desktop in sidebar docs"
+    "description": "The label for category 原生桌面 in sidebar docs"
   },
   "sidebar.docs.category.解决方案": {
     "message": "Solution",
@@ -593,10 +593,10 @@
   },
   "sidebar.docs.link.联系我们": {
     "message": "Contact US",
-    "description": "The label for link 联系我们 in sidebar docs, linking to ./helpdesk#contact"
+    "description": "The label for link 联系我们 in sidebar docs, linking to /docs/helpdesk#contact"
   },
   "sidebar.docs.category.参与开源": {
     "message": "Contribute",
-    "description": "The label for category Contribute in sidebar docs"
+    "description": "The label for category 参与开源 in sidebar docs"
   }
 }

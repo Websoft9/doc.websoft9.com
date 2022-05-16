@@ -221,5 +221,32 @@
   "theme.tags.tagsPageTitle": {
     "message": "Tags",
     "description": "The title of the tag list page"
+  },
+  "应用中心": {
+    "message": "Applications"
+  },
+  "Websoft9 包含数百个应用启动包以及知识库": {
+    "message": "Docs of hundreds of pre-packaged apps"
+  },
+  "云安装": {
+    "message": "Cloud Install"
+  },
+  "在主流的公有云平台快速安装 Websoft9": {
+    "message": "Quickly install Websoft9 on major Cloud"
+  },
+  "技术支持": {
+    "message": "Support"
+  },
+  "企业订阅客户随时获得 Websoft9 客户成功团队支持": {
+    "message": "Support from Websoft9 customer success team"
+  },
+  "所有文档": {
+    "message": "All Documentation"
+  },
+  "文档与支持": {
+    "message": "文档与支持"
+  },
+  "Websoft9（网久软件） 文档与支持中心，通过全面文档以及高效的客户成功团队，快速解决用户在软件安装部署、配置和运维中遇到的问题": {
+    "message": "Websoft9（网久软件） 文档与支持中心，通过全面文档以及高效的客户成功团队，快速解决用户在软件安装部署、配置和运维中遇到的问题"
   }
 }

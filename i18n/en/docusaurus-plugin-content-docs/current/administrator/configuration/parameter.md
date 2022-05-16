@@ -5,6 +5,16 @@ slug: /administrator/parameter
 
 # Parameter sheet
 
+You can use below commands to list all components of this application. 
+ 
+```
+# get all components and version
+sudo cat /data/logs/install_version.txt
+
+# get all running service
+sudo docker ps
+```
+
 The important information such as the installation directory path, configuration file path, port, version, etc. are listed below.
 
 ## Path and directory{#path}

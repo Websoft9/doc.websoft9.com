@@ -6,52 +6,52 @@ tags:
   - DevOps
 ---
 
-# 快速入门
+# Jenkins Getting Started
 
-[Jenkins](https://www.jenkins.io/zh) 是热门的开源持续集成（CI&CD）软件，提供超过1000个插件来支持构建、部署、自动化，满足各种项目的 DevOps 需要。
+[Jenkins](https://www.jenkins.io) is a self-contained, open source automation server which can be used to automate all sorts of tasks related to building, testing, and delivering or deploying software.
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins_is_the_hub_CD_Devops.png)  
 
+If you have installed Websoft9 Jenkins, the following steps is for your quick start
 
-部署 Websoft9 提供的 Jenkins 之后，请参考下面的步骤快速入门。
 
-## 准备
+## Preparation
 
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 若想用域名访问 Jenkins，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
-4. [获取](./user/credentials) Jenkins 的默认管理员账号和密码  
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:80** is allowed
+3. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for Jenkins.
+4. [Get](./user/credentials) default username and password of Jenkins
 
-    * 管理员账号: `admin`
-    * 管理员密码: 存储在您的服务器中的文件中 */var/lib/jenkins/secrets/initialAdminPassword*  
+    * Jenkins administrator username: `admin`
+    * Jenkins administrator password: stored in the path */var/lib/jenkins/secrets/initialAdminPassword*  
 
-## Jenkins 初始化向导
+## Jenkins Initialization
 
-### 详细步骤
+### Steps for you
 
-1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入初始化页面
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins-installstart-websoft9.png)
+1. Using local browser to visit the URL *http://DNS* or *http://Server's Internet IP*, you will enter initial wizard of Jenkins
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/jenkins/jenkins-installstart-websoft9.png)
 
-2. 运行命令`sudo cat /var/lib/jenkins/secrets/initialAdminPassword`，获取解锁密码（即默认管理员的密码）
+2. Connect Server and run command `sudo cat /var/lib/jenkins/secrets/initialAdminPassword` to Unlock Jenkins
 
-3. 成功登录到 Jenkins 后台  
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins-installcustomer-websoft9.png)
+3. Login the Jenkins console  
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/jenkins/jenkins-installcustomer-websoft9.png)
 
-4. 通过 Jenkins 后台，安装所需的插件  
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins-installing-websoft9.png)
+4. Install plugins   
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/jenkins/jenkins-installing-websoft9.png)
 
-5. 插件安装完成后，创建更多管理员用户  
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins-installusers-websoft9.png)
+5. Create user for Jenkins  
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/jenkins/jenkins-installusers-websoft9.png)
 
-> 需要了解更多 Jenkins 的使用，请参考官方文档：[Jenkins 用户文档中心](https://www.jenkins.io/zh/doc/)
+> More useful Jenkins guide, please refer to [Jenkins Documentation](https://www.jenkins.io/zh/doc/)
 
-### 碰到问题？
+### Having trouble?
 
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题。
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
-## Jenkins 使用入门
+## Jenkins QuickStart
 
-我们通过一个目标范例【Github 上的项目通过 Jenkins 自动构建部署】来指导您快速入门：
+This task【Build Github repository by Jenkins】 is for your Jenkins QuickStart
 
 1. 在 GitHub设置 Personal access tokens，用于 Jenkins 连接
  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins-wizard2-websoft9.png)
@@ -72,54 +72,50 @@ tags:
 4. 在对应Github 项目修改后，push提交；Jenkins完成自动化构建部署
  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins-wizard12-websoft9.png)
 
-## Jenkins 常用操作
+## Jenkins Setup
 
-### 安装插件{#installplugin}
+### Install plugin{#installplugin}
 
-登录Jenkins，依次打开：【【Manage Jenkins】>【Plugins Manager】
+Login to Jenkins, open：【【Manage Jenkins】>【Plugins Manager】 to manage and install all plugins
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins_installemailplugin-websoft9.png)
 
-### 配置 SMTP{#smtp}
+### Configure SMTP{#smtp}
 
-下面以提供设置 Jenkins 发邮件的简要步骤：
-
-1. 安装 Jenkins的邮箱扩展插件 [Email Extension](https://plugins.jenkins.io/email-ext/)
+1. Install the Jenkins plugin [Email Extension](https://plugins.jenkins.io/email-ext/)
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins_installemailplugin-websoft9.png)
 
-2. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
+2. Prepare your [SMTP parameter](./administrator/smtp)
 
-3. 登录 Jenkins 控制台，依次打开：【Manage Jenkins】>【Configure System】，填写 SMTP 参数
-![Jenkins SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins_configuresmtp-websoft9.png)
+3. Log in Jenkins Console, open 【Manage Jenkins】>【Configure System】, set you SMTP
+   ![Jenkins SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins_configuresmtp-websoft9.png)
 
-4. 测试邮件是否可以发送
+4. Test it
 
-## 参数
+## Reference sheet
 
-Jenkins 应用中包含 Nginx, Java, Docker, MySQL 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Jenkins
 
-下面仅列出 Jenkins 本身的参数：
-
-### 端口
+### Port
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
 | 8080   | Jenkins 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
 
 
-### 版本
+### Version
 
 ```shell
 jenkins -v
 ```
 
-### 服务
+### Service
 
 ```shell
 sudo systemctl start | stop | restart | status jenkins
 ```
 
-### 命令行
+### CLI
 
 Jenkins 提供 CLI 客户端和 SSH CLI [两种方式](https://www.jenkins.io/zh/doc/book/managing/cli/)，下面是推荐的 客户端 CLI：
 
@@ -137,5 +133,3 @@ curl JENKINS_URL/job/JOB_NAME/buildWithParameters \
 ```
 
 同时，也提供了 Java, Python, Ruby 等语言的 API SDK 开发包。 
-
-

@@ -2,36 +2,37 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './HomepageFeatures.module.css';
 import Link from '@docusaurus/Link';
+import Translate, {translate} from '@docusaurus/Translate';
 
 const FeatureList = [
   {
-    title: '应用中心',
+    title: <Translate>应用中心</Translate>,
     url: '/docs/apps',
     Svg: require('../../static/img/undraw_apps.svg').default,
     description: (
-      <>
+      <Translate>
         Websoft9 包含数百个应用启动包以及知识库
-      </>
+      </Translate>
     ),
   },
   {
-    title: '云安装',
+    title: <Translate>云安装</Translate>,
     url: '/docs/install/cloud',
     Svg: require('../../static/img/undraw_server.svg').default,
     description: (
-      <>
+      <Translate>
         在主流的公有云平台快速安装 Websoft9
-      </>
+      </Translate>
     ),
   },
   {
-    title: '技术支持',
+    title: <Translate>技术支持</Translate>,
     url: '/docs/helpdesk',
     Svg: require('../../static/img/undraw_helpdesk.svg').default,
     description: (
-      <>
+      <Translate>
         企业订阅客户随时获得 Websoft9 客户成功团队支持
-      </>
+      </Translate>
     ),
   }
 
