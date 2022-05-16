@@ -392,8 +392,8 @@
     "description": "The label for category 云桌面 in sidebar docs"
   },
   "sidebar.docs.category.原生桌面": {
-    "message": "原生桌面",
-    "description": "The label for category 原生桌面 in sidebar docs"
+    "message": "Native Desktop",
+    "description": "The label for category Native Desktop in sidebar docs"
   },
   "sidebar.docs.category.解决方案": {
     "message": "Solution",

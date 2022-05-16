@@ -23,7 +23,7 @@ const sidebars = {
     {
         type: 'link',
         label: '联系我们', // 链接标签
-        href: './helpdesk#contact', // 内部路径
+        href: '/docs/helpdesk#contact', // 内部路径
     }
 
     ]
