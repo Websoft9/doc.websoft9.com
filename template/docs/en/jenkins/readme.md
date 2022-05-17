@@ -19,11 +19,8 @@ If you have installed Websoft9 Jenkins, the following steps is for your quick st
 
 1. Get the **Internet IP** of your Server on Cloud
 2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:80** is allowed
-3. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for Jenkins.
-4. [Get](./user/credentials) default username and password of Jenkins
-
-    * Jenkins administrator username: `admin`
-    * Jenkins administrator password: stored in the path */var/lib/jenkins/secrets/initialAdminPassword*  
+3. Connect your Server and get **[default username and password](./user/credentials)** of Jenkins
+4. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for Jenkins.
 
 ## Jenkins Initialization
 

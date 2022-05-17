@@ -277,7 +277,7 @@ Nginx 广泛被用于 Ruby 应用程序的 HTTP 前端，而 Ruby 应用程序�
 这是由于上传文件大小超过了 Nginx 默认设置，因此需要修改 Nginx 这个限制：
 
 1. 使用 WinSCP 远程连接服务器
-2. 编辑 [Nginx 虚拟机主机配置文件](../nginx#path)
+2. 编辑 [Nginx 虚拟机主机配置文件](#path)
 3. 插入一行 `client_max_body_size 0;` 解除上传文件限制的配置项
    ```
    server {
@@ -286,7 +286,7 @@ Nginx 广泛被用于 Ruby 应用程序的 HTTP 前端，而 Ruby 应用程序�
     client_max_body_size 0; #解除上传文件限制
     ...
    ```
-4. 保存并[重启 Nginx 服务](../nginx#service)
+4. 保存并[重启 Nginx 服务](#service)
 
 ## 参数{#parameter}
 

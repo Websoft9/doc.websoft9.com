@@ -104,7 +104,7 @@ Jenkins 应用中包含 Nginx, Java, Docker, MySQL 等组件，可通过 **[通�
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
-| 8080   | Jenkins 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
+| 8080   | Jenkins 原始端口| 可选   |
 
 
 ### 版本
@@ -121,7 +121,7 @@ sudo systemctl start | stop | restart | status jenkins
 
 ### 命令行
 
-Jenkins 提供 CLI 客户端和 SSH CLI [两种方式](https://www.jenkins.io/zh/doc/book/managing/cli/)，下面是推荐的 客户端 CLI：
+[Jenkins CLI](https://www.jenkins.io/zh/doc/book/managing/cli/) 对于编写日常任务、批量更新、故障排除等脚本非常方便。
 
 ```shell
 java -jar jenkins-cli.jar [-s JENKINS_URL] [global options...] command [command options...] [arguments...]

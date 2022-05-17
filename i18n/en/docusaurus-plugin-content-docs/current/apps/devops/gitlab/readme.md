@@ -6,50 +6,48 @@ tags:
   - DevOps
 ---
 
-# 快速入门
+# GitLab Getting Started
 
-[GitLab](https://github.com/gitlabhq/gitlabhq) 是一个完整的 DevOps 平台软件。 使用GitLab，您可以获得开箱即用的完整 CI/CD 工具链。
+[GitLab](https://github.com/gitlabhq/gitlabhq) is a complete DevOps platform. With GitLab, you get a complete CI/CD toolchain out-of-the-box. One interface. One conversation. One permission model. Thousands of features. You'll be amazed at everything GitLab can do today.  
 
 ![GitLab devops](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-devopsall-websoft9.png)
 
-部署 Websoft9 提供的 GitLab 之后，请参考下面的步骤快速入门。
+If you have installed Websoft9 GitLab, the following steps is for your quick start  
 
-## 准备{#prepare}
+## Preparation{#prepare}
 
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 GitLab 的 **[默认管理员账号和密码](./user/credentials)**  
-4. 若想用域名访问  GitLab，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:80** is allowed
+3. Connect your Server and get **[default username and password](./user/credentials)** of GitLab
+4. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for GitLab
 
-## GitLab 初始化向导
+## GitLab Getting Started
 
-### 详细步骤
+### Steps for you
 
-1. 本地电脑浏览器访问：*http://域名* 或 *http://服务器公网IP*，进入初始化页面 
-   ![GitLab 登录](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-login-websoft9.png)
+1. Using local browser to visit the URL http://DNS or http://Server's Internet IP, login to your GitLab([Don't have password?](./user/credentials))
+   ![GitLab Login](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-login-websoft9.png)
 
-2. 输入[默认账号密码](./user/credentials)，进入 GitLab 控制台
-   ![GitLab 后台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-backend-websoft9.png)
+2. Go to GitLab dashboard to start use it 
+   ![GitLab dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-backend-websoft9.png)
 
-3. 进入管理设置面板（Admin Area）  
-   ![GitLab 管理设置面板](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-adminpanel-websoft9.png)
+3. Go to GitLab Admin Area to configure it
+   ![GitLab admin area](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-adminpanel-websoft9.png)
 
-4. 依次打开：【User Settings】>【Preferences】设置语言（支持中文）
-   ![GitLab 设置语言](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-setlanguage-websoft9.png)
+4. Open: **User Settings** > **Preferences** to set your language
+   ![GitLab language](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-setlanguage-websoft9.png)
 
-5. 依次打开：【User Settings】>【SSH key】设置秘钥
+5. Open: **User Settings** > **SSH key** to set your keys
    ![GitLab SSH key](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-sshkey-websoft9.png)
 
-6. 如果你部署的是 GitLab-EE（企业版），通过：【管理中心】>【许可证】导入后，**试用**或**启用**企业版
-   ![Gitlab 导入授权](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlabee-license-websoft9.png)
+6. If you have installed GitLab-EE, go to 【Admin Area】>【License】, import your license or try it
+   ![Gitlab license](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlabee-license-websoft9.png)
 
-7. [设置 GitLab 仓库地址](#setrepourl)
+> More useful GitLab guide, please refer to [GitLab Documentation](https://docs.gitlab.com/omnibus/README.html)
 
-> 需要了解更多 GitLab 的使用，请参考官方文档：[GitLab Documentation](https://docs.gitlab.com/omnibus/README.html)
+### Having trouble?
 
-### 出现问题？
-
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
 **GitLab能打开，但总是出现 502 错误？**  
 
@@ -59,57 +57,55 @@ tags:
 
 参阅：[此处](./gitlab/admin#502)
 
-## GitLab 使用入门
+## GitLab QuickStart
 
-下面介绍 Gitlab 在团队管理、权限管理、代码管理等方面的应用。
+This task【Manage team, member and code in GitLab】 is for your GitLab QuickStart
 
-1. 项目管理：管理员新建项目，并进行项目初始化、添加开发分支 dev ，不对开发人员开放主分支 master
+1. Domain binding, the complete real path needs to be used in the subsequent project management. After Gitlab is installed, the default domain name is http://gitlab.example.com, you need to modify it to your existing domain name in the configuration file, or modify it to IP to access http://IP. Reference[Domain binding](http://support.websoft9.com/docs/gitlab/solution-more.html#domain-binding)。
 
-   创建 Websoft9-Site1 项目
-   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-add-project-websoft9.png)
-   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-add-project1-websoft9.png)
+2. Project management: The administrator creates a new project, initializes the project, adds a development branch "dev", and does not open the master branch master to developers
 
-   初始化项目，添加自述文件 README.md 和 index.html 页面，并提交
-   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-add-file-websoft9.png)
+   Create project: Websoft9-Site1 
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-add-project-websoft9.png)
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-add-project1-websoft9.png)
 
-   新建开发分支 dev
-   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-add-branch-websoft9.png)
-   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-create-branch-websoft9.png)
+   Initialize the project, add README.md and index.html pages, and submit
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-add-file-websoft9.png)
 
-3. 成员管理：团队成员在登录页面注册账号，管理员在后台激活用户，并在项目成员中邀请用户，配置权限。用户须激活后才能登录系统。
+   New development branch dev
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-add-branch-websoft9.png)
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-create-branch-websoft9.png)
 
-   成员注册
-   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-register-websoft9.png)
+3. Member management: team members register an account on the login page. The administrator activates users in the system, and then invites users among project members and configures permissions. The user must be activated to log in to the system.
 
-   管理员激活注册用户
-   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-user-manager-websoft9.png)
-   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-user-manager1-websoft9.png)
+   User registration
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-register-websoft9.png)
 
-   管理员邀请用户加入项目组，分配权限
-   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-add-member-websoft9.png)
+   Administrator activates registered users
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-user-manager1-websoft9.png)
 
-4. 代码管理： 
-   项目成员负责index.html页面开发， 通过 git clone 项目到本地 ，在vs code 开发。
-   打开 Git Base 工具，通过 git clone 将项目克隆本地
+   The administrator invites users to join the project group and assigns rights
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-add-member-websoft9.png)
+
+4. Code management:
+   Project members are responsible for the development of the "index.html" page, through git clone the project to the local, development in vs code.
+   Use the "Git Base" and clone the project locally via "git clone"
   
-   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-clone-websoft9.png)
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-clone-websoft9.png)
 
-   在 vs code 中打开项目，编辑index.html
+   Use vs code to edit index.html locally, and then submit the local code to the server.
+   Log in to gitlab with your development account, view updates and create a merge request
 
-   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-vscode-websoft9.png)
-
-   编辑完成，提交本地代码到服务器。开发账号登录 gitlab ，查看更新并创建合并请求
-
-   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-pull-request-websoft9.png)
-   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-merge-request-websoft9.png)
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-pull-request-websoft9.png)
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-merge-request-websoft9.png)
    
-   管理员登录 gitlab 合并请求
+   Administrator login Gitlab merge request
 
-   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-merge-websoft9.png)
-   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-merge1-websoft9.png)
-   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-merge2-websoft9.png)
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-merge-websoft9.png)
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-merge1-websoft9.png)
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-merge2-websoft9.png)
 
-## 常用操作
+## Jenkins Setup
 
 ### 设置 GitLab 仓库地址{#setrepourl}
 
