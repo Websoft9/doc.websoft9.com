@@ -502,3 +502,11 @@ Docker安装后，在宿主机（服务器）端会运行一个 Docker Daemon �
 #### 容器与镜像在文件层面的关系？
 
 Docker 的原理表明：容器有一部分被称之为不变的文件，它共享的是镜像的文件，另外一部分是可变文件。  
+
+#### Docker-compose 编程中如何复用代码？
+
+有如下几种复用代码的途径：
+
+* [configs 指令](https://docs.docker.com/compose/compose-file/#configs)：共享一个外部配置文件
+* [yml 标准语法的 x 替换](https://docs.docker.com/compose/compose-file/compose-file-v3/#extension-fields)：在 compose 文件中定义公共代码片段，此语法规则来源于 yml 格式，非 docker 语法
+* [多个 compose 文件复用](https://docs.docker.com/compose/extends/#multiple-compose-files)：可以组合复用，也可以 A.yml  extend one service from B.yml 这种方式复用
