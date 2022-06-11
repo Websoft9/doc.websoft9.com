@@ -3,116 +3,119 @@ sidebar_position: 1
 slug: /alfresco
 tags:
   - Alfresco
-  - 企业管理
+  - Collaboration and Productivity
   - ERP
 ---
 
-# 快速入门
 
-[Alfresco Community Edition](https://www.alfresco.com/ecm-software/alfresco-community-editions) 是开源的企业内容管理系统，它面向大中型客户，作为一个灵活、可扩展的 ECM 平台，Alfresco Content Services 支持一系列用例，包括内容服务、信息治理、上下文搜索和洞察力，与领先业务应用程序 SAP, IBM Lotus, Microsoft Office, SharePoint 和 Google Docs 等轻松集成。
+# Alfresco Getting Started
 
-![Alfresco 系统架构](https://libs.websoft9.com/Websoft9/DocsPicture/zh/alfresco/alfresco-arcgui-websoft9.png)
+[Alfresco Community Edition](https://www.alfresco.com/ecm-software/alfresco-community-editions) is open source Enterprise Content Management software that handles any type of content, allowing users to easily share and collaborate on content.
 
-## 准备
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/alfresco/alfresco-arcgui-websoft9.png)
 
-部署 Websoft9 提供的 Alfresco 之后，需完成如下的准备工作：
+If you have installed Websoft9 Alfresco, the following steps is for your quick start
 
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 Alfresco 的 **[默认账号和密码](./user/credentials)**  
-4. 若想用域名访问  Alfresco **[域名五步设置](./administrator/domain_step)** 过程
+## Preparation
 
-
-## Alfresco 初始化向导{#init}
-
-### 详细步骤
-
-1. 使用本地电脑的浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入登陆界面
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/alfresco/alfresco-login-websoft9.png)
-
-2. 输入账号密码（[不知道账号密码？](./user/credentials)），成功登录到 Alfresco 后台  
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/alfresco/alfresco-consolegui-websoft9.png)
-
-3. Alfresco会自动根据浏览器语言来选择程序语言
-
-> 需要了解更多 Alfresco 的使用，请参考官方文档：[Alfresco Documentation](https://docs.alfresco.com/content-services/community/using/content/) 和 [Alfresco Videos](https://docs.alfresco.com/content-services/latest/tutorial/video/)
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:80** is allowed
+3. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for Alfresco
+4. [Get](./user/credentials) default username and password of Alfresco
 
 
-### 出现问题？
+## Alfresco Initialization{#init}
 
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
+### Steps for you
 
-**访问 Alfresco 出现 502 错误？**
+1. Use local browser to access: *http://DNS* or *http://Server's Internet IP*. You will enter Alfresco login page.
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/alfresco/alfresco-login-websoft9.png)
 
-Alfresco 开机启动最少需要 10 分钟，请耐心等待
+2. Log in Alfresco web console. ([Don't have password?](./user/credentials)) 
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/alfresco/alfresco-consolegui-websoft9.png)
+
+> More guide about Alfresco, please refer to [Alfresco Documentation](https://docs.alfresco.com/content-services/community/using/content).
 
 
-## Alfresco 使用入门
+### Having trouble?
 
-下面以 **Alfresco 传递数据** 作为一个任务，帮助用户快速入门：
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
-- 后台仪表盘
-  ![Alfresco台仪表盘](http://libs.websoft9.com/Websoft9/DocsPicture/zh/alfresco/alfresco-adminui-websoft9.png)
+**502 error ! Alfresco service not start?**
 
-- 我的文档
-  ![Alfresco我的文档](http://libs.websoft9.com/Websoft9/DocsPicture/zh/alfresco/alfresco-mydocs-websoft9.png)
+Alfresco need 5-10 minutes for boot starting
 
-- 共享文档
-  ![Alfresco共享文档](http://libs.websoft9.com/Websoft9/DocsPicture/zh/alfresco/alfresco-sharedocs-websoft9.png)
 
-- 增加多用户
-  ![Alfresco增加多用户](http://libs.websoft9.com/Websoft9/DocsPicture/zh/alfresco/alfresco-addusers-websoft9.png)
+## Alfresco QuickStart
 
-- 增加组（部门）
-  ![Alfresco增加组（部门）](http://libs.websoft9.com/Websoft9/DocsPicture/zh/alfresco/alfresco-addgroup-websoft9.png)
+Below is the useful screenshots of Alfresco: 
 
-- 工作流（审批）
-  ![Alfresco工作流（审批）](http://libs.websoft9.com/Websoft9/DocsPicture/zh/alfresco/alfresco-workflow-websoft9.png)
+- Main dashboard
+  ![Alfresco dashboard](http://libs.websoft9.com/Websoft9/DocsPicture/en/alfresco/alfresco-adminui-websoft9.png)
 
-## Alfresco 常用操作
+- My document
+  ![Alfresco document](http://libs.websoft9.com/Websoft9/DocsPicture/en/alfresco/alfresco-mydocs-websoft9.png)
 
-### 配置 SMTP{#smtp}
+- Document share
+  ![Alfresco Document share](http://libs.websoft9.com/Websoft9/DocsPicture/en/alfresco/alfresco-sharedocs-websoft9.png)
 
-1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
+- Add user
+  ![Alfresco Add user](http://libs.websoft9.com/Websoft9/DocsPicture/en/alfresco/alfresco-addusers-websoft9.png)
+
+- Add group
+  ![Alfresco Add group](http://libs.websoft9.com/Websoft9/DocsPicture/en/alfresco/alfresco-addgroup-websoft9.png)
+
+- Workflow management
+  ![Alfresco Workflow management](http://libs.websoft9.com/Websoft9/DocsPicture/en/alfresco/alfresco-workflow-websoft9.png)
+
+
+## Alfresco Setup
+
+### Configure SMTP{#smtp}
+
+1. Get [SMTP](./administrator/smtp) related parameters in the mailbox management console
    
-2. 登录 Alfresco 控制台，设置 SMTP 参数（暂未找到具体方案）
+2. Log in Alfresco Console, configure SMTP (Need more research)
 
-### 重置密码
+### Resetting Password
 
-常用的 Alfresco 重置密码相关的操作主要有修改密码和找回密码两种类型：
+here are two main measures to reset password.
 
-#### 修改密码
+**Changing password**
 
-1. 登录 Alfresco 后台，右上角依次打开：【Administrator】>【我的个人档案】
-  ![Alfresco 修改密码](https://libs.websoft9.com/Websoft9/DocsPicture/zh/alfresco/alfresco-modifypw-websoft9.png)
+Take the steps below: 
 
-2. 点击【更改密码】，开始修改密码
+1. Login Alfresco, open 【Administrator】>【My Profile】 
+  ![Alfresco modify password](https://libs.websoft9.com/Websoft9/DocsPicture/en/alfresco/alfresco-modifypw-websoft9.png)
 
-#### 找回密码
+2. Click【Change your Password】, start to change the password.
 
-如果用户忘记了密码，需要通过修改数据库中的密码信息来重置密码：
+**Forgot Password**
 
-1. 使用 **SSH** 连接到 Alfresco 所在的服务器
+Try to retrieve your password through database table as below: 
 
-2. 进入到 alfresco 数据库的 PSQL 交互式状态
+1. Use **SSH** to connect Alfresco instances
+
+2. Run the `psql` of Alfresco
    ```
    docker exec -it alfresco-postgres psql -U alfresco -d alfresco
    ```
 
-3. 运行如下的修改密码命令（新的密码为 **admin**）
+3. Modify password by below SQL command (The new password is set to `admin`)
    ```
    UPDATE alf_node_properties SET string_value='209c6174da490caeb422f3fa5a7ae634' WHERE node_id=4 and qname_id=10
    ```
 
-4. 退出容器交互式模式，回到服务器命令行中重启所有容器后生效
+4. Exit the `psql` of PostgreSQL, then restart all containers
    ```
    cd /data/wwwroot/alfresco
    docker-compose restart
    ```
 
-## 参数{#parameter}
+## Reference sheet{#parameter}
 
-Alfresco 应用中包含 Nginx, Docker, PostgreSQL, pgAdmin 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+ The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Alfresco
+
 
 通过运行`docker ps`，可以查看到 Alfresco 运行时所有的 Container：
 
@@ -131,13 +134,13 @@ ca3a6baf750e   alfresco/alfresco-share:7.0.0                          "/usr/loca
 
 下面仅列出 Alfresco 本身的参数：
 
-### 路径{#path}
+### Path{#path}
 
-Alfresco 安装目录： */data/wwwroot/alfresco*  
+Alfresco installation directory： */data/wwwroot/alfresco*  
 Alfresco 容器存储目录： */data/wwwroot/alfresco/volumes/alfresco*  
 Alfresco 日志目录： */data/wwwroot/alfresco/volumes/alfresco/share/logs*  
 
-### 端口{#port}
+### Port{#port}
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
@@ -145,19 +148,19 @@ Alfresco 日志目录： */data/wwwroot/alfresco/volumes/alfresco/share/logs*
 
 
 
-### 版本{#version}
+### Version{#version}
 
 ```shell
 docker images |grep alfresco-share |awk '{print $2}'
 ```
 
-### 服务{#service}
+### Service{#service}
 
 ```shell
 sudo docker-compose start | stop | restart alfresco
 ```
 
-### 命令行{#cli}
+### CLI{#cli}
 
 暂未发现
 

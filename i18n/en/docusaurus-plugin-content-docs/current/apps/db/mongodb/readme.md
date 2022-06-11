@@ -6,35 +6,39 @@ tags:
   - Cloud Native Database
 ---
 
-# 快速入门
+# MongoDB Getting Started
 
-[MongoDB](https://www.mongodb.com/zh) 是通用、基于文档的分布式数据库，帮助现代应用程序开发人员迎接云时代的到来。它在类似 JSON 的文档内存储数据。这种面对数据的数据存储方法非常自然，比传统的排/列模型更加直观和强大。MongoDB 也是一个真正的具有全套工具的数据平台，能帮助开发人员、分析师和数据科学家等各类人群更方便地处理数据。
+[MongoDB](https://www.mongodb.com/zh) is a scalable, high-performance, open source NoSQL database written in C++.MongoDB, Inc. is the company behind the database for GIANT ideas, offering the best of traditional databases as well as the flexibility, scale and performance today’s applications require. We build MongoDB and the drivers, offer software and services, run MongoDB University (which has trained over 350,000 engineers in MongoDB), and sponsor the MongoDB community.
 
 ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/mongodb-gui-websoft9.png)
 
 
-## 准备
+If you have installed Websoft9 MongoDB, the following steps is for your quick start
 
-部署 Websoft9 提供的 MongoDB 之后，需完成如下的准备工作：
+## Preparation
 
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 TCP：**27017 和 9091** 端口已经开启
-3. 在服务器中查看 MongoDB 的 **[默认账号和密码](./user/credentials)**  
-4. 若想用域名访问  MongoDB，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:27017,9091** is allowed
+3. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for MongoDB
+4. [Get](./user/credentials) default username and password of MongoDB
 
-## MongoDB 初始化向导
+## MongoDB Initialization
 
-### 详细步骤
+### Steps for you
 
-部署 MongoDB 之后，依次完成下面的步骤，验证其可用性：
+You should verify the MongoDB when completed deployment:
 
-1. 使用 SSH 连接 MongoDB 所在的服务器，运行下面的命令，查看 MongoDB 的安装信息和运行状态
+**Check MongoDB**
+
+1. Use the **SSH** to connect Server, and run the command below to view the installation information and running status
    ```
    sudo systemctl status mongod
    ```
-    MongoDB 正常运行会得到 " Active: active (running)... " 的反馈
+2. You can ge the message from SSH " Active: active (running)... " when MongoDB is running
 
-2. 运行 `mongo` 命令（MongoDB Shell）
+**Connect MongoDB**
+
+1. Use the **SSH** to connect Server, and run `mongo` command 
    ~~~
    mongo
 
@@ -51,46 +55,52 @@ tags:
          http://groups.google.com/group/mongodb-user
    ~~~
 
-3. 分别列出默认数据库和用户
+2. List all databases and users
    ```
-   # 列出所有数据库
+   # list all databases
    show dbs
 
-   # 切换到 admin 数据库，列出所有用户
+   # use admin, and list all users
    use admin
    show users
    ```
 
-### 出现问题？
+### Having trouble?
 
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题。
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
-**MongoDB 默认启用账号认证吗？**  
-没有，请修改配置文件 /etc/mongod.conf，将 authorization 字段设置为 enabled
+**Does MongoDB enable account authentication by default?**
+
+No, you should modify the configuration file */etc/mongod.conf* if you want 
 
 
-## MongoDB 入门指南
+## MongoDB QuickStart
 
 > 需要了解更多 MongoDB 的使用，请官方文档 [MongoDB Administration](https://docs.mongodb.com/manual/administration/)
 
-## MongoDB 常用操作
+## MongoDB Setup
 
-### 开启 MongoDB 远程访问{#remote}
+### Enable the MongoDB remote connection{#remote}
 
-1. 修改 [MongDB 配置文件](#path)
+1. Use **SSH** to connect MongoDB server and modify the [MongoDB configuration file](#path): *etc/mongod.conf*
    ```
-   #1 将authorization由disabled设置为enabled
+   #1 set authorization **disabled** to **enabled**
    security:
    authorization: enabled
 
-   #2 将 bindIP 修改为 0.0.0.0 或 本地电脑公网IP
+   #2 set bindIP to 0.0.0.0
    net:
       port: 27017
       bindIp: 0.0.0.0
    ```
-   > 0.0.0.0 代表任意公网IP均可访问
+   > 0.0.0.0 means any Internet IP can connect your MongoDB
 
-2. 重启 [MongoDB 服务](#service)
+2. Restart MongoDB [service](#service)
+   ```
+   systemctl restart mongod
+   ```
+3. Go to the Cloud Console and enable the **TCP:27017** port of Security Group
+
 
 ### 开启 MongoDB 访问认证
 
@@ -105,63 +115,13 @@ security:
 
 重启 [MongoDB 服务](#service)后生效
 
+### GUI
 
+The GUI of MongoDB are divided into desktop version and web version. Each form of tool has some popular tools:
 
-### 图形化 Web 端（adminMongo）
+**Desktop**
 
-adminMongo 是一款在线web版工具，默认已经安装到了MongoDB部署方案中。
-
-使用 adminMongo 的前置条件：
-
-* 开启 MongoDB的访问认证
-* 开启服务器安全组 **TCP:9091** 端口
-
-以上条件准备好之后，就可以根据选择合适的图形化界面工
-
-1. 本地电脑浏览器访问：*http://服务器公网IP:9091* 打开adminMongo界面
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/adminmongo-connect001-websoft9.png)
-
-2. 以连接字符串为例（这里的IP地址是公网IP或本地IP）
-   ```
-   # 默认连接到config数据库，172.17.0.1为内网IP
-   mongodb://root:1cTFecwTEs@172.17.0.1:27017/admin
-   # 默认连接到config数据库
-   mongodb://root:1cTFecwTEs@40.114.115.58
-   # 默认连接到admin数据库
-   mongodb://root:1cTFecwTEs@40.114.115.58/admin
-   mongodb://parse:AxXFcV5zSz@40.114.115.58/parse
-   ```
-3. 开始连接
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/adminmongo-connect002-websoft9.png)
-
-4. 连接成功，进入 adminMongo 控制面板
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/adminmongo-connect003-websoft9.png)
-
-6. 使用完成后，请删除连接
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/adminmongo-connect004-websoft9.png)
-
-更多可选的 Web 端：
-
-- [mongo-express](https://github.com/mongo-express/mongo-express) - Web-based admin interface built with Express
-- [mongoadmin](https://github.com/thomasst/mongoadmin) - Admin interface built with Django
-- [mongri](https://github.com/dongri/mongri) - Web-based user interface written in JavaScript
-- [Rockmongo](https://github.com/iwind/rockmongo) - PHPMyAdmin for MongoDB, sort of
-
-
-### 图形化客户端
-
-推荐使用官方出品的：[MongoDB Compass Community](https://www.mongodb.com/download-center/compass) 作为客户端工具管理 MongoDB：
-
-1. [下载](https://www.mongodb.com/products/compass)并安装 MongoDB Compass
-
-2. 填写准确的字段，连接 MongoDB
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/mongodbcompass001-websoft9.png)
-
-3. 连接成功，进入控制台
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/mongodbcompass002-websoft9.png)
-
-更多可选的客户端：
-
+- [MongoDB Compass Community](https://www.mongodb.com/download-center/compass) - A free tool for developing with MongoDB and includes a subset of the features of Compass.
 - [dbKoda](https://www.dbkoda.com/) - Cross-platform and open-source IDE
 - [MongoHub](https://github.com/jeromelebel/MongoHub-Mac) - Mac native client
 - [Mongotron](http://mongotron.io/) - Cross-platform and open-source client built with Electron
@@ -170,6 +130,75 @@ adminMongo 是一款在线web版工具，默认已经安装到了MongoDB部署�
 - [Robo 3T](https://github.com/Studio3T/robomongo) - Free, native and cross-platform shell-centric GUI (formerly Robomongo)
 - [Studio 3T](https://studio3t.com/) - Cross-platform GUI, stable and powerful (formerly MongoChef)
 
+**Web GUI**
+
+- [adminMongo](https://github.com/mrvautin/adminMongo) - Web-based user interface to handle connections and databases needs
+- [mongo-express](https://github.com/mongo-express/mongo-express) - Web-based admin interface built with Express
+- [mongoadmin](https://github.com/thomasst/mongoadmin) - Admin interface built with Django
+- [mongri](https://github.com/dongri/mongri) - Web-based user interface written in JavaScript
+- [Rockmongo](https://github.com/iwind/rockmongo) - PHPMyAdmin for MongoDB, sort of
+
+Now, we will introduce how to use **MongoDB compass** and **adminMongo**
+
+**Preparation**
+
+You must enable the authorization of MongoDB and set credential for it before your using the GUI  
+
+1. Use **SSH** to connect MongoDB server and modify the MongDB configuration file *etc/mongod.conf*
+   ```
+   #1 set authorization **disabled** to **enabled**
+   security:
+   authorization: enabled
+
+   #2 set bindIP to 0.0.0.0
+   net:
+      port: 27017
+      bindIp: 0.0.0.0
+   ```
+   > 0.0.0.0 means any Internet IP can connect your MongoDB
+
+2. Restart MongoDB service
+   ```
+   systemctl restart mongod
+   ```
+3. Go to the Cloud Console and enable the **TCP:27017** port of Security Group
+
+When completed the preparation, you can use the GUI now
+
+**adminMongo**
+
+adminMongo is a web GUI which installed by Docker for your MongoDB deployment solution
+
+1. Go to the Cloud Console and enable the **TCP:9091** port of Security Group
+
+2. Open Chrome or Firefox on your local PC to visit URL *http://Internet IP:9091*,you can enter the adminMongo page
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/adminmongo-connect001-websoft9.png)
+
+3. Following is the examples for adminMongo connection(IP is Internet IP0)
+   ```
+   # use the **config** database
+   mongodb://root:1cTFecwTEs@40.114.115.58
+   # use the **admin** database
+   mongodb://root:1cTFecwTEs@40.114.115.58/admin
+   mongodb://parse:AxXFcV5zSz@40.114.115.58/parse
+   ```
+
+4. Start to connect
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/adminmongo-connect002-websoft9.png)
+
+5. Go go adminMongo console when connect successfully
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/adminmongo-connect003-websoft9.png)
+
+6. Please delete the connections when you don't use it
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/adminmongo-connect004-websoft9.png)
+
+**MongoDB Compass**
+
+1. [Download](https://www.mongodb.com/products/compass) and install MongoDB Compass
+2. Fill in the correct items and connect MongoDB
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/mongodbcompass001-websoft9.png)
+3. Go go MongoDB Compass console when connect successfully
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/mongodbcompass002-websoft9.png)
 
 ### 规划数据模型
 
@@ -187,11 +216,9 @@ MongoDB 作为一种数据库，与传统的 RDBMS 的使用方式也有相似�
 * 规划数据生命周期
 
 
-### 命令速查
+### Useful MongoDB Command
 
-下面列出最常用的 MongoDB 命令供用户参考：  
-
-##### 显示、创建和切换数据库
+**show all database, create database, insert data**
 
 ```shell
 
@@ -200,24 +227,29 @@ admin     0.000GB
 config    0.000GB
 local     0.000GB
 
-# 创建test数据库（如果不存在test数据库，就会自动创建它）
+-------------------------
+
+#2 create database test, if there have test, it's means switch to test, example
 > use test
 switched to db test
 
-# 显示当前数据库
+# show the current database
 > db
 test
 
-# 显示当前所有用户数据
+# show the current database users
 > show users
 
-#3 插入数据到数据库
+-------------------------
+
+#3 Insert data into the database test, example
 > db.test.insert({"name":"company"})
 WriteResult({ "nInserted" : 1 })
+
+-------------------------
 ```
 
-
-##### 删除数据库
+**Delete the database**
 ```
 > show dbs
 admin     0.000GB
@@ -238,7 +270,7 @@ local     0.000GB
 websoft9  0.000GB
 ```
 
-##### 创建管理员账号
+**Create administrator user**
 
 ```
 > mongo
@@ -267,15 +299,14 @@ Successfully added user: { "user" : "webs_admin", "roles" : [ "userAdminAnyDatab
 }
 ```
 
+### Password management
 
-### 密码管理
+**Modify password**
 
-#### 修改密码
-
-参考下面的命令，修改已经创建的管理员账号root的密码
+You can modify the password of **root** user which added on your MongoDB by the following command
 
 ```
-mongo admin -u root -p YOURPASSWORD
+mongo admin --u root --p YOURPASSWORD
 MongoDB shell version v4.0.18
 connecting to: mongodb://127.0.0.1:27017/?gssapiServiceName=mongodb
 > db = db.getSiblingDB('admin')
@@ -284,21 +315,20 @@ admin
 > exit
 ```
 
-#### 重置密码
+**Reset password**
 
-重置密码即已经忘记密码的情况下，通过特殊手段重新设置新密码的过程。
+Reset password is the process of resetting a new password through special solutions in case the password has been forgotten.
 
-1. 修改 MongoDB 配置文件 *etc/mongod.conf*，将authorization由disabled设置为enabled
+1. Use **SSH** to connect MongoDB server and modify the MongoDB configuration file: *etc/mongod.conf*
    ```
    security:
    authorization: disabled
-
    ```
-2. 重启 MongoDB 服务
+2. Restart the MongoDB service
    ```
    systemctl restart mongod
    ```
-3. 重新设置密码
+3. Run the MongoDB command to set new password
    ```
    mongo
    > db = db.getSiblingDB('admin')
@@ -306,13 +336,13 @@ admin
    > db.changeUserPassword("root", "NEWPASSWORD")
    ```
 
-4. 重复第1步，但将 authorization 由 enabled 设置为 disabled
+4. Repeat step 1, but set authorization to disabled
+5. Restart the MongoDB service again
 
-5. 重启 MongoDB 服务
+## Reference sheet
 
-## MongoDB 参数
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage MongoDB 
 
-MongoDB 应用中包含 Docker,  adminMongo 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 MongoDB 运行时所有的 Container：
 
@@ -322,26 +352,26 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 下面仅列出 MongoDB 本身的参数：
 
-### 路径{#path}
+### Path{#path}
 
 MongoDB 数据目录: */var/lib/mongodb*   
 MongoDB 配置文件: */etc/mongod.conf*   
-MongoDB 日志文件: */var/log/mongodb*   
+MongoDB logs file: */var/log/mongodb*   
 
-### 端口{#port}
+### Port{#port}
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
 | 9091   | HTTP 访问 adminMongo	 | 可选   |
 | 27017   | MongoDB Server | 可选   |
 
-### 版本
+### Version
 
 ```shell
 mongodb -V
 ```
 
-### 服务{#service}
+### Service{#service}
 
 
 ```shell
@@ -349,15 +379,15 @@ sudo systemctl start | stop | restart | status mongod
 sudo docker start | stop | restart | stats adminmongo
 ```
 
-### 命令行{#cmd}
+### CLI{#cmd}
 
-#### 服务端
+**Server**
 
 安装MongoDB后，启动 bin 目录下的可执行文件 mongod 就可以启动 MongoDB 服务，如果你配置了 Systemd，也可以通过 `systemctl start mongod` 以后台的形式启动 MongoDB。  
 
 MongoDB 在启动的时候，可以通过命令接受一序列参数，也可以通过配置文件接受参数：  
 
-**命令行参数**
+**CLI Arguments**
 
 ```
   -v [ --verbose ] [=arg(=v)]           be more verbose (include multiple times
@@ -540,7 +570,7 @@ Free Monitoring options:
 
 ```
 
-**配置文件参数**
+**Configuration File**
 
 配置文件所用的参数与命令行有一些差异，MongoDB 当前采用配置组+配置段的方式组织[配置文件](https://docs.mongodb.com/v4.0/reference/configuration-options/#conf-file)，配置组主要包括：
 
@@ -576,7 +606,7 @@ storage:
       enabled: true
 ```
 
-#### 客户端
+**Client**
 
 MongoDB Shell 是 MongoDB 自带的一个交互式 JavaScript shell，让您能够访问、配置和管理MongoDB数据库、用户等。使用这个shell可执行各种任务，从设置用户账户到创建数据库，再到查询数据库内容，无所不包。
 

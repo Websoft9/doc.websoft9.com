@@ -3,13 +3,15 @@ sidebar_position: 2
 slug: /kafka/solution
 tags:
   - Kafka
-  - IT 架构
-  - 中间件
+  - IT Architecture
+  - Broker
+  
 ---
 
-# 场景方案
+# Kafka Solution
+  
+You can use Kafka integrated other software for IT Architecture.
 
-Kafka 可以与其他的软件平台**集成**一起使用，解决 微服务架构 过程中的各种场景问题。
 
 ## Kafka 与 Zookeeper
 
@@ -56,3 +58,7 @@ Kafka集群时，每个Kafka节点都是对等，是通过Zookeeper对不同的t
 1. 生产者程序启动后，第一次发元数据请求，发给任意一台，都会返回所有元数据信息，包含你需要信息的Leander分区在哪里
 2. 生产者将Leader分区缓存下来，当发送消息时，就从缓存找到Leader分区，直接将消息发送给Leader分区
 3. 假如经过一段时间，增加了新的kafka服务器，导致leader分区重新选举，生产者不知情还继续将消息发送给之前的那个分区，这时会返回失败信息。这时将重复1,2保证能正常发送信息。
+
+
+
+

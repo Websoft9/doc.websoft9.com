@@ -2,79 +2,77 @@
 sidebar_position: 1
 slug: /mingdao
 tags:
-  - 明道云
+  - Mingdao
   - APaaS
-  - 无代码平台
+  - No-code Development Platform
 ---
 
-# 快速入门
+# Mingdao  Getting Started
 
-[明道云](https://www.mingdao.com/) 是一个无代码开发平台（aPaas, No-Code, Low-Code），它可以让企业的业务部门在**不需要编程序**的情况下，自行创作出完全符合实际需求的软件系统。它的主要价值是：大大降低软件生产成本的同时，进一步提高软件交付的成功率。
+[Mingdao ](https://www.mingdao.com/en/about) is leader of APaaS, No Code Platform, it provide rapid development Tool and middle-ground application solution for enterprise customer.
 
 ![](https://alifile.mingdaocloud.com/wwwhome/dist/pack/static/src-common-mdfeature-img-2x-yy02.jpg)
+
+> Access [Mingdao official docs](https://docs.pd.mingdao.com/) to get more reference when you use this deployment solution
 
 Websoft9 提供的是明道云私有部署的**免费版**。它相对于**标准版**和**专业版**等收费版本来说，其有如下限制：  
 
 - 用户数不超过 30 个
 - 单个工作表最大行数 10 万行
 
-## 准备
-
-部署 Websoft9 提供的 明道云 之后，需完成如下的准备工作：
-
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的  **TCP:38881** 和 **TCP:8880**  端口已经开启
-3. 在服务器中查看 明道云 的 **[默认账号和密码](./user/credentials)**  
-4. 若想用域名访问  明道云 **[域名五步设置](./administrator/domain_step)** 过程
+If you have installed Websoft9 Mingdao , the following steps is for your quick start
 
 
-## 明道云初始化向导{#init}
+## Preparation
 
-### 详细步骤
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:38881,8880** is allowed
+3. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for Mingdao 
+4. [Get](./user/credentials) default username and password of Mingdao 
 
-明道云安装向导包含三个过程：初始化、安装数据、设置管理员：
+## Mingdao  Initialization
 
-1. 使用本地电脑的浏览器访问网址：*http://服务器公网IP:38881* 进入初始化页面
+### Steps for you
 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mingdao/mingdao-initial1-websoft9.png)
+1. Use local browser to access the URL *http://DNS:38881* or *http://Server's Internet IP:38881* to access installation wizard
 
-   > 上图中访问地址的默认端口 8880 可自行设置为其他端口号
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/mingdao/mingdao-initial1-websoft9.png)
 
-2. 设置访问地址后，进入【下一步】，开始初始化（过程持续约 3~5 分钟）
+   > You can set any other port which you want to use
 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mingdao/mingdao-initial2-websoft9.png)
+2. Then, go to 【Next】 step, start the initialization (need 3-5 minutes)
 
-3. 初始化完成后，开始**安装数据** （此过程中会引导至明道云官网申请密钥）
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/mingdao/mingdao-initial2-websoft9.png)
 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mingdao/mingdao-install1-websoft9.png)
+3. When complete the initialization, then start to **Data installation**
+
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/mingdao/mingdao-install1-websoft9.png)
    
+   > You should register from official website to get the credential 
 
-4. 完成**注册系统管理员**信息（务必牢记账号密码）
+4. At last, **Register the administrator** account
 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mingdao/mingdao-set-admin-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/mingdao/mingdao-set-admin-websoft9.png)
 
-5. 访问第1步设置的访问地址（例如：**http://服务器公网IP:8880**），登陆明道云后台
-
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mingdao/mingdao-login-websoft9.png)
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mingdao/mingdao-main-app-websoft9.png)
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mingdao/mingdao-main-lib-websoft9.png)
-
-
-> 需要了解更多 明道云 的使用，请参考：[明道云官方文档](https://help.mingdao.com/)
-
-### 出现问题？
-
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
+5. Access the Mingdao's URL (e.g **http://Server's IP:8880**) to login the backend
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/mingdao/mingdao-login-websoft9.png)
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/mingdao/mingdao-main-app-websoft9.png)
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/mingdao/mingdao-main-lib-websoft9.png)
 
 
-**浏览器打开IP地址，无法访问 明道云（白屏没有结果）**
+> More guide about MingDao, please refer to [MingDao Documentation](https://docs.pd.mingdao.com/).
 
-您的服务器对应的安全组 38881 端口没有开启（入规则），导致浏览器无法访问到服务器的任何内容
+### Having trouble?
 
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
-**访问地址的端口号可以不用 **8880** 吗**
+**Can't visit the start page of MingDao?**
 
-可以，但需要在云控制台安全组中，检查 **Inbound（入）规则** 下您所使用的端口确保开启
+Your TCP:38881 of Security Group Rules is not allowed, so there is no response from Chrome or Firefox.
+
+**Can the port number of the access address not need **8880**?**
+
+Yes, but you should enable your port at **[Inbound of Security Group Rule](https://support.websoft9.com/docs/faq/tech-instance.html)** of Cloud console
 
 
 **服务器重启后，服务器IP地址变化，导致工作流等一些服务无法使用**
@@ -86,7 +84,7 @@ Websoft9 提供的是明道云私有部署的**免费版**。它相对于**标�
 参考：[程序打不开](./mingdao/admin#restart)
 
 
-## 明道云使用入门
+## Mingdao QuickStart
 
 明道云官方提供了非常不错的：[教程和视频](https://help.mingdao.com/)
 
@@ -102,39 +100,45 @@ Websoft9 作为明道的合作伙伴，具备基于明道云的软件快速构�
 
 欢迎广大的客户朋友和行业合作[联系我们](./helpdesk#contact)。
 
-## 明道云常用操作
+## Mingdao Setup
 
+### Configuration 
 
-### 基础设置
+Refer to [official docs](https://docs.pd.mingdao.com)
 
-请参考官方提供的：[《私有版维护文档》](https://docs.pd.mingdao.com/)，包括：短信设置、对象存储设置、网络访问、环境变量、服务管理等
+### Configure SMTP{#smtp}
 
-### 配置 SMTP{#smtp}
+1. Get [SMTP](./administrator/smtp) related parameters in the mailbox management console
 
-1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
-   
-2. 登录明道云，打开右上角用户图标下的【系统配置】，点击【邮件服务设置】开始配置
-   ![明道云 SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mingdao/mingdao-smtp-websoft9.png)
+2. Log in MingDao Console and go to 【Email settings】 at 【System settings】
+   ![Mingdao SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/en/mingdao/mingdao-smtp-websoft9.png)
 
-3. 完成设置
+3. SMTP completed  
 
-### 重置密码
+### Reset Password
 
-常用的 明道云 重置密码相关的操作主要有修改密码和找回密码两种类型：
+There are two main measures to reset password.
 
-#### 修改密码
+### Changing password
 
-1. 登录 明道云 后台，依次打开：【系统设置】>【用户管理】，找到所需修改密码的账号对象
+Take the steps below:
 
-2. 开始修改密码
+1. Log in the MingDao backend, open 【System Setting】 to find the user account, of which you want to change password;
 
-#### 找回密码
+2. Start to change the password.
 
-方案有待完善
+### Forgot Password
 
-## 参数{#parameter}
+Try to retrieve your password through e-mail when forgot it.
 
-明道云 应用中包含 Nginx, Docker 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
+Follow the steps below:
+
+Coming soon...
+
+## Reference sheet
+
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Mingdao 
+
 
 通过运行`docker ps`，可以查看到 明道云 运行时所有的 Container：
 
@@ -147,14 +151,14 @@ d6fa950fb107   registry.cn-hangzhou.aliyuncs.com/mdpublic/mingdaoyun-doc:1.2.0  
 
 下面仅列出 明道云 本身的参数：
 
-### 路径{#path}
+### Path{#path}
 
 明道云目录： */data/wwwroot/mingdao*  
 明道云安装管理器目录： */data/wwwroot/mingdao/installer*  
 明道云持久化目录： */data/wwwroot/mingdao/volume*  
 明道云容器配置文件： */data/wwwroot/mingdao/script/docker-compose.yaml*  
 
-### 端口{#port}
+### Port{#port}
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
@@ -162,17 +166,17 @@ d6fa950fb107   registry.cn-hangzhou.aliyuncs.com/mdpublic/mingdaoyun-doc:1.2.0  
 | 8880   | HTTP 访问 明道云后台（初始化完成后)  | 可选   |
 
 
-### 版本{#version}
+### Version{#version}
 
 控制台查看
 
-### 服务{#service}
+### Service{#service}
 
 ```shell
 sudo docker start | stop | restart | stats  mingdao
 ```
 
-### 命令行{#cli}
+### CLI{#cli}
 
 [常用命令](https://docs.pd.mingdao.com/deployment/docker-compose/command.html)
 

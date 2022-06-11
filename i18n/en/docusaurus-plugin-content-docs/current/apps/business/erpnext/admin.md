@@ -7,15 +7,15 @@ tags:
   - ERP
 ---
 
-# 维护指南
+# ERPNext Maintenance
 
-本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup) 相关章节。
+This chapter is special guide for ERPNext maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-## 场景
+## Maintenance guide
 
-### 备份
+### ERPNext Backup
 
-#### 方法一：自动备份（计划任务）
+**自动备份（计划任务）**
 
 1. 登录 ERPNext 后，依次打开：【Settings】>【System Settings】
    ![ERPNext backup](https://libs.websoft9.com/Websoft9/DocsPicture/zh/erpnext/erpnext-autobk-websoft9.png)
@@ -23,7 +23,7 @@ tags:
 2. 等待计划任务执行
 
 
-#### 方法二：命令行备份
+**命令行备份**
 
 [手动输入命令](https://frappeframework.com/docs/user/en/bench/reference/backup)也可以备份 ERPNext：
 
@@ -46,64 +46,65 @@ tags:
 
    > 后台 Download Backups 处下载失败，原因有待研究。故，直接从上面的路径下载即可
 
-## 故障排除
 
-除以下列出的 ERPNext 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
+## Troubleshoot{#troubleshoot}
 
-#### 在Chrome下修改密码后报错？
+In addition to the ERPNext issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
-这个并不是服务器端的问题，只要更新浏览器即可。
+#### Error in Chrome when modify password?
 
-#### 运行 Bench 时报错 "You should not run this command as root" when run bench?
+This error is not attribute to ERPNext server, once you have upgraded you local Chrome, it solved
 
-Bench 只能通过 frapper 运行,必须先切换到此用户
+#### Why I get the message "You should not run this command as root" when run bench?
 
+The bench commands only can run for the user name frapper, you must change the user first
 ```shell
 su - frapper
 ```
 
-#### ERPNext 安装向导最后一步出现错误提示？
+#### Error prompt in the last step of the ERPNext installation wizard?
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/erpnext/erpnext-wizarderror-websoft9.png)
-
-原因：未知   
-方案：重复安装几次直至成功   
-
-
-## 问题解答
-
-#### 本项目中 ERPNext 采用何种安装方式？
-
-采用 Docker 安装，查看我们提供的 [Docker-Compose for ERPNext](https://github.com/Websoft9/docker-erpnext) 开源项目
-
-#### ERPNext 支持非 Docker 安装方式吗？
-
-支持，具体的安装大致流程如下：
-
-1. 使用Bench命令初始化一个Frappe框架
-2. 安装ERPNext app
-3. 创建一个名称同样为 ERPNext 的site
-4. 将site与app 连接起来
-
-#### Frappe，bench，ERPNext？
-
-ERPNext 是基于 [Frappe](https://github.com/frappe/frappe) 框架开发的免费 ERP 。而 Frappe 是一个用于快速开发JS和Python集成化应用的框架。[Bench](https://github.com/frappe/bench) 是Frappe框架体系中的 CLI 工具，用于创建和管理基于 Frappe 的应用程序。
-
-#### ERPNext 安装时创建 site 是什么原理？
-
-Frappe 框架主要由两个部分组成：app 和 site，app 是后端Python代码，site 是用于处理 HTTP 请求的前端部分。
-
-#### ERPNext 支持哪些数据库？
-
-MariaDB 和 PostgreSQL
+Cause: unknown  
+Solution: repeat the installation several times until successful
 
 
-#### 如何修改上传的文件权限?
+## FAQ{#faq}
+
+#### Which install solution for this ERPNext?
+
+Use Docker installation, you can access our [Docker-Compose for ERPNext](https://github.com/Websoft9/docker-erpnext) open source project on Github
+
+#### Can I install ERPNext by **Manual installation**?
+
+Yes, the general installation process of ERPNext is as follows:
+
+1. Use the **bench** command to initialize a Frappe framework
+2. Install ERPNext app
+3. Create a site with the same name as ERPNext
+4. Connect the site with the app
+
+
+#### What are the relationship and difference between Frappe, bench and ERPNext?
+
+[ERPNext](https://github.com/frappe/erpnext) is based on Frappe for free ERP framework development.  
+[Frappe](https://github.com/frappe/frappe) is a framework for rapid development of JS and Python integrated applications.  
+[Bench](https://github.com/frappe/bench) is a CLI tool of Frappe framework, which used to create and manage Frappe by commands.
+
+#### Why should create *site* for ERPNext installation?
+
+Frappe framework is mainly composed of two parts: app and site. App is the back-end Python code, and site is the front-end part for handling HTTP requests.
+
+#### What databases does ERPNext support?
+
+MariaDB and PostgreSQL
+
+#### How to change the permissions of filesytem?
+
+Change owner(group) or permissions like below:
 
 ```shell
-# 拥有者
-chown -R erpnext.erpnext /data/wwwroot/erpnext
-# 读写执行权限
+chown -R apache.apache /data/wwwroot/erpnext
 find /data/wwwroot/erpnext -type d -exec chmod 750 {} \;
 find /data/wwwroot/erpnext -type f -exec chmod 640 {} \;
 ```

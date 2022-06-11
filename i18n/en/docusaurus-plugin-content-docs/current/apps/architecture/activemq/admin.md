@@ -2,20 +2,24 @@
 sidebar_position: 3
 slug: /activemq/admin
 tags:
-  - ActiveMQ 
-  - IT 架构
-  - 中间件
+  - ActiveMQ
+  - IT Architecture
+  - Broker
 ---
 
-# 维护参考
+# ActiveMQ Maintenance
 
-## 场景
+This chapter is special guide for ActiveMQ maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-### ActiveMQ 升级
+## Maintenance guide
 
-ActiveMQ 主要采用二级制安装方式，其升级方案差不多等于安装：
+### Backup and Restore   
 
-1. 依次运行如下的命令做好准备：
+### Upgrade
+
+ActiveMQ upgrade is similar to installation, you can upgrade it by the following steps
+
+1. Prepare for upgrade
    ```
    # stop ActiveMQ service
    systemctl stop activemq
@@ -23,63 +27,66 @@ ActiveMQ 主要采用二级制安装方式，其升级方案差不多等于安�
    # rename the dir of ActiveMQ for backup
    mv /opt/apache-activemq  /opt/apache-activemqBK
    ```
-2. 访问 ActiveMQ 官方网站，[下载](http://activemq.apache.org/components/classic/download/)后解压并上传到：*/opt* 目录，并命名为 *apache-activemq*
-3. 分别运行下面的修改权限
+2. [Download ActiveMQ](http://activemq.apache.org/components/classic/download/) and upload it to the directory */opt* after unzip it, then renamed the directory to *apache-activemq*
+3. Run the following modify permissions separately
    ```
    chown -R activemq. /opt/apache-activemq
    chmod 640  /opt/apache-activemq/examples/stomp/php/*
    chmod +x /opt/apache-activemq/bin/activemq
    ```
-4. 重启 [ActiveMQ服务](../activemq#service) 后升级完成
+4. Restart the [ActiveMQ Service](/zh/admin-services#activemq)
 
-## 故障排除
+## Troubleshoot{#troubleshoot}
 
-除以下列出的 ActiveMQ 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
+In addition to the ActiveMQ issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
-#### ActiveMQ 服务无法启动？
+#### ActiveMQ service can't start?
 
-1. 以调试模式运行`activemq console`，便可以查看启动状态和错误
+1. Use the debug mode of `activemq console` and you can see the errors
    ```
    /opt/apache-activemq/bin/activemq
    ```
-2. 打开日志文件：*/opt/apache-activemq/data/activemq.log*，检索 **failed** 关键词，分析错误原因
+2. Search the keywords **Failed** or **error** in the log file: */opt/apache-activemq/data/activemq.log*
 
-3. 常见的无法启动ActiveMQ服务的原因有如下几点：
+3. The most common reasons are as follows:
 
-   * 主机名不符合要求。例如：activemq5.6，这种包含"."的主机名就会导致ActiveMQ无法重启。参考如下命令重置主机名
+   * The hostname have "." string, e.g: activemq5.6, you must rename it and restart the service by the following commands
    ```
    hostnamectl set-hostname activemq
+   systemctl restart activemq
    ```
-   * 缺乏Java的环境变量。通过：`echo $JAVA_HOME` 或 `which java` 查看反馈信息。
+   * Java environment variable problem. you can use the command `echo $JAVA_HOME` or `which java` to check it
 
-## 常见问题
+## FAQ{#faq}
 
-#### Active Classic vs ActiveMQ Artemis？
+#### What the difference between Active Classic and ActiveMQ Artemis?
 
-ActiveMQ Artemis 是 ActiveMQ 下一代产品，未来将替换 ActiveMQ Classic。 具体参考：[ActiveMQ Classic](https://activemq.apache.org/getting-started), [ActiveMQ Artemis](https://activemq.apache.org/components/artemis/documentation/)
+ActiveMQ Artemis is the next generation of ActiveMQClassic. Refer to: [ActiveMQ Classic](https://activemq.apache.org/getting-started), [ActiveMQ Artemis](https://activemq.apache.org/components/artemis/documentation/)
 
-#### 如何以调试模式启动ActiveMQ服务？
+#### How can I enable the debug mode of ActiveMQ service?
 
 ```
 systemctl stop activemq
 /opt/apache-activemq/bin/activemq console
 ```
-#### 如何退出 ActiveMQ 控制台？
 
-暂无方案
+#### How can I log out ActiveMQ console?
 
-#### ActiveMQ 中是否包含 Tomcat？
+coming soon...
+  
+#### Is the Tomcat included in the ActiveMQ directory?
 
-ActiveMQ 官方提供的二级制包中包含 Tomcat，但已经集成到 ActiveMQ 服务中。
+Yes, ActiveMQ integrated the Tomcat
+  
+#### Is it possible to modify the source path of ActiveMQ?
 
-#### 是否可以修改 ActiveMQ 的源码路径？
-
-可以，但要参考如下的命令重试设置环境变量
+Yes, but you should reset the PATH of ActiveMQ by the following command
+  
 ```
 echo 'export PATH="$PATH:/opt/apache-activemq/bin"' >> /etc/profile
 ```
 
-#### 如何修改上传的文件权限?
+#### How to change the permissions of file system?
 
 ```shell
 chown -R activemq.activemq /opt/apache-activemq

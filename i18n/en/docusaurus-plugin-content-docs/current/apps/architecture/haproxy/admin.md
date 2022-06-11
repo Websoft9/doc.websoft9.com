@@ -3,32 +3,35 @@ sidebar_position: 3
 slug: /haproxy/admin
 tags:
   - HAProxy
-  - IT 架构
-  - 中间件
+  - High Availability
 ---
 
-# 维护参考
+# HAProxy Maintenance
 
-## 场景
+This chapter is special guide for HAProxy maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-### HAProxy 升级
+## Maintenance guide
 
-如果 yum/apt 更新后的版本无法满足您需求，请通过[源码编译安装](https://github.com/haproxy/haproxy/blob/master/INSTALL)您所需的版本
+### Backup and Restore   
 
-## 故障排除
+### Upgrade
 
-除以下列出的 HAProxy 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
+If the version update by YUM/APT it not suitable for you, please use the [resource build installation](https://github.com/haproxy/haproxy/blob/master/INSTALL)to update HAProxy
 
-## 问题解答
+## Troubleshoot{#troubleshoot}
 
-#### 如何安装的 HAProxy？
+In addition to the HAProxy issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
-yum/apt 安装方式
+## FAQ{#faq}
+  
+#### What kind of installation method is used in this deployment solution to install HAProxy?
 
-#### 可否命令行修改 HAProxy 后台密码？
+yum or apt
+  
+#### Can I reset password of HAProxy?
 
-可以，修改配置文件`/etc/haproxy/haproxy.cfg`
+Yes, modify the configuration file `/etc/haproxy/haproxy.cfg`
+  
+#### Is there a web-base GUI database management tools?
 
-#### 是否有可视化的管理工具？
-
-默认开启 HAProxy Statistics Report 可视化界面，访问：*http://服务器公网IP:1080/haproxy* 即可
+Yes, HAProxy Statistics Report was enabled, you can visit it by URL: *http://Internet IP:1080/haproxy*

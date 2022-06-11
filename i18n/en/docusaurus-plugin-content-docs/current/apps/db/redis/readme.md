@@ -6,54 +6,52 @@ tags:
   - Cloud Native Database
 ---
 
-# 快速入门
+# Redis Getting Started
 
-[Redis](https://redis.io/) ）是一个流行的开源数据库、缓存、流式处理引擎和消息代理的开源内存中数据存储。
+[Redis](https://redis.io/) is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker. It supports data structures such as strings, hashes, lists, sets, sorted sets with range queries, bitmaps, hyperloglogs, geospatial indexes with radius queries and streams. Redis has built-in replication, Lua scripting, LRU eviction, transactions and different levels of on-disk persistence, and provides high availability via Redis Sentinel and automatic partitioning with Redis Cluster.  
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/redis/redis-gui-websoft9.png)
 
-## 准备
+If you have installed Websoft9 Redis, the following steps is for your quick start
 
-部署 Websoft9 提供的 Redis 之后，需完成如下的准备工作：
+## Preparation
 
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 TCP:**6379 和 8002** 端口已经开启
-3. 在服务器中查看 Redis 的 **[默认账号和密码](./user/credentials)**  
-4. 若想用域名访问  Redis，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:8002,6379** is allowed
+3. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for Redis
+4. [Get](./user/credentials) default username and password of Redis
 
-## Redis 初始化向导
+## Redis Initialization
 
-### 详细步骤
+### Steps for you
 
-1. 通过 SSH 工具连接 Redis服务器
+1. Use **SSH** tool to connect Redis Server
 
-2. 运行 Redis Service 命令
+2. Run the command `sudo systemctl status redis` to check the service state of Redis
    ```
-   $ sudo systemctl status redis  
-
+   ubuntu@redis:~$ sudo systemctl status redis 
    redis.service - redis
    Loaded: loaded (/lib/systemd/system/redis.service; enabled; vendor preset: en
    Active: active (running) since Mon 2020-02-03 10:03:09 UTC; 2h 27min ago
    Process: 31972 ExecStart=/usr/local/bin/redis-server /etc/redis/redis.conf (co
    Main PID: 31973 (redis-server)
    ```
-3. 运行版本查询命令
+3. Run the command `sudo systemctl status redis` to check the version of Redis
    ```
-   $ sudo redis-server -v
-
+   ubuntu@redis:~$ sudo redis-server -v
    Redis server v=2.8.24 sha=00000000:0 malloc=jemalloc-3.6.0 bits=64 build=ba7fac81f854c786
    ```
-4. 运行 Redis CLI 命令
+4. Go to **Redis CLI** to test it
    ```
-   $ redis-cli
+   ubuntu@redis:~$ redis-cli
    127.0.0.1:6379>
-
-   //密码登录
+ 
+   //use password
    redis-cli -h 127.0.0.1 -p 6379 -a <password>
    127.0.0.1:6379>
    ```
-   
-5. PHP 连接 redis 读写操作
+
+5. PHP connect to redis
 
    ```
    <?php
@@ -63,36 +61,39 @@ tags:
    $redis->auth('password');
    $redis->set('Websoft9', 9);
    echo $redis->get('Websoft9'); 
-
+   
    ?>
    
    ```
+   
+> More useful Redis guide, please refer to [Redis Documentation](https://redis.io/documentation)
 
-### 出现问题？
+### Having trouble?
 
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题.
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
-## Redis 使用入门
+## Redis QuickStart
 
 > 需要了解更多Redis的使用，请参考：[Redis Documentation](https://redis.io/documentation)
 
-## 常用操作
+## Redis Setup
 
-### 远程访问控制{#remote}
+### Redis remote connection{#remote}
 
-虽然不建议将 Redis 公开到 Internet 直接访问，但是有些特殊场景下，比如：使用 RedisInsight 客户端，就需要设置 Redis 的远程访问。  
+Although we don't suggest you access Redis from Internet, but sometime you may need to do this.  
 
-数据库是高安全应用，设置远程访问，最少需三个独立的步骤：
+e.g. Using **RedisInsight**.
 
-##### 设置安全组
+Then, you need to configure your redis remote by the following steps:
 
-一般来说，Redis使用的是6379端口。  
 
-首先，我们要登录到云控制台，打开云服务器所在的安全组中，保证 **TCP:6379** 端口是开启的。
+**Set port**
 
-##### 设置绑定（非必要）
+Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:6379** is allowed
 
-默认情况下，Redis 允许服务器所有网卡的连接。
+**Bind IP**
+
+You should check your [Redis configuration file](#path) the following segment
 
 ```
 # By default Redis listens for connections from all the network interfaces
@@ -105,19 +106,19 @@ tags:
 # bind 192.168.1.100 10.0.0.1
 # bind 127.0.0.1
 ```
-
 * 如果需要限制所有外部访问，去掉"#"，重启服务。
 * 如果要指定某个网卡，自行添加一行绑定项，例如： `bind 192.168.1.100 10.0.0.1`
 
 > 此处的 bind 不是白名单的概念，而是服务器网卡绑定关系。
 
-##### 开启身份验证
 
-Redis 提供了身份访问控制 [ACL](https://redis.io/topics/acl) 功能，特别是从 Redis 6.0 之后，这些功能进一步增强。  
+**Enable password**
 
-身份认证最简单的方式就是开启密码（对于外网访问是必须的）:
+Redis provided Access Control List [ACL](https://redis.io/topics/acl), after Redis 6.0, These features have been enhanced.
 
-1. 编辑 Redis 配置文件，找到如下的配置项
+Enable password is need for Internet access, the easiest way to authenticate is to set a password:
+
+1. Edit [Redis config file](#path),find the item below
 
 ```
 # Warning: since Redis is pretty fast an outside user can try up to
@@ -127,75 +128,85 @@ Redis 提供了身份访问控制 [ACL](https://redis.io/topics/acl) 功能，�
 # requirepass foobared
 ```
 
-2. 将 `# requirepass foobared` 修改为 `requirepass yourpassword`
+2. Set password from `# requirepass foobared` to `requirepass yourpassword`
+   > Be sure to set the password whic is a very complex  password
+   > For local access mode, if password authentication is turned off, you can still connect to access; for remote access, you must set a password to access
 
-   > 务必将密码设置成非常复杂的加强密码
-   > 本地访问方式，如果关闭密码认证，任然可以连接访问；远程方式必须设置密码才能访问
+3. After [restart Redis service](#service), it will take effect
 
-3. 重启 Redis 服务后生效
 
-### 图形化管理（RedisInsight）{#redisinsight}
+### Redis GUI（RedisInsight）{#redisinsight}
 
-RedisInsight（[下载](https://redislabs.com/redisinsight/) | [Licence](https://redislabs.com/redis-insight-license-terms)）官方提供的基于浏览器运行的 Redis GUI 工具，支持 Windows，Linux和Mac OS系统运行。
+We suggest you use the GUI tool **RedisInsight** ([Download](https://redislabs.com/redisinsight/) | [Licence](https://redislabs.com/redis-insight-license-terms)) powered by **Redis Labs** to manage your Redis. It's a web-base GUI which can be installed on Windows, Linux, Mac OS.
 
-RedisInsight 实现了多平台统一性，只要打开 RedisInsight 界面，使用方式是一模一样的：  
+RedisInsight is very powerful. It integrates management, monitoring, configuration and analysis, and can even run CLI commands.
 
-1. 打开 RedisInsight 界面
-  
-   * 本地浏览器访问：*http://服务器公网IP:8002* ，即可打开服务器上安装的 RedisInsight
-   * 启动桌面的 RedisInsight 图标，打开本地安装的 RedisInsight
+**Preconditions**
 
-   ![打开RedisInsight](https://libs.websoft9.com/Websoft9/DocsPicture/zh/redis/redisinsight-login-websoft9.png)
+View [Redis remote connection](#remote), confirm matching the basic condition.
 
-2. 选择【Connect to a Redis Server】
-   ![选择RedisInsight连接方式](https://libs.websoft9.com/Websoft9/DocsPicture/zh/redis/redisinsight-connect001-websoft9.png)
+**Steps**
 
-3. 输入连接信息（[不知道密码](./user/credentials)）
-   ![登录RedisInsight](https://libs.websoft9.com/Websoft9/DocsPicture/zh/redis/redisinsight-connect002-websoft9.png)
+RedisInsight realize the unity of multiple platforms, it have the same steps: 
+
+1. Start RedisInsight, access init page
+   * Using local Chrome or Firefox to visit the URL  *https://Internet IP:8002*, open the web RedisInsight
+   * Double click RedisInsight icon, open local client RedisInsight
+
+   ![Start RedisInsight](https://libs.websoft9.com/Websoft9/DocsPicture/en/redis/redisinsight-login-websoft9.png)
+
+2. Select 【Connect to a Redis Server】
+   ![Select RedisInsight connect way](https://libs.websoft9.com/Websoft9/DocsPicture/en/redis/redisinsight-connect001-websoft9.png)
+
+3. Input connect information 
+   ![Login RedisInsight](https://libs.websoft9.com/Websoft9/DocsPicture/en/redis/redisinsight-connect002-websoft9.png)
    
-   * HOST：localhost （推荐） 或 服务器公网IP（Redis已开启远程的状态）
+   * HOST：localhost (recommendation) or  Internet IP (Redis open remote)
    * Port：6379
    * Name：redis
 
-4. 成功建立一个连接
-   ![RedisInsight连接](https://libs.websoft9.com/Websoft9/DocsPicture/zh/redis/redisinsight-connectss-websoft9.png)
+4. Connect success
+   ![RedisInsight connection](https://libs.websoft9.com/Websoft9/DocsPicture/en/redis/redisinsight-connectss-websoft9.png)
 
-5. RedisInsight 的功能十分强大，集管理、监控、配置和分析于一体，甚至还可以运行CLI命令。
-   ![RedisInsight后台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/redis/redisinsight-consolegui-websoft9.png)
+5. RedisInsight has powerful functions, including management, monitoring, configuration and analysis, and can even run cli commands
+   ![RedisInsight console](https://libs.websoft9.com/Websoft9/DocsPicture/en/redis/redisinsight-consolegui-websoft9.png)
 
-### 持久化设置
 
-Redis 支持 RDB 和 AOF 两种持久化方式：
+### Persistence
 
-* RDB：即通过快照技术，将内存中的数据生成一份副本并保存到磁盘指定的目录中；
-* AOF：即通过协议文本的方式，将所有对数据库进行过写入的命令（及其参数）记录到 AOF 文件，以此达到记录数据库状态的目的，非常类似 MySQL 的二进制日志
+Redis supports RDB and AOF persistence way:
 
-### 多实例管理
+* RDB：through snapshot technology, a copy of the data in memory is generated and saved to the specified directory on the disk
+* AOF：In other words, all commands (and their parameters) that have been written to the database are recorded to the AOF file by means of protocol text, so as to achieve the purpose of recording database status, which is very similar to the binary log of MySQL
 
-Redis是一个字典结构的存储服务器，一个 Redis 实例对应多个字典（默认支持16个字典，从0开始编号），客户端可以指定将数据存储在哪个字典中。非常类似在关系数据库中建库。
 
-虽然 Redis 没有多数据库，但通常我们会在一台服务器上启动多个 Redis 实例：
+### Multiple instances
 
-1. 准备好第二个实例所需的端口，假如为：6378
+Redis is a dictionary hash structure storage server, one Redis has 16 dictionary hash(form 0 to 15, default 0), The client can specify which dictionary to store the data in. It is very similar to building a database in a relational database.
 
-2. 复制现有的 redis.conf 文件，命名为 redis_6378.conf
+Usually, we will start multiple redis instances on one server:
 
-3. 正确填写配置项
-    | 配置名    | 配置说明                                   |
+1. Prepare the ports required for the second instance, example for port: 6378
+
+2. Copy redis.conf file, named redis_6378.conf
+
+3. Fill in the configuration item correctly
+    | Configuration item    | Configuration description                                   |
     | --------- | ------------------------------------------ |
-    | port      | 端口                                       |
-    | logfile   | 日志文件                                   |
-    | dir       | Redis 工作目录（存放持久化文件和日志文件） |
-    | daemonize | 是否已守护进程方式启动 Redis（yes 或 no）  |
+    | port      | server port                    |
+    | logfile   | log files                                   |
+    | dir       | Redis work directory |
+    | daemonize | Whether it has been started in daemons mode Redis(yes or no)  |
 
-4. 启动服务
+4. Start service
     ```
     redis-server /etc/redis/redis_6378.conf
     ```
- 
-### 重置密码
 
-编辑 [Redis 配置文件](#path) 中的参数 `requirepass` 的值即重置密码。
+ 
+### Reset Password
+
+Edit [Redis Config](#path) parameter `requirepass` of value, can reset the password
 ```
 # Warning: since Redis is pretty fast an outside user can try up to
 # 150k passwords per second against a good box. This means that you should
@@ -203,17 +214,14 @@ Redis是一个字典结构的存储服务器，一个 Redis 实例对应多个�
 #
 # requirepass foobared
 ```
-### 系统配置
 
-Redis 的配置可以通过修改 redis.conf 文件实现，也可以先通过 redis-cli 登录后，在运行 **CONFIG** 命令查看或设置配置项。  
+### CONFIG
 
-**CONFIG** 可以查询配置项，也可以编辑配置项：
+You can configure Redis by modify `redis.conf` file, and run the **CONFIG** command of redis-cli by SSH  
 
-#### 查询配置项
+**Get configuration items**
 
-Redis CONFIG 命令格式范例如下： 
-
-通过运行：`CONFIG GET *` 命令，查询所有配置项
+run the command `CONFIG GET *` to list all configuration items
 
 ```
   127.0.0.1:6379> CONFIG GET *
@@ -341,31 +349,34 @@ Redis CONFIG 命令格式范例如下：
 122) ""
 ```
 
-通过运行：`CONFIG GET CONFIG_SETTING_NAME` 命令，查询指定项
+run the command: `CONFIG GET CONFIG_SETTING_NAME` to get the specified item
 
 ```
 127.0.0.1:6379> CONFIG GET loglevel
 1) "loglevel"
 2) "notice"
 ```
-#### 编辑配置项
 
-你可以通过修改 `redis.conf` 文件或使用 CONFIG set 命令来修改配置。
+**Edit configuration item**
 
-**语法格式：**
+You can modify the `redis.conf` file directly or use `CONFIG set` for configuration
+
+**commands Syntax format:**
 
 redis 127.0.0.1:6379> CONFIG SET CONFIG_SETTING_NAME NEW_CONFIG_VALUE
 
-下面是设置范例：  
+Following is example:  
 
 ```
 127.0.0.1:6379> CONFIG SET loglevel "notice"
 OK
 ```
 
-## Redis 参数
 
-Redis 应用中包含 Nginx, Docker, RedisInsight 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+## Reference sheet
+
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Redis 
+
 
 通过运行 `docker ps`，可以查看到 Redis 运行时所有的 Container：
 
@@ -375,19 +386,19 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 下面仅列出 Redis 本身的参数：
 
-### 路径{#path}
+### Path{#path}
 
 Redis 配置文件： */etc/redis.conf*  
 Redis 数据目录： */var/lib/redis*  
-Redis 日志文件： */var/log/redis/redis.log*  
+Redis logs file： */var/log/redis/redis.log*  
 Redis 默认数据库： *redis*  
 
-RedisInsight 安装目录： */data/redisinsight*  
-RedisInsight 日志文件： */data/logs/redisinsight*  
+RedisInsight installation directory： */data/redisinsight*  
+RedisInsight logs file： */data/logs/redisinsight*  
 RedisInsight 配置文件： */data/redisinsight/redisinsight.config*  
 
 
-### 端口
+### Port
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
@@ -395,42 +406,41 @@ RedisInsight 配置文件： */data/redisinsight/redisinsight.config*
 | 8002   | Redis | HTTP 访问 RedisInsight	   |
 
 
-### 版本
+### Version
 
 ```shell
 redis-server -v
 ```
 
-### 服务
+### Service
 
 ```shell
 sudo systemctl start | stop | restart | status redis
 sudo docker start | stop | restart | stats redisinsight
 ```
 
-### 命令行
+### CLI
 
-[redis-cli](https://redis.io/topics/rediscli) 是 Redis 命令行界面，这是一个简单的程序，可以将命令直接发送到 Redis，并直接从终端读取服务器发送的回复。
+[redis-cli](https://redis.io/topics/rediscli)  is the Redis command line interface, a simple program that allows to send commands to Redis, and read the replies sent by the server, directly from the terminal.
 
-Redis CLI 支持交互式模式和标准命令行两种使用方式：
+Redis CLI supports two usage modes: interactive mode and standard command line:
 
 ```
-# 交互式模式（无密码验证），即进入 CLI 的随时待命状态
+# Interactive mode (no password verification), immediately entering the standby state of the CLI
 redis-cli
 127.0.0.1:6379>
 
-# 交互式模式（密码验证），即进入 CLI 的随时待命状态
+# Interactive mode (password verification), immediately entering the standby state of the CLI
 redis-cli -h 127.0.0.1 -p 6379 -a 123456
 127.0.0.1:6379>
 
-# 标准命令行模式，即运行一条有明确目标的命令，执行完成后自动退出
+# Standard command line mode, that is to run a command with a clear goal and exit automatically after execution
 redis-cli help
 redis-cli incr mycounter
 redis-cli --stat
 redis-cli --bigkeys
 ```
-
-常用命令包括：
+**Command line usage**
 
 | **Command** | **Description** |
 | --- | --- |

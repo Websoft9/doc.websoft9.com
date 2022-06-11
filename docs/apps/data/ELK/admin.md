@@ -27,6 +27,15 @@ ELK 内置快照备份功能（阅读[官方文档](https://www.elastic.co/guide
 
 检查 Logstash 的 pipeline 配置文件中 Elasticsearch 账号密码是否正确
 
+#### ELK 无法登陆？
+
+如果现实下面的错误信息，即表明磁盘空间不足。  
+```
+kibana_task_manager_7.17.4_001/_mapping?timeout=60s error: [cluster_block_exception]: index [.kibana_task_manager_7.17.4_001] blocked by: [TOO_MANY_REQUESTS/12/disk usage exceeded flood-stage watermark, index has read-only-allow-delete block];,"}
+```
+
+ES 对磁盘空间有较高的要求，建议准备足够的空间。  
+
 ## 常见问题
 
 #### ELK 具体包含哪些应用？

@@ -2,29 +2,30 @@
 sidebar_position: 3
 slug: /mingdao/admin
 tags:
-  - 明道云
+  - Mingdao
   - APaaS
-  - 无代码平台
+  - No-code Development Platform
 ---
 
-# 维护指南
+# Mingdao Maintenance
 
-本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup) 相关章节。
+This chapter is special guide for Mingdao maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-## 场景
+## Maintenance guide
 
-## 故障排除
 
-除以下列出的 明道云 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
+## Troubleshoot{#troubleshoot}
 
-#### 如何查看错误日志？
+In addition to the Mingdao issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
+
+#### How can I check the error logs?
 
 ```
 cat /data/mingdao/script/mingdaoyun.log
 docker logs $(docker ps | grep mingdaoyun-community | awk '{print $1}')
 ```
 
-详细查看：[日志命令](https://docs.pd.mingdao.com/deployment/docker-compose/command.html#日志)
+More logs please refer to official docs: [Mingdao Logs](https://docs.pd.mingdao.com/deployment/docker-compose/command.html#日志)
 
 #### 服务器重启后，程序打不开{#restart}
 
@@ -35,7 +36,7 @@ cd /data/wwwroot/mingdao/installer/
  ./service.sh restartall
 
 ```
-#### 服务器IP变化，导致工作流等服务异常？{#ipchange}
+#### 服务器IP变化，导致工作流等服务异常？{#workflow}
 
 服务器 IP 变化后，需要修改 docker-compose 配置：
 
@@ -66,11 +67,11 @@ services:
 ```
 
 
-## 问题解答
+## FAQ{#faq}
 
-#### 明道云是否支持多语言？
+#### Does Mingdaoyun support multiple languages?
 
-支持中文和英文
+Chinese and English
 
 #### 明道云有哪些版本？
 
@@ -85,9 +86,9 @@ services:
 
 私有部署版虽然是一个单机部署方式，单其内部依然是一个微服务集合，所以为了保证容器内各服务进程的可用性，在容器内部预置了健康检查线程，当某服务出现故障时能自动恢复。
 
-#### 明道云采用何种安装方式？
+#### What method does this Mingdao deployment?
 
-采用 Docker 部署
+Docker
 
 #### Websoft9 与明道云是什么关系？
 

@@ -3,20 +3,21 @@ sidebar_position: 3
 slug: /xwiki/admin
 tags:
   - XWiki
-  - 知识管理
+  - Knowledge Management
 ---
 
-# 维护指南
+# XWiki Maintenance
 
-本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup) 相关章节。
+This chapter is special guide for XWiki maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-## 场景
+## Maintenance guide
 
-### 备份与恢复
+### Backup and Restore
 
-### 升级
+### Upgrade
 
-## 故障排除
+## Troubleshoot{#troubleshoot}
 
-## 问题解答
+In addition to the XWiki issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
+## FAQ{#faq}

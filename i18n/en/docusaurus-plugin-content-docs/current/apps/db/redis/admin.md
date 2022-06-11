@@ -6,37 +6,42 @@ tags:
   - Cloud Native Database
 ---
 
-# 维护参考
+# Redis Maintenance
 
-## 场景
+This chapter is special guide for Redis maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-### Redis 备份
+## Maintenance guide
 
-1. 使用SSH登录服务器，使用redis-cli工具运行**SAVE** 命令
-  ```shell
-  $ redis-cli
-  127.0.0.1:6379> SAVE
-  OK
-  ```
-2. 备份文件 `dump.rdb` 存放在 */var/lib/redis* 目录下
+### Redis Backup
 
-### Redis 升级
+1. Use SSH to connect Redis server, then run the `SAVE` on redis-cli
+```shell
+[root@w9 ~]# redis-cli
+127.0.0.1:6379> SAVE
+OK
+```
+2. You can find the bakcup file `dump.rdb` in the  */var/lib/redis*
 
-除了 Redis 5.0 以上版本之外，Redis已经是各个发行版的最新版本。
+### Redis Upgrade
 
-如何更新 Redis 5.0  到 Redis 6.0 ？ 由于 Redis 安装简单，因此大版本的升级，我们建议采用重装的方式
+There's not need to upgrade under the version 5.0.x. 
 
-1. 备份 Redis 配置文件
-2. 运行下面的命令重装 Redis
+How upgrade from Redis 5.0 to 6.0? we suggest you install 6.0 to replace 5.0:
+
+1. Backup Redis configuration files
+
+2. Run this shell to reinstall Redis
    ```
    wget -N https://raw.githubusercontent.com/Websoft9/ansible-linux/main/scripts/install.sh; bash install.sh -r redis
    ```
-3. 还原备份配置文件
+3. Restore backup configuration file
+
+4. Fix the if need
 
 
-## 故障排除{#troubleshoot}
+## Troubleshoot{#troubleshoot}
 
-除以下列出的 Redis 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。
+In addition to the Redis issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
 #### Can't open PID file /var/run/redis.pid (yet?) after start: No such file or directory
 
@@ -49,23 +54,31 @@ tags:
 如果运行多个 Redis 实例，需保证每个实例的配置文件中的端口不同，否则会导致端口被占用。
 
 
-## 问题解答
+## FAQ{#faq}
 
-#### 什么是Redis客户端？
+#### What is the Redis client?
 
-Redis 客户端是用于与Redis-Server进行通信的程序，例如：redis-cli 就是典型的客户端工具
+Redis client is a program used to communicate with Redis-Server, for example: redis-cli is client tool
 
-#### Redis 数据库默认的用户名是？
+#### What's relationship between Redis Labs and Redis?
 
-没有用户名的概念
+[Redis Labs](https://redislabs.com/) is the parent company of Redis, that is, Redis is a product of Redis Labs.
 
-#### Redis 支持多数据库吗？
+#### Does Redis need a password to log in?
 
-单服务器可运行多个 Redis 实例，每个实例有16个数据库(每库类似哈希表)，默认数据库为 db0。
+No password authentication required
 
-![Redis DataBases](https://libs.websoft9.com/Websoft9/DocsPicture/zh/redis/redis-database-websoft9.png)
+#### What is Redis default user？
 
-> redis-cli 如何切换数据库
+Redis have not users
+
+#### Redis supports multiple databases？
+
+Multiple redis instances can be run on a server. Each instance has 16 databases, the default is db0.
+
+![Redis DataBases](https://libs.websoft9.com/Websoft9/DocsPicture/en/redis/redis-database-websoft9.png)
+
+> redis-cli how to change database
 
 ```
 # Interactive mode (no password verification), immediately entering the standby state of the CLI
@@ -77,46 +90,40 @@ redis 127.0.0.1:6379> SELECT 1
 
 ```
 
-#### Redis社区版 vs Redis企业版
+#### Redis Communication Version vs Redis Enterprise Version
 
-* Redis社区版：兼容开源Redis的高性能数据缓存服务，适用于标准的、无特殊业务需求的Redis使用场景。
-* Redis企业版：在Redis社区版的基础上开发的强化版Redis服务，从访问延时、持久化需求、整体成本这三个核心维度考量，基于DRAM、NVM和ESSD云盘等存储介质，推出了多种不同形态的产品，为您提供更强的性能、更多的数据结构和更灵活的存储方式，满足不同场景下的业务需求。
+* Redis Communication Version: High performance data caching service compatible with open source redis, suitable for standard redis usage scenarios without special business requirements.
+* Redis Enterprise Version: The Enterprise version of redis service developed on the basis of redis Community Edition has launched a variety of different forms of products based on DRAM, NVM, ESSD cloud disk and other storage media from the three core dimensions of access delay, persistence requirements and overall cost, so as to provide you with stronger performance, more data structures and more flexible storage methods to meet the business requirements in different scenarios.
 
-#### Redis Labs 与 Redis 有什么关系？
+#### What data structures does Redis support?
 
-[Redis Labs](https://redislabs.com/) 是 Redis 的母公司，即 Redis 是 Redis Labs 公司旗下的产品。
+Redis is not a plain key-value store, it's data structures server, supporting different [kinds of values](https://redis.io/topics/data-types-intro)
 
-#### Redis需要密码才能登录吗？
+#### Is there a web-GUI tool for Redis?
 
-可以无需设置密码验证，只要外网访问才需要开启数据库密码
+Yes, installed [RedisInsight](../redis#redisinsight)
 
-#### Redis 支持哪些数据结构？
 
-Redis不是简单的键值存储，它实际上是一个数据结构服务器，支持不同类型的值。包括：二进制字符串、列表、集合、哈希、位图、HyperLogLogs、流等
+#### Is it possible to modify the source path of Redis?
 
-#### 是否有可视化的数据库管理工具？
+No
 
-部分Redis镜像已经安装 RedisInsight 这个可视化管理工具，如果没有安装，可以自行安装。
+#### Modify the RedisInsight access port?
 
-#### 是否可以修改Redis的源码路径？
-
-不可以修改
-
-#### 修改 RedisInsight 访问端口？
-
-编辑 [Nginx 虚拟主机配置文件](../nginx#path) 中的参数 `listen` 的值即重置密码。
-
-```
-server {
+1. Use WinSCP to connect Server
+2. Edit [Nginx vhost configuration file](../nginx#virtualHosx)
+3. Edit the value of the parameter `listen`
+   ```
+   server {
     listen 8002;
-    server_name example.yourdomain.com;
-```
+    server_name _;
+    ...
+   ```
+4. Save it and [Restart Nginx Service](../administrator/parameter#service)
 
-#### 远程无法连接 Redis？
+#### Can't connect Redis from remote?
 
-请检查服务器对应的安全组6379端口是否开启（入规则），且Redis配置文件中是否允许外部访问
+1. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:6379** is allowed
+2. Check your **Redis configuration file** that Redis allowed from Internet
 
-#### 是否提供 Web 版的可视化管理工具？
-
-已安装官方可视化管理工具：[RedisInsight](../redis#redisinsight)
 

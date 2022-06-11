@@ -3,51 +3,48 @@ sidebar_position: 1
 slug: /haproxy
 tags:
   - HAProxy
-  - IT 架构
-  - 中间件
+  - High Availability
 ---
 
-# 快速入门
+# HAProxy Getting Started
 
-[HAProxy](https://www.haproxy.org/) 是一个使用C语言编写的自由及开放源代码软件，其提供高可用性、负载均衡，以及基于 TCP 和 HTTP 的应用程序代理。
+[HAProxy](https://www.haproxy.org/) is a free, very fast and reliable solution offering high availability, load balancing, and proxying for TCP and HTTP-based applications. It is particularly suited for very high traffic web sites and powers quite a number of the world's most visited ones. Over the years it has become the de-facto standard opensource load balancer, is now shipped with most mainstream Linux distributions, and is often deployed by default in cloud platforms. 
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/haproxy/HAProxy-configuration.png)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/haproxy/HAProxy-configuration.png)  
 
-部署 Websoft9 提供的 HAProxy 之后，请参考下面的步骤快速入门。
+If you have installed Websoft9 HAProxy, the following steps is for your quick start
 
-## 准备
+## Preparation
 
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:1080** 端口已经开启
-3. 在服务器中查看 HAProxy 的 **[默认账号和密码](./user/credentials)**  
-4. 若想用域名访问 HAProxy，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:1080** is allowed
+3. **[Get](./user/credentials)** default username and password of HAProxy
+4. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for HAProxy
 
-## HAProxy 初始化向导
+## HAProxy Installation Wizard
 
-### 详细步骤
+### Steps for you
+  
+1. Using local Chrome or Firefox to visit the URL *http://DNS:1080/haproxy* or *http://Internet IP:1080/haproxy*
 
-1. 本地电脑浏览器访问网址：*http://域名:1080/haproxy* 或 *http://服务器公网IP:1080/haproxy*, 提示需要登录
-
-2. 输入账号密码（[不知道账号密码？](./user/credentials)），成功登录到 Haproxy Statistics Report 后台  
-
+2. Input username and password([Don't known password?](./user/credentials)), go to **HAProxy Statistics Report** console
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/haproxy/haproxy-statsgui-websoft9.png)
 
+> More useful HAProxy guide, please refer to [HAProxy Documentation](http://cbonte.github.io/haproxy-dconv/)
 
-> 需要了解更多 HAProxy 的使用，请参考官方文档：
+### Having trouble?
 
-### 出现问题？
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题。
+## HAProxy QuickStart  
 
-## HAProxy 使用入门
+Refer to [HAProxy Documentation](http://cbonte.github.io/haproxy-dconv/) 或以 **xxx** 作为一个任务，帮助用户快速入门：
 
-参考 [HAProxy Documentation](http://cbonte.github.io/haproxy-dconv/) 或以 **xxx** 作为一个任务，帮助用户快速入门：
+## HAProxy Setup
 
-## HAProxy 常用操作
+### Can I reset password of HAProxy?
 
-### 修改管理员密码
-
-如需修改登录密码，请编辑 HAProxy 配置文件 */etc/haproxy/haproxy.cfg* 相关字段
+Yes, modify the configuration file `/etc/haproxy/haproxy.cfg`
 
    ```
    listen admin_stats 
@@ -62,22 +59,21 @@ tags:
     stats admin if TRUE
    ```
 
+### Enable HAProxy Statistics Report
 
-### 开启 HAProxy 监控
+The HAProxy Statistics Report was enabled by default, just visit the URL:*http://Internet IP:1080/haproxy*
 
-默认已经设置 HAProxy Statistics Report，访问：*http://服务器公网IP:1080/haproxy*
+### Enable HAProxy log
 
-### 开启 HAProxy 日志
+Log was enabled by default, check the file `/etc/rsyslog.conf` to get the configuration details
 
-默认已经开启，查看 `/etc/rsyslog.conf` 配置文件了解详情
+### High availability
 
-### 高可用性
+You should deploy the software **Keepalived** to implement the High availability for HAProxy
+  
+### HAProxy Cluster configuration
 
-通过部署 Keepalived 实现 HAProxy的高可用性
-
-### 集群配置
-
-只需在配置文件中添加需要管理的集群服务器信息即可启用HAProxy集群，范例如下：
+Simply add the information of the cluster server to be managed in the configuration file to enable the HAProxy cluster. Examples are as follows:
 
 ```
 # [HTTP Site Configuration]
@@ -98,44 +94,42 @@ listen  https_web 192.168.10.10:443
         server server2 192.168.10.101:443 weight 1 maxconn 512 check
 ```
 
-## 参数
+## Reference sheet
 
-HAProxy 应用中包含 Docker 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage HAProxy
+  
+### Path{#path}
 
-下面仅列出 HAProxy 本身的参数：
-
-### 路径{#path}
-
-HAProxy 配置文件： */etc/haproxy/haproxy.cfg*    
-HAProxy 日志目录： */var/log/haproxy.log*   
-
-### 网址
+HAProxy configuration file: */etc/haproxy/haproxy.cfg*  
+HAProxy logs directory: */var/log/haproxy.log*    
+  
+### URL
 
 HAProxy Statistics Report：*http://URL:端口/haproxy*  
-HAProxy：*http://URL:端口/haproxy*  
+HAProxy：*http://URL:端口/haproxy*
+  
+### Port{#port}
 
-### 端口
-
-| 端口号 | 用途                                          | 必要性 |
+| Port | Use                                          | Necessity |
 | ------ | --------------------------------------------- | ------ |
-| 1080   | 通过 HTTP 访问 HAProxy  Statistics Report | 可选   |
-| 5000   | for  HAProx | 可选   |
+| 1080 | HTTP requests for HAProxy  Statistics Report | Optional |
+| 5000 | for  HAProxy  | Optional |
 
-### 版本
+### Version{#version}
 
 ```shell
 haproxy -v
 ```
 
-### 服务
+### Service{#service}
 
 ```shell
 sudo systemctl start | stop | restart | status haproxy
 ```
-
-### 命令行
-
-HAProxy 提供了强大的的命令行工具 `haproxy`  
+  
+### CLI{#cli}
+  
+Use `haproxy` to manage HAProxy  
 
 ```
 Usage : haproxy [-f <cfgfile>]* [ -vdVD ] [ -n <maxconn> ] [ -N <maxpconn> ]
@@ -159,10 +153,7 @@ Usage : haproxy [-f <cfgfile>]* [ -vdVD ] [ -n <maxconn> ] [ -N <maxpconn> ]
         -dV disables SSL verify on servers side
         -sf/-st [pid ]* finishes/terminates old pids. Must be last arguments.
 ```
-
-
+  
 ### API
 
 [HAProxy APIS](https://www.haproxy.com/blog/haproxy-apis/)
-
-

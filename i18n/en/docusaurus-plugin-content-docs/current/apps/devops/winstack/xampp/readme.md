@@ -147,10 +147,10 @@ XAMPP 应用中包含 Apache, PHP, MySQL 等组件，可通过 **[通用参数�
 | 默认根目录 | C:\xampp\htdocs |
 | PHP配置文件 | C:\xampp\php\php.ini |
 | Apache虚拟主机文件--根目录对应的文件 | C:\xampp\apache\conf\extra\httpd-vhosts.conf |
-| 日志文件 | 请通过XAMPP面板查看 |
-| Java安装目录 | C:\Program Files (x86)\Java |
-| Tomcat安装目录 | C:\xampp\tomcat Java |
-| Tomcat日志文件 | 请通过XAMPP面板查看 |
+| logs file | 请通过XAMPP面板查看 |
+| Javainstallation directory | C:\Program Files (x86)\Java |
+| Tomcatinstallation directory | C:\xampp\tomcat Java |
+| Tomcatlogs file | 请通过XAMPP面板查看 |
 | Tomcat Manager App | 请通过http://ip/9panel的运维工具进入（登录账号:tomcat/tomcat） |
 | Tomcat面板 | 管理地址:http://ip:8080/manager/html（登录账号:tomcat/tomcat） |
 | MySQL数据目录 | C:\xampp\mysql |

@@ -3,42 +3,47 @@ sidebar_position: 3
 slug: /scratch/admin
 tags:
   - Scratch
-  - 少儿编程
+  - Block-based Visual Programming
 ---
 
-# 维护指南
+# Scratch Maintenance
 
-本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup) 相关章节。
+This chapter is special guide for Scratch maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-## 场景
+## Maintenance guide
 
-### Scratch 升级
+### Scratch Upgrade
 
-Scratch 的升级是通过NPM来实现的，通过SSH工具，依次运行如下命令：
+Use the NPM to manage the Scratch Upgrade. Connect instance by SSH, run the following commands:
 
-```
+```shell
 cd /data/wwwroot/scratch-gui
 npm install https://github.com/LLK/scratch-gui.git
 npm run build
-
 ```
 
-## 故障排除
+## Troubleshoot{#troubleshoot}
 
-#### Scratch 访问很慢？{#slowy}
+In addition to the Scratch issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
-Scratch首次加载数据超过20M。例如：您使用的是2M带宽，那么理想情况下的加载时间为：20000k/(128k/s×2)=78s。显然，如果带宽不足，速度会非常慢。
+#### Is Scratch open very slowly?{#slowly}
 
-## 问题解答
+Scratch first loaded data over 20M. For example, if you are using 2M bandwidth, then the ideal load time is: 2000k / (128k/s × 2) = 7.8s. Obviously, if the bandwidth is insufficient, the speed will be very slow.
 
-#### Scratch 支持多语言吗？
+## FAQ{#faq}
 
-支持多语言（包含中文），系统默认根据浏览器自动选择语言，并可以实时切换 
+#### Scratch support multi-language?
+
+Yes, you can change language online
+
+#### scratch-www project VS scratch-gui project?
+
+[scratch-www](https://github.com/LLK/scratch-www)  = [scratch-gui](https://github.com/LLK/scratch-gui)  + Sharing community, Scratch-www user login function is still under development
+
+#### Where is the database connection configuration of Scratch?
+
+No need database now
 
 #### Scratch 支持用户注册和登录吗？
 
 暂时不支持
-
-#### scratch-www 项目 和 scratch-gui 项目 有什么区别？
-
-[scratch-www](https://github.com/LLK/scratch-www)  = [scratch-gui](https://github.com/LLK/scratch-gui)  + 分享社区，现在 scratch-www 用户登录功能还在开发中

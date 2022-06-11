@@ -6,49 +6,49 @@ tags:
   - Cloude Native Database
 ---
 
-# 快速入门
+# Oracle Database Getting Started
 
-Oracle Database 是一个以领先的性能、可扩展性、可靠性和安全性著称的数据库管理系统。Oracle Database 目前主要与 Oracle 公司其他软件集成，形成广泛的解决方案。  
+[Oracle Database](https://oracle-server.apache.org/) is the most widely deployed open source message broker. With more than 35,000 production deployments of Oracle Database world-wide at small startups and large enterprises, Oracle Database is the most popular open source message broker.
 
-![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/oracle_database/oracle-database-1024x410.jpg)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/oracle/oracle-gui-websoft9.png)
 
+If you have installed Websoft9 Oracle Database, the following steps is for your quick start
 
-在云服务器上部署 Oracle Database 预装包之后，请参考下面的步骤快速入门。
+## Preparation
 
-## 准备
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:1521** is allowed
+3. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for Oracle Database
+4. [Get](./user/credentials) default username and password of Oracle Database
 
-部署 Websoft9 提供的 Jenkins 之后，需完成如下的准备工作：
+## Oracle Database Initialization
 
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:1521** 端口已经开启
-3. 在服务器中查看 Jenkins 的 **[默认账号和密码](./user/credentials)**  
-4. 若想用域名访问  Jenkins，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
+### Steps for you
 
+1. Using local Chrome or Firefox to visit the URL *http://DNS:15672* or *http://Internet IP:15672*, you will enter installation wizard of Oracle Database
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/oracle/oracle-login-websoft9.png)
 
-## Oracle Database 初始化向导
+2. Log in to Oracle Database web console([Don't have password?](./user/credentials))  
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/oracle/oracle-bk-websoft9.png)
 
-### 详细步骤
+3. Set you new password from: 【Users】>【Admin】>【Permissions】>【Update this user】
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/oracle/oracle-pw-websoft9.png)
 
-1.  SSH 登录 Oracle Database 所在的服务器
+> More useful Oracle Database guide, please refer to [Oracle Database Documentation](https://www.oracle.com/documentation.html)
 
-2.  输入 `sqlpus` 命令，根据系统要求输入账号密码，数据库登录成功
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/oracle_database/oracle11gex-sqlrun-websoft9.png)
+### Having trouble?
 
-3.  运行一条命令测试可用性，例如：select * from v$version;  （查询数据库版本信息）
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
+## Oracle Database  QuickStart
 
-### 出现问题？
+## Oracle Database Setup
 
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题。
-
-
-## Oracle Database 常用操作
-
-### 开启远程访问{#remote}
+### Set remote connection {#remote}
 
 镜像默认已经设置好了远程连接，只需开启安全组 `TCP:1521` 端口即可启用远程访问
 
-### 图形化客户端
+### GUI
 
 Oracle Database支持第三方可视化数据库管理工具，例如 Navicat,Maestro,Oracle 企业管理器等。下面以使用最为广泛的 Navicat 为例来说明如何管理本镜像的数据库：
 
@@ -58,9 +58,10 @@ Oracle Database支持第三方可视化数据库管理工具，例如 Navicat,Ma
 3.  点击确认后，进入数据库管理界面
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/oracle_database/oracle11gex-ui-websoft9.png)
 
-## Oracle Database 参数
+## Reference sheet
 
-Oracle Database 应用中包含 Docker 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Oracle Database
+
 
 通过运行 `docker ps`，可以查看到 Oracle Database 运行时所有的 Container：
 
@@ -68,27 +69,26 @@ Oracle Database 应用中包含 Docker 等组件，可通过 **[通用参数表]
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
 ```
 
-
 下面仅列出 Oracle Database 本身的参数：
 
-### 路径{#path}
+### Path{#path}
 
 Oracle Database 配置文件路径：*/u01/app/oracle/product/11.2.0/db1/network/admin/listener.ora*  
 
-### 端口
+### Port
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
 | 1521   | 远程连接Oracle Database | 可选   |
 
 
-### 版本
+### Version
 
 ```shell
 select * from v$version;
 ```
 
-### 服务
+### Service
 
 ```shell
 sudo systemctl start | stop | restart | status oracle
@@ -97,7 +97,7 @@ sudo systemctl start | stop | restart | status oracle
 lsnrctl status
 ```
 
-### 命令行
+### CLI
 
 ### API
 

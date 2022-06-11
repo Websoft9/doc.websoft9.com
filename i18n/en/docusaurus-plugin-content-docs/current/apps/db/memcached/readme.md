@@ -6,38 +6,38 @@ tags:
   - Cloud Native Database
 ---
 
-# 快速入门
+# Memcached Getting Started
 
-[Memcached](https://www.memcached.org/) 是一个自由开源的，基于内存的key-value存储的高性能，分布式内存对象缓存系统。
+[Memcached](https://www.memcached.org) is a free & open source, high-performance, distributed memory object caching system, generic in nature, but intended for use in speeding up dynamic web applications by alleviating database load.
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/memcached/memcached-gui-websoft9.png)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/memcached/memcached-gui-websoft9.png)
 
-## 准备
+If you have installed Websoft9 Memcached, the following steps is for your quick start
 
-部署 Websoft9 提供的 Memcached 之后，需完成如下的准备工作：
+## Preparation
 
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 TCP：**11211 和 9090** 端口已经开启
-3. 在服务器中查看 Memcached 的 **[默认账号和密码](./user/credentials)**  
-4. 若想用域名访问  Memcached，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:11211,9090** is allowed
+3. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for Memcached
+4. [Get](./user/credentials) default username and password of Memcached
 
-## Memcached 初始化向导
+## Memcached Initialization
 
-### 详细步骤
+### Steps for you
 
-1. 通过 SSH 工具连接 Memcached服务器，安装 telnet
+1. Use **SSH** tool to connect Memcached Server, then install Telnet
    ```
    yum install telnet
    ```
 
-2. 运行 telnet 命令，连接 Memcached
+2. Use the telnet to connect Memcached
    ```
    telnet 127.0.0.1 11211
    Trying 127.0.0.1...
    Connected to 127.0.0.1.
    Escape character is '^]'.
    ```
-3. 连接成功，系统进入 Memcached 命令行输入状态，输入命令 `stats`
+3. Run the command `stats` to show all Memcached STAT when connection successful
    ```
    STAT pid 651
    STAT uptime 891
@@ -90,44 +90,54 @@ tags:
    END
 
    ```
-4. 输入命令 `quit` 退出系统
+4. Run the command `quit` if you want to exist Memcached
 
-5. 体验 Memcached 可视化管理工具 [Memcached-admin](#可视化管理)
+5. Test Memcached Web-based GUI tool [Memcached-admin](#gui)
 
-### 出现问题？
+> More useful Memcached guide, please refer to [Memcached Wiki](https://github.com/memcached/memcached/wiki)
 
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
 
-**Telnet 无法连接 Memcached？**   
+### Having trouble?
 
-请检查服务器是否已安装 telnet，同时查看云控制台安全组 **TCP:11211** 端口是否开启
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
-## Memcached  使用入门
+**Can't connect Memcached by Telnet?**
+
+Please make sure you Telnet installed and port **11211** enabled
+
+## Memcached  QuickStart
 
 > 需要了解更多Memcached的使用，请参考：[Memcached Wiki](https://github.com/memcached/memcached/wiki)
 
-## Memcached 常用操作
+## Memcached Setup
 
-### 图形化 Web 端
+### Memcached GUI{#gui}
 
-Memcached 预装方案中内置可视化数据库管理工具 `Memcached-admin` ，使用请参考如下步骤：
+Memcached deployment package includes Web-GUI tool Memcached-admin for monitor
 
-1. 登录云控制台，开启 Memcached-admin 所需的[端口](#port)
+Follow the steps below to use it:
 
-2. 本地浏览器 Chrome 或 Firefox 访问：*http://服务器公网IP:9090*，进入登录页面
+1. Login Cloud Console, make sure the **TCP:9090** port is allowed on **[Inbound of Security Group Rule](./administrator/firewall#security)**.
 
-3. 输入数据库用户名和密码，进入控制面板
-  ![Memcached-admin](https://libs.websoft9.com/Websoft9/DocsPicture/zh/memcached/memcached-gui-websoft9.png)
+2. Use the Chrome or FireFox to access URL *http://Server's Internet IP:9090*.  
 
-### 集群
+3. Enter username and password of MySQL. ([Don't know password?](./user/credentials))  
 
-参考：[ClusterMaint](https://github.com/memcached/memcached/wiki/ClusterMaint)
+4. Start to manage Memcached-admin now.  
+  ![Memcached-admin](https://libs.websoft9.com/Websoft9/DocsPicture/en/memcached/memcached-gui-websoft9.png)
 
 
 
-## Memcached 参数
+### Memcached Cluster
 
-Memcached 应用中包含 Nginx, Docker, Memcached-admin 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+More details about refer to [Memcached Cluster](https://github.com/memcached/memcached/wiki/ClusterMaint)
+
+
+
+## Reference sheet
+
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Memcached 
+
 
 通过运行 `docker ps`，可以查看到 Memcached 运行时所有的 Container：
 
@@ -139,13 +149,13 @@ e4e671827a3e   hatamiarash7/memcached-admin:latest   "docker-php-entrypoi…"   
 
 下面仅列出 Memcached 本身的参数：
 
-### 路径{#path}
+### Path{#path}
 
 Memcached 配置文件：*path/.env*  
 Memcached-admin 配置文件：*path/.env*  
 
 
-### 端口{#port}
+### Port{#port}
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
@@ -153,27 +163,27 @@ Memcached-admin 配置文件：*path/.env*
 | 9090  | 通过 Nginx 远程访问 Memcached 可视化工具| 可选   |
 
 
-### 版本
+### Version
 
 ```shell
 # Memcached version
 docker inspect  memcached | grep MEMCACHED_VERSION
 ```
 
-### 服务
+### Service
 
 ```shell
 sudo docker start | stop | restart | stats memcached
 sudo docker start | stop | restart | stats memcached-admin
 ```
 
-### 命令行
+### CLI
 
-#### 客户端
+**Telnet client**
 
-Memcached 是通过 Telnet 来运行客户端命令的：
+Memcached does not provide specific client. However, standard tools like telnet are enough to test container. Under Linux it is possible to connect by CLI command. We can invoke telnet from host machine, to connect to running Memcached server
 
-1. 远程登录到服务器，运行 telnet 命令，连接到 Memcached
+1. Use SSH to connect Sever and use Telnet connect Memcached
 ```
 telnet 127.0.0.1 11211
 Trying 127.0.0.1...
@@ -181,17 +191,15 @@ Connected to 127.0.0.1.
 Escape character is '^]'.
 ```
 
-2. 在交互式中输入 `stats` 查询系统信息
+2. Then, input `stats` command to list all configuration of Memcached
 
-> 详情查看[官方文档](https://github.com/memcached/memcached/wiki/Commands)
+More details please refer to docs: [Memcached Commands](https://github.com/memcached/memcached/wiki/Commands)
 
-#### 服务端
+**Commandline Arguments**
 
-Memcached 没有传统意义上的客户端，只有服务端命令 `memcached -h`，但本项目中采用 Docker 部署 Memcached，虽不能直接使用服务端命令，但可以预先配置再启动容器。 
+If you want to configure Memcached Server, you should configure [Commandline Arguments](https://github.com/memcached/memcached/wiki/ConfiguringServer#commandline-arguments) by like below steps:  
 
-服务端设置，需要在运行容器的时候带入配置参数，具体操作步骤：    
-
-1. 编辑 Memcached 容器编排文件 *path/docker-compose.yml*，修改增加更多的 **command** 项，然后保存
+1. Use SFTP to connect Server and edit */data/db/memcached/docker-compose.yml* file, add more items for **command** parameter
     ```
     version: '3.8'
     services:
@@ -201,15 +209,13 @@ Memcached 没有传统意义上的客户端，只有服务端命令 `memcached -
         restart: always
         command:
         - '-m 800'
-
     ```
 
-2. 重新创建容器后生效
+2. Recreate containers
    ```
-   cd path
+   cd /data/db/memcached
    sudo docker-compose up -d
    ```
 
 ### API
 
-无

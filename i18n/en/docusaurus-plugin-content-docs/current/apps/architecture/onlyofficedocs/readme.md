@@ -3,52 +3,53 @@ sidebar_position: 1
 slug: /onlyofficedocs
 tags:
   - ONLYOFFICE Docs
+  - IT Architecture
+  - Broker
 ---
 
-# 快速入门
+# ONLYOFFICE Docs Getting Started
 
-[ONLYOFFICE Docs ](https://www.onlyoffice.com/zh/office-suite.aspx) 是一个文档中间件，为文档管理软件提供 Office 格式的文档的在线预览与编辑。支持主流格式：docx、xlsx、pptx、odt、ods、odp、doc、xls、ppt、pdf、txt、rtf、html、epub、csv。
+[ONLYOFFICE Docs ](https://www.onlyoffice.com/office-suite.aspx) 是一个文档中间件，为文档管理软件提供 Office 格式的文档的在线预览与编辑。支持主流格式：docx, xlsx, pptx, odt, ods, odp, doc, xls, ppt, pdf, txt, rtf, html, epub, csv.
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/onlyoffice/onlyofficedocs-gui-websoft9.png)
+  
+If you have installed Websoft9 ONLYOFFICE Docs, the following steps is for your quick start
 
-部署 Websoft9 提供的 ONLYOFFICE Docs 之后，请参考下面的步骤快速入门。
+## Preparation
 
-## 准备
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:80,9002** is allowed
+3. **[Get](./user/credentials)** default username and password of ONLYOFFICE Docs
+4. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for ONLYOFFICE Docs
 
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80,9002** 端口已经开启 
-3. 若想用域名访问  ONLYOFFICE Docs，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
+## ONLYOFFICE Docs Initialization
 
+### Steps for you
 
-## ONLYOFFICE Docs 初始化向导
-
-### 详细步骤
-
-1. 本地电脑浏览器访问：*http://服务器公网IP:9002* 可看到 OnlyOffice Docs 正在运行的提示。  
-   ![ONLYOFFICE Document Server is running](https://libs.websoft9.com/Websoft9/DocsPicture/zh/onlyoffice/onlyoffice-dkisrunning-websoft9.png)
+1. Use local browser to access *http://Cloud Server Internet IP* and *http://Cloud Server Internet IP:9002* and see the notice that ONLYOFFICE Document Server is running.
+![ONLYOFFICE Document Server is running](https://libs.websoft9.com/Websoft9/DocsPicture/en/onlyoffice/onlyoffice-dkisrunning-websoft9.png)
 
 > 如果画面的提示不是*OnlyOffice Docs is running*，则说明服务运行异常。
 
 2. 完成域名解析后，请针对不同的 Web 服务器下，完成对应的域名绑定操作。
 
+>  More guide about ONLYOFFICE, please refer to [ONLYOFFICE Documentation](https://helpcenter.onlyoffice.com/server/docker/opensource/index.aspx).
 
-### 出现问题？
+### Having trouble?
 
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题。
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
-## ONLYOFFICE Docs 使用入门
+## ONLYOFFICE Docs QuickStart
 
-下面以 **×××** 作为一个任务，帮助用户快速入门：
+## ONLYOFFICE Docs Setup
 
-## ONLYOFFICE Docs 常用操作
+### Domain Binding
 
-### 绑定域名
-
-ONLYOFFICE Docs 绑定域名符合：**[域名五步设置](./administrator/domain_step)** 。  
+Refer to：**[Five steps for Domain](./administrator/domain_step)** 。  
 
 但是 Apache 或 Nginx **虚拟主机配置文件**请采用下面的模板：
 
-##### Nginx
+**Nginx**
     ```
     server {
         listen 80;
@@ -77,7 +78,7 @@ ONLYOFFICE Docs 绑定域名符合：**[域名五步设置](./administrator/doma
     }
     ```
 
-##### Apache
+**Apache**
 
     ```
     <VirtualHost *:80>
@@ -88,11 +89,12 @@ ONLYOFFICE Docs 绑定域名符合：**[域名五步设置](./administrator/doma
     ProxyPassReverse / http://127.0.0.1:9002/
     </VirtualHost>
     ```
-### HTTPS 设置
 
+### SSL/HTTPS
+  
 大多数情况下，调用 ONLYOFFICE Docs 的软件需要 ONLYOFFICE Docs 提供 HTTPS 服务，所以域名绑定后，需立即设置 HTTPS：
 
-1. 参考通用的 [HTTPS 配置指南](./administrator/domain_https)
+1. Refer to [Set HTTPS for App](./administrator/domain_https)
 
 2. 虚拟主机配置文件中增加下面的一行代码，使客户端和代理服务之间的连接所采用的传输协议
    ```
@@ -102,10 +104,10 @@ ONLYOFFICE Docs 绑定域名符合：**[域名五步设置](./administrator/doma
    # 以下适用于 Nginx
    proxy_set_header   X-Forwarded-Proto $scheme;
    ```
+  
+## Reference sheet
 
-## 参数
-
-ONLYOFFICE Docs 应用中包含 Nginx, Docker 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage ONLYOFFICE Docs
 
 通过运行`docker ps`，可以查看到 ONLYOFFICE Docs 运行时所有的 Container：
 
@@ -113,31 +115,29 @@ ONLYOFFICE Docs 应用中包含 Nginx, Docker 等组件，可通过 **[通用参
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
 ```
 
-下面仅列出 ONLYOFFICE Docs  本身的参数：
+### Port{#port}
 
-### 端口
-
-| 端口号 | 用途                                          | 必要性 |
+| Port | Use                                          | Necessity |
 | ------ | --------------------------------------------- | ------ |
-| 9002   | ONLYOFFICE Document Server on Docker | 可选   |
+| 9002   | ONLYOFFICE Document Server on Docker | Optional   |
 
-### 版本
+
+### Version{#version}
 
 ```shell
 docker image inspect onlyoffice/communityserver  | grep onlyoffice.community.version | sed -n 1p
 ```
 
-### 服务
+### Service{#service}
 
 ```shell
 sudo systemctl start | stop | restart | status onlyofficedocs
 ```
 
-### 命令行
+### CLI{#cli}
 
-有待研究
+Coming soon...  
 
 ### API
 
 [ONLYOFFICE Docs API](https://api.onlyoffice.com/editors/basic)
-

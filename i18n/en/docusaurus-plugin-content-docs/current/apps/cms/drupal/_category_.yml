@@ -1,0 +1,5 @@
+position: 4
+label: "Drupal"
+collapsible: true
+collapsed: true
+className: "red"

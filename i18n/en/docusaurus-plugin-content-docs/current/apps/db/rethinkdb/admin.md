@@ -6,48 +6,55 @@ tags:
   - Cloud Native Database
 ---
 
-# 维护指南
+# RethinkDB Maintenance
 
-本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup) 相关章节。
+This chapter is special guide for RethinkDB maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-## 场景
+## Maintenance guide
 
-### RethinkDB 备份
-RethinkDB 主要通过导出的实现备份，通过导入实现恢复：
+### RethinkDB Backup and Restore
+
+You can use `export/import` for RethinkDB backup and restore
+
+**Backup**
 
 ```
-# 导出普通数据库文件
+# export the db file
 rethinkdb export abc.db
 
-# 导出压缩格式数据库文件
+# export the dump file
 rethinkdb dump [options]
 ```
 
-### RethinkDB 恢复
+**Backup**
 
 ```
 rethinkdb import -d [options]
 ```
 
-### RethinkDB 升级
+### RethinkDB Upgrade
 
-官方没有提供版本升级命令，只提供了一个升级后的数据迁移方案：[Migrating](https://rethinkdb.com/docs/migration/)
-
-
-## 故障排除{#troubleshoot}
-
-除以下列出的 RethinkDB 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
-
-#### RethinkDB 改密后，登录控制台报错？
-
-浏览器缓存导致，打开新的无痕窗口或清空缓存即可。
+There no upgrade cli from RethinkDB documentation, but it have [Migrating](https://rethinkdb.com/docs/migration/) solution for upgrade
 
 
-## 常见问题
+## Troubleshoot{#troubleshoot}
 
-#### 是否有 RethinkDB 的 CLI 工具？
+In addition to the RethinkDB issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
-有，安装后存在cli命令，通过 `rethinkdb -h`查看使用详细
+#### Error in Chrome when modify RethinkDB password?
+
+You should clear Chrome cache or open incognito tab to access RethinkDB
+
+
+## FAQ{#faq}
+
+#### If there have RethinkDB CLI?
+
+Yes, `rethinkdb -h` for CLI help
+
+#### Is there a web-base GUI database management tools?
+
+Yes, visit by *http://Server's Internet IP*
 
 #### `rethinkdb repl` 命令如何密码登录？
 
@@ -65,9 +72,9 @@ rethinkdb repl --password-file /tmp/pw
 
 参考：[Nginx auth_basic](../nginx#authbasic)
 
-#### 通过端口可直接访问 RethinkDB 吗？
+#### Can I visit RethinkDB web console by *http://IP:8080*?
 
-不可以，为了安全考量默认仅支持 127.0.0.1 访问，所以需通过 Nginx 转发。
+No, RethinkDB web console now allow visit from 127.0.0.1
 
 #### RethinkDB 使用的是什么查询语言？
 

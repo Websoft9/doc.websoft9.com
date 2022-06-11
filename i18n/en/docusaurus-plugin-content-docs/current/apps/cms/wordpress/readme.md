@@ -4,64 +4,49 @@ slug: /wordpress
 tags:
   - WordPress
   - CMS
-  - 建站系统
-  - 博客系统
+  - Website
+  - Blog
 ---
 
-# 快速入门
+# WordPress Getting Started
 
-[WordPress](https://wordpress.org) 简称 WP，它是一个企业级开源 CMS（内容管理/建站系统），因易用性、易扩展性（ 插件 、模板、二次开）形成了完美的生态体系。全球互联网上有 34% 的网站都基于 WordPress 构建，它的影响力无与伦比。  
+[WordPress](https://www.wordpress.org) is open source software you can use to create a beautiful website, blog, or app.There are 28% of the web uses WordPress, from hobby blogs to the biggest news sites online in the world. Beautiful designs, powerful features, and the freedom to build anything you want. WordPress is both free and priceless at the same time.Extend WordPress with over 45,000 plugins to help your website meet your needs. Add an online store, galleries, mailing lists, forums, analytics, and much more.
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-product-screenshot.png)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-product-screenshot.png)  
 
-## 准备
+If you have installed Websoft9 WordPress, the following steps is for your quick start
 
-部署 Websoft9 提供的 WordPress 之后，需完成如下的准备工作：
+## Preparation
 
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 WordPress 的 **[默认账号和密码](./user/credentials)**  
-4. 若想用域名访问  WordPress **[域名五步设置](./administrator/domain_step)** 过程
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:80** is allowed
+3. **[Get](./user/credentials)** default username and password of WordPress
+4. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for WordPress
+ 
 
+## WordPress Initialization
 
-## WordPress 初始化向导{#init}
+### Steps for you
 
-### 详细步骤
+1. Using local Chrome or Firefox to visit the URL *http://domain name* or *http://Internet IP*, you will enter the WordPress   
+   ![Wordpress installation language](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-installsetlanguage-websoft9.png)  
 
-1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*https://域名* 或 *https://服务器公网IP*, 进入安装向导  
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wp01.png)
+2. Select your language, then go to next step  
 
-2. 选择语言后，进入 WordPress 安装要求说明，点击“现在就开始”进入下一步 
-  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-install001-websoft9.png)
+3. Set administrator user, password and mail, then click **Install WordPress**
+   ![Wordpress installation administrator](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-installsetadmin-websoft9.png)  
 
-3. 系统进入数据库连接信息安装项，请填写数据库连接信息（[不知道账号密码？](./user/credentials)） 
-  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-install002-websoft9.png)
+4. OK, it has been installed successfully.
+   ![Wordpress installation ok](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-installss-websoft9.png)  
 
-4. 数据库验证通过后，系统提示正式“进行安装” 
-  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-install003-websoft9.png)
+5. Use *http://domain or Internet IP/wp-admin*  to login to WordPress's dashboard
+   ![Wordpress installation dashbaord](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-bkdashboard-websoft9.png)
 
-5. 设置您的管理员账号、密码和邮箱， 点击“安装WordPress”; 
-  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-install004-websoft9.png)
+> More useful WordPress guide, please refer to [WordPress Documentation](https://wordpress.org/support/)
 
-6. 恭喜，成功安装
-  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-install005-websoft9.png)
+### Having trouble?
 
-7. 进入后台（http//域名或IP/wp-admin），试试 WordPress 的功能 
-  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-install006-websoft9.png)
-
-8. 开始使用商业主题（部分产品预装）：
-
-   - [Avada 主题](./wordpress/solution#avada)
-
-7. [WordPress 与 Discuz 双应用配置](./wordpress/solution#wordpress-discuz)（可选）
-
-
-> 需要了解更多WordPress的使用，请参考官方文档：[WordPress Documentation](https://wordpress.org/support/)
-
-
-### 出现问题？
-
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
 **使用 Avada 等主题，当 WordPress 升级后，页面编辑乱码了**
 
@@ -73,76 +58,71 @@ tags:
 
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/avada/wordpress-classiceditor-websoft9.png)
 
-
-## WordPress 使用入门
+## WordPress QuickStart
 
 下面以 **[WordPress 使用 Avada 主题建站](./wordpress/solution#avada)** 作为一个任务，帮助用户快速入门。
 
+## WordPress Setup
 
-## WordPress 常用操作
+### SMTP{#smtp}
 
-### 配置 SMTP{#smtp}
+1. Get [SMTP](./administrator/smtp) related parameters in the mailbox management console  
 
-1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
-   
-2. 登录 WordPress后台-设置-常规，设置好需要用于发件的邮件地址 
-   
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-mailcg-websoft9.png)
-3. 安装SMTP插件：[WP Mail SMTP by WPForms](https://wordpress.org/plugins/wp-mail-smtp/)
-   
-4. 后台-设置-Email，配置WP Mail SMTTP 插件的参数
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-mailconf-websoft9.png)
+2. Log in WordPress Console  
 
-5. 填写参数后保存，然后最后输入一个收件地址用于测试是否可用
+3. Go to Setting->General Settings, set your email which will diplay in the email sended for users
+   ![WordPress SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-setdmail-websoft9.png)  
 
-   - 如果测试成功，会看到”Your email was sent successfully!”
-   - 如果邮件配置不可用，则会显示“There was a problem while sending the test email.”
+4. Install the plugin: [WP Mail SMTP by WPForms](https://wordpress.org/plugins/wp-mail-smtp/)  
 
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-mailss-websoft9.png)
+5. Start to configure the WP Mail SMTTP(This sample is SendGrid)
+   ![WordPress SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-smtpsetdetail-websoft9.png)  
 
-6. SMTP 配置成功后，所有的 WordPress 后台邮件发送就会使用这个配置
+6. Click the **Send Email**, you can get the feedback *"Your email was sent successfully!..."* if SMTP is useful
+   ![WordPress SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-mailss-websoft9.png)
 
-### 域名额外配置（修改 URL）{#dns}
 
-**[域名五步设置](./administrator/domain_step)** 完成后，需重置 WordPress URL:
+### DNS Additional Configure（Modify URL）{#dns}
 
-1. 登录 WordPress 后台，依次打开：【设置】>【常规】，将网站路径和安装路径设置为新的域名
-   ![Wordpress 修改URL](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-modifyurls-websoft9.png)
+Complete **[Five steps for Domain](./administrator/domain_step)** ，Set the URL for WordPress：
 
-2. 保存后生效
+1. Connect Cloud Server, complete the Domain binding
+   ![Wordpress modify URL](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-changeurl-websoft9.png)
+  
+2. Save it
 
 > 如果更换域名后，网站中有一部分图片地址还是原来的域名，此时需要手工逐一修正
 > 如果在第2步操作完成后，无法进入第3步访问后台操作，请访问 Wordpress 数据库，将 option 表中的 home 和 siteurl 两个属性修改为【新的域名】
 > 通过 Websoft9 已经配置好的 MySQL 可视化工具 phpMyAdmin (http://ip/phpmyadmin 或 http://ip:9090 )进行快捷操作
 
-### HTTPS 额外设置{#https}
+### HTTPS Additional Configure {#https}
 
 **[标准 HTTPS 配置](./administrator/domain_https)** 完成后，可能会遇到如下的异常情况：
 
 - [配置HTTPS后，网站部分资源无法加载？](./wordpress/admin#httpsmore)
 
+### WordPress File type limit extend
 
-### 修改上传文件类型
+WordPress supports uploading of most image formats such as images by default, but some file formats are not supported. According to personal needs, we need to add some formats. Of course, some formats can be prohibited from being uploaded. 
 
-WordPress 默认支持大部分图片等文件格式的上传，但也有一些文件格式是不支持的，根据实际需要，可以增加或禁止一些格式的文件上传。设置方法如下：
+1. Edit `function.php` file on your Theme directory
+2. Copy the code section to functions.php file
+  ```
+  function edit_upload_types($existing_mimes = array()) {
 
-把以下代码加到主题目录（```/wp-content/themes/twentysixteen```）下的 functions.php 文件中：
-	
-   	function edit_upload_types($existing_mimes = array()) {
-	// 允许上传的文件类型
-	$existing_mimes['woff'] = 'application/woff';
-	$existing_mimes['rar'] = 'application/rar';
-	
-    // 如需添加更多文件类型支持，在其后增加代码即可
+  // Allowed file types to upload
+  $existing_mimes['woff'] = 'application/woff';
+  $existing_mimes['rar'] = 'application/rar';
 
-	// 不允许上传的的文件类型
-	unset( $existing_mimes['jpg'] );
+  // To add more file type support, add code later.
 
-	return $existing_mimes;
-	}
-	add_filter('upload_mimes', 'edit_upload_types');
-    
-> 以上是以自带主题 twentysixteen 为例，如果您使用的不是这款主题，则需要到对应主题目录下的 functions.php 文件中添加。
+  // File types that are not allowed to be uploaded
+  unset( $existing_mimes['jpg'] );
+
+  return $existing_mimes;
+  }
+  add_filter('upload_mimes', 'edit_upload_types');
+  ```
 
 ### 增加备案号
 
@@ -157,11 +137,13 @@ WordPress 默认支持大部分图片等文件格式的上传，但也有一些�
 
 4. 刷新网页看效果
 
-### 插件管理
+### Managing Plugins
 
-插件是WordPress功能的扩展，也是WordPress得以独步天下的“杀手锏”，其插件实现了名副其实的“即插即用”。全球有超过100万的WordPress插件，涵盖电商、表单、邮件、论坛、备份、美化、社交分享、轮播等领域。
+Plugins are ways to extend and add to the functionality that already exists in WordPress.
 
-##### 寻找插件
+For instructions and information on downloading, installing, upgrading, troubleshooting, and managing your WordPress Plugins, see [Managing Plugins](https://codex.wordpress.org/Managing_Plugins). If you want to develop your own plugin, there is a comprehensive list of resources in Plugin Resources.
+
+**寻找插件**
 
 寻找所需的插件，有三种方式：
 
@@ -169,15 +151,16 @@ WordPress 默认支持大部分图片等文件格式的上传，但也有一些�
 2. 通过百度、google等搜索“WordPress插件”，淘到自己喜欢的主题
 3. 通过插件交易市场购买功能强大的插件，例如：[codecanyon.net](https://codecanyon.net/?osr=tn)
 
-##### 安装插件
+**Add new plugins**
 
-安装插件一般有两种方式
+1. Administration Screen > Plugins > Add New
+   ![WordPress add plugin](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-addnewplugin-websoft9.png)  
 
-1. 通过WordPress后台-插件-安装插件，后台上传插件安装（推荐）
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-addplugins-websoft9.png)
-2. 通过FTP工具，将主题文件上传到 WordPress 根目录下 */wp-content/plugin*
+2. Search the plugins which you want,and install it,active it  
 
-##### Top20 插件
+3. you can also add plugins by upload you package of zip
+
+**Top20 插件**
 
 如下插件在使用 WordPress 中会经常用到：
 
@@ -203,13 +186,17 @@ WordPress 默认支持大部分图片等文件格式的上传，但也有一些�
 | Smartideo | 业务应用 | 优酷等视频插入 | 免费 |
 | Essential Grid | 排版与布局 | 文章、页面网格工具 | 免费 |
 | Post Grid, List for WordPress – Content Views | 排版与布局 | 文档、页面调用工具 | 免费 |
-| Fat Rat Collect | 数据采集 | 批量采集文章数据的开源插件，采集含括微信、简书、知乎、列表详情等 | 免费 |
-### 主题管理
+| Fat Rat Collect | 数据采集 | 批量采集文章数据的开源插件，采集含括微信、简书、知乎、列表详情等 | 免费 |  
 
-WordPress 官方仅提供简单外观的背后有着数十万社区驱动的精美主题：  
+### Adding New Themes
 
-1. 方式一：通过WordPress后台-外观-主题-添加，后台上传主题安装（推荐）
-2. 方式二：通过FTP工具，将主题文件上传到 */wp-content/theme* 目录下
+1. Download or prepare a theme which has been packaged and the suffix of the package is zip
+2. Login to the WordPress,go to Administration Screen -> Appearance -> Themes -> Add new
+   ![WordPress add new plugin](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-addnewtheme-websoft9.png)
+3. upload Themes or one Click the online themes,you can install the theme
+   ![WordPress add plugin](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-uploadtheme-websoft9.png)
+4. After installation of theme,you should active it by Administration Screen > Appearance > Themes  
+5. From the Themes panel, roll over the Theme thumbnail image for the Theme to activate the Theme click the Activate button.  
 
 ### WooCommerce 支付配置
 
@@ -219,7 +206,7 @@ WooCommerce 官方提供了 主题市场和插件市场 以扩展 WooCommerce �
 
 WooCommerce 默认提供了国外主流的支付插件，下面重点介绍中国本地化支付的两个支付配置
 
-##### 支付宝即时到账支付
+**支付宝即时到账支付**
 
 1. 申请支付宝商家账户，申请开通即时到账；
 
@@ -228,7 +215,7 @@ WooCommerce 默认提供了国外主流的支付插件，下面重点介绍中�
 3. 在商城中配置支付宝参数。配置界面如下：
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/plugins/woocommerce/intallalipay-websoft9.png)
 
-##### 微信扫描支付
+**微信扫描支付**
 
 WooCommerce微信支付插件使用非常简单，只需要如下步骤，就可以让你的WordPress商城添加微信支付功能。
 
@@ -249,41 +236,43 @@ WooCommerce微信支付插件使用非常简单，只需要如下步骤，就可
 5. 配置微信支付插件在woocommerce设置，支付设置中找到微信支付设置，填入微信公众号appid和微信支付密钥
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/plugins/woocommerce/weichatpay-help005-websoft9.png)
 
-### 管理员密码
+### Manage WordPress Password
 
-实际工作中，我们可能会 **修改** 或 **找回** WordPress 管理员密码
+We may **Modify** or **recover** WordPress administrator password
 
-#### 修改密码
+**Modify WordPress administrator password**
 
-1. 以管理员账号登录后台
-2. 依次打开：【用户】>【所有用户】，编辑需要修改密码的账号
-3. 往下拉倒【账号管理】项，点击【生成密码】，然后修改密码，并更新个人资料 
-   ![Wordpress 修改密码](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-modifypw-websoft9.png)
+Log in Wordpress, go to Users->Your Profile,update your password
+![Wordpress Modify WordPress administrator password](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-modifypw-websoft9.png)
 
-#### 找回密码
+**Recover WordPress administrator password**
 
-若不记得 WordPress 管理员密码，可以通过如下两个方式找回
+If you don't remember the WordPress administrator password, you can retrieve it in the following two ways.
 
-方案一：通过邮件找回密码
+**Recover by Email**
 
-WordPress可以通过发送邮件找回密码，但前提条件是您的 WordPress 网站已经配置好SMTP
-![Wordpress 修改密码](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-forgetpw-websoft9.png)
+WordPress can retrieve the password by sending an email, but only if your WordPress site has already configured SMTP.
+![Wordpress Modify WordPress administrator password](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-forgetpw-websoft9.png)
 
-方案二：修改数据库中的密码字段
+**Recover by database**
 
-如果不能发邮件，请登录数据库管理面板 phpMyAdmin 进行修改
+If the server does not support the function of sending email passwords, the database management panel phpmyadmin will modify it.
 
-1. 登录 phpMyAdmin，并找到你的网站数据库下的 *wp_user* 表
-   ![Wordpress 修改密码](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-wpusers-websoft9.png)
-2. 编辑管理员用户（下图以用户名 `admin`为例）  
-   ![Wordpress 修改密码](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-wpuserspw-websoft9.png)
-3. 截图的地方数据库密码(MD5加密后的密文)，用`21232f297a57a5a743894a0e4a801fc3`替换之
-4. 点击【执行】
-5. 新的密码为`admin`
+1. Log in to phpMyAdmin, find the *wp_user* table of your WordPress database
+   ![Wordpress database](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-wpusers-websoft9.png)  
 
-## 参数{#parameter}
+2. Edit the user(e.g. your username is `admin`)  
+   ![Wordpress database](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-wpuserspw-websoft9.png)  
 
-WordPress 应用中包含 PHP, Nginx, Apache, Docker, MySQL, phpMyAdmin 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+3. Replace the data with `21232f297a57a5a743894a0e4a801fc3`(MD5)  
+
+4. Click **run**  
+
+5. The new password is `admin` now
+
+## Reference sheet
+
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage WordPress
 
 通过运行`docker ps`，可以查看到 WordPress 运行时所有的 Container：
 
@@ -293,31 +282,34 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 下面仅列出 WordPress 本身的参数：
 
-### 路径{#path}
+### Path{#path}
 
-WordPress 安装目录： */data/wwwroot/wordpress*  
-WordPress 配置文件： */data/wwwroot/wordpress/wp-config.php*   
+WordPress installation directory: */data/wwwroot/wordpress*  
+WordPress configuration file: */data/wwwroot/wordpress/wp-config.php*   
 
-### 端口{#port}
+### Port{#port}
 
-无特殊端口
+| Port | Use                                          | Necessity |
+| ------ | --------------------------------------------- | ------ |
+| 3306 | Remote connect MySQL | Optional |
+| 80 | HTTP requests for WordPress | Required |
+| 443 | HTTPS requests WordPress | Optional |
+| 9090 | Web managment GUI for MySQL | Optional |
 
-### 版本{#version}
+### Version{#version}
 
 WordPress 控制台查看
 
-### 服务{#service}
+### Service{#service}
 
 ```shell
 sudo docker start | stop | restart | stats wordpress
 ```
 
-### 命令行{#cli}
+### CLI{#cli}
 
 [wp-cli](https://wp-cli.org/)
 
 ### API
 
 [REST API](https://developer.wordpress.org/rest-api/)
-
-

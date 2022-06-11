@@ -25,6 +25,11 @@ tags:
 
 除以下列出的 Portainer 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
 
+#### 初始化页面提示需要重启？
+
+问题原因：创建 Portainer 之后，需要在5分钟之内完成初始化，否则 Portainer 出于安全考虑会锁定初始化。  
+解决方案：运行重启应用命令 `sudo restart portainer`
+
 
 ## 问题解答
 

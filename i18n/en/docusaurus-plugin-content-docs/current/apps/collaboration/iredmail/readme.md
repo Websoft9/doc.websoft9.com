@@ -3,19 +3,19 @@ sidebar_position: 1
 slug: /iredmail
 tags:
   - iRedMail
-  - 企业邮箱
+  - Enterprise Email Service
 ---
 
-# 快速入门
+# iRedMail Getting Started
 
 [iRedMail](https://www.iredmail.org/) 是一个基于Linux/BSD 系统的开源的、功能完备、成熟的邮件服务器解决方案。只需几分钟，iRedMail 即可为您部署一台完全基于开源软件、功能完善的邮件服务器。
 
 ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iredmail/roudcube-admin-websoft9.png)
 
 
-部署 Websoft9 提供的 iRedMail 之后，需完成如下的准备工作：
+If you have installed Websoft9 iRedMail, the following steps is for your quick start
 
-## 准备
+## Preparation
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80,443,25,993,995,587,110,143** 端口已经开启
@@ -25,9 +25,9 @@ tags:
 6. 若想用域名访问  iRedMail **[域名五步设置](./administrator/domain_step)** 过程
 
 
-## iRedMail 初始化向导{#init}
+## iRedMail Initialization{#init}
 
-### 详细步骤
+### Steps for you
 
 1. 登录到云服务器，运行安装命令
    ```
@@ -94,16 +94,18 @@ tags:
      hostnamectl  set-hostname mail.websoft9.cn
      hostname
   ```
-### 出现问题？
 
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
+### Having trouble?
+
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
+
 
 **postmaster@xxx.com 有什么用？**
 
 镜像包含了系统监控/邮件病毒扫描/垃圾邮件处理等组件, postmaster@xxx.com 邮箱为管理员邮箱,会经常收到系统发来的监控/病毒扫描/病毒库升级/垃圾邮件处理/数据库备份等邮件,请作为管理邮件使用.
 
 
-## iRedMail 常用操作
+## iRedMail Setup
 
 
 ### 域名绑定{#dns}
@@ -200,7 +202,7 @@ DKIM是一种防范电子邮件欺诈的验证技术，通过消息加密认证�
 2. 可以设置用户名、密码和邮箱容量限额等，然后点击“添加”
 
 
-## 参数{#parameter}
+## Reference sheet{#parameter}
 
 iRedMail 应用中包含 Nginx, Docker, MySQL 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
@@ -213,7 +215,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 下面仅列出 iRedMail 本身的参数：
 
-### 路径{#path}
+### Path{#path}
 
 邮箱配置完成之后，请使用SFTP到服务器，下载 `/root/iRedMail/iRedMail.tips`文件，它包含了：
 
@@ -221,7 +223,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 - 各个组件的配置文件路径
 - 以及其它一些重要和敏感信息
 
-### 访问地址{#url}
+### URL{#url}
 
 安装配置完成之后，系统会自动生成一个默认的账号：postmaster@mydomain.com，可以用于登录：
 
@@ -250,7 +252,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 如果您希望采用 iamp.websoft9.cn 或 smtp.websoft9.cn 这种地址形式，请在域名控制台增加响应的CNAME记录
 
-### 端口{#port}
+### Port{#port}
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
@@ -260,7 +262,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 > 以上端口需要设置好安全组，并且向云产商申请解封25端口
 
-### 版本{#version}
+### Version{#version}
 
 |软件名称|软件版本|软件简介|
 |---|---|---|
@@ -279,12 +281,12 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 |netdata|1.10.0|Linux系统性能实时监控平台|
 |iRedAdmin|0.9.1|iRedAdmin是一个邮件用户管理面版|
 
-### 服务{#service}
+### Service{#service}
 
 ```shell
 
 ```
 
-### 命令行{#cli}
+### CLI{#cli}
 
 ### API

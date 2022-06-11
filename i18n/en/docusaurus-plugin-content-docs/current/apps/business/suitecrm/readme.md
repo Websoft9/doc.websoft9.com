@@ -7,87 +7,97 @@ tags:
   - CRM
 ---
 
-# 快速入门
+# SuiteCRM Getting Started
 
-[SuiteCRM](https://suitecrm.com/) 是一个屡获殊荣的企业级的、强大的、可定制的，免费的CRM系统。包括市场、销售过程管理、协作管理、工作流、门户等功能模块。所有功能全部开源，完全具备商业CRM软件媲美的功能和架构。
+[SuiteCRM](https://suitecrm.com/demo/) is a fork of SugarCRM Community Edition. Massively extended, SuiteCRM delivers Workflow, Reporting, Portal, Quotes, Products, Invoices, Accounts, Contacts, Opportunities, Projects, Responsive mobile theme, Email marketing campaigns, Knowledge Base, Outlook and Thunderbird integration, Contracts, Leads, Activities and much more.
 
-![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-ui.png)
+![](http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-gui-websoft9.png)
 
-## 准备
+If you have installed Websoft9 SuiteCRM, the following steps is for your quick start
 
-部署 Websoft9 提供的 SuiteCRM 之后，需完成如下的准备工作：
+## Preparation
 
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 SuiteCRM 的 **[默认账号和密码](./user/credentials)**  
-4. 若想用域名访问  SuiteCRM **[域名五步设置](./administrator/domain_step)** 过程
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:80** is allowed
+3. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for SuiteCRM
+4. [Get](./user/credentials) default username and password of SuiteCRM
+
+## SuiteCRM Initialization
+
+### Steps for you
+
+1. Using local Chrome or Firefox to visit *http://domain* or *http://Internet IP*, you will enter the configuration interface of installation
+
+2. Agree license, go to next step
+  ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-accept-websoft9.png)
+
+3. Environment check
+  ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-check-websoft9.png)
+
+4. Then configure the database connection information([Don't know password?](./user/credentials) and set administrator account
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-installdb-websoft9.png)
+
+   > Email is your system ID, not collected by anyone because it stored in your Cloud Server
+
+5. Wait the installing  
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-installing-websoft9.png)
 
 
-## SuiteCRM 初始化向导{#init}
+6. Set your SMTP (Optional)
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-smtp-websoft9.png)
 
-### 详细步骤
-
-1. 本地浏览器访问：*http://域名* 或 *http://服务器公网IP* 进入安装向导
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-accept-websoft9.png)
-
-2. 环境检测会自动通过，选择【Next】进入下一步
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-check-websoft9.png)
-
-3. 系统进入配置数据库界面（[查看数据库账号密码](./user/credentials)）。然后设置管理员账号，牢记之，点击“安装”
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-dbconf-websoft9.png)
-
-4. 系统进入安装过程，耐心等待，安装成功后系统会进行提示
+7. Install successfully, log in to SuiteCRM  
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-login-websoft9.png)
 
-5. 开始体验后台
+8. SuiteCRM dashboard
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-backend-websoft9.png)
 
-> 需要了解更多SuiteCRM 的使用，请参考官方文档：[EspoCRM Documentation](https://suitecrm.com/wiki/index.php/Main_Page)
+### Having trouble?
 
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
-### 出现问题？
-
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
-
-
-## SuiteCRM 使用入门
+## SuiteCRM QuickStart
 
 下面以 **SuiteCRM 构建企业CRM** 作为一个任务，帮助用户快速入门：
 
+## SuiteCRM Setup
 
-## SuiteCRM 常用操作
+### Configure SMTP{#smtp}
 
-### 配置 SMTP{#smtp}
-
-1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
+1. Get [SMTP](./administrator/smtp) related parameters in the mailbox management console
    
-2. 打开SuiteCRM->Administartor->Admin->Email->Email Setting，打开邮件发送设置项（Outgoing Mail Configuration）
+2. Go to SuiteCRM->Administartor->Admin->Email->Email Setting->Outgoing Mail Configuration
+   
+3. Fill in the correct SMTP Parameters
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-smtp-2-websoft9.png)
+    - SMTP Mail Server
+    - SMTP Port
+    - Use SMTP Authentication
+    - Enable SMTP over SSL or TLS
+    - Use Name
+    - Password
+    - Allow users to use this account for...
 
-3. 设置无误后，请点击“Send Test Email”进行测试以验证
+4. After the settings are correct, please click "Send Test Email" to Test to verify
 
-另外，SuiteCRM安装过程（第三步）也可以设置SMTP，参考下图：
+### Set Chinese Language
 
-![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-smtp-websoft9.png)
+SuiteCRM support multi-language.Below is a example for adding Chinese language in SuiteCRM
 
-### 安装中文包
+1. [Find and Download](https://crowdin.com/project/suitecrmtranslations) the language package
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-dllanguge-websoft9.png)
 
-SuiteCRM默认安装只有英文，需要中文或其他语言，需要下载语言包，然后通过后台进行安装，以中文为例，具体如下：
-
-1.  下载[中文语言包](https://crowdin.com/project/suitecrmtranslations/zh-CN) – 存到本地电脑上
-2.  以Admin身份进入SuiteCRM，进入 “Module loader”
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-lmodule-websoft9.png)
-3.  Upload file->Install it->Commit
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-linstall-websoft9.png)
-4.  Go to “Admin” enter “Repair” and apply “Quick repair and rebuild” for languages
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-repair-websoft9.png)
-5.  退出 SuiteCRM
-6.  先选择所需的语言，再登录
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-logincn-websoft9.png)
+2. Administrator->MODULE LOADER,upload the language package,then install it
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-uploadlanguage-websoft9.png)
+3. Afer the intallation,you can receive the message “The language package is ready to be installed.”
+4. go to Administrator->admin->system-Language,now you can see the new language item
+5. Log out,and log in again,you can see the language selections upper one the account
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-languageitems-websoft9.png)
 
 
-## 参数{#parameter}
+## Reference sheet
 
-SuiteCRM 应用中包含 PHP, Nginx, Apache, Docker, MySQL等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage SuiteCRM 
 
 通过运行`docker ps`，可以查看到 SuiteCRM 运行时所有的 Container：
 
@@ -98,26 +108,26 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 下面仅列出 SuiteCRM 本身的参数：
 
-### 路径{#path}
+### Path{#path}
 
 SuiteCRM 路径:  */data/wwwroot/suitecrm*  
 SuiteCRM 配置文件: */data/wwwroot/suitecrm/config.php*
 
-### 端口{#port}
+### Port{#port}
 
 无特殊端口
 
-### 版本{#version}
+### Version{#version}
 
 控制台查看
 
-### 服务{#service}
+### Service{#service}
 
 ```shell
 sudo docker start | stop | restart | stats suitecrm
 ```
 
-### 命令行{#cli}
+### CLI{#cli}
 
 无
 

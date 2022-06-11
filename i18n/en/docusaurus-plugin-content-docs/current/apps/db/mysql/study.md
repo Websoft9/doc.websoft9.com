@@ -6,8 +6,7 @@ tags:
   - Cloude Native Database
 ---
 
-# 原理学习
-
+# MySQL/MariaDB  Study
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mariadb/mariadb-structure-websoft9.png)
 

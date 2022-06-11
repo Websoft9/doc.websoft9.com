@@ -3,82 +3,85 @@ sidebar_position: 1
 slug: /graylog
 tags:
   - Graylog
-  - 日志管理
-  - 数据分析
+  - Data Analysis
+  - Log Management
 ---
 
-# 快速入门
+# Graylog Getting Started
 
-[Graylog](https://graylog-server.apache.org/) 是一个基于 Java 开发的开源的日志聚合、分析、审计、展现和预警工具，它是 ELK 的替代解决方案。  
+[Graylog](graylog.org) is on a mission to make Log Management and SIEM easier, faster, more affordable, and more effective. 
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/graylog/graylog-gui-websoft9.png)
 
-## 准备
+If you have installed Websoft9 Graylog, the following steps is for your quick start
 
-部署 Websoft9 提供的 Graylog 之后，请参考下面的步骤快速入门。
+## Preparation
 
-1. 在云控制台获取您的 **服务器公网 IP 地址**
-2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:80** 和 **TCP:9001** 端口是否开启
-3. 在服务器中查看 Graylog 的 **[默认账号和密码](./user/credentials)**
-4. 若想用域名访问 Graylog，务必先完成**[域名五步设置](./administrator/domain_step)** 过程
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:80** is allowed
+3. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for Graylog
+4. [Get](./user/credentials) default username and password of Graylog
 
-## Graylog 初始化向导
+## Graylog Initialization
 
-### 详细步骤
+### Steps for you
 
-1. 使用浏览器访问网址： *http://域名* or *http://服务器公网 IP*，进入 Graylog 登录界面
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/graylog/graylog-login-websoft9.png)
+1. Using local Chrome or Firefox to visit the URL *http://DNS* or *http://Server's Internet IP*, you can see the login page of Graylog.
+   ![login Graylog websoft9](https://libs.websoft9.com/Websoft9/DocsPicture/en/graylog/graylog-login-websoft9.png)
 
-2. 输入账号密码后，登入到 Graylog 控制台 ([不知道密码?](./user/credentials))  
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/graylog/graylog-console-websoft9.png)
+2. Input the login account and enter to Graylog Console([Don't have password?](./user/credentials))  
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/graylog/graylog-console-websoft9.png)
 
-> 需要了解更多 Graylog 的使用，请参考官方文档：[Configuring Graylog](https://docs.graylog.org/en/latest/pages/installation/docker.html)
+3. if you want to bind domain for Graylog, refer to [here](./administrator/domain_step)
 
-### 出现问题？
+> More useful Graylog guide, please refer to [Configuring Graylog](https://docs.graylog.org/en/latest/pages/configuration.html)
 
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或 **[FAQ](./faq#setup)** 尝试快速解决问题。
+### Having trouble?
 
-## Graylog 使用入门
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
+
+## Graylog QuickStart
 
 正在编写
 
-## Graylog 常用操作
+## Graylog Setup
 
-### 配置 SMTP
+### Configure SMTP{#smtp}
 
-Graylog 配置 SMTP 发邮件的步骤：：
+1. Get [SMTP](./administrator/smtp) related parameters in the mailbox management console
 
-1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
+2. Refer to [Official email setting](https://docs.graylog.org/en/3.3/pages/configuration/server.conf.html#email) by editing the email Graylog configuration file: */etc/graylog/server/server.conf*
 
-2. 修改 Graylog 配置文件中的 Refer to [transport_email 参数](https://docs.graylog.org/en/3.3/pages/configuration/server.conf.html#email)
+3. Modify the items **[transport_email](https://docs.graylog.org/en/3.3/pages/configuration/server.conf.html#email)**  of Graylog configuration file
 
-3. 重启 Graylog 后生效
+4. Restart Graylog service
    ```
    sudo docker restart graylog
    ```
 
-### 重置密码
+### Reset Password
 
-如果无法找回管理员密码，可以通过下面的步骤重置密码
+Try to reset your password if you can't use email to reset it:
 
-1. 使用 SSH 工具登录服务器，运行下面的密码重置命令
-
+1. Use SSH tool to login Server, then run the below commands
    ```
    new_password=admin123@graylog
    sha_password=$(echo -n $new_password | sha256sum | awk '{ print $1 }')
    sudo sed -i "s/8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918/$sha_password/g" /data/wwwroot/graylog/.env
    ```
 
-2. 重新运行容器编排命令，密码就被重置为 `admin123@graylog`
+2. You new password is `admin123@graylog` now after docker-compose recreate
    ```
    cd /data/wwwroot/graylog && sudo docker-compose up -d
    ```
 
-> 你可以将 new_password 设置为任何你想要的密码
+> You can set the new_password to any string if you want
 
-### 配置 Graylog
+### Configure Graylog
 
-针对于 Docker 安装，Graylog 每个配置选项都可以加上大写的前缀 GRAYLOG_ 实现环境变量化： 
+Every [configuration option](https://docs.graylog.org/docs/server-conf) can be set via environment variables.. Simply prefix the parameter name with **GRAYLOG_** and put it all in upper case.  
+
+For example, setting up the SMTP configuration for sending Graylog alert notifications via email, the **docker-compose.yml** would look like this:  
 
 ```
 version: '2'
@@ -101,11 +104,10 @@ version: '2'
         GRAYLOG_TRANSPORT_EMAIL_USE_SSL: "false"
 ```
 
-同时，也支持直接修改配置文件 server.conf
+## Reference sheet
 
-## Graylog 参数
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Graylog
 
-Graylog 应用中包含 Nginx, Docker, MongoDB, Elasticsearch 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 安装，Graylog 运行时所有的 Container：
 
@@ -119,26 +121,26 @@ f4cd00fc5f58   docker.elastic.co/elasticsearch/elasticsearch-oss:7.10.2   "/tini
 
 下面仅列出 Graylog 本身的参数：
 
-### 路径{#path}
+### Path{#path}
 
 Graylog 安装路径:  */data/wwwroot/graylog*  
 Graylog 配置文件:  */data/wwwroot/volumes/graylog/config/server.conf*  
 Graylog 日志目录:  */data/wwwroot/volumes/graylog/log*
 
-### 端口{#port}
+### Port{#port}
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
 | 9001   | Graylog 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
 
-### 版本
+### Version
 
 ```shell
 # Superset Version
 docker images |grep graylog/graylog |awk '{print $2}'
 ```
 
-### 服务
+### Service
 
 ```shell
 sudo docker  start | stop | restart | status graylog
@@ -146,7 +148,7 @@ sudo docker  start | stop | restart | status graylog-mongo
 sudo docker  start | stop | restart | status graylog-elasticsearch
 ```
 
-### 命令行
+### CLI
 
 Graylog 暂未提供命令行工具
 

@@ -2,42 +2,44 @@
 sidebar_position: 3
 slug: /parseserver/admin
 tags:
-  - Node
-  - 平台即服务
+  - Pars Server
+  - PaaS
   - Serverless
 ---
 
+# Parse Server Maintenance
 
+This chapter is special guide for Parse Server maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-# 维护参考
+## Maintenance guide
 
-## 场景
+### Backup and Restore 
 
-### Parse Server 升级
+### Parse Server Upgrade
 
-Parse Server 采用 NPM 来管理升级
+Parse Server uses NPM to manage upgrades
 
 ```
 npm update -g  parse-server
 ```
 
-### Parse Dashboard 升级
+### Parse Dashboard Upgrade
 
-Parse Dashboard 采用 NPM 来管理升级
+Parse Dashboard uses NPM to manage upgrades
 
 ```
 npm update -g  parse-dashboard
 ```
 
-## 故障处理
+## Troubleshoot{#troubleshoot}
 
-除以下列出的 Parse Server 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
+In addition to the Parse Server issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.
 
-## 常见问题
+## FAQ{#faq}
 
-#### Parse 与 Parse Server 有什么区别？
+#### What the different between Parse and Parse Server?
 
-Parse是一个在线的 Serverless 托管平台，现已停止运营。Parse Server 是开源 Parse 的功能，由用户自行下载部署到服务器的开源项目。
+Parse is a Serverless Paas which was stop opretion now. Parse Server is opensoure project to replace Parse and you can deploy it on your Cloud Server
 
 #### Parse Server 有哪些功能？
 
@@ -53,14 +55,14 @@ Parse是一个在线的 Serverless 托管平台，现已停止运营。Parse Ser
 - 与云平台很好的对接
 - 自定义业务逻辑与Hook机制
 
-#### Parse Server 提供了哪些SDK？
+#### What SDKs does Parse Server provide?
 
-IOS, Android, JavaScript, .NET + Xamarin, PHP, Arduino, Embedded C等 
+IOS, Android, JavaScript, .NET + Xamarin, PHP, Arduino, Embedded C, etc. 
 
-#### Parse Dashboard 如何存储数据？ 
+#### Where is the database connection configuration of Parse Dashboard?
 
-Parse Dashboard 不需要数据库支持，数据存储在文本文件中
+Parse Dashboard not need Database, its use text file for data storage
 
-#### 没有域名是否可以部署 Parse Server ？
+#### If there is no Domain name, can I deploy Parse Server?
 
-不可以，必须绑定域名
+No, you should bind Domain name fist

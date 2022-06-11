@@ -6,29 +6,38 @@ tags:
   - Cloud Native Database
 ---
 
-# 维护参考
+# Memcached Maintenance
 
-## 场景
+This chapter is special guide for Memcached maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-## 故障排除{#troubleshoot}
+## Maintenance guide
 
-除以下列出的 Memcached 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
+## Troubleshoot{#troubleshoot}
+
+In addition to the Memcached issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
 
-## 常见解答
+## FAQ{#faq}
 
-#### 什么是 Memcached 客户端？
+#### What is the Memcached client?
 
-Memcached 客户端是用于与 Memcached-Server 进行通信的程序，Memcached 是通过 Telnet 来运行客户端命令的。
+Memcached does not provide specific client. However, standard tools like telnet are enough to test container. Under Linux it is possible to connect by CLI command. We can invoke telnet from host machine, to connect to running Memcached server
+
+
+#### Does Memcached need a password to log in?
+
+No password authentication required
+
+#### Is there a web-GUI tool for Memcached?
+
+Yes
+
+#### 如何修改 Memcached-admin 控制台密码？
+
+参考： [Nginx auth_basic](../nginx#authbasic)
+
 
 #### Memcached 是否开启密码验证？
 
 没有开启
 
-#### Memcached 需要密码才能登录吗？
-
-无需设置密码验证
-
-#### 如何修改 Memcached-admin 控制台密码？
-
-参考： [Nginx auth_basic](../nginx#authbasic)

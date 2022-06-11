@@ -3,31 +3,43 @@ sidebar_position: 3
 slug: /elk/admin
 tags:
   - ELK Stack
-  - 日志管理
-  - 数据分析
+  - Data Analysis
 ---
 
-# 维护指南
+# ELK Stack Maintenance
 
-本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup) 相关章节。
+This chapter is special guide for ELK Stack maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-## 场景
+## Maintenance guide
 
-### 备份与恢复
+### ELK Stack Backup and Restore
 
-ELK 内置快照备份功能（阅读[官方文档](https://www.elastic.co/guide/en/elasticsearch/reference/7.13/snapshot-restore.html)）
+ELK 内置快照备份功能（Refer to[官方文档](https://www.elastic.co/guide/en/elasticsearch/reference/7.13/snapshot-restore.html)）
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-backupsp-websoft9.png)
 
-## 故障排除
+### ELK Stack Upgrade
 
-除以下列出的 ELK 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。
+## Troubleshoot{#troubleshoot}
+
+In addition to the ELK Stack issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
 #### Logstash 无法输出到 Elasticsearch？
 
 检查 Logstash 的 pipeline 配置文件中 Elasticsearch 账号密码是否正确
 
-## 常见问题
+## FAQ{#faq}
+
+#### How can I enable the debug mode of ELK service?
+
+```
+systemctl stop elk-server
+elk-server console
+```
+
+#### Can I reset password of ELK by command?
+
+Yes, e.g `elkctl change_password  admin newpassword`
 
 #### ELK 具体包含哪些应用？
 

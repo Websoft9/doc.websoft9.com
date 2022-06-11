@@ -6,101 +6,102 @@ tags:
   - DevOps
 ---
 
-# 快速入门
+# AWX Getting Started
 
-[AWX](https://github.com/ansible/awx) 是Ansible Tower的开源版，Ansible Tower是一个可视化界面的服务器自动部署和运维管理平台。AWX提供基于Web的用户界面，REST API和构建在Ansible之上的任务引擎。
-![AWX界面](https://libs.websoft9.com/Websoft9/DocsPicture/en/awx/awxui-websoft9.png)
+[AWX](https://github.com/ansible/awx) is the Ansible Tower's open source edition,AWX provides a web-based user interface, REST API, and task engine built on top of Ansible. It is the upstream project for Tower, a commercial derivative of AWX.
 
-在云服务器上部署 AWX 预装包之后，请参考下面的步骤快速入门。
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/awx/awxui-websoft9.png)
 
-## 准备
+If you have installed Websoft9 AWX, the following steps is for your quick start
 
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 AWX 的 **[默认管理员账号和密码](./user/credentials)**  
-4. 若想用域名访问  AWX，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
+## Preparation
 
-## AWX 初始化向导
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:80** is allowed
+3. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for AWX
+4. [Get](./user/credentials) default username and password of AWX
 
-### 详细步骤
+## AWX Initialization
 
-1. 使用本地电脑浏览器访问网址：*http://域名* 或 *http://公网IP*, 进入 AWX 登录页面
-   ![AWX登录页面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/awx/awx-login-websoft9.png)
+### Steps for you
 
-3. 输入用户名和密码[（不知道密码？）](./user/credentials)，登录到 AWX 后台管理界面
-   ![AWX后台界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/awx/awx-gui-websoft9.png)
+1. Using local browser visit the URL *http://DNS* or *http://Server's Internet IP*, enter to login interface
+   ![AWX login page](https://libs.websoft9.com/Websoft9/DocsPicture/en/awx/awx-login-websoft9.png)
 
-4. 此时，AWX 安装部署已经验证通过
+2. Login it to AWX console [(Don't know password?)](./user/credentials)
+   ![AWX console](https://libs.websoft9.com/Websoft9/DocsPicture/en/awx/awxui-websoft9.png)
 
-> 需要了解更多 AWX 的使用，请参考：[Ansible Tower Documentation](https://docs.ansible.com/ansible-tower/).
+> More useful AWX guide, please refer to [Ansible Tower Documentation](https://docs.ansible.com/ansible-tower/)
 
-### 出现问题？
+### Having trouble?
 
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题。
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
+## AWX QuickStart
 
-## AWX 使用入门
+Now, we will give use sample **How to run Ansible repository by AWX** for your practice
 
-下面以 **使用 AWX 可视化运行 Ansible 项目** 作为一个任务，帮助用户快速入门：
+**Concept**
 
-### 概念
+You must understand some import concept before your practice:
 
-在实战之前，必须先了解几个概念：
+![AWX console](https://libs.websoft9.com/Websoft9/DocsPicture/en/awx/awxui-websoft9.png)
 
-![AWX后台界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/awx/awx-consoleui-websoft9.png)
+* **Inventories**: A list of managed nodes
 
-* **清单（Inventories）**：对应 Ansible 的 Inventory，即主机组和主机IP清单列表。
+* **Credentials**: Username and password or key of nodes
 
-* **凭证（Credentials）**：受控主机的用户名、密码（秘钥）以及提权控制
+* **Projects**: Ansible project, most of time it is a Github repository
 
-* **项目（Projects）**：一个完整可运行的 Ansible 项目
+* **Templates**: It is a definition and set of parameters for running an Ansible job
 
-* **模板（Templates）**：将清单、项目和凭证关联起来的任务模板，一次创建，多次使用，可修改
+* **Jobs**: It is an instance of Tower launching an Ansible playbook against an inventory of hosts.
 
-* **作业（Jobs）**：模板每一次运行视为一次作业
+**Prepare**
 
-### 准备
+Before using AWX to run an Ansible project, please ensure that the following conditions are met:
 
-在使用 AWX 运行一个 Ansible 项目之前，请确保符合如下条件：
-
-* 准备一个可用的 Ansible 项目，例如：[Grafana](https://github.com/Websoft9/ansible-grafana)
-* 准备一台新创建的云服务器，此服务器被 AWX 安装 Ansible 项目。建议先运行下面的脚本，在服务中安装主流的仓库，以及 Git,pip 等工具
+* Prepare your Ansible project, e.g. [Grafana](https://github.com/Websoft9/ansible-grafana)
+* Prepare your one node and run the following command for runtime preparation
   ```
   wget -N https://cdn.statically.io/gh/Websoft9/ansible-linux/main/scripts/install.sh; bash install.sh
   ```
 
-### 步骤
+**Steps**
 
-下面我们开始列出具体的步骤：
+Below we begin to list the specific steps:
 
-1. 登录 AWX，创建【清单】，然后在清单中增加【主机】
+1. Login AWX and create 【Inventories】, then add 【Host】 in it.
 
-   ![创建清单](https://libs.websoft9.com/Websoft9/DocsPicture/zh/awx/awx-inventories001-websoft9.png)
+   ![create Inventories](https://libs.websoft9.com/Websoft9/DocsPicture/en/awx/awx-inventories001-websoft9.png)
 
-   ![创建主机](https://libs.websoft9.com/Websoft9/DocsPicture/zh/awx/awx-inventories002-websoft9.png)
+   ![create host](https://libs.websoft9.com/Websoft9/DocsPicture/en/awx/awx-inventories002-websoft9.png)
 
-   ![创建主机](https://libs.websoft9.com/Websoft9/DocsPicture/zh/awx/awx-inventories003-websoft9.png)
+   ![create host](https://libs.websoft9.com/Websoft9/DocsPicture/en/awx/awx-inventories003-websoft9.png)
 
-2. 创建【凭证】，下面是创建一个 root 账号以及管理密码所对应的范例（凭证类型选择【机器】）
-   ![创建凭证](https://libs.websoft9.com/Websoft9/DocsPicture/zh/awx/awx-credentials-websoft9.png)
+2. Create 【Credentials】, the following example
+   ![Create Credentials](https://libs.websoft9.com/Websoft9/DocsPicture/en/awx/awx-credentials-websoft9.png)
 
-3. 创建【项目】，下面以我们提供的开源项目 [HelloWorld](https://github.com/ansible/tower-example) 作为范例
+3. Create 【Project】, the following example is use [Grafana](https://github.com/Websoft9/ansible-grafana) powered by Websoft9
 
-   ![创建项目](https://libs.websoft9.com/Websoft9/DocsPicture/zh/awx/awx-project-websoft9.png)
+   ![create Project](https://libs.websoft9.com/Websoft9/DocsPicture/en/awx/awx-project-websoft9.png)
 
-4. 创建【模板】，分别将前面创建的【凭证】、【清单】、【项目】关联起来，便完成了模板的配置
-   ![创建模板](https://libs.websoft9.com/Websoft9/DocsPicture/zh/awx/awx-templates-websoft9.png)
+4. Create 【Templates】, associate 【Credentials】,【Inventories】,【Project】 in one interface
+   ![Create template](https://libs.websoft9.com/Websoft9/DocsPicture/en/awx/awx-templates-websoft9.png)
 
-   > 也可以直接设置**额外变量**覆盖交互式
+   > You can set it by add **extra variable** directly
 
-6. 启动Template，进入 Job 页面，开始安装所需的应用程序
-   ![成功运行项目](https://libs.websoft9.com/Websoft9/DocsPicture/zh/awx/awx-templaterunning-websoft9.png)
+5. Go to Template and start a 【Job】
+   ![Job running](https://libs.websoft9.com/Websoft9/DocsPicture/en/awx/awx-templaterunning-websoft9.png)
 
-## 常用操作
 
-### 修改 URL
+## AWX Setup
 
- **[域名五步设置](./administrator/domain_step)** 完成后，需登录 AWX，依次打开：【Settings】>【System】， 修改默认的 URL
+### DNS Additional Configure（Modify URL）{#dns}
+
+Complete **[Five steps for Domain](./administrator/domain_step)** ，Set the URL for AWX:
+
+Log in to AWX, open: [Settings] > [System], and modify the default URL
 
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/awx/awx-seturl-websoft9.png)
 
@@ -143,33 +144,33 @@ tags:
    docker restart awx_web
    ```
 
-### 配置 SMTP
+### Configure SMTP
 
-1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
+1. Get [SMTP](./administrator/smtp) related parameters in the mailbox management console
 
-2. 登录 AWX控制台，打开：【ADMINISTRATION】>【NOTIFICATIONS】
+2. Log in AWX Console, open **ADMINISTRATION** > **NOTIFICATIONS**
 
-3. 新建一个 Notification 模板，选择【电子邮件】，填写相关 SMTP 参数
+3. Create new Notification template, then complete the SMTP settings
    ![AWX SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/zh/awx/awx-smtp-websoft9.png)
 
 
-### 增加额外变量
+### Extra variable{#extravar}
 
-AWX 支持从项目之外注入所需的变量，它是通过**额外变量**机制实现，一方面可以增加变量的多样性，另外可以绕过 Ansible 项目中的交互式。  
+AWX support variable outside the Ansible project, it is **Extra variable** which can help you to pass **var_promots**  
 
-有两种额外变量的方式：
+There are two ways of additional variables:
 
-* **方式一**：在【模板】编辑页面直接增加额外变量
-  ![Ansible-Tower 额外变量](https://libs.websoft9.com/Websoft9/DocsPicture/zh/awx/awx-extravars-websoft9.png)
+* **Method one**: Add additional variables directly on the 【template】 page
+  ![Ansible-Tower Add additional variables](https://libs.websoft9.com/Websoft9/DocsPicture/en/awx/awx-extravars-websoft9.png)
 
-* **方式二**：在【模板】编辑页面增加一个【问卷调查】项
-  ![Ansible-Tower 问卷调查](https://libs.websoft9.com/Websoft9/DocsPicture/zh/awx/awx-varspromptset-websoft9.png)
+* **Method two**: Edit 【EDIT SURVEY】 link directly on the 【template】 page
+  ![Ansible-Tower EDIT SURVEY](https://libs.websoft9.com/Websoft9/DocsPicture/en/awx/awx-varspromptset-websoft9.png)
 
-详情参考官方文档 [Create a Survey](https://docs.ansible.com/ansible-tower/latest/html/userguide/job_templates.html#ug-surveys)
+More details please refer to official docs: [Create a Survey](https://docs.ansible.com/ansible-tower/latest/html/userguide/job_templates.html#ug-surveys)
 
-## 参数
+## Reference sheet
 
-AWX 应用中包含 Nginx, Docker, PostgreSQL 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage AWX
 
 通过运行`docker ps`，可以查看到 AWX 运行时所有的 Container：
 
@@ -182,10 +183,9 @@ e240ed8209cd        awx_task:1.0.0.8    "/tini -- /bin/sh ..."   2 minutes ago  
 97e196120ab3        postgres:9.6        "docker-entrypoint..."   2 minutes ago       Up 2 minutes        5432/tcp                             postgres
 ```
 
-
 下面仅列出 AWX 本身的参数：
 
-### 路径{#path}
+### Path{#path}
 
 AWX 配置文件目录 */data/.awx*  
 awx_postgres 挂载的目录：*/var/lib/postgresql/data*  
@@ -194,17 +194,17 @@ awx_rabbitmq 挂载的目录：*/var/lib/rabbitmq*
 awx_web 挂载的目录：*/var/lib/nginx*   
 awx_task 挂载的目录：*/var/lib/nginx* 
 
-### 端口
+### Port
 
 无特殊端口
 
-### 版本
+### Version
 
 ```shell
 sudo docker inspect awx_web
 ```
 
-### 服务
+### Service
 
 ```shell
 #AWX-主程序
@@ -218,7 +218,7 @@ sudo docker start | stop | restart | pause | stats awx_postgres
 sudo docker start | stop | restart | pause | stats awx_memcached
 ```
 
-### 命令行
+### CLI
 
 先运行  `pip install ansible-tower-cli` 安装 [AWX CLI ](https://docs.ansible.com/ansible-tower/latest/html/towercli/usage.html#installation)，然后配置使用
 

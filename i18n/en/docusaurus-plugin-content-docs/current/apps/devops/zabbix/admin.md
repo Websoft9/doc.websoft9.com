@@ -6,41 +6,39 @@ tags:
   - DevOps
 ---
 
-# 维护指南
+# Zabbix Maintenance
 
-本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup) 相关章节。
+This chapter is special guide for Zabbix maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-## 场景
+## Maintenance guide
 
-### 更换数据库
+### Replace database
 
-默认部署方案中，采用的是本地安装的 MySQL 数据库。如果您打算更换数据库，请参考如下步骤：
+This deployment solution is used the MySQL installed in local, if you want to use other database, refer to:
 
-1. 导出 zabbix, zabbix-proxy 数据库
+1. Export database  **zabbix, zabbix-proxy** by phpMyAmin
 
-2. 使用 SFTP 连接到服务器，编辑与数据库连接相关的两个文件
+2. Use **SFTP** to connect Zabbix instance and edit the database configuration file
 
    * /data/wwwroot/zabbix/.env_db_mysql_proxy
    * /data/wwwroot/zabbix/.env_db_mysql
 
-3. 分别修改两个文件中的数据库连接信息，保存
-
-4. 重新运行容器后生效
+3. Recreate container 
    ```
    cd /data/wwwroot/zabbix
    sudo docker compose up -d
    ```
 
-5. 导入备份数据到新的数据库中
+5. Import database  
 
 
-### Zabbix 升级
+### Zabbix Upgrade
 
-Zabbix 升级原理非常简单：先拉取最新版本的 Zabbix 镜像，然后重新运行容器。
+You can upgrade Zabbix by Docker very easy
 
-> Zabbix 升级之前请完成服务器的快照备份，以防不测。
+> Please backup all Zabbix data and database before upgrade
 
-1. 使用 SSH 登录 Zabbix 服务器后，拉取最新版本镜像
+1. Use **SSH** to connect Zabbix instance and pull the latest image
    ```
    docker image pull zabbix/zabbix-server-mysql:centos-5.2-latest 
    docker image pull zabbix/zabbix-proxy-mysql:centos-5.2-latest
@@ -48,18 +46,18 @@ Zabbix 升级原理非常简单：先拉取最新版本的 Zabbix 镜像，然�
    docker image pull zabbix/zabbix-java-gateway:centos-5.2-latest
    docker image pull zabbix/zabbix-snmptraps:centos-5.2-latest
    ```
-2. 重新运行 docker-compose 编排文件，启用新的容器
+2. Run the docker compose file to recreate container
     ```
     cd /data/wwwroot/zabbix
     docker-compose up -d
     ```
-3. 登录 Zabbix 后台查看升级后的版本
+3. Login to Zabbix console to check upgrade
 
-与升级有关的详细配置方案，请参考官方文档：[INSTALLATION FROM CONTAINERS](https://www.zabbix.com/documentation/5.0/manual/installation/containers)
+More upgrade detail, refer to: [INSTALLATION FROM CONTAINERS](https://www.zabbix.com/documentation/5.0/manual/installation/containers)
 
-## 故障排除
+## Troubleshoot{#troubleshoot}
 
-除以下列出的 Zabbix 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
+In addition to the Zabbix issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
 #### 修改了数据库密码 Zabbix 不能访问？
 
@@ -73,27 +71,27 @@ Zabbix 升级原理非常简单：先拉取最新版本的 Zabbix 镜像，然�
    sudo docker compose up -d
    ```
 
-## 问题解答
+## FAQ{#faq}
 
 #### Zabbix 能监控哪些对象？
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zabbix/zabbix-structure-websoft9.png)
 
-#### Zabbix 支持多语言吗？
+#### Does Zabbix support multi-language?
 
-支持多语言（包含中文），通过后台设置即可
+Yes,refer to [Zabbix language](../zabbix#i18)
 
-#### 本部署方案是如何安装 Zabbix 的？
+#### How does this deployment plan install Zabbix?
 
-采用 Docker 安装，以适用云原生时代
+Docker
 
-#### Docker 安装是否会丢失数据？
+#### Will Docker installation lose data?
 
-Zabbix 代码和运行文件已经采用持久存储，数据库 MySQL 是基于非容器部署
+Zabbix have mount to volume, and database MySQL is based on non-container deployment
 
-#### Zabbix 中有哪些组件？
+#### What components included in this Zabbix deployment solution? 
 
-包含：Zabbix-Server，Zabbix-Web，Zabbix-Proxy，Zabbix-Agent，Zabbix-java-gateway等组件。  
+Zabbix-Server, Zabbix-Web, Zabbix-Proxy, Zabbix-Agent, Zabbix-java-gateway   
 
 Zabbix-Web 是可视化的 Web 控制台，与 Zabbix-Server 是分离的。
 
@@ -101,22 +99,23 @@ Zabbix-Web 是可视化的 Web 控制台，与 Zabbix-Server 是分离的。
 
 Proxy 适合于 Zabbix 分布式部署架构中从 Zabbix-Agent 采集数据，用于减轻 Zabbix-Server 的压力。
 
-#### Zabbix-Sender是什么？
+#### What's Zabbix-Sender?
 
-Zabbix sender 是一个命令行应用程序，可用于将性能数据发送到 Zabbix server 进行处理。
+Zabbix sender is a command line utility that may be used to send performance data to Zabbix server for processing.
 
-#### Zabbix-Git是什么？
+#### What's Zabbix-Git?
 
-Zabbix get 是一个可以用于与 Zabbix agent 进行通信的命令行，并从 Zabbix agent 那里获取信息。
+Zabbix get is a command line utility which can be used to communicate with Zabbix agent and retrieve required information from the agent.
 
-#### 是否可以使用 RDS 作为 Zabbix 的数据库？
 
-可以
+#### Can I use the RDS of Cloud Provider for Zabbix?
+
+Yes
 
 #### Zabbix-Server 能在 Windows 上部署吗？
 
 官方没有提供 Windows 上的安装方案
 
-#### Zabbix数据库连接配置信息在哪里？
+#### #### Where is the database connection configuration of Zabbix?
 
-数据库配置信息 [Zabbix 环境变量](../zabbix#path)中
+Database configuration information in *LocalSettings.php* in the [Zabbix Path](../zabbix#path)中

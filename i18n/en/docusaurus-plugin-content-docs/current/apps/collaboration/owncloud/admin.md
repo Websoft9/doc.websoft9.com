@@ -8,78 +8,70 @@ tags:
   - 团队协作
 ---
 
-# 维护指南
+# ownClouds Maintenance
 
-本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup) 相关章节。
+This chapter is special guide for ownCloud maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-## 场景
 
-### 在线备份
+## Maintenance guide
 
-ownCloud 后台提供在线备份功能
+### Nextcloud online backup
 
-1. 登录 ownCloud 后台，安装 **[OwnBackup](https://en.websoft9.com/xdocs/owncloud-image-guide/#using-apps)** 插件
-2. 打开：【Admin】>【OwnBackup】，开始备份
+This section provides ownCloud online backup solution
+
+1. Log in ownCloud console as administrator, install **[OwnBackup](https://en.websoft9.com/xdocs/owncloud-image-guide/#using-apps)** 
+2. Go to【Admin】>【OwnBackup】, start backup
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-ownbackup-websoft9.png)
-3. 此插件也可以用于恢复
+3. You can restore it also
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-restore-websoft9.png)
 
-### 在线升级
+### ownCloud Upgrade
 
-ownCloud提供了非常人性化的升级入口，根据系统的更新提示既可以完成主版本、插件的更新。
+ownCloud provides a very user-friendly upgrade (update) portal, which can complete the update of the main version and APP plug-in according to the update prompt of the system.
 
-> 在升级之前请做好服务器的快照备份，这个是必须的步骤，因为谁都无法保证升级100%成功。
+**Plugin Upgrade**
 
-#### 插件升级
+1. After logging in to OwnCloud, see if there is an update notification in the upper right corner. if so, please click on the update entry in it.
+  ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-updatenotify-websoft9.png)
+2. After clicking on the update entry, enter the update interface.
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-updatelist-websoft9.png)
+3. Click the "update" button and the system goes to "update" and wait patiently for the update
+4. When all updates are completed, the update list shows "all apps are up to date"
 
-升级步骤参加如下：
+> If there is a problem with the upgrade process, such as: unable to download the upgrade package/no read and write permissions, make sure that the network is connected/OwnCloud Directory has read and write permissions
 
-1. 登录 OwnCloud 之后查看右上角是否有更新通知，若有，请点击其中的更新条目
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-updatenotify-websoft9.png)
+**Master Program Upgrade**
 
-2. 点击更新条目后 或 访问：*http://域名/index.php/apps/market/#/updates*  进入更新界面
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-updatelist-websoft9.png)
+1. Once have upgrade message "OwnCloud is available". Get more information on how to update.", you should upgrade it now
+2. Go to 【Admin】>【Setting】
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-openupdater-websoft9.png)
+3. Go to Updater
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-updater-websoft9.png)
+4. Click the button "Create a checkpoint" first
+5. Click the button "Start"
 
-3. 点击【更新】按钮，系统进入【UPDATING】，耐心等待更新
-4. 所有更新完成后，更新清单会显示“所有应用都是最新的”
+## Troubleshoot{#troubleshoot}
 
-> 如果升级过程出现问题，例如：无法下载升级包/没有读写权限，请确保网络是通的/OwnCloud目录具有读写权限
+In addition to the ownCloud issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
-#### 主程序升级
+#### After the domain configuration, find page layout confusion or the picture cannot be displayed?
 
-主程序升级与插件升级略有差异，具体参考如下：
+This problem occurs if you install through IP, and then bind the domain name. To solve it, please change the IP address to the domain name in Nextcloud [Confuguration file](../owncloud#path).
 
-1. 当有可用升级的程序时，系统提示“ownCloud is available. Get more information ...”
-2. 依次打开：Admin->设置->常规，找到更新管理器，若有更新请点击“打开更新管理器”按钮
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-openupdater-websoft9.png)
-3. 进入 Updater（更新管理器）
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-updater-websoft9.png)
-4. 点击【Create a checkpoint】，创建一个核心文件备份
-5. 点击【Start】按钮，系统进入自动化升级过程，下载和升级过程比较长，请耐心等待
-6. 升级成功提示
+## FAQ{#faq}
 
-> 由于升级过程会下载最新版本，ownCloud的下载服务器在国外，若下载不成功，需要不定期尝试
+#### ownCloud support multi-language?
 
-## 故障排除
+Yes.
 
-####  域名配置后页面显示混乱？
+#### Does ownCloud provide a client?
 
-如果先通过 IP 安装，再绑定域名，就会出现这个问题，请分别打开 ownCloud 的 [配置文件](../owncloud#path)，将其中的 IP 地址改成域名。
+Yes, includes: Nextcloud Desktop Client, Nextcloud Android App, Nextcloud iOS App
 
-## 常见问题
+#### How can ownCloud view & edit file online?
 
-#### ownCloud 支持多语言吗？
+You should complete the [OnlyOffice setting](../ownCloud/solution#onlyoffice) on your Nextcloud.
 
-支持多语言（包含中文）
+#### ownCloud can integrate external storage?
 
-#### ownCloud 是否提供客户端？
-
-有。包括：ownCloud Desktop Client, ownCloud Android App, ownCloud iOS App
-
-#### ownCloud 可预览和编辑 Office 文档吗？
-
-ownCloud 自身是无法预览和编辑 Office 文档的。但 Websoft9 的部署方案已经安装了文档中间件：[ONLYOFFICE Docs](../owncloud/solution#onlyoffice) 解决此需求。
-
-#### ownCloud 支持集成外部存储吗？
-
-支持多种主流外部存储服务
+Yes.

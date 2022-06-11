@@ -3,60 +3,59 @@ sidebar_position: 3
 slug: /moodle/admin
 tags:
   - Moodle
-  - 在线学习管理
+  - elearning
 ---
 
-# 维护指南
+# Moodle Maintenance
 
-本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup) 相关章节。
+This chapter is special guide for Moodle maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-## 场景
+## Maintenance guide
 
-### 在线备份
+### Moodle courses Backup and Restore
 
-课程是 Moodle 最重要的资源，Moodle 后台提供了自动备份课程的功能
+Courses are very import resource of Moodle, you can set an automatic backups for Moodle Courses
 
-1. 以管理员身份登录 Moodle 后台
+1. Log in Moodle console as administrator  
 
-2. 依次打开：【网站管理】>【课程】>【备份】，开始进行备份设置
-  ![Moodle 课程备份](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-coursebk-websoft9.png)
+2. Open **Site administrator** > **Courses** > **Backups** to set automatic backup
+  ![Moodle course backups](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/moodle-coursebk-websoft9.png)  
 
-3. 详细设置请自行研究
+3. Set it by yourself  
 
-4. 依次打开：【网站管理】>【报表】>【备份】，查看备份执行情况
-  ![Moodle 查看备份](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-coursebkrp-websoft9.png)
+4. Open **Site administrator** > **Reports** > **Backups** to view the backup result
+  ![Moodle view backup result](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/moodle-coursebkrp-websoft9.png)  
 
-### 命令行升级
+### Moodle Upgrade
 
-Moodle 官方提供了多种升级方式（[Moodle Upgrading](https://docs.moodle.org/37/en/Upgrading)），包括上传代码升级和命令升级等方式。  
+Moodle provided multiple upgrade methods, includes: automatic upgrade, upload source code for upgrading, using CLI for upgrading
 
-下面我们以命令行升级方式为例，介绍升级的大致方案：
+The following steps will introduce how to upgrade by CLI:
 
-1. 提前做好代码和数据库备份
+1. Use **SSH** to connect your Moodle Server
 
-2. 使用 SSH 远程登录到 Moodle 服务器，运行如下的命令开始升级：
+2. Run the following commands for upgrading
    ```
    cd /data/wwwroot/moodle/admin/cli
    php upgrade.php
    ```
+3. The system will start upgrade
 
-3. 等待升级完成
+More detail please refer to Moodle official docs [Moodle Upgrading](https://docs.moodle.org/37/en/Upgrading)
 
-## 故障排除
+## Troubleshoot{#troubleshoot}
 
-除以下列出的 Moodle 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
+In addition to the Moodle issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
+## FAQ{#faq}
 
-## 问题解答
+#### Moodle support multi-language?
 
-#### Moodle 支持多语言吗？
+Yes
 
-支持多语言（包含中文），后台可以设置语言
+#### Can I install plugins of Moodle online?
 
-#### Moodle 支持在线安装插件吗？
-
-支持，类似 Wordpress 在线安装插件，不过 Moodle 需要提前到官方注册一个账号
-
+Yes, if you have signed in Moodle you can install plugins from Console directly
 
 #### Moodle 开源版提供 APP？
 

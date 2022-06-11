@@ -6,14 +6,15 @@ tags:
   - Cloude Native Database
 ---
 
-# 维护参考
+# MySQL/MariaDB Maintenance
 
+This chapter is special guide for MySQL/MariaDB maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-## 场景
+## Maintenance guide
 
-### MySQL 备份与恢复{#backup}
+### MySQL/MariaDB Backup and Restore{#backup}
 
-##### 备份（导出）
+**Backup(export)**
 
 1. 使用 phpMyAdmin等可视化工具，[导出](../mysql#phpmyadminexportimport)数据库（建议SQL格式）
 
@@ -21,10 +22,9 @@ tags:
    ```
    mysqldump -uroot -p databasename>databasename.sql
    ```
-2. 将备份文件下载到本地，备份工作完成
+3. 将备份文件下载到本地，备份工作完成
 
-
-##### 恢复（导入）
+**Restore(import)**
 
 1. 登录 phpMyAdmin，打开顶部的【导入】标签页，根据向导开始导入
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-import-websoft9.png)
@@ -32,32 +32,36 @@ tags:
 2. 导入过程中可能会出现数据库字符集不兼容的情况，需要人工干预处理
 
 
-### MySQL 大版本升级{#upgrade}
+### MySQL/MariaDB Upgrade{#upgrade}
 
-Linux 上数据库大版本之间的差异较大，无法提供稳妥的升级方案
+**On Linux**
 
-Windows 上的 MySQL 升级分为两部分：
+The system update command can update MySQL patch also, e.g: 5.6.x to 5.6.y or 5.7.x to 5.7.y
 
-1. 使用Windows Update升级Windows系统
-2. 下载最新的MySQL，停止MySQL服务，替换MySQL的旧文件
+There are large differences between database distribution versions, which cannot provide a secure upgrade solution
 
-升级完成后，需要运行 `mysql_upgrade` 命令：
+**On Windows**
+
+MySQL upgrade on Windows Server divided into two parts
+
+1. Use Windows Update to upgrade Windows System
+2. Dowload the lastest MySQL, stop the MySQL Services and replace the old files of MySQL
+
+After upgrade , you need to run the `mysql_upgrade` command:
  
 ```
 mysql_upgrade -u root -p 13456
 ```
 
-### MySQL 迁移{#migration}
+### MySQL/MariaDB Migration{#migration}
 
-MySQL 到 MySQL 的迁移，可以通过数据的**导入导出**快速实现。    
+The migration from MySQL to MySQL can be implemented quickly through data import and export.
 
-但是，其他 DBMS 到 MySQL 的迁移最好是使用迁移工具，例如：[MySQL Workbench: Database Migration](https://www.mysql.com/products/workbench/migrate/)
+However, migrations from other DBMSs to MySQL are best done using a migration tool such as: [MySQL Workbench: Database Migration](https://www.mysql.com/products/workbench/migrate/)
 
-## 故障排除{#troubleshoot}
+## Troubleshoot{#troubleshoot}
 
-
-除以下列出的 MySQL 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
-
+In addition to the MySQL/MariaDB issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
 #### 导入数据库报错？
 
@@ -88,22 +92,22 @@ cat /data/mariadb/mariadb.err
 log-error=/data/mysql/log.err
 ```
 
-#### MySQL 日志太大，导致磁盘空间不足？{#binlogexceed}
+#### The database log file is too large, resulting in insufficient disk space?{#binlogexceed}
 
-默认安装，mysql会自动开启binlog，binlog是一个二进制格式的文件，用于记录用户对数据库**更新的****SQL语句****信息**，例如更改数据库表和更改内容的SQL语句都会记录到binlog里。
+By default, mysql will automatically open the binlog. Binlog is mainly used to recover the database without backup. However, the binlog will take up a lot of space. If you don't clean it for a long time, the remaining disk space will be 0, which will affect the database or the server will not start.
 
-binlog主要用于出现没有备份的情况下，恢复数据库。但binlog会占用较大空间，长期不清理会让剩余磁盘空间为0，从而影响数据库或服务器无法启动
+If you have confidence in your own backup, you do not need the binlog function. Refer to the following steps to turn it off:
 
-如果对自己的备份有信心，不需要binlog功能，参考如下步骤关闭之：
+1. Edit [MySQL Configuration File] (../mysql#path) and comment out the binlog log   
+  
+  ```
+  #log-bin=mysql-bin
+  ```
 
-1. 编辑 [MySQL 配置文件](../mysql#path)，注释掉 binlog 日志
-  ~~~
-  #log-bin=mysql-bin  
-  ~~~
-2. 重启mysql
-  ~~~
+2. Restart mysql
+  ```
   systemctl restart mysqld
-  ~~~
+  ```
 
 #### 磁盘空间不足导致数据库无法启动？
 
@@ -145,7 +149,7 @@ MariaDB [(none)]> show innodb status \G;
 方案： 配置文件中指定 mysql.sock 目录
 
 
-## 问题解答
+## FAQ{#faq}
 
 #### 单台服务器上可安装多个 MySQL实例？
 
@@ -159,17 +163,17 @@ MySQL Server 是指 MySQL 程序本体，而 MySQL Client 指采用TCP协议用�
 
 在MySQL5.7 版本之前，安装 MySQL 时会默认包含一个 test 数据库，该数据库仅仅用来测试使用，但是所有能连接到MySQL的用户，几乎都拥有test库的所有权限，因此存在一定的安全隐患。从信息安全角度考虑，如果您发现您使用的 MySQL 中有该 test 数据库，请**务必删除**。
 
-#### 是否可以修改 MySQL 根目录？
+#### Can I modify the root directory of MySQL?
 
-可以，但不建议修改
+Yes, please refer the documentation [Modify MySQL Data Directory](../mysql#datadirectory)
 
-#### 数据库 root 用户对应的密码是多少？
+#### What is the password for the database root user?
 
-密码存放在服务器相关文件中：`/credentials/password.txt`
+The password is stored in the server related file: `/credentials/password.txt`
 
-#### 是否有可视化的数据库管理工具？
+#### Is there a web-base GUI database management tools?
 
-有，内置 phpMyAdmin
+Yes, phpMyAdmin is on it, visit by *http://Server Internet IP:9090*
 
 #### 如何禁止外界访问 phpMyAdmin？
 

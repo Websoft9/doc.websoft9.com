@@ -3,15 +3,15 @@ sidebar_position: 3
 slug: /graylog/admin
 tags:
   - Graylog
-  - 日志管理
-  - 数据分析
+  - Data Analysis
+  - Log Management
 ---
 
-# 维护指南
+# Graylog Maintenance
 
-本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup) 相关章节。
+This chapter is special guide for Graylog maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-## 场景
+## Maintenance guide
 
 ### Graylog 集群
 
@@ -31,9 +31,13 @@ Graylog 支持如下最简答的部署方式：
 
 > 更多信息参考官方的[架构指南](https://www.slideshare.net/Graylog/graylog-engineering-design-your-architecture)
 
-## 故障排除
+### Backup and Restore
 
-除以下列出的 Graylog 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案：
+### Upgrade
+
+## Troubleshoot{#troubleshoot}
+
+In addition to the Graylog issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
 #### 登录后告警和错误提示 ？
 
@@ -46,12 +50,12 @@ Graylog 支持如下最简答的部署方式：
 **原因**：磁盘可用空间低于 15% 的时候，会出现这个问题  
 **方案**：释放冗余的文件或者增加服务器磁盘空间
 
-## 常见问题
+## FAQ{#faq}
 
-#### Graylog 架构原理图？
+#### Graylog Architecture?
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/graylog/graylog-arch-websoft9.png)
 
-#### Graylog 集群原理图？
+#### Graylog HA deployment?
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/graylog/architec_bigger_setup.png)

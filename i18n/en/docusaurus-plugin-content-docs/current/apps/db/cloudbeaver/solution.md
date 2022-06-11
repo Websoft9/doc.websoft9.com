@@ -1,12 +1,11 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 slug: /cloudbeaver/solution
 tags:
   - CloudBeaver
-  - MySQL, MongoDB, PostgreSQL
-  - 数据库可视化
+  - Cloud Database Manager
 ---
 
-# 场景方案
+# CloudBeaver Solution
 
 CloudBeaver 可以与其他的软件平台**集成**一起使用，解决 数据库管理 过程中的各种场景问题。

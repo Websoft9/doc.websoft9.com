@@ -4,12 +4,12 @@ slug: /ghost/solution
 tags:
   - Ghost
   - CMS
-  - 建站系统
-  - 博客系统
+  - Website
+  - Blog
 ---
 
-# 场景方案
+# Ghost Solution
 
-Ghost 可以与其他的软件平台**集成**一起使用，解决 内容订阅与编写业务场景 过程中的各种[场景问题](https://ghost.org/integrations/)。
+You can use [Ghost integrated other software](https://ghost.org/integrations/) for 内容订阅与编写业务场景.
 
 

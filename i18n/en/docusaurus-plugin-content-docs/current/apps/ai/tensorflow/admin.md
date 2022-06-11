@@ -3,44 +3,46 @@ sidebar_position: 3
 slug: /tensorflow/admin
 tags:
   - TensorFlow
-  - 人工智能
-  - 机器学习
+  - AI
+  - ML
 ---
 
-# 维护指南
+# TensorFlow Maintenance
 
-本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup) 相关章节。
+This chapter is special guide for TensorFlow maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-## 场景
+## Maintenance guide
 
-### TensorFlow 升级
 
-TensorFlow 是基于 pip 安装，故可以很方便的通过 pip 进行升级
+### TensorFlow Upgrade
+
+TensorFlow installed by pip, so the upgrade is very easy for it
 
 ```
-# 激活隔离环境下的 TensorFlow
+# Active Python virtual environment for TensorFlow
 source /data/apps/tensorflow/bin/activate
 
-# 升级
+# Upgrade
 pip install -U TensorFlow
 ```
 
-## 故障排除
 
-除以下列出的 TensorFlow 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
+## Troubleshoot{#troubleshoot}
 
-> 更多故障详细请参照[官方问题](https://www.tensorflow.org/install/errors)
+In addition to the TensorFlow issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
 
-## 问题解答
+> Please refer to [official document](https://www.tensorflow.org/install/errors) for more trouble shooting
 
-#### TensorFlow 是如何安装的？
+## FAQ{#faq}
 
-是创建 Python 隔离环境后，基于 pip 安装。
+#### How is TensorFlow installed?
 
-#### 是否有可视化的管理工具？
+Use pip install in the Python virtual environment
 
-有，内置TensorBoard，访问地址：*http://服务器公网IP:6006/*
+#### Is there a web-base GUI database management tools?
+
+Yes, TensorBoard is on it, visit by *http://Internet IP:6006*
 
 #### TensorFlow 实现 GPU 支持需要哪些条件？
 

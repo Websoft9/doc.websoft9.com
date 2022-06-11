@@ -1,32 +1,34 @@
 ---
 sidebar_position: 2
-slug: /docker/admin
+slug: /portainer/admin
 tags:
   - Docker
   - DevOps
 ---
 
-# 维护指南
+# Portainer  Maintenance
 
-本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup) 相关章节。
+This chapter is special guide for Portainer maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-## 场景
+## Maintenance guide
 
-### Portainer 备份
+### Portainer Backup and Restore
 
-到 Portainer 的容器列表里面查看 portainer 的 volume 对应的服务器目录，在```/var/lib/docker/volumes```下可找到 volume 对应的目录名，将其备份即可。
+### Portainer Backup
 
-### Portainer 升级
+Backup the volumes (```/var/lib/docker/volumes```) means backup all data.
 
-只需运行 ```docker pull portainer```就可以将 Portainer 升级到最新版本。
+### Portainer Upgrade
 
-
-## 故障排除
-
-除以下列出的 Portainer 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
+Just run the command ```docker pull portainer``, you can update Portainer very easily
 
 
-## 问题解答
+## Troubleshoot{#troubleshoot}
+
+In addition to the Portainer issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
+
+
+## FAQ{#faq}
 
 #### 怎么获得 Portainer 商业版秘钥？
 

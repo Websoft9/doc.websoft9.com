@@ -7,16 +7,37 @@ tags:
   - 客户成功
 ---
 
+# Dolibarr Maintenance
 
-# 维护指南
+This chapter is special guide for Dolibarr maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup) 相关章节。
-
-## 场景
-
-## 故障排除
-
-除以下列出的 Dolibarr 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。
+## Maintenance guide
 
 
-## 问题解答
+### Dolibarr Backup
+
+Dolibarr have provide the automatic backup tools
+
+1. Login as superuser,admin tools->backup,you can enter the interface
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/dolibarr-backup-websoft9.png)
+2. Click the “Generate backup” button,backup database, download all files in Dolibarr root directory
+3. Login as superuser,admin tools->restore,you can enter the interface
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/dolibarr-restore-websoft9.png)
+4. Restore the data, from a backup dump file, into the database of the new Dolibarr installation or into the database of this current installation (dolibarr). Warning, once restore is finished, you must use a login/password, that existed when backup was made, to connect again. To restore a backup database into this current installation, you can follow this assistant.
+
+### Dolibarr Upgrade
+
+## Troubleshoot{#troubleshoot}
+
+In addition to the Dolibarr issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
+
+## FAQ{#faq}
+
+#### Which database does this Dolibarr package use?
+
+MySQL
+
+#### Can I use Cloud database for Dolibarr?
+
+Yes
+

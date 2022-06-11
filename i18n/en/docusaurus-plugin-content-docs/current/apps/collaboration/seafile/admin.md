@@ -3,27 +3,38 @@ sidebar_position: 3
 slug: /seafile/admin
 tags:
   - Seafile
-  - 网盘
-  - 知识管理
-  - 团队协作
+  - File sync and share
+  - knowledge Management
 ---
 
-# 维护指南
+# Seafile Maintenance
 
-本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup) 相关章节。
+This chapter is special guide for Seafile maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-## 场景
+## Maintenance guide
 
-## 故障排除
+## Troubleshoot{#troubleshoot}
 
-#### Seafile 无法上传文件？
+In addition to the Jenkins issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
-设置 Seafile 的主机地址（**必选项，否则无法使用文件上传功能**）
+#### How can I use the logs?
 
-   - SERVICE_URL：*http://服务器公网IP*
-   - FILE_SERVER_ROOT：*http://服务器公网IP/seafhttp*
+You can find the keywords **Failed** or **error** from the logs directory: `/data/logs`  
 
-   ![Seafile后台界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-seturl-websoft9.png)
+You can also use docker command to check error logs: 
+```
+docker logs seafile
+docker logs seafile-mysql
+```
+
+#### Seafile upload file error?
+
+You should set the your correct Seafile host after deployment, otherwise you can't upload any files
+
+   - SERVICE_URL：*http://Internet IP of Server*
+   - FILE_SERVER_ROOT：*http:/Internet IP of Server/seafhttp*
+   
+   ![Seafile Host settings](https://libs.websoft9.com/Websoft9/DocsPicture/en/seafile/seafile-seturl-websoft9.png)
    
    
 #### 完成文档服务器配置，Seafile 仍然无法编辑和预览文件？
@@ -49,11 +60,11 @@ tags:
      - JWT_ENABLED=flase
 ```
 
-## 常见问题
+## FAQ{#faq}
 
-#### Seafile 支持多语言吗？
+#### Seafile support multi-language?
 
-支持多种语言（中文，英文等）
+Yes, more than just Chinese and English
 
 #### 为什么要推荐使用企业版 Seafile？
 
@@ -68,13 +79,13 @@ tags:
 
 官方推荐
 
-#### Seafile 是如何与 MySQL 连接的？
+#### How Seafile connect with MariaDB/MySQL?
 
-容器内部连接，即容器编排
+Container internal connection, container orchestration
 
-#### Seafile 默认能否对文档进行预览和编辑？
+#### How can Seafile view & edit file online?
 
-支持，如果不能预览，请参考[Office设置](../seafile/solution#onlyoffice)
+You should complete the [OnlyOffice setting](../ownCloud/solution#onlyoffice) on your Nextcloud.
 
 #### Seafile 支持手机客户端吗？
 
@@ -88,9 +99,9 @@ Seafile 是一款开源的企业网盘，作为企业网盘，主要用于网络
 - 文件和文件库管理，用于文件的管理和分类，并通过查看文件的历史信息了解文件的版本变更
 - 共享与写作，用于将文件或文件库共享给个人或群组，实现协同办公
 
-#### 是否可以修改 Seafile 的数据路径？
+#### Is it possible to modify the source path of Seafile?
 
-可以，但需要对历史数据进行迁移
+Yes, but you must migrate the data to new directory
 
 #### 没有域名是否可以设置 Seafile HTTPS？
 

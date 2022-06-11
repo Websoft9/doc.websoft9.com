@@ -6,43 +6,47 @@ tags:
   - Cloud Native Database
 ---
 
-# 维护参考
+# PostgreSQL Maintenance
 
-## 场景
+This chapter is special guide for PostgreSQL maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-### 迁移
+## Maintenance guide
 
-1. 备份 */data/postgresql/pgdata* 目录下的所有数据
-2. 根据不同的操作系统分别设置
+### Change PGDATA Directory
 
-   * RedHat/CentOS  修改 **postgreql.service** 文件中数据目录的环境变量
+1. Backup all files on you PGDATA */data/postgresql/pgdata* 
+2. Change the PGDATA directory by different Linux distribution
+
+   * RedHat/CentOS: modify the file **postgreql.service** 
       ```
-      # 查看postgresql.service位置
+      # cat postgresql.service directory
       systemctl cat postgreql.service 
 
-      # 在 postgresql.servce 中找到下面这行，修改之
+      # modify the  Environment=PGDATA in the file postgresql.servce
       Environment=PGDATA=/var/lib/pgsql/11/data/
       ```
-   * Ubuntu  修改 **postgresql.conf** 文件中数据目录
+   * Ubuntu: modify the file **postgresql.conf** 
      ```
      data_directory =
      ```
-3. 恢复数据到新的目录
-4. 重启 PostgreSQL 服务
+3. Restore all data from your backup
+4. Restart your PostgreSQL service
 
-### PostgreSQL应用备份
+### PostgreSQL Backup for application
 
-PostgreSQL上的应用备份有多种[备份方案](https://www.postgresql.org/docs/12/backup.html)，常见包括：
+There three main methods for PostgreSQL backup: 
 
-* 使用 pg_dump, pg_dumpall, pgAdmin, phpPgAdmin等工具进行数据库导出（SQL转存）
-* 使用 pg_basebackup等工具实现增量备份和基于时间的恢复
-* 数据库文件目录直接复制
+* User **pg_dump, pg_dumpall, pgAdmin, phpPgAdmin** to export databse(SQL dump)
+* Use **pg_basebackup** for incremental backup and time-based recovery
+* Database files copy and download directly
 
-其中数据库文件目录直接复制等同于服务器快照备份，无需重复再做。
+Database files copy is same with **snapshot backup** on your Cloud platform  
 
-### PostgreSQL 更新升级
+Get more details about backup, please refer to PostgreSQL official docs [PostgreSQL Backup](https://www.postgresql.org/docs/12/backup.html)
 
-PostgreSQL 提供了大版本升级工具 pg_upgrade。升级总是比较复杂，这里只列出 pg_upgrade 常用参数
+### PostgreSQL Upgrade
+
+PostgreSQL provides a major version upgrade tool **pg_upgrade**. Upgrading is always more complicated, only the common parameters of **pg_upgrade** are listed here
 
 ```
 pg_upgrade --help
@@ -93,28 +97,35 @@ or
 Report bugs to <pgsql-bugs@postgresql.org>.
 ```
 
-## 故障排除{#troubleshoot}
+## Troubleshoot{#troubleshoot}
 
-除以下列出的 PostgreSQL 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
+In addition to the PostgreSQL issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
-#### 运行 psql 命令显示 "cannot be run as root Failure, exiting"？
+#### The error "cannot be run as root Failure, exiting" when running the command `psql`?
 
-为了安全考量，默认安装已经创建了一个数据库账号 `postgres`，如果使用 `root` 账号登录，请切换用户后再使用 psql
+For the security, the user **postgres** has been created in the process of installation, if you want to use the customer tool (e.g psql, pg_upgrade) on your PostgreSQL server, you should change the user first
+
 ```
 sudo -i -u postgres
 ```
 
-## 常见问题
+## FAQ{#faq}
 
-#### 什么是 PostgreSQL 的 Client 和 Server？
+#### pgAdmin support multiply languages?
 
-PostgreSQL Server 是指 PostgreSQL 程序本体，而 PostgreSQL Client 指采用TCP协议用于连接程序本地的客户端工具。  
+Yes
 
-它们是两个完全不同的程序，也就是说它们并需要同时安装到同一台服务上。
+#### What type of client is pgAdmin?
 
-#### PostgreSQL 有默认数据库吗？
+pgAdmin is a web based client, even if installed under Windows, it is accessed indirectly by calling the browser
 
-有，名称为 postgres
+#### What are the Client and Server of PostgreSQL?
+
+PostgreSQL Server refers to the PostgreSQL program ontology, and PostgreSQL Client refers to the client that uses TCP protocol to connect to the program local. They are two completely different programs, which means that they do not need to be installed on the same service at the same time.
+
+#### What is the default database when completed the PostgreSQL deployment?
+
+postgres
 
 #### PostgreSQL 支持哪些数据类型？
 
@@ -147,10 +158,3 @@ PostgreSQL 常见的[认证方法](https://www.postgresql.org/docs/current/auth-
 * trust： 完全信任
 * peer：基于 unix socket 免密连接
 
-#### pgAdmin 支持多语言吗？
-
-支持数十种语言（包含中文）
-
-#### pgAdmin 是什么类型的客户端？
-
-pgAdmin 是通过浏览器访问的客户端，即使在 Windows 下安装，也是间接调用浏览器来访问的

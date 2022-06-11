@@ -245,7 +245,7 @@ WAMP 应用中包含 Apache, Docker, MySQL 等组件，可通过 **[通用参数
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wamp/wamp-openvhostconf-websoft9.png)
 
 Apache 主配置文件： *C:\websoft9\wampstack\apache2\conf\httpd.conf*   
-Apache 日志文件： *C:\websoft9\wampstack\apache2\logs*  
+Apache logs file： *C:\websoft9\wampstack\apache2\logs*  
 Apache 模块目录： *C:\websoft9\wampstack\apache2\modules*  
 
 #### PHP{#php}

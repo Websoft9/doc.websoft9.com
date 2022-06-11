@@ -7,75 +7,72 @@ tags:
   - 客户成功
 ---
 
-# 快速入门
+# VtigerCRM Getting Started
 
-[Vtiger Community Edition](https://www.vtiger.com/open-source-crm/) 一套开源的客户关系管理系统(CRM)，它是基于 SugarCRM 开发的一个衍生版本。适合中小企业从业务、市场、销售、采购、库存、客服等全程跟踪客户，实现销售自动化，获取更多订单。  
+[Vtiger Community Edition](https://www.vtiger.com/open-source-crm/) is an opensource CRM system that helps you create and automate a better customer journey.Vtiger CRM enables sales, support, and marketing teams to organize and collaborate to measurably improve customer experiences and business outcomes. Vtiger CRM also includes email, inventory, project management, and other tools, providing a complete the business management suite.
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/vtigercrm/vtigercrm-gui-websoft9.png)
 
-## 准备
+If you have installed Websoft9 VtigerCRM, the following steps is for your quick start
 
-部署 Websoft9 提供的 VtigerCRM 之后，需完成如下的准备工作：
+## Preparation
 
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 VtigerCRM 的 **[默认账号和密码](./user/credentials)**  
-4. 若想用域名访问  VtigerCRM **[域名五步设置](./administrator/domain_step)** 过程
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:80** is allowed
+3. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for VtigerCRM
+4. [Get](./user/credentials) default username and password of VtigerCRM
 
+## VtigerCRM Initialization
 
-## VtigerCRM 初始化向导{#init}
+### Steps for you
 
-### 详细步骤
-
-1. 本地浏览器访问：*http://域名* 或 *http://公网IP* 进入安装向导（首选域名访问方式）
+1. Using local Chrome or Firefox to visit *http://domain* or *http://Internet IP*, you will enter the configuration interface of installation
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/vtigercrm/vtigercrm-install001-websoft9.png)
 
-2. 系统进入环境检测步骤，通过后进入下一步
+2. Environment check, go to next step
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/vtigercrm/vtigercrm-install002-websoft9.png)
 
-3. 填写您的数据库参数（[查看数据库账号密码](./user/credentials)）
+3. Then configure the database connection information([Don't know password?](./user/credentials))
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/vtigercrm/vtigercrm-install003-websoft9.png)
 
-4. 数据库连接正确，点击“Next”进入下一步
+4. Check the database connection, go to next step
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/vtigercrm/vtigercrm-install004-websoft9.png)
 
-5. 选择一个匹配的行业，然后进入下一步
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/vtigercrm/vtigercrm-install005-websoft9.png)
+5. Select one industry for your VtigerCRM
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/vtigercrm/vg06.png)
 
-6. 选择需要安装的模块，建议全部勾选上，然后进入下一步
+6. Select the modules you want to installed
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/vtigercrm/vtigercrm-install006-websoft9.png)
 
-7. 系统提示选择货币、时区等
+7. Select the Currency, Time zone
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/vtigercrm/vtigercrm-install007-websoft9.png)
 
-8. 点击“Get Started”，进入后台，体验系统的完整功能
+8. VtigerCRM dashboard
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/vtigercrm/vtigercrm-backend-websoft9.png)
 
+> Refers to the [VtigerCRM Help](https://www.vtiger.com/help/) to get start your VtigerCRM tutorial
 
-> 需要了解更多 VtigerCRM 的使用，请参考官方文档：[Vtiger Help](https://www.vtiger.com/help/)
+### Having trouble?
 
-### 出现问题？
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
-
-
-## VtigerCRM 使用入门
+## VtigerCRM QuickStart
 
 下面以 **VtigerCRM 构建企业CRM** 作为一个任务，帮助用户快速入门：
 
 
-## VtigerCRM 常用操作
+## VtigerCRM Setup
 
-### 配置 SMTP{#smtp}
+### Configure SMTP{#smtp}
 
-1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
+1. Get [SMTP](./administrator/smtp) related parameters in the mailbox management console
    
 2. 打开VtigerCRM->设置按钮 > CRM Settings > Outgoing Server
   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-smtp-websoft9.png)
 
 3. 设置无误后，请点击“Send Test Email”进行测试以验证
 
-### 安装中文包
+### Set Chinese Language
 
 VtigerCRM 支持多国语言，中文包安装方法如下：
 
@@ -88,15 +85,15 @@ VtigerCRM 支持多国语言，中文包安装方法如下：
 3.  启用新的语言：右上角点击你的登录用户名->My Preferences-> Edit，点击 Language 后面的下拉框选择语言，然后保存
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/vtigercrm/change-language-websoft9.jpg)
 
-### 连接 Marketplace
+### Install apps
 
 在 VtigerCRM 右上角点齿轮图标进入后台设置界面，左侧菜单栏点击 Extension Store 进入官方扩展应用市场。点击应用市场右上角的 Login to Marketplace 登录或者注册应用市场。搜索 Chinese 找到简体中文语言包进行安装。
 
 注意：语言包也可以通过官方扩展应用市场安装。
 
-## 参数{#parameter}
+## Reference sheet
 
-VtigerCRM 应用中包含 PHP, Nginx, Docker, MySQL, phpMyAdmin 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage VtigerCRM 
 
 通过运行`docker ps`，可以查看到 VtigerCRM 运行时所有的 Container：
 
@@ -107,27 +104,27 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 下面仅列出 VtigerCRM 本身的参数：
 
-### 路径{#path}
+### Path{#path}
 
 VtigerCRM 目录:  */data/wwwroot/vtigercrm*   
 VtigerCRM 升级路径： *http://URL/migrate*
 
-### 端口{#port}
+### Port{#port}
 
 无特殊端口
 
 
-### 版本{#version}
+### Version{#version}
 
 控制台查看
 
-### 服务{#service}
+### Service{#service}
 
 ```shell
 sudo docker start | stop | restart | stats vtigercrm
 ```
 
-### 命令行{#cli}
+### CLI{#cli}
 
 无
 

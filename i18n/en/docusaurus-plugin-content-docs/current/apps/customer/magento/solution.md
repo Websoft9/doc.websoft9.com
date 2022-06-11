@@ -3,11 +3,11 @@ sidebar_position: 2
 slug: /magento/solution
 tags:
   - Magento
-  - 电子商务
+  - eCommerce
 ---
 
-# 场景方案
+# Magento Solution
 
-Magento 可以与其他的软件平台**集成**一起使用，解决 电商建站 过程中的各种[场景问题](https://business.adobe.com/solutions/overview.html)。
+You can use [Magento integrated other software](https://business.adobe.com/solutions/overview.html) for E-commerce station construction.
 
 

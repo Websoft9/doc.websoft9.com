@@ -3,19 +3,23 @@ sidebar_position: 3
 slug: /kafka/admin
 tags:
   - Kafka
-  - IT 架构
-  - 中间件
+  - IT Architecture
+  - Broker
 ---
 
-# 维护参考
+# Kafka Maintenance
 
-## 场景
+This chapter is special guide for Kafka maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-### Kafka升级
+## Maintenance guide
 
-Kafka 主要采用二级制安装方式，其升级方案差不多等于安装：
+### Backup and Restore   
 
-1. 依次运行如下的命令做好准备：
+### Upgrade
+
+You can upgrade your Kafka by the following steps:
+
+1. Prepare for upgrade
    ```
    # stop Kafka,Zookeeper service
    systemctl stop kafka
@@ -24,20 +28,18 @@ Kafka 主要采用二级制安装方式，其升级方案差不多等于安装�
    # rename the dir of Kafka for backup
    mv /opt/kafka  /opt/kafkaBK
    ```
-2. 从官网[下载Kafka](https://kafka.apache.org/downloads)后解压并上传到：*/opt* 目录，并命名为 *kafka*
-3. 分别运行下面的修改权限
+2. [Download Kafka](https://kafka.apache.org/downloads) and unzip it, then upload to the directory: */opt* and renamed it to *kafka*
+3. Run the following modify permissions
    ```
    chown -R kafka. /opt/kafka
    ```
-4. 重启 [Kafka服务](#服务) 后升级完成
-
-    ```
+4. Restart [Kafka services](/zh/admin-services#kafka)
 
 ### Kafka 集群
 
 Kafka对大数据处理性能优越，一般使用Kafka时，系统数据量都非常大。当数据量几何级数增长时，需要考虑两个要素：数据处理能力和容灾备份能力，使用Kafka集群就刚好解决了这两个问题。所以现实当中，一般Kafka应用会使用Kafka集群。
 
-#### Kafka集群结构
+**Kafka集群结构**
 
  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kafka/kafka-relation-websoft9.png)
 
@@ -46,8 +48,8 @@ Kafka对大数据处理性能优越，一般使用Kafka时，系统数据量都�
 2. 每个Kafka节点同时也是ZooKeeper节点
 3. 消息生产时和Kafka集群连接，消费时需要先通过Zookeeper找到消费位置offset,再连接Kafka集群获取消息
  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kafka/kafka-cluster1-websoft9.png)
- 
-#### 搭建Zookeeper和Kafka集群
+  
+**搭建Zookeeper和Kafka集群**
 
 我们可以把集群想象成为一个整体，对外连接时作为一个对象工作，具体需要哪个节点工作时再内部协调。因此，我们的集群方案就是，先搭建集群的一个节点，其他复制这个节点后修改即可。
 下面我们通过一个节点(172.31.57.62)为例来记录详细步骤：（假设我们使用局域网3台服务器172.31.57.62，172.31.57.63，172.31.57.64搭建集群）
@@ -116,7 +118,7 @@ systemctl daemon-reload
 systemctl restart zookeeper
 ```
 
-5. 编辑Kafka配置文件
+5. 编辑Kafkaconfiguration file
 
 ```
 # With the same id
@@ -152,43 +154,40 @@ systemctl daemon-reload
 systemctl restart kafka
 ```
 
-7,复制上面节点到服务器（172.31.57.63），将步骤3的myid修改成2，步骤5中broker.id修改成2，步骤5中listeners修改成该服务器地址；其他节点依次类推
+7. 复制上面节点到服务器（172.31.57.63），将步骤3的myid修改成2，步骤5中broker.id修改成2，步骤5中listeners修改成该服务器地址；其他节点依次类推
 
-8，注意当所有相关节点服务器都启动后，才会显示正常，否则会报错
+8. 注意当所有相关节点服务器都启动后，才会显示正常，否则会报错
+  
+## Troubleshoot{#troubleshoot}
 
+In addition to the Kafka issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
+  
+#### Kafka service can't start?
 
-## 故障处理
+1. Use the debug mode of `bash /opt/kafka/bin/kafka-server-start.sh` and you can see the errors
+2. Search the keywords **Failed** or **error** from logs: */data/logs*
+  
+#### Run the command "kafka-topics.sh", java not found?
 
-除以下列出的 Kafka 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案：
+You should add a variable $JAVA_HOME=/usr/bin/java
 
-#### Kafka服务无法启动？
-
-1. 以调试模式运行`bash /opt/kafka/bin/kafka-server-start.sh`，便可以查看启动状态和错误
-2. 打开日志文件：*/data/logs*，检索 **failed** 关键词，分析错误原因
-
-#### 运行 *kafka-run-class.sh* 显示 `java: not found...` 的错误？
-
-这是Java环境变量缺失导致的问题，请设置环境变量：$JAVA_HOME=/usr/bin/java
-
-
-## 问题解答
-
-#### 如何以调试模式启动 Kafka 服务？
+## FAQ{#faq}
+  
+#### How can I enable the debug mode of Kafka service?
 
 ```
 systemctl stop kafka zookeeper
 bash /opt/kafka/bin/kafka-server-start.sh
 ```
+  
+#### Is Java included in this deployment solution?
 
+Yes
+  
+#### Is a web-based GUI management tool for Kafka?
 
-#### 本部署环境中是否已经包含Java？
-
-是的
-
-#### 是否提供了 Kafka 可视化管理工具？
-
-是的。参考 [CMAK](../kafka#gui)
-
+Yes, refer to [CMAK](../kafka#gui)
+  
 #### CMAK 中无法支持所需的 Kafka 版本？
 
 CMAK 并不是支持所有 Kafka 版本，具体以使用为准

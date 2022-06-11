@@ -3,27 +3,26 @@ sidebar_position: 1
 slug: /elk
 tags:
   - ELK Stack
-  - 日志管理
-  - 数据分析
+  - Data Analysis
 ---
 
-# 快速入门
+# ELK Stack Getting Started
 
-[ELK Stack](https://www.elastic.co/cn/elastic-stack/) 是 Elastic Stack 的简称，由 Elasticsearch、Kibana、Beats 和 Logstash 等开源软件组成。ELK 能够获取任何来源、任何格式的数据，然后对数据进行搜索、分析和可视化。ELK 适用于各种用例，不管是日志，还是你能想到的任何项目，无一不能胜任。
+[ELK](https://elk-server.apache.org/) is the most widely deployed open source message broker. With more than 35,000 production deployments of ELK world-wide at small startups and large enterprises, ELK is the most popular open source message broker.
 
-![ELK Stack](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-gui-websoft9.gif)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-gui-websoft9.gif)
+
+If you have installed Websoft9 ELK Stack, the following steps is for your quick start
 
 
+## Preparation
 
-## 准备
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:80** is allowed
+3. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for ELK Stack
+4. [Get](./user/credentials) default username and password of ELK Stack
+5. Log in the cloud server, run the following command, pull the ELK-related Docker image and start the container
 
-部署 Websoft9 提供的 ELK 之后，请参考下面的步骤快速入门。
-
-1. 在云控制台获取您的 **服务器公网 IP 地址**
-2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:80** 和 **TCP:9001** 端口是否开启
-3. 在服务器中查看 ELK 的 **[默认账号和密码](./user/credentials)**
-4. 若想用域名访问 ELK **[域名五步设置](./administrator/domain_step)** 过程
-5. 登录云服务器，运行下面的命令，拉取 ELK 相关 Docker 镜像并启动容器
 
    ```
    cd /data/wwwroot/elk && docker-compose pull && docker-compose up -d
@@ -31,26 +30,30 @@ tags:
 
    > Elastic 开源版 License 不允许第三方的分发行为，但允许用户免费使用，所以拉取镜像的动作由用户自行操作。
 
-## ELK 初始化向导
 
-### 详细步骤
+## ELK Stack Initialization
 
-1. 使用本地电脑浏览器访问网址： *http://域名* 或  *http://服务器公网 IP*, 进入 ELK 登录界面
-   ![ELK 登录页面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-login-websoft9.png)
+### Steps for you
 
-2. 输入账号密码（[不知道账号密码？](./user/credentials)），成功登录到 ELK 后台  
-   ![ELK 后台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-bkreminder-websoft9.png)
-   ![ELK 控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-dashboard-websoft9.png)
+1. Use local Chrome or Firefox to access the URL *http://DNS* You will enter installation wizard of ELK.
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-login-websoft9.png)
 
-> 需要了解更多 ELK 的使用，请参考官方文档：[ELK Documentation](https://www.elk.com/documentation.html)
+2. Log in ELK web console. ([Don't have password?](./user/credentials)) 
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-bkreminder-websoft9.png)
 
-### 出现问题？
+3. Set you new password from: 【Users】>【Admin】>【Permissions】>【Update this user】
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-dashboard-websoft9.png)
 
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或 **[FAQ](./faq#setup)** 尝试快速解决问题。
+> More guide about ELK, please refer to [ELK Documentation](https://www.elk.com/documentation.html).
 
-## ELK 入门向导
+### Having trouble?
 
-ELK 的数据源多种多样，这里用常见的日志文件为 Logstash 的输入为例，步骤如下：
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
+
+
+## ELK Stack QuickStart
+
+ELK 的数据源多种多样，这里用常见的logs file为 Logstash 的输入为例，步骤如下：
 
 1. 在 [Logstash 的配置文件](#path)中设置索引"mytest"，并重启容器
    ```
@@ -102,9 +105,9 @@ ELK 的数据源多种多样，这里用常见的日志文件为 Logstash 的输
 
   ![ELK Index](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-wizard7-websoft9.png)
 
-## ELK 常用操作
+## ELK Stack Setup
 
-### Logstash 连接 Elasticsearch
+### Connecting Logstash to Elasticsearch
 
 Logstash 作为数据的采集者，它是如何将数据传输到 Elasticsearch 这个数据存储中的呢？
 
@@ -134,25 +137,24 @@ Logstash 作为数据的采集者，它是如何将数据传输到 Elasticsearch
 
   > 以上配置段中的 **output** 需要使用 elasticsearch 的数据库连接账号。
 
-### 配置 SMTP
+### Configure SMTP{#smtp}
 
-ELK 配置 SMTP 发邮件的步骤：：
+1. Get [SMTP](./administrator/smtp) related parameters in the mailbox management console
 
-1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
+2. Log in ELK Console.
+3. Enter the SMTP settings.
+![Metabase SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/en/metabase/metabase-smtp-websoft9.png)
+4. Click the **Test Connection**. You will get the feedback *"no errors were..."* if SMTP is valid.
 
-2. 登录 ELK 控制台，依次打开：【Stack Management】>【Watcher】，增加一个 [Email Action](https://www.elastic.co/guide/en/elasticsearch/reference/current/actions.html)
+### Reset Password
 
-3. 编辑 Elasticsearch 的配置文件，增加 [Email 配置](https://www.elastic.co/guide/en/elasticsearch/reference/current/actions-email.html)
+There are two main measures to reset password.
 
-### 重置密码
-
-常用的 ELK 重置密码相关的操作主要有修改密码和找回密码两种类型：
-
-#### 修改密码
+**Changing password**
 
 登录 Kibana 后，右上角用户图标的【用户配置文件】即可修改密码
 
-#### 找回密码
+**Forgot Password**
 
 如果用户忘记了密码，需通过重新运行容器的方式重置密码：
 
@@ -163,9 +165,10 @@ docker-compose down && docker-compose up -d
 
 `.env`文件中的 **DB_ES_PASSWORD** 变量即重置后的密码
 
-## ELK 参数
 
-ELK 应用中包含 Nginx, Docker 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+## Reference sheet
+
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage ELK
 
 通过运行`docker ps`，可以查看到 ELK 运行时所有的 Container：
 
@@ -178,11 +181,11 @@ de14eb80b9f9   elasticsearch:7.13.4   "/bin/tini -- /usr/l…"   4 minutes ago  
 
 下面仅列出 ELK 本身的参数：
 
-### 路径{#path}
+### Path{#path}
 
 ELK Stack 包含：Elasticsearch, Kibana, Logstash 等组件
 
-ELK 安装目录： */data/wwwroot/elk*  
+ELK installation directory： */data/wwwroot/elk*  
 ELK 配置目录： */data/wwwroot/elk/src*  
 ELK 配置容器配置文件： */data/wwwroot/elk/.env*  
 
@@ -190,7 +193,7 @@ Logstash 配置文件： */data/wwwroot/elk/src/logstash/pipelinelogstash.conf*
 Kibana 配置文件： */data/wwwroot/elk/src/kibana/config/kibana.yml*   
 Elasticsearch 配置文件： */data/wwwroot/elk/src/elasticsearch/config/elasticsearch.yml*  
 
-### 端口{#port}
+### Port{#port}
 
 | 端口号 | 用途                                         | 必要性 |
 | ------ | -------------------------------------------- | ------ |
@@ -201,13 +204,13 @@ Elasticsearch 配置文件： */data/wwwroot/elk/src/elasticsearch/config/elast
 | 5000   | Logstash TCP | 可选   |
 | 5044   | Logstash TCP	 | 可选   |
 
-### 版本
+### Version
 
 ```shell
 docker exec -it elk-elasticsearch bin/elasticsearch --version
 ```
 
-### 服务
+### Service
 
 ```shell
 sudo docker  start | stop | restart | status elk-elasticsearch
@@ -215,7 +218,7 @@ sudo docker  start | stop | restart | status elk-logstash
 sudo docker  start | stop | restart | status elk-kibana
 ```
 
-### 命令行
+### CLI
 
 [SQL CLI](https://www.elastic.co/guide/en/elasticsearch/reference/current/sql-cli.html)
 

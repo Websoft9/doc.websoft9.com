@@ -175,7 +175,7 @@ python3 -m venv myapp
 通过 source 命令，激活虚拟环境:
 
 ```
-source myapp/bin/active
+source myapp/bin/activate
 ```
 
 一旦进入激活状态之后，Shell 的前缀便变成 `(myapp) [root@...]#` 的样式。

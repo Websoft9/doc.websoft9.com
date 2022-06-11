@@ -7,87 +7,83 @@ tags:
   - ERP
 ---
 
-# 快速入门
+# ERPNext Getting Started
 
-[ERPNext](https://erpnext.com/)  是一个 100% 开源的 ERP，基于 Python 和 Node 开发。它功能全面，包含会计、人力资源、制造、网站、电商、CRM、资产管理、客服工作台等全面的功能。它是 SAP 的开源替代品，全球已经有超过 5,000 家企业客户使用。
-
+[ERPNext](https://erpnext.com/) is 100% open source ERP,based on Python and node development, it has comprehensive functions, including accounting, human resources, manufacturing, website, e-commerce, CRM, asset management, customer service workbench and other comprehensive functions. It is very suitable as a substitute for SAP, which has been used by more than 5000 enterprise customers all over the world.
 ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/erpnext/erpnext-adminui-websoft9.png)
 
-## 准备
+If you have installed Websoft9 ERPNext, the following steps is for your quick start
 
-部署 Websoft9 提供的 ERPNext 之后，需完成如下的准备工作：
+## Preparation
 
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 ERPNext 的 **[默认账号和密码](./user/credentials)**  
-4. 若想用域名访问  ERPNext **[域名五步设置](./administrator/domain_step)** 过程
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:80** is allowed
+3. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for ERPNext
+4. [Get](./user/credentials) default username and password of ERPNext
 
+## ERPNext Initialization
 
-## ERPNext 初始化向导{#init}
+### Steps for you
 
-### 详细步骤
+1. Using local Chrome or Firefox to visit the URL *http://DNS* or *http://Server's Internet IP*, you will enter installation wizard of ERPNext
+   ![ERPNext login](https://libs.websoft9.com/Websoft9/DocsPicture/en/erpnext/erpnext-login-websoft9.png)
 
-1. 使用本地电脑 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入初始化页面
-   ![erpnext安装登录](https://libs.websoft9.com/Websoft9/DocsPicture/zh/erpnext/erpnext-login-websoft9.png)
+2. Log in to ERPNext web console([Don't have password?](./user/credentials)), select your language and go to next step 
+   ![ERPNext install lang](https://libs.websoft9.com/Websoft9/DocsPicture/en/erpnext/erpnext-installlanguage-websoft9.png)
 
-2. 输入账号密码（[不知道账号密码？](./user/credentials)），选择语言， 进入下一步 
-   ![erpnext安装](https://libs.websoft9.com/Websoft9/DocsPicture/zh/erpnext/erpnext-language-websoft9.png)
+3. Follow the installation wizard to complete installation wizard
 
-3. 根据安装向导依次完成后续步骤
+4. You can see the interface when you complete the installation successfully
+   ![ERPNext background](https://libs.websoft9.com/Websoft9/DocsPicture/en/erpnext/erpnext-ok-websoft9.png)
 
-4. 安装完成之后，ERPNext 会弹出如下界面
-   ![erpnext后台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/erpnext/erpnext-cpsetup-websoft9.png)
+   There may be an installation error prompt, then you should retry it again until success
+   ![ERPNext wizard installation error](https://libs.websoft9.com/Websoft9/DocsPicture/zh/erpnext/erpnext-wizarderror-websoft9.png)
 
-   可能会出现安装错误提示，此时需要反复安装：
-   ![erpnext 向导安装报错](https://libs.websoft9.com/Websoft9/DocsPicture/zh/erpnext/erpnext-wizarderror-websoft9.png)
+5. A search box is provided in the top menu for quick retrieval and access to all functions of ERPNext
+   ![ERPNext quick search](https://libs.websoft9.com/Websoft9/DocsPicture/en/erpnext/erpnext-usersearch-websoft9.png)
 
-5. ERPNext 顶部菜单中提供了搜索框，用于快速检索并进入 ERPNext 所有的功能
-   ![erpnext 快速检索](https://libs.websoft9.com/Websoft9/DocsPicture/zh/erpnext/erpnext-sbar-websoft9.png)
+6. Example: enter the 【user】 settings to manage all accounts
+   ![ERPNext user management](https://libs.websoft9.com/Websoft9/DocsPicture/en/erpnext/erpnext-userlist-websoft9.png)
 
-6. 通过检索功能，进入【用户】设置，可以管理当前系统下所有账号
-   ![erpnext 用户管理](https://libs.websoft9.com/Websoft9/DocsPicture/zh/erpnext/erpnext-users-websoft9.png)
-
-
-> 需要了解更多 ERPNext 的使用，请参考官方文档：[ERPNext Documentation](https://docs.erpnext.com)
+> More useful ERPNext guide, please refer to [ERPNext Documentation](https://docs.erpnext.com/)
 
 
-### 出现问题？
+### Having trouble?
 
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
-**ERPNext 服务启动失败？**
+**ERPNext service can't start?**
 
-请确认hostname是否包含字符串 "."，例如 erpnext12.14.0 对于 ERPNext 来说是一个不合规的 hostname
+Make sure your **hostname** of Server not include the str ".". e.g erpnext12.14.0 is a not regular for ERPNext
 
-你可以使用下列命令来修改hostname：
+you can rename hostname by the following command
 
 ```
 hostnamectl set-hostname erpnext
 ```
 
-
-## ERPNext 使用入门
+## ERPNext QuickStart
 
 下面以 **ERPNext 构建企业ERP** 作为一个任务，帮助用户快速入门：
 
 
 
-## ERPNext 常用操作
+## ERPNext Setup
 
-### 配置 SMTP{#smtp}
+### Configure SMTP{#smtp}
 
-1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
-   
-2. 登录 ERPNext控制台，在【设置】>【电子邮件域名】填写SMTP参数
+1. Get [SMTP](./administrator/smtp) related parameters in the mailbox management console
+
+2. Log in ERPNext Console,set SMTP parameters in【Settings】>【Email Domain】
 ![ERPNext SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/en/erpnext/erpnext-smtp-websoft9.png)
 
-3. 点击【保存】后，系统后进行一个 SMTP 初步验证，验证通过才能保存成功
+3. After clicking **save**, it will verify SMTP and only the correct items can be saved successfully
 
-### 域名额外配置（修改 URL） {#dns}
+### DNS Additional Configure（Modify URL）{#dns}
 
-**[域名五步设置](./administrator/domain_step)** 完成后，需设置 ERPNext 的 SITE_URL：
+Complete **[Five steps for Domain](./administrator/domain_step)** ，Set the URL for ERPNext:
 
-1. 连接服务器，修改 ERPNext 容器环境变量文件：*/data/wwwroot/erpnext/.env*  
+1. Use SSH to connect Server,,modify the environment variables and set the domain name：*/data/wwwroot/erpnext/.env*  
    
    ```
    ...
@@ -97,33 +93,33 @@ hostnamectl set-hostname erpnext
    ```
 
 
-2. 重启 ERPNext 
+2. Restart ERPNext
    ```
    docker-compose up -d 
    ```
 
-### 重置密码
+### Reset password
 
-常用的 ERPNext 重置密码相关的操作主要有修改密码和找回密码两种类型：
+There are two main measures to reset password.
 
-#### 修改密码
+### Change password
 
-1. 登录 ERPNext后台，依次打开：【设置】>【个人设置】，找到修改密码项
-  ![ERPNext 修改密码](https://libs.websoft9.com/Websoft9/DocsPicture/zh/erpnext/erpnext-modifypw-websoft9.png)
+1. Log in to the background of ERPNext and open Settings > personal settings to find the password modification item
+![ERPNext change password](https://libs.websoft9.com/Websoft9/DocsPicture/en/erpnext/erpnext-modifypw-websoft9.png)
 
-2. 直接设置新密码，保存后生效
+2. Set the new password directly and take effect after saving
 
-#### 找回密码
+### Forgot Password
 
-如果用户忘记了 ERPNext 密码，可以通过如下的命令直接设置一个新密码：
+Try to retrieve your password by the following commands when forgot it.
 
-```
+````
 sudo -H -u erpnext bash -c "cd /data/wwwroot/frappe-bench && export GIT_PYTHON_REFRESH=quiet && /usr/local/bin/bench set-admin-password newpassword"
-```
+````
 
-## 参数{#parameter}
+## Reference sheet
 
-ERPNext 应用中包含 Nginx, Redis, MariaDB, Docker 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。  
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage ERPNext
 
 通过运行`docker ps`，可以查看到 ERPNext 运行时所有的 Container：
 
@@ -146,7 +142,7 @@ a404ca45d127   frappe/erpnext-nginx:v13     "/docker-entrypoint.…"   About an 
 
 下面仅列出 ERPNext 本身的参数：
 
-### 路径{#path}
+### Path{#path}
 
 ERPNext 路径:  */data/wwwroot/erpnext*  
 ERPNext 数据库配置文件: */data/wwwroot/erpnext/.env*  
@@ -155,24 +151,24 @@ ERPNext 应用路径 : */data/wwwroot/frappe-bench/volumes/erpnext-site-vol*
 ERPNext 附件路径:  */data/wwwroot/frappe-bench/volumes/erpnext-assets-vol*     
 ERPNext 备份位置：*/var/lib/docker/volumes/docker-erpnext_sites-vol/_data/IP/private/backups*  
 
-### 端口{#port}
+### Port{#port}
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
 | 8080   | ERPNext 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
 
 
-### 版本{#version}
+### Version{#version}
 
 控制台查看
 
-### 服务{#service}
+### Service{#service}
 
 ```shell
 sudo docker start | stop | restart | stats erpnext-worker-default
 ```
 
-### 命令行{#cli}
+### CLI{#cli}
 
 [CLI to manage Multi-tenant deployments for Frappe apps](https://github.com/frappe/bench)
 

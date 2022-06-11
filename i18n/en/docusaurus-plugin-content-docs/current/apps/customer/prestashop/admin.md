@@ -3,23 +3,23 @@ sidebar_position: 3
 slug: /prestashop/admin
 tags:
   - PrestaShop
-  - 电子商务
+  - eCommerce
 ---
 
-# 维护指南
+# PrestaShop Maintenance
 
-本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup) 相关章节。
+This chapter is special guide for PrestaShop maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-## 场景
+## Maintenance guide
 
-### 数据库备份
+### PrestaShop Backup and Restore
 
-PrestaShop 提供了后台数据库备份功能
+This section provides PrestaShop online database backup solution
 
-1. 登录 PrestaShop 后台，依次打开：【Advanced Parameters】>【DB backup】
+1. Log in PrestaShop console as administrator
+2. Open【Advanced Parameters】>【DB backup】
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-dbbackup-websoft9.png)
-
-3. 创建一个备份，然后下载到本地
+3. Create a new backup and download it
 
 ### 自动备份
 
@@ -43,38 +43,33 @@ Prestashop 自动备份是通过一个名称为【1-Click Upgrade】的插件实
    - 如果下载新版本这个步骤无法完成，需要多次尝试
    - 若出现 “you don't have permission...ajax-upgradetab.php” 的错误提示，升级失败，暂无解决办法
 
-> 与升级有关的更多方案，请参考官方文档：[PrestaShop Backup](https://doc.prestashop.com/display/PS16/Manual+update)
+> 与升级有关的更多方案，请参考官方文档：[PrestaShop Backup](https://doc.prestashop.com/display/PS16/Manual+update)   
 
-### Module 升级
+### PrestaShop Upgrade
 
-PrestaShop 提供了在线 Module（模块）升级能力
+PrestaShop can upgrade the Module online
 
-1. 登录 PrestaShop 后台，打开【Modules Catalog】
-
-2. 找到需要升级的Module，点击【Upgrade】即可在线升级
+1. Log in PrestaShop as administrator, open【Modules Catalog】
+2. Find the module you need to upgrade, click the 【Upgrade】 button
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-upgrademodules-websoft9.png)
 
 
-## 故障排除
+## Troubleshoot{#troubleshoot}
 
-除以下列出的 PrestaShop 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
+In addition to the PrestaShop issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.
 
-#### Prestashop 重定向错误？
+#### PrestaShop Redirects Error
 
-多语言下，重定向错误比较常见。例如：打开您的 Prestashop 商店中文版会出现重定向
+When add new language for PrestaShop, it will add redirects rules in the `.htaccess` file of PrestaShop root directory.
 
-处理办法：
+Check your `.htaccess` file in your application root directory, make sure there not any cycle redirects settings  
 
-1. 分析网站根目录下的 `.htaccess` 文件，看看有没有死循环规则
-2. 删除自行安装的语言包。再次重新导入，Prestashop 会自动生成伪静态规则，覆盖原有 `.htaccess` 文件
+## FAQ{#faq}
 
+#### PrestaShop support multi-language?
 
-## 问题解答
+Yes
 
-#### PrestaShop 支持多语言吗？
+#### Why should I link to the PrestaShop Marketplace?
 
-支持多语言（包含中文），通过[后台设置](../prestashop#setlanguage)即可
-
-#### 为什么要连接 PrestaShop Marketplace？
-
-只有连接 PrestaShop Marketplace，才可以使用其资源。连接教程[参考](../prestashop#marketplace)
+Just link PrestaShop Marketplace, you can use the resources of Marketplace online. [Connect Marketplace](/stack-installation.html#connect-prestashop-marketplace)

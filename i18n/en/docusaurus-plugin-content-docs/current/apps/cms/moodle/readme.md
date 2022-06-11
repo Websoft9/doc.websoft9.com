@@ -3,163 +3,165 @@ sidebar_position: 1
 slug: /moodle
 tags:
   - Moodle
-  - 在线学习管理
+  - elearning
 ---
 
-# 快速入门
+# Moodle Getting Started
 
-[Moodle LMS](https://moodle.com) 是一个开源的在线教育系统（慕课）。它符合 SCORM/AICC标准，功能强大、界面简单精巧。Moodle具有先进的教学理念，创设的包含技术管理、学习任务和社交三个虚拟学习维度，提倡师生或学生彼此间共同思考，合作解决问题。它是先进在线教学理念和实践的集大成者，已成为全球大中学院校建立开放式课程系统的首选软件。  
+[Moodle](https://moodle.org) is a learning platform designed to provide educators, administrators and learners with a single robust, secure and integrated system to create personalised learning environments.Moodle is built by the Moodle project which is led and coordinated by Moodle HQ, an Australian company of 30 developers which is financially supported by a network of over 60 Moodle Partner service companies worldwide.
 
-主要模块：课程管理、作业模块、聊天模块、投票模块、论坛模块、测验模块、资源模块、问卷调查模块、互动评价（workshop）
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodlegui-websoft9.jpg)  
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodlegui-websoft9.jpg)
+If you have installed Websoft9 Moodle, the following steps is for your quick start
 
-## 准备
+## Preparation
 
-部署 Websoft9 提供的 Moodle 之后，需完成如下的准备工作：
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:80** is allowed
+3. **[Get](./user/credentials)** default username and password of Moodle
+4. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for Moodle  
 
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 Moodle 的 **[默认账号和密码](./user/credentials)**  
-4. 若想用域名访问  Moodle **[域名五步设置](./administrator/domain_step)** 过程
+## Moodle Initialization
 
+### Steps for you
 
-## Moodle 初始化向导
+1. Using local Chrome or Firefox to visit the URL *https://domain name* or *https://Internet IP*, enter to Moodle installation page
 
-### 详细步骤
+2. Choose a language, then go to next step
+   ![Moodle-install-language](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md01.png)
 
-1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 就进入引导首页
+3. Set the Moodle source code and data directory
+   ![Moodle set directory](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md02.png)
 
-2. 根据系统提示，选择语言，进入下一步 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-install001-websoft9.png)
+4. Choose the database type
+   ![Moodle Choose database](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md03.png)
 
-3. 选择数据库类型，默认为【改进的MySQL】，然后进入确认路径设置（保持默认设置），进入下一步 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-install002-websoft9.png)
+5. Fill in your database connection information ([Don't know password?](./user/credentials))
+   ![Moodle set database connection](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md04.png)
 
-4. 填写数据库连接信息，建议采用预装环境自带的 MySQL 数据库([不知道账号密码？](./user/credentials))
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-install003-websoft9.png)
+6. Confirm the Copyright
+   ![Moodle Confirm the Copyright](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md05.png)
 
-5. 经过几次确认后，安装进入环境检测步骤，继续后续步骤 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-install004-websoft9.png)
+7. Installing
+   ![Moodle start install](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md06.png)
+   ![Moodle start install](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md07.png)
 
-6. 设置后台账号信息，请务必设置好并牢记之。进入下一步 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-install005-websoft9.png)
+8. Set administrator account
+   ![Moodle set administrator account](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md08.png)
 
-7. 设置网站初始化信息 
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-install006-websoft9.png)
+   > Email is your system ID, not collected by anyone because it stored in your Cloud Server
 
-8. 跟随安装提示直到完成，过程中尽量选择默认设置，勾选安装所有模块
+9. Set site name, short name, front page summary...
+   ![Moodle set site information](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md09.png)
 
-9.  系统完成最后一步安装，建议进入 Moodle 后台（以管理身份登录即进入后台），体验完整功能 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-install007-websoft9.png)
+10. Installed successfully.
+   ![Moodle installation successfully](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md10.png)
 
-10. [注册 Moodle 官方账号](#register)，打通你的 Moodle 与官方的连接，便于在线安装插件。
+11. [Register a Moodle account](/solution-more.html#moodle-register) to connect Moodle official website for more extension
 
-> 需要了解更多Moodle的使用，请参考官方文档：[Moodle Documentation](https://docs.moodle.org)
+> More useful Moodle guide, please refer to [Moodle Documentation](https://docs.moodle.org)
 
-### 出现问题？
+### Having trouble?
 
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
-## Moodle 使用入门
+## Moodle QuickStart
 
 下面以 **使用 Moodle 构建学习管理系统** 作为一个任务，帮助用户快速入门：
 
 [Moodle 快速搭建学习管理系统](https://cloud.tencent.com/developer/article/1822682)
 
+## Moodle Setup
 
-## Moodle 常用操作
+### DNS Additional Configure (Modify URL){#dns}
 
-### 域名额外配置（修改 URL）{#dns}
-
-**[域名五步设置](./administrator/domain_step)** 完成后，需重置 WordPress URL:
+Complete **[Five steps for Domain](./administrator/domain_step)** ，Set the URL for Moodle:
 
 1. 修改 Moodle [配置文件](#parameter)，将配置项 $CFG->wwwroot   = 'http://www.abc.com' 修改成域名;
 
 2. 保存后生效
 
-### HTTPS 额外设置{#https}
+### HTTPS{#https}  
 
 **[标准 HTTPS 配置](./administrator/domain_https)** 完成后，可能会遇到如下的异常情况：
 
 - [配置HTTPS后，网站部分资源无法加载？](./wordpress/admin#httpsmore)
 
+### Configure SMTP{#smtp}
 
-### 配置 SMTP{#smtp}
+1. Get [SMTP](./administrator/smtp) related parameters in the mailbox management console
 
-1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
+2. Log in to Moodle console as administrator  
 
-2. 以管理员身份登录 Moodle控制台
+3. Open **Site administrator** > **Server** > **Email** > **Outgoing mail configuration**
+   ![Moodle SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/moodle-smtp-websoft9.png)
+   ![Moodle SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/moodle-smtps-websoft9.png)  
 
-3. 依次打开：【网站管理】>【服务器】>【电子邮件】>【发送邮件设置】
-   ![Moodle SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-smtp-websoft9.png)
+4. Click the **Test outgoing mail configuration** to test your settings
 
-4. 点击【Test outgoing mail configuration】测试设置
+### Register your Moodle site{#register}
 
-### 向 Moodle 注册你的网站{#register}
+Once completed your Moodle installation wizard, suggest you to register Moodle's website account. This account can help you to get upgrade message, get share course of Moodle.NET, install plugins online
 
-Moodle 初始化安装完成之后，建议注册成为 Moodle 官方网站的会员，注册好处包括：升级通知，课程共享，在线安装插件等
+1. Log in Moodle console as administrator  
 
-1. 以管理员身份登录 Moodle 后台
-2. 依次打开：【网站管理】>【注册】
-   ![Moodle 注册](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-registermd-websoft9.png)
-3. 注册完成后登陆，这样你的 Moodle 与官方便建立了一个连接关系
+2. Open **Site administrator** > **Registation**
+   ![Moodle register](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/moodle-registermd-websoft9.png)  
 
-### Moodle 语言设置{#setlanguge}
+3. When you completed it, Moodle.net may stay in touch and provide you with important things for your Moodle site
 
-1. 以管理员身份登录 Moodle 后台
-2. 依次打开：【网站管理】>【语言】
-   ![Moodle 语言设置](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-languageset-websoft9.png)
-3. 根据实际情况进行语言设置
-   * 语言设置：即在线切换语言
-   * 定制语言：即在线编辑语言翻译内容
-   * 语言包： 即上传系统默认没有内置的语言
+### Moodle languages{#setlanguge}
 
-### Moodle 客户端{#client}
+1. Log in Moodle console as administrator  
 
-1. 以管理身份登录 Moodle 后台
+2. Open **Site administrator** > **Language**
+   ![Moodle language setting](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/moodle-languageset-websoft9.png)  
 
-2. 依次打开：【网站管理】>【移动应用程序】>【移动设备设置】
-   ![moodle-apps](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-app-1-websoft9.jpg)
-
-3. 将【为移动设备启用网络服务】设为 **启用** 状态；
-   ![moodle-apps](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-app-2-websoft9.jpg)
-
-4. 保存设置；
-
-5. 安装 [Moodle 手机客户端](https://download.moodle.org/mobile/)
-
-6. 打开后在地址栏输入 Moodle 的访问地址，就可以开始使用移动端
-   ![moodle-apps](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-mobile-websoft9.png)
-
-### Moodle 插件{#plugin}
-
-Moodle 是一个非常灵活的平台，大部分核心功能以插件的形式存在，系统默认安装了400多个插件。同时，官方提供了[插件市场](https://moodle.org/plugins/)供用户作用更多功能扩展。
-
-1. [注册 Moodle 官方账号](#register)，打通你的 Moodle 与官方的连接，便于在线安装插件。
-
-2. 以管理员身份登录 Moodle 后台
-
-3. 依次打开：【网站管理】>【插件】，会看到**安装插件**和**插件概况**两个链接
-   ![moodle 插件](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-plugins-websoft9.png)
-
-   * 安装插件：安装新插件入口
-   * 插件概况：查看已经安装的插件列表
-
-4. 点击【安装插件】，提供**从Moodle插件目录安装插件**和**从ZIP文件中安装插件**两种安装插件的方式
-   ![moodle 安装插件](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-pluginsmk-websoft9.png)
-
-   * 从Moodle插件目录安装插件：自动跳转并登录到 Moodle 的[官方插件市场](https://moodle.org/plugins/)，便可以在线安装
-   * 从ZIP文件中安装插件：需提前下载插件压缩文件，再从此处**上传**安装
-
-5. 点击【插件概况】，列出默认安装的插件，可以进行停用、卸载等操作
-   ![moodle 插件概况](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-plugininfo-websoft9.png)
+3. Set it by yourself
+   * Language settings: choose your language online
+   * Language customization: edit your language files online
+   * Language packs: upload your language packs
    
-6. 点击[插件概况](https://moodle.org/plugins/)寻找所需的插件，然后安装它们
+### Moodle Mobile{#client}
 
-> 更多插件管理查看官方文档 [Moodle Plugins](https://docs.moodle.org/37/en/Installing_plugins)
+1. Log in Moodle console as administrator  
 
-### Moodle 主题{#theme}
+2. Open **Site administrator** > **Mobile app** > **Mobile settings**
+   ![moodle-apps](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/moodle-app-1-websoft9.png)  
+
+3. Check **Enable web services for mobile devices** is selected
+   ![moodle-apps](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/moodle-app-2-websoft9.png)  
+
+4. Save settings  
+
+5. Install [Moodle APPS](https://download.moodle.org/mobile/) in your phone  
+
+6. Open the Moodle app in your phone, configure the Moodle's URL to your app and start to use it
+   ![moodle-apps](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-mobile-websoft9.png)
+   
+
+### Moodle plugins{#plugin}
+
+Moodle is very scalable platform, most of function were as plugins. Moodle have installed 400+ plugins by default and you can install plugins from [Plugins Marketplace](https://moodle.org/plugins/) to extend your functions
+
+1. Log in Moodle console as administrator  
+
+2. Open **Site administrator** > **Plugins** 
+   ![moodle plugins](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/moodle-plugins-websoft9.png)  
+
+3. Click **Plugins Overview** to list all plugins installed, you can disable and uninstall it also  
+
+4. Visit [Plugins Marketplace](https://moodle.org/plugins/) to search more plugins  
+
+5. Start to install plugins in the Moodle's console
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/moodle-intallplugins001-websoft9.png)  
+
+6. Upload plugin online
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/moodle-intallplugins-uploadfile-websoft9.png) 
+
+> More details about manage plugins please refer to official docs [Moodle Plugins](https://docs.moodle.org/37/en/Installing_plugins)
+
+### Moodle theme{#theme}
 
 Moodle 主题实际上是一个插件，因此需要安装新主题，必须通过【安装插件】的方式先进行安装。  
 
@@ -174,40 +176,41 @@ Moodle 主题实际上是一个插件，因此需要安装新主题，必须通�
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-addtheme001-websoft9.png)
 
 5. 点击【更改主题】即可完成主题更换
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-addtheme002-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-addtheme002-websoft9.png)  
 
-### 重置密码{#resetpwd}
+### Reset Password{#resetpwd}
 
-常用的 Moodle 重置密码相关的操作主要有修改密码和找回密码两种类型：
+There are two main measures to reset Moodle's password：
 
-#### 修改密码
+**Changing password**
 
-1. 登录 Moodle 后台，点击头像，进入【个人档案】设置下的**小齿轮图标**
-  ![Moodle 修改密码](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-modifypw-websoft9.png)
+Take the steps below:
 
-2. 点击【更改密码】链接，开始修改密码
+1. log in the Moodle console, click 【Profile】 link of user icon on the top menu, then click the **setting icon**
+  ![Moodle console modify password](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/moodle-modifypw-websoft9.png)
 
-#### 找回密码
+2. start to change the password.
 
-如果用户忘记了密码，有两种找回密码的方案：
+**Forgot Password**
 
-* 登录界面通过邮件找回密码（需提前完成 [SMTP 设置](#smtp）
-* 数据库中重置密码两种方案
+If you have forgotten the password of Moodle, two methods for you tor retrieve it:
 
-下面介绍通过数据库找回密码的方案：
+* Retrieve it by Email from login page (you must completed the [SMTP settings](./administrator/smtp))
+* Retrieve it by modify database
 
-1. 登录 [phpMyAdmin](./administrator/parameter#managedb)，并找到你的网站数据库下的 *mdl_user*表
+Follow the steps of retrieve database by modify database:
 
-  ![Moodle user表](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-phpmyadminuser-websoft9.png)
+1. Login [phpMyAdmin](./administrator/parameter#managedb), and find the database table *mdl_user*
 
-2. 编辑【admin】用户，将其中的 `password` 字段的值用 `21232f297a57a5a743894a0e4a801fc3` 替换
+  ![Moodle user table](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/moodle-phpmyadminuser-websoft9.png)
 
-3. 点击【执行】，新的密码就被重置为`admin`
+2. Edit the 【admin】user, replace the column `password` 's value to `21232f297a57a5a743894a0e4a801fc3`
 
+3. Click 【Go】 button, the password has been set to `admin`
 
-## Moodle 参数{#parameter}
+## Reference sheet
 
-Moodle 应用中包含 PHP, Nginx, Apache, Docker, MySQL 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Moodle
 
 通过运行`docker ps`，可以查看到 Moodle 运行时所有的 Container：
 
@@ -215,33 +218,32 @@ Moodle 应用中包含 PHP, Nginx, Apache, Docker, MySQL 等组件，可通过 *
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
 ```
 
+### Path{#path}
 
-下面仅列出 Moodle 本身的参数：
+Moodle installation directory: */data/wwwroot/moodle*  
+Moodle configuration file: */data/wwwroot/moodle/config.php*
 
-### 路径{#path}
+### Port{#port}
 
-Moodle 安装目录： */data/wwwroot/moodle*  
-Moodle 配置文件： */data/wwwroot/moodle/config.php*  
-
-
-### 端口{#port}
-
-| 端口号 | 用途                                          | 必要性 |
+| Port | Use                                          | Necessity |
 | ------ | --------------------------------------------- | ------ |
-| 8080   | Moodle 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
+| 3306 | Remote connect MySQL | Optional |
+| 80 | HTTP requests for Moodle | Required |
+| 443 | HTTPS requests Moodle | Optional |
+| 9090 | Web managment GUI for MySQL | Optional |
 
 
-### 版本{#version}
+### Version{#version}
 
 控制台查看
 
-### 服务{#service}
+### Service{#service}
 
 ```shell
 sudo docker start | stop | restart | stats moodle
 ```
 
-### 命令行{#cli}
+### CLI{#cli}
 
 [Administration via command line](https://docs.moodle.org/311/en/Administration_via_command_line)
 
@@ -250,6 +252,7 @@ $ cd /path/to/your/moodle/dir
 $ sudo -u apache /usr/bin/php admin/cli/somescript.php --params
 $ sudo -u apache /usr/bin/php admin/cli/install.php --help
 ```
+
 ### API
 
 [Core APIs](https://docs.moodle.org/dev/Core_APIs)

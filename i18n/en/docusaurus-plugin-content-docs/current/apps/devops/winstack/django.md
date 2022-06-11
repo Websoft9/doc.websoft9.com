@@ -4,8 +4,8 @@
 
 采用 [Bitnami Django](https://bitnami.com/stack/django) 安装包制作而成。  
 
-Django 安装目录： *C:\websoft9\django*  
-Django 安装目录： *C:\websoft9\django\apache2\htdocs*  
+Django installation directory： *C:\websoft9\django*  
+Django installation directory： *C:\websoft9\django\apache2\htdocs*  
 
 ## 服务
 

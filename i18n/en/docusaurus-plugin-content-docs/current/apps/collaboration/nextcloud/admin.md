@@ -3,25 +3,24 @@ sidebar_position: 3
 slug: /nextcloud/admin
 tags:
   - Nextcloud
-  - 网盘
-  - 知识管理
-  - 团队协作
+  - File sync and share
+  - knowledge Management
 ---
 
-# 维护指南
+# Nextcloud Maintenance
 
-本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup) 相关章节。
+This chapter is special guide for Nextcloud maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-## 场景
+## Maintenance guide
 
-### 在线备份
+### Nextcloud online backup
 
-Nextcloud 后台提供在线备份功能
+This section provides Nextcloud online backup solution.
 
-1. 登录 Nextcloud 后台，安装 **[OwnBackup](https://apps.nextcloud.com/apps/ownbackup)** 插件
+1. Log in Nextcloud console as administrator, install **[OwnBackup](https://apps.nextcloud.com/apps/ownbackup)** 
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-backupapps-websoft9.png)
-2. 打开：【Admin】>【Additional settings】>【OwnBackup】，开始备份
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-backupapp002-websoft9.png)
+2. Go to【Admin】>【OwnBackup】, start backup, and you can restore it.
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-backupapp002-websoft9.png)
 
 ### 手工升级
 
@@ -31,7 +30,7 @@ Nextcloud 后台提供在线备份功能
 
 1. 将 Nextcloud 的 data, config, apps 目录临时复制到服务器其他目录下
 
-2. 上传 Nextcloud 安装目录下的所有文件
+2. 上传 Nextcloud installation directory下的所有文件
    ```
    rm -rf /data/wwwroot/nextcloud/*
    ```
@@ -49,69 +48,69 @@ Nextcloud 后台提供在线备份功能
 
 7. 手工升级完成
 
-### 在线升级
+### Nextcloud Upgrade
 
-Nextcloud 提供了非常人性化的升级功能，根据系统的更新提示既可以完成主版本、插件的更新。
+Nextcloud provides a user-friendly upgrade (update) portal. You can complete the update of the main version and APP plug-in according to the update prompt of the system.
+> Before upgrade, take a necessary snapshot of the instance in case of the upgrade failed.
 
-> 在升级之前请做好服务器的快照备份，这个是必须的步骤，因为谁都无法保证升级100%成功。
+**Core Upgrade**
 
-#### 主程序升级
+Upgrades between core and APP plug-in are different. For core upgrade, take the following steps:
 
-主程序升级与插件升级略有差异，具体参考如下：
+1. Log in Nextcloud console, go to【Admin】>【Basic Settings】, click the【Open Updater】button when there is a new version.
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-openupdater-websoft9.png)
 
-1. 登录 Nextcloud 后台，进入【管理】>【基本设置】，若有更新请点击【打开更新管理器】按钮
-   ![Nextcloud 升级](https://libs.websoft9.com/Websoft9/DocsPicture/zh/nextcloud/nextcloud-openupdater-websoft9.png)
+2. Go to Updater.
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-updater-websoft9.png)
 
-2. 进入 Updater（更新管理器）
-   ![Nextcloud 升级](https://libs.websoft9.com/Websoft9/DocsPicture/zh/nextcloud/nextcloud-updater-websoft9.png)
+3. Check the upgrade requirement, then click 【Start update】
 
-3. 点击【Start update】开始更新
+4. The system enters the automatic upgrade process. As the download and upgrade process is relatively long, please be patient.
 
-4. 系统进入自动化升级过程，下载和升级过程比较长，请耐心等待
+**Apps Upgrade**
 
-> 由于升级过程会下载最新版本，Nextcloud的下载服务器在国外，若下载不成功，需要不定期尝试
+Steps for APPs upgrade are as follows:
 
-#### 插件升级
+1. Log in Nextcloud console, go to 【Apps】, find the apps that need upgrade.
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-updatelist-websoft9.png)
 
-升级步骤参加如下：
+2. Click 【Update】 button, wait for some minutes.
 
-1. 登录 Nextcloud 后台，进入【应用】，在应用列表中找到需更新的应用
-   ![Nextcloud 升级](https://libs.websoft9.com/Websoft9/DocsPicture/zh/nextcloud/nextcloud-updatelist-websoft9.png)
+3. Complete all updates until all apps are up to date.
 
-2. 点击【更新】按钮，耐心等待更新
+> During the upgrade process, If some problem occur, for example, unable to download upgrade package, or no read and write access, please check the network connection or ensure Nextcloud directory has read and write access.
 
-3. 所有更新完成后，更新清单会显示“所有应用都是最新的”
+## Troubleshoot{#troubleshoot}
 
-> 如果升级过程出现问题，例如：无法下载升级包/没有读写权限，请确保网络是通的/Nextcloud目录具有读写权限
+In addition to the Nextcloud issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
-## 故障排除
 
-####  域名配置后页面显示混乱？
+#### After the domain configuration, find page layout confusion or the picture cannot be displayed?
 
-如果先通过 IP 安装，再绑定域名，就会出现这个问题，请分别打开 Nextcloud 的 [配置文件](../nextcloud#path)，将其中的 IP 地址改成域名。
+This problem occurs if you install through IP, and then bind the domain name. To solve it, please change the IP address to the domain name in Nextcloud [Confuguration file](../nextcloud#path).
 
 #### 网络超时导致无法安装插件？
 
 采用[手工安装](../nextcloud#minstallplugin)方式
 
-## 常见问题
+## FAQ{#faq}
 
-#### Nextcloud 支持多语言吗？
+#### Nextcloud support multi-language?
 
-支持多语言（包含中文）
+Yes.
 
-#### Nextcloud 与 ownCloud 有什么关系？
+#### What is the relationship between Nextcloud and ownCloud?
 
-Nextcloud 是由 ownCloud 创始人带来开源社区其他人创建的一个分支项目，类似 MariaDB 与 MySQL 的关系
+Nextcloud is a branch project started by ownCloud inventor Frank Karlitschek and a dozen experienced open source entrepreneurs and engineers, similar to the relationship between MariaDB and MySQL.
 
-#### Nextcloud 是否提供客户端？
+#### Does Nextcloud provide a client?
 
-有。包括：Nextcloud Desktop Client, Nextcloud Android App, Nextcloud iOS App
+Yes, includes: Nextcloud Desktop Client, Nextcloud Android App, Nextcloud iOS App
 
-#### Nextcloud 可预览和编辑 Office 文档吗？
+#### How can Nextcloud view & edit file online?
 
-Nextcloud 自身是无法预览和编辑 Office 文档的。但 Websoft9 的部署方案已经安装了文档中间件：[ONLYOFFICE Docs](../nextcloud/solution#onlyoffice) 解决此需求。
+You should complete the [OnlyOffice setting](../nextcloud/solution#onlyoffice) on your Nextcloud.
 
-#### Nextcloud 支持集成外部存储吗？
+#### Nextcloud can integrate external storage?
 
-支持多种[主流外部存储服务](https://docs.nextcloud.com/server/latest/admin_manual/configuration_files/external_storage_configuration_gui.html#storage-configuration)
+Yes，[refer to](https://docs.nextcloud.com/server/latest/admin_manual/configuration_files/external_storage_configuration_gui.html#storage-configuration)

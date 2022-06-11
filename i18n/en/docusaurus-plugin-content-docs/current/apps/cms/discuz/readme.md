@@ -5,92 +5,93 @@ tags:
   - Discuz
   - CMS
   - 建站系统
-  - 博客系统 
+  - Blog
 ---
 
-# 快速入门
+# Discuz Getting Started
 
-Discuz 是老牌的论坛社区系统（也称之为 DiscuzX），诞生于2001年6月，后被腾讯公司收购。Discuz 生态经久不衰，基于它可以搭建社区论坛、知识付费网站、视频直播点播站、企业网站、同城社区、小程序、APP、图片素材站，游戏交流站，电商购物站、小说阅读、博客、拼车系统、房产信息、求职招聘、婚恋交友等等绝大多数类型的网站
+[Discuz](https://www.discuz.net)  is the best Forum & Community software in China, 200 million users in the world
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/ds06.png)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuz-gui-websoft9.png)  
 
-## 准备
-
-部署 Websoft9 提供的 Discuz 之后，需完成如下的准备工作：
-
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 Discuz 的 **[默认账号和密码](./user/credentials)**  
-4. 若想用域名访问  Discuz **[域名五步设置](./administrator/domain_step)** 过程
+If you have installed Websoft9 Discuz, the following steps is for your quick start
 
 
-## Discuz 初始化向导{#init}
+## Preparation
 
-### 详细步骤
-
-1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 就进入引导首页
-
-2.  首先点击【我同意】，确认用户许可协议
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/ds01.png)
-
-3.  通过环境检测后，点击【下一步】。  
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/ds02.png)
-
-4.  选择需要安装的程序组，建议选择【全新安装】，然后点击【下一步】。  
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/ds03.png)
-
-5.  配置数据库连接信息：请直接点击【下一步】完成连接。（**请不做任何修改**）   
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/ds04.png)
-
-6.  安装完成后的界面如下  
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/ds05.png)
-
-7.  进入论坛后，可以通过右上角登录对论坛进行管理。
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/ds06.png)
-
-### 出现问题？
-
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
-
-**安装的时候显示Discuz! Database Error**
-
-如果数据库名称、数据库账号与数据库密码填写与实际不符合，安装就会失败，显示“Discuz! Database Error”错误，具体解决办法：
-
-1. 使用 phpMyAdmin 连接数据库，验证填写的数据库账号是否与实际匹配
-2. 删除 Discuz 目录下的 *data/install.lock* 文件
-3. 本地浏览器访问： *http://服务器公网IP/discuz/install* 或 *http://域名/install* 重装
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:80** is allowed
+3. **[Get](./user/credentials)** default username and password of Discuz
+4. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for Discuz.
 
 
-## Discuz 使用入门
+## Discuz Initialization
+
+### Steps for you
+
+1. Using local Chrome or Firefox to visit the URL *https://domain* or *https://Internet IP*, start to install  
+
+2. Click "我同意",accept the liecense to the next step
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/ds01.png)
+
+3. Requirement check,then Click "下一步"
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/ds02.png)
+
+4. Select "全新安装 Discuz!X(含 UCenter Server)" and Click "下一步"
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/ds03.png)
+
+5. Then configure the database connection information([Don't know password?](./user/credentials))
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/ds04.png)
+
+6. Complete the installation, you can access the Discuz now
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/ds05.png)
+
+7. In the index page of Discuz, you can see the log in area
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/ds06.png)
+
+8. Discuz provides a very powerful function of installing templates and plug-ins online. you log in to the background of Discuz and connect your application center account, you can purchase (free or charged) plugin templates online through the background and install them online.
+
+### Having trouble?
+
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more. 
+
+#### Discuz! Database Error
+
+If you database configuration is incorrect,you can receive the message "Discuz! Database Error"
+
+1. Using phpMyAdmin to check you database account
+2. Connect in Cloud Server, delete the file: */data/wwwroot/discuz/data/install.lock*
+3. Visit URL *https://Internet IP or Domain/install* to start re-installation
+
+## Discuz QuickStart
 
 下面以 **使用 Discuz 构建论坛系统** 作为一个任务，帮助用户快速入门：
 
+## Discuz Setup
 
-## Discuz 常用操作
+### Configure SMTP{#smtp}
 
-### 配置 SMTP{#smtp}
+1. Get [SMTP](./administrator/smtp) related parameters in the mailbox management console
 
-1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
-
-2. 进入 Discuz 后台，打开：【站长】>【邮件设置】，仔细填写 SMTP 参数项   
+2. Log in Discuz Console, open 【Manage Discuz】>【Configure System】, set you SMTP
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuz-smtp-1-websoft9.png)
 
-	- 选择第二项
+   - 选择第二项
 	- 根据你的 SMTP 邮箱选择 SMTP服务器域名，前面的”ssl://“一定不能省略
 	- 端口栏输入 SMTP 服务器提供的端口号，一般为 465 ，具体的可根据自己的邮箱地址到官网查看
 	- 发件人邮件地址输入你自己的邮箱（**需要与SMTP身份验证用户名所填的邮箱地址一致**）
 	- 输入提供 SMTP 服务的邮箱地址
 	- 输入 SMTP 服务验证码（和邮箱登陆密码不一样）
- 
+
 3. 在 Discuz 后台，打开【全局】>【站点信息】，设置全局管理员邮箱，尽量和 SMTP 发件人邮箱保持一致
     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuz-smtp-2-websoft9.png)
     
 4. 测试，如出现如图所示的对话框则证明 SMTP 设置正确，另外，如果出现该对话框却在收件箱内没有邮件，请到垃圾邮件列表查看
 	![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuz-smtp-3-websoft9.png)
-     
-### Discuz 更换域名
 
-Discuz 更换域名非常繁琐，参考论坛上的热心帖子：[discuz! X3 更改域名全程记录](https://www.discuz.net/thread-3528253-1-1.html)
+### Discuz Change domain
+
+Refer to [discuz! X3 更改域名全程记录](https://www.discuz.net/thread-3528253-1-1.html)
 
 ### Discuz 模板/主题/应用中心使用
 
@@ -100,32 +101,35 @@ Discuz 有非常强大生态，大量在线安装模板、插件，您通过登�
 
 > 声明：Websoft9 不擅长 Discuz 具体功能的使用，更无法提供此类问题指出。请自行参阅 [Discuz 官方论坛](http://www.discuz.net/forum.php) 完成你要做的吧
 
-### Discuz 修改数据库配置{#modifydbconn}
+### Discuz modify database connection{#modifydbconn}
 
-在你的 Discuz 安装目录下，有三个与数据库相关的[配置文件](#path)
+In your Discuz installation directory, there are three database-related [configuration files](#path)
 
-一旦数据库连接信息变化，你需要配套修改以上三个文件以适用新的数据库配置。
+Once you have modified the database information used to initialize the installation, you will need to modify the above three files to apply the new database configuration.
 
-### Discuz 重置管理员密码
+### Discuz recover administrator password
 
-Discuz 密码忘记了，怎么找回？ 如下方案经过实践可用：
+1. Use SFTP to login Server, edit the *uc_server/data/config.inc.php* file in the root directory of Discuz  
 
-1. 适用 SFTP 工具连接服务器，编辑 Discuz 根目录下的 *uc_server/data/config.inc.php* 文件
-2. 用下面两行代码替换 `config.inc.php` 中已有的同名段
+2. Replace two items below with 
    ```
    define('UC_FOUNDERPW','047099adb883dc19616dae0ef2adc5b6');
    define('UC_FOUNDERSALT','311254');
-   ```
-3. [重启服务](./administrator/parameter#service)
-4. 此时 Ucenter 创始人的密码就变为: `123456789`
-5. 访问 *http://服务器公网IP/uc_server*，以`123456789`作为密码登录 Ucenter
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuz-ucpwlogin-websoft9.png)
-6. 通过【用户管理】中修改管理员密码
+   ```  
+
+3. [Restart Service](./administrator/parameter#service)  
+
+4. Then, your Ucenter administrator password is: `123456789`  
+
+5. Visit URL *http://Internet IP/uc_server*, us `123456789` as your password to login Ucenter
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuz-ucpwlogin-websoft9.png)  
+
+6. Modify adminitrator password from 【用户管理】
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuz-ucentermodifyadmin-websoft9.png)
 
-### Discuz 更换默认 Logo
+### Discuz change Logo
 
-参考论坛上的热心帖子：[如何替换程序默认Logo](http://www.discuz.net/thread-3185527-1-1.html) 
+Refer to Discuz forum [如何替换程序默认Logo](http://www.discuz.net/thread-3185527-1-1.html)  
 
 ### Discuz 设置伪静态
 
@@ -187,10 +191,9 @@ Discuz论坛安装完成后，想使连接里面显示文章名，应怎么开�
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuz-modifyfilesize003-websoft9.png)
 
+## Reference sheet
 
-## 参数{#parameter}
-
-Discuz 应用中包含 PHP, Nginx, Apache, Docker, MySQL 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。  
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Discuz
 
 通过运行`docker ps`，可以查看到 Discuz 运行时所有的 Container：
 
@@ -198,37 +201,37 @@ Discuz 应用中包含 PHP, Nginx, Apache, Docker, MySQL 等组件，可通过 *
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
 ```
 
+### Path{#path}
 
-下面仅列出 Discuz 本身的参数：
-
-### 路径{#path}
-
-Discuz 安装目录： */data/wwwroot/discuz*  
-Discuz 配置文件： */data/wwwroot/discuz/upload/config/config_global_default.php*  
+Discuz installation directory: */data/wwwroot/discuz*  
+Discuz configuration file: */data/wwwroot/discuz/upload/config/config_global_default.php*  
 Discuz 数据库相关配置文件：  
 - config/config_global.php
 - config/config_ucenter.php
 - uc_server/data/config.inc.php
 
-### 端口{#port}
+### Port{#port}
 
-无特殊端口
+| Port | Use                                          | Necessity |
+| ------ | --------------------------------------------- | ------ |
+| 3306 | Remote connect MySQL | Optional |
+| 80 | HTTP requests for Discuz | Required |
+| 443 | HTTPS requests Discuz | Optional |
+| 8080 | OnlyOffice Document Server on Docker | Optional |
 
 
-### 版本{#version}
+### Version{#version}
 
 控制台查看
 
-### 服务{#service}
+### Service{#service}
 
 ```shell
 sudo docker start | stop | restart | stats discuz
 ```
 
-### 命令行{#cli}
+### CLI{#cli}
 
 无
 
 ### API
-
-无

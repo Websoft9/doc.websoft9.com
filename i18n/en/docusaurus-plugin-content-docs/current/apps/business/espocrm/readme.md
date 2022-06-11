@@ -7,67 +7,80 @@ tags:
   - 客户成功
 ---
 
-# 快速入门
+# EspoCRM Getting Started
 
-[EspoCRM](https://www.espocrm.com/demo/) 是一个开源的轻量级CRM，采用响应式设计，界面非常美观大方，能够自动适应PC、平板和手机访问。功能非常全面，包括销售自动化、市场、销售过程、文档、产品、合同、知识库和工作流等功能。支持字段和表单布局客制化，便于定制。
+[EspoCRM](https://demo.espocrm.com/) is an Open Source CRM (Customer Relationship Management) software that allows you to see, enter and evaluate all your company relationships regardless of the type. People, companies or opportunities – all in an easy and intuitive interface.It’s a web application with a frontend designed as a single page application based on backbone.js and a REST API backend written in PHP.
+
 ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/espocrm-gui-websoft9.jpg)
 
+If you have installed Websoft9 EspoCRM, the following steps is for your quick start
 
-## 准备
+## Preparation
 
-部署 Websoft9 提供的 EspoCRM 之后，需完成如下的准备工作：
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:80** is allowed
+3. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for EspoCRM
+4. [Get](./user/credentials) default username and password of EspoCRM
 
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 EspoCRM 的 **[默认账号和密码](./user/credentials)**  
-4. 若想用域名访问  EspoCRM **[域名五步设置](./administrator/domain_step)** 过程
+## EspoCRM Initialization
 
+### Steps for you
 
-## EspoCRM 初始化向导{#init}
+1. Using local Chrome or Firefox to visit *http://domain* or *http://Internet IP*, you will enter the configuration interface of installation
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep01.png)
 
-### 详细步骤
+2. Agree license, go to next step
+  ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep02.png)
 
+3. Then configure the database connection information([Don't know password?](./user/credentials)) and set administrator account
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep03.png)
 
-1. 本地浏览器访问：*http://域名* 或 *http://公网IP* 进入安装向导（首选域名访问方式）
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/espocrm/espocrm-lan-websoft9.png)
+4. Wait the installing  
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep04.png)
 
-2. 选择语言之后（中国支持非常好），系统进入环境检测步骤
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/espocrm/espocrm-check-websoft9.png)
+5. Set system configuration
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep06.png)
 
-3. 然后点击“Install”，进入数据库参数设置界面（[查看数据库账号密码](./user/credentials)）
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/espocrm/espocrm-dbconf-websoft9.png)
+5. Set your SMTP (Optional)
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep07.png)
 
-4. 数据库连接正确，点击“Next”进入管理员账号设置界面，填写管理员信息，牢记之，并进入下一步
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/espocrm/espocrm-adminconf-websoft9.png)
+6. Install successfully  
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep08.png)
 
-5. 配置时区
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/espocrm/espocrm-timeconf-websoft9.png)
+7. Log in to EspoCRM dashboard
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep10.png)
 
-6. 系统提示安装成功
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/espocrm/espocrm-login-websoft9.png)
-7. 进入后台，体验系统的完整功能
+> Refers to the [EspoCRM Documentation](https://docs.espocrm.com/) to get start your EspoCRM tutorial
 
-> 需要了解更多 EspoCRM 的使用，请参考官方文档：[EspoCRM Documentation](https://www.espocrm.com/documentation/)
+### Having trouble?
 
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
-### 出现问题？
-
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
-
-
-## EspoCRM 使用入门
+## EspoCRM QuickStart
 
 下面以 **EspoCRM 构建企业CRM** 作为一个任务，帮助用户快速入门：
 
 
-## EspoCRM 常用操作
+## EspoCRM Setup
 
-### 配置 SMTP{#smtp}
+### Set Languages
 
-EspoCRM支持第三方的SMTP发送邮件模式，具体如下：
+EspoCRM support more than 14+ languages,how to configure the language after installation?
 
-1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
-   
+1. Administrator->Settings,change the language and save it
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/EspoCRM-language-websoft9.png)
+2. Refresh EspoCRM
+
+
+### Extension Packages
+
+Extensions allow you to add extra functionality to EspoCRM. They can be installed by Administrator panel->Customization->Extensions
+![](http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/EspoCRM-extension-websoft9.png)
+
+### Configure SMTP{#smtp}
+
+1. Get [SMTP](./administrator/smtp) related parameters in the mailbox management console
+
 2. 待EspoCRM安装完成后，点击右上角菜单->admin，点击Email项
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/espocrm/espocrm-smtp-1-websoft9.png)
 
@@ -82,9 +95,9 @@ EspoCRM支持第三方的SMTP发送邮件模式，具体如下：
 
 4. 设置完成后，请点击“Send Test Email”测试设置是否成功
 
-## 参数{#parameter}
+## Reference sheet
 
-EspoCRM 应用中包含 PHP, Apache, Docker, MySQL, phpMyAdmin 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage EspoCRM 
 
 通过运行`docker ps`，可以查看到 EspoCRM 运行时所有的 Container：
 
@@ -95,26 +108,26 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 下面仅列出 EspoCRM 本身的参数：
 
-### 路径{#path}
+### Path{#path}
 
 EspoCRM 路径:  */data/wwwroot/espocrm*  
 
-### 端口{#port}
+### Port{#port}
 
 无特殊端口
 
 
-### 版本{#version}
+### Version{#version}
 
 控制台查看
 
-### 服务{#service}
+### Service{#service}
 
 ```shell
 sudo docker start | stop | restart | stats espocrm
 ```
 
-### 命令行{#cli}
+### CLI{#cli}
 
 [Console Commands](https://docs.espocrm.com/administration/commands/)
 

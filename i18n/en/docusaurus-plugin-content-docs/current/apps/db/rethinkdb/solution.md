@@ -6,7 +6,7 @@ tags:
   - Cloud Native Database
 ---
 
-# 场景方案
+# RethinkDB Solution
 
 solution 可以与其他的软件平台**集成**一起使用，解决 数据库可用性 过程中的各种场景问题。
 

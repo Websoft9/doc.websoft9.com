@@ -11,29 +11,24 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 
-# 快速入门
+# SQLServer Express Getting Started
 
-[SQL Server Express](https://www.sqlserver.com) 是 Microsoft 官方 SQL Server 免费发行版（[版权与约束](#license)）。易于部署并可无偿获取并可以随应用程序免费再分发。如果需要更多的高级数据库功能，可将 SQL Server Express 无缝升级到 SQL Server 商业版本。
+[SQLServer Express](https://www.sqlserver.com/) Express edition is the entry-level, free database and is ideal for learning and building desktop and small server data-driven applications. It is the best choice for independent software vendors, developers, and hobbyists building client applications. If you need more advanced database features, SQL Server Express can be seamlessly upgraded to other higher end versions of SQL Server. SQL Server Express LocalDB, a lightweight version of Express that has all of its programmability features, yet runs in user mode, and has a fast, zero-configuration installation and a short list of prerequisites.
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/microsoft-sql-server-express.png)
 
+If you have installed Websoft9 SQLServer Express, the following steps is for your quick start
 
-本文档适用于：SQL Server Express 2005, 2008, 2012, 2014, 2016, 2017
+## Preparation
 
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:1433** is allowed
+3. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for SQLServer Express
+4. [Get](./user/credentials) default username and password of SQLServer Express
 
-## 准备
+## SQLServer Express Initialization
 
-部署 Websoft9 提供的 SQL Server 之后，需完成如下的准备步骤方可进入初始化向导：
-
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:1433** 端口是否开启
-3. 若想用域名访问 SQLServer，请先到 **域名控制台** 完成一个域名解析
-4. 远程桌面至服务器，[启用 SQL Server 管理员密码](#enablepw)
-
-
-## SQLServer 初始化安装向导
-
-### 详细步骤
+### Steps for you
 
 1. 使用本地电脑的 **远程桌面**工具，登录到服务器  
 2. 打开 **SQLServer企业管理器**，通过：【服务器名称】>【浏览更多...】选择服务器，并以【Windows身份】登录数据库  
@@ -47,9 +42,10 @@ import TabItem from '@theme/TabItem';
 3. [启用密码（开启 SQL Server 身份验证模式）](#enablepw)（可选）
 4. [重启 SQL Server 服务](#service)，使配置生效。
 
-### 出现问题？
+### Having trouble?
 
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
+
 
 **无法使用 SQLServer 密码登录？**  
 
@@ -59,12 +55,11 @@ import TabItem from '@theme/TabItem';
 
 请检查服务器名称是否正确：在【服务器名称】中通过【浏览更多...】选择正确的服务器
 
-
-## SQLServer 使用入门
+## SQLServer Express QuickStart
 
 > 需要了解更多 SQLServer 的使用，请参考官方文档：[SQL Server 技术文档](https://docs.microsoft.com/zh-cn/sql/sql-server)
 
-## SQLServer 常用操作
+## SQLServer Express Setup
 
 ### 获取服务器名称（ID）
 
@@ -81,7 +76,6 @@ import TabItem from '@theme/TabItem';
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-getsqlserver-websoft9.png)
 
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-getsqlserver2-websoft9.png)
-
 
 
 ### 启用密码（SQL Server 身份验证模式）{#enablepw}
@@ -103,11 +97,11 @@ import TabItem from '@theme/TabItem';
 待研究
 
 
-### 开启远程访问{#remote}
+### Set Remote Connetion{#remote}
 
 通过本地电脑远程访问 SQLServer，需完成如下设置：  
 
-#### SQLServer 服务端开启远程连接{#remotess}
+**SQLServer 服务端开启远程连接{#remotess}**
 
 本镜像默认完成了SQLServer远程访问的配置，但为了能够顺利访问，SQLServer所在的服务器还需完成如下两个设置：
 
@@ -117,7 +111,7 @@ import TabItem from '@theme/TabItem';
 2. 打开**SQL Server 配置管理器**工具，在网络配置中，启用【TCP/IP】协议
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-remote2-websoft9.png)
 
-#### Windows 服务器设置防火墙和端口{#remotefirewall}
+**Windows 服务器设置防火墙和端口{#remotefirewall}**
    
 1. 在Windows服务器防火墙设置中开启远程访问：【控制面板】>【系统和安全】>【Windows防火墙】>【允许程序或功能通过Windows防火墙】  
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver2014/sqlserver-firewall001-websoft9.png)
@@ -125,7 +119,7 @@ import TabItem from '@theme/TabItem';
 
 2. 在云控制台中，开启服务器安全组的**1433端口**  
 
-#### 客户端工具范例{#navicat}
+**客户端工具范例{#navicat}**
 
 设置完成上面的服务器之后，下面以Navicat为例来说明如何在本地电脑访问并管理SQLServer
 
@@ -141,13 +135,14 @@ import TabItem from '@theme/TabItem';
 5.  点击【确认】后，进入数据库管理界面
 
 
-## 参数
+## Reference sheet
 
-SQLServer 应用中包含 IIS 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage SQLServer Express 
+
 
 下面仅列出 SQLServer 本身的参数：
 
-### 路径{#path}
+### Path{#path}
 
 以SQL Server 2014为例，集成包中包括 SQL Server 2014 数据库引擎和 SQL Server Management Studio Express，具体包括：
 
@@ -159,20 +154,20 @@ SQLServer 应用中包含 IIS 等组件，可通过 **[通用参数表](./admini
 ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver2014/sqlserver2014-install-websoft9.png)
 
 
-### 端口
+### Port
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
 | 1433   | 远程访问 SQLServer | 可选   |
 
 
-### 版本
+### Version
 
 使用 SQL Server Management Studio 查看
 
-### 服务{#service}
+### Service{#service}
 
-##### 可视化界面管理
+**可视化界面管理**
 
 使用 SQL Server 身份验证登录数据库。打开**SQL Server 配置管理器**工具，重启 SQL Server 服务。  
 
@@ -180,7 +175,7 @@ SQLServer 应用中包含 IIS 等组件，可通过 **[通用参数表](./admini
 
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-restart-websoft9.png)
 
-##### 命令行管理
+**命令行管理**
 
 也可以使用 cmd 工具，通过命令的方式启动或关闭数据库
 
@@ -189,7 +184,7 @@ SQLServer 应用中包含 IIS 等组件，可通过 **[通用参数表](./admini
 *   SQL Server 管理器打开的命令是：ssms
 
 
-### 命令行
+### CLI
 
 [mssql-cli](https://docs.microsoft.com/en-us/sql/tools/mssql-cli)
 

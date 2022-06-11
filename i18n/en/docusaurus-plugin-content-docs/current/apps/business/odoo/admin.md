@@ -7,51 +7,52 @@ tags:
   - ERP
 ---
 
-# 维护指南
+# Odoo Maintenance
 
-本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup) 相关章节。
+This chapter is special guide for Odoo maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-## 场景
+## Maintenance guide
 
 ### 开启 PostgreSQL 远程连接
 
 Odoo 默认安装的 PostgreSQL 并不会启用数据库账号，官方解决方案：https://www.odoo.com/documentation/13.0/setup/deploy.html#postgresql
 
-### 在线升级
+### Odoo Upgrade
 
-Odoo 后台提供了在线升级能力，让升级工作变得非常简单。参考下面的步骤完成升级：
+Odoo can be upgraded from Console, online follow the steps below to complete the upgrade:
 
-1. 登录 Odoo 后台，[启动开发者模式](../odoo#dev-mode)
-2. 通过 【Settings】>【Updates】开始更新 Odoo 主程序
-   ![Odoo升级提示](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-upgradesui-websoft9.png)
-3. 升级成功会有 “Well done...” 的提示
-4. 点击 【Update Apps list】，开始更新 Odoo 模块
+1. Log in Odoo Console, [Enable developer mode](../odoo#dev-mode)
+2. Go to **Settings** > **Updates** to start upgrade Odoo
+   ![Odoo upgrade reminder](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-upgradesui-websoft9.png)
+3. When completed the upgrade, you can get the successful reminder “Well done...”
+4. Click the **Update Apps list** to upgrade all Odoo's Modules if you need
 
-更多更新方案和注意事项请参考官方文档：[Odoo Update](https://www.odoo.com/documentation/master/setup/update.html)
+More details please refer to official docs [Odoo Update](https://www.odoo.com/documentation/master/setup/update.html)
 
 
-## 故障排除
+## Troubleshoot{#troubleshoot}
 
-除以下列出的 Odoo 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
+In addition to the Odoo issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
 #### 如何查看 Odoo 错误日志？
 
 最简单的方式是通过 SSH 连接服务器，运行`odoo`这个命令，就会显示错误日志以及 Odoo 的运行情况
 
-#### 恢复数据库、上传附件等操作，出现 “413 Request Entity Too Large” 错误？{#attachment}
+#### Nginx “413 Request Entity Too Large” error?{#attachment}
 
-这是由于 Nginx 默认安装下，上传文件最大为 1M，因此需要修改 Nginx 这个限制：
-1. 使用 WinSCP 远程连接服务器
-2. 编辑 [Nginx 虚拟机主机配置文件](../nginx#virtualHosx)
-3. 插入一行 `client_max_body_size 0;` 解除上传文件限制的配置项
+The upload file size is limit 1M by default of Nginx, so you should lift this restrictions
+
+1. Use WinSCP to connect Server
+2. Edit [Nginx vhost configuration file](../nginx#virtualHosx)
+3. Insert `client_max_body_size 0;` 
    ```
    server {
     listen 80;
     server_name _;
-    client_max_body_size 0; #解除上传文件限制
+    client_max_body_size 0; #insert here
     ...
    ```
-4. 保存并[重启 Nginx 服务](../administrator/parameter#service)
+4. Save it and [Restart Nginx Service](../administrator/parameter#service)
 
 #### Odoo 总出现数据库设置提醒？
 
@@ -59,22 +60,18 @@ Odoo 后台提供了在线升级能力，让升级工作变得非常简单。参
 
 这个提醒的是要求你尽快给数据库设置一个高强度的管理员密码，如果不设置将面临很大的风险。一旦设置后，此界面就不会再弹出了
 
-#### SFTP 无法上传文件到 Odoo 目录？
+#### Could not upload file to Odoo program directory problem via SFTP?
 
-Linux 普通用户没有 Odoo 程序的源码或目录有操作的权限，需要执行以下命令:
+Since some Ubuntu systems have created the default user name ubuntu by default, ubuntu does not have the right to operate the source code or directory of the odoo program for ordinary users. you need to execute the command:
 
 ```
-sudo chmod o+rw  /usr/lib/python2.x/dist-packages/odoo   # odoo10版本
-sudo chmod o+rw  /usr/lib/python3/dist-packages/odoo   # odoo11版本以上
+sudo chmod o+rw  /usr/lib/python2.x/dist-packages/odoo   # odoo10
+sudo chmod o+rw  /usr/lib/python3/dist-packages/odoo   # odoo11 or 12
 ```
 
-#### PDF 无法打印中文
+#### Odoo can't print Chinese content?
 
-Odoo11 之前的版本，在使用 Odoo 打印功能时，下载的PDF文件只有英文，没有中文，导致打印不完整。
-
-**问题原因**：系统环境里没有下载所需的中文字体
-
-**解决方案**：执行以下命令下载字体
+When using the Odoo printing function, the downloaded PDF file is only in English and there is no Chinese part, resulting in incomplete printing. The reason is that the required Chinese font is not downloaded in the system environment. Solution: execute the following command to download fonts
 
 ~~~
 sudo apt-get install ttf-wqy-zenhei
@@ -89,32 +86,33 @@ sudo apt-get install ttf-wqy-microhei
 方案：需要进一步查看PostgreSQL安装问题，还是Odoo本身的问题
 
 
-## 问题解答
+## FAQ{#faq}
 
-#### Odoo 支持多语言吗？
+#### Odoo support multi-language?
 
-支持多语言（包含中文），参考：[语言设置](../odoo#setlang)
+Yes, refer to [Add language](../odoo#setlang)
 
-#### Odoo 数据库连接配置信息在哪里？
+#### Where is the database connection configuration of Odoo?
 
-Odoo 采用 [Peer Authentication](https://www.postgresql.org/docs/10/auth-methods.html#AUTH-PEER) 方式连接 PostgreSQL，即以操作系统用户登录数据库，无需密码。
+Odoo used the [Peer Authentication](https://www.postgresql.org/docs/10/auth-methods.html#AUTH-PEER) to connect PostgreSQL, the peer authentication method works by obtaining the client's operating system user name from the kernel and using it as the allowed database user name (with optional user name mapping). This method is only supported on local connections.
 
-#### Odoo 控制台看不到更新提示？
+#### Why can't I see the Odoo Updates feature in the Settings panel?
 
-此功能只能在开发者模式下使用，请确保你的 Odoo 控制台是否已经切换成[开发者管理模式](../odoo#dev-mode)
+The function is only used in the developer mode, make sure you have change to [Developer Mode](../odoo#dev-mode)
 
-#### 如何删除 Odoo 演示数据？
+#### How can I delete the Demo data of Odoo?
 
-没有直接上传的方案。由于 Odoo 支持多企业组织方式，建议新增一个企业组织（不要勾选演示数据）后，再删除带演示的数据库。具体操作方式参考：[ Odoo 数据库管理](../odoo#dbadmin)
+It is recommended to delete the database directly and then add it again (the Demo data is no longer checked)
 
-#### Odoo 是否可以导出 PDF 文件？
+#### Can Odoo export PDF files?
 
-可以。安装 Invoice, Purchase 等模块可以测试 print to PDF 功能
-![Odoo 打印PDF](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-printtopdf-websoft9.png)
+Yes, you can test it from the modules: Invoice, Purchase
+![Odoo print to PDF](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-printtopdf-websoft9.png)
 
-#### 是否有可视化的数据库管理工具？
 
-请直接通过 [Odoo 自带的数据库管理工具](../odoo#pgadmin)操作
+#### Is there a web-base GUI database management tools?
+
+Yes, Odoo includes the database GUI functions, refer to [Odoo Mange Database function](../odoo#pgadmin) 
 
 #### Odoo 在中国有哪些实施商？
 

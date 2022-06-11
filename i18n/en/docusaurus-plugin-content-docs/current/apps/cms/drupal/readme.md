@@ -7,80 +7,73 @@ tags:
   - 建站系统
 ---
 
-# 快速入门
+# Drupal Getting Started
 
-[Drupal](https://www.drupal.org) 是一个 100% 开源的老牌建站系统（CMS），社区生态健康，占据全球 3% 的 CMS 市场。Drupal 自定义权限、页面类型灵活，默认支持多语言，是的其开发的站点具备良好的扩展能力。
+[Drupal](https://www.drupal.org/)  is content management software. It’s used to make many of the websites and applications you use every day. Drupal has great standard features, like easy content authoring, reliable performance, and excellent security. But what sets it apart is its flexibility; modularity is one of its core principles. Its tools help you build the versatile, structured content that dynamic web experiences need.
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-gui-websoft9.png)
 
 
-## 准备
+## Preparation
 
-部署 Websoft9 提供的 Drupal 之后，需完成如下的准备工作：
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:80** is allowed
+3. **[Get](./user/credentials)** default username and password of Drupal
+4. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for Drupal
+ 
 
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 Drupal 的 **[默认账号和密码](./user/credentials)**  
-4. 若想用域名访问  Drupal **[域名五步设置](./administrator/domain_step)** 过程
+## Drupal Initialization
 
+### Steps for you
 
-## Drupal 初始化向导
+1. Using browser to access URL: *https://domain* or *https://Server's Internet IP*, start to install  
 
-### 详细步骤
+2. Choose a language, go to next step 
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/dp01.png)
 
-1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入引导页
+3. Select an installation profile 
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/dp02.png)
 
-2.  选择一门语言，进入下一步
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-install001-websoft9.png)
+3. Then configure the database connection information([Don't know password?](./user/credentials))
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/dp03.png)
 
-3.  选择一种安装方式，进入下一步
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-install002-websoft9.png)
+5. Wait for installing
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/dp04.png)
 
-4.  填写您的数据库参数（[查看数据库账号密码](./user/credentials)），保存并继续;
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-install003-websoft9.png)
+6. Set your administrator account for Drupal
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/dp05.png)
 
-5.  分别完成网站安装和翻译安装
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-install004-websoft9.png)
+7. Installed successfully
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/dp07.png)
 
-6.  设置网站信息。站点维护账号及后台账号，请务必设置好并牢记之。进入下一步
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-install005-websoft9.png)
+> More useful Drupal guide, please refer to [Drupal Documentation](https://www.drupal.org/documentation)
 
-7.  系统完成最后一步安装
+### Having trouble?
 
-8.  进入Drupal后台，体验完整功能
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-backend-websoft9.png)
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
-> 需要了解更多 Drupal 的使用，请参考官方文档：[Drupal Community Guides](https://www.drupal.org/documentation)
-
-### 出现问题？
-
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题。
-
-
-## Drupal 使用入门
+## Drupal QuickStart
 
 下面以 **使用 Drupal 构建内容管理系统** 作为一个任务，帮助用户快速入门：
 
+## Drupal Setup
 
-## Drupal 常用操作
+### Configure SMTP{#smtp}
 
-### 配置 SMTP{#smtp}
+1. Get [SMTP](./administrator/smtp) related parameters in the mailbox management console  
 
-1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
+2. Copy [SMTP Authentication Support](https://www.drupal.org/project/smtp) plugin URL and install it
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/drupal-installsmtp001-websoft9.png)
 
-2. 获取 [SMTP Authentication Support](https://www.drupal.org/project/smtp) 下载链接（Drupal 默认没有安装 SMTP 模块），在线安装
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-installsmtp-websoft9.png)
+3. Open:【Manage】>【Extend】, select【SMTP Authentication Support】and click 【install】 button
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/drupal-installsmtp002-websoft9.png)
 
-3. 打开：【管理】>【扩展】，找到【SMTP Authentication Support】，点击【Install】完成最终安装步骤
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-installsmtp002-websoft9.png)
+4. Open:【Manage】>【Configuration 】, click【SMTP Authentication Support】
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/drupal-setsmtp001-websoft9.png)
 
-4. 打开：【管理】>【配置】，找到【SMTP Authentication Support】，配置它
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-setsmtp-websoft9.png)
-
-5. 填写准确的 SMTP 设置项信息
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-smtp-4-websoft9.png)
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-smtp-5-websoft9.png)
-
+5. Set the SMTP configuration items
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/drupal-setsmtp002-websoft9.png)
+   
     * 发送模式选择“SMTP”，加密方式选择“SSL/TLS”;
     * 输入发送方邮箱地址；
     * 认证方式选择“登录”，并勾选“需要认证”选项；
@@ -89,70 +82,70 @@ tags:
     * 输入该邮箱地址的SMTP服务的授权码或密码；
     * 存储凭据；
 
-6. 设置完成后，勾选【启用调试】，将发出测试邮件
-     
+6. Select【Enable debugging】when complete setting and will send test mail
 
-### 更换域名
+4. Test it
 
-如果 Drupal 需要更换域名，除[ Drupal 配置文件](#path)之外，还需修改 Drupal 根目录下 `.htaccess` 中域名有关的值。  
+### DNS Additional Configure (Modify URL){#dns}
 
-### 设置多语言{#setlang}
+如果 Drupal 需要更换域名，除[ Drupal 配置文件](#path)之外，还需修改 Drupal 根目录下 `.htaccess` 中域名有关的值。
 
-Drupal 支持多语言，下面是安装并设置多语言的主要步骤：
+### Set languages{#setlang}
 
-1. 登录 Drupal，在后台 【管理】>【配置】>【地区和语言】中安装语言
-  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-addlanguage-websoft9.png)
+Drupal supports multiple languages. Here are the main steps to install and set up multiple languages:
 
-2. 安装新语言后，根据实际需要，设置默认语言
+1. Log in Drupal, go to【Manage】>【Configuration】>【Regional and Language】, install your languge
+  ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/drupal-addlanguage-websoft9.png)
 
-### 安装扩展{#plugin}
+2. After installing a new language, set the default language according to actual needs.
 
-Drupal 提供的 [Drupal Modules](https://www.drupal.org/project/project_module)包含大量的扩展，下面介绍如何安装它们
+### Install plugin{#installplugin}
 
-1. 打开 [Drupal Modules](https://www.drupal.org/project/project_module)网站，搜寻所需的扩展
+[Drupal Modules](https://www.drupal.org/project/project_module) have lots of Modules, below is the step for you to install it
+
+1. Visit [Drupal Modules](https://www.drupal.org/project/project_module) website, and search the Module you want to use
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/drupal-searchformodule-websoft9.png)
 
-2. 获取扩展的下载地址
+2. Get the dowload URL of your Module
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/drupal-dlmodule-websoft9.png)
 
-3. 登录 Drupal 后台，打开安装扩展的界面
+3. Log in Drupal,open the Extend installation interface  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/drupal-extend-websoft9.png)
 
-4. 通过输入下载地址，在线安装扩展
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-installsmtp-websoft9.png)
+4. Go to【Mange】>【Extend】>【Install Extend】, input the URL for Extend installation  
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/drupal-install_manager_module-websoft9.png)
 
-5. 安装完成
+5. Install successfully
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/drupal-moduleinstalled-websoft9.png)
 
-6. 最后，需要到模块管理中启用刚安装的插件
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-enablemodule-websoft9.png)
+6. At last, enable the Theme you have installed online
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/drupal-enablemodule-websoft9.png)
 
-### 安装主题{#theme}
+### Install Themes{#theme}
 
-Drupal 提供的 [Drupal Themes](https://www.drupal.org/project/project_theme) 包含大量的主题，下面介绍如何安装它们
+[Drupal Themes](https://www.drupal.org/project/project_theme) have lots of Themes, below is the step for you to install it
 
-1. 打开 [Drupal Themes](https://www.drupal.org/project/project_theme) 网站，搜寻所需的主题
+1. Visit [Drupal Themes](https://www.drupal.org/project/project_theme) website, and search the Theme you want to use
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-searchthemes-websoft9.png)
 
-2. 获取主题的下载地址
+2. Get the dowload URL of your Theme
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-themesurl-websoft9.png)
 
-3. 打开 【扩展管理】>【安装扩展】，输入下载地址，开始安装
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-installsmtp-websoft9.png)
+3. Open【Mange】>【Extend】>【Install Extend】, input the URL for Extend installation 
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/drupal-install_manager_module-websoft9.png)
 
-4. 安装后，打开【外观】，找到已经在线安装的主题，启用它
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-themeenable-websoft9.png)
+4. Then, open【Appearance】 page, enable the Theme you have installed online
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/drupal-completeinstall-theme-websoft9.png)
 
-> 有些模板提供商，提供的模板压缩包中包含 Drupal 内核文件，这种情况下 **安装模板=安装Drupal**
+> Some Themes's zip package may have the Drupal core, at this time **Install Theme= Install Drupal**
 
-### 重置密码{#resetpwd}
+### Reset password{#resetpwd}
 
-Drupal 官方提供了重置管理员密码的[详细方案](https://www.drupal.org/node/44164) 。
+If you don't remember your administrator password, please refer to the docs [here]((https://www.drupal.org/node/44164)) to reset it
 
+## Reference sheet
 
-## 参数{#parameter}
-
-Drupal 应用中包含  Nginx, Apache, Docker, MySQL, PHP 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Drupal
 
 通过运行`docker ps`，可以查看到 Drupal 运行时所有的 Container：
 
@@ -160,33 +153,32 @@ Drupal 应用中包含  Nginx, Apache, Docker, MySQL, PHP 等组件，可通过 
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
 ```
 
+### Path{#path}
 
-下面仅列出 Drupal 本身的参数：
+Drupal installation directory: */data/wwwroot/drupal*  
+Drupal configuration file: */data/wwwroot/drupal/web/sites/default/settings.php*
 
-### 路径{#path}
+### Port{#port}
 
-Drupal 安装目录： */data/wwwroot/drupal*  
-Drupal 配置文件： */data/wwwroot/drupal/web/sites/default/settings.php*  
-
-
-### 端口{#port}
-
-| 端口号 | 用途                                          | 必要性 |
+| Port | Use                                          | Necessity |
 | ------ | --------------------------------------------- | ------ |
-| 8080   | Drupal 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
+| 3306 | Remote connect MySQL | Optional |
+| 80 | HTTP requests for Drupal | Required |
+| 443 | HTTPS requests Drupal | Optional |
+| 9090 | HTTP request for phpMyAdmin | Optional |
 
 
-### 版本{#version}
+### Version{#version}
 
 登录控制台查看
 
-### 服务{#service}
+### Service{#service}
 
 ```shell
 sudo docker start | stop | restart | stats drupal
 ```
 
-### 命令行{#cli}
+### CLI{#cli}
 
 社区为 Drupal 提供了一个[第三方 CLI](https://drupalconsole.com/) 工具
 

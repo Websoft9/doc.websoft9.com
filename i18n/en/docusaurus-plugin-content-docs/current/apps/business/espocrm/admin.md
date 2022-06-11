@@ -7,18 +7,27 @@ tags:
   - 客户成功
 ---
 
+# EspoCRM Maintenance
 
-# 维护指南
+This chapter is special guide for EspoCRM maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup) 相关章节。
+## Maintenance guide
 
-## 场景
+### EspoCRM Upgrade
 
-## 故障排除
+We recommend to make a backup of your EspoCRM files and data before upgrade.To upgrade your EspoCRM download appropriate zip file and upload it at Administration > Upgrade.
 
-除以下列出的 EspoCRM 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
+1. Download upgrade package from [here](https://www.espocrm.com/download/upgrades/)
+2. Administration > Upgrade,upload it
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/EspoCRM-upgrade-websoft9.png)
+3. Then you will get the message “Your EspoCRM will be upgraded to version 4.x.x. This can take some time.”,click the “Run upgrade”
+4. Upgraded successfully
 
-## 问题解答
+## Troubleshoot{#troubleshoot}
+
+In addition to the EspoCRM issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
+
+## FAQ{#faq}
 
 #### EspoCRM 支持中文吗？
 

@@ -151,9 +151,9 @@ phpStudy 应用中包含 Apache, PHP, MySQL 等组件，可通过 **[通用参�
 | PHP配置文件 | C:\websoft9\phpStudy\PHPTutorial\php\php-\*\php.ini  |
 | PHP版本 | PHP5.2到PHP7.2可自由切换 |
 | Apache虚拟主机文件--根目录对应的文件 |  C:\websoft9\phpStudy\PHPTutorial\Apache\conf\extra\httpd-vhosts.conf |
-| Apache日志文件目录 | C:\websoft9\phpStudy\PHPTutorial\apache\logs | 
+| Apachelogs file目录 | C:\websoft9\phpStudy\PHPTutorial\apache\logs | 
 | Nginx虚拟主机文件--根目录对应的文件 | C:\websoft9\phpStudy\PHPTutorial\nginx\conf\vhosts.conf |
-| Nginx日志文件目录 | C:\websoft9\phpStudy\PHPTutorial\nginx\logs |
+| Nginxlogs file目录 | C:\websoft9\phpStudy\PHPTutorial\nginx\logs |
 | MySQL数据目录 | C:\websoft9\phpStudy\PHPTutorial\MySQL\data |
 | MySQL配置文件 | C:\websoft9\phpStudy\PHPTutorial\MySQL\my.ini |
 | phpMyAdmin目录 | C:\websoft9\phpStudy\PHPTutorial\WWW\phpMyAdmin |

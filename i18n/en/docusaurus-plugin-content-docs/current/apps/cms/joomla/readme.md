@@ -6,77 +6,79 @@ tags:
   - CMS
 ---
 
-# 快速入门
+# Joomla Getting Started
 
-[Joomla](https://joomla.org) 是一个 100% 开源的老牌建站系统（CMS），它占据全球 6% 的 CMS 市场。它拥有良好的社区，提供超过 6,500 个经过验证的扩展和高质量模板。  
+[Joomla](https://joomla.org/) is a free and open-source content management system (CMS) for publishing web content. Over the years Joomla! has won several awards. It is built on a model -view-controller web application framework that can be used independently of the CMS that allows you to build powerful online applications.
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-gui-websoft9.jpg)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-gui-websoft9.jpg)  
 
-## 准备
-
-部署 Websoft9 提供的 Joomla 之后，需完成如下的准备工作：
-
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 Joomla 的 **[默认账号和密码](./user/credentials)**  
-4. 若想用域名访问  Joomla **[域名五步设置](./administrator/domain_step)** 过程
+If you have installed Websoft9 Joomla, the following steps is for your quick start
 
 
-## Joomla 初始化向导
+## Preparation
 
-### 详细步骤
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:80** is allowed
+3. [Get](./user/credentials) default username and password of Joomla
+4. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for Joomla.
 
-1. 使用本地电脑的浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 就进入引导首页
 
-2. 选择一门语言，并设置站点名称
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-wizard1-websoft9.png)
+## Joomla Initialization
 
-3. 填写用户，账号，邮件等信息，然后进入下一步
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-wizard2-websoft9.png)
+### Steps for you
 
-4. 填写您的数据库参数（[不知道账号密码？](./user/credentials)），然后进入下一步
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-wizard3-websoft9.png)
+1. Using local Chrome or Firefox to visit the URL *https://domain* or *https://Internet IP*, start to install  
 
-5. 安装成功，建议此时点击【特别推荐：安装语言】以安装更多语言以支持未来的多语言网
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-wizard4-websoft9.png)
+2. Set the site information and select language,then Cick 'Setup Login Data' button
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-wizard1-websoft9.png)
 
-6. 开始安装更多语言（可选），其中【Chinese Simplified (zh-CN)】是必选语言
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-wizard5-websoft9.png)
+3. Set the user account inforamton
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-wizard2-websoft9.png)
+   > Email is your login ID, not collected by anyone because it stored in your Cloud Server
 
-7. 根据提示，设置是否开启网站的多语言功能，并设置默认前后台语言
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-wizard6-websoft9.png)
+4. Then configure the database connection information([Don't know password?](./user/credentials))
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-wizard3-websoft9.png)
 
-8. Joomla后台地址：http://域名/administrator，成功登陆后您可以开始使用Joomla
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-wizard7-websoft9.png)
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-wizard8-websoft9.png)
+5. Click "Extra steps: Install languages" to install extra language 
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-wizard4-websoft9.png)
 
-> 需要了解更多 Joomla 的使用，请参考官方文档：[Joomla Docs](https://docs.joomla.org/Main_Page/zh-cn)
+6. Follow the prompts to set whether to enable the multi-language feature of the website and set the default front-back language
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-wizard5-websoft9.png)
 
-### 出现问题？
+7. Click the 'Remove installation folder' button
 
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
+8. Log in Joomla backend (URL is *http://domain/administrator*)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-wizard6-websoft9.png)
 
-**Joomla 不是最新版本**
+9. You can use the Joomla backend to setup your site now
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-wizard7-websoft9.png)
 
-完成 Joomla 初始化安装后，登录后台可以一键在线更新至最新版本
+> Refer to [Joomla admin_manual](https://docs.joomla.org/Main_Page) to get more details
 
-## Joomla 使用入门
+### Having trouble?
+
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
+  
+#### Joomla not the latest version?
+
+Completed the Joomla initial installation, the login console can be updated online to the latest version with one click.
+
+## Joomla QuickStart
 
 下面以 **使用 Joomla 构建内容管理系统** 作为一个任务，帮助用户快速入门：
 
+## Joomla Setup
 
-## Joomla 常用操作
+### Configure SMTP{#smtp}
 
-### Joomla 配置 SMTP{#smtp}
+1. Get [SMTP](./administrator/smtp) related parameters in the mailbox management console  
 
-1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
+2. Log in Joomla backend, open【System】>【Global configuration】>【Server】>【Mail Settings】, mailer is set to **smtp**, 
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-opensmtp-websoft9.jpg)
 
-2. 登录 Joomla 后，打开：【系统管理】>【全局设置】>【服务器设置】，服务器邮件类型选择：SMTP
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-opensmtp-websoft9.png)
-
-3. 填写准确的 SMTP 设置项信息
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-smtpsettings-websoft9.png)
-
+3. Fill in the your correct SMTP items
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-smtpsettings-websoft9.png)
+   
     * 发送模式选择“SMTP”，加密方式选择“SSL/TLS”;
     * 输入发送方邮箱地址；
     * 认证方式选择“登录”，并勾选“需要认证”选项；
@@ -85,57 +87,63 @@ tags:
     * 输入该邮箱地址的SMTP服务的授权码或密码；
     * 存储凭据；
 
-4. 设置完成后，点击【发送测试邮件】，测试可用性
+4. Click "Send test email" to test your SMTP settings
+
      
-### Joomla 多语言{#setlang}
+### Joomla languages{#setlang}
 
-Joomla 支持多语言，下面是安装并设置多语言的主要步骤：
+Joomla supports multiple languages. Here are the main steps to install and set up multiple languages:
 
-1. 登录 Joomla，在后台 【扩展管理】>【语言管理】中安装语言
-  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-bkinstalllan-websoft9.png)
+1. Log in Joomla, go to【Extension】>【Language(s)】>【installed】, install the languages you want
+  ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-bkinstalllan-websoft9.png)
 
-2. 然后设置前后台的默认语言
-  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-bkenablelang-websoft9.png)
+2. Then set your default language of Joomla Site or Administrator
+  ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-bkenablelang-websoft9.png)
 
-### Joomla 扩展{#plugin}
 
-Joomla 后台集成了 [Joomla! Extensions Directory™](https://extensions.joomla.org/) 大量的扩展，下面介绍如何安装它们
+### Joomla extension{#plugin}
 
-1. 登录 Joomla
-2. 打开【扩展管理】>【安装扩展】，建议选择【从扩展目录安装】的方式在线寻找扩展
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-bkinstallext-websoft9.png)
-3. 安装你所需的扩展
+[Joomla! Extensions Directory™](https://extensions.joomla.org/) provided lots of extensions for you:
 
-### Joomla 安装模板{#template}
+1. Log in Joomla  
 
-Joomla 的模板安装，主要通过上传模板安装包的方式实现：
+2. Go to【Extensions】>【Install】>【Install from Web】and search the extensions
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-bkinstallext-websoft9.png)  
 
-1. 准备好你的模板安装包（一般是 .zip 文件）
+3. Install them online
 
-2. 登录 Joomla 后台
 
-3. 打开 【扩展管理】>【安装扩展】，选择【上传安装包文件】的方式上传你的模板，开始安装
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-bkuploadext-websoft9.png)
+### Joomla install template{#template}
 
-4. 安装后，打开【扩展管理】>【模板管理】>【风格管理】，找到已经安装的模板，启用它
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-bkenabletemplate-websoft9.png)
+You can upload your template package to install it:
 
-> 有些模板提供商，提供的模板压缩包中包含 Joomla 内核文件，这种情况下 **安装模板=安装Joomla**
+1. Prepare your template (.zip file)
+
+2. Log in Joomla backend
+
+3. Open 【Extensions】>【Install】, select the tab【Upload package file】to install template
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-upload_install.png)
+
+4. When have completed the installation, go to 【Extensions】>【Templates】>【Styles】, enable your template as default template
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-bkenabletemplate-websoft9.png)
+
+> Some template zip package may have the Joomla source code, at this time **Install template=Install Joomla**
+
 
 ### Joomla Cache
 
-Joomla 后台提供了缓存管理功能，参考下图：
+Joomla backend have cache management function, refer to this picture:
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-cache-websoft9.png)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-opencache-websoft9.png)
 
-### Joomla 重置密码{#setpwd}
+### Joomla reset administrator password{#setpwd}
 
-如果忘记了管理员密码，可以参考 [此处](https://docs.joomla.org/How_do_you_recover_or_reset_your_admin_password%3F/zh-cn) 重置密码
+If you don't remember your administrator password, please refer to the docs [here](https://docs.joomla.org/How_do_you_recover_or_reset_your_admin_password%3F/en) to reset it
 
 
-## 参数{#parameter}
+## Reference sheet
 
-Joomla 应用中包含 Nginx, Apache, Docker, MySQL, PHP 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Joomla
 
 通过运行`docker ps`，可以查看到 Joomla 运行时所有的 Container：
 
@@ -143,35 +151,36 @@ Joomla 应用中包含 Nginx, Apache, Docker, MySQL, PHP 等组件，可通过 *
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
 ```
 
+### Path{#path}
+  
+Joomla installation directory: */data/wwwroot/joomla*  
+Joomla configuration file: */data/wwwroot/joomla/configuration.php*   
 
-下面仅列出 Joomla 本身的参数：
+### Port{#port}
 
-### 路径{#path}
-
-Joomla 安装目录： */data/wwwroot/joomla*  
-Joomla 配置文件： */data/wwwroot/joomla/configuration.php*  
-
-
-### 端口{#port}
-
-无特殊端口
+| Port | Use                                          | Necessity |
+| ------ | --------------------------------------------- | ------ |
+| 80 | HTTP requests for Joomla | Required |
+| 443 | HTTPS requests Joomla | Optional |
+| 3306 | Remote connect MySQL | Optional |
+| 9090 | phpMyAdmin on Docker | Optional |
 
 
-### 版本{#version}
+### Version{#version}
 
 ```shell
 sudo cat /data/logs/install_version.txt
 ```
 
-### 服务{#service}
+### Service{#service}
 
 ```shell
 sudo docker start | stop | restart | stats joomla
 ```
 
-### 命令行{#cli}
+### CLI{#cli}
 
-无
+
 
 ### API
 

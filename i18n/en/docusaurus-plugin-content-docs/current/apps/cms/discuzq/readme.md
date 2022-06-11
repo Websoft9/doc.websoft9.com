@@ -5,28 +5,29 @@ tags:
   - Discuz!Q
   - CMS
   - 建站系统
-  - 博客系统
+  - Blog
 ---
 
-# 快速入门
+# Discuz!Q Getting Started
 
 [Discuz!Q](https://discuz.com/) 是开源的论坛系统，用于构建知识付费、内容变现的圈子或私域流量应用。它拥有完全开源、提供丰富接口、前后端分离、轻量化、数据独立可控、敏捷上云、快速变现七大能力。
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuzq/discuzq-guim-websoft9.webp)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuzq/discuzq-guim-websoft9.webp)  
 
-## 准备
-
-部署 Websoft9 提供的 Discuz!Q 之后，需完成如下的准备工作：
-
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 Discuz!Q 的 **[默认账号和密码](./user/credentials)**  
-4. 若想用域名访问  Discuz!Q **[域名五步设置](./administrator/domain_step)** 过程
+If you have installed Websoft9 Discuz!Q, the following steps is for your quick start
 
 
-## Discuz!Q  初始化向导{#init}
+## Preparation
 
-### 详细步骤
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:80** is allowed
+3. **[Get](./user/credentials)** default username and password of Discuz!Q
+4. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for Discuz!Q.
+ 
+
+## Discuz!Q Initialization
+
+### Steps for you
 
 1. 本地电脑浏览器访问网址：*http://域名/install* 或 *http://服务器公网IP/install*, 进入初始化界面
 
@@ -45,23 +46,20 @@ tags:
 6. 其他设置：微信公众号，小程序，微信支付等
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuzq-waychat-websoft9.png)
 
+### Having trouble?
 
-### 出现问题？
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
-
-
-## Discuz!Q 使用入门
+## Discuz!Q QuickStart
 
 下面以 **使用 Discuz!Q 构建论坛系统** 作为一个任务，帮助用户快速入门：
 
+## Discuz!Q Setup
 
-## Discuz!Q 常用操作
 
+## Reference sheet
 
-## 参数{#parameter}
-
-Discuz!Q 应用中包含 Nginx, Docker, MySQL 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Discuz!Q
 
 通过运行`docker ps`，可以查看到 Discuz!Q 运行时所有的 Container：
 
@@ -69,38 +67,35 @@ Discuz!Q 应用中包含 Nginx, Docker, MySQL 等组件，可通过 **[通用参
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
 ```
 
+### Path{#path}
 
-下面仅列出 Discuz!Q 本身的参数：
-
-### 路径{#path}
-
-Discuz!Q 安装目录： */data/wwwroot/discuzq*  
+Discuz!Q installation directory： */data/wwwroot/discuzq*  
 Discuz!Q 配置文件： */data/wwwroot/discuzq/volumes/config/config.php*  
 
-### 网址
+### URL
 
-Discuz!Q 后台地址： *http://URL/admin*  
+Discuz!Q 后台地址： *http://URL/admin*
 
-### 端口{#port}
+### Port{#port}
 
-| 端口号 | 用途                                          | 必要性 |
+| Port | Use                                          | Necessity |
 | ------ | --------------------------------------------- | ------ |
 | 9001   | Discuz!Q 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
 
 
-### 版本{#version}
+### Version{#version}
 
 控制台查看
 
-### 服务{#service}
+### Service{#service}
 
 ```shell
 sudo docker start | stop | restart | stats discuzq
 ```
 
-### 命令行{#cli}
+### CLI
 
-无
+
 
 ### API
 

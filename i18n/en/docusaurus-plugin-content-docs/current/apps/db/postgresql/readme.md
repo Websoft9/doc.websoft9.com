@@ -6,160 +6,166 @@ tags:
   - Cloud Native Database
 ---
 
-# 快速入门
+# PostgreSQL Getting Started
 
-[PostgreSQL](https://www.postgresql.org/) 社区志愿者开发的开源关系型数据库系统，它源于 UC Berkeley 大学 1977 年的 Ingres 计划。它稳定可靠，有很多前言的技术特征，并且性能卓越，在数据完整性和正确性方面赢得了良好的市场声誉。
-
+[PostgreSQL](https://www.postgresql.com/products/community/) is a powerful, open source object-relational database system with over 30 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance.
 
 ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/postgresql/pgadmin4-websoft9.png)
 
-## 准备
+If you have installed Websoft9 PostgreSQL, the following steps is for your quick start
 
-部署 Websoft9 提供的 PostgreSQL 之后，需完成如下的准备工作：
+## Preparation
 
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:5432,9090** 端口已经开启
-3. 在服务器中查看 PostgreSQL 的 **[默认账号和密码](./user/credentials)**  
-4. 若想用域名访问  PostgreSQL，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:9090,5432** is allowed
+3. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for PostgreSQL
+4. [Get](./user/credentials) default username and password of PostgreSQL
 
+## PostgreSQL Initialization
 
-## PostgreSQL 初始化向导
+### Steps for you
 
-### 详细步骤
-
-部署 PostgreSQL 之后，依次完成下面的步骤，验证其可用性
-
-1. 查看服务状态：SSH 连接服务器，运行下面的命令，查看 PostgreSQL 的安装信息和运行状态
+1. Use the **SSH** to connect Server, and run these command below to view the installation information and running status
    ```
    sudo systemctl status postgresql
    ```
-   PostgreSQL 正常运行会得到 " Active: active (running)... " 的反馈
+2. You can ge the message from SSH " Active: active (running)... " when PostgreSQL is running
 
-2. 连接 PostgreSQL：SSH 连接服务器，以 `postgre` 用户后运行 `psql` 命令，即可使用 psql 连接数据库
-    ```
-    sudo -i -u postgres
-    psql
+3. Using SSH to connect PostgreSQL Server(or remote to Windows Server), run the following commands
 
-    psql (12.3)
-    Type "help" for help.
+```
+sudo -i -u postgres
+psql
 
-    postgres=#
-    ```
+psql (12.3)
+Type "help" for help.
 
-3. 使用可视化管理工具 pgAdmin 
+postgres=#
+```
 
-### 出现问题？
+4. Login PostgreSQL with GUI tool pgAdmin
 
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题。
 
-## PostgreSQL 常用操作
+### Having trouble?
 
-### 设置远程访问{#remote}
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
-本地电脑连接 PostgreSQL 时，需设置 PostgreSQL 远程访问：
+## Jenkins QuickStart
 
-1. 云控制台安全组开启 **TCP:5432** 端口
-2.  修改 [postgresql.conf](#path) 文件
+## PostgreSQL Setup
+
+### Set remote connection{#remote}
+
+If you want to use customer tool (e.g Navicat/pgAdmin) on your local computer to connect PostgreSQL Server, you should set your remote connection first.  
+
+The database is a high-security application, set up remote access, at least two independent steps:
+
+1. Enable **TCP:5432** port on your Cloud Platform
+
+2. Modify the configuration file [postgresql.conf](#path) 
    ```
    #listen_addresses = 'localhost'
 
-   修改为
+   is set to
 
    listen_addresses = '*'
    ```
 
-3. 修改 [pg_hba.conf](#path) 文件，增加如下一行到文件末尾
+3. Modify the configuration file [pg_hba.conf](#path) , add the following line at the end of it
    ```
    host    all             all             0.0.0.0/0            md5
    ```
 
-4. 重启 PostgreSQL 后生效
+4. Restart PostgreSQL
    ```
-   sudo systemctl restart postgresql
+   systemctl restart postgresql
    ```
 
-### 密码管理
+### Password Management
 
-对于 PostgreSQL 来说，由于可以通过 Unix 套字节在无需验证的情况下登录数据库，因此修改密码和重置密码操作相同：
+PostgreSQL customer tool can connect PostgreSQL server by **Unix socket** directly, so you can modify your password without authentication
 
 ```
-# 切换到 postgres 用户
+# change to user postgres
 sudo -u postgres psql
 
-# 修改密码
+# modify your password
 ALTER USER postgres WITH PASSWORD 'postgres';
 
 #exit psql
 \q
 ```
 
-### 图形化工具{#pgadmin}
+### GUI-pgAdmin{#pgadmin}
 
-可以采用 PostreSQL 官方提供的[pgAdmin](https://www.pgadmin.org/) 或[第三方客户端工具](./tools#dbclient)在本地管理数据库。
+[pgAdmin](https://www.pgadmin.org/) is rich Open Source administration and development platform for PostgreSQL 
 
-pgAdmin 支持 Linux, Unix, Mac, Windows 等多种桌面操作系统，它采用**调用浏览器**运行，所以它既是 Web 端，也是客户端。  
+pgAdmin is built using Python and Javascript/jQuery. A desktop runtime written in C++ with Qt allows it to run standalone for individual users, or the web application code may be deployed directly on a webserver for use by one or more users through their web browser. 
 
-本节介绍 pgAdmin 连接和管理数据库等常见操作
-
-#### 登录 pgAdmin
-
-我们的部署方案默认安装了 pgAdmin， 可以直接采用如下方式使用：
-
-1. 本地电脑浏览器访问：*http://服务器公网IP:9090*，进入 pgAdmin
-   ![登录pgAdmin](https://libs.websoft9.com/Websoft9/DocsPicture/zh/postgresql/pgadmin-loginui-websoft9.png)
-
-2. 输入 pgAdmin 管理员的用户名和密码([查看账号密码](./user/credentials))之后，进入控制台
-   ![pgAdmin 控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/postgresql/pgadmin-console-websoft9.png)
-
-#### pgAdmin 客户端
-
-pgAdmin 也支持本地电脑 Windows 客户端：
-
-1. [下载](https://www.pgadmin.org/download/) pgAdmin Windows 版
-
-2. 安装完成后，双击 pgAdmin 图标，会启动默认浏览器中打开 pgAdmin
-
-3. 根据提示，先设置一个 pgAdmin 管理密码
-  ![设置pgAdmin管理密码](https://libs.websoft9.com/Websoft9/DocsPicture/zh/postgresql/pgadmin-setmasterpw-websoft9.png)
-
-#### 连接数据库
-
-登录到 pgAdmin 之后，就可以创建数据库连接来管理 PostgreSQL：
-
-1. 设置所需管理的 PostgreSQL 数据库连接信息([不知道密码？](./user/credentials))
-  ![设置pgAdmin连接信息](https://libs.websoft9.com/Websoft9/DocsPicture/zh/postgresql/pgadmin-setconnection-websoft9.png)
-
-2. 成功连接
-  ![phpPgadmin](https://libs.websoft9.com/Websoft9/DocsPicture/zh/postgresql/pgadmin-console-websoft9.png)
-
-#### 创建数据库
-
-1. 鼠标右键一次点击：【Servers】>【Create】>【Database】，创建数据库
-  ![pgAdmin 创建数据库](https://libs.websoft9.com/Websoft9/DocsPicture/zh/postgresql/pgadmin-createdb-websoft9.png)
-
-2. 设置数据库名称、编码等信息，创建数据库
-
-#### 创建用户
-
-PostgreSQL 中创建用户就是创建 Role
-
-1. 鼠标右键一次点击：【Servers】>【Create】>【Login/Group Role】，创建用户
-  ![pgAdmin 创建用户](https://libs.websoft9.com/Websoft9/DocsPicture/zh/postgresql/pgadmin-createroles-websoft9.png)
-
-2. 设置用户名称、密码等信息，创建用户
-
-#### 备份数据库
-
-1. 选择需要备份的数据库，点击【Backup】操作
-  ![pgAdmin 创建数据库](https://libs.websoft9.com/Websoft9/DocsPicture/zh/postgresql/pgadmin-backupdb-websoft9.png)
-
-2. 备份并下载到本地
+We will introduce the basic managements about pgAdmin
 
 
+**Login pgAdmin**
 
-## 参数
+You can login to phpAdmin directly if you have deploy Websoft9 solution of PostgreSQL:
 
-PostgreSQL 应用中包含 Docker, pgAdmin 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+1. Local browser Chrome or Firefox access URL: *http://server's Internet IP:9090*, enter to pgAdmin
+   ![login pgAdmin](https://libs.websoft9.com/Websoft9/DocsPicture/en/postgresql/pgadmin-loginui-websoft9.png)
+
+2. Input pgAdmin administrator account([view username and password](./user/credentials)) and enter to console
+   ![pgAdmin console](https://libs.websoft9.com/Websoft9/DocsPicture/en/postgresql/pgadmin-console-websoft9.png)
+
+
+**Install pgAdmin Desktop**
+
+pgAdmin can also used in you local computer:
+
+1. [Download](https://www.pgadmin.org/download/) and install pgAdmin for Windows
+
+2. Click the pgAdmin icon, you can see the pgAdmin running on your default browser
+
+3. Set your pgAdmin master password first
+  ![set pgAdmin password](https://libs.websoft9.com/Websoft9/DocsPicture/en/postgresql/pgadmin-setmasterpw-websoft9.png)
+
+**Connect pgAdmin**
+
+Once you have enter to pgAdmin console, you can connect PostgreSQL server now:
+
+1. Click 【server】 to connect PostgreSQL server
+
+2. Set your PostgreSQL database connection ([don't known password](./user/credentials))
+  ![set pgAdmin connection](https://libs.websoft9.com/Websoft9/DocsPicture/en/postgresql/pgadmin-createserver-websoft9.png)
+
+2. Login to console successfully
+  ![phpPgadmin](https://libs.websoft9.com/Websoft9/DocsPicture/en/postgresql/pgadmin-console-websoft9.png)
+
+**Create database**
+
+1. Right mouse click 【Servers】>【Create】>【Database】, create new database
+  ![pgAdmin create database](https://libs.websoft9.com/Websoft9/DocsPicture/zh/postgresql/pgadmin-createdb-websoft9.png)
+
+2. Set your database name, Encoding..., then create it
+
+**Create user**
+
+PostgreSQL roles is similar with users
+
+1. Right mouse click 【Servers】>【Create】>【Login/Group Role】, create new user
+  ![pgAdmin create user](https://libs.websoft9.com/Websoft9/DocsPicture/zh/postgresql/pgadmin-createroles-websoft9.png)
+
+2. Set your database username, password..., then create it
+
+**Backup database**
+
+1. Select the database you want to export, click 【Backup】button
+  ![pgAdmin](https://libs.websoft9.com/Websoft9/DocsPicture/zh/postgresql/pgadmin-backupdb-websoft9.png)
+
+2. Start you backup
+
+
+## Reference sheet
+
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage PostgreSQL 
 
 通过运行`docker ps`，可以查看到 PostgreSQL 运行时所有的 Container：
 
@@ -169,7 +175,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 下面仅列出 PostgreSQL 本身的参数：
 
-### 路径{#path}
+### Path{#path}
 
 PostgreSQL 配置文件目录: */data/postgresql/config*   
 PostgreSQL 数据目录：*/data/postgresql/pgdata*   
@@ -181,7 +187,7 @@ PostgreSQL 有两个重要的全局配置文件：
 * pg_hba.conf 主要负责客户端的连接和认证
 
 
-### 端口
+### Port
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
@@ -189,34 +195,37 @@ PostgreSQL 有两个重要的全局配置文件：
 | 5432   | 远程连接PostgreSQL | 可选   |
 
 
-### 版本
+### Version
 
 ```shell
 # PostgreSQL version
 psql -V
 ```
 
-### 服务
+### Service
 
 ```shell
 sudo systemctl start | stop | restart | status postgresql
 sudo docker start | stop | restart | stats pgadmin
 ```
 
-### 命令行
+### CLI
 
-PSQL 是 PostgreSQL 自带的命令行客户端工具，有非常丰富的功能。  
+Psql is the interactive terminal for working with Postgres. Theres an abundance of flags available for use when working with psql, but lets focus on some of the most important ones, then how to connect
 
-先切换到 postgre 用户，在运行 `psql` 命令，即可使用 psql 连接数据库
+**Connect psql by peer**
 
-```
-sudo -i -u postgres
+```shell
+cd /usr/bin
+su postgres
 psql
+```
 
-psql (12.3)
-Type "help" for help.
+**Connect psql from remote**
 
-postgres=#
+Enable the remote connection of PostgreSQL, then connect it
+```shell
+psql -U postgre -h localhost -W
 ```
 
 ### API

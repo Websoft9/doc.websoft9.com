@@ -5,59 +5,64 @@ tags:
   - PHP
   - LAMP
   - LNMP
-  - 运行环境
+  - Runtime
 ---
 
 # Deploy PHP app
 
-## 安装 PHP 应用{#phpapps}
+## Deploy Your PHP application{#phpapps}
 
-在 PHP 应用环境上安装一个网站，也就是我们常说的增加一个虚拟主机。
+To deploy PHP application on LAMP, you need to add **VirtualHost** for it
+> VirtualHost is vhost configuration segment. Each application must correspond to a unique VirtualHost in **vhost.conf / default.cong**
 
-宏观上看，只需两个步骤：**上传网站代码** + **虚拟机主机配置文件** 中增加**配置段**
+* [Apache vhost configuration file](../apache#path): /etc/httpd/conf.d/vhost.conf
+* [Nginx vhost configuration file](../nginx#path): /etc/nginx/conf.d/default.conf
+  
+Overall, just need two steps: 
+1. Upload source codes of applicaiton
+2. Add new VirtualHost vhost configuration segment
 
-* Apache 下，这个配置段为：`<VirtualHost *:80>...</VirtualHost>`
-* Nginx 下，这个配置段为：`server{}`
-
-
-### 安装第一个网站
-
-下面通过**替换示例网站**（默认存在一个示例网站）的方式来教你安装你的第一个网站：
-
-1. 使用 WinSCP 连接服务器
-
-2. 删除示例网站 */data/wwwroot/www.example.com* 下的所有文件（保留目录）
-
-3. 将本地电脑上的网站源码上传到示例目录下
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/winscp/winscp-uploadcodestoexample-websoft9.png)
-
-4. 修改虚拟主机配置文件，实现绑定域名、修改网站目录名称等操作。
-   * **Apache** 下，修改 *vhost.conf* 中已有的 `<VirtualHost *:80>...</VirtualHost>`
-   * **Nginx** 下，修改 *default.conf* 中已有的 `server{}`
+* [Apache VirtualHost](../apache#virtualhost) ：`<VirtualHost *:80>...</VirtualHost>`
+* [Nginx VirtualHost](../nginx#wwwtemplate) ：`server{}`
 
 
-5. 保存虚拟主机配置文件，重启服务后生效
+### Deploy fisrt application
+
+There is a example application in LAMP, we sugget you to **replace the example application** for deploy first application:
+
+1. Use WinSCP to connect Cloud Server
+2. Delete all files in the folder */data/wwwroot/www.example.com*, but don't delete *www.example.com*
+3. Upload your application's codes to the folder: */data/wwwroot/www.example.com* 
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-uploadcodestoexample-websoft9.png)
+
+4. Modify the virtual host configuration file to realize operations such as binding domain  and modifying website directory
+ * [Apache](../apache#virtualhost) ：`<VirtualHost *:80>...</VirtualHost>`
+ * [Nginx](../nginx#wwwtemplate) ：`server{}`
+
+
+5. Save virtual host configuration file and then restart service
     ~~~
-    # 重启 Apache
+    # restart Apache
     systemctl restart httpd
     
-    # 重启 Nginx
+    # restart Nginx
     systemctl restart httpd
     ~~~
 
-6. 本地浏览器访问网站：*http://域名* 或 *http://服务器公网IP* 
+6. Using the Chrome or Firefox to visit: *http://domain* or *http://IP/mysite2* to visit your application
 
-### 安装第二个网站
 
-从安装第二个网站开始，需要在**虚拟机主机配置文件**中增加对应的配置段，具体如下
+### Deploy second application
 
-1. 使用 WinSCP 连接服务器，在 /data/wwwroot 下新建一个网站目录，假设命令为“mysite2”
+Start to deploy the second application, you should add new VirtualHost segment to the file *vhost.conf* 
+
+1. Use WinSCP to connect Cloud Server，create a new "mysite2" website directory under /data/wwwroot
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/lamp/lamp-createmysite2-websoft9.png)
 
-2. 将本地网站源文件上传到：*/data/wwwroot/mysite2* 
+2. Upload your application's codes to the folder:：*/data/wwwroot/mysite2* 
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/lamp/lamp-uploadcodes-websoft9.png)
 
-3. 编辑 **虚拟机主机配置文件** 文件，实际情况获取代码段：
+3. Edit the **Virtual machine host configuration file** file to get the code snippet according to the scenario:
 
     | Web Server | 场景                                          | 获取代码段                    |
     | ---------- | --------------------------------------------- | ----------------------------- |
@@ -66,33 +71,34 @@ tags:
     | Nginx      | **有域名，通过 http://域名 访问网站**         | [获取](../apache#wwwtemplate) |
     |            | **没有域名，通过 http://IP/mysite2 访问网站** | [获取](../apache#aliatemplate) |
 
-4. 保存虚拟主机配置文件，重启服务后生效
+4. Save virtual host configuration file and then restart service
     ~~~
-    # 重启 Apache
+    # restart Apache
     systemctl restart httpd
     
-    # 重启 Nginx
+    # restart Nginx
     systemctl restart httpd
     ~~~
 
-5. 本地浏览器访问网站：*http://域名* 或 *http://服务器公网IP* 
+5. Using the Chrome or Firefox to visit: *http://domain* or *http://IP/mysite2* to visit your application
 
 
-### 安装第 N 个网站
+### Deploy more application
 
-安装第n个网站与安装第二个网站的操作步骤一模一样
+**Deploy more application** is the same with **Deploy second application**
 
-最后我们温故而知新，总结 PHP 应用环境安装网站步骤： 
+Finally, we know the new and summarize the steps of the LAMP deployment site: 
 
-1. 上传网站代码
-2. 绑定域名（非必要）
-3. 新增站点配置或修改示例站点配置
-4. 增加网站对应的数据库（非必要）
-5. 进入安装向导
+1. Upload the website code 
+2. Bind the domain name (not necessary) 
+3. Add the site configuration or modify the sample site configuration 
+4. Increase the database corresponding to the site (not necessary) 
+5. Enter the installation wizard
 
-## 维护 PHP 环境
 
-参考本文档相关专题页面：[《PHP 指南》](../php) 和 [《PHP 进阶》](../php/advanced) 
+## Maintain PHP Environment
+
+Refer to：[《PHP Guide》](../php) and [《PHP Advanced》](../php/advanced) 
 
 
 

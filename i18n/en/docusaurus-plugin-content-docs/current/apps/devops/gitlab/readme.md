@@ -51,11 +51,11 @@ Below is for you to solve problem, and you can contact **[Websoft9 Support](./he
 
 **GitLab能打开，但总是出现 502 错误？**  
 
-参阅：[此处](./gitlab/admin#502)
+Refer to：[here](./gitlab/admin#502)
 
 **GitLab 每次启动需等1分钟才能使用？**  
 
-参阅：[此处](./gitlab/admin#502)
+Refer to：[here](./gitlab/admin#502)
 
 ## GitLab QuickStart
 
@@ -105,7 +105,7 @@ This task【Manage team, member and code in GitLab】 is for your GitLab QuickSt
    ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-merge1-websoft9.png)
    ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-merge2-websoft9.png)
 
-## Jenkins Setup
+## Gitlab Setup
 
 ### 设置 GitLab 仓库地址{#setrepourl}
 
@@ -128,26 +128,41 @@ This task【Manage team, member and code in GitLab】 is for your GitLab QuickSt
 
 GitLab 仓库的 HTTPS 不等同于 GitLab 自身的 HTTPS，前置还需额外设置：[Enabling HTTPS](https://docs.gitlab.com/omnibus/settings/nginx.html#enable-https)
 
-### 配置 SMTP
+### Configure SMTP
 
-1. 参考 GitLab 官方提供的 [SMTP Setting 范例](https://docs.gitlab.com/omnibus/settings/smtp.html) ，准备好 SMTP 参数
+Sending mail is a common feature for GitLab. After a large number of user practice feedback, only one way is recommended, that is, using the **third-party STMP service** to send the email.
 
-2. 通过 SFTP 连接服务器，修改 GitLab 配置文件：*/etc/gitlab/gitlab.rb*
+> Do not try to install **Sendmail** or other Mail server software on your Cloud Server for sending mail, because it is very difficulty in maintenance.
+
+Follow is the sample using **SendGrid's SMTP Service** to configure sending mail for GitLab:
+
+1. Log in SendGrid console, prepare your SMTP settings like the follow sample
+   ```
+   SMTP host: smtp.sendgrid.net
+   SMTP port: 25 or 587 for unencrypted/TLS email, 465 for SSL-encrypted email
+   SMTP Authentication: must be checked
+   SMTP Encryption: must SSL
+   SMTP username: websoft9smpt
+   SMTP password: #fdfwwBJ8f    
+   ```
+2. Use SSH or SFTP to connect Server, modify the GitLab configuration file: */etc/gitlab/gitlab.rb*
    ```
    gitlab_rails['smtp_enable'] = true
-   gitlab_rails['smtp_address'] = "smtp.exmail.qq.com"
-   gitlab_rails['smtp_port'] = 465
-   gitlab_rails['smtp_user_name'] = "xxxx@xx.com"
-   gitlab_rails['smtp_password'] = "password"
+   gitlab_rails['smtp_address'] = "smtp.sendgrid.net"
+   gitlab_rails['smtp_port'] = 587
+   gitlab_rails['smtp_user_name'] = "a_sendgrid_crendential"
+   gitlab_rails['smtp_password'] = "a_sendgrid_password"
+   gitlab_rails['smtp_domain'] = "smtp.sendgrid.net"
    gitlab_rails['smtp_authentication'] = "login"
    gitlab_rails['smtp_enable_starttls_auto'] = true
-   gitlab_rails['smtp_tls'] = true
-   gitlab_rails['gitlab_email_from'] = 'xxxx@xx.com'
+   gitlab_rails['smtp_tls'] = false
    ```
-3. 重启服务后生效
+4. Restart Service
    ```
    sudo gitlab-ctl reconfigure
    ```
+
+GitLab provides configuration methods for dozens of different SMTP service providers, please refer to the official documentation:[SMTP settings](https://docs.gitlab.com/omnibus/settings/smtp.html)
 
 ### 重置管理员密码
 
@@ -180,9 +195,9 @@ GitLab 仓库的 HTTPS 不等同于 GitLab 自身的 HTTPS，前置还需额外�
 
    ```
 
-## 参数
+## Reference sheet
 
-GitLab 应用中包含 Docker, Portainer 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage GitLab 
 
 下面是一个简化的架构图，可用于了解 GitLab 的组件架构。
 
@@ -191,7 +206,7 @@ GitLab 应用中包含 Docker, Portainer 等组件，可通过 **[通用参数�
 -nginx：静态web服务器。  
 -gitlab-shell：用于处理Git命令和修改authorized keys列表。  
 -gitlab-workhorse: 轻量级的反向代理服务器。  
--logrotate：日志文件管理工具。  
+-logrotate：logs file管理工具。  
 -postgresql：数据库。  
 -redis：缓存数据库。  
 -sidekiq：用于在后台执行队列任务（异步执行）。  
@@ -199,7 +214,7 @@ GitLab 应用中包含 Docker, Portainer 等组件，可通过 **[通用参数�
 
 GitLab 包含数十种组件([查看](https://docs.gitlab.com/ee/development/architecture.html#component-list))，通过 */opt/gitlab/version-manifest.txt* 查看服务器上所有组件名称和版本
 
-### 路径{#path}
+### Path{#path}
 
 ##### GitLab
 
@@ -224,27 +239,27 @@ GitLab 核心 Nginx 配置文件:  */var/opt/gitlab/nginx/conf/gitlab-http.conf*
 
 ##### PostgreSQL
 
-PostgreSQL 安装目录： */var/opt/gitlab/postgresql*  
+PostgreSQL installation directory： */var/opt/gitlab/postgresql*  
 PostgreSQL 日志目录: */var/log/gitlab/postgresql*   
 PostgreSQL-Exporter 日志目录： */var/log/gitlab/postgres-exporter*  
 PostgreSQL 数据目录： */var/opt/gitlab/postgresql/data*
 
 ##### Redis
 
-Redis 安装目录： */var/opt/gitlab/redis*  
+Redis installation directory： */var/opt/gitlab/redis*  
 Redis 日志目录： */var/log/gitlab/redis*
 
-### 端口{#port}
+### Port{#port}
 
 暂无特殊端口
 
-### 版本
+### Version
 
 ```shell
 gitlab-ctl status  | grep gitlab-workhorse
 ```
 
-### 服务
+### Service
 
 GitLab 提供的（[gitlab-ctl ](https://docs.gitlab.com/omnibus/maintenance/README.html#get-service-status)）可以很方便的管理各个组件的服务：
 
@@ -262,7 +277,7 @@ GitLab 自身的启动/停止，是通过 Systemd 服务来管理的：
 systemctl start | stop | restart | status gitlab-runsvdir.service
 ```
 
-### 命令行
+### CLI
 
 GitLab 提供了命令行工具 `gitlab-ctl` 用于全面管理和配置 GitLab
 

@@ -3,52 +3,53 @@ sidebar_position: 1
 slug: /knowage
 tags:
   - Knowage
-  - 大数据分析
+  - Data Analysis
   - BI
 ---
 
-# 快速入门
+# Knowage Getting Started
 
-[Knowage](https://www.knowage-suite.com) 源自 SpagoBI，是使用 Java 语言写的开放源码的商业智能分析工具,是一套适合现代商业分析的开源工具套装。Knowage 提供了高级的自助服务功能，为最终用户提供了自主权，可以构建自己的分析、探索和组织自己的数据空间。
+[Knowage](https://www.knowage-suite.com) is the full capabilities open source suite for modern business analytics over traditional sources and big data systems. Its features, such as data federation, mash-up, data/text mining and advanced data visualization, give comprehensive support to rich and multi-source data analysis. The suite is composed of several modules, each one conceived for a specific analytical domain. They can be used individually as complete solution for a certain task, or combined with one another to ensure full coverage of user’ requirements.
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/knowage/knowage-gui-websoft9.png)
 
-## 准备
+If you have installed Websoft9 Knowage, the following steps is for your quick start
 
-部署 Websoft9 提供的 Knowage 之后，请参考下面的步骤快速入门。
+## Preparation
 
-1. 在云控制台获取您的 **服务器公网 IP 地址**
-2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:80** 和 **TCP:8080** 端口是否开启
-3. 在服务器中查看 Knowage 的 **[默认账号和密码](./user/credentials)**
-4. 若想用域名访问 Knowage，务必先完成**[域名五步设置](./administrator/domain_step)** 过程
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:80** is allowed
+3. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for Knowage
+4. [Get](./user/credentials) default username and password of Knowage
 
-## Knowage 初始化向导
+## Knowage Initialization
 
-### 详细步骤
+### Steps for you
 
-1. 使用本地电脑的浏览器访问网址： *http://域名/knowage* 或  *http://服务器公网IP/knowage*, 进入登录界面
+1. Using local Chrome or Firefox to visit the URL *http://DNS* or *http://Server's Internet IP*, you will enter login page of Knowage
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/knowage/knowage-login-websoft9.png)
 
-2. 输入账号密码（[不知道账号密码？](./user/credentials)），成功登录到 Knowage 后台  
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/knowage/knowage-backend-websoft9.png)
+   > You can visit Knowage by the URL: *http://Internet IP:8080/knowage* also
 
-3. 打开【Profile Management】>【Users Management】 修改密码
+2. Log in to Knowage web console([Don't have password?](./user/credentials)), go to dashboard of Knowage 
+
+3. Go to  Profile Management->Users Management to change the password of Administrator
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/knowage/knowage-changepw-websoft9.png)
 
-4. 打开【Server Settings】>【Configuration Management】 配置 Knowage
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/knowage/knowage-confmanagement-websoft9.png)
+4. Go 【Server Settings】>【Configuration Management】 to configure Knowage
+  ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/knowage/knowage-confmanagement-websoft9.png)
 
-> 需要了解更多 Knowage 的使用，请参考官方文档：[Knowage Documentation](https://knowage-suite.readthedocs.io/)
+> More useful Knowage guide, please refer to [Knowage Documentation](https://knowage-suite.readthedocs.io/)
 
-### 出现问题？
+### Having trouble?
 
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或 **[FAQ](./faq#setup)** 尝试快速解决问题。
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
 **无法进入登录页面？**
 
 因为 Knowage 应用比较消耗资源，4G 内存的服务器虽然也能运行，初始化过程比较慢，请耐心等待几分钟后再试。
 
-## Knowage 使用入门
+## Knowage QuickStart
 
 下面我们以一个完整的示例（**可视化呈现订单中不同国家的订单总额**），介绍如何使用 Knowage 快速分析数据。
 基本步骤分为 4 步：连接数据源，数据建模，配置数据，数据可视化呈现。前 2 步为 IT 人员准备数据，后 2 步为业务人员的自助分析。
@@ -84,11 +85,11 @@ tags:
    ![knowage](https://libs.websoft9.com/Websoft9/blog/tmp/knowage/zh/knowage-analysis4-websoft9.png)
    ![knowage](https://libs.websoft9.com/Websoft9/blog/tmp/knowage/zh/knowage-analysis5-websoft9.png)
 
-## Knowage 常用操作
+## Knowage Setup
 
 ### 连接数据源{#datasource}
 
-以连接 MySQL 为例，登录 Knowage，进入主面板，选择>【Data source】：
+Take connecting to MySQL as an example, log in to Knowage, enter the main panel, and select > [Data source]:
 
    ![knowage](https://libs.websoft9.com/Websoft9/blog/tmp/knowage/zh/knowage-datasource-websoft9.png)
 
@@ -98,9 +99,10 @@ tags:
 
    ![knowage](https://libs.websoft9.com/Websoft9/blog/tmp/knowage/zh/knowage-model-websoft9.png)
 
-## Knowage 参数
+## Reference sheet
 
-Knowage 应用中包含 Nginx, Docker, MariaDB 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Knowage
+
 
 通过运行`docker ps`，可以查看到 Knowage 运行时所有的 Container：
 
@@ -115,24 +117,24 @@ fa5d3ce16865   knowagelabs/knowage-python-docker:8.0.0-SNAPSHOT   "./entrypoint.
 
 下面仅列出 Knowage 本身的参数：
 
-### 路径{#path}
+### Path{#path}
 
 Knowage-server 资源目录： */data/wwwroot/knowage/resources*
 
-### 端口{#port}
+### Port{#port}
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
 | 8080   | Knowage 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
 
-### 版本
+### Version
 
 ```shell
 # Knowage Version
 docker images |grep knowagelabs |awk '{print $2}' |head -1 |cut -d- -f1
 ```
 
-### 服务
+### Sevice
 
 ```shell
 sudo docker  start | stop | restart | status knowage-server
@@ -142,7 +144,7 @@ sudo docker  start | stop | restart | status knowage-mariadb-server
 sudo docker  start | stop | restart | status knowage-mariadb-cache
 ```
 
-### 命令行
+### CLI
 
 Knowage 暂未提供命令行工具
 

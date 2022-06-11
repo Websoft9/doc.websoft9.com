@@ -3,54 +3,77 @@ sidebar_position: 1
 slug: /bt
 tags:
   - BT
-  - 宝塔面板
-  - 运行环境
+  - DevOps
+  - aaPanel
 ---
 
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 快速入门
+# aaPanel Getting Started
 
-BT（宝塔）面板**可视化**的服务器管理软件，支持一键LAMP/LNMP/监控/网站/FTP/数据库/JAVA等100多项服务器管理功能。可以通过 Web 端轻松管理服务器，提升运维效率。例如：管理网站、管理文件、图表化监控、计划任务等功能。
+[aaPanel](https://www.aapanel.com/) a simple but powerful control panel, can manage the web server through web-base GUI(Graphical User Interface). aaPanel provides the one-click function such as one-click install LNMP/LAMP developing environment and software.
+Our main goal is helping users to save the time of deploying, thus users just focus on their own project that is fine.
 
-![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btlinux/bt-linux_pc.png)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/bt/bt-guien-websoft9.png)
 
-部署 Websoft9 提供的 BT 之后，请参考下面的步骤快速入门。
+If you have installed Websoft9 aaPanel, the following steps is for your quick start
 
-## 准备
+## Preparation
 
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:8888** 端口已经开启
-3. 若想用域名访问  BT，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:8888** is allowed
+3. **[Get](./user/credentials)** default username and password of aaPanel
+4. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for aaPanel
 
-## 宝塔初始化向导
+## aaPanel Initialization
 
-### 详细步骤
+### Steps for you
 
-BT 部署到你的服务器后，即可开始使用：
+**1. aaPanel environment setup**
 
-1. 使用本地浏览器访问：*http://服务器公网IP:8888* ，进入登录页面  
-   ![BT 登录界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/btlinux/bt-login-websoft9.png)
+Using local Chrome or Firefox to visit the URL *http://Internet IP:8888*, go to the login page of aaPanel
 
-2. 输入默认账号密码（用户名：`administrator`  密码：`admin123`），进入宝塔后台
-   ![BT 后台界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/btlinux/bt-console-websoft9.png)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/bt/bt-login-websoft9.png)
 
-3. 如果出现下面的绑定宝塔账号提示，访问：*http://服务器公网IP:8888/soft* 即可绕开
-   ![BT 后台界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/btwin/bt-registerneed-websoft9.png)
+**2. Upgrade**
 
-  > 绑定宝塔官方账号不是必须的步骤
+First, you should upgrade aaPanel to latest version  
 
-4. 先升级成 BT 最新版本
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/bt/bt-update001-websoft9.png)
 
-5. 搭建所需的环境
+**3. Setup PHP runtime**
 
-### 异常处理
+Start to setup LAMP or LNMP according the aaPanel's remainder
 
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
+- 其中的每个组件版本可选（如下图LAMP主流版本选择）：
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/bt/bt-installlamp-websoft9.png)
 
-## 宝塔使用入门
+- 参完成选择后，点击“一键安装”，待安装完成后您就可以配置自己的网站了。
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/bt/bt-installlamping-websoft9.png) 
+
+**4. Setup more**
+
+初始化安装之外的安装，都可以通过【软件管理】去安装更多的组件。
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/bt/bt-appstore-websoft9.png)
+
+> More useful aaPanel guide, please refer to [aaPanel forum](https://forum.aapanel.com/)
+
+### Having trouble?
+
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
+
+**I can't visit the start page of aaPanel?**
+
+Your TCP:8888 of Security Group Rules is not allowed so there no response from Chrome or Firefox
+
+**能否将 PHP, Java 和 Node.js 安装到一起？**
+
+可以，但不建议。虽然宝塔的功能强大，能够安装的组件足够多，但是请把握一个原则，能不装的不要装，现在用不到的不要装
+
+## aaPanel QuickStart
 
 下面以 **通过 BT 安装一个 WordPress 网站** 作为一个任务，帮助用户快速入门：
 
@@ -69,7 +92,7 @@ BT 部署到你的服务器后，即可开始使用：
 8.  打开网址 http://您的域名 ,即可开始进行wordpress配置。
 
 
-## 常用操作
+## aaPanel Setup
 
 ### 搭建环境
 
@@ -118,15 +141,17 @@ BT 部署到你的服务器后，即可开始使用：
 2. 是否主动/被动模式都不能连接
 3. 宝塔中的防火墙设置禁止了21端口
 
-### 域名绑定
+### Domain binding
 
-绑定域名的前置条件是：已经完成域名解析（登录域名控制台，增加一个A记录指向服务器公网IP）  
+The precondition for **Domain binding** is have completed the **Domain resolution** for aaPanel Instance.
 
-完成域名解析后，从服务器安全和后续维护考量，需要完成**域名绑定**：
+From the perspective of server security and subsequent maintenance considerations, the **Domain Binding** step cannot be omitted.
 
-BT 域名绑定操作步骤：
+aaPanel domain name binding steps:
 
-![](http://libs.websoft9.com/Websoft9/DocsPicture/en/bt/bt-setdns-websoft9.png)
+1. Login to aaPanel
+2. Set DNS  
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/bt/bt-setdns-websoft9.png
 
 ### 挂载数据盘
 
@@ -191,18 +216,17 @@ BT 域名绑定操作步骤：
 
 ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btwin/btwin-inti-websoft9.png)
 
-## 参数
+## Reference sheet
 
-BT 应用中包含 Nginx, Docker 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage aaPanel
 
-下面仅列出 BT 本身的参数：
 
-### 路径{#path}
+### Path{#path}
 
 <Tabs>
 <TabItem value="linuxpath" label="Linux" default>
 
-* 安装目录：*/www/server*  
+* installation directory：*/www/server*  
 * 网站目录：*/www/wwwroot/default*  
 * Apache目录：*/www/server/httpd*  
 * Nginx目录：*/www/server/nginx*  
@@ -216,26 +240,26 @@ BT 应用中包含 Nginx, Docker 等组件，可通过 **[通用参数表](./adm
 
 <TabItem value="windowspath" label="Windows">
 
-* 安装目录：*C:\BtSoft\ServerAdmin*
+* installation directory：*C:\BtSoft\ServerAdmin*
 *   网站目录：*C:\wwwroot*
 *   MySQL 目录：*C:\BtSoft\mysql*
-*   Apache 日志文件：*C:\BtSoft\apache\logs*
+*   Apache logs file：*C:\BtSoft\apache\logs*
 
 </TabItem>
 </Tabs>
 
-### 端口
+### Port{#port}
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
 | 8888   | 访问宝塔的端口 | 必须   |
 
 
-### 版本
+### Version{#version}
 
 宝塔控制台查看
 
-### 服务
+### Service{#service}
 
 ```shell
 sudo /etc/init.d/nginx start | stop | restart | reload
@@ -248,7 +272,7 @@ sudo /etc/init.d/memcached start | stop | restart | reload
 sudo /etc/init.d/php-fpm-{52|53|54|55|56|70|71|72|73|74} start | stop | restart | reload
 ```
 
-### 命令行
+### CLI{#cli}
 
 ```
 $ bt

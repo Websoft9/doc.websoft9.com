@@ -7,25 +7,25 @@ tags:
   - CRM
 ---
 
-# 维护指南
+# ONLYOFFICE Maintenance
 
-本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup) 相关章节。
+This chapter is special guide for ONLYOFFICE maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-## 场景
+## Maintenance guide
 
-## 故障排除
+## Troubleshoot{#troubleshoot}
 
-除以下列出的 ONLYOFFICE 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。
+In addition to the ONLYOFFICE issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
-#### ONLYOFFICE 显示502错误？
+#### ONLYOFFICE displays 502 Bad Gateway?
 
-首先通过命令 `sudo docker logs onlyofficecommunityserver`，查看是否有错误日志。  
+First run the command `sudo docker logs onlyofficecommunityserver` to check if there's error logs.  
 
-一般是由文件权限不足或数据连接问题导致。
+Generally, it's caused by the lack of file permission or the failure of data connection.
 
-#### 重装数据库导致 ONLYOFFICE 无法运行？
+#### Can't run ONLYOFFICE after re-installing database?
 
-ONLYOFFICE 对数据库的配置有严格的要求，保证符合如下要求：
+ONLYOFFICE has strict rules for database configuration, ensure you meet the following requirements:
 
 ```
 echo "[mysqld]
@@ -36,28 +36,28 @@ group_concat_max_len = 2048
 log-error = /var/log/mysql/error.log" > /app/onlyoffice/mysql/conf.d/onlyoffice.cnf
 ```
 
-## 问题解答
+## FAQ{#faq}
 
-#### ONLYOFFICE 是否支持中文？
+#### Does ONLYOFFICE support multiple languages?
 
-支持，可以在线切换多种语言
+Yes, you can switch language online.
 
 #### Community Edition vs Enterprise Edition？
 
-参考官方说明 [Compare Community Edition and Enterprise Edition](https://github.com/ONLYOFFICE/CommunityServer#compare-community-edition-and-enterprise-edition)
+Refer to [Compare Community Edition and Enterprise Edition](https://github.com/ONLYOFFICE/CommunityServer#compare-community-edition-and-enterprise-edition)
 
-#### 能否介绍 ONLYOFFICE 各种版本的关系？
+#### What's the relationship between various edition of ONLYOFFICE?
 
-OnlyOffice的产品家族比较复杂，根据官方的介绍，可以分为：
+ONLYOFFICE offers different versions:
 
-* ENTERPRISE EDITION：企业版
-* COMMUNITY EDITION：开源版
-* INTEGRATION EDITION：比如集成了 ownCloud 的版本
-* DEVELOPER EDITION：开发者版本
+* ENTERPRISE EDITION
+* COMMUNITY EDITION
+* INTEGRATION EDITION
+* DEVELOPER EDITION
 
-其中每一个版本都是由：ONLYOFFICE WorkSpace, ONLYOFFICE docs 组成。  
+Each edition consists of: Community Server, Document Server, Mail Server.  
 
-COMMUNITY EDITION 是一个完全免费的版本。DEVELOPER EDITION 是适用于开发者的[收费版本](https://www.onlyoffice.com/zh/developer-edition-prices.aspx)。
+COMMUNITY EDITION is free, while [DEVELOPER EDITION](https://www.onlyoffice.com/en/developer-edition-prices.aspx) is a paid version for developers.
 
 #### ONLYOFFICE 开源版并发连接数有限制吗？
 

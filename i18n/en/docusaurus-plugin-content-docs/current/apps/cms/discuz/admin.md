@@ -5,37 +5,34 @@ tags:
   - Discuz
   - CMS
   - 建站系统
-  - 博客系统
+  - Blog
 ---
 
-# 维护指南
+# Discuz Maintenance
 
-本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup) 相关章节。
+This chapter is special guide for Discuz maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-## 场景
+## Maintenance guide
 
-### 在线备份与恢复
+### Backup and Restore
 
-Discuz 后台提供了非常简单实用的在线备份功能，使用方法如下：
+This section provides Discuz online backup&restore solution
 
-1. 登录 Discuz 后台，打开：【后台】>【站长】>【数据库】，进入备份页面，设置备份策略。
+1. Log in Discuz, open【后台】>【站长】>【数据库】, set your backup policy
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuz-backup-websoft9.png)
 
-2. 点击备份操作
+2. Click backup button
 
-3. 在线实现的备份可以在线恢复（还原）
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuz-restore-websoft9.png)
+3. You can restore your backups online from the backup
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuz-restore-websoft9.png)   
 
-### 升级
+### Upgrade
 
-Discuz 需要手工上传升级包方可升级，这项工作对普通用户来说非常有挑战性。  
+Discuz needs to manually upgrade the upgrade package to upgrade, which means that the upgrade is a bit difficult for ordinary users. In addition, the official has not had a formal upgrade tutorial, so we are unable to provide an upgrade plan. Discuz 官方提供了一个：[升级参考](https://gitee.com/Discuz/DiscuzX/wikis/%E5%8D%87%E7%BA%A7%E6%96%B9%E6%B3%95?sort_id=9978) 
 
-Discuz 官方提供了一个：[升级参考](https://gitee.com/Discuz/DiscuzX/wikis/%E5%8D%87%E7%BA%A7%E6%96%B9%E6%B3%95?sort_id=9978)
+## Troubleshoot{#troubleshoot}
 
-
-## 故障排除
-
-除以下列出的 Discuz 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
+In addition to the Discuz issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
 #### Discuz后台系统首页的文件校验显示大量文件被修改，这是系统风险或网站漏洞吗？
 
@@ -43,9 +40,9 @@ websoft9为了优化用户体验，初始设定了随机密码；同时为了用
 例如，discuzX3.4显示318文件被修改，60个文件丢失，这个是正常的，请勿担心。请参照下图
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuz-risk-websoft9.png)
 
-#### Discuz 重定向错误？
+#### Discuz Redirects Error
 
-重定向错误比较常见。处理办法：分析网站根目录下的 `.htaccess` 文件，看看有没有死循环规则
+Check your `.htaccess` file in your application root directory, make sure there not any cycle redirects settings
 
 #### Discuz 密码被锁，怎么解决？
 
@@ -93,16 +90,15 @@ Websoft9提供的 Discuz 部署包默认都是UTF-8，一般情况下也可以�
     systemctl restart httpd
     ```
 
-
-## 问题解答
+## FAQ{#faq}
 
 #### [DiscuzQ](https://discuz.com/) 与 Discuz 有什么关系和区别？
 
 从品牌上讲，DiscuzQ 是全新架构的 Discuz。但从代码角度看，它们完全不一样。Discuz! Q 的前后端完全分离，后端基于 Laravel，前端基于 Vue.js 和 uni-app，易于二次开发和扩展。
 
-#### Discuz 支持多语言吗？
+#### Discuz support multi-language?
 
-官方没有提供多语言方案
+Only Chinese
 
 #### Discuz 是免费的吗？
 

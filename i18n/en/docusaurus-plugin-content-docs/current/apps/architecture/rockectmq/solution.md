@@ -1,11 +1,16 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 slug: /rocketmq/solution
 tags:
   - RocketMQ
-  - IT 架构
-  - 中间件
+  - IT Architecture
+  - Broker
 ---
 
-# 原理学习
+# RocketMQ Solution
+  
+You can use RocketMQ integrated other software for IT Architecture.
+
+
+
 

@@ -3,21 +3,23 @@ sidebar_position: 3
 slug: /alfresco/admin
 tags:
   - Alfresco
-  - 企业管理
+  - Collaboration and Productivity
   - ERP
 ---
 
-# 维护指南
+# Alfresco Maintenance
 
-本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup) 相关章节。
+This chapter is special guide for Alfresco maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-## 场景
+## Maintenance guide
 
-### 备份
+### Alfresco Backup 
 
-参考官方文档：[Back up and restore](https://docs.alfresco.com/content-services/community/admin/backup-restore/)
+Refer to official documentation：[Back up and restore](https://docs.alfresco.com/content-services/community/admin/backup-restore/)
 
-## 故障排除
+## Troubleshoot{#troubleshoot}
+
+In addition to the Alfresco issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
 #### 中文 Markdown 格式预览乱码？
 
@@ -25,21 +27,21 @@ tags:
 问题原因：未知  
 解决方案：暂无  
 
-## 问题解答
+## FAQ{#faq}
 
-#### Alfresco 是否支持多语言？
+#### Does Alfresco support multiple languages?
 
-支持（包含中文），后台可以自行切换
+Yes, it automatically adapt according to the browser
 
-#### Alfresco Content Services Enterprise 和 Alfresco Community Edition 区别？
+#### What's different between Alfresco Content Services Enterprise and Alfresco Community Edition?
 
-Alfresco Community Edition 是 Alfresco Content Services Enterprise 的开源版本，参考[对比](https://www.alfresco.com/alfresco-content-services-enterprise-vs-alfresco-community-edition)
+Alfresco Community Edition is the open source edition of Alfresco Content Services Enterprise, refer to [Comparison chart](https://www.alfresco.com/alfresco-content-services-enterprise-vs-alfresco-community-edition)
 
-#### Alfresco 支持哪些文件格式？
+#### What file formats does Alfresco support?
 
-参考[Alfresco支持所有文件格式](https://www.alfresco.com.cn/alfresco-formats)
+Refer to [Alfresco-formats](https://www.alfresco.com.cn/alfresco-formats)
 
-#### 本项目中 Alfresco 采用何种安装方式？
+#### How was Alfresco installed in this solution?
 
 Docker
 

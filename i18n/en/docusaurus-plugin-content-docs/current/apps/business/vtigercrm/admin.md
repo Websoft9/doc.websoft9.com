@@ -7,13 +7,13 @@ tags:
   - 客户成功
 ---
 
-# 维护指南
+# VtigerCRM Maintenance
 
-本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup) 相关章节。
+This chapter is special guide for VtigerCRM maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-## 场景
+## Maintenance guide
 
-### 升级
+### VtigerCRM Upgrade
 
 VtigerCRM 自身提供了升级功能和[升级文档](http://community.vtiger.com/help/vtigercrm/administrators/migration.html)，具体操作如下：
 
@@ -33,9 +33,9 @@ VtigerCRM 自身提供了升级功能和[升级文档](http://community.vtiger.c
 4.  浏览器访问：http://服务器公网IP地址/migrate 开始升级流程
 
 
-## 故障排除
+## Troubleshoot{#troubleshoot}
 
-除以下列出的 VtigerCRM 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。
+In addition to the VtigerCRM issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
 #### 更换服务器IP，VtigerCRM 无法访问？
 
@@ -48,7 +48,7 @@ VtigerCRM 自身提供了升级功能和[升级文档](http://community.vtiger.c
 - rm -rf /data/wwwroot/vtigercrm/cache/*
 ```
 
-## 问题解答
+## FAQ{#faq}
 
 #### 能推荐 VtigerCRM 实施商吗？
 

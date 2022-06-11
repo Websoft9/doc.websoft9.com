@@ -4,12 +4,12 @@ slug: /mediawiki/solution
 tags:
   - Mediawiki
   - CMS
-  - 知识管理
-  - 博客系统
+  - Knowledge Management
+  - Blog
 ---
 
-# 场景方案
+# MediaWiki Solution
 
-MediaWiki 可以与其他的软件平台**集成**一起使用，解决 构建知识管理 过程中的各种[场景问题](#)。
+You can use [MediaWiki integrated other software](#) for Knowledge Management constuction.
 
 

@@ -1,20 +1,22 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 slug: /sqlserver/admin
 tags:
   - SQL Server
   - Cloude Native Database
 ---
 
-# 维护参考
+# SQLServer Express Maintenance
 
-## 场景
+This chapter is special guide for SQLServer Express maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-### SQL Server 更新{#upgrade}
+## Maintenance guide
+
+### SQL Server Upgrade{#upgrade}
 
 SQLServer更新只能是卸载旧版本，然后下载最新的安装包重新安装
 
-### SQL Server 数据库迁移{#migration}
+### SQL Server Migration{#migration}
 
 SQLServer 数据库存储目录更改:
 
@@ -37,7 +39,7 @@ SQLServer 数据库存储目录更改:
 6. 确保新目录生效后，再将原来的目录下的数据库文件删除。
 
 
-### SQL Server 手动备份{#backup}
+### SQL Server Manual Backup{#backup}
 
 通用的手动备份操作步骤如下：
 
@@ -45,11 +47,11 @@ SQLServer 数据库存储目录更改:
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-backup-websoft9.png)
 2. 根据备份向导逐步完成备份工作
 
-### SQL Server Express 自动备份{#autobackup}
+### SQL Server Express Auto Backup{#autobackup}
 
 SQL Server Express的数据库由于没有SQL Server Agent服务，所以也就不支持维护计划功能，自动备份数据库就成了一个十分麻烦的问题。
 
-#### 引入 SQL Backup Master{#sqlbackupmaster}
+**引入 SQL Backup Master{#sqlbackupmaster}**
 
 经过研究，我们建议采用第三方工具 [SQL Backup Master](https://www.sqlbackupmaster.com/)  实现自动备份。SQL Backup Master 是一款免费可靠的 SQL Server 数据库备份工具，主要特性:
 
@@ -63,7 +65,7 @@ SQL Server Express的数据库由于没有SQL Server Agent服务，所以也就�
 * 支持SQL Server版本 : SQL Server 2017, 2016, 2014, 2012, 2008, 2005
 
 
-#### SQL Backup Master 指南
+**SQL Backup Master 指南**
 
 1. 从官网下载安装好 SQL Server Master，双击【运行程序】。
 
@@ -78,15 +80,15 @@ SQL Server Express的数据库由于没有SQL Server Agent服务，所以也就�
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-bak4-websoft9.png)
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-bak5-websoft9.png.png)
 
- 5. 设置计划任务  
+ 1. 设置计划任务  
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-bak6-websoft9.png)
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-bak7-websoft9.png)
     
- 6. 保存设置  
+ 2. 保存设置  
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-bak8-websoft9.png)
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-bak9-websoft9.png)
     
-####  备选方案：计划任务{#backupschedule}
+**备选方案：计划任务{#backupschedule}**
 
 除了使用 SQL Backup Master 这个工具之外，也可以采用服务器系统的任务计划和备份数据库的存储过程来实现，参考：
 
@@ -96,9 +98,10 @@ SQL Server Express的数据库由于没有SQL Server Agent服务，所以也就�
 
 * [在 Windows Server 2012中实现SQL SERVER EXPRESS自动备份数据库](http://shiyousan.com/post/635615192184858364)
 
-## 故障排除{#troubleshoot}
+## Troubleshoot{#troubleshoot}
 
-除以下列出的 SQL Server 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
+In addition to the SQL Server Express issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
+
 
 #### 应用程序无法连接 SQLServer数据库？
 
@@ -121,7 +124,7 @@ SQL Server Express的数据库由于没有SQL Server Agent服务，所以也就�
 
 可以扩容系统盘，也可以[迁移](#migration)至数据盘。
 
-## 问题解答
+## FAQ{#faq}
 
 #### 什么是 SQL Server 企业管理器？
 

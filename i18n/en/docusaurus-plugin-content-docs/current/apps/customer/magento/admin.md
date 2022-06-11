@@ -3,84 +3,80 @@ sidebar_position: 3
 slug: /magento/admin
 tags:
   - Magento
-  - 电子商务
+  - eCommerce
 ---
 
-# 维护指南
+# Magento Maintenance
 
-本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup) 相关章节。
+This chapter is special guide for Magento maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-## 场景
+## Maintenance guide
 
-### 备份
+### Magento Backup and Restore
 
-本节提供 Magento 在线备份方案，请提前在云控制台做好必备的快照备份。
+This section provides Magento online backup solution, please make a necessary snapshot backup in the cloud console in advance.
 
-1. 登录到 Magento 后台，依次打开：【System】>【System->Backup】，进入Magento的备份设置页面
+1. Log in Magento console, open 【System】>【System->Backup】
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-backup-websoft9.png)
-
-2. 设置备份
-   
-3. 建议将备份加入到计划任务中
-
-   - 登录 Magento 后台，依次打开：【Stores】>【Configuration】
+  
+2. Set backup by yourself
+    
+3. Suggest you make the backup to your Schedule
+   - Log in Magento console, open 【Stores】>【Configuration】
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-bkscheduleset-websoft9.png)
+   - go to【System】>【Backup Settings】, set your Schedule
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-bkschedulesets-websoft9.png)   
 
-   - 找到：【System】>【Backup Settings】，设置计划任务
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-bkschedulesets-websoft9.png)
+### Magento Upgrade
 
-### 升级
+Magento provide two methond for Upgrade: Magento backend online upgrade and Composer command upgrade  
 
-Magento 可以通过两种方式升级：后台升级界面和 Composer 升级命令。  
+Below is the step for upgrade online:
 
-下面介绍后台升级界面升级步骤：
-
-1. 以管理身份登录 Magento，依次打开：【System】>【Web Setup Wizard】>【System Upgrade】 
+1. Log in to your Magento, go to 【System】>【Web Setup Wizard】>【System Upgrade】 
    ![Magento upgrade](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-sysupgradestart-websoft9.png)
-
-2. 如果没有连接 Marketplace，系统会要求你输入 Access key
+  
+2. If your Magento not [Link Marketplace](/stack-installation.html#link-magento-marketplace), you need to fill in your Access key to link Marketplace
    ![Magento connect Marketplace](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-sysupgradestartkey-websoft9.png)
-
-3. 点击升级按钮，开始在线升级
+  
+3. Click the upgrade button to start upgrading online
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-sysupgradestarting-websoft9.png)
+  
+4. If upgrade is very slowly and have error, please refer to [Troubleshooting](/else-troubleshooting.html#magento-upgrade-or-install-module-failed)
 
-4. 升级过程时间较长且报错，请查看[故障原因](#updateplugin)
+More upgrade detail please refer to [Magento Upgrade](https://devdocs.magento.com/guides/v2.3/comp-mgr/bk-compman-upgrade-guide.html)
+  
+## Troubleshoot{#troubleshoot}
 
-更多更新操作请参考官方文档：[Magento Upgrade](https://devdocs.magento.com/guides/v2.3/comp-mgr/bk-compman-upgrade-guide.html)
-
-
-## 故障排除
-
-除以下列出的 Magento 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
-
-#### Magento 在线升级或在线安装插件报错？{#updateerror}
+In addition to the Magento issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
+  
+**Magento upgrade or install module failed?**
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-upgrade-dependency.png)
 
-如果升级过程若报错，最可能的原因是内存不足，一方面需要保证服务器内存不低于 4G，另一方面需要修改 Magento 根目录下的 `.htaccess` 文件。
+If the upgrade have errors, the most likely cause is insufficient memory. On the one hand, you need to ensure that the server memory is not lower than 4G. On the other hand, you need to modify the `.htaccess` file in the Magento root directory.
 
-其中的 `php_value memory_limit` 不低于 2048M
+Make sure `php_value memory_limit` not lower than 2048M
 
 ```
     php_value memory_limit 2048M
     php_value max_execution_time 18000
 ```
-
-#### IP/域名 变更导致 Magento 无法访问？
+  
+**When the Magento site is accessed through IP, the server IP is changed and cannot be accessed?**
 
 SSH连接云服务器，重置 `base-url`的值：
 
 ```shell
 /data/wwwroot/magento/bin/magento setup:store-config:set --base-url=http://URL 或 服务器IP
-```
-
-#### Magento 索引报异常？
+```  
+**Magento 索引报异常？**
 
 **现象描述**：错误信息 One or more indexers are invalid....   
 **原因分析**：索引发生了变化
 **解决方案**：重新编制索引
 
-##### 方法1：控制台重置
+*方法1：控制台重置*
 
 1.  在管理员页面的左边控制栏点击“SYSTEM”,在弹出的选项中选择Index Management；
     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-cron001.png)
@@ -89,13 +85,13 @@ SSH连接云服务器，重置 `base-url`的值：
 
     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-cron002.png)
 
-##### 方法2：命令行重置
+*方法2：命令行重置*
 
 1. 使用命令行工具 (SSH or Terminal)进入magento安装根目录：cd /data/wwwroot/magento/bin
 
 2. 重新编制索引：php magento indexer:reindex
-
-#### Cron job 告警？
+  
+**Cron job 告警？**
 
 若出现 **One or more indexers are invalid. Make sure your Magento cron job is running** 的提示，请执行以下命令:
 
@@ -105,15 +101,16 @@ php htdocs\magento\bin\magento indexer:reindex
 
 然后回到 Magento 界面，刷新页面即可解决。
 
-#### 邮件未设置，跳过登陆时的邮件验证？
-
-关闭密码邮件**双重认证**，通过密码即可登陆：
-
+#### Login error,need mail authentication？
+  
+Close Magento_TwoFactorAuth，login by password
+  
 ```shell
 # Close Magento_TwoFactorAuth
 sudo php /data/wwwroot/magento/bin/magento module:disable Magento_TwoFactorAuth
 ```
-#### Magento 后台重定向太多，无法访问？
+  
+**Magento 后台重定向太多，无法访问？**
 
 **现象描述**：错误信息为 ERR_TOO_MANY_REDIRECTS magento admin     
 **原因分析**：如果排除 '.htaccess' 文件中的重定向问题，那么最有可能是 URL 导致的
@@ -124,7 +121,7 @@ php bin/magento setup:store-config:set --use-secure=1 --use-secure-admin=1 --bas
 php bin/magento cache:flush  #将基础URL更改为https并刷新缓存
 ```
 
-#### 无法加载CSS/JS，Magento 页面混乱？
+**无法加载CSS/JS，Magento 页面混乱？**
 
 在网站配置域名或做了 https 配置后，网站可能出现，能访问但页面排版混乱，图片不显示（不能访问请先 **[域名五步设置](../administrator/domain_step)**）。
 
@@ -149,7 +146,7 @@ php bin/magento cache:clean && bin/magento cache:flush
 php bin/magento maintenance:disable 
 ```
 
-#### 后台添加商品类别不能正常显示？
+**后台添加商品类别不能正常显示？**
 
 Magento 除了系统给出的商品属性，还允许用户通过后台“STORES”->"Attributes"->"Product"添加额外的商品属性。添加的额外属性的属性值设置不正确就会影响前台的商品展示，出现如图错误。通过以下步骤可以排查此问题：
 
@@ -174,20 +171,18 @@ Magento 除了系统给出的商品属性，还允许用户通过后台“STORES
 
 5. 清空浏览器缓存，重新打开网站
 
-## 问题解答
+## FAQ{#faq}
 
-#### Magento 支持多语言吗？
+**Magento support multi-language?**
 
-支持多语言（包含中文），需要上传语言包才能设置语言
+Yes, you should installed your language package first
 
-#### Magento 为什么运行这么慢？
+**Why is Magento running so slowly?**
 
-Magento 是一个复杂的企业级电商系统，对计算资源要求较高
+Magento is a complex enterprise Ecommerce system with high computing resource requirements
 
-#### 找不到 Magento 后台登陆地址？
-
-进入linux系统，通过命令一下命令查看
-
+**Forget backend URL of Magento?**
+  
 ```shell
 # Show Magento(URL)
 /data/wwwroot/magento/bin/magento info:adminuri
@@ -196,18 +191,18 @@ Magento 是一个复杂的企业级电商系统，对计算资源要求较高
 sudo /data/wwwroot/magento/bin/magento setup:config:set --backend-frontname=[yourAdminUrl] -n
 ```
 
-#### 为什么要连接 Magento Marketplace？
+**Why should I link to the Magento Marketplace?**
 
-只有连接 [Magento Marketplace](../magento#marketplace)，才可以使用其资源。
+Just link Magento Marketplace, you can use the resources of Marketplace online. [Link Marketplace](../magento#marketplace)
 
-#### 使用外部 RDS 作为 Magento 的数据库？
+**Can I use the RDS of Cloud Provider for Magento?**
 
-可以，修改 Magento [配置文件](../magento#path) 中对应的参数
+You can use the RDS for Magento if you need,and just need to modify the database configuration section in the wp-config.php
 
-#### Magento 能在 Windows 上部署吗？
+**Magento 能在 Windows 上部署吗?**
 
 可以，但是我们推荐在运行 Magento 效率更高的 Linux 服务器上运行
 
-#### Adobe Commerce 与 Magento 关系？
+**Adobe Commerce 与 Magento 关系?**
 
-Magento Open Source 被 Adobe 收购后，Adobe 将其商业版本更名为 Adobe Commerce。
+Magento Open Source 被 Adobe 收购后，Adobe 将其商业版本更名为 Adobe Commerce

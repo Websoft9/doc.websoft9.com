@@ -3,127 +3,120 @@ sidebar_position: 1
 slug: /seafile
 tags:
   - Seafile
-  - 网盘
-  - 知识管理
-  - 团队协作
+  - File sync and share
+  - knowledge Management
 ---
 
-# 快速入门
+# Seafile Getting Started
 
-[Seafile](https://www.seafile.com/home/) 是一款开源的企业云盘，注重可靠性和性能。支持 Windows, Mac, Linux, iOS, Android 平台。支持文件同步或者直接挂载到本地访问。私有云盘产品 Seafile 起源于创始人清华实验室时期，历经6年的打磨，已发展成为一个国际化的开源项目，在 GitHub 上的项目有超过4500人关注，在国内开源社区开源中国上面也赢得了很多赞誉。
+[Seafile](https://www.seafile.com/home/) is an open source file sync&share solution designed for high reliability, performance and productivity. Sync, share and collaborate across devices and teams. Build your team's knowledge base with Seafile's built-in Wiki feature.
 
-![Seafile界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-gui-websoft9.png)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/seafile/seafile-gui-websoft9.png)
 
-## 准备
-
-部署 Websoft9 提供的 Seafile 之后，需完成如下的准备工作：
-
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 和 **TCP:9002**  端口已经开启
-3. 在服务器中查看 Seafile 的 **[默认账号和密码](./user/credentials)**  
-4. 若想用域名访问  Seafile **[域名五步设置](./administrator/domain_step)** 过程
+If you have installed Websoft9 Seafile, the following steps is for your quick start
 
 
-## Seafile 初始化向导{#init}
+## Preparation
 
-### 详细步骤
-
-1. 使用本地电脑浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入Seafile 登录页面
-   ![Seafile登录页面](http://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-login-websoft9.png)
-
-2. 输入用户名和密码[（查看）](./user/credentials)，登录到Seafile后台管理界面
-   ![Seafile后台界面](http://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-bk-websoft9.png)
-
-3. 设置（检查） Seafile 的真实主机地址（**必选项，否则无法使用文件上传功能**）
-
-   - SERVICE_URL：*http://服务器公网IP*
-   - FILE_SERVER_ROOT：*http://服务器公网IP/seafhttp*
-
-   ![Seafile后台界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-seturl-websoft9.png)
-
-4. 开始使用 Seafile 全面友好的功能吧
-
-5. [导入](#importlicense)授权文件 (仅 Seafile 企业版需要)
-
-> 需要了解更多Seafile的使用，请参考：[《Seafile 用户手册》](https://cloud.seafile.com/published/seafile-user-manual/home.md) 和 [《Seafile 服务器手册》](https://cloud.seafile.com/published/seafile-manual-cn/home.md)
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:80** is allowed
+3. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for Jenkins.
+4. [Get](./user/credentials) default username and password of Jenkins
 
 
-### 出现问题？
+## Seafile Initialization{#init}
 
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
+### Steps for you
 
-**Seafile 是否支持在线文档编辑与预览？**
+1. Using local Chrome or Firefox to visit the URL *http://domain name* or *http://Internet IP*, you will log in interface of Seafile
+   ![Seafile login page](http://libs.websoft9.com/Websoft9/DocsPicture/en/seafile/seafile-login-websoft9.png)
 
-镜像预装了 OnlyOffice Docs，可以通过配置实现在线文档编辑与预览，[参考](./seafile/solution#onlyoffice)
+2. Input Seafile's username and password[(Get it)](./user/credentials)
+   ![Seafile console interface](http://libs.websoft9.com/Websoft9/DocsPicture/en/seafile/seafile-bk-websoft9.png)
 
+3. Set or check your Seafile host URL（**Required, otherwise you cannot use the file upload function**）
 
-## Seafile 使用入门
+   - SERVICE_URL：*http://Internt IP of Server*
+   - FILE_SERVER_ROOT：*http://Internt IP of Server/seafhttp*
 
+   ![Seafile console UI](https://libs.websoft9.com/Websoft9/DocsPicture/en/seafile/seafile-seturl-websoft9.png)
 
-下面以 **Seafile 构建企业网盘系统** 作为一个任务，帮助用户快速入门：
+4. Start to use it
 
-## Seafile 常用操作
+> More details for using Seafile, please use docs: ***[Seafile user guide](https://help.seafile.com/en/)*** and ***[Seafile Server Manual](http://manual.seafile.com/)***
 
-### 添加文件
+### Having trouble?
 
-下面我们介绍 Seafile 如何添加和编辑文件：
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
-1. 登录到 Seafile 后，添加资料库，然后添加文件
+**Can I have online document editing and preview in ownCloud?**
 
-   ![Seafile添加资料库](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-addlib-websoft9.png)
-
-   ![Seafile添加文件](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-addfile-websoft9.png)
-
-2. 在线编辑文件（通过内置的 OnlyOffice Docs 服务实现）
-
-   ![Seafile编辑文件](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-editfile1-websoft9.png)
-
-### 用户管理
-
-下面我们介绍 Seafile 如何创建用户和群组：
-
-1. 打开右上角用户图标，进入【系统管理】，分别添加【用户】和【群组】
-
-   ![Seafile进入系统管理](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-system-websoft9.png)
-
-   ![Seafile添加用户](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-adduser-websoft9.png)
-
-   ![Seafile添加群组](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-addgroup-websoft9.png)
-
-2. 设置所创建的用户所归属群组
-
-   ![Seafile用户分组](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-addusertogroup-websoft9.png)
-
-### 文件共享
-
-下面我们介绍 Seafile 如何给另外一个用户共享自己的文件：
-
-1. 进入【我的资料库】，将资料库共享给指定用户，
-
-   ![Seafile文件共享](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-sharefile1-websoft9.png)
+The image is pre-installed with [OnlyOffice docs](./onlyofficedocs), which can realize online document editing and preview through configuration, [reference configuration](./seafile/solution#onlyoffice)
 
 
-2. 设定权限为【可写】或【只读】
+## Seafile QuickStart
 
-   ![Seafile文件共享](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-sharefile-websoft9.png)
+Below we are familiar with the use of Seafile through operations such as creating a library, creating files, editing files, setting permissions, and user sharing.
 
-   > 在选择用户时，需输入用户名，系统自动查找匹配
+**Add & Edit file**
 
-### 读写共享文件
+The following is the steps about how to create file and edit file:
 
-下面我们演示 Seafile 用户如何读写其他人共享过来的文件：
+1. Login to Seafile Console, and add 【New library】and 【New file】
 
-1. 切换user1用户登录，使用邮箱地址【user1@websoft9】作为登录名
-   ![Seafile登录页面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-login1-websoft9.png)
+   ![Seafile add library](https://libs.websoft9.com/Websoft9/DocsPicture/en/seafile/seafile-addlib-websoft9.png)
 
-2. 查看共享文件，进入 OnlyOffice 进行编辑，保存文档
-   ![Seafile查看共享文件](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-viewsharefile-websoft9.png)
-   ![Seafile编辑共享文件](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-editfile-websoft9.png)
+   ![Seafile add file](https://libs.websoft9.com/Websoft9/DocsPicture/en/seafile/seafile-addfile-websoft9.png)
 
-3. 切换到管理员账号 `me@example.com`，查看共享文件的版本变更信息
-   ![查看共享文件版本信息](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-viewfileinfo1-websoft9.png)
-   ![查看共享文件版本信息](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-viewfileinfo-websoft9.png)
+2. Edit file online by **OnlyOffice Document Server**
 
+   ![Seafile edit file](https://libs.websoft9.com/Websoft9/DocsPicture/en/seafile/seafile-editfile1-websoft9.png)
+
+**User management**
+
+The following is the steps about how to create user and group:
+
+1. Click the icon of user and enter to【System Admin】, click【Add user】and【New Group】
+
+   ![Seafile system admin](https://libs.websoft9.com/Websoft9/DocsPicture/en/seafile/seafile-system-websoft9.png)
+
+   ![Seafile add user](https://libs.websoft9.com/Websoft9/DocsPicture/en/seafile/seafile-adduser-websoft9.png)
+
+   ![Seafile add group](https://libs.websoft9.com/Websoft9/DocsPicture/en/seafile/seafile-addgroup-websoft9.png)
+
+2. Set the user to a group
+
+   ![Seafile user group](https://libs.websoft9.com/Websoft9/DocsPicture/en/seafile/seafile-addusertogroup-websoft9.png)
+
+**Share file**
+
+The following is the steps about how to share files to other user:
+
+1. Enter to【My Library】, click share icon
+
+   ![Seafile share file](https://libs.websoft9.com/Websoft9/DocsPicture/en/seafile/seafile-sharefile1-websoft9.png)
+
+
+2. Set permission to【Read】or【Read-Write】
+
+   ![Seafile file share](https://libs.websoft9.com/Websoft9/DocsPicture/en/seafile/seafile-sharefile-websoft9.png)
+
+**Edit shared file**
+
+The following is the steps about how to edit the shared files:
+
+1. User another user to login Seafile(username: user1@websoft9)
+   ![Seafile login page](https://libs.websoft9.com/Websoft9/DocsPicture/en/seafile/seafile-login1-websoft9.png)
+
+2. Click 【Shared with me】 and edit the file you selected, then logout
+   ![Seafile view shared file](https://libs.websoft9.com/Websoft9/DocsPicture/en/seafile/seafile-viewsharefile-websoft9.png)
+   ![Seafile edit shared file](https://libs.websoft9.com/Websoft9/DocsPicture/en/seafile/seafile-editfile-websoft9.png)
+
+3. Login with administrator user `me@example.com` and view the history version of file
+   ![Seafile view the history version](https://libs.websoft9.com/Websoft9/DocsPicture/en/seafile/seafile-viewfileinfo1-websoft9.png)
+   ![Seafile view the history version](https://libs.websoft9.com/Websoft9/DocsPicture/en/seafile/seafile-viewfileinfo-websoft9.png)
+
+## Seafile Setup
 
 ### 导入企业版 License{#importlicense}
 
@@ -136,26 +129,26 @@ cp seafile-license.txt /data/wwwroot/seafile/seafile-data/seafile/
 docker restart seafile
 ```
 
-### 配置 SMTP{#smtp}
+### Configure SMTP{#smtp}
 
-1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
+1. Get [SMTP](./administrator/smtp) related parameters in the mailbox management console
+
+2. Use the SFTP to connect Server of Seafile, edit the Seafile configuration file [seahub_settings.py](#path)
    
-2. 使用 SFTP 连接服务器，编辑 Seafile 配置文件 [seahub_settings.py](#path)，插入邮箱配置段
+3. Insert your SMPT items (refer to Seafile official docs [sending_email](https://download.seafile.com/published/seafile-manual/config/sending_email.md))
    ```
    EMAIL_USE_SSL = True
-   EMAIL_HOST = 'smtp.163.com'
-   EMAIL_HOST_USER = 'websoft9@163.com'
-   EMAIL_HOST_PASSWORD = 'Auth_Code'  //此密码不是邮箱密码，是需要通过163邮箱后台设置去获取的授权码
+   EMAIL_HOST = 'smtp.sendgrid.net'
+   EMAIL_HOST_USER = 'websoft9smtp'
+   EMAIL_HOST_PASSWORD = '#fdfwwBJ8f'
    EMAIL_PORT = '465'
    DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
    SERVER_EMAIL = EMAIL_HOST_USER
    ```
-   参考官方文档：[发送邮件提醒](https://manual-cn-origin.seafile.com/config/sending_email)
-
-3. 重启 Seafile 容器服务
+4. Restart the Seafile service
    ```
    sudo docker restart seafile
-   ```
+   ``` 
 
 ### 修改邮件通知签名
 
@@ -164,23 +157,29 @@ docker restart seafile
 登录到 Seafile 修改网站名称即可：
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-sitename-email-websoft9.png)
 
-### Seafile 文档预览与编辑
+### Seafile document preview and editing
 
-参考：[Seafile 连接 ONLYOFFICE docs](./seafile/solution#onlyoffice)
+Refer to：[Seafile Integrate ONLYOFFICE Docs](./seafile/solution#onlyoffice)
 
+### DNS Additional Configure（Modify URL）{#dns}
 
-### 域名额外配置（修改 URL）{#dns}
+Complete **[Five steps for Domain](./administrator/domain_step)** ，Set the URL for Seafile:
 
-**[域名五步设置](./administrator/domain_step)** 完成后，需设置 Seafile 的 URL:
-
-1. 使用 SFTP 登录云服务器，修改 [Docker-compose 配置文件](#path)，将其中的 **SEAFILE_SERVER_HOSTNAME** 项的值为你的域名
-   
+1. Use the SFTP to connect your Server
+2. Modify [Docker-compose file](#path)
    ```text
-    - SEAFILE_SERVER_HOSTNAME=seafile.example.com  # Specifies your host name.
+   ...
+    - SEAFILE_SERVER_HOSTNAME=seafile.websoft9.cn # Specifies your host name.
+   ...
    ```
-2. 保存配置文件，重启 [Seafile 服务](#service)
+   set the item **SEAFILE_SERVER_HOSTNAME** to your domain
 
-### 配置 HTTPS{#https}
+3. Save it and then restart Docker-compose [service](#service)
+   ```
+   sudo cd /data && docker-compose up -d
+   ```
+
+### Configure HTTPS{#https}
 
 下面是对 Seafile 官方文档：[向Let's encrypt申请SSL证书](https://manual-cn-origin.seafile.com/deploy/deploy_with_docker#xiang-lets-encrypt-shen-qing-ssl-zheng-shu) 的实践解读，验证可用：
 
@@ -193,54 +192,54 @@ docker restart seafile
 
 **基本设置**
 
-Seafile 默认支持 [Let's Encrypt](https://letsencrypt.org/) 免费证书自动部署方案，只需如下几步设置：
+Seafile deployment package has installed the SSL module of Nginx and open Certificate Authority **[Let's Encrypt](https://letsencrypt.org/)** for you configure the HTTPS quickly and conveniently.
 
-1. 使用 SFTP 连接服务器，编辑 [docker-compose 配置文件](#path)
+1. Use the SFTP to connect Server, edit [docker-compose](#path) configuration file
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-editconfig-websoft9.png)
 
-2. 修改（检查）配置文件并保存，确保三个核心参数符合如下要求
+2. You should modify three items at least, then save it
    ```
-   - "443:443" 启用
-   - SEAFILE_SERVER_LETSENCRYPT 设置为 true
-   - SEAFILE_SERVER_HOSTNAME 修改为你自己的域名
+   - Remove # to enable "443:443"
+   - SEAFILE_SERVER_LETSENCRYPT set to **true**
+   - SEAFILE_SERVER_HOSTNAME set to you domain
    ```
-3. 运行 compose 重建命令
+
+3. Run the compose command to rebuild them
    ```
    sudo cd /data && docker-compose up -d
    ```
-4. HTTPS 设置成功
 
+4. HTTPS settings completed
 
-### 管理员密码
+The steps above is from  Seafile official docs: [Let's encrypt SSL certificate](https://download.seafile.com/published/seafile-manual/deploy/deploy_with_docker.md)
 
-实际工作中，我们可能会 **修改** 或 **找回** Seafile 管理员密码
+### Manage Seafile Password
 
-#### 修改密码
+We may **Modify** or **recover** Seafile administrator password
 
-1. 以管理员账号登录后台
-2. 依次打开：【设置】>【更新】，编辑需要修改密码的账号
-3. 修改密码后提交，退出后新密码生效 
-   ![Seafile 修改密码](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-modifypw-websoft9.png)
+**Modify Seafile administrator password**
 
-#### 找回密码
+Log in Seafile, go to Users->Your Profile,update your password
+![Seafile Modify Seafile administrator password](https://libs.websoft9.com/Websoft9/DocsPicture/en/seafile/seafile-modifypw-websoft9.png)
 
-若不记得 Seafile 管理员密码，可以通过如下两个方式找回
+**Recover Seafile administrator password**
 
-方案一：通过邮件找回密码
+If you don't remember the Seafile administrator password, you can retrieve it in the following two ways.
 
-Seafile可以通过发送邮件找回密码，但前提条件是您的 Seafile 已经配置好SMTP
-![Seafile 找回密码](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-forgetpw-websoft9.png)
+**Recover by Email**
 
-方案二：修改数据库中的密码字段
+Seafile can retrieve the password by sending an email, but only if your Seafile site has already configured SMTP.
+![Seafile Modify Seafile administrator password](https://libs.websoft9.com/Websoft9/DocsPicture/en/seafile/seafile-forgetpw-websoft9.png)
 
-如果不能发邮件，请登录数据库管理面板 phpMyAdmin 进行修改
+**Recover by database**
 
-1. 登录 phpMyAdmin，并找到你的网站数据库下的 *EmailUser* 表,编辑管理员用户（下图以用户名 `me.example.com`为例）
-   ![Wordpress 修改密码](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-userspw-websoft9.png)
-   
-2. 截图的地方数据库密码(加密后的密文)，用`PBKDF2SHA256$10000$7289a20ae4fc2329415b0645fa3d106019cc61952ae1bc2f9eeef7b30dc47d88$5418ac28f06bd84f2bb701a10dbea6b0bd30676c8042e1f73b9ce12aac302a8d`替换之
-3. 点击【执行】
-4. 新的密码为`123456`
+If the server does not support the function of sending email passwords, the database management panel phpmyadmin will modify it.
+
+1. Log in to phpMyAdmin, find the *EmailUser* table of your Seafile database,Edit the user(e.g. your username is `me@example.com`)  
+   ![Seafile database](https://libs.websoft9.com/Websoft9/DocsPicture/en/seafile/seafile-userspw-websoft9.png)
+2. Replace the data with `PBKDF2SHA256$10000$7289a20ae4fc2329415b0645fa3d106019cc61952ae1bc2f9eeef7b30dc47d88$5418ac28f06bd84f2bb701a10dbea6b0bd30676c8042e1f73b9ce12aac302a8d`(MD5)
+3. Click **run**
+4. The new password is `123456` now
 
 ### 使用客户端{#client}
 
@@ -258,9 +257,9 @@ Seafile可以通过发送邮件找回密码，但前提条件是您的 Seafile �
 
    ![Seafile](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-client-main-websoft9.jpg)
 
-## 参数{#parameter}
+## Reference sheet{#parameter}
 
-Seafile 应用中包含 Nginx, Docker, MySQL, phpMyAdmin, ONLYOFFICE docs, ElasticSearch 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Seafile
 
 通过运行`docker ps`，可以查看到 Seafile 运行时所有的 Container：
 
@@ -276,7 +275,7 @@ a4498231bb29        onlyoffice/documentserver:latest   "/bin/sh -c /app/ds/…" 
 
 下面仅列出 Seafile 本身的参数：
 
-### 路径{#path}
+### Path{#path}
 
 Seafile 存储目录： */data/wwwroot/seafile/seafile-data*  
 Seafile 日志目录： */data/wwwroot/seafile/seafile-data/logs*
@@ -289,25 +288,25 @@ seafile-elasticsearch 日志目录： */data/wwwroot/seafile/seafile-data/logs*
 
 > Seafile 配置文件包括 seahub_settings.py, seafile.conf等
 
-### 端口{#port}
+### Port{#port}
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
 | 9002 | 通过 http访问 OnlyOffice Docs on Docker | 可选 |
 
-### 版本{#version}
+### Version{#version}
 
 Seafile 控制台查看  
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-aboutversion-websoft9.png)
 
-### 服务{#service}
+### Service{#service}
 
 ```shell
 sudo docker start | stop | restart seafile
 ```
 
-### 命令行{#cli}
+### CLI{#cli}
 
 [Seafile client for a Cli server](https://help.seafile.com/syncing_client/linux-cli/)
 

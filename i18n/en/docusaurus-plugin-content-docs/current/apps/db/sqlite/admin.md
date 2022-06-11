@@ -6,64 +6,64 @@ tags:
   - DevOps
 ---
 
-# 维护指南
+# SQLite Maintenance
 
-本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup) 相关章节。
+This chapter is special guide for SQLite maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-## 场景
+## Maintenance guide
 
-### SQLite 备份
+### SQLite Backup
 
-通过 SFTP 将 SQLite 数据库文件（一般以 .db 结尾）下载到本地
+The general steps to make a manual backup are as follows:
 
-### SQLite 升级
+1. Compress and download the SQLite database file (.db) by SFTP.
+2. Complete a backup.
 
-如果系统仓库中的 SQLite 版本比较低，又想升级到指定的版本，可以参考如下教程： 
+### SQLite Upgrade
 
-> 升级之前请确保您已经完成了服务器的镜像（快照）备份
+If there no newer rpm/deb package for you SQLite, you should update it as below steps:  
 
-1. 找到所需 SQLite 目标版本的[下载地址](https://www.sqlite.org/chronology.html)
+> You should complete an image or snapshot backup for instance before upgrade
 
-2. 分别运行如下的升级命令
+1. Access the [Download](https://www.sqlite.org/chronology.html) URL of SQLite
+
+2. Run these commands
    ```
-   # 下载 SQLite 源码（自行替换）
+   # Download sources of SQLite, the URL below only for your reference
    wget https://www.sqlite.org/2019/sqlite-autoconf-3290000.tar.gz
 
-   # 编译
+   # Make it
    tar zxvf sqlite-autoconf-3290000.tar.gz 
    cd sqlite-autoconf-3290000/
    ./configure --prefix=/usr/local
    make && make install
    
-   # 替换旧版本
+   # Replace the old version
    mv /usr/bin/sqlite3  /usr/bin/sqlite3_old
    ln -s /usr/local/bin/sqlite3   /usr/bin/sqlite3
    echo "/usr/local/lib" > /etc/ld.so.conf.d/sqlite3.conf
+   sudo echo "/usr/local/lib" |tee /etc/ld.so.conf.d/sqlite3.conf
    ldconfig
    sqlite3 -version
    ```
 
-## 故障排除{#troubleshoot}
+## Troubleshoot{#troubleshoot}
 
-除以下列出的 SQLite 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
+In addition to the SQLite issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
-#### CloudBeaver 无法连接 SQLite 数据库？
+#### How can I use CloudBeaver to manage SQLite databases?
 
-确保 SQLite 数据库文件存放在： */data/apps/cloudbeaver/volumes* 目录下，如果不在此目录，CloudBeaver 便无法管理。
+CloudBeaver just only manage database in the directory: */data/apps/cloudbeaver/volumes*
 
-## 问题解答
+## FAQ{#faq}
 
-#### SQLite 是否支持用户名和密码验证？
+#### Does SQLite need username and password?
 
-不支持
+No
 
-#### 本项目中 SQLite 采用何种安装方式？
+#### What is the installation method of SQLite in this project?
 
-采用编译安装
-
-#### CloudBeaver 是如何连接 SQLite 的？
-
-SQLite 数据库文件存放在 */data/apps/cloudbeaver/volumes* 目录下，CloudBeaver 便可管理到它们。
+Make
 
 #### SQLite 有系统服务吗？
 

@@ -1,5 +1,5 @@
-position: 5
-label: "Mediawiki"
+position: 7
+label: "MediaWiki"
 collapsible: true
 collapsed: true
 className: "red"

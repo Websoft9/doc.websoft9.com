@@ -3,9 +3,14 @@ sidebar_position: 2
 slug: /haproxy/solution
 tags:
   - HAProxy
-  - 高可用
+  - High Availability
+  
 ---
 
-# 场景方案
+# HAProxy Solution
+  
+You can use HAProxy integrated other software for offering high availability solution.
 
-HAProxy 可以与其他的软件平台**集成**一起使用，解决 高可用性 过程中的各种场景问题。
+
+
+

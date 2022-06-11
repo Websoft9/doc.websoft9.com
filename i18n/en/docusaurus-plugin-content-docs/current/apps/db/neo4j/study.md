@@ -6,7 +6,7 @@ tags:
   - Cloud Native Database
 ---
 
-# 原理学习
+# Neo4j Study
 
 Neo4j 是目前主流的图数据库（graph database）产品，图数据库用于存在数据关系，更有利于关系的优化管理，存储和遍历节点和关系。  
 
@@ -95,40 +95,42 @@ Neo4j 作为一个数据库管理系统，与其他数据库管理系统有非�
 | `SHOW DEFAULT DATABASE`    | 显示默认数据库的名称和状态。 |
 | `:use neo4j;`    | 切换到 neo4j 库 |
 
-## 安装
+## Installation 
 
-Neo4j 是基于 Java 开发，因此运行它需要预先安装 JDK。  
+Neo4j is based on Java runtime, before installation, you should install JDK  
 
-* Linux：官方提供 rpm/deb 包的安装方式
-* Windows/macOS：官方提供了一键安装包
-* Docker：DockerHub上有一个官方的 [Neo4j 映像](https://hub.docker.com/_/neo4j/)
+* Linux: use rpm/deb package for installation
+* Windows/macOS: one click installation package
+* Docker：Use [Neo4j image](https://hub.docker.com/_/neo4j/) on DockerHub
 
-另外，官方提供无需安装的 [Neo4j Aura](https://neo4j.com/cloud/aura/?ref=menu) 托管平台，让用户专注于在线使用。  
+And you can use the [Neo4j Aura](https://neo4j.com/cloud/aura/?ref=menu) hosted in the cloud.  
 
-## 集群
+## CLI
 
-参考官方文档：[Clustering](https://neo4j.com/docs/operations-manual/current/clustering/)  
+Refer to: [Neo4j Tools](https://neo4j.com/docs/operations-manual/current/tools/)
 
-> 仅企业版支持集群
+## Clustering
+
+Refer to: [Clustering](https://neo4j.com/docs/operations-manual/current/clustering/)  
+
+> Only for Neo4j Enterprise Edition
 
 ## Fabric
 
-Neo4j Fabric 类型视图的概念，使用单个Cypher查询在多个数据库中存储和检索数据的方法。  
+Refer to: [Neo4j Fabric](https://neo4j.com/docs/operations-manual/current/fabric/introduction/#fabric-introduction)
 
-参考官方文档：[Neo4j Fabric](https://neo4j.com/docs/operations-manual/current/fabric/introduction/#fabric-introduction)
+## Authentication
 
-## 认证与授权
+Refer to: [Authentication and authorization](https://neo4j.com/docs/operations-manual/current/authentication-authorization/)
 
-参考官方文档：[Authentication and authorization](https://neo4j.com/docs/operations-manual/current/authentication-authorization/)
+## Security
 
-## 安全
+Refer to: [Neo4j Security](https://neo4j.com/docs/operations-manual/current/security/)
 
-参考官方文档：[Neo4j Security](https://neo4j.com/docs/operations-manual/current/security/)
+## Monitoring
 
-## 监控与维护
+Refer to: [Monitoring](https://neo4j.com/docs/operations-manual/current/monitoring/)
 
-参考官方文档：[Monitoring](https://neo4j.com/docs/operations-manual/current/monitoring/)
+## Performance
 
-## 性能
-
-参考官方文档：[Performance](https://neo4j.com/docs/operations-manual/current/performance/)
+Refer to: [Performance](https://neo4j.com/docs/operations-manual/current/performance/)

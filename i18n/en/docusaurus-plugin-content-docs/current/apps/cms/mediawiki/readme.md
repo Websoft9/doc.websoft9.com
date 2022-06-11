@@ -4,155 +4,162 @@ slug: /mediawiki
 tags:
   - Mediawiki
   - CMS
-  - 知识管理
-  - 博客系统
+  - Knowledge Management
+  - Blog
 ---
 
-# 快速入门
+# MediaWiki Getting Started
 
-[MediaWiki](https://www.mediawiki.org) 是大名鼎鼎的“维基百科”网站开源的 Wiki 程序。适合用于构建百科、知识库、在线文档、个人笔记等应用。MediaWiki的最大作用在于对知识的归档，可用于构建企业/个人知识库，Wiki 系统的思想是经过越多的人的编辑，结果就越趋于正确（完美）。
+[MediaWiki](https://mediawiki.org) is a free and open-source wiki software package written in PHP. It serves as the platform for Wikipedia and the other Wiki projects, used by hundreds of millions of people each month. MediaWiki is localised in over 350 languages and its reliability and robust feature set have earned it a large and vibrant community of third-party users and developers.
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mediawiki/MediaWiki_UI.png)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mediawikiui.gif)  
 
-## 准备
+If you have installed Websoft9 MediaWiki, the following steps is for your quick start
 
-部署 Websoft9 提供的 MediaWiki 之后，需完成如下的准备工作：
+## Preparation
 
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 MediaWiki 的 **[默认账号和密码](./user/credentials)**  
-4. 若想用域名访问  MediaWiki **[域名五步设置](./administrator/domain_step)** 过程
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:80** is allowed
+3. **[Get](./user/credentials)** default username and password of MediaWiki 
+4. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for MediaWiki 
 
+## MediaWiki Initialization
 
-## MediaWiki 初始化向导
+### Steps for you
 
-### 详细步骤
+1. Using local Chrome or Firefox to visit the URL *https://domain* or *https://Internet IP*, start to install    
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mw01.png)
 
-1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 就进入引导首页
+2. Choose a language to continue
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mw02.png)
 
-2. 根据系统提示，点击“…Installation”进入安装界面，选择语言 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mediawiki/mediawiki-install001-websoft9.png)
+3. Acccept the license and Continue
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mw03.png)
 
-3. 填写你的数据库配置信息([不知道账号密码？](./user/credentials))，保存并继续; 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mediawiki/mediawiki-install002-websoft9.png)
+4. Fill in database configuration
+   > It's  easy to make mistakes on this step. If have mistakes, you can [Re-install Mediawiki]
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mediawiki-setdbconnstr-websoft9.png)
 
-4. 选择数据库引擎和字符集设置，字符集建议选用UFT-8 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mediawiki/mediawiki-install003-websoft9.png)
+   - Database name: mediawiki (MySQL on this Image has a database instance name mediwiki)
+   - Database username: root
+   - Database password: [Don't know password?](./user/credentials)
+   
+   If you don't want to use the mediawiki as Database name,please create your database first. If you don't want to use the root as Database username,please create your user first
 
+5. Set database character,Click "Continue";  
+  ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mw05.png)
 
-5. 设置后台账号信息，请务必设置好并牢记之。进入下一步 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mediawiki/mediawiki-install004-websoft9.png)
+6. Set the site name, administrator account, password and mail,Click "Continue";
+  ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mw06.png)
 
-6. 跟随安装提示直到完成，过程中尽量选择默认设置，勾选安装所有模块
+7. Click "Continue";  
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mw07.png)
 
-7. 配置完成后会生成 LocalSettings.php 文件，根据提示下载。 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mediawiki/mediawiki-install005-websoft9.png)
+8. Click "Continue";  
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mw08.png)
 
-8. 将 `LocalSettings.php` 文件上传到服务器 MediaWiki 根目录
+9. Click "Continue";  
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mw09.png)
 
-9. 系统完成最后一步安装，建议进入MediaWiki后台（以管理身份登录即进入后台），体验完整功能 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mediawiki/mediawiki-homepage-websoft9.png)
+10. Download the file and upload it to the server directory:/data/wwwroot/mediawiki
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mw10.png)
 
-> 需要了解更多MediaWiki的使用，请参考官方文档：[MediaWiki FAQ](https://www.mediawiki.org/wiki/Sysadmin_hub/zh)
+11. OK, it has been installed successfully.
 
-### 出现问题？
+12. Use http://domain  to go to your index page.
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mw11.png)
 
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
+> More useful MediaWiki guide, please refer to [MediaWiki Sysadmin Docs](https://www.mediawiki.org/wiki/Sysadmin_hub)
 
-**重装 MediaWiki**
+### Having trouble?
 
-本地浏览器访问： *http://服务公网IP/mw-config/index.php?page=Restart&lastPage=Install* ，开始重装
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/Mediawiki-reinstall-websoft9.png)
+#### Can I re-install MediaWiki?
 
-## MediaWiki 使用入门
+Visit URL *http://Internet IP/mw-config/index.php?page=Restart&lastPage=Install*  to start reinstall
+
+![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/Mediawiki-reinstall-websoft9.png)
+
+## MediaWiki QuickStart
 
 下面以 **使用 MediaWiki 构建知识管理系统** 作为一个任务，帮助用户快速入门：
 
-## MediaWiki 常用操作
+## MediaWiki Setup
 
-### MediaWiki 配置 SMTP{#smtp}
+### Configure SMTP{#smtp}
 
-1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
+1. Get [SMTP](./administrator/smtp) related parameters in the mailbox management console  
 
-2. 编辑网站根目录下的 `LocalSettings.php` 配置文件
+2. Edit your MediaWiki's configuration file `LocalSettings.php` in the root directory  
 
-3. 找到变量 $wgSMTP，并设置它
-   
+3. Search the variable `$wgSMTP`, set the values
    ```
     $wgSMTP = array(
     'host'     => "smtp.163.com", 
-    'IDHost'   => "example.com",      // 邮箱域名，可选.如果不设置的话会设置成 $wgServer 的值.
+    'IDHost'   => "example.com",      // Email's domain name, optional
     'port'     => 465,                 
     'auth'     => true,               
     'username' => "websoft9@163.com",     
     'password' => "#wwBJ8"       
     );
    ```
-
-4. 找到变量 $ wgEnableEmail，设置其值为 true
-   
+4. Search the variable `$wgEnableEmail`, set the value
    ```
-    $ wgEnableEmail = true
+   $ wgEnableEmail = true
    ```
-
-
-5. 查找以下变量，将其值设置为发件邮箱
-   
+5. Search the variablea `$wgEnableEmail`, set it as your email address
    ```
-    $wgEmergencyContact = "websoft9@163.com";
-    $wgPasswordSender = "websoft9@163.com";
+   $wgEmergencyContact = "websoft9@163.com";
+   $wgPasswordSender = "websoft9@163.com";
    ```
+6. Save it  
 
+7. Restart [PHP-FPM Service](/zh/admin-services.html#php-fpm)  
 
-6. 保存设置
+8. Test email sending
 
-7. 重启 [PHP-FPM 服务](./administrator/parameter#service)后生效
+### Install plugin{#plugin}
 
-8. 测试是否可以发邮件
+Refer to [Manual:Extensions](https://www.mediawiki.org/wiki/Manual:Extensions)
 
-### MediaWiki 安装扩展{#plugin}
+### Create&Edit page{#page}
 
-参考官方文档：[Manual:Extensions](https://www.mediawiki.org/wiki/Manual:Extensions/zh)
+Refer to MediaWiki official docs: [Help:Starting_a_new_page](https://www.mediawiki.org/wiki/Help:Starting_a_new_page/en)
 
-### MediaWiki 创建或编辑页面{#page}
+### VisualEditor{#edit}
 
-参考官方文档：[Help:Starting_a_new_page](https://www.mediawiki.org/wiki/Help:Starting_a_new_page/zh)
+Refer to MediaWiki official docs: [Help:Starting_a_new_page](https://www.mediawiki.org/wiki/Help:VisualEditor/User_guide/en)
 
-### MediaWiki 可视化编辑器{#edit}
+### Change interface{#theme}
 
-参考官方文档：[Help:Starting_a_new_page](https://www.mediawiki.org/wiki/Help:VisualEditor/User_guide/zh)
+Changing interface includes: modify logo, set navigation, modify css and so on
 
-### MediaWiki 定制界面{#theme}
+Refer to MediaWiki official docs: [Help:FAQ:Changing Interface](https://www.mediawiki.org/wiki/Manual:FAQ#Changing_the_interface)
 
-定制界面包括：修改 Logo, 设置导航栏，修改 CSS 等  
+### Upload files{#upload}
 
-参考官方文档：[Help:FAQ:定制界面](https://www.mediawiki.org/wiki/Manual:FAQ/zh#定制界面)
+You can't upload files from MediaWiki by default, you need to enable it first  
 
-### MediaWiki 允许文件上传{#upload}
+Refer to MediaWiki official docs: [Help:FAQ:Enabel Uploading](https://www.mediawiki.org/wiki/Manual:FAQ#How_do_I_enable_uploading?)
 
-Mediawiki 默认并不可以上传文件，需要启动文件上传功能  
+### Languages{#setlang}
 
-参考官方文档：[Help:FAQ:启用文件上传](https://www.mediawiki.org/wiki/Manual:FAQ/zh#如何启用文件上传?)
+Refer to MediaWiki official docs: [Help:FAQ:Language](https://www.mediawiki.org/wiki/Manual:FAQ#How_do_I_change_the_interface_language?)
 
-### MediaWiki 语言设置{#setlang}
+### set MainPage{#sethomepage}
 
-参考官方文档：[Help:FAQ:语言设置](https://www.mediawiki.org/wiki/Manual:FAQ/zh#我如何更改界面语言？)
+Refer to MediaWiki official docs: [Help:FAQ:Chage Main Page](https://www.mediawiki.org/wiki/Manual:FAQ#How_do_I_change_which_page_is_the_main_page?)
 
-### MediaWiki 设置主页{#sethomepage}
+### Using Composer{#composer}
 
-参考官方文档：[Help:FAQ:设置主页](https://www.mediawiki.org/wiki/Manual:FAQ/zh#如何指定首页?)
+Websoft9's MediaWiki have installed the Composer by default  
 
-### MediaWiki 使用 Composer{#composer}
+Refer to MediaWiki official docs: [Help:Composer](https://www.mediawiki.org/wiki/Composer/en) 
 
-本预装包默认已经安装 Composer，详细使用  
+## Reference sheet
 
-参考官方文档：[Help:Composer](https://www.mediawiki.org/wiki/Composer/zh)
-
-
-## 参数{#parameter}
-
-MediaWiki 应用中包含 PHP, Nginx, Apache, Docker, MySQL 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage MediaWiki
 
 通过运行 `docker ps`，可以查看到 MediaWiki 运行时所有的 Container：
 
@@ -160,32 +167,31 @@ MediaWiki 应用中包含 PHP, Nginx, Apache, Docker, MySQL 等组件，可通�
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
 ```
 
+### Path{#path}
 
-下面仅列出 MediaWiki 本身的参数：
+MediaWiki installation directory: */data/wwwroot/mediawiki*  
+MediaWiki configuration file: */data/wwwroot/mediawiki/LocalSettings.php* 
 
-### 路径{#path}
+### Port{#port}
 
-MediaWiki 安装目录： */data/wwwroot/mediawiki*  
-MediaWiki 配置文件： */data/wwwroot/mediawiki/LocalSettings.php*  
+| Port | Use                                          | Necessity |
+| ------ | --------------------------------------------- | ------ |
+| 8080   | MediaWiki original port | Optional   |
 
 
-### 端口{#port}
-
-无特殊端口
-
-### 版本{#version}
+### Version{#version}
 
 控制台查看
 
-### 服务{#service}
+### Service{#service}
 
 ```shell
 sudo docker start | stop | restart | stats mediawiki
 ```
 
-### 命令行{#cli}
+### CLI{#cli}
 
-无
+None
 
 ### API
 

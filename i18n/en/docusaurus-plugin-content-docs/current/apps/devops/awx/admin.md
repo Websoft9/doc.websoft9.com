@@ -6,29 +6,36 @@ tags:
   - DevOps
 ---
 
-# 维护指南
+# AWX Maintenance
 
-本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup) 相关章节。
+This chapter is special guide for Jenkins maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-## 场景
+## Maintenance guide
 
-### AWX 使用外部 PostgreSQL
+### Use an external PostgreSQL
 
-默认安装下，使用的是Docker版本的PostgreSQL数据库，并设置了持久化存储。  
 
-如果你想将数据库更换为外部PostgreSQL数据库（自建或云数据库），请参考如下步骤：
+AWX requires access to a PostgreSQL database, and by default, one will be created and deployed in a container, and data will be persisted to a host volume. In this scenario, Websoft9's deployment have set the value of postgres_data_dir to a path that can be mounted to the container. When the container is stopped, the database files will still exist in the specified path.
 
-1. 备份好已有的AWX数据
-2. 进入到AWX的配置文件夹
+If you wish to use an external database (e.g [posgtresql](https://github.com/ansible/awx/blob/devel/INSTALL.md#docker-compose) ), following is the steps:
+
+1. Backup all your data of AWX
+2. Use SFTP to connect you AWX server and cd to AWS configure folder
    ```
    cd /data/.awx
    ```
-2. 删除目前AWX项目的所有容器
+2. Delete all dockers
    ```
    cd /data/.awx
    docker-compose -f docker-compose.yml down -v
    ```
-3. 修改 *docker-compose.yml* 文件，去掉两处 *depends_on:* 项中的 *- postgres*，并删除 *postgres: ...* 整段，最后文件的内容如下： 
+3. Remove all **postgres** related items in the file *docker-compose.yml*  
+
+   * Remove *- postgres* on the *depends_on:* 
+   * Remove all paragraph of *postgres: ...*
+
+   The following is the example after remove all **postgres** related items of docker-compose.yml
+
    ```
    version: '2'
    services:
@@ -116,7 +123,7 @@ tags:
      rsyslog-config:
 
    ```
-4. 修改 */data/.awx/credentials.py* 文件中数据库账号信息，确保为外部PostgreSQL的连接信息
+4. Modify the file */data/.awx/credentials.py* , make sure it is the correct connections for your external PostgreSQL
    ```
       DATABASES = {
        'default': {
@@ -132,7 +139,7 @@ tags:
 
    BROADCAST_WEBSOCKET_SECRET = "al9mLS4tWTlmX1owN1FyOElJWDY="
    ```
-5. 修改 */data/.awx/environment.sh* 文件中数据库账号信息，确保为外部PostgreSQL的连接信息
+5. Modify the file */data/.awx/environment.sh* , make sure it is the correct connections for your external PostgreSQL
    ```
    DATABASE_USER=awx
    DATABASE_NAME=awx
@@ -143,42 +150,47 @@ tags:
    AWX_ADMIN_PASSWORD=password
 
    ```
-6. 重新创建容器
+6. Restart all dockers
    ```
    docker-compose -f docker-compose.yml up -d
    ```
 
 
-### AWX 负载均衡部署
+### AWX High availability
 
-通过负载均衡处理多台 AWX 并行工作，对于大型企业来说这是一种很常见的部署方案。
+Processing multiple AWXs in parallel through load balancing is a very common deployment solution for large enterprises.
 
-### AWX 升级
+AWX is based on Docker deployment, the name of the container that handles the web is: awx_web
 
-升级 AWX 通过重新安装来完成。
 
-1. 使用SSH登录服务器
-2. 进入到 */data/awx/* 目录，从 Github 更新AWX源码
+### AWX Upgrade
+
+Upgrading AWX involves rerunning the install playbook. Download a newer release from https://github.com/ansible/awx/releases and re-populate the inventory file with your customized variables.
+
+For convenience, you can create a file called *update-vars.yml*:
+
+1. Use **SFTP** to connect Server
+2. Go to the directory */data/awx/* and update this repository from Github
    ```
-   git pull
+   sudo cd /data/awx && git pull
    ```
-3. 进入到 */data/awx/installer* 目录
-4. 增加一个 update-vars.yml 文件，其中的内容如下（其中的密码为真实值）：
+3. Go to the directory: */data/awx/installer* 
+4. Create new file named *update-vars.yml* and add the template to it like below(make sure all password is your correct password) 
    ```
    admin_password: 'adminpass'
    pg_password: 'pgpass'
    rabbitmq_password: 'rabbitpass'
    secret_key: 'mysupersecret'
    ```
-5. 运行如下命令，开始升级
+5. Run the update commands like below
    ```
    ansible-playbook -i inventory install.yml -e @update-vars.yml
    ```
 
 
-## 故障排除
+## Troubleshoot{#troubleshoot}
 
-除以下列出的 AWX 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
+In addition to the AWX issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
 #### 受控端更换镜像后，AWX 再次连接报错？
 
@@ -188,19 +200,23 @@ tags:
 
 等待更新完成后，重启服务器，再访问
 
-#### 创建项目选择手动（SCM 类型）提示 "WARNING..."？
+#### A server error has occurred?
 
-错误信息：WARNING: There are no available playbook directories in /var/lib/awx/projects....  
+```
+docker logs awx_web
+```
 
-原因：AWX容器的项目路径没有挂在到宿主机上  
-方案：将/var/lib/awx/projects 映射到宿主机目录  /data/wwwroot/awx/projects
+#### Create manful Project from SCM type have error "WARNING: There are no available playbook directories in /var/lib/awx/projects...."
 
-#### awx_redis 容器无法启动？
+Reason: The directory /var/lib/awx/projects of AWX container not mounted to Server
+Solution： Mounted the container's /var/lib/awx/projects to Server's path /data/wwwroot/awx/project.
 
-原因：redis.sock 权限不足导致  
-方案：给 /data/.awx/redis_socket 文件夹授权
+#### awx_redis container start fail?
 
-1. 编辑 */data/.awx/redis.conf* 文件中增加一行权限配置 `unixsocketperm 750`
+Reason: redis.sock permission problem  
+Solution:  
+
+1. Edit file */data/.awx/redis.conf* and add the line `unixsocketperm 750`
    ```
    unixsocket /var/run/redis/redis.sock
    unixsocketperm 660
@@ -208,48 +224,52 @@ tags:
    bind 127.0.0.1
    unixsocketperm 750
    ```
-2. Redis 通信目录授权 `chmod -R 777 /data/.awx/redis_socket`
-3. 进入到 AWX 目录后，重新运行容器即可
+2. Set redis socket directory permission with the command `chmod -R 777 /data/.awx/redis_socket`
+3. Go to AWX directory and run the container again
    ```
    cd /data/.awx
    docker-compose down -v
    docker-compose up -d
    ```
 
-#### 可进入 AWX 控制台，但无法运行 Job？
+#### I can login to AWX console, but run job failed?
 
-很有可能是 awx_redis 容器没有正常运行导致，通过命令 `docker ps` 查看 awx_redis 运行状态
+The  most likely reason is the **awx_redis** container can not start, you can run the command `docker ps` to check the status of  **awx_redis**
 
 
-## 问题解答
+## FAQ{#faq}
 
-#### AWX 支持多语言吗？
+#### AWX support multi-language?
 
-支持[多种语言](https://docs.ansible.com/ansible-tower/latest/html/release-notes/supported_locales.html)，包括中文。它不提供语言切换菜单，而是自动适用浏览器首选语言。
+Yes, it supported [Locales](https://docs.ansible.com/ansible-tower/latest/html/release-notes/supported_locales.html). It automatically sets the locale preference based on the user’s browser settings. For Safari, Internet Explorer, and older versions of Chrome as well as FireFox, this is handled automatically.
 
-#### AWX 是如何与 PostgreSQL 连接的？
+#### How is AWX connected to PostgreSQL?
 
-容器内部连接，即容器编排
+AWX connect PostgreSQL in Docker inner, and you can use external Database
 
-#### AWX 是否支持 Ansible Galaxy？
+#### AWX support Ansible Galaxy?
+Yes, refer to [Ansible Galaxy Support](https://docs.ansible.com/ansible-tower/latest/html/userguide/projects.html#ug-galaxy)
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/awx/awx-setgalax-websoft9.png)
+#### AWX support **var-prompt**?
 
-支持，参考官方文档 [Ansible Galaxy Support](https://docs.ansible.com/ansible-tower/latest/html/userguide/projects.html#ug-galaxy)
+Yes, refer to [Extra variable](../awx#extravar) charter of this docs
 
-#### AWX 是否支持交互式变量？
+#### What's URL of AWX API?
 
-支持
+http://AWX Server Internet IP/api/
 
-#### AWX API 地址是多少？
+#### If there is no domain name, can I deploy AWX?
 
-http://AWX Server 服务器公网IP/api/
+Yes, visit AWX by *http://Internet IP*
 
-#### AWX 是否支持 Ansible Galaxy？
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/awx/awx-setgalax-websoft9.png)
+#### Is there a web-base GUI database management tools?
 
-支持，参考官方文档 [Ansible Galaxy Support](https://docs.ansible.com/ansible-tower/latest/html/userguide/projects.html#ug-galaxy)
+No
+
+#### Is it possible to modify the source path of AWX?
+
+No
 
 #### AWX 的命令行是什么？
 

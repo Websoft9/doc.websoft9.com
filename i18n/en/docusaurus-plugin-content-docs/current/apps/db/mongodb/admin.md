@@ -6,60 +6,59 @@ tags:
   - Cloud Native Database
 ---
 
-# 维护指南
+# MongoDB Maintenance
 
-本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup) 相关章节。
+This chapter is special guide for MongoDB maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-## 场景
+## Maintenance guide
 
-### MongoDB 应用备份
+### MongoDB Backup
 
-通用的手动备份操作步骤如下：
+The general manual backup operation steps are as follows:
 
-1. 使用`mongodump`工具，导致数据库
+1. Use the tool `mongodump` to export database
    ```
-   #1 备份
+   #1 backup
    mongodump --authenticationDatabase admin --username root --password PASSWORD -d DATABASE_NAME -h localhost
 
-   # 查看备份
+   # check you backup
    cd dump/admin
    ls
    ```
-2. 使用`mongorestore`工具，恢复数据库
+2. Use tool `mongorestore` to restore database
    ```
    mongorestore --authenticationDatabase admin --username root --password PASSWORD PATH_TO_BACKUP_FILE
-
    ```
 
-详情参考官方文档：[MongoDB Backup Methods](https://docs.mongodb.com/manual/core/backups/)
+More details please refer to official docs: [MongoDB Backup Methods](https://docs.mongodb.com/manual/core/backups/)
 
-### MongoDB 更新升级
+### MongoDB Upgrade
 
-请参考官方文档：[Upgrade to the Latest Revision of MongoDB](https://docs.mongodb.com/manual/tutorial/upgrade-revision/)
+More detail refer to official docs:[Upgrade to the Latest Revision of MongoDB](https://docs.mongodb.com/manual/tutorial/upgrade-revision/)
 
-### MongoDB 数据迁移
+### MongoDB Data Migration
 
 可以，通过修改 /etc/mongod.conf 配置文件
 
 
-## 故障排除{#troubleshoot}
+## Troubleshoot{#troubleshoot}
 
-除以下列出的 MongoDB 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
+In addition to the MongoDB issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
 #### MongoDB compass 无法连接数据库？
 
 检查27017端口，bindIP和账户认证等连接字段是否满足条件
 
-## 问题解答
+## FAQ{#faq}
 
-#### 什么是 MongoDB 的 Client 和 Server？
+#### What are the Client and Server of MongoDB?
 
-MongoDB Server 是指 MongoDB 程序本体，而 MongoDB Client 指采用TCP协议用于连接程序本地的客户端。它们是两个完全不同的程序，也就是说它们并需要同时安装到同一台服务上。
+MongoDB Server refers to the MongoDB program ontology, and MongoDB Client refers to the client that uses TCP protocol to connect to the program local. They are two completely different programs, which means that they do not need to be installed on the same service at the same time.
 
-#### mongod 和 mongo 命令有什么区别？
+#### What's difference between command **mongod** and **mongo**?
 
-mongod 是 MongoDB 的服务端管理命令，用于启动数据库服务  
-mongo 是用于访问 MongoDB 服务的客户端  
+* mongod is the command for start MongoDB server's service  
+* mongo is MongoDB shell  
 
 #### MongoDB Community vs MongoDB Enterprise？
 
@@ -67,16 +66,16 @@ MongoDB Community is the source available and free to use edition of MongoDB.
 
 MongoDB Enterprise is available as part of the MongoDB Enterprise Advanced subscription and includes comprehensive support for your MongoDB deployment.   MongoDB Enterprise also adds enterprise-focused features such as LDAP and Kerberos support, on-disk encryption, and auditing.  
 
-#### 无身份验证可直接访问 MongoDB？
+#### Could I directly access mongodb without authentication?
 
-可以，默认安装时 MongoDB 没有开启访问控制，无需 MongoDB 用户名密码就可以访问，例如通过此URL访问：mongodb://localhost/admin。
- > MongoDB [访问控制参考](https://docs.mongodb.com/manual/tutorial/enable-authentication/)
+Yes, MongoDB does not enable access control during installation by default. So it can be accessed without mongodb user name and password, e.g. through this URL：mongodb://localhost/admin.
+ > MongoDB [Enable Access Control](https://docs.mongodb.com/manual/tutorial/enable-authentication/)
 
-#### MongoDB 中的 admin 数据库是什么？
+#### What is the **admin** database of MongoDB?
 
-安装 MongoDB 时会默认包含一个 admin 数据库，如果你创建管理员账户就必须存储到这个admin中
+The MongoDB installation will include an **admin** database by default. If you create an administrator account, you must store it in this admin
 
-#### MongoDB 提供哪些安全认证？
+#### Which authentication MongoDB support?
 
 MongoDB provides various features, such as authentication, access control, encryption, to secure your MongoDB deployments. Some key security features include:
 
@@ -86,9 +85,9 @@ MongoDB provides various features, such as authentication, access control, encry
 
 > MongoDB also provides the [Security Checklist](https://docs.mongodb.com/manual/administration/security-checklist/) for a list of recommended actions to protect a MongoDB deployment.
 
-#### MongoDB 支持哪些平台？
+#### What platforms does MongoDB support?
 
-所支持的平台，查看：[列表](https://docs.mongodb.com/manual/administration/production-notes/#prod-notes-supported-platforms)
+For the list of supported platforms, see [Supported Platforms](https://docs.mongodb.com/manual/administration/production-notes/#prod-notes-supported-platforms).
 
 #### MongoDB 提供官方有哪些工具？
 

@@ -1,59 +1,58 @@
 ---
-sidebar_position: 1
+sidebar_position: 3
 slug: /rabbitmq/admin
 tags:
-  - RabbitMQ 
-  - IT 架构
-  - 中间件
+  - RabbitMQ
+  - IT Architecture
+  - Broker
 ---
 
-# 维护参考
+# RabbitMQ Maintenance
+
+This chapter is special guide for RabbitMQ maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
+
+## Maintenance guide
+
+### Backup & Restore
+  
+### Upgrade
+
+Refer to the official docs: [Upgrading RabbitMQ](https://www.rabbitmq.com/upgrade.html)
 
 
-## 场景
+## Troubleshoot{#troubleshoot}
 
-### RabbitMQ 升级
+In addition to the RabbitMQ issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
-[Upgrading RabbitMQ](https://www.rabbitmq.com/upgrade.html)
+#### Can't remote connect RabbitMQ?
 
-## 故障排除
-
-除以下列出的 RabbitMQ 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
-
-#### RabbitMQ 远程连接失败？
-
-远程连接失败，请检查如下几点：
-
-* 是否开启云控制台上的安全组**TCP:5672**和**TCP:15672**端口
-
-* 创建的RabbitMQ 账号是否分配角色（下图的test用户由于没有分配角色，导致它无法远程连接）
-
+* Enable the **TCP:5672** and **TCP:15672** ports of your Security Group of your Cloud Platform
+* The user of RabbitMQ was assigned the suitable role (The user **test** can't connect from remote because it has not been assigned any role in the the picture below)
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rabbitmq/rabbitmq-createusererror-websoft9.png)
 
-#### RabbitMQ 服务无法启动？
+#### RabbitMQ service can't start?
 
-1. 以调试模式运行 `rabbitmq-server console`，便可以查看启动状态和错误
+1. Use the debug mode of `rabbitmq-server console` and you can see the errors
    ```
    rabbitmq-server console
    ```
-2. 打开日志文件：*/data/logs/rabbitmq-server*，检索 **failed** 关键词，分析错误原因
+2. Search the keywords **Failed** or **error** from logs: */data/logs/rabbitmq-server*
 
+#### Error in Chrome when modify password?
 
-#### 在Chrome下修改密码后报错？
-
-这个并不是服务器端的问题，只要更新浏览器即可。
+This error is not attribute to RabbitMQ server, once you have upgraded you local Chrome, it solved
 
 ![chrome error of RabbitMQ](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rabbitmq/rabbitmq-chromeerror-websoft9.png)
 
-## 问题解答
+## FAQ{#faq}
 
-#### 如何以调试模式启动RabbitMQ服务？
+#### How can I enable the debug mode of RabbitMQ service?
 
 ```
 systemctl stop rabbitmq-server
 rabbitmq-server console
 ```
 
-#### 如何用命令行修改 RabbitMQ 后台密码？
+#### Can I reset password of RabbitMQ by command?
 
-可以，`rabbitmqctl change_password  admin newpassword`
+Yes, e.g `rabbitmqctl change_password  admin newpassword`

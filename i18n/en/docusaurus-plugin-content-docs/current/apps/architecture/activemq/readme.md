@@ -2,135 +2,128 @@
 sidebar_position: 1
 slug: /activemq
 tags:
-  - ActiveMQ 
-  - IT 架构
-  - 中间件
+  - ActiveMQ
+  - IT Architecture
+  - Broker
 ---
 
-# 快速入门
+# ActiveMQ Getting Started
 
-[Apache ActiveMQ](https://activemq.apache.org) 是老牌的开源消息总线，完全支持 JMS1.1 和 J2EE 1.4 规范，它支持多种语言和协议编写客户端。
+[ActiveMQ](https://activemq.apache.org/) is the most popular and powerful open source messaging and Integration Patterns server.Apache ActiveMQ is fast, supports many Cross Language Clients and Protocols, comes with easy to use Enterprise Integration Patterns and many advanced features while fully supporting JMS 1.1 and J2EE 1.4. Apache ActiveMQ is released under the Apache 2.0 License
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/activemq/activemq-logined-websoft9.png)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/activemq/activemq-logined-websoft9.png)  
 
+If you have installed Websoft9 ActiveMQ, the following steps is for your quick start
 
-部署 Websoft9 提供的 ActiveMQ 之后，请参考下面的步骤快速入门。
+## Preparation
 
-## 准备
+1. Get the **Internet IP** on your Cloud Platform
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:8161** is allowed
+3. **[Get](./user/credentials)** default username and password of ActiveMQ
+4. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for ActiveMQ.
 
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:8161** 端口已经开启
-3. 在服务器中查看 ActiveMQ 的 **[默认账号和密码](./user/credentials)**  
-4. 若想用域名访问  ActiveMQ，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
+## ActiveMQ Installation
 
+### Steps for you
+  
+1. Using local Chrome or Firefox to visit the URL *http://DNS:8161* or *http://Internet IP:8161*, you will enter installation wizard of ActiveMQ([Don't know password?](./user/credentials))
+  ![ActiveMQ console](http://libs.websoft9.com/Websoft9/DocsPicture/zh/activemq/activemq-login-websoft9.png)
 
-## ActiveMQ 初始化向导
+2. Click link [Manage ActiveMQ broker] to login ActiveMQ console
+  ![ActiveMQ console](http://libs.websoft9.com/Websoft9/DocsPicture/zh/activemq/activemq-logined-websoft9.png)
 
-### 详细步骤
+3. You can reset the password by modify the file */opt/apache-activemq/conf/jetty-realm.properties* 
 
-1. 使用本地电脑浏览器访问网址：*http://域名:8161* 或 *http://服务器公网IP:8161*, 进入初始化页面
-   ![ActiveMQ初始化页面](http://libs.websoft9.com/Websoft9/DocsPicture/zh/activemq/activemq-login-websoft9.png)
+> More useful ActiveMQ guide, please refer to [Using Apache ActiveMQ](https://activemq.apache.org/using-activemq)
 
-2. 点击【Manage ActiveMQ broker】登录 ActiveMQ 控制台 （[不知道账号密码？](./user/credentials)）
-   ![ActiveMQ控制台](http://libs.websoft9.com/Websoft9/DocsPicture/zh/activemq/activemq-logined-websoft9.png)
+### Having trouble?
 
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
-### 出现问题？
-
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题。
-
-## ActiveMQ 使用入门
+## ActiveMQ QuickStart  
 
 [Using Apache ActiveMQ](https://activemq.apache.org/using-activemq)
 
-## ActiveMQ 常用操作
+## ActiveMQ Setup
 
-### 修改控制台密码
+### Reset Password
 
-通过 */opt/apache-activemq/conf/jetty-realm.properties* 文件修改，重启 [ActiveMQ 服务](#service)后生效
+You can reset or set the password by modity the file: */opt/apache-activemq/conf/jetty-realm.properties*, then **systemctl restart activemq**
+ 
+### ActiveMQ Web Demos
 
-### 运行 ActiveMQ 演示
+ActiveMQ comes with a number of Web demos that illustrate how to use the ActiveMQ broker with REST and AJAX. The Web demos are not activated in the default configuration, so you must follow the steps below to get them running:
 
-ActiveMQ 附带了许多 Web 演示，这些演示说明了如何将 ActiveMQ 代理与 REST 和 AJAX 一起使用。 Web 演示在默认配置中未激活，因此您必须按照以下步骤运行它们：
-
-1. 编辑 /opt/apache-activemq/examples/conf/activemq-demo.xml 文件并更改位置属性以反映加密凭证文件的位置，该文件位于 /opt/activemq/conf/credentials-enc.properties：
-
+1. Edit the */opt/apache-activemq/examples/conf/activemq-demo.xml* file and change the `locations` property to reflect the location of the encrypted credentials file, located at */opt/activemq/conf/credentials-enc.properties*:
   ```shell
   <property name="locations">
         <value>file:${activemq.conf}/credentials-enc.properties</value>
   </property>
   ```
 
-2. 如果 ActiveMQ 服务器当前正在运行，先停止：
-   
+2. If the ActiveMQ server is currently running, stop it:
   ```shell
   systemctl stop activemq
   ```
 
-3. 运行示例：
-   
+3. Run the example:
   ```shell
   cd /opt/activemq
   sudo ./bin/activemq console xbean:/opt/activemq/examples/conf/activemq-demo.xml
   ```
 
-4. 等待 ActiveMQ 代理启动。
+4. The ActiveMQ broker should now start.
+5. Log in to the Web administration panel and view the demos by browsing to *http://Internet IP:8161/demo*, If needed, use the credentials obtained from the server dashboard to log in.
 
-5. 登录到 Web 管理面板查看演示： *http://服务器公网 IP:8161/demo* 
+### Configuration 
 
-### 配置消息
+Refer to the official docs: http://activemq.apache.org/configuration.html
 
-官方方案：http://activemq.apache.org/configuration.html
+## Reference sheet
 
-## 参数
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage ActiveMQ
 
-ActiveMQ 应用中包含 Nginx, Docker 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
-
-下面仅列出 ActiveMQ 本身的参数：
-
-### 路径{#path}
-
-虽然运行 `whereis` 命令可以查看相关安装路径，但接下来我们仍然对路径信息进行更为准确的说明。
+### Path
+  
+You can check the file path by the cmd `whereis` of ActiveMQ, and we have prepared more detail for your reference
 
 ```
 whereis activemq
 whereis java
 ```
+  
+ActiveMQ installation directory: */opt/apache-activemq/*  
+ActiveMQ configuration directory: */opt/apache-activemq/conf*  
+ActiveMQ data directory: */opt/apache-activemq/data*  
+ActiveMQ logs directory: */opt/apache-activemq/data/activemq.log*
 
-ActiveMQ 安装目录： */opt/apache-activemq/*  
-ActiveMQ 配置目录： */opt/apache-activemq/conf*  
-ActiveMQ 数据目录： */opt/apache-activemq/data*  
-ActiveMQ 日志目录： */opt/apache-activemq/data/activemq.log*
+> you can reset the administrator password of ActiveMQ by modify the file: */opt/apache-activemq/conf/jetty-realm.propertie* 
 
-> 通过修改 */opt/apache-activemq/conf/jetty-realm.propertie* 重置管理密码
+### Port{#port}
 
-
-### 端口{#port}
-
-| 端口号 | 用途                                          | 必要性 |
+| Port | Use                                          | Necessity |
 | ------ | --------------------------------------------- | ------ |
-| 8161   | HTTP 访问 ActiveMQ Web 界面 | 可选   |
-| 5672   | amqp | 可选   |
+| 8161 | HTTP requests for ActiveMQ Console| Optional |
+| 5672 | amqp | Optional |
 
-
-### 版本{#version}
+### Version{#version}
 
 ```shell
 ls /opt/apache-activemq | grep activemq
 ```
 
-### 服务{#service}
+### Service{#service}
 
 ```shell
-sudo systemctl start | stop | restart | status activemq
+sudo systemctl start | stop | restart | status ActiveMQ
 ```
 
-### 命令行{#cmd}
-
-```
+### CLI{#cli}
+  
+```shell
 /opt/apache-activemq -h
 ```
-
+  
 ### API
 
 [ActiveMQ API](https://activemq.apache.org/maven/apidocs/index.html)

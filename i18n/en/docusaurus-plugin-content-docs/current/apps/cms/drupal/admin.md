@@ -7,43 +7,42 @@ tags:
   - 建站系统
 ---
 
-# 维护指南
+# Drupal Maintenance
 
-本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup) 相关章节。
+This chapter is special guide for Drupal maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-## 场景
+## Maintenance guide
 
-### 在线备份
+### Backup and Restore
 
-通过安装 Drupal 扩展，可以实现后台在线备份：
+This section provides Drupal online backup solution
 
-1. 下载 [Backup and Migrate](https://www.drupal.org/project/backup_migrate)
+1. Download module [Backup and Migrate](https://www.drupal.org/project/backup_migrate)
 
-2. 登录 Drupal 后台，通过上传压缩文件的方式安装 **Backup and Migrate** ，启用之
+2. Log in Drupal console as administrator, install **Backup and Migrate** by uploading package
 
-3. 打开：【管理】>【配置】，打开【Backup and Migrate】
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-backupnow-websoft9.png)
+3. Go to【Manage】>【configuration】, open【Backup and Migrate】
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/drupal-backupnow-websoft9.png)
 
-4. 开始设置备份策略
+4. Set your backup policy
 
-5. 通过 **Backup and Migrate** 实现的备份可以在线恢复
+5. You can also restore your data online by **Backup and Migrate**   
 
+### Upgrade
 
-### 基于 Composer 升级
+Drupal don't have online Upgrade function, but Drupal have Upgrade solution by **CLI**
 
-Drupal 目前没有提供后台可视化升级，但可以通过命令行的方式升级。
+1. Log in Drupal, you can see the upgrade reminder if there have latest version of Drupal
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/drupal-update-websoft9.png)  
 
-> 在升级之前请做好服务器的快照备份，这个是必须的步骤，因为谁都无法保证升级 100% 成功。
+2. Refer to [Updating Drupal core via Composer](https://www.drupal.org/docs/updating-drupal/updating-drupal-core-via-composer#update-instructions) to start Upgrade
 
-1. 登录 Drupal 后台，如果有升级需求系统会显示升级提示
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-update-websoft9.png)  
-
-2. 参考官方文档 [Updating Drupal core via Composer](https://www.drupal.org/docs/updating-drupal/updating-drupal-core-via-composer#update-instructions)，完成升级
-
-> 更多升级详情，请参考官方升级文档 [Drupal Upgrade](https://www.drupal.org/docs/updating-drupal)
+> More details about upgrade, please refer to [Drupal Upgrade](https://www.drupal.org/docs/updating-drupal)
 
 
-## 故障排除
+## Troubleshoot{#troubleshoot}
+
+In addition to the Drupal issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
 #### 初始化 【安装翻译】时总是报错？
 
@@ -68,10 +67,10 @@ $settings['trusted_host_patterns']=['^www\.webosft9\.com$'];
 
 #### Drupal 安装完成后仍提示安全漏洞？
 
-参阅：[Trusted Host settings](https://www.drupal.org/node/1992030)
+Refer to [Trusted Host settings](https://www.drupal.org/node/1992030)
 
-## 问题解答
+## FAQ{#faq}
 
-#### Drupal 支持多语言吗？
+#### Drupal support multi-language?
 
-支持多语言（包含中文），建议在初始化安装的时候安装多语言
+Yes

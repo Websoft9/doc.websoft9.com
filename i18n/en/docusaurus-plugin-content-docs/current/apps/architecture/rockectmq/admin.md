@@ -1,42 +1,46 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 slug: /rocketmq/admin
 tags:
   - RocketMQ
-  - IT 架构
-  - 中间件
+  - IT Architecture
+  - Broker
 ---
 
-# 维护参考
+# RocketMQ Maintenance
 
-## 场景
+This chapter is special guide for RocketMQ maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-### RocketMQ 升级
+## Maintenance guide
 
-升级之前请做好备份。  
+### Backup and Restore 
 
-RocketMQ 升级等同于重新安装，下面介绍升级步骤：
+### Upgrade
 
-1. 访问 RocketMQ [下载页面](http://rocketmq.apache.org/docs/quick-start/)，检查服务器环境是否匹配安装要求
+RocketMQ upgrade is the same with install a new version, you must completed all resource and data before upgrade.
 
-2. 停止 RocketMQ 服务，删除
+The following is the step for upgrade:
+
+1. Visit RocketMQ [Download](http://rocketmq.apache.org/docs/quick-start/) to check for the installation requirement
+
+2. Stop RocketMQ service
     ```
     sudo systemctl stop mqnamesrv
     sudo systemctl stop mqbroker
     ```
-3. 删除 RocketMQ 文件夹下所有的文件
+3. Delete all files in the directory of RocketMQ 
    ```
    rm -rf /data/rocketmq/*
    ```
-4. 下载新的 RocketMQ，并解压到 /data/rocketmq 目录下
+4. Download the new RocketMQ and unzip it to */data/rocketmq*
 
-5. 修改 *rocketmq/bin/runserver.sh* 文件中 Java 启动内存大小（非必要）
+5. Modify java runtime memory in the file: *rocketmq/bin/runserver.sh* (Optional)
 
-   > Xms4g -Xmx4g -Xmn2g 改成 Xms400M -Xmx400M -Xmn200M 表示降低了内存下限。
+   > set Xms4g -Xmx4g -Xmn2g to Xms400M -Xmx400M -Xmn200M means reduce the memory limit
 
-6. 修改 */data/rocketmq/bin/runbroker.sh* 文件中 Java 启动内存大小（非必要）
+6. Modify java runtime memory in the file: *rocketmq/bin/runbroker.sh* (Optional)
 
-7. 重新启动服务，其状态正常就代表升级成功
+7. Restart the RocketMQ and check the status
     ```
     sudo systemctl start mqnamesrv
     sudo systemctl start mqbroker
@@ -44,37 +48,35 @@ RocketMQ 升级等同于重新安装，下面介绍升级步骤：
     systemctl status mqbroker
     ```
 
-## 故障排除
+## Troubleshoot{#troubleshoot}
 
-除以下列出的 [RocketMQ 故障](http://rocketmq.apache.org/docs/faq)问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
+In addition to the [RocketMQ issues](http://rocketmq.apache.org/docs/faq) listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
 #### 内存不足？
 
 RocketMQ 最低内存设置查看 **runserver.sh** 和 **runbroker.sh**` JAVA_OPT 设置
 
-##### RocketMQ-Console-Ng 连接失败？
+#### RocketMQ-Console display some error?
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rocketmq/rocketmq-error-websoft9.png)
 
-问题原因：可视化工具的 docker-compose 文件中 RocketMQ 服务的地址错误。  
-解决方案：修改 RocketMQ 服务地址
+Reason: RocketMQ-Console can not connect RocketMQ Server
+Solution: Modify the service address of RocketMQ from the docker-compose file
 
+## FAQ{#faq}
 
+#### How is RocketMQ-Console-Ng installed?
 
-#### 问题解答
+Based on Docker
 
-##### RocketMQ-Console-Ng 是如何安装的？
+#### RocketMQ-Console-Ng is multilingual supported?
 
-基于 Docker 安装。
+It supports English and simplified Chinese
 
-#### RocketMQ-Console-Ng 支持多语言？
+#### How to install RocketMQ in this project?
 
-目前支持英文和简体中文，可以登陆后可以直接在顶部菜单进行设置。
+Installed by binary package.
 
-#### RocketMQ 采用何种安装方式？
+#### How long do RocketMQ messages last?
 
-采用二进制包解压的安装方式
-
-#### RocketMQ 的消息保存多久？
-
-消息将最多保存3天，未使用超过3天的消息将被删除。
+Messages will be saved for up to 3 days, and messages not used for more than 3 days will be deleted.

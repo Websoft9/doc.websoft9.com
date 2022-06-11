@@ -3,31 +3,29 @@ sidebar_position: 1
 slug: /pydio
 tags:
   - Pydio Cells
-  - 网盘
-  - 知识管理
-  - 团队协作
+  - File sync and share
+  - knowledge Management
 ---
 
-# 快速入门
+# Pydio Cells Getting Started
 
  [Pydio Cells](https://pydio.com/) 是自托管企业文档共享与协作 (DSC) 市场的开源软件。Pydio Cells 弥合了快速发展的开源软件和企业级解决方案之间的差距，为具有安全意识的组织提供了一个他们可以依靠的平台来共享文档和安全协作。
 
 ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/pydio/pydio-gui-websoft9.png)
 
+If you have installed Websoft9 Jenkins, the following steps is for your quick start
 
-## 准备
+## Preparation
 
-部署 Websoft9 提供的 Pydio Cells 之后，需完成如下的准备工作：
-
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 Pydio Cells 的 **[默认账号和密码](./user/credentials)**  
-4. 若想用域名访问  Pydio Cells **[域名五步设置](./administrator/domain_step)** 过程
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:80** is allowed
+3. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for Pydio Cells
+4. [Get](./user/credentials) default username and password of Pydio Cells
 
 
-## Pydio Cells 初始化向导{#init}
+## Pydio Cells Initialization{#init}
 
-### 详细步骤
+### Steps for you
 
 1. 本地浏览器访问：*http://域名* 或 *http://公网IP* 进入安装向导（首选域名访问方式）
    
@@ -49,22 +47,20 @@ tags:
 7. 后台界面
      ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/pydio/pydio-bk-websoft9.png)
 
-### 出现问题？
+### Having trouble?
 
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
 
-## Pydio Cells 使用入门
+## Pydio Cells QuickStart
 
 下面以 **Pydio Cells 构建文档管理系统** 作为一个任务，帮助用户快速入门：
 
+## Pydio Cells Setup
 
-## Pydio Cells 常用操作
+## Reference sheet{#parameter}
 
-
-## 参数{#parameter}
-
-Pydio Cells 应用中包含 Nginx, Docker, MySQL, phpMyAdmin 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Pydio Cells
 
 通过运行`docker ps`，可以查看到 Pydio Cells 运行时所有的 Container：
 
@@ -72,30 +68,29 @@ Pydio Cells 应用中包含 Nginx, Docker, MySQL, phpMyAdmin 等组件，可通�
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
 ```
 
-
 下面仅列出 Pydio Cells 本身的参数：
 
-### 路径{#path}
+### Path{#path}
 
-Pydio Cells 安装目录： */data/wwwroot/cells*  
+Pydio Cells installation directory： */data/wwwroot/cells*  
 
-### 端口{#port}
+### Port{#port}
 
 无特殊端口
 
-### 版本{#version}
+### Version{#version}
 
 ```shell
 sudo cat /data/logs/install_version.txt
 ```
 
-### 服务{#service}
+### Service{#service}
 
 ```shell
 sudo docker start | stop | restart | stats pydio
 ```
 
-### 命令行{#cli}
+### CLI{#cli}
 
 [Cells Client](https://pydio.com/en/docs/developer-guide/cells-client)
 

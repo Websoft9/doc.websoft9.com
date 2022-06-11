@@ -1,169 +1,167 @@
 ---
 sidebar_position: 1
-slug: /magento
+slug: /magento/readme
 tags:
   - Magento
-  - 电子商务
+  - eCommerce
 ---
 
-# 快速入门
+# Magento Getting Started
 
-[Magento Open Source](https://business.adobe.com/products/magento/open-source.html) 是一个老牌的开源电子商务平台，它满足 B2C 电商入门所需的一切。
+[Magento](https://magento.org) is a Commerce Platform,it is the most popular commerce platform in the world, with more than 250,000 merchants around the globe selling more and driving innovation. Just check out our customer stories to find out how the Magento Advantage really works.
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magentogui-websoft9.png) 
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magentogui-websoft9.png)  
 
-
-部署 Websoft9 提供的 Magento 之后，需完成如下的准备工作：
-
-## 准备
-
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 Magento 的 **[默认账号和密码](./user/credentials)**  
-4. 若想用域名访问  Magento **[域名五步设置](./administrator/domain_step)** 过程
+If you have installed Websoft9 Magento, the following steps is for your quick start
 
 
-## Magento 初始化向导
+## Preparation
 
-### 详细步骤
+1. Get the **Internet IP** on your Cloud Platform
+2. Check you **[Inbound of Security Group Rule](https://support.websoft9.com/docs/faq/tech-instance.html)** of Cloud Console to ensure the **TCP:80** is allowed
+3. **[Get](./user/credentials)** default username and password of Magento  
+4. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for Magento  
 
-Magento 最新版本已经采用命令行完成了安装向导，即可直接使用：
+## Magento Initialization
 
-1. 使用本地电脑浏览器访问网址：http://域名 或 http://服务器公网IP, 可以直接进入商城首页  
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-mall-websoft9.png)
+### Steps for you
 
-2. 访问网址：*http://域名/admin* 或 *http://服务器公网IP/admin*，进入后台登陆页面  
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-login-websoft9.png)
+The latest Magento has used the CLI to complete the installation wizard, so you can use it directly:
 
-3. 输入用户名和密码[获取解锁密码](./user/credentials)，登录到 Magento 后台管理界面  
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-backend-websoft9.png)
+1. Using local browser visit the URL *http://DNS* or *http://Server's Internet IP*, enter to Magento Mall home page 
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-mall-websoft9.png)
 
-> 需要了解更多 Magento 的使用，请参考官方文档：[Magento 用户文档中心](https://magento.com/resources/technical)
+2. Using local browser visit the URL *http://DNS* or *http://Server's Internet IP/admin*, enter to login interface  
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-login-websoft9.png)
 
-### 出现问题？
+3. Login it to Magento console [(Don't know password?)](./user/credentials)  
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-backend-websoft9.png)
 
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
+> Refer to [Magento Docs](https://magento.com/resources/technical) to get more details
 
-**想将 Magento 默认的 MySQL 数据库更换为自己的 RDS？**
+### Having trouble?
 
-执行下面命令可以更换 Magento 所使用的数据库
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.
+
+**Can I use Cloud database for Magento?**
+
+Yes, Use the following command to replace Magento's database.  
 
 ```
 magento setup:config:set --db-host=DB-HOST --db-name=DB-NAME --db-user=DB-USER --db-engine=DB-ENGINE --db-password=DB-PASSWORD
-```
+```  
 
-## Magento 使用入门
+## Magento QuickStart
 
 下面以 **使用 Magento 构建在线商城** 作为一个任务，帮助用户快速入门：
+  
+  
+## Magento Setup
 
+### Magento install modules
 
-## Magento 常用操作
+Below is the methods for you installing modules online
 
-### 安装插件{#installplugin}
-
-建议通过 Magento 后台在线安装扩展：
-
-1. 确保你的 Magento 已经[连接到官方的 Marketplace](#marketplace)
-
-2. 在 Marketplace 找到您需要的扩展或主题，购买完成，点击【Install】
-
-3. 登录 Magento 后台，打开：【SYSTEM】>【Web Setup Wizard】>【System Configration】 
-
-4. 在左侧菜单栏选择【EXTENSION MANAGER】，单击【Refresh】 将购买信息同步到网站，然后通过【Review and Install】查看
-
+1. Make sure your Magento is [Linking Marketplace](/stack-installation.html#link-magento-marketplace)
+2. Search the modules on Marketplace, 【buy】it and【Install】 it
+3. Log in your Magento, open【SYSTEM】>【Web Setup Wizard】>【System Configration】 
+4. On the left memu, click 【EXTENSION MANAGER】>【Refresh】, synchronize the your purchase to your Magento, then【Review and Install】 it
     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-theme-1-websoft9.png)
+   > Refresh not always successful, so please Refresh it repeatedly
+5. Select the modules in the catalog and install it
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-theme-2-websoft9.png)
+6. Magento will check the system environment before installation
+7. If installation is very slowly and have error, please refer to [Troubleshooting](/else-troubleshooting.html#magento-upgrade-or-install-module-failed)
 
-   > Refresh 可能会出现同步失败，请多次刷新
+### Link Magento Marketplace
 
-5. 在列表内选择插件或主题，即可进行安装
+Completed installation of Magento, suggest you make your Magento system link Magento's Marketplace. Once you have linked it, you can use many resourses on Marketplace.
 
-6. 安装时会进行系统环境检查，条件全面满足才可以开始安装
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setuptools-websoft9.png)  
 
-7. 安装过程时间较长且报错，请查看[故障原因](./magento/admin##updateerror)
+1. [Register a Magento Account](https://account.magento.com/applications/customer/login)
+2. Log in to Magento's Marketplace, create your **Access Key** from My Profile setting
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-1-websoft9.png)  
+3. Save Access Key
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-savemykey-websoft9.png)  
+4. Log in your Magento backend, open **SYSTEM** > **Web Setup Wizard**
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-websetupwz-websoft9.png) 
+5. Fill in the **System config** with your Access Key from Marketplace
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setmkkey-websoft9.png) 
+6. Save it, and wait for the Waiting for a successful connection
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setmkkeyss-websoft9.png) 
+7. Then, you can use the resources of Marketplace online
 
-### 连接 Magento Marketplace{#marketplace}
+### Magento set language
 
-安装 Magento 后，建议把你安装的 Magento 系统与 Magento 官方的 Marketplace 资源进行在线连接，这样便可以使用 Marketplace 上的大量资源
-
-![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setuptools-websoft9.png)  
-
-1. 到官方 [注册 Magento 账号](https://account.magento.com/applications/customer/login)
-
-2. 登录 Marketplace，打到My Profile 的 Access Keys 页面新建一个自己的 Access Key; 
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-1-websoft9.png)  
-
-3. 保存 Access Key
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-savemykey-websoft9.png)  
-
-4. 登录自己的 Magento 后台，依次打开：【SYSTEM】> 【Web Setup Wizard】
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-websetupwz-websoft9.png) 
-
-5. 在【System config】设置项中输入你在 Marketplace 上获取的 Access Key
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setmkkey-websoft9.png) 
-
-6. 成功保存，连接成功
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setmkkeyss-websoft9.png) 
-
-7. 连接后，就可以很方便的使用 Marketplace 上的资源
-
-### 安装中文包{#setlanguage}
-
-中文包 zh_Hans_CN 已经存在 [Magento 多语言目录](#path)中 
-
-需要启用中文请完成如下两个步骤：
-
-1.  如果你希望你的前台是中文，进入到Magento管理员界面，后台 Stores > Configuration > General > Local 中设置Local为Chinese(China)
+1. Download language package
+1. Set language for Magento front page: go to Stores > Configuration > General > Local
     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setlan-websoft9.png)
+2. Set language for Magento backend page: go to Account Setting > Interface Local
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-adminlanguages-websoft9.png)
 
-2.  如果你希望你的账户后台是中文，那么请在管理员页面右上角点击你的账户 Account Setting > Interface Local 中设置 Interface Local 为Chinese（China）
+### Magento Cache
 
-### 刷新缓存
+Cache is a important function for Magento
 
-Cache（缓存）是 Magento 的一项重要设置：
-
-1. 登录 Magento 后台，依次打开：【System】>【Tools】> 【Cache Management】
-2. 选择需要刷新的缓存
-3. 点击【Flush Magento Cache】和【Flush Cache Storage】开始刷新
+1. Log in Magento, go to【System】>【Tools】> 【Cache Management】
+2. Select items
+3. Click 【Flush Magento Cache】and【Flush Cache Storage】to start 
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-flushcache-websoft9.png)
-4. 也可以取消一些页面的缓存设置
+4. You can cancel cache from here
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-dscache-websoft9.png)
 
-### 配置 SMTP{#smtp}
+### SMTP
+  
+Sending mail is a common feature for Magento. With a large number of users' practice and feedback, only one way is recommended, that is, using the **third-party SMTP service** to send the email.
 
-1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数 
+> Do not try to install **Sendmail** or other Mail server software on your Cloud Server for sending mail, because it has great difficulty in maintenance.
 
-2. 确保你的 Magento 已经[连接到官方 Marketplace](#marketplace)
+Taking **SendGrid's SMTP Service** as an example, refer to the following steps to configure sending mail:
 
-3. 使用 SSH 工具登录到服务器，使用命令方式安装 Magento SMTP 扩展
+1. Log in SendGrid console, and prepare your SMTP settings.
+   ```
+   SMTP host: smtp.sendgrid.net
+   SMTP port: 25 or 587 for unencrypted/TLS email, 465 for SSL-encrypted email
+   SMTP Authentication: must be checked
+   SMTP Encryption: must SSL
+   SMTP username: websoft9smtp
+   SMTP password: #fdfwwBJ8f    
+   ```
+2. Make sure your Magento is [linking Magento's Marketplace](/stack-installation.html#link-magento-marketplace)
+3. Connect Server, use below commands for installing Magento SMTP module
    ```
     cd /data/wwwroot/magento` 
 	composer require mageplaza/module-smtp
 	php bin/magento setup:upgrade 
 	php bin/magento setup:di:compile
    ```
-   如果不会使用命令，请直接在 Marketplace 上购买 SMTP 插件
+   If you don't want to use command, you can buy it from Marketplace and install it
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtpplugin-websoft9.png)
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-buysmtpplugin-websoft9.png)
 
-4. 登录到 Magento 后台，完成 SMTP 参数设置  
-   - 点击**MAGEPLAZA**，在右边菜单选择**应用配置管理**;  
-     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-2-websoft9.png)
+4. Log in Magento backend, configure SMTP  
+   - Click **MAGEPLAZA** to start settings
+     ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-smtp-2-websoft9.png)
 
-   - 按照下图输入相应的信息
-     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-3-websoft9.png)
+   - Setting details
+     ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-smtp-3-websoft9.png)
 
-5. 登录到 Magento 后台，设置发件箱
-   - 首先进入应用配置管理页面:  
+5. Log in Magento backend, set send from and send to Email address
+   - Click **MAGEPLAZA** to start settings
      ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-4-websoft9.png)
-   - 按照下图设置邮箱：  
+   - Set it   
      ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-5-websoft9.png)
      
 
-### 域名额外配置（修改 URL） {#dns}
+More SMTP Service(Gmail, Hotmail, QQ mail, Yahoo mail, SendGrid and so on)  settings or Issues with SMTP, please refer to Websoft9's *[SMTP Guide](https://support.websoft9.com/docs/faq/tech-smtp.html)*
+     
 
-**[域名五步设置](./administrator/domain_step)** 完成后，需设置 Magento URL:
+### DNS Additional Configure（Modify URL）{#dns}
 
-通过SSH连接云服务器，运行下面的 CLI 命令进行参数配置
+Complete **[Five steps for Domain](./administrator/domain_step)** ，Set the URL for Magento :
+
+Connect to server via SSH and run  CLI commands to configure parameters
    
    ```shell
    cd /data/wwwroot/magento
@@ -173,7 +171,7 @@ Cache（缓存）是 Magento 的一项重要设置：
 
 ### HTTPS 额外设置{#https}
 
-**[标准 HTTPS 配置](./administrator/domain_https)** 完成后，还需运行下面的 CLI 命令进行配置：
+**[标准 HTTPS 配置](../administrator/domain_https)** 完成后，还需运行下面的 CLI 命令进行配置：
 
 ```
 cd /data/wwwroot/magento
@@ -181,9 +179,9 @@ php bin/magento setup:store-config:set --use-secure=1 --use-secure-admin=1 --bas
 php bin/magento cache:flush  #将基础URL更改为https并刷新缓存
 ```
 
-## 参数{#parameter}
+## Reference sheet
 
-Magento 应用中包含Apache, Nginx, Docker, MySQL, phpMyAdmin, Varnish, RabbitMQ, Elasticsearch等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Magento
 
 通过运行`docker ps`，可以查看到 Magento 运行时所有的 Container：
 
@@ -191,36 +189,37 @@ Magento 应用中包含Apache, Nginx, Docker, MySQL, phpMyAdmin, Varnish, Rabbit
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
 ```
 
-
-下面仅列出 Magento 本身的参数：
-
-### 路径{#path}
-
-Magento 安装目录： */data/wwwroot/magento*  
-Magento 配置文件： */data/wwwroot/magento/app/etc/env.php*  
+### Path{#path}
+  
+Magento installation directory: */data/wwwroot/magento*  
+Magento configuration file: */data/wwwroot/magento/app/etc/env.php*  
 Magento 多语言目录： */data/wwwroot/magento/vendor/magento/language-zh_hans_cn*   
 Magento 命令行工具：* /data/wwwroot/magento/bin/magento*  
-
-
+  
 > Magento 配置文件中包含数据库连接信息，更改了 MySQL 数据库账号密码，此处也需要对应修改
+  
+### Port{#port}
 
-### 端口{#port}
+| Port | Use                                          | Necessity |
+| ------ | --------------------------------------------- | ------ |
+| 3306 | Remote connect MySQL | Optional |
+| 80 | HTTP requests for Magento | Required |
+| 443 | HTTPS requests Magento | Optional |
 
-无特殊端口
 
-### 版本{#version}
+### Version{#version}
 
 ```shell
 magento -V
 ```
 
-### 服务{#service}
+### Service{#service}
 
 ```shell
 systemctl start | stop | restart | status magento
 ```
 
-### 命令行{#cli}
+### CLI{#cli}
 
 ```
 $ /data/wwwroot/magento/bin/magento list
@@ -389,6 +388,6 @@ Available commands:
 
 ### API
 
-Magento API 支持 REST（表述性状态传递）和 SOAP（简单对象访问协议）。 在 Magento 2 中，REST 和 SOAP 的 Web API 覆盖范围是相同的。
+Support for both REST (Representational State Transfer) and SOAP (Simple Object Access Protocol). In Magento 2, the web API coverage is the same for both REST and SOAP.
 
-参考[官方文档](https://devdocs.magento.com/guides/v2.2/get-started/bk-get-started-api.html)
+Refer to Magento [API official docs](https://devdocs.magento.com/guides/v2.2/get-started/bk-get-started-api.html)

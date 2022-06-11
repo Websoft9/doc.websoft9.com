@@ -2,90 +2,93 @@
 sidebar_position: 1
 slug: /parseserver
 tags:
-  - Node
-  - 平台即服务
+  - Parse Server
+  - PaaS
   - Serverless
 ---
 
-# 快速入门
+# Parse Server Getting Started
 
-[Parse Server ](https://parseplatform.org/) 基于 Node 的后端即服务平台。它通过对象和文件存储、用户身份验证、推送通知、仪表板等， 更快地构建应用程序。
+[Parse Server ](https://parseplatform.org/) is an open source backend or an API server module that can be deployed to any infrastructure that can run Node.js.
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/en/parseserver/dashboard.png)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/parseserver/dashboard.png)  
 
-部署 Websoft9 提供的 Parse Server 之后，请参考下面的步骤快速入门。
+If you have installed Websoft9 Parse Server, the following steps is for your quick start
 
-## 准备
+## Preparation
 
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 Parse Server 的 **[默认账号和密码](./user/credentials)**  
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:80,9091** is allowed
+3. **[Get](./user/credentials)** default username and password of Parse Server
+4. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for Parse Server  
+  
+## Parse Server Initialization
 
+### Steps for you
+  
+Since Parse cannot be visited by IP, so your should bind Domain name for it first  
+Refer to [Domain binding](./administrator/domain_step) to complete it now
 
-## Parse Server 初始化向导
+1. Using local Chrome or Firefox to visit the URL *http://domain name*, go to login Parse Dashboard 
+   ![Parse Dashboard login](https://libs.websoft9.com/Websoft9/DocsPicture/en/parseserver/ParseServer-loginpage-websoft9.png)
 
+2. Input username and password([view credentials](./user/credentials)) and go to the Console page
+   ![Parse Dashboard console gui](https://libs.websoft9.com/Websoft9/DocsPicture/en/parseserver/parse-backend-websoft9.png)
 
-### 详细步骤
+3. Suggest you to modify the Parse Dashboard's password now
 
+> More useful Parse Server guide, please refer to [Parse Server Documentation](https://docs.parseplatform.org) 
 
-1. 由于 Parse 不可通过 IP 访问，故务完成 **[域名解析](./administrator/domain_step)** 和 **[域名绑定](#binddomain)**
+### Having trouble?
 
-2. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名*  就进入 Parse Dashboard 登录页面
-![Parse Dashboard 登录](https://libs.websoft9.com/Websoft9/DocsPicture/en/parseserver/ParseServer-loginpage-websoft9.png)
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
-3. 输入账号和密码，登录后的界面如下
-![Parse Dashboard 后台界面](https://libs.websoft9.com/Websoft9/DocsPicture/en/parseserver/parse-backend-websoft9.png)
+## Parse Server QuickStart
+  
+More guide about Parse Server, please refer to [Parse Server Documentation](https://docs.parseplatform.org)
 
+## Parse Server Setup
 
-### 出现问题？
+Each of the following solutions has been proven to be effective and we hope to be helpful to you.
 
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题。
+### Domain binding
 
-## Parse Server 使用入门
+Please complete the **domain name resolution** work before the domain name is bound, and confirm that the resolution is successful.
 
-> 需要了解更多 Parse 的使用，请参考官方文档：[Parse Server Documentation](https://docs.parseplatform.org/)
+Parse Server domain name binding steps:
 
-
-## Parse Server 常用操作
-
-### 域名绑定{#binddomain}
-
-Parse 需绑定不同的子域名，例如：*parseserver.yourdomain.com* 和 *parsedashboard.yourdomain.com* 
-
-Parse Server 域名绑定操作步骤：
-
-1. 使用 SSH 连接云服务器，运行如下一条命令：
+1. Use SSH to connect your Cloud Server and run the following command
    ``` shell
    wget https://raw.githubusercontent.com/Websoft9/ansible-Parse-Server/master/script/parse-set-domain.sh && chmod +x parse-set-domain.sh &&./parse-set-domain.sh
    ```
-2. 根据提示输入两个不同的域名，回车
+2. Enter two different domain names as prompted
    ```   
    Input Parse Server Domain: parseserver.websoft9.com
    Input Parse Dashboard Domain: parsedashboard.websoft9.com
    ```
-3. 如果域名格式没有问题，会得到成功提示"Configure Done!"
-4. 绑定完成
+3. If there is no problem with the domain name format, you will get a success message "Configure Done!"
+4. Domain binding completed
+  
+## Domain modify
 
-### 域名修改
+Modifying a domain name is different from binding a domain name. Please strictly refer to the following steps:
 
-修改域名不同于绑定域名，请严格参考下面的步骤：
-
-1. 使用 SFTP 工具连接云服务器
-2. 修改 */etc/nginx/conf.d/default.conf* 文件中两个域名信息
-3. 修改 */etc/parse-server/parse-dashboard.json* 文件中的域名信息
-4. 重启服务后生效
+1. Using SFTP to connect Cloud Server
+2. Modify the the two Domain name in the file */etc/nginx/conf.d/default.conf* 
+3. Modify the the one Domain name in the file */etc/parse-server/parse-dashboard.json* 
+4. Restart Service like below
    ```
    sudo systemctl restart parse-dashboard
    sudo systemctl restart parse-server
    sudo systemctl restart nginx
    ```
+  
+## Modify Parse Dashboard Credentials
 
-### 修改 Parse Dashboard 账号密码
+Parse Dashboard's credentials is in its configuration file, refer to the following steps to modify it
 
-Parse Dashboard的账号密码存在它的配置文件中，修改步骤如下： 
-
-1. 通过 SSH 工具连接到云服务器
-2. 编辑 * /etc/parse-server/parse-server.json*，修改其中的 **users** 项
+1. Use SSH or SFTP tool to connect Cloud Server
+2. Edit * /etc/parse-server/parse-server.json* file and modify **users** item
    ```
     "users": [
     {
@@ -93,56 +96,55 @@ Parse Dashboard的账号密码存在它的配置文件中，修改步骤如下�
       "pass":"admin"
     } ]
    ```
-3. 重启 Parse Dashboard 服务后生效
+3. Restart Parse Dashboard Service
    ```
    systemctl restart parse-dashboard
-   ```
+   ```  
+  
+## Reference sheet
 
-## 参数
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Parse Server
 
-Parse Server 应用中包含 Nginx, Docker, MongoDB, adminMongo 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+### Path{#path}
+  
+**Parse Server**
 
-通过运行 `docker ps`，可以查看到 Parse Server 运行时所有的 Container：
+Parse Server  installation directory: */usr/lib/node_modules/parse-server*  
+Parse Server  configuration file: */etc/parse-server/parse-server.json*  
+Parse Server  logs directory: */var/log/parse-server*  
 
-```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
-```
+> The database connection information is in the Parse Server configuration file, once you have changed the database you should change the configuration also
 
+**Parse Dashboard**
 
-下面仅列出 Parse Server 本身的参数：
+Parse Dashboard  installation directory: */usr/lib/node_modules/parse-server*  
+Parse Dashboard  configuration file: */etc/parse-server/parse-server.json*  
+Parse Dashboard  logs: *you can view the logs on the Parse Dashboard Console*
 
-### 路径{#path}
-
-#### Parse Server 
-
-Parse Server  程序目录： */usr/lib/node_modules/parse-server*  
-Parse Server  配置文件： */etc/parse-server/parse-server.json*  
-Parse Server  日志目录： */var/log/parse-server*  
-
-> Parse Server 配置文件中包含数据库连接信息，更改了 MongoDB 账号密码，此处也需要对应修改
-
-#### Parse Dashboard
-
-Parse Dashboard  程序目录： */usr/lib/node_modules/parse-server*  
-Parse Dashboard  配置文件： */etc/parse-server/parse-server.json*  
-Parse Dashboard  日志文件： *直接在 Parse Dashboard 面板中查看*  
+### Port{#port}
 
 
-### 版本
+| Port | Use                                          | Necessity |
+| ------ | --------------------------------------------- | ------ |
+| 80 | HTTP requests for Parse Server  | Required |
+| 443 | HTTPS requests Parse Server  | Optional |
+| 20217 | Remote connect MongoDB | Optional |
+| 9091 | Web managment GUI for MongoDB | Optional |
 
-控制台界面中查看
+### Version{#version}
 
-### 服务
+You can see the version from product page of Marketplace.
+
+### Service{#service}
 
 ```shell
-sudo systemctl start | stop | restart | status parse-server
+sudo systemctl start | stop | restart | status parse-server 
 sudo systemctl start | stop | restart | status parse-dashboard
 ```
-### 命令行
 
-无
+### CLI{#cli}
+
 
 ### API
 
 [Parse API](https://docs.parseplatform.org/parse-server/guide/#using-parse-sdks-with-parse-server)
-

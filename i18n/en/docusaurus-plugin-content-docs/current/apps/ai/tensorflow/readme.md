@@ -3,86 +3,85 @@ sidebar_position: 1
 slug: /tensorflow
 tags:
   - TensorFlow
-  - 人工智能
-  - 机器学习
+  - AI
+  - ML
 ---
 
-# 快速入门
+# TensorFlow Getting Started
 
-[TensorFlow](https://www.tensorflow.org/) 是一个端到端开源机器学习平台。它拥有一个全面而灵活的生态系统，其中包含各种工具、库和社区资源。在机器学习方面，它可以轻松地构建模型、随时随地进行可靠的机器学习生产、进行强大的研究实验。
+[TensorFlow](https://www.tensorflow.org/) is an end-to-end open source machine learning platform. It has a comprehensive and flexible ecosystem, which contains a variety of tools, libraries and community resources. In terms of machine learning, it can easily build models, carry out reliable machine learning production anytime and anywhere, and conduct powerful research experiments.
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/tensorflow/tensowflow-gui-websoft9.jpg)
 
-## 准备
+## Preparation
 
-部署 Websoft9 提供的 TensorFlow 之后，需完成如下的准备工作：
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:6006,80** is allowed
+3. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for TensorFlow
+4. [Get](./user/credentials) default username and password of TensorFlow
 
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:6006** 端口已经开启
-3. 在服务器中查看 TensorFlow 的 **[默认账号和密码](./user/credentials)**  
-4. 若想用域名访问  TensorFlow **[域名五步设置](./administrator/domain_step)** 过程
+## TensorFlow Initialization
 
+### Steps for you
 
-## TensorFlow 初始化向导{#init}
-
-### 详细步骤
-
-1. 使用 SSH 登录服务器后，查看 TensorFlow 服务状态
+1. Use SSH to connect Server, run the following command to check the status of TensorFlow
    ```
    sudo systemctl status tensorflow
    ```
-2. 使用本地电脑的浏览器访问网址：*http://域名:6006* 或 *http://服务器公网IP:6006*, 进入登陆页面
 
-3. 输入账号密码（[不知道账号密码？](./user/credentials)），成功登录到 TensorBoard
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/tensorflow/tensorflow-board-websoft9.png)
-
-> 需要了解更多 TensorFlow 的使用，请参考官方文档：[TensorFlow Documentation](https://www.tensorflow.org/learn)
+2. Using local Chrome or Firefox to visit the URL http://DNS:6006 or http://Internet IP:6006 to access TensorBoard
 
 
-### 出现问题？
-
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
-
-**使用 TensorFlow 的时候为什么需要先 `source /data/apps/tensorflow/bin/activate` ?**
-
-本部署方案中 TensorFlow 使用的 Python 隔离环境安装
+ > More useful TensorFlow guide, please refer to [TensorFlow Documentation](https://www.tensorflow.org/learn)
 
 
-## TensorFlow 使用入门
+### Having trouble?
 
-下面以 **运行一个 TensorFlow 范例，演示它的计算结果** 作为一个任务，帮助用户快速入门：
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
-1. 使用 SSH 连接到服务器，运行下面的命令
+**Why should I run `source /data/apps/tensorflow/bin/activate`?**
+
+This TensorFlow used Python environment for deployment
+
+
+## TensorFlow QuickStart
+
+Now, we run a TensorFlow sample for quick start:
+
+1. Use SSH to connect Server, running the sample script by the following commands
    ```
    cd /data/apps/tensorflow
    source /data/apps/tensorflow/bin/activate
    python tensorflow_test.py
    ```
-2. 登录到 TensorBoard，此时页面已经有运行的内容
+
+2. Login to TensorBoard, you can see the graph changed
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/tensorflow/tensorflow-simpletest-websoft9.png)
 
 
-## TensorFlow 常用操作
+## TensorFlow Setup
 
-### 密码管理
+### TensorBoard Password
 
-本部署方案通过 Nginx 验证访问控制 TensorBoard 的访问。修改密码的方案参考：[Nginx .auth_basic 认证](./nginx#authbasic)
+This deployment solution use the Nginx htpasswd for TensorBoard authentication, refer to [Nginx .auth_basic](./nginx#authbasic)
 
-### 图形化工具 - TensorBoard
+### Web-based GUI - TensorBoard
 
-[TensorBoard](https://www.tensorflow.org/tensorboard/) 是 Tensorflow 的官方提供的可视化工具，它对 Tensorflow 日志文件进行程序状态的可视化分析。
 
-1. 使用本地电脑的浏览器访问网址：*http://域名:6006* 或 *http://服务器公网IP:6006*, 进入登陆页面
+[TensorBoard](https://www.tensorflow.org/tensorboard/) is the TensorFlow's visualization toolkit, TensorBoard provides the visualization and tooling needed for machine learning experimentation:
 
-2. 输入账号密码（[不知道账号密码？](./user/credentials)），成功登录到 TensorBoard
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/tensorflow/tensorflow-board-websoft9.png)
+1. Use local browser to access the URL *http://DNS:6006* or *http://Server's Server's Internet IP:6006* to login
 
-3. TensorBoard 工作台
+2. Input username and password ([Don't have password?](./user/credentials)), you can see the console of TensorBoard
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/tensorflow/tensorflow-board-websoft9.png)
+
+3. TensorBoard screenshots
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/tensorflow/tensorboard.gif)
 
-## 参数{#parameter}
+## Reference sheet
 
-TensorFlow 应用中包含 Python, Nginx, Docker 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage TensorFlow 
+
 
 通过运行`docker ps`，可以查看到 TensorFlow 运行时所有的 Container：
 
@@ -93,13 +92,13 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 下面仅列出 TensorFlow 本身的参数：
 
-### 路径{#path}
+### Path{#path}
 
-TensorFlow 安装目录： */data/apps/tensorflow*  
+TensorFlow installation directory： */data/apps/tensorflow*  
 TensorFlow 日志目录： */data/logs/tensorflow*  
 TensorFlow 配置目录： */data/apps/tensorflow/conf*  
 
-### 端口{#port}
+### Port{#port}
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
@@ -107,20 +106,20 @@ TensorFlow 配置目录： */data/apps/tensorflow/conf*
 
 
 
-### 版本{#version}
+### Version{#version}
 
 ```shell
 /data/apps/tensorflow/bin/tensorboard --version_tb
 ```
 
-### 服务{#service}
+### Service{#service}
 
 ```shell
 sudo systemctl start | stop | restart tensorflow
 
 ```
 
-### 命令行{#cli}
+### CLI{#cli}
 
 TensorFlow 提供了强大的的命令行工具 `tfx`，执行下列命令可安装：
 

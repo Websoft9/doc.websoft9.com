@@ -7,15 +7,47 @@ tags:
   - CRM
 ---
 
-# 维护指南
+# SuiteCRM Maintenance
 
-本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup) 相关章节。
+This chapter is special guide for SuiteCRM maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-## 场景
+## Maintenance guide
 
-## 故障排除
+### SuiteCRM Backup
 
-除以下列出的 SuiteCRM 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。
+**Set Automatic Backup**
+
+SuiteCRM have the Backups interface
+
+1. Log into your existing SuiteCRM application as the administrator and click admin on the right-hand corner of the page.
+2. System->Backups
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-backupfunction-websoft9.png)
+
+3. Input the backup directory adn Filename,then click the “Confirm Settings”
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-backup-websoft9.png)
+
+4. Settings confirmed. Press "run backup" to perform the backup.
+5. Now,your backup file has been generated
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-backupfiles-websoft9.png)
+
+### SuiteCRM Upgrade
+
+The Upgrade Wizard provides a quick way to upgrade to the latest version of the SuiteCRM application. It includes critical upgrade logic as well as the SQL commands needed to upgrade the application. Ensure that the config.php file for your installation, located in the SuiteCRM root directory, is writable, before using the Upgrade Wizard. Note: Manual upgrades by file replacements and running the upgrade SQL are not supported.
+
+1. Download the appropriate SuiteCRM Upgrade zip file from the SuiteCRM website or GitHub Repository to your local machine.
+
+2. Log into your existing SuiteCRM application as the administrator and click admin on the right-hand corner of the page.
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-upgradewz-websoft9.png)
+
+3. Click Upgrade Wizard in the Systems panel of the Administration Home page.
+
+
+> Refers to the [SuiteCRM Documentation](https://docs.suitecrm.com/) to get start your SuiteCRM tutorial
+
+
+## Troubleshoot{#troubleshoot}
+
+In addition to the SuiteCRM issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
 #### SuiteCRM 安装向导连接数据库步骤，点击【Next】没有任何反应？
 
@@ -25,4 +57,4 @@ tags:
 **解决方案**：临时购买一台香港地区的Windows服务器，在这个服务器打开浏览器安装SuiteCRM即可
 
 
-## 问题解答
+## FAQ{#faq}

@@ -6,23 +6,33 @@ tags:
   - Cloud Native Database
 ---
 
-# 维护参考
+# CouchDB Maintenance
 
-## 场景
+This chapter is special guide for CouchDB maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-### CouchDb 备份
+## Maintenance guide
 
-CouchDB备份涉及到3种不同的文件：数据库文件，配置文件，日志文件。  
+### CouchDb Backup
 
-详情参考官方备份文档：[Backing up CouchDB](https://docs.couchdb.org/en/latest/maintenance/backups.html)
+CouchDB has three different types of files it can create during runtime:Database files，Configuration files，Log files 
+Refer to the official docs：[Backing up CouchDB](https://docs.couchdb.org/en/latest/maintenance/backups.html)
 
-### CouchDB 升级
+### CouchDB Upgrade
 
-详情参考官方升级文档：[Upgrading CouchDB](https://docs.couchdb.org/en/latest/install/upgrading.html)
+Refer to the official docs: [Upgrading CouchDB](https://docs.couchdb.org/en/latest/install/upgrading.html)
 
-## 故障排除{#troubleshoot}
+## Troubleshoot{#troubleshoot}
 
-除以下列出的 CouchDB 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
+In addition to the CouchDb issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
+#### CouchDB service can't start?
 
-## 问题解答
+1. Execute `systemctl status couchdb` and you can see the errors
+
+2. Search the keywords **Failed** or **error** from logs: */data/logs/couchdb-server*
+
+## FAQ{#faq}
+
+#### If there is no domain name, can I deploy CouchDB?
+
+Yes, visit CouchDB by *http://Internet IP/_utils*

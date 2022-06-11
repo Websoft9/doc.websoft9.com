@@ -6,63 +6,70 @@ tags:
   - Cloud Native Database
 ---
 
-# 快速入门
+# RethinkDB Getting Started
 
-[RethinkDB](https://rethinkdb.com) 是一个曾经与 MongoDB 齐名的开源文档（JASON）数据库，目前完全由开源社区驱动。它支持多种数据类型，提供可视化的控制台，很方便部署和构建集群。
+[RethinkDB](https://rethinkdb.com)  is a NoSQL database that stores schemaless JSON documents, it is an open-source database for building realtime web applications.
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rethinkdb/rethinkdb-gui-websoft9.png)
+In addition to being designed from the ground up for realtime apps, RethinkDB offers a flexible query language, intuitive operations and monitoring APIs, and is easy to setup and learn.
 
-## 准备
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/rethinkdb/rethinkdb-gui-websoft9.png)
 
-部署 Websoft9 提供的 RethinkDB 之后，需完成如下的准备工作：
+If you have installed Websoft9 RethinkDB, the following steps is for your quick start
 
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 RethinkDB 的 **[默认账号和密码](./user/credentials)**  
-4. 若想用域名访问  RethinkDB，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
+## Preparation
 
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:80** is allowed
+3. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for RethinkDB
+4. [Get](./user/credentials) default username and password of RethinkDB
 
-## RethinkDB 初始化安装向导
+## RethinkDB Initialization
 
-### 详细步骤
+### Steps for you
 
-1. 使用本地电脑的浏览器访问网址：*http://域名* 或 *http://服务器公网IP*，准备登陆 RethinkDB 控制台
+1. Using local browser to visit the RethinkDB login page URL *http://DNS* or *http://Server's Internet IP* 
 
-2. 输入[用户名和密码](./user/credentials)，成功登录到 RethinkDB 后台  
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rethinkdb/rethinkdb-gui-websoft9.png)
+2. Input the username and password ([Don't have password?](./user/credentials))  
 
-### 出现问题？
+3. You can see the interface of RethinkDB
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/rethinkdb/rethinkdb-gui-websoft9.png)
 
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题。
+### Having trouble?
 
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
-## RethinkDB 使用入门
+## RethinkDB QuickStart
 
-下面以 **演示如何增加 Database 和 Table** 作为一个任务，帮助用户快速入门：
+These steps will show you how to create Database and Table by RethinkDB console:
 
-1. 依次打开：【Tables】>【Add Database】，增加一个数据库
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rethinkdb/rethinkdb-adddb-websoft9.png)
+1. Open: 【Tables】>【Add Database】to create a database
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/rethinkdb/rethinkdb-adddb-websoft9.png)
 
-2. 打开数据库，点击【Add Table】增加表
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rethinkdb/rethinkdb-addtable-websoft9.png)
+2. Click this the database you added and click 【Add Table】
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/rethinkdb/rethinkdb-addtable-websoft9.png)
 
-> 需要了解更多 RethinkDB 的使用，请参考官方文档：[RethinkDB Documentation](https://rethinkdb.com/docs)
+> More useful RethinkDB guide, please refer to [RethinkDB Documentation](https://rethinkdb.com/docs)
 
-## RethinkDB 常用操作
+## RethinkDB Setup
 
 ### 控制台密码管理
 
 RethinkDB 控制台默认没有提供登录认证，本部署方案采用了  [Nginx auth_bacic](./nginx#auth_basic) 作为登录认证方案
 
-### 远程访问{#remote}
+### Remote Connection{#remote}
 
-RethinkDB 远程访问的开关存储在：*/etc/rethinkdb/instances.d/instance.conf* 文件中。  
+RethinkDB remote connection is set from file: */etc/rethinkdb/instances.d/instance.conf*  
 
-只需执行下面命令，然后重启服务，即可开启远程访问。
+1. Add the below line in this file
+   ```
+   bind=0.0.0.0
+   ```
 
-```
-sudo sed -n "s/^#bind=/bind=0.0.0.0/g" /etc/rethinkdb/instances.d/instance.conf
-```
+2. Restart RethinkDB service
+   ```
+   sudo systemctl restart rethinkdb
+   ```
+
 
 ### 用户管理
 
@@ -95,7 +102,7 @@ sudo sed -n "s/^#bind=/bind=0.0.0.0/g" /etc/rethinkdb/instances.d/instance.conf
     r.db('rethinkdb').table('users').get('username').update({password: false})
     ```
 
-### 重置密码
+### Reset Password
 
 常用的 RethinkDB 重置密码相关的操作主要有修改密码和清空密码（将密码设置为空）两种方式。  
 
@@ -112,27 +119,33 @@ sudo sed -n "s/^#bind=/bind=0.0.0.0/g" /etc/rethinkdb/instances.d/instance.conf
 
 2. 点击【run】后生效
 
+**Reset RethinkDB console password**
 
-### 图形化工具
+Run `htpasswd -b /etc/nginx/.htpasswd admin new_password` command to reset password
 
-RethinkDB 可视化控制台是它的重要组成部分，是其重要的产品特征。  
+### Web-based GUI
 
-1. 使用本地电脑的浏览器访问网址：*http://服务器公网IP*，准备登陆 RethinkDB 控制台
+RethinkDB provides a web interface which lets you manage your entire server cluster, from controlling sharding and replication to running ReQL queries (in JavaScript), with editing and history support. 
 
-2. 输入用户名和密码（[不知道账号密码？](./user/credentials)）
+1. Using local browser to visit the RethinkDB login page URL *http://DNS* or *http://Server's Internet IP* 
 
-3. 成功登录到 RethinkDB 后台  
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rethinkdb/rethinkdb-ok-websoft9.png)
+2. Input the username and password ([Don't have password?](./user/credentials))  
 
-4. 依次打开：【Tables】>【Add Database】，增加一个数据库
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rethinkdb/rethinkdb-adddb-websoft9.png)
+3. You can see the interface of RethinkDB
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/rethinkdb/rethinkdb-gui-websoft9.png)
 
-5. 打开数据库，点击【Add Table】增加表
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rethinkdb/rethinkdb-addtable-websoft9.png)
+4. Open: 【Tables】>【Add Database】to create a database
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/rethinkdb/rethinkdb-adddb-websoft9.png)
 
-## RethinkDB 参数
+5. Click this the database you added and click 【Add Table】
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/rethinkdb/rethinkdb-addtable-websoft9.png)
 
-RethinkDB 应用中包含 Nginx, Docker 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+
+
+## Reference sheet
+
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage RethinkDB 
+
 
 通过运行`docker ps`，可以查看到 RethinkDB 运行时所有的 Container：
 
@@ -143,34 +156,35 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 下面仅列出 RethinkDB 本身的参数：
 
-### 路径{#path}
+### Path{#path}
 
 * RethinkDB 配置文件： */etc/rethinkdb/instances.d/instance.conf *
 
-### 端口
+### Port
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
 | 8080   | RethinkDB 控制台原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
 | 28015 | RethinkDB connect | 可选   |
 
-### 版本
+### Version
 
 ```shell
 rethinkdb --version
 ```
 
-### 服务
+### Service
 
 ```shell
 sudo systemctl start | stop | restart | status rethinkdb
 ```
 
-### 命令行
+### CLI
 
-#### 服务端
+**Server**
 
-RethinkDB 提供了强大的的**服务端**命令行工具 `rethinkdb`  
+RethinkDB provide administrator CLI tool `rethinkdb`. In addition, you can perform administration tasks using scriptable ReQL commands.
+
 
 ```
 $rethinkdb -h
@@ -314,7 +328,7 @@ There are a number of subcommands for more specific tasks:
 For more information, run 'rethinkdb help [subcommand]'.
 ```
 
-#### 客户端
+**Client**
 
 RethinkDB 官方没有客户端 CLI，但提供了Python, Java, Node 等开发语言的 [RethinkDB client drivers](https://rethinkdb.com/docs/install-drivers/)。  
 

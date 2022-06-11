@@ -6,30 +6,29 @@ tags:
   - DevOps
 ---
 
-# 快速入门
+# SQLite Getting Started
 
-[SQLite](https://sqlite.org) 是一个 C 语言库，它实现了一个小型、快速、自包含、高可靠性、功能齐全的 SQL 数据库引擎。SQLite 是世界上使用广泛的数据库引擎之一。SQLite 内置于所有手机和大多数计算机中，并捆绑在人们每天使用的无数其他应用程序中。
+[SQLite](https://sqlite.org) is a C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine. SQLite is the most used database engine in the world. SQLite is built into all mobile phones and most computers and comes bundled inside countless other applications
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlite/sqlite-gui-websoft9.png)
-
-
-## 准备
-
-部署 Websoft9 提供的 SQLite 之后，需完成如下的准备工作：
-
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:9090** 端口已经开启
-3. 在服务器中查看 SQLite 的 **[默认账号和密码](./user/credentials)**  
-4. 若想用域名访问  SQLite，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/sqlite/sqlite-gui-websoft9.png)
 
 
-## SQLite 初始化向导
+If you have installed Websoft9 SQLite, the following steps is for your quick start
 
-### 详细步骤
+## Preparation
 
-1. 使用 SSH 工具，连接到服务器
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:9090** is allowed
+3. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for SQLite
+4. [Get](./user/credentials) default username and password of SQLite
 
-2. 运行 `sqlite3` 命令，显然类型下面的结果，即表明运行正常
+## Jenkins Initialization
+
+### Steps for you
+
+1. Use **SSH** tool to connect Instance
+
+2. Running the command `sqlite3`, you can see the below information
    ```
    [root@VM-0-11-centos ~]# sqlite3
    SQLite version 3.29.0 2019-07-10 17:32:03
@@ -38,23 +37,22 @@ tags:
    Use ".open FILENAME" to reopen on a persistent database.
    sqlite>
    ```
+3. Verify [SQLite Web-based GUI](#gui) tool
 
-3. 验证 [SQLite 可视化](#gui)管理工具
+> More guide about SQLite, please refer to [SQLite Documentation](https://sqlite.org/docs.html).
 
-> 需要了解更多 SQLite 的使用，请参考官方文档：[SQLite 教程](https://www.sqlite.net.cn/tutorial/2.html)
+### Having trouble?
 
-### 出现问题？
-
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题。
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
 
-## SQLite 使用入门
+## SQLite QuickStart
 
 下面以 **SQLite 程序连接** 作为一个任务，帮助用户快速入门：
 
-## SQLite 常用操作
+## SQLite Setup
 
-### 程序连接
+### Connect Database to Application
 
 开发需要连接 SQLite，首先需要保证已经安装了对应的 SQlite 连接模块：
 
@@ -82,21 +80,21 @@ tags:
 ?>
 ```
 
-### 图形化工具{#gui}
+### Web-based GUI{#gui}
 
-本部署方案中预装 SQLite 数据库管理工具 `CloudBeaver` 。  
+This deployment solution of SQLite includes web-based GUI tool `CloudBeaver`. 
 
-下面我们完成的介绍如何使用可视化工具管理 SQLite。
+We will show you how to manage SQLite by CloudBeaver below:  
 
-#### 准备
+**Prepare**
 
-1. 使用 SSH 连接 SQLite 所在的服务器，在 [SQLite 数据文件目录](#path)下创建一个数据库
+1. Use **SSH** to connect SQLite instance and create a database at [SQLite data file directory](#path)
    ```
-   # 创建数据库
+   # Create database file
    cd /data/apps/cloudbeaver/volumes
    sqlite3 testDB.db
    
-   # 增加表
+   # Add a table
    sqlite> CREATE TABLE COMPANY(
    ID INT PRIMARY KEY     NOT NULL,
    NAME           TEXT    NOT NULL,
@@ -106,35 +104,35 @@ tags:
    )
    ```
 
-2. 登录云控制台，开启服务器 安全组 9090 端口
+2. Login your Cloud Platform, and Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:9090** is allowed.
 
-3. 完成 [CloudBeaver 初始化](./cloudbeaver)
+3. Complete [CloudBeaver installation wizard](./cloudbeaver)
+
+**Connect Database**
+
+Let's start to connect SQLite if we complete preparation:  
+
+1. Login to CloudBeaver console and open: 【Connection】>【Manual】, select **SQLite**
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-openconn-websoft9.png)
+
+2. Configure it as below and click 【Save】 button
+
+   - **Driver** is SQLite by default
+   - **Connection Name** can by any name if you want
+   - **Database** must use the path as: */opt/cloudbeaver/workspace/* and with filename
+
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-openconnsqlite-websoft9.png)
+
+3. Start to enable SQLite connection, you may need to input database username and password
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-conlogin-websoft9.png)
+
+4. You can see the table you created when you connect SQLite successfully
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-listtable-websoft9.png)
 
 
-#### 配置
+## Reference sheet
 
-完成上述准备工作后，我们开始连接 SQLite 数据库：  
-
-1. 登录 CloudBeaver 控制台，打开：【Connection】>【Manual】，选择 **SQLite**
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-openconn-websoft9.png)
-
-2. 参考下面的建议，设置连接信息，然后点击【Save】
-
-   - Driver 保持默认的 SQLite
-   - Connection Name 设置为一个便于识别的名字即可
-   - Database 为 SQLite 数据库文件的路径，路径前缀必须是：**/opt/cloudbeaver/workspace/**，再接上文件名称
-
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-openconnsqlite-websoft9.png)
-
-3. 设置信息保存后，使用这个 SQLite 连接，输入数据库的账号和密码
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-conlogin-websoft9.png)
-
-4. 成功连接到 SQLite，发现可以看到之前创建的 Company 表
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-listtable-websoft9.png)
-
-## SQLite 参数
-
-SQLite 应用中包含 Nginx, Docker, CloudBeaver 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage SQLite 
 
 通过运行 `docker ps`，可以查看到 SQLite 运行时所有的 Container：
 
@@ -145,56 +143,55 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 下面仅列出 SQLite 本身的参数：
 
-### 路径{#path}
+### Path{#path}
 
 SQLite 可执行程序： */usr/bin/sqlite3*  
 SQLite 数据库文件目录： */data/apps/cloudbeaver/volumes*  
 
-### 端口
+### Port
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
 | 9090   | 通过 HTTP 访问 SQLite 可视化工具台 | 可选   |
 
-### 版本
+### Version
 
 ```shell
 sqlite3 --version
 ```
 
-### 命令行
+### CLI
 
-SQLite 提供了强大的的命令行工具 `sqlite3`  
+SQLite provide `sqlite3` for user
 
-##### 程序命令行
+**Manage command**
 
 ```
-# 创建数据库
+# Create a database
 sqlite3 testDB.db
 
-# 查看帮助
+# Get help
 sqlite3 --help
 
-# 查看版本
+# Check version
 sqlite3 --version
 ```
 
-##### 交互式命令行
+**Interactive command**
 
-以 `sqlite3 testDB.db` 命令，进入 SQLite 运行状态后，开始使用数据库交互式命令行
+Run `sqlite3 testDB.db` command and go to SQLite interactive command status
 
 ```
-# 获取帮助
+# Get help
 sqlite> .help
 
-# 查询数据库列表
+# Check database list
 sqlite> .database
 
-# 附件一个数据库。
-# 数据库名称 main 和 temp 被保留用于主数据库和存储临时表及其他临时数据对象的数据库，不可用于附加
+# Attach a database
 sqlite> ATTACH DATABASE 'myDB.db' as 'TEST'
 
-# 创建表
+# Create table
 sqlite> CREATE TABLE COMPANY(
    ID INT PRIMARY KEY     NOT NULL,
    NAME           TEXT    NOT NULL,
@@ -203,11 +200,9 @@ sqlite> CREATE TABLE COMPANY(
    SALARY         REAL
 )
 
-# 查询表
+# Query table
 sqlite> .tables
-
-````
-
+```
 ### API
 
 

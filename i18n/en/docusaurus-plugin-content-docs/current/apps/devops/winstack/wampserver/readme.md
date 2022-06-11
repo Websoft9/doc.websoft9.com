@@ -258,7 +258,7 @@ WampServer 应用中包含 Apache, PHP, phpMyAdmin, MySQL 等组件，可通过 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wampserver/wampserver-vhost-websoft9.png)
 
 Apache 主配置文件： *C:\websoft9\wampserver\bin\apache\apache2.4.x\conf\httpd.conf*   
-Apache 日志文件： *C:\websoft9\wampserver\logs*  
+Apache logs file： *C:\websoft9\wampserver\logs*  
 Apache 模块目录： *C:\websoft9\wampserver\bin\apache\apache2.4.x\modules*  
 
 **httpd-vhosts.conf** 默认存在一个 [VirtualHost（虚拟主机）](https://support.websoft9.com/docs/windows/zh/webs-apache.html#虚拟主机) 配置项，对应的就是 **示例网站**
@@ -319,7 +319,7 @@ phpMyAdmin 虚拟主机配置文件: *C:\websoft9\wampserver\alias\phpmyadmin.co
 
 ### 版本
 
-在服务器 *C:\websoft9\wampserver* 目录下查看安装目录名称。
+在服务器 *C:\websoft9\wampserver* 目录下查看installation directory名称。
 
 ### 服务
 

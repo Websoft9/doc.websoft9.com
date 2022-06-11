@@ -8,11 +8,6 @@ import HomepageFeatures from '../components/HomepageFeatures';
 import HomepageSearch from '../components/HomepageSearch';
 import Translate, {translate} from '@docusaurus/Translate';
 
-const HeadMeta = {
-  title: "文档与支持",
-  description: "Websoft9（网久软件） 文档与支持中心，通过全面文档以及高效的客户成功团队，快速解决用户在软件安装部署、配置和运维中遇到的问题"
-};
-
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -37,7 +32,7 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title="文档与支持"
+      title= { translate({message:'文档与支持'}) }
       description="Websoft9（网久软件） 文档与支持中心，通过全面文档以及高效的客户成功团队，快速解决用户在软件安装部署、配置和运维中遇到的问题" >
       <HomepageHeader />
       <main>

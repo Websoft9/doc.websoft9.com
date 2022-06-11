@@ -3,201 +3,214 @@ sidebar_position: 1
 slug: /cloudbeaver
 tags:
   - CloudBeaver
-  - 虚拟桌面
-  - 数据库可视化管理工具
+  - Cloud Database Manager
 ---
 
-# 快速入门
+# Jenkins Getting Started
 
-[CloudBeaver Community](https://github.com/dbeaver/cloudbeaver) 是一个开源的 Web 数据库可视化管理工具，前端基于 TypeScript 和 React 编写，支持 PostgreSQL, MySQL, MariaDB, SQL Server, Oracle, DB2, Firebird, H2, Trino 等数据库。
+[CloudBeaver](https://github.com/dbeaver/cloudbeaver) is a web-based database GUI tool which provides rich web interface. Server itself is a Java application, web part is written on TypeScript and React. You can use it to manage PostgreSQL, MySQL, MariaDB, SQL Server, Oracle, DB2, Firebird, H2, Trino 
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-demogui-websoft9.png)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-demogui-websoft9.png)
 
-## 准备
+If you have installed Websoft9 CloudBeaver, the following steps is for your quick start
 
-部署 Websoft9 提供的 CloudBeaver 之后，需完成如下的准备工作：
+## Preparation
 
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 CloudBeaver 的 **[默认账号和密码](./user/credentials)**  
-4. 若想用域名访问  CloudBeaver，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:80** is allowed
+3. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for CloudBeaver
+4. [Get](./user/credentials) default username and password of CloudBeaver
 
-##  CloudBeaver 初始化向导
+## CloudBeaver Initialization
 
-### 详细步骤
+### Steps for you
 
-1. 使用本地电脑浏览器访问：*http://域名* 或 *http://服务器公网IP*, 进入初始化页面
-   ![初始化 CloudBeaver](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-wizard001-websoft9.png)
+1. Use local browser to access the URL *http://Server's Internet IP*. enter to CloudBeaver wizard
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-wizard001-websoft9.png)
 
-2. 设置用户名和密码，然后点击【Next】进入下一步
-   ![初始化 CloudBeaver](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-wizard002-websoft9.png)
+2. Set your username and password, then click 【Next】 button
+   ![init CloudBeaver](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-wizard002-websoft9.png)
 
-3. 继续点击【Next】进入下一步，最后点击【FINISH】完成初始化
-   ![初始化 CloudBeaver](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-wizard003-websoft9.png)
+3. Continue click【Next】 and click 【FINISH】 to complete it
+   ![init CloudBeaver](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-wizard003-websoft9.png)
 
-4. 默认已经存在一个 SQlite 的演示连接
-   ![初始化 CloudBeaver](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-wizard004-websoft9.png)
+4. You can see a SQlite demo connection now
+   ![init CloudBeaver](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-wizard004-websoft9.png)
 
-5. 通过：【Administrator】>【Connection Management】，删除【SQLite - Chinook (Sample)】，避免遭受 SQL 注入攻击
-   ![初始化 CloudBeaver](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-wizard005-websoft9.png)
+5. Go to: 【Administrator】>【Connection Management】, delete【SQLite - Chinook (Sample)】 to avoid security trouble
+   ![初始化 CloudBeaver](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-wizard005-websoft9.png)
 
-6. 再回到主页，默认的 SQLite 演示连接已经不存在
+6. Go to home page, you can't see the SQLite demo now
 
-### 出现问题？
+> More guide about CloudBeaver, please refer to [CloudBeaver Documentation](https://cloudbeaver.io/docs/).
 
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题。
+### Having trouble?
 
-## CloudBeaver 使用入门
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
+
+
+## CloudBeaver QuickStart
 
 > 需要了解更多 CloudBeaver 的使用，请参考[官方文档](https://cloudbeaver.io/docs/)
 
 
+## CloudBeaver Setup
 
-## CloudBeaver 常用操作
+### Manage MySQL
 
-### 管理 MySQL
+**Prepare**
 
-下面介绍如何使用 CloudBeaver 管理 MySQL 数据库
+You should prepare a MySQL service which can be access from you CloudBeaver server.  
 
-##### 准备
+If you don't have MySQL service, you can get it from [MySQL application](https://apps.websoft9.com/cloudbeaver) 
 
-提前准备 MySQL 服务并确保 MySQL 的远程访问已开放。  
+**Settings**
 
-如果没有 MySQL 服务，请通过 [MySQL 应用](https://apps.websoft9.com/cloudbeaver) 快速部署一个自己的 MySQL 服务。
+1. Login to CloudBeaver console and open: 【Connection】>【Manual】, select **MySQL**
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-conmysql001-websoft9.png)
 
-##### 配置
+2. Set the connections: host, port and credential, then click 【Save】button.
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-conmysql002-websoft9.png)
 
-1. 登录 CloudBeaver 控制台，打开：【Connection】>【Manual】，选择 **MySQL**
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-conmysql001-websoft9.png)
+3. Start to enable MySQL connection, you may need to input database username and password
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-conmysql003-websoft9.png)
 
-2. 设置连接信息：主机地址、端口、账号密码（可以勾选是否保存），然后点击【Save】
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-conmysql002-websoft9.png)
+4. You can manage your MySQL when connect successfully now
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-conmysql004-websoft9.png)
 
-3. 设置信息保存后，使用这个 MySQL 连接，输入数据库的账号和密码
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-conmysql003-websoft9.png)
+### Manage PostgreSQL
 
-4. 成功连接到 MySQL，可以开始管理工作
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-conmysql004-websoft9.png)
+Below we will introduce how to manage PostgreSQL by CloudBeaver
+
+**Prepare**
+
+You should prepare a PostgreSQL service which can be access from you CloudBeaver server.  
+
+If you don't have PostgreSQL service, you can get it from [PostgreSQL application](https://apps.websoft9.com/postgresql) 
+
+**Settings**
+
+1. Login to CloudBeaver console and open: 【Connection】>【Manual】, select **PostgreSQL**
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-openconn-websoft9.png)
+
+2. Set the connections: host, port and credential, then click 【Save】button.
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-connsetting-websoft9.png)
+
+3. Start to enable PostgreSQL connection, you may need to input database username and password
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-conlogin-websoft9.png)
+
+4. You can manage your PostgreSQL when connect successfully now
+
+### Manage SQLServer
+
+Below we will introduce how to manage SQLServer by CloudBeaver
+
+**Prepare**
+
+You should prepare a SQLServer service which can be access from you CloudBeaver server.  
+
+If you don't have SQLServer service, you can get it from [SQLServer application](https://apps.websoft9.com/sqlserver) 
+
+**Settings**
+
+1. Login to CloudBeaver console and open: 【Connection】>【Manual】, select **SQLServer**
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-openconn-websoft9.png)
+
+2. Set the connections: host, port and credential, then click 【Save】button.
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-connsetting-websoft9.png)
+
+3. Start to enable SQLServer connection, you may need to input database username and password
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-conlogin-websoft9.png)
+
+4. You can manage your SQLServer when connect successfully now
+
+### Manage SQLite
+
+Below we will introduce how to manage SQLite by CloudBeaver
+
+**Prepare**
+
+You should prepare a SQLite service which can be access from you CloudBeaver server.  
+
+If you don't have SQLite service, you can get it from [SQLite application](https://apps.websoft9.com/sqlite) 
+
+**Settings**
+
+1. Login to CloudBeaver console and open: 【Connection】>【Manual】, select **SQLite**
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-openconn-websoft9.png)
+
+2. Set the connections: host, port and credential, then click 【Save】button.
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-openconnsqlite-websoft9.png)
+
+3. Start to enable SQLite connection, you may need to input database username and password
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-conlogin-websoft9.png)
+
+4. You can manage your SQLite when connect successfully now
+
+### Manage Oracle Database
+
+Below we will introduce how to manage Oracle by CloudBeaver
+
+**Prepare**
+
+You should prepare a Oracle service which can be access from you CloudBeaver server.  
+
+If you don't have Oracle service, you can get it from [Oracle application](https://apps.websoft9.com/oracledatabase) 
+
+**Settings**
+
+1. Login to CloudBeaver console and open: 【Connection】>【Manual】, select **Oracle**
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-openconn-websoft9.png)
+
+2. Set the connections: host, port and credential, then click 【Save】button.
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-connsetting-websoft9.png)
+
+3. Start to enable Oracle connection, you may need to input database username and password
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-conlogin-websoft9.png)
+
+4. You can manage your Oracle when connect successfully now
+
+### Resetting Password
+
+There are two main measures to reset password.
+
+**Changing password**
+
+Take the steps below:
+
+1. Login to CloudBeaver, Go to【Administrator】>【User】 of top right menu and find your account
+  ![CloudBeaver modify password](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-modifypw-websoft9.png)
+
+2. Modify password and click 【Save】
+
+**Forgot Password**
+
+Retrieve your password need to recreate container
+
+1. Use **SSH** to connect CloudBeaver instance
+
+2. Run the below commands
+   ```
+   cd /data/apps/cloudbeaver
+   docker-compose down -v
+   docker-compose pull
+   docker-compose up -d
+   `
 
 
-### 管理 PostgreSQL
-
-下面介绍如何使用 CloudBeaver 管理 PostgreSQL 数据库
-
-##### 准备
-
-提前准备 PostgreSQL 服务并确保 PostgreSQL 的远程访问已开放。  
-
-若没有 PostgreSQL 服务，请通过 [PostgreSQL 应用](https://apps.websoft9.com/postgresql) 快速部署一个自己的 PostgreSQL 服务。
-
-##### 配置
-
-1. 登录 CloudBeaver 控制台，打开：【Connection】>【Manual】，选择 **PostgreSQL**
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-openconn-websoft9.png)
-
-2. 设置连接信息：主机地址、端口、账号密码（可以勾选是否保存），然后点击【Save】
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-connsetting-websoft9.png)
-
-3. 设置信息保存后，使用这个 PostgreSQL 连接，输入数据库的账号和密码
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-conlogin-websoft9.png)
-
-4. 成功连接到 PostgreSQL，可以开始管理工作
-
-### 管理 SQLServer
-
-下面介绍如何使用 CloudBeaver 管理 SQLServer 数据库
-
-##### 准备
-
-提前准备 SQLServer 服务并确保 SQLServer 的远程访问已开放。  
-
-若没有 SQLServer 服务，请通过 [SQLServer 应用](https://apps.websoft9.com/sqlserver) 快速部署一个自己的 SQLServer 服务。
-
-##### 配置
-
-1. 登录 CloudBeaver 控制台，打开：【Connection】>【Manual】，选择 **SQLServer**
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-openconn-websoft9.png)
-
-2. 设置连接信息：主机地址、端口、账号密码（可以勾选是否保存），然后点击【Save】
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-connsetting-websoft9.png)
-
-3. 设置信息保存后，使用这个 SQLServer 连接，输入数据库的账号和密码
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-conlogin-websoft9.png)
-
-4. 成功连接到 SQLServer，可以开始管理工作
-
-### 管理 SQLite
-
-下面介绍如何使用 CloudBeaver 管理 SQLite 数据库
-
-##### 准备
-
-提前准备 SQLite 服务并确保 SQLite 的远程访问已开放。  
-
-若没有 SQLite 服务，请通过 [SQLite 应用](https://apps.websoft9.com/sqlite) 快速部署一个自己的 SQLite 服务。
-
-##### 配置
-
-1. 登录 CloudBeaver 控制台，打开：【Connection】>【Manual】，选择 **SQLite**
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-openconn-websoft9.png)
-
-2. 设置连接信息：主机地址、端口、账号密码（可以勾选是否保存），然后点击【Save】
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-openconnsqlite-websoft9.png)
-
-3. 设置信息保存后，使用这个 SQLite 连接，输入数据库的账号和密码
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-conlogin-websoft9.png)
-
-4. 成功连接到 SQLite，可以开始管理工作
-
-### 管理 Oracle Database
-
-下面介绍如何使用 CloudBeaver 管理 Oracle 数据库
-
-##### 准备
-
-提前准备 Oracle 服务并确保 Oracle 的远程访问已开放。  
-
-若没有 Oracle 服务，请通过 [Oracle 应用](https://apps.websoft9.com/oracledatabase) 快速部署一个自己的 Oracle 服务。
-
-##### 配置
-
-1. 登录 CloudBeaver 控制台，打开：【Connection】>【Manual】，选择 **Oracle**
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-openconn-websoft9.png)
-
-2. 设置连接信息：主机地址、端口、账号密码（可以勾选是否保存），然后点击【Save】
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-connsetting-websoft9.png)
-
-3. 设置信息保存后，使用这个 Oracle 连接，输入数据库的账号和密码
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-conlogin-websoft9.png)
-
-4. 成功连接到 Oracle，可以开始管理工作
-
-### 重置密码
-
-常用的 CloudBeaver 重置密码相关的操作主要有修改密码和找回密码两种类型：
-
-##### 修改密码
-
-1. 登录 CloudBeaver 后台，右上角打开：【Administrator】>【User】，找到所需修改密码的账号对象
-  ![CloudBeaver 修改密码](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-modifypw-websoft9.png)
-
-2. 开始修改密码，点击【Save】后生效
-
-##### 找回密码
-
-如果用户忘记了密码，只能通过[重置 CloudBeaver 容器](./docker#resetcontainer)的方式找回。
-
-### 驱动管理
+### Drivers
 
 [Driver managements](https://cloudbeaver.io/docs/Driver-managements/)
 
-### 导出数据
+### Export data
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-exportdata-websoft9.png)
 
-## CloudBeaver 参数
 
-CloudBeaver 应用中包含 Nginx, Docker 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+## Reference sheet
+
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage CloudBeaver 
+
 
 通过运行`docker ps`，可以查看到 CloudBeaver 运行时所有的 Container：
 
@@ -208,29 +221,29 @@ CONTAINER ID   IMAGE                        COMMAND             CREATED       ST
 
 下面仅列出 CloudBeaver 本身的参数：
 
-### 路径{#path}
+### Path{#path}
 
 * CloudBeaver 配置文件： */data/apps/cloudbeaver/volumes/GlobalConfiguration/.dbeaver/data-sources.json*  
 
 > data-sources.json 存放数据库连接信息
 
-### 端口
+### Port
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
 | 9090   | CloudBeaver 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
 
-### 版本
+### Version
 
 控制台查看
 
-### 服务
+### Service
 
 ```shell
 sudo docker start | stop | restart | stats cloudbeaver
 ```
 
-### 命令行
+### CLI
 
 ### API
 

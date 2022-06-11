@@ -7,93 +7,78 @@ tags:
   - ERP
 ---
 
-# 快速入门
+# Odoo Getting Started
 
-[Odoo](https://www.odoo.com/) 是一个开源的企业**全业务链**管理平台，ERP, 采购，库存，财务，营销，CRM，生产，人事，服务支持、电子商务、建站等各个应用程序完美集成在一起，使您能够完全实现业务流程自动化，省时省力，受益良多。Odoo 的开源开发模式利用数千名开发人员和业务专家来打造全球最大的完全集成的商业应用程序及其生态系统。
+[Odoo](https://www.odoo.com/) is a suite of web based open source business apps.The main Odoo Apps include an Open Source CRM, Website Builder, eCommerce, Warehouse Management, Project Management, Billing & Accounting, Point of Sale, Human Resources, Marketing, Manufacturing, Purchase Management,Odoo Apps can be used as stand-alone applications, but they also integrate seamlessly so you get a full-featured Open Source ERP when you install several Apps.
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odooui-websoft9.png)
 
-## 准备
+If you have installed Websoft9 Odoo, the following steps is for your quick start
 
-部署 Websoft9 提供的 Odoo 之后，需完成如下的准备工作：
+## Preparation
 
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 Odoo 的 **[默认账号和密码](./user/credentials)**  
-4. 若想用域名访问  Odoo **[域名五步设置](./administrator/domain_step)** 过程
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:80** is allowed
+3. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for Odoo
+4. [Get](./user/credentials) default username and password of Odoo
 
+## Odoo Initialization
 
-## Odoo 初始化向导{#init}
+### Steps for you
 
-### 详细步骤
+1. Using local Chrome or Firefox to visit the URL *http://domain name* or *http://Internet IP*, you will enter installation wizard of Odoo
+ ![Odoo初始化页面](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-startcreatedb-websoft9.png)
 
-#### 社区版
+2.Fill in all items, then click **create database** button to start create one Company's database
+  > The Email and Password is credentials for log in to Odoo
 
-1. 使用本地 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入初始化页面
-   ![Odoo 社区版初始化页面](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-startcreatedb-websoft9.png)
-
-2. 填写好所有参数，点击【create database】按钮，开始初始化安装。
-   > 其中 Email 和 Password 是登录账号密码，务必牢记之
-
-3. 初始化安装完成后，登录后台，安装所需的 APP
+3. After the create database is complete, log in to the Odoo Console and install the apps your required.
   ![Odoo APPS](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-consoleui-websoft9.png)
 
-#### 企业版
+4. Log out, click the **Manage Database** in the log in page of Odoo  
+  ![Odoo manage database](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-loginpage-websoft9.png)
 
-部署 Odoo 企业版后，根据镜像引导页获取试用授权，便可以免费试用一个月。
+5. Click the **set a master password** to set a management password for Odoo's databases(very important)
+  ![Odoo set a pssword](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-setmasterpw-websoft9.png)
 
-1. 使用本地 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入欢迎页面
-  ![Odoo 欢迎页面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/odoo/odoo-eewelcome-websoft9.png)
+6. Odoo Support for multi-enterprise, so you can **create database** again for creating new company
+  ![Odoo create database again](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-multidb-websoft9.png)
 
-2. 获取授权后，登录云服务器，运行如下命令解锁企业版
-   ```
-   bash /etc/odoo/ee_init.sh
-   ```
+7. Return to log in page, you can see a new database listed for log in
+  ![Odoo login](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-multidblogin-websoft9.png)
 
-3. 刷新欢迎页面后，显示初始化安装步骤
-  ![Odoo 初始化页面](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-startcreatedb-websoft9.png)
+> More useful Odoo guide, please refer to [Odoo Documentation](https://www.odoo.com/documentation/master/index.html)
 
-4. 完成初始化后，提示一旦安装第一个应用之后，系统就会提示要求注册订阅号（You will be able to register your database once you have installed your first app.）
-  ![Odoo 注册提示](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-registersb000-websoft9.png)
+### Having trouble?
 
-5. 系统提示 **Register your subscription or buy a subscription**，请输入试用码
-  ![Odoo 注册提示](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-registersb001-websoft9.png)
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
-6. 开始试用企业版  
-  ![Odoo 注册提示](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-registersb002-websoft9.png)
+**Check the Demo data, can you delete the data later?**
 
-> 免费试用期结束之后，数据库可能会被被清空，请到 [Odoo 官方](https://www.odoo.com/zh_CN/pricing)进行企业版订阅，需折扣可以直接[联系我们](./helpdesk#contact)。
+Their no tools for you to delete Demo data. It is recommended to delete the database directly and then add it again (the Demo data is no longer checked)
 
-
-### 出现问题？
-
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
-
-**安装时勾选了 Demo data，想删除这些数据?**
-
-官方并没有提供 Demo data 的删除工具，建议直接删除数据库，然后再新增（此时不再勾选 Demo data）
-
-## Odoo 使用入门
+## Odoo QuickStart
 
 下面以 **Odoo 构建企业ERP** 作为一个任务，帮助用户快速入门：
 
 > 需要了解更多Odoo的使用，请参考官方文档：[Odoo Documentation](https://www.odoo.com/documentation/master/index.html)
 
-## Odoo 常用操作
+## Odoo Setup
 
-### 配置 SMTP{#smtp}
+### Configure SMTP{#smtp}
 
-1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
-   
-2. 登录 Odoo 控制台，安装 SMTP 所需的 **Discuss** 模块
+1. Get [SMTP](./administrator/smtp) related parameters in the mailbox management console
+
+2. Log in to the Odoo Console, intall the **Discuss** module that SMTP need
    ![Odoo SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-discussmodule-websoft9.png)
 
-3. 通过：【Settings】>【General Settings】>【Discuss】开始配置邮箱
+3. Open **Settings** > **General Settings** > **Discuss** to start configure SMTP
    ![Odoo SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-gsetmail-websoft9.png)
 
-4. 填写 SMTP 参数
+3. Fill in the SMTP parameters
    ![Odoo SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-smtps-websoft9.png)
-5. 点击【Test Connection】
+
+4. Click the **Test Connection**
 
 ### 数据库管理器{#dbadmin}
 
@@ -111,7 +96,7 @@ Odoo 自带一个数据库管理器，参考：
 4. 选择操作项，管理数据库  
 ![Odoo set a password](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-manages-websoft9.png)
 
-#### 新增
+**新增**
 
 Odoo 支持多租户（多企业组织），增加一个数据库就等于增加一个企业。  
 
@@ -122,14 +107,14 @@ Odoo 支持多租户（多企业组织），增加一个数据库就等于增加
 
 2. 新增完成后，你会看到数据库管理界面列出新增的数据库
 
-#### 备份
+**备份**
 
 1. 输入密码，选择备份格式，点击【Backup】
    ![Odoo 备份](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-managesbk-websoft9.png)
 
 2. 备份完成后，系统会自动下载备份数据（zip文件）
 
-#### 复制
+**复制**
 
 可以完整复制一个企业组织，作为新企业组织的数据
 
@@ -138,11 +123,11 @@ Odoo 支持多租户（多企业组织），增加一个数据库就等于增加
 
 2. 复制成功后，数据库管理栏目会列出新复制的数据库
 
-#### 删除
+**删除**
 
 请谨慎操作
 
-#### 恢复
+**恢复**
 
 数据库被删除后，可以通过备份进行恢复
 
@@ -151,89 +136,81 @@ Odoo 支持多租户（多企业组织），增加一个数据库就等于增加
 
 1. 数据库恢复过程中可能会出现"413 Request Entity Too Large"，[解决办法](./odoo/admin#attachment)
 
-#### 修改主密码
+**修改主密码**
 
 修改主密码是一项非常重要的安全操作。  
 
-### 管理 Odoo
+### Basic Settings
 
-本章列出使用 Odoo 过程中最常见的一些配置
+Go to Odoo's Settings panel
 
-#### 基础设置
+1. Log in Odoo, and click the **Settings icon** in the left top menu
+   ![Odoo  Settings ](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-settingspanel-websoft9.png)
+2. Then, you can install apps, set language, add user, set up company and more
 
-Odoo 后台提供了设置界面，参考：
+### Set your Logo
 
-1. 登录 Odoo 后，打开点击左上角的设置图标，打开【Settings】项
-   ![Odoo设置界面](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-settingspanel-websoft9.png)
-2. 接下来可以进行：安装apps，设置语言，增加用户，企业初始化等操作
+![Odoo set logo](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-settingslogo-websoft9.png)doo 设置logo](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-settingslogo-websoft9.png)
 
-#### 设置企业 Logo
+### Set Language{#setlang}
 
-![Odoo 设置logo](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-settingslogo-websoft9.png)
+1. Go to **Settings** console to add a new language
+  ![Odoo add new language](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-settingslangs-websoft9.png)
+2. Then go to **Administrator** > **Prefrences**    
+  ![Odoo user prefrences](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-pref-websoft9.png)
+3. Set language for administrator
+  ![Odoo set language](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-language002-websoft9.png)
 
-#### 增加语言{#setlang}
+### Enable developer mode{#dev-mode}
 
-1. 通过【Settings】控制台增加一个语言
-  ![Odoo 增加语言](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-settingslangs-websoft9.png)
-2. 转到【Administrator】>【Prefrences】  
-  ![Odoo 用户管理](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-pref-websoft9.png)
-3. 给用户设置语言
-  ![Odoo 设置语言](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-language002-websoft9.png)
+1. Log in to Odoo, open the **Settings** item by clicking the settings icon in the upper left corner.
+2. Click **Active the developer mode** on the lower right of the Settings screen.
+   ![Odoo Developer Mode](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-enabledev-websoft9.png)
+3. In the developer mode, the Settings console has more features.
 
-#### 开发者模式{#dev-mode}
+### Install wkhtmltopdf
 
-Odoo 默认是管理者模式，如果需要深度设置，请先开启开发者模式
+Odoo has installed the wkhtmltopdf, if you want to reintall it, follow is the steps:
 
-1. 登录 Odoo 后，打开点击左上角的设置图标，打开【Settings】项
-2. 在 Settings 界面的右下点击【Active the developer mode】
-   ![Odoo 开发者模式](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-enabledev-websoft9.png)
-3. 在开发者模式下，Settings 控制台的功能更多了
-
-#### 安装 wkhtmltopdf
-
-Odoo 镜像默认已经安装 wkhtmltopdf，如何你想重新安装它，具体操作步骤如下：
-
-1.  卸载已经安装的 wkhtmltopdf 旧版本:
+1.  Remove the old version of wkhtmltopdf
 
     ~~~
     ~# sudo apt-get remove wkhtmltopdf 
     ~# sudo apt-get autoremove
     ~~~
 
-2.  去官网下载最新版本的 wkhtmltopdf 压缩包:
+2.  Download wkhtmltopdf tar file from Github
 
     ~~~
     ~# wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.4/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
     ~~~
 
-3.  解压下载好的压缩包，得到一个名为：wkhtmltox 的文件夹：
+3.  Unzip it and you can find a new folder named wkhtmltox in your Server
 
     ~~~
     ~# tar –xf [filename]
     ~~~
 
-4.  将 wkhtmltox/bin/wkhtmltomage 和 wkhtmmltox/bin/wkhtmltoodf 这两个文件复制到 /usr/bin 目录下去：
+4.  Copy the file *wkhtmltox/bin/wkhtmltomage* and *wkhtmmltox/bin/wkhtmltoodf* the directory */usr/bin*
 
     ~~~
     ~# cp wkhtmltox/bin/wkhtmltoimage /usr/bin/
     ~# cp wkhtmmltox/bin/wkhtmltoodf /usr/bin/
     ~~~
 
-5.  重启Odoo服务
+5.  Restart Odoo service
 
     ~~~
     ~# systemctl restart odoo
     ~~~
 
-#### Apps 市场
+### Apps Marketplace
 
-Odoo除了基础模块之外，通过[Odoo Apps 市场](https://www.odoo.com/apps/modules)提供了大量优质的第三方模块。通过使用第三方模块，用户可以快速找到所需的功能，以免费或极小的代价满足需求，快速上线业务，这是Odoo开源生态的带给用户的巨大价值，商业ERP在这方面是无法取代的。
+In addition to the base modules, Odoo offers a number of premium third-party modules through [Odoo Apps Marketplace](https://www.odoo.com/apps/modules)
 
+## Reference sheet
 
-
-## 参数{#parameter}
-
-Odoo 应用中包含 Nginx, Docker, PostgreSQL, pgAdmin, Python 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Odoo 
 
 通过运行`docker ps`，可以查看到 Odoo 运行时所有的 Container：
 
@@ -244,30 +221,30 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 下面仅列出 Odoo 本身的参数：
 
-### 路径{#path}
+### Path{#path}
 
-Odoo 安装目录： */usr/lib/python3/dist-packages/odoo*  
+Odoo installation directory： */usr/lib/python3/dist-packages/odoo*  
 Odoo 配置文件： */etc/odoo/odoo.conf*  
 Odoo 日志目录： */var/log/odoo*
 
-### 端口{#port}
+### Port{#port}
 
 无特殊端口
 
 
-### 版本{#version}
+### Version{#version}
 
 ```shell
 odoo --version
 ```
 
-### 服务{#service}
+### Service{#service}
 
 ```shell
 sudo docker start | stop | restart | status odoo
 ```
 
-### 命令行{#cli}
+### CLI{#cli}
 
 Odoo CLI 是用于管理和配置Odoo的命令行工具，通过 SSH 连接服务器，运行 `odoo -h` 命令，列出如下可用的功能。
 

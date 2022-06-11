@@ -3,137 +3,125 @@ sidebar_position: 1
 slug: /opencart
 tags:
   - OpenCart
-  - 电子商务
+  - eCommerce
 ---
 
-# 快速入门
+# OpenCart Getting Started
 
-[OpenCart](https://opencart.com) 是一个易用性很高，100% 开源的电子商务系统。它支持多语言、多货币和多店铺。生态中超过 10000+ 个扩展可用。
+[OpenCart](https://opencart.com)  is an easy to-use, powerful, open source online store management program that can manage multiple online stores from a single back-end. Administrative area simply by filling in forms and clicking “Save”. There are many professionally-written extensions available to customize the store to your needs.it have 13000+ modules and themes on Marketplace for all your needs.
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/opencart/opencart-gui-websoft9.png)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/opencart/opencart-gui-websoft9.png)  
 
-## 准备
-
-部署 Websoft9 提供的 OpenCart 之后，需完成如下的准备工作：
-
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 在服务器中查看 OpenCart 的 **[默认账号和密码](./user/credentials)**  
-4. 若想用域名访问  OpenCart **[域名五步设置](./administrator/domain_step)** 过程
+If you have installed Websoft9 OpenCart, the following steps is for your quick start
 
 
-## OpenCart 初始化向导
+## Preparation
 
-### 详细步骤
+1. Get the **Internet IP** on your Cloud Platform
+2. Check you **[Inbound of Security Group Rule](https://support.websoft9.com/docs/faq/tech-instance.html)** of Cloud Console to ensure the **TCP:80** is allowed
+3. **[Get](./user/credentials)** default username and password of OpenCart  
+4. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for OpenCart
 
-1. 使用本地电脑浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 就进入引导首页
+## OpenCart Initialization
 
-2. 进入安装界面，同意安装协议
-   ![oc1](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/oc1.png)  
+### Steps for you
 
-3. 通过环境检测后，进入下一步  
+1. Using local Chrome or Firefox to visit the URL *https://domain* or *https://Internet IP*, start to install    
+2. Agree license, Click "Continue"
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/oc1.png)
+3. Verify the environment and go to next step  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/oc2.png)
+4. Database connection configuration, you can use the MySQL in this Server([Don's know password?](/stack-accounts.html#mysql)), and you can use other database services
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/oc3.png)
+5. When the installation is completed,it will go the following interface
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/oc4.png)
+6. Please delete */data/wwwroot/opencart/install* folder.
+7. You can use OpenCart now
 
-3. 填写数据库信息（[不知道账号密码？](./user/credentials)并设置后台管理账号
-   ![oc1](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/oc3.png)
+> More useful OpenCart guide, please refer to [OpenCart Docs](https://docs.opencart.com/) to get more details
 
-4. 安装成功后，系统提示【删除安装目录】
-   ![oc1](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/oc4.png)
+### Having trouble?
 
-5. SSH 工具连接服务器，删除安装目录
-   ```
-   rm -rf /data/wwwroot/opencart/upload/install
-   ```
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
-6. 体验商城前台和后台
-
-> 需要了解更多 OpenCart 的使用，请参考官方文档：[OpenCart Docs](http://docs.opencart.com)
-
-### 出现问题？
-
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题。
-
-## OpenCart 使用入门
+## OpenCart QuickStart
 
 下面以 **使用 OpenCart 构建在线商城** 作为一个任务，帮助用户快速入门：
 
+## OpenCart Setup
 
-## OpenCart 常用操作
+### OpenCart Extension
 
-### 安装插件{#installplugin}
+OpenCart have 13000+ extention published on the Marketplace, how to insatll them?
 
-OpenCart 提供了大量的扩展发布在 Marketplace 上，下面是具体的安装扩展步骤：
-
-1. 在 Marketplace 上下载所需的扩展
-
-2. 登录 OpenCart 后台，依次打开：【Extensions】>【Installer】
+1. Find the extension you want to used on Marketplace and download it
+  
+2. Log in OpenCart console, open:【Extensions】>【Installer】
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/opencart-installex-websoft9.png)
+  
+3. Upload your extension compressed file
+  
+4. Installing it
 
-3. 上传扩展文件
+### OpenCart language
 
-4. 等待安装完成
+Enable a new language package in Opencart have the following steps(e.g Chinese lanuage)
 
-
-### 安装语言包{#setlanguage}
-
-在 Opencart 中增加一个新的语言（以中文包为例），主要有三个步骤：
-
-1. 到 [OpenCart Marketplace](https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=19126&filter_category_id=2&page=8)下载中文语言包（请注意版本）；
-
-2. 将下载好的语言包解压出来，会得到一个名为 upload 的文件夹，内有 admin 和 catalog 两个文件夹分别为后台和前台的文件夹；
-
-3. 使用 SFTP 软件将前后台中文包分别上传到服务器：
+1. Go to [OpenCart Marketplace](https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=19126&filter_category_id=2&page=8), download suitable lanuage package
+2. Unzip package, you can see a folder name `upload` that includes two folder `admin`, `catalog`
+3. Use SFTP to upload them to your Server
    ```
-   admin->language->zh_cn 文件夹 上传到  /data/wwwroot/opencart/admin/language 目录下
-   catalog->language->zh-cn 文件夹 上传到 /data/wwwroot/opencart/catalog/language 目录下
+   admin->language->zh_cn  to  ```/data/wwwroot/opencart/admin/language``` 
+   catalog->language->zh-cn to ```/data/wwwroot/opencart/catalog/language```
    ```
-4. 登录 OpenCart，打开【System】>【localization】>【languages】，增加一个语言并填写配置信息
+4. Log in OpenCart, go to【System】>【localization】>【languages】, add new language and configure it
 	![websoft9](https://libs.websoft9.com/Websoft9/DocsPicture/zh/opencart/opencart-language-1-websoft9.png)
 
-5. 店铺前后台分别选择所需的语言：【System】>【Settings】  
+5. Enable language both for catalog and admin: open 【System】>【Settings】, the 【Language】 for catalog, 【Administration Language】for admin
+	   ![websoft9](https://libs.websoft9.com/Websoft9/DocsPicture/zh/opencart/opencart-language-2-websoft9.png)
 
-   - Language 为前台默认语言
-   - Administration Language 为后台默认语言
-
-	![websoft9](https://libs.websoft9.com/Websoft9/DocsPicture/zh/opencart/opencart-language-2-websoft9.png)
-
-
-
-6. 刷新前后台页面，系统显示新的语言
+6. Refresh OpenCart, display the new language
 
 ### OpenCart vQmod
 
-Opencart 2.0 使用vQmod机制安装扩展，需提前安装并启用vQmod，具体如下：
+Opencart 2.0 using **vQmod** for installing extensions, so you need to install and enable vQmod:
 
-1. [下载vQmod](https://github.com/vqmod/vqmod)
-2. Go to Extensions > Installer，上传下载的 vqmod.zip 文件
+1. [Download vQmod](https://github.com/vqmod/vqmod)
+2. Go to Extensions > Installer, upload **vqmod.zip**
 3. Go to Extensions > Extensions > Modules > Integrated VQmod to install and then edit to enable this module
 
-### 配置 SMTP{#smtp}
+### SMTP
 
-1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数 
-
-2. 登录到 OpenCart 后台，完成 SMTP 参数设置  
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/opencart/opencart-smtp-websoft9.png)
+1. Log in SendGrid console, prepare your SMTP settings like the follow sample
+   ```
+   SMTP host: smtp.sendgrid.net
+   SMTP port: 25 or 587 for unencrypted/TLS email, 465 for SSL-encrypted email
+   SMTP Authentication: must be checked
+   SMTP Encryption: must SSL
+   SMTP username: websoft9smpt
+   SMTP password: #fdfwwBJ8f    
+   ```
+2. Log in OpenCart console as administrator, configure SMTP  
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/opencart-smtp-websoft9.png)
   
-   - 输入提供SMTP服务的服务器地址，其中的 ssl://  一定不能省略
-   - 务必准确的填写你的 SMTP 参数
+   - SMTP Hostname: tls:// or ssl:// is need
+   - Make sure you have input correct SMTP items
 
-3. 发送测试邮件
+3. Send testing Email
 
-### 域名额外配置（修改 URL） {#dns}
+### OpenCart change domain
 
-**[域名五步设置](./administrator/domain_step)** 完成后，需设置 OpenCart URL:
+You can change the domain of OpenCart by the following steps:
 
-1. 修改 OpenCart 根目录下的[配置文件](#path) `config.php`
+1. Complete the new **Domain resolution and Domain binding**
+2. Modify the OpenCart configuration `config.php` in the root directory
    ```
    // HTTP
    define('HTTP_SERVER', 'http://example.com/');
    // HTTPS
    define('HTTPS_SERVER', 'https://example.com/');
    ```
-
-2. 修改 OpenCart 后台目录下的[配置文件](#path) `admin/config.php`
+3. Modify the OpenCart configuration `admin/config.php` in the root directory
    ```
    // HTTP
    define('HTTP_SERVER', 'http://www.example.com/admin/');
@@ -142,12 +130,11 @@ Opencart 2.0 使用vQmod机制安装扩展，需提前安装并启用vQmod，具
    define('HTTPS_SERVER', 'http://www.example.com/admin/');
    define('HTTPS_CATALOG', 'http://www.example.com/');
    ```
+3. [Restart PHP-FPM Service](/admin-services.html#php-fpm)
 
-3. 重启服务后生效
+## Reference sheet
 
-## 参数{#parameter}
-
-OpenCart 应用中包含 Nginx, Apache, Docker, MySQL, phpMyAdmin 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage OpenCart
 
 通过运行`docker ps`，可以查看到 OpenCart 运行时所有的 Container：
 
@@ -155,40 +142,41 @@ OpenCart 应用中包含 Nginx, Apache, Docker, MySQL, phpMyAdmin 等组件，�
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
 ```
 
-下面仅列出 OpenCart 本身的参数：
+### Path{#path}
+  
+OpenCart installation directory: */data/wwwroot/OpenCart*  
+OpenCart catalog configuration file: */data/wwwroot/opencart/config.php*   
+OpenCart admin configuration file: */data/wwwroot/opencart/admin/config.php*
+  
+### Port{#port}
 
-### 路径{#path}
+| Port | Use                                          | Necessity |
+| ------ | --------------------------------------------- | ------ |
+| 3306 | Remote connect MySQL | Optional |
+| 80 | HTTP requests for OpenCart | Required |
+| 443 | HTTPS requests OpenCart | Optional |
 
-OpenCart 安装目录： */data/wwwroot/opencart*  
-OpenCart 前台配置文件： */data/wwwroot/opencart/config.php*  
-OpenCart 后台配置文件： */data/wwwroot/opencart/admin/config.php* 
 
-
-### 端口{#port}
-
-无特殊端口
-
-### 版本{#version}
+### Version{#version}
 
 ```shell
 sudo cat /data/logs/install_version.txt
 ```
 
-### 服务{#service}
+### Service{#service}
 
 ```shell
 sudo docker start | stop | restart | stats opencart
 ```
 
-### 命令行{#cli}
+### CLI{#cli}
 
 无
 
 ### API
 
-
 ```
 curl http://myopencart.example.com/index.php?route=api/cart/add
 ```
 
-官方文档：[OpenCart API](http://docs.opencart.com/en-gb/system/users/api/)
+Refer to [OpenCart API](http://docs.opencart.com/en-gb/system/users/api/)

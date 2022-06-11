@@ -11,154 +11,152 @@ tags:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 快速入门
+# MySQL/MariaDB Getting Started
 
-[MySQL](https://www.mysql.com/products/community/) 是全球知名的关系型数据库管理系统，由瑞典 MySQL AB 公司开发，几经易手目前属于 Oracle 旗下产品。
+[MySQL](https://www.mysql.com/products/community/) is a popular open source database. Whether you are a fast growing web property, technology ISV or large enterprise, MySQL can cost-effectively help you deliver high performance, scalable database applications. It is intend to provide a high reliable database management system. MariaDB is one of the most popular database servers. Made by the original developers of MySQL. Guaranteed to stay open source.
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/mysql-dbgui-websoft9.png)
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/mysql-mariadb-ui-websoft9.png)
 
-[MariaDB](https://mariadb.org/) 是一个在全球广受欢迎的关系型数据库系统。它由 MySQL 创始人 Michael Widenius 于2014年联合旧部在芬兰创立。MariaDB最初被设计为 MySQL 的增强，直接替代品，之所以被使用是因为它具有快速，可扩展和强大的功能，并具有丰富的存储引擎，插件和许多其他工具生态系统，因此对于各种用例都非常通用。
+[MariaDB](https://mariadb.org/) is one of the most popular database servers in the world. It’s made by the original developers of MySQL and guaranteed to stay open source. Notable users include Wikipedia, WordPress.com and Google. MariaDB is developed as open source software and as a relational database it provides an SQL interface for accessing data. The latest versions of MariaDB also include GIS and JSON features.
 
 ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mariadb/mariadb-gui-websoft9.png)
 
-## 准备
+If you have installed Websoft9 MySQL/MariaDB, the following steps is for your quick start
 
-部署 Websoft9 提供的 MySQL/MariaDB 之后，需完成如下的准备工作：
+## Preparation
 
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:3306,9090** 端口已经开启
-3. 在服务器中查看 MySQL/MariaDB 的 **[默认账号和密码](./user/credentials)**  
-4. 若想用域名访问  MySQL/MariaDB，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:3306,9090** is allowed
+3. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for Jenkins
+4. [Get](./user/credentials) default username and password of Jenkins
 
+## MySQL/MariaDB Initialization
 
-## MySQL/MariaDB 初始化向导
-
-### 详细步骤
-
-部署 MySQL/MariaDB 之后，依次完成下面的步骤，验证其可用性
+### Steps for you
 
 <Tabs>
 <TabItem value="linuxwizard" label="Linux" default>
 
-1. 使用 SSH 连接 MySQL/MariaDB 所在的服务器
+1. Use the **SSH** to connect Server, and run these command below to view the installation information and running status
+   ```
+   sudo systemctl status mysqld
+   #### or ####
+   sudo systemctl status mysql
+   ```
 
-2. 运行下面的命令，查看 MySQL/MariaDB 的安装信息和运行状态
-    ```
-    sudo systemctl status mysql
-    ```
-   MySQL 正常运行会得到 " Active: active (running)... " 的反馈
+2. You can ge the message from SSH " Active: active (running)... " when MySQL is running
 
-3. 使用 root [账号密码](./user/credentials) 登录 MySQL 服务端
-    ~~~
-    #假设初始密码是：123456
-    mysql -uroot –p123456
-    ~~~
+3. Using SSH to connect MySQL Server, run the following command
+   ~~~
+   #assume the root password is `123456`
+   mysql -uroot –p123456
+   ~~~
 
-    登录成功会显示如下信息：
+4. You can find the MySQL version from the message
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mysql/mysql01.png)
 
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mysql/mysql01.png)
-
-4. 使用 MySQL 可视化管理工具 [phpMyAdmin](#phpmyadmin) 验证
-
+5. Login MySQL with [phpMyAdmin](#phpmyadmin)
+   
 
 </TabItem>
 
 <TabItem value="winwizard" label="Windows">
 
-1. 远程桌面登录到 Windows-CMD 窗口，运行下面的命令
-    ~~~
-    #假设初始密码是：123456
-    mysql -uroot –p123456
-    ~~~
-2. 使用服务器桌面上的 
+1.  Remote to Windows Server, run the following command with Windows-CMD Window
+   ~~~
+   #assume the root password is `123456`
+   mysql -uroot –p123456
+   ~~~
+2. Using Navicat on the Server Desktop
 
 </TabItem>
 </Tabs>
 
 
-### 出现问题？
+### Having trouble?
 
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题。
-
-
-## MySQL/MariaDB 常用操作
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
 
-### 密码管理
+## MySQL/MariaDB QuickStart
 
-- 修改密码，即使用已有密码登录 MySQL，然后修改成另外一个密码。  
-- 重置密码，即忘记了密码，需要通过重置密码找回
+## MySQL/MariaDB Setup
 
-##### 修改密码{#modifypw}
+### Modify and reset MySQL password
 
-可以通过 MySQL 管理工具修改密码，也通过命令上修改密码
+Modify password: Change the current password to another password  
+Reset password: Have forgotten your password, need to get an initial password
 
-##### phpMyAdmin修改密码
+**Modify password**
+
+You can modify password by MySQL GUI or commands:
+
+1. Use phpMyAdmin(Recommend)
 
 ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/websoft9-modifymysqlpw.gif)
 
-##### 命令行修改密码
-
-执行一下命令:
+2. Use Commands
 ```
-mysqladmin -u 用户名 -p 旧密码 password '新密码' 
+mysqladmin -u root -p oldpassword password 'newpassword' 
 ```
 
-##### 重置密码{#resetpw}
+**Reset password**
 
-如果忘记了 root 密码，就需要通过命令操作，实现MySQL密码重置。我们提供了一个重置密码的脚本：
+You can reset your MySQL password by the following two solution:  
 
-1. 使用SSH远程连接到 MySQL 服务器
-2. 运行如下命令，按提示输入新密码即可。
+1. Use SSH to connect MySQL Server
+2. Run the following command
    ```
-   wget -N https://ghproxy.com/https://raw.githubusercontent.com/websoft9dev/role_mysql/master/tools/reset_password.sh; bash reset_password.sh
+   wget -N https://raw.githubusercontent.com/websoft9dev/role_mysql/master/tools/reset_password.sh; bash reset_password.sh
    ```
 
-### 设置 MySQL 远程访问{#remote}
 
-本地电脑连接 MySQL 时，需设置 MySQL 远程访问：
+### Set Remote Connection{#remote}
 
-1. 云控制台安全组开启 TCP:3306 端口
-2. 设置 MySQL 的远程配置
-    * [phpMyAdmin 快速配置（推荐）](#phpmyadminremote)
-    * 命令行配置
+Most of the time, if you want to use GUI tools to manage MySQL/MariaDB on you local computer, you shoud open the remote connection of MySQL/MariaDB. 
+
+Database is high security application, you need two steps for remote connection settings at least:
+
+1. Enable the TCP:3306 port
+   
+2. Open MySQL remote connection
+   
+    * [phpMyAdmin Quick set (recommended）](#phpmyadminremote)
+    * Use commands
      ```
-     # 登录
+     # Log in MySQL
      mysql -u root -p 
      
-     # 开启远程访问
+     # Enable Remote
      mysql>  use mysql;
      mysql>  update user set host = '%' where user = 'root';
     
-     # 重启后生效
+     # Restart MySQL
      systemctl restart mysqld
 
      ```
 
-### 更换 MySQL 数据目录
+### Modify MySQL Data Directory{#datadirectory}
 
-修改 MySQL 数据目录，按以下步骤操作：
+The data directory for MySQL is set to */data/mysql* by default. If you want to modify MySQL Data Directory, following are the steps for you:
 
-1. 停止 MySQL 服务
+1. Stop the MySQL Service
    ```shell
    sudo sytemctl stop mysqld
    ```
-2. 将 */data/mysql* 移动到目标新目录，例如 */data/mysql2*
-
-3. 修改[ MySQL 配置文件](#path)中的 datadir 配置：
+2. Move the */data/mysql* to the destination directory, e.g */data/mysql2* 
+3. Modify the location of this folder modifying the`/etc/my.cnf` file, as shown below:
    ```shell
    datadir=/data/mysql2
    ```
-4. 重启服务
+4. Restart the MySQL
    ```shell
    sudo sytemctl start mysqld
    ```
 
+### Set The Binary Log
 
-### 设置 Binary Log
-
-
-修改 MySQL 配置文件相关项
+You can modify the MySQL configuration _/etc/my.cnf_ to change the binary log settings<br />
 
 ```
 log_bin = mysql-bin      # enable Binary log
@@ -166,95 +164,102 @@ binlog_format = mixed    # Binary log format
 expire_logs_days = 7     # Binary log expire time
 ```
 
-如果您的二进制日志文件太大，建议将 expire_logs_day 更改为更小，定时清理日志文件。
+Some times, there a lot of event for your database, then the binary log file size very rapid growth and your disk space may not enough, if there no space on disk, your MySQL Service can not start.
 
-### 图形化客户端
+Suggest you change the expire_logs_day to more smaller if you binary log file size is too big
 
-使用 MySQL 官方的 [Workbench](https://www.mysql.com/products/workbench/) 或 [第三方客户端工具](./tools#dbclient)在本地管理数据库。
+### GUI
 
-
-###  图形化 Web 端（phpMyAdmin）{#phpmyadmin}
-
-[phpMyAdmin](https://www.phpmyadmin.net/) 是很受欢迎的 MySQL 数据库管理工具，下面介绍常见的 phpMyAdmin 操作
-
-#### 连接 MySQL{#phpmyadminconnect}
-
-如果部署方案中包含 phpMyAdmin 等图形化工具，使用就更加便捷方便：
-
-1. 本地浏览器电脑浏览器访问：*http://服务器公网IP:9090*，进入phpMyAdmin
-
-  ![登录phpMyadmin](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-logincn-websoft9.png)
-
-2. 输入数据库用户名和密码([不知道密码？](./user/credentials))
-
-3. 登录成功后，可以管理任意数据库
-
-  ![phpMyadmin](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-adddb-websoft9.png)
+Working on a relational database using only command line tools to writing queries can be hard, luckily we found the best Free GUI tools for your MySQL work. Most uses of MySQL for Web development allow you to get around a lot of back end requirements with the use of PHP and other tools that work the database without having to do more than set up. However, as the use of SQL for Web development has increased, and the complexities, so has the availability of tools to manage your SQL database. Here are some of the best tools for working with your MySQL database.
 
 
+| **Name**                                                     | **Description**                                              | **Cross platform**                            | **Price** |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | --------------------------------------------- | --------- |
+| [MySQL Workbench](https://dev.mysql.com/downloads/workbench/) | MySQL Workbench is a unified visual tool for database architects, developers, and DBAs. MySQL Workbench provides data modeling, SQL development, and comprehensive administration tools for server configuration, user administration, backup, and much more. | Windows,Linux,MacOS                           | Free      |
+| [phpMyAdmin](https://www.phpmyadmin.net/)                    | phpMyAdmin is a free software tool written in PHP, intended to handle the administration of MySQL over the Web. phpMyAdmin supports a wide range of operations on MySQL and MariaDB. Frequently used operations (managing databases, tables, columns, relations, indexes, users, permissions, etc) can be performed via the user interface, while you still have the ability to directly execute any SQL statement. | Based on Web,one installation, use everywhere | Free      |
+| [Navicat](https://www.navicat.com/en/products/navicat-for-mysql) | Navicat for MySQL is the ideal solution for MySQL/MariaDB administration and development. It is a single application that allows you to connect to MySQL and MariaDB databases simultaneously. | Windows,MacOS,IOS                             | Not free  |
+| [MySQL-Front](http://www.mysqlfront.de/)                     | MySQL-Front is a Windows front end program for the MySQL database server. The database structure and data can be handled via dialogs or SQL commands. Import and Export in standard file formats is supported. The database server can be connected directly or via HTTP tunneling. | Windows                                       | Free      |
+| [Sequel Pro](https://sequelpro.com/)                         | Sequel Pro is a fast, easy-to-use Mac database management application for working with MySQL databases. | MacOS                                         | Free      |
+| [HeidiSQL](https://www.heidisql.com/download.php)            | HeidiSQL is a useful and reliable tool designed for web developers using the popular MariaDB or MySQL server, Microsoft SQL databases or PostgreSQL. Support for multiple languages (including Chinese) | Windows                                       | Free      |
+| [DBeaver Community](https://dbeaver.io/)                     | Free multi-platform database tool for developers, SQL programmers, database administrators and analysts. Supports all popular databases: MySQL, PostgreSQL, MariaDB, SQLite, Oracle, DB2, SQL Server, Sybase, MS Access, Teradata, Firebird, Derby, etc. | Windows                                       | Free      |
+| [dbForge Studio for MySQL Express](https://www.devart.com/dbforge/mysql/) | dbForge Studio for MySQL is a universal GUI tool for MySQL and MariaDB database development, management, and administration. The IDE allows you to create and execute queries, develop and debug stored routines, automate database object management, analyze table data via an intuitive interface. The MySQL client delivers data and schema comparison and synchronization tools, database reporting tools, backup options with scheduling, and much more. | Windows                                       | Free      |
 
-#### 修改 root 密码{#phpmyadminmodifypw}
+GUI tools gives you direct access to your MySQL Databases on local and remote servers.
 
-1. 登录phpMyAdmin后，默认页面-常规设置，点击【修改密码】
+### WEB GUI - phpMyAdmin{#phpmyadmin}
 
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/websoft9-modifymysqlpw.gif)
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-modifypw-websoft9.png)
+[phpMyAdmin](https://www.phpmyadmin.net/) is a very popular MySQL database management tool. The following describes the common phpMyAdmin operations.
 
-2. 修改密码-&gt;保存-&gt;退出登录，刷新浏览器后便可以使用新密码登录了
 
-#### 新增数据库{#phpmyadmindb}
+1. Using local Chrome or Firefox to visit the URL http://Internet IP:9090, you will enter the  _phpMyAdmin_
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mysql/mysql-login-websoft9.png)
 
-1. 登录phpMyAdmin后，点击左侧菜单栏的“新建”，进入如下的数据库创建界面 
+2. Select you language, Username is `root`,Password should get from the Chapter"[Administrator usenames and password](./user/credentials)"
+   
+3. Click the button "Go"
 
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-adddb-websoft9.png)
+#### Modify the root password{#phpmyadminmodifypw}
 
-2. 填写数据库名-&gt;点击创建按钮，一个新的数据库变建立成功
+1. Login to phpMyAdmin, you can see the "Modify the password" link in dashboard page, then click it
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/phpmyadmin/phpmyadmin-changepwds-websoft9.png)
 
-3. 默认情况下，root拥有新建的数据库的全部权限
+2. After the modification of password, exit phpMyAdmin and refresh the log in page to restart it
 
-#### 新增数据库用户{#phpmyadminuser}
+#### Add new database{#phpmyadmindb}
 
-> 数据库用户与数据库是分离的，是“多对多”的关系。可以通过关联使得某个用户具有某个数据库的权限
+1. Login to phpMyAdmin, click "New" in the left menu to start creating a new database
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/phpmyadmin/phpmyadmin-createdb-websoft9.png)
 
-1. 登录phpMyAdmin后，点击左侧菜单栏中新打算对其新增用户的数据库（例如：mywebsoft9）
-2. 点击顶部菜单栏的“权限”，找到“新增用户账户”，如下新增用户界面 ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-adduser-websoft9.png)
-3. 根据上图填写用户名、主机地址和密码，然后关联对应的数据库和勾选权限设置
-4. 点击“执行”，就完成新增用户和数据库关联了
+2. Fill in the suitable Database Name, select the character coding, then click "Create" button to complete this step
 
-说明：也可以登录phpMyAdmin的默认页面后，点击顶部菜单上“账户”，对用户和权限进行管理
+#### Add user account{#phpmyadminuser}
 
-#### 数据库导入和导出{#phpmyadminexportimport}
+> The database user is separated from the database and is a "many-to-many" relationship. You can associate a user with the permissions of a database by associating
 
-> 导出即备份数据库，导入即恢复数据库。这个两个操作对 phpMyAdmin 来说比较简单，具体如下：
 
-1. 登录phpMyAdmin后，选择您需要操作的数据库后，点击顶部菜单栏的“导出” 
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-export-websoft9.png)
+1. Login to phpMyAdmin, Click one database on the left menu which you want to add user account for it
+2. Click "**Privileges**" tab, you can see the users belong to this database listed
+3. Click "**Add user account**", start to add new user
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/mysql/mysql-adduser-websoft9.png)
 
-2. 选择导出方式（默认为“快速”）和格式（默认为“SQL”），点击“执行”按钮
+4. Fill in suitable User name/Host name/Password, click "go" button to complete this step
+5. You can also go to User account->Add user account to manage users
 
-3. 数据库备份文件（.sql后缀）生成后，保存到本地完成导出工具
+#### Export/Impoft database{#phpmyadminexportimport}
 
-4. 恢复数据库，对应的是“导入”操作，具体参考下图 
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-import-websoft9.png)
+In phpMyAdmin, Export is to back up the database, import and restore the database.
 
-5. 导入文件特别要注意字符集兼容性
+**Export**
 
-#### MySQL 远程访问{#phpmyadminremote}
+1. Login to phpMyAdmin, select your database then click "Export" tab on the top menu
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/phpmyadmin/phpmyadmin-export-websoft9.png)
 
-在phpMyAdmin中开启远程只需要将root账号的访问方式改成“任意方式访问”，具体如下：
+2. Select suitable Export method,Format for you, then click the "Go" button to start export
 
-1. 打开账户->找到主机名为127.0.0.1的root用户，点击“修改权限”
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/mysql-openremote001-websoft9.png)
-2. 在“登录信息”选项卡中，将“主机名”下拉菜单选项更改为“任意主机”，点击执行
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/mysql-openremote002-websoft9.png)
-3. 以上两步就完成了开启远程连接的工作
+3. After the database backup file (.sql suffix) is generated, save it to the local computer
 
-#### 管理多个 MySQL 实例
+**Import**
 
-phpMyAdmin 支持多个 MySQL 实例。
+1. Restore the database, corresponding to the "Import" operation, refer to the following
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/mysql/mysql-import-websoft9.png)
 
-修改 phpMyAdmin 的 docker-compose 文件的对应的环境变量（PMA_HOST 更改为 PMA_HOSTS）即可支持：
+2. Import files should pay special attention to character set compatibility
 
+#### MySQL Remote {#phpmyadminremote}
+
+To enable remote in phpMyAdmin, you only need to change the access mode of the root account to "any way to access", as follows:
+
+1. Log in phpMyAdmin, go to User account->Edit privileges of root account
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/phpmyadmin/phpmyadmin-modifypw001-websoft9.png)
+
+2. Select the tab Login Information, Host Name fill in "%", click "Go" button completing this setting
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/phpmyadmin/phpmyadmin-modifypw002-websoft9.png)
+
+#### Manage multiple MySQL instances
+
+phpMyAdmin supports multiple MySQL instances.
+
+Modify the corresponding environment variable of the docker-compose file of phpMyAdmin (PMA_HOST is changed to PMA_HOSTS) to support:
 ```
 version: "3.7"
 services:
@@ -268,11 +273,11 @@ services:
 ...
 ```
 
-#### 修改导入文件大小限制
+#### Modify import file size limit
 
-phpMyAdmin 默认可导入的文件大小有限制，可通过如下步骤修改它：
+The default file size that phpMyAdmin can import is limited, you can modify it by the following steps:
 
-1. 使用 SFTP 连接服务器，编辑 */data/apps/phpmyadmin/docker-compose.yml* 文件，在环境变量处增加一个字段 `- UPLOAD_LIMIT=20M`
+1. Use SFTP to connect to the server, edit the */data/apps/phpmyadmin/docker-compose.yml* file, and add a field to the environment variable `- UPLOAD_LIMIT=20M`
   ```
   version: "3.7"
   services: 
@@ -285,14 +290,15 @@ phpMyAdmin 默认可导入的文件大小有限制，可通过如下步骤修改
          - UPLOAD_LIMIT=20M
   ```
 
-2. 重新创建 phpMyAdmin 容器后生效
+2. Restart phpMyAdmin
   ```
   cd /data/apps/phpmyadmin && docker-compose up -d
   ```
 
-## MySQL/MariaDB 参数
+## Reference sheet
 
-MySQL 应用中包含 Docker, phpMyAdmin 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage MySQL/MariaDB 
+
 
 通过运行`docker ps`，可以查看到 MySQL 运行时所有的 Container：
 
@@ -302,14 +308,14 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 下面仅列出 MySQL 本身的参数：
 
-### 路径{#path}
+### Path{#path}
 <Tabs>
 <TabItem value="linuxpath" label="Linux" default>
 
-MySQL 安装目录: *usr/local/mysql*  
+MySQL installation directory: *usr/local/mysql*  
 MySQL 配置文件: *etc/my.cnf*   
 MySQL 数据目录：*/data/mysql*   
-MySQL 日志文件: */var/log/mysql/mysqld.log*   
+MySQL logs file: */var/log/mysql/mysqld.log*   
 MySQL PIN: */run/mysqld/mysqld.pid*   
 MySQL Socket: */var/lib/mysql/mysql.sock*
 
@@ -332,20 +338,20 @@ phpMyAdmin 虚拟主机配置文件: */etc/httpd/conf.d/phpMyAdmin.conf*
 </TabItem>
 </Tabs>
 
-### 端口
+### Port
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
 | 3306   | MySQL/MariaDB 远程端口 | 可选   |
 | 9090   | HTTP 访问 phpMyAdmin on Docker | 可选   |
 
-### 版本
+### Version
 
 ```shell
 mysql -V
 ```
 
-### 服务
+### Service
 
 <Tabs>
 <TabItem value="linuxservice" label="Linux" default>
@@ -367,7 +373,7 @@ sudo docker start | stop | restart | stats phpmyadmin
 </Tabs>
 
 
-### 命令行
+### CLI
 
 MySQL 安装完成后，默认有如下可用工具：
 

@@ -6,63 +6,59 @@ tags:
   - CMS
 ---
 
-# 维护指南
+# Joomla Maintenance
 
-本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup) 相关章节。
+This chapter is special guide for Joomla maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-## 场景
+## Maintenance guide
 
-### 在线备份
+### Backup and Restore
 
-通过安装 Joomla 扩展，可以实现后台在线备份：
+This section provides Joomla online backup solution
 
-1. 下载 [Akeeda](https://www.akeebabackup.com/download.html)
+1. Download extension [Akeeda](https://www.akeebabackup.com/download.html)
 
-2. 登录 Joomla 后台，通过上传压缩文件的方式安装 **Akeeda** 
+2. Log in Joomla console as administrator, install **Akeeka** by uploading package
 
-3. 打开：【Dashboard】>【System】>【Control Panel】，找到【Backup is up-to-date】
+3. Go to【Dashboard】>【System】>【Control Panel】, find 【Backup is up-to-date】
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-backup-websoft9.png)
 
-4. 开始设置备份策略
+4. Set the backup
 
-5. 通过 Akeeda 实现的备份可以在线恢复
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-restore-websoft9.
+5. You can **Restore** Joomla with **Akeeda** also
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-restore-websoft9.png)  
 
+### Upgrade
 
-### 在线升级
+Joomla provides a very user-friendly upgrade (update) portal
 
-Joomla 提供了非常人性化的在线升级方案，根据系统的更新提示完成升级
+> Please completed backup of Server before any upgrade of Joomla
 
-> 在升级之前请做好服务器的快照备份，这个是必须的步骤，因为谁都无法保证升级 100% 成功。
+1. Log in Joomla backend, you can see the upgrade reminder when have latest version
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-bkupgradets-websoft9.png)  
 
-1. 登录 Joomla 后台，如果有升级需求系统会显示升级提示
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-bkupgradets-websoft9.png)  
+2. Go to the upgrade interface, check the upgrade requirement and start to upgrade
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-update003-websoft9.png)
 
-2. 根据提示进入升级中心，确认是否具备升级条件
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-update003-websoft9.png)
-
-3. 升级中，请耐心等待
+3. Upgrading, wait for it
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-update004-websoft9.PNG)
 
-4. 升级成功
+4. Upgrade successfully
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-update005-websoft9.PNG)
 
-5. 扩展也可以在线升级
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-bkextupgrade-websoft9.png)
+5. You can upgrade extension of Joomla also
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-bkextupgrade-websoft9.png)
 
 
-> 更多升级详情，请参考官方升级文档 [Joomla Upgrading](https://docs.joomla.org/Portal:Upgrading_Versions/zh-cn)
+## Troubleshoot{#troubleshoot}
 
+In addition to the Joomla issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
-## 故障排除
+## FAQ{#faq}
 
-除以下列出的 Joomla 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
+#### Joomla support multi-language?
 
-## 问题解答
-
-#### Joomla 支持多语言吗？
-
-支持多语言（包含中文），建议在初始化安装的时候安装多语言
+Yes
 
 #### 在组件中如何加载其他扩展的语言文件?
 

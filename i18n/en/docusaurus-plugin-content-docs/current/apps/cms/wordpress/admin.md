@@ -4,30 +4,30 @@ slug: /wordpress/admin
 tags:
   - WordPress
   - CMS
-  - 建站系统
-  - 博客系统
+  - Website
+  - Blog
 ---
 
-# 维护指南
+# WordPress Maintenance
 
-本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup) 相关章节。
+This chapter is special guide for WordPress maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-## 场景
+## Maintenance guide
+  
+### WordPress 10 major points
 
-### WordPress 维护 10 大原则
+In order to make WordPress run more efficiently, easy to maintain, and easy to migrate, we have summarized 10 key points that WordPress administrators and content managers need to pay attention to in practice:
 
-为了使 WordPress 运行更有效率，方便维护、方便迁移，我们在实践中总结了需要注意的 10 个要点：
-
-1. 上传图片尽量不超过100k/张
-2. 如果总图片数量超过500张，建议将图片放到对象存储中，实现动静分离，也便于维护
-3. 所有图片名称为英文
-4. 新闻的图片大小比例最好为600:400，保证统一性。每篇新闻都要配套图片，美观大方，便于展示
-5. 所有页面、新闻 URL 地址均采用英文
-6. 后台账号的密码要复杂一些
-7. 轮播 Banner 不超过3张
-8. 插件数量不超过20个，不用的插件务必卸载，以避免插件冲突而导致网站不可用
-9. 网站内容为王，请将精力集中于内容的更新、知识库的建立
-10. 视频等大文件请放到其他存储中
+1. Upload pictures as far as possible no more than 100k/sheet
+2. If the total number of pictures exceeds 500, it is recommended to put the picture in the object storage to achieve dynamic separation and easy maintenance.
+3. All picture names are in English
+4. The image size ratio of the news is preferably 600:400 to ensure uniformity. Each news must be accompanied by pictures, beautiful and easy to display.
+5. All pages and news URL addresses are in English
+6. The password of the background account is more complicated.
+7. Carousel Banner no more than 3
+8. The number of plugins does not exceed 20, and the plugins that are not used must be uninstalled to avoid the conflict of plugins and the website is unavailable.
+9. The content of the website is king. Please concentrate on the update of the content and the establishment of the knowledge base.
+10. Please put large files such as video in other storage.
 
 ### WordPress 使用外部图片
 
@@ -42,7 +42,7 @@ tags:
 3. 登录Wordpress后台，依次打开：页面编辑-插入多媒体，将图片插入到WordPress系统中
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aliyun/aliyun-oss-adresstowp-websoft9.png)
 
-### WordPress 集成对象存储
+### WordPress integration with OSS
 
 所谓 WordPress 与 对象存储集成实际上就是：将对象存储挂载到 WordPress 的 wp-upload 文件夹上。
 
@@ -61,68 +61,67 @@ tags:
 4. 设置资源本地备份与同步
   ![OSS](https://libs.websoft9.com/Websoft9/blog/tmp/wordpress/zh/wordpress-oss2-websoft9.png)
 
-### 备份与恢复
 
-WordPress插件库中有数量众多的备份插件，我们推荐使用：[UpdraftPlus WordPress Backup Plugin ](https://wordpress.org/plugins/updraftplus/)
+### Backup and Restore
+
+There are many WordPress plugins for backup, we recommend [UpdraftPlus WordPress Backup Plugin ](https://wordpress.org/plugins/updraftplus/) 
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-updraftplus-websoft9.png)
 
-这个插件特点和好处包括：
+UpdraftPlus simplifies backups (and restoration). Backup into the cloud, Dropbox, Google Drive, Rackspace Cloud, DreamObjects, FTP, Openstack Swift, UpdraftPlus Vault and email and restore with a single click. Backups of files and database can have separate schedules. The paid version also backs up to Microsoft OneDrive, Microsoft Azure, Google Cloud Storage, SFTP, SCP, and WebDAV.
 
-* 可以预设备份时间点，实现自动备份
-* 可以备份网站文件和数据库
-* 可以实现一键恢复
+* Backup scope: Database,Wordpress
+* Backup effect: Very Good
+* Backup frequency: Automatic backup per day if you need
+* Recommended reason : Automation Backup
 
-### 升级
+### WordPress Upgrade
 
-升级之前必须备份，这个是基本素养。  
-
-WordPress 升级包括：内核升级、插件升级和主题升级。这三者都可以通过 WordPress 后台进行在线升级，下图是升级提醒：  
+WordPress Upgrade includes: WordPress core upgrade, Plugin upgrade, Theme upgrade. You can upgrade them by the dashboard of WordPress. Following is the reminder links for WordPress Upgrade
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-upgrade-websoft9.png)
 
-由于这三者分别属于不同的开发者，升级后可能会导致不兼容的现象。具体表现有：
+WordPress core, Plugin, Theme are developed by different organization, so their may have the incompatible problem after any upgrade like below
 
-- 网站打不开，显示500程序错误
-- 网站结构变得混乱
-- 主题部分功能不可用
+- The website cannot be opened, showing 500 program errors
+- Website structure has become confusing
+- The topic part feature is not available
 
-以上不兼容现象是正常的，最好的解决办法是让 主题和插件的版本 适应 WordPress 内核版本。
+The above incompatibility is normal, and the best solution is to adapt the theme and plugin version to the WordPress kernel version.
 
-#### 内核升级
+### Worpress Core upgrade
 
-##### 一键升级
+#### One-click upgrade
 
-WordPress 内核升级非常简单，当进入后台之后系统会提示需要升级，点击升级即可。
+When new version for Wordpress Core,you can see the upgrade reminder link, click it to start updates
 
- ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-wordpresscoreupdate-websoft9.png)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-wordpresscoreupdate-websoft9.png)
 
-##### 手动升级{#mupgrade}
+#### Manual upgrade{#mupgrade}
 
-有的时候，由于网络原因，在线一键升级不可用，那么就需要手工升级
+Sometimes, you can't upgrade WordPress by On-Click for the reason of networ, manual upgrade for you
 
-1. [下载](https://github.com/WordPress/WordPress/tags)最新的 WordPress 版本，并解压
-2. 登录云服务器，进入 [WordPress 的根目录](../wordpress#path)
-3. 删除此目录下的 `wp-admin` 和 `wp-includes` 文件夹
-4. 上传本地解压后的 WordPress代码，有同名文件提醒的时候选择覆盖上传
+1. [Download](https://github.com/WordPress/WordPress/tags) a new WordPress version and unzip it
+2. Log in to Cloud Server and go to the [WordPress root directory](../wordpress#path)
+3. Delete the `wp-admin` and `wp-includes` 
+4. Upload local WordPress to Cloud Server, cover all files if have the same file name
 5. 重新访问WordPress，可能会出现下图所示的数据库升级步骤
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-update-db-websoft9.jpg)
 6. 点击【升级WordPress数据库】即可
 
-#### 插件升级
+### Plugins upgrade
 
-插件一般采用在线升级的方式，并逐一升级  
+Please update plugin online if you need,e.x
+   ![Wordpress plugin upgrade](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-pluginsupgrade-websoft9.png)
 
- ![WordPress 插件升级](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-pluginupdate-websoft9.png)
+### Theme upgrade
 
-#### 主题升级
+Most of the time,you may using the business theme which don't provider online update,below is the suggest steps  
 
-主题升级建议采用的方式：
-
-1. 使用 WinSCP 登录服务，删除原有主题（或对其改名）
-2. 通过 【WordPress 后台】>【外观】>【主题】>【添加】>【上传主题】的方式，完成主题安装
-   ![Wordpress 上传主题](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-addthemes-websoft9.png)
-
+1. Using SFTP to delete the theme from wp-contents folder
+2. Log in WordPress, go to Appearance->Theme->Add New, upload the theme online
+  ![Wordpress theme upgrade](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-themesupgrade-websoft9.png)
+3. Enable the theme when complete the installation
 
 ### 代码植入处理{#insertcode}
 
@@ -143,9 +142,11 @@ WordPress 由于被广泛使用，导致安全漏洞被无限放大，其中Word
 其他扫描工具：
 
 1. Quttera Web Malware Scanner 
-2. Anti-Malware Security and Brute-Force Firewall  
+2. Anti-Malware Security and Brute-Force Firewall
 
-## 故障排除
+## Troubleshoot{#troubleshoot}
+
+In addition to the WordPress issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
 #### 配置HTTPS后，网站部分资源无法加载？{#httpsmore}
 
@@ -194,7 +195,7 @@ WordPress上传文件出错，有几种可能性：
 
 #### 正在执行例行维护请一分钟后回来？
 
-出现这个提示的原因是在网站Wordpress安装目录下生成了.maintenance文件
+出现这个提示的原因是在网站Wordpressinstallation directory下生成了.maintenance文件
 
 * 如果存在将其删除即可,恢复正常. 
 * 如果不存在,那么新建一个.maintenance，内容为空白，刷新，恢复正常后再删除它
@@ -224,36 +225,35 @@ WordPress 的后台管理是分权限的，而最高权限是超级管理员。�
 错误信息： You don't have permission to access /wp-admin/admin.php on this server?  
 解决方案：待研究
 
+## FAQ{#faq}
 
-## 问题解答
+#### WordPress support multi-language?
 
-#### WordPress支持多语言吗？
-
-支持多语言（包含中文），后台可以设置语言
+Yes
 
 #### WordPress能建企业网站吗？
 
 可以，全球34%的网站都是基于 WordPress 构建
 
-#### 如果没有域名是否可以部署 WordPress？
+#### If there is no domain name, can I deploy WordPress?
 
-可以，访问`http://服务器公网IP` 即可
+Yes, visit WordPress by *http://Internet IP*
 
-#### WordPress 登录后台如何使用 SSL？
+#### How to enable HTTTS for log in WordPress?
 
-在 wp-config.php 文件中的特定位置，添加如下两行代码
+Insert these codes below in you `wp-config.php` file
 
 ```
-### 添加代码开始 ###
+### Insert start ###
 define('FORCE_SSL_ADMIN', true);
 define('FORCE_SSL_LOGIN', true);
-### 添加代码结束 ###
+### Insert end ###
 
 if ( !defined(‘ABSPATH’) )
         define(‘ABSPATH’, dirname(__FILE__) . ‘/’)
 ```
 
-#### 如何修改上传的文件权限?
+#### How to change the permissions of filesytem?
 
 ```shell
 #WordPress(LAMP)

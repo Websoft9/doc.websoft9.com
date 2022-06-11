@@ -3,65 +3,65 @@ sidebar_position: 1
 slug: /grafana
 tags:
   - Grafana
-  - 大数据分析
+  - Data Analysis
   - BI
 ---
 
-# 快速入门
+# Grafana Getting Started
 
-[Grafana](https://github.com/grafana/grafana) 是一个开源的度量分析与可视化套件。经常被用作基础设施的时间序列数据和应用程序分析的可视化，它在其他领域也被广泛的使用包括工业传感器、家庭自动化、天气和过程控制等。
+[Grafana](https://github.com/grafana/grafana) Grafana is the leading open source project for visualizing metrics. Supporting rich integration for every popular database like Graphite, Prometheus and InfluxDB.
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/grafana/grafana-dashboardui.png)
 
-## 准备
+If you have installed Websoft9 Grafana, the following steps is for your quick start
 
-部署 Websoft9 提供的 Grafana 之后，请参考下面的步骤快速入门。
+## Preparation
 
-1. 在云控制台获取您的 **服务器公网 IP 地址**
-2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:80** 和 **TCP:3000** 端口是否开启
-3. 在服务器中查看 Grafana 的 **[默认账号和密码](./user/credentials)**
-4. 若想用域名访问 Grafana，务必先完成**[域名五步设置](./administrator/domain_step)** 过程
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:80** is allowed
+3. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for Grafana
+4. [Get](./user/credentials) default username and password of Grafana
 
-## Grafana 初始化向导
+## Grafana Initialization
 
-### 详细步骤
+### Steps for you
 
-1. 使用本地电脑的浏览器访问网址： *http://域名* 或  *http://服务器公网IP*, 就进入登录页面
-   ![Grafana 登录](https://libs.websoft9.com/Websoft9/DocsPicture/en/grafana/grafana-login-websoft9.png)
+1. Using local Chrome or Firefox to visit the URL *http://domain name* or *http://Internet IP*, you will enter the register interface of Grafana
+![Grafana login page](https://libs.websoft9.com/Websoft9/DocsPicture/en/grafana/grafana-login-websoft9.png)
 
-2. 输入默认的用户名和密码（[查看](./user/credentials)），系统会提示修改密码
-   ![Grafana 强提示修改密码](https://libs.websoft9.com/Websoft9/DocsPicture/en/grafana/grafana-forcechangepw-websoft9.png)
+2. Input the [default username and password](./user/credentials), then system will force you to change your password
+![Grafana change password](https://libs.websoft9.com/Websoft9/DocsPicture/en/grafana/grafana-forcechangepw-websoft9.png)
 
-3. 登录到 Grafana 控制台页面  
-   ![Grafana 控制台](https://libs.websoft9.com/Websoft9/DocsPicture/en/grafana/grafana-dashboard-websoft9.png)
+3. Log in to the Grafana Console  
+![Grafana console](https://libs.websoft9.com/Websoft9/DocsPicture/en/grafana/grafana-dashboard-websoft9.png)
 
-4. 通过【Configuration】>【Plugins】添加插件  
-   ![Grafana 添加插件](https://libs.websoft9.com/Websoft9/DocsPicture/en/grafana/grafana-plugins-websoft9.png)
+4. Open **Configuration** > **Plugins** to add plugins for function extension 
+![Grafana add plugin](https://libs.websoft9.com/Websoft9/DocsPicture/en/grafana/grafana-plugins-websoft9.png)
 
-5. 通过【Configuration】>【Data Sources】添加数据源（分析对象）  
-   ![Grafana 添加数据源](https://libs.websoft9.com/Websoft9/DocsPicture/en/grafana/grafana-datasource-websoft9.png)
+5. Open **Configuration** > **Data Sources** to add data source for analysis  
+![Grafana add data source](https://libs.websoft9.com/Websoft9/DocsPicture/en/grafana/grafana-datasource-websoft9.png)
 
-6. 通过【Configuration】>【Users】增加用户  
-   ![Grafana 添加用户](https://libs.websoft9.com/Websoft9/DocsPicture/en/grafana/grafana-users-websoft9.png)
+6. Open **Configuration** > **Users** to add user  
+![Grafana add user](https://libs.websoft9.com/Websoft9/DocsPicture/en/grafana/grafana-users-websoft9.png)
 
-> 需要了解更多 Grafana 的使用，请参考官方文档：[Grafana Documentation](https://grafana.com/docs)
+> More useful Grafana guide, please refer to [Grafana Documentation](https://grafana.com/docs)
 
-### 出现问题？
+### Having trouble?
 
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或 **[FAQ](./faq#setup)** 尝试快速解决问题。
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
-## Grafana 使用入门
+
+## Grafana QuickStart
 
 下面以 xxx 配置数据监控作为范例。
 
-## Grafana 常用操作
+## Grafana Setup
 
-### 配置 SMTP
+### Configure SMTP{#smtp}
 
-1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
+1. Get [SMTP](./administrator/smtp) related parameters in the mailbox management console
 
-2. 修改[Grafana 配置文件](#path)，增加如下的 SMTP 配置段
-
+2. Edit the SMTP segment part in [Grafana configuration file](#path) and fill in your SMTP items
    ```
    #################################### SMTP / Emailing #####################
    [smtp]
@@ -81,60 +81,58 @@ tags:
    welcome_email_on_sign_up = false
    templates_pattern = emails/*.html
    ```
-
-3. 重启服务
+3. Restart Service
    ```
    sudo systemctl restart grafana-server
    ```
-   
-4. 登录 Grafana 控制台，打开：【Alerting】>【Alert Rules】，新建一个【Email】通知渠道
+4.  Log in Grafana Console, Open: **Alerting** > **Alert Rules**, create new Notification Channel and select the type with **Email**
    ![Grafana SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/en/grafana/grafana-sendmails-websoft9.png)
+5. Click the **Test Connection**, you can get the feedback *"no errors were..."* if SMTP is useful
 
-5. 点击【Send Test】
+### Reset Password
 
-### 重置密码
-
-SSH 登录服务器，运行下面的命令即可
+SSH login to the server, run the following command
 
 ```
-# 修改管理员密码
+# Modify administrator password
 grafana-cli admin reset-admin-password admin123
 ```
 
-## Grafana 参数
+## Reference sheet
 
-Grafana 应用中包含 Nginx, SQLite 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Grafana
+
 
 下面仅列出 Grafana 本身的参数：
 
-### 路径{#path}
+### Path{#path}
 
-Grafana 安装目录： */usr/share/grafana*  
+Grafana installation directory： */usr/share/grafana*  
 Grafana 配置文件：  */usr/share/grafana/conf/defaults.ini*  
-Grafana 日志文件：  */var/log/grafana/grafana.log*  
+Grafana logs file：  */var/log/grafana/grafana.log*  
 Grafana 数据存储路径： */usr/share/grafana/data*  
 Grafana 数据日志路径： */usr/share/grafana/data/log*
 
-### 端口{#port}
+### Port{#port}
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
 | 3000   | Grafana 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
 
-### 版本
+### Version
 
 ```shell
 # Grafana Version
 grafana-cli -v
 ```
 
-### 服务
+### Service
 
 ```
 sudo systemctl start | stop | restart | status grafana-server
 ```
 
-### 命令行
+### CLI
 
 Grafana 提供命令行工具`grafana-cli`用于全面管理和配置 Grafana
 

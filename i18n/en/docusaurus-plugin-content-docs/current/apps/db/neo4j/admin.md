@@ -6,21 +6,20 @@ tags:
   - Cloud Native Database
 ---
 
-# 维护指南
+# Neo4j Maintenance
 
-本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup) 相关章节。
+This chapter is special guide for Neo4j maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-## 场景
+## Maintenance guide
 
-## 备份
 
-### Neo4j 备份
+### Neo4j Backup
 
-请参考 [Neo4j's Backup Docs](https://neo4j.com/docs/operations-manual/current/backup/)
+Please refer to [Neo4j's Backup Docs](https://neo4j.com/docs/operations-manual/current/backup/)
 
-### Neo4j 升级
+### Neo4j Upgrade
 
-Neo4j 升级有一定的复杂性，请参考[官方升级文档](https://neo4j.com/docs/operations-manual/current/upgrade/)
+Neo4j Upgrade is not easy, please refer to [Neo4j's Upgrade Docs](https://neo4j.com/docs/operations-manual/current/upgrade/)
 
 升级对象一般指的是：Neo4j 4.1.2 to Neo4j 4.2.0，下面说明主要步骤：
 
@@ -41,40 +40,44 @@ Neo4j 升级有一定的复杂性，请参考[官方升级文档](https://neo4j.
 5. 升级完成之后，恢复 `dbms.allow_upgrade=true`之前的 # 号
 
 
-## 故障排除{#troubleshoot}
+## Troubleshoot{#troubleshoot}
 
-除以下列出的 Neo4j 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
+In addition to the Neo4j issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
-## 问题解答
+## FAQ{#faq}
 
-#### Neo4j 支持多语言吗？
+#### Neo4j support multiply languages?
 
-支持多语言（包含中文），系统默认根据浏览器自动选择语言 
+Yes
 
-#### 社区版 vs 企业版？
+#### Neo4j Community Edition vs Neo4j Enterprise Edition?
 
-参考：[Neo4j 功能细节对比](https://neo4j.com/docs/operations-manual/current/introduction/#edition-details)
+Please refer to [Neo4j edition details](https://neo4j.com/docs/operations-manual/current/introduction/#edition-details)
 
-#### Neo4j 支持哪些连接协议？
+#### How many connection protocol on Neo4j?
 
-Neo4j 支持三种不同的连接方式：Bolt、HTTP、HTTPS。
+Bolt, HTTP, HTTPS
 
-#### Neo4j browser 是什么？
+#### What's Neo4j Browser? 
 
-Neo4j浏览器是一个可以通过Web浏览器运行的图形用户界面（GUI）。 Neo4j浏览器可用于添加数据，运行查询，创建关系等。 它还提供了一种可视化数据库中数据的简便方法。
+The Neo4j browser is a graphical user interface (GUI) that can be run through a web browser. The Neo4j browser can be used for adding data, running queries, creating relationships, and more. It also provides an easy way to visualise the data in the database.
 
-#### Neo4j 一个实例支持多个数据库吗？
+#### Is there a web-base GUI database management tools?
 
-支持，但社区版仅支持一个默认的系统库和用户库
+Yes, Neo4j Browser is on it, visit by *http://Internet IP*
 
-#### Neo4j 有行和列的概念吗？
+#### How to disable Neo4j Browser access?
 
-有，但存储的是数据节点以及节点之间的关系
+Disable port 80 of the server security group
 
-#### Cypher 是什么？
+#### Cypher？
 
-Cypher是操作Neo4j的语句，等同于SQL
+Cypher is Neo4j’s graph query language that allows users to store and retrieve data from the graph database. Neo4j wanted to make querying graph data easy to learn, understand, and use for everyone, but also incorporate the power and functionality of other standard data access languages.
 
-#### 如何禁止 Neo4j Browser 访问？
+#### One Neo4j instance support multiply databases?
 
-关闭服务器安全组的 80 端口即可禁止
+Yes, but only for Neo4j Enterprise Edition
+
+#### Is there have line and column for Neo4j?
+
+Yes, but it storage for relationship of Node

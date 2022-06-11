@@ -3,31 +3,36 @@ sidebar_position: 3
 slug: /canvas/admin
 tags:
   - Canvas
-  - 在线学习管理
+  - elearning
 ---
 
-# 维护指南
+# Canvas Maintenance
 
-本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup) 相关章节。
+This chapter is special guide for Canvas maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-## 场景
+## Maintenance guide
 
-### 升级
+### Backup and Restore
+   
+### Upgrade
 
-Canvas升级有点小复杂，详情参考官方升级文档：[Upgrading Canvas](https://github.com/instructure/canvas-lms/wiki/Upgrading)
+Refer to the official docs: [Upgrading Canvas](https://github.com/instructure/canvas-lms/wiki/Upgrading)
 
-## 故障排除
 
-#### 如何查看错误日志？
+## Troubleshoot{#troubleshoot}
 
-通过如下两种日志检索关键词 **Failed** 或者 **error** 查看错误
+In addition to the Canvas issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more. 
 
-* Canvas 日志：`/data/wwwroot/canvas/log/production.log`
-* Apache 日志：`/data/logs/apache`
+#### How can I use the logs?
 
-#### 403 访问权限错误？
+You can find the keywords **Failed** or **error** from the these logs
 
-需要确保 Canvas 根目录具有 canvas 和 www-data 两个用户的权限
+* Canvas log: `/data/wwwroot/canvas/log/production.log`
+* Apache log: `/data/logs/apache`
+
+#### 403 error?
+
+You should make sure user **canvas** and **www-data** haver permission of DIR */data/wwwroot/canvas*
 
 #### 文件上传，不能下载
 
@@ -37,28 +42,27 @@ Canvas升级有点小复杂，详情参考官方升级文档：[Upgrading Canvas
 1. 找到 [Apache 虚拟主机配置文件](../administrator/parameter)，将 ServerName 值修改为实际域名
 2. 找到 [Canvas 域名配置文件](../canvas#path)，将 production 配置节点的 **domain** 值修改为实际域名
 
+## FAQ{#faq}
 
-## 问题解答
+#### Can Canvas open source support mobile?
 
-#### Canvas 开源版是否提供移动端？
+Yes, refer to: [mobile-guide](https://community.canvaslms.com/community/answers/guides/mobile-guide)
 
-支持手机浏览器、Android 和 IOS 移动端。 详情参考：[mobile-guide](https://community.canvaslms.com/community/answers/guides/mobile-guide)
+#### Canvas multi-languages?
 
-#### Canvas 支持中文吗
-
-支持包括中文、英文等二十多种语言
+Yes
 
 #### Canvas 怎么安装插件？
 
 参考: [安装插件](../canvas#plugin)
 
-#### 快速重置 Canvas 管理员密码？
+#### Can I reset administrator password of Canvas by command?
 
-Canvas 官方没有提供方案。
+No
 
-#### Canvas 云版本与 OpenSource 区别？
+#### Canvas hosted offering vs OpenSource?
 
-有。具体参考 [code differences between the open source and hosted offerings](https://github.com/instructure/canvas-lms/wiki/FAQ#does-canvas-support-any-extensions)
+Refer to: [code differences between the open source and hosted offerings](https://github.com/instructure/canvas-lms/wiki/FAQ#does-canvas-support-any-extensions)
 
 #### Canvas 根目录需 canvas 和 apache 权限？
 
@@ -67,6 +71,3 @@ Canvas 官方没有提供方案。
 ```
 setfacl -m u:www-data:rx -R /data/wwwroot/canvas
 ```
-#### 推荐一个国内学习 Canvas 的网站？
-
-小编认为[上海交通大学教育技术中心](https://v.sjtu.edu.cn/guide/)还不错

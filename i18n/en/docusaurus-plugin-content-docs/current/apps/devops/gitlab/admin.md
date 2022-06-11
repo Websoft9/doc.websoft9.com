@@ -6,38 +6,45 @@ tags:
   - DevOps
 ---
 
-# 维护指南
+# Gitlab Maintenance
 
-本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup) 相关章节。
+This chapter is special guide for Gitlab maintenance and settings. And you can refer to [Administrator](../administrator) and [Steps after installing](../install/setup) for some general settings that including: **Configure Domain, HTTPS Setting, Migration, Web Server configuration, Docker Setting, Database connection, Backup & Restore...**  
 
-## 场景
+## Maintenance guide
 
-### 备份与恢复
+### Gitlab Backup and Restore
 
-基于 GitLab [官方备份文档](https://docs.gitlab.com/omnibus/settings/backups.html)，我们建议的备份操作步骤如下：
+Based the official docs, we suggest you backup by these steps:
 
-1. 备份 GitLab 配置文件：通过 SFTP 工具将所有配置（*/etc/gitlab*）目录 **压缩后**再下载到本地电脑
-2. 备份 GitLab 系统：运行一条备份命令即可（[查看备份清单](https://docs.gitlab.com/ce/raketasks/backup_restore.html#creating-a-backup-of-the-gitlab-system)）
+1. Backup configuration files: Use SFTP  **compression** and download（*/etc/gitlab*）
+2. Backup all GitLab system: run a backup command. ([view the backup lists](https://docs.gitlab.com/ce/raketasks/backup_restore.html#creating-a-backup-of-the-gitlab-system))
    ``` shell
    sudo gitlab-backup create
    ```
+3. Put the system files and configuartion files in the same folder, named according to the date
+4. Backup completed
 
-### 升级
+> GitLab provide the official docs for [Backups](https://docs.gitlab.com/omnibus/settings/backups.html)
 
-GitLab 是一个企业级软件，它所采用了大量的第三方开源组件，它的升级是一个系统化工程。  
 
-#### 逐级升级
+### Gitlab Upgrade
 
-所幸，GitLab 官方提供了一个稳妥可靠的 **逐级** [升级方案](https://docs.gitlab.com/omnibus/update/README.html#updating-using-the-official-repositories) 以弥补由于当前版本与最新版本之间的跨度太大儿无法升级的问题。
+GitLab officially provides **level by level**[upgrade plan](https://docs.gitlab.com/omnibus/update/README.html#updating-using-the-official-repositories), each version has an upgrade The path must be gradually upgraded to the **specified version**, the method is as follows:
 
-下面以 Gitlab 13.0.14 升级至 GitLab 14.1.6 为例，介绍详细的升级方案：  
+#### Specify version upgrade
 
-1. 查询官方[升级路径](https://docs.gitlab.com/ee/update/index.html#upgrade-paths)文档，确认升级路径
+The update method of updating to a specified version is very useful. On the one hand, it meets the requirements of a specific version of the user, and on the other hand, it achieves a **gradual upgrade** in this way, which solves the situation that the version span is too large to be upgraded.
+
+For example: Gitlab12 to GitLab14 cannot be upgraded directly, you need to refer to the official step-by-step [upgrade path](https://docs.gitlab.com/ee/update/index.html#upgrade-paths) to achieve this. 
+
+Take the Gitlab 13.0.14 to GitLab 14.1.6 as sample for your reference below:    
+
+1. Get the **upgrade paths** from [official docs](https://docs.gitlab.com/ee/update/index.html#upgrade-paths), computing your correct path like this:  
    ```
    13.0.14 -> 13.1.11 -> 13.8.8 -> 13.12.10 -> 13.12.12 -> 14.0.11 -> 14.1.6
    ```
 
-2. 可选步骤：检索当前升级库是否提供上述路径的各种版本（ce 可替换成 ee）
+2. Optional step: search all versions in GitLab repository (ce can be instead to ee)
    ```
    # Ubuntu/Debian
    sudo apt-cache madison gitlab-ce
@@ -49,7 +56,7 @@ GitLab 是一个企业级软件，它所采用了大量的第三方开源组件�
    dnf --showduplicates list gitlab-ce
    ```
 
-3. 根据升级路径，一级一级逐渐向上升
+3. Update step by step
    ```
    # Ubuntu/Debian
    sudo apt install gitlab-ce-<version>
@@ -61,14 +68,14 @@ GitLab 是一个企业级软件，它所采用了大量的第三方开源组件�
    dnf install gitlab-ce-<version>
    ```
 
-> 如果不填写版本号，例如：yum install gitlab-ce，即表明升级到最新版本。
+> If you update by `yum install gitlab-ce` which not include version, it mean update to latest version
 
 
-#### CE 升级到 EE
+#### CE to EE
 
-GitLab Community Edition (CE) 升级到同版本的 GitLab Enterprise Edition 的操作步骤如下：
+To upgrade an existing GitLab Community Edition (CE) server to GitLab Enterprise Edition (EE), all you have to do is install the EE package on top of CE. 
 
-1. 获取当前CE的版本号
+1. Get the CE version nubmer
    ```
    # For Debian/Ubuntu
    sudo apt-cache policy gitlab-ce | grep Installed
@@ -76,7 +83,7 @@ GitLab Community Edition (CE) 升级到同版本的 GitLab Enterprise Edition �
    # For CentOS/RHEL
    sudo rpm -q gitlab-ce
    ```
-2. 匹配EE版本号。例如获取的CE版本号为 *8.6.7-ce.0*，那么应该升级的EE版本号为：*8.6.7-ee.0*
+2. Match the EE version number.e.g. the CE number is *8.6.7-ce.0*, then the EE number should be *8.6.7-ee.0*
 3. Add the gitlab-ee Apt or Yum repository
    ```
    # For Debian/Ubuntu
@@ -85,7 +92,7 @@ GitLab Community Edition (CE) 升级到同版本的 GitLab Enterprise Edition �
    # For CentOS/RHEL
    curl -s https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.rpm.sh | sudo bash
    ```
-4. 安装 gitlab-ee 版本（同时系统自动卸载ce版）
+4. Install the correct GitLab-EE version(system will automatically uninstall CE version the same time)
    ```
    ........................................
    # For Debian/Ubuntu
@@ -108,8 +115,8 @@ GitLab Community Edition (CE) 升级到同版本的 GitLab Enterprise Edition �
    ## Reconfigure GitLab
    sudo gitlab-ctl reconfigure
    ```
-5. 在服务器的 GitLab 管理面板 (/admin/license/new) 上传许可证文件。
-6. 确认 GitLab 按正常工作后，删除旧的社区版存储库
+5. Go to the GitLab admin panel of your server (/admin/license/new) and upload your license file.
+6. After you confirm that GitLab is working as expected, you may remove the old Community Edition repository:
    ```
    # For Debian/Ubuntu
    sudo rm /etc/apt/sources.list.d/gitlab_gitlab-ce.list
@@ -117,14 +124,13 @@ GitLab Community Edition (CE) 升级到同版本的 GitLab Enterprise Edition �
    # For CentOS/RHEL
    sudo rm /etc/yum.repos.d/gitlab_gitlab-ce.repo
    ```
-以上操作更详细说明请参考官方文档：[Updating Community Edition to Enterprise Edition](https://docs.gitlab.com/omnibus/update/README.html#updating-community-edition-to-enterprise-edition)
+More details about CE upgrade to EE, please refer to official docs: [Updating Community Edition to Enterprise Edition](https://docs.gitlab.com/omnibus/update/README.html#updating-community-edition-to-enterprise-edition)
 
+## Troubleshoot{#troubleshoot}
 
-## 故障排除
+In addition to the Gitlab issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
-除以下列出的 GitLab 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。  
-
-### 公司固定 IP 突然不能访问 Gitlab？
+#### 公司固定 IP 突然不能访问 Gitlab？
 
 **现象描述**：通过公司网络（固定IP）突然（以前可以访问）不能访问Gitlab，而通过自己的手机wifi可以访问。   
 
@@ -135,19 +141,14 @@ GitLab Community Edition (CE) 升级到同版本的 GitLab Enterprise Edition �
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-attachip-websoft9.png)
 
 
-### 访问 GitLab 出现 502 错误？{#502}
+#### GitLab 502 error when loading?{#502}
 
-**现象描述**：首次访问 GitLab 或 访问人数较多时，GitLab 出现 502 错误？   
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-502-websoft9.png)
 
-**原因分析**：GitLab 所需内存最低为4G，若服务器配置不足，100% 会出现 502 错误。另外，对于单核CPU的服务器，Unicorn and Sidekiq 服务启动最少需要一分钟，如果没有启动完成，也会报502错误   
-
-**解决方案**：升级服务器配置
+The minimum required free memory for GitLab is 4G. If the Server memory is limit, a 502 error will occur. For a single-core CPU server, the Unicorn and Sidekiq service starts up to a minute, and if it is not started, it will report a 502 error.
 
 
-
-
-## 问题解答
+## FAQ{#faq}
 
 #### 没有买 License 可使用 GitLab 企业版吗？
 
@@ -157,30 +158,30 @@ GitLab Community Edition (CE) 升级到同版本的 GitLab Enterprise Edition �
 
 本项目采用 [Omnibus GitLab包](https://gitlab.com/gitlab-org/omnibus-gitlab) 的安装方式。Omnibus GitLab 是官方推荐的一种安装方法，它自带了 GitLab 所需的所有组件和服务，并可以省去繁琐的配置，同时它自带 CLI 工具，便于 GitLab 升级和维护。
 
-#### GitLab 支持多语言吗？
+#### GitLab support multi-language?
 
-支持多语言（包含中文），通过控制台即可修改语言
+Yes, you can change the language from the Admin Panel of GitLab
 
-#### GitLab 数据库连接配置信息在哪里？
+#### Where is the database connection configuration of GitLab?
 
-存储在 [Gilab 配置文件](../gitlab#path)中
+Database configuration information in */etc/gitlab/gitlab.rb* in the [Gilab Configure](../gitlab#path)
 
-#### 应用中的 PostgreSQL 是否可以远程访问？
+#### Can I remote connect PostgreSQL?
 
-不可以。默认安装下，GitLab 使用 Peer Authentication 与 PostgreSQL 通讯。这意味着客户端只能以 PostgreSQL 所在主机上的 Linux 系统账号访问数据库，无法远程访问。
+No, Omnibus GitLab use the PostgreSQL Peer Authentication mode for local connection
 
-#### 使用 SSH 的克隆项目时端口多少？
+#### What is the default port for cloning gitlab Projects Using SSH?  
 
-22
+Default port is 22
 
-#### 为什么没有提供数据库密码？
+#### What is the password for the database root user?
 
-GitLab 使用的 Peer Authentication 方式连接 PostgreSQL, 没有设置数据库密码
+Omnibus GitLab use the PostgreSQL Peer Authentication mode for local connection, no username and pssword
 
-#### 是否提供了数据库管理工具？
+#### Is there a web-base GUI database management tools?
 
-无
+No
 
-#### 可否修改 GitLab Repository 存储目录？
+#### Is it possible to modify the repository path of GitLab?
 
-可以，参考：[Repository storage paths](https://docs.gitlab.com/ee/administration/repository_storage_paths.html)
+Yes, Refer to official docs [Repository Storage Paths](https://docs.gitlab.com/ee/administration/repository_storage_paths.html)
