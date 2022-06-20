@@ -17,6 +17,7 @@ jobs:
         
     - name: Docusaurus build
       run: |
+        yarn install
         yarn run build
       env:
         CI: true
