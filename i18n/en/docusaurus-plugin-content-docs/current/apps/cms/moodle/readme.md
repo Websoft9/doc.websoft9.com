@@ -57,7 +57,7 @@ If you have installed Websoft9 Moodle, the following steps is for your quick sta
 10. Installed successfully.
    ![Moodle installation successfully](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md10.png)
 
-11. [Register a Moodle account](/solution-more.html#moodle-register) to connect Moodle official website for more extension
+11. [Register a Moodle account](#register) to connect Moodle official website for more extension
 
 > More useful Moodle guide, please refer to [Moodle Documentation](https://docs.moodle.org)
 

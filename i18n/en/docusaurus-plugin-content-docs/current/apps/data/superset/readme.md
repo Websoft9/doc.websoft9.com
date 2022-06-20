@@ -29,7 +29,7 @@ If you have installed Websoft9 superset, the following steps is for your quick s
 1. Using local browser to access URL *http://DNS* or *http://Instance's Internet IP*, enter login page
    ![superset login page](https://libs.websoft9.com/Websoft9/DocsPicture/en/superset/superset-login-websoft9.png)
 
-2. Log in to Superset web console([Don't have password?](/stack-accounts.md#superset))  
+2. Log in to Superset web console([Don't have password?](./user/credentials))  
    ![superset login page](https://libs.websoft9.com/Websoft9/DocsPicture/en/superset/superset-console-websoft9.png)
 
 3. Modiyf your password by: 【Super Admin】>【Profile】

@@ -33,7 +33,7 @@ You can upgrade your Kafka by the following steps:
    ```
    chown -R kafka. /opt/kafka
    ```
-4. Restart [Kafka services](/zh/admin-services#kafka)
+4. Restart [Kafka services](../kafka#service)
 
 ### Kafka 集群
 

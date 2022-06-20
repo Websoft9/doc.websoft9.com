@@ -14,7 +14,7 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p className="hero__subtitle"><Translate>重新定义开源服务，让云原生应用快速普及</Translate></p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <Layout
       title= { translate({message:'文档与支持'}) }
-      description="Websoft9（网久软件） 文档与支持中心，通过全面文档以及高效的客户成功团队，快速解决用户在软件安装部署、配置和运维中遇到的问题" >
+      description={ translate({message: 'Websoft9（网久软件） 文档与支持中心，通过全面文档以及高效的客户成功团队，快速解决用户在软件安装部署、配置和运维中遇到的问题'}) } >
       <HomepageHeader />
       <main>
         <HomepageFeatures />

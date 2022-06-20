@@ -30,6 +30,7 @@ If you have installed Websoft9 PrestaShop, the following steps is for your quick
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/ps01.png)
 
 2. Agree license, Click "Next"
+
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/ps02.png)
 
 3. Set your store information and administration account, Click "Next"
@@ -37,7 +38,8 @@ If you have installed Websoft9 PrestaShop, the following steps is for your quick
    
    > Email is your login ID, not collected by anyone because it stored in your Cloud Server
 
-4. Database connection configuration, you can use the MySQL in this Server([Don's know password?](/stack-accounts.html#mysql)), and you can use other database services
+4. Database connection configuration, you can use the MySQL in this Server([Don's know password?](./user/credentials)), and you can use other database services
+
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/ps04.png)
 
 5. Installation is finished
@@ -78,7 +80,7 @@ Modules is a very import function for PrestaShop to extend the business requirem
 3. Open:【Modules】>【Module Manager】, find the module you want to upgrade and click the【Upgrade】button
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-upgrademodules-websoft9.png)
 
-### Prestashop connect Marketplace
+### Prestashop connect Marketplace{#connect-prestashop-marketplace}
 
 Completed installation of PrestaShop, suggest you make your PrestaShop system connect PrestaShop's Marketplace. Once you have connected it, you can use many resourses on Marketplace.
 
@@ -139,7 +141,7 @@ If you want to change domain for PrestaShop, these steps you need to do:
 
 1. Completed domain resolution and domain binding
 2. Enable PrestaShop's Maintenance mode
-3. Edit the PrestaShop's configuration file([path](/stack-components.html#prestashop)), modify the domain
+3. Edit the PrestaShop's [configuration file](#path), modify the domain
 4. Log in PrestaShop console, open:【Shop Parameters】>【Traffic&SEO】, modify the shop URL
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-seturl-websoft9.png)
 

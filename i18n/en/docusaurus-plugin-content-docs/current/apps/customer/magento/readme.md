@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-slug: /magento/readme
+slug: /magento
 tags:
   - Magento
   - eCommerce
@@ -18,9 +18,9 @@ If you have installed Websoft9 Magento, the following steps is for your quick st
 ## Preparation
 
 1. Get the **Internet IP** on your Cloud Platform
-2. Check you **[Inbound of Security Group Rule](https://support.websoft9.com/docs/faq/tech-instance.html)** of Cloud Console to ensure the **TCP:80** is allowed
+2. Check you **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:80** is allowed
 3. **[Get](./user/credentials)** default username and password of Magento  
-4. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for Magento  
+4. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for Magento 
 
 ## Magento Initialization
 
@@ -62,18 +62,17 @@ magento setup:config:set --db-host=DB-HOST --db-name=DB-NAME --db-user=DB-USER -
 
 Below is the methods for you installing modules online
 
-1. Make sure your Magento is [Linking Marketplace](/stack-installation.html#link-magento-marketplace)
+1. Make sure your Magento is [Linking Marketplace](#link-magento-marketplace)
 2. Search the modules on Marketplace, 【buy】it and【Install】 it
 3. Log in your Magento, open【SYSTEM】>【Web Setup Wizard】>【System Configration】 
 4. On the left memu, click 【EXTENSION MANAGER】>【Refresh】, synchronize the your purchase to your Magento, then【Review and Install】 it
     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-theme-1-websoft9.png)
    > Refresh not always successful, so please Refresh it repeatedly
 5. Select the modules in the catalog and install it
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-theme-2-websoft9.png)
 6. Magento will check the system environment before installation
-7. If installation is very slowly and have error, please refer to [Troubleshooting](/else-troubleshooting.html#magento-upgrade-or-install-module-failed)
+7. If installation is very slowly and have error, please refer to [Troubleshooting](../magento/admin#troubleshoot)
 
-### Link Magento Marketplace
+### Link Magento Marketplace{#link-magento-marketplace}
 
 Completed installation of Magento, suggest you make your Magento system link Magento's Marketplace. Once you have linked it, you can use many resourses on Marketplace.
 
@@ -83,6 +82,7 @@ Completed installation of Magento, suggest you make your Magento system link Mag
 2. Log in to Magento's Marketplace, create your **Access Key** from My Profile setting
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-1-websoft9.png)  
 3. Save Access Key
+
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-savemykey-websoft9.png)  
 4. Log in your Magento backend, open **SYSTEM** > **Web Setup Wizard**
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-websetupwz-websoft9.png) 
@@ -128,7 +128,7 @@ Taking **SendGrid's SMTP Service** as an example, refer to the following steps t
    SMTP username: websoft9smtp
    SMTP password: #fdfwwBJ8f    
    ```
-2. Make sure your Magento is [linking Magento's Marketplace](/stack-installation.html#link-magento-marketplace)
+2. Make sure your Magento is [linking Magento's Marketplace](#link-magento-marketplace)
 3. Connect Server, use below commands for installing Magento SMTP module
    ```
     cd /data/wwwroot/magento` 
@@ -154,7 +154,7 @@ Taking **SendGrid's SMTP Service** as an example, refer to the following steps t
      ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-5-websoft9.png)
      
 
-More SMTP Service(Gmail, Hotmail, QQ mail, Yahoo mail, SendGrid and so on)  settings or Issues with SMTP, please refer to Websoft9's *[SMTP Guide](https://support.websoft9.com/docs/faq/tech-smtp.html)*
+More SMTP Service(Gmail, Hotmail, QQ mail, Yahoo mail, SendGrid and so on)  settings or Issues with SMTP, please refer to Websoft9's *[SMTP Guide](./administrator/smtp)*
      
 
 ### DNS Additional Configure（Modify URL）{#dns}
@@ -171,7 +171,7 @@ Connect to server via SSH and run  CLI commands to configure parameters
 
 ### HTTPS 额外设置{#https}
 
-**[标准 HTTPS 配置](../administrator/domain_https)** 完成后，还需运行下面的 CLI 命令进行配置：
+**[标准 HTTPS 配置](./administrator/domain_https)** 完成后，还需运行下面的 CLI 命令进行配置：
 
 ```
 cd /data/wwwroot/magento

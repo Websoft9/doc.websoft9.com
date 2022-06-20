@@ -115,7 +115,7 @@ Visit URL *http://Internet IP/mw-config/index.php?page=Restart&lastPage=Install*
    ```
 6. Save it  
 
-7. Restart [PHP-FPM Service](/zh/admin-services.html#php-fpm)  
+7. Restart [PHP-FPM Service](#service)  
 
 8. Test email sending
 

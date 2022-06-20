@@ -161,7 +161,7 @@ Neo4j have some useful GUI tools, include web-based and desktop, support Windows
 
 Before use GUI tool, you should [enable remote connection](#remote)
 
-**Neo4j Browser{#browser}**
+#### Neo4j Browser{#browser}
 
 Neo4j Browser is a web-base tool for Neo4j, included in the Neo4j Server by default
 
@@ -169,7 +169,7 @@ Neo4j Browser is a web-base tool for Neo4j, included in the Neo4j Server by defa
 
 ![Neo4j Browser](https://libs.websoft9.com/Websoft9/DocsPicture/en/neo4j/neo4j-connectfirst-websoft9.png)
 
-2. Select 【bolt://】URL mode, and input the [default username and password](/stack-accounts.md), then the system may force a password change.
+2. Select 【bolt://】URL mode, and input the [default username and password](./user/credentials), then the system may force a password change.
 
 ![modify Neo4j password](https://libs.websoft9.com/Websoft9/DocsPicture/en/neo4j/neo4j-snewpw-websoft9.png)
 
@@ -183,11 +183,11 @@ Neo4j Browser is a web-base tool for Neo4j, included in the Neo4j Server by defa
 
 ![Neo4j add user](https://libs.websoft9.com/Websoft9/DocsPicture/en/neo4j/neo4j-adduser-websoft9.png)
 
-**Neo4j Desktop{#desktop}**
+#### Neo4j Desktop{#desktop}
 
 [Neo4j Desktop](https://neo4j.com/download-center/) is a local tool for developer.
 
-**Neo4j Bloom**
+#### Neo4j Bloom
 
 Neo4j Bloom is the graph visualization and exploration tool 
 

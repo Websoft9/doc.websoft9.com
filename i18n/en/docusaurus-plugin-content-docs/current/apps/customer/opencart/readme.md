@@ -31,7 +31,7 @@ If you have installed Websoft9 OpenCart, the following steps is for your quick s
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/oc1.png)
 3. Verify the environment and go to next step  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/oc2.png)
-4. Database connection configuration, you can use the MySQL in this Server([Don's know password?](/stack-accounts.html#mysql)), and you can use other database services
+4. Database connection configuration, you can use the MySQL in this Server([Don's know password?](./user/credentials)), and you can use other database services
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/oc3.png)
 5. When the installation is completed,it will go the following interface
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/oc4.png)
@@ -130,7 +130,7 @@ You can change the domain of OpenCart by the following steps:
    define('HTTPS_SERVER', 'http://www.example.com/admin/');
    define('HTTPS_CATALOG', 'http://www.example.com/');
    ```
-3. [Restart PHP-FPM Service](/admin-services.html#php-fpm)
+3. [Restart PHP-FPM Service](#service)
 
 ## Reference sheet
 

@@ -120,45 +120,6 @@ The External Storage Support application enables you to mount external storage s
 More details please refer to [External Storage](https://doc.owncloud.org/server/admin_manual/configuration/files/external_storage/index.html)
 
 
-### ownCloud transfer
-
-ownCloud source code and data is in system disk by default, you can transfer them to data disk or  Object storage:
-
-**to data disk**
-
-1. Purchase a data disk from Cloud Platform, then **attach** it to ownCloud Server
-2. Use SFTP tool to connect Server and stop service
-   ```
-   systemctl stop httpd
-   ```
-3. Create a new folder */data/wwwroot/owncloud2* 
-4. Initialize data disk, and **mount** it to *owncloud2* folder
-5. Copy all files in */data/wwwroot/owncloud* to */data/wwwroot/owncloud2*  
-6. Modify the OwnCloud directory in  [vhost configuration file](/zh/stack-components.html#apache) 
-7. Start the service
-   ```
-   systemctl start httpd
-   ```
-
-**to Object storage**
-
-1. Purchase Object storage from Cloud Platform, then create a new **bucket**
-2. Use SFTP tool to connect Server and stop service
-   ```
-   systemctl stop httpd
-   ```
-3. Create a new folder */data/wwwroot/owncloud2* 
-4. Then **mount** it to *owncloud2* folder
-5. Copy all files in */data/wwwroot/owncloud* to */data/wwwroot/owncloud2*  
-6. Modify the OwnCloud directory in  [vhost configuration file](/zh/stack-components.html#apache) 
-7. Start the service
-   ```
-   systemctl start httpd
-   ```
-8. Set the object storage to boot automatically (different cloud platform operations)
-
-> The **mount** command is very difficult for user, and there is a risk of copy failure if the data is exceed 10G
-
 ## Reference sheet
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Jenkins

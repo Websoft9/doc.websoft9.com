@@ -141,7 +141,7 @@ Drupal supports multiple languages. Here are the main steps to install and set u
 
 ### Reset password{#resetpwd}
 
-If you don't remember your administrator password, please refer to the docs [here]((https://www.drupal.org/node/44164)) to reset it
+If you don't remember your administrator password, please refer to the docs [here](https://www.drupal.org/node/44164) to reset it
 
 ## Reference sheet
 

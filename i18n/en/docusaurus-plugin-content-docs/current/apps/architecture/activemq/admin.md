@@ -34,7 +34,7 @@ ActiveMQ upgrade is similar to installation, you can upgrade it by the following
    chmod 640  /opt/apache-activemq/examples/stomp/php/*
    chmod +x /opt/apache-activemq/bin/activemq
    ```
-4. Restart the [ActiveMQ Service](/zh/admin-services#activemq)
+4. Restart the [ActiveMQ Service](../activemq#service)
 
 ## Troubleshoot{#troubleshoot}
 

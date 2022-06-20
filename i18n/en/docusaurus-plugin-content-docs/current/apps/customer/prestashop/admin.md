@@ -72,4 +72,4 @@ Yes
 
 #### Why should I link to the PrestaShop Marketplace?
 
-Just link PrestaShop Marketplace, you can use the resources of Marketplace online. [Connect Marketplace](/stack-installation.html#connect-prestashop-marketplace)
+Just link PrestaShop Marketplace, you can use the resources of Marketplace online. [Connect Marketplace](../prestashop#connect-prestashop-marketplace)

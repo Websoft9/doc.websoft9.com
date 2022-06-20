@@ -123,7 +123,7 @@ No
 
 #### Can't connect Redis from remote?
 
-1. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:6379** is allowed
+1. Check your **[Inbound of Security Group Rule](../administrator/firewall#security)** of Cloud Console to ensure the **TCP:6379** is allowed
 2. Check your **Redis configuration file** that Redis allowed from Internet
 
 

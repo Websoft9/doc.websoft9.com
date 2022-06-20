@@ -9,7 +9,7 @@ tags:
 
 # Graylog Getting Started
 
-[Graylog](graylog.org) is on a mission to make Log Management and SIEM easier, faster, more affordable, and more effective. 
+[Graylog](https://graylog.org) is on a mission to make Log Management and SIEM easier, faster, more affordable, and more effective. 
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/graylog/graylog-gui-websoft9.png)
 

@@ -36,13 +36,13 @@ Below is the step for upgrade online:
 1. Log in to your Magento, go to 【System】>【Web Setup Wizard】>【System Upgrade】 
    ![Magento upgrade](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-sysupgradestart-websoft9.png)
   
-2. If your Magento not [Link Marketplace](/stack-installation.html#link-magento-marketplace), you need to fill in your Access key to link Marketplace
+2. If your Magento not [Link Marketplace](../magento#link-magento-marketplace), you need to fill in your Access key to link Marketplace
    ![Magento connect Marketplace](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-sysupgradestartkey-websoft9.png)
   
 3. Click the upgrade button to start upgrading online
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-sysupgradestarting-websoft9.png)
   
-4. If upgrade is very slowly and have error, please refer to [Troubleshooting](/else-troubleshooting.html#magento-upgrade-or-install-module-failed)
+4. If upgrade is very slowly and have error, please refer to [Troubleshooting](#troubleshoot)
 
 More upgrade detail please refer to [Magento Upgrade](https://devdocs.magento.com/guides/v2.3/comp-mgr/bk-compman-upgrade-guide.html)
   
@@ -173,36 +173,28 @@ Magento 除了系统给出的商品属性，还允许用户通过后台“STORES
 
 ## FAQ{#faq}
 
-**Magento support multi-language?**
+#### Magento support multi-language?
 
 Yes, you should installed your language package first
 
-**Why is Magento running so slowly?**
+#### Why is Magento running so slowly?
 
 Magento is a complex enterprise Ecommerce system with high computing resource requirements
 
-**Forget backend URL of Magento?**
+#### Forget backend URL of Magento?
   
 ```shell
 # Show Magento(URL)
-/data/wwwroot/magento/bin/magento info:adminuri
+magento/bin/magento info:adminuri
 
 # Update Magento(URL)
-sudo /data/wwwroot/magento/bin/magento setup:config:set --backend-frontname=[yourAdminUrl] -n
+magento/bin/magento setup:config:set --backend-frontname=[yourAdminUrl] -n
 ```
 
-**Why should I link to the Magento Marketplace?**
+#### Why should I link to the Magento Marketplace?
 
-Just link Magento Marketplace, you can use the resources of Marketplace online. [Link Marketplace](../magento#marketplace)
+Just link Magento Marketplace, you can use the resources of Marketplace online.
 
-**Can I use the RDS of Cloud Provider for Magento?**
+#### Adobe Commerce vs Magento Open Source?
 
-You can use the RDS for Magento if you need,and just need to modify the database configuration section in the wp-config.php
-
-**Magento 能在 Windows 上部署吗?**
-
-可以，但是我们推荐在运行 Magento 效率更高的 Linux 服务器上运行
-
-**Adobe Commerce 与 Magento 关系?**
-
-Magento Open Source 被 Adobe 收购后，Adobe 将其商业版本更名为 Adobe Commerce
+Magento Open Source is the formal name of Adobe Commerce
