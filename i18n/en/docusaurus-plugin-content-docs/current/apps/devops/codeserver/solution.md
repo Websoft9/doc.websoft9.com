@@ -12,3 +12,4 @@ You can use code-server integrated other softwarefor DevOps automation.
 
 * Jenkins
 * Gitlab
+* AWX

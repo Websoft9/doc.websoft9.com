@@ -70,7 +70,7 @@ Below is the methods for you installing modules online
    > Refresh not always successful, so please Refresh it repeatedly
 5. Select the modules in the catalog and install it
 6. Magento will check the system environment before installation
-7. If installation is very slowly and have error, please refer to [Troubleshooting](../magento/admin#troubleshoot)
+7. If installation is very slowly and have error, please refer to [Troubleshooting](./magento/admin#troubleshoot)
 
 ### Link Magento Marketplace{#link-magento-marketplace}
 
