@@ -4,7 +4,7 @@ on:
   push:
     paths: 
       - 'docs/**'
-      - 'i18/**'
+      - 'i18n/**'
       - 'src/**'
       - 'static/**'
       - '**.js'
