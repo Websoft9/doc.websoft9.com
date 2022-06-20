@@ -31,5 +31,5 @@ jobs:
         source_dir: build
         container_name: $web
         connection_string: ${{ secrets.Azure_blob }}
-        extra_args: '--destination-path build'
+        extra_args: '--destination-path ./'
         sync: true
