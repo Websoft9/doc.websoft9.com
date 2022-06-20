@@ -49,11 +49,11 @@ If you have installed Websoft9 GitLab, the following steps is for your quick sta
 
 Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
-**GitLab能打开，但总是出现 502 错误？**  
+**GitLab interface 502 error?**  
 
 Refer to：[here](./gitlab/admin#502)
 
-**GitLab 每次启动需等1分钟才能使用？**  
+**GitLab need long time to start?**  
 
 Refer to：[here](./gitlab/admin#502)
 
