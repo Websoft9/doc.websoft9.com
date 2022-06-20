@@ -32,4 +32,5 @@ jobs:
         container_name: $web
         connection_string: ${{ secrets.Azure_blob }}
         extra_args: '--destination-path ./'
+        overwrite: true
         sync: true
