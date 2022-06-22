@@ -24,6 +24,7 @@ jobs:
           if [ ! -d "$docpath" ]; then
             mkdir -p $docpath
             pip install Jinja2 jinja2-cli
+            echo $doc_type
             template_path=""
             if [ doc_type == "apps" ]; then
               template_path_zh="template/docs/zh/app"
@@ -55,4 +56,4 @@ jobs:
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Templating README
+          commit_message: Templating docs
