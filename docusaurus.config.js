@@ -83,8 +83,8 @@ const config = {
           nodes: [
             {
               host: '8.142.3.195',
-              port: 443,
-              protocol: 'https',
+              port: 8109,
+              protocol: 'http',
             },
           ],
           apiKey: '123456',
