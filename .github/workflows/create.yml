@@ -28,7 +28,7 @@ jobs:
             if [ doc_type == "apps" ]; then
               template_path_zh="template/docs/zh/app"
               template_path_en="template/docs/en/app"
-            elseif [ doc_type == "administrator" ]; then
+            elif [ doc_type == "administrator" ]; then
               template_path_zh="template/docs/zh/administrator"
               template_path_en="template/docs/en/administrator"
             else
