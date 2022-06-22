@@ -66,9 +66,9 @@ const config = {
             label: '文档',
           },
 
-          {to: '/docs/helpdesk', label: '技术支持', position: 'left'},
+          { to: '/docs/helpdesk', label: '技术支持', position: 'left' },
 
-          {type: 'localeDropdown', position: 'right',},
+          { type: 'localeDropdown', position: 'right', },
 
           {
             href: 'https://github.com/websoft9',
@@ -77,25 +77,24 @@ const config = {
           },
         ],
       },
-  typesense: {
-    typesenseCollectionName: 'websoft9', // Replace with your own doc site's name. Should match the collection name in the scraper settings.
-    typesenseServerConfig: {
-      nodes: [
-        {
-          host: '8.142.3.195',
-          port: 8109,
-          protocol: 'http',
+      typesense: {
+        typesenseCollectionName: 'websoft9', // Replace with your own doc site's name. Should match the collection name in the scraper settings.
+        typesenseServerConfig: {
+          nodes: [
+            {
+              host: '8.142.3.195',
+              port: 443,
+              protocol: 'https',
+            },
+          ],
+          apiKey: '123456',
         },
-      ],
-      apiKey: '123456',
-    },
-    // Optional: Typesense search parameters: https://typesense.org/docs/0.21.0/api/documents.md#search-parameters
-    typesenseSearchParameters: {},
+        // Optional: Typesense search parameters: https://typesense.org/docs/0.21.0/api/documents.md#search-parameters
+        typesenseSearchParameters: {},
 
-    // Optional
-    contextualSearch: true,
-    
-  },
+        // Optional
+        contextualSearch: true,
+      },
 
       footer: {
         style: 'dark',
@@ -169,14 +168,14 @@ const config = {
         },
         copyright: `Copyright ©2014- ${new Date().getFullYear()} 长沙网久软件有限公司 备案：湘ICP备16009117号`,
       },
- 
+
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
       tableOfContents: {
-	minHeadingLevel: 2,
-	maxHeadingLevel: 4
+        minHeadingLevel: 2,
+        maxHeadingLevel: 4
       }
     }),
 };
