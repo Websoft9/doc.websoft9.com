@@ -21,20 +21,22 @@ jobs:
           trademark=$(cat docs/_list |awk -F/ '{print $NF}')
           doc_type=$(cat docs/_list |awk -F/ '{print $1}')
           appname=$(cat docs/_list |awk -F/ '{print $NF}' | tr '[A-Z]' '[a-z]')
+
           if [ ! -d "$docpath" ]; then
             mkdir -p $docpath
             pip install Jinja2 jinja2-cli
             echo $doc_type
             template_path=""
-            if [ doc_type == "apps" ]; then
+            if [ $doc_type == "apps" ]; then
               template_path_zh="template/docs/zh/app"
               template_path_en="template/docs/en/app"
-            elif [ doc_type == "administrator" ]; then
+            elif [ $doc_type == "administrator" ]; then
               template_path_zh="template/docs/zh/administrator"
               template_path_en="template/docs/en/administrator"
             else
               echo "Path not correct"; exit 1
             fi
+
             for file in $(ls $template_path_zh | grep ".jinja2")
               do
                 newfile=$docpath/"$(echo $file | cut -d. -f1)".md
