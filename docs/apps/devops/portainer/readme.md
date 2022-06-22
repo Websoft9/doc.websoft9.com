@@ -20,10 +20,7 @@ tags:
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:9000** 端口已经开启
 3. 若想用域名访问  Portainer，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
-
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 如果使用 Portainer，请在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:9000** 端口是否开启
-3. 如果你部署了包含 Portainer 的Docker环境，请直接登录使用。否则，请先安装 Portainer：
+4. 如果你部署了包含 Portainer 的Docker环境，请直接登录使用。否则，请先安装 Portainer：
     ~~~
     #通过命令安装 Portainer
 

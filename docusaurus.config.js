@@ -33,7 +33,7 @@ const config = {
           showLastUpdateTime: true,
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/websoft9/doc.websoft9.com/tree/main/docs',
+          editUrl: 'https://github.com/websoft9/doc.websoft9.com/tree/main',
         },
         blog: {
           showReadingTime: true,
@@ -47,6 +47,7 @@ const config = {
       }),
     ],
   ],
+  themes: ['docusaurus-theme-search-typesense'],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -76,6 +77,26 @@ const config = {
           },
         ],
       },
+  typesense: {
+    typesenseCollectionName: 'websoft9', // Replace with your own doc site's name. Should match the collection name in the scraper settings.
+    typesenseServerConfig: {
+      nodes: [
+        {
+          host: '8.142.3.195',
+          port: 8109,
+          protocol: 'http',
+        },
+      ],
+      apiKey: '123456',
+    },
+    // Optional: Typesense search parameters: https://typesense.org/docs/0.21.0/api/documents.md#search-parameters
+    typesenseSearchParameters: {},
+
+    // Optional
+    contextualSearch: true,
+    
+  },
+
       footer: {
         style: 'dark',
         links: [
