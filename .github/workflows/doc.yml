@@ -26,11 +26,11 @@ jobs:
     - name: debug
       run: ls
 
-    - uses: bacongobbler/azure-blob-storage-upload@v1.2.0
+    - uses: bacongobbler/azure-blob-storage-upload@v2.0.0
       with:
         source_dir: build
         container_name: $web
         connection_string: ${{ secrets.Azure_blob }}
-        extra_args: '--destination-path ./'
-        overwrite: true
+        #extra_args: '--destination-path ./'
+        #overwrite: true
         sync: true
