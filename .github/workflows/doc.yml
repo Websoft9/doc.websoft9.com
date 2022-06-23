@@ -1,4 +1,4 @@
-name: Docs Build and Upload
+name: Docs Build and Upload to Azure
 
 on: 
   push:

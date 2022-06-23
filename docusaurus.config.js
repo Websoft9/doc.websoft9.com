@@ -82,12 +82,12 @@ const config = {
         typesenseServerConfig: {
           nodes: [
             {
-              host: '8.142.3.195',
+              host: '39.99.190.142',
               port: 8109,
               protocol: 'http',
             },
           ],
-          apiKey: '123456',
+          apiKey: 'u!Q8E1wVTzG8SOk3',
         },
         // Optional: Typesense search parameters: https://typesense.org/docs/0.21.0/api/documents.md#search-parameters
         typesenseSearchParameters: {},
