@@ -82,9 +82,9 @@ const config = {
         typesenseServerConfig: {
           nodes: [
             {
-              host: '39.99.190.142',
-              port: 8109,
-              protocol: 'http',
+              host: 'https://search.websoft9.com',
+              port: 443,
+              protocol: 'https',
             },
           ],
           apiKey: 'u!Q8E1wVTzG8SOk3',
