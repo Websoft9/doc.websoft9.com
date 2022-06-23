@@ -2,6 +2,7 @@ name: Docs Build and Upload to Azure
 
 on: 
   push:
+    branches: [ main ]
     paths: 
       - 'docs/**'
       - 'i18n/**'
