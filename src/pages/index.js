@@ -17,8 +17,7 @@ function HomepageHeader() {
         <p className="hero__subtitle"><Translate>重新定义开源服务，让云原生应用快速普及</Translate></p>
         <div className={styles.buttons}>
           <Link
-            className="button button--secondary button--lg"
-            to="/docs/">
+            className="button button--secondary button--lg" to="/docs/">
             <Translate>所有文档</Translate>
           </Link>
         </div>
