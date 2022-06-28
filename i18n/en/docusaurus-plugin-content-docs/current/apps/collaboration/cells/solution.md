@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-slug: /pydio/solution
+slug: /cells/solution
 tags:
   - Pydio Cells
   - File sync and share

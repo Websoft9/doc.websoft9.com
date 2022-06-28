@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-slug: /pydio
+slug: /cells
 tags:
   - Pydio Cells
   - File sync and share

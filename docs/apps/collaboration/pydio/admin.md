@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-slug: /pydio/admin
+slug: /cells/admin
 tags:
   - Pydio Cells
   - 网盘

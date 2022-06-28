@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-slug: /pydio
+slug: /cells
 tags:
   - Pydio Cells
   - 网盘
@@ -10,9 +10,9 @@ tags:
 
 # 快速入门
 
- [Pydio Cells](https://pydio.com/) 是自托管企业文档共享与协作 (DSC) 市场的开源软件。Pydio Cells 弥合了快速发展的开源软件和企业级解决方案之间的差距，为具有安全意识的组织提供了一个他们可以依靠的平台来共享文档和安全协作。
+ [Pydio Cells](https://pydio.com/) 是自托管企业文档共享与协作 (DSC) 市场的开源软件，努力打造一个符合高级安全要求、合规性的企业的文档协作系统。  
 
-![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/pydio/pydio-gui-websoft9.png)
+![](http://libs.websoft9.com/Websoft9/DocsPicture/en/cells/cells-gui-websoft9.png)
 
 
 ## 准备
@@ -31,23 +31,18 @@ tags:
 
 1. 本地浏览器访问：*http://域名* 或 *http://公网IP* 进入安装向导（首选域名访问方式）
    
-2. 选择语言，点击"Start Wizard"
-     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/pydio/pydio-install001-websoft9.png)
+2. 接受【安装协议】后，进入下一步  
 
-3. 设置管理员账号，进入下一步
-     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/pydio/pydio-install002-websoft9.png)
+4. 设置数据库连接（[不知道数据库账号密码](./user/credentials)），然后进入下一步
+   ![cells 设置数据库连接](http://libs.websoft9.com/Websoft9/DocsPicture/en/cells/cells-installdbconfig-websoft9.png)
 
-4. 选择Mysql数据库，填写数据库信息（[查看数据库账号密码](./user/credentials)），点击“test db connection”进入下一步
-     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/pydio/pydio-install003-websoft9.png)
+5. 设置管理员账号密码，并牢记之
 
-5. 进入高级设置，设置默认语言为“简体中文”，点击“Install Pydio”，开始安装
-     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/pydio/pydio-install004-websoft9.png)
+6. 依次完成后续安装步骤，直至看到安装成功的提示
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/cells/cells-installdbss-websoft9.png)
 
-6. 安装完成后，登录后台
-     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/pydio/pydio-login-websoft9.png)
+7. 点击【Reload】后，登录进入 Cells 后台界面
 
-7. 后台界面
-     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/pydio/pydio-bk-websoft9.png)
 
 ### 出现问题？
 
@@ -70,6 +65,8 @@ Pydio Cells 应用中包含 Nginx, Docker, MySQL, phpMyAdmin 等组件，可通�
 
 ```bash
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+aed8241d7dec   mysql:5.7            "docker-entrypoint.s…"   About an hour ago   Up About an hour   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp   cells-db
+1858341ccd48   pydio/cells:latest   "docker-entrypoint.s…"   About an hour ago   Up About an hour   0.0.0.0:9001->8080/tcp, :::9001->8080/tcp              cells
 ```
 
 
@@ -86,13 +83,13 @@ Pydio Cells 安装目录： */data/wwwroot/cells*
 ### 版本{#version}
 
 ```shell
-sudo cat /data/logs/install_version.txt
+docker inspect cells | grep com.docker.compose.version
 ```
 
 ### 服务{#service}
 
 ```shell
-sudo docker start | stop | restart | stats pydio
+sudo docker start | stop | restart | stats cells
 ```
 
 ### 命令行{#cli}
