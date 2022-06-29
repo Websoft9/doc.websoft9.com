@@ -14,9 +14,9 @@ tags:
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/metabase/metabase-product-screenshot.png)
 
 
-## 准备
+部署 Websoft9 提供的 Metabase 之后，请参考下面的步骤快速入门。 
 
-部署 Websoft9 提供的 Metabase 之后，请参考下面的步骤快速入门。
+## 准备
 
 1. 在云控制台获取您的 **服务器公网 IP 地址**
 2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:80** 和 **TCP:9001** 端口是否开启

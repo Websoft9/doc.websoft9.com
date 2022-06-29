@@ -12,6 +12,7 @@ tags:
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/opencart/opencart-gui-websoft9.png)
 
+
 ## 准备
 
 部署 Websoft9 提供的 OpenCart 之后，需完成如下的准备工作：

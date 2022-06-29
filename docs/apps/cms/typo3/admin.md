@@ -28,3 +28,16 @@ Typo3 后台提供了在线升级功能，升级非常容易：
 
 ## 问题解答
 
+#### Typo3 有哪些扩展？
+
+系统扩展和第三方扩展
+
+#### Typo3 后台支持多语言吗？
+
+支持。详情参考：[Changing The Backend Language](https://docs.typo3.org/m/typo3/tutorial-getting-started/main/en-us/Setup/BackendLanguages.html#backendlanguages)
+
+#### Typo3 支持多语言网站吗？
+
+支持
+
+

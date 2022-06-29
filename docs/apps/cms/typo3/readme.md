@@ -9,7 +9,7 @@ tags:
 
 # 快速入门
 
-[Typo3](https://typo3.org/) 是一个由成熟社区驱动的**企业级** CMS，充满活力的专业社区和[商业生态伙伴](https://typo3.com/partners/professional-service-listing)为企业客户提供全面的服务。TYPO3 可以轻松的与数字资产管理、电子商务、翻译服务、营销自动化、分析等无缝[集成](https://typo3.com/partners/technology-partners)。
+[Typo3](https://typo3.org/) 是一个源自德国的**企业级**建站系统（CMS），它拥有成熟的[商业生态伙伴](https://typo3.com/partners/professional-service-listing)为企业客户提供全面的服务。可以轻松的与数字资产管理、电子商务、翻译服务、营销自动化、分析等无缝[集成](https://typo3.com/partners/technology-partners)。
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/typo3-gui-websoft9.png)
 
@@ -27,31 +27,18 @@ tags:
 
 ### 详细步骤
 
-1. 本地浏览器访问：*http://域名* 或 *http://公网IP* 进入安装向导（首选域名访问方式）
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/typo3-installstart-websoft9.png)
+1. 本地浏览器访问：*http://域名* 或 *http://公网IP* 进入安装向导
 
-   在 Typo3 的根目录下，新建一个名称为 **FIRST_INSTALL** 的空白文件
 
-2. 系统进入环境检测步骤，通过后进入下一步
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/ty02.png)
+2. 系统进入环境检测步骤通过后，填写数据库参数（[查看内置数据库账号密码](./user/credentials)）
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/typo3-installdb-websoft9.png)
 
-3. 填写您的数据库参数（[查看数据库账号密码](./user/credentials)）
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/ty03.png)
+4. 数据库连接成功后，系统提示选择一个已有数据库或创建一个新的数据库（推荐前者）
 
-4. 选择一个数据库 或 新建一个
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/ty04.png)
+5. 设置管理账号和站点信息  
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/typo3-installsetadmin-websoft9.png)
 
-5. 设置管理员账号  
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/ty05.png)
-
-6. 安装完成，根据提示进入后台  
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/ty06.png)
-
-7. 登录后台   
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/typo3-login-websoft9.png)
-
-8. Typo3 后台界面  
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/ty08.png)
+8. 完成安装后登录后台
 
 
 > 需要了解更多 Typo3 的使用，请参考官方文档：[Typo3 Documentation](https://typo3.org/help/documentation/)
@@ -97,7 +84,9 @@ Typo3 应用中包含 PHP, Nginx, Apache, Docker, MySQL 等组件，可通过 **
 通过运行`docker ps`，可以查看到 Typo3 运行时所有的 Container：
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                        COMMAND                  CREATED          STATUS          PORTS                                                  NAMES
+a993567e8948   martinhelmich/typo3:latest   "docker-php-entrypoi…"   18 minutes ago   Up 18 minutes   0.0.0.0:9001->80/tcp, :::9001->80/tcp                  typo3
+ba3eb402562b   mysql:8                      "docker-entrypoint.s…"   18 minutes ago   Up 18 minutes   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp   typo3-mysql
 ```
 
 
@@ -127,7 +116,53 @@ sudo docker start | stop | restart | stats typo3
 
 ### 命令行{#cli}
 
-[Symfony Console Commands (cli)](https://docs.typo3.org/m/typo3/reference-coreapi/main/en-us/ApiOverview/CommandControllers/Index.html)
+Typo3 拥有非常全面的命令行功能：  
+
+* typo3 官方核心命令行
+* typo3cms 第三方扩展命令
+
+```
+$ php /var/www/html/typo3_src/typo3/sysext/core/bin/typo3
+TYPO3 CMS 11.5.12 (Application Context: Production)
+
+Usage:
+  command [options] [arguments]
+
+Options:
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+  -q, --quiet           Do not output any message
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+Available commands:
+  list                   Lists commands
+  help                   Displays help for a command
+  dumpautoload           [extensionmanager:extension:dumpclassloadinginformation|extension:dumpclassloadinginformation] Updates class loading information in non-composer mode.
+ backend
+  backend:lock           Lock the TYPO3 Backend
+  backend:resetpassword  Trigger a password reset for a backend user
+  backend:unlock         Unlock the TYPO3 Backend
+ cache
+  cache:warmup           Cache warmup for all, system or, if implemented, frontend caches.
+  cache:flush            Cache clearing for all, system or frontend caches.
+ extension
+  extension:list         Shows the list of extensions available to the system
+  extension:setup        Set up extensions
+ language
+  language:update        Update the language files of all activated extensions
+ mailer
+  mailer:spool:send      [swiftmailer:spool:send] Sends emails from the spool
+ referenceindex
+  referenceindex:update  Update the reference index of TYPO3
+ site
+  site:list              Shows the list of sites available to the system
+  site:show              Shows the configuration of the specified site
+ upgrade
+  upgrade:run            Run upgrade wizard. Without arguments all available wizards will be run.
+  upgrade:list           List available upgrade wizards.
+```
 
 ### API
 

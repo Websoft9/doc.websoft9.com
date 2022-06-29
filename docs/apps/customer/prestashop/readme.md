@@ -12,9 +12,10 @@ tags:
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/pretashopui-websoft9.png)
 
+部署 Websoft9 提供的 PrestaShop 之后，需完成如下的准备工作：
+
 ## 准备
 
-部署 Websoft9 提供的 PrestaShop 之后，需完成如下的准备工作：
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
