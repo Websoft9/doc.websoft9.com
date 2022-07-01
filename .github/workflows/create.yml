@@ -37,16 +37,16 @@ jobs:
               echo "Path not correct"; exit 1
             fi
 
-            for file in $(ls $template_path_zh | grep ".jinja2")
+            for file in $(ls $template_path_zh")
               do
-                newfile=$docpath/"$(echo $file | cut -d. -f1)".md
+                newfile=$docpath/"$(echo $file)"
                 echo $newfile
                 jinja2 $template_path_zh/$file -D appname=$appname -D trademark=$trademark > $newfile
               done
 
-            for file in $(ls $template_path_en | grep ".jinja2")
+            for file in $(ls $template_path_en")
               do
-                newfile=i18n/en/docusaurus-plugin-content-docs/current/"$(cat docs/_list | tr '[A-Z]' '[a-z]')"/"$(echo $file | cut -d. -f1)".md
+                newfile=i18n/en/docusaurus-plugin-content-docs/current/"$(cat docs/_list | tr '[A-Z]' '[a-z]')"/"$(echo $file)"
                 echo $newfile
                 jinja2 $template_path_en/$file -D appname=$appname -D trademark=$trademark > $newfile
               done
