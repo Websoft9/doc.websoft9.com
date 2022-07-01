@@ -17,13 +17,15 @@ jobs:
 
       - name: Create docs by template
         run: |
-          docpath=docs/"$(cat docs/_list | tr '[A-Z]' '[a-z]')"
+          docpath_zh=docs/"$(cat docs/_list | tr '[A-Z]' '[a-z]')"
+          docpath_en=i18n/en/docusaurus-plugin-content-docs/current/"$(cat docs/_list | tr '[A-Z]' '[a-z]')"
           trademark=$(cat docs/_list |awk -F/ '{print $NF}')
           doc_type=$(cat docs/_list |awk -F/ '{print $1}')
           appname=$(cat docs/_list |awk -F/ '{print $NF}' | tr '[A-Z]' '[a-z]')
 
-          if [ ! -d "$docpath" ]; then
-            mkdir -p $docpath
+          if [ ! -d "$docpath_zh" ]; then
+            mkdir -p $docpath_zh
+            mkdir -p $docpath_en
             pip install Jinja2 jinja2-cli
             echo $doc_type
             template_path=""
@@ -39,14 +41,14 @@ jobs:
 
             for file in $(ls $template_path_zh")
               do
-                newfile=$docpath/"$(echo $file)"
+                newfile=$docpath_zh/"$(echo $file)"
                 echo $newfile
                 jinja2 $template_path_zh/$file -D appname=$appname -D trademark=$trademark > $newfile
               done
 
             for file in $(ls $template_path_en")
               do
-                newfile=i18n/en/docusaurus-plugin-content-docs/current/"$(cat docs/_list | tr '[A-Z]' '[a-z]')"/"$(echo $file)"
+                newfile=$docpath_en/"$(echo $file)"
                 echo $newfile
                 jinja2 $template_path_en/$file -D appname=$appname -D trademark=$trademark > $newfile
               done
