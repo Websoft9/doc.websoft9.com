@@ -1,7 +1,5 @@
----
-position: 100
+position: 3
 label: "Budibase"
 collapsible: true
 collapsed: true
 className: "red"
----

@@ -1,7 +1,5 @@
----
 position: 100
 label: "{{trademark}}"
 collapsible: true
 collapsed: true
 className: "red"
----
