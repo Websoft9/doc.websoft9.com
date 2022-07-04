@@ -8,7 +8,7 @@ tags:
   - Blog
 ---
 
-# WordPress Getting Started test sync
+# WordPress Getting Started Test sync
 
 [WordPress](https://www.wordpress.org) is open source software you can use to create a beautiful website, blog, or app.There are 28% of the web uses WordPress, from hobby blogs to the biggest news sites online in the world. Beautiful designs, powerful features, and the freedom to build anything you want. WordPress is both free and priceless at the same time.Extend WordPress with over 45,000 plugins to help your website meet your needs. Add an online store, galleries, mailing lists, forums, analytics, and much more.
 
