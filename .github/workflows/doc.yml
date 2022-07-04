@@ -32,6 +32,6 @@ jobs:
         source_dir: build
         container_name: $web
         connection_string: ${{ secrets.Azure_blob }}
-        extra_args: '--destination ./en'
+        extra_args: '--destination ../en'
         #overwrite: true
         sync: true
