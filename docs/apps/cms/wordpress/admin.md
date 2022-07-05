@@ -46,7 +46,7 @@ tags:
 WordPress 支持一台服务器，一次安装，一个数据库，部署多个网站，多个网站共享主题、插件，站点单独操作，方便构建和管理站群系统。
 1. 初始化 WordPress ，新建默认网站 MainSite 
    
-   [](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-install-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-install-websoft9.png)
 
 2. 启用 WordPress 多站点
    - 使用 SSH 工具连接服务器，修改 MainSite 配置文件 wp-config.php，添加配置项：
@@ -57,23 +57,23 @@ WordPress 支持一台服务器，一次安装，一个数据库，部署多个�
 
    - 配置网络： 登录 WordPress 后台，通过【工具】-【站点网络配置】，点击【安装】,启用多站点网络功能
 
-    [](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-network-setup-websoft9.png)
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-network-setup-websoft9.png)
 
     > 如需用域名访问，建议在主站安装时就设置好域名访问
     > 通过子域名访问网站，需要在域名解析时添加 * 通配符，如 *.websoft9.com
 
 3. 修改配置，使 WordPress 支持多站点：将系统生成的配置信息分别插入到 wp-config.php 文件，及替换 .htaccess文件
    
-   [](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-multi-config-websoft9.png
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-multi-config-websoft9.png)
 
 4. 新建网站 web1 ：【我的站点】-【管理网站】-【站点】-【添加新站点】，设置网站URL、标题、语言等。
-   [](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-add-site-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-add-site-websoft9.png)
 
 5. 多站点管理：重新登录后台，通过【我的站点】-【管理网站】，可以进行查看仪表盘、多网站管理、主题及插件维护等操作
    
-   [](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-sites-admin-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-sites-admin-websoft9.png)
 
-   [](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-sites-admin2-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-sites-admin2-websoft9.png)
 
 
 ### WordPress 集成对象存储

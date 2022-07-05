@@ -67,7 +67,7 @@ WordPress supports one server, one installation, one database, deploying multipl
 
 1. Initialize WordPress and create a new default website MainSite
    
-   [](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-install-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-install-websoft9.png)
 
 2. Enable WordPress Multisite
    - Use the SSH tool to connect to the server, modify the MainSite configuration file wp-config.php, and add configuration items:
@@ -78,23 +78,22 @@ WordPress supports one server, one installation, one database, deploying multipl
 
    - Configure the network: Log in WordPress, , go to Tools -> Network Setup -> Install, and enable the multi-site network function
 
-    [](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-network-setup-websoft9.png)
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-network-setup-websoft9.png)
 
     > If you want to use DNS access, it is recommended to set up DNS access when the main site is installed
     > To access a website through a subdomain, you need to add a * wildcard during DNS resolution, such as *.websoft9.com
 
 3. Modify the configuration: insert the system-generated configuration information into the wp-config.php file, and replace the .htaccess file
    
-   [](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-multi-config-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-multi-config-websoft9.png)
 
 4. Create a new website web1: go to My Sites- > Network Admin -> Sites -> Add New , set the website URL, title, language, etc.
-   [](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-add-site-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-add-site-websoft9.png)
 
 5. Multi-site management: re-login to WordPress，  go to My Sites- > Network Admin, you can view the dashboard, multi-site management, theme and plug-in maintenance and other operations
    
-   [](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-sites-admin-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-sites-admin-websoft9.png)
 
-   [](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-sites-admin2-websoft9.png)
 
 ### Backup and Restore
 
