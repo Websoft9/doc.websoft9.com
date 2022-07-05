@@ -46,6 +46,7 @@ tags:
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-installset-websoft9.png)
 
 3. 设置管理账号  
+
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-installadmin-websoft9.png)
 
 4. 安装成功后，直接跳转到后台界面 
@@ -66,9 +67,9 @@ tags:
 
 ## 参数
 
-Budibase 应用中包含 Docker, Gogs, MySQL 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
+Gogs 应用中包含 Docker, MySQL 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
 
-通过运行 `docker ps`，查看 Budibase 运行时所有的服务组件：   
+通过运行 `docker ps`，查看 Gogs 运行时所有的服务组件：   
 
 ```bash
 CONTAINER ID   IMAGE               COMMAND                  CREATED          STATUS                    PORTS                                                                                NAMES

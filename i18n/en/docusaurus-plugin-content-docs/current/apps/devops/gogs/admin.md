@@ -21,3 +21,7 @@ This chapter is special guide for Gogs maintenance and settings. And you can ref
 In addition to the Gogs issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
 ## FAQ{#faq}
+
+#### Gogs support multi-language?
+
+Yes, supports real-time switching of multiple languages.
