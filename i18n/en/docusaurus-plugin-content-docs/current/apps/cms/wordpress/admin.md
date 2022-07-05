@@ -85,7 +85,7 @@ WordPress supports one server, one installation, one database, deploying multipl
 
 3. Modify the configuration: insert the system-generated configuration information into the wp-config.php file, and replace the .htaccess file
    
-   [](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-multi-config-websoft9.png
+   [](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-multi-config-websoft9.png)
 
 4. Create a new website web1: go to My Sites- > Network Admin -> Sites -> Add New , set the website URL, title, language, etc.
    [](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-add-site-websoft9.png)
