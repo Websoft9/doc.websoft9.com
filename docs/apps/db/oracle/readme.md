@@ -1,15 +1,16 @@
 ---
-sidebar_position: 100
+sidebar_position: 10
 slug: /oracle
 tags:
-  - Web 面板
-  - 可视化
-  - GUI
+  - Oracle Database
+  - Cloude Native Database
 ---
 
 # 快速入门
 
-Oracle 介绍
+Oracle Database （简称 “Oracle”）是一个以领先的性能、可扩展性、可靠性和安全性著称的数据库管理系统。Oracle Database 目前主要与 Oracle 公司其他软件集成，形成广泛的解决方案。  
+
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/oracle_database/oracle-database-1024x410.jpg)
 
 部署 Websoft9 提供的 Oracle 之后，请参考下面的步骤快速入门。
 
@@ -24,9 +25,13 @@ Oracle 介绍
 
 ### 详细步骤
 
-1. 使用本地电脑浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入初始化页面
+1.  SSH 登录 Oracle Database 所在的服务器 
 
-2. 完成初始化工作
+2.  输入 `sqlpus` 命令，根据系统要求输入账号密码，数据库登录成功    
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/oracle_database/oracle11gex-sqlrun-websoft9.png)  
+
+3.  运行一条命令测试可用性，例如：select * from v$version;  （查询数据库版本信息）  
+
 
 ### 碰到问题？
 
@@ -42,39 +47,30 @@ Oracle 介绍
 
 ## Oracle 常用操作{#guide}
 
-### 配置 SMTP{#smtp}
+### 开启远程访问{#remote}
 
-1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
+镜像默认已经设置好了远程连接，只需开启安全组 `TCP:1521` 端口即可启用远程访问
 
-2. 填写 Oracle 邮件相关配置
+### 图形化客户端
 
-3. 测试邮件发送是否可用
+Oracle Database支持第三方可视化数据库管理工具，例如 Navicat,Maestro,Oracle 企业管理器等。下面以使用最为广泛的 Navicat 为例来说明如何管理本镜像的数据库：
 
-### 安装插件{#plugin}
+1.  [下载](http://www.navicat.com.cn/download/navicat-for-oracle)并安装Navicat For Oracle
+
+2.  新建一个Oracle连接，填写好连接参数（用户名为：system，密码为：123456；端口1521不能更改，另外请确保云服务器控制台上的安全组打开了TCP:1521），点击“连接测试”，成功标明参数没有问题。  
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/oracle_database/oracle11gex-conn-websoft9.png)
+
+3.  点击确认后，进入数据库管理界面
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/oracle_database/oracle11gex-ui-websoft9.png)
 
 ### 重置管理员密码{#resetpw}
 
 忘记管理员密码时，请参考如下方案重置密码：  
 
-### 域名额外配置（修改 URL）{#dns}
-
-**[域名五步设置](./administrator/domain_step)** 完成后，需设置 Oracle 的 URL:  
-
-1. 步骤1
-
-2. 步骤2
-
-### HTTPS 额外设置{#https}
-
-**[标准 HTTPS 配置](./administrator/domain_https)** 完成后，可能还需要如下步骤： 
-
-1. 步骤1
-
-2. 步骤2
 
 ## 参数{#parameter}
 
-Oracle 应用中包含 Docker, Portainer 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
+Oracle 应用中包含 Docker, Oracle 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
 
 通过运行 `docker ps`，查看 Oracle 运行时所有的服务组件：   
 
@@ -84,7 +80,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 ### 路径{#path}
 
-Oracle 配置文件： *path/config.php*    
+Oracle Database 配置文件路径：*/u01/app/oracle/product/11.2.0/db1/network/admin/listener.ora*    
 
 ### 端口{#port}
 
@@ -92,7 +88,7 @@ Oracle 配置文件： *path/config.php*
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
-| 8080   | Oracle 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
+| 1521   | 远程连接 Oracle Database | 可选   |
 
 ### 版本{#version}
 
@@ -107,3 +103,7 @@ sudo docker start | stop | restart | stats oracle
 ### 命令行{#cli}
 
 ### API{#api}
+
+### 版权与约束
+
+Oracle Database XE 对安装主机的规模和 CPU 数量不作限制（每台计算机一个数据库），但 XE 将最多存储 11GB 的用户数据，最多使用 1GB 内存，使用主机上的一个 CPU。版权说明：在使用软件之前，建议阅读[ Oracle Database 快捷版 11*g* 第 2 版的 OTN 许可协议](http://www.oracle.com/technetwork/licenses/database-11g-express-license-459621.html)
