@@ -80,9 +80,9 @@ tags:
 
 ### HTTPS 额外设置{#https}
 
-**[标准 HTTPS 配置](./administrator/domain_https)** 完成后，可能会遇到如下的异常情况：
+**[标准 HTTPS 配置](./administrator/domain_https)** 完成后，修改配置文件：
 
-- [配置HTTPS后，网站部分资源无法加载？](./wordpress/admin#httpsmore)
+- 修改 Moodle [配置文件](#parameter)，将配置项 $CFG->wwwroot   = 'https://www.abc.com' 修改成 HTTPS 域名;
 
 
 ### 配置 SMTP{#smtp}
