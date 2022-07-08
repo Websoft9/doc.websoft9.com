@@ -13,18 +13,40 @@ tags:
 
 ## 场景
 
-### Oracle 备份与恢复
+### Oracle 导出和导入
+
+Oracle Data Pump 支持将数据和元数据从一个数据库高速移动到另一个数据库。 
+
+导出和导入命令如下：  
+
+* expdp
+* impdp
 
 ### Oracle 升级
+
+### Oracle 数据库复制
+
+Oracle GoldenGate 是一种异步、基于日志的实时数据复制产品。
+
+### Oracle 集群
+
+Oracle 集群又称之为 Oracle Real Application Clusters (Oracle RAC)，它支持多个实例共享对 Oracle 数据库的访问，实例通过互连链接。  
+
+Oracle Clusterware 是实现 Oracle RAC 的工具。  
 
 ## 故障排除{#troubleshoot}
 
 除以下列出的 Oracle 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。  
 
-#### 更改域名导致无法访问 Oracle ？
+#### Error "ORA-28040: No matching authentication protocol"？
 
-#### 访问 Oracle 出现 502 错误？{#502}
+问题原因： 客户端与服务端的协议版本不一致   
+解决方案： 升级客户端
 
+####  ORA-28009: connection as SYS should be as SYSDBA or SYSOPER？
+
+问题原因： 连接数据库时用户与默认的 role 不匹配    
+解决方案： 连接信息中的 role  选择为 SYSDBA or SYSOPER
 
 ## 问题解答{#faq}
 
@@ -54,5 +76,15 @@ CDB 是 Oracle 对数据库（PDB）的逻辑分组，多个数据库在逻辑�
 * Oracle SQL Developer：可以导入导出、编写 SQL 脚本等
 * ORDS：是 Oracle Web 化的中间件，提供 API，PL/SQL 等能力，集成了 Oracle SQL Developer
 * APEX：是基于 ORDS 的一个无代码开发平台
+
+#### PL/SQL 是什么？
+
+PL/SQL 是 Oracle 服务端的存储过程编程语言
+
+#### Oracle 网络服务必须配置吗？
+
+Oracle 网络服务在分布式异构计算环境中提供企业范围的连接解决方​​案。Oracle Net 是 Oracle Net Services 的一个组件，它支持从客户端应用程序到数据库的网络会话。  
+
+所以，在单机环境下，它不是必须的配置。  
 
 
