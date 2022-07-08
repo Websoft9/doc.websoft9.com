@@ -22,7 +22,24 @@ Oracle Data Pump 支持将数据和元数据从一个数据库高速移动到另
 * expdp
 * impdp
 
+### Oracle 备份与恢复
+
+Oracle 备份与恢复主要通过 Recovery Manager (RMAN) 实现。  
+
+```
+$ docker exec -it oracle rman
+
+Recovery Manager: Release 21.0.0.0.0 - Production on Fri Jul 8 03:52:17 2022
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle and/or its affiliates.  All rights reserved.
+
+RMAN>
+```
+
 ### Oracle 升级
+
+本应用基于 Docker 安装，其升级采用通用的 Docker 应用升级方案即可。 
 
 ### Oracle 数据库复制
 
@@ -30,7 +47,7 @@ Oracle GoldenGate 是一种异步、基于日志的实时数据复制产品。
 
 ### Oracle 集群
 
-Oracle 集群又称之为 Oracle Real Application Clusters (Oracle RAC)，它支持多个实例共享对 Oracle 数据库的访问，实例通过互连链接。  
+Oracle 集群又称之为 Oracle Real Application Clusters (Oracle RAC)，它支持多个实例共享对 Oracle 数据库的访问。  
 
 Oracle Clusterware 是实现 Oracle RAC 的工具。  
 

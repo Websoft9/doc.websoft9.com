@@ -2,6 +2,7 @@
 sidebar_position: 3
 slug: /budibase/admin
 tags:
+  - Low Code
   - Budibase
 ---
 

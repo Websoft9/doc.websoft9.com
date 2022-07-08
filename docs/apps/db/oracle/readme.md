@@ -40,6 +40,7 @@ Oracle Database （简称 “Oracle”）是一个以领先的性能、可扩展
 4. 运行下面的命令，进入 Oracle 数据库容器中
    ```
    sudo docker exec -it oracle bash
+   sqlplus SYS  AS SYSDBA
    ```
 
 
@@ -54,7 +55,11 @@ Oracle Database （简称 “Oracle”）是一个以领先的性能、可扩展
 
 1. 使用 [CloudBeaver 连接 Oracle](#cloudbeaver) 数据库
 
-2. 
+2. 创建一个数据表
+
+3. 向数据表中增加内容
+
+4. 查看新增的数据
 
 ## Oracle 常用操作{#guide}
 
@@ -64,7 +69,10 @@ Oracle Database （简称 “Oracle”）是一个以领先的性能、可扩展
 
 ### 重置管理员密码{#resetpw}
 
-忘记管理员密码时，请参考如下方案重置密码：  
+忘记管理员密码时，运行下面的命令重置密码:  
+```
+docker exec oracle ./setPassword.sh <your_password>
+```
 
 ### 客户端工具{#client}
 
@@ -107,6 +115,13 @@ SQL*Plus 是官方提供的命令行客户端，运行下面的命令即可进�
 docker exec -it oracle sqlplus / as sysdba
 ```
 
+#### 本地开发者客户端 SQL Developer
+
+SQL Developer是 SQL*Plus 的图形版本，用 Java 编写，支持 SQL 和 PL/SQL 开发。您可以使用标准数据库身份验证连接到任何 Oracle 数据库模式。
+
+#### Web 应用程序客户端 APEX
+
+[APEX](./apex) 是用于 Oracle 数据库的 Web 应用程序开发工具。
 
 ## 参数{#parameter}
 
@@ -147,7 +162,16 @@ sudo docker start | stop | restart | stats oracle
 
 ### 命令行{#cli}
 
+Oracle Database 提供了大量的命令工具：
+
+* sqlplus 客户端工具
+* expdp 导出
+* impdp 导出
+* rman 备份与恢复
+
 ### API{#api}
+
+Oracle 通过 [Oracle REST Data Services](https://www.oracle.com/database/technologies/appdev/rest.html)  实现安全访问 Oracle 数据库。  
 
 ### 版权与约束
 

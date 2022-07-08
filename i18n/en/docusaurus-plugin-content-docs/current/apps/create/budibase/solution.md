@@ -7,4 +7,4 @@ tags:
 
 # Budibase Solution
 
-You can use [Budibase](https://www.jenkins.io/solutions/) integrated other software for **xxxx**.
+
