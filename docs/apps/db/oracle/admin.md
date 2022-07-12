@@ -67,25 +67,31 @@ Oracle Clusterware 是实现 Oracle RAC 的工具。
 
 ## 问题解答{#faq}
 
-#### Oracle 支持多语言吗？
+#### Oracle 企业版或标准版免费吗？
 
-支持多语言（包含中文），通过控制台即可修改语言
+不免费，需获得 Oracle 官方授权方可使用
 
-#### Oracle 支持多个数据库吗？
+#### Oracle 多数据库架构？
 
-从 12c 之后，Oracle 开始支持多个数据库。（通过 CDB 技术实现）
+从 12c 之后，Oracle 开始支持多个数据库实例，并逐渐演化成现在的多租户架构。  
 
-#### CDB 是什么？
+![](https://docs.oracle.com/en/database/oracle/oracle-database/21/cncpt/img/cncpt389.png)
 
-CDB 是 Oracle 对数据库（PDB）的逻辑分组，多个数据库在逻辑上可以组合成一个 CDB。
+* 从 Oracle Database 21c 开始，“数据库”特指多租户容器数据库 (CDB)、可插拔数据库 (PDB)或应用程序容器的数据文件。
+* CDB 是 Oracle 对数据库（PDB）的逻辑分组，多个数据库在逻辑上可以组合成一个 CDB。
 
-#### Oracle 支持多个 CDB 吗？
+#### SID 和 Service Name 区别？
 
-有待研究
+SID 是数据库实例唯一的名称。 Service Name 是向监听（TNS）注册后的别名。可以给同一个数据库实例配置多个 Service Name。  
 
-#### 表空间是什么？
+所以，大多数情况下， SID 和 Service Name 名称是相同的。  
 
-表空间是对表的逻辑分组，多个表可以在逻辑上组合成一个表空间。 为了避免表空间中的表名冲突，Oracle 在表名上会带上用户，以杜绝冲突的可能性。  
+#### 表空间和模式对象（ Segment）？
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/oracle/oracle-concepttablespaces-websoft9.jpg)
+
+* 表空间：对数据库的逻辑划分，每个表空间包含一个或多个物理的数据库文件。表空间是 Oracle 数据库恢复的最小单位，容纳着许多数据库实体，如表、视图、索引、聚簇、回退段和临时段等。
+* 模式对象：数据库用户拥有一个与用户名同名的数据库模式。
 
 #### Oracle 数据库有哪些可视化管理工具？
 
@@ -104,4 +110,10 @@ Oracle 网络服务在分布式异构计算环境中提供企业范围的连接�
 
 所以，在单机环境下，它不是必须的配置。  
 
+#### Oracle 用户信息保存在哪里？
 
+保存在 sys 下的 user$ 表里面：
+
+```
+select * from sys.user$;
+```

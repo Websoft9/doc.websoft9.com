@@ -20,6 +20,21 @@ Oracle Database （简称 “Oracle”）是一个以领先的性能、可扩展
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:1521 和 TCP:5500** 端口已经开启
 3. 在服务器中查看 Oracle 的 **[默认账号和密码](./user/credentials)**  
 4. 若想用域名访问 Oracle，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
+5. 针对于 **Oracle Database 企业版或标准版**，用户需额外如下几个步骤：
+
+   - 到 Oracle 官方网站[注册](https://profile.oracle.com/myprofile/account/create-account.jspx)一个免费用户账号
+
+   - 登录 [Oracle Database Repositories](https://container-registry.oracle.com/) 网站，阅读并同意 **Oracle Standard Terms and Restrictions**
+
+      ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/oracle/oracle-registryagree-websoft9.png)
+      ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/oracle/oracle-registryagreess-websoft9.png)
+
+   - 连接到云服务器，运行下面的命令，拉取并启动 Oracle 数据库镜像
+     ```
+     cd /data/apps/oracle
+     docker login container-registry.oracle.com/database/enterprise
+     docker compose up -d
+     ```
 
 ## Oracle 初始化向导{#wizard}
 
@@ -74,6 +89,31 @@ Oracle Database （简称 “Oracle”）是一个以领先的性能、可扩展
 docker exec oracle ./setPassword.sh <your_password>
 ```
 
+### 获取 SID 或 Servce Name{#getsid}
+
+1. 进入 sqlplus 
+    ```
+    $ docker exec -it oracle sqlplus / as sysdba 
+    ```
+
+2. 运行查询实例信息的 SQL 命令，instance_name 即所需的信息
+    ```
+    SQL> show parameter instance
+
+    NAME                                 TYPE        VALUE
+    ------------------------------------ ----------- ------------------------------
+    active_instance_count                integer
+    instance_abort_delay_time            integer     0
+    instance_groups                      string
+    instance_mode                        string      READ-WRITE
+    instance_name                        string      XE
+    instance_number                      integer     0
+    instance_type                        string      RDBMS
+    open_links_per_instance              integer     4
+    parallel_instance_group              string
+    ```
+
+
 ### 客户端工具{#client}
 
 Oracle Database 支持多种客户端，有第三方工具，也有官方工具。
@@ -83,7 +123,7 @@ Oracle Database 支持多种客户端，有第三方工具，也有官方工具�
 * 用户名: sys
 * Role：SYSDBA
 * Port: 1521 或 其他自定义的端口
-* 服务名称: xe 或 其他自定义的名称
+* [服务名称或 SID](#getsid)
 
 #### Web 可视化客户端 CloudBeaver{#cloudbeaver}
 
@@ -137,7 +177,7 @@ e8214ddd441c   dbeaver/cloudbeaver:latest                              "./run-se
 
 ### 路径{#path}
 
-Oracle Database 配置文件路径：*/u01/app/oracle/product/11.2.0/db1/network/admin/listener.ora*    
+Oracle Database 配置文件路径：*/data/apps/oracle/dbconfig*     
 
 ### 端口{#port}
 

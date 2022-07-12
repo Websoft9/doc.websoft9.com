@@ -7,4 +7,4 @@ tags:
 
 # Oracle Solution
 
-You can use [Oracle](https://www.jenkins.io/solutions/) integrated other software for **xxxx**.
+You can use [Oracle](https://www.jenkins.io/solutions/) integrated other software for **Analytics and data warehousing**.
