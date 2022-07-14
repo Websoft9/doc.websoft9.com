@@ -29,7 +29,6 @@ tags:
 
 1. 本地浏览器访问：*http://域名* 或 *http://公网IP* 进入安装向导
 
-
 2. 系统进入环境检测步骤通过后，填写数据库参数（[查看内置数据库账号密码](./user/credentials)）
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/typo3-installdb-websoft9.png)
 
@@ -38,7 +37,7 @@ tags:
 5. 设置管理账号和站点信息  
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/typo3-installsetadmin-websoft9.png)
 
-8. 完成安装后登录后台
+6. 完成安装后登录后台
 
 
 > 需要了解更多 Typo3 的使用，请参考官方文档：[Typo3 Documentation](https://typo3.org/help/documentation/)

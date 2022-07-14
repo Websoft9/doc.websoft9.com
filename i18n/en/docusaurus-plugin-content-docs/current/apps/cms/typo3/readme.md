@@ -9,8 +9,7 @@ tags:
 
 # Typo3 Getting Started
 
-[Typo3](https://typo3.org/) 是一个由成熟社区驱动的**企业级** CMS，充满活力的专业社区和[商业生态伙伴](https://typo3.com/partners/professional-service-listing)为企业客户提供全面的服务。TYPO3 可以轻松的与数字资产管理、电子商务、翻译服务、营销自动化、分析等无缝[集成](https://typo3.com/partners/technology-partners)
-
+[Typo3](https://typo3.org/) is a **enterprise-level** website building system (CMS) originating from Germany. It has a mature [business ecological partner](https://typo3.com/partners/professional-service-listing) to provide enterprise customers with comprehensive Serve. Can easily [integrate] seamlessly with digital asset management, e-commerce, translation services, marketing automation, analytics, and more (https://typo3.com/partners/technology-partners).
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/typo3-gui-websoft9.png)
 
 If you have installed Websoft9 Typo3, the following steps is for your quick start
@@ -26,33 +25,20 @@ If you have installed Websoft9 Typo3, the following steps is for your quick star
 
 ### Steps for you
 
-1. 本地浏览器访问：*http://域名* 或 *http://公网IP* 进入安装向导（首选域名访问方式）
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/typo3-installstart-websoft9.png)
+1. Using local Chrome or Firefox to visit the URL http://domain name or http://Internet IP, you will enter the Typo3
 
-   在 Typo3 的根目录下，新建一个名称为 **FIRST_INSTALL** 的空白文件
+2. After passing the system environment test, fill in the database parameters ([View database account password](./user/credentials))
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/typo3-installdb-websoft9.png)
 
-2. 系统进入环境检测步骤，通过后进入下一步
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/ty02.png)
+4. After the database connection is successful, the system prompts you to select an existing database or create a new database (an existing database is recommended)
 
-3. 填写您的数据库参数（[查看数据库账号密码](./user/credentials)）
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/ty03.png)
+5. Set the management account and site information
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/typo3-installsetadmin-websoft9.png)
 
-4. 选择一个数据库 或 新建一个
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/ty04.png)
+6. After the installation is completed, log in to the background
 
-5. 设置管理员账号  
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/ty05.png)
 
-6. 安装完成，根据提示进入后台  
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/ty06.png)
-
-7. 登录后台   
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/typo3-login-websoft9.png)
-
-8. Typo3 后台界面  
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/ty08.png)
-
-> 需要了解更多 Typo3 的使用，请参考官方文档：[Typo3 Documentation](https://typo3.org/help/documentation/)
+> To learn more about the use of Typo3, please refer to the official documentation: [Typo3 Documentation](https://typo3.org/help/documentation/)
 
 ### Having trouble?
 
@@ -60,58 +46,64 @@ Below is for you to solve problem, and you can contact **[Websoft9 Support](./he
 
 ## Typo3 QuickStart
 
-下面以 **使用 Typo3 构建内容管理系统** 作为一个任务，帮助用户快速入门：
 
 ## Typo3 Setup
 
-### 扩展管理
+### Extension management
 
-TYPO3 CMS 提供大量扩展，以增强系统功能。
+TYPO3 CMS offers numerous extensions to enhance system functionality.
 
-1. 登录 Typo3后台，打开【ADMIN TOOLS】> 【Extensions】
+1. Login to Typo3 backend，go to ADMIN TOOLS  > Extensions
+
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/typo3-BackendExtensionManager-websoft9.png)
 
-2. 顶部下拉菜单中选择【Get extensions】查看扩展
+2. Select [Get extensions] from the menu to view extensions
+
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/typo3-BackendExtensionManagerInstall-websoft9.png)
 
-3. 安装、更新扩展  
+3. Install or update extensions
+
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/typo3-BackendExtensionManagerExtensionVersions-websoft9.png)
 
-### 模板管理
+### Template management
 
-TYPO3 CMS 的模板管理非常细致，能够对模板最小元素进行细微的设置
+The template management of TYPO3 CMS is very meticulous and can make subtle settings for the smallest elements of the template
 
-1. 登录 Typo3后台，打开【WEB】>【Template】
+1. Login to Typo3 backend，go to WEB > Template
+
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/typo3-template-websoft9.png)
 
-2. 配置模板
+2. Configuration template
 
 ## Reference sheet
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Typo3
 
-通过运行`docker ps`，可以查看到 Typo3 运行时所有的 Container：
+Run `docker ps` command, view all Containers when Typo3 is running:
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                        COMMAND                  CREATED          STATUS          PORTS                                                  NAMES
+a993567e8948   martinhelmich/typo3:latest   "docker-php-entrypoi…"   18 minutes ago   Up 18 minutes   0.0.0.0:9001->80/tcp, :::9001->80/tcp                  typo3
+ba3eb402562b   mysql:8                      "docker-entrypoint.s…"   18 minutes ago   Up 18 minutes   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp   typo3-mysql
 ```
+
 ### Path{#path}
 
-TYPO3 网站目录： */data/wwwroot/typo3*
+TYPO3 Directory： */data/wwwroot/typo3*
 
 ### Port{#port}
 
 | Port | Use                                          | Necessity |
 | ------ | --------------------------------------------- | ------ |
-| 8080   | Typo3 original port | Optional   |
+| 9001   | Typo3 original port | Optional   |
 
 ### URL
 
-后端：*http://URL/typo3*
+Backend：*http://URL/typo3*
 
 ### Version{#version}
 
-控制台查看
+
 
 ### Service{#service}
 
@@ -120,6 +112,55 @@ sudo systemctl start | stop | restart | status Typo3
 ```
 
 ### CLI{#cli}
+
+Typo3 has full command line functionality:
+
+* typo3 official core command line
+* typo3cms third-party extension command
+
+```
+$ php /var/www/html/typo3_src/typo3/sysext/core/bin/typo3
+TYPO3 CMS 11.5.12 (Application Context: Production)
+
+Usage:
+  command [options] [arguments]
+
+Options:
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+  -q, --quiet           Do not output any message
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+Available commands:
+  list                   Lists commands
+  help                   Displays help for a command
+  dumpautoload           [extensionmanager:extension:dumpclassloadinginformation|extension:dumpclassloadinginformation] Updates class loading information in non-composer mode.
+ backend
+  backend:lock           Lock the TYPO3 Backend
+  backend:resetpassword  Trigger a password reset for a backend user
+  backend:unlock         Unlock the TYPO3 Backend
+ cache
+  cache:warmup           Cache warmup for all, system or, if implemented, frontend caches.
+  cache:flush            Cache clearing for all, system or frontend caches.
+ extension
+  extension:list         Shows the list of extensions available to the system
+  extension:setup        Set up extensions
+ language
+  language:update        Update the language files of all activated extensions
+ mailer
+  mailer:spool:send      [swiftmailer:spool:send] Sends emails from the spool
+ referenceindex
+  referenceindex:update  Update the reference index of TYPO3
+ site
+  site:list              Shows the list of sites available to the system
+  site:show              Shows the configuration of the specified site
+ upgrade
+  upgrade:run            Run upgrade wizard. Without arguments all available wizards will be run.
+  upgrade:list           List available upgrade wizards.
+```
+
 
 [Symfony Console Commands (cli)](https://docs.typo3.org/m/typo3/reference-coreapi/main/en-us/ApiOverview/CommandControllers/Index.html)
 
