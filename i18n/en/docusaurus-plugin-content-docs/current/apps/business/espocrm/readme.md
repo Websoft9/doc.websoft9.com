@@ -26,13 +26,13 @@ If you have installed Websoft9 EspoCRM, the following steps is for your quick st
 
 ### Steps for you
 
-1. Using local Chrome or Firefox to visit *http://domain* or *http://Internet IP*, you will log in to EspoCRM (enter [account password](./user/credentials))
+1. Using local Chrome or Firefox to visit *http://domain* or *http://Internet IP*, you will log in to EspoCRM ([Get](./user/credentials)username and password )
 
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/espocrm-login-websoft9.png)
 
 2. Log in to EspoCRM dashboard
 
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/spocrm-main-websoft9.png)
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/espocrm-main-websoft9.png)
 
 > Refers to the [EspoCRM Documentation](https://docs.espocrm.com/) to get start your EspoCRM tutorial
 
