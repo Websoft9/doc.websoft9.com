@@ -26,29 +26,13 @@ If you have installed Websoft9 EspoCRM, the following steps is for your quick st
 
 ### Steps for you
 
-1. Using local Chrome or Firefox to visit *http://domain* or *http://Internet IP*, you will enter the configuration interface of installation
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep01.png)
+1. Using local Chrome or Firefox to visit *http://domain* or *http://Internet IP*, you will log in to EspoCRM (enter [account password](./user/credentials))
 
-2. Agree license, go to next step
-  ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep02.png)
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/espocrm-login-websoft9.png)
 
-3. Then configure the database connection information([Don't know password?](./user/credentials)) and set administrator account
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep03.png)
+2. Log in to EspoCRM dashboard
 
-4. Wait the installing  
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep04.png)
-
-5. Set system configuration
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep06.png)
-
-5. Set your SMTP (Optional)
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep07.png)
-
-6. Install successfully  
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep08.png)
-
-7. Log in to EspoCRM dashboard
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep10.png)
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/spocrm-main-websoft9.png)
 
 > Refers to the [EspoCRM Documentation](https://docs.espocrm.com/) to get start your EspoCRM tutorial
 
@@ -81,19 +65,17 @@ Extensions allow you to add extra functionality to EspoCRM. They can be installe
 
 1. Get [SMTP](./administrator/smtp) related parameters in the mailbox management console
 
-2. 待EspoCRM安装完成后，点击右上角菜单->admin，点击Email项
+2. Log in to EspoCRM, click the menu in the upper right corner -> admin, click [Email Account] to add or edit your personal Email 
+
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/espocrm/espocrm-smtp-1-websoft9.png)
 
-3. 根据下图的设置，完成SMTP参数的设置
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/espocrm/espocrm-smtp-2-websoft9.png)
-	* Server 处请填写 smtp 服务器的地址 ；
-	* Port 处请填写正确的端口号；
-	* Auth 处勾选表示发邮件需要验证账号
-	* Security 处请邮件服务器支持的连接协议；
-	* UseName 处请输入自己的邮箱地址 ；
-	* Password 处请输入SMTP密码或授权码（不同于邮箱密码）
+3. Settings for sending and receiving emails: Set IMAP/SMTP parameters separately
 
-4. 设置完成后，请点击“Send Test Email”测试设置是否成功
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/espocrm/espocrm-smtp-2-websoft9.png)
+
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/espocrm/espocrm-smtp-3-websoft9.png)
+
+4. After the setting is completed, please click "Send Test Email" to test 
 
 ## Reference sheet
 

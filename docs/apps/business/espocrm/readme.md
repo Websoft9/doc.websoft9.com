@@ -28,24 +28,13 @@ tags:
 ### 详细步骤
 
 
-1. 本地浏览器访问：*http://域名* 或 *http://公网IP* 进入安装向导（首选域名访问方式）
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/espocrm/espocrm-lan-websoft9.png)
+1. 本地浏览器访问：*http://域名* 或 *http://公网IP* , 进入登录页面，输入[账号密码](./user/credentials)登录
 
-2. 选择语言之后（中国支持非常好），系统进入环境检测步骤
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/espocrm/espocrm-check-websoft9.png)
-
-3. 然后点击“Install”，进入数据库参数设置界面（[查看数据库账号密码](./user/credentials)）
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/espocrm/espocrm-dbconf-websoft9.png)
-
-4. 数据库连接正确，点击“Next”进入管理员账号设置界面，填写管理员信息，牢记之，并进入下一步
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/espocrm/espocrm-adminconf-websoft9.png)
-
-5. 配置时区
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/espocrm/espocrm-timeconf-websoft9.png)
-
-6. 系统提示安装成功
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/espocrm/espocrm-login-websoft9.png)
-7. 进入后台，体验系统的完整功能
+
+2. 进入后台，体验系统的完整功能
+
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/espocrm/espocrm-main-websoft9.png)
 
 > 需要了解更多 EspoCRM 的使用，请参考官方文档：[EspoCRM Documentation](https://www.espocrm.com/documentation/)
 
@@ -68,17 +57,14 @@ EspoCRM支持第三方的SMTP发送邮件模式，具体如下：
 
 1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
    
-2. 待EspoCRM安装完成后，点击右上角菜单->admin，点击Email项
+2. 待EspoCRM安装完成后，点击右上角菜单->admin，点击【电子邮件账户】进行个人邮箱的添加或编辑
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/espocrm/espocrm-smtp-1-websoft9.png)
 
-3. 根据下图的设置，完成SMTP参数的设置
+3. 根据下图的设置，进行收发邮件的设置，分别设置 IMAP/SMTP 参数
+
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/espocrm/espocrm-smtp-2-websoft9.png)
-	* Server 处请填写 smtp 服务器的地址 ；
-	* Port 处请填写正确的端口号；
-	* Auth 处勾选表示发邮件需要验证账号
-	* Security 处请邮件服务器支持的连接协议；
-	* UseName 处请输入自己的邮箱地址 ；
-	* Password 处请输入SMTP密码或授权码（不同于邮箱密码）
+
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/espocrm/espocrm-smtp-3-websoft9.png)
 
 4. 设置完成后，请点击“Send Test Email”测试设置是否成功
 
