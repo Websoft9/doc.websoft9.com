@@ -67,10 +67,21 @@ Below is for you to solve problem, and you can contact **[Websoft9 Support](./he
 
 1. Get [SMTP](./administrator/smtp) related parameters in the mailbox management console
    
-2. 打开VtigerCRM->设置按钮 > CRM Settings > Outgoing Server
-  ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-smtp-websoft9.png)
+2. Open the main menu on the left side of VtigerCRM: Settings > CRM Settings > CONFIGURATION > Outgoing Server
+   
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/vtigercrm/vtiger-smtp-websoft9.png)
 
-3. 设置无误后，请点击“Send Test Email”进行测试以验证
+    > The email server in the case is Tencent Enterprise Email, and the password is the client authorization code
+
+3. Save the settings, the test can pass, and the SMTP configuration is successful. Mail delivery can be tested in **Mail Manager**.
+
+**Inbox Configuration**
+
+From the main menu **Mail Manager** , click **Configure Mailbox** to configure the inbox
+   
+  ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/vtigercrm/vtiger-imap-websoft9.png)
+
+  ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/vtigercrm/vtiger-imap1-websoft9.png)
 
 ### Set Chinese Language
 

@@ -70,10 +70,21 @@ tags:
 
 1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
    
-2. 打开VtigerCRM->设置按钮 > CRM Settings > Outgoing Server
-  ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-smtp-websoft9.png)
+2. 打开 VtigerCRM 左上角主菜单 : Settings > CRM Settings > CONFIGURATION > Outgoing Server
+   
+  ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/vtigercrm/vtiger-smtp-websoft9.png)
 
-3. 设置无误后，请点击“Send Test Email”进行测试以验证
+   > 案例中的邮箱服务器为腾讯企业邮箱，密码为客户端授权码
+
+3. 保存设置，能检测通过，表明 SMTP 配置成功。可以在 Mail Manager 功能中测试邮件发送。
+
+**收件箱 配置**
+
+通过左侧主菜单 Mail Manager ，进入 Configure Mailbox ，配置收件箱
+   
+  ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/vtigercrm/vtiger-imap-websoft9.png)
+
+  ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/vtigercrm/vtiger-imap1-websoft9.png)
 
 ### 安装中文包
 
