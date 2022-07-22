@@ -71,8 +71,6 @@ Below is for you to solve problem, and you can contact **[Websoft9 Support](./he
    
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/vtigercrm/vtiger-smtp-websoft9.png)
 
-    > The email server in the case is Tencent Enterprise Email, and the password is the client authorization code
-
 3. Save the settings, the test can pass, and the SMTP configuration is successful. Mail delivery can be tested in **Mail Manager**.
 
 **Inbox Configuration**
