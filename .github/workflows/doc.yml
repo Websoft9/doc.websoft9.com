@@ -9,6 +9,8 @@ on:
       - 'src/**'
       - 'static/**'
       - '**.js'
+    paths-ignore:
+      - 'docs/_list'
 
 jobs:
   build:
