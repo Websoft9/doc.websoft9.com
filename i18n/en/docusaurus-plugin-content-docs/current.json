@@ -260,7 +260,7 @@
     "description": "The label for category Mingdao 明道 in sidebar docs"
   },
   "sidebar.docs.category.数据与分析": {
-    "message": "Data Analysis",
+    "message": "Data and Analysis",
     "description": "The label for category 数据与分析 in sidebar docs"
   },
   "sidebar.docs.category.Knowage": {
