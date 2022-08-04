@@ -9,7 +9,7 @@ tags:
 
 # 快速入门
 
-Akeneo 介绍
+Akeneo 是一个开源的主数据管理系统（PIM）
 
 部署 Websoft9 提供的 Akeneo 之后，请参考下面的步骤快速入门。
 
