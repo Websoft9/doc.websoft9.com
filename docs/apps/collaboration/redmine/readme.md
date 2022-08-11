@@ -78,22 +78,33 @@ Redmine 所需内存最低为2G，若服务器配置较低或并发访问超过�
 
 2. 通过 SFTP 连接服务器，修改 `configuration.yml` 文件，找到 “production:”, 在 production 下面添加并完善你的 SMTP 参数:  
    ```
-    email_delivery: #(前面2个空格）
-    delivery_method: :smtp #（前面4个空格）
-    smtp_settings: #（前面4个空格）
-    address: "SMTPSERVER"	#（前面6个空格）
-    port: 587	#（前面6个空格）
-    domain: "YouDomain"	#（前面6个空格）
-    authentication: :login #（前面6个空格）
-    user_name: "YouEmail" #（前面6个空格）
-    password: "YouPassword" #（前面6个空格）
-    ```
-    > 注意缩进/空格,按照规定格式配置，否则redmine报错
+   production:
+   delivery_method: :smtp
+   smtp_settings:
+      address: smtp.exmail.qq.com
+      port: 465
+      ssl: true
+      enable_starttls_auto: true
+      domain: websoft9.com
+      authentication: :login
+      user_name: help@websoft9.com
+      password: ********
+
+   ```
+    > 注意缩进/空格,按照规定格式配置，否则Redmine报错
 
 3. 重启 Redmine 服务后生效
    ```
    sudo docker restart redmine
    ```
+
+4. 配置系统主机：【管理】-【配置】-【一般】-【主机名称】
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/redmine/redmine-sethost-websoft9.png)
+
+5. 配置系统邮件发件人地址：【管理】-【配置】-【邮件通知】-【邮件发件人地址】,保存，点击最下方“发送测试邮件”进行测试
+   
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/redmine/redmine-smtp-websoft9.png)
 
 Redmine 官方提供了数十种不同 SMTP 配置方法，请参考官方文档： [Email Configuration](https://www.redmine.org/projects/redmine/wiki/EmailConfiguration)
 

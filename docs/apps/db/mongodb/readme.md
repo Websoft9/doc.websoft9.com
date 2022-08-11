@@ -28,27 +28,28 @@ tags:
 
 部署 MongoDB 之后，依次完成下面的步骤，验证其可用性：
 
-1. 使用 SSH 连接 MongoDB 所在的服务器，运行下面的命令，查看 MongoDB 的安装信息和运行状态
+1. 使用 SSH 连接 MongoDB 所在的服务器，运行下面的命令，查看 MongoDB 的运行状态
    ```
-   sudo systemctl status mongod
+   cd /data/apps/mongodb && sudo docker compose ls
    ```
-    MongoDB 正常运行会得到 " Active: active (running)... " 的反馈
+    MongoDB 正常运行会得到 " STATUS: running(1) " 的反馈
 
-2. 运行 `mongo` 命令（MongoDB Shell）
+2. 运行 `docker exec -it mongodb bash mongo admin -u root -p YOURPASSWORD`（[不知道账号密码？](./user/credentials)） 命令（MongoDB Shell）
    ~~~
-   mongo
-
-   ---
-   MongoDB shell version v4.0.18
-   connecting to: mongodb://127.0.0.1:27017/?gssapiServiceName=mongodb
-   Implicit session: session { "id" : UUID("e5c50eca-e51b-482e-b0bd-24edc2d1e433") }
-   MongoDB server version: 4.0.18
-   Welcome to the MongoDB shell.
-   For interactive help, type "help".
-   For more comprehensive documentation, see
-         http://docs.mongodb.org/
-   Questions? Try the support group
-         http://groups.google.com/group/mongodb-user
+   [root@iZj6c9ocmn38lr1gpaqprdZ mongodb]# docker exec -it mongodb mongo admin -u root -p YOURPASSWORD
+   MongoDB shell version v5.0.10
+   connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+   {"t":{"$date":"2022-08-10T03:05:34.194Z"},"s":"I",  "c":"NETWORK",  "id":5693100, "ctx":"js","msg":"Asio socket.set_option failed with std::system_error","attr":{"note":"connect (sync) TCP fast open","option":{"level":6,"name":30,"data":"01 00 00 00"},"error":{"what":"set_option: Protocol not available","message":"Protocol not available","category":"asio.system","value":92}}}
+   Implicit session: session { "id" : UUID("030a4e0b-54cf-4f93-aa90-792b10c478f7") }
+   MongoDB server version: 5.0.10
+   ================
+   Warning: the "mongo" shell has been superseded by "mongosh",
+   which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+   an upcoming release.
+   For installation instructions, see
+   https://docs.mongodb.com/mongodb-shell/install/
+   ================
+   > 
    ~~~
 
 3. 分别列出默认数据库和用户
@@ -105,40 +106,31 @@ security:
 
 重启 [MongoDB 服务](#service)后生效
 
+### 图形化客户端
 
+MongoDB Compass 作为客户端工具管理 MongoDB,为了方便使用，将其集成到了web版的可视化桌面。
 
-### 图形化 Web 端（adminMongo）
-
-adminMongo 是一款在线web版工具，默认已经安装到了MongoDB部署方案中。
-
-使用 adminMongo 的前置条件：
+使用 MongoDB Compass 的前置条件：
 
 * 开启 MongoDB的访问认证
 * 开启服务器安全组 **TCP:9091** 端口
 
-以上条件准备好之后，就可以根据选择合适的图形化界面工
 
-1. 本地电脑浏览器访问：*http://服务器公网IP:9091* 打开adminMongo界面
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/adminmongo-connect001-websoft9.png)
+1. 本地电脑浏览器访问：*https://服务器公网IP:9091* ，根据提示输入用户名和密码登陆web桌面（[不知道账号密码？](./user/credentials)）
 
-2. 以连接字符串为例（这里的IP地址是公网IP或本地IP）
+2. 点击web桌面的MongoDB Compass图标，进入MongoDB Compass
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/mongodbcompass-click-websoft9.png)
+
+2. 填写准确的字段，连接 MongoDB
    ```
-   # 默认连接到config数据库，172.17.0.1为内网IP
-   mongodb://root:1cTFecwTEs@172.17.0.1:27017/admin
-   # 默认连接到config数据库
-   mongodb://root:1cTFecwTEs@40.114.115.58
    # 默认连接到admin数据库
-   mongodb://root:1cTFecwTEs@40.114.115.58/admin
-   mongodb://parse:AxXFcV5zSz@40.114.115.58/parse
+   mongodb://root:1cTFecwTEs@mongodb:27017/admin
    ```
-3. 开始连接
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/adminmongo-connect002-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/mongodbcompass001-websoft9.png)
 
-4. 连接成功，进入 adminMongo 控制面板
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/adminmongo-connect003-websoft9.png)
+3. 连接成功，进入控制台
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/mongodbcompass002-websoft9.png)
 
-6. 使用完成后，请删除连接
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/adminmongo-connect004-websoft9.png)
 
 更多可选的 Web 端：
 
@@ -146,19 +138,6 @@ adminMongo 是一款在线web版工具，默认已经安装到了MongoDB部署�
 - [mongoadmin](https://github.com/thomasst/mongoadmin) - Admin interface built with Django
 - [mongri](https://github.com/dongri/mongri) - Web-based user interface written in JavaScript
 - [Rockmongo](https://github.com/iwind/rockmongo) - PHPMyAdmin for MongoDB, sort of
-
-
-### 图形化客户端
-
-推荐使用官方出品的：[MongoDB Compass Community](https://www.mongodb.com/download-center/compass) 作为客户端工具管理 MongoDB：
-
-1. [下载](https://www.mongodb.com/products/compass)并安装 MongoDB Compass
-
-2. 填写准确的字段，连接 MongoDB
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/mongodbcompass001-websoft9.png)
-
-3. 连接成功，进入控制台
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/mongodbcompass002-websoft9.png)
 
 更多可选的客户端：
 
@@ -275,7 +254,7 @@ Successfully added user: { "user" : "webs_admin", "roles" : [ "userAdminAnyDatab
 参考下面的命令，修改已经创建的管理员账号root的密码
 
 ```
-mongo admin -u root -p YOURPASSWORD
+docker exec -it mongodb mongo admin -u root -p YOURPASSWORD
 MongoDB shell version v4.0.18
 connecting to: mongodb://127.0.0.1:27017/?gssapiServiceName=mongodb
 > db = db.getSiblingDB('admin')
@@ -288,17 +267,22 @@ admin
 
 重置密码即已经忘记密码的情况下，通过特殊手段重新设置新密码的过程。
 
-1. 修改 MongoDB 配置文件 *etc/mongod.conf*，将authorization由disabled设置为enabled
+1. 进入mongodb容器
+   ```
+   docker exec -it mongodb bash
+   ```
+
+2. 修改 MongoDB 配置文件 */etc/mongod.conf*，将authorization由disabled设置为enabled
    ```
    security:
    authorization: disabled
 
    ```
-2. 重启 MongoDB 服务
+3. 重启 MongoDB 服务
    ```
    systemctl restart mongod
    ```
-3. 重新设置密码
+4. 重新设置密码
    ```
    mongo
    > db = db.getSiblingDB('admin')
@@ -312,50 +296,51 @@ admin
 
 ## MongoDB 参数
 
-MongoDB 应用中包含 Docker,  adminMongo 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+MongoDB 应用中包含 Docker,  MongoCompass 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 MongoDB 运行时所有的 Container：
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                                                   COMMAND                  CREATED         STATUS                  PORTS                                                                                  NAMES
+80130e1088b2   websoft9dev/mongocompass:v1.31                          "/dockerstartup/kasm…"   2 minutes ago   Up About a minute       4901/tcp, 5901/tcp, 0.0.0.0:9091->6901/tcp, :::9091->6901/tcp                          mongocompass
+c17d12157c01   mongo:latest                                            "docker-entrypoint.s…"   4 minutes ago   Up 4 minutes            0.0.0.0:27017->27017/tcp, :::27017->27017/tcp                                          mongodb
 ```
 
 下面仅列出 MongoDB 本身的参数：
 
 ### 路径{#path}
 
-MongoDB 数据目录: */var/lib/mongodb*   
-MongoDB 配置文件: */etc/mongod.conf*   
-MongoDB 日志文件: */var/log/mongodb*   
+MongoDB 安装目录: */data/apps/mongodb*  
+MongoDB 数据目录: */data/apps/mongodb/mongo_data*   
+MongoDB 配置文件: */data//apps/mongodb/src/mongod.conf*   
+ 
 
 ### 端口{#port}
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
-| 9091   | HTTP 访问 adminMongo	 | 可选   |
+| 9091   | HTTP 访问 MongoCompass | 可选   |
 | 27017   | MongoDB Server | 可选   |
 
 ### 版本
 
 ```shell
-mongodb -V
+docker exec -i mongodb mongo --version
 ```
 
 ### 服务{#service}
 
 
 ```shell
-sudo systemctl start | stop | restart | status mongod
-sudo docker start | stop | restart | stats adminmongo
+sudo docker start | stop | restart  mongodb
+sudo docker start | stop | restart  mongocompass
 ```
 
 ### 命令行{#cmd}
 
 #### 服务端
 
-安装MongoDB后，启动 bin 目录下的可执行文件 mongod 就可以启动 MongoDB 服务，如果你配置了 Systemd，也可以通过 `systemctl start mongod` 以后台的形式启动 MongoDB。  
-
-MongoDB 在启动的时候，可以通过命令接受一序列参数，也可以通过配置文件接受参数：  
+MongoDB 的服务端叫mongod，进入容器后，可以通过mongod命令接受一序列参数，也可以通过配置文件接受参数：  
 
 **命令行参数**
 
@@ -582,10 +567,10 @@ MongoDB Shell 是 MongoDB 自带的一个交互式 JavaScript shell，让您能�
 
 ```
 # log in Mongo Shell without authenticating
-mongo
+docker exec -it mongodb mongo
 
 # log in Mongo Shell witt authenticating
-mongo admin --username root -p
+docker exec -it mongodb mongo admin --username root -p
 
 MongoDB shell version v4.0.18
 connecting to: mongodb://127.0.0.1:27017/?gssapiServiceName=mongodb

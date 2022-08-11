@@ -79,20 +79,30 @@ Redmine need at leaset 2G free memory, If the memory is less than 2, there will 
 
 2. Use SSH or SFTP to connect Server, modify `configuration.yml` and add the following **SMTP segment** to the **production** part: 
    ```
-    email_delivery: 
-    delivery_method: :smtp
-    smtp_settings: 
-    address: "SMTPSERVER"
-    port: 587
-    domain: "YouDomain"
-    authentication: :login 
-    user_name: "YouEmail" 
-    password: "YouPassword"
-    ```
+   production:
+   delivery_method: :smtp
+   smtp_settings:
+      address: smtp.exmail.qq.com
+      port: 465
+      ssl: true
+      enable_starttls_auto: true
+      domain: websoft9.com
+      authentication: :login
+      user_name: help@websoft9.com
+      password: ********
+
+   ```
 3. Restart Redmine service
    ```
    sudo docker restart redmine
    ```
+4. Configure host: Administration - Settings - General - HoHost name and pathst
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/redmine/redmine-sethost-websoft9.png)
+
+5. Configure Email sender address: Administration - Settings - Email Notification - Emission Email address, save it, and click "Send a test Email" to test
+   
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/redmine/redmine-smtp-websoft9.png)
 
 > Redmine provides  official documentation for SMTP: [Email Configuration](https://www.redmine.org/projects/redmine/wiki/EmailConfiguration)
 
