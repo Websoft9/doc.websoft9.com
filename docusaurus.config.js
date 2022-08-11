@@ -71,7 +71,7 @@ const config = {
           { type: 'localeDropdown', position: 'right', },
 
           {
-            href: 'https://github.com/websoft9',
+            href: 'https://github.com/websoft9/doc.websoft9.com',
             label: 'GitHub',
             position: 'right',
           },

@@ -16,20 +16,25 @@ tags:
 
 通用的手动备份操作步骤如下：
 
-1. 使用`mongodump`工具，导致数据库
+1. 进入 MongoDB 容器
    ```
-   #1 备份
+   docker exec -it mongodb bash
+   cd /data/db
+   ```
+2. 使用`mongodump`工具，导出数据库
+   ```
+   # 备份
    mongodump --authenticationDatabase admin --username root --password PASSWORD -d DATABASE_NAME -h localhost
 
    # 查看备份
-   cd dump/admin
-   ls
+   cd dump/admin && ls 
    ```
-2. 使用`mongorestore`工具，恢复数据库
+3. 使用`mongorestore`工具，恢复数据库
    ```
    mongorestore --authenticationDatabase admin --username root --password PASSWORD PATH_TO_BACKUP_FILE
 
    ```
+  > 退出容器后，也可在*/data/apps/mongodb/mongo_data/dump/admin*查看备份数据文件
 
 详情参考官方文档：[MongoDB Backup Methods](https://docs.mongodb.com/manual/core/backups/)
 
@@ -39,7 +44,7 @@ tags:
 
 ### MongoDB 数据迁移
 
-可以，通过修改 /etc/mongod.conf 配置文件
+可以，通过修改 /data/apps/mongodb/src/mongod.conf 配置文件
 
 
 ## 故障排除{#troubleshoot}
@@ -58,18 +63,17 @@ MongoDB Server 是指 MongoDB 程序本体，而 MongoDB Client 指采用TCP协�
 
 #### mongod 和 mongo 命令有什么区别？
 
-mongod 是 MongoDB 的服务端管理命令，用于启动数据库服务  
-mongo 是用于访问 MongoDB 服务的客户端  
+mongod 是 MongoDB 的服务端管理命令，用于启动数据库服务。  
+mongo 是用于访问 MongoDB 服务的客户端。  
 
 #### MongoDB Community vs MongoDB Enterprise？
 
-MongoDB Community is the source available and free to use edition of MongoDB.    
-
-MongoDB Enterprise is available as part of the MongoDB Enterprise Advanced subscription and includes comprehensive support for your MongoDB deployment.   MongoDB Enterprise also adds enterprise-focused features such as LDAP and Kerberos support, on-disk encryption, and auditing.  
+MongoDB社区是MongoDB的源代码，可免费使用。  
+MongoDB Enterprise是MongoDB企业高级订阅的一部分，包括对MongoDB部署的全面支持。MongoDB Enterprise还添加了以企业为中心的功能，如LDAP和Kerberos支持、磁盘加密和审计。
 
 #### 无身份验证可直接访问 MongoDB？
 
-可以，默认安装时 MongoDB 没有开启访问控制，无需 MongoDB 用户名密码就可以访问，例如通过此URL访问：mongodb://localhost/admin。
+可以，默认安装时 MongoDB 开启了访问控制，当关闭认证后无需 MongoDB 用户名密码就可以访问。
  > MongoDB [访问控制参考](https://docs.mongodb.com/manual/tutorial/enable-authentication/)
 
 #### MongoDB 中的 admin 数据库是什么？
@@ -78,13 +82,13 @@ MongoDB Enterprise is available as part of the MongoDB Enterprise Advanced subsc
 
 #### MongoDB 提供哪些安全认证？
 
-MongoDB provides various features, such as authentication, access control, encryption, to secure your MongoDB deployments. Some key security features include:
+MongoDB提供各种功能，如身份验证、访问控制和加密，以保护MongoDB部署的安全。一些主要的安全功能包括： 
 
 | Authentication | Authorization | TLS/SSL | Enterprise Only |
 | :--- | :--- | :--- | :--- |
 | [Authentication](https://docs.mongodb.com/manual/core/authentication/)<br />[SCRAM](https://docs.mongodb.com/manual/core/security-scram/)<br />[x.509](https://docs.mongodb.com/manual/core/security-x.509/) | [Role-Based Access Control](https://docs.mongodb.com/manual/core/authorization/)<br />[Enable Auth](https://docs.mongodb.com/manual/tutorial/enable-authentication/)<br />[Manage Users and Roles](https://docs.mongodb.com/manual/tutorial/manage-users-and-roles/) | [TLS/SSL (Transport Encryption)](https://docs.mongodb.com/manual/core/security-transport-encryption/)<br />[Configure mongod and mongos for TLS/SSL](https://docs.mongodb.com/manual/tutorial/configure-ssl/)<br />[TLS/SSL Configuration for Clients](https://docs.mongodb.com/manual/tutorial/configure-ssl-clients/) | [Kerberos Authentication](https://docs.mongodb.com/manual/core/kerberos/)<br />[LDAP Proxy Authentication](https://docs.mongodb.com/manual/core/security-ldap/)<br />[Encryption at Rest](https://docs.mongodb.com/manual/core/security-encryption-at-rest/)<br />[Auditing](https://docs.mongodb.com/manual/core/auditing/) |
 
-> MongoDB also provides the [Security Checklist](https://docs.mongodb.com/manual/administration/security-checklist/) for a list of recommended actions to protect a MongoDB deployment.
+> MongoDB还提供了 [安全检查列表](https://docs.mongodb.com/manual/administration/security-checklist/) 保护MongoDB部署的建议操作列表。
 
 #### MongoDB 支持哪些平台？
 
@@ -95,31 +99,31 @@ MongoDB provides various features, such as authentication, access control, encry
 MongoDB 官方主要工具如下：
 
 **MongoDB Atlas Open Service Broker**  
-Learn how you can use the Atlas Open Service Broker to deploy Atlas clusters and manage database users from within Kubernetes.
+学习如何使用Atlas Open Service Broker在Kubernetes内部署Atlas集群和管理数据库用户。
 
 **MongoDB BI Connector**  
-Reference guide for the MongoDB BI Connector. Learn how you can use business intelligence tools and SQL to query data stored in MongoDB.
+MongoDB BI连接器参考指南。学习如何使用商业智能工具和SQL查询存储在MongoDB中的数据。
 
 **MongoDB Charts**  
-Reference guide for MongoDB Charts. Learn how to create visualizations of MongoDB data quickly and easily.
+MongoDB图表参考指南。学习如何快速轻松地创建MongoDB数据的可视化。 
 
 **MongoDB Command Line Interface**  
-Learn how to use the MongoDB Command Line Interface to quickly interact with your MongoDB deployments for easier testing and scripting.
+学习如何使用MongoDB命令行界面与MongoDB部署快速交互，以简化测试和脚本编写。
 
 **MongoDB Compass**  
-Reference guide for MongoDB Compass. Learn to use MongoDB Compass's graphical user interface to view and analyze data stored in MongoDB.
+MongoDB Compass参考指南。学习使用MongoDB Compass的图形用户界面查看和分析存储在MongoDB中的数据。 
 
 **MongoDB Database Tools**  
-Tools for interfacing with a MongoDB cluster, such as importing/exporting data.
+用于与MongoDB集群接口的工具，如导入/导出数据。 
 
 **MongoDB Kafka Connector**  
-Learn how to persist data from Kafka topics as a data sink into MongoDB as well as publish changes from MongoDB into Kafka topics as a data source.
+学习如何将Kafka主题中的数据持久化为MongoDB中的数据接收器，以及如何将MongoDB的更改发布为Kafka topics中的数据源。
 
 **MongoDB Kubernetes Operator**  
-Learn how you can use the Kubernetes Operator to run MongoDB Enterprise on Kubernetes and configure Cloud or Ops Manager for backup and monitoring.
+学习如何使用Kubernetes操作符在Kubernete上运行MongoDB Enterprise，并配置Cloud或Ops Manager进行备份和监控。
 
 **MongoDB Spark Connector**  
-Reference guide for the MongoDB Spark Connector. Learn how you can use MongoDB with Apache Spark.
+MongoDB火花连接器参考指南。了解如何将MongoDB与Apache Spark结合使用。
 
 
 #### 什么是 NoSQL？
@@ -139,7 +143,7 @@ MongoDB 采用 BSON（一种轻量级的二进制JSON）格式存储数据，每
 
 #### SQL vs MongoDB ？
 
-The basic concepts in mongodb are document, collection, and databases. let's take SQL as an example to help you better understand MongoDB.
+MongoDB中的基本概念是文档、集合和数据库。让我们以SQL为例，帮助您更好地理解MongoDB。
 
 | SQL Term/concept | MongoDB Term/concept | explain |
 | :--- | :--- | :--- |
@@ -151,7 +155,7 @@ The basic concepts in mongodb are document, collection, and databases. let's tak
 | table joins |   | MongoDB no this |
 | primary key | primary key | keyPrimary key, MongoDB automatically sets the _id field as the primary key |
 
-Through the example below, we can also understand some concepts in Mongo more intuitively:
+通过下面的例子，我们还可以更直观地理解Mongo中的一些概念：
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/nosqlvssql-websoft9.png)
 

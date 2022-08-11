@@ -34,7 +34,7 @@ tags:
    ```
     MongoDB 正常运行会得到 " STATUS: running(1) " 的反馈
 
-2. 运行 `docker exec -it mongodb bash mongo admin -u root -p YOURPASSWORD`（[不知道账号密码？](./user/credentials)） 命令（MongoDB Shell）
+2. 运行 `docker exec -it mongodb mongo admin -u root -p YOURPASSWORD`（[不知道账号密码？](./user/credentials)） 命令（MongoDB Shell）
    ~~~
    [root@iZj6c9ocmn38lr1gpaqprdZ mongodb]# docker exec -it mongodb mongo admin -u root -p YOURPASSWORD
    MongoDB shell version v5.0.10
@@ -67,7 +67,7 @@ tags:
 若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题。
 
 **MongoDB 默认启用账号认证吗？**  
-没有，请修改配置文件 /etc/mongod.conf，将 authorization 字段设置为 enabled
+默认情况下 MongoDB 认证已开启。
 
 
 ## MongoDB 入门指南
@@ -78,37 +78,50 @@ tags:
 
 ### 开启 MongoDB 远程访问{#remote}
 
+默认MongoDB 远程访问已经开启，如果因为其它因素无法远程，可如下操作：
 1. 修改 [MongDB 配置文件](#path)
    ```
-   #1 将authorization由disabled设置为enabled
-   security:
-   authorization: enabled
-
-   #2 将 bindIP 修改为 0.0.0.0 或 本地电脑公网IP
+   # 将 bindIP 修改为 0.0.0.0 或 本地电脑公网IP
    net:
       port: 27017
       bindIp: 0.0.0.0
    ```
    > 0.0.0.0 代表任意公网IP均可访问
 
-2. 重启 [MongoDB 服务](#service)
+2. 重启 [MongoDB 服务]
+   ```
+   cd /data/apps/mongodb
+   sudo docker compose up -d
+   ```      
 
-### 开启 MongoDB 访问认证
+### 关闭 MongoDB 访问认证
 
-为了方便试用，默认情况下 MongoDB 认证已关闭。所以，创建用户不需要登录。
+默认情况下 MongoDB 认证已开启，可按照下面流程关闭：
 
-打开 [MongoDB 配置文件](#path)，将 authorization字段改为 enabled 即启用认证。
+打开 [MongoDB compose文件](#path)，将环境变量用户以及密码注释掉。
 
-```
-security:
-  authorization: disabled
-```
+   ```
+   services:
+     mongo:
+       image: mongo:${APP_VERSION}
+       restart: always
+       container_name: ${APP_NAME}
+       ports:
+         - ${APP_MONGO_PORT}:27017
+       #environment:
+       #  MONGO_INITDB_ROOT_USERNAME: ${APP_USER}
+       #  MONGO_INITDB_ROOT_PASSWORD: ${APP_PASSWORD}
+   ```
 
-重启 [MongoDB 服务](#service)后生效
+重启 [MongoDB 服务]后生效
+   ```
+   cd /data/apps/mongodb
+   sudo docker compose up -d
+   ```
 
 ### 图形化客户端
 
-MongoDB Compass 作为客户端工具管理 MongoDB,为了方便使用，将其集成到了web版的可视化桌面。
+MongoDB Compass 作为客户端工具管理 MongoDB，为了方便使用将其集成到了web版的可视化桌面。
 
 使用 MongoDB Compass 的前置条件：
 
@@ -123,8 +136,8 @@ MongoDB Compass 作为客户端工具管理 MongoDB,为了方便使用，将其�
 
 2. 填写准确的字段，连接 MongoDB
    ```
-   # 默认连接到admin数据库
-   mongodb://root:1cTFecwTEs@mongodb:27017/admin
+   # 示例连接字符串
+   mongodb://root:1cTFecwTEs@mongodb:27017
    ```
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/mongodbcompass001-websoft9.png)
 
@@ -267,21 +280,32 @@ admin
 
 重置密码即已经忘记密码的情况下，通过特殊手段重新设置新密码的过程。
 
-1. 进入mongodb容器
+
+1. 修改 [MongoDB compose文件](#path)，将环境变量用户以及密码注释掉
+   ```
+   services:
+     mongo:
+       image: mongo:${APP_VERSION}
+       restart: always
+       container_name: ${APP_NAME}
+       ports:
+         - ${APP_MONGO_PORT}:27017
+       #environment:
+       #  MONGO_INITDB_ROOT_USERNAME: ${APP_USER}
+       #  MONGO_INITDB_ROOT_PASSWORD: ${APP_PASSWORD}
+   ```
+
+2. 重启 MongoDB 服务
+   ```
+   cd /data/apps/mongodb
+   sudo docker compose up -d
+   ```
+
+3. 进入mongodb容器
    ```
    docker exec -it mongodb bash
    ```
 
-2. 修改 MongoDB 配置文件 */etc/mongod.conf*，将authorization由disabled设置为enabled
-   ```
-   security:
-   authorization: disabled
-
-   ```
-3. 重启 MongoDB 服务
-   ```
-   systemctl restart mongod
-   ```
 4. 重新设置密码
    ```
    mongo
@@ -290,13 +314,29 @@ admin
    > db.changeUserPassword("root", "NEWPASSWORD")
    ```
 
-4. 重复第1步，但将 authorization 由 enabled 设置为 disabled
+5. 修改 [MongoDB compose文件](#path)，使环境变量用户以及密码生效
+   ```
+   services:
+     mongo:
+       image: mongo:${APP_VERSION}
+       restart: always
+       container_name: ${APP_NAME}
+       ports:
+         - ${APP_MONGO_PORT}:27017
+       environment:
+         MONGO_INITDB_ROOT_USERNAME: ${APP_USER}
+         MONGO_INITDB_ROOT_PASSWORD: ${APP_PASSWORD}
+   ```
 
-5. 重启 MongoDB 服务
+6. 重启 MongoDB 服务，新密码立即生效
+   ```
+   cd /data/apps/mongodb
+   sudo docker compose up -d
+   ```
 
 ## MongoDB 参数
 
-MongoDB 应用中包含 Docker,  MongoCompass 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+MongoDB 应用中包含 Docker，  MongoCompass 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 MongoDB 运行时所有的 Container：
 
@@ -310,10 +350,10 @@ c17d12157c01   mongo:latest                                            "docker-e
 
 ### 路径{#path}
 
-MongoDB 安装目录: */data/apps/mongodb*  
-MongoDB 数据目录: */data/apps/mongodb/mongo_data*   
-MongoDB 配置文件: */data//apps/mongodb/src/mongod.conf*   
- 
+MongoDB 安装目录： */data/apps/mongodb*  
+MongoDB 数据目录： */data/apps/mongodb/mongo_data*   
+MongoDB 配置文件： */data/apps/mongodb/src/mongod.conf*   
+MongoDB compose文件： */data/apps/mongodb/docker-compose.yml*  
 
 ### 端口{#port}
 
