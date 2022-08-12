@@ -34,9 +34,9 @@ tags:
    ```
     MongoDB 正常运行会得到 " STATUS: running(1) " 的反馈
 
-2. 运行 `docker exec -it mongodb mongo admin -u root -p YOURPASSWORD`（[不知道账号密码？](./user/credentials)） 命令（MongoDB Shell）
+2. 运行 MongoDB Shell 命令（[不知道账号密码？](./user/credentials)）
    ~~~
-   [root@iZj6c9ocmn38lr1gpaqprdZ mongodb]# docker exec -it mongodb mongo admin -u root -p YOURPASSWORD
+   $ docker exec -it mongodb mongo admin -u root -p YOURPASSWORD
    MongoDB shell version v5.0.10
    connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
    {"t":{"$date":"2022-08-10T03:05:34.194Z"},"s":"I",  "c":"NETWORK",  "id":5693100, "ctx":"js","msg":"Asio socket.set_option failed with std::system_error","attr":{"note":"connect (sync) TCP fast open","option":{"level":6,"name":30,"data":"01 00 00 00"},"error":{"what":"set_option: Protocol not available","message":"Protocol not available","category":"asio.system","value":92}}}
@@ -78,7 +78,8 @@ tags:
 
 ### 开启 MongoDB 远程访问{#remote}
 
-默认MongoDB 远程访问已经开启，如果因为其它因素无法远程，可如下操作：
+默认MongoDB 远程访问已经开启，如果因为其它因素无法远程，可如下操作：  
+
 1. 修改 [MongDB 配置文件](#path)
    ```
    # 将 bindIP 修改为 0.0.0.0 或 本地电脑公网IP
@@ -88,17 +89,16 @@ tags:
    ```
    > 0.0.0.0 代表任意公网IP均可访问
 
-2. 重启 [MongoDB 服务]
+2. 重启 [MongoDB 服务](#service)
    ```
-   cd /data/apps/mongodb
-   sudo docker compose up -d
+   sudo docker restart mongodb
    ```      
 
 ### 关闭 MongoDB 访问认证
 
 默认情况下 MongoDB 认证已开启，可按照下面流程关闭：
 
-打开 [MongoDB compose文件](#path)，将环境变量用户以及密码注释掉。
+1. 打开 [MongoDB compose 文件](#path)，将环境变量用户以及密码注释掉。
 
    ```
    services:
@@ -113,15 +113,15 @@ tags:
        #  MONGO_INITDB_ROOT_PASSWORD: ${APP_PASSWORD}
    ```
 
-重启 [MongoDB 服务]后生效
+2. 重新创建 MongoDB 容器
    ```
    cd /data/apps/mongodb
    sudo docker compose up -d
    ```
 
-### 图形化客户端
+### 图形化 Web 端(MongoDB Compass)
 
-MongoDB Compass 作为客户端工具管理 MongoDB，为了方便使用将其集成到了web版的可视化桌面。
+MongoDB Compass 官方提供的客户端工具，我们的部署方案已经将它预装到一个 Web 环境中：  
 
 使用 MongoDB Compass 的前置条件：
 
@@ -131,37 +131,18 @@ MongoDB Compass 作为客户端工具管理 MongoDB，为了方便使用将其�
 
 1. 本地电脑浏览器访问：*https://服务器公网IP:9091* ，根据提示输入用户名和密码登陆web桌面（[不知道账号密码？](./user/credentials)）
 
-2. 点击web桌面的MongoDB Compass图标，进入MongoDB Compass
+2. 点击web桌面的 MongoDB Compass 图标，进入MongoDB Compass
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/mongodbcompass-click-websoft9.png)
 
-2. 填写准确的字段，连接 MongoDB
+3. 填写准确的字段，连接 MongoDB
    ```
    # 示例连接字符串
    mongodb://root:1cTFecwTEs@mongodb:27017
    ```
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/mongodbcompass001-websoft9.png)
 
-3. 连接成功，进入控制台
+4. 连接成功，进入控制台
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/mongodbcompass002-websoft9.png)
-
-
-更多可选的 Web 端：
-
-- [mongo-express](https://github.com/mongo-express/mongo-express) - Web-based admin interface built with Express
-- [mongoadmin](https://github.com/thomasst/mongoadmin) - Admin interface built with Django
-- [mongri](https://github.com/dongri/mongri) - Web-based user interface written in JavaScript
-- [Rockmongo](https://github.com/iwind/rockmongo) - PHPMyAdmin for MongoDB, sort of
-
-更多可选的客户端：
-
-- [dbKoda](https://www.dbkoda.com/) - Cross-platform and open-source IDE
-- [MongoHub](https://github.com/jeromelebel/MongoHub-Mac) - Mac native client
-- [Mongotron](http://mongotron.io/) - Cross-platform and open-source client built with Electron
-- [NoSQLBooster](https://nosqlbooster.com/) - Feature-rich but easy-to-use cross-platform IDE (formerly MongoBooster)
-- [Nosqlclient](https://github.com/nosqlclient/nosqlclient) - Cross-platform, self hosted and easy to use management tool (formerly Mongoclient)
-- [Robo 3T](https://github.com/Studio3T/robomongo) - Free, native and cross-platform shell-centric GUI (formerly Robomongo)
-- [Studio 3T](https://studio3t.com/) - Cross-platform GUI, stable and powerful (formerly MongoChef)
-
 
 ### 规划数据模型
 
@@ -267,7 +248,7 @@ Successfully added user: { "user" : "webs_admin", "roles" : [ "userAdminAnyDatab
 参考下面的命令，修改已经创建的管理员账号root的密码
 
 ```
-docker exec -it mongodb mongo admin -u root -p YOURPASSWORD
+$ docker exec -it mongodb mongo admin -u root -p YOURPASSWORD
 MongoDB shell version v4.0.18
 connecting to: mongodb://127.0.0.1:27017/?gssapiServiceName=mongodb
 > db = db.getSiblingDB('admin')
@@ -281,7 +262,7 @@ admin
 重置密码即已经忘记密码的情况下，通过特殊手段重新设置新密码的过程。
 
 
-1. 修改 [MongoDB compose文件](#path)，将环境变量用户以及密码注释掉
+1. 修改 [MongoDB compose 文件](#path)，将环境变量用户以及密码注释掉
    ```
    services:
      mongo:
@@ -328,7 +309,7 @@ admin
          MONGO_INITDB_ROOT_PASSWORD: ${APP_PASSWORD}
    ```
 
-6. 重启 MongoDB 服务，新密码立即生效
+6. 重新创建 MongoDB 容器，新密码立即生效
    ```
    cd /data/apps/mongodb
    sudo docker compose up -d
@@ -351,7 +332,7 @@ c17d12157c01   mongo:latest                                            "docker-e
 ### 路径{#path}
 
 MongoDB 安装目录： */data/apps/mongodb*  
-MongoDB 数据目录： */data/apps/mongodb/mongo_data*   
+MongoDB 数据目录： */data/apps/mongodb/data/mongo_data*   
 MongoDB 配置文件： */data/apps/mongodb/src/mongod.conf*   
 MongoDB compose文件： */data/apps/mongodb/docker-compose.yml*  
 

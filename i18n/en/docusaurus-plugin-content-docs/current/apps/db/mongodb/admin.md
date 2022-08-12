@@ -14,18 +14,21 @@ This chapter is special guide for MongoDB maintenance and settings. And you can 
 
 ### MongoDB Backup
 
-The general manual backup operation steps are as follows:
+Run the following command to back up the data file in the following folder of mongodb application directory: **data/mongo_data/dump/admin**. The general manual backup operation steps are as follows:
 
-1. Use the tool `mongodump` to export database
+1. Access MongoDB  container
+   ```
+   docker exec -it mongodb cd /data/db
+   ```
+2. Use the tool **mongodump** to export database
    ```
    #1 backup
    mongodump --authenticationDatabase admin --username root --password PASSWORD -d DATABASE_NAME -h localhost
 
    # check you backup
-   cd dump/admin
-   ls
+   cd dump/admin && ls
    ```
-2. Use tool `mongorestore` to restore database
+3. Use tool **mongorestore** to restore database
    ```
    mongorestore --authenticationDatabase admin --username root --password PASSWORD PATH_TO_BACKUP_FILE
    ```
@@ -38,16 +41,15 @@ More detail refer to official docs:[Upgrade to the Latest Revision of MongoDB](h
 
 ### MongoDB Data Migration
 
-可以，通过修改 /etc/mongod.conf 配置文件
-
+Edit configuration file: **/data/apps/mongodb/src/mongod.conf**  
 
 ## Troubleshoot{#troubleshoot}
 
 In addition to the MongoDB issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
-#### MongoDB compass 无法连接数据库？
+#### MongoDB compass is unable to connect to the database?
 
-检查27017端口，bindIP和账户认证等连接字段是否满足条件
+Check whether the connection fields such as 27017 port, bindip and account authentication meet the conditions  
 
 ## FAQ{#faq}
 
@@ -89,9 +91,9 @@ MongoDB provides various features, such as authentication, access control, encry
 
 For the list of supported platforms, see [Supported Platforms](https://docs.mongodb.com/manual/administration/production-notes/#prod-notes-supported-platforms).
 
-#### MongoDB 提供官方有哪些工具？
+#### What are the official tools of MongoDB?
 
-MongoDB 官方主要工具如下：
+The main official tools are as follows:
 
 **MongoDB Atlas Open Service Broker**  
 Learn how you can use the Atlas Open Service Broker to deploy Atlas clusters and manage database users from within Kubernetes.
@@ -120,19 +122,45 @@ Learn how you can use the Kubernetes Operator to run MongoDB Enterprise on Kuber
 **MongoDB Spark Connector**  
 Reference guide for the MongoDB Spark Connector. Learn how you can use MongoDB with Apache Spark.
 
+#### What other MongoDB client tools besides MongoDB Compass?
 
-#### 什么是 NoSQL？
+The GUI of MongoDB are divided into desktop version and web version. Each form of tool has some popular tools:
 
-NoSQL 即 Not only SQL的简称，并非 Not SQL，也即意味着 NoSQL 数据库也有着类似 SQL 的查询概念。 NoSQL 是一个包罗万象的术语，涵盖了除传统的关系型数据库（RDBMS）之外的所有数据库。NoSQL 试图放弃关系型数据库的传统结构，让开发人员能够以更接近系统数据流需求的方式实现模型。当前有多种不同的 NoSQL 技术，包括：
+**Desktop**
 
-* 文档存储数据库
-* 健/值数据库
-* 列存储数据库
-* 图存储数据库
+- [MongoDB Compass Community](https://www.mongodb.com/download-center/compass) - A free tool for developing with MongoDB and includes a subset of the features of Compass.
+- [dbKoda](https://www.dbkoda.com/) - Cross-platform and open-source IDE
+- [MongoHub](https://github.com/jeromelebel/MongoHub-Mac) - Mac native client
+- [Mongotron](http://mongotron.io/) - Cross-platform and open-source client built with Electron
+- [NoSQLBooster](https://nosqlbooster.com/) - Feature-rich but easy-to-use cross-platform IDE (formerly MongoBooster)
+- [Nosqlclient](https://github.com/nosqlclient/nosqlclient) - Cross-platform, self hosted and easy to use management tool (formerly Mongoclient)
+- [Robo 3T](https://github.com/Studio3T/robomongo) - Free, native and cross-platform shell-centric GUI (formerly Robomongo)
+- [Studio 3T](https://studio3t.com/) - Cross-platform GUI, stable and powerful (formerly MongoChef)
 
-MongoDB 就属于文档存储数据库的杰出代表。文档数据库采用面向文档的方法存储数据，其背后的理念是，可以将单个实体的所有数据存放在一个文档中，而文档以**集合**的形式组合起来。  
+**Web GUI**
 
-MongoDB 采用 BSON（一种轻量级的二进制JSON）格式存储数据，每个文档最大不能超过16MB，避免查询占用太多内存或频繁访问文件系统，因此性能非常高。
+- [adminMongo](https://github.com/mrvautin/adminMongo) - Web-based user interface to handle connections and databases needs
+- [mongo-express](https://github.com/mongo-express/mongo-express) - Web-based admin interface built with Express
+- [mongoadmin](https://github.com/thomasst/mongoadmin) - Admin interface built with Django
+- [mongri](https://github.com/dongri/mongri) - Web-based user interface written in JavaScript
+- [Rockmongo](https://github.com/iwind/rockmongo) - PHPMyAdmin for MongoDB, sort of
+
+#### What is NoSQL？
+
+NoSQL is the abbreviation of not only SQL, not not not SQL, which means that NoSQL database also has the query concept similar to SQL.  
+NoSQL is an all encompassing term that covers all databases except the traditional relational database (RDBMS). NoSQL tries to give up  
+the traditional structure of relational database, so that developers can realize the model in a way closer to the system data flow requirements.  
+There are many different NoSQL technologies, including:
+* Document storage database
+* Key / value database
+* Column storage database
+* Figure storage database
+
+Mongodb is an outstanding representative of document storage database. The document database uses the document oriented method to store data.  
+The idea behind it is that all data of a single entity can be stored in one document, and the documents are combined in the form of **sets**.
+
+Mongodb uses bson (a lightweight binary JSON) format to store data. Each document can not exceed 16MB at most, so as to avoid too much memory or  
+frequent access to the file system. Therefore, the performance is very high.
 
 ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/mongodb-gui-websoft9.png)
 
@@ -154,45 +182,45 @@ Through the example below, we can also understand some concepts in Mongo more in
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/nosqlvssql-websoft9.png)
 
-#### MongoDB 有哪些数据类型？
+#### What data types does MongoDBhave?
 
-MongoDB 的数据类型非常类似 JavaScript 对象。
+Mongodb's data type is very similar to JavaScript objects.
 
-**字符串** - 这是用于存储数据的最常用的数据类型。MongoDB中的字符串必须为`UTF-8`。
+**String** - this is the most commonly used data type for storing data. The string in mongodb must be 'UTF-8'.
 
-**整型** - 此类型用于存储数值。 整数可以是`32`位或`64`位，具体取决于服务器。
+**Integer** - this type is used to store numeric values. The integer can be '32' bit or '64' bit, depending on the server.
 
-**布尔类型** - 此类型用于存储布尔值(`true` / `false`)值。
+**Boolean type** - this type is used to store Boolean values (` true '/ ` false').
 
-**双精度浮点数** - 此类型用于存储浮点值。
+**Double precision floating-point number * * - this type is used to store floating-point values.
 
-**最小/最大键** - 此类型用于将值与最小和最大`BSON`元素进行比较。
+**Min/Max key** - this type is used to compare the value with the minimum and maximum ` bson 'elements.
 
-**数组** - 此类型用于将数组或列表或多个值存储到一个键中。
+**Array** - this type is used to store an array or list or multiple values in one key.
 
-**时间戳** - `ctimestamp`，当文档被修改或添加时，可以方便地进行录制。
+**Timestamp** - `ctimestamp'. When a document is modified or added, it can be recorded conveniently.
 
-**对象** - 此数据类型用于嵌入式文档。
+**Object** - this data type is used for embedded documents.
 
-**对象** - 此数据类型用于嵌入式文档。
+**Object** - this data type is used for embedded documents.
 
-**Null** - 此类型用于存储`Null`值。
+**Null** - this type is used to store 'null' values.
 
-**符号** - 该数据类型与字符串相同; 但是，通常保留用于使用特定符号类型的语言。
+**Symbol** - the data type is the same as the string; However, the language used to use specific symbol types is usually reserved.
 
-**日期** - 此数据类型用于以UNIX时间格式存储当前日期或时间。您可以通过创建日期对象并将日，月，年的日期进行指定自己需要的日期时间。
+**Date** - this data type is used to store the current date or time in UNIX time format. You can specify the date and time you need by creating a date object and specifying the date of day, month and year.
 
-**对象ID** - 此数据类型用于存储文档的ID。
+**Object ID** - this data type is used to store the ID of the document.
 
-**二进制数据** - 此数据类型用于存储二进制数据。
+**Binary data** - this data type is used to store binary data.
 
-**代码** - 此数据类型用于将JavaScript代码存储到文档中。
+**Code** - this data type is used to store JavaScript code into the document.
 
-**正则表达式** - 此数据类型用于存储正则表达式。
+**Regular expression * * - this data type is used to store regular expressions
 
-### MongoDB 中数据库、用户和角色关系？
+### Database, user and role relationship in mongodb?
 
-通过阅读下面的代码理解用户、数据库和角色的关系
+Read the following code to understand the relationship between users, databases and roles:
 
 ```
 use reporting
@@ -209,7 +237,9 @@ db.createUser(
   }
 )
 ```
-对 MongoDB 来说，每个用户都存在一个数据库中（区别于 MySQL 中所有的用户存储在一个系统数据库中）  
+For mongodb, each user exists in a database (different from mysql, where all users are stored in a system database)    
 
-系统默认，会自动创建 admin 数据库，这是一个特殊数据库，提供了普通数据库没有的功能，对于具备全局管理权限的数据库用户，必须存储在这个 admin 数据中。
+
+By default, the system will automatically create an **admin** database. This is a special database that provides functions that are not available in ordinary databases. Database users with global management permissions must be stored in this admin database.
+
 

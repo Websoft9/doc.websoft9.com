@@ -8,5 +8,5 @@ tags:
 
 # MongoDB Solution
 
-MongoDB 可以与其他的软件平台**集成**一起使用，解决 数据库高可用性 过程中的各种场景问题。
+You can use MongoDB integrated other software, to solve various scenarios in the process of database high availability.
 

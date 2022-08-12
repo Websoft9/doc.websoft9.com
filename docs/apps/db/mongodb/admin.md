@@ -14,14 +14,13 @@ tags:
 
 ### MongoDB 应用备份
 
-通用的手动备份操作步骤如下：
+运行下列命令，可将数据文件备份在 MongoDB 应用目录下列文件夹：data/mongo_data/dump/admin
 
 1. 进入 MongoDB 容器
    ```
-   docker exec -it mongodb bash
-   cd /data/db
+   docker exec -it mongodb cd /data/db
    ```
-2. 使用`mongodump`工具，导出数据库
+2. 使用 **mongodump** 工具，导出数据库
    ```
    # 备份
    mongodump --authenticationDatabase admin --username root --password PASSWORD -d DATABASE_NAME -h localhost
@@ -29,12 +28,11 @@ tags:
    # 查看备份
    cd dump/admin && ls 
    ```
-3. 使用`mongorestore`工具，恢复数据库
+3. 使用 **mongorestore** 工具，恢复数据库
    ```
    mongorestore --authenticationDatabase admin --username root --password PASSWORD PATH_TO_BACKUP_FILE
 
    ```
-  > 退出容器后，也可在*/data/apps/mongodb/mongo_data/dump/admin*查看备份数据文件
 
 详情参考官方文档：[MongoDB Backup Methods](https://docs.mongodb.com/manual/core/backups/)
 
@@ -44,7 +42,7 @@ tags:
 
 ### MongoDB 数据迁移
 
-可以，通过修改 /data/apps/mongodb/src/mongod.conf 配置文件
+可以，通过修改 */data/apps/mongodb/src/mongod.conf* 配置文件
 
 
 ## 故障排除{#troubleshoot}
@@ -158,6 +156,26 @@ MongoDB中的基本概念是文档、集合和数据库。让我们以SQL为例�
 通过下面的例子，我们还可以更直观地理解Mongo中的一些概念：
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/nosqlvssql-websoft9.png)
+
+#### 除 MongoDB Compass 之外，还有哪些客户端工具？
+
+更多可选的 Web 端：
+
+- [mongo-express](https://github.com/mongo-express/mongo-express) - Web-based admin interface built with Express
+- [mongoadmin](https://github.com/thomasst/mongoadmin) - Admin interface built with Django
+- [mongri](https://github.com/dongri/mongri) - Web-based user interface written in JavaScript
+- [Rockmongo](https://github.com/iwind/rockmongo) - PHPMyAdmin for MongoDB, sort of
+
+更多可选的客户端：
+
+- [dbKoda](https://www.dbkoda.com/) - Cross-platform and open-source IDE
+- [MongoHub](https://github.com/jeromelebel/MongoHub-Mac) - Mac native client
+- [Mongotron](http://mongotron.io/) - Cross-platform and open-source client built with Electron
+- [NoSQLBooster](https://nosqlbooster.com/) - Feature-rich but easy-to-use cross-platform IDE (formerly MongoBooster)
+- [Nosqlclient](https://github.com/nosqlclient/nosqlclient) - Cross-platform, self hosted and easy to use management tool (formerly Mongoclient)
+- [Robo 3T](https://github.com/Studio3T/robomongo) - Free, native and cross-platform shell-centric GUI (formerly Robomongo)
+- [Studio 3T](https://studio3t.com/) - Cross-platform GUI, stable and powerful (formerly MongoChef)
+
 
 #### MongoDB 有哪些数据类型？
 

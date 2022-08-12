@@ -32,27 +32,28 @@ You should verify the MongoDB when completed deployment:
 
 1. Use the **SSH** to connect Server, and run the command below to view the installation information and running status
    ```
-   sudo systemctl status mongod
+   cd /data/apps/mongodb && sudo docker compose ls
    ```
-2. You can ge the message from SSH " Active: active (running)... " when MongoDB is running
+2. You can ge the message from SSH " STATUS: running(1) " when MongoDB is running
 
 **Connect MongoDB**
 
-1. Use the **SSH** to connect Server, and run `mongo` command 
+1. Use the **SSH** to connect Server, and run MongoDB shell ([Don't have password?](./user/credentials))
    ~~~
-   mongo
-
-   ---
-   MongoDB shell version v4.0.18
-   connecting to: mongodb://127.0.0.1:27017/?gssapiServiceName=mongodb
-   Implicit session: session { "id" : UUID("e5c50eca-e51b-482e-b0bd-24edc2d1e433") }
-   MongoDB server version: 4.0.18
-   Welcome to the MongoDB shell.
-   For interactive help, type "help".
-   For more comprehensive documentation, see
-         http://docs.mongodb.org/
-   Questions? Try the support group
-         http://groups.google.com/group/mongodb-user
+   $ docker exec -it mongodb mongo admin -u root -p YOURPASSWORD
+   MongoDB shell version v5.0.10
+   connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+   {"t":{"$date":"2022-08-10T03:05:34.194Z"},"s":"I",  "c":"NETWORK",  "id":5693100, "ctx":"js","msg":"Asio socket.set_option failed with std::system_error","attr":{"note":"connect (sync) TCP fast open","option":{"level":6,"name":30,"data":"01 00 00 00"},"error":{"what":"set_option: Protocol not available","message":"Protocol not available","category":"asio.system","value":92}}}
+   Implicit session: session { "id" : UUID("030a4e0b-54cf-4f93-aa90-792b10c478f7") }
+   MongoDB server version: 5.0.10
+   ================
+   Warning: the "mongo" shell has been superseded by "mongosh",
+   which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+   an upcoming release.
+   For installation instructions, see
+   https://docs.mongodb.com/mongodb-shell/install/
+   ================
+   >
    ~~~
 
 2. List all databases and users
@@ -71,18 +72,18 @@ Below is for you to solve problem, and you can contact **[Websoft9 Support](./he
 
 **Does MongoDB enable account authentication by default?**
 
-No, you should modify the configuration file */etc/mongod.conf* if you want 
+YES, Mongodb authentication is enabled by default. 
 
 
 ## MongoDB QuickStart
 
-> 需要了解更多 MongoDB 的使用，请官方文档 [MongoDB Administration](https://docs.mongodb.com/manual/administration/)
+> To learn more about the use of mongodb, refer to the official document [MongoDB Administration](https://docs.mongodb.com/manual/administration/)
 
 ## MongoDB Setup
 
-### Enable the MongoDB remote connection{#remote}
+### Enable MongoDB remote connection{#remote}
 
-1. Use **SSH** to connect MongoDB server and modify the [MongoDB configuration file](#path): *etc/mongod.conf*
+1. Use **SSH** to connect MongoDB server and modify the [MongoDB configuration file](#path)
    ```
    #1 set authorization **disabled** to **enabled**
    security:
@@ -95,125 +96,76 @@ No, you should modify the configuration file */etc/mongod.conf* if you want
    ```
    > 0.0.0.0 means any Internet IP can connect your MongoDB
 
-2. Restart MongoDB [service](#service)
+2. Restart [MongoDB service](#service)
    ```
-   systemctl restart mongod
+   sudo docker restart mongodb
    ```
 3. Go to the Cloud Console and enable the **TCP:27017** port of Security Group
 
 
-### 开启 MongoDB 访问认证
+### Close MongoDB access authentication
 
-为了方便试用，默认情况下 MongoDB 认证已关闭。所以，创建用户不需要登录。
+Mongodb authentication is enabled by default, and can be closed according to the following process:
 
-打开 [MongoDB 配置文件](#path)，将 authorization字段改为 enabled 即启用认证。
+1. Edit [MongoDB configuration file](#path), comment out the environment variable user and password.
 
-```
-security:
-  authorization: disabled
-```
+   ```
+   services:
+     mongo:
+       image: mongo:${APP_VERSION}
+       restart: always
+       container_name: ${APP_NAME}
+       ports:
+         - ${APP_MONGO_PORT}:27017
+       #environment:
+       #  MONGO_INITDB_ROOT_USERNAME: ${APP_USER}
+       #  MONGO_INITDB_ROOT_PASSWORD: ${APP_PASSWORD}
+   ```
 
-重启 [MongoDB 服务](#service)后生效
+2. Recreate MongoDB container
+   ```
+   cd /data/apps/mongodb
+   sudo docker compose up -d
+   ```       
 
-### GUI
+### MongoDB web GUI
 
-The GUI of MongoDB are divided into desktop version and web version. Each form of tool has some popular tools:
-
-**Desktop**
-
-- [MongoDB Compass Community](https://www.mongodb.com/download-center/compass) - A free tool for developing with MongoDB and includes a subset of the features of Compass.
-- [dbKoda](https://www.dbkoda.com/) - Cross-platform and open-source IDE
-- [MongoHub](https://github.com/jeromelebel/MongoHub-Mac) - Mac native client
-- [Mongotron](http://mongotron.io/) - Cross-platform and open-source client built with Electron
-- [NoSQLBooster](https://nosqlbooster.com/) - Feature-rich but easy-to-use cross-platform IDE (formerly MongoBooster)
-- [Nosqlclient](https://github.com/nosqlclient/nosqlclient) - Cross-platform, self hosted and easy to use management tool (formerly Mongoclient)
-- [Robo 3T](https://github.com/Studio3T/robomongo) - Free, native and cross-platform shell-centric GUI (formerly Robomongo)
-- [Studio 3T](https://studio3t.com/) - Cross-platform GUI, stable and powerful (formerly MongoChef)
-
-**Web GUI**
-
-- [adminMongo](https://github.com/mrvautin/adminMongo) - Web-based user interface to handle connections and databases needs
-- [mongo-express](https://github.com/mongo-express/mongo-express) - Web-based admin interface built with Express
-- [mongoadmin](https://github.com/thomasst/mongoadmin) - Admin interface built with Django
-- [mongri](https://github.com/dongri/mongri) - Web-based user interface written in JavaScript
-- [Rockmongo](https://github.com/iwind/rockmongo) - PHPMyAdmin for MongoDB, sort of
-
-Now, we will introduce how to use **MongoDB compass** and **adminMongo**
+Now, we will introduce how to use **MongoDB compass**	
 
 **Preparation**
 
-You must enable the authorization of MongoDB and set credential for it before your using the GUI  
-
-1. Use **SSH** to connect MongoDB server and modify the MongDB configuration file *etc/mongod.conf*
-   ```
-   #1 set authorization **disabled** to **enabled**
-   security:
-   authorization: enabled
-
-   #2 set bindIP to 0.0.0.0
-   net:
-      port: 27017
-      bindIp: 0.0.0.0
-   ```
-   > 0.0.0.0 means any Internet IP can connect your MongoDB
-
-2. Restart MongoDB service
-   ```
-   systemctl restart mongod
-   ```
-3. Go to the Cloud Console and enable the **TCP:27017** port of Security Group
+- Open the access authentication of MongoDB
+- Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:9091** is allowed
 
 When completed the preparation, you can use the GUI now
 
-**adminMongo**
-
-adminMongo is a web GUI which installed by Docker for your MongoDB deployment solution
-
-1. Go to the Cloud Console and enable the **TCP:9091** port of Security Group
-
-2. Open Chrome or Firefox on your local PC to visit URL *http://Internet IP:9091*,you can enter the adminMongo page
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/adminmongo-connect001-websoft9.png)
-
-3. Following is the examples for adminMongo connection(IP is Internet IP0)
+1. Open Chrome or Firefox on your local PC to visit URL *http://Internet IP:9091*, follow the prompts to enter the user name and password([Don't have password?](./user/credentials))
+2. Click the MongoDB compass icon on the web desktop to enter MongoDB compass
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/mongodbcompass-click-websoft9.png)
+3. Fill in the correct items and connect MongoDB
    ```
-   # use the **config** database
-   mongodb://root:1cTFecwTEs@40.114.115.58
-   # use the **admin** database
-   mongodb://root:1cTFecwTEs@40.114.115.58/admin
-   mongodb://parse:AxXFcV5zSz@40.114.115.58/parse
+   # example connect string
+   mongodb://root:1cTFecwTEs@mongodb:27017
    ```
-
-4. Start to connect
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/adminmongo-connect002-websoft9.png)
-
-5. Go go adminMongo console when connect successfully
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/adminmongo-connect003-websoft9.png)
-
-6. Please delete the connections when you don't use it
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/adminmongo-connect004-websoft9.png)
-
-**MongoDB Compass**
-
-1. [Download](https://www.mongodb.com/products/compass) and install MongoDB Compass
-2. Fill in the correct items and connect MongoDB
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/mongodbcompass001-websoft9.png)
-3. Go go MongoDB Compass console when connect successfully
+4. Go go MongoDB Compass console when connect successfully
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/mongodbcompass002-websoft9.png)
 
-### 规划数据模型
+### Planning data model
 
-MongoDB 作为一种数据库，与传统的 RDBMS 的使用方式也有相似之处，即规划数据模型，建立数据库范式。只有这种，才能更好的发挥数据库的性能。  
+MongoDB as a kind of database, it is also similar to the traditional RDBMS, that is, planning the data model and establishing the database paradigm.  
+Only in this way can the performance of the database be better developed.  
 
 ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mongodb/mongodb-datamodel-websoft9.png)
 
-数据规划的主要设计要点包括：
+The main design points of data planning include:
 
-* 使用数据范式
-* 使用嵌入式文档反范式
-* 使用固定集合
-* 考虑文档增大
-* 规划索引、分片和复制
-* 规划数据生命周期
+* Use data paradigm
+* Using embedded document anti paradigm
+* Use fixed sets
+* Consider document enlargement
+* Planning indexing, sharding, and replication
+* Planning data lifecycle
 
 
 ### Useful MongoDB Command
@@ -280,7 +232,7 @@ switched to db admin
 Successfully added user: { "user" : "webs_admin", "roles" : [ "userAdminAnyDatabase" ] }
 
 
-# 显示账号
+# Show account number
 > show users
 {
         "_id" : "admin.webs_admin",
@@ -306,7 +258,7 @@ Successfully added user: { "user" : "webs_admin", "roles" : [ "userAdminAnyDatab
 You can modify the password of **root** user which added on your MongoDB by the following command
 
 ```
-mongo admin --u root --p YOURPASSWORD
+$ docker exec -it mongodb mongo admin -u root -p YOURPASSWORD
 MongoDB shell version v4.0.18
 connecting to: mongodb://127.0.0.1:27017/?gssapiServiceName=mongodb
 > db = db.getSiblingDB('admin')
@@ -319,73 +271,99 @@ admin
 
 Reset password is the process of resetting a new password through special solutions in case the password has been forgotten.
 
-1. Use **SSH** to connect MongoDB server and modify the MongoDB configuration file: *etc/mongod.conf*
+1. Edit [MongoDB configuration file](#path), comment out the environment variable user and password.
+
    ```
-   security:
-   authorization: disabled
+   services:
+     mongo:
+       image: mongo:${APP_VERSION}
+       restart: always
+       container_name: ${APP_NAME}
+       ports:
+         - ${APP_MONGO_PORT}:27017
+       #environment:
+       #  MONGO_INITDB_ROOT_USERNAME: ${APP_USER}
+       #  MONGO_INITDB_ROOT_PASSWORD: ${APP_PASSWORD}
    ```
-2. Restart the MongoDB service
+
+2. Recreate MongoDB container
    ```
-   systemctl restart mongod
-   ```
+   cd /data/apps/mongodb
+   sudo docker compose up -d
+   ```     
 3. Run the MongoDB command to set new password
    ```
-   mongo
+   $ docker exec -it mongodb nongo
    > db = db.getSiblingDB('admin')
    admin
    > db.changeUserPassword("root", "NEWPASSWORD")
    ```
 
-4. Repeat step 1, but set authorization to disabled
-5. Restart the MongoDB service again
-
+4. Edit [MongoDB configuration file](#path), make the environment variable user and password effective
+   ```
+   services:
+     mongo:
+       image: mongo:${APP_VERSION}
+       restart: always
+       container_name: ${APP_NAME}
+       ports:
+         - ${APP_MONGO_PORT}:27017
+       environment:
+         MONGO_INITDB_ROOT_USERNAME: ${APP_USER}
+         MONGO_INITDB_ROOT_PASSWORD: ${APP_PASSWORD}
+   ```
+   
+5. Recreate MongoDB container, and the new password will take effect immediately
+   ```
+   cd /data/apps/mongodb
+   sudo docker compose up -d
+   ```
+   
 ## Reference sheet
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage MongoDB 
 
-
-通过运行`docker ps`，可以查看到 MongoDB 运行时所有的 Container：
+Run `docker ps`, view all containers when MongoDB is running:  
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                                                   COMMAND                  CREATED         STATUS                  PORTS                                                                                  NAMES
+80130e1088b2   websoft9dev/mongocompass:v1.31                          "/dockerstartup/kasm…"   2 minutes ago   Up About a minute       4901/tcp, 5901/tcp, 0.0.0.0:9091->6901/tcp, :::9091->6901/tcp                          mongocompass
+c17d12157c01   mongo:latest                                            "docker-entrypoint.s…"   4 minutes ago   Up 4 minutes            0.0.0.0:27017->27017/tcp, :::27017->27017/tcp                                          mongodb
 ```
-
-下面仅列出 MongoDB 本身的参数：
 
 ### Path{#path}
 
-MongoDB 数据目录: */var/lib/mongodb*   
-MongoDB 配置文件: */etc/mongod.conf*   
-MongoDB logs file: */var/log/mongodb*   
+MongoDB install directory: */data/apps/mongodb*  
+MongoDB data directory: */data/apps/mongodb/data/mongo_data*   
+MongoDB configuration file: */data/apps/mongodb/src/mongod.conf*   
+MongoDB compose file: */data/apps/mongodb/docker-compose.yml*  
 
 ### Port{#port}
 
-| 端口号 | 用途                                          | 必要性 |
+| Port | Use                                          | Necessity |
 | ------ | --------------------------------------------- | ------ |
-| 9091   | HTTP 访问 adminMongo	 | 可选   |
-| 27017   | MongoDB Server | 可选   |
+| 9091   | HTTP access MongoDB Compass	 | Optional   |
+| 27017   | MongoDB Server | Optional   |
 
 ### Version
 
 ```shell
-mongodb -V
+docker exec -i mongodb mongo --version
 ```
 
 ### Service{#service}
 
 
 ```shell
-sudo systemctl start | stop | restart | status mongod
-sudo docker start | stop | restart | stats adminmongo
+sudo docker start | stop | restart  mongodb
+sudo docker start | stop | restart  mongocompass
 ```
 
 ### CLI{#cmd}
 
 **Server**
-
-安装MongoDB后，启动 bin 目录下的可执行文件 mongod 就可以启动 MongoDB 服务，如果你配置了 Systemd，也可以通过 `systemctl start mongod` 以后台的形式启动 MongoDB。  
-
-MongoDB 在启动的时候，可以通过命令接受一序列参数，也可以通过配置文件接受参数：  
+ 
+The service end of MongoDB is called mongod. After entering the container, you can accept a series of parameters through the mongod command or through the configuration file:
 
 **CLI Arguments**
 
@@ -572,7 +550,8 @@ Free Monitoring options:
 
 **Configuration File**
 
-配置文件所用的参数与命令行有一些差异，MongoDB 当前采用配置组+配置段的方式组织[配置文件](https://docs.mongodb.com/v4.0/reference/configuration-options/#conf-file)，配置组主要包括：
+There are some differences between the parameters used in the configuration file and the command line. Mongodb currently [configuration file] https://docs.mongodb.com/v4.0/reference/configuration-options/#conf-file) ,   
+the configuration group mainly includes:
 
 * systemLog Options
 * processManagement Options
@@ -587,7 +566,7 @@ Free Monitoring options:
 * auditLog Options
 * snmp Options 
 
-下面是一个典型的配置文件内容：  
+The following is a typical configuration file:  
 
 ```
 processManagement:
@@ -608,7 +587,8 @@ storage:
 
 **Client**
 
-MongoDB Shell 是 MongoDB 自带的一个交互式 JavaScript shell，让您能够访问、配置和管理MongoDB数据库、用户等。使用这个shell可执行各种任务，从设置用户账户到创建数据库，再到查询数据库内容，无所不包。
+MongoDB Shell is MongoDB's a built-in interactive JavaScript shell enables you to access, configure and manage mongodb databases, users, etc.  
+Using this shell, you can perform a variety of tasks, from setting up user accounts to creating databases, and then querying the contents of databases.
 
 ```
 # log in Mongo Shell without authenticating
@@ -647,10 +627,10 @@ MongoDB server version: 4.0.18
 
 ```
 
-MongoDB shell 有两种方式与数据库进行交互：
+Mongodb shell has two ways to interact with the database:
 
-* 命令行交互式操作
-* 运行存放在文件中的命令脚本（例如：shell_script.js）
+* Command line interactive operation
+* Run the command script stored in the file (for example: shell_script.js)
 
 ### API
 
