@@ -10,68 +10,68 @@ tags:
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mariadb/mariadb-structure-websoft9.png)
 
-对于 MySQL/MariaDB 管理员来说，需要掌握的知识要点包括：
+For MySQL/MariaDB administrators, the knowledge points to be mastered include:
 
-* MySQL/MariaDB 安装
-* SQL 语句
-* 基础概念：存储引擎、字符集
-* 可视化管理：使用 phpMyAdmin 等可视化工具管理数据库
-* 高级管理技术：升级、客户端工具使用、日志管理、备份恢复、监控
-* 优化技术：锁、连接池、并发参数、负载均衡、集群、主从、读写分离
-* 安全技术：注入
+* MySQL / MariaDB installation
+* SQL statement
+* Basic concepts: storage engine, character set
+* Visual management: use visual tools such as phpMyAdmin to manage the database
+* Advanced management technology: upgrade, use of client tools, log management, backup and recovery, monitoring
+* Optimization technology: lock, connection pool, concurrent parameters, load balancing, cluster, master-slave, read-write separation
+* Safety technology: injection
 
-下面，我们把以上要点做一个简单的阐述，希望对你的学习有一定的帮助。
-
+Next, we will make a brief exposition of the above points, hoping to help you in your study.
 
 ## SQL
 
-### 语言
+### Language
 
-SQL 是数据库的一种操作语言（命令），只要登录到数据库后，就可以使用它来操作数据库
+SQL is an operation language (command) of the database. Once you log in to the database, you can use it to operate the database
 
-* 在命令行下，直接可以运行 SQL 语句
-* 在可视化下，打开【运行SQL】的窗口，就可以运行 SQL 语句
+* Under the command line, you can directly run SQL statements
+* Under visualization, open the [run SQL] window to run SQL statements
 
 
-SQL 主要分为三种类型：
+There are three types of SQL:
 
-1. 数据库定义语言（DDL）：主要用于创建或修改数据库、数据段、表、列、索引等对象，主要包括 create、drop、alter 等
-2. 数据库操纵语言（DML）：主要用于添加或更新数据库记录等，主要包括 insert、delete、update 等
-3. 数据库控制语句（DCL）：主要用于控制权限和访问，主要包括 grant、revoke 等
+1. Database definition language (DDL): mainly used to create or modify database, data segment, table, column, index and other objects, mainly including create, drop, alter, etc
+2. Database manipulation language (DML): mainly used to add or update database records, including insert, delete, update, etc
+3. Database control statement (DCL): mainly used to control permissions and access, mainly including grant, revoke, etc
 
-下面是一些常用的 SQL 命令：
+The following are some common SQL commands:
 
 ```
-# 登录数据库
+# Login database
+
 mysql -u root –p
 Enter password:
 
 
-MariaDB> create database dbname;     #特别注意有分号
-MariaDB> show  databases;            #查看数据库
-MariaDB> exit;                       #退出数据库控制台，特别注意有分号
-MariaDB> drop database 数据库名称;    #删除数据库
-MariaDB> show databases;             #查看数据库
-MariaDB> alter table tablename raname mytable             #更改表名称
+MariaDB> create database dbname;     # create database
+MariaDB> show  databases;            # view database
+MariaDB> exit;                       # exit console
+MariaDB> drop database databasename;    # delete database
+MariaDB> alter table tablename raname mytable             # modify table name
 ```
 
-在学习中，我们无需熟记每一条语句，而是要有能力根据官方参考手册去定位"做什么事情可能会采用什么语句"。
+In learning, we do not need to memorize every sentence, but we need to be able to locate "what sentence may be used in doing something" according to the official reference manual.
 
-### 模式
+### Pattern
 
-SQL 模式是 SQL 的标准。由于不同厂商、不同的发展阶段，导致有不同的 SQL 标准出现。
+SQL schema is the standard of SQL. Due to different manufacturers and different development stages, different SQL standards appear.
 
-比较流行的 SQL Mode 包括：ANSI、TRADITIONAL 和 STRICT_TRANS_TABLES 等 
+Popular SQL modes include ANSI, traditional and strict_ TRANS_ Tables, etc 
 
-## 基础概念
+## Basic concepts
 
-数据库系统与应用软件系统有着较大的差异，它是存储、检索和计算海量规范化数据的系统，因此它有些独特的基本概念需要用户了解：
+There is a big difference between the database system and the application software system. It is a system that stores, retrieves and calculates a large amount of standardized data.  
+Therefore, it needs users to understand some unique basic concepts:
 
-### 存储引擎
+### Storage Engine
 
-MariaDB 存储引擎就是指数据库表的类型，存储引擎决定了表在计算机中的存储方式。
+MariaDB storage engine refers to the type of database table. The storage engine determines the storage mode of the table in the computer.
 
-运行 `show engines;` 命令，就会列出所有支持的存储引擎类型：
+Run `show engines;` , all supported storage engine types are listed:
 
 ```
 MariaDB [(none)]> show engines;
@@ -90,13 +90,14 @@ MariaDB [(none)]> show engines;
 8 rows in set (0.000 sec)
 ```
 
-值得注意的是，只有 **InnoDB** 引擎才支持 **事务处理**。
+Only the **InnoDB** engine supports **Transaction processing**.
 
-### 字符集
+### Character Set
 
-MySQL的字符集问题主要是两个概念，一个是 **Character Sets**，一个是 **Collations**，前者是字符内容及编码，后者是对前者进行校对的规则。这两个参数集可以在数据库实例、单个数据库、表、列，连接等四个级别指定。
+MySQL's character set problem mainly includes two concepts, one is **character sets ** and the other is **collaborations **. The former is the character  
+content and coding, and the latter is the rules for proofreading the former. These two parameter sets can be specified at four levels: database instance, single database, table, column, and connection.
 
-运行 `SHOW CHARACTER SET;` 命令，就会列出所有支持的存储引擎类型：
+Run `SHOW CHARACTER SET;` , all supported character set types are listed:
 
 ```
 MariaDB [(none)]> SHOW CHARACTER SET;
@@ -147,37 +148,35 @@ MariaDB [(none)]> SHOW CHARACTER SET;
 40 rows in set (0.000 sec)
 ```
 
-字符集其实就是一套文字符号及编码，对应的文字及编码，可以将人类可以识别的内容与计算机可以识别的信息进行互相转换。  
+The character set is actually a set of character symbols and codes. The corresponding characters and codes can convert the contents that can be recognized by human and the information that can be recognized by computer. 
 
-### 视图
+### View
 
-视图（View）是从一个或多个表中导出来的新表，且这个表是虚拟表。
+View is a new table derived from one or more tables, and this table is a virtual table.
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mariadb/mariadb-whatisview-websoft9.png)
 
-视图的基本上起着类似筛选的作用，并避免重复建表。
+Views basically play a similar role to filtering and avoid duplicate table creation.
 
+### Index
 
-### 索引
-
-索引（Index）顾名思义是为了便于快速检索数据而建立的指向表（专业术语称之为：指针），类似新华字典中的音序表。
+Index as the name implies, it is a pointer table (called pointer in professional terms) established for the purpose of facilitating the rapid retrieval of data, similar to the phonetic order table in Xinhua dictionary.
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mariadb/mariadb-whatisindex-websoft9.png)
 
-### 触发器
+### Triggers
 
-触发器（Triggers）是由 Insert、Update、Delete 等事件触发的某种特定操作，满足这些触发器的触发条件时，数据库系统就会执行触发器自定义的程序语句。
+Triggers are specific operations triggered by events such as insert, update and delete. When the trigger conditions of these triggers are met, the database system will execute the program statements defined by the triggers.
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mariadb/mariadb-whatistrigger-websoft9.png)
 
-### 事务
+### Transaction
 
-事务（Transaction）主要用于处理操作量大，复杂度高的数据。比如说，在人事系统中，你删除一个员工，你既需要删除人员的基本资料，也要删除和该人员相关的信息，如工资条，考勤数据等等，这样，这些数据库操作语句就构成一个事务。
-
-事务以 begin 语句开始，以 commit 语句结束：
+Transaction is mainly used to process data with large amount of operation and high complexity. For example, in the personnel system, if you delete an employee, you need to delete both the basic information of the employee and the information related to the employee, such as salary slip and attendance data. In this way, these database operation statements constitute a transaction.
+The transaction starts with the begin statement and ends with the commit statement:
 
 ```
-mysql> begin;  # 开始事务
+mysql> begin;  
 Query OK, 0 rows affected (0.00 sec)
  
 mysql> insert into runoob_transaction_test value(5);
@@ -186,97 +185,89 @@ Query OK, 1 rows affected (0.01 sec)
 mysql> insert into runoob_transaction_test value(6);
 Query OK, 1 rows affected (0.00 sec)
  
-mysql> commit; # 提交事务
+mysql> commit; 
 Query OK, 0 rows affected (0.01 sec)
 ```
+Generally speaking, a transaction must satisfy four conditions (acid): atomicity (or inseparability), consistency, isolation (also known as independence), and durability.
 
-一般来说，事务是必须满足4个条件（ACID）：：原子性（Atomicity，或称不可分割性）、一致性（Consistency）、隔离性（Isolation，又称独立性）、持久性（Durability）。
+The popular explanation is as follows: **"either succeed or recover after failure."**
 
-通俗的解释如下：**“要么成功，要么不成功后复原。”**
+### Stored procedure
 
-### 存储过程
+A stored procedure is a program segment based on SQL that is written in advance in the database for the application to call.
 
-存储过程（Procedure）就是在数据库中预先编写基于 SQL 的程序段，以便应用程序调用。 
+! []( https://libs.websoft9.com/Websoft9/DocsPicture/zh/mariadb/mariadb-whatisprocedure-websoft9.png )
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mariadb/mariadb-whatisprocedure-websoft9.png)
+Since it is a program segment, it certainly supports common program syntax: function, conditional judgment, loop, etc.
+Popular explanation: "database SQL programming"
 
-既然是程序段，它当然会支持常见的程序语法：函数、条件判断、循环等。
+### Zoning
 
-通俗的解释：“数据库 SQL 编程”
-
-### 分区
-
-分区（Partition）是一种物理数据库设计技术，主要把逻辑上的单个表从物理上划分为数十个物理分区。  
-
-其主要目的是为了在特定的 SQL 操作中减少数据读写的总量以缩减响应时间。
+Partition is a physical database design technology, which mainly divides a logical single table into dozens of physical partitions.
+Its main purpose is to reduce the total amount of data read and write in a specific SQL operation to reduce the response time.
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mariadb/mariadb-whatispartition-websoft9.png)
 
-## 高级管理
+## Senior management
 
-### 用户权限
+### User rights
 
-MariaDB 用户主要包括 root 用户和普通用户，其中 root 用户即管理员，它具有最高级的数据库权限。 
+MariaDB users mainly include root users and ordinary users. The root user is the administrator and has the most advanced database permissions.
 
-> 一般来说，用户不会去更改 root 用户的设置，下面我们重点介绍普通用户。
+> Generally speaking, the user will not change the settings of the root user. Let's focus on ordinary users.
 
-用户管理包含两方面的知识要点：
+User management includes two knowledge points:
 
-* 用户账号信息
-* 用户账号权限
+* User account information
+* User account authority
 
-在 MariaDB 中，一个用户的账号是有：**username:host:password** 三个部分组成的。
+In MariaDB, a user's account is composed of * * Username: host: password * *.
+MariaDB has a database named * * MySQL * * by default. It stores tables related to user accounts and user permissions. When users log in to the database, they can judge which permissions they have according to these tables, so as to realize permission control.
 
-MariaDB 默认有一个名为 **mysql** 的数据库，它的下面存储的都是用户账号、用户权限相关的表，用户登录数据库，就根据这些表来判断用户具备哪些权限，从而实现权限控制。
-
-与用户权限有关的表包括（按优先级排序）：
+Tables related to user rights include (sorted by priority):
 
 【user】>【db】>【host】>【table-priv】>【columns-priv】>【proc-priv】
 
-权限大小维度看，又依次为：系统、数据库、表、视图、索引、存储过程等
-
-下面是 user 表的表结构信息：
+From the dimension of permission size, they are: system, database, table, view, index, stored procedure, etc
+The following is the table structure information of the user table:
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mariadb/mariadb-usertable-websoft9.png)
 
-有一个特殊命令 **grant**，它是用于给其他用户（包括自身）授权的命令操作。
+There is a special command * * grant * *, which is used to authorize other users (including themselves).
 
-### 备份还原
+###Backup restore
 
-先明确与备份有关的名词：
+First, define the terms related to backup:
 
-从备份的对象数据格式来说，备份分为：
+In terms of the object data format of the backup, the backup is divided into:
+* Logical backup: the backup realized by [exporting] the database
+* Physical backup: the backup realized by copying the physical files of the database
 
-* 逻辑备份：将数据库【导出】而实现的备份
-* 物理备份：拷贝数据库的物理文件而实现的备份
+From the database state during backup, backup can be divided into:
+* Cold backup: backup after database shutdown
+* Hot backup: database backup without shutdown (data integrity must be maintained)
 
-从备份时数据库状态来说，备份又可以分为：
+MariaDB supports three backup and restore methods:
+* Backup and recovery tools: mysqldump or mysqlhotcopy
+* Copy data directory
+* Export import table
 
-* 冷备份：数据库停机后备份
-* 热备份：数据库不停机备份（必须保持数据的完整性）
-
-MariaDB 支持三种备份和还原方式：
-
-* 备份恢复工具：mysqldump 或 mysqlhotcopy 等
-* 复制数据目录
-* 导出导入表
-
-mysqldump 是官方提供的命令，简单实用：
+mysqldump is an official command, simple and practical:
 
 ```
-# 分别备份一个、多个和所有数据库
+# Backup one, multiple and all databases respectively
 mysqldump -u usename -p dbname > dbname.sql
 mysqldump -u usename -p dbname1 dbname12 > dbname.sql
 mysqldump -u usename -p --all-database > all-database.sql
 ```
 
-### 升级
+### Upgrade
 
-详情参考本文的 [更新升级](../mysql/admin#upgrade) 章节。
+Please refer to the [update and upgrade](../mysql/admin#upgrade) chapter of this article for details.
 
-### 管理工具
+### Management tool
 
-MariaDB 安装完成后，默认有如下可用工具：
+MariaDB after installation, the following tools are available by default:
 
 * mysql
 * mysqladmin
@@ -288,43 +279,47 @@ MariaDB 安装完成后，默认有如下可用工具：
 * mysqlbinlog
 * myisampack
 
-### 日志
 
-Mariadb 日志是记录 MariaDB 数据库日常操作和错误信息的文件，可以分为：
+### Log
 
-* 二进制日志（Binlog）
-* 错误日志
-* 慢查询日志
-* 通用查询日志
+MariaDB log is a file that records daily operation and error information of MariaDB database. It can be divided into:
 
-二进制日志记录所有操作数据库的动作，适用于恢复数据库；  
-错误日志适用于诊断问题；  
-慢查询日志用于记录执行效率较低的查询语句；  
-通用查询日志记录所有的查询操作；  
+* Binary log (binlog)
+* Error log
+* Slow query log
+* General query log
 
-从排查故障的角度看，错误日志和慢查询日志是需要重点考虑的日志对象。
+The binary log records all actions of operating the database and is applicable to restoring the database;
+The error log is suitable for diagnosing problems;
+Slow query log is used to record query statements with low execution efficiency;
+General query log records all query operations;
 
-### 监控
+From the perspective of troubleshooting, error logs and slow query logs are the log objects that need to be considered.
 
-数据库监控主要是通过监控工具，主动发现异常，并推动后续的故障运维流程。  
+###Monitoring
+
+Database monitoring is mainly through monitoring tools to actively find abnormalities and promote subsequent fault operation and maintenance processes.
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mariadb/mariadb-monitorgui-websoft9.png)
 
-数据库监控相关的开源软件包括：
+Open source software related to database monitoring includes:
 
 * Nagios
 * Cacti
 * Zabbix
 * Ganglia
 
-### 优化
 
-优化是通过分析数据库的某个时间周期的状况，通过参数调整和计算资源改善实现数据库性能的提升。  
 
-下面我们重点介绍优化入门方法：
+### Optimize
 
-1. 登录 MariaDB 数据库
-2. 运行 `show status like 'vaule' ` 语句查看性能相关的参数，诊断整体性能
+Optimization is to improve the performance of the database by analyzing the status of a certain time period of the database, adjusting parameters and improving computing resources.
+
+Below we will focus on the introduction to Optimization:
+
+
+1. Login in MariaDB database
+2. Run `show status like 'vaule' ` , view performance related parameters and diagnose overall performance
    ```
     MariaDB [(none)]> show status like 'connections';
     +---------------+-------+
@@ -334,61 +329,63 @@ Mariadb 日志是记录 MariaDB 数据库日常操作和错误信息的文件，
     +---------------+-------+
     1 row in set (0.000 sec)
    ```
-   * connection: 连接次数
-   * uptime: 服务器上线时间
-   * slow_queries: 慢查询次数
-   * com_select：查询操作次数
-   * com_insert: 插入操作次数
-   * com_update：更新操作次数
-   * com_delete：删除操作次数
+  * Connection: connection times
+  * Uptime: server online time
+  * slow_ Queries: slow query times
+  * com_ Select: query operation times
+  * com_ Insert: number of insert operations
+  * com_ Update: number of update operations
+  * com_ Delete: number of delete operations
 
-3. 采用索引和视图减少数据库检索
-4. 将大表（字段很多）拆分成多个小表
-5. 分析和优化表 `analyze table name;`
-6. 优化服务器配置
-7. 优化 my.cnf 中的缓存和内存配置项（**高手才能驾驭**）
+3. Use index and view to reduce database retrieval
 
-### 安全
+4. Split a large table (with many fields) into multiple small tables
 
-数据库独特的安全风险来源于 **SQL 注入** 问题。
+5. Analyze and optimize table ` analyze table name`
+
+6. Optimize server configuration
+
+7. Optimize my Cache and memory configuration items in CNF (* * master can control * *)
+
+
+### Security
+
+The unique security risk of the database comes from the **SQL injection** problem.
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mariadb/mariadb-whatissqlinject-websoft9.png)
 
-### 审计
+### Audit
 
-全球数字经济发展蓬勃，伴随的数据安全成为重大的隐患。各国目前都出台了与网络安全相关的法律，对于数据保护、隐私管理作出了明确的规定。  
+With the rapid development of the global digital economy, the accompanying data security has become a major hidden danger. At present, all countries have introduced laws related to network security, and made clear provisions on data protection and privacy management.
 
-数据库的安全是重中之重。数据库审计是对数据库资源利用率和权限的跟踪，特别是监视和记录用户数据库操作，审计满足日益严格的合规性要求。
+Database security is the top priority. Database audit is to track the utilization rate and authority of database resources, especially to monitor and record user database operations. The audit meets increasingly strict compliance requirements.
 
-审计可以基于多种因素，包括单个操作（例如，执行的SQL语句的类型），也可以基于多种因素的组合（例如，用户名，应用程序，时间等）。执行常规的数据库日志分析可以增强内部安全措施通过回答诸如谁更改了关键数据，何时更改关键数据等问题。
+The audit can be based on a variety of factors, including a single operation (for example, the type of SQL statement executed) or a combination of factors (for example, user name, application, time, etc.). Performing regular database log analysis can enhance internal security measures by answering questions such as who changed critical data and when.
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mariadb/mariadb-audit-websoft9.png)
 
-如何开始启动 MariaDB 的审计呢？
+How to start the audit of MariaDB?
 
-1. 安装 **[Maria Audit Plugin](https://mariadb.com/kb/en/mariadb-audit-plugin/)** 插件
-2. 设置审计日志路径
+1. Install **[Maria Audit Plugin](https://mariadb.com/kb/en/mariadb-audit-plugin/)** plugin
+2. Set audit log path
 
-## 高级架构
+## Advanced architecture
 
-主要从读写分离、主从、集群等层面考虑高可用性。
+High availability is mainly considered from the aspects of read-write separation, master-slave and cluster.
 
-### 读写分离
+### Read write separation
 
-### 主从复制
+### Master slave replication
 
-MariaDB 主从复制是将主数据库的 DDL 和 DML操作通过二进制日志传到复制服务器（也叫从库），然后在从库上对这些日志重新执行（也叫重做），从而使得从库和主库的数据保持同步。
+MariaDB master-slave replication is to transfer the DDL and DML operations of the master database to the replication server (also called slave database) through binary logs, and then re execute these logs on the slave database (also called redo), so as to keep the data of the slave database and the master database synchronized.
 
-MariaDB 支持一台主库向多台从库进行复制，从库同时也可以作为其他服务器的主库，实现链状架构。
+MariaDB supports the replication of one master library to multiple slave libraries. The slave library can also be used as the master library of other servers to realize the chain architecture.
 
-主从复制应用场景：
+Master slave replication application scenario:
 
-* 主库出现问题，可以快速切换到从库提供服务
-* 从库上执行查询操作，降低主库的访问压力
-* 从库上执行备份，避免备份期间影响主库的服务
+* If there is a problem with the master library, you can quickly switch to the slave library to provide services
+* Query from the database to reduce the access pressure of the main database
+* Perform backup from the library to avoid affecting the service of the primary library during backup
+> Because replication is asynchronous or semi synchronous, there is always a certain gap between master and slave data.
 
-> 由于复制是异步的或半同步的，所以主从之间的数据总是存在一定的差距。
-
-
-
-### 集群
+### Cluster

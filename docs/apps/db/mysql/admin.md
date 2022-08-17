@@ -21,9 +21,9 @@ tags:
 
 2. 或使用 **mysqldump** 工具导出（效率更高，通用性更强）
    ```
-   mysqldump -uroot -p databasename>databasename.sql
+   docker exec -it mariadb mysqldump -uroot -p databasename>databasename.sql
    ```
-2. 将备份文件下载到本地，备份工作完成
+3. 将备份文件下载到本地，备份工作完成
 
 
 ##### 恢复（导入）
@@ -70,7 +70,7 @@ MySQL 到 MySQL 的迁移，可以通过数据的**导入导出**快速实现。
 导致 MySQL 无法启动的主要原因有：
 
 * 磁盘空间不足（二进制日志文件大小增长过快）
-* 锁死
+* 死锁
 * MySQL 配置文件错误
 
 建议先通过命令进行排查  
@@ -83,28 +83,27 @@ df -lh
 free -lh
 
 # MySQL 状态
-sudo systemctl status mysql
+cd /data/apps/mysql && sudo docker compose ls
 
 # 查看数据库日志
-cat /data/mariadb/mariadb.err
-log-error=/data/mysql/log.err
+docker exec -it mysql cat /var/log/mysql/error.log
 ```
 
 #### MySQL 日志太大，导致磁盘空间不足？{#binlogexceed}
 
-默认安装，mysql会自动开启binlog，binlog是一个二进制格式的文件，用于记录用户对数据库**更新的****SQL语句****信息**，例如更改数据库表和更改内容的SQL语句都会记录到binlog里。
+默认安装，mysql没有开启binlog，binlog是一个二进制格式的文件，用于记录用户对数据库**更新的****SQL语句****信息**，例如更改数据库表和更改内容的SQL语句都会记录到binlog里。
 
-binlog主要用于出现没有备份的情况下，恢复数据库。但binlog会占用较大空间，长期不清理会让剩余磁盘空间为0，从而影响数据库或服务器无法启动
+binlog主要用于出现没有备份的情况下，恢复数据库。但binlog会占用较大空间，如果用户开启binlog后长期不清理会让剩余磁盘空间为0，从而影响数据库或服务器无法启动
 
 如果对自己的备份有信心，不需要binlog功能，参考如下步骤关闭之：
 
-1. 编辑 [MySQL 配置文件](../mysql#path)，注释掉 binlog 日志
+1. 编辑 [MySQL 配置文件](../mysql#path)
   ~~~
-  #log-bin=mysql-bin  
+  #log_bin=mysql-bin 
   ~~~
 2. 重启mysql
   ~~~
-  systemctl restart mysqld
+  sudo docker restart mysql
   ~~~
 
 #### 磁盘空间不足导致数据库无法启动？
@@ -187,10 +186,10 @@ sudo docker stop phpmyadmin
 
 #### 如何自定义 MariaDB 错误日志文件路径？
 
-修改 MySQL/MariaDB 配置文件中下面的参数即可
+修改 [MySQL 配置文件](../mysql#path)
 
 ```
-log-error=/data/mysql/log.err
+log-error=log_error=/var/log/mysql/error.log
 ```
 
 #### 什么是数据库的冷备份和热备份？

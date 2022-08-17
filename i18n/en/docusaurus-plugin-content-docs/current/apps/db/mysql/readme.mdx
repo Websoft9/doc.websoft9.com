@@ -39,17 +39,15 @@ If you have installed Websoft9 MySQL/MariaDB, the following steps is for your qu
 
 1. Use the **SSH** to connect Server, and run these command below to view the installation information and running status
    ```
-   sudo systemctl status mysqld
-   #### or ####
-   sudo systemctl status mysql
+   cd /data/apps/mysql && sudo docker compose ls
    ```
 
-2. You can ge the message from SSH " Active: active (running)... " when MySQL is running
+2. You can ge the message from SSH " STATUS: running(1) " when MySQL is running
 
 3. Using SSH to connect MySQL Server, run the following command
    ~~~
    #assume the root password is `123456`
-   mysql -uroot –p123456
+   docker exec -it mysql mysql -uroot –p123456
    ~~~
 
 4. You can find the MySQL version from the message
@@ -97,14 +95,17 @@ You can modify password by MySQL GUI or commands:
 
 2. Use Commands
 ```
-mysqladmin -u root -p oldpassword password 'newpassword' 
+docker exec -it mysql mysqladmin -u root -p oldpassword password 'newpassword' 
 ```
 
 **Reset password**
 
 You can reset your MySQL password by the following two solution:  
 
-1. Use SSH to connect MySQL Server
+1. Use SSH to connect MySQL Server, access into the mysql container
+   ```
+   docker exec -it mysql bash
+   ```
 2. Run the following command
    ```
    wget -N https://raw.githubusercontent.com/websoft9dev/role_mysql/master/tools/reset_password.sh; bash reset_password.sh
@@ -125,14 +126,14 @@ Database is high security application, you need two steps for remote connection 
     * Use commands
      ```
      # Log in MySQL
-     mysql -u root -p 
+     docker exec -i mysql mysql -u root -p 
      
      # Enable Remote
      mysql>  use mysql;
      mysql>  update user set host = '%' where user = 'root';
     
      # Restart MySQL
-     systemctl restart mysqld
+     sudo docker restart mysql
 
      ```
 
@@ -140,23 +141,31 @@ Database is high security application, you need two steps for remote connection 
 
 The data directory for MySQL is set to */data/mysql* by default. If you want to modify MySQL Data Directory, following are the steps for you:
 
-1. Stop the MySQL Service
+1. Edit [MySQL compose file](#path)
    ```shell
-   sudo sytemctl stop mysqld
+   version: '3.8'
+   services:
+    mariadb:
+      image: $APP_REPO:$APP_VERSION
+      container_name: $APP_NAME
+      restart: always
+      environment:
+        - MARIADB_ROOT_PASSWORD=$APP_PASSWORD
+      ports:
+        - $APP_PORT:3306
+      command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+      volumes:
+        - ./src/newdata:/var/lib/mysql
    ```
-2. Move the */data/mysql* to the destination directory, e.g */data/mysql2* 
-3. Modify the location of this folder modifying the`/etc/my.cnf` file, as shown below:
+
+2. Recreate the MySQL container, date derectory is ok
    ```shell
-   datadir=/data/mysql2
-   ```
-4. Restart the MySQL
-   ```shell
-   sudo sytemctl start mysqld
+   cd /data/apps/mysql && sudo docker compose up -d
    ```
 
 ### Set The Binary Log
 
-You can modify the MySQL configuration _/etc/my.cnf_ to change the binary log settings<br />
+You can modify the [MySQL configuration] (#path) to change the binary log settings<br />
 
 ```
 log_bin = mysql-bin      # enable Binary log
@@ -270,14 +279,13 @@ services:
        - PMA_HOSTS=172.17.0.1,172.17.0.2
        - PMA_PORTS=3306
        - UPLOAD_LIMIT=20M 
-...
 ```
 
 #### Modify import file size limit
 
 The default file size that phpMyAdmin can import is limited, you can modify it by the following steps:
 
-1. Use SFTP to connect to the server, edit the */data/apps/phpmyadmin/docker-compose.yml* file, and add a field to the environment variable `- UPLOAD_LIMIT=20M`
+1. Use SFTP to connect to the server, edit [phpmyadmin compose file](#path), and add a field to the environment variable `- UPLOAD_LIMIT=20M`
   ```
   version: "3.7"
   services: 
@@ -300,55 +308,53 @@ The default file size that phpMyAdmin can import is limited, you can modify it b
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage MySQL/MariaDB 
 
 
-通过运行`docker ps`，可以查看到 MySQL 运行时所有的 Container：
+Run `docker ps`, view all containers when MySQL/MariaDB is running:
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE               COMMAND                  CREATED          STATUS          PORTS                                       NAMES
+4c7eb560231d   phpmyadmin:latest   "/docker-entrypoint.…"   10 minutes ago   Up 10 minutes   0.0.0.0:9090->80/tcp, :::9090->80/tcp       phpmyadmin
+d5c4ba36ce50   mariadb:10.8        "docker-entrypoint.s…"   10 minutes ago   Up 10 minutes   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp   mariadb 
 ```
-
-下面仅列出 MySQL 本身的参数：
 
 ### Path{#path}
 <Tabs>
 <TabItem value="linuxpath" label="Linux" default>
 
-MySQL installation directory: *usr/local/mysql*  
-MySQL 配置文件: *etc/my.cnf*   
-MySQL 数据目录：*/data/mysql*   
-MySQL logs file: */var/log/mysql/mysqld.log*   
-MySQL PIN: */run/mysqld/mysqld.pid*   
-MySQL Socket: */var/lib/mysql/mysql.sock*
+MySQL installation directory:  */data/apps/mysql* 
+MySQL data directory: */data/apps/mysql/data/mysql_data*  
+MySQL configure file: */data/apps/mysql/src/conf.d/mysql.cnf*   
+MySQL compose file: */data/apps/mysql/docker-compose.yml*  
 
-MariaDB 配置文件: */etc/my.cnf*   
-MariaDB 数据目录：*/data/mariadb*   
-MariaDB 错误日志: */data/mariadb/mariadb.err*  
-MariaDB Socket: */data/mariadb/mariadb.sock*  
+MariaDB installation directory: */data/apps/mariadb* 
+MariaDB data directory: */data/apps/mariadb/data/mariadb_data*  
+MariaDB configure file: */data/apps/mariadb/src/conf.d/mysql.cnf*   
+MariaDB compose file: */data/apps/mariadb/docker-compose.yml*  
 
-phpMyAdmin 安装路径: */data/apps/phpmyadmin*  
-phpMyAdmin 配置文件: */data/apps/phpmyadmin/config.inc.php*   
-phpMyAdmin 虚拟主机配置文件: */etc/httpd/conf.d/phpMyAdmin.conf*   
+phpMyAdmin installation directory: */data/apps/phpmyadmin*  
+phpMyAdmin configure file: */data/apps/phpmyadmin/config.inc.php*   
+phpMyAdmin compose file: */data/apps/phpmyadmin/docker-compose.yml*    
 
 </TabItem>
 <TabItem value="winpath" label="Windows">
 
-* 目录：C:/websoft9/mysql
-* 配置文件：C:/websoft9/mysql/etc/my.ini
-* 数据文件目录:：C:/websoft9/mysql/data
+* directory: C:/websoft9/mysql
+* configure file: C:/websoft9/mysql/etc/my.ini
+* data directory: C:/websoft9/mysql/data
 
 </TabItem>
 </Tabs>
 
 ### Port
 
-| 端口号 | 用途                                          | 必要性 |
+| Port | Use                                          | Necessity |
 | ------ | --------------------------------------------- | ------ |
-| 3306   | MySQL/MariaDB 远程端口 | 可选   |
-| 9090   | HTTP 访问 phpMyAdmin on Docker | 可选   |
+| 3306   | MySQL/MariaDB Remote port| Optional   |
+| 9090   | HTTP Access phpMyAdmin on Docker | Optional   |
 
 ### Version
 
 ```shell
-mysql -V
+docker exec -it mysql mysql -V
 ```
 
 ### Service
@@ -357,15 +363,15 @@ mysql -V
 <TabItem value="linuxservice" label="Linux" default>
 
 ```shell
-sudo systemctl start | stop | restart | status mysql
-sudo systemctl start | stop | restart | status mariadb
-sudo docker start | stop | restart | stats phpmyadmin
+sudo docker start | stop | restart  phpmyadmin
+sudo docker start | stop | restart  mysql
+sudo docker start | stop | restart  mariadb
 ```
 
 </TabItem>
   <TabItem value="winservice" label="Windows">
 
-采用操作系统的服务管理功能，来实现 MySQL 的启动、停止和重启操作  
+The service management function of the operating system is used to realize the start, stop and restart of MySQL.  
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/mysql-servicewin-websoft9.png)
 
@@ -375,7 +381,7 @@ sudo docker start | stop | restart | stats phpmyadmin
 
 ### CLI
 
-MySQL 安装完成后，默认有如下可用工具：
+After MySQL installation, the following tools are available by default:
 
 * mysql
 * mysqladmin

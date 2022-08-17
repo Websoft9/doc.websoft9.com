@@ -38,6 +38,9 @@ APEX 介绍
 
 若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题。
 
+** APEX 创建应用APP时提示权限不够? **
+
+APEX 创建应用APP时选择默认数据库用户pdbadmin，需要对此用户赋予建表，增删改查等权限。选择创建新的数据库用户可顺利创建新的APP。
 
 ## APEX 使用入门{#quickstart}
 
@@ -70,35 +73,21 @@ APEX 介绍
 
 ## APEX 常用操作{#guide}
 
-### 配置 SMTP{#smtp}
+### 配置应用APP状态{#smtp}
 
-1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
+### 通过导入csv数据文件创建APP
 
-2. 填写 APEX 邮件相关配置
+1. 点击创建APP，选择从一个文件创建APP
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-imp01-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-imp02-websoft9.png)
 
-3. 测试邮件发送是否可用
+2. 选择csv数据文件并根据提示导入
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-imp03-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-imp04-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-imp05-websoft9.png)
 
-### 安装插件{#plugin}
-
-### 重置管理员密码{#resetpw}
-
-忘记管理员密码时，请参考如下方案重置密码：  
-
-### 域名额外配置（修改 URL）{#dns}
-
-**[域名五步设置](./administrator/domain_step)** 完成后，需设置 APEX 的 URL:  
-
-1. 步骤1
-
-2. 步骤2
-
-### HTTPS 额外设置{#https}
-
-**[标准 HTTPS 配置](./administrator/domain_https)** 完成后，可能还需要如下步骤： 
-
-1. 步骤1
-
-2. 步骤2
+3. 点击【App Builder】，新APP已经创建，登陆即可开始体验
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-imp06-websoft9.png)
 
 ## 参数{#parameter}
 
@@ -114,7 +103,8 @@ eac8b12b397c   container-registry.oracle.com/database/express:latest   "/bin/sh 
 
 ### 路径{#path}
    
-APEX 安装目录: */data/apps/apex*
+APEX 安装目录： */data/apps/apex*
+APEX 数据目录： */data/apps/apex/data/oracledb*
 
 ### 端口{#port}
 
@@ -122,11 +112,13 @@ APEX 安装目录: */data/apps/apex*
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
-| 5500   | Oracle express 的管理端口，须通过 | 可选   |
+| 5500   | Oracle管理端口，须通过https访问 | 可选   |
+| 9001   | APEX主端口 | 可选   |
 
 ### 版本{#version}
-
-控制台查看
+```shell
+docker exec -i apex ls /opt/oracle/apex|grep -v images|grep -v setapexadmin.sql
+```
 
 ### 服务{#service}
 

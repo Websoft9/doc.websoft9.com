@@ -13,9 +13,18 @@ tags:
 
 ## 场景
 
-### APEX 备份与恢复
+### APEX 导入与导出
+
+APEX 可以在控制台非常方便的将工作区，应用APP导入导出
+
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-list-websoft9.png) 
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-import-websoft9.png) 
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-export-websoft9.png) 
 
 ### APEX 升级
+
+本应用基于 Docker 安装，其升级采用通用的 Docker 应用升级方案即可。 
+
 
 ## 故障排除{#troubleshoot}
 
@@ -30,5 +39,5 @@ tags:
 
 #### APEX 支持多语言吗？
 
-支持多语言（包含中文），通过控制台即可修改语言
+支持多语言（包含中文），通过控制台即可修改语言。
 

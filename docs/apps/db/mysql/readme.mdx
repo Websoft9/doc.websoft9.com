@@ -44,14 +44,14 @@ import TabItem from '@theme/TabItem';
 
 2. 运行下面的命令，查看 MySQL/MariaDB 的安装信息和运行状态
     ```
-    sudo systemctl status mysql
+    cd /data/apps/mysql && sudo docker compose ls
     ```
-   MySQL 正常运行会得到 " Active: active (running)... " 的反馈
+   MySQL 正常运行会得到 " STATUS: running(1)" 的反馈
 
 3. 使用 root [账号密码](./user/credentials) 登录 MySQL 服务端
     ~~~
     #假设初始密码是：123456
-    mysql -uroot –p123456
+    docker exec -it mysql mysql -uroot –p123456
     ~~~
 
     登录成功会显示如下信息：
@@ -101,14 +101,18 @@ import TabItem from '@theme/TabItem';
 
 执行一下命令:
 ```
-mysqladmin -u 用户名 -p 旧密码 password '新密码' 
+docker exec -it mysql mysqladmin -u 用户名 -p 旧密码 password '新密码' 
 ```
 
 ##### 重置密码{#resetpw}
 
 如果忘记了 root 密码，就需要通过命令操作，实现MySQL密码重置。我们提供了一个重置密码的脚本：
 
-1. 使用SSH远程连接到 MySQL 服务器
+1. 使用SSH远程连接到 MySQL 服务器，进入容器
+   ```
+   docker exec -it mysql bash
+   ```
+   
 2. 运行如下命令，按提示输入新密码即可。
    ```
    wget -N https://ghproxy.com/https://raw.githubusercontent.com/websoft9dev/role_mysql/master/tools/reset_password.sh; bash reset_password.sh
@@ -124,14 +128,14 @@ mysqladmin -u 用户名 -p 旧密码 password '新密码'
     * 命令行配置
      ```
      # 登录
-     mysql -u root -p 
+     docker exec -i mariadb mysql -uroot -p YOURPASSWORD
      
      # 开启远程访问
      mysql>  use mysql;
      mysql>  update user set host = '%' where user = 'root';
     
      # 重启后生效
-     systemctl restart mysqld
+     sudo docker restart mysql
 
      ```
 
@@ -139,26 +143,32 @@ mysqladmin -u 用户名 -p 旧密码 password '新密码'
 
 修改 MySQL 数据目录，按以下步骤操作：
 
-1. 停止 MySQL 服务
+1. 修改 **/data/apps/mysql/docker-compose.yml**中数据挂载目录
    ```shell
-   sudo sytemctl stop mysqld
+   version: '3.8'
+   services:
+    mariadb:
+      image: $APP_REPO:$APP_VERSION
+      container_name: $APP_NAME
+      restart: always
+      environment:
+        - MARIADB_ROOT_PASSWORD=$APP_PASSWORD
+      ports:
+        - $APP_PORT:3306
+      command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+      volumes:
+        - ./src/newdata:/var/lib/mysql
    ```
-2. 将 */data/mysql* 移动到目标新目录，例如 */data/mysql2*
-
-3. 修改[ MySQL 配置文件](#path)中的 datadir 配置：
+2. 重新创建 MySQL 容器，数据文件在设置的目录已经生成
    ```shell
-   datadir=/data/mysql2
-   ```
-4. 重启服务
-   ```shell
-   sudo sytemctl start mysqld
+   cd /data/apps/mysql && sudo docker compose up -d
    ```
 
 
 ### 设置 Binary Log
 
 
-修改 MySQL 配置文件相关项
+MySQL默认没有开启 Binary Log，修改 [MySQL 配置文件](#path)相关项
 
 ```
 log_bin = mysql-bin      # enable Binary log
@@ -253,7 +263,7 @@ expire_logs_days = 7     # Binary log expire time
 
 phpMyAdmin 支持多个 MySQL 实例。
 
-修改 phpMyAdmin 的 docker-compose 文件的对应的环境变量（PMA_HOST 更改为 PMA_HOSTS）即可支持：
+修改 phpMyAdmin 的 [phpmyadmin compose 文件](#path)的对应的环境变量（PMA_HOST 更改为 PMA_HOSTS）即可支持：
 
 ```
 version: "3.7"
@@ -272,7 +282,7 @@ services:
 
 phpMyAdmin 默认可导入的文件大小有限制，可通过如下步骤修改它：
 
-1. 使用 SFTP 连接服务器，编辑 */data/apps/phpmyadmin/docker-compose.yml* 文件，在环境变量处增加一个字段 `- UPLOAD_LIMIT=20M`
+1. 使用 SFTP 连接服务器，编辑 [phpmyadmin compose 文件](#path)，在环境变量处增加一个字段 `- UPLOAD_LIMIT=20M`
   ```
   version: "3.7"
   services: 
@@ -297,7 +307,10 @@ MySQL 应用中包含 Docker, phpMyAdmin 等组件，可通过 **[通用参数�
 通过运行`docker ps`，可以查看到 MySQL 运行时所有的 Container：
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE               COMMAND                  CREATED          STATUS          PORTS                                       NAMES
+4c7eb560231d   phpmyadmin:latest   "/docker-entrypoint.…"   10 minutes ago   Up 10 minutes   0.0.0.0:9090->80/tcp, :::9090->80/tcp       phpmyadmin
+d5c4ba36ce50   mariadb:10.8        "docker-entrypoint.s…"   10 minutes ago   Up 10 minutes   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp   mariadb
+
 ```
 
 下面仅列出 MySQL 本身的参数：
@@ -306,21 +319,19 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 <Tabs>
 <TabItem value="linuxpath" label="Linux" default>
 
-MySQL 安装目录: *usr/local/mysql*  
-MySQL 配置文件: *etc/my.cnf*   
-MySQL 数据目录：*/data/mysql*   
-MySQL 日志文件: */var/log/mysql/mysqld.log*   
-MySQL PIN: */run/mysqld/mysqld.pid*   
-MySQL Socket: */var/lib/mysql/mysql.sock*
+MySQL 安装目录: */data/apps/mysql*    
+MySQL 数据目录：*/data/apps/mysql/data/mysql_data*   
+MySQL 配置文件: */data/apps/mysql/src/conf.d/mysql.cnf*
+MySQL compose 文件: */data/apps/mysql/docker-compose.yml*
 
-MariaDB 配置文件: */etc/my.cnf*   
-MariaDB 数据目录：*/data/mariadb*   
-MariaDB 错误日志: */data/mariadb/mariadb.err*  
-MariaDB Socket: */data/mariadb/mariadb.sock*  
+MariaDB 安装目录: */data/apps/mariadb*  
+MariaDB 数据目录: */data/apps/mariadb/data/mariadb_data*  
+MariaDB 配置文件: */data/apps/mariadb/src/conf.d/mysql.cnf*
+MariaDB compose 文件: */data/apps/mariadb/docker-compose.yml*
 
 phpMyAdmin 安装路径: */data/apps/phpmyadmin*  
-phpMyAdmin 配置文件: */data/apps/phpmyadmin/config.inc.php*   
-phpMyAdmin 虚拟主机配置文件: */etc/httpd/conf.d/phpMyAdmin.conf*   
+phpMyAdmin 配置文件: */data/apps/phpmyadmin/config.inc.php*    
+phpMyAdmin compose 文件: */data/apps/phpmyadmin/docker-compose.yml*
 
 </TabItem>
 <TabItem value="winpath" label="Windows">
@@ -342,7 +353,7 @@ phpMyAdmin 虚拟主机配置文件: */etc/httpd/conf.d/phpMyAdmin.conf*
 ### 版本
 
 ```shell
-mysql -V
+docker exec -it mysql mysql -V
 ```
 
 ### 服务
@@ -351,9 +362,8 @@ mysql -V
 <TabItem value="linuxservice" label="Linux" default>
 
 ```shell
-sudo systemctl start | stop | restart | status mysql
-sudo systemctl start | stop | restart | status mariadb
 sudo docker start | stop | restart | stats phpmyadmin
+sudo docker start | stop | restart | stats mysql
 ```
 
 </TabItem>

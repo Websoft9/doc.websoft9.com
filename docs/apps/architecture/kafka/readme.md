@@ -27,10 +27,9 @@ tags:
 使用SSH登录到服务器后，运行如下几个命令，检查 Kafka是否正确安装
 
 ```
-systemctl status kafka
-systemctl status zookeeper
-bash /opt/kafka/bin/kafka-configs.sh
+cd /data/apps/kafka && sudo docker compose ls
 ```
+Kafka 正常运行会得到 " STATUS: running(3) " 的反馈
 
 ## Kafka 使用入门
 
@@ -59,10 +58,10 @@ Kafka 默认设置保留 7 天日志，但默认并为启用日志清理策略�
 
 ```
 # 打开日志删除策略
-sed -i '/log.retention.hours=168/i\log.cleanup.policy=delete' /opt/kafka/config/server.properties
+sed -i '/log.cleanup.policy=compact/log.cleanup.policy=delete/g' /opt/kafka/config/server.properties
 
 # 重启Kafka
-systemctl restart kafka
+sudo docker restart kafka
 ```
 
 #### 自定义日志清理策略
@@ -79,7 +78,7 @@ systemctl restart kafka
 
 2. 修改后重启 Kafka 服务
     ```
-    systemctl restart kafka
+    sudo docker restart kafka
     ```
 
 ## 参数
@@ -89,7 +88,10 @@ Kafka 应用中包含 Nginx, CMAK, Docker, Zookeeper, Java 等组件，可通过
 通过运行 `docker ps`，可以查看到 Kafka 运行时所有的 Container：
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                                         COMMAND                  CREATED          STATUS          PORTS                                                                     NAMES
+e628a73126fd   bitnami/kafka:2.8                             "/opt/bitnami/script…"   36 minutes ago   Up 36 minutes   0.0.0.0:9092->9092/tcp, :::9092->9092/tcp                                 kafka
+219ebeafc96c   bitnami/zookeeper:latest                      "/opt/bitnami/script…"   36 minutes ago   Up 36 minutes   2888/tcp, 3888/tcp, 0.0.0.0:2181->2181/tcp, :::2181->2181/tcp, 8080/tcp   kafka-zookeeper
+84ff90680786   ghcr.io/eshepelyuk/dckr/cmak-3.0.0.5:latest   "/cmak/bin/cmak -Dpi…"   36 minutes ago   Up 36 minutes   0.0.0.0:9091->9000/tcp, :::9091->9000/tcp                                 kafka-cmak
 ```
 
 
@@ -97,24 +99,13 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 ### 路径{#path}
 
-#### Kafka
-
-Kafka 安装目录：*/opt/kafka*  
+Kafka 安装目录：*/data/apps/kafka*  
 Kafka 日志目录：*/opt/kafka/logs*  
 Kafka bin目录：*/opt/kafka/bin*  
 Kafka 配置目录：*/opt/kafka/config*  
+Kafka 数据目录：*/data/apps/kafka/data/kafka_data*  
 
-#### CMAK
-
-[CMAK](https://github.com/yahoo/CMAK) 是管理 Kafka 集群的可视化工具，基于 Docker 安装
-
-CMAK 安装目录： */data/apps/cmak*  
-
-#### Zookeeper
-
-Zookeeper 配置文件路径：/opt/zookeeper/conf/  
-Zookeeper 日志文件：/opt/zookeeper/tmp/zookeeper.out  
-
+Zookeeper 数据目录：*/data/apps/kafka/data/zookeeper_data*   
 
 ### 端口
 
@@ -128,7 +119,7 @@ Zookeeper 日志文件：/opt/zookeeper/tmp/zookeeper.out
 
 ```shell
 # Kafka version
-ls /opt/kafka/libs | grep kafka_
+docker exec -i kafka /opt/bitnami/kafka/bin/kafka-topics.sh --version
 
 # CMAK version
 docker exec -it cmak bash -c 'ls /cmak/lib/cmak.cmak-*-assets.jar'
@@ -138,13 +129,9 @@ docker exec -it cmak bash -c 'ls /cmak/lib/cmak.cmak-*-assets.jar'
 ### 服务
 
 ```shell
-sudo systemctl start | stop | restart | status kafka
-bash /opt/kafka/bin/kafka-server-start.sh
-
-sudo systemctl start | stop | restart | status zookeeper
-bash /opt/kafka/bin/zookeeper-server-start.sh
-
-sudo docker start | stop | restart | stats cmak
+sudo docker start | stop | restart kafka
+sudo docker start | stop | restart kafka-cmak
+sudo docker start | stop | restart kafka-zookeeper
 ```
 
 ### 命令行
