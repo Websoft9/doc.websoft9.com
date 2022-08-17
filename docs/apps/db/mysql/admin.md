@@ -207,7 +207,7 @@ log-error=log_error=/var/log/mysql/error.log
 
 #### MySQL 8.0 默认字符集是？
 
-Mysql8.0 以上安装完默认 character_set_server 为utf8mb4
+Mysql8.0 以上安装完默认 character_set_server 为utf8mb4。
 
 
 

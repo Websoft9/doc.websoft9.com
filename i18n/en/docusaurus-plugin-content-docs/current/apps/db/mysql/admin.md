@@ -27,7 +27,7 @@ This chapter is special guide for MySQL/MariaDB maintenance and settings. And yo
 **Restore(import)**
 
 1. Log in to phpMyAdmin, open the [import] tab at the top, and start importing according to the wizard
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-import-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/mysql/phpmyadmin-import-websoft9.png)
 
 2. Incompatibility of database character sets may occur during import, and manual intervention is required
 

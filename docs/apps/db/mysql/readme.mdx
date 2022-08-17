@@ -48,10 +48,10 @@ import TabItem from '@theme/TabItem';
     ```
    MySQL 正常运行会得到 " STATUS: running(1)" 的反馈
 
-3. 使用 root [账号密码](./user/credentials) 登录 MySQL 服务端
+3. 使用 root [账号密码](./user/credentials) 登录 MySQL/MariaDB 服务端
     ~~~
-    #假设初始密码是：123456
-    docker exec -it mysql mysql -uroot –p123456
+    #假设初始密码是：7j5vc0EttEUDtC!
+    docker exec -it mariadb mysql -uroot –p7j5vc0EttEUDtC!
     ~~~
 
     登录成功会显示如下信息：
@@ -193,7 +193,7 @@ expire_logs_days = 7     # Binary log expire time
 
 1. 本地浏览器电脑浏览器访问：*http://服务器公网IP:9090*，进入phpMyAdmin
 
-  ![登录phpMyadmin](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-logincn-websoft9.png)
+  ![登录phpMyadmin](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-login-websoft9.png)
 
 2. 输入数据库用户名和密码([不知道密码？](./user/credentials))
 
@@ -321,17 +321,17 @@ d5c4ba36ce50   mariadb:10.8        "docker-entrypoint.s…"   10 minutes ago   U
 
 MySQL 安装目录: */data/apps/mysql*    
 MySQL 数据目录：*/data/apps/mysql/data/mysql_data*   
-MySQL 配置文件: */data/apps/mysql/src/conf.d/mysql.cnf*
-MySQL compose 文件: */data/apps/mysql/docker-compose.yml*
+MySQL 配置文件: */data/apps/mysql/src/conf.d/mysql.cnf*  
+MySQL compose 文件: */data/apps/mysql/docker-compose.yml*  
 
 MariaDB 安装目录: */data/apps/mariadb*  
 MariaDB 数据目录: */data/apps/mariadb/data/mariadb_data*  
-MariaDB 配置文件: */data/apps/mariadb/src/conf.d/mysql.cnf*
-MariaDB compose 文件: */data/apps/mariadb/docker-compose.yml*
+MariaDB 配置文件: */data/apps/mariadb/src/conf.d/mysql.cnf*  
+MariaDB compose 文件: */data/apps/mariadb/docker-compose.yml*  
 
 phpMyAdmin 安装路径: */data/apps/phpmyadmin*  
-phpMyAdmin 配置文件: */data/apps/phpmyadmin/config.inc.php*    
-phpMyAdmin compose 文件: */data/apps/phpmyadmin/docker-compose.yml*
+phpMyAdmin 配置文件: */data/apps/phpmyadmin/config.inc.php*      
+phpMyAdmin compose 文件: */data/apps/phpmyadmin/docker-compose.yml*  
 
 </TabItem>
 <TabItem value="winpath" label="Windows">

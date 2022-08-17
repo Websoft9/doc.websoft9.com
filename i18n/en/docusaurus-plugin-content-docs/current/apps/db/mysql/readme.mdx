@@ -46,8 +46,8 @@ If you have installed Websoft9 MySQL/MariaDB, the following steps is for your qu
 
 3. Using SSH to connect MySQL Server, run the following command
    ~~~
-   #assume the root password is `123456`
-   docker exec -it mysql mysql -uroot –p123456
+   #assume the root password is `7j5vc0EttEUDtC!`
+   docker exec -it mariadb mysql -uroot –p7j5vc0EttEUDtC!
    ~~~
 
 4. You can find the MySQL version from the message
@@ -320,19 +320,19 @@ d5c4ba36ce50   mariadb:10.8        "docker-entrypoint.s…"   10 minutes ago   U
 <Tabs>
 <TabItem value="linuxpath" label="Linux" default>
 
-MySQL installation directory:  */data/apps/mysql* 
-MySQL data directory: */data/apps/mysql/data/mysql_data*  
-MySQL configure file: */data/apps/mysql/src/conf.d/mysql.cnf*   
-MySQL compose file: */data/apps/mysql/docker-compose.yml*  
+MySQL installation directory:  */data/apps/mysql*  
+MySQL data directory: */data/apps/mysql/data/mysql_data*    
+MySQL configure file: */data/apps/mysql/src/conf.d/mysql.cnf*     
+MySQL compose file: */data/apps/mysql/docker-compose.yml*    
 
-MariaDB installation directory: */data/apps/mariadb* 
-MariaDB data directory: */data/apps/mariadb/data/mariadb_data*  
-MariaDB configure file: */data/apps/mariadb/src/conf.d/mysql.cnf*   
+MariaDB installation directory: */data/apps/mariadb*   
+MariaDB data directory: */data/apps/mariadb/data/mariadb_data*    
+MariaDB configure file: */data/apps/mariadb/src/conf.d/mysql.cnf*    
 MariaDB compose file: */data/apps/mariadb/docker-compose.yml*  
 
 phpMyAdmin installation directory: */data/apps/phpmyadmin*  
-phpMyAdmin configure file: */data/apps/phpmyadmin/config.inc.php*   
-phpMyAdmin compose file: */data/apps/phpmyadmin/docker-compose.yml*    
+phpMyAdmin configure file: */data/apps/phpmyadmin/config.inc.php*     
+phpMyAdmin compose file: */data/apps/phpmyadmin/docker-compose.yml*      
 
 </TabItem>
 <TabItem value="winpath" label="Windows">
