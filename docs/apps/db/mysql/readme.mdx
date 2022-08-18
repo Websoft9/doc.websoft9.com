@@ -143,7 +143,7 @@ docker exec -it mysql mysqladmin -u 用户名 -p 旧密码 password '新密码'
 
 修改 MySQL 数据目录，按以下步骤操作：
 
-1. 修改 **/data/apps/mysql/docker-compose.yml**中数据挂载目录
+1. 修改[MySQL compose 文件](#path)中数据挂载目录
    ```shell
    version: '3.8'
    services:
@@ -164,9 +164,7 @@ docker exec -it mysql mysqladmin -u 用户名 -p 旧密码 password '新密码'
    cd /data/apps/mysql && sudo docker compose up -d
    ```
 
-
 ### 设置 Binary Log
-
 
 MySQL默认没有开启 Binary Log，修改 [MySQL 配置文件](#path)相关项
 
@@ -181,7 +179,6 @@ expire_logs_days = 7     # Binary log expire time
 ### 图形化客户端
 
 使用 MySQL 官方的 [Workbench](https://www.mysql.com/products/workbench/) 或 [第三方客户端工具](./tools#dbclient)在本地管理数据库。
-
 
 ###  图形化 Web 端（phpMyAdmin）{#phpmyadmin}
 
@@ -200,8 +197,6 @@ expire_logs_days = 7     # Binary log expire time
 3. 登录成功后，可以管理任意数据库
 
   ![phpMyadmin](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-adddb-websoft9.png)
-
-
 
 #### 修改 root 密码{#phpmyadminmodifypw}
 

@@ -58,9 +58,9 @@ Kafka 默认设置保留 7 天日志，但默认并为启用日志清理策略�
 
 ```
 # 打开日志删除策略
-sed -i '/log.cleanup.policy=compact/log.cleanup.policy=delete/g' /opt/kafka/config/server.properties
+docker exec -it kafka sed -i '/log.retention.hours=168/i\log.cleanup.policy=delete' /opt/bitnami/kafka/config/server.properties
 
-# 重启Kafka
+# 重启 [Kafka 服务](#service)
 sudo docker restart kafka
 ```
 
@@ -68,7 +68,12 @@ sudo docker restart kafka
 
 用户可以自定义日志清理策略，具体步骤如下：
 
-1. 修改 */opt/kafka/config/server.propertie*  文件中相关的参数
+1. 进入kafka容器
+    ```
+    sudo docker exec -it kafka bash
+    ```
+
+2. 修改 */opt/bitnami/kafka/config/server.propertie*  文件中相关的参数
     ```
     log.cleanup.policy=delete #添加 启用删除策略配置段
     log.retention.hours=168    #默认7天
@@ -76,7 +81,7 @@ sudo docker restart kafka
     log.segment.bytes=1073741824 #默认每个segment的大小为1GB
     ```
 
-2. 修改后重启 Kafka 服务
+3. 重启  [Kafka 服务](#service)
     ```
     sudo docker restart kafka
     ```
@@ -100,11 +105,7 @@ e628a73126fd   bitnami/kafka:2.8                             "/opt/bitnami/scrip
 ### 路径{#path}
 
 Kafka 安装目录：*/data/apps/kafka*  
-Kafka 日志目录：*/opt/kafka/logs*  
-Kafka bin目录：*/opt/kafka/bin*  
-Kafka 配置目录：*/opt/kafka/config*  
 Kafka 数据目录：*/data/apps/kafka/data/kafka_data*  
-
 Zookeeper 数据目录：*/data/apps/kafka/data/zookeeper_data*   
 
 ### 端口
@@ -122,7 +123,7 @@ Zookeeper 数据目录：*/data/apps/kafka/data/zookeeper_data*
 docker exec -i kafka /opt/bitnami/kafka/bin/kafka-topics.sh --version
 
 # CMAK version
-docker exec -it cmak bash -c 'ls /cmak/lib/cmak.cmak-*-assets.jar'
+docker exec -it kafka-cmak bash -c 'ls /cmak/lib/cmak.cmak-*-assets.jar'|awk -F"-" '{print $2}'
 
 ```
 
@@ -138,10 +139,10 @@ sudo docker start | stop | restart kafka-zookeeper
 
 ```
 # kafka
-bin/kafka-console-consumer.sh --bootstrap-server youip:port --consumer.config consumer.properties --topic my-topic
+docker exec -it kafka /opt/bitnami/kafka/bin/kafka-console-consumer.sh --bootstrap-server youip:port --consumer.config consumer.properties --topic my-topic
 
 # ZooKeeper client
-zkCli.sh -server IP:2181
+docker exec -it kafka-zookeeper zkCli.sh -server IP:2181
 ```
 
 ### API

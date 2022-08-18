@@ -15,25 +15,7 @@ tags:
 
 ### Kafka升级
 
-Kafka 主要采用二级制安装方式，其升级方案差不多等于安装：
-
-1. 依次运行如下的命令做好准备：
-   ```
-   # stop Kafka,Zookeeper service
-   systemctl stop kafka
-   systemctl stop zookeeper
-
-   # rename the dir of Kafka for backup
-   mv /opt/kafka  /opt/kafkaBK
-   ```
-2. 从官网[下载Kafka](https://kafka.apache.org/downloads)后解压并上传到：*/opt* 目录，并命名为 *kafka*
-3. 分别运行下面的修改权限
-   ```
-   chown -R kafka. /opt/kafka
-   ```
-4. 重启 [Kafka服务](#服务) 后升级完成
-
-    ```
+请参考官方文档：[Upgrading From Previous Versions](https://kafka.apache.org/documentation/#upgrade)
 
 ### Kafka 集群
 
@@ -158,6 +140,7 @@ systemctl restart kafka
 
 8，注意当所有相关节点服务器都启动后，才会显示正常，否则会报错
 
+  > 此集群的搭建完全是另行搭建，不是在本产品 Kafka 容器上做集群
 
 ## 故障处理
 
@@ -165,27 +148,27 @@ systemctl restart kafka
 
 #### Kafka服务无法启动？
 
-1. 以调试模式运行`bash /opt/kafka/bin/kafka-server-start.sh`，便可以查看启动状态和错误
-2. 打开日志文件：*/data/logs*，检索 **failed** 关键词，分析错误原因
+通过命令 `sudo docker logs kafka` 查看启动状态和错误
 
 #### 运行 *kafka-run-class.sh* 显示 `java: not found...` 的错误？
 
-这是Java环境变量缺失导致的问题，请设置环境变量：$JAVA_HOME=/usr/bin/java
-
+容器内Java环境变量缺失导致的问题，请设置环境变量：$JAVA_HOME=/usr/bin/java
 
 ## 问题解答
 
 #### 如何以调试模式启动 Kafka 服务？
 
 ```
-systemctl stop kafka zookeeper
-bash /opt/kafka/bin/kafka-server-start.sh
+cd /data/apps/kafka && docker compose up
 ```
 
+#### 在已有 TOPIC 上是否支持关闭部分分区？
+
+不支持
 
 #### 本部署环境中是否已经包含Java？
 
-是的
+是的， Kafka容器中已有Java环境
 
 #### 是否提供了 Kafka 可视化管理工具？
 
