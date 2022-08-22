@@ -22,15 +22,19 @@ If you have installed Websoft9 Kafka, the following steps is for your quick star
 3. **[Get](./user/credentials)** default username and password of Kafka
 4. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for Kafka
 
-## Kafka Installation Check
+## Kafka Initialization
 
-Use you **SSH** to login Server, run the following commands
+### Steps for you 
 
-```
-systemctl status kafka
-systemctl status zookeeper
-bash /opt/kafka/bin/kafka-configs.sh
-```
+You should verify the Kafka when completed deployment:
+
+1. Use you **SSH** to login Server, run the following commands
+
+   ```
+   cd /data/apps/kafka && sudo docker compose ls
+   ```
+
+2. Kafka will get feedback from "status: running (3)" during normal operation
 
 ### Having trouble?
 
@@ -56,53 +60,57 @@ Follow the steps below to use it:
 3. CMAK connect Kafka successfully
    ![Create kafka cluster](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kafka/kafka-addcluster002-websoft9.png)
   
-### 日志管理
+### Log management
 
-**启用默认日志清理策略**
+**Enable default log cleanup policy**
 
-Kafka 默认设置保留 7 天日志，但默认并为启用日志清理策略。运行如下命令后启用：
+The default setting of Kafka is to keep logs for 7 days, but the log cleaning policy is enabled by default. Enable after running the following command:
 
 ```
-# 打开日志删除策略
+# Open log deletion policy
 sed -i '/log.retention.hours=168/i\log.cleanup.policy=delete' /opt/kafka/config/server.properties
 
-# 重启Kafka
-systemctl restart kafka
+# Restart Kafka service
+sudo docker restart kafka
 ```
 
-**自定义日志清理策略**
+**Custom log cleanup policy**
 
-用户可以自定义日志清理策略，具体步骤如下：
+You can customize the log cleaning policy. The specific steps are as follows:：
 
-1. 修改 */opt/kafka/config/server.propertie*  文件中相关的参数
+1. Access Kafka container
+
+2. Edit */opt/bitnami/kafka/config/server.propertie *  relevant parameters
     ```
-    log.cleanup.policy=delete #添加 启用删除策略配置段
-    log.retention.hours=168    #默认7天
-    log.retention.check.interval.ms=300000 #默认每5分钟检查一次
-    log.segment.bytes=1073741824 #默认每个segment的大小为1GB
+    log.cleanup.policy=delete 
+    log.retention.hours=168  
+    log.retention.check.interval.ms=300000 
+    log.segment.bytes=1073741824
     ```
 
-2. 修改后重启 Kafka 服务
+3. Restart Kafka service
     ```
-    systemctl restart kafka
+    sudo docker restart kafka
     ```
 
 ## Reference sheet
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Kafka
 
-通过运行 `docker ps`，可以查看到 Kafka 运行时所有的 Container：
+Run `docker ps`, view all containers when MongoDB is running:
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                                         COMMAND                  CREATED          STATUS          PORTS                                                                     NAMES
+e628a73126fd   bitnami/kafka:2.8                             "/opt/bitnami/script…"   36 minutes ago   Up 36 minutes   0.0.0.0:9092->9092/tcp, :::9092->9092/tcp                                 kafka
+219ebeafc96c   bitnami/zookeeper:latest                      "/opt/bitnami/script…"   36 minutes ago   Up 36 minutes   2888/tcp, 3888/tcp, 0.0.0.0:2181->2181/tcp, :::2181->2181/tcp, 8080/tcp   kafka-zookeeper
+84ff90680786   ghcr.io/eshepelyuk/dckr/cmak-3.0.0.5:latest   "/cmak/bin/cmak -Dpi…"   36 minutes ago   Up 36 minutes   0.0.0.0:9091->9000/tcp, :::9091->9000/tcp                                 kafka-cmak
 ```
   
 ### Path{#path}
 
-Kafka installation directory:*/opt/kafka*  
-Kafka installation log directory:*/opt/kafka/logs*  
-Kafka bin directory: */opt/kafka/bin*  
-Kafka configuration directory: */opt/kafka/config* 
+Kafka installation directory: */data/apps/kafka*  
+Kafka data directory: */data/apps/kafka/data/kafka_data*  
+Zookeeper data directory: */data/apps/kafka/data/zookeeper_data* 
   
 ### Port{#port}
 
@@ -116,33 +124,29 @@ Kafka configuration directory: */opt/kafka/config*
 
 ```shell
 # Kafka version
-ls /opt/kafka/libs | grep kafka_
+docker exec -i kafka /opt/bitnami/kafka/bin/kafka-topics.sh --version
 
 # CMAK version
-docker exec -it cmak bash -c 'ls /cmak/lib/cmak.cmak-*-assets.jar'
+docker exec -it kafka-cmak bash -c 'ls /cmak/lib/cmak.cmak-*-assets.jar'|awk -F"-" '{print $2}'
 
 ```
 
 ### Service{#service}
 
 ```shell
-sudo systemctl start | stop | restart | status kafka
-bash /opt/kafka/bin/kafka-server-start.sh
-
-sudo systemctl start | stop | restart | status zookeeper
-bash /opt/kafka/bin/zookeeper-server-start.sh
-
-sudo docker start | stop | restart | stats cmak
+sudo docker start | stop | restart kafka
+sudo docker start | stop | restart kafka-cmak
+sudo docker start | stop | restart kafka-zookeeper
 ```
   
 ### CLI{#cli}
   
 ```
 # kafka
-bin/kafka-console-consumer.sh --bootstrap-server youip:port --consumer.config consumer.properties --topic my-topic
+docker exec -it kafka /opt/bitnami/kafka/bin/kafka-console-consumer.sh --bootstrap-server youip:port --consumer.config consumer.properties --topic my-topic
 
 # ZooKeeper client
-zkCli.sh -server IP:2181
+docker exec -it kafka-zookeeper zkCli.sh -server IP:2181
 ```
   
 ### API

@@ -24,6 +24,8 @@ tags:
 
 ## Kafka 初始化向导
 
+### 详细步骤
+
 使用SSH登录到服务器后，运行如下几个命令，检查 Kafka是否正确安装
 
 ```
@@ -31,10 +33,13 @@ cd /data/apps/kafka && sudo docker compose ls
 ```
 Kafka 正常运行会得到 " STATUS: running(3) " 的反馈
 
+### 碰到问题？
+
+若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题。
+
 ## Kafka 使用入门
 
 [Kafka Quickstart](https://kafka.apache.org/quickstart) 或以 **Github 上的项目通过 Kafka 自动构建部署** 作为一个任务，帮助用户快速入门：
-
 
 ## Kafka 常用操作
 

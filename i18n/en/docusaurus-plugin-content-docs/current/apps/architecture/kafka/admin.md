@@ -17,44 +17,30 @@ This chapter is special guide for Kafka maintenance and settings. And you can re
 
 ### Upgrade
 
-You can upgrade your Kafka by the following steps:
+Please refer to the official document: [upgrading from previous versions](https://kafka.apache.org/documentation/#upgrade)
 
-1. Prepare for upgrade
-   ```
-   # stop Kafka,Zookeeper service
-   systemctl stop kafka
-   systemctl stop zookeeper
+### Kafka cluster
 
-   # rename the dir of Kafka for backup
-   mv /opt/kafka  /opt/kafkaBK
-   ```
-2. [Download Kafka](https://kafka.apache.org/downloads) and unzip it, then upload to the directory: */opt* and renamed it to *kafka*
-3. Run the following modify permissions
-   ```
-   chown -R kafka. /opt/kafka
-   ```
-4. Restart [Kafka services](../kafka#service)
-
-### Kafka 集群
-
-Kafka对大数据处理性能优越，一般使用Kafka时，系统数据量都非常大。当数据量几何级数增长时，需要考虑两个要素：数据处理能力和容灾备份能力，使用Kafka集群就刚好解决了这两个问题。所以现实当中，一般Kafka应用会使用Kafka集群。
-
-**Kafka集群结构**
+Kafka has excellent big data processing performance. Generally, when Kafka is used, the system data volume is very large. When the data volume increases geometrically, two factors need to be considered: data processing capacity and disaster recovery and backup capacity. Kafka cluster can solve these two problems. Therefore, in reality, most Kafka applications will use Kafka clusters.
+**Kafka cluster structure**
 
  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kafka/kafka-relation-websoft9.png)
 
-我们Kafka集群方案中集群特点：
-1. Kafka搭建了集群，Zookeeper也搭建了集群管理Kafka
-2. 每个Kafka节点同时也是ZooKeeper节点
-3. 消息生产时和Kafka集群连接，消费时需要先通过Zookeeper找到消费位置offset,再连接Kafka集群获取消息
+The cluster features in our Kafka cluster scheme are:
+
+1. Kafka built a cluster, and zookeeper also built a cluster management Kafka
+2. Each Kafka node is also a zookeeper node
+3. The message is connected to the Kafka cluster during production. When consuming, you need to find the offset of the consumption location through zookeeper, and then connect to the Kafka cluster to obtain the message
+
  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kafka/kafka-cluster1-websoft9.png)
   
-**搭建Zookeeper和Kafka集群**
+**Build zookeeper and Kafka clusters**
 
-我们可以把集群想象成为一个整体，对外连接时作为一个对象工作，具体需要哪个节点工作时再内部协调。因此，我们的集群方案就是，先搭建集群的一个节点，其他复制这个节点后修改即可。
-下面我们通过一个节点(172.31.57.62)为例来记录详细步骤：（假设我们使用局域网3台服务器172.31.57.62，172.31.57.63，172.31.57.64搭建集群）
-1. 下载[Kafka](https://archive.apache.org/dist/kafka/2.7.1/kafka_2.13-2.7.1.tgz)，解压到/opt下，并改名为kafka
-2. 编辑修改config/zookeeper.properties
+We can think of the cluster as a whole, and work as an object when connecting to the outside. The specific node needs to work before internal coordination. Therefore, our cluster scheme is to build a node of the cluster first, and then copy the node and modify it.
+Let's take a node (172.31.57.62) as an example to record the detailed steps: (suppose we use three servers in the LAN (172.31.57.62, 172.31.57.63, 172.31.57.64) to build a cluster.)
+
+1. Download [Kafka]（ https://archive.apache.org/dist/kafka/2.7.1/kafka_2.13-2.7.1.tgz ）, unzip it to / opt and rename it Kafka
+2. Edit and modify config / zookeeper.properties
 ```
 # Licensed to the Apache Software Foundation (ASF) under one or more
 # contributor license agreements.  See the NOTICE file distributed with
@@ -89,14 +75,14 @@ server.1=172.31.57.62:2888:3888
 server.2=172.31.57.63:2888:3888
 server.3=172.31.57.64:2888:3888
 ```
-3. 进入zookeeper，创建ID文件
+3. Enter zookeeper and create ID file
 
 ```
 cd zookeeper
 echo 1 > myid
 ```
 
-4. 创建Zookeeper服务，启动
+4. Create zookeeper service and start
 
 ```
 [Unit]
@@ -118,7 +104,7 @@ systemctl daemon-reload
 systemctl restart zookeeper
 ```
 
-5. 编辑Kafkaconfiguration file
+5. Edit Kafkaconfiguration file
 
 ```
 # With the same id
@@ -131,7 +117,7 @@ log.dirs=/opt/kafka/logs
 zookeeper.connect=172.31.57.62:2181,172.31.57.63:2181,172.31.57.64:2181
 ```
 
-6. 创建Kafka服务，启动
+6. Create Kafka Service and start it
 
 ```
 /etc/systemd/system/kafka.service
@@ -154,9 +140,9 @@ systemctl daemon-reload
 systemctl restart kafka
 ```
 
-7. 复制上面节点到服务器（172.31.57.63），将步骤3的myid修改成2，步骤5中broker.id修改成2，步骤5中listeners修改成该服务器地址；其他节点依次类推
+7. Copy the above node to the server (172.31.57.63), modify the myid in step 3 to 2, the broker.id in step 5 to 2, and the listeners in step 5 to the server address; Other nodes, and so on
 
-8. 注意当所有相关节点服务器都启动后，才会显示正常，否则会报错
+8. Note that the display will be normal only after all relevant node servers are started, otherwise an error will be reported
   
 ## Troubleshoot{#troubleshoot}
 
@@ -164,8 +150,7 @@ In addition to the Kafka issues listed below, you can refer to [Troubleshoot + F
   
 #### Kafka service can't start?
 
-1. Use the debug mode of `bash /opt/kafka/bin/kafka-server-start.sh` and you can see the errors
-2. Search the keywords **Failed** or **error** from logs: */data/logs*
+Run `sudo docker logs kafka` to view startup status and errors
   
 #### Run the command "kafka-topics.sh", java not found?
 
@@ -176,10 +161,13 @@ You should add a variable $JAVA_HOME=/usr/bin/java
 #### How can I enable the debug mode of Kafka service?
 
 ```
-systemctl stop kafka zookeeper
-bash /opt/kafka/bin/kafka-server-start.sh
+cd /data/apps/kafka && docker compose up
 ```
-  
+
+#### Is it supported to close some partitions on the existing topic?
+
+Not support
+ 
 #### Is Java included in this deployment solution?
 
 Yes
@@ -188,13 +176,13 @@ Yes
 
 Yes, refer to [CMAK](../kafka#gui)
   
-#### CMAK 中无法支持所需的 Kafka 版本？
+#### Cannot support the required Kafka version in cmak?
 
-CMAK 并不是支持所有 Kafka 版本，具体以使用为准
+Cmak does not support all Kafka versions. The specific use shall prevail
 
-#### CMAK 连接 Kafaka2.4 以下报错？
+####Cmak connects kafaka2.4 and the following error is reported?
 
-错误信息： Yikes! KeeperErrorCode = Unimplemented for /kafka-manager/mutex Try again. ([issue](https://github.com/yahoo/CMAK/issues/748))   
-解决方案： 暂无
+Error message: yikes! KeeperErrorCode = Unimplemented for /kafka-manager/mutex Try again. ([issue]( https://github.com/yahoo/CMAK/issues/748 ))
+Solution: None
 
-但出现上述错误的情景中，Zookeeper 客户端是可以连接 Zookeeper 服务端的  
+However, in the case of the above error, the zookeeper client can connect to the zookeeper server
