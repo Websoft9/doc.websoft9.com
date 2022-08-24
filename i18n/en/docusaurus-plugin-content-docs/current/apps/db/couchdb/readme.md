@@ -17,7 +17,7 @@ If you have installed Websoft9 CouchDB, the following steps is for your quick st
 ## Preparation
 
 1. Get the **Internet IP** of your Server on Cloud
-2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:80** is allowed
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:5984,80** is allowed
 3. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for CouchDB
 4. [Get](./user/credentials) default username and password of CouchDB
 

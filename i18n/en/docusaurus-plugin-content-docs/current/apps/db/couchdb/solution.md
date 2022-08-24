@@ -8,4 +8,4 @@ tags:
 
 # CouchDB Solution
 
-CouchDB 可以与其他的软件平台**集成**一起使用，解决 **数据管理** 过程中的各种场景问题。 
+CouchDB can be used with other software platforms **integration** to solve various scenarios in ** data management**.

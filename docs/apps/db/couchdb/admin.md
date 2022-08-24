@@ -31,4 +31,8 @@ CouchDB备份涉及到3种不同的文件：数据库文件，配置文件，日
 
 #### CouchDB 支持分区数据库吗?
 
-CouchDB支持[分区数据库](https://docs.couchdb.org/en/stable/partitioned-dbs/index.html#partitioned-databases)
+CouchDB 支持[分区数据库](https://docs.couchdb.org/en/stable/partitioned-dbs/index.html#partitioned-databases)
+
+#### CouchDB 有连接限制吗?
+
+CouchDB 默认的最大连接数为 2048。

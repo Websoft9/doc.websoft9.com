@@ -104,15 +104,10 @@ CONTAINER ID   IMAGE            COMMAND                  CREATED          STATUS
 
 ### 路径{#path}
 
-
 CouchDB 安装目录： */data/apps/couchdb*  
 CouchDB 数据目录： */data/apps/couchdb/data/couchdb_data*  
 CouchDB 配置文件： */data/apps/couchdb/data/couchdb_config/docker.ini*  
 CouchDB 日志目录： */data/apps/couchdb/data/couchdb_log*  
-
-### 网址
-
-CouchDB 控制台： *http://域名/_utils*  
 
 ### 端口
 

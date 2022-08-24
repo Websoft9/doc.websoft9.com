@@ -25,14 +25,12 @@ Refer to the official docs: [Upgrading CouchDB](https://docs.couchdb.org/en/late
 
 In addition to the CouchDb issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
-#### CouchDB service can't start?
-
-1. Execute `systemctl status couchdb` and you can see the errors
-
-2. Search the keywords **Failed** or **error** from logs: */data/logs/couchdb-server*
-
 ## FAQ{#faq}
 
-#### If there is no domain name, can I deploy CouchDB?
+#### CouchDB support partitioned databases?
 
-Yes, visit CouchDB by *http://Internet IP/_utils*
+CouchDB support [partitioned databases]().
+
+#### CouchDB have connection restrictions?
+
+The default maximum number of connections to CouchDB is 2048.
