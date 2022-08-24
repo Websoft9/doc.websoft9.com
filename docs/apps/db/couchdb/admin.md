@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 slug: /couchdb/admin
 tags:
   - CouchDB
@@ -28,3 +28,7 @@ CouchDB备份涉及到3种不同的文件：数据库文件，配置文件，日
 
 
 ## 问题解答
+
+#### CouchDB 支持分区数据库吗?
+
+CouchDB支持[分区数据库](https://docs.couchdb.org/en/stable/partitioned-dbs/index.html#partitioned-databases)

@@ -17,10 +17,9 @@ tags:
 部署 Websoft9 提供的 CouchDB 之后，需完成如下的准备工作：
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
+2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:5984，80** 端口已经开启
 3. 在服务器中查看 CouchDB 的 **[默认账号和密码](./user/credentials)**  
 4. 若想用域名访问  CouchDB，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
-
 
 ## CouchDB 初始化向导
 
@@ -56,20 +55,24 @@ tags:
    > 0.0.0.0 代表任意公网IP均可访问
 
 2. [重启 CouchDB 服务](#service)后生效
+   ```
+   sudo docker restart couchdb
+   ```
 
 
 ### 开启用户认证
 
-1. 修改 CouchDB 配置文件 */opt/couchdb/etc/default.ini*
+1. 修改 CouchDB [配置文件](#path)
    ```
   将 require_valid_user 的值设置为 false， 则每个人都必须经过身份验证。
    [chttpd]
    require_valid_user = false
    ```
 
-2. CouchDB
+2. [重启 CouchDB 服务](#service)后生效
    ```
-   systemctl restart couchdb
+   sudo docker restart couchdb
+   ```
 
 ### 重置密码
 
@@ -80,26 +83,32 @@ tags:
    admin = $new_password
    ```
 2. [重启 CouchDB 服务](#service)后生效
+   ```
+   sudo docker restart couchdb
+   ```
 
 
 ## CouchDB 参数
 
-CouchDB 应用中包含 Nginx, Docker 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+CouchDB 应用中包含 Docker 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 CouchDB 运行时所有的 Container：
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
-```
+CONTAINER ID   IMAGE            COMMAND                  CREATED          STATUS          PORTS                                                           NAMES
+5aaaaaddb857   couchdb:latest   "tini -- /docker-ent…"   30 seconds ago   Up 28 seconds   4369/tcp, 9100/tcp, 0.0.0.0:5984->5984/tcp, :::5984->5984/tcp   couchdb
 
+```
 
 下面仅列出 CouchDB 本身的参数：
 
 ### 路径{#path}
 
-CouchDB 配置文件： */opt/couchdb/etc/default.ini* 和 */opt/couchdb/etc/local.ini*  
-CouchDB 安装目录： */data/couchdb*  
-CouchDB 日志目录： */data/logs/couchdb*  
+
+CouchDB 安装目录： */data/apps/couchdb*  
+CouchDB 数据目录： */data/apps/couchdb/data/couchdb_data*  
+CouchDB 配置文件： */data/apps/couchdb/data/couchdb_config/docker.ini*  
+CouchDB 日志目录： */data/apps/couchdb/data/couchdb_log*  
 
 ### 网址
 
@@ -107,21 +116,22 @@ CouchDB 控制台： *http://域名/_utils*
 
 ### 端口
 
+除 80, 443 等常见端口需开启之外，以下端口可能会用到： 
+
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
-| 5984   | CouchDB 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
-
+| 5984   | CouchDB 原始端口，已通过 Nginx 转发到 80 端口 | 可选  |
 
 ### 版本
 
 ```shell
-cat path/couchdb/releases/*/couchdb.rel  |sed -n 3p | awk -F '"' '{print $4}'
+docker exec -i couchdb cat /opt/couchdb/releases/RELEASES  |sed -n 2p | awk -F '"' '{print $4}'
 ```
 
 ### 服务
 
 ```shell
-sudo systemctl start | stop | restart | status couchdb
+sudo docker start | stop | restart couchdb
 ```
 
 ### 命令行
