@@ -54,6 +54,12 @@ tags:
 
 若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题。
 
+#### Dashboard 提示需要移动 Storage 文件夹？
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/opencart/opencart-storagepath-websoft9.png)  
+
+建议忽略此提示，因为移动文件夹会导致不可知的代码错误
+
 ## OpenCart 使用入门
 
 下面以 **使用 OpenCart 构建在线商城** 作为一个任务，帮助用户快速入门：
