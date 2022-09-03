@@ -76,6 +76,15 @@ find /data/wwwroot/default -type d -exec chmod 750 {} \
 
 # 修改文件权限
 chmod u+x <file>
+
+# Add groupnamehere to an exist directory /base/path/
+sudo setfacl -Rm g:groupnamehere:rwx /base/path/
+
+# Add groupnamehere to an exist directory /base/path/
+sudo setfacl -Rm g:groupnamehere:rwx /base/path/
+
+# Add groupnamehere to an new directory /base/path/
+sudo setfacl -Rdm g:groupnamehere:rwx /base/path/
 ```
 
 ## 搜索
