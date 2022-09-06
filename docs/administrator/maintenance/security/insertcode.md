@@ -21,7 +21,7 @@ slug: /administrator/security_insertcode
    grep -r search_term <directory>
    
    ```
-3. 使用[Datalog](https://www.datadoghq.com/) 或 [Cloudcare](https://www.cloudcare.cn/) 这种在线的监控平台，对系统进行深度的分析。
+3. 使用[Datalog](https://www.datadoghq.com/) 或 [Cloudcare](https://www.cloudcare.cn/) 这种在线的监控平台，对系统进行深度的分析。 
 
 下面以 WordPress 为例，介绍系统被代码植入后的处理方案。  
 
