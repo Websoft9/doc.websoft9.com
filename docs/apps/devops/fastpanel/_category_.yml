@@ -1,0 +1,5 @@
+position: 100
+label: "FASTPANEL"
+collapsible: true
+collapsed: true
+className: "red"
