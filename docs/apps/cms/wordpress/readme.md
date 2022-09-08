@@ -31,29 +31,18 @@ tags:
 1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*https://域名* 或 *https://服务器公网IP*, 进入安装向导  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wp01.png)
 
-2. 选择语言后，进入 WordPress 安装要求说明，点击“现在就开始”进入下一步 
-  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-install001-websoft9.png)
-
-3. 系统进入数据库连接信息安装项，请填写数据库连接信息（[不知道账号密码？](./user/credentials)） 
-  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-install002-websoft9.png)
-
-4. 数据库验证通过后，系统提示正式“进行安装” 
-  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-install003-websoft9.png)
-
-5. 设置您的管理员账号、密码和邮箱， 点击“安装WordPress”; 
+2. 设置您的管理员账号、密码和邮箱， 点击“安装WordPress”; 
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-install004-websoft9.png)
 
-6. 恭喜，成功安装
+3. 恭喜，成功安装
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-install005-websoft9.png)
 
-7. 进入后台（http//域名或IP/wp-admin），试试 WordPress 的功能 
+4. 进入后台（http//域名或IP/wp-admin），试试 WordPress 的功能 
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-install006-websoft9.png)
 
-8. 开始使用商业主题（部分产品预装）：
+5. 开始使用商业主题（部分产品预装）：
 
    - [Avada 主题](./wordpress/solution#avada)
-
-7. [WordPress 与 Discuz 双应用配置](./wordpress/solution#wordpress-discuz)（可选）
 
 
 > 需要了解更多WordPress的使用，请参考官方文档：[WordPress Documentation](https://wordpress.org/support/)
@@ -283,12 +272,15 @@ WordPress可以通过发送邮件找回密码，但前提条件是您的 WordPre
 
 ## 参数{#parameter}
 
-WordPress 应用中包含 PHP, Nginx, Apache, Docker, MySQL, phpMyAdmin 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+WordPress 应用中包含 PHP, Nginx, Apache, Docker, MariaDB, phpMyAdmin 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 WordPress 运行时所有的 Container：
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE               COMMAND                  CREATED          STATUS          PORTS                                       NAMES
+2fe10a179a6c   phpmyadmin:latest   "/docker-entrypoint.…"   16 seconds ago   Up 16 seconds   0.0.0.0:9090->80/tcp, :::9090->80/tcp       phpmyadmin
+d43ecff5608c   wordpress:latest    "docker-entrypoint.s…"   39 seconds ago   Up 38 seconds   0.0.0.0:9001->80/tcp, :::9001->80/tcp       wordpress
+9f4aa7ad771b   mariadb:10.4        "docker-entrypoint.s…"   39 seconds ago   Up 38 seconds   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp   wordpress-db
 ```
 
 下面仅列出 WordPress 本身的参数：
@@ -300,16 +292,23 @@ WordPress 配置文件： */data/wwwroot/wordpress/wp-config.php*
 
 ### 端口{#port}
 
-无特殊端口
+除 80, 443 等常见端口需开启之外，以下端口可能会用到：
+
+| 端口号 | 用途                                           | 必要性 |
+| ------ | ---------------------------------------------- | ------ |
+| 9090   | phpmyadmin端口 | 可选   |
+| 3306   | mariadb的数据库端口 | 可选   |
 
 ### 版本{#version}
 
-WordPress 控制台查看
+WordPress 控制台点击【升级】即可查看当前版本
 
 ### 服务{#service}
 
 ```shell
-sudo docker start | stop | restart | stats wordpress
+sudo docker start | stop | restart  wordpress
+sudo docker start | stop | restart  wordpress-db
+sudo docker start | stop | restart  phpmyadmin
 ```
 
 ### 命令行{#cli}

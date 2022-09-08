@@ -48,19 +48,19 @@ If you have installed Websoft9 WordPress, the following steps is for your quick 
 
 Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
-**使用 Avada 等主题，当 WordPress 升级后，页面编辑乱码了**
+**Using Avada and other themes, when WordPress is upgraded, the page editing is garbled**
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/avada/wordpress-avadaeditp-websoft9.png)
 
-**问题原因**： Wordpress升级到5.0版本之后，WordPress 官方提供的默认编辑器发生了本质的变化，导致已有主题无法适应新的 WordPress 编辑器内核  
+**Cause of problem**： After Wordpress upgrading to version 5.0, the default editor officially provided by WordPress has changed fundamentally, resulting in that the existing theme cannot adapt to the new WordPress editor core  
 
-**解决方案**：安装一个名称为“Classic Editor”的插件，继续使用旧的编辑器内核  
+**Solution**：Install a plug-in named "classic editor" and continue to use the old editor core 
 
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/avada/wordpress-classiceditor-websoft9.png)
 
 ## WordPress QuickStart
 
-下面以 **[WordPress 使用 Avada 主题建站](./wordpress/solution#avada)** 作为一个任务，帮助用户快速入门。
+The following is **[WordPress uses Avada theme to build a website](./wordpress/solution#avada)** as a task, it helps users get started quickly.
 
 ## WordPress Setup
 
@@ -91,15 +91,16 @@ Complete **[Five steps for Domain](./administrator/domain_step)** ，Set the URL
   
 2. Save it
 
-> 如果更换域名后，网站中有一部分图片地址还是原来的域名，此时需要手工逐一修正
-> 如果在第2步操作完成后，无法进入第3步访问后台操作，请访问 Wordpress 数据库，将 option 表中的 home 和 siteurl 两个属性修改为【新的域名】
-> 通过 Websoft9 已经配置好的 MySQL 可视化工具 phpMyAdmin (http://ip/phpmyadmin 或 http://ip:9090 )进行快捷操作
+> If after changing the domain name, some of the picture addresses in the website are still the original domain name, you need to manually correct them one by one
+> If you cannot access the background operation in step 3 after step 2 is completed, please visit the WordPress database and change the home and siteurl attributes in the option table to [new domain name]
+> Through the MySQL visualization tool phpMyAdmin that has been configured in websoft9(http://ip/phpmyadmin or http://ip:9090 )Perform shortcuts
+
 
 ### HTTPS Additional Configure {#https}
 
-**[标准 HTTPS 配置](./administrator/domain_https)** 完成后，可能会遇到如下的异常情况：
+**[Standard HTTPS configuration](./administrator/domain_https)** After completion, the following exceptions may be encountered:
 
-- [配置HTTPS后，网站部分资源无法加载？](./wordpress/admin#httpsmore)
+- [After HTTPS is configured, some resources of the website cannot be loaded?](./wordpress/admin#httpsmore)
 
 ### WordPress File type limit extend
 
@@ -124,18 +125,18 @@ WordPress supports uploading of most image formats such as images by default, bu
   add_filter('upload_mimes', 'edit_upload_types');
   ```
 
-### 增加备案号
+### Add record number
 
-如果你使用的WordPress默认自带主题，需要在页面底部增加ICP备案以及链接。具体操作步骤如下：
+If you use WordPress with its own theme by default, you need to add ICP filing and links at the bottom of the page. The specific operation steps are as follows:
 
-1. 登录WordPress后台，依次打开【外观】>【小工具】
+1. Log in to WordPress background and open 【appearance】> 【gadget】 in turn
 
-2. 从左侧的【可用小工具】中拖拽一个【文本】小工具到右侧的【页脚1】
+2. Drag a text widget from the available widgets on the left to the footer 1 on the right
 
-3. 填写好备案号相关信息，增加链接，并分别点击【回车符】按钮和【保存】按钮
+3. Fill in the relevant information of the record number, add a link, and click the 【Enter】 button and the 【save】 button respectively
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-beian.png)
 
-4. 刷新网页看效果
+4. Refresh the page to see the effect
 
 ### Managing Plugins
 
@@ -143,13 +144,13 @@ Plugins are ways to extend and add to the functionality that already exists in W
 
 For instructions and information on downloading, installing, upgrading, troubleshooting, and managing your WordPress Plugins, see [Managing Plugins](https://codex.wordpress.org/Managing_Plugins). If you want to develop your own plugin, there is a comprehensive list of resources in Plugin Resources.
 
-**寻找插件**
+**Looking for plug-ins**
 
-寻找所需的插件，有三种方式：
+There are three ways to find the required plug-ins:
 
-1. 通过WordPress后台-外观-安装插件，在线获取[WordPress插件库](https://wordpress.org/plugins/)的插件 
-2. 通过百度、google等搜索“WordPress插件”，淘到自己喜欢的主题
-3. 通过插件交易市场购买功能强大的插件，例如：[codecanyon.net](https://codecanyon.net/?osr=tn)
+1. Through WordPress background - appearance - install plug-ins,Get [WordPress plug-in library](https://wordpress.org/plugins/) Online
+2. Search "WordPress plug-in" on Baidu, Google, etc., and find your favorite theme
+3. Purchase powerful plug-ins through the plug-in trading market, such as:[codecanyon.net](https://codecanyon.net/?osr=tn)
 
 **Add new plugins**
 
@@ -160,33 +161,33 @@ For instructions and information on downloading, installing, upgrading, troubles
 
 3. you can also add plugins by upload you package of zip
 
-**Top20 插件**
+**Top20 plugins**
 
-如下插件在使用 WordPress 中会经常用到：
+The following plug-ins are often used in WordPress:
 
-| 名称 | 类别 | 用途 | 付费 or 免费 |
+|Name | category | purpose | paid or free|
 | :--- | :--- | :--- | :--- |
-| WooCommerce | 电商 | 将WordPress扩展成电子商务网站 | 免费 |
-| WooCommerce Tab Manager | 电商 | 电商页面Tab扩展 | 免费 |
-| UpdraftPlus WordPress Backup Plugin | 备份 | 自动备份WordPress | 免费 |
-| Visual Composer: Page Builder for WordPress | 排版与布局 | 客户化编辑器 | 收费 |
-| Slider Revolution Responsive WordPress Plugin | 排版与布局 | 强大无比的轮播动画制作与管理 | 收费 |
-| Ninja Forms – The Easy and Powerful Forms Builder | 表单 | 表单插件 | 免费 |
-| Duplicator – WordPress Migration Plugin | 系统管理 | 网站整体打包工具，拥有备份与迁移 | 免费 |
-| All-in-One WP Migration | 系统管理 | 网站整体打包与恢复工具 | 免费 |
-| download-monitor | 下载管理 | 下载管理 | 免费 |
-| File Manager | 文件管理 | 在线文件管理工具 | 免费 |
-| Yoast SEO | SEO | SEO优化建议和按页面设置 | 免费 |
-| All in One SEO | SEO | SEO优化建议和按页面设置 | 免费 |
-| Remove Google Fonts | 系统管理 | 屏蔽google字体，提升速度 | 免费 |
-| WP-Optimize | 系统管理 | 系统优化和瘦身 | 免费 |
-| WP Job Manager | 业务应用 | 招聘、职位管理 | 免费 |
-| WP Mail SMTP by WPForms | 业务应用 | SMTP邮件发送设置 | 免费 |
-| weDocs – the documentation plugin | 业务应用 | 在线文档工具 | 免费 |
-| Smartideo | 业务应用 | 优酷等视频插入 | 免费 |
-| Essential Grid | 排版与布局 | 文章、页面网格工具 | 免费 |
-| Post Grid, List for WordPress – Content Views | 排版与布局 | 文档、页面调用工具 | 免费 |
-| Fat Rat Collect | 数据采集 | 批量采集文章数据的开源插件，采集含括微信、简书、知乎、列表详情等 | 免费 |  
+|Woocommerce | e-commerce | expand WordPress into an e-commerce website | free|
+|Woocommerce tab manager | e-commerce | e-commerce page tab extension | free|
+|Updraftplus WordPress backup plugin | backup | automatic backup of WordPress | free|
+|Visual Composer: page builder for WordPress | typesetting and layout | customized editor | charge|
+|Slider revolution responsive WordPress plugin | layout and layout | powerful round robin animation production and management | charging|
+|Ninja forms – the easy and powerful forms builder | forms | form plug-ins | free|
+|Duplicator – WordPress migration plugin | system management | website overall packaging tool with backup and migration | free|
+|All in one WP migration | system management | website overall packaging and recovery tool | free|
+|Download monitor | download management | download management | free|
+|File manager | file management | online file management tool | free|
+|Yoast SEO | SEO | SEO optimization suggestions and settings by page | free|
+|All in one SEO | SEO | SEO optimization suggestions and settings by page | free|
+|Remove Google fonts | system management | block Google fonts and improve speed | free|
+|WP optimize | system management | system optimization and slimming | free|
+|WP job manager | business application | recruitment and position management | free|
+|WP mail SMTP by wpforms | business application | SMTP mail sending settings | free|
+|Wedocs – the documentation plugin | business applications | online documentation tools | free|
+|Smartideo | business application | video insertion such as Youku | free|
+|Essential grid | typesetting and layout | article and page grid tools | free|
+|Post grid, list for WordPress – content views | typesetting and layout | document and page calling tools | free|
+|Fat rat collect | data collection | open source plug-in for bulk collection of article data, including wechat, Jianshu, Zhihu, list details, etc. | free|
 
 ### Adding New Themes
 
@@ -198,42 +199,42 @@ For instructions and information on downloading, installing, upgrading, troubles
 4. After installation of theme,you should active it by Administration Screen > Appearance > Themes  
 5. From the Themes panel, roll over the Theme thumbnail image for the Theme to activate the Theme click the Activate button.  
 
-### WooCommerce 支付配置
+### Woocommerce payment configuration
 
-WooCommerce 是 WordPress 的一个电子商务插件，在 WordPress 上安装这个插件，就可以将你的 WordPress 改造成电商网站。据说 WooCommerce 已超过上亿次下载，市场占有率领先于同类软件。  
+Woocommerce is an e-commerce plug-in for WordPress. By installing this plug-in on WordPress, you can transform your WordPress into an e-commerce website. It is said that woocommerce has been downloaded more than 100 million times, and its market share is ahead of similar software.
 
-WooCommerce 官方提供了 主题市场和插件市场 以扩展 WooCommerce 的功能。
+Woocommerce officially provides a theme market and a plug-in market to expand woocommerce's functions.
 
-WooCommerce 默认提供了国外主流的支付插件，下面重点介绍中国本地化支付的两个支付配置
+Woocommerce provides mainstream foreign payment plug-ins by default. The following focuses on two payment configurations for localized payment in China
 
-**支付宝即时到账支付**
+**Alipay instant payment**
 
-1. 申请支付宝商家账户，申请开通即时到账；
+1. Apply for a Alipay merchant account, and apply for instant arrival;
 
-2. 在商城中安装支付宝支付插件（如果没有支付宝插件，请通过此处购买）
+2. Install the Alipay payment plug-in in the mall (if there is no Alipay plug-in, please buy it here)
 
-3. 在商城中配置支付宝参数。配置界面如下：
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/plugins/woocommerce/intallalipay-websoft9.png)
+3. Configure Alipay parameters in the mall. The configuration interface is as follows:
+ ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/plugins/woocommerce/intallalipay-websoft9.png)
 
-**微信扫描支付**
+**Wechat scanning payment**
 
-WooCommerce微信支付插件使用非常简单，只需要如下步骤，就可以让你的WordPress商城添加微信支付功能。
+The woocommerce wechat payment plug-in is very simple to use. You can add wechat payment function to your WordPress mall just by following the steps below.
 
-1. 安装微信支付插件（如果没有支付宝插件，请通过此处购买）
+1. Install wechat payment plug-in (if you don't have Alipay plug-in, please buy it here)
 
-2. 获取微信公众号APPID，密钥，微信支付密钥以及微信支付授权目录
-   - 获取微信公众号的AppID\(应用ID\) 和AppSecret\(应用密钥\) AppID\(应用ID\) 和AppSecret\(应用密钥\)是微信公众号与第三方网站（wordpress）通信的授权ID和密码，非常重要，必须填写。 请登录微信公众平台（https://mp.weixin.qq.com），点击开发-配置获取：AppID 和AppSecret
+2. Obtain wechat official account appid, key, wechat payment key and wechat payment authorization directory
+-Get appid(application ID) and appsecret (application key) of wechat official account appid (application ID) and appsecret (application key) are the authorization ID and password for wechat official account to communicate with the third-party website (WordPress). They are very important and must be filled in. Please log in to wechat public platform(https://mp.weixin.qq.com)Click development-configuration to get appid and appsecret
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/plugins/woocommerce/wechatpay-help001-websoft9.png)
-   - 获取微信支付密钥登录微信支付商户平台（https://pay.weixin.qq.com），在账户设置-API安全中找到并设置密钥，密钥为32位，注意一下，获取密钥后保留备用
+-Get wechat payment key and log in to wechat payment merchant platform（ https://pay.weixin.qq.com ）Find and set the key in account settings - API security. The key is 32 bits. Please note that it is reserved for use after obtaining the key
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/plugins/woocommerce/weichatpay-help002-websoft9.png)
 
-3. 添加授权支付目录在微信公众平台（https://mp.weixin.qq.com）点击-微信支付-开发配置，设置授权支付目录 微信支付插件的授权支付目录为：https://你的域名/wp-content/plugins/wechat-weixin-payments-for-woocommerce/
+3. Add authorized payment directory on wechat public platform(https://mp.weixin.qq.com)Click - wechat payment - development configuration, and set the authorized payment directory. The authorized payment directory of wechat payment plug-in is: HTTPS://your domain/WP content/plugins/wechat Weixin payments for woocommerce/
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/plugins/woocommerce/weichatpay-help003-websoft9.png)
 
-4. 设置回调域名在微信公众平台（https://mp.weixin.qq.com）-开发-接口权限中找到-网页服务-网页账号修改授权回调页面域名，域名为你的网站域名，注意区分www和不带www；
-      ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/plugins/woocommerce/weichatpay-help004-websoft9.png)
+4. Set callback domain name on wechat public platform(https://mp.weixin.qq.com)-In development - Interface permissions, find - Web Services - web account modification authorization callback page domain name. The domain name is your website domain name. Pay attention to distinguish between WWW and without WWW;
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/plugins/woocommerce/weichatpay-help004-websoft9.png)
 
-5. 配置微信支付插件在woocommerce设置，支付设置中找到微信支付设置，填入微信公众号appid和微信支付密钥
+5. Configure wechat payment plug-in. Find wechat payment settings in woocommerce settings and fill in wechat official account appid and wechat payment key
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/plugins/woocommerce/weichatpay-help005-websoft9.png)
 
 ### Manage WordPress Password
@@ -274,36 +275,40 @@ If the server does not support the function of sending email passwords, the data
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage WordPress
 
-通过运行`docker ps`，可以查看到 WordPress 运行时所有的 Container：
+Run `docker ps`, view all containers when WordPress is running:  
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE               COMMAND                  CREATED          STATUS          PORTS                                       NAMES
+2fe10a179a6c   phpmyadmin:latest   "/docker-entrypoint.…"   16 seconds ago   Up 16 seconds   0.0.0.0:9090->80/tcp, :::9090->80/tcp       phpmyadmin
+d43ecff5608c   wordpress:latest    "docker-entrypoint.s…"   39 seconds ago   Up 38 seconds   0.0.0.0:9001->80/tcp, :::9001->80/tcp       wordpress
+9f4aa7ad771b   mariadb:10.4        "docker-entrypoint.s…"   39 seconds ago   Up 38 seconds   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp   wordpress-db
 ```
-
-下面仅列出 WordPress 本身的参数：
 
 ### Path{#path}
 
-WordPress installation directory: */data/wwwroot/wordpress*  
-WordPress configuration file: */data/wwwroot/wordpress/wp-config.php*   
+WordPress installation directory: */data/apps/wordpress*  
+WordPress configuration file: */data/apps/wordpress/data/wordpress/wp-config.php*   
+WordPress data directory: /data/apps/wordpress/data/mysql_data
 
 ### Port{#port}
 
+In addition to common ports such as 80, 443, etc., the following ports may be used:
+
 | Port | Use                                          | Necessity |
 | ------ | --------------------------------------------- | ------ |
-| 3306 | Remote connect MySQL | Optional |
-| 80 | HTTP requests for WordPress | Required |
-| 443 | HTTPS requests WordPress | Optional |
+| 3306 | Remote connect MariaDB | Optional |
 | 9090 | Web managment GUI for MySQL | Optional |
 
 ### Version{#version}
 
-WordPress 控制台查看
+WordPress view it on console
 
 ### Service{#service}
 
 ```shell
-sudo docker start | stop | restart | stats wordpress
+sudo docker start | stop | restart  wordpress
+sudo docker start | stop | restart  wordpress-db
+sudo docker start | stop | restart  phpmyadmin
 ```
 
 ### CLI{#cli}
