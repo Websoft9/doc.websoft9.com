@@ -12,288 +12,206 @@ tags:
 
 You can use WordPress integrated other software for content management construction.
   
-## WordPress 与 Discuz 双应用{#wordpress-discuz}
+## Avada topic guide {# Avada}
 
-WordPress&Discuz 预装包部署后，浏览器访问：*https://服务器公网ip/9panel* 开始安装向导。
-
-**注意**：应用是否通过域名访问，对应的安装步骤不同，请选择合适的方案：
-
-### 方式一：通过IP访问
-
-如果不打算使用域名访问网站，而是通过IP地址访问网站，安装非常简单：
-
-* WordPress安装入口：*https://服务器公网IP*，进入 [WordPress 安装向导](../wordpress#init)
-* Discuz安装入口：*https://服务器公网IP/discuz*，进入 [Discuz 安装向导](../discuz#init))
-
-### 方式二：共用一个域名访问
-
-共用一个域名（假设域名为www.abc.com），类似：
-
-* *https://www.abc.com*   访问 WordPress
-* *https://www.abc.com/discuz*   访问 Discuz
-
-这种情况下的安装步骤如下：
-
-1. 登录到域名管理面板，完成解析域名，确保域名解析成功
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/domain-websoft9.png)
-
-2. 分别完成安装向导
-   - 本地浏览器访问：*https://www.abc.com*   开始 [WordPress 安装向导](../wordpress#init)
-   - 本地浏览器访问：*https://www.abc.com/discuz*   进入 [Discuz 安装向导](../discuz#init))
-
-### 方式三：分别配置域名
-
-给 WordPress 和 Discuz 分别配置不同的域名，例如：
-
-* *https://wordpress.abc.com*  配置给 WordPress
-* *https://discuz.abc.com*    配置给 Discuz
-
-此场景下对应的安装步骤如下：
-
-1. 确保域名解析成功
-
-3. 通过 WinSCP 连接服务器，进入*/etc/httpd/conf.d*目录，修改域名的配置文件，绑定各自的域名。 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress-discuz/wpdz-vhostconf-1-websoft9.png)
-
-   - WordPress域名绑定：请修改“vhost.conf”里面的域名信息，然后保存
-   - Discuz域名绑定：请修改“discuz.conf.范例”里面的域名信息，保存后再去掉“.范例”后缀使之生效
-
-4. 使用 WinSCP 重启服务 或 云控制台重启服务器
-   ```
-   systemctl restart httpd
-   ```
-5. 分别完成安装向导
-   - 本地浏览器访问：*https://wordpress.abc.com*   进入 [WordPress 安装向导](../wordpress#init)
-   - 本地浏览器访问：*https://discuz.abc.com*   进入 [Discuz 安装向导](../discuz#init))
-
-### FAQ
-
-#### 如何删除引导页面？
-
-打开IP地址显示的是引导页面，引导页面的作用是为了在镜像首次安装的时候给用户以有效提醒。
-
-请到 */data/wwwroot/default* 目录中删除引导页面相关的内容。删除的时候，一定要保留wordpress和discuz文件夹，删除后请清除浏览器缓存，这样引导页面就不会出现了
-
-#### 为什么默认打开是 WordPress？
-
-WordPress相比Discuz来说更为流行，以Wordpress为主页是大多数用户可能的选择。Wordpress对应的配置文件是vhost.conf，可以自行修改
-
-#### 安装的时候显示Discuz! Database Error?
-
-如果数据库名称、数据库账号与数据库密码填写与实际不符合，安装就会失败，显示“Discuz!DatabaseError”错误，具体解决办法：
-
-1. 使用phpMyAdmin（登录账号请使用discuz所用到的数据库账号）登录，验证你填写的数据库账号是否与实际匹配
-2. 请到服务器上删除./data/install.lock文件
-3. 通过网址：*https://ip/discuz/install* 或 *https://域名/install* 重装（一定要加上/install）
-  
-## Avada 主题指南{#avada}
-
-Avada是一款在热门的WordPress主题，设计简单大方，支持所见即所得的可视化编辑与页面布局，内置超过20个免费模板，能够基于模板快速构建网站。Avada在Themeforest上累计销量超过37万次，其他下载和二次分发不计其数。适用于企业站和相册站、电商站、博客站。
+Avada is a popular WordPress theme. Its design is simple and generous. It supports WYSIWYG visual editing and page layout. It has more than 20 free templates built in, and can quickly build websites based on templates. Avada has sold more than 370000 times on themeforest, and countless other downloads and secondary distributions. It is applicable to enterprise stations, photo album stations, e-commerce stations and blog stations.
 
 ![](https://photogallery.oss.aliyuncs.com/photo/1904996544835414/undefined/483d94c3-51bd-49ce-b5e8-2c86d62a448d.jpg)
 
-### 主题下载与安装
+### Topic: Download and installation
 
-Avada安装和下载有两种方式，请根据实际情况选择合适您的方式：
+There are two ways to install and download Avada. Please choose the right way according to the actual situation:
 
-方式一：使用Avada镜像安装包（推荐）
+Method 1: use Avada image installation package (recommended)
 
-* [阿里云WordPress镜像（含Aavad中文主题包）](https://market.aliyun.com/products/53616009/cmjj011415.html)
-* [腾讯云WordPress镜像（含Avada中文主题包）](https://market.cloud.tencent.com/products/1515#)
-* [华为云WordPress镜像（含Aavad中文主题包）](https://app.huaweicloud.com/all/?q=YXZhZGE)  
+* [Alibaba cloud WordPress image (including aavad Chinese theme pack)](https://market.aliyun.com/products/53616009/cmjj011415.html)
+* [Tencent cloud WordPress image (including Avada Chinese theme pack)](https://market.cloud.tencent.com/products/1515#)
+* [Huawei cloud WordPress image (including aavad Chinese theme pack)](https://app.huaweicloud.com/all/?q=YXZhZGE)
 
-方式二：到themeforest.net 购买[原版](https://themeforest.net/item/avada-responsive-multipurpose-theme/2833226)  
+Mode 2: go to themeforest Net to purchase [original](https://themeforest.net/item/avada-responsive-multipurpose-theme/2833226)
 
-方式三：在Websoft9下载主题自行安装
-* [Avada 7.1.1 官方原版下载](https://libs.websoft9.com/apps/wordpress/avada7.1.1-en.zip)
-* [Avada 6.2 汉化版下载](https://libs.websoft9.com/apps/wordpress/avada6.2-cn.zip)
+Method 3: download the theme on websoft9 and install it yourself
+
+*[Avada 7.1.1 official original download](https://libs.websoft9.com/apps/wordpress/avada7.1.1-en.zip)
+*[Avada 6.2 Chinese version download](https://libs.websoft9.com/apps/wordpress/avada6.2-cn.zip)
 
 ---
 
 **FAQ**
 
-* 镜像包方式中的Avada有没有授权码？
-没有授权码，但可以正常使用
+*Is there an authorization code for Avada in the image package mode?
+There is no authorization code, but it can be used normally
 
-* Avada授权码有什么作用？
-可以在线升级主题和导入模板
+*What is the function of Avada authorization code?
+You can upgrade themes and import templates online
 
-### 启用 Avada 主题
+### Enable Avada theme
 
-如果你的 WordPress 预装包中包含了 Avada 主题，请参考本节完成 Avada 启用和模板导入：
+If your WordPress pre package contains Avada theme, please refer to this section to complete Avada enabling and template import:
 
-#### 在线导入 Avada 模板
+#### Import Avada template online
 
-完成镜像安装之后，WordPress前台页面并没有模板的效果，请勿在这个时候误以为 Avada 没有高大上的效果而放弃它，那就太可惜了。实际上Avada内置了20+个免费模板，均可以在线导入。步骤如下：
-
-1. 通过后台-插件，选择所有插件后全部启用  
+After completing the image installation, the WordPress foreground page does not have the effect of the template. Don't give up Avada at this time because it doesn't have the effect of being tall. It's too bad. In fact, Avada has built-in 20 + free templates, all of which can be imported online. The steps are as follows:
+1. Enable all plug-ins after selecting all plug-ins through background plug-ins
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-enableplugins-websoft9.png)
 
-2. 后台-Avada-演示，进入Avada演示界面 
+2. Background Avada demo, enter Avada demo interface
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/avada/avada-getdemo-websoft9.png)
 
-3. 选择一个演示，可以进行“预览”和“导入”两种操作
+3. Select a presentation to perform "Preview" and "import"
 
-4. 以其中“Science”为例，点击导入，导入内容为“全部”，点击“导入”按钮 
+4. Take "science" as an example. Click Import. The imported content is "all". Click the "import" button
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/avada/avada-demoall-websoft9.png)
 
-5. 系统会有一个提示，直接点击OK，进入演示导入过程 
+5. There will be a prompt. Click OK to enter the demonstration import process
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/avada/avada-demook-websoft9.png)
 
-6. 演示导入完成后，系统会提示“完成”（少数时候受制于网络原因，导入可能不成功，需要多次尝试） 
+6. After the demo import is completed, the system will prompt "complete" (in a few cases, due to network reasons, the import may not succeed, and multiple attempts are required)
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/avada/avada-democomplete-websoft9.png)
 
-7. 点击“完成”，回到演示列表页面，会看到“Science”的状态已经为完全导入了。如果导入不成功，会显示部分导入 
+7. Click "finish" to return to the demo list page, and you will see that the status of "science" has been fully imported. If the import is unsuccessful, partial import will be displayed
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/avada/avada-democomplete2-websoft9.png)
 
-8. 在回到前台页面，看看模板的效果
+8. Go back to the front page to see the effect of the template
 
-#### 在线卸载 Avada 模板
+#### Uninstall Avada template online
 
-导入的模板可以在线卸载（清除干净），如果你想导入新的模板，请先卸载已有模板，卸载步骤如下：
+The imported template can be uninstalled online (cleaned). If you want to import a new template, please uninstall the existing template first. The uninstallation steps are as follows:
 
-1. 后台-Avada-演示，找到要卸载的演示，点击“修改” 
+1. Background Avada demo, find the demo to uninstall and click "modify"
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/avada/avada-uninstall-websoft9.png)
-2. 勾选“卸载”，点击移除按钮，开始卸载
-3. 卸载成功，系统会提示完成
+2. Check "uninstall" and click the "remove" button to start uninstalling
+3. The uninstallation is successful, and the system will prompt completion
 
+### build a website with Avada theme by 9 steps
 
-### 使用 Avada 主题9步建站 
+After familiarizing ourselves with WordPress, we familiarize ourselves with Avada through the following nine steps. At the same time, we modify the previously imported demo page into our own page, and then we have completed the preliminary production of a website.
 
-在熟悉了WordPress之后，我们通过如下9个步骤的实践来熟悉Avada，同时将前面导入的演示页面修改成我们自己的页面，那么也就完成了一个网站的初步制作。
+#### Step 1: general setting and configuration of website
 
-#### 第一步 网站通用设置与配置
+Avada adopts a configuration mode of work, that is, the layout, style, color, text, header, footer, background, etc. of the website are set through the background system, which can meet personalized needs without any programming.
 
-Avada采用的是配置式的工作方式，即网站的布局、风格、颜色、文字、页眉、页脚、背景等都是通过后台系统设置出来的，无需任何编程就可以应对个性化的需求。
-
-后台-外观-主题选项，我们就进入了如下配置管理界面：
+Background - appearance - theme, we enter the following configuration management interface:
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/avada/avada_gsetting-websoft9.jpg)
 
-**布局：**对网站内容区的宽度进行设置，一般建议布局采用宽屏模式，网站宽度设置为：1140px；
+**Layout:** Set the width of the content area of the website. Generally, it is recommended to use the widescreen mode for layout. The width of the website is set to 1140px;
 
-**菜单：**菜单是网站最重要的部分，设置也非常灵活。为了能够快速上手，我们只对“主菜单”和“手机菜单”的内容进行设置
+**Menu:** The menu is the most important part of the website, and the setting is also very flexible. In order to get started quickly, we only set the contents of "main menu" and "mobile menu"
 
-**响应式：**响应式是即多屏幕自适应，默认请开启；
+**Responsive:** Responsive is multi screen adaptation, please turn it on by default;
 
-**颜色：**系统预设了10个颜色皮肤（注意是皮肤），尽量选择一个与您企业logo颜色相近似的皮肤颜色。也可以自定义，但自定义颜色需要对所有与颜色有关的设置中进行操作
+**Color:** The system presets 10 color skins (note that it is skin), and try to choose a skin color that is similar to the color of your enterprise logo. You can also customize the color, but you need to operate on all color related settings
 
-**页眉：**即网站的顶部区域，通常网站所有页面都使用同样的页眉，以保持网站的整体风格统一。
+**Header:** That is, the top area of the website. Generally, all pages of the website use the same header to maintain the overall style of the website.
+*  Header position: top of general selection
+*  Header layout: there are 6 options in total. It is recommended to select the first one
+*  Header style: used by advanced users to change the CSS of the header
+*  Top header: when the page is scrolling upward, the header is fixed at the top of the browser. This is the top header. Select on by default to maintain a good access experience
 
-*   页眉位置：一般选择顶部
-*   页眉布局：一共6种选择，建议选择第一种
-*   页眉样式：对页眉的css进行更改，高级用户使用
-*   置顶页眉：页面在向上滚动的时候，页眉固定便在浏览器的顶部位置，这个就是置顶页眉。默认选择开启，保持较好的访问体验
+**Logo：** That is, manage your own website logo. The system can set the main logo, the top header logo, the mobile logo, and the logo on the high-definition screen separately. You can also upload only one main logo, and the others will call this logo automatically
 
-**Logo：**即管理自己网站的logo，系统可以对主logo、置顶页眉logo、移动端logo、高清屏幕的logo分别进行设置，也可以只上传一个主logo，其他自动调用这个logo
+**Icon: ** is what we often call favicon ICO, which is displayed on the tabs of the browser, is very important. The size of the default icon website favicon is 16px x 16px.
 
-**图标：**即我们常说的favicon.ico，显示在浏览器的Tabs上，非常重要。默认图标网站Favicon的大小为：16px x 16px。
+**Page title bar: ** as the name implies, the title area of a page is below the menu bar (if there is a slider, it is generally below the slider). The content displayed in the page title bar of each page is different. Breadcrumb navigation is what we often call "current path of website"
 
-**页面标题栏：**顾名思义即页面的标题区域，是在菜单栏的下方（如果有Slider的话一般在Slider的下方），每个页面的页面标题栏显示的内容有差异。面包屑导航即我们常说的“网站当前路径”
+**Sliding bar: ** refers to the scalable content opened by "+" in the upper right corner of the website, which is recommended to be closed by default
 
-**滑动栏：**指的是网站右上角通过“+”来开启的伸缩内容，默认建议关闭
+**Footer: ** refers to the bottom area of the website, which is divided into the footer content area and the footer copyright area, of which the footer copyright area is at the bottom of the website. The footer content area in Avada is controlled and displayed through widgets. The number of footer columns is the number of content blocks divided by the footer content area. The default is 4
 
-**页脚：**即网站的底部区域，分为页脚内容区和页脚版权区，其中页脚版权区在网站的最底部。Avada中页脚内容区是通过小工具来控制显示的，页脚列数即页脚内容区进行分割的内容块数，默认为4
+**Sidebar: ** mainly defines the general side content area of the web page, which is used by advanced users
 
-**侧边栏：**主要对通用性的网页侧边内容区进行定义，高级用户使用
+**Background: ** website background image settings
 
-**背景：**网站背景图片设置
+**Layout: ** that is, website layout, from font size to h1-h6 Title Definition, is one of the most important settings of the website. For the font in the body layout, we generally choose "Microsoft YaHei", with a font size of 14. The title font is also selected as "Microsoft YaHei" by default.
 
-**版式：**即网站排版，设计到字体大小、H1-H6标题定义，是网站最重要的设置部分之一。正文版式中的字体，我们一般选择“微软雅黑”，字体大小为14。标题字体也默认选择“微软雅黑”比较合适。
+**Short code style: ** short code is a short code that inserts HTML code, which is a function expansion scheme provided by WordPress and suitable for advanced users
 
-**简码风格：**简码是插入html代码的短代码，这是WordPress提供的一中功能扩展方案，适合高级用户使用
+**Blog: ** that is, article management. Here, you can personalize the layout design of article classification and article details, and control the display of content elements. Please keep the default settings
 
-**博客：**即文章管理，这里可以对文章分类、文章详情进行个性化的版式设计，内容元素显示控制，请保持默认设置
+**Portfolio: ** i.e. case management, in the form of text management of mixed arrangement of text and text, just keep the default setting
 
-**作品集：**即案例管理，表现形式为图文混排的文字管理，保持默认设置即可
+**Social media: ** enter and set the icons and links of social media. The entered social media can be displayed in the header or footer. You can control the display of "header social icon" and "footer social picture" respectively. The "social sharing box" under this category is mainly used to set page sharing;
 
-**社交媒体：**对社交媒体的图标和链接进行录入和设置。录入的社交媒体可以显示在页眉，也可以显示在页脚。可以通过“页眉社交图标”和“页脚社交图片”分别进行显示控制。此类别下的“社交分享盒”主要是对页面分享进行设置；
+**Slide: ** for advanced users
 
-**幻灯片：**高级用户使用
+**Elastic slides: ** Avada has disabled elastic slides, so there is no need to set them
 
-**Elastic幻灯片：**Avada已经禁用了Elastic幻灯片，无需设置
+**Light box: ** light box is the website automatically plays the picture when you click on it. This effect is called photosynthesis. Advanced user use
 
-**光盒：**光盒是点击图片的时候，网站自动对图片进行播放，这种效果即光合。高级用户使用
+Contact form:
 
-联系表：
+**Search page: ** set the display position of the search icon, the search content range, and the display method of the search results. Advanced users can use
 
-**搜索页面：**对搜索图标的显示位置、搜索内容范围、搜索结果显示方式进行设置，高级用户使用
+**Additional: ** for advanced users
 
-**附加：**高级用户使用
+**Advanced: ** used by advanced users
 
-**高级：**高级用户使用
+**Custom CSS: ** used by developers
 
-**自定义CSS：**开发者使用
+**Impor/Export: ** back up, export and import the contents of the general settings and configurations of the website. Ordinary users should use them with caution
 
-**导入/导出：**对网站通用设置与配置的内容进行备份和导出导入，普通用户慎用
+#### Step 2: home page production
 
-#### 第二步 首页制作
+In the Avada theme, the production principle of the home page is the same as that of other pages, but obviously the home page is more representative, so this chapter focuses on the online production of the home page.
 
-在Avada主题中，首页与其他页面的制作原理是一样的，但显然首页更具有代表性，因此本章重点介绍首页的在线制作。
-
-在学会制作前，请仔细阅读如下的首页布局图：
-
+Before learning to make, please carefully read the following home page layout:
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/avada/avada_indexmap-websoft9.jpg)
 
-如果我们通过4.1 网站通用设置与配置已经完成了页眉、页脚，那我们制作首页就非常简单了，只需要完成首页对应的Slider（轮播）和内容设置，再套用已经预设值好的页眉、页脚，首页就完成了。
+If we have completed the header and footer through the general settings and configuration of the 4.1 website, it is very simple for us to make the home page. We only need to complete the slider (rotation) and content settings corresponding to the home page, and then apply the preset header and footer to complete the home page.
+There are two ways to make a home page, including creating a new page, naming it home page, or changing an existing home page. Here we assume to create a new homepage:
 
-制作首页有两种方式，包括：新建一个页面，命名为首页或在对一个已有的首页页面进行更改。在这里我们假设新建一个首页：
-
-1、后台-页面-新增页面，我们会看到如下页面
+1. Background - Page - new page, we will see the following page
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/avada/avada-addnewpage-websoft9.jpg)
 
-上图就是一个页面制作界面，其中“Fusion页面构建器”为可视化模式，“默认编辑器”为code编辑模式，对于普通用户，我们选择可视化编辑模式
+The above figure is a page making interface, in which the "fusion page builder" is in the visual mode and the "default editor" is in the code editing mode. For ordinary users, we choose the visual editing mode
 
-四个Tap，分别是列选项、构建器元素、自定义模板、预定模板。
+The four taps are column options, builder elements, custom templates, and scheduled templates.
 
-列选项即css中的Div、行、列，全宽包含容器相当于一个全宽的div，div中可以容纳各种不同宽度的列。系统对列进行了比例划分归类，分别是1/1,1/2,1/3等
+Column options are div, row and column in CSS. The full width containment container is equivalent to a full width div, which can accommodate columns of various widths. The system classifies the columns by proportion, which are 1/1, 1/2, 1/3, etc
 
-构建器元素还需要自己反复探索
+The builder element needs to be explored repeatedly
 
-自定义模板即对自己制作的页面保存为模板，后面新建页面就可以直接套用
+User defined template is to save the self-made page as a template, which can be directly applied to the new page later
 
-预定模板即系统内置的模板，可以套用但是不能更改
+The predetermined template is the built-in template of the system, which can be applied but cannot be changed
 
-2、如果制作首页？我们建议对一个已有的页面进行可视化编辑，这样更有感觉，学习的效率更高
+2. How to make a home page? We suggest that an existing page be visually edited, which makes it feel more and learning more efficient
 
-#### 第三步 轮播制作
+#### Step 3: production of rotation
 
-轮播（Slider）是现代网页制作的一种常见的展现方式，我们务必掌握这个技能。Avada采用知名的轮播插件Slider Revolution作为主要（唯一）的轮播工具。
+Slide is a common presentation method in modern web page production. We must master this skill. Avada uses the famous carousel plug-in slider revolution as the main (only) carousel tool.
 
-轮播的制作和使用步骤如下：
+The production and use steps of rotation are as follows:
 
-1、后台- Slider Revolution-新建滑块
-
+a. Background - slider revolution - create a new slider:
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/plugins/Revolutionslider/3bc66360.jpg)
 
-2、输入滑块名称，选择布局和样式，保存。轮播文件就新建好了
-
+b. Enter the name of the slider, select the layout and style, and save. The rotation file is created
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/plugins/Revolutionslider/revs-new.jpg)
 
-3、点击“Slider Editor”标签，进入轮播项的设计与处理
-
+c. Click the "slider editor" tab to enter the design and processing of carousel items
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/plugins/Revolutionslider/6823997d.png)
 
-接下来，我们就像制作ppt一样制作轮播了
+Next, we will make a round robin just like making ppt
 
-4、轮播完成之后，需要通过页面调用这个轮播。任意一个页面的页面选项，都有幻灯片的调用项。具体如下：
-
+d. After the round robin is completed, the round robin needs to be called through the page. The page options of any page have call items for slides. The details are as follows:
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/plugins/Revolutionslider/80427780.png)
 
-#### 第四步 菜单管理
+#### Step 4: menu management
 
-菜单是网站的核心入口，Avada可以把所有内容的标题和链接通过菜单的形式组织起来，然后供页面调用。
+The menu is the core entrance of the website. Avada can organize the titles and links of all contents in the form of menus, and then make them available to the page.
 
-那么是如何实现自己的菜单的呢？
+So how do you realize your own menu?
 
-1、后台-外观-菜单，进入菜单编辑页面
+a. Background-appearance-menu, enter the menu editing page
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-createmenu-websoft9.png)
 
-2、创建一个新菜单，名称定义为“我的菜单”（任意命名）
+b. Create a new menu with the name defined as "my menu" (any name)
 
-3、选择左侧菜单来源，分别添加到菜单中。显示位置选择“main navigation”为主菜单位置。菜单添加完成后，保存菜单
+c. Select the source of the menu on the left and add it to the menu respectively. Display position select "main navigation" as the main menu position. Save the menu after adding the menu)
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-createmenu002-websoft9.png)
 

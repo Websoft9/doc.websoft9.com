@@ -272,7 +272,7 @@ WordPress可以通过发送邮件找回密码，但前提条件是您的 WordPre
 
 ## 参数{#parameter}
 
-WordPress 应用中包含 PHP, Nginx, Apache, Docker, MariaDB, phpMyAdmin 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+WordPress 应用中包含 PHP, Nginx, MariaDB, phpMyAdmin 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 WordPress 运行时所有的 Container：
 
@@ -287,8 +287,9 @@ d43ecff5608c   wordpress:latest    "docker-entrypoint.s…"   39 seconds ago   U
 
 ### 路径{#path}
 
-WordPress 安装目录： */data/wwwroot/wordpress*  
-WordPress 配置文件： */data/wwwroot/wordpress/wp-config.php*   
+WordPress 安装目录： */data/apps/wordpress*  
+WordPress 配置文件： */data/apps/wordpress/data/wordpress/wp-config.php*   
+WordPress 数据目录： */data/apps/wordpress/data/mysql_data*   
 
 ### 端口{#port}
 
@@ -297,7 +298,7 @@ WordPress 配置文件： */data/wwwroot/wordpress/wp-config.php*
 | 端口号 | 用途                                           | 必要性 |
 | ------ | ---------------------------------------------- | ------ |
 | 9090   | phpmyadmin端口 | 可选   |
-| 3306   | mariadb的数据库端口 | 可选   |
+| 3306   | Mariadb的数据库端口 | 可选   |
 
 ### 版本{#version}
 
