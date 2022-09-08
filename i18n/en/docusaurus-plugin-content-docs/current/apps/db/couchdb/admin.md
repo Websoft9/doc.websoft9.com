@@ -21,7 +21,7 @@ Refer to the official docs：[Backing up CouchDB](https://docs.couchdb.org/en/la
 
 Refer to the official docs: [Upgrading CouchDB](https://docs.couchdb.org/en/latest/install/upgrading.html)
 
-## Troubleshoot{#troubleshoot}
+## Troubleshoot
 
 In addition to the CouchDB issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
