@@ -21,7 +21,7 @@ Refer to the official docs：[Backing up CouchDB](https://docs.couchdb.org/en/la
 
 Refer to the official docs: [Upgrading CouchDB](https://docs.couchdb.org/en/latest/install/upgrading.html)
 
-## Troubleshoot
+## Troubleshoot{#troubleshoot}
 
 In addition to the CouchDB issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
@@ -29,7 +29,7 @@ In addition to the CouchDB issues listed below, you can refer to [Troubleshoot +
 
 #### CouchDB support partitioned databases?
 
-CouchDB support [partitioned databases]().
+CouchDB support [partitioned databases](https://docs.couchdb.org/en/3.2.0/partitioned-dbs/index.html).
 
 #### CouchDB have connection restrictions?
 
