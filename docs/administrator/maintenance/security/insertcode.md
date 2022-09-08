@@ -27,15 +27,24 @@ slug: /administrator/security_insertcode
    
    # 查看资源占用
    top
+   pstree
    
-   # 查看账号
+   # 列出所有账号
    cat /etc/passwd
    
-   # 查看登录日志
+   # 查看登录失败的日志（看有哪些外部尝试登录的攻击）
    lastb
    
-   # 检测是否有 SSH 隧道（外部绕开正常登录的手段）
+   # 查看登录成功的日志
+   last
+   
+   # 检测是否有 SSH 隧道（scp 登录或隧道登录会显示 @notty）
    ps -ef | grep -v grep| grep "sshd: root@notty"
+   
+   # 多维度检测 ssh 登录列表
+   netstat -antup | grep ssh
+   ps auxf | grep ssh
+   ps auxf | grep notty
    
    # 检查定时任务
    crontab  -l
@@ -50,10 +59,10 @@ slug: /administrator/security_insertcode
 
 3. 登录WordPress后台，安装安全插件[Wordfence Scan Enabled](https://wordpress.org/plugins/wordfence/)
 
-5. 运行Wordfence Scan Enabled，启动网站健康检查
+5. 运行 Wordfence Scan Enabled，启动网站健康检查
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-wordfence-websoft9.png)
    
-4. 对于“Critical”标记的结果，手工一一处理
+4. 对于【Critical】标记的结果，手工一一处理
 
 ## 工具
 
