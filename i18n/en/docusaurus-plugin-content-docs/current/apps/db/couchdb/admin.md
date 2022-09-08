@@ -12,7 +12,7 @@ This chapter is special guide for CouchDB maintenance and settings. And you can 
 
 ## Maintenance guide
 
-### CouchDb Backup
+### CouchDB Backup
 
 CouchDB has three different types of files it can create during runtime:Database files，Configuration files，Log files 
 Refer to the official docs：[Backing up CouchDB](https://docs.couchdb.org/en/latest/maintenance/backups.html)
@@ -23,7 +23,7 @@ Refer to the official docs: [Upgrading CouchDB](https://docs.couchdb.org/en/late
 
 ## Troubleshoot{#troubleshoot}
 
-In addition to the CouchDb issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
+In addition to the CouchDB issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
 ## FAQ{#faq}
 
