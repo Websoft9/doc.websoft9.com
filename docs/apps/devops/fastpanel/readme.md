@@ -49,11 +49,27 @@ FASTPANEL 面板是可视化的服务器管理软件，支持快速安装LAMP/LN
 
 下面以 **创建网站** 作为一个任务，帮助用户快速入门：
 
-1. 首页选择手动创建一个网站
-2. 输入域名后，选择下一步
-3. 点击【创建网站】
-4. 您的网站可以正常访问了
+为了创建网站通过域名访问，需要做如下准备：
+1. 申请网站域名并解析到当前服务器公网IP
+2. 编辑首页网站IP，将其设置为公网IP
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/fastpanel/fastpanel-site01-websoft9.png)
+   
+3. 主菜单选择【管理】->【IP management】，禁用172.17.0.1，并将内网IP和公网IP关联，点击【保存】
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/fastpanel/fastpanel-site02-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/fastpanel/fastpanel-site03-websoft9.png)
+   
+4. 进入首页，点击【创建网站】，选择手动创建一个网站
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/fastpanel/fastpanel-site04-websoft9.png)
+   
+5. 输入申请域名后，选择下一步
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/fastpanel/fastpanel-site05-websoft9.png)
+   
+6. 点击【创建网站】，网站创建成功
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/fastpanel/fastpanel-site06-websoft9.png)
 
+7. 通过浏览器输入域名即可访问
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/fastpanel/fastpanel-site07-websoft9.png)
+   
 ## FASTPANEL 常用操作{#guide}
 
 ### 安装应用程序
