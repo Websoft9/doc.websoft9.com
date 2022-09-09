@@ -9,8 +9,9 @@ tags:
 
 # 快速入门
 
-FASTPANEL 介绍
-
+FASTPANEL 面板是可视化的服务器管理软件，支持快速安装LAMP/LNMP/网站多项服务器管理功能。可以通过 Web 端轻松管理服务器，提升运维效率。例如：管理网站、管理文件、邮件、防火墙等功能。
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/fastpanel/fastpanel-show-websoft9.png)
+   
 部署 Websoft9 提供的 FASTPANEL 之后，请参考下面的步骤快速入门。
 
 ## 准备{#prepare}
@@ -42,18 +43,29 @@ FASTPANEL 介绍
 
 **进入初始化页面时，页面报警：面临潜在的安全风险？**  
 
-这是因为没有申请Https证书提示的安全警告，请点击【接受风险并继续】。
+这是因为没有申请Https证书提示的安全警告，请点击【接受风险并继续】继续操作即可。
 
 ## FASTPANEL 使用入门{#quickstart}
 
-下面以 **××××** 作为一个任务，帮助用户快速入门：
+下面以 **创建网站** 作为一个任务，帮助用户快速入门：
 
 ## FASTPANEL 常用操作{#guide}
 
 ### 重置管理员密码{#resetpw}
 
-忘记管理员密码时，请参考如下方案重置密码：  
+忘记管理员密码时，请参考如下流程方案重置密码：  
 
+1. 使用 root 密码通过 SSH 连接到您的服务器
+   ```
+   ssh root@your.server
+   ```
+
+2. 修改 fastuser 用户的密码之后，您可以使用设置的新密码登录面板
+   ```
+   passwd fastuser
+   ```
+
+ > FASTPANEL 的管理员用户也是服务器的普通用户fastuser
 
 ## 参数{#parameter}
 
