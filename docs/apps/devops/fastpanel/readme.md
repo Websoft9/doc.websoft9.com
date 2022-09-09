@@ -56,6 +56,19 @@ FASTPANEL 面板是可视化的服务器管理软件，支持快速安装LAMP/LN
 
 ## FASTPANEL 常用操作{#guide}
 
+### 安装应用程序
+
+下面以 **安装PHP7.4** 为例，展示如何安装新的应用程序：
+
+1. 后台界面，主菜单选择【设置】->【应用程序】
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/fastpanel/fastpanel-install1-websoft9.png)
+   
+2. 在应用程序列表，分页寻找PHP7.4，点击安装按钮
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/fastpanel/fastpanel-install2-websoft9.png)
+   
+3. 稍后PHP7.4已经正常安装成功
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/fastpanel/fastpanel-install3-websoft9.png)
+   
 ### 重置管理员密码{#resetpw}
 
 忘记管理员密码时，请参考如下流程方案重置密码：  
