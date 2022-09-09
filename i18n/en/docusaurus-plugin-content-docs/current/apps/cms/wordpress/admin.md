@@ -29,36 +29,34 @@ In order to make WordPress run more efficiently, easy to maintain, and easy to m
 9. The content of the website is king. Please concentrate on the update of the content and the establishment of the knowledge base.
 10. Please put large files such as video in other storage.
 
-### WordPress 使用外部图片
+### WordPress use external images
 
-当 WordPress 的图片超过 500 张的时候，建议将图片存放到外部对象存储中（OSS），实现图片与主程序分离，加速网站访问。  
+When there are more than 500 pictures in WordPress, it is recommended to store the pictures in external object storage (OSS) to separate the pictures from the main program and speed up website access.
 
-1. 通过OSS的客户端工具，上传图片到对象存储
+1. Upload images to Object Storage through OSS client tools
 
-2. 获取对象存储中图片的地址，类似：
+2. Get the address of the image in the object store, similar to:
    ```
    https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-product-screenshot.png
    ```
-3. 登录Wordpress后台，依次打开：页面编辑-插入多媒体，将图片插入到WordPress系统中
+3. Log in to the WordPress background and open: Page Editing - Insert Multimedia, Insert Pictures into the WordPress System
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aliyun/aliyun-oss-adresstowp-websoft9.png)
 
 ### WordPress integration with OSS
 
-所谓 WordPress 与 对象存储集成实际上就是：将对象存储挂载到 WordPress 的 wp-upload 文件夹上。
+The so-called WordPress and object storage integration is actually: mount the object storage to the wp-upload folder of WordPress.
+The operation of mounting OSS is not simple. The following **OSS Upload plugin** is an example to illustrate the mounting method:
 
-挂载 OSS 的操作并不简单，下面**OSS Upload 插件** 为例说明挂载的方法：  
+1. Required to prepare object storage integration: Bucket, read and write permissions, URL, **Access Key** and **Secret Key**
 
-
-1. 准备对象存储集成所需的：Bucket，读写权限、URL、**Access Key**和**Secret Key**
-
-2. WordPress后台，安装 **OSS Upload** 插件并启用
+2. WordPress in the background, install the **OSS Upload** plugin and enable it
    
    ![OSS](https://libs.websoft9.com/Websoft9/blog/tmp/wordpress/zh/wordpress-oss-plugin-websoft9.png)
    
-3. 对 OSS Upload 插件进行配置，关联将要连接的对象存储
+3. Configure the OSS Upload plugin to associate the object storage to be connected
    ![OSS](https://libs.websoft9.com/Websoft9/blog/tmp/wordpress/zh/wordpress-oss-websoft9.png)
 
-4. 设置资源本地备份与同步
+4. Set up resource local backup and synchronization
   ![OSS](https://libs.websoft9.com/Websoft9/blog/tmp/wordpress/zh/wordpress-oss2-websoft9.png)
 
 ### WordPress Multisite
@@ -75,13 +73,13 @@ WordPress supports one server, one installation, one database, deploying multipl
     define( 'WP_ALLOW_MULTISITE', true );
     /* That's all, stop editing! Happy blogging. */
     ```
-
+    
    - Configure the network: Log in WordPress, , go to Tools -> Network Setup -> Install, and enable the multi-site network function
 
     ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-network-setup-websoft9.png)
 
     > If you want to use DNS access, it is recommended to set up DNS access when the main site is installed
-    > To access a website through a subdomain, you need to add a * wildcard during DNS resolution, such as *.websoft9.com
+    > To access a website through a subdomain, you need to add a wildcard during DNS resolution, such as *.websoft9.com*
 
 3. Modify the configuration: insert the system-generated configuration information into the wp-config.php file, and replace the .htaccess file
    
@@ -93,7 +91,6 @@ WordPress supports one server, one installation, one database, deploying multipl
 5. Multi-site management: re-login to WordPress，  go to My Sites- > Network Admin, you can view the dashboard, multi-site management, theme and plug-in maintenance and other operations
    
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-sites-admin-websoft9.png)
-
 
 ### Backup and Restore
 
@@ -138,9 +135,9 @@ Sometimes, you can't upgrade WordPress by On-Click for the reason of networ, man
 2. Log in to Cloud Server and go to the [WordPress root directory](../wordpress#path)
 3. Delete the `wp-admin` and `wp-includes` 
 4. Upload local WordPress to Cloud Server, cover all files if have the same file name
-5. 重新访问WordPress，可能会出现下图所示的数据库升级步骤
+5. Revisit WordPress, the database upgrade steps shown in the image below may appear
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-update-db-websoft9.jpg)
-6. 点击【升级WordPress数据库】即可
+6. Click [Upgrade WordPress Database]
 
 ### Plugins upgrade
 
@@ -156,23 +153,23 @@ Most of the time,you may using the business theme which don't provider online up
   ![Wordpress theme upgrade](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-themesupgrade-websoft9.png)
 3. Enable the theme when complete the installation
 
-### 代码植入处理{#insertcode}
+### Code implantation{#insertcode}
 
-WordPress 由于被广泛使用，导致安全漏洞被无限放大，其中WordPress网站被植入第三方代码是最常见的安全故障。
+WordPress due to its widespread use, security vulnerabilities are infinitely magnified, among which WordPress sites are implanted with third-party code is the most common security failure.
 
-* 源码中植入非常明显的代码
-* 源码中植入难以察觉的代码
-* 数据库中被植入
+* Implant very obvious code in the source code
+* Imperceptible code is embedded in the source code
+* implanted in the database
 
-经过实践，下面介绍一种简单有效的处理办法
+After practice, the following introduces a simple and effective treatment method
 
-1. 通过在线安全检查网站[sitecheck.sucuri.net](https://sitecheck.sucuri.net)进行排查，初步定义被植入的内容
-2. 登录WordPress后台，安装安全插件[Wordfence Scan Enabled](https://wordpress.org/plugins/wordfence/)
-3. 运行Wordfence Scan Enabled，启动网站健康检查
+1. Check website through online security[sitecheck.sucuri.net](https://sitecheck.sucuri.net) conduct an investigation to initially define the implanted content
+2. Log in to the WordPress backend and install the security plugin[Wordfence Scan Enabled](https://wordpress.org/plugins/wordfence/)
+3. Run Wordfence Scan Enabled, start the website health check
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-wordfence-websoft9.png)
-4. 对于“Critical”标记的结果，手工一一处理
+4. For the results marked "Critical", manually process them one by one
 
-其他扫描工具：
+Other scanning tools:
 
 1. Quttera Web Malware Scanner 
 2. Anti-Malware Security and Brute-Force Firewall
@@ -181,14 +178,14 @@ WordPress 由于被广泛使用，导致安全漏洞被无限放大，其中Word
 
 In addition to the WordPress issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
-#### 配置HTTPS后，网站部分资源无法加载？{#httpsmore}
+#### After configuring HTTPS, some resources of the website cannot be loaded?{#httpsmore}
 
-在完成 https 的配置后，可能会出现网站无法加载 css 等静态文件，特别是是对于经过二次开发过的 WordPress 会更为常见。
+After completing the configuration of https, it may happen that the website cannot load static files such as css, especially for WordPress that has undergone secondary development.
 
-问题原因及对策
+Causes of problems and countermeasures:
 
-1. 特殊插件导致？ 某些插件自带 HTTPS 开关，需要根据实际情况开启或关闭。 
-2. 开了 CDN 服务？ 编辑 WordPress 根目录下的 **wp-config.php** 文件，增加如下代码
+1. Caused by special plugins? Some plugins come with an HTTPS switch, which needs to be turned on or off according to the actual situation.
+2. Do you have CDN service enabled? Edit the **wp-config.php** file in the WordPress root directory and add the following code
 
     ```
        define('FORCE_SSL_ADMIN', true);
@@ -197,66 +194,66 @@ In addition to the WordPress issues listed below, you can refer to [Troubleshoot
        define( 'CONCATENATE_SCRIPTS', false );
     ```
 
-#### HTTPS 访问 “....并非完全安全”？
+#### HTTPS access "....not completely secure"?
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/avada/https-notallsafe-websoft9.png)
 
-原因是由于 WordPress 网页中含有一部分 HTTP 开头的图片等静态链接资源，需要手工逐一修改
+The reason is that the WordPress web page contains some static link resources such as images starting with HTTP, which need to be manually modified one by one
 
-####  出现病毒导致乱码？
+####  Viruses cause garbled characters?
 
-由于被广泛使用，导致 WordPress 安全漏洞被无限放大，其中WordPress网站被[植入第三方代码](#insertcode)是最常见的安全故障。 
+Due to its widespread use, WordPress security vulnerabilities are infinitely magnified, with WordPress sites being [inserted with third-party code](#insertcode) the most common security failure.
 
-#### 频繁出现数据库连接错误？
+#### Frequent database connection errors?
 
-诊断原因：可能性最大的原因是内存不足导致 WordPress 数据库运行异常  
-解决方案：增加内存+启用CDN  
+Diagnosing the cause: The most likely cause is insufficient memory causing the WordPress database to behave abnormally
+Solution: increase memory + enable CDN
 
-> CDN可以在给网站加速的同时，大大降低服务器内存的开销
+> CDN can greatly reduce the overhead of server memory while accelerating the website
 
-#### 上传图片出错？
+#### Error uploading pictures?
 
-WordPress上传文件出错，有几种可能性： 
+There are several possibilities for the WordPress upload file error:
 
-1. 图片大小超过服务器限定的要求  
-解决方案：请参考本章环境管理-&gt;PHP配置中的修改上传文件大小  
+1. The image size exceeds the server limit
+Solution: Please refer to this chapter Environment Management -> Modifying the Upload File Size in PHP Configuration
 
-2. 图片实际的格式与后缀不一致。  
-解决方案：例如一个 WordPress9.jpg的图片的真实格式是Wordpress9.jpeg，上传的时候会报错，如果把后缀改为jpeg，上传正常。实际上，真实格式与后缀不一致的时候，在Windows系统的文件中也不会有预览效果
+2. The actual format of the picture is inconsistent with the suffix.
+Solution: For example, the real format of a WordPress9.jpg image is WordPress9.jpeg, and an error will be reported when uploading. If the suffix is ​​changed to jpeg, the upload will be normal. In fact, when the real format is inconsistent with the suffix, there will be no preview effect in the file of the Windows system.
 
-3. 权限问题（IIS中比较常见）
+3. Permission issues (common in IIS)
 
-#### 正在执行例行维护请一分钟后回来？
+#### Performing routine maintenance. Please come back in a minute?
 
-出现这个提示的原因是在网站Wordpressinstallation directory下生成了.maintenance文件
+The reason for this prompt is that the .maintenance file is generated under the Wordpressinstallation directory of the website
 
-* 如果存在将其删除即可,恢复正常. 
-* 如果不存在,那么新建一个.maintenance，内容为空白，刷新，恢复正常后再删除它
+* If it exists, delete it and return to normal.
+* If it does not exist, then create a new .maintenance, the content is blank, refresh, and then delete it after returning to normal
 
-#### 不能发送邮件？
+#### Can't send mail?
 
-WordPress 默认是通过mail()函数发送邮件，必须要求服务器本身配置好了邮件功能。  
+By default, WordPress sends emails through the mail() function, and the server itself must be configured with the mail function.
 
-实际中，将服务器改造成邮件服务器，是一件非常复杂的工作，且难以维护。因此，建议安装一个SMTP插件来解决发送邮件问题：WP-Mail-SMTP
+In practice, transforming the server into a mail server is a very complicated task and difficult to maintain. Therefore, it is recommended to install an SMTP plugin to solve the problem of sending mail: WP-Mail-SMTP
 
-#### 网络不通导致无法升级？
+#### Unable to upgrade due to network failure?
 
-WordPress 升级包地址也是国外的。有时候由于网络原因，升级地址不可用。如果您迫切需要升级，请参考：[WordPress手工升级文档](#mupgrade)
+The WordPress upgrade package address is also abroad. Sometimes due to network reasons, the upgrade address is not available. If you urgently need to upgrade, please refer to: [WordPress manual upgrade documentation](#mupgrade)
 
-#### 管理员失去权限，无法正常登录后台？
+#### The administrator has lost his authority and cannot log in to the background normally?
 
-WordPress 的后台管理是分权限的，而最高权限是超级管理员。当wordpress管理员因失去权限无法正常进入后台，可以通过进入PhpMyAdmin数据库管理工具，来进行权限恢复：
+The background management of WordPress is divided into permissions, and the highest authority is the super administrator. When the wordpress administrator cannot enter the background normally due to losing permissions, he can restore the permissions by entering the PhpMyAdmin database management tool:
 
-* 登录数据库管理工具phpMyAdmin:  http:// 服务器ip/phpMyAdmin/
-* 找到跟用户相关的数据表：wp_users和wp_usermeta;
-* 先进入wp_users,查看自己的管理员用户名，超级管理员用户id一般都是1，不是就修改；
-* 再进入wp_usermeta表，找到wp_user_level，wp_capabilities字段。如果对应账号wp_user_level的值不是10 ，请修改为10（超级管理员一半都是10，最高权   限）；查看wp_capabilities值，如果里面不是 “administrator”，可以直接改成：a:1:{s:13:"administrator";b:1;} ；
-* 重新登录。
+* Log in to the database management tool phpMyAdmin: http://server ip/phpMyAdmin/
+* Find data tables related to users: wp_users and wp_usermeta;
+* First enter wp_users, check your own administrator user name, the super administrator user id is generally 1, if not, modify it;
+* Enter the wp_usermeta table again and find the wp_user_level, wp_capabilities fields. If the value of the corresponding account wp_user_level is not 10, please change it to 10 (half of the super administrators are 10, the highest authority); check the wp_capabilities value, if it is not "administrator", you can directly change it to: a:1:{s:13 :"administrator";b:1;};
+* re-register.
 
-#### Wordpress 导入演示数据没权限？
+#### Wordpress does not have permission to import demo data?
 
-错误信息： You don't have permission to access /wp-admin/admin.php on this server?  
-解决方案：待研究
+Error message: You don't have permission to access /wp-admin/admin.php on this server?
+Solution: To be studied
 
 ## FAQ{#faq}
 
@@ -264,9 +261,9 @@ WordPress 的后台管理是分权限的，而最高权限是超级管理员。�
 
 Yes
 
-#### WordPress能建企业网站吗？
+#### Can WordPress build a corporate website?
 
-可以，全球34%的网站都是基于 WordPress 构建
+Yes, 34% of the world's websites are built on WordPress
 
 #### If there is no domain name, can I deploy WordPress?
 
@@ -299,6 +296,6 @@ find /data/wwwroot -type d -exec chmod 750 {} \;
 find /data/wwwroot -type f -exec chmod 640 {} \;
 ```
 
-#### 换回 Classic Editor 经典编辑器？
+#### Switching back to Classic Editor Classic Editor?
 
-Wordpress5.0 之后的版本，编辑器与之前有了明显的区别。这里不探讨编辑器孰优孰劣，我们发现编辑器升级之后，用户的主题无法适应新的编辑器，导致做不到可视化编辑。如果您希望主题可以可视化编辑，您必须启用经典编辑器。启用的方法非常简单，安装“Classic Editor”这个插件即可
+After Wordpress5.0, the editor is obviously different from before. We do not discuss the advantages and disadvantages of the editor here. We found that after the editor is upgraded, the user's theme cannot adapt to the new editor, resulting in visual editing. If you want the theme to be editable visually, you must enable the classic editor. The method of enabling is very simple, just install the "Classic Editor" plugin
