@@ -60,7 +60,7 @@ Below is for you to solve problem, and you can contact **[Websoft9 Support](./he
 
 ## WordPress QuickStart
 
-The following is **[WordPress uses Avada theme to build a website](./wordpress/solution#avada)** as a task, it helps users get started quickly.
+The following is ** xxx ** as a task, it helps users get started quickly.
 
 ## WordPress Setup
 
@@ -92,8 +92,10 @@ Complete **[Five steps for Domain](./administrator/domain_step)** ，Set the URL
 2. Save it
 
 > If after changing the domain name, some of the picture addresses in the website are still the original domain name, you need to manually correct them one by one
+
 > If you cannot access the background operation in step 3 after step 2 is completed, please visit the WordPress database and change the home and siteurl attributes in the option table to [new domain name]
-> Through the MySQL visualization tool phpMyAdmin that has been configured in websoft9(http://ip/phpmyadmin or http://ip:9090 )Perform shortcuts
+
+> Through the MySQL visualization tool phpMyAdmin that has been configured in websoft9(http://ip:phpmyadmin or http://ip:9090)Perform shortcuts
 
 
 ### HTTPS Additional Configure {#https}
@@ -133,7 +135,7 @@ If you use WordPress with its own theme by default, you need to add ICP filing a
 
 2. Drag a text widget from the available widgets on the left to the footer 1 on the right
 
-3. Fill in the relevant information of the record number, add a link, and click the 【Enter】 button and the 【save】 button respectively
+3. Fill in the relevant information of the record number, add a link, and click the 【Enter】and the【save】respectively
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-beian.png)
 
 4. Refresh the page to see the effect
@@ -223,15 +225,15 @@ The woocommerce wechat payment plug-in is very simple to use. You can add wechat
 1. Install wechat payment plug-in (if you don't have Alipay plug-in, please buy it here)
 
 2. Obtain wechat official account appid, key, wechat payment key and wechat payment authorization directory
--Get appid(application ID) and appsecret (application key) of wechat official account appid (application ID) and appsecret (application key) are the authorization ID and password for wechat official account to communicate with the third-party website (WordPress). They are very important and must be filled in. Please log in to wechat public platform(https://mp.weixin.qq.com)Click development-configuration to get appid and appsecret
+-Get appid and appsecret of wechat official account application IDand application key are the authorization ID and password for wechat official account to communicate with the third-party website (WordPress). They are very important and must be filled in. Please log in to [wechat public platform](https://mp.weixin.qq.com), Click development-configuration to get appid and appsecret
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/plugins/woocommerce/wechatpay-help001-websoft9.png)
--Get wechat payment key and log in to wechat payment merchant platform（ https://pay.weixin.qq.com ）Find and set the key in account settings - API security. The key is 32 bits. Please note that it is reserved for use after obtaining the key
+-Get wechat payment key and log in to [wechat payment merchant platform](https://pay.weixin.qq.com) Find and set the key in account settings-API security. The key is 32 bits. Please note that it is reserved for use after obtaining the key
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/plugins/woocommerce/weichatpay-help002-websoft9.png)
 
-3. Add authorized payment directory on wechat public platform(https://mp.weixin.qq.com)Click - wechat payment - development configuration, and set the authorized payment directory. The authorized payment directory of wechat payment plug-in is: HTTPS://your domain/WP content/plugins/wechat Weixin payments for woocommerce/
+3. Add authorized payment directory on [wechat public platform](https://mp.weixin.qq.com).Click wechat payment-development configuration, and set the authorized payment directory. The authorized payment directory of wechat payment plug-in is: (https://your domain/WP content/plugins/wechat Weixin payments for woocommerce)
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/plugins/woocommerce/weichatpay-help003-websoft9.png)
 
-4. Set callback domain name on wechat public platform(https://mp.weixin.qq.com)-In development - Interface permissions, find - Web Services - web account modification authorization callback page domain name. The domain name is your website domain name. Pay attention to distinguish between WWW and without WWW;
+4. Set callback domain name on [wechat public platform](https://mp.weixin.qq.com). In development-Interface permissions, find Web Services-web account modification authorization callback page domain name. The domain name is your website domain name. Pay attention to distinguish between WWW and without WWW;
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/plugins/woocommerce/weichatpay-help004-websoft9.png)
 
 5. Configure wechat payment plug-in. Find wechat payment settings in woocommerce settings and fill in wechat official account appid and wechat payment key
