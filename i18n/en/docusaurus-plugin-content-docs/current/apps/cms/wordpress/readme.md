@@ -48,16 +48,6 @@ If you have installed Websoft9 WordPress, the following steps is for your quick 
 
 Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
-**Using Avada and other themes, when WordPress is upgraded, the page editing is garbled**
-
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/avada/wordpress-avadaeditp-websoft9.png)
-
-**Cause of problem**： After Wordpress upgrading to version 5.0, the default editor officially provided by WordPress has changed fundamentally, resulting in that the existing theme cannot adapt to the new WordPress editor core  
-
-**Solution**：Install a plug-in named "classic editor" and continue to use the old editor core 
-
-  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/avada/wordpress-classiceditor-websoft9.png)
-
 ## WordPress QuickStart
 
 The following is ** xxx ** as a task, it helps users get started quickly.
@@ -82,7 +72,7 @@ The following is ** xxx ** as a task, it helps users get started quickly.
    ![WordPress SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-mailss-websoft9.png)
 
 
-### DNS Additional Configure（Modify URL）{#dns}
+### DNS Additional Configure{#dns}
 
 Complete **[Five steps for Domain](./administrator/domain_step)** ，Set the URL for WordPress：
 
