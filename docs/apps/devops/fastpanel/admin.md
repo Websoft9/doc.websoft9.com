@@ -13,18 +13,25 @@ tags:
 
 ## 场景
 
-### FASTPANEL 备份与恢复
+### FASTPANEL 备份
+
+详情参考官方备份文档：[Creating backup plans](https://fastpanel.direct/wiki/en/creating-backup-plans-by-the-example-of-using-dropbox)
 
 ### FASTPANEL 升级
+
+默认情况下，FASTPANEL 根据 Cron 调度程序设置的调度自动更新。您无需执行任何其他操作即可更新面板。
+如果由于某种原因需要强制更新，请通过 SSH 执行以下控制台命令：
+```
+/usr/local/fastpanel2/app/updater
+```
 
 ## 故障排除{#troubleshoot}
 
 除以下列出的 FASTPANEL 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。  
 
-#### 更改域名导致无法访问 FASTPANEL ？
+#### 进入初始化页面时，页面报警：面临潜在的安全风险？
 
-#### 访问 FASTPANEL 出现 502 错误？{#502}
-
+这是因为没有申请Https证书提示的安全警告，请点击【接受风险并继续】继续操作即可。
 
 ## 问题解答{#faq}
 
