@@ -191,26 +191,30 @@ BT 域名绑定操作步骤：
 
 ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btwin/btwin-inti-websoft9.png)
 
-## 参数
+## 参数{#parameter}
 
-BT 应用中包含 Nginx, Docker 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+BT 应用中包含 Docker, Nginx 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
 
-下面仅列出 BT 本身的参数：
+通过运行 `docker ps`，查看 {{trademark}} 运行时所有的服务组件：   
+
+```bash
+CONTAINER ID   IMAGE                  COMMAND                  CREATED         STATUS                   PORTS                                                                                                                                                                                                                                          NAMES
+c528a9b3aa49   btpanel/baota:latest   "bash -c 'cat /my_cm…"   9 minutes ago   Up 8 minutes (healthy)   0.0.0.0:21->21/tcp, :::21->21/tcp, 0.0.0.0:80->80/tcp, :::80->80/tcp, 0.0.0.0:443->443/tcp, :::443->443/tcp, 0.0.0.0:8888->8888/tcp, :::8888->8888/tcp, 3306/tcp, 0.0.0.0:28->22/tcp, :::28->22/tcp, 0.0.0.0:9099->888/tcp, :::9099->888/tcp   bt
+```
 
 ### 路径{#path}
 
 <Tabs>
 <TabItem value="linuxpath" label="Linux" default>
 
-* 安装目录：*/www/server*  
-* 网站目录：*/www/wwwroot/default*  
-* Apache目录：*/www/server/httpd*  
-* Nginx目录：*/www/server/nginx*  
-* MySQL目录：*/www/server/mysql*  
-* PHP目录：*/www/server/php*  
-* Redis目录：*/www/server/redis*  
-* Memcached目录：*/usr/local/memcached*  
-* 日志目录：*/www/wwwlogs*
+* 安装目录：*/data/apps/bt/data/www/server*  
+* 网站目录：*/data/apps/bt/data/www/wwwroot/default*  
+* Apache目录：*/data/apps/bt/data/www/server/httpd*  
+* Nginx目录：*/data/apps/bt/data/www/server/nginx*  
+* MySQL目录：*/data/apps/bt/data/www/server/mysql*  
+* PHP目录：*/data/apps/bt/data/www/server/php*  
+* Redis目录：*/data/apps/bt/data/www/server/redis*  
+* 日志目录：*/data/apps/bt/data/www/wwwlogs*
 
 </TabItem>
 
@@ -238,14 +242,7 @@ BT 应用中包含 Nginx, Docker 等组件，可通过 **[通用参数表](./adm
 ### 服务
 
 ```shell
-sudo /etc/init.d/nginx start | stop | restart | reload
-sudo /etc/init.d/apache start | stop | restart | reload
-sudo /etc/init.d/mysql start | stop | restart | reload
-sudo /etc/init.d/pure-ftpd start | stop | restart | reload
-sudo /etc/init.d/pure-ftpd start | stop | restart | reload
-sudo /etc/init.d/redis start | stop | restart | reload
-sudo /etc/init.d/memcached start | stop | restart | reload
-sudo /etc/init.d/php-fpm-{52|53|54|55|56|70|71|72|73|74} start | stop | restart | reload
+sudo docker start | stop | restart | stats bt
 ```
 
 ### 命令行
@@ -271,4 +268,3 @@ $ bt
 ### API
 
 BT 没有提供 API
-
