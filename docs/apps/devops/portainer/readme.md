@@ -160,7 +160,7 @@ Portainer 数据目录：*/data/apps/portainer/data/portainer*
 ### 版本
 
 ```shell
-sudo docker respect portainer
+curl https://github.com/portainer/portainer/releases |grep Release |grep tag |head -1 |cut -d/ -f6 |cut -c 1-6
 ```
 
 ### 服务
