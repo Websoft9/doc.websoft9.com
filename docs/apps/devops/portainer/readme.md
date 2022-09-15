@@ -141,9 +141,8 @@ Portainer 应用中包含 Docker, Portainer 等组件，可通过 **[通用参�
 通过运行 `docker ps`，查看 Portainer 运行时所有的服务组件：   
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                           COMMAND                  CREATED        STATUS                  PORTS                                                                               NAMES
 c47fe38db3bf   portainer/portainer-ce:latest   "/portainer"             2 months ago   Up 13 days              8000/tcp, 9443/tcp, 0.0.0.0:9091->9000/tcp, :::9091->9000/tcp                       portainer
-ner
 ```
 
 ### 路径{#path}
