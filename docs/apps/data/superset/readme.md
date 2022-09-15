@@ -19,7 +19,7 @@ tags:
 ## 准备
 
 1. 在云控制台获取您的 **服务器公网 IP 地址**
-2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:80** 和 **TCP:9001** 端口是否开启
+2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:80** 和 **TCP:80** 端口是否开启
 3. 在服务器中查看 Superset 的 **[默认账号和密码](./user/credentials)**
 4. 若想用域名访问 Superset，务必先完成**[域名五步设置](./administrator/domain_step)** 过程
 
@@ -118,8 +118,6 @@ mssql+pymssql://username:password@server ip:port/database
 
 ```
 
-
-
 ### 更换 Logo
 
 如果打算用自己的 Logo 更换 Superset 容器中默认的 Logo，具体的步骤如下：
@@ -207,16 +205,16 @@ d6670fa1bc11   apache/superset:latest          "/usr/bin/docker-ent…"   About 
 
 ### 路径{#path}
 
-Superset 源码目录： */data/wwwroot/superset*  
-Superset 数据目录： */data/wwwroot/superset_home*  
-Superset 配置目录： */data/wwwroot/superset/docker*  
-Superset 配置文件： */data/wwwroot/superset/docker/pythonpath_dev/superset_config.py*
+Superset 源码目录： */data/apps/superset*  
+Superset 数据目录： */data/apps/superset/superset_home*  
+Superset 配置目录： */data/apps/superset/src/docker*  
+Superset 配置文件： */data/apps/superset/src/docker/pythonpath_dev/superset_config.py*
 
 ### 端口{#port}
 
-| 端口号 | 用途                                           | 必要性 |
-| ------ | ---------------------------------------------- | ------ |
-| 9001   | Superset 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
+除 80, 443 等常见端口需开启之外，以下端口可能会用到：  
+
+无
 
 ### 版本
 
