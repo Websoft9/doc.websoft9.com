@@ -18,18 +18,8 @@ tags:
 ## 准备
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:9000** 端口已经开启
+2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
 3. 若想用域名访问  Portainer，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
-4. 如果你部署了包含 Portainer 的Docker环境，请直接登录使用。否则，请先安装 Portainer：
-    ~~~
-    #通过命令安装 Portainer
-
-    docker volume create portainer_data
-    docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
-    cd /usr/libexec/docker/
-    sudo ln -s docker-runc-current docker-runc
-    ~~~
-
 
 ## Portainer 初始化向导
 
@@ -42,8 +32,7 @@ tags:
    ```
    运行服务状态查询命令，Docker 正常运行会得到 " Active: active (running)... " 的反馈
 
-
-2. 通过本地浏览器访问：*http://服务器公网IP:9000*， 直接进入 Portainer 界面
+2. 通过本地浏览器访问：*http://服务器公网IP*， 直接进入 Portainer 界面
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/docker/portainer/portainer-login-websoft9.png)
 
 3. 自行设置管理员账号密码，点击【Create user】
@@ -147,21 +136,27 @@ tags:
 
 ## 参数
 
-Portainer 应用中包含 Nginx, Docker 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+Portainer 应用中包含 Docker, Portainer 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
 
-下面仅列出 Portainer 本身的参数：
+通过运行 `docker ps`，查看 Portainer 运行时所有的服务组件：   
+
+```bash
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+c47fe38db3bf   portainer/portainer-ce:latest   "/portainer"             2 months ago   Up 13 days              8000/tcp, 9443/tcp, 0.0.0.0:9091->9000/tcp, :::9091->9000/tcp                       portainer
+ner
+```
 
 ### 路径{#path}
 
-Portainer 数据卷：*/var/lib/docker/volumes/portainer_data/_data*   
-
+Portainer 数据目录：*/data/apps/portainer/data/portainer*   
 
 ### 端口
 
+除 80, 443 等常见端口需开启之外，以下端口可能会用到：  
+
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
-| 9000   | 通过 HTTP 访问 Portainer  | 必选   |
-
+| 9091  | 通过 HTTP 访问 Portainer  | 可选   |
 
 ### 版本
 
