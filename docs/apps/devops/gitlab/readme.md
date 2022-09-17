@@ -28,7 +28,11 @@ tags:
 1. 本地电脑浏览器访问：*http://域名* 或 *http://服务器公网IP*，进入初始化页面 
    ![GitLab 登录](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-login-websoft9.png)
 
-2. 输入[默认账号密码](./user/credentials)，进入 GitLab 控制台
+2. 输入账号密码，进入 GitLab 控制台
+    ```
+    # 用户:root，密码：通过脚本查看
+    sudo docker exec -it gitlab grep 'Password:' /etc/gitlab/initial_root_password    
+    ```
    ![GitLab 后台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-backend-websoft9.png)
 
 3. 进入管理设置面板（Admin Area）  
@@ -201,51 +205,35 @@ GitLab 应用中包含 Docker, Portainer 等组件，可通过 **[通用参数�
 -sidekiq：用于在后台执行队列任务（异步执行）。  
 -unicorn：An HTTP server for Rack applications，GitLab Rails应用是托管在这个服务器上面的。
 
-GitLab 包含数十种组件([查看](https://docs.gitlab.com/ee/development/architecture.html#component-list))，通过 */opt/gitlab/version-manifest.txt* 查看服务器上所有组件名称和版本
+GitLab 包含数十种组件([查看](https://docs.gitlab.com/ee/development/architecture.html#component-list))，通过容器内路径 */opt/gitlab/version-manifest.txt* 查看所有组件名称和版本
+
+通过运行 `docker ps`，查看 GitLab 运行时所有的服务组件：   
+
+```bash
+CONTAINER ID   IMAGE                         COMMAND                  CREATED       STATUS                 PORTS                                                                               NAMES
+c5b22639c668   gitlab/gitlab-ce:latest       "/assets/wrapper"        2 hours ago   Up 2 hours (healthy)   443/tcp, 0.0.0.0:23->22/tcp, :::23->22/tcp, 0.0.0.0:9001->80/tcp, :::9001->80/tcp   gitlab
+49995b282a20   gitlab/gitlab-runner:latest   "/usr/bin/dumb-init …"   2 hours ago   Up 2 hours                                                                                                 gitlab-runner
+
+```
 
 ### 路径{#path}
 
 ##### GitLab
 
-GitLab 配置文件： */data/apps/gitlab/gitlab.rb*    
-GitLab 及所有组件配置： */opt/gitlab*  
-GitLab Repository 存储目录： */var/opt/gitlab/git-data*  
-GitLab 备份目录： */var/opt/gitlab/backups*
-
-##### Unicorn
-
-Unicorn 日志目录： */var/log/gitlab/unicorn*  
-
-##### Sidekiq
-
-Unicorn 日志目录： */var/log/gitlab/sidekiq*
-
-##### Nginx
-
-Nginx 日志目录: */var/log/gitlab/nginx*  
-Nginx 配置文件: */var/opt/gitlab/nginx/conf/nginx.conf*  
-GitLab 核心 Nginx 配置文件:  */var/opt/gitlab/nginx/conf/gitlab-http.conf*
-
-##### PostgreSQL
-
-PostgreSQL 安装目录： */var/opt/gitlab/postgresql*  
-PostgreSQL 日志目录: */var/log/gitlab/postgresql*   
-PostgreSQL-Exporter 日志目录： */var/log/gitlab/postgres-exporter*  
-PostgreSQL 数据目录： */var/opt/gitlab/postgresql/data*
-
-##### Redis
-
-Redis 安装目录： */var/opt/gitlab/redis*  
-Redis 日志目录： */var/log/gitlab/redis*
+GitLab 安装目录： */data/apps/gitlab*   
+GitLab 数据目录： */data/apps/gitlab/data/gitlab_data*  
+GitLab 日志目录： */data/apps/gitlab/data/gitlab_logs*  
 
 ### 端口{#port}
+
+除 80, 443 等常见端口需开启之外，以下端口可能会用到： 
 
 暂无特殊端口
 
 ### 版本
 
 ```shell
-gitlab-ctl status  | grep gitlab-workhorse
+docker exec -i gitlab head -n+1 /opt/gitlab/version-manifest.txt
 ```
 
 ### 服务
@@ -253,17 +241,8 @@ gitlab-ctl status  | grep gitlab-workhorse
 GitLab 提供的（[gitlab-ctl ](https://docs.gitlab.com/omnibus/maintenance/README.html#get-service-status)）可以很方便的管理各个组件的服务：
 
 ```shell
-sudo gitlab-ctl start | stop | restart | status reconfigure nginx
-sudo gitlab-ctl start | stop | restart | status reconfigure unicorn
-sudo gitlab-ctl start | stop | restart | status reconfigure sidekiq
-sudo gitlab-ctl start | stop | restart | status reconfigure postgresql
-sudo gitlab-ctl start | stop | restart | status reconfigure redis
-```
-
-GitLab 自身的启动/停止，是通过 Systemd 服务来管理的：
-
-```shell
-systemctl start | stop | restart | status gitlab-runsvdir.service
+sudo gitlab-ctl start | stop | restart | status gitlab
+sudo gitlab-ctl start | stop | restart | status gitlab-runner
 ```
 
 ### 命令行
