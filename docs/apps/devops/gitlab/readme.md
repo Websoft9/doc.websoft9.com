@@ -238,11 +238,9 @@ docker exec -i gitlab head -n+1 /opt/gitlab/version-manifest.txt
 
 ### 服务
 
-GitLab 提供的（[gitlab-ctl ](https://docs.gitlab.com/omnibus/maintenance/README.html#get-service-status)）可以很方便的管理各个组件的服务：
-
 ```shell
-sudo gitlab-ctl start | stop | restart | status gitlab
-sudo gitlab-ctl start | stop | restart | status gitlab-runner
+sudo docker start | stop | restart | stats gitlab
+sudo docker start | stop | restart | stats gitlab-runner
 ```
 
 ### 命令行
@@ -250,7 +248,7 @@ sudo gitlab-ctl start | stop | restart | status gitlab-runner
 GitLab 提供了命令行工具 `gitlab-ctl` 用于全面管理和配置 GitLab
 
 ```
-$ gitlab-ctl -h
+$ docker exec -it gitlab gitlab-ctl -h
 
 I don't know that command.
 omnibus-ctl: command (subcommand)
