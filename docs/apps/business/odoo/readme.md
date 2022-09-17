@@ -229,8 +229,6 @@ Odoo 镜像默认已经安装 wkhtmltopdf，如何你想重新安装它，具体
 
 Odoo除了基础模块之外，通过[Odoo Apps 市场](https://www.odoo.com/apps/modules)提供了大量优质的第三方模块。通过使用第三方模块，用户可以快速找到所需的功能，以免费或极小的代价满足需求，快速上线业务，这是Odoo开源生态的带给用户的巨大价值，商业ERP在这方面是无法取代的。
 
-
-
 ## 参数{#parameter}
 
 Odoo 应用中包含 Nginx, Docker, PostgreSQL, pgAdmin, Python 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
@@ -238,19 +236,20 @@ Odoo 应用中包含 Nginx, Docker, PostgreSQL, pgAdmin, Python 等组件，可�
 通过运行`docker ps`，可以查看到 Odoo 运行时所有的 Container：
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                   COMMAND                  CREATED         STATUS         PORTS                                                      NAMES
+b0755e46fac5   dpage/pgadmin4:latest   "/entrypoint.sh"         2 minutes ago   Up 2 minutes   443/tcp, 0.0.0.0:9090->80/tcp, :::9090->80/tcp             pgadmin
+e94cd3f2455b   odoo:15                 "/entrypoint.sh odoo"    2 minutes ago   Up 2 minutes   8071-8072/tcp, 0.0.0.0:9001->8069/tcp, :::9001->8069/tcp   odoo
+486284019f46   postgres:14             "docker-entrypoint.s…"   2 minutes ago   Up 2 minutes   0.0.0.0:5432->5432/tcp, :::5432->5432/tcp                  odoo-db
 ```
-
-
-下面仅列出 Odoo 本身的参数：
 
 ### 路径{#path}
 
-Odoo 安装目录： */usr/lib/python3/dist-packages/odoo*  
-Odoo 配置文件： */etc/odoo/odoo.conf*  
-Odoo 日志目录： */var/log/odoo*
+Odoo 安装目录： */data/apps/odoo*  
+Odoo 配置文件： */data/apps/odoo/data/odoo_config/odoo.conf*  
 
 ### 端口{#port}
+
+除 80, 443 等常见端口需开启之外，以下端口可能会用到：
 
 无特殊端口
 
@@ -258,13 +257,15 @@ Odoo 日志目录： */var/log/odoo*
 ### 版本{#version}
 
 ```shell
-odoo --version
+docker exec -it odoo odoo --version
 ```
 
 ### 服务{#service}
 
 ```shell
 sudo docker start | stop | restart | status odoo
+sudo docker start | stop | restart | status odoo-db
+sudo docker start | stop | restart | status pgadmin
 ```
 
 ### 命令行{#cli}
