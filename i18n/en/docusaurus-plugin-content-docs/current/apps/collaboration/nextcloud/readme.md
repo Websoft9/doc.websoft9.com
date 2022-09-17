@@ -27,26 +27,22 @@ If you have installed Websoft9 Nextcloud, the following steps is for your quick 
 
 ### Steps for you
 
-1. Use local Chrome or Firefox to access the URL *https://domain* or *https://Internet IP*.
-
-2. Create administrator account, then set 【Storage & Database】, suggest you select 【MySQL】.
-
-3. Configure the MySQL database connection. ([Don't know password?](./user/credentials)) 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-intall-websoft9.png)
+1. Use local Chrome or Firefox to access the URL *https://domain* or *https://Internet IP*, access install wizard page
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-wizard-websoft9.png)
    
-4. Click 【Finish Setup】and complete the installation.
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-intallss-websoft9.png)
+2. Set the user name and password and keep it in mind, click [Install], and choose to install plugins or skip according to your needs
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-plugin-websoft9.png)
 
-5. Begin your actions on Nextcloud Console.
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-backend-websoft9.png)
+3. Close the pop-up window and start to experience the background
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-main-websoft9.png)
 
-6. Go to Marketplace to get more extensions  
+4. Go to Marketplace to get more extensions  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-app-websoft9.png)
 
-7. Access URL *https://Internet IP:9002* to check if **OnlyOffice Document Server** has been installed.
+5. Access URL *https://Internet IP:9002* to check if **OnlyOffice Document Server** has been installed.
    ![](http://libs-websoft9-com.oss-cn-qingdao.aliyuncs.com/Websoft9/DocsPicture/zh/onlyoffice/onlyoffice-documentserver-websoft9.png)
 
-8. Complete [Nextcloud preview and edit](./nextcloud/solution#onlyoffice) settings. (Optional)
+6. Complete [Nextcloud preview and edit](./nextcloud/solution#onlyoffice) settings. (Optional)
 
 > Refer to [Nextcloud admin_manual](https://docs.nextcloud.com/server/latest/admin_manual/) to get more details.
 
@@ -65,6 +61,7 @@ The image is pre-installed with [OnlyOffice docs](./onlyofficedocs), which can r
 
 ## Nextcloud QuickStart
 
+This task **Nextcloud builds enterprise network disk system** is for your Nextcloud QuickStart:
 
 ## Nextcloud Setup
 
@@ -204,38 +201,42 @@ NextCloud 支持 WebDAV 协议，用户可以通过 WebDAV 来连接并同步文
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage NextCloud  
 
-通过运行 `docker ps`，可以查看到 Nextcloud 运行时所有的 Container：
+Run docker ps, view all containers when Nextcloud is running:
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                              COMMAND                  CREATED             STATUS             PORTS                                                  NAMES
+c8a5fae52a35   onlyoffice/documentserver:latest   "/app/ds/run-documen…"   59 minutes ago      Up 59 minutes      443/tcp, 0.0.0.0:9002->80/tcp, :::9002->80/tcp         onlyofficedocs
+5523e9c3a9bd   phpmyadmin:latest                  "/docker-entrypoint.…"   59 minutes ago      Up 59 minutes      0.0.0.0:9090->80/tcp, :::9090->80/tcp                  phpmyadmin
+6ecb1771a868   nextcloud:latest                   "/entrypoint.sh apac…"   About an hour ago   Up About an hour   0.0.0.0:9001->80/tcp, :::9001->80/tcp                  nextcloud
+ae358a9bb912   mysql:8.0                          "docker-entrypoint.s…"   About an hour ago   Up About an hour   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp   nextcloud-db
 ```
-
-
-下面仅列出 Nextcloud 本身的参数：
 
 ### Path{#path}
 
-Nextcloud installation directory： */data/wwwroot/nextcloud*  
-Nextcloud 配置文件： */data/wwwroot/nextcloud/config/config.php*  
+Nextcloud installation directory: */data/apps/nextcloud*
+Nextcloud data directory: */data/apps/nextcloud/data/nextcloud-data*
+Nextcloud site directory: */data/apps/nextcloud/data/nextcloud*
+Nextcloud configuration file: */data/apps/nextcloud/data/nextcloud/config/config.php*
+Onlyofficedocs installation directory: */data/apps/onlyofficedocs*
 
 ### Port{#port}
 
-| 端口号 | 用途                                          | 必要性 |
-| ------ | --------------------------------------------- | ------ |
-| 80   | 通过 HTTP 访问 Nextcloud | 可选   |
-| 9002 | OnlyOffice docs on Docker | 可选 |
-
+| Port Number | Purpose | Necessity |
+| ------ | ------------------------------------------ --- | ------ |
+| 9002 | OnlyOffice docs on Docker | Optional |
 
 ### Version{#version}
 
 ```shell
-occ -v
+docker exec -i nextcloud cat version.php |grep OC_VersionString |awk -F "'" '{print $2}'
 ```
 
 ### Service{#service}
 
 ```shell
 sudo docker start | stop | restart | stats nextcloud
+sudo docker start | stop | restart | stats nextcloud-db
+sudo docker start | stop | restart | stats phpmyadmin
 sudo docker start | stop | restart | stats onlyofficedocs
 ```
 
