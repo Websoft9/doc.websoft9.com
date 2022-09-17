@@ -154,34 +154,39 @@ Log in PrestaShop console, open:【Advanced Parameters】>【Import】
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage PrestaShop
 
-通过运行`docker ps`，可以查看到 PrestaShop 运行时所有的 Container：
+Run docker ps, view all containers when PrestaShop is running:
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                          COMMAND                  CREATED          STATUS          PORTS                                                  NAMES
+90426aedeca1   prestashop/prestashop:latest   "docker-php-entrypoi…"   47 minutes ago   Up 47 minutes   0.0.0.0:9001->80/tcp, :::9001->80/tcp                  prestashop
+cac699817c8b   mysql:5.7                      "docker-entrypoint.s…"   47 minutes ago   Up 47 minutes   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp   prestashop-db
+489469b66647   phpmyadmin:latest              "/docker-entrypoint.…"   48 minutes ago   Up 48 minutes   0.0.0.0:9090->80/tcp, :::9090->80/tcp                  phpmyadmin
 ```
 
 ### Path{#path}
   
-PrestaShop installation directory: */data/wwwroot/PrestaShop*  
-PrestaShop configuration file: */data/wwwroot/prestashop/app/config/parameters.php*
+PrestaShop install directory: */data/apps/prestashop*  
+PrestaShop site directory: */data/apps/prestashop/data/prestashop*  
+PrestaShop configure file: */data/apps/prestashop/data/prestashop/app/config/parameters.php* 
 
 ### Port{#port}
 
-| Port | Use                                          | Necessity |
-| ------ | --------------------------------------------- | ------ |
-| 3306 | Remote connect MySQL | Optional |
-| 80 | HTTP requests for PrestaShop | Required |
-| 443 | HTTPS requests PrestaShop | Optional |
-| 9090 | phpMyAdmin on Docker | Optional |
+In addition to common ports such as 80, 443, etc., the following ports may be used:
+
+No special port
 
 ### Version{#version}
 
-You can see the version from product page of Marketplace.
+```
+docker exec -i prestashop cat /var/www/html/app/AppKernel.php|grep "const VERSION"|cut -d= -f2
+```
 
 ### Service{#service}
 
 ```shell
 sudo docker start | restart | stop | stats prestashop
+sudo docker start | restart | stop | stats prestashop-db
+sudo docker start | restart | stop | stats phpmyadmin
 ```
 
 ### CLI{#cli}
