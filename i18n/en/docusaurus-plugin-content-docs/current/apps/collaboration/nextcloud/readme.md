@@ -110,15 +110,15 @@ Nextcloud integrated [Marketplace](https://marketplace.nextcloud.com/) that have
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-backendmk-websoft9.png)
 2. Install it online.
 
-### 手工安装扩展{#minstallplugin}
+### Manually install the extension {#minstallplugin}
 
-网络问题可能会导致无法在线安装扩展，此时就需要手工安装（下面以 ONLYOFFICE 为例）：
+Network problems may cause the extension to be unable to be installed online. In this case, manual installation is required (take ONLYOFFICE as an example below):
 
-1. 到 Nextcloud [官方应用商店](https://apps.nextcloud.com/apps/onlyoffice/releases?platform=22#22)下载扩展
+1. Go to Nextcloud [Official App Store](https://apps.nextcloud.com/apps/onlyoffice/releases?platform=22#22) to download the extension
 
-2. 下载到本地后，解压，通过FTP上传到服务器 Nextcloud 应用目录：/data/wwwroot/nextcloud/apps
+2. After downloading it locally, unzip it and upload it to the server via FTP. Nextcloud application directory: /data/wwwroot/nextcloud/apps
 
-3. 登录 Nextcloud 后台，进入应用中心，启用 ONLYOFFICE 即可进入下一步操作，开启文档在线预览和编辑
+3. Log in to the Nextcloud background, enter the application center, enable ONLYOFFICE to proceed to the next step, and enable online preview and editing of documents
 
 ### Nextcloud external storage{#oss}
 
@@ -183,20 +183,19 @@ Nextcloud source code and data is stored in system disk by default, you can tran
 
 > The **mount** command is very difficult for users, and there is a risk of copy failure if the data exceeds 10G.
 
-### 通过 WebDAV 连接 NextCloud
+### Connect NextCloud via WebDAV
 
-NextCloud 支持 WebDAV 协议，用户可以通过 WebDAV 来连接并同步文件，比如在 Windows10 系统映射磁盘到 NextCloud，用于本地访问云盘文档。
+NextCloud supports the WebDAV protocol. Users can connect and synchronize files through WebDAV, such as mapping disks to NextCloud on Windows10 systems for local access to cloud disk documents.
 
-1. 获取 WebDav 连接 URL： 登录NextCloud，点击【文件】-【设置】获取 URL
-  > 注意：每个用户都有自己的 URL，使用对应的 URL 和用户名登录才能正确访问文件
+1. Obtain the WebDav connection URL: Log in to NextCloud, click [File] - [Settings] to obtain the URL
+  > Note: Each user has their own URL, use the corresponding URL and username to log in to access the file correctly
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/nextcloud/nextcloud-webdavurl-websoft9.jpg)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-webdavurl-websoft9.jpg)
 
-2. 配置本地连接：在 Windows10 【运行】regedit 命令，进入注册表，修改注册表项 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WebClient\Parameters，将 BasicAuthLevel 值设为 2 ，将 FileSizeLimitInBytes 值改成十进制 50000000
-3. 重启本地服务：打开 Windows PowerShell(管理员) 工具，输入命令 net start webclient 重启 webclient 服务
-4. 映射本地磁盘：右击【我的电脑】，选择【映射网络驱动器】， 复制第1步中的URL，确定。在弹出的登录界面，输入NextCloud 登录账号，完成连接。
-5. 完成上述操作，进入【我的电脑】，可以看见新添加的【网络位置盘符】，双击打开即可访问 NextCloud 远程文件。
-
+2. Configure the local connection: in Windows10 [run] the regedit command, enter the registry, modify the registry key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WebClient\Parameters, set the BasicAuthLevel value to 2, and change the FileSizeLimitInBytes value to decimal 50000000
+3. Restart the local service: Open the Windows PowerShell (Administrator) tool and enter the command net start webclient to restart the webclient service
+4. Map local disk: Right-click [My Computer], select [Map Network Drive], copy the URL in step 1, and click OK. In the pop-up login interface, enter the NextCloud login account to complete the connection.
+5. After completing the above operations, enter [My Computer], you can see the newly added [Network Location Drive Letter], double-click to open it to access the NextCloud remote file.
 ## Reference sheet{#parameter}
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage NextCloud  
