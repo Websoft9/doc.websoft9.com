@@ -6,7 +6,7 @@ tags:
   - Cloud Database Manager
 ---
 
-# Jenkins Getting Started
+# CloudBeaver Getting Started
 
 [CloudBeaver](https://github.com/dbeaver/cloudbeaver) is a web-based database GUI tool which provides rich web interface. Server itself is a Java application, web part is written on TypeScript and React. You can use it to manage PostgreSQL, MySQL, MariaDB, SQL Server, Oracle, DB2, Firebird, H2, Trino 
 
