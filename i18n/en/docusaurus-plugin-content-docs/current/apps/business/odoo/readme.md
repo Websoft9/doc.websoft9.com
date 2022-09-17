@@ -59,9 +59,9 @@ Their no tools for you to delete Demo data. It is recommended to delete the data
 
 ## Odoo QuickStart
 
-下面以 **Odoo 构建企业ERP** 作为一个任务，帮助用户快速入门：
+The following uses **Odoo to build enterprise ERP** as a task to help users get started quickly:
 
-> 需要了解更多Odoo的使用，请参考官方文档：[Odoo Documentation](https://www.odoo.com/documentation/master/index.html)
+> To learn more about the use of Odoo, please refer to the official documentation: [Odoo Documentation](https://www.odoo.com/documentation/master/index.html)
 
 ## Odoo Setup
 
