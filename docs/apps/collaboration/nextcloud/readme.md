@@ -29,25 +29,21 @@ tags:
 ### 详细步骤
 
 1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入引导首页
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-wizard-websoft9.png)
+   
+2. 输入用户名和密码，点击【安装】，安装完成后提示可继续安装插件，根据需求选择安装或者跳过    
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-plugin-websoft9.png)
 
-2. 系统首先要求设置一个管理员账号，选择 Nextcloud 的数据库存储方式，建议选择【MySQL】    
+3. 关闭弹窗，开始体验后台
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-main-websoft9.png)
 
-3. 填写 MySQL 数据库连接信息（[不知道账号密码？](./user/credentials)）  
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-intall-websoft9.png)
-
-4. 点击“Flish Setup”，完成安装，获得安装成功的提示
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-intallss-websoft9.png)
-
-5. 关闭弹窗，开始体验后台
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-backend-websoft9.png)
-
-6. 进入Marketplace，扩展更多的功能
+4. 进入Marketplace，扩展更多的功能
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-app-websoft9.png)
    
-7. 浏览器访问网址：*https://服务器公网IP:9002* 查看是否安装 **OnlyOffice docs**
+5. 浏览器访问网址：*https://服务器公网IP:9002* 查看是否安装 **OnlyOffice docs**
    ![](http://libs-websoft9-com.oss-cn-qingdao.aliyuncs.com/Websoft9/DocsPicture/zh/onlyoffice/onlyoffice-documentserver-websoft9.png)
 
-8. [设置文档预览与编辑](./nextcloud/solution#onlyoffice)功能（非必要）
+6. [设置文档预览与编辑](./nextcloud/solution#onlyoffice)功能（非必要）
 
 > 需要了解更多 Nextcloud 的使用，请参考官方文档：[Nextcloud admin_manual](https://docs.nextcloud.com/server/latest/admin_manual/)
 
@@ -204,40 +200,45 @@ NextCloud 支持 WebDAV 协议，用户可以通过 WebDAV 来连接并同步文
 
 ## 参数{#parameter}
 
-Nextcloud 应用中包含 PHP, Apache, Nginx, Docker, Redis, MySQL, phpMyAdmin, [ONLYOFFICE Docs](./onlyofficedocs) 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。  
+Nextcloud 应用中包含 Nginx, Docker, MySQL, phpMyAdmin, [ONLYOFFICE Docs](./onlyofficedocs) 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。  
 
 通过运行 `docker ps`，可以查看到 Nextcloud 运行时所有的 Container：
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                              COMMAND                  CREATED             STATUS             PORTS                                                  NAMES
+c8a5fae52a35   onlyoffice/documentserver:latest   "/app/ds/run-documen…"   59 minutes ago      Up 59 minutes      443/tcp, 0.0.0.0:9002->80/tcp, :::9002->80/tcp         onlyofficedocs
+5523e9c3a9bd   phpmyadmin:latest                  "/docker-entrypoint.…"   59 minutes ago      Up 59 minutes      0.0.0.0:9090->80/tcp, :::9090->80/tcp                  phpmyadmin
+6ecb1771a868   nextcloud:latest                   "/entrypoint.sh apac…"   About an hour ago   Up About an hour   0.0.0.0:9001->80/tcp, :::9001->80/tcp                  nextcloud
+ae358a9bb912   mysql:8.0                          "docker-entrypoint.s…"   About an hour ago   Up About an hour   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp   nextcloud-db
 ```
-
-
-下面仅列出 Nextcloud 本身的参数：
 
 ### 路径{#path}
 
-Nextcloud 安装目录： */data/wwwroot/nextcloud*  
-Nextcloud 配置文件： */data/wwwroot/nextcloud/config/config.php*  
+Nextcloud 安装目录： */data/apps/nextcloud*  
+Nextcloud 数据目录： */data/apps/nextcloud/data/nextcloud-data*  
+Nextcloud 站点目录： */data/apps/nextcloud/data/nextcloud*  
+Nextcloud 配置文件： */data/apps/nextcloud/data/nextcloud/config/config.php*  
+Onlyofficedocs 安装目录： */data/apps/onlyofficedocs*  
 
 ### 端口{#port}
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
-| 80   | 通过 HTTP 访问 Nextcloud | 可选   |
 | 9002 | OnlyOffice docs on Docker | 可选 |
 
 
 ### 版本{#version}
 
 ```shell
-occ -v
+docker exec -i nextcloud cat version.php |grep OC_VersionString |awk -F "'" '{print $2}'
 ```
 
 ### 服务{#service}
 
 ```shell
 sudo docker start | stop | restart | stats nextcloud
+sudo docker start | stop | restart | stats nextcloud-db
+sudo docker start | stop | restart | stats phpmyadmin
 sudo docker start | stop | restart | stats onlyofficedocs
 ```
 
