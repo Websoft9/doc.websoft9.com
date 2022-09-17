@@ -3,14 +3,14 @@ sidebar_position: 2
 slug: /nextcloud/solution
 tags:
   - Nextcloud
-  - 网盘
-  - 知识管理
-  - 团队协作
+  - netdisc
+  - Knowledge management
+  - Teamwork
 ---
 
 # Nextcloud Solution
 
-Nextcloud 可以与其他的软件平台**集成**一起使用，解决 构建企业网盘系统 过程中的各种[场景问题](https://nextcloud.com/industries/)。
+You can use Nextcloud integrated other software，solve various [scenario problems](https://nextcloud.com/industries/) in the process of building an enterprise network disk system.
 
 ## Integrate ONLYOFFICE Doc for Document Editing{#onlyoffice}
 
