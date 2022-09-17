@@ -212,11 +212,11 @@ ae358a9bb912   mysql:8.0                          "docker-entrypoint.s…"   Abo
 
 ### Path{#path}
 
-Nextcloud installation directory: */data/apps/nextcloud*
-Nextcloud data directory: */data/apps/nextcloud/data/nextcloud-data*
-Nextcloud site directory: */data/apps/nextcloud/data/nextcloud*
-Nextcloud configuration file: */data/apps/nextcloud/data/nextcloud/config/config.php*
-Onlyofficedocs installation directory: */data/apps/onlyofficedocs*
+Nextcloud installation directory: */data/apps/nextcloud*  
+Nextcloud data directory: */data/apps/nextcloud/data/nextcloud-data*  
+Nextcloud site directory: */data/apps/nextcloud/data/nextcloud*  
+Nextcloud configuration file: */data/apps/nextcloud/data/nextcloud/config/config.php*  
+Onlyofficedocs installation directory: */data/apps/onlyofficedocs*  
 
 ### Port{#port}
 
