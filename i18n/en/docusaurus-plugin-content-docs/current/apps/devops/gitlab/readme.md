@@ -25,7 +25,11 @@ If you have installed Websoft9 GitLab, the following steps is for your quick sta
 
 ### Steps for you
 
-1. Using local browser to visit the URL http://DNS or http://Server's Internet IP, login to your GitLab([Don't have password?](./user/credentials))
+1. Using local browser to visit the URL http://DNS or http://Server's Internet IP, login to your GitLab
+    ```
+    # user:root, password: view by this script
+    sudo docker exec -it gitlab grep 'Password:' /etc/gitlab/initial_root_password    
+    ```
    ![GitLab Login](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-login-websoft9.png)
 
 2. Go to GitLab dashboard to start use it 
@@ -107,26 +111,26 @@ This task【Manage team, member and code in GitLab】 is for your GitLab QuickSt
 
 ## Gitlab Setup
 
-### 设置 GitLab 仓库地址{#setrepourl}
+### Set GitLab repository address {#setrepourl}
 
-在初始化之前的 **[准备](#prepare)** 环节，如果您已经完成 **[域名五步设置](./administrator/domain_step)**，GitLab 可以域名访问，但是 GitLab 仓库的网址还不是用户自己的域名。
+In the **[prepare](#prepare)** link before initialization, if you have completed the **[domain five-step setup](./administrator/domain_step)**, GitLab can access the domain name, but the URL of the GitLab repository is still Not the user's own domain name.
 
-因此，还需要参考下面的步骤[设置 GitLab 仓库地址](https://docs.gitlab.com/omnibus/settings/configuration.html#configuring-the-external-url-for-gitlab)：
+Therefore, you also need to refer to the following steps [setting the GitLab repository address](https://docs.gitlab.com/omnibus/settings/configuration.html#configuring-the-external-url-for-gitlab):
 
-1. 通过 SSH 或 SFTP 登录云服务器
-2. 修改 [GitLab 配置文件](#path)，将 **external_url** 项的值 *http://gitlab.example.com* 修改为你的域名
-   ```text
-   external_url "http://gitlab.example.com" # 改为自定义域名
+1. Log in to the cloud server via SSH or SFTP
+2. Modify the [GitLab configuration file](#path), and change the value of the **external_url** item *http://gitlab.example.com* to your domain name
+   ````text
+   external_url "http://gitlab.example.com" # Change to custom domain name
    ...
-   ``` 
-3. 保存配置文件，重启下面的服务
-   ```
+   ````
+3. Save the configuration file and restart the following services
+   ````
    sudo gitlab-ctl reconfigure
-   ```
+   ````
 
-### 设置 GitLab 仓库的 HTTPS{#setrepohttps}
+### Set HTTPS for GitLab repository {#setrepohttps}
 
-GitLab 仓库的 HTTPS 不等同于 GitLab 自身的 HTTPS，前置还需额外设置：[Enabling HTTPS](https://docs.gitlab.com/omnibus/settings/nginx.html#enable-https)
+The HTTPS of the GitLab repository is not equivalent to the HTTPS of GitLab itself, and additional settings are required beforehand: [Enabling HTTPS](https://docs.gitlab.com/omnibus/settings/nginx.html#enable-https)
 
 ### Configure SMTP
 
@@ -164,15 +168,15 @@ Follow is the sample using **SendGrid's SMTP Service** to configure sending mail
 
 GitLab provides configuration methods for dozens of different SMTP service providers, please refer to the official documentation:[SMTP settings](https://docs.gitlab.com/omnibus/settings/smtp.html)
 
-### 重置管理员密码
+### Reset admin password
 
-忘记管理员密码时，请参考如下方案重置密码（[方案来源](https://docs.gitlab.com/13.11/ee/security/reset_user_password.html)）：  
+When you forget the administrator password, please refer to the following scheme to reset the password ([source of the scheme](https://docs.gitlab.com/13.11/ee/security/reset_user_password.html)):
 
-1. 使用 SSH 登陆 GitLab 服务器
-2. 输入 `gitlab-rails console` 命令，根据提示完成后续步骤
+1. Log in to the GitLab server using SSH
+2. Enter the `gitlab-rails console` command and follow the prompts to complete the next steps
    ```
 
-   $ gitlab-rails console     //进入控制台命令
+   $ gitlab-rails console 
    --------------------------------------------------------------------------------
     Ruby:         ruby 2.7.2p137 (2020-10-01 revision 5445e04352) [x86_64-linux]
     GitLab:       13.8.4 (9fb9cbf50c3) FOSS
@@ -182,13 +186,13 @@ GitLab provides configuration methods for dozens of different SMTP service provi
 
    Loading production environment (Rails 6.0.3.4)
    irb(main):001:0>
-   irb(main):002:0> user = User.find_by_username 'root'  //找到用户，默认管理员用户名为 root
+   irb(main):002:0> user = User.find_by_username 'root' 
    => #<User id:1 @root>
    irb(main):003:0> user.password='Websoft9'   //修改密码
    => "Websoft9"
-   irb(main):004:0> user.password_confirmation='Websoft9'  //二次确认密码
+   irb(main):004:0> user.password_confirmation='Websoft9'
    => "Websoft9"
-   irb(main):006:0>  user.save! //保存更改
+   irb(main):006:0>  user.save!
    Enqueued ActionMailer::MailDeliveryJob (Job ID: 3f4ac447-9869-412a-9b5a-988c06cf          eaa2) to Sidekiq(mailers) with arguments: "DeviseMailer", "password_change_by_ad          min", "deliver_now", {:args=>[#<GlobalID:0x00007fb7e5337990 @uri=#<URI::GID gid:          //gitlab/User/1>>]}
    => true
    irb(main):007:0>
@@ -199,90 +203,62 @@ GitLab provides configuration methods for dozens of different SMTP service provi
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage GitLab 
 
-下面是一个简化的架构图，可用于了解 GitLab 的组件架构。
+Below is a simplified architecture diagram that can be used to understand GitLab's component architecture.
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/architecture_simplified.png)
 
--nginx：静态web服务器。  
--gitlab-shell：用于处理Git命令和修改authorized keys列表。  
--gitlab-workhorse: 轻量级的反向代理服务器。  
--logrotate：logs file管理工具。  
--postgresql：数据库。  
--redis：缓存数据库。  
--sidekiq：用于在后台执行队列任务（异步执行）。  
--unicorn：An HTTP server for Rack applications，GitLab Rails应用是托管在这个服务器上面的。
+-nginx: static web server.
+-gitlab-shell: Used to process Git commands and modify the list of authorized keys.
+-gitlab-workhorse: Lightweight reverse proxy server.
+-logrotate: logs file management tool.
+-postgresql: database.
+-redis: cache database.
+-sidekiq: Used to execute queued tasks in the background (asynchronous execution).
+-unicorn: An HTTP server for Rack applications on which GitLab Rails applications are hosted.
 
-GitLab 包含数十种组件([查看](https://docs.gitlab.com/ee/development/architecture.html#component-list))，通过 */opt/gitlab/version-manifest.txt* 查看服务器上所有组件名称和版本
+GitLab includes dozens of components ([view](https://docs.gitlab.com/ee/development/architecture.html#component-list)), view the server via */opt/gitlab/version-manifest.txt* All component names and versions above
+
+Run `docker ps`, view all containers when GitLab is running:  
+
+```bash
+CONTAINER ID   IMAGE                         COMMAND                  CREATED       STATUS                 PORTS                                                                               NAMES
+c5b22639c668   gitlab/gitlab-ce:latest       "/assets/wrapper"        2 hours ago   Up 2 hours (healthy)   443/tcp, 0.0.0.0:23->22/tcp, :::23->22/tcp, 0.0.0.0:9001->80/tcp, :::9001->80/tcp   gitlab
+49995b282a20   gitlab/gitlab-runner:latest   "/usr/bin/dumb-init …"   2 hours ago   Up 2 hours                                                                                                 gitlab-runner
+```
 
 ### Path{#path}
 
 ##### GitLab
 
-GitLab 配置文件： */etc/gitlab/gitlab.rb*    
-GitLab 及所有组件配置： */opt/gitlab*  
-GitLab Repository 存储目录： */var/opt/gitlab/git-data*  
-GitLab 备份目录： */var/opt/gitlab/backups*
-
-##### Unicorn
-
-Unicorn 日志目录： */var/log/gitlab/unicorn*  
-
-##### Sidekiq
-
-Unicorn 日志目录： */var/log/gitlab/sidekiq*
-
-##### Nginx
-
-Nginx 日志目录: */var/log/gitlab/nginx*  
-Nginx 配置文件: */var/opt/gitlab/nginx/conf/nginx.conf*  
-GitLab 核心 Nginx 配置文件:  */var/opt/gitlab/nginx/conf/gitlab-http.conf*
-
-##### PostgreSQL
-
-PostgreSQL installation directory： */var/opt/gitlab/postgresql*  
-PostgreSQL 日志目录: */var/log/gitlab/postgresql*   
-PostgreSQL-Exporter 日志目录： */var/log/gitlab/postgres-exporter*  
-PostgreSQL 数据目录： */var/opt/gitlab/postgresql/data*
-
-##### Redis
-
-Redis installation directory： */var/opt/gitlab/redis*  
-Redis 日志目录： */var/log/gitlab/redis*
+GitLab installation directory: */data/apps/gitlab*
+GitLab data directory: */data/apps/gitlab/data/gitlab_data*
+GitLab log directory: */data/apps/gitlab/data/gitlab_logs*
 
 ### Port{#port}
 
-暂无特殊端口
+In addition to common ports such as 80, 443, etc., the following ports may be used:
+
+No special port
 
 ### Version
 
 ```shell
-gitlab-ctl status  | grep gitlab-workhorse
+docker exec -i gitlab head -n+1 /opt/gitlab/version-manifest.txt
 ```
 
 ### Service
 
-GitLab 提供的（[gitlab-ctl ](https://docs.gitlab.com/omnibus/maintenance/README.html#get-service-status)）可以很方便的管理各个组件的服务：
-
 ```shell
-sudo gitlab-ctl start | stop | restart | status reconfigure nginx
-sudo gitlab-ctl start | stop | restart | status reconfigure unicorn
-sudo gitlab-ctl start | stop | restart | status reconfigure sidekiq
-sudo gitlab-ctl start | stop | restart | status reconfigure postgresql
-sudo gitlab-ctl start | stop | restart | status reconfigure redis
-```
-
-GitLab 自身的启动/停止，是通过 Systemd 服务来管理的：
-
-```shell
-systemctl start | stop | restart | status gitlab-runsvdir.service
+sudo docker start | stop | restart | stats gitlab
+sudo docker start | stop | restart | stats gitlab-runner
 ```
 
 ### CLI
 
-GitLab 提供了命令行工具 `gitlab-ctl` 用于全面管理和配置 GitLab
+GitLab provides the command line tool `gitlab-ctl` for comprehensive management and configuration of GitLab
 
 ```
-$ gitlab-ctl -h
+$ docker exec -it gitlab gitlab-ctl -h
 
 I don't know that command.
 omnibus-ctl: command (subcommand)
