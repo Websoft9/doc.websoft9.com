@@ -241,6 +241,7 @@ docker exec -it odoo odoo --version
 
 ### Service{#service}
 
+```
 sudo docker start | stop | restart | status odoo
 sudo docker start | stop | restart | status odoo-db
 sudo docker start | stop | restart | status pgadmin
@@ -248,7 +249,7 @@ sudo docker start | stop | restart | status pgadmin
 
 ### CLI{#cli}
 
-Odoo CLI 是用于管理和配置Odoo的命令行工具，通过 SSH 连接服务器，运行 `odoo -h` 命令，列出如下可用的功能。
+Odoo CLI is a command line tool for managing and configuring Odoo, connect to the server via SSH, run the `odoo -h` command, and list the available functions as follows.
 
 ```
 Options:
