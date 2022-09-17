@@ -27,36 +27,10 @@ tags:
 
 ### 详细步骤
 
-1. 使用本地电脑浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 就进入引导首页  
-
-   若有升级提醒，请点击【yes,please!】
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-installupdate-websoft9.png)
-   
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-language-websoft9.png)
-
-2. 选择语言，接受许可协议，继续下一步
-
-3. 安装进入管理员账号设置界面，牢记之，点击“下一步”
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-adminconf-websoft9.png)
-
-4. 安装进入数据库配置界面（[不知道数据库密码？](./user/credentials)）然后点击”保存”
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-dbconfig-websoft9.png)
-
-5. 系统安装成功，分别进入后台和前台体验
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-installss-websoft9.png)
-
-6. 登录后台，系统提示删除intall文件夹
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-delinstall-websoft9.png)
-
-7. SSH 连接服务器，进入 [PrestaShop 根目录](#path)后，删除 **install** 文件夹
-   ```
-   rm -rf install
-   ```
-
-8. 删除完成后，点击第六步的后台链接，开始体验后台（请牢记后台地址）
+1. 使用本地电脑浏览器访问网址：*http://域名/admin* 或*http://服务器公网IP/admin*, 就进入后台登陆页面  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-login-websoft9.png)
 
-9.  登录成功，体验后台
+2. 登录后台（[不知道数据库密码？](./user/credentials)），开始体验后台
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-backend-websoft9.png)
 
 > 需要了解更多 PrestaShop 的使用，请参考官方文档：[PrestaShop Docs](https://www.prestashop.com/en/resources/documentations)
@@ -68,7 +42,6 @@ tags:
 ## PrestaShop 使用入门
 
 下面以 **使用 PrestaShop 构建在线商城** 作为一个任务，帮助用户快速入门：
-
 
 ## PrestaShop 常用操作
 
@@ -166,21 +139,22 @@ Prestashop的多语言支持非常的成熟，系统在后台内置一套多语�
 
 ## 参数{#parameter}
 
-PrestaShop 应用中包含 Apache, Nginx, Docker, MySQL, phpMyAdmin 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+PrestaShop 应用中包含  Nginx, Docker, MySQL, phpMyAdmin 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 PrestaShop 运行时所有的 Container：
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                          COMMAND                  CREATED          STATUS          PORTS                                                  NAMES
+90426aedeca1   prestashop/prestashop:latest   "docker-php-entrypoi…"   47 minutes ago   Up 47 minutes   0.0.0.0:9001->80/tcp, :::9001->80/tcp                  prestashop
+cac699817c8b   mysql:5.7                      "docker-entrypoint.s…"   47 minutes ago   Up 47 minutes   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp   prestashop-db
+489469b66647   phpmyadmin:latest              "/docker-entrypoint.…"   48 minutes ago   Up 48 minutes   0.0.0.0:9090->80/tcp, :::9090->80/tcp                  phpmyadmin
 ```
-
-
-下面仅列出 PrestaShop 本身的参数：
 
 ### 路径{#path}
 
-PrestaShop 目录： */data/wwwroot/prestashop*  
-PrestaShop 配置文件： */data/wwwroot/prestashop/app/config/parameters.php*  
+PrestaShop 安装目录： */data/apps/prestashop*  
+PrestaShop 主站目录： */data/apps/prestashop/data/prestashop*  
+PrestaShop 配置文件： */data/apps/prestashop/data/prestashop/app/config/parameters.php*  
 
 ### 端口{#port}
 
@@ -188,12 +162,16 @@ PrestaShop 配置文件： */data/wwwroot/prestashop/app/config/parameters.php*
 
 ### 版本{#version}
 
-PrestaShop 控制台查看
+```
+docker exec -i prestashop cat /var/www/html/app/AppKernel.php|grep "const VERSION"|cut -d= -f2
+```
 
 ### 服务{#service}
 
 ```shell
 sudo docker start | restart | stop | stats prestashop
+sudo docker start | restart | stop | stats prestashop-db
+sudo docker start | restart | stop | stats phpmyadmin
 ```
 
 ### 命令行{#cli}
