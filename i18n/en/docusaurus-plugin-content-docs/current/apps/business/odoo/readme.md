@@ -80,65 +80,65 @@ Their no tools for you to delete Demo data. It is recommended to delete the data
 
 4. Click the **Test Connection**
 
-### 数据库管理器{#dbadmin}
+### Database Manager {#dbadmin}
 
-Odoo 自带一个数据库管理器，参考：  
+Odoo comes with a database manager, refer to:
 
-1. 在 Odoo 登录界面点击【Manage Database】链接    
+1. Click the [Manage Database] link on the Odoo login interface
 ![Odoo manage database](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-loginpage-websoft9.png)
 
-2. 点击【set a master password】给数据库设置一个主密码保护数据库（非常重要）  
+2. Click [set a master password] to set a master password for the database to protect the database (very important)
 ![Odoo set a password](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-setmasterpw-websoft9.png)
 
-3. 设置密码  
+3. Set a password
 ![Odoo set a password](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-setapw-websoft9.png)
 
-4. 选择操作项，管理数据库  
+4. Select the action item to manage the database
 ![Odoo set a password](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-manages-websoft9.png)
 
-**新增**
+**NEW**
 
-Odoo 支持多租户（多企业组织），增加一个数据库就等于增加一个企业。  
+Odoo supports multi-tenancy (multi-enterprise organization), adding a database is equivalent to adding an enterprise.
 
-多个企业共同使用一套 Odoo，采用不同的账号登录，相互不干扰。
+Multiple companies use a set of Odoo together, log in with different accounts, and do not interfere with each other.
 
-1. 点击【create database】，输入密码，设置名称
-   ![Odoo 新增数据库](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-multidb-websoft9.png)
+1. Click [create database], enter the password, and set the name
+   ![Odoo new database](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-multidb-websoft9.png)
 
-2. 新增完成后，你会看到数据库管理界面列出新增的数据库
+2. After the addition is complete, you will see the new database listed in the database management interface
 
-**备份**
+**Backup**
 
-1. 输入密码，选择备份格式，点击【Backup】
-   ![Odoo 备份](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-managesbk-websoft9.png)
+1. Enter the password, select the backup format, and click [Backup]
+   ![Odoo Backup](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-managesbk-websoft9.png)
 
-2. 备份完成后，系统会自动下载备份数据（zip文件）
+2. After the backup is completed, the system will automatically download the backup data (zip file)
 
-**复制**
+**copy**
 
-可以完整复制一个企业组织，作为新企业组织的数据
+An enterprise organization can be completely copied as the data of the new enterprise organization
 
-1. 输入密码，设置名称，点击【Continue】
+1. Enter the password, set the name, and click [Continue]
 ![Odoo set a pssword](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-managesdp-websoft9.png)
 
-2. 复制成功后，数据库管理栏目会列出新复制的数据库
+2. After the copy is successful, the database management column will list the newly copied database
 
-**删除**
+**delete**
 
-请谨慎操作
+Please proceed with caution
 
-**恢复**
+**recover**
 
-数据库被删除后，可以通过备份进行恢复
+After the database is deleted, it can be restored from a backup
 
-1. 输入密码，选择备份文件，命名恢复后的数据库名称，点击【Continue】
+1. Enter the password, select the backup file, name the restored database, and click [Continue]
 ![Odoo set a pssword](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-managesrs-websoft9.png)
 
-1. 数据库恢复过程中可能会出现"413 Request Entity Too Large"，[解决办法](./odoo/admin#attachment)
+1. "413 Request Entity Too Large" may appear during database recovery. [Solution](./odoo/admin#attachment)
 
-**修改主密码**
+**Modify master password**
 
-修改主密码是一项非常重要的安全操作。  
+Changing the master password is a very important security operation.  
 
 ### Basic Settings
 
@@ -212,36 +212,38 @@ In addition to the base modules, Odoo offers a number of premium third-party mod
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Odoo 
 
-通过运行`docker ps`，可以查看到 Odoo 运行时所有的 Container：
+Run docker ps, view all containers when {{trademark}} is running:
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                   COMMAND                  CREATED         STATUS         PORTS                                                      NAMES
+b0755e46fac5   dpage/pgadmin4:latest   "/entrypoint.sh"         2 minutes ago   Up 2 minutes   443/tcp, 0.0.0.0:9090->80/tcp, :::9090->80/tcp             pgadmin
+e94cd3f2455b   odoo:15                 "/entrypoint.sh odoo"    2 minutes ago   Up 2 minutes   8071-8072/tcp, 0.0.0.0:9001->8069/tcp, :::9001->8069/tcp   odoo
+486284019f46   postgres:14             "docker-entrypoint.s…"   2 minutes ago   Up 2 minutes   0.0.0.0:5432->5432/tcp, :::5432->5432/tcp                  odoo-db
 ```
 
 
-下面仅列出 Odoo 本身的参数：
-
 ### Path{#path}
 
-Odoo installation directory： */usr/lib/python3/dist-packages/odoo*  
-Odoo 配置文件： */etc/odoo/odoo.conf*  
-Odoo 日志目录： */var/log/odoo*
+Odoo install directory: */data/apps/odoo*  
+Odoo configure file: */data/apps/odoo/data/odoo_config/odoo.conf* 
 
 ### Port{#port}
 
-无特殊端口
+In addition to common ports such as 80, 443, etc., the following ports may be used:
 
+No special port
 
 ### Version{#version}
 
 ```shell
-odoo --version
+docker exec -it odoo odoo --version
 ```
 
 ### Service{#service}
 
-```shell
 sudo docker start | stop | restart | status odoo
+sudo docker start | stop | restart | status odoo-db
+sudo docker start | stop | restart | status pgadmin
 ```
 
 ### CLI{#cli}
@@ -454,7 +456,7 @@ Options:
 
 ```
 
-更多详细情况，请参考官方文档：[Command-line interface: odoo-bin](https://www.odoo.com/documentation/13.0/reference/cmdline.html)
+For more details, please refer to the official documentation: [Command-line interface: odoo-bin](https://www.odoo.com/documentation/13.0/reference/cmdline.html)
 
 ### API
 
