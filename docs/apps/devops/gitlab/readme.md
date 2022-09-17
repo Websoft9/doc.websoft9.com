@@ -207,7 +207,7 @@ GitLab 包含数十种组件([查看](https://docs.gitlab.com/ee/development/arc
 
 ##### GitLab
 
-GitLab 配置文件： */etc/gitlab/gitlab.rb*    
+GitLab 配置文件： */data/apps/gitlab/gitlab.rb*    
 GitLab 及所有组件配置： */opt/gitlab*  
 GitLab Repository 存储目录： */var/opt/gitlab/git-data*  
 GitLab 备份目录： */var/opt/gitlab/backups*
