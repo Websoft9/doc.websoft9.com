@@ -43,7 +43,7 @@ Below is for you to solve problem, and you can contact **[Websoft9 Support](./he
 
 ## PrestaShop QuickStart
 
-下面以 **使用 PrestaShop 构建在线商城** 作为一个任务，帮助用户快速入门：
+Let's take **Building an online store with PrestaShop** as a task to help users get started quickly:
 
 ## PrestaShop Setup
 
@@ -168,7 +168,7 @@ sudo docker start | restart | stop | stats phpmyadmin
 
 ### CLI{#cli}
 
-PrestaShop 提供了一个用于安装和修改配置的 [CLI](https://doc.prestashop.com/display/PS17/Installing+PrestaShop+using+the+command-line+script)，进入根目录下运行：  
+PrestaShop provide a [CLI](https://doc.prestashop.com/display/PS17/Installing+PrestaShop+using+the+command-line+script) for installing and modifying the configuration, enter the root directory and run: 
 
 ```
 php index_cli.php --domain=example.com --db_server=sql.example.com --db_name=prestashop --db_user=root --db_password=123456789
