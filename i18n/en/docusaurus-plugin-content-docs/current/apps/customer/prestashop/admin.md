@@ -21,29 +21,29 @@ This section provides PrestaShop online database backup solution
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-dbbackup-websoft9.png)
 3. Create a new backup and download it
 
-### 自动备份
+### Automatic backup
 
-Prestashop 自动备份是通过一个名称为【1-Click Upgrade】的插件实现的，具体步骤如下：
+Prestashop automatic backup is realized through a plug-in named [1-Click Upgrade]. The specific steps are as follows:
 
-1. 登录 PrestaShop 后台，打开【Modules Catalog】，搜索【upgrade】，安装备份插件
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-upgrade001-websoft9.png)
+1. Log in to the PrestaShop background, open [Modules Catalog], search for [upgrade], and install the backup plugin
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/prestashop-upgrade001-websoft9.png)
 
-2. 安装完成后，点击【配置】，进入模块设置界面
+2. After the installation is complete, click [Configuration] to enter the module setting interface
 
-3. 根据设置建议，将系统置为维护模式（maintenance mode）
+3. Put the system into maintenance mode as suggested by the settings
    
-4. 点击【Upgrade PrestaShop now】按钮，开始升级
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-upgrade002-websoft9.png)
+4. Click the [Upgrade PrestaShop now] button to start the upgrade
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/prestashop-upgrade002-websoft9.png)
 
-5. 升级过程中首先会下载最新的安装包，受制于网络因素，这个过程可能会比较慢。
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-upgrade003-websoft9.png)
+5. During the upgrade process, the latest installation package will be downloaded first. Due to network factors, this process may be slow.
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/prestashop-upgrade003-websoft9.png)
 
-6. 升级过程的例外情况
+6. Exceptions to the upgrade process
 
-   - 如果下载新版本这个步骤无法完成，需要多次尝试
-   - 若出现 “you don't have permission...ajax-upgradetab.php” 的错误提示，升级失败，暂无解决办法
+   - If this step of downloading a new version cannot be completed, several attempts are required
+   - If the error message "you don't have permission...ajax-upgradetab.php" appears, the upgrade fails, and there is no solution yet
 
-> 与升级有关的更多方案，请参考官方文档：[PrestaShop Backup](https://doc.prestashop.com/display/PS16/Manual+update)   
+> For more solutions related to the upgrade, please refer to the official document: [PrestaShop Backup](https://doc.prestashop.com/display/PS16/Manual+update)
 
 ### PrestaShop Upgrade
 
