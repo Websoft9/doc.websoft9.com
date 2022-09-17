@@ -26,36 +26,13 @@ If you have installed Websoft9 PrestaShop, the following steps is for your quick
 
 ### Steps for you
 
-1. Using local Chrome or Firefox to visit the URL *https://domain* or *https://Internet IP*, start to install    
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/ps01.png)
-
-2. Agree license, Click "Next"
-
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/ps02.png)
-
-3. Set your store information and administration account, Click "Next"
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/ps03.png)
-   
-   > Email is your login ID, not collected by anyone because it stored in your Cloud Server
-
-4. Database connection configuration, you can use the MySQL in this Server([Don's know password?](./user/credentials)), and you can use other database services
-
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/ps04.png)
-
-5. Installation is finished
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/ps05.png)
-
-6. Please delete */data/wwwroot/prestashop/install* folder by SSH
-   ```
-   rm -rf /data/wwwroot/prestashop/install
-   ```
-7. Click "Manage your store" to enter your administration account, Click "Login IN"
+1. Using local Chrome or Firefox to visit the URL *https://domain/admin* or *https://Internet IP/admin*, access login page    
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/ps07.png)
 
-8. This is your administration console
+2. Input email and password([Don's know password?](./user/credentials)), accesss your administration console
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/ps08.png)
 
-9. Use *http://IP*  to go to your index page.
+3. Use *http://IP*  to go to your index page.
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/ps09.png)
 
 > Refer to [PrestaShop Docs](https://www.prestashop.com/en/resources/documentations) to get more details
