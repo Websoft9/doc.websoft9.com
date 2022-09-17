@@ -22,32 +22,6 @@ This section provides Nextcloud online backup solution.
 2. Go to【Admin】>【OwnBackup】, start backup, and you can restore it.
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-backupapp002-websoft9.png)
 
-### 手工升级
-
-有时候由于网络问题，上面的基于升级界面的升级会由于网络下载速度太慢，导致升级失败。  
-
-此时，可以考虑采用如下的手工升级方案：
-
-1. 将 Nextcloud 的 data, config, apps 目录临时复制到服务器其他目录下
-
-2. 上传 Nextcloud installation directory下的所有文件
-   ```
-   rm -rf /data/wwwroot/nextcloud/*
-   ```
-3. 将本地下载的 Nextcloud 源码（除 config, apps 目录之外）上传到 /data/wwwroot/nextcloud 目录
-
-4. 将第1步备份的几个目录还原到 */data/wwwroot/nextcloud* 中
-
-5. 使用 *php occ* 命令进行升级处理
-   ```
-   cd /data/wwwroot/nextcloud
-   php occ upgrade
-   ```
-
-6. 登录到 Nextcloud 后台界面，启用所需的插件
-
-7. 手工升级完成
-
 ### Nextcloud Upgrade
 
 Nextcloud provides a user-friendly upgrade (update) portal. You can complete the update of the main version and APP plug-in according to the update prompt of the system.
@@ -89,9 +63,9 @@ In addition to the Nextcloud issues listed below, you can refer to [Troubleshoot
 
 This problem occurs if you install through IP, and then bind the domain name. To solve it, please change the IP address to the domain name in Nextcloud [Confuguration file](../nextcloud#path).
 
-#### 网络超时导致无法安装插件？
+#### Failed to install plugin due to network timeout?
 
-采用[手工安装](../nextcloud#minstallplugin)方式
+Use [manual installation](../nextcloud#minstallplugin) method
 
 ## FAQ{#faq}
 
