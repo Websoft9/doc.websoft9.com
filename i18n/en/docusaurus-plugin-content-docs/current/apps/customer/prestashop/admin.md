@@ -26,17 +26,17 @@ This section provides PrestaShop online database backup solution
 Prestashop automatic backup is realized through a plug-in named [1-Click Upgrade]. The specific steps are as follows:
 
 1. Log in to the PrestaShop background, open [Modules Catalog], search for [upgrade], and install the backup plugin
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/prestashop-upgrade001-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-upgrade001-websoft9.png)
 
 2. After the installation is complete, click [Configuration] to enter the module setting interface
 
 3. Put the system into maintenance mode as suggested by the settings
    
 4. Click the [Upgrade PrestaShop now] button to start the upgrade
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/prestashop-upgrade002-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-upgrade002-websoft9.png)
 
 5. During the upgrade process, the latest installation package will be downloaded first. Due to network factors, this process may be slow.
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/prestashop-upgrade003-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-upgrade003-websoft9.png)
 
 6. Exceptions to the upgrade process
 
