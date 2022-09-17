@@ -29,10 +29,10 @@ If you have installed Websoft9 PrestaShop, the following steps is for your quick
 1. Using local Chrome or Firefox to visit the URL *https://domain/admin* or *https://Internet IP/admin*, access login page    
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/ps07.png)
 
-2. Input email and password([Don's know password?](./user/credentials)), accesss your administration console
+2. Input email and password([Don's know password?](./user/credentials)), accesss your administration console  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/ps08.png)
 
-3. Use *http://IP*  to go to your index page.
+3. Use *http://IP*  to go to your index page.  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/ps09.png)
 
 > Refer to [PrestaShop Docs](https://www.prestashop.com/en/resources/documentations) to get more details
