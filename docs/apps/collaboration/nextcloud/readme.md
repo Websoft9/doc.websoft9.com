@@ -31,7 +31,7 @@ tags:
 1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入引导首页
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-wizard-websoft9.png)
    
-2. 输入用户名和密码，点击【安装】，安装完成后提示可继续安装插件，根据需求选择安装或者跳过    
+2. 设置用户名和密码并牢记，点击【安装】，安装完成后提示可继续安装插件，根据需求选择安装或者跳过    
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/nextcloud/nextcloud-plugin-websoft9.png)
 
 3. 关闭弹窗，开始体验后台
