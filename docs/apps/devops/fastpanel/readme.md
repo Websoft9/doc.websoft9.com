@@ -28,7 +28,7 @@ FASTPANEL 面板是可视化的服务器管理软件，支持快速安装LAMP/LN
 1. 使用本地电脑浏览器访问网址：*http://域名:8888* 或 *http://服务器公网IP:8888*, 进入初始化页面
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/fastpanel/fastpanel-init-websoft9.png)
 
-2. 点击申请许可证，通过邮箱在FASTPANEL官网注册后，复制激活码激活
+2. 输入邮件地址，点击【申请许可证】，根据收取邮件内容点击链接，并刷新页面
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/fastpanel/fastpanel-active-websoft9.png)
    
 3. 输入账号密码后登录（[不知道账号密码？](#账号密码)）
