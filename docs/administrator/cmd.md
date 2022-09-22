@@ -71,8 +71,8 @@ cd /data/wwwroot
 chown -R nginx.nginx /data/wwwroot
 
 # 分别修改文件和文件夹的读、写、执行权限
-find /data/wwwroot/default -type f -exec chmod 640 {} \
-find /data/wwwroot/default -type d -exec chmod 750 {} \
+find /data/wwwroot/default -type f -exec chmod 640 {} \;
+find /data/wwwroot/default -type d -exec chmod 750 {} \;
 
 # 修改文件权限
 chmod u+x <file>
