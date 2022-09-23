@@ -15,6 +15,20 @@ slug: /troubleshoot/method
 
 资源瓶颈主要指计算资源不足：CUP 超负荷、内存不足、硬盘空间已满、带宽太小、进程互斥、端口被占用等。
 
+```
+# 查看内存使用
+free
+
+# 查看硬盘使用
+df -hl 
+
+# 查看进程以及 CPU 使用
+top
+
+# 查看端口
+netstat -tunlp
+```
+
 典型范例：  
 
 * [MySQL 日志太大，导致磁盘空间不足？](../mysql/admin#binlogexceed)
