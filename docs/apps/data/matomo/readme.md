@@ -2,14 +2,18 @@
 sidebar_position: 100
 slug: /matomo
 tags:
-  - Web 面板
-  - 可视化
-  - GUI
+  - matomo
+  - analytics
+  - 统计分析
 ---
 
 # 快速入门
 
 Matomo 介绍
+
+Matomo 是一个强大的开源网络分析平台，拥有100% 的数据所有权，并确保业务符合GDPR和CCPA。尤其对于商业软件来说，Matomo 增强的搜索引擎优化以及转换优化能力，让您在数字营销领域能力大大增强。
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/matomo/matomo-show-websoft9.png)
 
 部署 Websoft9 提供的 Matomo 之后，请参考下面的步骤快速入门。
 
@@ -25,14 +29,24 @@ Matomo 介绍
 ### 详细步骤
 
 1. 使用本地电脑浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入初始化页面
+  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/matomo/matomo-init1-websoft9.png)
 
-2. 完成初始化工作
-
+2. 点击【Next】，直到Superuser页面设置用户名，密码和登陆邮件账号并牢记
+  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/matomo/matomo-init2-websoft9.png)
+  
+3. 点击【Next】，设置站点名称，时区，URL
+  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/matomo/matomo-init3-websoft9.png)
+  
+4. 完成初始化向导，进入登陆页面
+  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/matomo/matomo-login-websoft9.png)
+  
+5. 输入向导设置的用户名和密码，开始体验后台
+  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/matomo/matomo-main-websoft9.png)
+  
 ### 碰到问题？
 
 若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题。
-
-**Matomo 能打开，但总是出现 502 错误？**  
+  
 
 参阅：
 
@@ -42,35 +56,7 @@ Matomo 介绍
 
 ## Matomo 常用操作{#guide}
 
-### 配置 SMTP{#smtp}
 
-1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
-
-2. 填写 Matomo 邮件相关配置
-
-3. 测试邮件发送是否可用
-
-### 安装插件{#plugin}
-
-### 重置管理员密码{#resetpw}
-
-忘记管理员密码时，请参考如下方案重置密码：  
-
-### 域名额外配置（修改 URL）{#dns}
-
-**[域名五步设置](./administrator/domain_step)** 完成后，需设置 Matomo 的 URL:  
-
-1. 步骤1
-
-2. 步骤2
-
-### HTTPS 额外设置{#https}
-
-**[标准 HTTPS 配置](./administrator/domain_https)** 完成后，可能还需要如下步骤： 
-
-1. 步骤1
-
-2. 步骤2
 
 ## 参数{#parameter}
 
@@ -79,12 +65,16 @@ Matomo 应用中包含 Docker, Portainer 等组件，可通过 **[通用参数�
 通过运行 `docker ps`，查看 Matomo 运行时所有的服务组件：   
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE               COMMAND                  CREATED       STATUS       PORTS                                   NAMES
+55278a64ce01   phpmyadmin:latest   "/docker-entrypoint.…"   3 hours ago   Up 3 hours   0.0.0.0:9090->80/tcp, :::9090->80/tcp   phpmyadmin
+c17ad9f95f74   matomo:latest       "/entrypoint.sh apac…"   3 hours ago   Up 3 hours   0.0.0.0:9001->80/tcp, :::9001->80/tcp   matomo
+ead45db0cdab   mysql:5.7           "docker-entrypoint.s…"   3 hours ago   Up 3 hours   3306/tcp, 33060/tcp                     matomo-db
 ```
 
 ### 路径{#path}
 
-Matomo 配置文件： *path/config.php*    
+Matomo 数据目录： */data/apps/matomo*  
+Matomo 数据目录： */data/apps/matom/data/matomo* 
 
 ### 端口{#port}
 
@@ -92,18 +82,26 @@ Matomo 配置文件： *path/config.php*
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
-| 8080   | Matomo 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
+| 9090   | 数据库可视化工具phpmyadmin | 可选   |
 
 ### 版本{#version}
 
-控制台查看
+```
+docker exec -it matomo cat /var/www/html/core/Version.php|grep "const VERSION ="|cut -d"=" -f2
+```
 
 ### 服务{#service}
 
 ```shell
 sudo docker start | stop | restart | stats matomo
+sudo docker start | stop | restart | stats matomo-db
+sudo docker start | stop | restart | stats phpmyadmin
 ```
 
 ### 命令行{#cli}
 
+暂无
+
 ### API{#api}
+
+[Matomo API Documentation](https://matomo.org/guide/apis/)

@@ -15,7 +15,11 @@ tags:
 
 ### Matomo 备份与恢复
 
+请参照[官方文档](https://matomo.org/faq/how-to/how-do-i-backup-and-restore-the-matomo-data)
+
 ### Matomo 升级
+
+请参照[Matomo 升级](https://matomo.org/faq/on-premise/update-matomo)
 
 ## 故障排除{#troubleshoot}
 
