@@ -24,53 +24,48 @@ SRS 介绍
 
 ### 详细步骤
 
-1. 使用本地电脑浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入初始化页面
+1. 使用本地电脑浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入后台管理页面
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/srs/srs-init-websoft9.png)
 
-2. 完成初始化工作
+2. 点击【SRS控制台】，进入控制台进行监控以及各种设置
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/srs/srs-console-websoft9.png)
 
 ### 碰到问题？
 
 若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题。
 
-**SRS 能打开，但总是出现 502 错误？**  
-
 参阅：
 
 ## SRS 使用入门{#quickstart}
 
-下面以 **××××** 作为一个任务，帮助用户快速入门：
+下面以 **OBS 推送PC桌面流到 SRS** 作为一个任务，帮助用户快速入门：
+
+1. 下载并安装[OBS](https://obsproject.com/download)
+
+2. 启动 OBS，点击【+】来添加源
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/srs/srs-add-websoft9.png)
+
+3. 选择【显示器采集】，新建源名称后点击【确定】
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/srs/srs-add1-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/srs/srs-add2-websoft9.png)
+
+4. 选择【设置】，分别对【推流】和【输出】进行设置
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/srs/srs-set-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/srs/srs-set1-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/srs/srs-set2-websoft9.png)
+
+  > 输出编码如果使用硬件，对显卡要求较高，可能无法推流成功
+
+5. 点击【开始推流】，连接成功即推流成功
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/srs/srs-tl1-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/srs/srs-tl2-websoft9.png)
+
+6. 回到后台，点击【SRS播放器】查看推流结果
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/srs/srs-view1-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/srs/srs-view2-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/srs/srs-view3-websoft9.png)
 
 ## SRS 常用操作{#guide}
-
-### 配置 SMTP{#smtp}
-
-1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
-
-2. 填写 SRS 邮件相关配置
-
-3. 测试邮件发送是否可用
-
-### 安装插件{#plugin}
-
-### 重置管理员密码{#resetpw}
-
-忘记管理员密码时，请参考如下方案重置密码：  
-
-### 域名额外配置（修改 URL）{#dns}
-
-**[域名五步设置](./administrator/domain_step)** 完成后，需设置 SRS 的 URL:  
-
-1. 步骤1
-
-2. 步骤2
-
-### HTTPS 额外设置{#https}
-
-**[标准 HTTPS 配置](./administrator/domain_https)** 完成后，可能还需要如下步骤： 
-
-1. 步骤1
-
-2. 步骤2
 
 ## 参数{#parameter}
 
@@ -79,20 +74,19 @@ SRS 应用中包含 Docker, Portainer 等组件，可通过 **[通用参数表](
 通过运行 `docker ps`，查看 SRS 运行时所有的服务组件：   
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE              COMMAND                  CREATED       STATUS       PORTS                                                                                                                                                                                             NAMES
+49f6aed14ba8   ossrs/srs:latest   "./objs/srs -c conf/…"   2 hours ago   Up 2 hours   0.0.0.0:1935->1935/tcp, :::1935->1935/tcp, 0.0.0.0:1985->1985/tcp, :::1985->1985/tcp, 0.0.0.0:8000->8000/tcp, :::8000->8000/tcp, 8000/udp, 0.0.0.0:8080->8080/tcp, :::8080->8080/tcp, 10080/udp   srs
 ```
 
 ### 路径{#path}
 
-SRS 配置文件： *path/config.php*    
+SRS 安装目录： */data/apps/srs*      
 
 ### 端口{#port}
 
 除 80, 443 等常见端口需开启之外，以下端口可能会用到：  
 
-| 端口号 | 用途                                          | 必要性 |
-| ------ | --------------------------------------------- | ------ |
-| 8080   | SRS 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
+无特殊端口
 
 ### 版本{#version}
 
@@ -106,4 +100,8 @@ sudo docker start | stop | restart | stats srs
 
 ### 命令行{#cli}
 
+暂无
+
 ### API{#api}
+
+SRS提供[API接口](https://ossrs.net/lts/zh-cn/docs/v4/doc/http-api)，供外部程序管理服务器
