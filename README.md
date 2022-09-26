@@ -24,3 +24,7 @@ yarn run write-translations -- --locale zh-cn
 # Upgrade Docusaurus 
 yarn upgrade @docusaurus/core@latest @docusaurus/preset-classic@latest
 ```
+
+## Documentation system
+
+[Divio 文档规范](https://documentation.divio.com/)
