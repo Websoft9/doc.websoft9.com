@@ -9,8 +9,8 @@ tags:
 
 # ONLYOFFICE Solution
 
-ONLYOFFICE 可以与其他的软件平台**集成**一起使用，解决 构建企业管理系统 过程中的各种[场景问题](#)。
+ONLYOFFICE can be used with other software platforms **integrated** to solve various [scenario problems](#) in the process of building an enterprise management system.
 
-## 与网盘集成
+## Integrate with network disk
 
-ONLYOFFICE Docs 支持被 [ownCloud, Nextcloud, Seafile](../onlyofficedocs/solution) 等网盘软件集成，用于文档预览与编辑。
+ONLYOFFICE Docs supports integration with network disk software such as [ownCloud, Nextcloud, Seafile](../onlyofficedocs/solution) for document preview and editing.

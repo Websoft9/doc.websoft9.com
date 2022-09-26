@@ -73,7 +73,7 @@ ONLYOFFICE requires much memory, at least 8G is recommended.
 
 ## ONLYOFFICE QuickStart
 
-下面以 **ONLYOFFICE 构建集成邮件服务器** 作为一个任务，帮助用户快速入门：
+The following uses **ONLYOFFICE Build an Integrated Mail Server** as a task to help users get started quickly:
 
 ## ONLYOFFICE Setup
 
@@ -138,35 +138,32 @@ Try to retrieve your password through email when forgot it.
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage ONLYOFFICE 
 
 
-通过运行`docker ps`，可以查看到 ONLYOFFICE 运行时所有的 Container：
+By running `docker ps`, you can view all Containers when ONLYOFFICE is running:
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                               COMMAND                  CREATED          STATUS          PORTS                                                                                                                                                                                          NAMES
+9e404a923dbb   onlyoffice/controlpanel:3.0.3.410   "/var/www/onlyoffice…"   17 seconds ago   Up 14 seconds   80/tcp, 443/tcp                                                                                                                                                                                onlyoffice-control
+e9180dd570a4   onlyoffice/communityserver:latest   "/app/run-community-…"   20 seconds ago   Up 15 seconds   3306/tcp, 5280/tcp, 9865-9866/tcp, 9871/tcp, 9882/tcp, 9888/tcp, 0.0.0.0:5222->5222/tcp, :::5222->5222/tcp, 0.0.0.0:9003->80/tcp, :::9003->80/tcp, 0.0.0.0:49153->443/tcp, :::49153->443/tcp   onlyoffice
+2a191ade9b10   onlyoffice/documentserver:7.0       "/app/ds/run-documen…"   25 seconds ago   Up 16 seconds   443/tcp, 0.0.0.0:9002->80/tcp, :::9002->80/tcp                                                                                                                                                 onlyoffice-docs
+c90ae46964ba   mysql:5.7                           "docker-entrypoint.s…"   25 seconds ago   Up 16 seconds   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp                                                                                                                                           onlyoffice-db
 ```
-
-
-下面仅列出 ONLYOFFICE 本身的参数：
 
 ### Path{#path}
 
-ONLYOFFICE Workspace存储目录： */data/wwwroot/communityserver*  
-ONLYOFFICE Workspace docker-compose 文件路径： */data/wwwroot/onlyoffice/docker-compose.yml*  
-ONLYOFFICE Workspace 日志目录： */data/wwwroot/onlyoffice/communityserver/logs*
+ONLYOFFICE Workspace installation directory: */data/apps/onlyoffice*  
+ONLYOFFICE Workspace storage directory: */data/apps/onlyoffice/data/community_data*  
+ONLYOFFICE Workspace log directory: */data/apps/onlyoffice/data/community_log*  
+ONLYOFFICE Workspace document directory: */data/apps/onlyoffice/data/document_data*  
 
 ### Port{#port}
 
-| 端口号 | 用途                                          | 必要性 |
-| ------ | --------------------------------------------- | ------ |
-| 9003   | ONLYOFFICE Workspace 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
-| 9002   | ONLYOFFICE docs  | 可选   |
-
+| Port Number | Purpose | Necessity |
+| ------ | ------------------------------------------ --- | ------ |
+| 9002 | ONLYOFFICE docs | optional |
 
 ### Version{#version}
 
 ```shell
-# ONLYOFFICE version
-onlyofficectl status | grep ONLYOFFICE*
-
 # ONLYOFFICE Community Server version
 docker image inspect onlyoffice/communityserver  | grep onlyoffice.community.version | sed -n 1p
 ```
@@ -175,7 +172,9 @@ docker image inspect onlyoffice/communityserver  | grep onlyoffice.community.ver
 
 ```shell
 sudo docker start | stop | restart onlyoffice
-sudo docker start | stop | restart onlyofficedocs
+sudo docker start | stop | restart onlyoffice-db
+sudo docker start | stop | restart onlyoffice-control
+sudo docker start | stop | restart onlyoffice-docs
 ```
 
 ### CLI{#cli}

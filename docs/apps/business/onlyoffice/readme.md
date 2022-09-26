@@ -152,9 +152,6 @@ e9180dd570a4   onlyoffice/communityserver:latest   "/app/run-community-…"   20
 c90ae46964ba   mysql:5.7                           "docker-entrypoint.s…"   25 seconds ago   Up 16 seconds   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp                                                                                                                                           onlyoffice-db
 ```
 
-
-下面仅列出 ONLYOFFICE 本身的参数：
-
 ### 路径{#path}
 
 ONLYOFFICE Workspace 安装目录： */data/apps/onlyoffice*  

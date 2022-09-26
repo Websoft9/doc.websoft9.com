@@ -59,19 +59,19 @@ Each edition consists of: Community Server, Document Server, Mail Server.
 
 COMMUNITY EDITION is free, while [DEVELOPER EDITION](https://www.onlyoffice.com/en/developer-edition-prices.aspx) is a paid version for developers.
 
-#### ONLYOFFICE 开源版并发连接数有限制吗？
+#### Is there a limit to the number of concurrent connections in ONLYOFFICE open source version?
 
-并发连接数不超过 20个（Up to 20 Simultaneous connections）
+Up to 20 Simultaneous connections
 
-#### ONLYOFFICE Docs 并发连接数是什么？
+#### ONLYOFFICE Docs What is the number of concurrent connections?
 
-参阅：[ONLYOFFCE Docs](../onlyofficedocs/admin#onlyofficedocsmaxconn) 相关文档
+See: [ONLYOFFCE Docs](../onlyofficedocs/admin#onlyofficedocsmaxconn) related documentation
 
-#### ONLYOFFICE 默认支持文档编辑与预览吗？
+#### Does ONLYOFFICE support document editing and previewing by default?
 
-默认已经配置好，无需任何设置即可使用
+It is already configured by default and can be used without any settings
 
-#### 本应用是否可以对外提供文档服务？
+#### Can this application provide external document services?
 
-可以，*http://服务器公网IP:9002* 即文档预览与编辑服务地址
+Yes, *http://server public IP:9002* is the document preview and editing service address
 
