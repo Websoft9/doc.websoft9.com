@@ -13,6 +13,10 @@ This chapter is special guide for ONLYOFFICE maintenance and settings. And you c
 
 ## Maintenance guide
 
+### ONLYOFFICE  Upgrade
+
+Refer to [ONLYOFFICE update to latest](https://helpcenter.onlyoffice.com/administration/control-panel-update.aspx)
+
 ## Troubleshoot{#troubleshoot}
 
 In addition to the ONLYOFFICE issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
@@ -65,7 +69,7 @@ Up to 20 Simultaneous connections
 
 #### ONLYOFFICE Docs What is the number of concurrent connections?
 
-See: [ONLYOFFCE Docs](../onlyofficedocs/admin#onlyofficedocsmaxconn) related documentation
+See: [ONLYOFFICE Docs](../onlyofficedocs/admin#onlyofficedocsmaxconn) related documentation
 
 #### Does ONLYOFFICE support document editing and previewing by default?
 

@@ -13,6 +13,10 @@ tags:
 
 ## 场景
 
+### 升级
+
+详细请参照[ONLYOFFICE 升级到最新](https://helpcenter.onlyoffice.com/administration/control-panel-update.aspx)
+
 ## 故障排除
 
 除以下列出的 ONLYOFFICE 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。
@@ -65,7 +69,7 @@ COMMUNITY EDITION 是一个完全免费的版本。DEVELOPER EDITION 是适用�
 
 #### ONLYOFFICE Docs 并发连接数是什么？
 
-参阅：[ONLYOFFCE Docs](../onlyofficedocs/admin#onlyofficedocsmaxconn) 相关文档
+参阅：[ONLYOFFICE Docs](../onlyofficedocs/admin#onlyofficedocsmaxconn) 相关文档
 
 #### ONLYOFFICE 默认支持文档编辑与预览吗？
 
