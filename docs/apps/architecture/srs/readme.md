@@ -9,7 +9,8 @@ tags:
 
 # 快速入门
 
-SRS 介绍
+SRS 是一个简单高效的实时视频服务器，支持RTMP、WebRTC、HLS、HTTP-FLV、SRT等多种实时流媒体协议。基于协程技术，无异步回调难以维护的问题，SRS支持云原生标准（Docker镜像、K8s部署、可观测性日志和监控指标等），提供云SRS无门槛应用。SRS聚焦于实时流媒体网关，实现实时流媒体协议的接入和互相转换以及不断迭代，比如RTMP、HLS、WebRTC、HTTP-FLV和SRT等。
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/srs/srs-main-websoft9.png)
 
 部署 Websoft9 提供的 SRS 之后，请参考下面的步骤快速入门。
 
@@ -25,16 +26,16 @@ SRS 介绍
 ### 详细步骤
 
 1. 使用本地电脑浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入后台管理页面
+
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/srs/srs-init-websoft9.png)
 
 2. 点击【SRS控制台】，进入控制台进行监控以及各种设置
+
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/srs/srs-console-websoft9.png)
 
 ### 碰到问题？
 
 若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题。
-
-参阅：
 
 ## SRS 使用入门{#quickstart}
 

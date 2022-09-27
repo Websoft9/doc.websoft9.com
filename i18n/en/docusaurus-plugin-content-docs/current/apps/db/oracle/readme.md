@@ -84,7 +84,7 @@ This task **Create new table** is for your Oracle QuickStart
 忘记管理员密码时，运行下面的命令重置密码:  
 
 ```
-docker exec oracle ./setPassword.sh <your_password>
+docker exec -it oracle ./setPassword.sh <your_password>
 ```
 
 ### Get SID Or Servce Name{#getsid}

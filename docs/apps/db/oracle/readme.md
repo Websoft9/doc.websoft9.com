@@ -86,7 +86,7 @@ Oracle Database （简称 “Oracle”）是一个以领先的性能、可扩展
 
 忘记管理员密码时，运行下面的命令重置密码:  
 ```
-docker exec oracle ./setPassword.sh <your_password>
+docker exec -it oracle ./setPassword.sh <your_password>
 ```
 
 ### 获取 SID 或 Servce Name{#getsid}
