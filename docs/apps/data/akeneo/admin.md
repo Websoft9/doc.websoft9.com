@@ -15,7 +15,11 @@ tags:
 
 ### Akeneo 备份与恢复
 
+详细请参照[Akeneo 备份管理](https://docs.akeneo.com/6.0/technical_architecture/technical_information/operation_processes.html#backup-management)
+
 ### Akeneo 升级
+
+详细请参照[Akeneo 升级](https://docs.akeneo.com/6.0/migrate_pim/upgrade_major_version.html#upgrade-from-5-0-to-6-0)
 
 ## 故障排除{#troubleshoot}
 

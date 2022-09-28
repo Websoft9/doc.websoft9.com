@@ -9,7 +9,9 @@ tags:
 
 # 快速入门
 
-Akeneo 是一个开源的主数据管理系统（PIM）
+Akeneo 是一个开源的产品体验管理 (PXM) 和产品信息管理 (PIM) 软件产品。可帮助商家和品牌在所有销售渠道中提供引人入胜的客户体验、提高产品数据质量并简化产品目录管理。使用 Akeneo 作为产品基础设施管理，能够转变业务模式，消减产品浓缩成本。
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/akeneo/akeneo-main-websoft9.png)
 
 部署 Websoft9 提供的 Akeneo 之后，请参考下面的步骤快速入门。
 
@@ -25,52 +27,22 @@ Akeneo 是一个开源的主数据管理系统（PIM）
 ### 详细步骤
 
 1. 使用本地电脑浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入初始化页面
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/akeneo/akeneo-login-websoft9.png)
 
-2. 完成初始化工作
+2. 输入用户名和密码([不知道密码?](./user/credentials)) ，登陆 Akeneo 开始产品管理 
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/akeneo/akeneo-product-websoft9.png)
 
 ### 碰到问题？
 
 若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题。
 
-**Akeneo 能打开，但总是出现 502 错误？**  
-
-参阅：
-
 ## Akeneo 使用入门{#quickstart}
 
-下面以 **××××** 作为一个任务，帮助用户快速入门：
+下面以 **Akeneo 数据导入导出** 作为一个任务，帮助用户快速入门：
+
+详细请参照[Akeneo 数据导入导出](https://docs.akeneo.com/6.0/import_and_export_data/index.html)
 
 ## Akeneo 常用操作{#guide}
-
-### 配置 SMTP{#smtp}
-
-1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
-
-2. 填写 Akeneo 邮件相关配置
-
-3. 测试邮件发送是否可用
-
-### 安装插件{#plugin}
-
-### 重置管理员密码{#resetpw}
-
-忘记管理员密码时，请参考如下方案重置密码：  
-
-### 域名额外配置（修改 URL）{#dns}
-
-**[域名五步设置](./administrator/domain_step)** 完成后，需设置 Akeneo 的 URL:  
-
-1. 步骤1
-
-2. 步骤2
-
-### HTTPS 额外设置{#https}
-
-**[标准 HTTPS 配置](./administrator/domain_https)** 完成后，可能还需要如下步骤： 
-
-1. 步骤1
-
-2. 步骤2
 
 ## 参数{#parameter}
 
@@ -79,31 +51,44 @@ Akeneo 应用中包含 Docker, Portainer 等组件，可通过 **[通用参数�
 通过运行 `docker ps`，查看 Akeneo 运行时所有的服务组件：   
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                                                      COMMAND                  CREATED         STATUS         PORTS                                                  NAMES
+7d46c77c8bc7   phpmyadmin:latest                                          "/docker-entrypoint.…"   6 minutes ago   Up 6 minutes   0.0.0.0:9090->80/tcp, :::9090->80/tcp                  phpmyadmin
+db9a7668dad3   websoft9dev/akeneo:latest                                  "/entrypoint.sh /usr…"   7 minutes ago   Up 6 minutes   0.0.0.0:9001->80/tcp, :::9001->80/tcp                  akeneo
+6ecce79ee4c1   mysql:8.0                                                  "docker-entrypoint.s…"   7 minutes ago   Up 6 minutes   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp   akeneo-mysql
+8ea176b3bf04   docker.elastic.co/elasticsearch/elasticsearch-oss:7.10.1   "/tini -- /usr/local…"   7 minutes ago   Up 6 minutes   0.0.0.0:9200->9200/tcp, :::9200->9200/tcp, 9300/tcp    akeneo-elasticsearch
 ```
 
 ### 路径{#path}
 
-Akeneo 配置文件： *path/config.php*    
+Akeneo 安装目录： */data/apps/akeneof*  
+Akeneo 配置文件： */data/apps/akeneo/src/000-default.conf*  
+Akeneo 站点目录： */data/apps/akeneo/data/akeneo*    
 
 ### 端口{#port}
 
 除 80, 443 等常见端口需开启之外，以下端口可能会用到：  
 
-| 端口号 | 用途                                          | 必要性 |
-| ------ | --------------------------------------------- | ------ |
-| 8080   | Akeneo 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
+暂无特殊端口
 
 ### 版本{#version}
 
-控制台查看
+```
+docker exec -i akeneo  grep "pim-community-dev/tree" /var/www/html/composer.lock |awk -F"/v" '{print $2}'
+```
 
 ### 服务{#service}
 
 ```shell
 sudo docker start | stop | restart | stats akeneo
+sudo docker start | stop | restart | stats akeneo-elasticsearch
+sudo docker start | stop | restart | stats akeneo-mysql
 ```
 
 ### 命令行{#cli}
 
+暂无
+
 ### API{#api}
+
+Akeneo 采用 [REST API](https://api.akeneo.com/documentation/introduction.html) 规范。 
+
