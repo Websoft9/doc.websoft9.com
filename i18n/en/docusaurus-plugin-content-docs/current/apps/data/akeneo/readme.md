@@ -7,7 +7,9 @@ tags:
 
 # Akeneo Getting Started
 
-Akeneo introduce
+Akeneo is an open source Product Experience Management (PXM) and Product Information Management (PIM) software product. Helps merchants and brands deliver engaging customer experiences across all sales channels, improve product data quality, and simplify product catalog management. Using Akeneo as product infrastructure management can transform business models and reduce product enrichment costs.
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/akeneo/akeneo-main-websoft9.png)
 
 If you have installed Websoft9 Akeneo, the following steps is for your quick start
 
@@ -23,44 +25,22 @@ If you have installed Websoft9 Akeneo, the following steps is for your quick sta
 ### Steps for you
 
 1. Using local browser to visit the URL *http://DNS* or *http://Server's Internet IP*, you will enter initial wizard of Akeneo
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/akeneo/akeneo-login-websoft9.png)
 
-2. Complete initialization
-
-3. login to your Akeneo([Don't have password?](./user/credentials))
+2. login to your Akeneo([Don't have password?](./user/credentials))
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/akeneo/akeneo-product-websoft9.png)
 
 ### Having trouble?
 
 Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
-**Akeneo interface 502 error?**  
-
-Refer to：
-
 ## Akeneo QuickStart
 
-This task **xxxx** is for your Akeneo QuickStart
+The following takes **Akeneo data import and export** as a task to help users get started quickly:
 
-1. 
-
-2.  
+For details, please refer to [Akeneo Data Import and Export](https://docs.akeneo.com/6.0/import_and_export_data/index.html)
 
 ## Akeneo Setup
-
-### Configure  SMTP{#smtp}
-
-1. Prepare your [SMTP parameter](./administrator/smtp)
-
-2. Start to configure Akeneo
-
-3. Test it
-
-### DNS Additional Configure{#dns}
-
-Complete **[Five steps for Domain](./administrator/domain_step)** ，Set the URL for Akeneo  
-
-1. step1
-
-2. step2
 
 ## Reference sheet
 
@@ -69,31 +49,43 @@ The below items and **[General parameter sheet](./administrator/parameter)** is 
 Run `docker ps`, view all containers when Akeneo is running:  
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                                                      COMMAND                  CREATED         STATUS         PORTS                                                  NAMES
+7d46c77c8bc7   phpmyadmin:latest                                          "/docker-entrypoint.…"   6 minutes ago   Up 6 minutes   0.0.0.0:9090->80/tcp, :::9090->80/tcp                  phpmyadmin
+db9a7668dad3   websoft9dev/akeneo:latest                                  "/entrypoint.sh /usr…"   7 minutes ago   Up 6 minutes   0.0.0.0:9001->80/tcp, :::9001->80/tcp                  akeneo
+6ecce79ee4c1   mysql:8.0                                                  "docker-entrypoint.s…"   7 minutes ago   Up 6 minutes   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp   akeneo-mysql
+8ea176b3bf04   docker.elastic.co/elasticsearch/elasticsearch-oss:7.10.1   "/tini -- /usr/local…"   7 minutes ago   Up 6 minutes   0.0.0.0:9200->9200/tcp, :::9200->9200/tcp, 9300/tcp    akeneo-elasticsearch
 ```
 
 ### Path{#path}
 
-Akeneo configuration file： *path/config.php*    
+Akeneo installation directory: */data/apps/akeneof*
+Akeneo configuration file: */data/apps/akeneo/src/000-default.conf*
+Akeneo Site Directory: */data/apps/akeneo/data/akeneo*   
 
 ### Port{#port}
 
 In addition to common ports such as 80, 443, etc., the following ports may be used:
 
-| Port | Use                                          | Necessity |
-| ------ | --------------------------------------------- | ------ |
-| 8080   | Akeneo original port	 | Optional   |
+no
 
 ### Version {#version}
 
-View in console
+```
+docker exec -i akeneo  grep "pim-community-dev/tree" /var/www/html/composer.lock |awk -F"/v" '{print $2}'
+```
 
 ### Service {#service}
 
 ```shell
 sudo docker start | stop | restart | stats akeneo
+sudo docker start | stop | restart | stats akeneo-elasticsearch
+sudo docker start | stop | restart | stats akeneo-mysql
 ```
 
 ### CLI {#cli}
 
+no
+
 ### API {#api}
+
+Akeneo adopts the [REST API](https://api.akeneo.com/documentation/introduction.html) specification.
