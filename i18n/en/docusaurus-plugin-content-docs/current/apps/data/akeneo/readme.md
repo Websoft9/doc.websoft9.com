@@ -58,15 +58,15 @@ db9a7668dad3   websoft9dev/akeneo:latest                                  "/entr
 
 ### Path{#path}
 
-Akeneo installation directory: */data/apps/akeneof*
-Akeneo configuration file: */data/apps/akeneo/src/000-default.conf*
-Akeneo Site Directory: */data/apps/akeneo/data/akeneo*   
+Akeneo installation directory: */data/apps/akeneof*  
+Akeneo configuration file: */data/apps/akeneo/src/000-default.conf*  
+Akeneo Site Directory: */data/apps/akeneo/data/akeneo*     
 
 ### Port{#port}
 
 In addition to common ports such as 80, 443, etc., the following ports may be used:
 
-no
+No special port
 
 ### Version {#version}
 
@@ -84,7 +84,7 @@ sudo docker start | stop | restart | stats akeneo-mysql
 
 ### CLI {#cli}
 
-no
+No
 
 ### API {#api}
 

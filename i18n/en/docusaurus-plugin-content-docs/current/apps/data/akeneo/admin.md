@@ -14,11 +14,11 @@ This chapter is special guide for Akeneo maintenance and settings. And you can r
 
 ### Akeneo Backup and Restore
 
-For details, please refer to [Akeneo Backup Management](https://docs.akeneo.com/6.0/technical_architecture/technical_information/operation_processes.html#backup-management)
+Refer to [Akeneo Backup Management](https://docs.akeneo.com/6.0/technical_architecture/technical_information/operation_processes.html#backup-management)
 
 ### Akeneo Upgrade
 
-For details, please refer to [Akeneo Upgrade](https://docs.akeneo.com/6.0/migrate_pim/upgrade_major_version.html#upgrade-from-5-0-to-6-0)
+Refer to [Akeneo Upgrade](https://docs.akeneo.com/6.0/migrate_pim/upgrade_major_version.html#upgrade-from-5-0-to-6-0)
 
 ## Troubleshoot{#troubleshoot}
 
