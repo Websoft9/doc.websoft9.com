@@ -11,7 +11,7 @@ tags:
 
 Matomo 介绍
 
-Matomo 是一个强大的开源网络分析平台，拥有100% 的数据所有权，并确保业务符合GDPR和CCPA。尤其对于商业软件来说，Matomo 增强的搜索引擎优化以及转换优化能力，让您在数字营销领域能力大大增强。
+Matomo 是一个强大的开源网站流量和分析平台，拥有100% 的数据所有权，并确保业务符合GDPR和CCPA。尤其对于商业软件来说，Matomo 增强的搜索引擎优化以及转换优化能力，让您在数字营销领域能力大大增强。
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/matomo/matomo-show-websoft9.png)
 
@@ -31,16 +31,16 @@ Matomo 是一个强大的开源网络分析平台，拥有100% 的数据所有�
 1. 使用本地电脑浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入初始化页面
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/matomo/matomo-init1-websoft9.png)
 
-2. 点击【Next】，直到Superuser页面设置用户名，密码和登陆邮件账号并牢记
+2. 设置管理员账号：点击【Next】，直到 Superuser 页面设置用户名，密码和登陆邮件账号并牢记
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/matomo/matomo-init2-websoft9.png)
   
-3. 点击【Next】，设置站点名称，时区，URL
+3. 添加监控网站：点击【Next】，设置站点名称，时区，URL
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/matomo/matomo-init3-websoft9.png)
   
-4. 完成初始化向导，进入登陆页面
+4. 完成初始化向导，进入登录页面
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/matomo/matomo-login-websoft9.png)
   
-5. 输入向导设置的用户名和密码，开始体验后台
+5. 登录后台，复制追踪代码到监控网站页面，并查看监控数据
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/matomo/matomo-main-websoft9.png)
   
 ### 碰到问题？
