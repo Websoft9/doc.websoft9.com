@@ -132,6 +132,16 @@ Nginx 的 502 错误全称为 “Nginx 502 Bad Gateway”。错误不在 Nginx �
 
 参阅: [日志诊断](./troubleshoot/logs)
 
+#### 如何清楚 Docker 容器日志？
+
+```
+# 获取容器日志路径
+docker inspect --format='{{.LogPath}}' Container_Name
+
+# 清空日志
+echo "" > log_path
+```
+
 #### 端口被占用导致应用无法启动或报错？{#portconflict}
 
 运行 `netstat -tunlp` 命令，查看服务器上已经使用的端口情况。 
