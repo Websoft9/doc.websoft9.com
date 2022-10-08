@@ -9,8 +9,6 @@ tags:
 
 # 快速入门
 
-Rainbond 介绍
-
 Rainbond 是一个云原生应用管理平台，使用简单，不需要懂容器、Kubernetes和底层复杂技术，支持管理多个Kubernetes集群，和管理企业应用全生命周期。主要功能包括应用开发环境、应用市场、微服务架构、应用交付、应用运维、应用级多云管理等。
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rainbond/rainbond-main-websoft9.png)
 
@@ -30,7 +28,7 @@ Rainbond 是一个云原生应用管理平台，使用简单，不需要懂容�
 1. 使用本地电脑浏览器访问网址：*http://域名:7070* 或 *http://服务器公网IP*, 进入初始化页面
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rainbond/rainbond-login-websoft9.png)
 
-2. 输入用户名和密码(user:admin password:admin123)
+2. 输入用户名和密码登陆到后台(user:admin password:admin123)
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rainbond/rainbond-main-websoft9.png)
 
 ### 碰到问题？
@@ -52,7 +50,7 @@ Rainbond 是一个云原生应用管理平台，使用简单，不需要懂容�
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rainbond/rainbond-tomcat-websoft9.png)
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rainbond/rainbond-tomcat2-websoft9.png)
 
-4. 选中tomcat组件，并开发对外端口
+4. 选中tomcat组件，并开放对外端口
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rainbond/rainbond-tomcatclick-websoft9.png)
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rainbond/rainbond-tomcatport-websoft9.png)
 
@@ -128,7 +126,7 @@ b9b62ea4a549        registry.cn-beijing.aliyuncs.com/quyc/rainbond-allinone:v1.2
 
 ### 路径{#path}
 
-Rainbond 配置文件： *path/config.php*    
+Rainbond 数据目录： */root/rainbonddata*    
 
 ### 端口{#port}
 
@@ -150,4 +148,8 @@ sudo docker start | stop | restart | stats rainbond-allinone
 
 ### 命令行{#cli}
 
+[Rainbond Cli](https://www.rainbond.com/docs/ops-guide/tools/grctl)
+
 ### API{#api}
+
+Rainbond API(https://www.rainbond.com/docs/ops-guide/component/rbd-api/) 服务，提供底层服务接口。
