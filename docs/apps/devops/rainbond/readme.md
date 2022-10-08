@@ -12,6 +12,7 @@ tags:
 Rainbond 介绍
 
 Rainbond 是一个云原生应用管理平台，使用简单，不需要懂容器、Kubernetes和底层复杂技术，支持管理多个Kubernetes集群，和管理企业应用全生命周期。主要功能包括应用开发环境、应用市场、微服务架构、应用交付、应用运维、应用级多云管理等。
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rainbond/rainbond-main-websoft9.png)
 
 部署 Websoft9 提供的 Rainbond 之后，请参考下面的步骤快速入门。
 
@@ -27,8 +28,10 @@ Rainbond 是一个云原生应用管理平台，使用简单，不需要懂容�
 ### 详细步骤
 
 1. 使用本地电脑浏览器访问网址：*http://域名:7070* 或 *http://服务器公网IP*, 进入初始化页面
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rainbond/rainbond-login-websoft9.png)
 
-2. 完成初始化工作
+2. 输入用户名和密码(user:admin password:admin123)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rainbond/rainbond-main-websoft9.png)
 
 ### 碰到问题？
 
@@ -38,7 +41,23 @@ Rainbond 是一个云原生应用管理平台，使用简单，不需要懂容�
 
 下面以 **Rainbond 部署JAVA运行环境** 作为一个任务，帮助用户快速入门：
 
-1. 
+1. 登陆 Rainbond 后台，点击【新增】-> 【从镜像构建】
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rainbond/rainbond-createapp-websoft9.png)
+
+2. 点击【新建应用】
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rainbond/rainbond-newapp-websoft9.png)
+
+3. 输入应用名称，并创建tomcat组件
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rainbond/rainbond-createok-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rainbond/rainbond-tomcat-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rainbond/rainbond-tomcat2-websoft9.png)
+
+4. 选中tomcat组件，并开发对外端口
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rainbond/rainbond-tomcatclick-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rainbond/rainbond-tomcatport-websoft9.png)
+
+5. JAVA运行环境部署成功，可以访问tomcat了
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rainbond/rainbond-complete-websoft9.png)
 
 ## Rainbond 常用操作{#guide}
 
