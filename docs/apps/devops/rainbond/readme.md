@@ -57,6 +57,19 @@ Rainbond 是一个云原生应用管理平台，使用简单，不需要懂容�
 5. JAVA运行环境部署成功，点击【访问】按钮可以访问tomcat了
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rainbond/rainbond-complete-websoft9.png)
 
+6. 点击【Web终端】，即可进入容器，执行下列命令。创建自己的jsp页面
+
+   ```
+   cd /usr/local/tomcat/webapps/ROOT
+   mkdir mypage 
+   echo "hello world" >> hello.jsp
+   
+   ```
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rainbond/rainbond-container-websoft9.png)
+
+7. 默认外部URL追加使用创建的目录和文件名即可访问自己的jsp页面了
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rainbond/rainbond-jsppage-websoft9.png)
+
 ## Rainbond 常用操作{#guide}
 
 
