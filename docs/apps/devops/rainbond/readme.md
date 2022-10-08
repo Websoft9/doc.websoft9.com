@@ -54,7 +54,7 @@ Rainbond 是一个云原生应用管理平台，使用简单，不需要懂容�
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rainbond/rainbond-tomcatclick-websoft9.png)
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rainbond/rainbond-tomcatport-websoft9.png)
 
-5. JAVA运行环境部署成功，可以访问tomcat了
+5. JAVA运行环境部署成功，点击【访问】按钮可以访问tomcat了
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rainbond/rainbond-complete-websoft9.png)
 
 ## Rainbond 常用操作{#guide}
@@ -152,4 +152,4 @@ sudo docker start | stop | restart | stats rainbond-allinone
 
 ### API{#api}
 
-Rainbond API(https://www.rainbond.com/docs/ops-guide/component/rbd-api/) 服务，提供底层服务接口。
+[Rainbond API](https://www.rainbond.com/docs/ops-guide/component/rbd-api/) 服务，提供底层服务接口。
