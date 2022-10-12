@@ -78,6 +78,9 @@ The following uses **Odoo to build enterprise ERP** as a task to help users get 
 3. Fill in the SMTP parameters
    ![Odoo SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-smtps-websoft9.png)
 
+   Odoo 15
+   ![Odoo SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-smtp-websoft9.png)
+
 4. Click the **Test Connection**
 
 ### Database Manager {#dbadmin}

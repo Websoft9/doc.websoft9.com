@@ -93,6 +93,10 @@ tags:
 
 4. 填写 SMTP 参数
    ![Odoo SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-smtps-websoft9.png)
+
+   Odoo 15
+   ![Odoo SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-smtp-websoft9.png)
+
 5. 点击【Test Connection】
 
 ### 数据库管理器{#dbadmin}
