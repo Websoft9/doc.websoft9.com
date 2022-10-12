@@ -8,4 +8,4 @@ tags:
 
 # Redis Solution
 
-Redis 可以与其他的软件平台**集成**一起使用，解决 应用性能 过程中的各种场景问题。
+Redis can be used with other software platforms **integrated** to solve various scenarios in the application performance process.

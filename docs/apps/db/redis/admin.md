@@ -16,25 +16,15 @@ tags:
 
 1. 使用SSH登录服务器，使用redis-cli工具运行**SAVE** 命令
   ```shell
-  $ redis-cli
+  $ sudo docker exec -it redis redis-cli
   127.0.0.1:6379> SAVE
   OK
   ```
-2. 备份文件 `dump.rdb` 存放在 */var/lib/redis* 目录下
+2. 备份文件 `dump.rdb` 存放在redis容器的 */var/lib/redis* 目录下
 
 ### Redis 升级
 
-除了 Redis 5.0 以上版本之外，Redis已经是各个发行版的最新版本。
-
-如何更新 Redis 5.0  到 Redis 6.0 ？ 由于 Redis 安装简单，因此大版本的升级，我们建议采用重装的方式
-
-1. 备份 Redis 配置文件
-2. 运行下面的命令重装 Redis
-   ```
-   wget -N https://raw.githubusercontent.com/Websoft9/ansible-linux/main/scripts/install.sh; bash install.sh -r redis
-   ```
-3. 还原备份配置文件
-
+详细请参照 [Redis 升级](https://docs.redis.com/latest/rs/installing-upgrading/upgrading/)
 
 ## 故障排除{#troubleshoot}
 
@@ -71,7 +61,7 @@ Redis 客户端是用于与Redis-Server进行通信的程序，例如：redis-cl
 
 ```
 # Interactive mode (no password verification), immediately entering the standby state of the CLI
-[root@iZj6calfqlbdkbj5cxjnf9Z ~]# redis-cli
+$ sudo docker exec -it redis redis-cli
 127.0.0.1:6379>
 
 # Change default database 0 to 1
@@ -106,13 +96,7 @@ Redis不是简单的键值存储，它实际上是一个数据结构服务器，
 
 #### 修改 RedisInsight 访问端口？
 
-编辑 [Nginx 虚拟主机配置文件](../nginx#path) 中的参数 `listen` 的值即重置密码。
-
-```
-server {
-    listen 8002;
-    server_name example.yourdomain.com;
-```
+编辑 Redis 环境变量文件 **/data/apps/redis/.env**，修改【APP_GUI_PORT】值即可
 
 #### 远程无法连接 Redis？
 

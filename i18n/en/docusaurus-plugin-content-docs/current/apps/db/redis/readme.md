@@ -17,7 +17,7 @@ If you have installed Websoft9 Redis, the following steps is for your quick star
 ## Preparation
 
 1. Get the **Internet IP** of your Server on Cloud
-2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:8002,6379** is allowed
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:8001,6379** is allowed
 3. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for Redis
 4. [Get](./user/credentials) default username and password of Redis
 
@@ -27,44 +27,28 @@ If you have installed Websoft9 Redis, the following steps is for your quick star
 
 1. Use **SSH** tool to connect Redis Server
 
-2. Run the command `sudo systemctl status redis` to check the service state of Redis
-   ```
-   ubuntu@redis:~$ sudo systemctl status redis 
-   redis.service - redis
-   Loaded: loaded (/lib/systemd/system/redis.service; enabled; vendor preset: en
-   Active: active (running) since Mon 2020-02-03 10:03:09 UTC; 2h 27min ago
-   Process: 31972 ExecStart=/usr/local/bin/redis-server /etc/redis/redis.conf (co
-   Main PID: 31973 (redis-server)
-   ```
-3. Run the command `sudo systemctl status redis` to check the version of Redis
-   ```
-   ubuntu@redis:~$ sudo redis-server -v
+2. Run the following command to view the Redis service, STATUS is running, indicating that the Redis service is normal
+   ````
+   $ cd /data/apps/redis && sudo docker compose ls
+   NAME STATUS CONFIG FILES
+   redis running(2) /data/apps/redis/docker-compose.yml
+
+   ````
+3. Run the version query command
+   ````
+   $ sudo docker exec -it redis redis-server -v
+
    Redis server v=2.8.24 sha=00000000:0 malloc=jemalloc-3.6.0 bits=64 build=ba7fac81f854c786
-   ```
-4. Go to **Redis CLI** to test it
-   ```
-   ubuntu@redis:~$ redis-cli
+   ````
+4. Run the Redis CLI command
+   ````
+   $ docker exec -it redis redis-cli
    127.0.0.1:6379>
- 
-   //use password
-   redis-cli -h 127.0.0.1 -p 6379 -a <password>
+
+   //password login
+   $ docker exec -it redis redis-cli -h 127.0.0.1 -p 6379 -a <password>
    127.0.0.1:6379>
-   ```
-
-5. PHP connect to redis
-
-   ```
-   <?php
-   
-   $redis = new Redis();
-   $redis->connect('127.0.0.1', 6379);
-   $redis->auth('password');
-   $redis->set('Websoft9', 9);
-   echo $redis->get('Websoft9'); 
-   
-   ?>
-   
-   ```
+   ````
    
 > More useful Redis guide, please refer to [Redis Documentation](https://redis.io/documentation)
 
@@ -74,7 +58,7 @@ Below is for you to solve problem, and you can contact **[Websoft9 Support](./he
 
 ## Redis QuickStart
 
-> 需要了解更多Redis的使用，请参考：[Redis Documentation](https://redis.io/documentation)
+> To learn more about the use of Redis, please refer to: [Redis Documentation](https://redis.io/documentation)
 
 ## Redis Setup
 
@@ -85,7 +69,6 @@ Although we don't suggest you access Redis from Internet, but sometime you may n
 e.g. Using **RedisInsight**.
 
 Then, you need to configure your redis remote by the following steps:
-
 
 **Set port**
 
@@ -106,11 +89,10 @@ You should check your [Redis configuration file](#path) the following segment
 # bind 192.168.1.100 10.0.0.1
 # bind 127.0.0.1
 ```
-* 如果需要限制所有外部访问，去掉"#"，重启服务。
-* 如果要指定某个网卡，自行添加一行绑定项，例如： `bind 192.168.1.100 10.0.0.1`
+* If you need to restrict all external access, remove the "#" and restart the service.
+* If you want to specify a certain network card, add a line of binding items yourself, for example: `bind 192.168.1.100 10.0.0.1`
 
-> 此处的 bind 不是白名单的概念，而是服务器网卡绑定关系。
-
+> The bind here is not a concept of a whitelist, but a binding relationship between server network cards.
 
 **Enable password**
 
@@ -377,47 +359,40 @@ OK
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Redis 
 
-
-通过运行 `docker ps`，可以查看到 Redis 运行时所有的 Container：
+By running `docker ps`, you can view all Containers when Redis is running:
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                           COMMAND                  CREATED          STATUS          PORTS                                       NAMES
+4635ce332949   redislabs/redisinsight:latest   "bash ./docker-entry…"   33 seconds ago   Up 31 seconds   0.0.0.0:8001->8001/tcp, :::8001->8001/tcp   redis-gui
+a232e91f522e   redis:7.0                       "redis-server /etc/r…"   33 seconds ago   Up 31 seconds   0.0.0.0:6379->6379/tcp, :::6379->6379/tcp   redis
 ```
-
-下面仅列出 Redis 本身的参数：
 
 ### Path{#path}
 
-Redis 配置文件： */etc/redis.conf*  
-Redis 数据目录： */var/lib/redis*  
-Redis logs file： */var/log/redis/redis.log*  
-Redis 默认数据库： *redis*  
+Redis installation directory: */data/apps/redis*
+Redis configuration file: */data/apps/redis/src/redis.conf*
+Redis data directory: */data/apps/redis/data/redis_data*
 
-RedisInsight installation directory： */data/redisinsight*  
-RedisInsight logs file： */data/logs/redisinsight*  
-RedisInsight 配置文件： */data/redisinsight/redisinsight.config*  
+### port
 
-
-### Port
-
-| 端口号 | 用途                                          | 必要性 |
-| ------ | --------------------------------------------- | ------ |
-| 6379   | Redis | 可选   |
-| 8002   | Redis | HTTP 访问 RedisInsight	   |
+| Port Number | Purpose | Necessity |
+| ------ | ------------------------------------------ --- | ------ |
+| 6379 | Redis | optional |
+| 8001 | HTTP access to RedisInsight | Required |
 
 
 ### Version
 
 ```shell
-redis-server -v
-```
+docker exec -it redis redis-server -v
+````
 
-### Service
+### Serve
 
 ```shell
-sudo systemctl start | stop | restart | status redis
-sudo docker start | stop | restart | stats redisinsight
-```
+sudo docker start | stop | restart | stats redis
+sudo docker start | stop | restart | stats redis-gui
+````
 
 ### CLI
 
@@ -427,11 +402,11 @@ Redis CLI supports two usage modes: interactive mode and standard command line:
 
 ```
 # Interactive mode (no password verification), immediately entering the standby state of the CLI
-redis-cli
+$docker exec -it redis redis-cli
 127.0.0.1:6379>
 
 # Interactive mode (password verification), immediately entering the standby state of the CLI
-redis-cli -h 127.0.0.1 -p 6379 -a 123456
+$docker exec -it redis redis-cli -h 127.0.0.1 -p 6379 -a 123456
 127.0.0.1:6379>
 
 # Standard command line mode, that is to run a command with a clear goal and exit automatically after execution

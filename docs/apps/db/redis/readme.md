@@ -17,7 +17,7 @@ tags:
 部署 Websoft9 提供的 Redis 之后，需完成如下的准备工作：
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 TCP:**6379 和 8002** 端口已经开启
+2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 TCP:**6379 和 8001** 端口已经开启
 3. 在服务器中查看 Redis 的 **[默认账号和密码](./user/credentials)**  
 4. 若想用域名访问  Redis，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
 
@@ -27,45 +27,27 @@ tags:
 
 1. 通过 SSH 工具连接 Redis服务器
 
-2. 运行 Redis Service 命令
+2. 运行下列命令查看 Redis 服务，STATUS是running说明 Redis 服务正常
    ```
-   $ sudo systemctl status redis  
+   $ cd /data/apps/redis && sudo docker compose ls
+   NAME                STATUS              CONFIG FILES
+   redis               running(2)          /data/apps/redis/docker-compose.yml
 
-   redis.service - redis
-   Loaded: loaded (/lib/systemd/system/redis.service; enabled; vendor preset: en
-   Active: active (running) since Mon 2020-02-03 10:03:09 UTC; 2h 27min ago
-   Process: 31972 ExecStart=/usr/local/bin/redis-server /etc/redis/redis.conf (co
-   Main PID: 31973 (redis-server)
    ```
 3. 运行版本查询命令
    ```
-   $ sudo redis-server -v
+   $ sudo docker exec -it redis redis-server -v
 
    Redis server v=2.8.24 sha=00000000:0 malloc=jemalloc-3.6.0 bits=64 build=ba7fac81f854c786
    ```
 4. 运行 Redis CLI 命令
    ```
-   $ redis-cli
+   $docker exec -it redis redis-cli
    127.0.0.1:6379>
 
    //密码登录
-   redis-cli -h 127.0.0.1 -p 6379 -a <password>
+   $docker exec -it redis redis-cli -h 127.0.0.1 -p 6379 -a <password>
    127.0.0.1:6379>
-   ```
-   
-5. PHP 连接 redis 读写操作
-
-   ```
-   <?php
-   
-   $redis = new Redis();
-   $redis->connect('127.0.0.1', 6379);
-   $redis->auth('password');
-   $redis->set('Websoft9', 9);
-   echo $redis->get('Websoft9'); 
-
-   ?>
-   
    ```
 
 ### 出现问题？
@@ -142,7 +124,7 @@ RedisInsight 实现了多平台统一性，只要打开 RedisInsight 界面，�
 
 1. 打开 RedisInsight 界面
   
-   * 本地浏览器访问：*http://服务器公网IP:8002* ，即可打开服务器上安装的 RedisInsight
+   * 本地浏览器访问：*http://服务器公网IP:8001* ，即可打开服务器上安装的 RedisInsight
    * 启动桌面的 RedisInsight 图标，打开本地安装的 RedisInsight
 
    ![打开RedisInsight](https://libs.websoft9.com/Websoft9/DocsPicture/zh/redis/redisinsight-login-websoft9.png)
@@ -365,47 +347,41 @@ OK
 
 ## Redis 参数
 
-Redis 应用中包含 Nginx, Docker, RedisInsight 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+Redis 应用中包含 Docker, RedisInsight 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
 通过运行 `docker ps`，可以查看到 Redis 运行时所有的 Container：
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                           COMMAND                  CREATED          STATUS          PORTS                                       NAMES
+4635ce332949   redislabs/redisinsight:latest   "bash ./docker-entry…"   33 seconds ago   Up 31 seconds   0.0.0.0:8001->8001/tcp, :::8001->8001/tcp   redis-gui
+a232e91f522e   redis:7.0                       "redis-server /etc/r…"   33 seconds ago   Up 31 seconds   0.0.0.0:6379->6379/tcp, :::6379->6379/tcp   redis
 ```
-
-下面仅列出 Redis 本身的参数：
 
 ### 路径{#path}
 
-Redis 配置文件： */etc/redis.conf*  
-Redis 数据目录： */var/lib/redis*  
-Redis 日志文件： */var/log/redis/redis.log*  
-Redis 默认数据库： *redis*  
-
-RedisInsight 安装目录： */data/redisinsight*  
-RedisInsight 日志文件： */data/logs/redisinsight*  
-RedisInsight 配置文件： */data/redisinsight/redisinsight.config*  
-
+Redis 安装目录： */data/apps/redis*  
+Redis 配置文件： */data/apps/redis/src/redis.conf*  
+Redis 数据目录： */data/apps/redis/data/redis_data*  
 
 ### 端口
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
 | 6379   | Redis | 可选   |
-| 8002   | Redis | HTTP 访问 RedisInsight	   |
+| 8001   | HTTP 访问 RedisInsight	   |必须   |
 
 
 ### 版本
 
 ```shell
-redis-server -v
+docker exec -it redis redis-server -v
 ```
 
 ### 服务
 
 ```shell
-sudo systemctl start | stop | restart | status redis
-sudo docker start | stop | restart | stats redisinsight
+sudo docker start | stop | restart | stats redis
+sudo docker start | stop | restart | stats redis-gui
 ```
 
 ### 命令行
@@ -416,11 +392,11 @@ Redis CLI 支持交互式模式和标准命令行两种使用方式：
 
 ```
 # 交互式模式（无密码验证），即进入 CLI 的随时待命状态
-redis-cli
+$docker exec -it redis redis-cli
 127.0.0.1:6379>
 
 # 交互式模式（密码验证），即进入 CLI 的随时待命状态
-redis-cli -h 127.0.0.1 -p 6379 -a 123456
+$docker exec -it redis  -h 127.0.0.1 -p 6379 -a 123456
 127.0.0.1:6379>
 
 # 标准命令行模式，即运行一条有明确目标的命令，执行完成后自动退出
