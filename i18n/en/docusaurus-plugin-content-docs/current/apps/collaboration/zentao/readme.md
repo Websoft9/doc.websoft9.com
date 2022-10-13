@@ -33,7 +33,7 @@ If you have installed Websoft9 Jenkins, the following steps is for your quick st
 3. Accept LICENSE and check the environment for ZenTao
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/zentao/zentao-installsyscheck-websoft9.png)
 
-4. Then configure the database connection information([Don't know password?](./user/credentials))
+4. System initialization has set the database parameters, click Next
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/zentao/zentao-installdbconf-websoft9.png)
 
 5. Set your administrator account for ZenTao
@@ -101,34 +101,43 @@ Refer to [Integrate Git](https://www.zentao.pm/book/zentaomanual/free-open-sourc
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage ZenTao
 
-下面仅列出 ZenTao 本身的参数：
+Run `docker ps`, view all containers when ZenTao is running:  
 
-### Path{#path}
+```bash
+CONTAINER ID   IMAGE                    COMMAND                  CREATED         STATUS         PORTS                                   NAMES
+bbe3b0d3441d   easysoft/zentao:latest   "bash -c 'cat /my_cm…"   8 minutes ago   Up 8 minutes   0.0.0.0:9003->80/tcp, :::9003->80/tcp   zentao
+0c04db7cc20a   mysql:5.7                "docker-entrypoint.s…"   8 minutes ago   Up 8 minutes   3306/tcp, 33060/tcp                     zentao-db
 
-ZenTao installation directory： */data/wwwroot/zentao*  
-ZenTao 配置文件： */data/wwwroot/zentao/config/my.php*
+```
+
+### Path {#path}
+
+ZenTao installation directory: */data/apps/zentao*  
+ZenTao source code path: */data/apps/zentao/data/zentao*  
+ZenTao configuration file: */data/apps/zentao/data/zentao/config/config.php*  
 
 ### Port{#port}
 
-无特殊端口
+no special port
 
 ### Version
 
 ```shell
 # ZenTao Version
-cat /data/wwwroot/zentao/VERSION
-```
+cat /data/apps/zentao/data/zentao/VERSION
+````
 
 ### Service
 
 ```shell
 sudo docker start | stop | restart | stats zentao
-```
+sudo docker start | stop | restart | stats zentao-db
+````
 
-### CLI
+### Cli
 
-ZenTao 提供了一套命令操作，详情参考官方文档：[初始化管理脚本](https://www.zentao.net/book/zentaopmshelp/35.html)
+ZenTao provides a set of command operations, please refer to the official documentation for details: [Initialization Management Script](https://www.zentao.net/book/zentaopmshelp/35.html)
 
 ### API
 
-[ZenTao API](https://www.zentao.net/book/api/setting-369.html) 所有请求结果都用 JSON 格式，根据返回结果 status 状态来判断是否请求成功。
+[ZenTao API](https://www.zentao.net/book/api/setting-369.html) All request results are in JSON format, and whether the request is successful is judged according to the status of the returned result.

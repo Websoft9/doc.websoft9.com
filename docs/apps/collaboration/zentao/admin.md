@@ -12,7 +12,7 @@ tags:
 
 ## 场景
 
-### 在线备份与恢复
+### ZenTao 备份与恢复
 
 ZenTao 后台提供了非常简单实用的在线备份功能，使用方法如下：
 
@@ -27,18 +27,11 @@ ZenTao 后台提供了非常简单实用的在线备份功能，使用方法如�
 4. ZenTao 提供的回收站功能，也可以恢复手工删除的数据
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zentao/zentao-recycle-websoft9.png)
 
-### 手工升级
+### ZenTao 升级
 
-ZenTao 通过手工上传代码的方式进行升级。在升级之前请做好服务器的快照备份，这个是必须的步骤，因为谁都无法保证升级 100% 成功。
+请参考官方升级文档 [ZenTao 升级](https://www.zentao.net/book/zentaopmshelp/67.html)
 
-1. [下载](https://www.zentao.net/download.html)最新源码，解压
-2. 上传并覆盖服务器上的 ZenTao 源码
-3. 本地浏览器访问: _http://服务器公网 IP/upgrade.php_ 开始升级
-4. 如果升级过程报错" Uncaught Error: Call to a member function query() on null in li..."，请给 `zentao/www` 和 `zentao/tmp` 目录递归加下 777 权限后再试
-
-> 更多升级详情，请参考官方升级文档 [ZenTao 通过源代码方式升级(通用)](https://www.zentao.net/book/zentaopmshelp/67.html)
-
-## 故障排除
+## 故障排除{#troubleshoot}
 
 除以下列出的 Zentao 故障问题之外，[通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案：
 
@@ -47,7 +40,7 @@ ZenTao 通过手工上传代码的方式进行升级。在升级之前请做好�
 1. 10 分钟后会自动解锁。
 2. 管理员登录，组织 → 用户 操作栏里有解锁按钮。
 
-## 常见问题
+## 问题解答{#faq}
 
 #### ZenTao 支持多语言吗？
 

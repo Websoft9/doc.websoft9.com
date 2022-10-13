@@ -369,9 +369,9 @@ a232e91f522e   redis:7.0                       "redis-server /etc/r…"   33 sec
 
 ### Path{#path}
 
-Redis installation directory: */data/apps/redis*
-Redis configuration file: */data/apps/redis/src/redis.conf*
-Redis data directory: */data/apps/redis/data/redis_data*
+Redis installation directory: */data/apps/redis*  
+Redis configuration file: */data/apps/redis/src/redis.conf*  
+Redis data directory: */data/apps/redis/data/redis_data*  
 
 ### port
 

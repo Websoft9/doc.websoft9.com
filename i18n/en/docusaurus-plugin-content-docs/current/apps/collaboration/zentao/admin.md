@@ -12,7 +12,7 @@ This chapter is special guide for ZenTao maintenance and settings. And you can r
 
 ## Maintenance guide
 
-### ZenTao Online backup&restore
+### ZenTao Backup and Restore
 
 This section provides ZenTao online backup&restore solution
 
@@ -29,27 +29,16 @@ This section provides ZenTao online backup&restore solution
 
 ### ZenTao Upgrade
 
-ZenTao is upgraded by manually uploading code.
-
-1. [Download](https://www.zentao.net/download.html) the latest source code of ZenTao, unzip it
-
-2. Upload and cover your old ZenTao source code on your Server
-
-3. Visit *https://Internet IP/upgrade.php* to start upgrade
-
-4. If error like **" Uncaught Error: Call to a member function query() on null in li..."**, please set **777* permission recursively for the folder `zentao/www` and `zentao/tmp`, then try it again
-
-> More details about upgrade, please refer to [ZenTao Upgrade](https://www.zentao.pm/book/zentaomanual/free-open-source-project-management-software-upgradezentao-18.html)
+More details about upgrade, please refer to [ZenTao Upgrade](https://www.zentao.pm/book/zentaomanual/free-open-source-project-management-software-upgradezentao-18.html)
 
 ## Troubleshoot{#troubleshoot}
 
 In addition to the ZenTao issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
+#### The wrong password has been locked many times, how to solve it?
 
-#### 密码输入错误多次被锁，怎么解决？
-
-1. 10 分钟后会自动解锁。
-2. 管理员登录，组织 → 用户 操作栏里有解锁按钮。
+1. It will automatically unlock after 10 minutes.
+2. Log in as an administrator, and there is an unlock button in the Organization → User operation bar.
 
 ## FAQ{#faq}
 

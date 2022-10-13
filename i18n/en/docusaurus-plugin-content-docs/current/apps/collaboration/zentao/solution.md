@@ -8,4 +8,4 @@ tags:
 
 # ZenTao Solution
 
-ZenTao（禅道） 可以与其他的软件平台**集成**一起使用，解决项目管理过程中的各种[场景问题](https://www.zentao.net)。
+ZenTao (Zen Tao) can be used with other software platforms **integrated** to solve various [scenario problems](https://www.zentao.net) in the project management process.

@@ -33,7 +33,7 @@ tags:
 3. 安装进入环境检测页面，点击下一步
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zentao/zentao-install002-websoft9.png)
 
-4. 填写您的数据库参数（[查看数据库账号密码](./user/credentials)）
+4. 系统初始化已经设置好数据库参数，点击下一步
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zentao/zentao-install003-websoft9.png)
 
 5. 设置后台账号信息，请务必设置好并牢记之，然后“保存”（建议勾选导入 demo 数据，以便理解系统）
@@ -111,14 +111,22 @@ ZenTao 提供了 [插件市场](https://www.zentao.net/extension-browse.html) �
 
 ## ZenTao 参数
 
-ZenTao 应用中包含 PHP, Apache, Docker, MySQL, phpMyAdmin 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+ZenTao 应用中包含 Docker, Portainer 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
 
-下面仅列出 ZenTao 本身的参数：
+通过运行 `docker ps`，查看 ZenTao 运行时所有的服务组件：   
+
+```bash
+CONTAINER ID   IMAGE                    COMMAND                  CREATED         STATUS         PORTS                                   NAMES
+bbe3b0d3441d   easysoft/zentao:latest   "bash -c 'cat /my_cm…"   8 minutes ago   Up 8 minutes   0.0.0.0:9003->80/tcp, :::9003->80/tcp   zentao
+0c04db7cc20a   mysql:5.7                "docker-entrypoint.s…"   8 minutes ago   Up 8 minutes   3306/tcp, 33060/tcp                     zentao-db
+
+```
 
 ### 路径{#path}
 
-ZenTao 安装目录： */data/wwwroot/zentao*  
-ZenTao 配置文件： */data/wwwroot/zentao/config/my.php*
+ZenTao 安装目录： */data/apps/zentao*  
+ZenTao 源码路径： */data/apps/zentao/data/zentao*    
+ZenTao 配置文件： */data/apps/zentao/data/zentao/config/config.php*  
 
 ### 端口{#port}
 
@@ -128,13 +136,14 @@ ZenTao 配置文件： */data/wwwroot/zentao/config/my.php*
 
 ```shell
 # ZenTao Version
-cat /data/wwwroot/zentao/VERSION
+cat /data/apps/zentao/data/zentao/VERSION
 ```
 
 ### 服务
 
 ```shell
 sudo docker start | stop | restart | stats zentao
+sudo docker start | stop | restart | stats zentao-db
 ```
 
 ### 命令行
