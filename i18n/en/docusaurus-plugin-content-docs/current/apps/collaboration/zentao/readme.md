@@ -28,25 +28,29 @@ If you have installed Websoft9 Jenkins, the following steps is for your quick st
 1. Using local Chrome or Firefox to visit the URL *https://domain* or *https://Internet IP*, start to install  
 
 2. Choose a language, go to next step 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/zentao/zentao-installstart-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/zentao/zentao-init1-websoft9.png)
 
 3. Accept LICENSE and check the environment for ZenTao
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/zentao/zentao-installsyscheck-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/zentao/zentao-init2-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/zentao/zentao-init3-websoft9.png)
 
-4. System initialization has set the database parameters, click Next
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/zentao/zentao-installdbconf-websoft9.png)
+4. Then configure the database connection information
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/zentao/zentao-init4-websoft9.png)
 
-5. Set your administrator account for ZenTao
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/zentao/zentao-installadmin-websoft9.png)
+5. Save configure file
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/zentao/zentao-init5-websoft9.png)
 
-6. Installed successfully, please delete the `install.php` in the ZenTao directory
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/zentao/zentao-installss-websoft9.png)
+6. Set your administrator account for ZenTao
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/zentao/zentao-init7-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/zentao/zentao-init8-websoft9.png)
+
+  > Please don't select the [Import Demo data](Demo data only support chinese)
 
 7. ZenTao Log in
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/zentao/zentao-login-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/zentao/zentao-init9-websoft9.png)
 
 8. ZenTao dashboard
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/zentao/zentao-gui-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/zentao/zentao-init10-websoft9.png)
 
 9. Register [ZenTao official account](https://www.zentao.net/user-register.html), make your ZenTao connect to ZenTao's plugins Marketplace
 
@@ -112,9 +116,9 @@ bbe3b0d3441d   easysoft/zentao:latest   "bash -c 'cat /my_cm…"   8 minutes ago
 
 ### Path {#path}
 
-ZenTao installation directory: */data/apps/zentao*  
-ZenTao source code path: */data/apps/zentao/data/zentao*  
-ZenTao configuration file: */data/apps/zentao/data/zentao/config/config.php*  
+ZenTao installation directory: */data/apps/zentao*
+ZenTao source code path: */data/apps/zentao/data/zentao*
+ZenTao configuration file: */data/apps/zentao/data/zentao/config/config.php*
 
 ### Port{#port}
 

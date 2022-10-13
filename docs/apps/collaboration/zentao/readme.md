@@ -28,27 +28,31 @@ tags:
 1. 使用本地浏览器访问网址： *http://域名* 或 *http://服务器公网IP*, 就进入引导首页
 
 2. 根据系统提示，选择语言，然后“开始安装”
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zentao/zentao-install001-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zentao/zentao-init1-websoft9.png)
 
-3. 安装进入环境检测页面，点击下一步
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zentao/zentao-install002-websoft9.png)
+3. 接受License许可，安装进入环境检测页面，点击下一步
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zentao/zentao-init2-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zentao/zentao-init3-websoft9.png)
 
 4. 系统初始化已经设置好数据库参数，点击下一步
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zentao/zentao-install003-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zentao/zentao-init4-websoft9.png)
 
-5. 设置后台账号信息，请务必设置好并牢记之，然后“保存”（建议勾选导入 demo 数据，以便理解系统）
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zentao/zentao-install005-websoft9.png)
+5. 保存配置文件
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zentao/zentao-init5-websoft9.png)
 
-6. 系统完成最后一步安装，登录到禅道管理系统，体验并测试系统功能
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zentao/zentao-install006-websoft9.png)
+6. 设置后台账号信息，请务必设置好并牢记之，然后“保存”（建议勾选导入 demo 数据，以便理解系统）
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zentao/zentao-init6-websoft9.png)
 
-7. 登录后台  
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zentao/zentao-login-websoft9.png)
+7. 系统完成最后一步安装，提示安装成功
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zentao/zentao-init7-websoft9.png)
 
-8. 体验后台  
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zentao/zentao-gui-websoft9.png)
+8. 登录后台  
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zentao/zentao-init8-websoft9.png)
 
-9. [注册 ZenTao 官网账号](https://www.zentao.net/user-register.html)，便于后续在线安装插件
+9. 体验后台  
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zentao/zentao-init9-websoft9.png)
+
+10. [注册 ZenTao 官网账号](https://www.zentao.net/user-register.html)，便于后续在线安装插件
 
 > 需要了解更多 ZenTao 的使用，请参考官方文档：[ZenTao 开源版手册](https://www.zentao.net/book/zentaopmshelp/40.html) 和 [FAQ](https://www.zentao.net/faq.html)
 
