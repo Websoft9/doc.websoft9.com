@@ -87,4 +87,4 @@ You should complete the [OnlyOffice setting](../nextcloud/solution#onlyoffice) o
 
 #### Nextcloud can integrate external storage?
 
-Yes，[refer to](https://docs.nextcloud.com/server/latest/admin_manual/configuration_files/external_storage_configuration_gui.html#storage-configuration)
+Yes，refer to [external storage](https://docs.nextcloud.com/server/latest/admin_manual/configuration_files/external_storage_configuration_gui.html#storage-configuration)
