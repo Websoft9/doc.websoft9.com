@@ -34,3 +34,7 @@ OnlyOffice的产品家族比较复杂，根据官方的介绍，可以分为：
 COMMUNITY EDITION 是一个完全免费的版本。
 
 DEVELOPER EDITION 和 ENTERPRISE EDITION 是收费版本，Websoft9 可以帮助用户采购收费版本，最少 10% 的折扣。  
+
+#### ONLYOFFICE Docs 如何授权访问控制？
+
+参考：[Configure JWT](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx)
