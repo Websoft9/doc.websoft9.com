@@ -2,7 +2,7 @@
 sidebar_position: 3
 slug: /owncloud/admin
 tags:
-  - ownCloud
+  - OwnCloud
   - 网盘
   - 知识管理
   - 团队协作
@@ -16,9 +16,9 @@ tags:
 
 ### 在线备份
 
-ownCloud 后台提供在线备份功能
+OwnCloud 后台提供在线备份功能
 
-1. 登录 ownCloud 后台，安装 **[OwnBackup](https://en.websoft9.com/xdocs/owncloud-image-guide/#using-apps)** 插件
+1. 登录 OwnCloud 后台，安装 **[OwnBackup](https://en.websoft9.com/xdocs/owncloud-image-guide/#using-apps)** 插件
 2. 打开：【Admin】>【OwnBackup】，开始备份
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-ownbackup-websoft9.png)
 3. 此插件也可以用于恢复
@@ -26,7 +26,7 @@ ownCloud 后台提供在线备份功能
 
 ### 在线升级
 
-ownCloud提供了非常人性化的升级入口，根据系统的更新提示既可以完成主版本、插件的更新。
+OwnCloud提供了非常人性化的升级入口，根据系统的更新提示既可以完成主版本、插件的更新。
 
 > 在升级之前请做好服务器的快照备份，这个是必须的步骤，因为谁都无法保证升级100%成功。
 
@@ -49,7 +49,7 @@ ownCloud提供了非常人性化的升级入口，根据系统的更新提示既
 
 主程序升级与插件升级略有差异，具体参考如下：
 
-1. 当有可用升级的程序时，系统提示“ownCloud is available. Get more information ...”
+1. 当有可用升级的程序时，系统提示“OwnCloud is available. Get more information ...”
 2. 依次打开：Admin->设置->常规，找到更新管理器，若有更新请点击“打开更新管理器”按钮
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-openupdater-websoft9.png)
 3. 进入 Updater（更新管理器）
@@ -58,28 +58,28 @@ ownCloud提供了非常人性化的升级入口，根据系统的更新提示既
 5. 点击【Start】按钮，系统进入自动化升级过程，下载和升级过程比较长，请耐心等待
 6. 升级成功提示
 
-> 由于升级过程会下载最新版本，ownCloud的下载服务器在国外，若下载不成功，需要不定期尝试
+> 由于升级过程会下载最新版本，OwnCloud的下载服务器在国外，若下载不成功，需要不定期尝试
 
 ## 故障排除
 
 ####  域名配置后页面显示混乱？
 
-如果先通过 IP 安装，再绑定域名，就会出现这个问题，请分别打开 ownCloud 的 [配置文件](../owncloud#path)，将其中的 IP 地址改成域名。
+如果先通过 IP 安装，再绑定域名，就会出现这个问题，请分别打开 OwnCloud 的 [配置文件](../owncloud#path)，将其中的 IP 地址改成域名。
 
 ## 常见问题
 
-#### ownCloud 支持多语言吗？
+#### OwnCloud 支持多语言吗？
 
 支持多语言（包含中文）
 
-#### ownCloud 是否提供客户端？
+#### OwnCloud 是否提供客户端？
 
-有。包括：ownCloud Desktop Client, ownCloud Android App, ownCloud iOS App
+有。包括：OwnCloud Desktop Client, OwnCloud Android App, OwnCloud iOS App
 
-#### ownCloud 可预览和编辑 Office 文档吗？
+#### OwnCloud 可预览和编辑 Office 文档吗？
 
-ownCloud 自身是无法预览和编辑 Office 文档的。但 Websoft9 的部署方案已经安装了文档中间件：[ONLYOFFICE Docs](../owncloud/solution#onlyoffice) 解决此需求。
+OwnCloud 自身是无法预览和编辑 Office 文档的。但 Websoft9 的部署方案已经安装了文档中间件：[ONLYOFFICE Docs](../owncloud/solution#onlyoffice) 解决此需求。
 
-#### ownCloud 支持集成外部存储吗？
+#### OwnCloud 支持集成外部存储吗？
 
 支持多种主流外部存储服务
