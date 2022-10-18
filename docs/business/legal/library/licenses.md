@@ -64,7 +64,7 @@ slug: /legal/licenses
 - https://github.com/apache/zookeeper/blob/master/LICENSE.txt
 
 #### Akeneo
-- OSL V3
+- OSL V3 
 - https://github.com/akeneo/pim-community-standard/blob/master/LICENCE.txt
 
 #### Alfresco
