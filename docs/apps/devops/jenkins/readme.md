@@ -17,13 +17,10 @@ tags:
 
 ## 准备
 
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
-3. 若想用域名访问 Jenkins，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
-4. [获取](./user/credentials) Jenkins 的默认管理员账号和密码  
-
-    * 管理员账号: `admin`
-    * 管理员密码: 存储在您的服务器中的文件中 */var/lib/jenkins/secrets/initialAdminPassword*  
+1. 在云控制台获取您的 **服务器公网 IP 地址**
+2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:80** 端口是否开启
+3. 在服务器中查看 Jenkins 的 **[默认账号和密码](./user/credentials)**
+4. 若想用域名访问 Jenkins，务必先完成**[域名五步设置](./administrator/domain_step)** 过程
 
 ## Jenkins 初始化向导
 
@@ -32,7 +29,7 @@ tags:
 1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入初始化页面
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins-installstart-websoft9.png)
 
-2. 运行命令`sudo cat /var/lib/jenkins/secrets/initialAdminPassword`，获取解锁密码（即默认管理员的密码）
+2. 根据提示输入密码（[不知道账号密码？](./user/credentials)）
 
 3. 成功登录到 Jenkins 后台  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins-installcustomer-websoft9.png)
@@ -98,27 +95,31 @@ tags:
 
 ## 参数
 
-Jenkins 应用中包含 Nginx, Java, Docker, MySQL 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
+Jenkins 应用中包含 Nginx, Docker 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
 
-下面仅列出 Jenkins 本身的参数：
+
+通过运行 `docker ps`，查看 Jenkins 运行时所有的服务组件： 
+
+```bash
+CONTAINER ID   IMAGE                       COMMAND                  CREATED             STATUS          PORTS                                                                                      NAMES
+22e92eb0e4b5   jenkins/jenkins:lts-jdk11   "/usr/bin/tini -- /u…"   About an hour ago   Up 53 minutes   0.0.0.0:50000->50000/tcp, :::50000->50000/tcp, 0.0.0.0:9001->8080/tcp, :::9001->8080/tcp   jenkins
+
+```  
 
 ### 端口
 
-| 端口号 | 用途                                          | 必要性 |
-| ------ | --------------------------------------------- | ------ |
-| 8080   | Jenkins 原始端口| 可选   |
-
+无特殊端口
 
 ### 版本
 
 ```shell
-jenkins -v
+docker exec -i jenkins cat /var/jenkins_home/config.xml |grep version |sed -n 2p |tr -d "</>version"
 ```
 
 ### 服务
 
 ```shell
-sudo systemctl start | stop | restart | status jenkins
+sudo docker start | stop | restart | stats jenkins
 ```
 
 ### 命令行
@@ -139,5 +140,3 @@ curl JENKINS_URL/job/JOB_NAME/buildWithParameters \
 ```
 
 同时，也提供了 Java, Python, Ruby 等语言的 API SDK 开发包。 
-
-

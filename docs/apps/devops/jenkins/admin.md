@@ -12,11 +12,11 @@ tags:
 
 ## 场景
 
-### 备份与恢复
+### Jenkins 备份与恢复
 
 [Backup plugin](https://plugins.jenkins.io/backup/) 提供对 Jenkins 的备份和恢复功能。  
 
-### 升级
+### Jenkins 升级
 
 Jenkins 内置升级功能，操作简单：
 

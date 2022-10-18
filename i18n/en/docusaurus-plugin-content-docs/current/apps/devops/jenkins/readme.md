@@ -19,11 +19,8 @@ If you have installed Websoft9 Jenkins, the following steps is for your quick st
 
 1. Get the **Internet IP** of your Server on Cloud
 2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:80** is allowed
-3. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for Jenkins.
-4. [Get](./user/credentials) default username and password of Jenkins
-
-    * Jenkins administrator username: `admin`
-    * Jenkins administrator password: stored in the path */var/lib/jenkins/secrets/initialAdminPassword*  
+3. Connect your Server and get **[default username and password](./user/credentials)** of Jenkins 
+4. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for Jenkins 
 
 ## Jenkins Initialization
 
@@ -32,7 +29,7 @@ If you have installed Websoft9 Jenkins, the following steps is for your quick st
 1. Using local browser to visit the URL *http://DNS* or *http://Server's Internet IP*, you will enter initial wizard of Jenkins
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/jenkins/jenkins-installstart-websoft9.png)
 
-2. Connect Server and run command `sudo cat /var/lib/jenkins/secrets/initialAdminPassword` to Unlock Jenkins
+2. Input the password as prompted([Don't have password?](./user/credentials))
 
 3. Login the Jenkins console  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/jenkins/jenkins-installcustomer-websoft9.png)
@@ -53,24 +50,24 @@ Below is for you to solve problem, and you can contact **[Websoft9 Support](./he
 
 This task【Build Github repository by Jenkins】 is for your Jenkins QuickStart
 
-1. 在 GitHub设置 Personal access tokens，用于 Jenkins 连接
- ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins-wizard2-websoft9.png)
+1. Set up Personal access tokens on GitHub for Jenkins connection
+ ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/jenkins/jenkins-wizard2-websoft9.png)
 
-2. Jenkins全局系统设置中，连接 GitHub
- ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins-wizard3-websoft9.png)
- ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins-wizard4-websoft9.png)
- ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins-wizard5-websoft9.png)
+2. In Jenkins global system settings, connect to GitHub
+ ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/jenkins/jenkins-wizard3-websoft9.png)
+ ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/jenkins/jenkins-wizard4-websoft9.png)
+ ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/jenkins/jenkins-wizard5-websoft9.png)
 
-3. 创建一个构建任务：输入任务名，按流程分别输入 Github项目 URL，账号密码等信息
- ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins-wizard6-websoft9.png)
- ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins-wizard7-websoft9.png)
- ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins-wizard8-websoft9.png)
- ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins-wizard9-websoft9.png)
- ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins-wizard10-websoft9.png)
- ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins-wizard11-websoft9.png)
+3. Create a build task: enter the task name, enter the Github project URL, account password and other information according to the process
+ ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/jenkins/jenkins-wizard6-websoft9.png)
+ ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/jenkins/jenkins-wizard7-websoft9.png)
+ ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/jenkins/jenkins-wizard8-websoft9.png)
+ ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/jenkins/jenkins-wizard9-websoft9.png)
+ ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/jenkins/jenkins-wizard10-websoft9.png)
+ ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/jenkins/jenkins-wizard11-websoft9.png)
 
-4. 在对应Github 项目修改后，push提交；Jenkins完成自动化构建部署
- ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins-wizard12-websoft9.png)
+4. After the corresponding Github project is modified, push the submission; Jenkins completes the automated build and deployment
+ ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/jenkins/jenkins-wizard12-websoft9.png)
 
 ## Jenkins Setup
 
@@ -96,23 +93,27 @@ Login to Jenkins, open：【【Manage Jenkins】>【Plugins Manager】 to manage
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Jenkins
 
+Run `docker ps`, view all containers when Jenkins is running:  
+
+```bash
+CONTAINER ID   IMAGE                       COMMAND                  CREATED             STATUS          PORTS                                                                                      NAMES
+22e92eb0e4b5   jenkins/jenkins:lts-jdk11   "/usr/bin/tini -- /u…"   About an hour ago   Up 53 minutes   0.0.0.0:50000->50000/tcp, :::50000->50000/tcp, 0.0.0.0:9001->8080/tcp, :::9001->8080/tcp   jenkins
+```
+
 ### Port
 
-| Port | Use                                          | Necessity |
-| ------ | --------------------------------------------- | ------ |
-| 8080   | Jenkins original port | Optional   |
-
+No special port
 
 ### Version
 
 ```shell
-jenkins -v
+docker exec -i jenkins cat /var/jenkins_home/config.xml |grep version |sed -n 2p |tr -d "</>version"
 ```
 
 ### Service
 
 ```shell
-sudo systemctl start | stop | restart | status jenkins
+sudo docker start | stop | restart | stats jenkins
 ```
 
 ### CLI

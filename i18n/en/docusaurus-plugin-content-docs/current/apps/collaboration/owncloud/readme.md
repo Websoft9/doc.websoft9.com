@@ -28,7 +28,7 @@ If you have installed Websoft9 OwnCloud, the following steps is for your quick s
 ### Steps for you
 
 1. Using local Chrome or Firefox to visit the URL *https://domain* or *https://Internet IP*, access to login page  
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-init1-websoft9.jpg)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-init1-websoft9.png)
    
 2. Fill in the login information([Don't know password?](./user/credentials))  
    
