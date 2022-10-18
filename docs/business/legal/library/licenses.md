@@ -27,6 +27,10 @@ slug: /legal/licenses
 - MIT
 - https://github.com/mrvautin/adminMongo/blob/master/LICENSE
 
+#### Akeneo
+- OSL V3
+- https://github.com/akeneo/pim-community-standard/blob/master/LICENCE.txt
+
 #### Alfresco
 - Apache-2.0
 - https://github.com/Alfresco/acs-deployment/blob/master/LICENSE
@@ -71,7 +75,7 @@ slug: /legal/licenses
 - Apache-2.0
 - https://github.com/Alfresco/acs-community-packaging/blob/develop/LICENSE
 
-#### AWX
+#### AWX- Ansible Tower Community Edition 
 - Apache-2.0
 - https://github.com/ansible/awx/blob/devel/LICENSE.md
 
@@ -106,7 +110,7 @@ slug: /legal/licenses
 
 #### Code-server
 - MIT
-- https://github.com/cdr/code-server/blob/main/LICENSE.txt
+- https://github.com/coder/code-server/blob/main/LICENSE
 
 #### Couchbase
 - Apache-2.0
@@ -168,6 +172,10 @@ slug: /legal/licenses
 #### FastCGI
 - LGPL V3
 - https://github.com/eddic/fastcgipp/blob/master/COPYING
+
+#### FASTPANEL
+- MIT
+- https://fastpanel.direct/assets/docs/agreement_en.pdf
 
 #### Ghost
 - MIT
@@ -255,6 +263,10 @@ slug: /legal/licenses
 - GPL v2
 - https://github.com/mate-desktop/mate-desktop/blob/master/COPYING
 
+#### Matomo
+- GPL v3
+- https://github.com/matomo-org/matomo/blob/4.x-dev/LICENSE
+
 #### Mattermost
 - MIT License
 - https://github.com/mattermost/mattermost-server/blob/master/LICENSE.txt
@@ -272,9 +284,13 @@ slug: /legal/licenses
 - AGPL v3
 - https://github.com/metabase/metabase/blob/master/LICENSE.txt
 
+#### Mingdao
+- Apache 2.0
+- https://github.com/mingdaocom/pd/blob/master/LICENSE
+
 #### ModSecurity
 - Apache 2.0
--https://github.com/SpiderLabs/ModSecurity/blob/v3/master/LICENSE
+- https://github.com/SpiderLabs/ModSecurity/blob/v3/master/LICENSE
 
 #### MongoDB Community
 - SSPL
@@ -312,20 +328,18 @@ slug: /legal/licenses
 #### Odoo Community Edition
 - LGPL v3
 - https://github.com/odoo/odoo/blob/13.0/LICENSE
+- https://github.com/odoo/odoo/blob/15.0/LICENSE
 
-#### ONLYOFFICE Docs Community
-
-Starting from version 6.0, Document Server is distributed under a new name - ONLYOFFICE Docs.
-
+#### ONLYOFFICE Docs Community（Starting from version 6.0, Document Server is distributed under a new name - ONLYOFFICE Docs.）
 - AGPL v3
 - https://github.com/ONLYOFFICE/DocumentServer/blob/master/LICENSE.txt
 
-#### ONLYOFFICE Community Edition
-
-Starting from version 11.0, Community Server is distributed as ONLYOFFICE Groups on terms of Apache License.
-
+#### ONLYOFFICE Community Edition (Starting from version 11.0, Community Server is distributed as ONLYOFFICE Groups on terms of Apache License.)
 - Apache 2.0
 - https://github.com/ONLYOFFICE/CommunityServer/blob/master/LICENSE
+
+#### ONLYOFFICE license list
+- https://www.onlyoffice.com/legalterms.aspx
 
 #### OpenCart
 - GPL v3
@@ -355,7 +369,6 @@ Starting from version 11.0, Community Server is distributed as ONLYOFFICE Groups
 ![image](https://user-images.githubusercontent.com/54173243/147202976-2b3989a5-3676-4fb9-a2c6-1c6e99df13b9.png)
 
 ![image](https://user-images.githubusercontent.com/54173243/147203426-fb12b8c6-c559-4a80-88aa-50eff8121be1.png)
-
 
 
 #### ownCloud
@@ -471,6 +484,14 @@ Starting from version 11.0, Community Server is distributed as ONLYOFFICE Groups
 #### SS CMS (Siteserver CMS)
 - AGPL v3
 - https://github.com/siteserver/cms/blob/master/LICENSE
+
+#### SRS (simple realtime video server)
+- SPDX-License-Identifier: MIT（from SRS 4)
+- https://github.com/ossrs/srs/blob/develop/LICENSE
+  - 官网说明：https://ossrs.net/lts/zh-cn/license
+  - 具体内容：https://github.com/ossrs/srs/commit/67272f0721db044d98e324df23bc0d2a3e8817c8#commitcomment-51515520 
+- MIT or MulanPSL-2.0（from SRS 5)
+- https://github.com/ossrs/srs/blob/develop/LICENSE.DUAL
 
 #### Smarty
 - LGPL V3
