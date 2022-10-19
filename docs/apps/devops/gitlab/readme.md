@@ -109,7 +109,7 @@ tags:
    ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-merge1-websoft9.png)
    ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-merge2-websoft9.png)
 
-## 常用操作
+## GitLab 常用操作
 
 ### 设置 GitLab 仓库地址{#setrepourl}
 
@@ -184,7 +184,7 @@ GitLab 仓库的 HTTPS 不等同于 GitLab 自身的 HTTPS，前置还需额外�
 
    ```
 
-## 参数
+## GitLab 参数
 
 GitLab 应用中包含 Docker, Portainer 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
 

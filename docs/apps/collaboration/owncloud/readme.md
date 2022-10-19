@@ -172,7 +172,7 @@ OwnCloud 的程序和数据文件默认均存在系统盘，你要转移到数�
 > 以上两种数据转移方案中，**mount** 操作对新手来说是几乎是不可能独立完成的任务。另外，如果转移的数据超过10G，会存在拷贝失败的风险
 
 
-## 参数{#parameter}
+## OwnCloud 参数{#parameter}
 
 OwnCloud 应用中包含 PHP, Apache, Nginx, Docker, Redis, MySQL, phpMyAdmin, [ONLYOFFICE Docs](./onlyofficedocs) 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
 

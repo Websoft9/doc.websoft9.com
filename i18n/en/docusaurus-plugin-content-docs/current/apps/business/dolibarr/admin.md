@@ -35,7 +35,7 @@ In addition to the Dolibarr issues listed below, you can refer to [Troubleshoot 
 
 #### Which database does this Dolibarr package use?
 
-MySQL
+Mariadb
 
 #### Can I use Cloud database for Dolibarr?
 

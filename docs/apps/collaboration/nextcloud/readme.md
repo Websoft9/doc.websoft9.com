@@ -198,7 +198,7 @@ NextCloud 支持 WebDAV 协议，用户可以通过 WebDAV 来连接并同步文
 4. 映射本地磁盘：右击【我的电脑】，选择【映射网络驱动器】， 复制第1步中的URL，确定。在弹出的登录界面，输入NextCloud 登录账号，完成连接。
 5. 完成上述操作，进入【我的电脑】，可以看见新添加的【网络位置盘符】，双击打开即可访问 NextCloud 远程文件。
 
-## 参数{#parameter}
+## OwnCloud 参数{#parameter}
 
 Nextcloud 应用中包含 Nginx, Docker, MySQL, phpMyAdmin, [ONLYOFFICE Docs](./onlyofficedocs) 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。  
 

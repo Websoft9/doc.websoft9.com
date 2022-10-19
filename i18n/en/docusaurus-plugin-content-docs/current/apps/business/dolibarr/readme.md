@@ -26,29 +26,15 @@ If you have installed Websoft9 Dolibarr, the following steps is for your quick s
 
 ### Steps for you
 
-1. Using local Chrome or Firefox to visit *http://domain* or *http://Internet IP*, you will enter the configuration interface of installation
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/dolibarr/dolibarr-check-websoft9.png)
+1. Using local Chrome or Firefox to visit *http://domain* or *http://Internet IP*,access login page
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/dolibarr/dolibarr-init1-websoft9.png)
 
-2. Agree license and environment, go to next step
-3. Then configure the database connection information([Don't know password?](./user/credentials))
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/dolibarr/dolibarr-dbconf-websoft9.png)
+2. Input user and password ([do not know the account password?](./user/credentials)), click "login"
 
-4. Check database connection
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/dolibarr/dolibarr-confss-websoft9.png)
-
-5. Set your administrator account
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/dolibarr/dolibarr-adminconf-websoft9.png)
-
-6. Install successfully 
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/dolibarr/dolibarr-installss-websoft9.png)
-
-7. Log in Dolibarr
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/dolibarr/dolibarr-login-websoft9.png)
-
-8. Dolibarr dashboard
+3. Dolibarr dashboard
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/dolibarr/dolibarr-backend-websoft9.png)
 
-9. Go to “Home->Setup->Company/Foundation” and edit informations for company or foundation you want to manage.
+4. Go to “Home->Setup->Company/Foundation” and edit informations for company or foundation you want to manage.
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/dolibarr-setupcompany-websoft9.png)
 
 > Refers to the [Dolibarr Documentation](https://docs.dolibarr.com/) to get start your Dolibarr tutorial
@@ -59,10 +45,9 @@ Below is for you to solve problem, and you can contact **[Websoft9 Support](./he
 
 ## Dolibarr QuickStart
 
-下面以 **Dolibarr 构建企业CRM** 作为一个任务，帮助用户快速入门：
+This task **Dolibarr builds enterprise CRM** is for your Dolibarr  QuickStart
 
 ## Dolibarr Setup
-
 
 ### Modules
 
@@ -74,40 +59,45 @@ To activate a module you want, go to page “Home->Setup->Modules” and click t
 
 
 
-## Reference sheet
+## Dolibarr reference sheet
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Dolibarr 
 
-通过运行`docker ps`，可以查看到 Dolibarr 运行时所有的 Container：
+Run `docker ps`, view all containers when Dolibarr  is running:
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                         COMMAND                  CREATED          STATUS                    PORTS                                                                               NAMES                                                                                                gitlab-runner
+ae306d549ced   tuxgasy/dolibarr:15.0.2       "docker-run.sh apach…"   28 minutes ago   Up 28 minutes             0.0.0.0:9002->80/tcp, :::9002->80/tcp                                               dolibarr
+a8043dc3d226   mariadb:latest                "docker-entrypoint.s…"   28 minutes ago   Up 28 minutes             3306/tcp                                                                            dolibarr-db
+
 ```
-
-
-下面仅列出 Dolibarr 本身的参数：
 
 ### Path{#path}
 
-Dolibarr 路径:  */data/wwwroot/dolibarr*  
+Dolibarr installation directory: */data/apps/dolibarr*  
+Dolibarr site directory: */data/apps/dolibarr/data/dolibarr_html*  
+Dolibarr Documents Directory: */data/apps/dolibarr/data/dolibarr_documents*  
 
 ### Port{#port}
 
-无特殊端口
+No special port
 
 ### Version{#version}
 
-Dolibarr  控制台查看
+```
+sudo docker images |grep tuxgasy/dolibarr |awk '{print $2}'
+```
 
 ### Service{#service}
 
 ```shell
 sudo docker start | stop | restart | stats dolibarr
+sudo docker start | stop | restart | stats dolibarr-db
 ```
 
 ### CLI{#cli}
 
-无
+no
 
 ### API
 

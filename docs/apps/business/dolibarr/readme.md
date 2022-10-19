@@ -27,26 +27,12 @@ tags:
 
 ### 详细步骤
 
-1. 本地浏览器访问：*http://域名* 或 *http://公网IP* 进入安装向导（首选域名访问方式）
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/dolibarr/dolibarr-check-websoft9.png)
+1. 本地浏览器访问：*http://域名* 或 *http://公网IP* 进入登陆页面
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/dolibarr/dolibarr-init1-websoft9.png)
 
-2. 完成通过许可协议、安装进入环境检测步骤，点击“Start”
-3. 安装进入数据库配置界面（[查看数据库账号密码](./user/credentials)），然后点击”Next Step”
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/dolibarr/dolibarr-dbconf-websoft9.png)
+2. 输入用户和密码（[不知道账号密码？](./user/credentials)），点击“login”
 
-4. 安装开始验证数据库可用性和安装过程，持续点击“Next Step”
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/dolibarr/dolibarr-confss-websoft9.png)
-
-5. 安装进入管理员账号设置界面，牢记之，点击“Next Step”
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/dolibarr/dolibarr-adminconf-websoft9.png)
-
-6. 系统安装成功
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/dolibarr/dolibarr-installss-websoft9.png)
-
-7. 点击“Go to Dolibarr”登录后台
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/dolibarr/dolibarr-login-websoft9.png)
-
-8. 开始体验后台
+3. 开始体验后台
     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/dolibarr/dolibarr-backend-websoft9.png)
 
 ### 出现问题？
@@ -61,22 +47,24 @@ tags:
 
 ## Dolibarr 常用操作
 
-## 参数{#parameter}
+## Dolibarr 参数{#parameter}
 
 Dolibarr 应用中包含 PHP, Apache, Docker, Docker, MySQL, phpMyAdmin 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 Dolibarr 运行时所有的 Container：
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                         COMMAND                  CREATED          STATUS                    PORTS                                                                               NAMES                                                                                                gitlab-runner
+ae306d549ced   tuxgasy/dolibarr:15.0.2       "docker-run.sh apach…"   28 minutes ago   Up 28 minutes             0.0.0.0:9002->80/tcp, :::9002->80/tcp                                               dolibarr
+a8043dc3d226   mariadb:latest                "docker-entrypoint.s…"   28 minutes ago   Up 28 minutes             3306/tcp                                                                            dolibarr-db
+
 ```
-
-
-下面仅列出 Dolibarr 本身的参数：
 
 ### 路径{#path}
 
-Dolibarr 路径:  */data/wwwroot/dolibarr*  
+Dolibarr 安装目录:  */data/apps/dolibarr*  
+Dolibarr 站点目录:  */data/apps/dolibarr/data/dolibarr_html*  
+Dolibarr 文档目录:  */data/apps/dolibarr/data/dolibarr_documents*  
 
 ### 端口{#port}
 
@@ -84,12 +72,15 @@ Dolibarr 路径:  */data/wwwroot/dolibarr*
 
 ### 版本{#version}
 
-Dolibarr  控制台查看
+```
+sudo docker images |grep tuxgasy/dolibarr |awk '{print $2}'
+```
 
 ### 服务{#service}
 
 ```shell
 sudo docker start | stop | restart | stats dolibarr
+sudo docker start | stop | restart | stats dolibarr-db
 ```
 
 ### 命令行{#cli}
