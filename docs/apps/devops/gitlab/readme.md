@@ -28,11 +28,7 @@ tags:
 1. 本地电脑浏览器访问：*http://域名* 或 *http://服务器公网IP*，进入初始化页面 
    ![GitLab 登录](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-login-websoft9.png)
 
-2. 输入账号密码，进入 GitLab 控制台
-    ```
-    # 用户:root，密码：通过脚本查看
-    sudo docker exec -it gitlab grep 'Password:' /etc/gitlab/initial_root_password    
-    ```
+2. 输入账号密码（[不知道账号密码？](./user/credentials)），进入 GitLab 控制台
    ![GitLab 后台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-backend-websoft9.png)
 
 3. 进入管理设置面板（Admin Area）  

@@ -25,14 +25,10 @@ If you have installed Websoft9 GitLab, the following steps is for your quick sta
 
 ### Steps for you
 
-1. Using local browser to visit the URL http://DNS or http://Server's Internet IP, login to your GitLab
-    ```
-    # user:root, password: view by this script
-    sudo docker exec -it gitlab grep 'Password:' /etc/gitlab/initial_root_password    
-    ```
+1. Using local browser to visit the URL http://DNS or http://Server's Internet IP, access login page
    ![GitLab Login](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-login-websoft9.png)
 
-2. Go to GitLab dashboard to start use it 
+2. Input user and password([Don't have password?](./user/credentials)),go to GitLab dashboard to start use it 
    ![GitLab dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-backend-websoft9.png)
 
 3. Go to GitLab Admin Area to configure it
