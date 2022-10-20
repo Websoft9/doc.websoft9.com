@@ -12,27 +12,7 @@ This chapter is special guide for PostgreSQL maintenance and settings. And you c
 
 ## Maintenance guide
 
-### Change PGDATA Directory
-
-1. Backup all files on you PGDATA */data/postgresql/pgdata* 
-2. Change the PGDATA directory by different Linux distribution
-
-   * RedHat/CentOS: modify the file **postgreql.service** 
-      ```
-      # cat postgresql.service directory
-      systemctl cat postgreql.service 
-
-      # modify the  Environment=PGDATA in the file postgresql.servce
-      Environment=PGDATA=/var/lib/pgsql/11/data/
-      ```
-   * Ubuntu: modify the file **postgresql.conf** 
-     ```
-     data_directory =
-     ```
-3. Restore all data from your backup
-4. Restart your PostgreSQL service
-
-### PostgreSQL Backup for application
+### PostgreSQL Backup and Restore
 
 There three main methods for PostgreSQL backup: 
 

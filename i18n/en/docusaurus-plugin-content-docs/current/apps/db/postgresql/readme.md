@@ -27,21 +27,21 @@ If you have installed Websoft9 PostgreSQL, the following steps is for your quick
 
 1. Use the **SSH** to connect Server, and run these command below to view the installation information and running status
    ```
-   sudo systemctl status postgresql
+   cd /data/apps/postgresql && sudo docker compose ls
    ```
-2. You can ge the message from SSH " Active: active (running)... " when PostgreSQL is running
+2. You can ge the message from SSH "STATUS: running(1) " when PostgreSQL is running
 
 3. Using SSH to connect PostgreSQL Server(or remote to Windows Server), run the following commands
 
-```
-sudo -i -u postgres
-psql
+    ```
+    $ docker exec -it postgresql bash
+    $ psql -d postgresql -U postgresql
+    psql (15.0 (Debian 15.0-1.pgdg110+1))
+    Type "help" for help.
+    
+    postgresql=#
 
-psql (12.3)
-Type "help" for help.
-
-postgres=#
-```
+    ```
 
 4. Login PostgreSQL with GUI tool pgAdmin
 
@@ -78,7 +78,7 @@ The database is a high-security application, set up remote access, at least two 
 
 4. Restart PostgreSQL
    ```
-   systemctl restart postgresql
+   sudo docker restart postgresql
    ```
 
 ### Password Management
@@ -86,14 +86,13 @@ The database is a high-security application, set up remote access, at least two 
 PostgreSQL customer tool can connect PostgreSQL server by **Unix socket** directly, so you can modify your password without authentication
 
 ```
-# change to user postgres
-sudo -u postgres psql
+$ docker exec -it postgresql bash
+$ psql -d postgresql -U postgresql
 
 # modify your password
-ALTER USER postgres WITH PASSWORD 'postgres';
+$ ALTER USER postgres WITH PASSWORD 'postgres';
 
-#exit psql
-\q
+$ exit psql \q
 ```
 
 ### GUI-pgAdmin{#pgadmin}
@@ -163,49 +162,42 @@ PostgreSQL roles is similar with users
 2. Start you backup
 
 
-## Reference sheet
+## PostgreSQL reference sheet
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage PostgreSQL 
 
-通过运行`docker ps`，可以查看到 PostgreSQL 运行时所有的 Container：
+Run `docker ps`, view all containers when PostgreSQL is running: 
+
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                   COMMAND                  CREATED         STATUS         PORTS                                            NAMES
+7e91744ee643   dpage/pgadmin4:latest   "/entrypoint.sh"         3 seconds ago   Up 1 second    443/tcp, 0.0.0.0:9090->80/tcp, :::9090->80/tcp   pgadmin
+9218c5167c4b   postgres:latest         "docker-entrypoint.s…"   2 minutes ago   Up 2 minutes   0.0.0.0:5432->5432/tcp, :::5432->5432/tcp        postgresql```
 ```
-
-下面仅列出 PostgreSQL 本身的参数：
 
 ### Path{#path}
 
-PostgreSQL 配置文件目录: */data/postgresql/config*   
-PostgreSQL 数据目录：*/data/postgresql/pgdata*   
-PostgreSQL 日志目录: */data/postgresql/log*  
-
-PostgreSQL 有两个重要的全局配置文件：
-
-* postgresql.conf 主要负责配置文件位置、资源限制、集群负责等
-* pg_hba.conf 主要负责客户端的连接和认证
-
+PostgreSQL install directory:  */data/apps/postgresql*   
+PostgreSQL data directory: */data/apps/postgresql/data/postgres* 
 
 ### Port
 
-| 端口号 | 用途                                          | 必要性 |
-| ------ | --------------------------------------------- | ------ |
-| 9090   | 通过 HTTP 访问 phpPgAdmin	 | 可选   |
-| 5432   | 远程连接PostgreSQL | 可选   |
-
+| Port Number | Purpose | Necessity |
+| ------ | ------------------------------------------ --- | ------ |
+| 9090 | Access phpPgAdmin via HTTP | Optional |
+| 5432 | Remote connection to PostgreSQL | optional |
 
 ### Version
 
 ```shell
 # PostgreSQL version
-psql -V
+docker exec -it postgresql psql -V
 ```
 
 ### Service
 
 ```shell
-sudo systemctl start | stop | restart | status postgresql
+sudo docker start | stop | restart | stats postgresql
 sudo docker start | stop | restart | stats pgadmin
 ```
 
@@ -216,16 +208,13 @@ Psql is the interactive terminal for working with Postgres. Theres an abundance 
 **Connect psql by peer**
 
 ```shell
-cd /usr/bin
-su postgres
-psql
-```
 
-**Connect psql from remote**
+$ docker exec -it postgresql psql --help
+psql is the PostgreSQL interactive terminal.
 
-Enable the remote connection of PostgreSQL, then connect it
-```shell
-psql -U postgre -h localhost -W
+Usage:
+  psql [OPTION]... [DBNAME [USERNAME]]
+``` -U postgre -h localhost -W
 ```
 
 ### API

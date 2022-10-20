@@ -8,5 +8,5 @@ tags:
 
 # PostgreSQL Solution
 
-PostgreSQL 可以与其他的软件平台**集成**一起使用，解决 数据库高可用性 过程中的各种场景问题。
+PostgreSQL can be used with other software platforms **integrated** to solve various scenarios in the process of database high availability.
 

@@ -18,7 +18,7 @@ tags:
 部署 Websoft9 提供的 PostgreSQL 之后，需完成如下的准备工作：
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:5432,9090** 端口已经开启
+2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:5432** 端口已经开启
 3. 在服务器中查看 PostgreSQL 的 **[默认账号和密码](./user/credentials)**  
 4. 若想用域名访问  PostgreSQL，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
 
@@ -31,19 +31,19 @@ tags:
 
 1. 查看服务状态：SSH 连接服务器，运行下面的命令，查看 PostgreSQL 的安装信息和运行状态
    ```
-   sudo systemctl status postgresql
+   cd /data/apps/postgresql && sudo docker compose ls
    ```
-   PostgreSQL 正常运行会得到 " Active: active (running)... " 的反馈
+   PostgreSQL 正常运行会得到 "STATUS: running(1)" 的反馈
 
-2. 连接 PostgreSQL：SSH 连接服务器，以 `postgre` 用户后运行 `psql` 命令，即可使用 psql 连接数据库
+2. 连接 PostgreSQL：SSH 连接服务器，通过下列命令，即可使用 psql 连接数据库
     ```
-    sudo -i -u postgres
-    psql
-
-    psql (12.3)
+    $ docker exec -it postgresql bash
+    $ psql -d postgresql -U postgresql
+    psql (15.0 (Debian 15.0-1.pgdg110+1))
     Type "help" for help.
+    
+    postgresql=#
 
-    postgres=#
     ```
 
 3. 使用可视化管理工具 pgAdmin 
@@ -75,7 +75,7 @@ tags:
 
 4. 重启 PostgreSQL 后生效
    ```
-   sudo systemctl restart postgresql
+   sudo docker restart postgresql
    ```
 
 ### 密码管理
@@ -83,14 +83,13 @@ tags:
 对于 PostgreSQL 来说，由于可以通过 Unix 套字节在无需验证的情况下登录数据库，因此修改密码和重置密码操作相同：
 
 ```
-# 切换到 postgres 用户
-sudo -u postgres psql
+$ docker exec -it postgresql bash
+$ psql -d postgresql -U postgresql
 
 # 修改密码
-ALTER USER postgres WITH PASSWORD 'postgres';
+$ ALTER USER postgres WITH PASSWORD 'postgres';
 
-#exit psql
-\q
+$ exit psql \q
 ```
 
 ### 图形化工具{#pgadmin}
@@ -161,19 +160,18 @@ PostgreSQL 中创建用户就是创建 Role
 
 PostgreSQL 应用中包含 Docker, pgAdmin 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
-通过运行`docker ps`，可以查看到 PostgreSQL 运行时所有的 Container：
+通过运行`docker ps`，可以查看到 PostgreSQL 运行时所有的服务组件：
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                   COMMAND                  CREATED         STATUS         PORTS                                            NAMES
+7e91744ee643   dpage/pgadmin4:latest   "/entrypoint.sh"         3 seconds ago   Up 1 second    443/tcp, 0.0.0.0:9090->80/tcp, :::9090->80/tcp   pgadmin
+9218c5167c4b   postgres:latest         "docker-entrypoint.s…"   2 minutes ago   Up 2 minutes   0.0.0.0:5432->5432/tcp, :::5432->5432/tcp        postgresql```
 ```
-
-下面仅列出 PostgreSQL 本身的参数：
 
 ### 路径{#path}
 
-PostgreSQL 配置文件目录: */data/postgresql/config*   
-PostgreSQL 数据目录：*/data/postgresql/pgdata*   
-PostgreSQL 日志目录: */data/postgresql/log*  
+PostgreSQL 配置文件目录: */data/apps/postgresql*   
+PostgreSQL 数据目录：*/data/apps/postgresql/data/postgres*   
 
 PostgreSQL 有两个重要的全局配置文件：
 
@@ -185,7 +183,7 @@ PostgreSQL 有两个重要的全局配置文件：
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
-| 9090   | 通过 HTTP 访问 phpPgAdmin	 | 可选   |
+| 9090   | 通过 HTTP 访问 PgAdmin	 | 可选   |
 | 5432   | 远程连接PostgreSQL | 可选   |
 
 
@@ -193,13 +191,13 @@ PostgreSQL 有两个重要的全局配置文件：
 
 ```shell
 # PostgreSQL version
-psql -V
+docker exec -it postgresql psql -V
 ```
 
 ### 服务
 
 ```shell
-sudo systemctl start | stop | restart | status postgresql
+sudo docker start | stop | restart | stats postgresql
 sudo docker start | stop | restart | stats pgadmin
 ```
 
@@ -210,13 +208,12 @@ PSQL 是 PostgreSQL 自带的命令行客户端工具，有非常丰富的功能
 先切换到 postgre 用户，在运行 `psql` 命令，即可使用 psql 连接数据库
 
 ```
-sudo -i -u postgres
-psql
 
-psql (12.3)
-Type "help" for help.
+$ docker exec -it postgresql psql --help
+psql is the PostgreSQL interactive terminal.
 
-postgres=#
+Usage:
+  psql [OPTION]... [DBNAME [USERNAME]]
 ```
 
 ### API

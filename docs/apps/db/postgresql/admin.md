@@ -12,27 +12,7 @@ tags:
 
 ## 场景
 
-### 迁移
-
-1. 备份 */data/postgresql/pgdata* 目录下的所有数据
-2. 根据不同的操作系统分别设置
-
-   * RedHat/CentOS  修改 **postgreql.service** 文件中数据目录的环境变量
-      ```
-      # 查看postgresql.service位置
-      systemctl cat postgreql.service 
-
-      # 在 postgresql.servce 中找到下面这行，修改之
-      Environment=PGDATA=/var/lib/pgsql/11/data/
-      ```
-   * Ubuntu  修改 **postgresql.conf** 文件中数据目录
-     ```
-     data_directory =
-     ```
-3. 恢复数据到新的目录
-4. 重启 PostgreSQL 服务
-
-### PostgreSQL应用备份
+### PostgreSQL 备份与恢复
 
 PostgreSQL上的应用备份有多种[备份方案](https://www.postgresql.org/docs/12/backup.html)，常见包括：
 
@@ -42,7 +22,7 @@ PostgreSQL上的应用备份有多种[备份方案](https://www.postgresql.org/d
 
 其中数据库文件目录直接复制等同于服务器快照备份，无需重复再做。
 
-### PostgreSQL 更新升级
+### PostgreSQL 升级
 
 PostgreSQL 提供了大版本升级工具 pg_upgrade。升级总是比较复杂，这里只列出 pg_upgrade 常用参数
 
