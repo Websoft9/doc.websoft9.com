@@ -46,7 +46,7 @@ If you have installed Websoft9 Jenkins, the following steps is for your quick st
 
   > Please don't select the [Import Demo data](Demo data only support chinese)
 
-7. ZenTao Log in
+7. Login by you set user and password
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/zentao/zentao-init9-websoft9.png)
 
 8. ZenTao dashboard
@@ -116,9 +116,9 @@ bbe3b0d3441d   easysoft/zentao:latest   "bash -c 'cat /my_cm…"   8 minutes ago
 
 ### Path {#path}
 
-ZenTao installation directory: */data/apps/zentao*
-ZenTao source code path: */data/apps/zentao/data/zentao*
-ZenTao configuration file: */data/apps/zentao/data/zentao/config/config.php*
+ZenTao installation directory: */data/apps/zentao*  
+ZenTao source code path: */data/apps/zentao/data/zentao*  
+ZenTao configuration file: */data/apps/zentao/data/zentao/config/config.php*  
 
 ### Port{#port}
 

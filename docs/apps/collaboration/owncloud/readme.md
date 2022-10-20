@@ -33,7 +33,7 @@ tags:
 
 2. 填写登陆信息（[不知道账号密码？](./user/credentials)）  
 
-5. 点击登陆，开始体验后台
+5. 点击【login】，开始体验后台
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-installcomplete-websoft9.png)
 
 6. [设置文档预览与编辑](./owncloud/solution#onlyoffice)功能（非必要）
@@ -207,7 +207,7 @@ Onlyofficedocs 安装目录：*/data/apps/onlyofficedocs*
 ### 版本{#version}
 
 ```shell
-owncloudcmd
+docker exec -i owncloud occ -Version
 ```
 
 ### 服务{#service}

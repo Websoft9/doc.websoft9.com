@@ -51,23 +51,23 @@ Below is for you to solve problem, and you can contact **[Websoft9 Support](./he
 This task【Build Github repository by Jenkins】 is for your Jenkins QuickStart
 
 1. Set up Personal access tokens on GitHub for Jenkins connection
- ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/jenkins/jenkins-wizard2-websoft9.png)
+ ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins-wizard2-websoft9.png)
 
 2. In Jenkins global system settings, connect to GitHub
- ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/jenkins/jenkins-wizard3-websoft9.png)
- ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/jenkins/jenkins-wizard4-websoft9.png)
- ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/jenkins/jenkins-wizard5-websoft9.png)
+ ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins-wizard3-websoft9.png)
+ ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins-wizard4-websoft9.png)
+ ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins-wizard5-websoft9.png)
 
 3. Create a build task: enter the task name, enter the Github project URL, account password and other information according to the process
- ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/jenkins/jenkins-wizard6-websoft9.png)
- ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/jenkins/jenkins-wizard7-websoft9.png)
- ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/jenkins/jenkins-wizard8-websoft9.png)
- ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/jenkins/jenkins-wizard9-websoft9.png)
- ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/jenkins/jenkins-wizard10-websoft9.png)
- ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/jenkins/jenkins-wizard11-websoft9.png)
+ ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins-wizard6-websoft9.png)
+ ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins-wizard7-websoft9.png)
+ ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins-wizard8-websoft9.png)
+ ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins-wizard9-websoft9.png)
+ ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins-wizard10-websoft9.png)
+ ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins-wizard11-websoft9.png)
 
 4. After the corresponding Github project is modified, push the submission; Jenkins completes the automated build and deployment
- ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/jenkins/jenkins-wizard12-websoft9.png)
+ ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins-wizard12-websoft9.png)
 
 ## Jenkins Setup
 
@@ -89,7 +89,7 @@ Login to Jenkins, open：【【Manage Jenkins】>【Plugins Manager】 to manage
 
 4. Test it
 
-## Reference sheet
+## Jenkins reference sheet
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Jenkins
 

@@ -151,7 +151,7 @@ Onlyofficedocs installation directory: */data/apps/onlyofficedocs*
 ### Version{#version}
 
 ```shell
-owncloudcmd
+docker exec -i owncloud occ -Version
 ```
 
 ### Service{#service}
@@ -165,7 +165,7 @@ sudo docker start | stop | restart | stats onlyofficedocs
 
 ### CLI{#cli}
 
-[owncloudcmd](https://doc.owncloud.com/desktop/next/advanced_usage/command_line_client.html) ss OwnCloud's CLI
+[owncloudcmd](https://doc.owncloud.com/desktop/next/advanced_usage/command_line_client.html) is OwnCloud CLI
 
 ```
 owncloudcmd -h

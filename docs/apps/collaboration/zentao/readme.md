@@ -46,7 +46,7 @@ tags:
 7. 系统完成最后一步安装，提示安装成功
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zentao/zentao-init7-websoft9.png)
 
-8. 登录后台  
+8. 根据您设置的用户和密码登录后台  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zentao/zentao-init8-websoft9.png)
 
 9. 体验后台  
