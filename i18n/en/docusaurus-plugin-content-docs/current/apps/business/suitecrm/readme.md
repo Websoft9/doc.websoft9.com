@@ -26,31 +26,14 @@ If you have installed Websoft9 SuiteCRM, the following steps is for your quick s
 
 ### Steps for you
 
-1. Using local Chrome or Firefox to visit *http://domain* or *http://Internet IP*, you will enter the configuration interface of installation
+1. Using local Chrome or Firefox to visit *http://domain* or *http://Internet IP*, you will enter login page
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-init1-websoft9.png)
 
-2. Agree license, go to next step
-  ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-accept-websoft9.png)
+2. According to the wizard prompt, select [Next] to initialize the settings
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-init2-websoft9.png)
 
-3. Environment check
-  ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-check-websoft9.png)
-
-4. Then configure the database connection information([Don't know password?](./user/credentials) and set administrator account
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-installdb-websoft9.png)
-
-   > Email is your system ID, not collected by anyone because it stored in your Cloud Server
-
-5. Wait the installing  
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-installing-websoft9.png)
-
-
-6. Set your SMTP (Optional)
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-smtp-websoft9.png)
-
-7. Install successfully, log in to SuiteCRM  
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-login-websoft9.png)
-
-8. SuiteCRM dashboard
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-backend-websoft9.png)
+3. The initialization setting is completed, and start to experience the background
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-init3-websoft9.png)
 
 ### Having trouble?
 
@@ -58,7 +41,7 @@ Below is for you to solve problem, and you can contact **[Websoft9 Support](./he
 
 ## SuiteCRM QuickStart
 
-下面以 **SuiteCRM 构建企业CRM** 作为一个任务，帮助用户快速入门：
+The following uses **SuiteCRM to build an enterprise CRM** as a task to help users get started quickly:
 
 ## SuiteCRM Setup
 
@@ -95,31 +78,32 @@ SuiteCRM support multi-language.Below is a example for adding Chinese language i
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-languageitems-websoft9.png)
 
 
-## Reference sheet
+## SuiteCRM reference sheet
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage SuiteCRM 
 
-通过运行`docker ps`，可以查看到 SuiteCRM 运行时所有的 Container：
+By running `docker ps`, you can view all Containers when SuiteCRM is running:
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
-```
-
-
-下面仅列出 SuiteCRM 本身的参数：
+CONTAINER ID   IMAGE                         COMMAND                  CREATED          STATUS                 PORTS                                                                               NAMES
+f705c84dd8d1   bitnami/suitecrm:latest       "/opt/bitnami/script…"   27 seconds ago   Up 26 seconds          8443/tcp, 0.0.0.0:9002->8080/tcp, :::9002->8080/tcp                                 suitecrm
+5d2d02d4c02e   mariadb:10.6                  "docker-entrypoint.s…"   29 seconds ago   Up 26 seconds          0.0.0.0:3306->3306/tcp, :::3306->3306/tcp                                           suitecrm-db
+````
 
 ### Path{#path}
 
-SuiteCRM 路径:  */data/wwwroot/suitecrm*  
-SuiteCRM 配置文件: */data/wwwroot/suitecrm/config.php*
+SuiteCRM installation directory: */data/apps/suitecrm*  
+SuiteCRM Site Directory: */data/apps/suitecrm/data/suitecrm*  
 
 ### Port{#port}
 
-无特殊端口
+No special port
 
 ### Version{#version}
 
-控制台查看
+```
+docker exec -i suitecrm cat /bitnami/suitecrm/VERSION
+```
 
 ### Service{#service}
 
@@ -129,7 +113,7 @@ sudo docker start | stop | restart | stats suitecrm
 
 ### CLI{#cli}
 
-无
+No
 
 ### API
 

@@ -378,7 +378,7 @@ Redis data directory: */data/apps/redis/data/redis_data*
 | Port Number | Purpose | Necessity |
 | ------ | ------------------------------------------ --- | ------ |
 | 6379 | Redis | optional |
-| 8001 | HTTP access to RedisInsight | Required |
+| 8002 | HTTP access to RedisInsight | Required |
 
 
 ### Version

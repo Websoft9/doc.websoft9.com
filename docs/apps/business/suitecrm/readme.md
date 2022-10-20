@@ -22,25 +22,18 @@ tags:
 3. 在服务器中查看 SuiteCRM 的 **[默认账号和密码](./user/credentials)**  
 4. 若想用域名访问  SuiteCRM **[域名五步设置](./administrator/domain_step)** 过程
 
-
 ## SuiteCRM 初始化向导{#init}
 
 ### 详细步骤
 
-1. 本地浏览器访问：*http://域名* 或 *http://服务器公网IP* 进入安装向导
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-accept-websoft9.png)
+1. 本地浏览器访问：*http://域名* 或 *http://服务器公网IP* ，进入登陆页面
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-init1-websoft9.png)
 
-2. 环境检测会自动通过，选择【Next】进入下一步
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-check-websoft9.png)
+2. 根据向导提示，选择【Next】初始化设置
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-init2-websoft9.png)
 
-3. 系统进入配置数据库界面（[查看数据库账号密码](./user/credentials)）。然后设置管理员账号，牢记之，点击“安装”
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-dbconf-websoft9.png)
-
-4. 系统进入安装过程，耐心等待，安装成功后系统会进行提示
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-login-websoft9.png)
-
-5. 开始体验后台
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-backend-websoft9.png)
+3. 初始化设置完成，开始体验后台
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-init3-websoft9.png)
 
 > 需要了解更多SuiteCRM 的使用，请参考官方文档：[EspoCRM Documentation](https://suitecrm.com/wiki/index.php/Main_Page)
 
@@ -53,7 +46,6 @@ tags:
 ## SuiteCRM 使用入门
 
 下面以 **SuiteCRM 构建企业CRM** 作为一个任务，帮助用户快速入门：
-
 
 ## SuiteCRM 常用操作
 
@@ -85,23 +77,23 @@ SuiteCRM默认安装只有英文，需要中文或其他语言，需要下载语
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-logincn-websoft9.png)
 
 
-## 参数{#parameter}
+## SuiteCRM 参数{#parameter}
 
 SuiteCRM 应用中包含 PHP, Nginx, Apache, Docker, MySQL等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 SuiteCRM 运行时所有的 Container：
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                         COMMAND                  CREATED          STATUS                 PORTS                                                                               NAMES
+f705c84dd8d1   bitnami/suitecrm:latest       "/opt/bitnami/script…"   27 seconds ago   Up 26 seconds          8443/tcp, 0.0.0.0:9002->8080/tcp, :::9002->8080/tcp                                 suitecrm
+5d2d02d4c02e   mariadb:10.6                  "docker-entrypoint.s…"   29 seconds ago   Up 26 seconds          0.0.0.0:3306->3306/tcp, :::3306->3306/tcp                                           suitecrm-db
+
 ```
-
-
-下面仅列出 SuiteCRM 本身的参数：
 
 ### 路径{#path}
 
-SuiteCRM 路径:  */data/wwwroot/suitecrm*  
-SuiteCRM 配置文件: */data/wwwroot/suitecrm/config.php*
+SuiteCRM 安装目录:  */data/apps/suitecrm*  
+SuiteCRM 站点目录: */data/apps/suitecrm/data/suitecrm*
 
 ### 端口{#port}
 
@@ -109,12 +101,15 @@ SuiteCRM 配置文件: */data/wwwroot/suitecrm/config.php*
 
 ### 版本{#version}
 
-控制台查看
+```
+docker exec -i suitecrm cat /bitnami/suitecrm/VERSION
+```
 
 ### 服务{#service}
 
 ```shell
 sudo docker start | stop | restart | stats suitecrm
+sudo docker start | stop | restart | stats suitecrm-db
 ```
 
 ### 命令行{#cli}

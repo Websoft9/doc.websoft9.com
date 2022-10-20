@@ -13,6 +13,14 @@ tags:
 
 ## 场景
 
+### SuiteCRM 备份与恢复
+
+详细请参照[SuiteCRM 备份](https://docs.suitecrm.com/developer/best-practices/#_backup)
+
+### SuiteCRM 升级
+
+详细请参照[SuiteCRM 升级策略](https://docs.suitecrm.com/8.x/admin/installation-guide/upgrading/)
+
 ## 故障排除
 
 除以下列出的 SuiteCRM 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。

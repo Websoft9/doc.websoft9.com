@@ -13,7 +13,7 @@ This chapter is special guide for SuiteCRM maintenance and settings. And you can
 
 ## Maintenance guide
 
-### SuiteCRM Backup
+### SuiteCRM Backup and Restore
 
 **Set Automatic Backup**
 
@@ -29,6 +29,8 @@ SuiteCRM have the Backups interface
 4. Settings confirmed. Press "run backup" to perform the backup.
 5. Now,your backup file has been generated
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-backupfiles-websoft9.png)
+
+> Refers to the[SuiteCRM Backup](https://docs.suitecrm.com/developer/best-practices/#_backup)
 
 ### SuiteCRM Upgrade
 
@@ -49,12 +51,12 @@ The Upgrade Wizard provides a quick way to upgrade to the latest version of the 
 
 In addition to the SuiteCRM issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
-#### SuiteCRM 安装向导连接数据库步骤，点击【Next】没有任何反应？
+#### SuiteCRM installation wizard steps to connect to the database, click [Next] nothing happens?
 
-**问题原因**：经过排查，发现【Next】动作有文件404（估计是Ajax触发），即有文件无法下载程序没有反应
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-noresponse-websoft9.png)
+**Cause of the problem**: After investigation, it is found that there is a file 404 in the [Next] action (it is estimated to be triggered by Ajax), that is, there is a file that cannot be downloaded and the program does not respond.
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-noresponse-websoft9.png)
 
-**解决方案**：临时购买一台香港地区的Windows服务器，在这个服务器打开浏览器安装SuiteCRM即可
+**Solution**: Temporarily purchase a Windows server in Hong Kong, open a browser on this server and install SuiteCRM
 
 
 ## FAQ{#faq}
