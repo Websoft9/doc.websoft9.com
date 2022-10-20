@@ -30,8 +30,7 @@ tags:
 1. 使用本地电脑的浏览器访问网址： *http://域名* 或  *http://服务器公网IP*, 就进入登录页面
    ![Grafana 登录](https://libs.websoft9.com/Websoft9/DocsPicture/en/grafana/grafana-login-websoft9.png)
 
-2. 输入默认的用户名和密码（[查看](./user/credentials)），系统会提示修改密码
-   ![Grafana 强提示修改密码](https://libs.websoft9.com/Websoft9/DocsPicture/en/grafana/grafana-forcechangepw-websoft9.png)
+2. 输入默认的用户名和密码（[不知道账号密码？](./user/credentials)）
 
 3. 登录到 Grafana 控制台页面  
    ![Grafana 控制台](https://libs.websoft9.com/Websoft9/DocsPicture/en/grafana/grafana-dashboard-websoft9.png)
@@ -99,40 +98,48 @@ SSH 登录服务器，运行下面的命令即可
 
 ```
 # 修改管理员密码
-grafana-cli admin reset-admin-password admin123
+docker exec -it grafana grafana-cli admin reset-admin-password admin123
 ```
 
 ## Grafana 参数
 
-Grafana 应用中包含 Nginx, SQLite 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+Grafana 应用中包含 Nginx, MySQL 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
-下面仅列出 Grafana 本身的参数：
+```
+CONTAINER ID   IMAGE                    COMMAND                  CREATED          STATUS          PORTS                                       NAMES
+0e8348b13542   phpmyadmin:latest        "/docker-entrypoint.…"   12 minutes ago   Up 12 minutes   0.0.0.0:9090->80/tcp, :::9090->80/tcp       phpmyadmin
+12bb28a1571e   grafana/grafana:latest   "/run.sh"                13 minutes ago   Up 13 minutes   0.0.0.0:9001->3000/tcp, :::9001->3000/tcp   grafana
+5eaf5c965651   grafana/promtail:main    "/usr/bin/promtail -…"   13 minutes ago   Up 13 minutes                                               grafana-promtail
+610a9ad5edfe   mysql:5.7                "docker-entrypoint.s…"   13 minutes ago   Up 13 minutes   3306/tcp, 33060/tcp                         grafana-db
+49b08cdf0e3d   grafana/loki:main        "/usr/bin/loki -conf…"   13 minutes ago   Up 13 minutes   3100/tcp                                    grafana-loki
+
+```
 
 ### 路径{#path}
 
-Grafana 安装目录： */usr/share/grafana*  
-Grafana 配置文件：  */usr/share/grafana/conf/defaults.ini*  
-Grafana 日志文件：  */var/log/grafana/grafana.log*  
-Grafana 数据存储路径： */usr/share/grafana/data*  
-Grafana 数据日志路径： */usr/share/grafana/data/log*
+Grafana 安装目录：*/data/apps/grafana*  
+Grafana 配置文件：*/data/apps/grafana/data/grafana_config/grafana.ini*  
+Grafana 日志目录：*/data/apps/grafana/data/grafana_logs*  
+Grafana 数据目录：*/data/apps/grafana/data/grafana_data*  
 
 ### 端口{#port}
 
-| 端口号 | 用途                                          | 必要性 |
-| ------ | --------------------------------------------- | ------ |
-| 3000   | Grafana 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
+无特殊端口
 
 ### 版本
 
 ```shell
 # Grafana Version
-grafana-cli -v
+sudo docker exec -it grafana grafana-cli -v
 ```
 
 ### 服务
 
 ```
-sudo systemctl start | stop | restart | status grafana-server
+sudo docker l start | stop | restart | stats grafana
+sudo docker l start | stop | restart | stats grafana-db
+sudo docker l start | stop | restart | stats grafana-promtail
+sudo docker l start | stop | restart | stats grafana-loki
 ```
 
 ### 命令行
@@ -140,7 +147,7 @@ sudo systemctl start | stop | restart | status grafana-server
 Grafana 提供命令行工具`grafana-cli`用于全面管理和配置 Grafana
 
 ```
-[root@iZj6cfvehfql1u0bth47acZ ~]# grafana-cli -h
+$ docker exec -it grafana grafana-cli -h
 NAME:
    Grafana CLI - A new cli application
 

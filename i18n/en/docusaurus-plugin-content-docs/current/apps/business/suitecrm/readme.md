@@ -27,13 +27,13 @@ If you have installed Websoft9 SuiteCRM, the following steps is for your quick s
 ### Steps for you
 
 1. Using local Chrome or Firefox to visit *http://domain* or *http://Internet IP*, you will enter login page
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-init1-websoft9.png)
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-init1-websoft9.png)
 
 2. According to the wizard prompt, select [Next] to initialize the settings
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-init2-websoft9.png)
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-init2-websoft9.png)
 
 3. The initialization setting is completed, and start to experience the background
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-init3-websoft9.png)
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-init3-websoft9.png)
 
 ### Having trouble?
 

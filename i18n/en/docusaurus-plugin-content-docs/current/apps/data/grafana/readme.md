@@ -29,8 +29,7 @@ If you have installed Websoft9 Grafana, the following steps is for your quick st
 1. Using local Chrome or Firefox to visit the URL *http://domain name* or *http://Internet IP*, you will enter the register interface of Grafana
 ![Grafana login page](https://libs.websoft9.com/Websoft9/DocsPicture/en/grafana/grafana-login-websoft9.png)
 
-2. Input the [default username and password](./user/credentials), then system will force you to change your password
-![Grafana change password](https://libs.websoft9.com/Websoft9/DocsPicture/en/grafana/grafana-forcechangepw-websoft9.png)
+2. Input the  username and password, ([Don't have password?](./user/credentials))
 
 3. Log in to the Grafana Console  
 ![Grafana console](https://libs.websoft9.com/Websoft9/DocsPicture/en/grafana/grafana-dashboard-websoft9.png)
@@ -53,7 +52,7 @@ Below is for you to solve problem, and you can contact **[Websoft9 Support](./he
 
 ## Grafana QuickStart
 
-下面以 xxx 配置数据监控作为范例。
+The following uses xxx configuration data monitoring as an example.
 
 ## Grafana Setup
 
@@ -95,49 +94,58 @@ SSH login to the server, run the following command
 
 ```
 # Modify administrator password
-grafana-cli admin reset-admin-password admin123
+sudo docker exec -it grafana grafana-cli admin reset-admin-password admin123
 ```
 
-## Reference sheet
+## Grafana reference sheet
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Grafana 
 
-The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Grafana
+Run `docker ps`, view all containers when Grafana is running:  
 
+```
+CONTAINER ID   IMAGE                    COMMAND                  CREATED          STATUS          PORTS                                       NAMES
+0e8348b13542   phpmyadmin:latest        "/docker-entrypoint.…"   12 minutes ago   Up 12 minutes   0.0.0.0:9090->80/tcp, :::9090->80/tcp       phpmyadmin
+12bb28a1571e   grafana/grafana:latest   "/run.sh"                13 minutes ago   Up 13 minutes   0.0.0.0:9001->3000/tcp, :::9001->3000/tcp   grafana
+5eaf5c965651   grafana/promtail:main    "/usr/bin/promtail -…"   13 minutes ago   Up 13 minutes                                               grafana-promtail
+610a9ad5edfe   mysql:5.7                "docker-entrypoint.s…"   13 minutes ago   Up 13 minutes   3306/tcp, 33060/tcp                         grafana-db
+49b08cdf0e3d   grafana/loki:main        "/usr/bin/loki -conf…"   13 minutes ago   Up 13 minutes   3100/tcp                                    grafana-loki
 
-下面仅列出 Grafana 本身的参数：
+```
 
 ### Path{#path}
 
-Grafana installation directory： */usr/share/grafana*  
-Grafana 配置文件：  */usr/share/grafana/conf/defaults.ini*  
-Grafana logs file：  */var/log/grafana/grafana.log*  
-Grafana 数据存储路径： */usr/share/grafana/data*  
-Grafana 数据日志路径： */usr/share/grafana/data/log*
+Grafana install directory: */data/apps/grafana*  
+Grafana configure file: */data/apps/grafana/data/grafana_config/grafana.ini*  
+Grafana log directory:  */data/apps/grafana/data/grafana_logs*  
+Grafana datadirectory:  */data/apps/grafana/data/grafana_data* 
 
 ### Port{#port}
 
-| 端口号 | 用途                                          | 必要性 |
-| ------ | --------------------------------------------- | ------ |
-| 3000   | Grafana 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
+No special port
 
 ### Version
 
 ```shell
 # Grafana Version
-grafana-cli -v
+sudo docker exec -it grafana grafana-cli -v
 ```
 
 ### Service
 
+
 ```
-sudo systemctl start | stop | restart | status grafana-server
+sudo docker l start | stop | restart | stats grafana
+sudo docker l start | stop | restart | stats grafana-db
+sudo docker l start | stop | restart | stats grafana-promtail
+sudo docker l start | stop | restart | stats grafana-loki
 ```
 
 ### CLI
 
-Grafana 提供命令行工具`grafana-cli`用于全面管理和配置 Grafana
+Grafana CLI tools `grafana-cli`, for full management and configuration Grafana
 
 ```
-[root@iZj6cfvehfql1u0bth47acZ ~]# grafana-cli -h
+$ docker exec -it grafana grafana-cli -h
 NAME:
    Grafana CLI - A new cli application
 
@@ -171,4 +179,4 @@ GLOBAL OPTIONS:
 
 ### API
 
-[Grafana API](https://grafana.com/docs/grafana/latest/http_api) 采用 REST API 2.0 规范。
+[Grafana API](https://grafana.com/docs/grafana/latest/http_api) adopt the REST API 2.0 specification.
