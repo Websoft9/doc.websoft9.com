@@ -19,6 +19,10 @@ slug: /legal/licenses
 - MIT
 - https://github.com/microsoft/referencesource/blob/master/LICENSE.txt
 
+#### aaPanel
+- 宝塔开源许可协议
+- https://github.com/aaPanel/aaPanel/blob/master/license.txt
+
 #### ASP.NET Core
 - Apache-2.0
 - https://github.com/aspnet/AspNetCore/blob/master/LICENSE.txt
