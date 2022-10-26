@@ -19,7 +19,7 @@ slug: /user/dbgui
 | Oracle                  | system     | 1521 | 无                     |                      |
 | SQLServer               | sa         | 1433     | 登录服务器，使用 SQL Server Management Server| |
 
-## Web 客户端管理
+## Web 客户端管理{#webgui}
 
 Web 可视化客户端与数据库在同一台服务器，所以不需要开启数据库自身的远程连接端口（更好的保护数据库）也可以连接数据库。  
 
