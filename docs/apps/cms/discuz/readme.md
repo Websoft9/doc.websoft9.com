@@ -39,7 +39,7 @@ Discuz 是老牌的论坛社区系统（也称之为 DiscuzX），诞生于2001�
 4.  选择需要安装的程序组，建议选择【全新安装】，然后点击【下一步】。  
     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/ds03.png)
 
-5.  配置数据库连接信息：请直接点击【下一步】完成连接。（**请不做任何修改**）   
+5.  配置连接信息：请直接点击【下一步】完成连接。（**除设置管理员密码外请不做任何修改**）   
     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/ds04.png)
 
 6.  安装完成后的界面如下  
@@ -188,41 +188,40 @@ Discuz论坛安装完成后，想使连接里面显示文章名，应怎么开�
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuz-modifyfilesize003-websoft9.png)
 
 
-## 参数{#parameter}
+## Discuz 参数{#parameter}
 
-Discuz 应用中包含 PHP, Nginx, Apache, Docker, MySQL 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。  
+Discuz 应用中包含 Nginx, Docker, MySQL 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。  
 
 通过运行`docker ps`，可以查看到 Discuz 运行时所有的 Container：
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                     COMMAND                  CREATED          STATUS          PORTS                                   NAMES
+39280f60a6be   phpmyadmin:latest         "/docker-entrypoint.…"   29 minutes ago   Up 29 minutes   0.0.0.0:9090->80/tcp, :::9090->80/tcp   phpmyadmin
+7d838f86d7c8   websoft9dev/discuz:v1.0   "bash -c 'cat /my_cm…"   29 minutes ago   Up 29 minutes   0.0.0.0:9001->80/tcp, :::9001->80/tcp   discuz
+916b76113150   mysql:5.7                 "docker-entrypoint.s…"   29 minutes ago   Up 29 minutes   3306/tcp, 33060/tcp                     discuz-db
 ```
-
-
-下面仅列出 Discuz 本身的参数：
 
 ### 路径{#path}
 
-Discuz 安装目录： */data/wwwroot/discuz*  
-Discuz 配置文件： */data/wwwroot/discuz/upload/config/config_global_default.php*  
-Discuz 数据库相关配置文件：  
-- config/config_global.php
-- config/config_ucenter.php
-- uc_server/data/config.inc.php
+Discuz 安装目录： */data/apps/discuz*  
+Discuz 站点目录： */data/apps/discuz/data/discuz*  
 
 ### 端口{#port}
 
 无特殊端口
 
-
 ### 版本{#version}
 
-控制台查看
+```
+sudo docker exec -it discuz cat /usr/src/discuz/upload/source/discuz_version.php |grep "'DISCUZ_VERSION'," |awk -F"," '{print $2}'|awk -F"'" '{print $2}'
+```
 
 ### 服务{#service}
 
 ```shell
 sudo docker start | stop | restart | stats discuz
+sudo docker start | stop | restart | stats discuz-db
+sudo docker start | stop | restart | stats phpmyadmin
 ```
 
 ### 命令行{#cli}

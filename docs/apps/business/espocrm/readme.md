@@ -68,36 +68,44 @@ EspoCRM支持第三方的SMTP发送邮件模式，具体如下：
 
 4. 设置完成后，请点击“Send Test Email”测试设置是否成功
 
-## 参数{#parameter}
+## EspoCRM 参数{#parameter}
 
 EspoCRM 应用中包含 PHP, Apache, Docker, MySQL, phpMyAdmin 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
 
 通过运行`docker ps`，可以查看到 EspoCRM 运行时所有的 Container：
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE               COMMAND                  CREATED          STATUS          PORTS                                               NAMES
+b7518429ca6d   phpmyadmin:latest   "/docker-entrypoint.…"   29 minutes ago   Up 29 minutes   0.0.0.0:9090->80/tcp, :::9090->80/tcp               phpmyadmin
+764219b50614   espocrm/espocrm     "docker-daemon.sh"       30 minutes ago   Up 29 minutes   80/tcp                                              espocrm-daemon
+e16a2e7fef6d   mysql:8             "docker-entrypoint.s…"   30 minutes ago   Up 30 minutes   3306/tcp, 33060/tcp                                 espocrm-db
+e768059102e7   espocrm/espocrm     "docker-entrypoint.s…"   30 minutes ago   Up 30 minutes   0.0.0.0:9001->80/tcp, :::9001->80/tcp               espocrm
+f7a3374937b2   espocrm/espocrm     "docker-websocket.sh"    30 minutes ago   Up 29 minutes   80/tcp, 0.0.0.0:9002->8080/tcp, :::9002->8080/tcp   espocrm-websocket
 ```
-
-
-下面仅列出 EspoCRM 本身的参数：
 
 ### 路径{#path}
 
-EspoCRM 路径:  */data/wwwroot/espocrm*  
+EspoCRM 安装目录:  */data/apps/espocrm*  
+EspoCRM 站点目录:  */data/apps/espocrm/data/espocrm*  
 
 ### 端口{#port}
 
 无特殊端口
 
-
 ### 版本{#version}
 
-控制台查看
+```
+sudo docker exec -i espocrm cat /var/www/html/data/config.php|grep "'version' =>" |cut -d">" -f2
+```
 
 ### 服务{#service}
 
 ```shell
 sudo docker start | stop | restart | stats espocrm
+sudo docker start | stop | restart | stats espocrm-db
+sudo docker start | stop | restart | stats espocrm-daemon
+sudo docker start | stop | restart | stats espocrm-websocket
+sudo docker start | stop | restart | stats phpmyadmin
 ```
 
 ### 命令行{#cli}

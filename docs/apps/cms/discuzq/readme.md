@@ -59,43 +59,44 @@ tags:
 ## Discuz!Q 常用操作
 
 
-## 参数{#parameter}
+## Discuz!Q 参数{#parameter}
 
 Discuz!Q 应用中包含 Nginx, Docker, MySQL 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 Discuz!Q 运行时所有的 Container：
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                        COMMAND                  CREATED          STATUS          PORTS                                                  NAMES
+54d7748385cf   phpmyadmin:latest            "/docker-entrypoint.…"   38 minutes ago   Up 38 minutes   0.0.0.0:9090->80/tcp, :::9090->80/tcp                  phpmyadmin
+b63e355487a0   websoft9dev/discuzq:latest   "/tmp/cmd.sh"            39 minutes ago   Up 39 minutes   443/tcp, 0.0.0.0:9001->80/tcp, :::9001->80/tcp         discuzq
+322344b7aad5   mysql:5.7                    "docker-entrypoint.s…"   39 minutes ago   Up 39 minutes   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp   discuzq-db
 ```
-
-
-下面仅列出 Discuz!Q 本身的参数：
 
 ### 路径{#path}
 
-Discuz!Q 安装目录： */data/wwwroot/discuzq*  
-Discuz!Q 配置文件： */data/wwwroot/discuzq/volumes/config/config.php*  
+Discuz!Q 安装目录： */data/apps/discuzq*  
+Discuz!Q 站点目录： */data/apps/discuzq/data/discuzq*  
 
 ### 网址
 
-Discuz!Q 后台地址： *http://URL/admin*  
+Discuz!Q 后台地址： *http://域名/admin*  
 
 ### 端口{#port}
 
-| 端口号 | 用途                                          | 必要性 |
-| ------ | --------------------------------------------- | ------ |
-| 9001   | Discuz!Q 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
-
+无特殊端口
 
 ### 版本{#version}
 
-控制台查看
+```
+sudo docker exec -it discuzq bash -c 'grep -rn "const VERSION =" /var/www/discuz/vendor/discuz/core/src/Foundation/Application.php | awk "{print \$5}" | tr -d ";"'
+```
 
 ### 服务{#service}
 
 ```shell
 sudo docker start | stop | restart | stats discuzq
+sudo docker start | stop | restart | stats discuzq-db
+sudo docker start | stop | restart | stats phpmyadmin
 ```
 
 ### 命令行{#cli}
