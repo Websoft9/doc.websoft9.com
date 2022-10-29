@@ -34,9 +34,9 @@ tags:
 
 3. 在 code-server 界面上打开 workspace 文件夹  
    ![code-server 打开项目目录](https://libs.websoft9.com/Websoft9/DocsPicture/zh/codeserver/codeserver-openfolder-websoft9.png)
-   > 默认存放代码的根目录为：*/data/wwwroot/codeserver/volumes/config/workspace*  
+   > 默认存放代码的根目录为：*/data/apps/codeserver/data/code/workspace*  
 
-4. 打开 Terminal，查看系统环境（默认已安装 Node, Yarn等）
+4. 打开 Terminal，查看系统环境
    ![code-server 打开Terminal](https://libs.websoft9.com/Websoft9/DocsPicture/zh/codeserver/codeserver-terminal-websoft9.png)
 
 5. 安装更多开发所需的组件
@@ -74,7 +74,7 @@ tags:
 
 > 需要了解更多 code-server 的使用，请参考官方文档：[code-server Documentation](https://hub.docker.com/r/linuxserver/code-server)
 
-## 常用操作
+## code-server 常用操作
 
 ### 安装组件
 
@@ -151,24 +151,22 @@ tags:
 
 由于多用户协同开发有诸多个性化需求，无法在以上方案中一一列出，欢迎提出更多需求。
 
-## 参数
+## code-server 参数
 
-code-server 应用中包含 Nginx, MySQL, MongoDB, phpMyAdmin, adminMongo, Docker 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。  
+code-server 应用中包含 Nginx, Docker 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。  
 
 通过运行`docker ps`，可以查看到 code-server 运行时所有的 Container：
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
-```
-
-下面仅列出 code-server 本身的参数：
+CONTAINER ID   IMAGE                                    COMMAND   CREATED          STATUS          PORTS                                       NAMES
+81bb4aeed134   ghcr.io/linuxserver/code-server:latest   "/init"   23 minutes ago   Up 23 minutes   0.0.0.0:9001->8443/tcp, :::9001->8443/tcp   codeserver```
 
 ### 路径{#path}
 
-code-server 日志目录： */data/wwwroot/codeserver/volumes/config/data/logs*  
-code-server 工作目录： */data/wwwroot/codeserver/volumes/config/workspace*  
-code-server Extension 目录： */data/wwwroot/codeserver/volumes/config/extensions*  
-
+code-server 安装目录： */data/apps/codeserver*  
+code-server 数据目录： */data/apps/codeserver/data/code/data*  
+code-server 工作目录： */data/apps/codeserver/data/code/workspace*  
+code-server 扩展目录： */data/apps/codeserver/data/code/extensions*  
 
 ### 端口
 
@@ -178,7 +176,7 @@ code-server Extension 目录： */data/wwwroot/codeserver/volumes/config/extens
 ### 版本
 
 ```shell
-docker inspect -f '{{ index .Config.Labels "build_version" }}' codeserver
+sudo docker inspect codeserver | grep org.opencontainers.image.version | cut -d: -f2
 ```
 
 ### 服务
@@ -189,9 +187,7 @@ sudo docker start | stop | restart | stats codeserver
 
 ### 命令行
 
-```
-code-server -h
-```
+容器尚未安装 CLI
 
 ### API
 
