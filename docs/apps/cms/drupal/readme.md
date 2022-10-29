@@ -28,27 +28,14 @@ tags:
 
 ### 详细步骤
 
-1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入引导页
+1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入首页
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-main-websoft9.png)
 
-2.  选择一门语言，进入下一步
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-install001-websoft9.png)
+2.  点击【login in】,输入用户名和密码（[不知道账号密码？](./user/credentials)）
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-install1-websoft9.png)
 
-3.  选择一种安装方式，进入下一步
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-install002-websoft9.png)
-
-4.  填写您的数据库参数（[查看数据库账号密码](./user/credentials)），保存并继续;
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-install003-websoft9.png)
-
-5.  分别完成网站安装和翻译安装
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-install004-websoft9.png)
-
-6.  设置网站信息。站点维护账号及后台账号，请务必设置好并牢记之。进入下一步
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-install005-websoft9.png)
-
-7.  系统完成最后一步安装
-
-8.  进入Drupal后台，体验完整功能
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-backend-websoft9.png)
+3.  进入Drupal后台，体验完整功能
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-boardpage-websoft9.png)
 
 > 需要了解更多 Drupal 的使用，请参考官方文档：[Drupal Community Guides](https://www.drupal.org/documentation)
 
@@ -150,40 +137,42 @@ Drupal 提供的 [Drupal Themes](https://www.drupal.org/project/project_theme) �
 Drupal 官方提供了重置管理员密码的[详细方案](https://www.drupal.org/node/44164) 。
 
 
-## 参数{#parameter}
+## Drupal 参数{#parameter}
 
 Drupal 应用中包含  Nginx, Apache, Docker, MySQL, PHP 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 Drupal 运行时所有的 Container：
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                   COMMAND                  CREATED         STATUS         PORTS                                                  NAMES
+55468e3adc82   phpmyadmin:latest       "/docker-entrypoint.…"   6 minutes ago   Up 6 minutes   0.0.0.0:9090->80/tcp, :::9090->80/tcp                  phpmyadmin
+55ed815ca707   bitnami/drupal:latest   "/opt/bitnami/script…"   7 minutes ago   Up 7 minutes   8443/tcp, 0.0.0.0:9001->8080/tcp, :::9001->8080/tcp    drupal
+77f0ab094626   mysql:5.7               "docker-entrypoint.s…"   7 minutes ago   Up 7 minutes   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp   drupal-db
+
 ```
-
-
-下面仅列出 Drupal 本身的参数：
 
 ### 路径{#path}
 
-Drupal 安装目录： */data/wwwroot/drupal*  
-Drupal 配置文件： */data/wwwroot/drupal/web/sites/default/settings.php*  
+Drupal 安装目录： */data/apps/drupal*  
+Drupal 站点目录： */data/apps/drupal/data/drupal*  
 
 
 ### 端口{#port}
 
-| 端口号 | 用途                                          | 必要性 |
-| ------ | --------------------------------------------- | ------ |
-| 8080   | Drupal 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
-
+无特殊端口
 
 ### 版本{#version}
 
-登录控制台查看
+```
+docker exec -it drupal cat /opt/bitnami/drupal/core/lib/Drupal.php |grep -i "const version" |awk -F "'" '{print  $2}'
+```
 
 ### 服务{#service}
 
 ```shell
 sudo docker start | stop | restart | stats drupal
+sudo docker start | stop | restart | stats drupal-db
+sudo docker start | stop | restart | stats phpmyadmin
 ```
 
 ### 命令行{#cli}

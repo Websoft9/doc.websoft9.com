@@ -26,25 +26,14 @@ tags:
 
 ### Steps for you
 
-1. Using browser to access URL: *https://domain* or *https://Server's Internet IP*, start to install  
+1. Use the Chrome or Firefox browser on the local computer to access the URL: *http://domain name* or *http://server public IP*, enter the home page
+     ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/drupal-main-websoft9.png)
 
-2. Choose a language, go to next step 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/dp01.png)
+2. Click [login in], enter the user name and password ([do not know the account password?](./user/credentials))
+     ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/drupal-install1-websoft9.png)
 
-3. Select an installation profile 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/dp02.png)
-
-3. Then configure the database connection information([Don't know password?](./user/credentials))
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/dp03.png)
-
-5. Wait for installing
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/dp04.png)
-
-6. Set your administrator account for Drupal
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/dp05.png)
-
-7. Installed successfully
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/dp07.png)
+3. Enter the Drupal backend to experience the full functionality
+     ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/drupal-boardpage-websoft9.png)
 
 > More useful Drupal guide, please refer to [Drupal Documentation](https://www.drupal.org/documentation)
 
