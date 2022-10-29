@@ -13,9 +13,9 @@ This chapter is special guide for Odoo maintenance and settings. And you can ref
 
 ## Maintenance guide
 
-### 开启 PostgreSQL 远程连接
+### Enable PostgreSQL remote connection
 
-Odoo 默认安装的 PostgreSQL 并不会启用数据库账号，官方解决方案：https://www.odoo.com/documentation/13.0/setup/deploy.html#postgresql
+Odoo default installed PostgreSQL does not enable the database account, the official solution:https://www.odoo.com/documentation/13.0/setup/deploy.html#postgresql
 
 ### Odoo Upgrade
 
@@ -34,9 +34,9 @@ More details please refer to official docs [Odoo Update](https://www.odoo.com/do
 
 In addition to the Odoo issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
-#### 如何查看 Odoo 错误日志？
+#### How to view Odoo error log?
 
-最简单的方式是通过 SSH 连接服务器，运行`odoo`这个命令，就会显示错误日志以及 Odoo 的运行情况
+The easiest way is to connect to the server via SSH, run the command `odoo`, it will display the error log and the operation of Odoo
 
 #### Nginx “413 Request Entity Too Large” error?{#attachment}
 
@@ -54,11 +54,11 @@ The upload file size is limit 1M by default of Nginx, so you should lift this re
    ```
 4. Save it and [Restart Nginx Service](../administrator/parameter#service)
 
-#### Odoo 总出现数据库设置提醒？
+#### Odoo always appears database setting reminder?
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/odoo/odoo-setpasswodrem-websoft9.png)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-setpasswodrem-websoft9.png)
 
-这个提醒的是要求你尽快给数据库设置一个高强度的管理员密码，如果不设置将面临很大的风险。一旦设置后，此界面就不会再弹出了
+This reminder is that you are required to set a strong administrator password for the database as soon as possible. If you do not set it, you will face great risks. Once set, this interface will no longer pop up
 
 #### Could not upload file to Odoo program directory problem via SFTP?
 
@@ -81,9 +81,9 @@ sudo apt-get install ttf-wqy-microhei
 #### Command pg_dump not found？
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/odoo/odoo-backuperror-websoft9.png)
 
-现象：Odoo 备份数据时，报错：Command pg_dump not found  
-原因：PostgreSQL 的备份命令没有找到
-方案：需要进一步查看PostgreSQL安装问题，还是Odoo本身的问题
+Phenomenon: When Odoo backs up data, an error is reported: Command pg_dump not found
+Reason: PostgreSQL backup command not found
+Solution: Need to further check the PostgreSQL installation problem, or the problem of Odoo itself
 
 
 ## FAQ{#faq}
@@ -114,34 +114,34 @@ Yes, you can test it from the modules: Invoice, Purchase
 
 Yes, Odoo includes the database GUI functions, refer to [Odoo Mange Database function](../odoo#pgadmin) 
 
-#### Odoo 在中国有哪些实施商？
+#### Which implementers does Odoo have in China?
 
-如果您需要Odoo的配置，咨询、实施和开发服务，请与专业的服务商联系。我们了解到的信息如下：
+If you need Odoo configuration, consulting, implementation and development services, please contact a professional service provider. What we learned is as follows:
 
-*   苏州远鼎 http://www.chinamaker.net/
-*   开源智造 http://www.oscg.cn/
-*   上海寰享网络科技有限公司 https://www.elico-corp.com/zh_CN/
-*   北京开远科技有限公司 https://www.kalway.cn/
-*   珠海市信莱德软件开发有限公司 http://www.zhsunlight.cn/
-*   成都欧督系统科技有限公司 http://www.odoostart.com/
-*   山西清水欧度信息技术有限公司  http://www.odooqs.com (54773801@qq.com)
+* Suzhou Yuanding http://www.chinamaker.net/
+* Open source intelligent manufacturing http://www.oscg.cn/
+* Shanghai Huanxiang Network Technology Co., Ltd. https://www.elico-corp.com/zh_CN/
+* Beijing Kaiyuan Technology Co., Ltd. https://www.kalway.cn/
+* Zhuhai Xinlaide Software Development Co., Ltd. http://www.zhsunlight.cn/
+* Chengdu Oodoo System Technology Co., Ltd. http://www.odoostart.com/
+* Shanxi Qingshui Odu Information Technology Co., Ltd. http://www.odooqs.com (54773801@qq.com)
 
-#### 有什么好的Odoo学习资源？
+#### What are some good Odoo learning resources?
 
-* Odoo爱好者博客：https://alanhou.org/category/odoo/
+* Odoo fan blog: https://alanhou.org/category/odoo/
 
-#### 贵司提供的企业版镜像包含授权吗？
+#### Does the enterprise image provided by your company include license?
 
-不包含授权，用户需要向Odoo官方订阅授权。  
+Authorization is not included, and users need to authorize the official subscription of Odoo.
 
-下面是关于试用、授权和费用的说明：
+Below is a description of trials, licenses and fees:
 
-* 镜像部署后，用户需向官方申请免费试用30天
-* 试用期之后，用户需向官方订阅商用授权以继续使用
-* 镜像费用不包含 Odoo 授权费用，Odoo 授权费用也不包含镜像费用
-* 镜像解决了用户的安装部署，订阅镜像一方面省去了安装麻烦，另外一方面可以在运维过程获得我们的技术支持
-* 总体费用 = 云服务器费用 + 镜像费用 + 企业版授权费用
+* After the image is deployed, users need to apply to the official for a 30-day free trial
+* After the trial period, users need to subscribe to the official commercial license to continue to use
+*Mirroring fees do not include Odoo licensing fees, and Odoo licensing fees do not include mirroring fees
+* Mirroring solves the installation and deployment of users. On the one hand, subscribing to mirroring saves the trouble of installation. On the other hand, you can get our technical support during the operation and maintenance process.
+* Overall fee = cloud server fee + image fee + enterprise license fee
 
-#### Odoo 社区版可以升级到企业版吗？
+#### Can Odoo Community Edition be upgraded to Enterprise Edition?
 
-可以，但需要提前订阅企业版授权
+Yes, but you need to subscribe to the Enterprise Edition license in advance

@@ -120,17 +120,28 @@ RabbitMQ 配置TLS/SSL，需要以下4个步骤：
     rabbitmq-diagnostics listeners
     ```
 
-## 参数
+## RabbitMQ 参数
 
 RabbitMQ 应用中包含 Docker 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
-下面仅列出 RabbitMQ 本身的参数：
+通过运行 `docker ps`，查看 RabbitMQ  运行时所有的服务组件：   
+
+```bash
+CONTAINER ID   IMAGE                      COMMAND                  CREATED          STATUS          PORTS                                                                                                                                                                                  NAMES
+9b2d4c09de70   rabbitmq:3.10-management   "docker-entrypoint.s…"   37 minutes ago   Up 37 minutes   0.0.0.0:4369->4369/tcp, :::4369->4369/tcp, 5671/tcp, 0.0.0.0:5672->5672/tcp, :::5672->5672/tcp, 15671/tcp, 15691-15692/tcp, 0.0.0.0:15672->15672/tcp, :::15672->15672/tcp, 25672/tcp   rabbitmq
+```
+
+### 路径{#path}
+
+RabbitMQ 安装目录： */data/apps/rabbitmq*   
+RabbitMQ 配置目录： */data/apps/rabbitmq/data/rabbitmq_config*   
+RabbitMQ 数据目录： */data/apps/rabbitmq/data/rabbitmq_data*  
 
 ### 端口
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
-| 15672   | 通过 HTTP 访问 RabbitMQ 控制台 | 可选   |
+| 15672   | 通过 HTTP 访问 RabbitMQ 控制台 | 必选   |
 | 5672 | RabbitMQ 连接端口 | 可选   |
 | 4369 | Erlang distribution | 可选   |
 
@@ -138,29 +149,21 @@ RabbitMQ 应用中包含 Docker 等组件，可通过 **[通用参数表](./admi
 ### 版本
 
 ```shell
-# erlang  Version
-yum info erlang
-apt show erlang
-
-# RabbitMQ version
-rabbitmqctl status | grep RabbitMQ*
+docker exec -i rabbitmq rabbitmqctl version
 ```
 
 ### 服务
 
 ```shell
-sudo systemctl start | stop | restart | status rabbitmq-server
-rabbitmq-server console
+sudo docker start | stop | restart | stats rabbitmq
 ```
 
 ### 命令行
 
 ```
 # RabbitMQ CLI
-rabbitmqctl 
+docker exec -it rabbitmq rabbitmqctl
 
-# Erlang debug
-erl
 ```
 
 ### API
