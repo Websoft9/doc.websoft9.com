@@ -26,29 +26,14 @@ tags:
 
 ### 详细步骤
 
-1. 使用本地电脑的浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 就进入引导首页
+1. 使用浏览器访问网址：*http://域名/administrator* 或 *http://服务器公网IP/administrator*, 就进入登陆页面
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-install1-websoft9.png)
 
-2. 选择一门语言，并设置站点名称
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-wizard1-websoft9.png)
+2. 输入用户名和密码（[不知道账号密码？](./user/credentials)），成功登陆后您可以开始使用Joomla
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-install2-websoft9.png)
 
-3. 填写用户，账号，邮件等信息，然后进入下一步
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-wizard2-websoft9.png)
-
-4. 填写您的数据库参数（[不知道账号密码？](./user/credentials)），然后进入下一步
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-wizard3-websoft9.png)
-
-5. 安装成功，建议此时点击【特别推荐：安装语言】以安装更多语言以支持未来的多语言网
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-wizard4-websoft9.png)
-
-6. 开始安装更多语言（可选），其中【Chinese Simplified (zh-CN)】是必选语言
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-wizard5-websoft9.png)
-
-7. 根据提示，设置是否开启网站的多语言功能，并设置默认前后台语言
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-wizard6-websoft9.png)
-
-8. Joomla后台地址：http://域名/administrator，成功登陆后您可以开始使用Joomla
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-wizard7-websoft9.png)
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-wizard8-websoft9.png)
+3. 使用浏览器访问网址：*http://域名* 或 *http://服务器公网IP*，可以体验前端页面
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-install3-websoft9.png)
 
 > 需要了解更多 Joomla 的使用，请参考官方文档：[Joomla Docs](https://docs.joomla.org/Main_Page/zh-cn)
 
@@ -133,23 +118,23 @@ Joomla 后台提供了缓存管理功能，参考下图：
 如果忘记了管理员密码，可以参考 [此处](https://docs.joomla.org/How_do_you_recover_or_reset_your_admin_password%3F/zh-cn) 重置密码
 
 
-## 参数{#parameter}
+## Joomla 参数{#parameter}
 
-Joomla 应用中包含 Nginx, Apache, Docker, MySQL, PHP 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
+Joomla 应用中包含 Nginx, Docker, MySQL, phpmyadmin 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
 
 通过运行`docker ps`，可以查看到 Joomla 运行时所有的 Container：
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE               COMMAND                  CREATED             STATUS             PORTS                                                 NAMES
+d25075df271f   phpmyadmin:latest   "/docker-entrypoint.…"   About an hour ago   Up About an hour   0.0.0.0:9090->80/tcp, :::9090->80/tcp                 phpmyadmin
+5c64467e167f   bitnami/joomla:4    "/opt/bitnami/script…"   About an hour ago   Up About an hour   8443/tcp, 0.0.0.0:9001->8080/tcp, :::9001->8080/tcp   joomla
+9a027cdd4220   mariadb:10.6        "docker-entrypoint.s…"   About an hour ago   Up About an hour   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp             joomla-db
 ```
-
-
-下面仅列出 Joomla 本身的参数：
 
 ### 路径{#path}
 
-Joomla 安装目录： */data/wwwroot/joomla*  
-Joomla 配置文件： */data/wwwroot/joomla/configuration.php*  
+Joomla 安装目录： */data/apps/joomla*  
+Joomla 站点目录： */data/apps/joomla/data/joomla*  
 
 
 ### 端口{#port}
@@ -160,13 +145,15 @@ Joomla 配置文件： */data/wwwroot/joomla/configuration.php*
 ### 版本{#version}
 
 ```shell
-sudo cat /data/logs/install_version.txt
+sudo docker exec -i joomla cat /bitnami/joomla/language/en-GB/install.xml |grep "<version>"
 ```
 
 ### 服务{#service}
 
 ```shell
 sudo docker start | stop | restart | stats joomla
+sudo docker start | stop | restart | stats joomla-db
+sudo docker start | stop | restart | stats phpmyadmin
 ```
 
 ### 命令行{#cli}
