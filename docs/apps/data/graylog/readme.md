@@ -20,7 +20,7 @@ tags:
 
 
 1. 在云控制台获取您的 **服务器公网 IP 地址**
-2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:80** 和 **TCP:9001** 端口是否开启
+2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:80** 端口是否开启
 3. 在服务器中查看 Graylog 的 **[默认账号和密码](./user/credentials)**
 4. 若想用域名访问 Graylog，务必先完成**[域名五步设置](./administrator/domain_step)** 过程
 
@@ -112,26 +112,22 @@ Graylog 应用中包含 Nginx, Docker, MongoDB, Elasticsearch 等组件，可通
 通过运行`docker ps`，可以查看到 安装，Graylog 运行时所有的 Container：
 
 ```
-CONTAINER ID   IMAGE                                                      COMMAND                  CREATED         STATUS                   PORTS                                                                                                                                                                                                                           NAMES
-dffc0d802a26   graylog/graylog:4.1                                        "/usr/bin/tini -- wa…"   2 minutes ago   Up 2 minutes (healthy)   0.0.0.0:1514->1514/tcp, 0.0.0.0:1514->1514/udp, :::1514->1514/tcp, :::1514->1514/udp, 0.0.0.0:12201->12201/tcp, 0.0.0.0:12201->12201/udp, :::12201->12201/tcp, :::12201->12201/udp, 0.0.0.0:9001->9000/tcp, :::9001->9000/tcp   graylog
-7c0a42a383c3   mongo:4.2                                                  "docker-entrypoint.s…"   2 minutes ago   Up 2 minutes             27017/tcp                                                                                                                                                                                                                       graylog-mongo
-f4cd00fc5f58   docker.elastic.co/elasticsearch/elasticsearch-oss:7.10.2   "/tini -- /usr/local…"   2 minutes ago   Up 2 minutes             9200/tcp, 9300/tcp                                                                                                                                                                                                              graylog-elasticsearch
-9497147a0263   mrvautin/adminmongo                                        "docker-entrypoint.s…"   8 minutes ago   Up 3 minutes             0.0.0.0:9091->1234/tcp, :::9091->1234/tcp                                                                                                                                                                                       adminmongo
+CONTAINER ID   IMAGE                                                  COMMAND                  CREATED              STATUS                        PORTS                                                                                                                                                                                                                           NAMES
+aba3f411351a   websoft9dev/mongocompass:v1.31                         "/dockerstartup/kasm…"   39 seconds ago       Up 37 seconds                 4901/tcp, 5901/tcp, 0.0.0.0:9091->6901/tcp, :::9091->6901/tcp                                                                                                                                                                   mongocompass
+8285b315009a   graylog/graylog:4.3                                    "/usr/bin/tini -- wa…"   About a minute ago   Up About a minute (healthy)   0.0.0.0:1514->1514/tcp, 0.0.0.0:1514->1514/udp, :::1514->1514/tcp, :::1514->1514/udp, 0.0.0.0:12201->12201/tcp, 0.0.0.0:12201->12201/udp, :::12201->12201/tcp, :::12201->12201/udp, 0.0.0.0:9001->9000/tcp, :::9001->9000/tcp   graylog
+7795d2333c74   docker.elastic.co/elasticsearch/elasticsearch:7.16.3   "/bin/tini -- /usr/l…"   About a minute ago   Up About a minute             9200/tcp, 9300/tcp                                                                                                                                                                                                              graylog-elasticsearch
+04dc27b0962c   mongo:4.2                                              "docker-entrypoint.s…"   About a minute ago   Up About a minute             27017/tcp                                          "docker-entrypoint.s…"   8 minutes ago   Up 3 minutes             0.0.0.0:9091->1234/tcp, :::9091->1234/tcp                                                                                                                                                                                       adminmongo
 ```
-
-下面仅列出 Graylog 本身的参数：
 
 ### 路径{#path}
 
-Graylog 安装路径:  */data/wwwroot/graylog*  
-Graylog 配置文件:  */data/wwwroot/volumes/graylog/config/server.conf*  
-Graylog 日志目录:  */data/wwwroot/volumes/graylog/log*
+Graylog 安装路径:  */data/apps/graylog*  
+Graylog 数据目录:  */data/apps/graylog/data/graylog/graylog_data*  
+Graylog 插件目录:  */data/apps/graylog/data/graylog/graylog_plugin*  
 
 ### 端口{#port}
 
-| 端口号 | 用途                                          | 必要性 |
-| ------ | --------------------------------------------- | ------ |
-| 9001   | Graylog 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
+无特殊端口
 
 ### 版本
 
@@ -146,6 +142,7 @@ docker images |grep graylog/graylog |awk '{print $2}'
 sudo docker  start | stop | restart | status graylog
 sudo docker  start | stop | restart | status graylog-mongo
 sudo docker  start | stop | restart | status graylog-elasticsearch
+sudo docker  start | stop | restart | status mongocompass
 ```
 
 ### 命令行
@@ -156,4 +153,4 @@ Graylog 暂未提供命令行工具
 
 [Graylog API](https://docs.graylog.org/v1/docs/rest-api) 采用 REST API 2.0 规范, 功能强大甚至 Graylog Web 界面也专门使用 Graylog REST API 与 Graylog 集群交互。
 
-API 访问方式：*https://服务器公网IP:9001/api/api-browser/global/index.html*， 缺少 /global/index.html 是无法访问的。
+ > API 访问方式：*https://服务器公网IP:9001/api/api-browser/global/index.html*， 缺少 /global/index.html 是无法访问的。

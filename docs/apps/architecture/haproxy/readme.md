@@ -33,7 +33,7 @@ tags:
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/haproxy/haproxy-statsgui-websoft9.png)
 
 
-> 需要了解更多 HAProxy 的使用，请参考官方文档：
+> 需要了解更多 HAProxy 的使用，请参考官方文档。
 
 ### 出现问题？
 
@@ -98,39 +98,40 @@ listen  https_web 192.168.10.10:443
         server server2 192.168.10.101:443 weight 1 maxconn 512 check
 ```
 
-## 参数
+## HAProxy 参数
 
 HAProxy 应用中包含 Docker 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
-下面仅列出 HAProxy 本身的参数：
+通过运行 `docker ps`，查看 HAProxy 运行时所有的服务组件： 
+
+```bash
+CONTAINER ID   IMAGE         COMMAND                  CREATED         STATUS         PORTS                                                                              NAMES
+df7ee0f0070c   haproxy:2.6   "docker-entrypoint.s…"   9 minutes ago   Up 9 minutes   0.0.0.0:1080->1080/tcp, :::1080->1080/tcp, 0.0.0.0:9001->80/tcp, :::9001->80/tcp   haproxy
+
+```
 
 ### 路径{#path}
 
-HAProxy 配置文件： */etc/haproxy/haproxy.cfg*    
-HAProxy 日志目录： */var/log/haproxy.log*   
-
-### 网址
-
-HAProxy Statistics Report：*http://URL:端口/haproxy*  
-HAProxy：*http://URL:端口/haproxy*  
+HAProxy 安装目录： */data/apps/haproxy*  
+HAProxy 配置文件： */data/apps/haproxy/src/haproxy.cfg*     
 
 ### 端口
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
-| 1080   | 通过 HTTP 访问 HAProxy  Statistics Report | 可选   |
-| 5000   | for  HAProx | 可选   |
+| 1080   | 通过 HTTP 访问 HAProxy  Statistics Report | 必须   |
+| 9001   | HAProxy 侦听的端口 | 可选   |
 
 ### 版本
 
 ```shell
-haproxy -v
+sudo docker exec -it haproxy haproxy -v
 ```
 
 ### 服务
 
 ```shell
-sudo systemctl start | stop | restart | status haproxy
+sudo systemctl start | stop | restart | stats haproxy
 ```
 
 ### 命令行
