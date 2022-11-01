@@ -13,32 +13,93 @@ tags:
 
 ## 场景
 
-### 子目录配置域名
+### Cockpit 配置子域访问
 
-Cockpit 配置域名有一定的特殊之处（[方案来源](https://caddy.community/t/example-cockpit/8283)）：
+Cockpit 配置子目录域名有一定的特殊之处：
+
+* [For Caddy](https://caddy.community/t/example-cockpit/8283)
+* [For Nginx](https://cockpit-project.org/external/wiki/Proxying-Cockpit-over-NGINX#virtual-host-file)
 
 1. 先修改/etc/cockpit/cockpit.conf
+    ```
+    [WebService]
+    Origins = https://example.com wss://example.com
+    AllowUnencrypted = true
+    ForwardedForHeader = X-Forwarded-For
+    UrlRoot=/panel
+    ```
 
-```
-[WebService]
-Origins = https://example.com wss://example.com
-ProtocolHeader = X-Forwarded-Proto
-UrlRoot=/cockpit
-```
+2. 然后配置 proxy 虚拟主机
 
-2. 然后配置 proxy （以 Caddy 为例）
-```
-example.com {
-    reverse_proxy /cockpit/* localhost:9090 {
-        transport http {
-            tls_insecure_skip_verify
+    * For Caddy
+    ```
+    example.com {
+        reverse_proxy /panel/* localhost:9090 {
+            transport http {
+                tls_insecure_skip_verify
+            }
         }
     }
-}
-```
+    ```
+    
+    * For Nginx
+    
+    ```
+    server {
+    listen         80;
+    listen         443 ssl;
+    server_name    example.com;
+
+    location / {
+        # Required to proxy the connection to Cockpit
+        proxy_pass https://127.0.0.1:9090;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        # Required for web sockets to function
+        proxy_http_version 1.1;
+        proxy_buffering off;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+
+        # Pass ETag header from Cockpit to clients.
+        # See: https://github.com/cockpit-project/cockpit/issues/5239
+        gzip off;
+        };
+    
+        location /panel/ {
+        # Required to proxy the connection to Cockpit
+        proxy_pass https://127.0.0.1:9090;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        # Required for web sockets to function
+        proxy_http_version 1.1;
+        proxy_buffering off;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+
+        # Pass ETag header from Cockpit to clients.
+        # See: https://github.com/cockpit-project/cockpit/issues/5239
+        gzip off;
+        }
+        }
+    ```
 
 ## 故障排除
 
 除以下列出的 Cockpit 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
 
 ## 问题解答
+
+#### Cockpit 是否可以通过 http 访问？
+
+可以，但需要在 Cockpit 配置文件中增加 `AllowUnencrypted = true`
+
+#### 如何避免 http 访问 Cockpit 强制跳转 HTTPS？
+
+建议采用 Nginx 转发
+
+#### 采用 HTTPS 访问 Cockpit 后就无法用 HTTP 访问？
+
+不是的，只需要清空浏览器缓存或重启浏览器

@@ -28,7 +28,7 @@ jobs:
     - name: debug
       run: ls
 
-    - uses: bacongobbler/azure-blob-storage-upload@v2.0.0
+    - uses: bacongobbler/azure-blob-storage-upload@main
       with:
         source_dir: build
         container_name: $web
