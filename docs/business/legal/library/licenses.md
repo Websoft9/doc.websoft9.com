@@ -160,6 +160,7 @@ slug: /legal/licenses
 #### Elasticsearch
 - Elastic Lisence 2.0
 - https://github.com/elastic/elasticsearch/blob/7.16/licenses/ELASTIC-LICENSE-2.0.txt
+- https://www.elastic.co/pricing/faq/licensing
 
 #### Erlang
 - Apache-2.0
@@ -243,8 +244,9 @@ slug: /legal/licenses
 - AGPL v3
 - https://github.com/KnowageLabs/Knowage-Server/blob/master/LICENSE
 
-#### KodCloud
+#### KodExplore
 - GPL v3
+- https://github.com/kalcaddle/KodExplorer
 - https://www.gnu.org/licenses/gpl-3.0.en.html
 
 #### Laravel
