@@ -132,7 +132,7 @@ Graylog 插件目录:  */data/apps/graylog/data/graylog/graylog_plugin*
 ### 版本
 
 ```shell
-# Superset Version
+# Graylog Version
 docker images |grep graylog/graylog |awk '{print $2}'
 ```
 
@@ -153,4 +153,4 @@ Graylog 暂未提供命令行工具
 
 [Graylog API](https://docs.graylog.org/v1/docs/rest-api) 采用 REST API 2.0 规范, 功能强大甚至 Graylog Web 界面也专门使用 Graylog REST API 与 Graylog 集群交互。
 
- > API 访问方式：*https://服务器公网IP:9001/api/api-browser/global/index.html*， 缺少 /global/index.html 是无法访问的。
+ > API 访问方式：*https://服务器公网IP/api/api-browser/global/index.html*， 缺少 /global/index.html 是无法访问的。

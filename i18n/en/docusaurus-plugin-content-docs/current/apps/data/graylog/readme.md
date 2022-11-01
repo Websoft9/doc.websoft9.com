@@ -109,34 +109,30 @@ version: '2'
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Graylog
 
 
-通过运行`docker ps`，可以查看到 安装，Graylog 运行时所有的 Container：
+Run `docker ps` command, view all Containers when Graylog is running:
 
 ```
-CONTAINER ID   IMAGE                                                      COMMAND                  CREATED         STATUS                   PORTS                                                                                                                                                                                                                           NAMES
-dffc0d802a26   graylog/graylog:4.1                                        "/usr/bin/tini -- wa…"   2 minutes ago   Up 2 minutes (healthy)   0.0.0.0:1514->1514/tcp, 0.0.0.0:1514->1514/udp, :::1514->1514/tcp, :::1514->1514/udp, 0.0.0.0:12201->12201/tcp, 0.0.0.0:12201->12201/udp, :::12201->12201/tcp, :::12201->12201/udp, 0.0.0.0:9001->9000/tcp, :::9001->9000/tcp   graylog
-7c0a42a383c3   mongo:4.2                                                  "docker-entrypoint.s…"   2 minutes ago   Up 2 minutes             27017/tcp                                                                                                                                                                                                                       graylog-mongo
-f4cd00fc5f58   docker.elastic.co/elasticsearch/elasticsearch-oss:7.10.2   "/tini -- /usr/local…"   2 minutes ago   Up 2 minutes             9200/tcp, 9300/tcp                                                                                                                                                                                                              graylog-elasticsearch
-9497147a0263   mrvautin/adminmongo                                        "docker-entrypoint.s…"   8 minutes ago   Up 3 minutes             0.0.0.0:9091->1234/tcp, :::9091->1234/tcp                                                                                                                                                                                       adminmongo
+CONTAINER ID   IMAGE                                                  COMMAND                  CREATED              STATUS                        PORTS                                                                                                                                                                                                                           NAMES
+aba3f411351a   websoft9dev/mongocompass:v1.31                         "/dockerstartup/kasm…"   39 seconds ago       Up 37 seconds                 4901/tcp, 5901/tcp, 0.0.0.0:9091->6901/tcp, :::9091->6901/tcp                                                                                                                                                                   mongocompass
+8285b315009a   graylog/graylog:4.3                                    "/usr/bin/tini -- wa…"   About a minute ago   Up About a minute (healthy)   0.0.0.0:1514->1514/tcp, 0.0.0.0:1514->1514/udp, :::1514->1514/tcp, :::1514->1514/udp, 0.0.0.0:12201->12201/tcp, 0.0.0.0:12201->12201/udp, :::12201->12201/tcp, :::12201->12201/udp, 0.0.0.0:9001->9000/tcp, :::9001->9000/tcp   graylog
+7795d2333c74   docker.elastic.co/elasticsearch/elasticsearch:7.16.3   "/bin/tini -- /usr/l…"   About a minute ago   Up About a minute             9200/tcp, 9300/tcp                                                                                                                                                                                                              graylog-elasticsearch
+04dc27b0962c   mongo:4.2                                              "docker-entrypoint.s…"   About a minute ago   Up About a minute             27017/tcp                                          "docker-entrypoint.s…"   8 minutes ago   Up 3 minutes             0.0.0.0:9091->1234/tcp, :::9091->1234/tcp                                                                                                                                                                                       adminmongo
 ```
-
-下面仅列出 Graylog 本身的参数：
 
 ### Path{#path}
 
-Graylog 安装路径:  */data/wwwroot/graylog*  
-Graylog 配置文件:  */data/wwwroot/volumes/graylog/config/server.conf*  
-Graylog 日志目录:  */data/wwwroot/volumes/graylog/log*
+Graylog installation directory::  */data/apps/graylog*  
+Graylog data directory:  */data/apps/graylog/data/graylog/graylog_data*  
+Graylog plugin directory:  */data/apps/graylog/data/graylog/graylog_plugin*  
 
 ### Port{#port}
 
-| 端口号 | 用途                                          | 必要性 |
-| ------ | --------------------------------------------- | ------ |
-| 9001   | Graylog 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
+No special port
 
 ### Version
 
 ```shell
-# Superset Version
+# Graylog Version
 docker images |grep graylog/graylog |awk '{print $2}'
 ```
 
@@ -146,14 +142,14 @@ docker images |grep graylog/graylog |awk '{print $2}'
 sudo docker  start | stop | restart | status graylog
 sudo docker  start | stop | restart | status graylog-mongo
 sudo docker  start | stop | restart | status graylog-elasticsearch
+sudo docker  start | stop | restart | status mongocompass
 ```
 
 ### CLI
 
-Graylog 暂未提供命令行工具
 
 ### API
 
-[Graylog API](https://docs.graylog.org/v1/docs/rest-api) 采用 REST API 2.0 规范, 功能强大甚至 Graylog Web 界面也专门使用 Graylog REST API 与 Graylog 集群交互。
+[Graylog API] (https://docs.graylog.org/v1/docs/rest-api) Using the REST API 2.0 specification, even the Graylog web interface specifically uses the Graylog REST API to interact with the Graylog cluster.
 
-API 访问方式：*https://服务器公网IP:9001/api/api-browser/global/index.html*， 缺少 /global/index.html 是无法访问的。
+API access mode: *https://IP/api/api-browser/global/index.html*, without /global/index.html is inaccessible.

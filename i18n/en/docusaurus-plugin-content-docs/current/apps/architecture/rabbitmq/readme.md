@@ -120,8 +120,8 @@ CONTAINER ID   IMAGE                      COMMAND                  CREATED      
 ### Path{#path}
   
 RabbitMQ installation directory:  * /data/apps/rabbitmq*  
-RabbitMQ configuration directory:  */data/apps/rabbitmq/data/rabbitmq_config*
-RabbitMQ data directory:  */data/apps/rabbitmq/data/rabbitmq_data*
+RabbitMQ configuration directory:  */data/apps/rabbitmq/data/rabbitmq_config*  
+RabbitMQ data directory:  */data/apps/rabbitmq/data/rabbitmq_data*  
   
 ### Port{#port}
 

@@ -121,51 +121,56 @@ sudo -H -u erpnext bash -c "cd /data/wwwroot/frappe-bench && export GIT_PYTHON_R
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage ERPNext
 
-通过运行`docker ps`，可以查看到 ERPNext 运行时所有的 Container：
+Run `docker ps` command, view all Containers when ERPNext is running:
 
 ```bash
-CONTAINER ID   IMAGE                        COMMAND                  CREATED             STATUS             PORTS                                       NAMES
-949746dc0e88   frappe/frappe-socketio:v13   "docker-entrypoint.s…"   About an hour ago   Up About an hour                                               erpnext-socketio
-030c4324b810   frappe/erpnext-worker:v13    "docker-entrypoint.s…"   About an hour ago   Up About an hour                                               erpnext-schedule
-5816692bb579   frappe/erpnext-worker:v13    "docker-entrypoint.s…"   About an hour ago   Up About an hour                                               erpnext-worker-long
-09b2e2242549   frappe/erpnext-worker:v13    "docker-entrypoint.s…"   About an hour ago   Up About an hour                                               erpnext-worker-short
-2252928c2230   frappe/erpnext-worker:v13    "docker-entrypoint.s…"   About an hour ago   Up About an hour                                               erpnext-worker-default
-4108b4ca06d5   redis:latest                 "docker-entrypoint.s…"   About an hour ago   Up About an hour   6379/tcp                                    erpnext-redis-cache
-bbe639069a28   redis:latest                 "docker-entrypoint.s…"   About an hour ago   Up About an hour   6379/tcp                                    erpnext-redis-queue
-29f4870961b4   mariadb:10.3                 "docker-entrypoint.s…"   About an hour ago   Up About an hour   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp   erpnext-mariadb
-9aecda1e6f3e   redis:latest                 "docker-entrypoint.s…"   About an hour ago   Up About an hour   6379/tcp                                    erpnext-redis-socketio
-a404ca45d127   frappe/erpnext-nginx:v13     "/docker-entrypoint.…"   About an hour ago   Up About an hour   0.0.0.0:8000->80/tcp, :::8000->80/tcp       erpnext-nginx
-39d908b3132e   frappe/erpnext-worker:v13    "docker-entrypoint.s…"   About an hour ago   Up About an hour                                               erpnext-worker
+CONTAINER ID   IMAGE                        COMMAND                  CREATED          STATUS                    PORTS                                       NAMES
+593c04bd4c02   phpmyadmin:latest            "/docker-entrypoint.…"   42 minutes ago   Up 42 minutes             0.0.0.0:9090->80/tcp, :::9090->80/tcp       phpmyadmin
+20e2ac33e35b   redis:6.2-alpine             "docker-entrypoint.s…"   43 minutes ago   Up 43 minutes             6379/tcp                                    erpnext-redis
+dea90210633b   frappe/erpnext-worker:v14    "bench worker --queu…"   43 minutes ago   Up 43 minutes                                                         erpnext-queue-default
+ef18b6e52994   frappe/erpnext-worker:v14    "bench worker --queu…"   43 minutes ago   Up 42 minutes                                                         erpnext-queue-long
+b4a168ab4534   frappe/erpnext-nginx:v14     "/docker-entrypoint.…"   43 minutes ago   Up 42 minutes             0.0.0.0:9001->8080/tcp, :::9001->8080/tcp   erpnext-frontend
+c7950ea7a76b   frappe/erpnext-worker:v14    "bench schedule"         43 minutes ago   Up 43 minutes                                                          erpnext-scheduler
+eba636cdaf31   mariadb:10.6                 "docker-entrypoint.s…"   43 minutes ago   Up 42 minutes (healthy)   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp   erpnext-db
+7818fdaa4e72   frappe/frappe-socketio:v14   "docker-entrypoint.s…"   43 minutes ago   Up 42 minutes                                                         erpnext-websocket
+971999ec36d3   frappe/erpnext-worker:v14    "/home/frappe/frappe…"   43 minutes ago   Up 43 minutes                                                         erpnext
+ae93cdf7bb21   frappe/erpnext-worker:v14    "bench worker --queu…"   43 minutes ago   Up 42 minutes                                                         erpnext-queue-short
 ```
 
-> erpnext-worker-default 为项目主容器
 
-下面仅列出 ERPNext 本身的参数：
+> erpnext is the main container
+
 
 ### Path{#path}
 
-ERPNext 路径:  */data/wwwroot/erpnext*  
-ERPNext 数据库配置文件: */data/wwwroot/erpnext/.env*  
-ERPNext 日志路径:  */data/wwwroot/erpnext/volumes/erpnext-logs-vol*  
-ERPNext 应用路径 : */data/wwwroot/frappe-bench/volumes/erpnext-site-vol*  
-ERPNext 附件路径:  */data/wwwroot/frappe-bench/volumes/erpnext-assets-vol*     
-ERPNext 备份位置：*/var/lib/docker/volumes/docker-erpnext_sites-vol/_data/IP/private/backups*  
+ERPNext installation directory::  */data/apps/erpnext*  
+ERPNext website directory:  */data/apps/erpnext/data/sites*  
+ERPNext database configuration file: */data/apps/erpnext/.env*  
 
 ### Port{#port}
 
-| 端口号 | 用途                                          | 必要性 |
-| ------ | --------------------------------------------- | ------ |
-| 8080   | ERPNext 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
-
+No special port
 
 ### Version{#version}
 
-控制台查看
+```
+cat /data/apps/erpnext/.env |grep  "APP_VERSION" |awk -F"=" '{print $2}'
+```
+
 
 ### Service{#service}
 
 ```shell
-sudo docker start | stop | restart | stats erpnext-worker-default
+sudo docker start | stop | restart | stats erpnext
+sudo docker start | stop | restart | stats erpnext-db
+sudo docker start | stop | restart | stats erpnext-scheduler
+sudo docker start | stop | restart | stats erpnext-frontend
+sudo docker start | stop | restart | stats erpnext-websocket
+sudo docker start | stop | restart | stats erpnext-redis
+sudo docker start | stop | restart | stats erpnext-queue-default
+sudo docker start | stop | restart | stats erpnext-queue-long
+sudo docker start | stop | restart | stats erpnext-queue-short
+sudo docker start | stop | restart | stats phpmyadmin
 ```
 
 ### CLI{#cli}
@@ -174,5 +179,5 @@ sudo docker start | stop | restart | stats erpnext-worker-default
 
 ### API
 
-参考： [ERPNext API](https://frappeframework.com/docs/user/en/api)
+[ERPNext API](https://frappeframework.com/docs/user/en/api)
 

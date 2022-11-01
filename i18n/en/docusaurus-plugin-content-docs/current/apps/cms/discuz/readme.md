@@ -195,43 +195,41 @@ Discuz论坛安装完成后，想使连接里面显示文章名，应怎么开�
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Discuz
 
-通过运行`docker ps`，可以查看到 Discuz 运行时所有的 Container：
+Run `docker ps` command, view all Containers when Discuz is running:
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                     COMMAND                  CREATED          STATUS          PORTS                                   NAMES
+39280f60a6be   phpmyadmin:latest         "/docker-entrypoint.…"   29 minutes ago   Up 29 minutes   0.0.0.0:9090->80/tcp, :::9090->80/tcp   phpmyadmin
+7d838f86d7c8   websoft9dev/discuz:v1.0   "bash -c 'cat /my_cm…"   29 minutes ago   Up 29 minutes   0.0.0.0:9001->80/tcp, :::9001->80/tcp   discuz
+916b76113150   mysql:5.7                 "docker-entrypoint.s…"   29 minutes ago   Up 29 minutes   3306/tcp, 33060/tcp                     discuz-db
 ```
 
 ### Path{#path}
 
-Discuz installation directory: */data/wwwroot/discuz*  
-Discuz configuration file: */data/wwwroot/discuz/upload/config/config_global_default.php*  
-Discuz 数据库相关配置文件：  
-- config/config_global.php
-- config/config_ucenter.php
-- uc_server/data/config.inc.php
+Discuz installation directory: */data/apps/discuz*
+Discuz website directory： */data/apps/discuz/data/discuz*  
+Discuz configuration file: */data/apps/discuz/data/discuz/config/config_global_default.php*  
 
 ### Port{#port}
 
-| Port | Use                                          | Necessity |
-| ------ | --------------------------------------------- | ------ |
-| 3306 | Remote connect MySQL | Optional |
-| 80 | HTTP requests for Discuz | Required |
-| 443 | HTTPS requests Discuz | Optional |
-| 8080 | OnlyOffice Document Server on Docker | Optional |
-
+No special port
 
 ### Version{#version}
 
-控制台查看
+```
+sudo docker exec -it discuz cat /usr/src/discuz/upload/source/discuz_version.php |grep "'DISCUZ_VERSION'," |awk -F"," '{print $2}'|awk -F"'" '{print $2}'
+```
 
 ### Service{#service}
 
 ```shell
 sudo docker start | stop | restart | stats discuz
+sudo docker start | stop | restart | stats discuz-db
+sudo docker start | stop | restart | stats phpmyadmin
 ```
 
 ### CLI{#cli}
 
-无
+
 
 ### API

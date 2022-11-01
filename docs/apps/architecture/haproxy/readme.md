@@ -131,7 +131,7 @@ sudo docker exec -it haproxy haproxy -v
 ### 服务
 
 ```shell
-sudo systemctl start | stop | restart | stats haproxy
+sudo docker start | stop | restart | stats haproxy
 ```
 
 ### 命令行

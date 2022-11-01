@@ -135,6 +135,7 @@ d25075df271f   phpmyadmin:latest   "/docker-entrypoint.…"   About an hour ago 
 
 Joomla 安装目录： */data/apps/joomla*  
 Joomla 站点目录： */data/apps/joomla/data/joomla*  
+Joomla 配置文件: */data/apps/joomla/data/joomla/configuration.php*   
 
 
 ### 端口{#port}

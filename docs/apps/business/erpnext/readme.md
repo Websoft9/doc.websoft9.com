@@ -144,12 +144,9 @@ ae93cdf7bb21   frappe/erpnext-worker:v14    "bench worker --queu…"   43 minute
 
 ### 路径{#path}
 
-ERPNext 安装目录:  */data/wwwroot/erpnext*  
-ERPNext 日志目录:  */data/wwwroot/erpnext/volumes/erpnext-logs-vol*  
-ERPNext 应用目录 : */data/wwwroot/frappe-bench/volumes/erpnext-site-vol*  
-ERPNext 附件目录:  */data/wwwroot/frappe-bench/volumes/erpnext-assets-vol*     
-ERPNext 备份目录：*/var/lib/docker/volumes/docker-erpnext_sites-vol/_data/IP/private/backups*  
-ERPNext 数据库配置文件: */data/wwwroot/erpnext/.env*  
+ERPNext 安装目录:  */data/apps/erpnext*  
+ERPNext 站点目录:  */data/apps/erpnext/data/sites*  
+ERPNext 数据库配置文件: */data/apps/erpnext/.env*  
 
 ### 端口{#port}
 
@@ -157,7 +154,9 @@ ERPNext 数据库配置文件: */data/wwwroot/erpnext/.env*
 
 ### 版本{#version}
 
-控制台查看
+```
+cat /data/apps/erpnext/.env |grep  "APP_VERSION" |awk -F"=" '{print $2}'
+```
 
 ### 服务{#service}
 

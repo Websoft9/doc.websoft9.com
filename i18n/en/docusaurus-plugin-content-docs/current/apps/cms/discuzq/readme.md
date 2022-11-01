@@ -61,36 +61,42 @@ Below is for you to solve problem, and you can contact **[Websoft9 Support](./he
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Discuz!Q
 
-通过运行`docker ps`，可以查看到 Discuz!Q 运行时所有的 Container：
+Run `docker ps` command, view all Containers when Discuz!Q is running:
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                        COMMAND                  CREATED          STATUS          PORTS                                                  NAMES
+54d7748385cf   phpmyadmin:latest            "/docker-entrypoint.…"   38 minutes ago   Up 38 minutes   0.0.0.0:9090->80/tcp, :::9090->80/tcp                  phpmyadmin
+b63e355487a0   websoft9dev/discuzq:latest   "/tmp/cmd.sh"            39 minutes ago   Up 39 minutes   443/tcp, 0.0.0.0:9001->80/tcp, :::9001->80/tcp         discuzq
+322344b7aad5   mysql:5.7                    "docker-entrypoint.s…"   39 minutes ago   Up 39 minutes   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp   discuzq-db
 ```
 
 ### Path{#path}
 
-Discuz!Q installation directory： */data/wwwroot/discuzq*  
-Discuz!Q 配置文件： */data/wwwroot/discuzq/volumes/config/config.php*  
+Discuz!Q installation directory： */data/apps/discuzq* 
+Discuz!Q website directory： */data/apps/discuzq/data/discuzq*  
+Discuz!Q configuration file： */data/wwwroot/discuzq/volumes/config/config_default.php*  
 
 ### URL
 
-Discuz!Q 后台地址： *http://URL/admin*
+Discuz!Q backend： *http://URL/admin*
 
 ### Port{#port}
 
-| Port | Use                                          | Necessity |
-| ------ | --------------------------------------------- | ------ |
-| 9001   | Discuz!Q 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
-
+No special port
 
 ### Version{#version}
 
-控制台查看
+```
+sudo docker exec -it discuzq bash -c 'grep -rn "const VERSION =" /var/www/discuz/vendor/discuz/core/src/Foundation/Application.php | awk "{print \$5}" | tr -d ";"'
+```
+
 
 ### Service{#service}
 
 ```shell
 sudo docker start | stop | restart | stats discuzq
+sudo docker start | stop | restart | stats discuzq-db
+sudo docker start | stop | restart | stats phpmyadmin
 ```
 
 ### CLI
@@ -99,4 +105,4 @@ sudo docker start | stop | restart | stats discuzq
 
 ### API
 
-[官方API](https://discuz.com/api-docs/v1/)
+[API](https://discuz.com/api-docs/v1/)

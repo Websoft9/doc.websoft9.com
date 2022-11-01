@@ -27,30 +27,13 @@ If you have installed Websoft9 Joomla, the following steps is for your quick sta
 
 ### Steps for you
 
-1. Using local Chrome or Firefox to visit the URL *https://domain* or *https://Internet IP*, start to install  
+1. Using local Chrome or Firefox to visit the URL *https://domain* or *https://Internet IP*  
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-install3-websoft9.png)
 
-2. Set the site information and select language,then Cick 'Setup Login Data' button
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-wizard1-websoft9.png)
-
-3. Set the user account inforamton
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-wizard2-websoft9.png)
-   > Email is your login ID, not collected by anyone because it stored in your Cloud Server
-
-4. Then configure the database connection information([Don't know password?](./user/credentials))
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-wizard3-websoft9.png)
-
-5. Click "Extra steps: Install languages" to install extra language 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-wizard4-websoft9.png)
-
-6. Follow the prompts to set whether to enable the multi-language feature of the website and set the default front-back language
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-wizard5-websoft9.png)
-
-7. Click the 'Remove installation folder' button
-
-8. Log in Joomla backend (URL is *http://domain/administrator*)
+2. Log in Joomla backend (URL is *http://domain/administrator*)
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-wizard6-websoft9.png)
 
-9. You can use the Joomla backend to setup your site now
+3. You can use the Joomla backend to setup your site now, [Get Password](./user/credentials)
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-wizard7-websoft9.png)
 
 > Refer to [Joomla admin_manual](https://docs.joomla.org/Main_Page) to get more details
@@ -79,13 +62,14 @@ Completed the Joomla initial installation, the login console can be updated onli
 3. Fill in the your correct SMTP items
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-smtpsettings-websoft9.png)
    
-    * 发送模式选择“SMTP”，加密方式选择“SSL/TLS”;
-    * 输入发送方邮箱地址；
-    * 认证方式选择“登录”，并勾选“需要认证”选项；
-    * 输入SMTP服务器地址和SMTP服务器的端口号；
-    * 输入和发件人邮箱一致的邮箱地址；
-    * 输入该邮箱地址的SMTP服务的授权码或密码；
-    * 存储凭据；
+
+    * Select "SMTP" for sending mode and "SSL/TLS" for encryption mode;  
+    * Enter the sender's email address;  
+    * Select "Login" for authentication method and check the "Require authentication" option;  
+    * Enter the SMTP server address and SMTP server port number;  
+    * Enter the email address that matches the sender's email address;  
+    * Enter the authorization code or password of the SMTP service of the email address;  
+    * Storage credentials;  
 
 4. Click "Send test email" to test your SMTP settings
 
@@ -145,37 +129,37 @@ If you don't remember your administrator password, please refer to the docs [her
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Joomla
 
-通过运行`docker ps`，可以查看到 Joomla 运行时所有的 Container：
+Run `docker ps` command, view all Containers when Joomla is running:
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE               COMMAND                  CREATED             STATUS             PORTS                                                 NAMES
+d25075df271f   phpmyadmin:latest   "/docker-entrypoint.…"   About an hour ago   Up About an hour   0.0.0.0:9090->80/tcp, :::9090->80/tcp                 phpmyadmin
+5c64467e167f   bitnami/joomla:4    "/opt/bitnami/script…"   About an hour ago   Up About an hour   8443/tcp, 0.0.0.0:9001->8080/tcp, :::9001->8080/tcp   joomla
+9a027cdd4220   mariadb:10.6        "docker-entrypoint.s…"   About an hour ago   Up About an hour   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp             joomla-db
 ```
 
 ### Path{#path}
   
-Joomla installation directory: */data/wwwroot/joomla*  
-Joomla configuration file: */data/wwwroot/joomla/configuration.php*   
+Joomla installation directory:  */data/apps/joomla* 
+Joomla website directory： */data/apps/joomla/data/joomla* 
+Joomla configuration file: */data/apps/joomla/data/joomla/configuration.php*   
 
 ### Port{#port}
 
-| Port | Use                                          | Necessity |
-| ------ | --------------------------------------------- | ------ |
-| 80 | HTTP requests for Joomla | Required |
-| 443 | HTTPS requests Joomla | Optional |
-| 3306 | Remote connect MySQL | Optional |
-| 9090 | phpMyAdmin on Docker | Optional |
-
+No special port  
 
 ### Version{#version}
 
 ```shell
-sudo cat /data/logs/install_version.txt
+sudo docker exec -i joomla cat /bitnami/joomla/language/en-GB/install.xml |grep "<version>"
 ```
 
 ### Service{#service}
 
 ```shell
 sudo docker start | stop | restart | stats joomla
+sudo docker start | stop | restart | stats joomla-db
+sudo docker start | stop | restart | stats phpmyadmin
 ```
 
 ### CLI{#cli}

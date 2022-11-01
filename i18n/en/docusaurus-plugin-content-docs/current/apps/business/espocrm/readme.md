@@ -4,7 +4,7 @@ slug: /espocrm
 tags:
   - EspoCRM
   - CRM
-  - 客户成功
+  - Customer Success
 ---
 
 # EspoCRM Getting Started
@@ -81,32 +81,43 @@ Extensions allow you to add extra functionality to EspoCRM. They can be installe
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage EspoCRM 
 
-通过运行`docker ps`，可以查看到 EspoCRM 运行时所有的 Container：
+Run `docker ps` command, view all Containers when EspoCRM is running:
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE               COMMAND                  CREATED          STATUS          PORTS                                               NAMES
+b7518429ca6d   phpmyadmin:latest   "/docker-entrypoint.…"   29 minutes ago   Up 29 minutes   0.0.0.0:9090->80/tcp, :::9090->80/tcp               phpmyadmin
+764219b50614   espocrm/espocrm     "docker-daemon.sh"       30 minutes ago   Up 29 minutes   80/tcp                                              espocrm-daemon
+e16a2e7fef6d   mysql:8             "docker-entrypoint.s…"   30 minutes ago   Up 30 minutes   3306/tcp, 33060/tcp                                 espocrm-db
+e768059102e7   espocrm/espocrm     "docker-entrypoint.s…"   30 minutes ago   Up 30 minutes   0.0.0.0:9001->80/tcp, :::9001->80/tcp               espocrm
+f7a3374937b2   espocrm/espocrm     "docker-websocket.sh"    30 minutes ago   Up 29 minutes   80/tcp, 0.0.0.0:9002->8080/tcp, :::9002->8080/tcp   espocrm-websocket
 ```
 
 
-下面仅列出 EspoCRM 本身的参数：
-
 ### Path{#path}
 
-EspoCRM 路径:  */data/wwwroot/espocrm*  
+EspoCRM installation directory:  */data/apps/espocrm*  
+EspoCRM website directory:  */data/apps/espocrm/data/espocrm*  
+
 
 ### Port{#port}
 
-无特殊端口
+No special port
 
 
 ### Version{#version}
 
-控制台查看
+```
+sudo docker exec -i espocrm cat /var/www/html/data/config.php|grep "'version' =>" |cut -d">" -f2
+```
 
 ### Service{#service}
 
 ```shell
 sudo docker start | stop | restart | stats espocrm
+sudo docker start | stop | restart | stats espocrm-db
+sudo docker start | stop | restart | stats espocrm-daemon
+sudo docker start | stop | restart | stats espocrm-websocket
+sudo docker start | stop | restart | stats phpmyadmin
 ```
 
 ### CLI{#cli}

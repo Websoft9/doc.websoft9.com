@@ -98,33 +98,38 @@ listen  https_web 192.168.10.10:443
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage HAProxy
   
+Run `docker ps` command, view all Containers when HAProxy is running:
+
+```bash
+CONTAINER ID   IMAGE         COMMAND                  CREATED         STATUS         PORTS                                                                              NAMES
+df7ee0f0070c   haproxy:2.6   "docker-entrypoint.s…"   9 minutes ago   Up 9 minutes   0.0.0.0:1080->1080/tcp, :::1080->1080/tcp, 0.0.0.0:9001->80/tcp, :::9001->80/tcp   haproxy
+
+```
+
+
 ### Path{#path}
 
-HAProxy configuration file: */etc/haproxy/haproxy.cfg*  
-HAProxy logs directory: */var/log/haproxy.log*    
-  
-### URL
-
-HAProxy Statistics Report：*http://URL:端口/haproxy*  
-HAProxy：*http://URL:端口/haproxy*
+HAProxy installation directory： */data/apps/haproxy*  
+HAProxy configuration file： */data/apps/haproxy/src/haproxy.cfg*     
+ 
   
 ### Port{#port}
 
 | Port | Use                                          | Necessity |
 | ------ | --------------------------------------------- | ------ |
 | 1080 | HTTP requests for HAProxy  Statistics Report | Optional |
-| 5000 | for  HAProxy  | Optional |
+| 9001 | for  HAProxy  | Optional |
 
 ### Version{#version}
 
 ```shell
-haproxy -v
+sudo docker exec -it haproxy haproxy -v
 ```
 
 ### Service{#service}
 
 ```shell
-sudo systemctl start | stop | restart | status haproxy
+sudo docker start | stop | restart | status haproxy
 ```
   
 ### CLI{#cli}
