@@ -205,6 +205,7 @@ slug: /legal/licenses
 #### Grafana
 - AGPL-3.0
 - https://github.com/grafana/grafana/blob/master/LICENSE
+- 补充说明：https://github.com/grafana/grafana/blob/HEAD/LICENSING.md
 
 #### Graylog
 - GPL v3 (Before Graylog 4.0)
