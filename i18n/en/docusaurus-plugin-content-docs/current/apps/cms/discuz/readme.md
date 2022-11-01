@@ -206,7 +206,7 @@ CONTAINER ID   IMAGE                     COMMAND                  CREATED       
 
 ### Path{#path}
 
-Discuz installation directory: */data/apps/discuz*
+Discuz installation directory: */data/apps/discuz*  
 Discuz website directory： */data/apps/discuz/data/discuz*  
 Discuz configuration file: */data/apps/discuz/data/discuz/config/config_global_default.php*  
 

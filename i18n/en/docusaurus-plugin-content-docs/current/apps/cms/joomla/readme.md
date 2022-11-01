@@ -140,7 +140,7 @@ d25075df271f   phpmyadmin:latest   "/docker-entrypoint.…"   About an hour ago 
 
 ### Path{#path}
   
-Joomla installation directory:  */data/apps/joomla* 
+Joomla installation directory:  */data/apps/joomla*  
 Joomla website directory： */data/apps/joomla/data/joomla* 
 Joomla configuration file: */data/apps/joomla/data/joomla/configuration.php*   
 
