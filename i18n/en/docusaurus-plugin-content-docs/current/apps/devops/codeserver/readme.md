@@ -34,7 +34,7 @@ If you have installed Websoft9 code-server, the following steps is for your quic
 3. Open the WorkSpace directory at **code-server** console
    ![code-server directory](https://libs.websoft9.com/Websoft9/DocsPicture/en/codeserver/codeserver-openfolder-websoft9.png)
 
-   > Default workspace directory is: */data/wwwroot/codeserver/volumes/config/workspace*  
+   > Default workspace directory is: */data/apps/codeserver/data/code/workspace*  
 
 4. Open the 【Terminal】windows, run the `node` command, you can view the its version
    ![code-server open Terminal](https://libs.websoft9.com/Websoft9/DocsPicture/en/codeserver/codeserver-terminal-websoft9.png)
@@ -151,29 +151,31 @@ You can refer the below sample:
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage code-server
   
 
-通过运行`docker ps`，可以查看到 code-server 运行时所有的 Container：
+Run `docker ps` command, view all Containers when code-server is running:
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                                    COMMAND   CREATED          STATUS          PORTS                                       NAMES
+81bb4aeed134   ghcr.io/linuxserver/code-server:latest   "/init"   23 minutes ago   Up 23 minutes   0.0.0.0:9001->8443/tcp, :::9001->8443/tcp   codeserver```
 ```
 
 下面仅列出 code-server 本身的参数：
 
 ### Path{#path}
 
-code-server 日志目录： */data/wwwroot/codeserver/volumes/config/data/logs*  
-code-server 工作目录： */data/wwwroot/codeserver/volumes/config/workspace*  
-code-server Extension 目录： */data/wwwroot/codeserver/volumes/config/extensions*  
+code-server installation directory： */data/apps/codeserver*  
+code-server data directory： */data/apps/codeserver/data/code/data*  
+code-server workspace： */data/apps/codeserver/data/code/workspace*  
+code-server extensions directory： */data/apps/codeserver/data/code/extensions*  
 
 ### Port
 
-无特殊端口
+No special port
 
 
 ### Version
 
 ```shell
-docker inspect -f '{{ index .Config.Labels "build_version" }}' codeserver
+sudo docker inspect codeserver | grep org.opencontainers.image.version | cut -d: -f2
 ```
 
 ### Service
@@ -184,9 +186,6 @@ sudo docker start | stop | restart | stats codeserver
 
 ### CLI
 
-```
-code-server -h
-```
 
 ### API
 

@@ -110,10 +110,18 @@ rabbitmq-diagnostics listeners
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage RabbitMQ
 
+Run `docker ps` command, view all Containers when RabbitMQ is running:
+
+```bash
+CONTAINER ID   IMAGE                      COMMAND                  CREATED          STATUS          PORTS                                                                                                                                                                                  NAMES
+9b2d4c09de70   rabbitmq:3.10-management   "docker-entrypoint.s…"   37 minutes ago   Up 37 minutes   0.0.0.0:4369->4369/tcp, :::4369->4369/tcp, 5671/tcp, 0.0.0.0:5672->5672/tcp, :::5672->5672/tcp, 15671/tcp, 15691-15692/tcp, 0.0.0.0:15672->15672/tcp, :::15672->15672/tcp, 25672/tcp   rabbitmq
+```
+
 ### Path{#path}
   
-RabbitMQ installation directory:  */data/rabbitmq*  
-RabbitMQ logs directory:  */data/logs/rabbitmq*
+RabbitMQ installation directory:  * /data/apps/rabbitmq*  
+RabbitMQ configuration directory:  */data/apps/rabbitmq/data/rabbitmq_config*
+RabbitMQ data directory:  */data/apps/rabbitmq/data/rabbitmq_data*
   
 ### Port{#port}
 
@@ -126,29 +134,21 @@ RabbitMQ logs directory:  */data/logs/rabbitmq*
 ### Version{#version}
 
 ```shell
-# erlang  Version
-yum info erlang
-apt show erlang
-
 # RabbitMQ version
-rabbitmqctl status | grep RabbitMQ*
+docker exec -i rabbitmq rabbitmqctl version
 ```
 
 ### Service{#service}
 
 ```shell
-sudo systemctl start | stop | restart | status rabbitmq-server
-rabbitmq-server console
+sudo docker start | stop | restart | stats rabbitmq
 ```
 
 ### CLI{#cli}
 
 ```
 # RabbitMQ CLI
-rabbitmqctl 
-
-# Erlang debug
-erl
+docker exec -it rabbitmq rabbitmqctl
 ```
   
 ### API

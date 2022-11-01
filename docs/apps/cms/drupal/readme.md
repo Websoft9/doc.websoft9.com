@@ -155,6 +155,7 @@ CONTAINER ID   IMAGE                   COMMAND                  CREATED         
 
 Drupal 安装目录： */data/apps/drupal*  
 Drupal 站点目录： */data/apps/drupal/data/drupal*  
+Drupal 配置文件: */data/apps/drupal/data/drupal/sites/default/settings.php*
 
 
 ### 端口{#port}

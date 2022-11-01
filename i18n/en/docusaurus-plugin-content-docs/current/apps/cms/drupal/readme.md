@@ -27,13 +27,13 @@ tags:
 ### Steps for you
 
 1. Use the Chrome or Firefox browser on the local computer to access the URL: *http://domain name* or *http://server public IP*, enter the home page
-     ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/drupal-main-websoft9.png)
+     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-main-websoft9.png)
 
 2. Click [login in], enter the user name and password ([do not know the account password?](./user/credentials))
-     ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/drupal-install1-websoft9.png)
+     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-install1-websoft9.png)
 
 3. Enter the Drupal backend to experience the full functionality
-     ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/drupal-boardpage-websoft9.png)
+     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-boardpage-websoft9.png)
 
 > More useful Drupal guide, please refer to [Drupal Documentation](https://www.drupal.org/documentation)
 
@@ -136,40 +136,43 @@ If you don't remember your administrator password, please refer to the docs [her
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Drupal
 
-通过运行`docker ps`，可以查看到 Drupal 运行时所有的 Container：
+Run `docker ps` command, view all Containers when Drupal is running:
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                   COMMAND                  CREATED         STATUS         PORTS                                                  NAMES
+55468e3adc82   phpmyadmin:latest       "/docker-entrypoint.…"   6 minutes ago   Up 6 minutes   0.0.0.0:9090->80/tcp, :::9090->80/tcp                  phpmyadmin
+55ed815ca707   bitnami/drupal:latest   "/opt/bitnami/script…"   7 minutes ago   Up 7 minutes   8443/tcp, 0.0.0.0:9001->8080/tcp, :::9001->8080/tcp    drupal
+77f0ab094626   mysql:5.7               "docker-entrypoint.s…"   7 minutes ago   Up 7 minutes   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp   drupal-db
+
 ```
 
 ### Path{#path}
 
-Drupal installation directory: */data/wwwroot/drupal*  
-Drupal configuration file: */data/wwwroot/drupal/web/sites/default/settings.php*
+Drupal installation directory: */data/apps/drupal*  
+Drupal website directory: */data/apps/drupal/data/drupal*  
+Drupal configuration file: */data/apps/drupal/data/drupal/sites/default/settings.php*
 
 ### Port{#port}
 
-| Port | Use                                          | Necessity |
-| ------ | --------------------------------------------- | ------ |
-| 3306 | Remote connect MySQL | Optional |
-| 80 | HTTP requests for Drupal | Required |
-| 443 | HTTPS requests Drupal | Optional |
-| 9090 | HTTP request for phpMyAdmin | Optional |
-
+No special port
 
 ### Version{#version}
 
-登录控制台查看
+```
+docker exec -it drupal cat /opt/bitnami/drupal/core/lib/Drupal.php |grep -i "const version" |awk -F "'" '{print  $2}'
+```
 
 ### Service{#service}
 
 ```shell
 sudo docker start | stop | restart | stats drupal
+sudo docker start | stop | restart | stats drupal-db
+sudo docker start | stop | restart | stats phpmyadmin
 ```
 
 ### CLI{#cli}
 
-社区为 Drupal 提供了一个[第三方 CLI](https://drupalconsole.com/) 工具
+The community provides Drupal with a [third-party CLI] (https://drupalconsole.com/) 
 
 ### API
 
