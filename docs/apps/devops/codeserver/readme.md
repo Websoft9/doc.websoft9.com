@@ -160,6 +160,7 @@ code-server 应用中包含 Nginx, Docker 等组件，可通过 **[通用参数�
 ```bash
 CONTAINER ID   IMAGE                                    COMMAND   CREATED          STATUS          PORTS                                       NAMES
 81bb4aeed134   ghcr.io/linuxserver/code-server:latest   "/init"   23 minutes ago   Up 23 minutes   0.0.0.0:9001->8443/tcp, :::9001->8443/tcp   codeserver```
+```
 
 ### 路径{#path}
 
