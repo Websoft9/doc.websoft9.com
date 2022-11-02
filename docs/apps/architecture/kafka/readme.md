@@ -108,7 +108,7 @@ e628a73126fd   bitnami/kafka:2.8                             "/opt/bitnami/scrip
 
 Kafka 安装目录：*/data/apps/kafka*  
 Kafka 数据目录：*/data/apps/kafka/data/kafka_data*  
-Kafka 配置目录：*/data/apps/kafka/data/kafka_data/kafka/config* 
+Kafka 配置目录：*/data/apps/kafka/data/kafka_data/kafka/config*   
 Zookeeper 数据目录：*/data/apps/kafka/data/zookeeper_data*   
 
 ### 端口
@@ -142,7 +142,7 @@ sudo docker start | stop | restart kafka-zookeeper
 
 ```
 # kafka
-docker exec -it kafka /opt/bitnami/kafka/bin/kafka-console-consumer.sh --bootstrap-server youip:port --consumer.config consumer.properties --topic my-topic
+docker exec -it kafka /opt/bitnami/kafka/bin/kafka-console-consumer.sh --bootstrap-server yourip:port --consumer.config consumer.properties --topic my-topic
 
 # ZooKeeper client
 docker exec -it kafka-zookeeper zkCli.sh -server IP:2181

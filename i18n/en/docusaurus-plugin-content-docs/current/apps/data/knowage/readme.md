@@ -45,66 +45,28 @@ If you have installed Websoft9 Knowage, the following steps is for your quick st
 
 Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
-**无法进入登录页面？**
+**Can't get to the login page?**
 
-因为 Knowage 应用比较消耗资源，4G 内存的服务器虽然也能运行，初始化过程比较慢，请耐心等待几分钟后再试。
+Because Knowage has high requirements for computing resources, although the server with 4G memory can also run, the initialization process is relatively slow, please wait a few minutes and try again.  
 
 ## Knowage QuickStart
 
-下面我们以一个完整的示例（**可视化呈现订单中不同国家的订单总额**），介绍如何使用 Knowage 快速分析数据。
-基本步骤分为 4 步：连接数据源，数据建模，配置数据，数据可视化呈现。前 2 步为 IT 人员准备数据，后 2 步为业务人员的自助分析。
-
-1. 操作步骤展示
-
-   ![knowage](https://libs.websoft9.com/Websoft9/blog/tmp/knowage/zh/knowage-websoft9.png)
-
-2. [连接数据源](#datasource)
-
-3. [数据建模](#datamodel)
-
-4. 配置数据集：业务人员从模型中二次筛选数据，分析和呈现；
-
-   ![knowage](https://libs.websoft9.com/Websoft9/blog/tmp/knowage/zh/knowage-dataset1-websoft9.png)
-
-   ![knowage](https://libs.websoft9.com/Websoft9/blog/tmp/knowage/zh/knowage-dataset2-websoft9.png)
-
-   ![knowage](https://libs.websoft9.com/Websoft9/blog/tmp/knowage/zh/knowage-dataset3-websoft9.png)
-
-5. 数据呈现，设置可视化呈现方式（CHART）。根据场景也可以将数据以其他的可视化业务报表（仪表盘）呈现，供决策分析使用。
-
-   ![knowage](https://libs.websoft9.com/Websoft9/blog/tmp/knowage/zh/knowage-analysis-websoft9.png)
-
-   ![knowage](https://libs.websoft9.com/Websoft9/blog/tmp/knowage/zh/knowage-analysis1-websoft9.png)
-
-   ![knowage](https://libs.websoft9.com/Websoft9/blog/tmp/knowage/zh/knowage-analysis2-websoft9.png)
-
-6. 选择数据集
-   ![knowage](https://libs.websoft9.com/Websoft9/blog/tmp/knowage/zh/knowage-analysis3-websoft9.png)
-
-7. 配置数据项
-   ![knowage](https://libs.websoft9.com/Websoft9/blog/tmp/knowage/zh/knowage-analysis4-websoft9.png)
-   ![knowage](https://libs.websoft9.com/Websoft9/blog/tmp/knowage/zh/knowage-analysis5-websoft9.png)
 
 ## Knowage Setup
 
-### 连接数据源{#datasource}
+### Connect data source{#datasource}
 
-Take connecting to MySQL as an example, log in to Knowage, enter the main panel, and select > [Data source]:
+Take connecting to MySQL as an example, log in to Knowage, enter the main panel, and select > [Data source].
 
-   ![knowage](https://libs.websoft9.com/Websoft9/blog/tmp/knowage/zh/knowage-datasource-websoft9.png)
 
-### 数据建模{#datamodel}
+### Data modeling{#datamodel}
 
-根据业务场景从数据源中选取数据，建模：
-
-   ![knowage](https://libs.websoft9.com/Websoft9/blog/tmp/knowage/zh/knowage-model-websoft9.png)
 
 ## Reference sheet
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Knowage
 
-
-通过运行`docker ps`，可以查看到 Knowage 运行时所有的 Container：
+Run `docker ps` command, view all Containers when Knowage is running:
 
 ```
 CONTAINER ID   IMAGE                                              COMMAND                  CREATED        STATUS                 PORTS                               NAMES
@@ -115,17 +77,17 @@ fa5d3ce16865   knowagelabs/knowage-python-docker:8.0.0-SNAPSHOT   "./entrypoint.
 7fbfe56727d5   knowagelabs/knowage-r-docker:8.0.0-SNAPSHOT        "./entrypoint.sh r k…"   2 hours ago    Up 2 hours (healthy)   5001/tcp                            knowage-r
 ```
 
-下面仅列出 Knowage 本身的参数：
+
 
 ### Path{#path}
 
-Knowage-server 资源目录： */data/wwwroot/knowage/resources*
+Knowage installation directory： */data/apps/knowage*  
+Knowage resource directory： */data/apps/knowage/data/resources*  
+
 
 ### Port{#port}
 
-| 端口号 | 用途                                          | 必要性 |
-| ------ | --------------------------------------------- | ------ |
-| 8080   | Knowage 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
+No special port  
 
 ### Version
 
@@ -146,8 +108,8 @@ sudo docker  start | stop | restart | status knowage-mariadb-cache
 
 ### CLI
 
-Knowage 暂未提供命令行工具
 
 ### API
 
-[Knowage API](https://knowage.docs.apiary.io) 采用 REST API 2.0 规范。Knowage REST API 旨在管理 Knowage 分析文档和数据集的生命周期。
+[Knowage API](https://knowage.docs.apiary.io) adopts the REST API 2.0 specification.   
+The REST API is designed to manage the lifecycle of Knowage analytical documents and datasets.

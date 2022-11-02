@@ -97,7 +97,7 @@ You can customize the log cleaning policy. The specific steps are as follows:：
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Kafka
 
-Run `docker ps`, view all containers when MongoDB is running:
+Run `docker ps`, view all containers when Kafka is running:
 
 ```bash
 CONTAINER ID   IMAGE                                         COMMAND                  CREATED          STATUS          PORTS                                                                     NAMES
@@ -110,6 +110,7 @@ e628a73126fd   bitnami/kafka:2.8                             "/opt/bitnami/scrip
 
 Kafka installation directory: */data/apps/kafka*  
 Kafka data directory: */data/apps/kafka/data/kafka_data*  
+Kafka configuration directory：*/data/apps/kafka/data/kafka_data/kafka/config*   
 Zookeeper data directory: */data/apps/kafka/data/zookeeper_data* 
   
 ### Port{#port}
@@ -143,7 +144,7 @@ sudo docker start | stop | restart kafka-zookeeper
   
 ```
 # kafka
-docker exec -it kafka /opt/bitnami/kafka/bin/kafka-console-consumer.sh --bootstrap-server youip:port --consumer.config consumer.properties --topic my-topic
+docker exec -it kafka /opt/bitnami/kafka/bin/kafka-console-consumer.sh --bootstrap-server yourip:port --consumer.config consumer.properties --topic my-topic
 
 # ZooKeeper client
 docker exec -it kafka-zookeeper zkCli.sh -server IP:2181
@@ -151,4 +152,4 @@ docker exec -it kafka-zookeeper zkCli.sh -server IP:2181
   
 ### API
 
-Refer to [Kafka APIS](https://kafka.apache.org/documentation/#api) and [Kafka Clients](https://cwiki.apache.org/confluence/display/KAFKA/Clients)
+[Kafka APIS](https://kafka.apache.org/documentation/#api) and [Kafka Clients](https://cwiki.apache.org/confluence/display/KAFKA/Clients)
