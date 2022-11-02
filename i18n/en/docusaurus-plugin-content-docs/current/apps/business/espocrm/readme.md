@@ -42,8 +42,7 @@ Below is for you to solve problem, and you can contact **[Websoft9 Support](./he
 
 ## EspoCRM QuickStart
 
-下面以 **EspoCRM 构建企业CRM** 作为一个任务，帮助用户快速入门：
-
+Coming soon
 
 ## EspoCRM Setup
 

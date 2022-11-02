@@ -48,7 +48,7 @@ This task【receives/ delivers Messages】 is for your RabbitMQ QuickStart:
 
 ## RabbitMQ Setup
 
-下面以 Rabbimtq [官方文档](https://www.rabbitmq.com/documentation.html)为基础，提炼一些常用的操作供用户参考：
+The following is based on [RabbitMQ official documentation] (https://www.rabbitmq.com/documentation.html), distilling common operations for reference:  
 
 ### Create User
 

@@ -63,13 +63,14 @@ Below is for you to solve problem, and you can contact **[Websoft9 Support](./he
 5. Set the SMTP configuration items
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/drupal-setsmtp002-websoft9.png)
    
-    * 发送模式选择“SMTP”，加密方式选择“SSL/TLS”;
-    * 输入发送方邮箱地址；
-    * 认证方式选择“登录”，并勾选“需要认证”选项；
-    * 输入SMTP服务器地址和SMTP服务器的端口号；
-    * 输入和发件人邮箱一致的邮箱地址；
-    * 输入该邮箱地址的SMTP服务的授权码或密码；
-    * 存储凭据；
+    * Select "SMTP" for sending mode and "SSL/TLS" for encryption mode;  
+    * Enter the sender's email address;  
+    * Select "Login" for authentication method and check the "Require authentication" option;  
+    * Enter the SMTP server address and SMTP server port number;  
+    * Enter the email address that matches the sender's email address;  
+    * Enter the authorization code or password of the SMTP service of the email address;  
+    * Storage credentials;  
+
 
 6. Select【Enable debugging】when complete setting and will send test mail
 
@@ -77,7 +78,7 @@ Below is for you to solve problem, and you can contact **[Websoft9 Support](./he
 
 ### DNS Additional Configure (Modify URL){#dns}
 
-如果 Drupal 需要更换域名，除[ Drupal 配置文件](#path)之外，还需修改 Drupal 根目录下 `.htaccess` 中域名有关的值。
+Drupal needs to change the DNS, in addition to the [Drupal configuration file] (#path), you also need to modify the DNS in the '.htaccess' in the Drupal root directory.
 
 ### Set languages{#setlang}
 

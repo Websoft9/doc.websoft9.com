@@ -143,7 +143,7 @@ ae93cdf7bb21   frappe/erpnext-worker:v14    "bench worker --queu…"   43 minute
 
 ### Path{#path}
 
-ERPNext installation directory::  */data/apps/erpnext*  
+ERPNext installation directory:  */data/apps/erpnext*  
 ERPNext website directory:  */data/apps/erpnext/data/sites*  
 ERPNext database configuration file: */data/apps/erpnext/.env*  
 
