@@ -18,7 +18,7 @@ tags:
 ## 准备
 
 1. 在云控制台获取您的 **服务器公网 IP 地址**
-2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:80** 和 **TCP:8080** 端口是否开启
+2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:80**  端口是否开启
 3. 在服务器中查看 Knowage 的 **[默认账号和密码](./user/credentials)**
 4. 若想用域名访问 Knowage，务必先完成**[域名五步设置](./administrator/domain_step)** 过程
 
@@ -117,13 +117,12 @@ fa5d3ce16865   knowagelabs/knowage-python-docker:8.0.0-SNAPSHOT   "./entrypoint.
 
 ### 路径{#path}
 
-Knowage-server 资源目录： */data/wwwroot/knowage/resources*
+Knowage 安装目录： */data/apps/knowage*  
+Knowage 资源目录： */data/apps/knowage/data/resources*  
 
 ### 端口{#port}
 
-| 端口号 | 用途                                          | 必要性 |
-| ------ | --------------------------------------------- | ------ |
-| 8080   | Knowage 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
+无特殊端口
 
 ### 版本
 

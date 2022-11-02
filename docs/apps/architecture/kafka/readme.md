@@ -93,7 +93,7 @@ sudo docker restart kafka
 
 ## 参数
 
-Kafka 应用中包含 Nginx, CMAK, Docker, Zookeeper, Java 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+Kafka 应用中包含 Nginx, CMAK, Docker, Zookeeper等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
 通过运行 `docker ps`，可以查看到 Kafka 运行时所有的 Container：
 
@@ -104,21 +104,19 @@ e628a73126fd   bitnami/kafka:2.8                             "/opt/bitnami/scrip
 84ff90680786   ghcr.io/eshepelyuk/dckr/cmak-3.0.0.5:latest   "/cmak/bin/cmak -Dpi…"   36 minutes ago   Up 36 minutes   0.0.0.0:9091->9000/tcp, :::9091->9000/tcp                                 kafka-cmak
 ```
 
-
-下面仅列出 Kafka 本身的参数：
-
 ### 路径{#path}
 
 Kafka 安装目录：*/data/apps/kafka*  
 Kafka 数据目录：*/data/apps/kafka/data/kafka_data*  
+Kafka 配置目录：*/data/apps/kafka/data/kafka_data/kafka/config* 
 Zookeeper 数据目录：*/data/apps/kafka/data/zookeeper_data*   
 
 ### 端口
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
-| 9092   | Kafka | 可选   |
-| 2181   | Zookeeper | 可选   |
+| 9092   | Kafka | 必须   |
+| 2181   | Zookeeper | 必须   |
 | 9091   | CMAK  | 可选   |
 
 ### 版本
