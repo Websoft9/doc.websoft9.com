@@ -35,12 +35,9 @@ tags:
 
 1. 通过OSS的客户端工具，上传图片到对象存储
 
-2. 获取对象存储中图片的地址，类似：
-   ```
-   https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-product-screenshot.png
-   ```
-3. 登录Wordpress后台，依次打开：页面编辑-插入多媒体，将图片插入到WordPress系统中
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aliyun/aliyun-oss-adresstowp-websoft9.png)
+2. 获取对象存储中图片的地址  
+
+3. 登录Wordpress后台，依次打开：页面编辑-插入多媒体，将图片插入到WordPress系统中  
 
 ### WordPress 多站点
 WordPress 支持一台服务器，一次安装，一个数据库，部署多个网站，多个网站共享主题、插件，站点单独操作，方便构建和管理站群系统。

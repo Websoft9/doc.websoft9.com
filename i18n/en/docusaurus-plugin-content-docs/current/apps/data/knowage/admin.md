@@ -21,7 +21,7 @@ In addition to the Knowage issues listed below, you can refer to [Troubleshoot +
 
 #### Knowage support multi-languages?
 
-支持，但不包含中文
+Yes
 
 #### Install knowledge in this way?
 
