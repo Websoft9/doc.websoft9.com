@@ -139,12 +139,12 @@ f3956c005325   hatamiarash7/memcached-admin:latest   "docker-php-entrypoi…"   
 
 Memcached 安装目录：*/data/apps/memcached*  
 
-### 端口{#port}
+### 端口{#port} 
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
 | 11211   | 远程访问 Memcached | 可选   |
-| 9090  | 通过 Nginx 远程访问 Memcached 可视化工具| 可选   |
+| 9090  | 访问 Memcached Admin 可视化工具| 可选   |
 
 
 ### 版本

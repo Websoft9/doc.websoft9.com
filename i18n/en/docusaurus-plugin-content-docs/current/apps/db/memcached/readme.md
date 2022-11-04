@@ -107,7 +107,7 @@ Please make sure you Telnet installed and port **11211** enabled
 
 ## Memcached  QuickStart
 
-> 需要了解更多Memcached的使用，请参考：[Memcached Wiki](https://github.com/memcached/memcached/wiki)
+> For more information, please refer to：[Memcached Wiki](https://github.com/memcached/memcached/wiki)
 
 ## Memcached Setup
 
@@ -139,28 +139,25 @@ More details about refer to [Memcached Cluster](https://github.com/memcached/mem
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Memcached 
 
 
-通过运行 `docker ps`，可以查看到 Memcached 运行时所有的 Container：
+Run `docker ps` command, view all Containers when Memcached is running:
 
 ```
-CONTAINER ID   IMAGE                                 COMMAND                  CREATED             STATUS             PORTS                                           NAMES
-5f7322ff5805   memcached:latest                      "docker-entrypoint.s…"   About an hour ago   Up About an hour   0.0.0.0:11211->11211/tcp, :::11211->11211/tcp   memcached
-e4e671827a3e   hatamiarash7/memcached-admin:latest   "docker-php-entrypoi…"   4 minutes ago   Up 4 minutes   0.0.0.0:8080->80/tcp, :::8080->80/tcp           memcached-admin
+CONTAINER ID   IMAGE                                 COMMAND                  CREATED              STATUS              PORTS                                           NAMES
+34e1af9ace07   memcached:latest                      "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:11211->11211/tcp, :::11211->11211/tcp   memcached
+f3956c005325   hatamiarash7/memcached-admin:latest   "docker-php-entrypoi…"   About a minute ago   Up About a minute   0.0.0.0:9090->80/tcp, :::9090->80/tcp           memcached-panel
 ```
 
-下面仅列出 Memcached 本身的参数：
 
 ### Path{#path}
 
-Memcached 配置文件：*path/.env*  
-Memcached-admin 配置文件：*path/.env*  
-
+Memcached installation directory：*/data/apps/memcached*  
 
 ### Port{#port}
 
-| 端口号 | 用途                                          | 必要性 |
+| Port | Use                                          | Necessity |
 | ------ | --------------------------------------------- | ------ |
-| 11211   | 远程访问 Memcached | 可选   |
-| 9090  | 通过 Nginx 远程访问 Memcached 可视化工具| 可选   |
+| 11211   | Remote access to Memcached | Optional   |
+| 9090  | Visit Memcached Admin | Optional   |
 
 
 ### Version

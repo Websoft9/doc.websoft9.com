@@ -27,47 +27,14 @@ If you have installed Websoft9 MediaWiki, the following steps is for your quick 
 
 ### Steps for you
 
-1. Using local Chrome or Firefox to visit the URL *https://domain* or *https://Internet IP*, start to install    
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mw01.png)
+1. Using local Chrome or Firefox to visit the URL *https://domain* or *https://Internet IP*  
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mediawiki/mediawiki-install1-websoft9.png)
 
-2. Choose a language to continue
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mw02.png)
+2. Enter the username and password ([Don't know the account password?] ](./user/credentials)) to log in to Mediawiki  
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mediawiki/mediawiki-install2-websoft9.png)
 
-3. Acccept the license and Continue
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mw03.png)
-
-4. Fill in database configuration
-   > It's  easy to make mistakes on this step. If have mistakes, you can [Re-install Mediawiki]
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mediawiki-setdbconnstr-websoft9.png)
-
-   - Database name: mediawiki (MySQL on this Image has a database instance name mediwiki)
-   - Database username: root
-   - Database password: [Don't know password?](./user/credentials)
-   
-   If you don't want to use the mediawiki as Database name,please create your database first. If you don't want to use the root as Database username,please create your user first
-
-5. Set database character,Click "Continue";  
-  ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mw05.png)
-
-6. Set the site name, administrator account, password and mail,Click "Continue";
-  ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mw06.png)
-
-7. Click "Continue";  
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mw07.png)
-
-8. Click "Continue";  
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mw08.png)
-
-9. Click "Continue";  
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mw09.png)
-
-10. Download the file and upload it to the server directory:/data/wwwroot/mediawiki
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mw10.png)
-
-11. OK, it has been installed successfully.
-
-12. Use http://domain  to go to your index page.
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mw11.png)
+3. Go to the MediaWiki backend   
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mediawiki/mediawiki-install3-websoft9.png)
 
 > More useful MediaWiki guide, please refer to [MediaWiki Sysadmin Docs](https://www.mediawiki.org/wiki/Sysadmin_hub)
 
@@ -161,32 +128,36 @@ Refer to MediaWiki official docs: [Help:Composer](https://www.mediawiki.org/wiki
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage MediaWiki
 
-通过运行 `docker ps`，可以查看到 MediaWiki 运行时所有的 Container：
+Run `docker ps` command, view all Containers when MediaWiki is running:  
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                      COMMAND                  CREATED          STATUS          PORTS                                                 NAMES
+88ba09aae88d   bitnami/mediawiki:latest   "/opt/bitnami/script…"   11 minutes ago   Up 11 minutes   8443/tcp, 0.0.0.0:9005->8080/tcp, :::9005->8080/tcp   mediawiki
+9f651002908f   mysql:5.7                  "docker-entrypoint.s…"   11 minutes ago   Up 11 minutes   3306/tcp, 33060/tcp                                   mediawiki-db
 ```
 
 ### Path{#path}
 
-MediaWiki installation directory: */data/wwwroot/mediawiki*  
-MediaWiki configuration file: */data/wwwroot/mediawiki/LocalSettings.php* 
+MediaWiki installation directory: */data/apps/mediawiki*     
+MediaWiki configuration file: */data/apps/mediawiki/data/mediawiki/LocalSettings.php*    
+MediaWiki extension directory： */data/apps/mediawiki/data/mediawiki/extensions*     
 
 ### Port{#port}
 
-| Port | Use                                          | Necessity |
-| ------ | --------------------------------------------- | ------ |
-| 8080   | MediaWiki original port | Optional   |
-
+No special port  
 
 ### Version{#version}
 
-控制台查看
+```
+sudo docker exec -i mediawiki grep -rn "MediaWiki " /bitnami/mediawiki/LocalSettings.php|awk -F"MediaWiki " '{print $2}'
+```
+
 
 ### Service{#service}
 
 ```shell
 sudo docker start | stop | restart | stats mediawiki
+sudo docker start | stop | restart | stats mediawiki-db
 ```
 
 ### CLI{#cli}
@@ -195,4 +166,4 @@ None
 
 ### API
 
-[API:Main_page](https://www.mediawiki.org/wiki/API:Main_page/zh)
+[API:Main_page](https://www.mediawiki.org/wiki/API)
