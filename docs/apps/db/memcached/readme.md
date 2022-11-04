@@ -123,8 +123,6 @@ Memcached 预装方案中内置可视化数据库管理工具 `Memcached-admin` 
 
 参考：[ClusterMaint](https://github.com/memcached/memcached/wiki/ClusterMaint)
 
-
-
 ## Memcached 参数
 
 Memcached 应用中包含 Nginx, Docker, Memcached-admin 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
@@ -132,18 +130,14 @@ Memcached 应用中包含 Nginx, Docker, Memcached-admin 等组件，可通过 *
 通过运行 `docker ps`，可以查看到 Memcached 运行时所有的 Container：
 
 ```
-CONTAINER ID   IMAGE                                 COMMAND                  CREATED             STATUS             PORTS                                           NAMES
-5f7322ff5805   memcached:latest                      "docker-entrypoint.s…"   About an hour ago   Up About an hour   0.0.0.0:11211->11211/tcp, :::11211->11211/tcp   memcached
-e4e671827a3e   hatamiarash7/memcached-admin:latest   "docker-php-entrypoi…"   4 minutes ago   Up 4 minutes   0.0.0.0:8080->80/tcp, :::8080->80/tcp           memcached-admin
+CONTAINER ID   IMAGE                                 COMMAND                  CREATED              STATUS              PORTS                                           NAMES
+34e1af9ace07   memcached:latest                      "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:11211->11211/tcp, :::11211->11211/tcp   memcached
+f3956c005325   hatamiarash7/memcached-admin:latest   "docker-php-entrypoi…"   About a minute ago   Up About a minute   0.0.0.0:9090->80/tcp, :::9090->80/tcp           memcached-panel
 ```
-
-下面仅列出 Memcached 本身的参数：
 
 ### 路径{#path}
 
-Memcached 配置文件：*path/.env*  
-Memcached-admin 配置文件：*path/.env*  
-
+Memcached 安装目录：*/data/apps/memcached*  
 
 ### 端口{#port}
 
