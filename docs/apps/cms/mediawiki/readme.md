@@ -29,29 +29,13 @@ tags:
 ### 详细步骤
 
 1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 就进入引导首页
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mediawiki/mediawiki-install1-websoft9.png)
 
-2. 根据系统提示，点击“…Installation”进入安装界面，选择语言 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mediawiki/mediawiki-install001-websoft9.png)
+2. 点击【login in】,输入用户名和密码([不知道账号密码？](./user/credentials)) 
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mediawiki/mediawiki-install2-websoft9.png)
 
-3. 填写你的数据库配置信息([不知道账号密码？](./user/credentials))，保存并继续; 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mediawiki/mediawiki-install002-websoft9.png)
-
-4. 选择数据库引擎和字符集设置，字符集建议选用UFT-8 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mediawiki/mediawiki-install003-websoft9.png)
-
-
-5. 设置后台账号信息，请务必设置好并牢记之。进入下一步 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mediawiki/mediawiki-install004-websoft9.png)
-
-6. 跟随安装提示直到完成，过程中尽量选择默认设置，勾选安装所有模块
-
-7. 配置完成后会生成 LocalSettings.php 文件，根据提示下载。 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mediawiki/mediawiki-install005-websoft9.png)
-
-8. 将 `LocalSettings.php` 文件上传到服务器 MediaWiki 根目录
-
-9. 系统完成最后一步安装，建议进入MediaWiki后台（以管理身份登录即进入后台），体验完整功能 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mediawiki/mediawiki-homepage-websoft9.png)
+3. 进入MediaWiki后台，体验完整功能 
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mediawiki/mediawiki-install3-websoft9.png)
 
 > 需要了解更多MediaWiki的使用，请参考官方文档：[MediaWiki FAQ](https://www.mediawiki.org/wiki/Sysadmin_hub/zh)
 
@@ -157,17 +141,17 @@ MediaWiki 应用中包含 PHP, Nginx, Apache, Docker, MySQL 等组件，可通�
 通过运行 `docker ps`，可以查看到 MediaWiki 运行时所有的 Container：
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                      COMMAND                  CREATED          STATUS          PORTS                                                 NAMES
+88ba09aae88d   bitnami/mediawiki:latest   "/opt/bitnami/script…"   11 minutes ago   Up 11 minutes   8443/tcp, 0.0.0.0:9005->8080/tcp, :::9005->8080/tcp   mediawiki
+9f651002908f   mysql:5.7                  "docker-entrypoint.s…"   11 minutes ago   Up 11 minutes   3306/tcp, 33060/tcp                                   mediawiki-db
 ```
 
 
-下面仅列出 MediaWiki 本身的参数：
-
 ### 路径{#path}
 
-MediaWiki 安装目录： */data/wwwroot/mediawiki*  
-MediaWiki 配置文件： */data/wwwroot/mediawiki/LocalSettings.php*  
-
+MediaWiki 安装目录： */data/apps/mediawiki*  
+MediaWiki 配置文件： */data/apps/mediawiki/data/mediawiki/LocalSettings.php*    
+MediaWiki 插件目录： */data/apps/mediawiki/data/mediawiki/extensions*    
 
 ### 端口{#port}
 
@@ -175,12 +159,15 @@ MediaWiki 配置文件： */data/wwwroot/mediawiki/LocalSettings.php*
 
 ### 版本{#version}
 
-控制台查看
+```
+sudo docker exec -i mediawiki grep -rn "MediaWiki " /bitnami/mediawiki/LocalSettings.php|awk -F"MediaWiki " '{print $2}'
+```
 
 ### 服务{#service}
 
 ```shell
 sudo docker start | stop | restart | stats mediawiki
+sudo docker start | stop | restart | stats mediawiki-db
 ```
 
 ### 命令行{#cli}
