@@ -92,7 +92,7 @@ magento setup:config:set --db-host=DB-HOST --db-name=DB-NAME --db-user=DB-USER -
 2. 登录 Marketplace，打到My Profile 的 Access Keys 页面新建一个自己的 Access Key; 
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-1-websoft9.png)  
 
-3. 保存 Access Key
+3. 保存 Access Key  
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-savemykey-websoft9.png)  
 
 4. SSH 登录到 Magento 服务器，进入根目录  `/data/wwwroot/magento` ，将 key 复制到 auth.json.example,并重命名为 auth.json 
@@ -151,17 +151,16 @@ Cache（缓存）是 Magento 的一项重要设置：
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-buysmtpplugin-websoft9.png)
 
 4. 登录到 Magento 后台，完成 SMTP 参数设置  
-   - 点击**MAGEPLAZA**，在右边菜单选择**应用配置管理**;  
-     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-2-websoft9.png)
+   - 点击**STORES**，在右边菜单选择**Configuration**;    
+     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-config01-websoft9.png)  
+   - 按照下图输入相应的信息  
+     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-3-websoft9.png)  
 
-   - 按照下图输入相应的信息
-     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-3-websoft9.png)
-
-5. 登录到 Magento 后台，设置发件箱
+5. 登录到 Magento 后台，设置发件箱  
    - 首先进入应用配置管理页面:  
-     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-4-websoft9.png)
+     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-4-websoft9.png)  
    - 按照下图设置邮箱：  
-     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-5-websoft9.png)
+     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-5-websoft9.png)  
      
 
 ### 域名额外配置（修改 URL） {#dns}

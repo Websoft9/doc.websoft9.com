@@ -81,7 +81,7 @@ Completed installation of Magento, suggest you make your Magento system link Mag
 2. Log in to Magento's Marketplace, create your **Access Key** from My Profile setting
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-1-websoft9.png)  
 
-3. Save Access Key
+3. Save Access Key  
 
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-savemykey-websoft9.png)  
 
@@ -152,17 +152,15 @@ Taking **SendGrid's SMTP Service** as an example, refer to the following steps t
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-buysmtpplugin-websoft9.png)
 
 4. Log in Magento backend, configure SMTP  
-   - Click **MAGEPLAZA** to start settings
-     ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-smtp-2-websoft9.png)
+   - Click **STORES** and select **Configuration** in the right menu;  
+     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-config01-websoft9.png)
 
-   - Setting details
-     ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-smtp-3-websoft9.png)
+   - Setting details  
+     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-config02-websoft9.png)
 
-5. Log in Magento backend, set send from and send to Email address
-   - Click **MAGEPLAZA** to start settings
-     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-4-websoft9.png)
-   - Set it   
-     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-5-websoft9.png)
+5. Log in Magento backend, set send from and send to Email address  
+   - Click [STORES]-[Configuration]-[Store Email Addresses] to start settings  
+     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-config03-websoft9.png)  
      
 
 More SMTP Service(Gmail, Hotmail, QQ mail, Yahoo mail, SendGrid and so on)  settings or Issues with SMTP, please refer to Websoft9's *[SMTP Guide](./administrator/smtp)*
