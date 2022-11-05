@@ -53,8 +53,7 @@ magento setup:config:set --db-host=DB-HOST --db-name=DB-NAME --db-user=DB-USER -
 
 ## Magento QuickStart
 
-下面以 **使用 Magento 构建在线商城** 作为一个任务，帮助用户快速入门：
-  
+ 
   
 ## Magento Setup
 
@@ -81,15 +80,27 @@ Completed installation of Magento, suggest you make your Magento system link Mag
 1. [Register a Magento Account](https://account.magento.com/applications/customer/login)
 2. Log in to Magento's Marketplace, create your **Access Key** from My Profile setting
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-1-websoft9.png)  
+
 3. Save Access Key
 
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-savemykey-websoft9.png)  
-4. Log in your Magento backend, open **SYSTEM** > **Web Setup Wizard**
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-websetupwz-websoft9.png) 
-5. Fill in the **System config** with your Access Key from Marketplace
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setmkkey-websoft9.png) 
-6. Save it, and wait for the Waiting for a successful connection
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setmkkeyss-websoft9.png) 
+
+4. Log in to the Magento server using SSH and go to the root directory '/data/wwwroot/magento' ，Paste the access keys in your auth.json file 
+
+
+```
+{
+    "http-basic": {
+        "repo.magento.com": {
+            "username": "7023803e7e",
+            "password": "e1e52894a5b"
+        }
+    }
+}
+
+```
+
+
 7. Then, you can use the resources of Marketplace online
 
 ### Magento set language
@@ -165,25 +176,25 @@ Connect to server via SSH and run  CLI commands to configure parameters
    
    ```shell
    cd /data/wwwroot/magento
-   php bin/magento config:set web/unsecure/base_url http://www.mydomain.com/ # 修改成您的实际域名，必须以 / 结束
-   php bin/magento config:set web/secure/base_url http://www.mydomain.com/ # 修改成您的实际域名，必须以 / 结束
+   php bin/magento config:set web/unsecure/base_url http://www.mydomain.com/ 
+   php bin/magento config:set web/secure/base_url http://www.mydomain.com/ 
    ```
 
-### HTTPS 额外设置{#https}
+### HTTPS extra settings {#https}
 
-**[标准 HTTPS 配置](./administrator/domain_https)** 完成后，还需运行下面的 CLI 命令进行配置：
+**[Standard HTTPS Configuration](./administrator/domain_https)** Once complete, you also need to run the following CLI command to configure:
 
 ```
 cd /data/wwwroot/magento
 php bin/magento setup:store-config:set --use-secure=1 --use-secure-admin=1 --base-url-secure="https://www.yourdomain.com/"
-php bin/magento cache:flush  #将基础URL更改为https并刷新缓存
+php bin/magento cache:flush  
 ```
 
 ## Reference sheet
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Magento
 
-通过运行`docker ps`，可以查看到 Magento 运行时所有的 Container：
+Run `docker ps` command, view all Containers when Magento is running:
 
 ```bash
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
@@ -193,10 +204,10 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
   
 Magento installation directory: */data/wwwroot/magento*  
 Magento configuration file: */data/wwwroot/magento/app/etc/env.php*  
-Magento 多语言目录： */data/wwwroot/magento/vendor/magento/language-zh_hans_cn*   
-Magento 命令行工具：* /data/wwwroot/magento/bin/magento*  
+Magento languag directory： */data/wwwroot/magento/vendor/magento/language-zh_hans_cn*   
+Magento CLI：* /data/wwwroot/magento/bin/magento*  
   
-> Magento 配置文件中包含数据库连接信息，更改了 MySQL 数据库账号密码，此处也需要对应修改
+> The Magento configuration file contains database connection information, and the MySQL database account password has been changed, which also needs to be changed here
   
 ### Port{#port}
 

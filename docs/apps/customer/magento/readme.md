@@ -95,16 +95,21 @@ magento setup:config:set --db-host=DB-HOST --db-name=DB-NAME --db-user=DB-USER -
 3. 保存 Access Key
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-savemykey-websoft9.png)  
 
-4. 登录自己的 Magento 后台，依次打开：【SYSTEM】> 【Web Setup Wizard】
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-websetupwz-websoft9.png) 
+4. SSH 登录到 Magento 服务器，进入根目录  `/data/wwwroot/magento` ，将 key 复制到 auth.json.example,并重命名为 auth.json 
 
-5. 在【System config】设置项中输入你在 Marketplace 上获取的 Access Key
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setmkkey-websoft9.png) 
+```
+{
+    "http-basic": {
+        "repo.magento.com": {
+            "username": "7023803e7e",
+            "password": "e1e52894a5b"
+        }
+    }
+}
 
-6. 成功保存，连接成功
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setmkkeyss-websoft9.png) 
+```
 
-7. 连接后，就可以很方便的使用 Marketplace 上的资源
+6. 连接后，就可以很方便的使用 Marketplace 上的资源
 
 ### 安装中文包{#setlanguage}
 
