@@ -3,70 +3,67 @@ sidebar_position: 2
 slug: /runtime/javaplus
 tags:
   - Java
-  - ÔËĞĞ»·¾³
+  - è¿è¡Œç¯å¢ƒ
 ---
 
-# Java plus ÔËĞĞ»·¾³
+# Java plus è¿è¡Œç¯å¢ƒ
 
-## ³õÊ¼»¯Ïòµ¼
+## åˆå§‹åŒ–å‘å¯¼
 
-Java plus Í¨¹ı cockpit Ãæ°å¼¯³ÉÁËÒ»ÏµÁĞ¿ÉÊÓ»¯¹¤¾ß¡£
+Java plus é€šè¿‡ cockpit é¢æ¿é›†æˆäº†ä¸€ç³»åˆ—å¯è§†åŒ–å·¥å…·ã€‚
 
-### ÏêÏ¸²½Öè
+### è¯¦ç»†æ­¥éª¤
 
-1. Ê¹ÓÃ±¾µØµçÄÔµÄ Chrome »ò Firefox ä¯ÀÀÆ÷·ÃÎÊÍøÖ·£º*http://·şÎñÆ÷¹«ÍøIP/panel*, ½øÈëµÇÂ¼½çÃæ
+1. ä½¿ç”¨æœ¬åœ°ç”µè„‘çš„ Chrome æˆ– Firefox æµè§ˆå™¨è®¿é—®ç½‘å€ï¼š*http://æœåŠ¡å™¨å…¬ç½‘IP/panel*, è¿›å…¥ç™»å½•ç•Œé¢
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/runtime/runtime-javaplus1-websoft9.png)
 
-2. ÊäÈë²Ù×÷ÏµÍ³ÕËºÅÃÜÂëºóµÇÂ¼µ½ºóÌ¨
+2. è¾“å…¥æ“ä½œç³»ç»Ÿè´¦å·å¯†ç åç™»å½•åˆ°åå°
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/runtime/runtime-javaplus2-websoft9.png)
 
-3. ²é¿´ÃÜÂëĞÅÏ¢ÒÔ¼°Ê¹ÓÃNginxºÍMySQL¿ÉÊÓ»¯¹¤¾ß
+3. æŸ¥çœ‹å¯†ç ä¿¡æ¯ä»¥åŠä½¿ç”¨Nginxå’ŒMySQLå¯è§†åŒ–å·¥å…·
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/runtime/runtime-javaplus3-websoft9.png)
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/runtime/runtime-javaplus4-websoft9.png)
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/runtime/runtime-javaplus5-websoft9.png)
 
-4. Ê¹ÓÃ±¾µØµçÄÔµÄ Chrome »ò Firefox ä¯ÀÀÆ÷·ÃÎÊÍøÖ·£º*http://·şÎñÆ÷¹«ÍøIP*, ²é¿´Java·¶ÀıJenkins
+4. ä½¿ç”¨æœ¬åœ°ç”µè„‘çš„ Chrome æˆ– Firefox æµè§ˆå™¨è®¿é—®ç½‘å€ï¼š*http://æœåŠ¡å™¨å…¬ç½‘IP*, æŸ¥çœ‹JavaèŒƒä¾‹Jenkins
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/runtime/runtime-javaplus6-websoft9.png)
 
-> JavaÓ¦ÓÃJenkins Í¨¹ı`java -jar jenkins`Æô¶¯
+> Javaåº”ç”¨Jenkins é€šè¿‡`java -jar jenkins`å¯åŠ¨
 
-## ³£ÓÃ²Ù×÷
+## å¸¸ç”¨æ“ä½œ
 
-### ÅäÖÃÓòÃû
+### é…ç½®åŸŸå
 
-Ç°Ìá£º×¼±¸ºÃIP¶ÔÓ¦µÄÓòÃû
+å‰æï¼šå‡†å¤‡å¥½IPå¯¹åº”çš„åŸŸå
 
-1. Ê¹ÓÃ±¾µØµçÄÔµÄ Chrome »ò Firefox ä¯ÀÀÆ÷·ÃÎÊÍøÖ·£º*http://·şÎñÆ÷¹«ÍøIP/panel*, ½øÈëµÇÂ¼½çÃæ
+1. ä½¿ç”¨æœ¬åœ°ç”µè„‘çš„ Chrome æˆ– Firefox æµè§ˆå™¨è®¿é—®ç½‘å€ï¼š*http://æœåŠ¡å™¨å…¬ç½‘IP/panel*, è¿›å…¥ç™»å½•ç•Œé¢
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/runtime/runtime-javaplus1-websoft9.png)
 
-2. ÊäÈë²Ù×÷ÏµÍ³ÕËºÅÃÜÂëºóµÇÂ¼µ½ºóÌ¨
+2. è¾“å…¥æ“ä½œç³»ç»Ÿè´¦å·å¯†ç åç™»å½•åˆ°åå°
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/runtime/runtime-javaplus2-websoft9.png)
 
-3. ½øÈëµÇÂ¼½çÃæºóÑ¡Ôñ¡¾Nginx´úÀí¡¿²Ëµ¥
+3. è¿›å…¥ç™»å½•ç•Œé¢åé€‰æ‹©ã€Nginxä»£ç†ã€‘èœå•
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/runtime/runtime-javaplus5-websoft9.png)
 
-4. µÇÂ½Nginx Proxy Manager£¬ÃÜÂëÍ¨¹ı¡¾³õÊ¼ÕËºÅ¡¿²é¿´£¬µÇÂ½¸ù¾İ
+4. ç™»é™†Nginx Proxy Managerï¼Œå¯†ç é€šè¿‡ã€åˆå§‹è´¦å·ã€‘æŸ¥çœ‹ï¼Œç™»é™†æ ¹æ®
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/runtime/runtime-javaplus7-websoft9.png)
 
-5. µã»÷¡¾Proxy Hosts¡¿-> ¡¾Add Proxy Host¡¿
+5. ç‚¹å‡»ã€Proxy Hostsã€‘-> ã€Add Proxy Hostã€‘
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/runtime/runtime-javaplus8-websoft9.png)
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/runtime/runtime-javaplus9-websoft9.png)
 
-6. ¸ù¾İ×Ô¼ºµÄÓòÃûÅäÖÃ´úÀíÉèÖÃ
+6. æ ¹æ®è‡ªå·±çš„åŸŸåé…ç½®ä»£ç†è®¾ç½®
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/runtime/runtime-javaplus10-websoft9.png)
 
-7. ä¯ÀÀÆ÷ÊäÈëÓòÃû·ÃÎÊJavaÓ¦ÓÃ
+7. æµè§ˆå™¨è¾“å…¥åŸŸåè®¿é—®Javaåº”ç”¨
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/runtime/runtime-javaplus11-websoft9.png)
 
-### ÈçºÎÆô¶¯×Ô¼ºµÄJavaÓ¦ÓÃ
+### å¦‚ä½•å¯åŠ¨è‡ªå·±çš„Javaåº”ç”¨
 
 
 
-## Î¬»¤ Java »·¾³
+## ç»´æŠ¤ Java ç¯å¢ƒ
 
-²Î¿¼±¾ÎÄµµÏà¹Ø×¨ÌâÕÂ½Ú£º
+å‚è€ƒæœ¬æ–‡æ¡£ç›¸å…³ä¸“é¢˜ç« èŠ‚ï¼š
 
-* [Java Ö¸ÄÏ](../java) ºÍ [Java ½ø½×](../java/advanced) 
-
-
-
+* [Java æŒ‡å—](../java) å’Œ [Java è¿›é˜¶](../java/advanced) 
