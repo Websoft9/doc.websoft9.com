@@ -334,8 +334,7 @@ slug: /legal/licenses
 
 #### Odoo Community Edition
 - LGPL v3
-- https://github.com/odoo/odoo/blob/13.0/LICENSE
-- https://github.com/odoo/odoo/blob/15.0/LICENSE
+- https://github.com/odoo/odoo/blob/16.0/LICENSE
 
 #### ONLYOFFICE Docs Community（Starting from version 6.0, Document Server is distributed under a new name - ONLYOFFICE Docs.）
 - AGPL v3
