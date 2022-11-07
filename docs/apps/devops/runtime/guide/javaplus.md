@@ -45,7 +45,7 @@ Java plus 通过 cockpit 面板集成了一系列可视化工具。
 3. 进入登录界面后选择【Nginx代理】菜单
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/runtime/runtime-javaplus5-websoft9.png)
 
-4. 登陆Nginx Proxy Manager，密码通过【初始账号】查看，登陆根据
+4. 登陆Nginx Proxy Manager，密码通过【初始账号】查看，初次登陆会提示修改邮件和密码
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/runtime/runtime-javaplus7-websoft9.png)
 
 5. 点击【Proxy Hosts】-> 【Add Proxy Host】
