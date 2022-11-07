@@ -60,7 +60,35 @@ Java plus 通过 cockpit 面板集成了一系列可视化工具。
 
 ### 如何启动自己的Java应用
 
+通过上传新的Java应用metabase，我们来了解创建自己java应用的过程：
 
+1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://服务器公网IP/panel*, 进入登录界面
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/runtime/runtime-javaplus1-websoft9.png)
+
+2. 输入操作系统账号密码后登录到后台
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/runtime/runtime-javaplus2-websoft9.png)
+
+3. 进入登录界面后选择【Navigator】菜单，将下载好的metabase.jar上传到相应路径
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/runtime/runtime-javaplus12-websoft9.png)
+
+4. 修改配置文件，追加metabase的启动命令和其他参数
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/runtime/runtime-javaplus13-websoft9.png)
+
+5. 登陆Nginx Proxy Manager，点击【Proxy Hosts】，编辑host以及你的metabase的端口
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/runtime/runtime-javaplus14-websoft9.png)
+
+6. 修改容器启动配置文件
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/runtime/runtime-javaplus15-websoft9.png)
+
+7. 重新启动运行环境
+
+  ```
+  cd /data/apps/runtime && docker compose up -d
+  ```
+
+8. 点击Nginx Proxy Manager对应配置的host，metabase应用启动成功
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/runtime/runtime-javaplus16-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/runtime/runtime-javaplus17-websoft9.png)
 
 ## 维护 Java 环境
 
