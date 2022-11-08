@@ -149,32 +149,28 @@ Redmine 官方提供了数十种不同 SMTP 配置方法，请参考官方文档
 
 
 
-## 参数{#parameter}
+## Redmine 参数{#parameter}
 
 Redmine 应用中包含 Nginx, Docker, MySQL, phpMyAdmin 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。  
 
 通过运行`docker ps`，可以查看到 Redmine 运行时所有的 Container：
 
 ```bash
-CONTAINER ID   IMAGE                           COMMAND                  CREATED              STATUS                PORTS                               NAMES
-4ff55aec7671   redmine                         "/docker-entrypoint.…"   11 seconds ago       Up 10 seconds         0.0.0.0:9010->3000/tcp              redmine
-3067c535663b   mysql:5.7                       "docker-entrypoint.s…"   About a minute ago   Up 58 seconds         33060/tcp, 0.0.0.0:3309->3306/tcp   redmine-mysql
+CONTAINER ID   IMAGE               COMMAND                  CREATED          STATUS          PORTS                                                  NAMES
+635cd1609242   phpmyadmin:latest   "/docker-entrypoint.…"   21 minutes ago   Up 21 minutes   0.0.0.0:9090->80/tcp, :::9090->80/tcp                  phpmyadmin
+bcd0b75f04d7   redmine:4.2         "bash -c 'cat /my_cm…"   21 minutes ago   Up 21 minutes   0.0.0.0:9001->3000/tcp, :::9001->3000/tcp              redmine
+b171c341fa90   mysql:5.7           "docker-entrypoint.s…"   21 minutes ago   Up 21 minutes   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp   redmine-db
 ```
-
-
-下面仅列出 Redmine 本身的参数：
 
 ### 路径{#path}
 
-Redmine 安装目录：*/data/wwwroot/redmine*  
-Redmine 容器配置文件：*/data/wwwroot/redmine/docker-compose.yml*  
-Redmine 系统配置文件：*/data/wwwroot/redmineconfig/configuration.yml*  
+Redmine 安装目录：*/data/apps/redmine*  
+Redmine 站点目录：*/data/apps/redmine/data/redmine*  
+Redmine 配置目录：*/data/apps/redmine/data/redmine/config*  
 
 ### 端口{#port}
 
-| 端口号 | 用途                                          | 必要性 |
-| ------ | --------------------------------------------- | ------ |
-| 80   | 通过 HTTP 访问 Redmine | 可选   |
+无特殊端口
 
 ### 版本{#version}
 
@@ -186,6 +182,8 @@ docker inspect redmine:latest |grep REDMINE_VERSION |head -1 |cut -d= -f2
 
 ```shell
 sudo docker start | stop | restart redmine
+sudo docker start | stop | restart redmine-db
+sudo docker start | stop | restart phpmyadmin
 ```
 
 ### 命令行{#cli}

@@ -64,7 +64,7 @@ Below is for you to solve problem, and you can contact **[Websoft9 Support](./he
 
 ## Metabase QuickStart
 
-下面以 xxx 进行数据分析作为范例。
+
 
 ## Metabase Setup
 
@@ -84,7 +84,7 @@ Below is for you to solve problem, and you can contact **[Websoft9 Support](./he
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Metabase
 
 
-通过运行`docker ps`，可以查看到 Metabase 运行时所有的 Container：
+Run `docker ps` command, view all Containers when Metabase is running:
 
 ```
 CONTAINER ID   IMAGE                      COMMAND                  CREATED       STATUS       PORTS                                                  NAMES
@@ -94,19 +94,17 @@ cf73ba27aee6   metabase/metabase:latest   "/app/run_metabase.sh"   2 hours ago  
 
 ```
 
-下面仅列出 Metabase 本身的参数：
+
 
 ### Path{#path}
 
-Metabase 源码目录： */data/wwwroot/metabase/data*  
-Metabase 插件目录： */data/wwwroot/metabase/plugins*  
-Metabase 配置文件： */data/wwwroot/metabase/metabase.conf*  
+Metabase installation directory： */data/apps/metabase/data*  
+Metabase plugin directory： */data/apps/metabase/plugins*  
+Metabase configuration file： */data/apps/metabase/metabase.conf*  
 
 ### Port{#port}
 
-| 端口号 | 用途                                           | 必要性 |
-| ------ | ---------------------------------------------- | ------ |
-| 9001   | Metabase 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
+No special port  
 
 ### Version{#version}
 
@@ -118,13 +116,13 @@ curl https://api.github.com/repos/metabase/metabase/releases/latest |jq -r .tag_
 ### Service{#service}
 
 ```shell
-sudo docker  start | stop | restart | status metabase
-sudo docker  start | stop | restart | status metabase-mysql
+sudo docker  start | stop | restart | stats metabase
+sudo docker  start | stop | restart | stats metabase-mysql
+sudo docker  start | stop | restart | stats phpmyadmin
 ```
 
 ### CLI{#cli}
 
-Matebase 暂时未提供命令行工具
 
 ### API
 

@@ -17,7 +17,7 @@ tags:
 部署 Websoft9 提供的 RethinkDB 之后，需完成如下的准备工作：
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
+2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:28015** 端口已经开启
 3. 在服务器中查看 RethinkDB 的 **[默认账号和密码](./user/credentials)**  
 4. 若想用域名访问  RethinkDB，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
 
@@ -26,7 +26,7 @@ tags:
 
 ### 详细步骤
 
-1. 使用本地电脑的浏览器访问网址：*http://域名* 或 *http://服务器公网IP*，准备登陆 RethinkDB 控制台
+1. 使用本地电脑的浏览器访问网址：*http://域名:9090* 或 *http://服务器公网IP:9090*，准备登陆 RethinkDB 控制台
 
 2. 输入[用户名和密码](./user/credentials)，成功登录到 RethinkDB 后台  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rethinkdb/rethinkdb-gui-websoft9.png)
@@ -117,7 +117,7 @@ sudo sed -n "s/^#bind=/bind=0.0.0.0/g" /etc/rethinkdb/instances.d/instance.conf
 
 RethinkDB 可视化控制台是它的重要组成部分，是其重要的产品特征。  
 
-1. 使用本地电脑的浏览器访问网址：*http://服务器公网IP*，准备登陆 RethinkDB 控制台
+1. 使用本地电脑的浏览器访问网址：*http://服务器公网IP:9090*，准备登陆 RethinkDB 控制台
 
 2. 输入用户名和密码（[不知道账号密码？](./user/credentials)）
 
@@ -137,33 +137,33 @@ RethinkDB 应用中包含 Nginx, Docker 等组件，可通过 **[通用参数表
 通过运行`docker ps`，可以查看到 RethinkDB 运行时所有的 Container：
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE              COMMAND                  CREATED              STATUS              PORTS                                                                                                                                     NAMES
+e9cfcd42987e   rethinkdb:latest   "/bin/bash -c 'rethi…"   About a minute ago   Up About a minute   0.0.0.0:28015->28015/tcp, :::28015->28015/tcp, 0.0.0.0:29015->29015/tcp, :::29015->29015/tcp, 0.0.0.0:9090->8080/tcp, :::9090->8080/tcp   rethinkdb
 ```
-
-
-下面仅列出 RethinkDB 本身的参数：
 
 ### 路径{#path}
 
-* RethinkDB 配置文件： */etc/rethinkdb/instances.d/instance.conf *
+* RethinkDB 安装目录： */data/apps/rethinkdb*  
+* RethinkDB 数据目录： */data/apps/rethinkdb/data/rethinkdb_data*  
+* RethinkDB 配置文件目录： */etc/rethinkdb/instances.d*  
+> 配置文件目录是指容器内目录，默认是空的
 
 ### 端口
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
-| 8080   | RethinkDB 控制台原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
 | 28015 | RethinkDB connect | 可选   |
 
 ### 版本
 
 ```shell
-rethinkdb --version
+docker exec -it rethinkdb rethinkdb --version
 ```
 
 ### 服务
 
 ```shell
-sudo systemctl start | stop | restart | status rethinkdb
+sudo docker l start | stop | restart | stats rethinkdb
 ```
 
 ### 命令行
@@ -173,7 +173,8 @@ sudo systemctl start | stop | restart | status rethinkdb
 RethinkDB 提供了强大的的**服务端**命令行工具 `rethinkdb`  
 
 ```
-$rethinkdb -h
+$ docker exec -it rethinkdb bash
+$ rethinkdb -h
 
 Running 'rethinkdb' will create a new data directory or use an existing one,
   and serve as a RethinkDB server.
