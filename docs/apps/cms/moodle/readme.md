@@ -29,31 +29,17 @@ tags:
 ### 详细步骤
 
 1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 就进入引导首页
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-install1-websoft9.png)
 
-2. 根据系统提示，选择语言，进入下一步 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-install001-websoft9.png)
+2. 点击【login】 ，进入登陆页面
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-install2-websoft9.png)
 
-3. 选择数据库类型，默认为【改进的MySQL】，然后进入确认路径设置（保持默认设置），进入下一步 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-install002-websoft9.png)
 
-4. 填写数据库连接信息，建议采用预装环境自带的 MySQL 数据库([不知道账号密码？](./user/credentials))
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-install003-websoft9.png)
+3. 填写用户和密码([不知道账号密码？](./user/credentials))
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-install3-websoft9.png)
 
-5. 经过几次确认后，安装进入环境检测步骤，继续后续步骤 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-install004-websoft9.png)
 
-6. 设置后台账号信息，请务必设置好并牢记之。进入下一步 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-install005-websoft9.png)
-
-7. 设置网站初始化信息 
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-install006-websoft9.png)
-
-8. 跟随安装提示直到完成，过程中尽量选择默认设置，勾选安装所有模块
-
-9.  系统完成最后一步安装，建议进入 Moodle 后台（以管理身份登录即进入后台），体验完整功能 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-install007-websoft9.png)
-
-10. [注册 Moodle 官方账号](#register)，打通你的 Moodle 与官方的连接，便于在线安装插件。
+4. [注册 Moodle 官方账号](#register)，打通你的 Moodle 与官方的连接，便于在线安装插件。
 
 > 需要了解更多Moodle的使用，请参考官方文档：[Moodle Documentation](https://docs.moodle.org)
 
@@ -207,38 +193,39 @@ Moodle 主题实际上是一个插件，因此需要安装新主题，必须通�
 
 ## Moodle 参数{#parameter}
 
-Moodle 应用中包含 PHP, Nginx, Apache, Docker, MySQL 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
+Moodle 应用中包含  Nginx, Docker, MySQL 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
 
 通过运行`docker ps`，可以查看到 Moodle 运行时所有的 Container：
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                  COMMAND                  CREATED       STATUS       PORTS                                                 NAMES
+0df736525a31   phpmyadmin:latest      "/docker-entrypoint.…"   2 hours ago   Up 2 hours   0.0.0.0:9090->80/tcp, :::9090->80/tcp                 phpmyadmin
+91e032f7426b   bitnami/moodle:4       "/opt/bitnami/script…"   2 hours ago   Up 2 hours   8443/tcp, 0.0.0.0:9001->8080/tcp, :::9001->8080/tcp   moodle
+ea1b14f31de8   bitnami/mariadb:10.6   "/opt/bitnami/script…"   2 hours ago   Up 2 hours   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp             moodle-db
 ```
-
-
-下面仅列出 Moodle 本身的参数：
 
 ### 路径{#path}
 
-Moodle 安装目录： */data/wwwroot/moodle*  
-Moodle 配置文件： */data/wwwroot/moodle/config.php*  
-
+Moodle 安装目录： */data/apps/moodle*  
+Moodle 数据目录： */data/apps/moodle/data/moodledata_data*  
+Moodle 配置文件： */data/apps/moodle/data/moodle_data/config.php*  
 
 ### 端口{#port}
 
-| 端口号 | 用途                                          | 必要性 |
-| ------ | --------------------------------------------- | ------ |
-| 8080   | Moodle 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
-
+无特殊端口
 
 ### 版本{#version}
 
-控制台查看
+```
+docker exec -i moodle cat /bitnami/moodle/version.php  | grep "\$release" | awk '{print $3}' | sed 's/^.//'
+```
 
 ### 服务{#service}
 
 ```shell
 sudo docker start | stop | restart | stats moodle
+sudo docker start | stop | restart | stats moodle-db
+sudo docker start | stop | restart | stats phpmyadmin
 ```
 
 ### 命令行{#cli}

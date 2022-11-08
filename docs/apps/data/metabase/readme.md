@@ -98,19 +98,15 @@ cf73ba27aee6   metabase/metabase:latest   "/app/run_metabase.sh"   2 hours ago  
 
 ```
 
-下面仅列出 Metabase 本身的参数：
-
 ### 路径{#path}
 
-Metabase 源码目录： */data/wwwroot/metabase/data*  
-Metabase 插件目录： */data/wwwroot/metabase/plugins*  
-Metabase 配置文件： */data/wwwroot/metabase/metabase.conf*  
+Metabase 源码目录： */data/apps/metabase/data*  
+Metabase 插件目录： */data/apps/metabase/plugins*  
+Metabase 配置文件： */data/apps/metabase/metabase.conf*  
 
 ### 端口{#port}
 
-| 端口号 | 用途                                           | 必要性 |
-| ------ | ---------------------------------------------- | ------ |
-| 9001   | Metabase 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
+无特殊端口
 
 ### 版本
 
@@ -122,8 +118,9 @@ curl https://api.github.com/repos/metabase/metabase/releases/latest |jq -r .tag_
 ### 服务
 
 ```shell
-sudo docker  start | stop | restart | status metabase
-sudo docker  start | stop | restart | status metabase-mysql
+sudo docker  start | stop | restart | stats metabase
+sudo docker  start | stop | restart | stats metabase-mysql
+sudo docker  start | stop | restart | stats phpmyadmin
 ```
 
 ### 命令行
