@@ -33,6 +33,9 @@ tags:
 2. 登录后台（[不知道数据库密码？](./user/credentials)），开始体验后台
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-backend-websoft9.png)
 
+3. 用本地电脑浏览器访问网址：*http://域名* 或*http://服务器公网IP*，体验前台商城
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-site-websoft9.png)
+
 > 需要了解更多 PrestaShop 的使用，请参考官方文档：[PrestaShop Docs](https://www.prestashop.com/en/resources/documentations)
 
 ### 出现问题？
@@ -137,7 +140,7 @@ Prestashop的多语言支持非常的成熟，系统在后台内置一套多语�
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-importdb-websoft9.png)
 
 
-## 参数{#parameter}
+## PrestaShop 参数{#parameter}
 
 PrestaShop 应用中包含  Nginx, Docker, MySQL, phpMyAdmin 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
@@ -179,6 +182,7 @@ sudo docker start | restart | stop | stats phpmyadmin
 PrestaShop 提供了一个用于安装和修改配置的 [CLI](https://doc.prestashop.com/display/PS17/Installing+PrestaShop+using+the+command-line+script)，进入根目录下运行：  
 
 ```
+$ docker exec -it prestashop bash
 php index_cli.php --domain=example.com --db_server=sql.example.com --db_name=prestashop --db_user=root --db_password=123456789
 ```
 
