@@ -143,9 +143,9 @@ e9cfcd42987e   rethinkdb:latest   "/bin/bash -c 'rethi…"   About a minute ago 
 
 ### 路径{#path}
 
-* RethinkDB 安装目录： */data/apps/rethinkdb*  
-* RethinkDB 数据目录： */data/apps/rethinkdb/data/rethinkdb_data*  
-* RethinkDB 配置文件目录： */etc/rethinkdb/instances.d*  
+RethinkDB 安装目录： */data/apps/rethinkdb*  
+RethinkDB 数据目录： */data/apps/rethinkdb/data/rethinkdb_data*  
+RethinkDB 配置文件目录： */etc/rethinkdb/instances.d*  
 > 配置文件目录是指容器内目录，默认是空的
 
 ### 端口

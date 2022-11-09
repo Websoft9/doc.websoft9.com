@@ -30,10 +30,10 @@ tags:
 1. 用本地电脑浏览器访问网址：*http://域名* 或*http://服务器公网IP*，体验前台商城
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-site-websoft9.png)
 
-2. 使用本地电脑浏览器访问网址：*http://域名/admin* 或*http://服务器公网IP/admin*, 就进入后台登陆页面  
+2. 使用本地电脑浏览器访问网址：*http://域名/admin* 或*http://服务器公网IP/admin*, 就进入后台登陆页面,（[不知道数据库密码？](./user/credentials)）  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-login-websoft9.png)
 
-3. 登录后台（[不知道数据库密码？](./user/credentials)），开始体验后台
+3. 登录后台，开始体验后台
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-backend-websoft9.png)
 
 4. 通过[设置语言](#setlanguage)，为站点添加多语言
@@ -58,7 +58,8 @@ Modules 是 PrestaShop 功能扩展，Modules 可以即插即用
 1. 登录 PrestaShop 后台，依次打开：【Modules】>【Module Catalog】，找到所需的插件，点击【Install】开始安装
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-installmd-websoft9.png)
 
-3. 依次打开：【Modules】>【Module Manager】，找到所需的插件，点击【Upgrade】即可在线升级
+3. 依次打开：【Modules】>【Module Manager】，找到所需的插件，点击【Upgrade】即可在线升级  
+
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-upgrademodules-websoft9.png)
 
 ### 连接 Marketplace{#marketplace}
@@ -87,6 +88,7 @@ if (!defined('_PS_MODE_DEMO_')) {
     define('_PS_MODE_DEMO_', false);
 }
 ```
+
 ##### 导入语言
 
 1. 登录Prestashop后台，依次打开：【国际】>【本地化】，进入设置界面

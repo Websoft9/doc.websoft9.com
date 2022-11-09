@@ -52,9 +52,9 @@ These steps will show you how to create Database and Table by RethinkDB console:
 
 ## RethinkDB Setup
 
-### 控制台密码管理
+### Console password management
 
-RethinkDB 控制台默认没有提供登录认证，本部署方案采用了  [Nginx auth_bacic](./nginx#auth_basic) 作为登录认证方案
+The RethinkDB console does not provide default login authentication, and this deployment solution uses [Nginx auth_bacic](./nginx#auth_basic) as the login authentication mode
 
 ### Remote Connection{#remote}
 
@@ -71,53 +71,48 @@ RethinkDB remote connection is set from file: */etc/rethinkdb/instances.d/instan
    ```
 
 
-### 用户管理
+### User management
 
-下面以**新增用户、密码和重置密码**作为范例进行说明：
+The following is an example of **adding a user, password, and resetting password**:
 
 
-1. 以 `admin` 用户身份连接数据库（只有 admin 用户具有用户系统表的访问权限，因此必须以 admin 用户连接到数据库）
+1. Connect to the database as the `admin` user (only the admin user has access to the user's system tables, so you must connect to the database as the admin user)
    ```
    from rethinkdb import r
 
-   # 无密码连接
    r.connect('localhost', 28015).repl()
 
-   # 有密码连接
    r.connect('localhost', 28015, password='123456').repl()
    ```
 
-2. 新增用户名和密码（用户信息存储在 **users** [系统表](https://rethinkdb.com/docs/system-tables/)中）
+2. Add new users (user information is stored in **users** [system table](https://rethinkdb.com/docs/system-tables/))
+
    ```
    r.db('rethinkdb').table('users').insert({id: 'bob', password: 'secret'})
    ```
 
-3. 重置指定用户的密码
+3. Reset the user's password
 
     ```
-    # 重置为新密码
     r.db('rethinkdb').table('users').get('username').update({password: newpassword})
 
-    # 重置为空密码
     r.db('rethinkdb').table('users').get('username').update({password: false})
     ```
 
 ### Reset Password
 
-常用的 RethinkDB 重置密码相关的操作主要有修改密码和清空密码（将密码设置为空）两种方式。  
+Commonly used RethinkDB password reset related operations mainly include changing the password and clearing the password (setting the password to blank).  
 
-1. 登录 RethinkDB Web 界面，在【Data explorer】下输入所需的命令
+1. Log in to the RethinkDB web interface and enter the required commands under [Data explorer]
 
    ```
-   # 修改密码命令
    r.db('rethinkdb').table('users').get('admin').update({password: 'newpassword'})
 
-   # 清空密码命令
    r.db('rethinkdb').table('users').get('admin').update({password: false})
    ```
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rethinkdb/rethinkdb-editpassword-websoft9.png)
 
-2. 点击【run】后生效
+2. Click [Run] to take effect
 
 **Reset RethinkDB console password**
 
@@ -147,36 +142,36 @@ RethinkDB provides a web interface which lets you manage your entire server clus
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage RethinkDB 
 
 
-通过运行`docker ps`，可以查看到 RethinkDB 运行时所有的 Container：
+Run `docker ps` command, view all Containers when RethinkDB is running:
 
-```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE              COMMAND                  CREATED              STATUS              PORTS                                                                                                                                     NAMES
+e9cfcd42987e   rethinkdb:latest   "/bin/bash -c 'rethi…"   About a minute ago   Up About a minute   0.0.0.0:28015->28015/tcp, :::28015->28015/tcp, 0.0.0.0:29015->29015/tcp, :::29015->29015/tcp, 0.0.0.0:9090->8080/tcp, :::9090->8080/tcp   rethinkdb
 ```
 
 
-下面仅列出 RethinkDB 本身的参数：
-
 ### Path{#path}
 
-* RethinkDB 配置文件： */etc/rethinkdb/instances.d/instance.conf *
+RethinkDB installation directory： */data/apps/rethinkdb*  
+RethinkDB data directory： */data/apps/rethinkdb/data/rethinkdb_data*  
+RethinkDB configuration directory： */etc/rethinkdb/instances.d*  
+
 
 ### Port
 
-| 端口号 | 用途                                          | 必要性 |
+| Port | Use                                          | Necessity |
 | ------ | --------------------------------------------- | ------ |
-| 8080   | RethinkDB 控制台原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
-| 28015 | RethinkDB connect | 可选   |
+| 28015 | RethinkDB connect | Optional   |
 
 ### Version
 
 ```shell
-rethinkdb --version
+docker exec -it rethinkdb rethinkdb --version
 ```
 
 ### Service
 
 ```shell
-sudo systemctl start | stop | restart | status rethinkdb
+sudo docker l start | stop | restart | stats rethinkdb
 ```
 
 ### CLI
@@ -330,18 +325,18 @@ For more information, run 'rethinkdb help [subcommand]'.
 
 **Client**
 
-RethinkDB 官方没有客户端 CLI，但提供了Python, Java, Node 等开发语言的 [RethinkDB client drivers](https://rethinkdb.com/docs/install-drivers/)。  
+RethinkDB officially does not have a client CLI, but provides [RethinkDB client drivers](https://rethinkdb.com/docs/install-drivers/) for Python, Java, Node and other development languages. 
 
-用户通过这些 drivers 以程序的方式连接 RethinkDB 服务，然后进行场景的数据库操作。  
+Through these drivers, you can programmatically connect to the RethinkDB service and then perform database operations for the scene.  
 
-下面以 Python 为例描述如何具体使用：
+The following uses Python as an example to describe how to use it:
 
-1. 安装 rethinkdb 驱动
+1. Install the RethinkDB driver
    ```
    pip3 install rethinkdb
    ```
 
-2. 编写 Python 程序，连接 RethinkDB 服务器
+2. Write Python programs to connect to the RethinkDB server
    ```
    from rethinkdb import r
    r.connect('localhost', 28015).repl()
@@ -351,5 +346,5 @@ RethinkDB 官方没有客户端 CLI，但提供了Python, Java, Node 等开发�
 
 ### API
 
-上述客户端命令即 API
+The above client commands are APIs
 

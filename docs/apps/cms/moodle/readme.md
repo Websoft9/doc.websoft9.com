@@ -31,11 +31,11 @@ tags:
 1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 就进入引导首页
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-install1-websoft9.png)
 
-2. 点击【login】 ，进入登陆页面
+2. 点击【login】 ，进入登陆页面, 填写用户和密码([不知道账号密码？](./user/credentials))，登录
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-install2-websoft9.png)
 
 
-3. 填写用户和密码([不知道账号密码？](./user/credentials))
+3. 进入后台
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-install3-websoft9.png)
 
 4. 设置网站基本信息

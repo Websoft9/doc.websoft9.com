@@ -35,7 +35,7 @@ If you have installed Websoft9 PrestaShop, the following steps is for your quick
 3. Input email and password([Don's know password?](./user/credentials)), accesss your administration console  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/prestashop-backend-websoft9.png)
 
-4. Use [Set language] (#setlanguage) to add multiple languages to your site
+4. Use [Set language](#setlanguage) to add multiple languages to your site
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/prestashop-mutlan-websoft9.png)
 
 
@@ -77,13 +77,7 @@ Completed installation of PrestaShop, suggest you make your PrestaShop system co
 
 Prestashop's multi-language support is very mature. The system has a multi-language system built in the background. You only need to select the corresponding language and import it online to your PrestaShop system.
 
-> During the setup process, if you prompt 'This functionality has been disabled.', please modify the configuration file in advance: /data/apps/prestashop/data/prestashop/app/config/defines.inc.php, and modify the configuration item to false:
-```
-if (!defined('_PS_MODE_DEMO_')) {
-    define('_PS_MODE_DEMO_', false);
-}
-
-```
+> During the setup process, if you prompt 'This functionality has been disabled.', please modify the configuration file in advance: /data/apps/prestashop/data/prestashop/app/config/defines.inc.php, and modify the configuration item to false:define('_PS_MODE_DEMO_', false);
 
 ##### Import language
 
