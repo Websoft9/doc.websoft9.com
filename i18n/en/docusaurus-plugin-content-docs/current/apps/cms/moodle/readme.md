@@ -25,39 +25,21 @@ If you have installed Websoft9 Moodle, the following steps is for your quick sta
 
 ### Steps for you
 
-1. Using local Chrome or Firefox to visit the URL *https://domain name* or *https://Internet IP*, enter to Moodle installation page
+1. Using local Chrome or Firefox to visit the URL *https://domain name* or *https://Internet IP*, enter to Moodle login page  
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-install1-websoft9.png)
 
-2. Choose a language, then go to next step
-   ![Moodle-install-language](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md01.png)
+2. Click [Login] to enter the login page
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-install2-websoft9.png)
 
-3. Set the Moodle source code and data directory
-   ![Moodle set directory](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md02.png)
+3.  Fill in the user and password ([Don't know the account password?] ](./user/credentials)), log in to the backend
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-install3-websoft9.png)
 
-4. Choose the database type
-   ![Moodle Choose database](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md03.png)
+4. Set up site information
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-newsite-websoft9.png) 
 
-5. Fill in your database connection information ([Don't know password?](./user/credentials))
-   ![Moodle set database connection](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md04.png)
+5. [Set the site language](#setlanguge)
 
-6. Confirm the Copyright
-   ![Moodle Confirm the Copyright](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md05.png)
-
-7. Installing
-   ![Moodle start install](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md06.png)
-   ![Moodle start install](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md07.png)
-
-8. Set administrator account
-   ![Moodle set administrator account](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md08.png)
-
-   > Email is your system ID, not collected by anyone because it stored in your Cloud Server
-
-9. Set site name, short name, front page summary...
-   ![Moodle set site information](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md09.png)
-
-10. Installed successfully.
-   ![Moodle installation successfully](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md10.png)
-
-11. [Register a Moodle account](#register) to connect Moodle official website for more extension
+6. [Register a Moodle account](#register) to connect Moodle official website for more extension
 
 > More useful Moodle guide, please refer to [Moodle Documentation](https://docs.moodle.org)
 
@@ -67,25 +49,9 @@ Below is for you to solve problem, and you can contact **[Websoft9 Support](./he
 
 ## Moodle QuickStart
 
-下面以 **使用 Moodle 构建学习管理系统** 作为一个任务，帮助用户快速入门：
-
-[Moodle 快速搭建学习管理系统](https://cloud.tencent.com/developer/article/1822682)
 
 ## Moodle Setup
 
-### DNS Additional Configure (Modify URL){#dns}
-
-Complete **[Five steps for Domain](./administrator/domain_step)** ，Set the URL for Moodle:
-
-1. 修改 Moodle [配置文件](#parameter)，将配置项 $CFG->wwwroot   = 'http://www.abc.com' 修改成域名;
-
-2. 保存后生效
-
-### HTTPS{#https}  
-
-**[标准 HTTPS 配置](./administrator/domain_https)** 完成后，修改配置文件：
-
-- 修改 Moodle [配置文件](#parameter)，将配置项 $CFG->wwwroot   = 'https://www.abc.com' 修改成 HTTPS 域名;
 
 ### Configure SMTP{#smtp}
 
@@ -115,13 +81,19 @@ Once completed your Moodle installation wizard, suggest you to register Moodle's
 1. Log in Moodle console as administrator  
 
 2. Open **Site administrator** > **Language**
-   ![Moodle language setting](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/moodle-languageset-websoft9.png)  
+   ![Moodle Language](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-languageset-websoft9.png)
 
-3. Set it by yourself
+3. Set it by yourself  
+   ![Moodle Language](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-languagepacks-websoft9.png)  
+ 
    * Language settings: choose your language online
    * Language customization: edit your language files online
    * Language packs: upload your language packs
-   
+4. Switch languages
+   ![Moodle languages](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-mutlanguage-websoft9.png)
+
+
+  
 ### Moodle Mobile{#client}
 
 1. Log in Moodle console as administrator  
@@ -151,7 +123,7 @@ Moodle is very scalable platform, most of function were as plugins. Moodle have 
 
 3. Click **Plugins Overview** to list all plugins installed, you can disable and uninstall it also  
 
-4. Visit [Plugins Marketplace](https://moodle.org/plugins/) to search more plugins  
+4. Visit [Plugins Marketplace](https://moodle.org/plugins/) to search more plugins,and download 
 
 5. Start to install plugins in the Moodle's console
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/moodle-intallplugins001-websoft9.png)  
@@ -163,20 +135,18 @@ Moodle is very scalable platform, most of function were as plugins. Moodle have 
 
 ### Moodle theme{#theme}
 
-Moodle 主题实际上是一个插件，因此需要安装新主题，必须通过【安装插件】的方式先进行安装。  
+The Moodle theme is also a plugin, so to install a new theme, install it first by [Install Plugin](#plugin).   
 
-1. 以管理员身份登录 Moodle
+1. Log in Moodle console as administrator  
 
-2. 依次打开：【网站管理】>【插件】，进入插件市场后，选择【Theme】类型的插件
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-mktheme-websoft9.png)
+2. Visit [Plugins Marketplace](https://moodle.org/plugins/) to search more themes,and download  
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/moodle-mktheme-websoft9.png)
 
-3. 在线安装所需的主题
+3. [Install the theme](#plugin)
 
-4. 打开【网站管理】>【外观】>【主题选择器】
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-addtheme001-websoft9.png)
+4. Use themes
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/moodle-addtheme001-websoft9.png)
 
-5. 点击【更改主题】即可完成主题更换
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-addtheme002-websoft9.png)  
 
 ### Reset Password{#resetpwd}
 
@@ -212,35 +182,37 @@ Follow the steps of retrieve database by modify database:
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Moodle
 
-通过运行`docker ps`，可以查看到 Moodle 运行时所有的 Container：
+Run `docker ps` command, view all Containers when Moodle is running:
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                  COMMAND                  CREATED       STATUS       PORTS                                                 NAMES
+0df736525a31   phpmyadmin:latest      "/docker-entrypoint.…"   2 hours ago   Up 2 hours   0.0.0.0:9090->80/tcp, :::9090->80/tcp                 phpmyadmin
+91e032f7426b   bitnami/moodle:4       "/opt/bitnami/script…"   2 hours ago   Up 2 hours   8443/tcp, 0.0.0.0:9001->8080/tcp, :::9001->8080/tcp   moodle
+ea1b14f31de8   bitnami/mariadb:10.6   "/opt/bitnami/script…"   2 hours ago   Up 2 hours   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp             moodle-db
 ```
 
 ### Path{#path}
 
-Moodle installation directory: */data/wwwroot/moodle*  
-Moodle configuration file: */data/wwwroot/moodle/config.php*
+Moodle installation directory:  */data/apps/moodle*  
+Moodle configuration file:  */data/apps/moodle/data/moodle_data/config.php*  
+Moodle installation directory： */data/apps/moodle/data/moodledata_data*  
 
 ### Port{#port}
 
-| Port | Use                                          | Necessity |
-| ------ | --------------------------------------------- | ------ |
-| 3306 | Remote connect MySQL | Optional |
-| 80 | HTTP requests for Moodle | Required |
-| 443 | HTTPS requests Moodle | Optional |
-| 9090 | Web managment GUI for MySQL | Optional |
-
+No special port
 
 ### Version{#version}
 
-控制台查看
+```
+docker exec -i moodle cat /bitnami/moodle/version.php  | grep "\$release" | awk '{print $3}' | sed 's/^.//'
+```
 
 ### Service{#service}
 
 ```shell
 sudo docker start | stop | restart | stats moodle
+sudo docker start | stop | restart | stats moodle-db
+sudo docker start | stop | restart | stats phpmyadmin
 ```
 
 ### CLI{#cli}

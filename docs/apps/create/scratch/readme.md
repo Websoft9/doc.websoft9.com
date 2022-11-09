@@ -50,21 +50,19 @@ tags:
 
 ## 参数{#parameter}
 
-Scratch 应用中包含 Node, Nginx, Docker 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+Scratch 应用中包含 Nginx, Docker 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 Scratch 运行时所有的 Container：
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                        COMMAND                  CREATED          STATUS          PORTS                                   NAMES
+537d4d38eef3   websoft9dev/scratch:latest   "nginx -g 'daemon of…"   58 seconds ago   Up 57 seconds   0.0.0.0:9001->80/tcp, :::9001->80/tcp   scratch
 ```
-
-
-下面仅列出 Scratch 本身的参数：
 
 ### 路径{#path}
 
-Scratch 项目目录： */data/wwwroot/scratch*  
-Scratch 静态页面目录： */data/wwwroot/scratch/build*  
+Scratch 安装目录： */data/apps/scratch*  
+Scratch 静态页面目录： */usr/share/nginx/html（容器内）*  
 
 ### 端口{#port}
 
@@ -77,7 +75,7 @@ Scratch 静态页面目录： */data/wwwroot/scratch/build*
 ### 服务{#service}
 
 ```shell
-
+sudo docker start | stop | restart scratch
 ```
 
 ### 命令行{#cli}

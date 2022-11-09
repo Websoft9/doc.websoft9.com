@@ -38,8 +38,13 @@ tags:
 3. 填写用户和密码([不知道账号密码？](./user/credentials))
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-install3-websoft9.png)
 
+4. 设置网站基本信息
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-newsite-websoft9.png)  
 
-4. [注册 Moodle 官方账号](#register)，打通你的 Moodle 与官方的连接，便于在线安装插件。
+5. 设置网站语言：默认为英文，可以通过安装语言包，[设置网站语言](#setlanguge)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-main-cn-websoft9.png)  
+
+6. [注册 Moodle 官方账号](#register)，打通你的 Moodle 与官方的连接，便于在线安装插件。
 
 > 需要了解更多Moodle的使用，请参考官方文档：[Moodle Documentation](https://docs.moodle.org)
 
@@ -94,12 +99,13 @@ Moodle 初始化安装完成之后，建议注册成为 Moodle 官方网站的�
 ### Moodle 语言设置{#setlanguge}
 
 1. 以管理员身份登录 Moodle 后台
-2. 依次打开：【网站管理】>【语言】
+2. 依次打开：【Site administration】>【language】
    ![Moodle 语言设置](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-languageset-websoft9.png)
-3. 根据实际情况进行语言设置
-   * 语言设置：即在线切换语言
-   * 定制语言：即在线编辑语言翻译内容
-   * 语言包： 即上传系统默认没有内置的语言
+3. 根据实际情况进行语言设置，通过安装语言包添加新的语言  
+   ![Moodle 语言设置](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-languagepacks-websoft9.png)  
+
+4. 为站点切换语言
+   ![Moodle 语言设置](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-mutlanguage-websoft9.png)
 
 ### Moodle 客户端{#client}
 
