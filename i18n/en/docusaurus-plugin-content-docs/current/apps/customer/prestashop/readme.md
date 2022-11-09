@@ -26,14 +26,18 @@ If you have installed Websoft9 PrestaShop, the following steps is for your quick
 
 ### Steps for you
 
-1. Using local Chrome or Firefox to visit the URL *https://domain/admin* or *https://Internet IP/admin*, access login page    
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/ps07.png)
+1. Use *http://IP*  to go to your index page.  
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/prestashop-site-websoft9.png)
 
-2. Input email and password([Don's know password?](./user/credentials)), accesss your administration console  
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/ps08.png)
+2. Using local Chrome or Firefox to visit the URL *https://domain/admin* or *https://Internet IP/admin*, access login page    
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/prestashop-login-websoft9.png)
 
-3. Use *http://IP*  to go to your index page.  
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/ps09.png)
+3. Input email and password([Don's know password?](./user/credentials)), accesss your administration console  
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/prestashop-backend-websoft9.png)
+
+4. Use [Set language] (#setlanguage) to add multiple languages to your site
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/prestashop-mutlan-websoft9.png)
+
 
 > Refer to [PrestaShop Docs](https://www.prestashop.com/en/resources/documentations) to get more details
 
@@ -72,6 +76,14 @@ Completed installation of PrestaShop, suggest you make your PrestaShop system co
 ### PrestaShop language
 
 Prestashop's multi-language support is very mature. The system has a multi-language system built in the background. You only need to select the corresponding language and import it online to your PrestaShop system.
+
+> During the setup process, if you prompt 'This functionality has been disabled.', please modify the configuration file in advance: /data/apps/prestashop/data/prestashop/app/config/defines.inc.php, and modify the configuration item to false:
+```
+if (!defined('_PS_MODE_DEMO_')) {
+    define('_PS_MODE_DEMO_', false);
+}
+
+```
 
 ##### Import language
 
@@ -145,6 +157,7 @@ cac699817c8b   mysql:5.7                      "docker-entrypoint.s…"   47 minu
 PrestaShop install directory: */data/apps/prestashop*  
 PrestaShop site directory: */data/apps/prestashop/data/prestashop*  
 PrestaShop configure file: */data/apps/prestashop/data/prestashop/app/config/parameters.php* 
+PrestaShop configure file: */data/apps/prestashop/data/prestashop/config/defines.inc.php*   
 
 ### Port{#port}
 

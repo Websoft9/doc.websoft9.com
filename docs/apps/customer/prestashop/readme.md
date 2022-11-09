@@ -27,14 +27,17 @@ tags:
 
 ### 详细步骤
 
-1. 使用本地电脑浏览器访问网址：*http://域名/admin* 或*http://服务器公网IP/admin*, 就进入后台登陆页面  
+1. 用本地电脑浏览器访问网址：*http://域名* 或*http://服务器公网IP*，体验前台商城
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-site-websoft9.png)
+
+2. 使用本地电脑浏览器访问网址：*http://域名/admin* 或*http://服务器公网IP/admin*, 就进入后台登陆页面  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-login-websoft9.png)
 
-2. 登录后台（[不知道数据库密码？](./user/credentials)），开始体验后台
+3. 登录后台（[不知道数据库密码？](./user/credentials)），开始体验后台
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-backend-websoft9.png)
 
-3. 用本地电脑浏览器访问网址：*http://域名* 或*http://服务器公网IP*，体验前台商城
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-site-websoft9.png)
+4. 通过[设置语言](#setlanguage)，为站点添加多语言
+
 
 > 需要了解更多 PrestaShop 的使用，请参考官方文档：[PrestaShop Docs](https://www.prestashop.com/en/resources/documentations)
 
@@ -78,7 +81,12 @@ Modules 是 PrestaShop 功能扩展，Modules 可以即插即用
 ### 语言包管理{#setlanguage}
 
 Prestashop的多语言支持非常的成熟，系统在后台内置一套多语言体系，只需要选择对应的语言，在线导入到您的 PrestaShop 系统即可。
-
+> 在设置过程中，如提示'This functionality has been disabled.'，请提前修改配置文件：/data/apps/prestashop/data/prestashop/app/config/defines.inc.php，修改配置项为false：
+```
+if (!defined('_PS_MODE_DEMO_')) {
+    define('_PS_MODE_DEMO_', false);
+}
+```
 ##### 导入语言
 
 1. 登录Prestashop后台，依次打开：【国际】>【本地化】，进入设置界面
@@ -158,6 +166,7 @@ cac699817c8b   mysql:5.7                      "docker-entrypoint.s…"   47 minu
 PrestaShop 安装目录： */data/apps/prestashop*  
 PrestaShop 主站目录： */data/apps/prestashop/data/prestashop*  
 PrestaShop 配置文件： */data/apps/prestashop/data/prestashop/app/config/parameters.php*  
+PrestaShop 配置文件: */data/apps/prestashop/data/prestashop/config/defines.inc.php* 
 
 ### 端口{#port}
 
