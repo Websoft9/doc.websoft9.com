@@ -265,27 +265,19 @@ Seafile 应用中包含 Nginx, Docker, MySQL, phpMyAdmin, ONLYOFFICE docs, Elast
 通过运行`docker ps`，可以查看到 Seafile 运行时所有的 Container：
 
 ```bash
-CONTAINER ID        IMAGE                              COMMAND                  CREATED             STATUS              PORTS                                         NAMES
-958e4cbc8dbe        seafileltd/seafile-mc:latest       "/sbin/my_init -- /s…"   14 hours ago        Up 9 minutes        0.0.0.0:80->80/tcp, 0.0.0.0:443->443/tcp      seafile
-80c266262079        phpmyadmin/phpmyadmin:latest       "/docker-entrypoint.…"   14 hours ago        Up 9 minutes        0.0.0.0:9090->80/tcp                          phpmyadmin
-cea7ee7b8f2a        memcached:1.5.6                    "memcached -m 256"       14 hours ago        Up 9 minutes        11211/tcp                                     seafile-memcached
-43881d791ed6        seafileltd/elasticsearch:5.6.16    "/docker-entrypoint.…"   14 hours ago        Up 9 minutes        3306/tcp                                      seafile-elasticsearch
-a4498231bb29        onlyoffice/documentserver:latest   "/bin/sh -c /app/ds/…"   39 hours ago        Up 9 minutes        0.0.0.0:9002->80/tcp, 0.0.0.0:9003->443/tcp   onlyoffice-documentserver
+CONTAINER ID   IMAGE                          COMMAND                  CREATED       STATUS       PORTS                                       NAMES
+824cc16f7950   phpmyadmin:latest              "/docker-entrypoint.…"   3 hours ago   Up 3 hours   0.0.0.0:9090->80/tcp, :::9090->80/tcp       phpmyadmin
+fb9c795d5cef   seafileltd/seafile-mc:latest   "/sbin/my_init -- /s…"   3 hours ago   Up 3 hours   0.0.0.0:9001->80/tcp, :::9001->80/tcp       seafile
+e237c52ccadd   mariadb:10.5                   "docker-entrypoint.s…"   3 hours ago   Up 3 hours   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp   seafile-db
+ffd4eae50a9c   memcached:1.5.6                "memcached -m 256"       3 hours ago   Up 3 hours   11211/tcp                                   seafile-memcached
 ```
-
-
-下面仅列出 Seafile 本身的参数：
 
 ### 路径{#path}
 
-Seafile 存储目录： */data/wwwroot/seafile/seafile-data*  
-Seafile 日志目录： */data/wwwroot/seafile/seafile-data/logs*
-
-seafile-memcached 存储目录： */data/wwwroot/seafile/seafile-data*  
-seafile-memcached 日志目录： */data/wwwroot/seafile/seafile-data/logs*
-
-seafile-elasticsearch 存储目录： */data/wwwroot/seafile/seafile-elasticsearch*  
-seafile-elasticsearch 日志目录： */data/wwwroot/seafile/seafile-data/logs*
+Seafile 安装目录： */data/apps/seafile*  
+Seafile 安装目录： */data/apps/seafile/data/seafile_data*  
+Seafile 日志目录：*/data/apps/seafile/data/seafile_data/logs*
+Seafile 配置目录：*/data/apps/seafile/data/seafile_data/seafile/conf*
 
 > Seafile 配置文件包括 seahub_settings.py, seafile.conf等
 
@@ -305,6 +297,8 @@ Seafile 控制台查看
 
 ```shell
 sudo docker start | stop | restart seafile
+sudo docker start | stop | restart seafile-db
+sudo docker start | stop | restart seafile-memcached
 ```
 
 ### 命令行{#cli}
