@@ -88,6 +88,7 @@ Nginx 代理是用于给应用配置域名和证书的管理工具：
 2. 向 **[应用启动配置文件](#path)** 中增加一段启动配置，并重启对应的容器 
 3. 在 Nginx 代理中，为应用增加代理设置并配置域名
 
+
 下面以 **在 Java17 容器下部署 [Metabase](https://www.metabase.com/docs/latest/installation-and-operation/running-the-metabase-jar-file)** 为例，详细介绍部署的具体步骤：  
 
 1. 登录面板，打开【Navigator】菜单，将下载好的 metabase.jar 上传到相应路径
@@ -117,6 +118,7 @@ Nginx 代理是用于给应用配置域名和证书的管理工具：
 
 5. 参考 [域名配置](#dns) 章节，给此应用配置域名后方可访问
 
+> java17 容器下默认已经部署了 Jenkins,所以 Java 环境下多应用案例也可参照上述过程。
 
 ### 配置域名{#dns}
 
@@ -161,7 +163,7 @@ Nginx 代理是用于给应用配置域名和证书的管理工具：
 * 应用源码存放目录： */data/apps/runtime/data/java* *  
 * 应用启动配置文件：*/data/apps/runtime/config/java/supervisord.conf*  
 
-> java* 是 java8, java10 等的统称
+> java* 是 java8, java10 等的统称，java* 容器共用应用启动配置文件。
 
 ### 组件{#component}
 

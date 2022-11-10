@@ -28,18 +28,15 @@ If you have installed Websoft9 Moodle, the following steps is for your quick sta
 1. Using local Chrome or Firefox to visit the URL *https://domain name* or *https://Internet IP*, enter to Moodle login page  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-install1-websoft9.png)
 
-2. Click [Login] to enter the login page
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-install2-websoft9.png)
-
-3.  Fill in the user and password ([Don't know the account password?] ](./user/credentials)), log in to the backend
+2.  Click [Login] to enter the login page, log in to the backend, ([Don't know the account password?](./user/credentials))
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-install3-websoft9.png)
 
-4. Set up site information
+3. Set up site information
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-newsite-websoft9.png) 
 
-5. [Set the site language](#setlanguge)
+4. [Set the site language](#setlanguge)
 
-6. [Register a Moodle account](#register) to connect Moodle official website for more extension
+5. [Register a Moodle account](#register) to connect Moodle official website for more extension
 
 > More useful Moodle guide, please refer to [Moodle Documentation](https://docs.moodle.org)
 
