@@ -47,7 +47,6 @@ tags:
 若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
 
 
-
 ## Mattermost 使用入门
 
 下面以 **Mattermost 构建协作系统** 作为一个任务，帮助用户快速入门：
@@ -93,18 +92,19 @@ Mattermost 应用中包含 Nginx, Docker, MySQL 等组件，可通过 **[通用�
 通过运行`docker ps`，可以查看到 Mattermost 运行时所有的 Container：
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                                       COMMAND                  CREATED             STATUS                       PORTS                                                                NAMES
+1c26e24d9c18   dpage/pgadmin4:latest                       "/entrypoint.sh"         About an hour ago   Up About an hour             443/tcp, 0.0.0.0:9090->80/tcp, :::9090->80/tcp                       pgadmin
+1d96d7bd3dd8   mattermost/mattermost-team-edition:latest   "/entrypoint.sh matt…"   About an hour ago   Up About an hour (healthy)   8067/tcp, 8074-8075/tcp, 0.0.0.0:9001->8065/tcp, :::9001->8065/tcp   mattermost
+4baf3c38539b   postgres:13-alpine                          "docker-entrypoint.s…"   About an hour ago   Up About an hour             5432/tcp                                                             mattermost-db
 ```
-
-
-下面仅列出 Mattermost 本身的参数：
 
 ### 路径{#path}
 
-Mattermost 安装目录： */opt/mattermost/*  
-Mattermost 配置文件： */opt/mattermost/config/config.json*  
-Mattermost 数据目录： */opt/mattermost/data*  
-Mattermost 日志目录： */opt/mattermost/logs*
+Mattermost 安装目录： */data/apps/mattermost*  
+Mattermost 数据目录： */data/apps/mattermost/data/mattermost_data*  
+Mattermost 日志目录： */data/apps/mattermost/data/mattermost_logs*  
+Mattermost 插件目录： */data/apps/mattermost/data/mattermost_plugins*  
+Mattermost 配置文件： */data/apps/mattermost/data/mattermost_config/config.json*  
 
 > config.json 包含数据库连接信息
 
@@ -115,15 +115,15 @@ Mattermost 日志目录： */opt/mattermost/logs*
 ### 版本{#version}
 
 ```shell
-# mattermost version
-cd /opt/mattermost/bin
-./mattermost version
+sudo docker exec -i mattermost /mattermost/bin/mattermost version
 ```
 
 ### 服务{#service}
 
 ```shell
 sudo docker start | stop | restart | stats mattermost
+sudo docker start | stop | restart | stats mattermost-db
+sudo docker start | stop | restart | stats pgadmin
 ```
 
 ### 命令行{#cli}

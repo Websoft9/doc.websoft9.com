@@ -35,8 +35,10 @@ tags:
 3. 通过环境检测后，进入下一步  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/oc2.png)
 
-3. 填写数据库信息（[不知道账号密码？](./user/credentials)并设置后台管理账号
+3. 填写数据库信息（[不知道账号密码？](./user/credentials)
    ![oc1](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/oc3.png)
+
+  > 数据库默认信息使用默认值，请不要更改
 
 4. 安装成功后，系统提示【删除安装目录】
    ![oc1](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/oc4.png)
@@ -152,23 +154,24 @@ Opencart 2.0 使用vQmod机制安装扩展，需提前安装并启用vQmod，具
 
 3. 重启服务后生效
 
-## 参数{#parameter}
+## OpenCart 参数{#parameter}
 
 OpenCart 应用中包含 Nginx, Apache, Docker, MySQL, phpMyAdmin 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 OpenCart 运行时所有的 Container：
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                         COMMAND                  CREATED         STATUS         PORTS                                                  NAMES
+b6addfb7c879   phpmyadmin:latest             "/docker-entrypoint.…"   6 minutes ago   Up 6 minutes   0.0.0.0:9090->80/tcp, :::9090->80/tcp                  phpmyadmin
+25555368fb33   websoft9dev/opencart:latest   "docker-php-entrypoi…"   7 minutes ago   Up 7 minutes   0.0.0.0:9001->80/tcp, :::9001->80/tcp                  opencart
+172c1fafc338   mysql:5.7                     "docker-entrypoint.s…"   7 minutes ago   Up 7 minutes   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp   opencart-db
 ```
-
-下面仅列出 OpenCart 本身的参数：
 
 ### 路径{#path}
 
-OpenCart 安装目录： */data/wwwroot/opencart*  
-OpenCart 前台配置文件： */data/wwwroot/opencart/config.php*  
-OpenCart 后台配置文件： */data/wwwroot/opencart/admin/config.php* 
+OpenCart 安装目录： */data/apps/opencart*  
+OpenCart 前台配置文件： */data/apps/opencart/data/opencart/config.php*  
+OpenCart 后台配置文件： */data/apps/opencart/data/opencart/admin/config.php* 
 
 
 ### 端口{#port}
@@ -178,7 +181,7 @@ OpenCart 后台配置文件： */data/wwwroot/opencart/admin/config.php*
 ### 版本{#version}
 
 ```shell
-sudo cat /data/logs/install_version.txt
+cat /data/apps/opencart/data/opencart/index.php |grep VERSION |cut -d"'" -f4
 ```
 
 ### 服务{#service}
