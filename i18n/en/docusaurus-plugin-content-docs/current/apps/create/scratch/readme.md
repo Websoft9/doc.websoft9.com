@@ -37,12 +37,9 @@ If you have installed Websoft9 Scratch, the following steps is for your quick st
 
 Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
-**[Scratch打开很慢？](./scratch/admin#slowly)**
+**[Scratch opens slowly?](./scratch/admin#slowly)**
 
 ## Scratch QuickStart
-
-下面以 **Scratch 构建少儿编程系统** 作为一个任务，帮助用户快速入门：
-
 
 
 ## Scratch Setup
@@ -51,38 +48,34 @@ Below is for you to solve problem, and you can contact **[Websoft9 Support](./he
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Scratch 
 
-
-通过运行`docker ps`，可以查看到 Scratch 运行时所有的 Container：
+Run `docker ps` command, view all Containers when Scratch is running:  
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                        COMMAND                  CREATED          STATUS          PORTS                                   NAMES
+537d4d38eef3   websoft9dev/scratch:latest   "nginx -g 'daemon of…"   58 seconds ago   Up 57 seconds   0.0.0.0:9001->80/tcp, :::9001->80/tcp   scratch
 ```
 
 
-下面仅列出 Scratch 本身的参数：
-
 ### Path{#path}
 
-Scratch 项目目录： */data/wwwroot/scratch*  
-Scratch 静态页面目录： */data/wwwroot/scratch/build*  
+Scratch installation directory： */data/apps/scratch*  
+Scratch site directory： */data/apps/scratch/data/scratch/build*   
 
 ### Port{#port}
 
-无特殊端口
+No special port  
 
 ### Version{#version}
 
-控制台查看
 
 ### Service{#service}
 
 ```shell
-
+sudo docker start | stop | restart scratch
 ```
 
 ### CLI{#cli}
 
-无
 
 ### API
 

@@ -124,16 +124,15 @@ The below items and **[General parameter sheet](./administrator/parameter)** is 
 Run `docker ps`, view all containers when OwnCloud is running:  
 
 ```bash
-CONTAINER ID   IMAGE                    COMMAND                  CREATED          STATUS                    PORTS                                                  NAMES
-5da52ff1d010   phpmyadmin:latest        "/docker-entrypoint.…"   18 minutes ago   Up 18 minutes             0.0.0.0:9090->80/tcp, :::9090->80/tcp                  phpmyadmin
-0f4a5b87d637   owncloud/server:latest   "/usr/bin/entrypoint…"   18 minutes ago   Up 18 minutes (healthy)   0.0.0.0:9001->8080/tcp, :::9001->8080/tcp              owncloud
-800709fedbfd   mysql:5.7                "docker-entrypoint.s…"   18 minutes ago   Up 18 minutes (healthy)   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp   owncloud-db
-c8b84fb0dca3   redis:6                  "docker-entrypoint.s…"   18 minutes ago   Up 18 minutes (healthy)   6379/tcp                                               owncloud-redis
-
+CONTAINER ID   IMAGE                              COMMAND                  CREATED             STATUS                       PORTS                                                  NAMES
+47ea9a709b5d   onlyoffice/documentserver:latest   "/app/ds/run-documen…"   About an hour ago   Up About an hour             443/tcp, 0.0.0.0:9002->80/tcp, :::9002->80/tcp         onlyofficedocs
+cd2792a962d0   phpmyadmin:latest                  "/docker-entrypoint.…"   About an hour ago   Up About an hour             0.0.0.0:9090->80/tcp, :::9090->80/tcp                  phpmyadmin
+c2cce00268eb   owncloud/server:latest             "/usr/bin/entrypoint…"   About an hour ago   Up About an hour (healthy)   0.0.0.0:9001->8080/tcp, :::9001->8080/tcp              owncloud
+bdfde6911911   mysql:5.7                          "docker-entrypoint.s…"   About an hour ago   Up About an hour (healthy)   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp   owncloud-db
+59fa97a29571   redis:6                            "docker-entrypoint.s…"   About an hour ago   Up About an hour (healthy)   6379/tcp                                               owncloud-redis
 ```
 
 ### Path{#path}
-
 
 OwnCloud installation directory: */data/apps/owncloud*  
 OwnCloud data directory: */data/apps/owncloud/data/owncloud*  

@@ -3,8 +3,8 @@ sidebar_position: 1
 slug: /mattermost
 tags:
   - Mattermost
-  - 团队协作
-  - 团队通讯
+  - Team collaboration
+  - Team communication
 ---
 
 # Mattermost Getting Started
@@ -49,9 +49,10 @@ Below is for you to solve problem, and you can contact **[Websoft9 Support](./he
 
 ## Mattermost Setup
 
-### 增加团队用户数
+### Increase the number of Teams users
 
-系统控制台 【SITE CONFIGURATION】>【Users and Teams】> 【Max Users Per Team】值来设置团队人数：
+Log in to the console and set the [SITE CONFIGURATION] > [Users and Teams] > [Max Users Per Team] values to set the team size:  
+
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/mattermost/mattermost-maxusers-websoft9.png)
 
 ### Domain Binding（Modify URL）{#dns}
@@ -73,65 +74,67 @@ Log in Mattermost console, open: **ENVIRONMENT** > **Web Server**, modify **Site
    
 4. Click the **Test Connection**, you can get the feedback *"no errors were..."* if SMTP is useful
 
-### 安装插件
+### Install the plugin
 
-例如，jitmi被用户大量使用。
+For example, JITMI is used a lot.
 
-### 语言设置{#setlang}
+### Language settings{#setlang}
 
-支持多语言（包含中文），可以登录控制台，通过【SITE CONFIGURATION】>【Localization】设置语言 
+Support multiple languages (including Chinese), log in to the console, open [SITE CONFIGURATION] > [Localization], set the language 
 
 ## Reference sheet{#parameter}
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Mattermost
 
 
-通过运行`docker ps`，可以查看到 Mattermost 运行时所有的 Container：
+Run `docker ps` command, view all Containers when Mattermost is running:
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                                       COMMAND                  CREATED             STATUS                       PORTS                                                                NAMES
+1c26e24d9c18   dpage/pgadmin4:latest                       "/entrypoint.sh"         About an hour ago   Up About an hour             443/tcp, 0.0.0.0:9090->80/tcp, :::9090->80/tcp                       pgadmin
+1d96d7bd3dd8   mattermost/mattermost-team-edition:latest   "/entrypoint.sh matt…"   About an hour ago   Up About an hour (healthy)   8067/tcp, 8074-8075/tcp, 0.0.0.0:9001->8065/tcp, :::9001->8065/tcp   mattermost
+4baf3c38539b   postgres:13-alpine                          "docker-entrypoint.s…"   About an hour ago   Up About an hour             5432/tcp                                                             mattermost-db
 ```
 
 
-下面仅列出 Mattermost 本身的参数：
-
 ### Path{#path}
 
-Mattermost installation directory： */opt/mattermost/*  
-Mattermost 配置文件： */opt/mattermost/config/config.json*  
-Mattermost 数据目录： */opt/mattermost/data*  
-Mattermost 日志目录： */opt/mattermost/logs*
+Mattermost installation directory:： */data/apps/mattermost*  
+Mattermost data directory:： */data/apps/mattermost/data/mattermost_data*  
+Mattermost log directory:： */data/apps/mattermost/data/mattermost_logs*  
+Mattermost plugin directory:： */data/apps/mattermost/data/mattermost_plugins*  
+Mattermost configuration file： */data/apps/mattermost/data/mattermost_config/config.json*  
 
-> config.json 包含数据库连接信息
+> The config.json file contains database connection information
 
 ### Port{#port}
 
-无特殊端口
+No special port
 
 ### Version{#version}
 
 ```shell
-# mattermost version
-cd /opt/mattermost/bin
-./mattermost version
+sudo docker exec -i mattermost /mattermost/bin/mattermost version
 ```
 
 ### Service{#service}
 
 ```shell
 sudo docker start | stop | restart | stats mattermost
+sudo docker start | stop | restart | stats mattermost-db
+sudo docker start | stop | restart | stats pgadmin
 ```
 
 ### CLI{#cli}
 
-Mattermost 提供了 `mattermost` 和 `mmctl` 两种命令，[mattermost](https://docs.mattermost.com/administration/command-line-tools.html)是服务器端命令，[mmctl](https://docs.mattermost.com/administration/mmctl-cli-tool.html)基于API的客户端命令
- 
+Mattermost provides both 'mattermost' and 'mmctl' commands, [mattermost](https://docs.mattermost.com/administration/command-line-tools.html) is a server-side command, [mmctl]( https://docs.mattermost.com/administration/mmctl-cli-tool.html) API-based client commands
+
 ```
-/opt/mattermost/bin/mattermost -h
+/opt/mattermost/bin/mattermost -h #In-container operations
 /opt/mattermost/bin/mmctl -h
 ```
 
-如果运行 /opt/mattermost/bin/mmctl version 查询出的版本稍微低一点
+If you run /opt/mattermost/bin/mmctl version, the version will be slightly lower
 
 ### API
 

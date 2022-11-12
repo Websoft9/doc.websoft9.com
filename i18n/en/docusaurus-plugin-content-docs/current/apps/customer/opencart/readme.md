@@ -46,7 +46,6 @@ Below is for you to solve problem, and you can contact **[Websoft9 Support](./he
 
 ## OpenCart QuickStart
 
-下面以 **使用 OpenCart 构建在线商城** 作为一个任务，帮助用户快速入门：
 
 ## OpenCart Setup
 
@@ -136,31 +135,29 @@ You can change the domain of OpenCart by the following steps:
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage OpenCart
 
-通过运行`docker ps`，可以查看到 OpenCart 运行时所有的 Container：
+Run `docker ps` command, view all Containers when OpenCart is running:
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                         COMMAND                  CREATED         STATUS         PORTS                                                  NAMES
+b6addfb7c879   phpmyadmin:latest             "/docker-entrypoint.…"   6 minutes ago   Up 6 minutes   0.0.0.0:9090->80/tcp, :::9090->80/tcp                  phpmyadmin
+25555368fb33   websoft9dev/opencart:latest   "docker-php-entrypoi…"   7 minutes ago   Up 7 minutes   0.0.0.0:9001->80/tcp, :::9001->80/tcp                  opencart
+172c1fafc338   mysql:5.7                     "docker-entrypoint.s…"   7 minutes ago   Up 7 minutes   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp   opencart-db
 ```
 
 ### Path{#path}
   
-OpenCart installation directory: */data/wwwroot/OpenCart*  
-OpenCart catalog configuration file: */data/wwwroot/opencart/config.php*   
-OpenCart admin configuration file: */data/wwwroot/opencart/admin/config.php*
+OpenCart installation directory: */data/apps/opencart*    
+OpenCart catalog configuration file: */data/apps/opencart/data/opencart/config.php*    
+OpenCart admin configuration file: */data/apps/opencart/data/opencart/admin/config.php* 
   
 ### Port{#port}
 
-| Port | Use                                          | Necessity |
-| ------ | --------------------------------------------- | ------ |
-| 3306 | Remote connect MySQL | Optional |
-| 80 | HTTP requests for OpenCart | Required |
-| 443 | HTTPS requests OpenCart | Optional |
-
+No special port
 
 ### Version{#version}
 
 ```shell
-sudo cat /data/logs/install_version.txt
+cat /data/apps/opencart/data/opencart/index.php |grep VERSION |cut -d"'" -f4
 ```
 
 ### Service{#service}
@@ -171,7 +168,6 @@ sudo docker start | stop | restart | stats opencart
 
 ### CLI{#cli}
 
-无
 
 ### API
 
