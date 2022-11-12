@@ -30,22 +30,22 @@ tags:
 1. 使用本地电脑浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 就进入引导首页
 
 2. 进入安装界面，同意安装协议
-   ![oc1](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/oc1.png)  
+   ![oc1](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/opencart-install01-websoft9.png)  
 
 3. 通过环境检测后，进入下一步  
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/oc2.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/opencart-install02-websoft9.png)
 
 3. 填写数据库信息（[不知道账号密码？](./user/credentials)
-   ![oc1](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/oc3.png)
+   ![oc1](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/opencart-install03-websoft9.png)
 
   > 数据库默认信息使用默认值，请不要更改
 
 4. 安装成功后，系统提示【删除安装目录】
-   ![oc1](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/oc4.png)
+   ![oc1](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/opencart-install04-websoft9)
 
 5. SSH 工具连接服务器，删除安装目录
    ```
-   rm -rf /data/wwwroot/opencart/upload/install
+   rm -rf /data/apps/opencart/data/opencart/install
    ```
 
 6. 体验商城前台和后台
