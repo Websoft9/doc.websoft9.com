@@ -122,8 +122,8 @@ aba3f411351a   websoft9dev/mongocompass:v1.31                         "/dockerst
 ### 路径{#path}
 
 Graylog 安装路径:  */data/apps/graylog*  
-Graylog 数据目录:  */data/apps/graylog/data/graylog/graylog_data*  
-Graylog 插件目录:  */data/apps/graylog/data/graylog/graylog_plugin*  
+Graylog 数据目录:  */data/apps/graylog/data/graylog_data*  
+Graylog 插件目录:  */data/apps/graylog/data/graylog_plugin*  
 
 ### 端口{#port}
 
