@@ -35,7 +35,7 @@ tags:
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/ghost/ghost-register001-websoft9.png)
 
 3. 开始创建管理员账号，以邮箱地址为用户名，密码不要设置过于简单  
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/ghost/ghost-register002-websoft9.png)
+
 
 > 需要了解更多 Ghost 的使用，参考官方：[Tutorials](https://ghost.org/tutorials/) 和 [FAQ](https://ghost.org/faq/)
 

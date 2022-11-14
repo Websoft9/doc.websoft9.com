@@ -37,7 +37,7 @@ If you have installed Websoft9 Ghost, the following steps is for your quick star
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/ghost/ghost-register001-websoft9.png)
 
 3. Create your account with the email address as username. Don't set a too simple password.  
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/ghost/ghost-register002-websoft9.png)
+
    
 > More about how to use Ghost, please refer to official [Tutorials](https://ghost.org/tutorials/) and [FAQ](https://ghost.org/faq/).
 
