@@ -62,7 +62,7 @@ CONTAINER ID   IMAGE                        COMMAND                  CREATED    
 ### 路径{#path}
 
 Scratch 安装目录： */data/apps/scratch*  
-Scratch 静态页面目录： */data/apps/scratch/data/scratch/build*   
+Scratch 静态页面目录： */data/apps/scratch/data/scratch*   
 
 ### 端口{#port}
 

@@ -59,7 +59,7 @@ CONTAINER ID   IMAGE                        COMMAND                  CREATED    
 ### Path{#path}
 
 Scratch installation directory： */data/apps/scratch*  
-Scratch site directory： */data/apps/scratch/data/scratch/build*   
+Scratch site directory： */data/apps/scratch/data/scratch*   
 
 ### Port{#port}
 

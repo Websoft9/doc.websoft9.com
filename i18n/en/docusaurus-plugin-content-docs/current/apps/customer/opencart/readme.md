@@ -26,15 +26,15 @@ If you have installed Websoft9 OpenCart, the following steps is for your quick s
 
 ### Steps for you
 
-1. Using local Chrome or Firefox to visit the URL *https://domain* or *https://Internet IP*, start to install    
+1. Using local Chrome or Firefox to visit the URL *https://domain* or *https://Internet IP*,you will enter initial wizard of OpenCart
 2. Agree license, Click "Continue"
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/opencart-install01-websoft9.png)
 3. Verify the environment and go to next step  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/opencart-install02-websoft9.png)
-4. Database connection configuration, you can use the MySQL in this Server([Don's know password?](./user/credentials)), and you can use other database services
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/opencart-install03-websoft9.png)
-5. When the installation is completed,it will go the following interface
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/opencart-install04-websoft9)
+4. Set up an administrator account
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/opencart-install03-websoft9.png)  
+5. When the configuration is completed,it will go the following interface
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/opencart-install04-websoft9.png)
 6. Please delete */data/apps/opencart/data/opencart/install* folder.
 7. You can use OpenCart now
 

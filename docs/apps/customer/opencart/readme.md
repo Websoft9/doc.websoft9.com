@@ -35,13 +35,13 @@ tags:
 3. 通过环境检测后，进入下一步  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/opencart-install02-websoft9.png)
 
-3. 填写数据库信息（[不知道账号密码？](./user/credentials)
+3. 设置管理员账号
    ![oc1](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/opencart-install03-websoft9.png)
 
   > 数据库默认信息使用默认值，请不要更改
 
 4. 安装成功后，系统提示【删除安装目录】
-   ![oc1](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/opencart-install04-websoft9)
+   ![oc1](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/opencart-install04-websoft9.png)
 
 5. SSH 工具连接服务器，删除安装目录
    ```
