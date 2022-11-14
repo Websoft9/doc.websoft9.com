@@ -173,41 +173,40 @@ Ghost 支持网站向客户以订阅的方式售卖文章，是知识付费创�
   ![Ghost 代码插入](https://libs.websoft9.com/Websoft9/DocsPicture/en/ghost/ghost-setsubs-websoft9.png)
 
 
-## 参数{#parameter}
+## Ghost 参数{#parameter}
 
 Ghost 应用中包含 Apache, Docker, MySQL 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。  
 
 通过运行`docker ps`，可以查看到 Ghost 运行时所有的 Container：
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE               COMMAND                  CREATED       STATUS       PORTS                                                  NAMES
+3b1c248cc847   phpmyadmin:latest   "/docker-entrypoint.…"   2 hours ago   Up 2 hours   0.0.0.0:9090->80/tcp, :::9090->80/tcp                  phpmyadmin
+cadf419ea7a8   ghost:latest        "docker-entrypoint.s…"   2 hours ago   Up 2 hours   0.0.0.0:9001->2368/tcp, :::9001->2368/tcp              ghost
+e069a73a1f73   mysql:8.0           "docker-entrypoint.s…"   2 hours ago   Up 2 hours   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp   ghost-db
 ```
-
-
-下面仅列出 Ghost 本身的参数：
 
 ### 路径{#path}
 
-Ghost 安装目录： */data/wwwroot/ghost/content*  
-Ghost 配置文件： */data/wwwroot/ghost/config.production.json*  
-Ghost 容器编排文件： */data/wwwroot/ghost/docker-compose.yml*  
-
+Ghost 安装目录： */data/apps/ghost*  
+Ghost 配置文件： */data/apps/ghost/data/ghost/config.production.json*  
 
 ### 端口{#port}
 
-| 端口号 | 用途                                          | 必要性 |
-| ------ | --------------------------------------------- | ------ |
-| 8080   | Ghost 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
-
+无特殊端口
 
 ### 版本{#version}
 
-控制塔查看
+```
+ls /data/apps/ghost/data/ghost/versions
+```
 
 ### 服务{#service}
 
 ```shell
 sudo docker start | stop | restart | stats ghost
+sudo docker start | stop | restart | stats ghost-db
+sudo docker start | stop | restart | stats phpmyadmin
 ```
 
 ### 命令行{#cli}
