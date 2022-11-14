@@ -89,7 +89,7 @@ tags:
 
 3. 重启 Ghost 容器
    ```
-   cd /data/wwwroot/ghost && docker-compose up -d && docker restart ghost
+   cd /data/apps/ghost && docker-compose up -d && docker restart ghost
    ```
 
 4. 登录 Ghost 后台，打开：【Manage】>【Staff】，通过【Invite People】 测试邮箱可用性
@@ -111,7 +111,7 @@ tags:
 2. 重启服务后生效
    ```
    sudo systemctl restart nginx
-   cd /data/wwwroot/ghost && sudo docker-compose up -d && sudo docker restart ghost
+   cd /data/apps/ghost && sudo docker-compose up -d && sudo docker restart ghost
    ```
 
 

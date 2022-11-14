@@ -47,8 +47,6 @@ Below is for you to solve problem, and you can contact **[Websoft9 Support](./he
 
 ## Ghost QuickStart
 
-This task **使用 Ghost 构建博客** is for your Ghost QuickStart
-
 
 ## Ghost Setup
 
@@ -71,7 +69,7 @@ This task **使用 Ghost 构建博客** is for your Ghost QuickStart
    ```
 3. restart Ghost docker;
    ```
-   cd /data/wwwroot/ghost && docker-compose up -d && docker restart ghost
+   cd /data/apps/ghost && docker-compose up -d && docker restart ghost
    ```
 4. log in Ghost backend, open 【Manage】>【Staff】and test it by 【Invite People】.
 
@@ -91,7 +89,7 @@ Complete **[Five steps for Domain](./administrator/domain_step)** ，Set the URL
 2. Run the related commands. Above settings work after restarting the service.
    ```
    sudo systemctl restart nginx
-   cd /data/wwwroot/ghost && sudo docker-compose up -d && sudo docker restart ghost
+   cd /data/apps/ghost && sudo docker-compose up -d && sudo docker restart ghost
    ```
 
 ### Personalization
@@ -158,35 +156,37 @@ Steps are as follows:
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Ghost
 
-通过运行`docker ps`，可以查看到 Ghost 运行时所有的 Container：
+Run `docker ps` command, view all Containers when Ghost is running:
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE               COMMAND                  CREATED       STATUS       PORTS                                                  NAMES
+3b1c248cc847   phpmyadmin:latest   "/docker-entrypoint.…"   2 hours ago   Up 2 hours   0.0.0.0:9090->80/tcp, :::9090->80/tcp                  phpmyadmin
+cadf419ea7a8   ghost:latest        "docker-entrypoint.s…"   2 hours ago   Up 2 hours   0.0.0.0:9001->2368/tcp, :::9001->2368/tcp              ghost
+e069a73a1f73   mysql:8.0           "docker-entrypoint.s…"   2 hours ago   Up 2 hours   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp   ghost-db
 ```
 
 ### Path{#path}
 
-Ghost installation directory: */data/wwwroot/ghost/content*  
-Ghost configuration file: */data/wwwroot/ghost/config.production.json*  
-Ghost Docker compose file: */data/wwwroot/ghost/docker-compose.yml*
+Ghost installation directory： */data/apps/ghost*  
+Ghost configuration file： */data/apps/ghost/data/ghost/config.production.json*  
+
 
 ### Port{#port}
 
-| Port | Use                                          | Necessity |
-| ------ | --------------------------------------------- | ------ |
-| 80 | Use HTTP to visit Ghost | Optional |
-| 443 | Use HTTPS to visit Ghost | Optional |
-| 9090 | web-base GUI database management tool, phpMyAdmin | Optional |
-| 3306 | local database client to access database | Optional |
+No special port  
 
 ### Version{#version}
 
-控制塔查看
+```
+ls /data/apps/ghost/data/ghost/versions
+```
 
 ### Service{#service}
 
 ```shell
-sudo systemctl start | stop | restart | status ghost
+sudo docker start | stop | restart | stats ghost
+sudo docker start | stop | restart | stats ghost-db
+sudo docker start | stop | restart | stats phpmyadmin
 ```
 
 ### CLI{#cli}
