@@ -108,7 +108,7 @@ e628a73126fd   bitnami/kafka:2.8                             "/opt/bitnami/scrip
 
 Kafka 安装目录：*/data/apps/kafka*  
 Kafka 数据目录：*/data/apps/kafka/data/kafka_data*  
-Kafka 配置目录：*/data/apps/kafka/data/kafka_data/kafka/config*   
+Kafka 配置目录：*/opt/bitnami/kafka/conf（容器内）*   
 Zookeeper 数据目录：*/data/apps/kafka/data/zookeeper_data*   
 
 ### 端口
