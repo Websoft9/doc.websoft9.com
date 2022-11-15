@@ -95,7 +95,7 @@ fa5d3ce16865   knowagelabs/knowage-python-docker:8.0.0-SNAPSHOT   "./entrypoint.
 ### 路径{#path}
 
 Knowage 安装目录： */data/apps/knowage*  
-Knowage 资源目录： */data/apps/knowage/data/resources*  
+Knowage 资源目录： */data/apps/knowage/data/knowage*  
 
 ### 端口{#port}
 
