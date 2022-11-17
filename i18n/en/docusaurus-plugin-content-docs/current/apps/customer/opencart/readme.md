@@ -70,8 +70,8 @@ Enable a new language package in Opencart have the following steps(e.g Chinese l
 2. Unzip package, you can see a folder name `upload` that includes two folder `admin`, `catalog`
 3. Use SFTP to upload them to your Server
    ```
-   admin->language->zh_cn  to  ```/data/wwwroot/opencart/admin/language``` 
-   catalog->language->zh-cn to ```/data/wwwroot/opencart/catalog/language```
+   admin->language->zh_cn  to  /data/apps/opencart/data/opencart/admin/language
+   catalog->language->zh-cn to /data/apps/opencart/data/opencart/catalog/language
    ```
 4. Log in OpenCart, go to【System】>【localization】>【languages】, add new language and configure it
 	![websoft9](https://libs.websoft9.com/Websoft9/DocsPicture/zh/opencart/opencart-language-1-websoft9.png)
