@@ -15,36 +15,37 @@ This chapter is special guide for ERPNext maintenance and settings. And you can 
 
 ### ERPNext Backup
 
-**自动备份（计划任务）**
+#### **Automatic backups(scheduled tasks)**
 
-1. 登录 ERPNext 后，依次打开：【Settings】>【System Settings】
+1. Log in to ERPNext and open: Settings> System Settings  
    ![ERPNext backup](https://libs.websoft9.com/Websoft9/DocsPicture/zh/erpnext/erpnext-autobk-websoft9.png)
 
-2. 等待计划任务执行
+2. Wait for the scheduled task to execute  
 
 
-**命令行备份**
+#### **Manual backup**
 
-[手动输入命令](https://frappeframework.com/docs/user/en/bench/reference/backup)也可以备份 ERPNext：
+[Manual backup](https://frappeframework.com/docs/user/en/bench/reference/backup) ERPNext：
 
-1.. 进入 ERPNext 主容器
+1. Enter the ERPNext container  
    ```
    docker exec -it erpnext-worker-default  bash
    ```
-2. 在容器中运行备份命令
+2. Run the backup command  
+
    ```
-   # 查询项目文件夹名称（IP 或 域名）
+   # Query the project folder name (IP or DNS)
    ls
 
-   # 备份
+   # backup  
    bench --site 121.41.86.118 backup
    ```
 
-#### 获取备份文件
+#### Get the backup file  
 
-备份文件存储 ERPNext 的持久存储中。
+Backup files are stored in persistent storage for ERPNext.  
 
-   > 后台 Download Backups 处下载失败，原因有待研究。故，直接从上面的路径下载即可
+   > Download fails at Download Backups in the background, the cause remains to be investigated. You can download it directly from the path above.  
 
 
 ## Troubleshoot{#troubleshoot}

@@ -130,13 +130,13 @@ More details about CE upgrade to EE, please refer to official docs: [Updating Co
 
 In addition to the Gitlab issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
 
-#### 公司固定 IP 突然不能访问 Gitlab？
+#### Corporate fixed IP suddenly can't access Gitlab?  
 
-**现象描述**：通过公司网络（固定IP）突然（以前可以访问）不能访问Gitlab，而通过自己的手机wifi可以访问。   
+**Phenomenon**：Suddenly (previously accessible) Gitlab is not accessible through the corporate network (fixed IP), but can be accessed through your own mobile wifi.        
 
-**原因分析**：GitLab 有一个rack-attack安全机制。某种条件下（例如：公司大量并发访问 GitLab）rack-attack安全将你的 IP 错误地拦截，导致了从此不能访问 GitLab   
+**Why**：GitLab has a rack-attack security mechanism. Under certain conditions (e.g., a large number of concurrent access to GitLab), rack-attack security will mistakenly block your IP, resulting in no access to GitLab from now on.      
 
-**解决方案**：修改 [Gitlab 配置文件](../gitlab#path) 相关项
+**Solution**：Modify the [Gitlab Configuration file](../gitlab#path)
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-attachip-websoft9.png)
 
@@ -150,13 +150,9 @@ The minimum required free memory for GitLab is 4G. If the Server memory is limit
 
 ## FAQ{#faq}
 
-#### 没有买 License 可使用 GitLab 企业版吗？
+#### Can I use GitLab Enterprise without a license?  
 
-如果安装了 GitLab 企业版，在没有导入 License 的情况下使用的是 社区版的所有功能。[GitLab-EE vs GitLab-CE](https://about.gitlab.com/install/ce-or-ee/)
-
-#### How to install GitLab？
-
-本项目采用 [Omnibus GitLab包](https://gitlab.com/gitlab-org/omnibus-gitlab) 的安装方式。Omnibus GitLab 是官方推荐的一种安装方法，它自带了 GitLab 所需的所有组件和服务，并可以省去繁琐的配置，同时它自带 CLI 工具，便于 GitLab 升级和维护。
+If you have GitLab Enterprise installed, but did not import License, you are using all the features of Community Edition.。[GitLab-EE vs GitLab-CE](https://about.gitlab.com/install/ce-or-ee/)
 
 #### GitLab support multi-language?
 

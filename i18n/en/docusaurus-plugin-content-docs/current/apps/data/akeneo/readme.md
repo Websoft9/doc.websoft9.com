@@ -7,9 +7,9 @@ tags:
 
 # Akeneo Getting Started
 
-Akeneo is an open source Product Experience Management (PXM) and Product Information Management (PIM) software product. Helps merchants and brands deliver engaging customer experiences across all sales channels, improve product data quality, and simplify product catalog management. Using Akeneo as product infrastructure management can transform business models and reduce product enrichment costs.
+[Akeneo](https://www.akeneo.com/) is an open source Product Experience Management (PXM) and Product Information Management (PIM) software product. Helps merchants and brands deliver engaging customer experiences across all sales channels, improve product data quality, and simplify product catalog management. Using Akeneo as product infrastructure management can transform business models and reduce product enrichment costs.
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/en/akeneo/akeneo-main-websoft9.png)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/akeneo/akeneo-main-websoft9.png)
 
 If you have installed Websoft9 Akeneo, the following steps is for your quick start
 

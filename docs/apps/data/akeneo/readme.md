@@ -2,14 +2,12 @@
 sidebar_position: 100
 slug: /akeneo
 tags:
-  - Web 面板
-  - 可视化
-  - GUI
+  - Akeneo
 ---
 
 # 快速入门
 
-Akeneo 是一个开源的产品体验管理 (PXM) 和产品信息管理 (PIM) 软件产品。可帮助商家和品牌在所有销售渠道中提供引人入胜的客户体验、提高产品数据质量并简化产品目录管理。使用 Akeneo 作为产品基础设施管理，能够转变业务模式，消减产品浓缩成本。
+[Akeneo](https://www.akeneo.com/) 是一个开源的产品体验管理 (PXM) 和产品信息管理 (PIM) 软件产品。可帮助商家和品牌在所有销售渠道中提供引人入胜的客户体验、提高产品数据质量并简化产品目录管理。使用 Akeneo 作为产品基础设施管理，能够转变业务模式，消减产品浓缩成本。
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/akeneo/akeneo-main-websoft9.png)
 
