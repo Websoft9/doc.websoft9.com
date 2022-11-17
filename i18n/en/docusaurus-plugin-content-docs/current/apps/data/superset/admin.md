@@ -53,6 +53,6 @@ find /data/wwwroot/superset -type d -exec chmod 750 {} \;
 find /data/wwwroot/superset -type f -exec chmod 640 {} \;
 ```
 
-#### 是否支持 Google Authentication？
+#### Does Google Authentication support it?
 
-SuperSet 默认只提供了邮件登录，更多登录方式使用需参考其框架文档：[Flask-AppBuilder](https://flask-appbuilder.readthedocs.io/en/latest/security.html#supported-authentication-types)
+SuperSet only provides email login by default, and more login methods need to refer to：[Flask-AppBuilder](https://flask-appbuilder.readthedocs.io/en/latest/security.html#supported-authentication-types)

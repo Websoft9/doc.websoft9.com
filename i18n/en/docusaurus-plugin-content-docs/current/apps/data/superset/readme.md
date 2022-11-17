@@ -177,7 +177,7 @@ Try to retrieve your password by the flowing steps:
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Superset
 
-通过运行`docker ps`，可以查看到 Superset 运行时所有的 Container：
+Run `docker ps` command, view all Containers when Superset is running:
 
 ```
 CONTAINER ID   IMAGE                           COMMAND                  CREATED              STATUS                                 PORTS                               NAMES
@@ -188,20 +188,17 @@ d6670fa1bc11   apache/superset:latest          "/usr/bin/docker-ent…"   About 
 06bf52f4b856   redis:3.2                       "docker-entrypoint.s…"   About a minute ago   Up About a minute                      127.0.0.1:6379->6379/tcp            superset_cache
 ```
 
-下面仅列出 Superset 本身的参数：
 
 ### Path{#path}
 
-Superset 源码目录： */data/wwwroot/superset*  
-Superset 数据目录： */data/wwwroot/superset_home*  
-Superset 配置目录： */data/wwwroot/superset/docker*  
-Superset 配置文件： */data/wwwroot/superset/docker/pythonpath_dev/superset_config.py*
+Superset installation directory： */data/apps/superset*  
+Superset data directory： */data/apps/superset/superset_home*  
+Superset configuration directory： */data/apps/superset/src/docker*  
+Superset configuration file： */data/apps/superset/src/docker/pythonpath_dev/superset_config.py*
 
 ### Port{#port}
 
-| 端口号 | 用途                                           | 必要性 |
-| ------ | ---------------------------------------------- | ------ |
-| 9001   | Superset 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
+No special port  
 
 ### Version
 
@@ -222,7 +219,7 @@ sudo docker  start | stop | restart | status superset-cache
 
 ### CLI
 
-uperset have CLI `superset` for administrator.  
+Superset have CLI `superset` for administrator.  
 
 Use **SSH** to login Server, and run the following command to Superset container
 

@@ -9,4 +9,4 @@ tags:
 
 # Superset Solution
 
-Superset 可以与其他的软件平台**集成**一起使用，解决 大数据分析 过程中的各种[场景问题](https://superset.apache.org/)。
+You can use Superset integrated other software for [Data Analysis](https://superset.apache.org/).

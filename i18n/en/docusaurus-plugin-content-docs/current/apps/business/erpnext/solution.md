@@ -9,4 +9,4 @@ tags:
 
 # ERPNext Solution
 
-ERPNext 可以与其他的软件平台**集成**一起使用，解决 构建企业ERP系统 过程中的各种[场景问题](#)。
+ERPNext can be used with other software platform integrations to solve various scenarios in the process of building enterprise ERP systems.
