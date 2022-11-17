@@ -39,15 +39,6 @@ tags:
 4. 修改语言：通过右上角国旗图标设置你所需的语言
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/superset/superset-setlanguagech-websoft9.png)
 
-   > 在 0.999 及以上的版本中，Superset 取消了菜单栏的语言设置，须通过修改配置文件进行语言设置，方法如下:
-   >
-   > 1. 进入 Superset 容器：docker exec -it -u root superset-app bash
-   > 2. 安装 vim 编辑器：apt-get update && apt-get install vim -y
-   > 3. 编辑配置文件：vim superset/config.py
-   > 4. 找到本地化配置项，将值设为 zh ，切换为中文环境：BABEL_DEFAULT_LOCALE = 'zh'
-   > 5. Ctrl + D 退出容器，并重启容器：docker restart superset-app
-   > 6. 重新打开 Superset，查看中文界面
-
 ### 出现问题？
 
 若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或 **[FAQ](./faq#setup)** 尝试快速解决问题：
