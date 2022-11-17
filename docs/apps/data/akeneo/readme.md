@@ -60,8 +60,8 @@ db9a7668dad3   websoft9dev/akeneo:latest                                  "/entr
 
 ### 路径{#path}
 
-Akeneo 安装目录： */data/apps/akeneof*  
-Akeneo 配置文件： */data/apps/akeneo/src/000-default.conf*  
+Akeneo 安装目录： */data/apps/akeneo*  
+Akeneo 配置文件： */data/apps/akeneo/000-default.conf*  
 Akeneo 站点目录： */data/apps/akeneo/data/akeneo*    
 
 ### 端口{#port}

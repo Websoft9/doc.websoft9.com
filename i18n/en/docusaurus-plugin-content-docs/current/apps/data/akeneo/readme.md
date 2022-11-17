@@ -58,8 +58,8 @@ db9a7668dad3   websoft9dev/akeneo:latest                                  "/entr
 
 ### Path{#path}
 
-Akeneo installation directory: */data/apps/akeneof*  
-Akeneo configuration file: */data/apps/akeneo/src/000-default.conf*  
+Akeneo installation directory: */data/apps/akeneo*  
+Akeneo configuration file: */data/apps/akeneo/000-default.conf*  
 Akeneo Site Directory: */data/apps/akeneo/data/akeneo*     
 
 ### Port{#port}
