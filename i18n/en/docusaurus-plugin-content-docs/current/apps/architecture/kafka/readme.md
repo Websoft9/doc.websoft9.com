@@ -110,7 +110,7 @@ e628a73126fd   bitnami/kafka:2.8                             "/opt/bitnami/scrip
 
 Kafka installation directory: */data/apps/kafka*  
 Kafka data directory: */data/apps/kafka/data/kafka_data*  
-Kafka configuration directory：*/data/apps/kafka/data/kafka_data/kafka/config*   
+Kafka configuration directory：*/opt/bitnami/kafka/conf（Inside the kafka container）*   
 Zookeeper data directory: */data/apps/kafka/data/zookeeper_data* 
   
 ### Port{#port}
