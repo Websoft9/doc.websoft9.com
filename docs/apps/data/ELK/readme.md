@@ -18,13 +18,13 @@ tags:
 ## 准备
 
 1. 在云控制台获取您的 **服务器公网 IP 地址**
-2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:80** 和 **TCP:9001** 端口是否开启
+2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **80** 和 **9200** 端口是否开启
 3. 在服务器中查看 ELK 的 **[默认账号和密码](./user/credentials)**
 4. 若想用域名访问 ELK **[域名五步设置](./administrator/domain_step)** 过程
 5. 登录云服务器，运行下面的命令，拉取 ELK 相关 Docker 镜像并启动容器
 
    ```
-   cd /data/wwwroot/elk && docker-compose pull && docker-compose up -d
+   cd /data/apps/elk && docker-compose pull && docker-compose up -d
    ```
 
    > Elastic 开源版 License 不允许第三方的分发行为，但允许用户免费使用，所以拉取镜像的动作由用户自行操作。
@@ -155,7 +155,7 @@ ELK 配置 SMTP 发邮件的步骤：：
 如果用户忘记了密码，需通过重新运行容器的方式重置密码：
 
 ```
-cd /data/wwwroot/elk
+cd /data/apps/elk
 docker-compose down && docker-compose up -d
 ```
 
@@ -180,24 +180,18 @@ de14eb80b9f9   elasticsearch:7.13.4   "/bin/tini -- /usr/l…"   4 minutes ago  
 
 ELK Stack 包含：Elasticsearch, Kibana, Logstash 等组件
 
-ELK 安装目录： */data/wwwroot/elk*  
-ELK 配置目录： */data/wwwroot/elk/src*  
-ELK 配置容器配置文件： */data/wwwroot/elk/.env*  
-
-Logstash 配置文件： */data/wwwroot/elk/src/logstash/pipelinelogstash.conf*  
-Kibana 配置文件： */data/wwwroot/elk/src/kibana/config/kibana.yml*   
-Elasticsearch 配置文件： */data/wwwroot/elk/src/elasticsearch/config/elasticsearch.yml*  
+ELK 安装目录： */data/apps/elk*  
+ELK 配置目录： */data/apps/elk/src*  
+Logstash 配置文件： */data/apps/elk/src/logstash/pipelinelogstash.conf*  
+Kibana 配置文件： */data/apps/elk/src/kibana/config/kibana.yml*   
+Elasticsearch 配置文件： */data/apps/elk/src/elasticsearch/config/elasticsearch.yml*  
 
 ### 端口{#port}
 
 | 端口号 | 用途                                         | 必要性 |
 | ------ | -------------------------------------------- | ------ |
-| 9001   | kibana 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
-| 9200   | Elasticsearch HTTP | 可选   |
-| 9300   | Elasticsearch TCP | 可选   |
+| 9200   | Elasticsearch HTTP | 必须   |
 | 9600   | Logstash API | 可选   |
-| 5000   | Logstash TCP | 可选   |
-| 5044   | Logstash TCP	 | 可选   |
 
 ### 版本
 

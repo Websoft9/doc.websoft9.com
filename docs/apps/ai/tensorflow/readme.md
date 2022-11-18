@@ -18,7 +18,7 @@ tags:
 部署 Websoft9 提供的 TensorFlow 之后，需完成如下的准备工作：
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:6006** 端口已经开启
+2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80, 6006** 端口已经开启
 3. 在服务器中查看 TensorFlow 的 **[默认账号和密码](./user/credentials)**  
 4. 若想用域名访问  TensorFlow **[域名五步设置](./administrator/domain_step)** 过程
 
@@ -27,13 +27,27 @@ tags:
 
 ### 详细步骤
 
-1. 使用 SSH 登录服务器后，查看 TensorFlow 服务状态
-   ```
-   sudo systemctl status tensorflow
-   ```
-2. 使用本地电脑的浏览器访问网址：*http://域名:6006* 或 *http://服务器公网IP:6006*, 进入登陆页面
+1. 使用本地电脑的浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入登陆页面
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/tensorflow/tensorflow-login-websoft9.png)
 
-3. 输入账号密码（[不知道账号密码？](./user/credentials)），成功登录到 TensorBoard
+2. SSH登陆服务器，执行如下命令取得token后填入登陆页面，并点击【Login】
+   ```
+   $ docker exec -it tensorflow jupyter notebook list
+   Currently running servers:
+   http://0.0.0.0:8888/?token=c8929544462391e32bbf0d7763b7b5dda3ab00b2f14da5b9 :: /tf
+
+   ```
+
+3. 登陆控制台，体验jupyter的强大功能（编辑源码，终端运行）
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/tensorflow/tensorflow-main-websoft9.png)
+
+4. 产品集成了 TensorBoard 工具，通过下面命令启动
+   ```
+   $ docker exec -it tensorflow bash
+   $ cd /usr/local/lib/python3.8/dist-packages/tensorboard && tensorboard --logdir=/data/logs --port 6006 --host 0.0.0.0
+   ```
+
+5. 使用浏览器访问：*http://域名:6006* 或 *http://服务器公网IP:6006*, 验证图形化工具 - TensorBoard
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/tensorflow/tensorflow-board-websoft9.png)
 
 > 需要了解更多 TensorFlow 的使用，请参考官方文档：[TensorFlow Documentation](https://www.tensorflow.org/learn)
@@ -68,55 +82,39 @@ tags:
 
 本部署方案通过 Nginx 验证访问控制 TensorBoard 的访问。修改密码的方案参考：[Nginx .auth_basic 认证](./nginx#authbasic)
 
-### 图形化工具 - TensorBoard
-
-[TensorBoard](https://www.tensorflow.org/tensorboard/) 是 Tensorflow 的官方提供的可视化工具，它对 Tensorflow 日志文件进行程序状态的可视化分析。
-
-1. 使用本地电脑的浏览器访问网址：*http://域名:6006* 或 *http://服务器公网IP:6006*, 进入登陆页面
-
-2. 输入账号密码（[不知道账号密码？](./user/credentials)），成功登录到 TensorBoard
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/tensorflow/tensorflow-board-websoft9.png)
-
-3. TensorBoard 工作台
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/tensorflow/tensorboard.gif)
-
-## 参数{#parameter}
+## TensorFlow 参数{#parameter}
 
 TensorFlow 应用中包含 Python, Nginx, Docker 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 TensorFlow 运行时所有的 Container：
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                                  COMMAND                  CREATED        STATUS         PORTS                                                                                  NAMES
+f7e151917bec   tensorflow/tensorflow:latest-jupyter   "/bin/bash -c 'cd /u…"   15 hours ago   Up 2 minutes   0.0.0.0:6006->6006/tcp, :::6006->6006/tcp, 0.0.0.0:9001->8888/tcp, :::9001->8888/tcp   tensorflow
 ```
-
-
-下面仅列出 TensorFlow 本身的参数：
 
 ### 路径{#path}
 
 TensorFlow 安装目录： */data/apps/tensorflow*  
-TensorFlow 日志目录： */data/logs/tensorflow*  
-TensorFlow 配置目录： */data/apps/tensorflow/conf*  
+TensorFlow notebooks目录： */data/apps/tensorflow/data/tensorflow*  
 
 ### 端口{#port}
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
-| 6006   | 通过 HTTP 访问 TensorBoard | 可选   |
-
+| 6006   | 通过 HTTP 访问 TensorBoard | 必选   |
 
 
 ### 版本{#version}
 
 ```shell
-/data/apps/tensorflow/bin/tensorboard --version_tb
+docker exec -it tensorflow grep "_VERSION =" /usr/local/lib/python3.8/dist-packages/tensorflow/tools/pip_package/setup.py| cut -d= -f2
 ```
 
 ### 服务{#service}
 
 ```shell
-sudo systemctl start | stop | restart tensorflow
+sudo systemctl start | stop | restart | stats tensorflow
 
 ```
 

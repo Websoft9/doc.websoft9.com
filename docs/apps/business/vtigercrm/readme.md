@@ -122,6 +122,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 VtigerCRM 目录:  */data/wwwroot/vtigercrm*   
 VtigerCRM 升级路径： *http://URL/migrate*
+VtigerCRM 安装时数据库配置文件： *layouts/v7/modules/Install/Step4.tpl*  
 
 ### 端口{#port}
 
