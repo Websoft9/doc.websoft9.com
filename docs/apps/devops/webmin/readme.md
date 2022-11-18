@@ -58,7 +58,7 @@ tags:
 
 7. 完成其他所需的配置
 
-> 需要了解更多 Webmin 的使用，请参考官方文档：[Webmin Documentation](http://doxfer.webmin.com/Webmin/Main_Page)
+> Webmin 监控的不是云服务器本身，对应的容器内系统主要用作学习使用。其他请参考官方文档：[Webmin Documentation](http://doxfer.webmin.com/Webmin/Main_Page)
 
 ### 出现问题？
 
@@ -185,38 +185,29 @@ Webmin 默认使用的是服务器 root 账号，修改服务器密码即修改 
 故，用 `passwd` 系统命令即可
 
 
-## 参数
+## Webmin 参数
 
 Webmin 应用中包含 Apache, Docker 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
 
-下面仅列出 Webmin 本身的参数：
+通过运行 `docker ps`，查看 Jenkins 运行时所有的服务组件： 
+
+```bash
+CONTAINER ID   IMAGE                       COMMAND                  CREATED        STATUS          PORTS                                         NAMES
+c49af4b962a2   websoft9dev/webmin:latest   "/bin/sh -c /home/en…"   20 hours ago   Up 10 seconds   0.0.0.0:9001->10000/tcp, :::9001->10000/tcp   webmin
+```  
 
 ### 路径{#path}
 
-##### Webmin
-
 Webmin 安装目录： */data/apps/webmin*  
-Webmin 日志文件： */data/apps/webmin/webmin.log*  
-Webmin 模块目录： */data/apps/webmin/modules*  
-
-##### Apache
-
-Apache 虚拟主机配置文件：*/etc/httpd/conf.d/vhost.conf*  
-Apache 主配置文件： */etc/httpd/conf/httpd.conf*  
-Apache 日志文件： */var/log/httpd*  
-Apache 模块配置文件： */etc/httpd/conf.modules.d/00-base.conf*
-
 
 ### 端口
 
-| 端口号 | 用途                                          | 必要性 |
-| ------ | --------------------------------------------- | ------ |
-| 10000   | Webmin 原始端口，已通过 Apache 转发到 80 端口 | 可选   |
+无特殊端口
 
 ### 版本
 
 ```shell
-cat /data/apps/webmin/
+docker exec -i webmin cat /etc/webmin/version
 ```
 
 ### 服务
