@@ -17,8 +17,8 @@ import TabItem from '@theme/TabItem';
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/microsoft-sql-server-express.png)
 
-
-本文档适用于：SQL Server Express 2005, 2008, 2012, 2014, 2016, 2017
+Windows 服务器适用于： SQL Server Express 2005, 2008, 2012, 2014, 2016, 2017
+Linux 服务器适用于： SQL Server Express 2017 2019 2022
 
 
 ## 准备
@@ -26,7 +26,7 @@ import TabItem from '@theme/TabItem';
 部署 Websoft9 提供的 SQL Server 之后，需完成如下的准备步骤方可进入初始化向导：
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:1433** 端口是否开启
+2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:1433,9090** 端口是否开启
 3. 若想用域名访问 SQLServer，请先到 **域名控制台** 完成一个域名解析
 4. 远程桌面至服务器，[启用 SQL Server 管理员密码](#enablepw)
 
