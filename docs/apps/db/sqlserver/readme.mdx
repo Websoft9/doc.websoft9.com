@@ -38,7 +38,26 @@ Linux 服务器适用于： SQL Server Express 2017 2019 2022
 <Tabs>
 <TabItem value="linuxinit" label="Linux" default>
 
-test linux 
+Linux环境下使用 CloudBeaver 来验证 SQL Server 数据库：
+
+1. 使用本地电脑浏览器访问：*http://域名* 或 *http://服务器公网IP*, 进入初始化页面
+   ![初始化 CloudBeaver](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-wizard001-websoft9.png)
+
+2. 设置用户名和密码，然后点击【Next】进入下一步
+   ![初始化 CloudBeaver](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-wizard002-websoft9.png)
+
+3. 继续点击【Next】进入下一步，最后点击【FINISH】完成初始化
+   ![初始化 CloudBeaver](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-wizard003-websoft9.png)
+
+4. 点击追加【SQL SERVER】驱动
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/sqlserver-driver-websoft9.png)
+
+5. 填写数据库基本信息（[不知道账号密码？](./user/credentials)），点击【Create】
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/sqlserver-passwd-websoft9.png)
+
+6. 点击左上角 Cloud Beaver 图标，SQL Server 数据库连接成功，可以自由使用
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/sqlserver-connect-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/sqlserver-main-websoft9.png)
 
 </TabItem>
 <TabItem value="wininit" label="Windows">
@@ -153,13 +172,27 @@ test linux
 5.  点击【确认】后，进入数据库管理界面
 
 
-## 参数
+## SQL Server 参数
 
-SQLServer 应用中包含 IIS 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+SQL Server 应用中包含 IIS 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
-下面仅列出 SQLServer 本身的参数：
+通过运行 `docker ps`，查看 SQL Server 运行时所有的服务组件： 
+```
+CONTAINER ID   IMAGE                                        COMMAND                  CREATED          STATUS          PORTS                                       NAMES
+7918843fec4a   mcr.microsoft.com/mssql/server:2022-latest   "/opt/mssql/bin/perm…"   30 seconds ago   Up 24 seconds   0.0.0.0:1433->1433/tcp, :::1433->1433/tcp   mssql
+f1780694066a   dbeaver/cloudbeaver:latest                   "./run-server.sh"        2 hours ago      Up 2 hours      0.0.0.0:9090->8978/tcp, :::9090->8978/tcp   cloudbeaver
+```
 
 ### 路径{#path}
+
+<Tabs>
+<TabItem value="linuxpath" label="Linux" default>
+
+SQL Server 安装目录： */data/apps/sqlserver*  
+SQL Server 数据目录： */data/apps/sqlserver/data/sqlserver*  
+
+</TabItem>
+<TabItem value="winpath" label="Windows">
 
 以SQL Server 2014为例，集成包中包括 SQL Server 2014 数据库引擎和 SQL Server Management Studio Express，具体包括：
 
@@ -170,13 +203,15 @@ SQLServer 应用中包含 IIS 等组件，可通过 **[通用参数表](./admini
 
 ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver2014/sqlserver2014-install-websoft9.png)
 
+</TabItem>
+</Tabs>
 
 ### 端口
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
-| 1433   | 远程访问 SQLServer | 可选   |
-
+| 1433   | 远程访问 SQLServer | 必选   |
+| 9090   | 可视化 SQLServer 工具 | 必选   |
 
 ### 版本
 
@@ -184,6 +219,12 @@ SQLServer 应用中包含 IIS 等组件，可通过 **[通用参数表](./admini
 
 ### 服务{#service}
 
+<Tabs>
+<TabItem value="linuxserver" label="Linux" default>
+sudo docker start | stop | restart | stats mssql
+sudo docker start | stop | restart | stats cloudbeaver
+</TabItem>
+<TabItem value="winserver" label="Windows">
 ##### 可视化界面管理
 
 使用 SQL Server 身份验证登录数据库。打开**SQL Server 配置管理器**工具，重启 SQL Server 服务。  
@@ -191,6 +232,8 @@ SQLServer 应用中包含 IIS 等组件，可通过 **[通用参数表](./admini
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-config-websoft9.png)
 
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-restart-websoft9.png)
+</TabItem>
+</Tabs>
 
 ##### 命令行管理
 
