@@ -35,6 +35,7 @@ Oracle Database （简称 “Oracle”）是一个以领先的性能、可扩展
      docker login container-registry.oracle.com/database/enterprise
      docker compose up -d
      ```
+   > 因为企业版镜像超过10G，云服务器需要较高的带宽，建议使用100M的带宽；拉取镜像需要较长的时间，请耐心等待镜像下载完成
 
 ## Oracle 初始化向导{#wizard}
 

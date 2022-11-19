@@ -20,7 +20,6 @@ import TabItem from '@theme/TabItem';
 Windows 服务器适用于： SQL Server Express 2005, 2008, 2012, 2014, 2016, 2017
 Linux 服务器适用于： SQL Server Express 2017 2019 2022
 
-
 ## 准备
 
 部署 Websoft9 提供的 SQL Server 之后，需完成如下的准备步骤方可进入初始化向导：
@@ -29,7 +28,6 @@ Linux 服务器适用于： SQL Server Express 2017 2019 2022
 2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:1433,9090** 端口是否开启
 3. 若想用域名访问 SQLServer，请先到 **域名控制台** 完成一个域名解析
 4. 远程桌面至服务器，[启用 SQL Server 管理员密码](#enablepw)
-
 
 ## SQLServer 初始化安装向导
 
@@ -76,7 +74,6 @@ Linux环境下使用 CloudBeaver 来验证 SQL Server 数据库：
 
 </TabItem>
 </Tabs>
-
 
 ### 出现问题？
 
@@ -189,7 +186,7 @@ f1780694066a   dbeaver/cloudbeaver:latest                   "./run-server.sh"   
 <TabItem value="linuxpath" label="Linux" default>
 
 SQL Server 安装目录： */data/apps/sqlserver*  
-SQL Server 数据目录： */data/apps/sqlserver/data/sqlserver*  
+SQL Server 数据目录： */data/apps/sqlserver/data/mssql_data*  
 
 </TabItem>
 <TabItem value="winpath" label="Windows">
@@ -221,8 +218,8 @@ SQL Server 数据目录： */data/apps/sqlserver/data/sqlserver*
 
 <Tabs>
 <TabItem value="linuxserver" label="Linux" default>
-sudo docker start | stop | restart | stats mssql
-sudo docker start | stop | restart | stats cloudbeaver
+sudo docker start | stop | restart | stats mssql  
+sudo docker start | stop | restart | stats cloudbeaver  
 </TabItem>
 <TabItem value="winserver" label="Windows">
 ##### 可视化界面管理
