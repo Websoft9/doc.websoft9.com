@@ -38,7 +38,7 @@ tags:
 
    ```
 
-3. 登陆控制台，体验jupyter的强大功能（编辑源码，终端运行）
+3. 登陆控制台，体验jupyter的强大功能（编辑源码）
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/tensorflow/tensorflow-main-websoft9.png)
 
 4. 产品集成了 TensorBoard 工具，通过下面命令启动
@@ -57,30 +57,14 @@ tags:
 
 若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
 
-**使用 TensorFlow 的时候为什么需要先 `source /data/apps/tensorflow/bin/activate` ?**
-
-本部署方案中 TensorFlow 使用的 Python 隔离环境安装
-
-
 ## TensorFlow 使用入门
 
 下面以 **运行一个 TensorFlow 范例，演示它的计算结果** 作为一个任务，帮助用户快速入门：
-
-1. 使用 SSH 连接到服务器，运行下面的命令
-   ```
-   cd /data/apps/tensorflow
-   source /data/apps/tensorflow/bin/activate
-   python tensorflow_test.py
-   ```
-2. 登录到 TensorBoard，此时页面已经有运行的内容
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/tensorflow/tensorflow-simpletest-websoft9.png)
-
 
 ## TensorFlow 常用操作
 
 ### 密码管理
 
-本部署方案通过 Nginx 验证访问控制 TensorBoard 的访问。修改密码的方案参考：[Nginx .auth_basic 认证](./nginx#authbasic)
 
 ## TensorFlow 参数{#parameter}
 
@@ -114,7 +98,7 @@ docker exec -it tensorflow grep "_VERSION =" /usr/local/lib/python3.8/dist-packa
 ### 服务{#service}
 
 ```shell
-sudo systemctl start | stop | restart | stats tensorflow
+sudo docker start | stop | restart | stats tensorflow
 
 ```
 
@@ -127,7 +111,7 @@ source /data/apps/tensorflow/bin/activate
 pip install tfx
 ```
 
- >tfx只支持到2.3.2，安装可能会导致TensorFlow版本降级
+ > tfx只支持到2.3.2，安装可能会导致TensorFlow版本降级
 
 ### API
 

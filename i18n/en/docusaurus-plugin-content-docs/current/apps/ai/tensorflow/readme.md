@@ -24,12 +24,29 @@ tags:
 
 ### Steps for you
 
-1. Use SSH to connect Server, run the following command to check the status of TensorFlow
+1. Use the browser of your local computer to access the URL: *http:// domain name* or *http:// server public IP* to enter the login page  
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/tensorflow/tensorflow-login-websoft9.png)
+
+2. Use SSH to connect Server, run the following command to obtain the token:  
+
    ```
-   sudo systemctl status tensorflow
+   $ docker exec -it tensorflow jupyter notebook list
+   Currently running servers:
+   http://0.0.0.0:8888/?token=c8929544462391e32bbf0d7763b7b5dda3ab00b2f14da5b9 :: /tf
+
    ```
 
-2. Using local Chrome or Firefox to visit the URL http://DNS:6006 or http://Internet IP:6006 to access TensorBoard
+3. Log in to the console and use jupyter (edit the source code)  
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/tensorflow/tensorflow-main-websoft9.png)
+
+4. Use SSH to connect Server, run the following command to start TensorBoard 
+
+   ```
+   $ docker exec -it tensorflow bash
+   $ cd /usr/local/lib/python3.8/dist-packages/tensorboard && tensorboard --logdir=/data/logs --port 6006 --host 0.0.0.0
+   ```
+
+5. Using local Chrome or Firefox to visit the URL http://DNS:6006 or http://Internet IP:6006 to access TensorBoard
 
 
  > More useful TensorFlow guide, please refer to [TensorFlow Documentation](https://www.tensorflow.org/learn)
@@ -39,96 +56,66 @@ tags:
 
 Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
-**Why should I run `source /data/apps/tensorflow/bin/activate`?**
-
-This TensorFlow used Python environment for deployment
-
 
 ## TensorFlow QuickStart
 
 Now, we run a TensorFlow sample for quick start:
-
-1. Use SSH to connect Server, running the sample script by the following commands
-   ```
-   cd /data/apps/tensorflow
-   source /data/apps/tensorflow/bin/activate
-   python tensorflow_test.py
-   ```
-
-2. Login to TensorBoard, you can see the graph changed
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/tensorflow/tensorflow-simpletest-websoft9.png)
 
 
 ## TensorFlow Setup
 
 ### TensorBoard Password
 
-This deployment solution use the Nginx htpasswd for TensorBoard authentication, refer to [Nginx .auth_basic](./nginx#authbasic)
-
-### Web-based GUI - TensorBoard
-
-
-[TensorBoard](https://www.tensorflow.org/tensorboard/) is the TensorFlow's visualization toolkit, TensorBoard provides the visualization and tooling needed for machine learning experimentation:
-
-1. Use local browser to access the URL *http://DNS:6006* or *http://Server's Server's Internet IP:6006* to login
-
-2. Input username and password ([Don't have password?](./user/credentials)), you can see the console of TensorBoard
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/tensorflow/tensorflow-board-websoft9.png)
-
-3. TensorBoard screenshots
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/tensorflow/tensorboard.gif)
 
 ## Reference sheet
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage TensorFlow 
 
 
-通过运行`docker ps`，可以查看到 TensorFlow 运行时所有的 Container：
+Run `docker ps` command, view all Containers when TensorFlow is running:
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                                  COMMAND                  CREATED        STATUS         PORTS                                                                                  NAMES
+f7e151917bec   tensorflow/tensorflow:latest-jupyter   "/bin/bash -c 'cd /u…"   15 hours ago   Up 2 minutes   0.0.0.0:6006->6006/tcp, :::6006->6006/tcp, 0.0.0.0:9001->8888/tcp, :::9001->8888/tcp   tensorflow
 ```
 
-
-下面仅列出 TensorFlow 本身的参数：
 
 ### Path{#path}
 
 TensorFlow installation directory： */data/apps/tensorflow*  
-TensorFlow 日志目录： */data/logs/tensorflow*  
-TensorFlow 配置目录： */data/apps/tensorflow/conf*  
+TensorFlow notebooks directory： */data/apps/tensorflow/data/tensorflow*  
 
 ### Port{#port}
 
-| 端口号 | 用途                                          | 必要性 |
+| Port | Use                                          | Necessity |
 | ------ | --------------------------------------------- | ------ |
-| 6006   | 通过 HTTP 访问 TensorBoard | 可选   |
+| 6006   | Access TensorBoard via HTTP | Optional   |
 
 
 
 ### Version{#version}
 
 ```shell
-/data/apps/tensorflow/bin/tensorboard --version_tb
+docker exec -it tensorflow grep "_VERSION =" /usr/local/lib/python3.8/dist-packages/tensorflow/tools/pip_package/setup.py| cut -d= -f2
 ```
 
 ### Service{#service}
 
 ```shell
-sudo systemctl start | stop | restart tensorflow
+sudo docker start | stop | restart tensorflow
 
 ```
 
 ### CLI{#cli}
 
-TensorFlow 提供了强大的的命令行工具 `tfx`，执行下列命令可安装：
+TensorFlow provides a powerful command-line tool 'tfx', which can be installed by executing the following commands:  
 
 ```
 source /data/apps/tensorflow/bin/activate
 pip install tfx
 ```
 
- >tfx只支持到2.3.2，安装可能会导致TensorFlow版本降级
+ > tfx is only supported until 2.3.2, and installation may cause the TensorFlow version to be downgraded
 
 ### API
 

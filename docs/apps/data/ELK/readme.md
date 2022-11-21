@@ -27,7 +27,7 @@ tags:
    cd /data/apps/elk && docker-compose pull && docker-compose up -d
    ```
 
-   > Elastic 开源版 License 不允许第三方的分发行为，但允许用户免费使用，所以拉取镜像的动作由用户自行操作。
+   > Elastic 开源版本 License 不允许第三方的分发行为，但允许用户免费使用。因此，用户使用本方案部署 Elastic ，请先执行上述命令自行拉取 Elastic 镜像。  
 
 ## ELK 初始化向导
 
@@ -94,7 +94,7 @@ ELK 的数据源多种多样，这里用常见的日志文件为 Logstash 的输
 
   ![ELK Index](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-wizard5-websoft9.png)
 
-5. 索引在 Kibana 创建成功，可以用时间条件在此检索数据
+5. 索引在 Kibana 创建成功，可以用时间戳在此检索数据
 
   ![ELK Index](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-wizard6-websoft9.png)
 
@@ -204,7 +204,7 @@ docker exec -it elk-elasticsearch bin/elasticsearch --version
 ```shell
 sudo docker  start | stop | restart | status elk-elasticsearch
 sudo docker  start | stop | restart | status elk-logstash
-sudo docker  start | stop | restart | status elk-kibana
+sudo docker  start | stop | restart | status elk-kibana 
 ```
 
 ### 命令行

@@ -28,7 +28,7 @@ If you have installed Websoft9 ELK Stack, the following steps is for your quick 
    cd /data/wwwroot/elk && docker-compose pull && docker-compose up -d
    ```
 
-   > Elastic 开源版 License 不允许第三方的分发行为，但允许用户免费使用，所以拉取镜像的动作由用户自行操作。
+   > The Elastic Open Source License does not allow third-party distribution, but allows users to use it for free. Therefore, if you use this solution to deploy Elastic, you should first execute the above command to pull the Elastic image yourself.  
 
 
 ## ELK Stack Initialization
@@ -48,14 +48,15 @@ If you have installed Websoft9 ELK Stack, the following steps is for your quick 
 
 ### Having trouble?
 
-Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.   
 
 
 ## ELK Stack QuickStart
 
-ELK 的数据源多种多样，这里用常见的logs file为 Logstash 的输入为例，步骤如下：
+ELK supports a variety of data sources, here we use the common logs file as an input to Logstash as an example, the steps are as follows:  
 
-1. 在 [Logstash 的配置文件](#path)中设置索引"mytest"，并重启容器
+1. Set the index "mytest" in [Logstash configuration file](#path) and restart the container  
+
    ```
    input{
       file{
@@ -81,11 +82,11 @@ ELK 的数据源多种多样，这里用常见的logs file为 Logstash 的输入
    docker-compose up -d
    ```
 
-2. 验证 Elasticsearch 和 Logstash 是否成功连接，索引数据是否生效(通过 URL 验证：http://服务器公网 IP:9200/cat/indices?v)
+2. Verify that Elasticsearch and Logstash are successfully connected and that the index data is valid (verified by URL: http:// server public IP: 9200/cat/indices?v)  
 
   ![ELK 验证](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-wizardindex-websoft9.png)
 
-3. 登陆 Kibana，点击【Manage】，再点击右侧菜单的【Index Patterns】
+3. Log in to Kibana, click [Manage], and then click [Index Patterns] in the right menu  
 
   ![ELK Index](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-wizard1-websoft9.png)
 
@@ -93,13 +94,13 @@ ELK 的数据源多种多样，这里用常见的logs file为 Logstash 的输入
 
   ![ELK Index](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-wizard3-websoft9.png)
 
-4. 检索"mytest"，根据提示完成创建
+4. Search for "mytest" and follow the prompts to complete the creation  
 
   ![ELK Index](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-wizard4-websoft9.png)
 
   ![ELK Index](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-wizard5-websoft9.png)
 
-5. 索引在 Kibana 创建成功，可以用时间条件在此检索数据
+5. The index is created successfully in Kibana, and you can retrieve data here with a timestamp  
 
   ![ELK Index](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-wizard6-websoft9.png)
 
@@ -109,11 +110,11 @@ ELK 的数据源多种多样，这里用常见的logs file为 Logstash 的输入
 
 ### Connecting Logstash to Elasticsearch
 
-Logstash 作为数据的采集者，它是如何将数据传输到 Elasticsearch 这个数据存储中的呢？
+As the data collector, how does Logstash transfer data to Elasticsearch?  
 
-1. 编辑 [Logstash 配置文件](#path)
+1. Edit [Logstash Confiugration file](#path)
 
-2. 新增一个 pipeline 的配置文件，其内容如下：
+2. Add a new pipeline configuration file:  
    ```
    input{
       file{
@@ -135,7 +136,7 @@ Logstash 作为数据的采集者，它是如何将数据传输到 Elasticsearch
    }
    ```
 
-  > 以上配置段中的 **output** 需要使用 elasticsearch 的数据库连接账号。
+  > **output** in the configuration requires the database connection account of Elasticsearch.  
 
 ### Configure SMTP{#smtp}
 
@@ -152,25 +153,25 @@ There are two main measures to reset password.
 
 **Changing password**
 
-登录 Kibana 后，右上角用户图标的【用户配置文件】即可修改密码
+Log in to Kibana and click User Profile in the upper right corner of the user icon to change the password  
 
 **Forgot Password**
 
-如果用户忘记了密码，需通过重新运行容器的方式重置密码：
+If you forget your password, you can reset it by rerunning the container:  
 
 ```
 cd /data/wwwroot/elk
 docker-compose down && docker-compose up -d
 ```
 
-`.env`文件中的 **DB_ES_PASSWORD** 变量即重置后的密码
+The **DB_ES_PASSWORD** variable in the `.env` file is the password after the reset
 
 
 ## Reference sheet
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage ELK
 
-通过运行`docker ps`，可以查看到 ELK 运行时所有的 Container：
+Run `docker ps` command, view all Containers when ELK is running:  
 
 ```
 CONTAINER ID   IMAGE                  COMMAND                  CREATED         STATUS         PORTS                                                                                                                                                                        NAMES
@@ -179,30 +180,23 @@ babdf8193e8d   kibana:7.13.4          "/bin/tini -- /usr/l…"   4 minutes ago  
 de14eb80b9f9   elasticsearch:7.13.4   "/bin/tini -- /usr/l…"   4 minutes ago   Up 4 minutes   0.0.0.0:9200->9200/tcp, :::9200->9200/tcp, 0.0.0.0:9300->9300/tcp, :::9300->9300/tcp
 ```
 
-下面仅列出 ELK 本身的参数：
 
 ### Path{#path}
 
-ELK Stack 包含：Elasticsearch, Kibana, Logstash 等组件
+The ELK Stack consists of components such as Elasticsearch, Kibana, Logstash, etc  
 
-ELK installation directory： */data/wwwroot/elk*  
-ELK 配置目录： */data/wwwroot/elk/src*  
-ELK 配置容器配置文件： */data/wwwroot/elk/.env*  
-
-Logstash 配置文件： */data/wwwroot/elk/src/logstash/pipelinelogstash.conf*  
-Kibana 配置文件： */data/wwwroot/elk/src/kibana/config/kibana.yml*   
-Elasticsearch 配置文件： */data/wwwroot/elk/src/elasticsearch/config/elasticsearch.yml*  
+ELK installation directory： */data/apps/elk*  
+ELK configuration directory： */data/apps/elk/src*  
+Logstash configuration file： */data/apps/elk/src/logstash/pipelinelogstash.conf*  
+Kibana configuration file： */data/apps/elk/src/kibana/config/kibana.yml*   
+Elasticsearch configuration file： */data/apps/elk/src/elasticsearch/config/elasticsearch.yml*  
 
 ### Port{#port}
 
-| 端口号 | 用途                                         | 必要性 |
+| Port | Use                                         | Necessity |
 | ------ | -------------------------------------------- | ------ |
-| 9001   | kibana 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
-| 9200   | Elasticsearch HTTP | 可选   |
-| 9300   | Elasticsearch TCP | 可选   |
-| 9600   | Logstash API | 可选   |
-| 5000   | Logstash TCP | 可选   |
-| 5044   | Logstash TCP	 | 可选   |
+| 9200   | Elasticsearch HTTP | Required  |
+| 9600   | Logstash API | Optional   |
 
 ### Version
 
@@ -224,4 +218,4 @@ sudo docker  start | stop | restart | status elk-kibana
 
 ### API
 
-[ELK API](https://www.elastic.co/guide/en/elasticsearch/reference/current/http-clients.html) 采用 REST API 2.0 规范。
+[ELK API](https://www.elastic.co/guide/en/elasticsearch/reference/current/http-clients.html) adopts the REST API 2.0 specification.

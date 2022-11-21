@@ -15,16 +15,6 @@ tags:
 
 ### TensorFlow 升级
 
-TensorFlow 是基于 pip 安装，故可以很方便的通过 pip 进行升级
-
-```
-# 激活隔离环境下的 TensorFlow
-source /data/apps/tensorflow/bin/activate
-
-# 升级
-pip install -U TensorFlow
-```
-
 ## 故障排除
 
 除以下列出的 TensorFlow 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
@@ -36,7 +26,7 @@ pip install -U TensorFlow
 
 #### TensorFlow 是如何安装的？
 
-是创建 Python 隔离环境后，基于 pip 安装。
+使用docker安装
 
 #### 是否有可视化的管理工具？
 
