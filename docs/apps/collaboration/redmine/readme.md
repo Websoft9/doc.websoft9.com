@@ -167,6 +167,9 @@ b171c341fa90   mysql:5.7           "docker-entrypoint.s…"   21 minutes ago   U
 Redmine 安装目录：*/data/apps/redmine*  
 Redmine 站点目录：*/data/apps/redmine/data/redmine*  
 Redmine 配置目录：*/data/apps/redmine/data/redmine/config*  
+Redmine 配置文件：*/data/apps/redmine/data/redmine/config/configuration.yml*  
+
+> configuration.yml 是容器首次启动时基于 configuration.yml.example 而创建的
 
 ### 端口{#port}
 

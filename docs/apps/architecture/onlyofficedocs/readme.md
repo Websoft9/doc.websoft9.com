@@ -42,6 +42,20 @@ tags:
 
 ## ONLYOFFICE Docs 常用操作
 
+### 启用 JWT Key
+
+JWT Key 用于第三方软件与 ONLYOFFICE Docs 的密码验证，确保 ONLYOFFICE Docs 在授权的情况下才可以被调用。   
+
+只需修改 ONLYOFFICE Docs  根目录下的 `.env` 中 JWT_ENABLED=true 即可。  
+
+```
+# [true, false]
+JWT_ENABLED=false
+JWT_SECRET=sBPF1mjEbQ2bzj31entX
+JWT_HEADER=Authorization
+JWT_IN_BODY=false
+```
+
 ### 绑定域名
 
 ONLYOFFICE Docs 绑定域名符合：**[域名五步设置](./administrator/domain_step)** 。  

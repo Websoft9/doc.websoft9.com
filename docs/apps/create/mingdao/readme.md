@@ -149,10 +149,10 @@ d6fa950fb107   registry.cn-hangzhou.aliyuncs.com/mdpublic/mingdaoyun-doc:1.2.0  
 
 ### 路径{#path}
 
-明道云目录： */data/wwwroot/mingdao*  
-明道云安装管理器目录： */data/wwwroot/mingdao/installer*  
-明道云持久化目录： */data/wwwroot/mingdao/volume*  
-明道云容器配置文件： */data/wwwroot/mingdao/script/docker-compose.yaml*  
+明道云目录： */data/apps/mingdao*  
+明道云安装管理器目录： */data/apps/mingdao/installer*  
+明道云持久化目录： */data/apps/mingdao/volume*  
+明道云容器配置文件： */data/apps/mingdao/script/docker-compose.yaml*  
 
 ### 端口{#port}
 
