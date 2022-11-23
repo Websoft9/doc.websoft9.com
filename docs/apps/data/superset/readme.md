@@ -197,7 +197,7 @@ d6670fa1bc11   apache/superset:latest          "/usr/bin/docker-ent…"   About 
 ### 路径{#path}
 
 Superset 源码目录： */data/apps/superset*  
-Superset 数据目录： */data/apps/superset/superset_home*  
+Superset 数据目录： */data/apps/superset/data/superset_home*  
 Superset 配置目录： */data/apps/superset/src/docker*  
 Superset 配置文件： */data/apps/superset/src/docker/pythonpath_dev/superset_config.py*
 

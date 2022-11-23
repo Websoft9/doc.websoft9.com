@@ -276,8 +276,8 @@ ffd4eae50a9c   memcached:1.5.6                "memcached -m 256"       3 hours a
 
 Seafile 安装目录： */data/apps/seafile*  
 Seafile 安装目录： */data/apps/seafile/data/seafile_data*  
-Seafile 日志目录：*/data/apps/seafile/data/seafile_data/logs*
-Seafile 配置目录：*/data/apps/seafile/data/seafile_data/seafile/conf*
+Seafile 日志目录：*/data/apps/seafile/data/seafile_data/logs*  
+Seafile 配置目录：*/data/apps/seafile/data/seafile_data/seafile/conf*  
 
 > Seafile 配置文件包括 seahub_settings.py, seafile.conf等
 
