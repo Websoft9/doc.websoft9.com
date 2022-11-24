@@ -151,8 +151,8 @@ d6fa950fb107   registry.cn-hangzhou.aliyuncs.com/mdpublic/mingdaoyun-doc:1.2.0  
 
 明道云目录： */data/apps/mingdao*  
 明道云安装管理器目录： */data/apps/mingdao/installer*  
-明道云持久化目录： */data/apps/mingdao/volume*  
-明道云容器配置文件： */data/apps/mingdao/script/docker-compose.yaml*  
+明道云持久化目录： */data/mingdao/script/volume*  
+明道云容器配置文件： */data/mingdao/script/docker-compose.yaml*  
 
 ### 端口{#port}
 
@@ -169,7 +169,9 @@ d6fa950fb107   registry.cn-hangzhou.aliyuncs.com/mdpublic/mingdaoyun-doc:1.2.0  
 ### 服务{#service}
 
 ```shell
-sudo docker start | stop | restart | stats  mingdao
+cd /data/apps/mingdao/installer/
+./service.sh restartall
+
 ```
 
 ### 命令行{#cli}

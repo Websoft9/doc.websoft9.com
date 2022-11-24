@@ -27,20 +27,20 @@ docker logs $(docker ps | grep mingdaoyun-community | awk '{print $1}')
 
 More logs please refer to official docs: [Mingdao Logs](https://docs.pd.mingdao.com/deployment/docker-compose/command.html#日志)
 
-#### 服务器重启后，程序打不开{#restart}
+#### After the server restarts, the program cannot start {#restart}
 
-服务器重启后，明道云容器没有启动，使用下面的命令，启动服务，稍等片刻即可打开
-
-```
-cd /data/wwwroot/mingdao/installer/
- ./service.sh restartall
+Use the following command to restart the service
 
 ```
-#### 服务器IP变化，导致工作流等服务异常？{#workflow}
+cd /data/apps/mingdao/installer/
+./service.sh restartall
 
-服务器 IP 变化后，需要修改 docker-compose 配置：
+```
+#### The IP address of the server changes, resulting in workflow exceptions{#workflow}
 
-打开[明道云容器配置文件](../mingdao#path)，修改 ENV_MINGDAO_HOST 为新的IP，再用重启服务
+Modify the configuration file to restart the service:   
+
+Open the [Mingdao Configuration File](../mingdao#path), change ENV_MINGDAO_HOST to the new IP, and then restart the service  
 
 ```
 version: '3'

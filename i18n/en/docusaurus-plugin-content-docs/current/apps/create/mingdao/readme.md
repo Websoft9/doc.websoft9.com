@@ -15,10 +15,10 @@ tags:
 
 > Access [Mingdao official docs](https://docs.pd.mingdao.com/) to get more reference when you use this deployment solution
 
-Websoft9 提供的是明道云私有部署的**免费版**。它相对于**标准版**和**专业版**等收费版本来说，其有如下限制：  
+Websoft9 provides the free version of Mingdao Private Deployment. It has the following limitations over paid versions such as Standard and Professional:  
 
-- 用户数不超过 30 个
-- 单个工作表最大行数 10 万行
+- The number of users does not exceed 30
+- Maximum number of rows per worksheet: 100,000 rows
 
 If you have installed Websoft9 Mingdao , the following steps is for your quick start
 
@@ -75,30 +75,29 @@ Your TCP:38881 of Security Group Rules is not allowed, so there is no response f
 Yes, but you should enable your port at **[Inbound of Security Group Rule](https://support.websoft9.com/docs/faq/tech-instance.html)** of Cloud console
 
 
-**服务器重启后，服务器IP地址变化，导致工作流等一些服务无法使用**
+**After the server restarts or the IP changes, some services such as workflows cannot be used**
 
-参考：[工作流无法使用](./mingdao/admin#workflow)
+[Reference](./mingdao/admin#workflow)
 
-**服务器重启后，程序打不开**
+**After server restart, the program cannot start**
 
-参考：[程序打不开](./mingdao/admin#restart)
-
+[Reference](./mingdao/admin#restart)
 
 ## Mingdao QuickStart
 
-明道云官方提供了非常不错的：[教程和视频](https://help.mingdao.com/)
+Mingdao provides [tutorials and videos](https://help.mingdao.com/)
 
-## 明道云定制服务
+## Mingdao customized service
 
-Websoft9 作为明道的合作伙伴，具备基于明道云的软件快速构建能力。我们可以为客户提供如下的服务：
+Websoft9, as a partner of Mindao, has the ability to quickly build software based on Mingdao. We can provide the following services to our customers:
 
-* 基于实际业务，快速建立基础数据模型
-* 提炼管理流程，将业务融合到软件操作中
-* 将明道云与其他系统的连接集成，打破企业数据孤岛
+* Quickly establish the basic data model based on actual business
+* Refine the management process and integrate the business into the software operation
+* Integrate Mingdao Cloud connections with other systems to break down enterprise data silos
 
 ![](https://alifile.mingdaocloud.com/wwwhome/dist/pack/static/src-common-partnerIntroduction-img-jj2.png)
 
-欢迎广大的客户朋友和行业合作[联系我们](./helpdesk#contact)。
+Welcome customers and industry cooperation [contact us](./helpdesk#contact).
 
 ## Mingdao Setup
 
@@ -140,46 +139,46 @@ Coming soon...
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Mingdao 
 
 
-通过运行`docker ps`，可以查看到 明道云 运行时所有的 Container：
+Run `docker ps` command, view all Containers when Mingdao is running:
 
 ```bash
 CONTAINER ID   IMAGE                                                                   COMMAND                  CREATED       STATUS       PORTS                       NAMES
-1100b00c55ec   registry.cn-hangzhou.aliyuncs.com/mdpublic/mingdaoyun-community:2.4.1   "/Housekeeper/main -…"   2 hours ago   Up 2 hours   0.0.0.0:8880->8880/tcp      script_app_1
+1100b00c55ec   registry.cn-hangzhou.aliyuncs.com/mdpublic/mingdaoyun-community:3.7.0   "/Housekeeper/main -…"   2 hours ago   Up 2 hours   0.0.0.0:8880->8880/tcp      script_app_1
 d6fa950fb107   registry.cn-hangzhou.aliyuncs.com/mdpublic/mingdaoyun-doc:1.2.0         "/bin/sh -c /app/ds/…"   2 hours ago   Up 2 hours   80/tcp, 443/tcp, 8000/tcp   script_doc_1
 ```
 
 
-下面仅列出 明道云 本身的参数：
 
 ### Path{#path}
 
-明道云目录： */data/apps/mingdao*  
-明道云安装管理器目录： */data/apps/mingdao/installer*  
-明道云持久化目录： */data/apps/mingdao/volume*  
-明道云容器配置文件： */data/apps/mingdao/script/docker-compose.yaml*  
+Mingdao installation directory： */data/apps/mingdao*  
+Mingdao installation manager directory： */data/apps/mingdao/installer*  
+Mingdao data directory： */data/mingdao/script/volume*   
+Mingdao configuration file： */data/mingdao/script/docker-compose.yaml*  
 
 ### Port{#port}
 
-| 端口号 | 用途                                          | 必要性 |
+| Port | Use                                          | Necessity |
 | ------ | --------------------------------------------- | ------ |
-| 38881   | HTTP 访问 明道云初始化页面 | 可选   |
-| 8880   | HTTP 访问 明道云后台（初始化完成后)  | 可选   |
+| 38881   | HTTP access to the Mingdao initialization page | Required   |
+| 8880   | HTTP access to the Mingdao  | Optional   |
 
 
 ### Version{#version}
 
-控制台查看
+View in the console
 
 ### Service{#service}
 
 ```shell
-sudo docker start | stop | restart | stats  mingdao
+cd /data/apps/mingdao/installer/
+./service.sh restartall
 ```
 
 ### CLI{#cli}
 
-[常用命令](https://docs.pd.mingdao.com/deployment/docker-compose/command.html)
+[CLI](https://docs.pd.mingdao.com/deployment/docker-compose/command.html)
 
 ### API
 
-[平台API介绍](https://help.mingdao.com/API1.html)
+[API](https://help.mingdao.com/API1.html)

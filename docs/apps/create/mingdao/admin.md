@@ -20,7 +20,6 @@ tags:
 #### 如何查看错误日志？
 
 ```
-cat /data/mingdao/script/mingdaoyun.log
 docker logs $(docker ps | grep mingdaoyun-community | awk '{print $1}')
 ```
 
@@ -31,8 +30,8 @@ docker logs $(docker ps | grep mingdaoyun-community | awk '{print $1}')
 服务器重启后，明道云容器没有启动，使用下面的命令，启动服务，稍等片刻即可打开
 
 ```
-cd /data/wwwroot/mingdao/installer/
- ./service.sh restartall
+cd /data/apps/mingdao/installer/
+./service.sh restartall
 
 ```
 #### 服务器IP变化，导致工作流等服务异常？{#ipchange}
