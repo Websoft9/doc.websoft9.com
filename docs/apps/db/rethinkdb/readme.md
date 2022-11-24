@@ -17,7 +17,7 @@ tags:
 部署 Websoft9 提供的 RethinkDB 之后，需完成如下的准备工作：
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:28015** 端口已经开启
+2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:28015,9090** 端口已经开启
 3. 在服务器中查看 RethinkDB 的 **[默认账号和密码](./user/credentials)**  
 4. 若想用域名访问  RethinkDB，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
 
@@ -56,7 +56,7 @@ RethinkDB 控制台默认没有提供登录认证，本部署方案采用了  [N
 
 ### 远程访问{#remote}
 
-RethinkDB 远程访问的开关存储在：*/etc/rethinkdb/instances.d/instance.conf* 文件中。  
+RethinkDB 远程访问的开关存储在：*/etc/rethinkdb/instances.d/instance.conf* 文件中(容器内部)。  
 
 只需执行下面命令，然后重启服务，即可开启远程访问。
 
@@ -153,6 +153,7 @@ RethinkDB 配置文件目录： */etc/rethinkdb/instances.d*
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
 | 28015 | RethinkDB connect | 可选   |
+| 9090 | RethinkDB Web-based GUI| 可选   |
 
 ### 版本
 

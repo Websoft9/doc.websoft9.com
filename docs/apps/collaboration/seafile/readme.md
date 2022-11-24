@@ -132,7 +132,7 @@ tags:
 通过下面的命令，拷贝授权至 Seafile，即可完成授权文件的安装:
 
 ```bash
-cp seafile-license.txt /data/wwwroot/seafile/seafile-data/seafile/
+cp seafile-license.txt /data/apps/seafile/data/seafile_data
 docker restart seafile
 ```
 
@@ -275,7 +275,7 @@ ffd4eae50a9c   memcached:1.5.6                "memcached -m 256"       3 hours a
 ### 路径{#path}
 
 Seafile 安装目录： */data/apps/seafile*  
-Seafile 安装目录： */data/apps/seafile/data/seafile_data*  
+Seafile 应用目录： */data/apps/seafile/data/seafile_data*  
 Seafile 日志目录：*/data/apps/seafile/data/seafile_data/logs*  
 Seafile 配置目录：*/data/apps/seafile/data/seafile_data/seafile/conf*  
 

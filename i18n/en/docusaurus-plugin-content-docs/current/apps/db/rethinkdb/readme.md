@@ -19,7 +19,7 @@ If you have installed Websoft9 RethinkDB, the following steps is for your quick 
 ## Preparation
 
 1. Get the **Internet IP** of your Server on Cloud
-2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:80** is allowed
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:9090 28015 ** is allowed
 3. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for RethinkDB
 4. [Get](./user/credentials) default username and password of RethinkDB
 
@@ -27,7 +27,7 @@ If you have installed Websoft9 RethinkDB, the following steps is for your quick 
 
 ### Steps for you
 
-1. Using local browser to visit the RethinkDB login page URL *http://DNS* or *http://Server's Internet IP* 
+1. Using local browser to visit the RethinkDB login page URL *http://DNS:9090* or *http://Server's Internet IP:9090* 
 
 2. Input the username and password ([Don't have password?](./user/credentials))  
 
@@ -58,7 +58,7 @@ The RethinkDB console does not provide default login authentication, and this de
 
 ### Remote Connection{#remote}
 
-RethinkDB remote connection is set from file: */etc/rethinkdb/instances.d/instance.conf*  
+RethinkDB remote connection is set from file: */etc/rethinkdb/instances.d/instance.conf* (Container internal configuration file)
 
 1. Add the below line in this file
    ```
@@ -116,13 +116,13 @@ Commonly used RethinkDB password reset related operations mainly include changin
 
 **Reset RethinkDB console password**
 
-Run `htpasswd -b /etc/nginx/.htpasswd admin new_password` command to reset password
+Run `htpasswd -b /etc/nginx/.htpasswd admin new_password` command to reset password 
 
 ### Web-based GUI
 
 RethinkDB provides a web interface which lets you manage your entire server cluster, from controlling sharding and replication to running ReQL queries (in JavaScript), with editing and history support. 
 
-1. Using local browser to visit the RethinkDB login page URL *http://DNS* or *http://Server's Internet IP* 
+1. Using local browser to visit the RethinkDB login page URL *http://DNS:9090* or *http://Server's Internet IP:9090* 
 
 2. Input the username and password ([Don't have password?](./user/credentials))  
 
@@ -144,6 +144,7 @@ The below items and **[General parameter sheet](./administrator/parameter)** is 
 
 Run `docker ps` command, view all Containers when RethinkDB is running:
 
+```
 CONTAINER ID   IMAGE              COMMAND                  CREATED              STATUS              PORTS                                                                                                                                     NAMES
 e9cfcd42987e   rethinkdb:latest   "/bin/bash -c 'rethi…"   About a minute ago   Up About a minute   0.0.0.0:28015->28015/tcp, :::28015->28015/tcp, 0.0.0.0:29015->29015/tcp, :::29015->29015/tcp, 0.0.0.0:9090->8080/tcp, :::9090->8080/tcp   rethinkdb
 ```
@@ -153,7 +154,7 @@ e9cfcd42987e   rethinkdb:latest   "/bin/bash -c 'rethi…"   About a minute ago 
 
 RethinkDB installation directory： */data/apps/rethinkdb*  
 RethinkDB data directory： */data/apps/rethinkdb/data/rethinkdb_data*  
-RethinkDB configuration directory： */etc/rethinkdb/instances.d*  
+RethinkDB configuration directory： */etc/rethinkdb/instances.d*  (Container internal configuration file)
 
 
 ### Port
@@ -161,6 +162,7 @@ RethinkDB configuration directory： */etc/rethinkdb/instances.d*
 | Port | Use                                          | Necessity |
 | ------ | --------------------------------------------- | ------ |
 | 28015 | RethinkDB connect | Optional   |
+| 9090 | RethinkDB Web-based GUI | Required   |
 
 ### Version
 
