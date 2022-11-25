@@ -182,7 +182,7 @@ ELK Stack 包含：Elasticsearch, Kibana, Logstash 等组件
 
 ELK 安装目录： */data/apps/elk*  
 ELK 配置目录： */data/apps/elk/src*  
-Logstash 配置文件： */data/apps/elk/src/logstash/pipelinelogstash.conf*  
+Logstash 配置文件： */data/apps/elk/src/logstash/pipeline/logstash.conf*  
 Kibana 配置文件： */data/apps/elk/src/kibana/config/kibana.yml*   
 Elasticsearch 配置文件： */data/apps/elk/src/elasticsearch/config/elasticsearch.yml*  
 

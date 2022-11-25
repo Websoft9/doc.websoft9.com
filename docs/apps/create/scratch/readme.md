@@ -38,7 +38,9 @@ tags:
 
 若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
 
-**[Scratch打开很慢？](./scratch/admin#slowy)**
+**[Scratch无法加载或访问很慢？](./scratch/admin#slowy)**
+
+**[Scratch 背景和角色图标无法在线获取？](./scratch/admin#assets)**    
 
 ## Scratch 使用入门
 
