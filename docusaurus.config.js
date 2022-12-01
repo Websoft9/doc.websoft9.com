@@ -104,19 +104,19 @@ const config = {
             items: [
               {
                 label: '应用',
-                to: '/docs/apps',
+                to: 'https://www.websoft9.com/apps',
               },
               {
                 label: '解决方案',
-                to: '/docs/solution',
+                to: 'https://www.websoft9.com/solutions',
               },
               {
                 label: '技术服务',
-                to: '/docs/helpdesk',
+                to: 'https://www.websoft9.com/services',
               },
               {
                 label: '分发服务',
-                to: '/docs/helpdesk',
+                to: 'https://www.websoft9.com/services/business-process-outsourcing/cloud-distribution-for-isv',
               },
 
 
@@ -136,11 +136,11 @@ const config = {
               },
               {
                 label: '7×24 工单',
-                href: 'https://www.websoft9.com/cn/ticket',
+                href: 'https://www.websoft9.com/ticket',
               },
               {
                 label: '人工支持',
-                href: 'https://www.websoft9.com/cn/contact',
+                href: 'https://www.websoft9.com/contact-us',
               },
             ],
           },
@@ -149,7 +149,7 @@ const config = {
             items: [
               {
                 label: '博客',
-                to: 'https://blog.websoft9.com',
+                to: 'https://www.websoft9.com/blog',
               },
               {
                 label: 'GitHub',

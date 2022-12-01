@@ -1,26 +1,26 @@
 ---
 sidebar_position: 1
-slug: /elk
+slug: /elastic
 tags:
   - ELK Stack
   - Data Analysis
 ---
 
-# ELK Stack Getting Started
+# Elastic Stack Getting Started
 
 [ELK](https://elk-server.apache.org/) is the most widely deployed open source message broker. With more than 35,000 production deployments of ELK world-wide at small startups and large enterprises, ELK is the most popular open source message broker.
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-gui-websoft9.gif)
 
-If you have installed Websoft9 ELK Stack, the following steps is for your quick start
+If you have installed Websoft9 Elastic Stack, the following steps is for your quick start
 
 
 ## Preparation
 
 1. Get the **Internet IP** of your Server on Cloud
 2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:80** is allowed
-3. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for ELK Stack
-4. [Get](./user/credentials) default username and password of ELK Stack
+3. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for Elastic Stack
+4. [Get](./user/credentials) default username and password of Elastic Stack
 5. Log in the cloud server, run the following command, pull the ELK-related Docker image and start the container
 
 
@@ -31,29 +31,29 @@ If you have installed Websoft9 ELK Stack, the following steps is for your quick 
    > The Elastic Open Source License does not allow third-party distribution, but allows users to use it for free. Therefore, if you use this solution to deploy Elastic, you should first execute the above command to pull the Elastic image yourself.  
 
 
-## ELK Stack Initialization
+## Elastic Stack Initialization
 
 ### Steps for you
 
-1. Use local Chrome or Firefox to access the URL *http://DNS* You will enter installation wizard of ELK.
+1. Use local Chrome or Firefox to access the URL *http://DNS* You will enter installation wizard of Elastic Stack.
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-login-websoft9.png)
 
-2. Log in ELK web console. ([Don't have password?](./user/credentials)) 
+2. Log in Elastic Stack web console. ([Don't have password?](./user/credentials)) 
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-bkreminder-websoft9.png)
 
 3. Set you new password from: 【Users】>【Admin】>【Permissions】>【Update this user】
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-dashboard-websoft9.png)
 
-> More guide about ELK, please refer to [ELK Documentation](https://www.elk.com/documentation.html).
+> More guide about Elastic Stack, please refer to [ELK Documentation](https://www.elk.com/documentation.html).
 
 ### Having trouble?
 
 Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.   
 
 
-## ELK Stack QuickStart
+## Elastic Stack QuickStart
 
-ELK supports a variety of data sources, here we use the common logs file as an input to Logstash as an example, the steps are as follows:  
+Elastic Stack supports a variety of data sources, here we use the common logs file as an input to Logstash as an example, the steps are as follows:  
 
 1. Set the index "mytest" in [Logstash configuration file](#path) and restart the container  
 
@@ -77,7 +77,7 @@ ELK supports a variety of data sources, here we use the common logs file as an i
    ```
 
    ```
-   cd /data/wwwroot/elk
+   cd /data/apps/elastic
    docker-compose down
    docker-compose up -d
    ```
@@ -106,7 +106,7 @@ ELK supports a variety of data sources, here we use the common logs file as an i
 
   ![ELK Index](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-wizard7-websoft9.png)
 
-## ELK Stack Setup
+## Elastic Stack Setup
 
 ### Connecting Logstash to Elasticsearch
 
@@ -142,7 +142,7 @@ As the data collector, how does Logstash transfer data to Elasticsearch?
 
 1. Get [SMTP](./administrator/smtp) related parameters in the mailbox management console
 
-2. Log in ELK Console.
+2. Log in Elastic Stack Console.
 3. Enter the SMTP settings.
 ![Metabase SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/en/metabase/metabase-smtp-websoft9.png)
 4. Click the **Test Connection**. You will get the feedback *"no errors were..."* if SMTP is valid.
@@ -160,7 +160,7 @@ Log in to Kibana and click User Profile in the upper right corner of the user ic
 If you forget your password, you can reset it by rerunning the container:  
 
 ```
-cd /data/wwwroot/elk
+cd /data/apps/elastic
 docker-compose down && docker-compose up -d
 ```
 
@@ -169,27 +169,27 @@ The **DB_ES_PASSWORD** variable in the `.env` file is the password after the res
 
 ## Reference sheet
 
-The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage ELK
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Elastic Stack
 
-Run `docker ps` command, view all Containers when ELK is running:  
+Run `docker ps` command, view all Containers when Elastic Stack is running:  
 
 ```
 CONTAINER ID   IMAGE                  COMMAND                  CREATED         STATUS         PORTS                                                                                                                                                                        NAMES
-4c27ee6b8e98   logstash:7.13.4        "/usr/local/bin/dock…"   4 minutes ago   Up 4 minutes   0.0.0.0:5000->5000/tcp, :::5000->5000/tcp, 0.0.0.0:5044->5044/tcp, :::5044->5044/tcp, 0.0.0.0:9600->9600/tcp, 0.0.0.0:5000->5000/udp, :::9600->9600/tcp, :::5000->5000/udp   elk-logstash
-babdf8193e8d   kibana:7.13.4          "/bin/tini -- /usr/l…"   4 minutes ago   Up 4 minutes   0.0.0.0:9001->5601/tcp, :::9001->5601/tcp                                                                                                                                    elk-kibana
+4c27ee6b8e98   logstash:7.13.4        "/usr/local/bin/dock…"   4 minutes ago   Up 4 minutes   0.0.0.0:5000->5000/tcp, :::5000->5000/tcp, 0.0.0.0:5044->5044/tcp, :::5044->5044/tcp, 0.0.0.0:9600->9600/tcp, 0.0.0.0:5000->5000/udp, :::9600->9600/tcp, :::5000->5000/udp   elastic-logstash
+babdf8193e8d   kibana:7.13.4          "/bin/tini -- /usr/l…"   4 minutes ago   Up 4 minutes   0.0.0.0:9001->5601/tcp, :::9001->5601/tcp                                                                                                                                    elastic-kibana
 de14eb80b9f9   elasticsearch:7.13.4   "/bin/tini -- /usr/l…"   4 minutes ago   Up 4 minutes   0.0.0.0:9200->9200/tcp, :::9200->9200/tcp, 0.0.0.0:9300->9300/tcp, :::9300->9300/tcp
 ```
 
 
 ### Path{#path}
 
-The ELK Stack consists of components such as Elasticsearch, Kibana, Logstash, etc  
+The Elastic Stack consists of components such as Elasticsearch, Kibana, Logstash, etc  
 
-ELK installation directory： */data/apps/elk*  
-ELK configuration directory： */data/apps/elk/src*  
-Logstash configuration file： */data/apps/elk/src/logstash/pipelinelogstash.conf*  
-Kibana configuration file： */data/apps/elk/src/kibana/config/kibana.yml*   
-Elasticsearch configuration file： */data/apps/elk/src/elasticsearch/config/elasticsearch.yml*  
+Elastic Stack installation directory： */data/apps/elastic*  
+Elastic Stack configuration directory： */data/apps/elastic/src*  
+Logstash configuration file： */data/apps/elastic/src/logstash/pipelinelogstash.conf*  
+Kibana configuration file： */data/apps/elastic/src/kibana/config/kibana.yml*   
+Elasticsearch configuration file： */data/apps/elastic/src/elasticsearch/config/elasticsearch.yml*  
 
 ### Port{#port}
 
@@ -201,15 +201,15 @@ Elasticsearch configuration file： */data/apps/elk/src/elasticsearch/config/el
 ### Version
 
 ```shell
-docker exec -it elk-elasticsearch bin/elasticsearch --version
+docker exec -it elastic-elasticsearch bin/elasticsearch --version
 ```
 
 ### Service
 
 ```shell
-sudo docker  start | stop | restart | status elk-elasticsearch
-sudo docker  start | stop | restart | status elk-logstash
-sudo docker  start | stop | restart | status elk-kibana
+sudo docker  start | stop | restart | status elastic-elasticsearch
+sudo docker  start | stop | restart | status elastic-logstash
+sudo docker  start | stop | restart | status elastic-kibana
 ```
 
 ### CLI
