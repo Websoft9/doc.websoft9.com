@@ -154,6 +154,12 @@ Opencart 2.0 使用vQmod机制安装扩展，需提前安装并启用vQmod，具
 
 3. 重启服务后生效
 
+### 添加备案信息
+
+修改页面底部文件 footer.twig，添加相关信息即可：  
+修改/data/apps/opencart/data/opencart/catalog/view/template/common/footer.twig   中 `<p>{{ powered }} </p> `  内容
+
+
 ## OpenCart 参数{#parameter}
 
 OpenCart 应用中包含 Nginx, Apache, Docker, MySQL, phpMyAdmin 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
