@@ -9,7 +9,9 @@ tags:
 
 # 快速入门
 
-APEX 介绍
+[Oracle APEX](https://apex.oracle.com/) 是广受欢迎的企业级低代码应用平台。借助该平台，您可以构建功能先进的可扩展安全企业应用。使用 APEX，开发人员可快速开发并部署出色的应用，从而解决实际问题并立即创造价值。您无需精通各种技术，就可以提供高级解决方案。您只需集中精力解决业务问题，其他工作都可以交给 APEX 来处理。
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-main-websoft9.png)
 
 部署 Websoft9 提供的 APEX 之后，请参考下面的步骤快速入门。
 
@@ -24,7 +26,7 @@ APEX 介绍
 
 ### 详细步骤
 
-1. 使用本地电脑浏览器访问网址：*http://域名:9001* 或 *http://服务器公网IP:9001*, 进入登录页面
+1. 使用本地电脑浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入登录页面
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-init-websoft9.png)
 
 2. 输入账号密码（[不知道账号密码？](./user/credentials)），首次登陆必须修改用户密码  
@@ -33,7 +35,8 @@ APEX 介绍
 3. 密码修改完成后，开始体验后台
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-index-websoft9.png)    
 
-
+ > 由于 Apex 相关应用比较大，购买镜像后需要等10多分钟才能正常浏览画面
+ 
 ### 出现问题？
 
 若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题。
@@ -103,7 +106,7 @@ eac8b12b397c   container-registry.oracle.com/database/express:latest   "/bin/sh 
 
 ### 路径{#path}
    
-APEX 安装目录： */data/apps/apex*
+APEX 安装目录： */data/apps/apex*  
 APEX 数据目录： */data/apps/apex/data/oracledb*
 
 ### 端口{#port}
@@ -128,6 +131,8 @@ sudo docker start | stop | restart | stats apex-db
 ```
 
 ### 命令行{#cli}
+
+无
 
 ### API{#api}
 
