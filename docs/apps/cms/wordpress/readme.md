@@ -314,10 +314,56 @@ sudo docker start | stop | restart  phpmyadmin
 
 ### 命令行{#cli}
 
-[wp-cli](https://wp-cli.org/)
+下面通过具体示例展示 wp-cli 的用法：
+
+1. 验证  wp-cli 是否安装成功
+  ```
+  $ docker exec -it wordpress bash
+  $ wp --info
+  OS:  Linux 3.10.0-1160.25.1.el7.x86_64 #1 SMP Wed Apr 28 21:49:45 UTC 2021 x86_64
+  Shell:  
+  PHP binary:  /usr/local/bin/php
+  PHP version:  8.0.26
+  php.ini used:  
+  MySQL binary:  
+  MySQL version:  
+  SQL modes:  
+  WP-CLI root dir:  phar://wp-cli.phar/vendor/wp-cli/wp-cli
+  WP-CLI vendor dir:  phar://wp-cli.phar/vendor
+  WP_CLI phar path:  /var/www/html
+  WP-CLI packages dir:  
+  WP-CLI cache dir:  /root/.wp-cli/cache
+  WP-CLI global config:  
+  WP-CLI project config:.
+  ```
+
+2. 如果您尚未完成初始化向导，也可通过 wp-cli 创建新的站点
+
+  ```
+  $wp core install --url=http://yourIP --title="WP-CLI" --admin_user=youradmin --admin_password=yourpassword --admin_email=your_email
+  Success: WordPress installed successfully.
+  ```
+
+3. 通过 wp-cli 安装插件
+
+  ```
+  $ wp plugin install akismet
+  Warning: akismet: Plugin already installed.
+  Success: Plugin already installed. 
+  ```
+
+  > 更多用法请参照[wp-cli](https://make.wordpress.org/cli/)
 
 ### API
 
 [REST API](https://developer.wordpress.org/rest-api/)
+
+WordPress 初始化完成之后，无需任何设置即可调用 API 查看网站相关数据：  
+
+```
+curl -X OPTIONS -i http://yourdomain.com/wp-json/
+curl -X GET -i http://yourdomain.com/wp-json/wp/v2/posts
+curl -X GET -i http://yourdomain.com/wp-json/wp/v2/pages
+```
 
 
