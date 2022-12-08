@@ -44,6 +44,9 @@ tags:
 
    - [Avada 主题](./wordpress/solution#avada)
 
+6. WordPress 和 Minio 可以组合成[【高性能网站方案】](./wordpress/solution#wordpress-minio)
+
+7. WordPress 和 Matomo 可以组合成[【网站统计优化方案】](./wordpress/solution#wordpress-matomo)
 
 > 需要了解更多WordPress的使用，请参考官方文档：[WordPress Documentation](https://wordpress.org/support/)
 
@@ -352,7 +355,7 @@ sudo docker start | stop | restart  phpmyadmin
   Success: Plugin already installed. 
   ```
 
-  > 更多用法请参照[wp-cli](https://make.wordpress.org/cli/)
+  > 更多用法请参照 [ wp-cli ](https://wp-cli.org/)
 
 ### API
 

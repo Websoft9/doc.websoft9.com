@@ -12,6 +12,14 @@ tags:
 
 WordPress 可以与其他的软件平台**集成**一起使用，解决 构建内容管理 过程中的各种[场景问题](#)。
 
+## WordPress 与 [Minio](../minio) 存储优化场景方案{#wordpress-minio}
+
+使用 Minio 和 WordPress 构建[高性能 WordPress 站点](https://benlobaugh.medium.com/build-highly-performant-wordpress-sites-with-minio-and-wp-offload-media-dadc7bb25371)
+
+## WordPress 与 Matomo(../matomo) 网站统计优化方案{#wordpress-matomo}
+
+使用 Matomo 和 WordPress 可以组合成[【网站统计优化方案】](https://matomo.org/installing-matomo-for-wordpress/)
+
 ## WordPress 与 Discuz 双应用{#wordpress-discuz}
 
 WordPress&Discuz 预装包部署后，浏览器访问：*https://服务器公网ip/9panel* 开始安装向导。
