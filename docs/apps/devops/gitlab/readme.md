@@ -45,7 +45,7 @@ tags:
 
 7. [设置 GitLab 仓库地址](#setrepourl)
 
-8. 如果您部署的是Gitlab-Jenkins（集成版）, 可以更好的使用[【集成场景方案】](./gitlab/solution#gitlab-jenkins)
+8. 如果您部署的是 Gitlab-Jenkins（集成版）, 能更好的应用[【CI/CD集成场景方案】](./gitlab/solution#gitlab-jenkins)
 
 > 需要了解更多 GitLab 的使用，请参考官方文档：[GitLab Documentation](https://docs.gitlab.com/omnibus/README.html)
 

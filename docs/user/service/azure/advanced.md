@@ -78,3 +78,10 @@ Offer         Publisher    Sku                          Urn                     
 ------------  -----------  ---------------------------  --------------------------------------------------------------  ---------
 w9wordpress2  websoft9inc  wordpress52-lemp72-centos76  websoft9inc:w9wordpress2:wordpress52-lemp72-centos76:5.2.20000  5.2.20000
 ```
+
+#### 如何创建子账号？
+
+1. 登录到Azure后台，在 Auzre Default Directory 中找到 AD 的域名
+2. 在这个 AD 下创建一个账号
+3. 在成本管理中，找到Pay-As-You-Go的订阅项，点击这个订阅项，为 AD 中的子账号分配权限
+
