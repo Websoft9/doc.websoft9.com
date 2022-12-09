@@ -13,9 +13,9 @@ tags:
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-main-websoft9.png)
 
-部署 Websoft9 提供的 APEX 之后，请参考下面的步骤快速入门。
-
 ## 准备{#prepare}
+
+部署 Websoft9 提供的 APEX 之后，请参考下面的步骤快速入门。
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
@@ -92,7 +92,7 @@ APEX 创建应用APP时选择默认数据库用户pdbadmin，需要对此用户�
 3. 点击【App Builder】，新APP已经创建，登陆即可开始体验
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-imp06-websoft9.png)
 
-## 参数{#parameter}
+## APEX 参数{#parameter}
 
 APEX 应用中包含 Docker, Oracle 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
 
