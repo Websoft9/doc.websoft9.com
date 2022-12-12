@@ -273,7 +273,7 @@ WordPress可以通过发送邮件找回密码，但前提条件是您的 WordPre
 4. 点击【执行】
 5. 新的密码为`admin`
 
-## 参数{#parameter}
+## WordPress 参数{#parameter}
 
 WordPress 应用中包含 PHP, Nginx, MariaDB, phpMyAdmin 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
@@ -340,7 +340,7 @@ sudo docker start | stop | restart  phpmyadmin
   WP-CLI project config:.
   ```
 
-2. 如果您尚未完成初始化向导，也可通过 wp-cli 创建新的站点
+2. 如果您尚未完成初始化向导，也可通过 wp-cli 创建新的站点（如已完成初始化向导，可直接使用 wp-cli ）
 
   ```
   $wp core install --url=http://yourIP --title="WP-CLI" --admin_user=youradmin --admin_password=yourpassword --admin_email=your_email
