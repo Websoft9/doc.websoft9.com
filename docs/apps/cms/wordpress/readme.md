@@ -50,6 +50,14 @@ tags:
 
 > 需要了解更多WordPress的使用，请参考官方文档：[WordPress Documentation](https://wordpress.org/support/)
 
+### 组合应用
+
+如果您安装了 Websoft9 提供的 WordPress 和其他组合应用，请提前获取 **[端口和账号密码](./user/credentials)** ，并完成它们的初始化过程。
+
+被组合的应用以及其参考文档如下：  
+
+* [MinIO 指南](../minio)
+* [Matomo 指南](../matomo)
 
 ### 出现问题？
 
