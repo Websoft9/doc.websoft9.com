@@ -17,7 +17,7 @@ WordPress 可以与其他的软件平台**集成**一起使用，解决 构建�
 WordPress [集成MinIO](https://benlobaugh.medium.com/build-highly-performant-wordpress-sites-with-minio-and-wp-offload-media-dadc7bb25371) 集成的关键过程如下：
 
 1. WordPress 启用  WP Offload Media 插件
-2. WordPress 设置配置文件wp-config.php中 MinIO 相关设置
+2. WordPress 修改配置文件wp-config.php中 MinIO 相关设置
 
 ## WordPress 集成 Matomo 网站优化场景方案{#wordpress-matomo}
 
