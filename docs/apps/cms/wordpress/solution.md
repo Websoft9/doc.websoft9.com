@@ -21,7 +21,7 @@ WordPress [集成MinIO](https://benlobaugh.medium.com/build-highly-performant-wo
 
 ## WordPress 集成 Matomo 网站优化场景方案{#wordpress-matomo}
 
-WordPress [集成Matomo](https://matomo.org/installing-matomo-for-wordpress/) 集成的关键过程如下：
+WordPress [集成Matomo](https://wordpress.org/plugins/wp-piwik/#installation) 集成的关键过程如下：
 
 1. WordPress 启用 WP-Matomo(WP-Piwik) 插件
 2. 在WP-Matomo (WP-Piwik) 设置菜单按照说明配置您的 Matomo 连接即可
