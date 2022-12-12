@@ -56,8 +56,8 @@ tags:
 
 被组合的应用以及其参考文档如下：  
 
-* [MinIO 指南](../minio)
-* [Matomo 指南](../matomo)
+* [MinIO 指南](./minio)
+* [Matomo 指南](./matomo)
 
 ### 出现问题？
 

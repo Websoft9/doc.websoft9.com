@@ -53,8 +53,8 @@ tags:
 
 被组合的应用以及其参考文档如下：  
 
-* [Jenkins 指南](../jenkins)
-* [Mattermost 指南](../mattermost)
+* [Jenkins 指南](./jenkins)
+* [Mattermost 指南](./mattermost)
 
 
 ### 出现问题？
