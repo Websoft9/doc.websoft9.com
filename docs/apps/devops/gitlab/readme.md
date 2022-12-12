@@ -34,20 +34,28 @@ tags:
 3. 进入管理设置面板（Admin Area）  
    ![GitLab 管理设置面板](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-adminpanel-websoft9.png)
 
-4. 依次打开：【User Settings】>【Preferences】设置语言（支持中文）
+4. 语言设置：【User Settings】>【Preferences】，设置自己喜欢的语言（包含中文）
    ![GitLab 设置语言](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-setlanguage-websoft9.png)
 
-5. 依次打开：【User Settings】>【SSH key】设置秘钥
+5. SSH key 设置：【User Settings】>【SSH key】
    ![GitLab SSH key](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-sshkey-websoft9.png)
 
 6. 如果你部署的是 GitLab-EE（企业版），通过：【管理中心】>【许可证】导入后，**试用**或**启用**企业版
    ![Gitlab 导入授权](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlabee-license-websoft9.png)
 
-7. [设置 GitLab 仓库地址](#setrepourl)
-
-8. 如果您部署的是 Gitlab-Jenkins（集成版）, 能更好的应用[【 DevOps 集成场景方案】](./gitlab/solution#gitlab-jenkins)
+7. [设置](#setrepourl) GitLab 仓库地址
 
 > 需要了解更多 GitLab 的使用，请参考官方文档：[GitLab Documentation](https://docs.gitlab.com/omnibus/README.html)
+
+### 组合应用
+
+如果您安装了 Websoft9 提供的 GitLab 和其他 DevOps 的组合应用，请提前获取 **[端口和账号密码](./user/credentials)** ，并完成它们的初始化过程。
+
+被组合的应用以及其参考文档如下：  
+
+* [Jenkins 指南](../jenkins)
+* [Mattermost 指南](../mattermost)
+
 
 ### 出现问题？
 
