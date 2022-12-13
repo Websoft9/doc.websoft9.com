@@ -8,11 +8,11 @@ tags:
 
 # 快速入门
 
-[GitLab](https://github.com/gitlabhq/gitlabhq) 是一个完整的 DevOps 平台软件。 使用GitLab，您可以获得开箱即用的完整 CI/CD 工具链。极狐 GitLab 是本地化的版本，基于GitLab EE和极狐(GitLab)在国内独立运营的JH代码仓库构建，产品的企业级订阅许可证、源代码管理、支付系统等均在中国境内管理，受中国法律保护。
+[GitLab](https://github.com/gitlabhq/gitlabhq) 是一个完整的 DevOps 平台软件。 使用 GitLab，您可以获得开箱即用的完整 CI/CD 工具链。极狐 GitLab 是本地化的版本，基于 GitLab EE 和极狐 GitLab 在国内独立运营的 JH 代码仓库构建，产品的企业级订阅许可证、源代码管理、支付系统等均在中国境内管理，受中国法律保护。
 
 ![GitLab devops](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-devopsall-websoft9.png)
 
-部署 Websoft9 提供的 GitLab 或 极狐GitLab 之后，请参考下面的步骤快速入门。
+部署 Websoft9 提供的 GitLab 或 极狐 GitLab 之后，请参考下面的步骤快速入门。
 
 ## 准备{#prepare}
 
