@@ -59,6 +59,15 @@ tags:
 * [MinIO 指南](./minio)
 * [Matomo 指南](./matomo)
 
+### 免费主题
+
+如果您安装了 Websoft9 提供的 WordPress 免费主题版，请通过下面地址下载:  
+
+* [Avada 主题](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/avada/avada.zip),其下插件：[LayerSlider](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/avada/LayerSlider.zip)、[fusion-builder](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/avada/fusion-builder.zip)、[ fusion-core](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/avada/fusion-core..zip)、[revslider](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/avada/revslider.zip)
+* [Divi 主题](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/divi/divi.zip),其下插件：[Divi-Builder-Layouts-147](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/divi/Divi-Builder-Layouts-147.zip)
+* [Porto 主题](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/porto/porto.zip),其下插件：
+* [The7 主题](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/the7/dt-the7.zip),其下插件：[dt-the7-core](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/the7/dt-the7-core.zip)、[go_pricing](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/the7/go_pricing.zip)、[js_composer](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/the7/js_composer.zip)、[Ultimate_VC_Addons](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/the7/Ultimate_VC_Addons.zip)、[revslider](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/the7/revslider.zip)
+
 ### 出现问题？
 
 若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：

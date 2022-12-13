@@ -12,16 +12,16 @@ tags:
 
 WordPress 可以与其他的软件平台**集成**一起使用，解决 构建内容管理 过程中的各种[场景问题](#)。
 
-## WordPress 集成 MinIO 高性能场景方案{#wordpress-minio}
+## WordPress 集成 MinIO{#wordpress-minio}
 
-WordPress [集成MinIO](https://benlobaugh.medium.com/build-highly-performant-wordpress-sites-with-minio-and-wp-offload-media-dadc7bb25371) 集成的关键过程如下：
+WordPress [集成MinIO](https://benlobaugh.medium.com/build-highly-performant-wordpress-sites-with-minio-and-wp-offload-media-dadc7bb25371)搭建高性能存储方网站，集成的关键过程如下：
 
 1. WordPress 启用  WP Offload Media 插件
 2. WordPress 修改配置文件wp-config.php中 MinIO 相关设置
 
-## WordPress 集成 Matomo 网站优化场景方案{#wordpress-matomo}
+## WordPress 集成 Matomo{#wordpress-matomo}
 
-WordPress [集成Matomo](https://wordpress.org/plugins/wp-piwik/#installation) 集成的关键过程如下：
+WordPress [集成Matomo](https://wordpress.org/plugins/wp-piwik/#installation)轻松实现网站统计优化，集成的关键过程如下：
 
 1. WordPress 启用 WP-Matomo(WP-Piwik) 插件
 2. 在WP-Matomo (WP-Piwik) 设置菜单按照说明配置您的 Matomo 连接即可
