@@ -30,7 +30,7 @@ MinIO 是全球领先的对象存储先锋，目前在全世界有数百万的�
 
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/minio/minio-login-websoft9.png)
 
-2. 输入账号密码（不知道账号密码？），进入后台
+2. 输入账号密码（[不知道账号密码？](./user/credentials)），进入后台
 
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/minio/minio-main-websoft9.png)
 
@@ -156,3 +156,5 @@ TIP:
 ```
 
 ### API{#api}
+
+暂无
