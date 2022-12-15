@@ -14,10 +14,14 @@ WordPress 可以与其他的软件平台**集成**一起使用，解决 构建�
 
 ## WordPress 集成 MinIO{#wordpress-minio}
 
-WordPress [集成MinIO](https://benlobaugh.medium.com/build-highly-performant-wordpress-sites-with-minio-and-wp-offload-media-dadc7bb25371)搭建高性能存储方网站，集成的关键过程如下：
+WordPress 集成 MinIO 搭建高性能存储方网站，集成的关键过程如下：
 
-1. WordPress 启用  WP Offload Media 插件
-2. WordPress 修改配置文件wp-config.php中 MinIO 相关设置
+1. 登录 WordPress 安装并启用  Media Cloud 插件  
+2. 登录 MinIO，通过 【Access Keys】 -【Create access key】生产访问秘钥对，并下载秘钥对文件保存本地  
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-minio-setting-websoft9.png)
+
+3. 登录 WordPress 通过 配置 Media Cloud 插件，实现与 MinIO 连通，并在媒体中测试上传文件，此时的文件已经保存在 MinIO 中
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-minio-accesskey-websoft9.png)
 
 ## WordPress 集成 Matomo{#wordpress-matomo}
 
