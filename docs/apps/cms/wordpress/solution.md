@@ -17,11 +17,13 @@ WordPress 可以与其他的软件平台**集成**一起使用，解决 构建�
 WordPress 集成 MinIO 搭建高性能存储方网站，集成的关键过程如下：
 
 1. 登录 WordPress 安装并启用  Media Cloud 插件  
-2. 登录 MinIO，通过 【Access Keys】 -【Create access key】生产访问秘钥对，并下载秘钥对文件保存本地  
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-minio-setting-websoft9.png)
-
-3. 登录 WordPress 通过 配置 Media Cloud 插件，实现与 MinIO 连通，并在媒体中测试上传文件，此时的文件已经保存在 MinIO 中
+2. 登录 MinIO，通过 【Access Keys】 -【Create access key】生成访问秘钥对，并下载秘钥对保存本地  
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-minio-accesskey-websoft9.png)
+
+3. 登录 WordPress 通过配置 Media Cloud 插件，实现与 MinIO 连通，并在媒体中测试上传文件，此时的文件已经保存在 MinIO 中
+> 配置信息参考上个步骤的秘钥文件  
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-minio-setting-websoft9.png)
 
 ## WordPress 集成 Matomo{#wordpress-matomo}
 
