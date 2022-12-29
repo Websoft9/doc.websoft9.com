@@ -36,7 +36,7 @@ tags:
 
 2. 运行 MongoDB Shell 命令（[不知道账号密码？](./user/credentials)）
    ~~~
-   $ docker exec -it mongodb mongo admin -u root -p YOURPASSWORD
+   $ docker exec -it mongodb mongosh admin -u root -p YOURPASSWORD
    MongoDB shell version v5.0.10
    connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
    {"t":{"$date":"2022-08-10T03:05:34.194Z"},"s":"I",  "c":"NETWORK",  "id":5693100, "ctx":"js","msg":"Asio socket.set_option failed with std::system_error","attr":{"note":"connect (sync) TCP fast open","option":{"level":6,"name":30,"data":"01 00 00 00"},"error":{"what":"set_option: Protocol not available","message":"Protocol not available","category":"asio.system","value":92}}}
@@ -346,7 +346,7 @@ MongoDB compose文件： */data/apps/mongodb/docker-compose.yml*
 ### 版本
 
 ```shell
-docker exec -i mongodb mongo --version
+docker exec -i mongodb mongosh 
 ```
 
 ### 服务{#service}
@@ -588,10 +588,10 @@ MongoDB Shell 是 MongoDB 自带的一个交互式 JavaScript shell，让您能�
 
 ```
 # log in Mongo Shell without authenticating
-docker exec -it mongodb mongo
+docker exec -it mongodb mongosh
 
 # log in Mongo Shell witt authenticating
-docker exec -it mongodb mongo admin --username root -p
+docker exec -it mongodb mongosh admin --username root -p
 
 MongoDB shell version v4.0.18
 connecting to: mongodb://127.0.0.1:27017/?gssapiServiceName=mongodb

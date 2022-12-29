@@ -27,6 +27,12 @@ Graylog 支持如下最简答的部署方式：
 也支持复杂的[集群](https://docs.graylog.org/v1/docs/multinode-setup)部署：  
 ![Graylog 集群部署架构图](https://libs.websoft9.com/Websoft9/DocsPicture/zh/graylog/graylog-hasetup-websoft9.png)
 
+Elasticsearch 架构中：  
+
+* Elasticsearch 用于存储日志和搜索日志，集群可以提升效率
+* Graylog 用于传输数据和展现数据，集群可以提升可用性
+* MongoDB 用于存储配置信息，数据很少，集群作用有限
+
 其中，MongoDB 实际上可以不做集群。
 
 > 更多信息参考官方的[架构指南](https://www.slideshare.net/Graylog/graylog-engineering-design-your-architecture)
@@ -55,3 +61,9 @@ Graylog 支持如下最简答的部署方式：
 #### Graylog 集群原理图？
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/graylog/architec_bigger_setup.png)
+
+#### Graylog 企业版定价因素？
+
+* 日志存储量：Graylog 企业版主要以日志存储量作为定价的参考指标
+* 集群：Graylog 集群部署也是定价的参考指标之一
+* ES：Elasticsearch 开源版支持集群，如果需要考虑更多功能， 需 订阅 Elasticsearch 商业版。

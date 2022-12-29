@@ -12,6 +12,32 @@ slug: /alibabacloud/advanced
 
 阿里云为服务器提供一套功能强大、完整的 [API](https://next.api.aliyun.com/) 以及 CLI 操作方式，为自动化提供了坚实的基础。  
 
+### 导入私有镜像
+
+[阿里云导入镜像流程](https://help.aliyun.com/document_detail/127285.html) 已经描述非常详细，下面只列出概要以及注意事项：
+
+1. 本地 VMWare 导入 ISO 原生镜像
+2. 虚拟机上安装 cloud-init 、安骑士和云助手，关闭防火墙和Selinux
+3. 使用 VMWare 导出虚拟机为 OVF 镜像，然后通过[转换镜像格式](https://help.aliyun.com/document_detail/57187.html) 转换为 VDH 格式
+4. 将 VDH 文件上传至阿里云 OSS，然后导入私有镜像
+
+镜像导入成功过后，可能仍然存在下面的常见问题：
+
+##### 虚拟机没有网络？
+
+vim /etc/sysconfig/network-scripts/ifcfg-ens33，将ONBOOT=no改为yes，重启后生效
+
+##### 阿里云版本的  cloud-init 安装不上？
+
+尝试安装  cloud-init 社区原版
+
+##### 系统盘无法自动扩展？
+
+这个问题比较复杂，但主要考虑两个方向：
+
+1. 创建虚拟机时磁盘分区尽量简单化，比如说：只设置 1 个分区
+2. 系统中安装磁盘自动扩容的插件
+
 ###  对象存储
 
 #### 自建对象存储
