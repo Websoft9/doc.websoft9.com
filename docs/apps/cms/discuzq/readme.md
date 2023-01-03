@@ -76,7 +76,7 @@ b63e355487a0   websoft9dev/discuzq:latest   "/tmp/cmd.sh"            39 minutes 
 
 Discuz!Q 安装目录： */data/apps/discuzq*  
 Discuz!Q 站点目录： */data/apps/discuzq/data/discuzq*  
-Discuz!Q 配置文件： */data/wwwroot/discuzq/volumes/config/config_default.php*  
+Discuz!Q 配置文件： */data/apps/discuzq/data/discuzq/config/config_default.php*  
 ### 网址
 
 Discuz!Q 后台地址： *http://域名/admin*  
