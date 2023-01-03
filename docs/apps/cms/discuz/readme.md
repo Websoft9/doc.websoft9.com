@@ -205,7 +205,7 @@ CONTAINER ID   IMAGE                     COMMAND                  CREATED       
 
 Discuz 安装目录： */data/apps/discuz*  
 Discuz 站点目录： */data/apps/discuz/data/discuz*  
-Discuz 配置文件: */data/apps/discuz/data/discuz/config/config_global_default.php*  
+Discuz 配置文件: */data/apps/discuz/data/discuz/config/config_default.php*  
 
 
 ### 端口{#port}
