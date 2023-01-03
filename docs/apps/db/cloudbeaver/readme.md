@@ -210,7 +210,7 @@ CONTAINER ID   IMAGE                        COMMAND             CREATED       ST
 
 ### 路径{#path}
 
-* CloudBeaver 配置文件： */data/apps/cloudbeaver/volumes/GlobalConfiguration/.dbeaver/data-sources.json*  
+* CloudBeaver 配置文件： */data/apps/cloudbeaver/data/cloudbeaver/GlobalConfiguration/.dbeaver/data-sources.json*  
 
 > data-sources.json 存放数据库连接信息
 
