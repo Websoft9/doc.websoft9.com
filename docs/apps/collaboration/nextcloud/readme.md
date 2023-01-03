@@ -149,40 +149,44 @@ Nextcloud 支持多种流行的企业存储服务，具体使用步骤如下：
 
 Nextcloud 的程序和数据文件默认均存在系统盘，你要转移到数据盘（或对象存储），步骤如下：
 
-#### 转移到数据盘
-
-1. 在服务器所在的云平台上购买数据盘，并**挂载**到 Nextcloud 服务器
-2. 使用 SFTP 工具连接服务器，停止服务
-   ```
-   systemctl stop httpd
-   ```
-3. 新建一个 */data/wwwroot/nextcloud2* 文件夹
-4. 初始化数据盘，并将数据盘 **mount** 到新建的 *nextcloud2* 文件夹
-5. 将 */data/wwwroot/nextcloud* 下的数据全部拷贝到 */data/wwwroot/nextcloud2*  
-6. 修改 Nextcloud [虚拟主机配置文件](./apache#virtualhost) 的路径
-7. 启动服务后生效
-   ```
-   systemctl start httpd
-   ```
-
 #### 转移到对象存储
 
-1. 在服务器所在的云平台上购买对象存储，新建一个 **bucket**
-2. 使用 SFTP 工具连接服务器，停止服务
+转移到对象存储有四个要点：对象存储挂载到服务器，Nextcloud 数据文件备份与复制，docker-compose 文件 volume 挂载更改和重建索引。  
+
+具体步骤如下：  
+
+1. 将 Nextcloud 数据目录复制一份到目录：*/data/backup/nextcloud*  
+2. 在服务器所在的云平台上购买对象存储，新建一个 **bucket**
+3. 将对象存储的 bucket **mount** 到 Nextcloud 数据目录 */data/app/nextcloud/ossdata/*，并设置开机自动挂载。以阿里云为例：
+   
+   在/etc/init.d/目录下建立文件ossfs，内容如下：
    ```
-   systemctl stop httpd
+   #! /bin/bash
+   #
+   # ossfs      Automount Aliyun OSS Bucket in the specified direcotry.
+   #
+   # chkconfig: 2345 90 10
+   # description: Activates/Deactivates ossfs configured to start at boot time.
+
+   ossfs Websoft9Image /data/app/nextcloud/ossdata/ -ourl=http://oss-cn-hangzhou.aliyuncs.com -o allow_other -o nonempty -o mp_umask=007 -o uid=48 -o gid=48
    ```
-3. 新建一个 */data/wwwroot/nextcloud2* 文件夹
-4. 将对象存储的 bucket **mount** 到新建的 *nextcloud2* 文件夹
-5. 将 */data/wwwroot/nextcloud* 下的数据全部拷贝到 */data/wwwroot/nextcloud2*  
-6. 修改 Nextcloud [虚拟主机配置文件](./apache#virtualhost) 的路径
-7. 启动服务后生效
+
+   > uid 对应着容器中用户的 uid，解决了权限的问题。 
+
+4. 将 Nextcloud 备份文件拷贝到 Nextcloud 数据目录 */data/app/nextcloud/ossdata/*
+5. 修改 docker-compose.yml 文件中 Nextcloud 数据路径到 */data/app/nextcloud/ossdata/*，docker  compose up 后生效。
+6. 连接到 Nextcloud 容器，cd 到 Nextcloud 根目录，重建 Nextcloud 索引 
    ```
-   systemctl start httpd
+   occ files:scan --all
    ```
-8. 设置对象存储开机自动挂载（不同云平台操作不同）
+
+#### 转移到数据盘
+
+转移到数据盘的操作与转移到对象存储非常类似，只是 2-3 步骤操作略有差异。
+
 
 > 以上两种数据转移方案中，**mount** 操作对新手来说是几乎是不可能独立完成的任务。另外，如果转移的数据超过10G，会存在拷贝失败的风险
+
 
 ### 通过 WebDAV 连接 NextCloud
 
