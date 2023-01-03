@@ -15,7 +15,11 @@ tags:
 
 ### 升级
 
-VtigerCRM 自身提供了升级功能和[升级文档](http://community.vtiger.com/help/vtigercrm/administrators/migration.html)，具体操作如下：
+VtigerCRM 自身提供了升级功能和[升级文档](http://community.vtiger.com/help/vtigercrm/administrators/migration.html)。
+
+升级是将**升级包**覆盖到已有源码上进行升级。新版本 VtigerCRM 安装完成后再导入旧版本数据的升级方案是不可行的。
+
+具体升级操作如下：
 
 1. 到 VtigerCRM 官网[下载升级包](https://www.vtiger.com/open-source-crm/download-open-source/)（注意：是升级包，不是最新的软件包）
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/vtigercrm/vtigercrm-dlupgradepack-websoft9.png)
