@@ -105,24 +105,23 @@ VtigerCRM 支持多国语言，中文包安装方法如下：
 
 注意：语言包也可以通过官方扩展应用市场安装。
 
-## 参数{#parameter}
+## VtigerCRM 参数{#parameter}
 
-VtigerCRM 应用中包含 PHP, Nginx, Docker, MySQL, phpMyAdmin 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+VtigerCRM 应用中包含 Nginx, Docker, MySQL, phpMyAdmin 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
 通过运行`docker ps`，可以查看到 VtigerCRM 运行时所有的 Container：
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                       COMMAND                  CREATED       STATUS       PORTS                                       NAMES
+dc3b1e1026ef   phpmyadmin:latest           "/docker-entrypoint.…"   5 hours ago   Up 5 hours   0.0.0.0:9090->80/tcp, :::9090->80/tcp       phpmyadmin
+c0ea822f21c2   websoft9dev/vtiger:latest   "docker-php-entrypoi…"   5 hours ago   Up 5 hours   0.0.0.0:9001->80/tcp, :::9001->80/tcp       vtiger
+2a9b0fe6613a   mysql:5.6                   "docker-entrypoint.s…"   5 hours ago   Up 5 hours   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp   vtiger-db
 ```
-
-
-下面仅列出 VtigerCRM 本身的参数：
 
 ### 路径{#path}
 
-VtigerCRM 目录:  */data/wwwroot/vtigercrm*   
-VtigerCRM 升级路径： *http://URL/migrate*
-VtigerCRM 安装时数据库配置文件： *layouts/v7/modules/Install/Step4.tpl*  
+VtigerCRM 目录:  */data/apps/vtiger*   
+VtigerCRM 安装时数据库配置文件： */data/apps/vtiger/data/vtiger/layouts/v7/modules/Install/Step4.tpl*  
 
 ### 端口{#port}
 
