@@ -194,6 +194,11 @@ GitLab 仓库的 HTTPS 不等同于 GitLab 自身的 HTTPS，前置还需额外�
 
    ```
 
+### 极狐 Gitlab 设置中文  
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/jh-gitlab-setlanguge-websoft9.png)
+
+
 ## GitLab 参数
 
 GitLab 应用中包含 Docker, Portainer 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 

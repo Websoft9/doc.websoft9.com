@@ -9,7 +9,36 @@ slug: /tencentcloud/advanced
 
 ### API/CLI
 
-腾讯云提供了原生 API/CLI 。  
+腾讯云的[命令行工具](https://cloud.tencent.com/document/product/440)与其 API 调用的参数是一致的，这一点做得非常好。
+
+* 在线的API调试工具：[API 3.0 Explorer](https://console.cloud.tencent.com/api/explorer)
+* 地域分布[查看](https://cloud.tencent.com/document/product/213/6091)
+
+#### 配置
+
+一条交互式命令即可配置
+```
+$ tccli configure
+TencentCloud API secretId [*afcQ]:AKIDwLw1234xxxxxxe2g9nR2OTI787aBCDP
+TencentCloud API secretKey [*ArFd]:OxXj7khcV1234xxxxxxABcdCc1LiArFd
+region: ap-guangzhou
+output[json]:
+```
+
+#### 常见命令
+```
+# 查询当前区域的zones
+tccli cvm DescribeZones
+
+# 查询镜像
+tccli cvm DescribeImages  --Filters '[{"Name":"image-type","Values":["PUBLIC_IMAGE"]}]' \
+    --filter  'ImageSet[*].{name:ImageDescription, id:ImageId, cloudin: IsSupportCloudinit, at:Architecture}'
+
+# 使用SPOTPAID（竞价实例）类型创建服务器
+        'vm_createVM_template':'tccli cvm RunInstances \
+            --InstanceChargeType SPOTPAID \
+            --InstanceMarketOptions \'{"MarketType":"spot","SpotOptions":{"MaxPrice":"5"}}\' \
+```
 
 
 ## 常见问题

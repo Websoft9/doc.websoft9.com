@@ -12,7 +12,78 @@ slug: /alibabacloud/advanced
 
 阿里云为服务器提供一套功能强大、完整的 [API](https://next.api.aliyun.com/) 以及 CLI 操作方式，为自动化提供了坚实的基础。  
 
-#### 查询并导出商品
+阿里云官方有两套CLI，分别是Python版和GO语言版，官方推荐使用Go语言版本。
+
+* [CLI 命令查看和演示](https://api.aliyun.com/)
+* [阿里云机房区域分布](https://help.aliyun.com/document_detail/40654.html)
+
+#### 配置
+
+通过 aliyun help 查询参数值，下面范例中有两个配置，分别代表阿里云和AlibabaCloud，current 表示默认配置
+```
+{
+	"current": "default",
+	"profiles": [
+		{
+			"name": "default",
+			"mode": "AK",
+			"access_key_id": "LTAIxudddf",
+			"access_key_secret": "boeIdddqRNumc",
+			"sts_token": "",
+			"ram_role_name": "",
+			"ram_role_arn": "",
+			"ram_session_name": "",
+			"private_key": "",
+			"key_pair_name": "",
+			"expired_seconds": 0,
+			"verified": "",
+			"region_id": "cn-hongkong",
+			"output_format": "json",
+			"language": "zh",
+			"site": "china",
+			"retry_timeout": 0,
+			"connect_timeout": 0,
+			"retry_count": 0
+		},
+		{
+			"name": "global",
+			"mode": "AK",
+			"access_key_id": "LTdddxg",
+			"access_key_secret": "xyNo3Oddd4LEOB",
+			"sts_token": "",
+			"ram_role_name": "",
+			"ram_role_arn": "",
+			"ram_session_name": "",
+			"private_key": "",
+			"key_pair_name": "",
+			"expired_seconds": 0,
+			"verified": "",
+			"region_id": "cn-hongkong",
+			"output_format": "json",
+			"language": "zh",
+			"site": "",
+			"retry_timeout": 0,
+			"connect_timeout": 0,
+			"retry_count": 0
+		}
+	],
+	"meta_path": ""
+}
+```
+
+#### 常用命令
+```
+#交互式配置凭证
+aliyun configure
+
+#多个凭证下，指定一个凭证集
+aliyun --profile 
+
+#查询所有镜像
+aliyun ecs DescribeImages --Architecture x86_64 --ImageOwnerAlias system --PageSize 100 --output cols=OSName,ImageId,CreationTime rows=Images.Image[]
+```
+
+#### 导出云市场商品{#exportoffers}
 
 1. 打开 [API 调试器](https://next.api.aliyun.com/api/Market/2015-11-01/DescribeProducts?lang=JAVA)
 2. SearchTerm 填写“长沙网久软件有限公司。筛选项：key=productType, vaule=MIRROR；
@@ -133,5 +204,13 @@ vim /etc/sysconfig/network-scripts/ifcfg-ens33，将ONBOOT=no改为yes，重启�
 #### 上传的 OracleLinux 镜像无法重置密码？
 
 确保上传镜像等选择等是【CentOS】类别，如果是【OtherLinux】等类别，就会导致无法在控制台重置密码
+
+#### aliyun ecs DescribeImages的超时时间是多少？
+
+阿里云默认为180s，如果180s没有达到预期，则返回错误信息。
+
+#### 阿里云CLI支持云市场操作吗？
+
+云市场只提供 API
 
 

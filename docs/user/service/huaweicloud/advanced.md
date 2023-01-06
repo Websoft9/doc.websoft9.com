@@ -9,7 +9,82 @@ slug: /huaweicloud/advanced
 
 ### API/CLI
 
-华为云提供了原生 API/CLI 和 OpenStack API/CLI 两种方式。  
+华为云提供了[原生 API/CLI](https://support.huaweicloud.com/productdesc-hcli/hcli_01.html) 和 OpenStack API/CLI 两种方式。
+
+* [机房编号](https://developer.huaweicloud.com/endpoint)
+
+#### 配置
+
+华为云 CLI 默认的超时和重试设置不太合理，出错不重试，5s就超时。所以运行之前需要修改这些值：  
+必要参数：readTimeout, connectionTimeout, retryCount
+ 
+```
+{
+	"crypter": "3XQfrO2Krn4OeZeA4ZdITnFgIM6q+/+w",
+	"nonce": "cvLMpf1hTaCtMadKQI",
+	"language": "cn",
+	"current": "default",
+	"profiles": [
+		{
+			"name": "default",
+			"mode": "AKSK",
+			"accessKeyId": "4QUDu1ucWvatP8ZHl4u3a0+8xy",
+			"secretAccessKey": "/CkDi1uzeAwMN2Q=",
+			"securityToken": "",
+			"xAuthToken": "",
+			"expiresAt": "",
+			"region": "",
+			"projectId": "",
+			"domainId": "",
+			"readTimeout": 20,
+			"connectTimeout": 10,
+			"retryCount": 5
+		}
+	]
+}
+```
+
+另外，需要注意的是，配置文件中的 region、projectId 不要预先设置到配置文件中，以避免CLI无法操作多区域。
+
+* region 在运行CLI命令的时候通过参数带入
+* project_id 在运行CLI命令的时候会自动获取
+
+#### 常用命令 
+
+通过 [apiexplorer](https://apiexplorer.developer.huaweicloud.com/) 可以查询常见的命令
+
+```
+# 查询公共镜像
+hcloud IMS ListImages --cli-region="ap-southeast-1" --__imagetype="gold"
+
+# 创建服务器
+hcloud ECS CreatePostPaidServers --cli-region="ap-southeast-1" --server.key_name="websoft9_auto" --server.security_groups.1.id="14e9ce31-0378-4785-8e03-a43ec78f12b9" --server.availability_zone="ap-southeast-1b" --server.vpcid="943bc887-3340-4219-bf9d-8265d8cef1d2" --server.name="test-cdl" --server.nics.1.subnet_id="4105cc19-20dd-4be5-b03c-50734cdf9248" --server.root_volume.volumetype="SSD" --server.flavorRef="c3.large.2" --server.publicip.eip.bandwidth.size=300 --server.publicip.eip.bandwidth.sharetype="PER" --server.publicip.eip.iptype="5_bgp" --server.imageRef="5be19e6d-80ef-4e9d-96a2-ec1b8438065d"
+
+# 查询创建服务器Job状态
+hcloud ECS ShowJob --cli-region="ap-southeast-1"  --job_id="ff80808176f756f30177d725bde10842"
+
+# 查询磁盘信息
+hcloud ECS ListServerVolumeAttachments --cli-region="ap-southeast-1"  --server_id="24749da9-f15a-4245-8c9f-9a291c7f90f2"
+
+# 查询服务器详情（包含公网IP信息）
+hcloud ECS ShowServer --cli-region="ap-southeast-1" --server_id="24749da9-f15a-4245-8c9f-9a291c7f90f2"
+
+# 关闭服务器
+hcloud ECS NovaStopServer --cli-region="ap-southeast-1" --server_id="24749da9-f15a-4245-8c9f-9a291c7f90f2" --os-stop.type="SOFT"
+
+# 制作系统盘镜像
+ hcloud IMS CreateImage --cli-region="ap-southeast-1" --instance_id="24749da9-f15a-4245-8c9f-9a291c7f90f2" --name="image-name"
+ 
+# 查询镜像信息
+hcloud IMS ListImages --cli-region="ap-southeast-1" --__imagetype="private" --name="image-name"
+
+# 跨区域复制镜像
+hcloud IMS CopyImageCrossRegion --cli-region="ap-southeast-1" --image_id="2fdf21a6-cf32-4787-9524-18565da42e46" --agency_name="Copy" --name="image-name" --description="Copy from HK" --project_name="cn-north-4" --region="cn-north-4"
+
+# 删除服务器
+hcloud ECS DeleteServers --cli-region="ap-southeast-1" --delete_volume=true --servers.1.id="7d178f9b-ecf1-4844-aea2-e41d642afd65" --delete_publicip=true
+
+```
 
 
 ## 问题解答
@@ -55,3 +130,11 @@ slug: /huaweicloud/advanced
 #### 鲲鹏是什么类型的服务器？
 
 鲲鹏原指华为在2019年1月初发布的一款兼容ARM指令集的服务器芯片鲲鹏920，性能强悍，配备了64个物理核心，单核实力从CPU算力benchmark的角度对比，大约持平于同期X86的主流服务器芯片，整体多核多线程算力较同期的X86芯片更强大。 当前鲲鹏的含义已经有所延伸，鲲鹏不再仅仅局限于鲲鹏系列服务芯片，更是包含了服务器软件在新的计算架构平台上的完整软硬件生态和云服务生态。
+
+#### CooCLI 与 OpenStackCLI 有什么区别？
+
+华为云由于使用的是OpenStack架构，原来一直使用 OpenStackCLI，但由于其快速发展，OpenStackCLi 已经无法满足用户的需求，所有华为云自行开发了 KooCLI
+
+#### CLI 创建的秘钥对为什么找不到？
+
+CLI 用户使用的秘钥对必须是CLI用户登录到控制台后创建，其他用户创建的无法使用

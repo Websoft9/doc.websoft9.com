@@ -57,3 +57,9 @@ JRE 是 JAVA 程序运行时，JDK 是 Java 开发者套件。JDK 包含了 JRE�
 #### 如何找到 Java 资源？
 
 参考：[Awesome Java](https://github.com/akullpp/awesome-java)
+
+#### Java 应用程序启动过慢？
+
+这是由于 [java.security 随机数策略导致](https://cloud.tencent.com/developer/article/2016915)
+
+
