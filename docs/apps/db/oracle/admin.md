@@ -65,6 +65,15 @@ Oracle Clusterware 是实现 Oracle RAC 的工具。
 问题原因： 连接数据库时用户与默认的 role 不匹配    
 解决方案： 连接信息中的 role  选择为 SYSDBA or SYSOPER
 
+####  创建用户时，ORA-00440: Message 440 not found;product=RDBMS;facility=ORA？
+
+问题原因： 登陆的sysdba权限的sys用户在root库上，需要连接到数据PDB库    
+解决方案： 连接到 ORCLPDB1 库即可，下图通过 Oracle SQL Developer 客户端演示
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/oracle/oracle-connectpdb-websoft9.png)
+
+ > 如果在连接ORCLCDB时需要创建用户，Oracle用户名必须带前缀"C##"
+
 ## 问题解答{#faq}
 
 #### Oracle 企业版或标准版免费吗？
@@ -85,6 +94,14 @@ Oracle Clusterware 是实现 Oracle RAC 的工具。
 SID 是数据库实例唯一的名称。 Service Name 是向监听（TNS）注册后的别名。可以给同一个数据库实例配置多个 Service Name。  
 
 所以，大多数情况下， SID 和 Service Name 名称是相同的。  
+
+#### 如何导入dump文件？
+
+```
+sudo docker cp dumpfile oracle:/tmp/dumpfile
+sudo docker exec -it oracle bash
+imp user/password@ORCLPDB1 file="dump文件路径" full=y ignore=y;
+```
 
 #### 表空间和模式对象（ Segment）？
 
