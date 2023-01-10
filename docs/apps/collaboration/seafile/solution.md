@@ -19,7 +19,7 @@ Seafile 开源版支持集成 OnlyOffice Docs 作为 Office 格式的文档预�
 但是，为了便于用户维护，下面我们把配置的详细步骤列出，以供需要时参考：  
 
 1. 首先，确保 [OnlyOffice Docs](../onlyofficedocs) 可访问
-2. 然后，SFTP 连接服务器，编辑 Seafile 配置文件/opt/seafile-data/seafile/conf/seahub_settings.py
+2. 然后，SFTP 连接服务器，编辑 Seafile 配置文件/data/apps/seafile/data/seafile_data/seafile/conf/seahub_settings.py
 3. 插入下面的模板（或对已经存在的模板进行修改）
    ```
    # Enable Only Office
