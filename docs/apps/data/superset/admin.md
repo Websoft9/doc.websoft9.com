@@ -13,6 +13,25 @@ tags:
 
 ## 场景
 
+### Superset 升级
+
+升级方法操作如下：
+
+```
+cd /data/apps/superset
+sudo docker compose down
+# such as: upgrade version=2.0.1
+sudo sed -i 's/APP_VERSION=.*/APP_VERSION=upgrade version}/g' /data/apps/superset/.env
+cd /tmp && git clone https://github.com/apache/superset
+git checkout upgrade version
+rm -rf /data/apps/superset/src/docker
+cp -r docker /data/apps/superset/src
+docker compose up -d
+
+```
+
+ > 该升级方法仅作为参照，对于版本跨度较大的情况可能不会成功，请联系客服处理。
+
 ## 故障排除
 
 除以下列出的 Superset 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案：

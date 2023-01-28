@@ -15,7 +15,24 @@ This chapter is special guide for Superset maintenance and settings. And you can
 
 ### Backup and Restore
 
-### Upgrade
+### Superset Upgrade
+
+You can upgrade as follows:
+
+```
+cd /data/apps/superset
+sudo docker compose down
+# such as: upgrade version=2.0.1
+sudo sed -i 's/APP_VERSION=.*/APP_VERSION=upgrade version}/g' /data/apps/superset/.env
+cd /tmp && git clone https://github.com/apache/superset
+git checkout upgrade version
+rm -rf /data/apps/superset/src/docker
+cp -r docker /data/apps/superset/src
+docker compose up -d
+
+```
+
+ > This upgrade method is only for reference, and it may not be successful in the case of a large version span, please contact customer service.
 
 ## Troubleshoot{#troubleshoot}
 
