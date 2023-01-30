@@ -129,20 +129,14 @@ ca3a6baf750e   alfresco/alfresco-share:7.0.0                          "/usr/loca
 ```
 
 
-下面仅列出 Alfresco 本身的参数：
-
 ### 路径{#path}
 
-Alfresco 安装目录： */data/wwwroot/alfresco*  
-Alfresco 容器存储目录： */data/wwwroot/alfresco/volumes/alfresco*  
-Alfresco 日志目录： */data/wwwroot/alfresco/volumes/alfresco/share/logs*  
+Alfresco 安装目录： */data/apps/alfresco*  
+Alfresco 容器存储目录： */data/apps/alfresco/data/alfresco*  
 
 ### 端口{#port}
 
-| 端口号 | 用途                                          | 必要性 |
-| ------ | --------------------------------------------- | ------ |
-| 8080   | Alfresco 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
-
+无特殊端口
 
 
 ### 版本{#version}

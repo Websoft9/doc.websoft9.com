@@ -117,8 +117,6 @@ Try to retrieve your password through database table as below:
  The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Alfresco
 
 
-通过运行`docker ps`，可以查看到 Alfresco 运行时所有的 Container：
-
 ```bash
 CONTAINER ID   IMAGE                                                  COMMAND                  CREATED             STATUS             PORTS                                                                                                                                                                                NAMES
 3d2afa8a1cc7   alfresco/alfresco-acs-nginx:3.1.1                      "/entrypoint.sh"         About an hour ago   Up About an hour   80/tcp, 0.0.0.0:8080->8080/tcp, :::8080->8080/tcp                                                                                                                                    alfresco-proxy
@@ -132,20 +130,14 @@ ca3a6baf750e   alfresco/alfresco-share:7.0.0                          "/usr/loca
 ```
 
 
-下面仅列出 Alfresco 本身的参数：
-
 ### Path{#path}
 
-Alfresco installation directory： */data/wwwroot/alfresco*  
-Alfresco 容器存储目录： */data/wwwroot/alfresco/volumes/alfresco*  
-Alfresco 日志目录： */data/wwwroot/alfresco/volumes/alfresco/share/logs*  
+Alfresco Install Directory： */data/apps/alfresco*  
+Alfresco Data Directory： */data/apps/alfresco/data/alfresco* 
 
 ### Port{#port}
 
-| 端口号 | 用途                                          | 必要性 |
-| ------ | --------------------------------------------- | ------ |
-| 8080   | Alfresco 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
-
+No special port
 
 
 ### Version{#version}
