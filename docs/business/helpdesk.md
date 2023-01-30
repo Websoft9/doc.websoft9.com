@@ -36,7 +36,7 @@ Websoft9 客户成功团队从咨询、方案和技术支持全面的服务客�
   
 | 支持渠道 | 服务时间 | 适用场景| 使用入口|
 | --- | --- | --- | --- |
-| 工单（推荐） | 7×24 | 处理故障 | [访问工单系统](https://share.hsforms.com/1V3u-6EPoRgOKEdi9kSk12w568t5)|
+| 工单（推荐） | 7×24 | 处理故障 | [访问工单系统](https://www.websoft9.com/ticket)|
 | 邮箱 | 7×24 | 处理故障，合作 | help@websoft9.com|
 | 微信（扫一扫） | 5×8| 交流咨询 | ![](https://libs.websoft9.com/websites/zh/wx-lz.png) ![](https://libs.websoft9.com/websites/zh/wx-cdl.png) |
 | 电话 | 7×8| 售前或紧急故障 | **0731-8957 2759**|
@@ -46,9 +46,9 @@ Websoft9 客户成功团队从咨询、方案和技术支持全面的服务客�
 
 #### 工单系统需要注册吗？
 
-可以注册，也可以不注册。
+不需要注册，它会通过将内容回复到您的邮箱中。
 
-[![alt text](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/workorder-ui.png "title")](https://share.hsforms.com/1V3u-6EPoRgOKEdi9kSk12w568t5)
+[![alt text](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/workorder-ui.png "title")](https://www.websoft9.com/ticket)
 
 #### 如何查看工单反馈？
 

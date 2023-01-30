@@ -25,7 +25,7 @@ sudo docker compose down
 # such as: upgrade version=2.0.1
 sudo sed -i 's/APP_VERSION=.*/APP_VERSION=2.0.1/g' /data/apps/superset/.env
 cd /tmp && sudo git clone https://github.com/apache/superset
-cd superset && sudo git checkout 2.0
+cd superset && sudo git checkout 2.0.1
 sudo rm -rf /data/apps/superset/src/docker
 sudo cp -r docker /data/apps/superset/src
 cd /data/apps/superset
