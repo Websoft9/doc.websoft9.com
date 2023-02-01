@@ -28,7 +28,7 @@ If you have installed Websoft9 Alfresco, the following steps is for your quick s
 
 ### Steps for you
 
-1. Use local browser to access: *http://DNS* or *http://Server's Internet IP*. You will enter Alfresco login page.
+1. Use local browser to access: *http://DNS* or *http://Server's Internet IP*. Click [Alfresco Repository]->[Alfresco Share].
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/alfresco/alfresco-login-websoft9.png)
 
 2. Log in Alfresco web console. ([Don't have password?](./user/credentials)) 

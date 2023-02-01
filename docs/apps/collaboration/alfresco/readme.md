@@ -27,7 +27,7 @@ tags:
 
 ### 详细步骤
 
-1. 使用本地电脑的浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入登陆界面
+1. 使用本地浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 点击 [Alfresco Repository]->[Alfresco Share]
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/alfresco/alfresco-login-websoft9.png)
 
 2. 输入账号密码（[不知道账号密码？](./user/credentials)），成功登录到 Alfresco 后台  
