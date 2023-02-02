@@ -67,8 +67,8 @@ tags:
 
 ##### 配置
 
-1. 登录 CloudBeaver 控制台，打开：【Connection】>【Manual】，选择 **MySQL**
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-conmysql001-websoft9.png)
+1. 登录 CloudBeaver 控制台，点击右上角【Settings】图标，选择【Administration】>【Connection Management】，添加对应数据库，进行连接管理  
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-connection-websoft9.png)
 
 2. 设置连接信息：主机地址、端口、账号密码（可以勾选是否保存），然后点击【Save】
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-conmysql002-websoft9.png)
@@ -92,8 +92,8 @@ tags:
 
 ##### 配置
 
-1. 登录 CloudBeaver 控制台，打开：【Connection】>【Manual】，选择 **PostgreSQL**
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-openconn-websoft9.png)
+1. 登录 CloudBeaver 控制台，点击右上角【Settings】图标，选择【Administration】>【Connection Management】，添加对应数据库，进行连接管理  
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-connection-websoft9.png)
 
 2. 设置连接信息：主机地址、端口、账号密码（可以勾选是否保存），然后点击【Save】
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-connsetting-websoft9.png)
@@ -115,8 +115,8 @@ tags:
 
 ##### 配置
 
-1. 登录 CloudBeaver 控制台，打开：【Connection】>【Manual】，选择 **SQLServer**
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-openconn-websoft9.png)
+1. 登录 CloudBeaver 控制台，点击右上角【Settings】图标，选择【Administration】>【Connection Management】，添加对应数据库，进行连接管理  
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-connection-websoft9.png)
 
 2. 设置连接信息：主机地址、端口、账号密码（可以勾选是否保存），然后点击【Save】
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-connsetting-websoft9.png)
@@ -138,8 +138,8 @@ tags:
 
 ##### 配置
 
-1. 登录 CloudBeaver 控制台，打开：【Connection】>【Manual】，选择 **SQLite**
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-openconn-websoft9.png)
+1. 登录 CloudBeaver 控制台，点击右上角【Settings】图标，选择【Administration】>【Connection Management】，添加对应数据库，进行连接管理  
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-connection-websoft9.png)
 
 2. 设置连接信息：主机地址、端口、账号密码（可以勾选是否保存），然后点击【Save】
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-openconnsqlite-websoft9.png)
@@ -161,8 +161,8 @@ tags:
 
 ##### 配置
 
-1. 登录 CloudBeaver 控制台，打开：【Connection】>【Manual】，选择 **Oracle**
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-openconn-websoft9.png)
+1.  登录 CloudBeaver 控制台，点击右上角【Settings】图标，选择【Administration】>【Connection Management】，添加对应数据库，进行连接管理   
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-connection-websoft9.png)
 
 2. 设置连接信息：主机地址、端口、账号密码（可以勾选是否保存），然后点击【Save】
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-connsetting-websoft9.png)

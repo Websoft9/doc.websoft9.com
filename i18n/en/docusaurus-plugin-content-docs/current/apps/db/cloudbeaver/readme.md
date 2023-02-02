@@ -66,8 +66,8 @@ If you don't have MySQL service, you can get it from [MySQL application](https:/
 
 **Settings**
 
-1. Login to CloudBeaver console and open: 【Connection】>【Manual】, select **MySQL**
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-conmysql001-websoft9.png)
+1. Login to the CloudBeaver console, click 【Settings】 in the upper right corner, select 【Administration】 >【Connection Management】, and add the corresponding database for connection configuration  
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-connection-websoft9.png)
 
 2. Set the connections: host, port and credential, then click 【Save】button.
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-conmysql002-websoft9.png)
@@ -90,8 +90,8 @@ If you don't have PostgreSQL service, you can get it from [PostgreSQL applicatio
 
 **Settings**
 
-1. Login to CloudBeaver console and open: 【Connection】>【Manual】, select **PostgreSQL**
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-openconn-websoft9.png)
+1. Login to the CloudBeaver console, click 【Settings】 in the upper right corner, select 【Administration】 >【Connection Management】, and add the corresponding database for connection configuration  
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-connection-websoft9.png)
 
 2. Set the connections: host, port and credential, then click 【Save】button.
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-connsetting-websoft9.png)
@@ -113,8 +113,8 @@ If you don't have SQLServer service, you can get it from [SQLServer application]
 
 **Settings**
 
-1. Login to CloudBeaver console and open: 【Connection】>【Manual】, select **SQLServer**
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-openconn-websoft9.png)
+1. Login to the CloudBeaver console, click 【Settings】 in the upper right corner, select 【Administration】 >【Connection Management】, and add the corresponding database for connection configuration  
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-connection-websoft9.png)
 
 2. Set the connections: host, port and credential, then click 【Save】button.
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-connsetting-websoft9.png)
@@ -136,8 +136,8 @@ If you don't have SQLite service, you can get it from [SQLite application](https
 
 **Settings**
 
-1. Login to CloudBeaver console and open: 【Connection】>【Manual】, select **SQLite**
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-openconn-websoft9.png)
+1. Login to the CloudBeaver console, click 【Settings】 in the upper right corner, select 【Administration】 >【Connection Management】, and add the corresponding database for connection configuration  
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-connection-websoft9.png)
 
 2. Set the connections: host, port and credential, then click 【Save】button.
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-openconnsqlite-websoft9.png)
@@ -159,7 +159,7 @@ If you don't have Oracle service, you can get it from [Oracle application](https
 
 **Settings**
 
-1. Login to CloudBeaver console and open: 【Connection】>【Manual】, select **Oracle**
+1. Login to the CloudBeaver console, click 【Settings】 in the upper right corner, select 【Administration】 >【Connection Management】, and add the corresponding database for connection configuration  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-openconn-websoft9.png)
 
 2. Set the connections: host, port and credential, then click 【Save】button.
