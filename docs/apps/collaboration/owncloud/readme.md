@@ -108,7 +108,7 @@ ownCloud [Marketplace](https://marketplace.owncloud.com/) 包含大量的扩展�
 
 2. 下载并解压  
 
-3. 上传到 ownCloud 应用目录：*data/wwwroot/owncloud/apps*
+3. 上传到 ownCloud 应用目录：/var/lib/docker/volumes/owncloud_owncloud/_data/apps，并通过chown 命令，改变扩展目录（如 ownbackup）的拥有者和关联组用户为 www-data
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-ftp-websoft9.png)
 
 4. 启用 OwnBackup  

@@ -93,8 +93,8 @@ Owncloud [Marketplace](https://marketplace.owncloud.com/) have lots of extension
 
 1. Visit [Marketplace](https://marketplace.owncloud.com/), find the app you want to use(e.g OwnBackup)
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-searchapps-websoft9.jpg)
-2. Download and unzip it
-3. Upload it to your OwnCloud's apps directory: *data/wwwroot/owncloud/apps*
+2. Download and unzip it  
+3. Upload to the ownCloud application directory: */var/lib/docker/volumes/owncloud_owncloud/_data/apps*, and change the owner and group user of the directory to *www-data*  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-ftp-websoft9.png)
 4. Enable OwnBackup
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-enableapps-websoft9.png)

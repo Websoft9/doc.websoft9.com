@@ -116,7 +116,7 @@ Network problems may cause the extension to be unable to be installed online. In
 
 1. Go to Nextcloud [Official App Store](https://apps.nextcloud.com/apps/onlyoffice/releases?platform=22#22) to download the extension
 
-2. After downloading it locally, unzip it and upload it to the server via FTP. Nextcloud application directory: /data/wwwroot/nextcloud/apps
+2. After downloading, unzip and upload to the Nextcloud application directory via FTP: */var/lib/docker/volumes/nextcloud_nextcloud/_data/apps*, change the owner and group user of the onlyoffice directory to *www-data*  
 
 3. Log in to the Nextcloud background, enter the application center, enable ONLYOFFICE to proceed to the next step, and enable online preview and editing of documents
 

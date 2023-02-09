@@ -125,7 +125,7 @@ Nextcloud 后台集成了 [Marketplace](https://apps.nextcloud.com) 大量的扩
 
 1. 到 Nextcloud [官方应用商店](https://apps.nextcloud.com/apps/onlyoffice/releases?platform=22#22)下载扩展
 
-2. 下载到本地后，解压，通过FTP上传到服务器 Nextcloud 应用目录：/data/wwwroot/nextcloud/apps
+2. 下载并解压，通过FTP上传到服务器 Nextcloud 应用目录：/var/lib/docker/volumes/nextcloud_nextcloud/_data/apps，并通过chown 命令，改变 onlyoffice 目录的拥有者和关联组用户为 www-data
 
 3. 登录 Nextcloud 后台，进入应用中心，启用 ONLYOFFICE 即可进入下一步操作，开启文档在线预览和编辑
 
