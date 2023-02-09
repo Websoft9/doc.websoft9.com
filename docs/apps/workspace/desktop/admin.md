@@ -15,7 +15,26 @@ tags:
 
 本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup) 相关章节。
 
-## 故障处理
+## 故障处理{#troubleshoot}
+
+#### 远程桌面时，报错：“由于安全设置错误，客户端无法连接到远程计算机...”  
+
+原因：本地远程桌面客户端与服务端协议不匹配    
+方案：[修改本地客户端协议](https://blog.csdn.net/sherlockmj/article/details/123650902)  
+
+#### useradd 创建的用户无法远程连接？
+
+现象：`useradd` 创建用户，然后 `passwd username` 设置密码。这样的账户无法连接服务器  
+原因： useradd 主要是用于创建应用账号，不是 Linux 系统账号  
+方案： 使用 `adduser` 创建
+
+#### 不知道 VNC 的连接密码？
+
+使用 SSH 连接到服务器后，输入如下的命令设置密码即可
+```
+vncpasswd
+systemctl restart vnc
+```
 
 #### 登录后，不小心锁屏了怎么办？
 
@@ -24,19 +43,18 @@ tags:
 以 Gnome 为例，关闭步骤：【Privacy】>【Screen Lock】，将【Automatic Screen Lock】设置为 off
 
 
-#### "由于安全设置错误, 客户端无法连接到远程计算机." ？
-![image.png](https://libs.websoft9.com/Websoft9/DocsPicture/zh/linux/linux-errorsafe-websoft9.png)
-
-解决办法：
-
-1. 打开"本地安全策略"- Win+R 并输入 secpol.msc (或者在"管理工具"中打开)；
-2. 在本地安全策略中，打开“本地策略”下的“安全选项”；
-3. 在右边的策略中，找到“系统加密：将FIPS算法用于加密 、哈希和签名”点击右键属性；
-4. 将“本地安全设置”设置为“已禁用”，在单击“应用”，后”确定”，即可远程控制  
-   ![image.png](https://libs.websoft9.com/Websoft9/DocsPicture/zh/windows/windows-remoteanquan-websoft9.png)
-
-
 ## 常见问题
+
+#### 使用秘钥对是否可以连接桌面？
+
+不可以，请先使用 **SSH** 登录服务器后，运行 `passwd` 命令为用户设置登录密码
+
+#### RDP 为什么比 VNC 更快？
+
+VNC 原理：服务器端渲染图像后，再把图像传输到客户端直接显示  
+RDP 原理：服务器端传送**渲染图像的指令**，再传输到客户端经过**显卡计算**后显示  
+
+标准的服务器没有显卡（GPU），故服务器渲染图像只能使用CPU，效率非常低。同时，传输图像比传输指令耗费的带宽更大。
 
 #### 桌面锁定状态下是否支持秘钥解锁？
 
@@ -70,4 +88,5 @@ sudo yum localinstall google-chrome-stable_current_x86_64.rpm
 ### 服务
 ```
 sudo systemctl start | stop | restart | status vncserver
+sudo systemctl start | stop | restart | status xrdp
 ```

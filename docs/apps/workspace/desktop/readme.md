@@ -15,7 +15,7 @@ tags:
 
 原生桌面指的除预装桌面之外，没有安装其他软件的原生操作系统。  
 
-Windows 桌面风格统一，而 Linux 桌面会根据不同的发行版而产生差异（截图）。
+Windows 桌面风格统一，而 [Linux 桌面](./desktop/study#desktoplist)会根据不同的发行版而产生差异。
 
 ## 场景
 
@@ -101,47 +101,6 @@ VNC 是一种传统的连接 Linux 服务器桌面的方式：
    systemctl restart vncserver@:1.service
    `
 
-### Linux 桌面预览
+## 碰到问题？
 
-主流的 Linux 发行版桌面截图：  
-
-   * **Gnome Desktop**
-   ![Gnome Desktop](https://libs.websoft9.com/Websoft9/DocsPicture/en/linux/linux-desktop-gnome-websoft9.jpg)
-   
-   * **KDE Desktop**
-   ![Gnome Desktop](https://libs.websoft9.com/Websoft9/DocsPicture/en/linux/linux-desktop-kde-websoft9.jpg)
-
-   * **Mate Desktop**
-   ![Gnome Desktop](https://libs.websoft9.com/Websoft9/DocsPicture/en/linux/linux-desktop-mate-websoft9.png)
-
-   * **Xfce Desktop**
-   ![Gnome Desktop](https://libs.websoft9.com/Websoft9/DocsPicture/en/linux/linux-desktop-xfce-websoft9.png)
-
-
-
-## 异常处理
-
-#### useradd 创建的用户无法远程连接？
-
-现象：`useradd` 创建用户，然后 `passwd username` 设置密码。这样的账户无法连接服务器  
-原因： useradd 主要是用于创建应用账号，不是 Linux 系统账号  
-方案： 使用 `adduser` 创建
-
-#### 不知道 VNC 的连接密码？
-
-使用 SSH 连接到服务器后，输入如下的命令设置密码即可
-```
-vncpasswd
-systemctl restart vnc
-```
-
-#### 使用秘钥对是否可以连接桌面？
-
-不可以，请先使用 **SSH** 登录服务器后，运行 `passwd` 命令为用户设置登录密码
-
-#### RDP 为什么比 VNC 更快？
-
-VNC 原理：服务器端渲染图像后，再把图像传输到客户端直接显示  
-RDP 原理：服务器端传送**渲染图像的指令**，再传输到客户端经过**显卡计算**后显示  
-
-标准的服务器没有显卡（GPU），故服务器渲染图像只能使用CPU，效率非常低。同时，传输图像比传输指令耗费的带宽更大。
+若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考  **[故障排除](./desktop/admin#troubleshoot)** 章节。

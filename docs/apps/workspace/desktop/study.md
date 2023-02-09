@@ -13,6 +13,23 @@ tags:
 
 # 原理学习
 
+## Linux 常用桌面{#desktoplist}
+
+主流的 Linux 发行版桌面截图：  
+
+   * **Gnome Desktop**
+   ![Gnome Desktop](https://libs.websoft9.com/Websoft9/DocsPicture/en/linux/linux-desktop-gnome-websoft9.jpg)
+   
+   * **KDE Desktop**
+   ![Gnome Desktop](https://libs.websoft9.com/Websoft9/DocsPicture/en/linux/linux-desktop-kde-websoft9.jpg)
+
+   * **Mate Desktop**
+   ![Gnome Desktop](https://libs.websoft9.com/Websoft9/DocsPicture/en/linux/linux-desktop-mate-websoft9.png)
+
+   * **Xfce Desktop**
+   ![Gnome Desktop](https://libs.websoft9.com/Websoft9/DocsPicture/en/linux/linux-desktop-xfce-websoft9.png)
+
+
 ## 安装配置桌面{#desktop}
 
 一般来说 Linux 默认情况下并自带安装桌面，需要用户自主安装配置才可以使用。
