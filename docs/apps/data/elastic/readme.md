@@ -24,7 +24,7 @@ tags:
 5. 登录云服务器，运行下面的命令，拉取 Elastic 相关 Docker 镜像并启动容器
 
    ```
-   cd /data/apps/elastic && docker-compose pull && docker-compose up -d
+   cd /data/apps/elastic && docker compose pull && docker compose up -d
    ```
 
    > Elastic Stack 开源版本 License 不允许第三方的分发行为，但允许用户免费使用。因此，用户使用本方案部署 Elastic Stack，请先执行上述命令自行拉取 Elastic Stack 镜像。  

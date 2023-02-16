@@ -25,7 +25,7 @@ If you have installed Websoft9 Elastic Stack, the following steps is for your qu
 
 
    ```
-   cd /data/wwwroot/elk && docker-compose pull && docker-compose up -d
+   cd /data/apps/elastic && docker compose pull && docker compose up -d
    ```
 
    > The Elastic Open Source License does not allow third-party distribution, but allows users to use it for free. Therefore, if you use this solution to deploy Elastic, you should first execute the above command to pull the Elastic image yourself.  
@@ -161,7 +161,7 @@ If you forget your password, you can reset it by rerunning the container:
 
 ```
 cd /data/apps/elastic
-docker-compose down && docker-compose up -d
+docker compose down && docker compose up -d
 ```
 
 The **DB_ES_PASSWORD** variable in the `.env` file is the password after the reset
