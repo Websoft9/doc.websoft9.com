@@ -49,7 +49,11 @@ Windows 本地电脑自带的远程桌面客户后端支持 XRDP，所以连接�
 4. XRDP 对话框中，输入服务器 root 账号和密码
   ![enter image description here](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gnome/gnome-login-websoft9.png)
  
-   > 建议采用普通用户登录 Linux 桌面，而不是 root 用户
+   > 建议采用普通用户登录 Linux 桌面，而不是 root 用户。请参照下面命令创建普通用户：
+    ```
+    sudo su 
+    adduser xxxuser # 根据提示完成密码设置
+    ```
 
 5. 成功登录后，就可以看到 Linux 桌面
 
