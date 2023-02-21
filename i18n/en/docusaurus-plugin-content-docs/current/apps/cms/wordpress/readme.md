@@ -206,7 +206,7 @@ Woocommerce provides mainstream foreign payment plug-ins by default. The followi
 2. Install the Alipay payment plug-in in the mall (if there is no Alipay plug-in, please buy it here)
 
 3. Configure Alipay parameters in the mall. The configuration interface is as follows:
- ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/plugins/woocommerce/intallalipay-websoft9.png)
+ ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-intallalipay-websoft9.png)
 
 **Wechat scanning payment**
 

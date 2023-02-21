@@ -40,7 +40,7 @@ When there are more than 500 pictures in WordPress, it is recommended to store t
    https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-product-screenshot.png
    ```
 3. Log in to the WordPress background and open: Page Editing - Insert Multimedia, Insert Pictures into the WordPress System
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aliyun/aliyun-oss-adresstowp-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/aliyun/aliyun-oss-adresstowp-websoft9.png)
 
 ### WordPress integration with OSS
 
@@ -136,7 +136,7 @@ Sometimes, you can't upgrade WordPress by On-Click for the reason of networ, man
 3. Delete the `wp-admin` and `wp-includes` 
 4. Upload local WordPress to Cloud Server, cover all files if have the same file name
 5. Revisit WordPress, the database upgrade steps shown in the image below may appear
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-update-db-websoft9.jpg)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-update-db-websoft9.png)
 6. Click [Upgrade WordPress Database]
 
 ### Plugins upgrade
@@ -196,7 +196,7 @@ Causes of problems and countermeasures:
 
 #### HTTPS access "....not completely secure"?
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/avada/https-notallsafe-websoft9.png)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/https-notallsafe-websoft9.png)
 
 The reason is that the WordPress web page contains some static link resources such as images starting with HTTP, which need to be manually modified one by one
 
