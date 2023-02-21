@@ -25,7 +25,7 @@ It is recommended to contact us through the following channels:
   
 | Channel | Time | Scenes| Access|
 | --- | --- | --- | --- |
-| Ticket | 7×24 | Customer Support | [Access Ticket System](https://share.hsforms.com/1V3u-6EPoRgOKEdi9kSk12w568t5)|
+| Ticket | 7×24 | Customer Support | [Access Ticket System](https://www.websoft9.com/en-US/ticket)|
 | Email | 7×24 | Customer Support and Partnership | help@websoft9.com|
 | Wechat | 5×8| Consult | ![](https://libs.websoft9.com/websites/zh/wx-lz.png) ![](https://libs.websoft9.com/websites/zh/wx-cdl.png) |
 | Telephone | 7×8| Consult and emergency bug | **0731-8957 2759**|
@@ -37,7 +37,7 @@ It is recommended to contact us through the following channels:
 
 No, you don't need to register it,   
 
-[![alt text](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/workorder-ui.png "title")](https://share.hsforms.com/1V3u-6EPoRgOKEdi9kSk12w568t5)
+[![alt text](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/workorder-ui.png "title")](https://www.websoft9.com/en-US/ticket)
 
 #### How to check or reply for Ticket System?
 
