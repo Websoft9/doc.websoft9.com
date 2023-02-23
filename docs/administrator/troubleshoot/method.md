@@ -51,6 +51,32 @@ netstat -tunlp
 * 静态：严格安全机制，不符合条件的连接被禁止
 * 动态：连接开始可用，但外界条件发生变化，导致某种安全机制启动，连接变得不可用
 
+常用的诊断连接命令：  
+```
+# 查看端口是否开放
+nmap -p 22 47.92.175.174
+nmap -p 80 47.92.175.174
+
+# 分别查看本机开放的 TCP 端口、UDP 端口
+nmap -sT 127.0.0.1
+nmap -sU 127.0.0.1
+
+# DNS 诊断
+dig websoft9.com
+
+# 端到端连通诊断
+ping websoft9.com
+
+# 路由跟踪
+traceroute websoft9.com
+
+# Telnet
+telnet websoft9.com 9090
+
+# Ping 与 traceroute 组合
+mtr websoft9.com
+```
+
 典型范例：  
 
 * [无法连接 Windows 远程桌面？](../faq#notconnectwin)
@@ -62,7 +88,6 @@ netstat -tunlp
 * [域名解析迟迟没有生效？](../administrator/domain_step#effect)
 * [容器应用无法远程访问？](../docker/advanced#noremote)
 * [Apache mod_evasive for DDoS](https://www.howtogeek.com/devops/how-to-configure-mod_evasive-for-apache-ddos-protection/)：mod_evasive 不合理的设置会频繁导致 403 错误
-
 
 ### 组件失效
 

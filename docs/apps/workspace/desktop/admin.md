@@ -70,12 +70,20 @@ RDP 原理：服务器端传送**渲染图像的指令**，再传输到客户端
 
 #### 是否能安装web浏览器？
 
-可以，以CentOS7安装Google Chrome为例：
+可以，以安装 Google Chrome为例：
 
 ```
+# For CentOS7
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
 sudo yum localinstall google-chrome-stable_current_x86_64.rpm
 /usr/bin/google-chrome --no-sandbox
+
+# For Ubuntu
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb
+vim /usr/bin/google-chrome/google-chrome
+exec -a "$0" "$HERE/chrome" "$@"  修改为 exec -a "$0" "$HERE/chrome" "$@" --no-sandbox
+rm -r ~/.config/google-chrome
 ```
 
 ## 参数
@@ -87,6 +95,12 @@ sudo yum localinstall google-chrome-stable_current_x86_64.rpm
 
 ### 服务
 ```
-sudo systemctl start | stop | restart | status vncserver
+# For RDP
 sudo systemctl start | stop | restart | status xrdp
+
+# For Gnome
+sudo systemctl start | stop | restart | status gdm
+
+# For VNC
+sudo systemctl start | stop | restart | status vncserver
 ```
