@@ -26,7 +26,7 @@ yarn upgrade @docusaurus/core@latest @docusaurus/preset-classic@latest
 ```
 
 ## Search for Documentation Sites:
-Step 1: Install docker and excute search servcice, as following:
+Step 1: Install docker and execute search servcice, as following:
 ```
 git clone https://github.com/Websoft9/docker-library
 cd docker-library/apps/typesense
