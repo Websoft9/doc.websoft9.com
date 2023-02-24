@@ -35,7 +35,7 @@ It is recommended to contact us through the following channels:
 
 #### Do I need to register Ticket System?
 
-No, you don't need to register it,   
+No, you don't need to register it.   
 
 [![alt text](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/workorder-ui.png "title")](https://share.hsforms.com/1V3u-6EPoRgOKEdi9kSk12w568t5)
 
