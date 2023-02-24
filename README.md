@@ -25,6 +25,17 @@ yarn run write-translations -- --locale zh-cn
 yarn upgrade @docusaurus/core@latest @docusaurus/preset-classic@latest
 ```
 
+## How to use searchbar?
+
+### Prepare
+
+1. Install docker and excute search servcice, as following:
+```
+git clone https://github.com/Websoft9/docker-library
+cd docker-library/apps/typesense
+docker compose up -d
+```
+
 ## Documentation system
 
 [Divio 文档规范](https://documentation.divio.com/)
