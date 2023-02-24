@@ -27,9 +27,8 @@ yarn upgrade @docusaurus/core@latest @docusaurus/preset-classic@latest
 
 ## How to use searchbar?
 
-### Prepare
 
-1. Install docker and excute search servcice, as following:
+Install docker and excute search servcice, as following:
 ```
 git clone https://github.com/Websoft9/docker-library
 cd docker-library/apps/typesense
