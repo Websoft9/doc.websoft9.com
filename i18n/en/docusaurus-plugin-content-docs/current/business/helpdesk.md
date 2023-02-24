@@ -45,4 +45,4 @@ Use email to reply
 
 #### What languages for Websoft9 support?
 
-English, Chinese, Japanese
+English, Chinese, Japanese.
