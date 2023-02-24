@@ -82,7 +82,7 @@ Modules 是 PrestaShop 功能扩展，Modules 可以即插即用
 ### 语言包管理{#setlanguage}
 
 Prestashop的多语言支持非常的成熟，系统在后台内置一套多语言体系，只需要选择对应的语言，在线导入到您的 PrestaShop 系统即可。
-> 在设置过程中，如提示'This functionality has been disabled.'，请提前修改配置文件：/data/apps/prestashop/data/prestashop/app/config/defines.inc.php，修改配置项为false：
+> 在设置过程中，如提示'This functionality has been disabled.'，请提前修改配置文件：/data/apps/prestashop/data/prestashop/config/defines.inc.php，修改配置项为 false：
 ```
 if (!defined('_PS_MODE_DEMO_')) {
     define('_PS_MODE_DEMO_', false);
@@ -100,6 +100,9 @@ if (!defined('_PS_MODE_DEMO_')) {
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-alllanguage-websoft9.png) 
 
 > 每次导入一个新的语言包，系统会自动为此语言生成一个伪静态规则。如果您的某个语言的伪静态设置出现问题导致了 Redirect（重定向），可以删除这个语言，然后重新导入一次即可。
+
+4. 通过修改个人信息，设置后台显示语言
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-setlanguage-websoft9.png) 
 
 ##### 删除语言
 

@@ -77,21 +77,25 @@ Completed installation of PrestaShop, suggest you make your PrestaShop system co
 
 Prestashop's multi-language support is very mature. The system has a multi-language system built in the background. You only need to select the corresponding language and import it online to your PrestaShop system.
 
-> During the setup process, if you prompt 'This functionality has been disabled.', please modify the configuration file in advance: /data/apps/prestashop/data/prestashop/app/config/defines.inc.php, and modify the configuration item to false:define('_PS_MODE_DEMO_', false);
+> During the setup process, if you prompt 'This functionality has been disabled.', please modify the configuration file in advance: /data/apps/prestashop/data/prestashop/config/defines.inc.php, and modify the configuration item to false:define('_PS_MODE_DEMO_', false);
 
 ##### Import language
 
-1. Log in PrestaShop console, open:【International】>【Localization】>【language】, enter the interface of language settings
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/prestashop-local-websoft9.png)
+1. Log in PrestaShop console, open:【International】>【Localization】>【language】, enter the interface of language settings  
+
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/prestashop-local-websoft9.png)  
+
 2. Select the language you want to use and click【import】 icon to import online
-3. Click 【language】 tab, you can see all language packages been installed successfully
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/prestashop-alllanguage-websoft9.png) 
+3. Click 【language】 tab, you can see all language packages been installed successfully  
+
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/prestashop-alllanguage-websoft9.png)   
+
 
 > When add new language for PrestaShop, it will add redirects rules in the  `.htaccess` file of PrestaShop root directory.
 
 ##### Delete language
 
-1. Log in PrestaShop console, open:【International】>【Localization】>【language】,edit your language
+1. Log in PrestaShop console, open:【International】>【Localization】>【language】,edit your language  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/prestashop-dellanguage001-websoft9.png)
 2. Set the Status to 【No】
 3. Click 【language】 tab, you can delete the language you have disabled

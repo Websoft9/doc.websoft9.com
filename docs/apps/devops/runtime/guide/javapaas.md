@@ -76,7 +76,7 @@ Nginx 代理是用于给应用配置域名和证书的管理工具：
 
 ### 异常处理
 
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
+若碰到问题，请第一时刻联系 **[技术支持](./../helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./../faq#setup)** 尝试快速解决问题：
 
 ## 常用操作
 
@@ -192,7 +192,7 @@ e344b8a23cce   runtime-java17                    "bash -c 'cat /opt/c…"   3 ho
 
 ### 端口{#port}
 
-在云服务器中，通过 **[安全组设置](./administrator/firewall#security)** 来控制（开启或关闭）端口是否可以被外部访问。 
+在云服务器中，通过 **[安全组设置](./../administrator/firewall#security)** 来控制（开启或关闭）端口是否可以被外部访问。 
 
 通过命令`netstat -tunlp`查看相关端口，下面列出本应用可能要用到的端口：
 
@@ -214,6 +214,6 @@ docker start | stop | restart nginxproxymanager
 
 ### 版本号{#version}
 
-参考：[通用版本号查询](./administrator/parameter#version)
+参考：[通用版本号查询](./../administrator/parameter#version)
 
 

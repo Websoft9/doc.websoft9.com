@@ -78,6 +78,7 @@ const config = {
       },
       typesense: {
         typesenseCollectionName: 'websoft9', // Replace with your own doc site's name. Should match the collection name in the scraper settings.
+        // typesenseCollectionName: 'docusaurus-2',
         typesenseServerConfig: {
           nodes: [
             {

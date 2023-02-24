@@ -11,11 +11,11 @@ You can use the local computer client and pre-installed Web-based GUI tools to c
 
 | Database name                   | Username     | Remote port | Web-based GUI           |  Enable Remote  |
 | ----------------------- | ---------- | ------------------------ | ------------------------ | ------------------------ |
-| MySQL/Mariadb      | root       | 3306   | Y       |   [设置](../mysql#remote)     |
-| PostgreSQL              | postgres   | 5432 | Y       |   [设置](../postgresql#remote)     |
-| Mongodb                 | root | 27017 | Y       |   [设置](../mongodb#remote)     |
+| MySQL/Mariadb      | root       | 3306   | Y       |   [Detail](../mysql#remote)     |
+| PostgreSQL              | postgres   | 5432 | Y       |   [Detail](../postgresql#remote)     |
+| Mongodb                 | root | 27017 | Y       |   [Detail](../mongodb#remote)     |
 | Oracle                  | system     | 1521 | Y                     |                      |
-| SQLServer               | sa         | 1433     | 登录服务器，使用 SQL Server Management Server| |
+| SQLServer               | sa         | 1433     | N | Use SQL Server Management Server on your Instance|
 
 ## Web-based GUI
 
