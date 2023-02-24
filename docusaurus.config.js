@@ -10,9 +10,9 @@ const config = {
   tagline: '重新定义开源服务，让云原生应用快速普及',
   url: 'https://support.websoft9.com',
   baseUrl: '/',
-  onBrokenLinks: 'error',
-  onBrokenMarkdownLinks: 'error',
-  onDuplicateRoutes: 'error',
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'throw',
+  onDuplicateRoutes: 'throw',
   favicon: 'img/favicon.ico',
   organizationName: 'Websoft9', // Usually your GitHub org/user name.
   deploymentBranch: 'gh-pages',
@@ -51,7 +51,6 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      autoCollapseSidebarCategories: false,
       navbar: {
         title: 'Websoft9',
         logo: {
