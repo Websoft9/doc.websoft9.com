@@ -41,7 +41,7 @@ No, you don't need to register it.
 
 #### How to check or reply for Ticket System?
 
-Use email to reply 
+Use email to reply. 
 
 #### What languages for Websoft9 support?
 
