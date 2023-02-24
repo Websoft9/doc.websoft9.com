@@ -70,7 +70,7 @@ RDP 原理：服务器端传送**渲染图像的指令**，再传输到客户端
 
 #### 是否能安装web浏览器？
 
-可以，以安装 Google Chrome为例：
+可以，以安装 Google Chrome 为例：
 
 ```
 # For CentOS7
