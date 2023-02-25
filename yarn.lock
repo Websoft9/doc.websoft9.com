@@ -4581,10 +4581,10 @@ dns-packet@^5.2.2:
   dependencies:
     "@leichtgewicht/ip-codec" "^2.0.1"
 
-docusaurus-theme-search-typesense@^0.9.0:
-  version "0.9.0"
-  resolved "https://registry.npmmirror.com/docusaurus-theme-search-typesense/-/docusaurus-theme-search-typesense-0.9.0.tgz#61b62b576f37d71118a09f6e1e6d29bea690a538"
-  integrity sha512-c9aOShE1sbgREyyWtGjGvjeu78iEJ8LYHsP0tOIeS9xAdId4YxkX+A7AWGH3JjxDBD29EAs32bSVQLB4XqFf8Q==
+docusaurus-theme-search-typesense@^0.9.0-3:
+  version "0.9.0-3"
+  resolved "https://registry.npmmirror.com/docusaurus-theme-search-typesense/-/docusaurus-theme-search-typesense-0.9.0-3.tgz#639bfe5ae061d3c3ac76271431bfb0810ab019ac"
+  integrity sha512-DtwGgA+4lJ62dZMB+90hHfTIECA81lFyqXY5x+uhjEllbXsjsDRTi52a+wtRBxWLYj18wy28nWZSvtcTut3Ahg==
   dependencies:
     "@docusaurus/logger" "2.3.1"
     "@docusaurus/plugin-content-docs" "2.3.1"
