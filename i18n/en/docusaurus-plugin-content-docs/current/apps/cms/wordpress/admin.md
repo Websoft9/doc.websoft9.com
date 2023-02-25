@@ -259,7 +259,7 @@ Solution: To be studied
 
 #### WordPress support multi-language?
 
-Yes
+Yes.
 
 #### Can WordPress build a corporate website?
 
