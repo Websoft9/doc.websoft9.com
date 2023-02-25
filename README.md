@@ -6,8 +6,6 @@ This website is built using [Docusaurus 2](https://docusaurus.io/), a modern sta
 
 ```
 # Install
-git clone https://github.com/Websoft9/doc.websoft9.com
-cd doc.websoft9.com	
 yarn install
 
 # Development 
@@ -25,51 +23,10 @@ yarn run write-translations -- --locale zh-cn
 yarn upgrade @docusaurus/core@latest @docusaurus/preset-classic@latest
 ```
 
-## Search for Documentation Sites:
-Step 1: Install docker and execute search servcice, as following:
-```
-git clone https://github.com/Websoft9/docker-library
-cd docker-library/apps/typesense
-docker compose up -d
-```
-Step 2: Add a Search Bar to your Documentation Site
-use the docusaurus-theme-search-typesense plugin to add a search bar to your Docusaurus site:
-```
-npm install docusaurus-theme-search-typesense@next --save
-or
-yarn add docusaurus-theme-search-typesense@next
-```
-Add the following to your docusaurus.config.js file:
-```
-{
-  themes: ['docusaurus-theme-search-typesense'],
-  themeConfig: {
-    typesense: {
-      // Replace this with the name of your index/collection.
-      // It should match the "index_name" entry in the scraper's "config.json" file.
-      typesenseCollectionName: 'docusaurus-2',
+## [Using-typesense-docsearch](https://docusaurus.io/zh-CN/docs/2.2.0/search#using-typesense-docsearch)
 
-      typesenseServerConfig: {
-        nodes: [
-          {
-            host: 'xxx-1.a1.typesense.net',
-            port: 443,
-            protocol: 'https',
-          }
-        ],
-        apiKey: 'xyz',
-      },
-
-      // Optional: Typesense search parameters: https://typesense.org/docs/0.24.0/api/search.html#search-parameters
-      typesenseSearchParameters: {},
-
-      // Optional
-      contextualSearch: true,
-    },
-  }
-}
-```
-
+1. Install [typesense](https://github.com/Websoft9/docker-library/tree/main/apps/typesense) and configure it
+2. Install [docusaurus-theme-search-typesense plugin](https://typesense.org/docs/guide/docsearch.html#step-2-add-a-search-bar-to-your-documentation-site) and [configure](https://github.com/Websoft9/doc.websoft9.com/blob/main/docusaurus.config.js) it
 
 ## Documentation system
 

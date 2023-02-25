@@ -92,7 +92,7 @@ if (!defined('_PS_MODE_DEMO_')) {
 ##### 导入语言
 
 1. 登录Prestashop后台，依次打开：【国际】>【本地化】，进入设置界面
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-setlanguage-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-setlang-websoft9.png)
 
 2. 选择一个语言包，点击本项之右下角【上传】图标，完成在线导入
 
