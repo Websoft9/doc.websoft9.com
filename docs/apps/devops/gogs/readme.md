@@ -80,7 +80,8 @@ Gogs 应用中包含 Docker, MySQL 等组件，可通过 **[通用参数表](./a
 ```bash
 CONTAINER ID   IMAGE              COMMAND                  CREATED          STATUS                    PORTS                                                                                NAMES
 1146da16e5e7   mysql:5.7          "docker-entrypoint.s…"   18 minutes ago   Up 18 minutes             3306/tcp, 33060/tcp                                                                  gogs-db
-2ad58951f177   gogs/gogs:latest   "/app/gogs/docker/st…"   18 minutes ago   Up 18 minutes (healthy)   0.0.0.0:10022->22/tcp, :::10022->22/tcp, 0.0.0.0:9001->3000/tcp, :::9001->3000/tcp   gogs```
+2ad58951f177   gogs/gogs:latest   "/app/gogs/docker/st…"   18 minutes ago   Up 18 minutes (healthy)   0.0.0.0:10022->22/tcp, :::10022->22/tcp, 0.0.0.0:9001->3000/tcp, :::9001->3000/tcp   gogs
+```
 
 ### 路径{#path}
 
