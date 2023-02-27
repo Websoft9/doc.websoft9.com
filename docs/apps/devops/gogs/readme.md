@@ -19,7 +19,7 @@ tags:
 ## 准备
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
+2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80和10022** 端口已经开启
 3. 在服务器中查看 Gogs 的 **[默认管理员账号和密码](./user/credentials)**  
 4. 若想用域名访问  Gogs，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
 
@@ -40,14 +40,14 @@ tags:
 
    - 域名：公网IP 或 真实域名
    - SSH 端口： 10022， 可从 Gogs 根目录 .env 文件中查询
-   - HTTP 端口： 80 或 3000，可从 Gogs 根目录 .env 文件中查询
+   - HTTP 端口： 80 或 9001，可从 Gogs 根目录 .env 文件中查询
    - 应用 URL：http://公网IP  或  http://域名:http端口
 
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-installset-websoft9.png)
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-db-websoft9.png)
 
 3. 设置管理账号  
 
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-installadmin-websoft9.png)
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-admin-websoft9.png)
 
 4. 安装成功后，直接跳转到后台界面 
 
@@ -65,6 +65,12 @@ tags:
 
 ## 常用操作
 
+### 设置语言
+
+页面右下方点击语言项可快速设置多国语言。  
+
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-language-websoft9.png)
+
 ## 参数
 
 Gogs 应用中包含 Docker, MySQL 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
@@ -72,14 +78,14 @@ Gogs 应用中包含 Docker, MySQL 等组件，可通过 **[通用参数表](./a
 通过运行 `docker ps`，查看 Gogs 运行时所有的服务组件：   
 
 ```bash
-CONTAINER ID   IMAGE               COMMAND                  CREATED          STATUS                    PORTS                                                                                NAMES
-3cc976ef4fd5   mysql:5.7           "docker-entrypoint.s…"   19 minutes ago   Up 19 minutes             3306/tcp, 33060/tcp                                                                  gogs-db
-d1bf1977d72b   gogs/gogs:latest    "/app/gogs/docker/st…"   19 minutes ago   Up 19 minutes (healthy)   0.0.0.0:3000->3000/tcp, :::3000->3000/tcp, 0.0.0.0:10022->22/tcp, :::10022->22/tcp   gogs
-```
+CONTAINER ID   IMAGE              COMMAND                  CREATED          STATUS                    PORTS                                                                                NAMES
+1146da16e5e7   mysql:5.7          "docker-entrypoint.s…"   18 minutes ago   Up 18 minutes             3306/tcp, 33060/tcp                                                                  gogs-db
+2ad58951f177   gogs/gogs:latest   "/app/gogs/docker/st…"   18 minutes ago   Up 18 minutes (healthy)   0.0.0.0:10022->22/tcp, :::10022->22/tcp, 0.0.0.0:9001->3000/tcp, :::9001->3000/tcp   gogs```
 
 ### 路径{#path}
 
 Gogs 安装目录: */data/apps/gogs* 
+Gogs 数据目录: */data/apps/gogs/src/gogs_data* 
 
 ### 端口
 
@@ -87,13 +93,12 @@ Gogs 安装目录: */data/apps/gogs*
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
-| 3000   | Gogs HTTP 端口，已通过 Nginx 转发到 80 端口 | 可选   |
 | 10022   | Gogs SSH 端口 | 可选   |
 
 ### 版本
 
 ```shell
-docker inspect gogs | grep com.docker.compose.version
+sudo docker exec -it gogs ./gogs --version
 ```
 
 ### 服务
@@ -105,7 +110,7 @@ sudo docker start | stop | restart | stats gogs
 ### 命令行
 
 ```
-$ ./gogs -h
+$ sudo docker exec -it gogs ./gogs -h
 NAME:
    Gogs - A painless self-hosted Git service
 
