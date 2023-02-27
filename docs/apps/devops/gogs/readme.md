@@ -34,7 +34,7 @@ tags:
    - 数据库类型： MySQL
    - 数据库主机名填写：mysql:3306
 
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-installdb-websoft9.png)
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-db-websoft9.png)
 
 2. 设置 Gogs 的应用基本参数   
 
@@ -43,11 +43,11 @@ tags:
    - HTTP 端口： 80 或 9001，可从 Gogs 根目录 .env 文件中查询
    - 应用 URL：http://公网IP  或  http://域名:http端口
 
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-db-websoft9.png)
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-admin-websoft9.png)
 
 3. 设置管理账号  
 
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-admin-websoft9.png)
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-installadmin-websoft9.png)
 
 4. 安装成功后，直接跳转到后台界面 
 

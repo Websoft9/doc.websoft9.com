@@ -103,7 +103,26 @@ VNC 是一种传统的连接 Linux 服务器桌面的方式：
    systemctl stop vncserver@:1.service
    systemctl status vncserver@:1.service
    systemctl restart vncserver@:1.service
-   `
+   ```
+
+### 设置桌面语言
+设置 Linux 桌面为中文一般分三个步骤，安装语言包、安装字体(防乱码)和设置区域和语言，下面以 CentOS KDE 桌面为例演示：
+
+1. 查询系统支持语言包并安装语言包
+   ```
+   yum search kde | grep -i chinese
+   yum install kde-l10n-Chinese.noarch
+   ```
+
+2. 安装字体
+   ```
+   yum groupinstall "fonts"
+   ```
+
+3. 远程登录 KDE 桌面，设置语言: [system settings] - [Commone Appearance and Behavior] - [Local] - [Languages]
+
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/linux/kde-setlang-websoft9.png)
+
 
 ## 碰到问题？
 
