@@ -63,7 +63,7 @@ tags:
 创建管理员帐号并不是必须的，因为用户表中的第一个用户将自动获得管理员权限。
 
 
-## 常用操作
+## Gogs 常用操作
 
 ### 设置语言
 
@@ -71,7 +71,7 @@ tags:
 
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-language-websoft9.png)
 
-## 参数
+## Gogs 参数
 
 Gogs 应用中包含 Docker, MySQL 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
 
