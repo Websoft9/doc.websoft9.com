@@ -8,7 +8,7 @@ tags:
 
 # 快速入门
 
-[Gogs](https://github.com/gogs/gogs) 是一款极易搭建的自助 Git 仓库系统，相对于 GitLab 而言 Gogs 更加轻量级。 
+[Gogs](https://gogs.io/) 是一款极易搭建的自助 Git 仓库系统，相对于 GitLab 而言 Gogs 更加轻量级。Gogs 的目标是打造一个最简单、最快速和最轻松的方式搭建自助 Git 服务。使用 Go 语言开发使得 Gogs 能够通过独立的二进制分发，并且支持 Go 语言支持的 所有平台，包括 Linux、Mac OS X、Windows 以及 ARM 平台。 
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-guistart-websoft9.png)
 
@@ -27,12 +27,13 @@ tags:
 
 ### 详细步骤
 
-1. 使用本地电脑浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入初始化页面
+1. 使用本地电脑浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入初始化页面。进入页面底部选择合适的语言。  
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-language-websoft9.png)
 
-2. 填写数据库连接信息（**[查看预装的数据库账号密码](./user/credentials)** ）
+2. 设置数据库连接（**[查看预装的数据库账号密码](./user/credentials)** ）
 
    - 数据库类型： MySQL
-   - 数据库主机名填写：mysql:3306
+   - 主机名：gogs-db
 
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-db-websoft9.png)
 
@@ -40,8 +41,8 @@ tags:
 
    - 域名：公网IP 或 真实域名
    - SSH 端口： 10022， 可从 Gogs 根目录 .env 文件中查询
-   - HTTP 端口： 80 或 9001，可从 Gogs 根目录 .env 文件中查询
-   - 应用 URL：http://公网IP  或  http://域名:http端口
+   - HTTP 端口： 80
+   - 应用 URL：http://公网IP  或  http://域名:端口
 
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-admin-websoft9.png)
 
@@ -49,9 +50,9 @@ tags:
 
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-installadmin-websoft9.png)
 
-4. 安装成功后，直接跳转到后台界面 
+4. 安装成功后，进入系统后台 
 
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-installss-websoft9.png)
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-dashboard-websoft9.png)
 
 
 ### 出现问题？
@@ -67,7 +68,7 @@ tags:
 
 ### 设置语言
 
-页面右下方点击语言项可快速设置多国语言。  
+进入页面下方设置语言  
 
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-language-websoft9.png)
 

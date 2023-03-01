@@ -135,7 +135,7 @@ Follow the steps below:
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Zabbix
 
 
-本部署方案中的 Zabbix 采用 Docker部署，运行 `docker ps` 查看运行的容器。
+Run `docker ps` command, view all Containers when Zabbix is running:
 
 ```
 $ docker ps
@@ -149,22 +149,17 @@ cacb13aa8f36   zabbix/zabbix-java-gateway:centos-5.2-latest       "docker-entryp
 
 ```
 
-下面列出 Zabbix 本身的参数：
 
 ### Path{#path}
 
 Zabbix installation directory: */data/zabbix*  
-Zabbix 配置文件（环境变量）: */data/zabbix/.env.xxx*    
-Zabbix 持久存储：*/data/wwwroot/zabbix/zbx_env  
-Zabbix-Web 数据库配置：*/data/wwwroot/zabbix/.env_db_mysql*  
-Zabbix-Proxy 数据库配置：*/data/wwwroot/zabbix/.env_db_mysql_proxy*   
+Zabbix configuration file: */data/zabbix/.env.xxx*    
+Zabbix Persistent storage：*/data/wwwroot/zabbix/zbx_env  
+Zabbix-Web Database configuration：*/data/wwwroot/zabbix/.env_db_mysql*  
+Zabbix-Proxy Database configuration：*/data/wwwroot/zabbix/.env_db_mysql_proxy*   
 
 
 ### Port
-
-| 端口号 | 用途                                          | 必要性 |
-| ------ | --------------------------------------------- | ------ |
-| 9006   | Zabbix 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
 
 
 ### Version
@@ -184,20 +179,5 @@ sudo docker start | stop | restart | stats  zabbix-server
 
 ### CLI
 
-Jenkins 提供 CLI 客户端和 SSH CLI [两种方式](https://www.jenkins.io/zh/doc/book/managing/cli/)，下面是推荐的 客户端 CLI：
-
-```shell
-java -jar jenkins-cli.jar [-s JENKINS_URL] [global options...] command [command options...] [arguments...]
-```
-
 ### API
-
-Jenkins 提供可供远程访问的 [类似 REST API](https://www.jenkins.io/doc/book/using/remote-access-api/) 以便更好的实现自动化。
-```
-curl JENKINS_URL/job/JOB_NAME/buildWithParameters \
-  --user USER:TOKEN \
-  --data id=123 --data verbosity=high
-```
-
-同时，也提供了 Java, Python, Ruby 等语言的 API SDK 开发包。 
 

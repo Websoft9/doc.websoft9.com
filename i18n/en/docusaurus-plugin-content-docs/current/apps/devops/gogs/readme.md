@@ -8,7 +8,7 @@ tags:
 
 # Gogs Getting Started
 
-[Gogs](https://github.com/gogs/gogs) 是一款极易搭建的自助 Git 仓库系统，相对于 GitLab 而言 Gogs 更加轻量级。 
+[Gogs](https://gogs.io/) is a painless self-hosted Git service.This project aims to build a simple, stable and extensible self-hosted Git service that can be setup in the most painless way. With Go, this can be done with an independent binary distribution across ALL platforms that Go supports, including Linux, macOS, Windows and ARM. 
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-guistart-websoft9.png)
 
@@ -25,40 +25,36 @@ If you have installed Websoft9 Gogs, the following steps is for your quick start
 
 ### Steps for you
 
-1. 使用本地电脑浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入初始化页面
+1. Using local Chrome or Firefox to visit the URL https://DNS or https://Server's Internet IP, you can access the initialization page.
 
-2. 填写数据库连接信息（**[查看预装的数据库账号密码](./user/credentials)** ）
+2. Connect to the database（**[default username and password](./user/credentials)** ）
 
-   - 数据库类型： MySQL
-   - 数据库主机名填写：mysql:3306
+   - Database Type： MySQL
+   - Host：gogs-db
 
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/gogs/gogs-installdb-websoft9.png)
 
-2. 设置 Gogs 的应用基本参数   
+2. Set the Gogs parameters   
 
-   - 域名：公网IP 或 真实域名
-   - SSH 端口： 10022， 可从 Gogs 根目录 .env 文件中查询
-   - HTTP 端口： 80 或 3000，可从 Gogs 根目录 .env 文件中查询
-   - 应用 URL：http://公网IP  或  http://域名:http端口
+   - Domain：Public IP or DNS
+   - SSH Port： 10022 (Can be obtained or modified from the Gogs root .env file)
+   - HTTP Port： 80 
+   - Application URL：http://IP  or  http://DNS
 
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/gogs/gogs-installset-websoft9.png)
 
-3. 设置管理账号  
+3. Set up an administrative account  
 
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/gogs/gogs-installadmin-websoft9.png)
 
-4. 安装成功后，直接跳转到后台界面 
+4. Complete the settings and enter the Dashboard
 
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/gogs/gogs-installss-websoft9.png)
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/gogs/gogs-dashboard-websoft9.png)
 
 
 ### Having trouble?
 
 Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
-
-**安装的时候忘记设置管理账号？**  
-
-创建管理员帐号并不是必须的，因为用户表中的第一个用户将自动获得管理员权限。
 
 
 ## Gogs QuickStart
@@ -69,7 +65,7 @@ Below is for you to solve problem, and you can contact **[Websoft9 Support](./he
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Gogs
 
-通过运行 `docker ps`，查看 Gogs 运行时所有的服务组件：   
+Run `docker ps` command, view all Containers when Gogs is running:：   
 
 ```bash
 CONTAINER ID   IMAGE               COMMAND                  CREATED          STATUS                    PORTS                                                                                NAMES
@@ -84,10 +80,9 @@ Gogs installation directory: */data/apps/gogs*
 
 ### Port
 
-| 端口号 | 用途                                          | 必要性 |
+| Port | Use                                          | Necessity |
 | ------ | --------------------------------------------- | ------ |
-| 3000   | Gogs 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
-| 10022   | Gogs SSH 端口 | 可选   |
+| 10022  | Gogs SSH | Optional   |
 
 ### Version
 

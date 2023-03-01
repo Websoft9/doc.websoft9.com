@@ -181,20 +181,7 @@ sudo docker start | stop | restart | stats  zabbix-server
 
 ### 命令行
 
-Jenkins 提供 CLI 客户端和 SSH CLI [两种方式](https://www.jenkins.io/zh/doc/book/managing/cli/)，下面是推荐的 客户端 CLI：
-
-```shell
-java -jar jenkins-cli.jar [-s JENKINS_URL] [global options...] command [command options...] [arguments...]
-```
 
 ### API
 
-Jenkins 提供可供远程访问的 [类似 REST API](https://www.jenkins.io/doc/book/using/remote-access-api/) 以便更好的实现自动化。
-```
-curl JENKINS_URL/job/JOB_NAME/buildWithParameters \
-  --user USER:TOKEN \
-  --data id=123 --data verbosity=high
-```
-
-同时，也提供了 Java, Python, Ruby 等语言的 API SDK 开发包。 
 
