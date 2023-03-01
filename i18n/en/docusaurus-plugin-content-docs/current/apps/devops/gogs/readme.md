@@ -32,7 +32,7 @@ If you have installed Websoft9 Gogs, the following steps is for your quick start
    - Database Type： MySQL
    - Host：gogs-db
 
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/gogs/gogs-installdb-websoft9.png)
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-db-websoft9.png)
 
 2. Set the Gogs parameters   
 
@@ -41,15 +41,15 @@ If you have installed Websoft9 Gogs, the following steps is for your quick start
    - HTTP Port： 80 
    - Application URL：http://IP  or  http://DNS
 
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/gogs/gogs-installset-websoft9.png)
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-admin-websoft9.png)
 
 3. Set up an administrative account  
 
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/gogs/gogs-installadmin-websoft9.png)
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-installadmin-websoft9.png)
 
 4. Complete the settings and enter the Dashboard
 
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/gogs/gogs-dashboard-websoft9.png)
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-dashboard-websoft9.png)
 
 
 ### Having trouble?
