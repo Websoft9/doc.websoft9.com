@@ -104,6 +104,19 @@ WordPress插件库中有数量众多的备份插件，我们推荐使用：[Updr
 * 可以备份网站文件和数据库
 * 可以实现一键恢复
 
+### 计划任务
+
+WordPress 内置计划功能（wp cron），并默认启动了插件更新检查、主题检查等十多个任务。wp cron 不依赖操作系统的计划任务而独立运行。  
+
+如果用户希望增加自己的计划任务，具体的步骤如下：
+
+1. 安装并启用 [WP Crontrol](https://wordpress.org/plugins/wp-crontrol) 插件
+2. 打开：【工具】>【Cron Event】，新增一个 Cron，选择 PHP code
+   ```
+   fopen("websoft9.txt", "w");
+   ```
+3. 测试这个 Cron，会发现 WP 根目录新增了 websoft9.txt 这个文件
+
 ### 升级
 
 升级之前必须备份，这个是基本素养。  

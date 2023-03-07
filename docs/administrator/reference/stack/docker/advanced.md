@@ -100,7 +100,7 @@ Docker 的镜像是 Docker 容器运行的基础，镜像是一种文件的形�
 镜像从逻辑上可以简单理解是一个文件，但实际上是多层文件的组合。
 
 所以，镜像虽然不是一个单独的文件，但可以被导出成为一个压缩文件：
-
+ 
 ```
 # 镜像导出成一个tarball文件
 docker save image
@@ -125,6 +125,12 @@ docker load image
 
 支持自建仓库。一般云提供商均提供了镜像仓库服务，供客户存放自己的私有镜像。
 
+##### 其他公开仓库
+
+* [Amazon ECR Public Gallery](https://gallery.ecr.aws/)
+* [Microsoft Artifact Registry](https://mcr.microsoft.com/)
+* [Oracle Container Registry](https://container-registry.oracle.com/)
+* [image at Github](https://github.com/search?q=wordpress+image&type=registrypackages)
 
 ### 容器
 

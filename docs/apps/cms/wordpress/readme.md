@@ -90,6 +90,15 @@ tags:
 
 ## WordPress 常用操作
 
+### 禁用 WordPress目录浏览
+禁用目录浏览可以降低 WordPress 文件信息泄露，提高站点的安全性。未禁用之前如下图：
+
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-disable-directory-browsing-websoft9.png)
+
+在 WordPress 根目录下的 .htaccess 文件末尾添加代码： ` Options -Indexes `  ，禁止目录访问。如下图：
+
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-disable-directory-browsing2-websoft9.png)
+
 ### 配置 SMTP{#smtp}
 
 1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数

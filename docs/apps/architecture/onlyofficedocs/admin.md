@@ -38,3 +38,8 @@ DEVELOPER EDITION 和 ENTERPRISE EDITION 是收费版本，Websoft9 可以帮助
 #### ONLYOFFICE Docs 如何授权访问控制？
 
 参考：[Configure JWT](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx)
+
+
+#### ONLYOFFICE Docs 支持导出 PDF 吗？  
+支持！集成到云盘软件后，打开文档，通过 ONLYOFFICE Docs  【文件】-【另存为】或【下载为】，将文件保存为 PDF 文件。
+
