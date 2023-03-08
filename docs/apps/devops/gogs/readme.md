@@ -86,8 +86,8 @@ CONTAINER ID   IMAGE              COMMAND                  CREATED          STAT
 
 ### 路径{#path}
 
-Gogs 安装目录: */data/apps/gogs* 
-Gogs 数据目录: */data/apps/gogs/src/gogs_data* 
+Gogs 安装目录: */data/apps/gogs*  
+Gogs 数据目录: */data/apps/gogs/data/gogs_data*  
 
 ### 端口
 
