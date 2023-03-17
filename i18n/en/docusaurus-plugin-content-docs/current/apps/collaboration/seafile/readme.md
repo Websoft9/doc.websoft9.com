@@ -162,23 +162,12 @@ Refer to：[Seafile Integrate ONLYOFFICE Docs](./seafile/solution#onlyoffice)
 
 Complete **[Five steps for Domain](./administrator/domain_step)** ，Set the URL for Seafile:
 
-1. Use the SFTP to connect your Server
-2. Modify [Docker-compose file](#path)
-   ```text
-   ...
-    - SEAFILE_SERVER_HOSTNAME=seafile.websoft9.cn # Specifies your host name.
-   ...
-   ```
-   set the item **SEAFILE_SERVER_HOSTNAME** to your domain
+Log in to the Seafile and modify the host address( SERVER_URL & FILE_SERVER_ROOT ). It must be modified, otherwise the file cannot be uploaded or downloaded normally.
 
-3. Save it and then restart Docker-compose [service](#service)
-   ```
-   sudo cd /data/apps/seafile && docker-compose up -d
-   ```
 
 ### Configure HTTPS{#https}
 
-### Manage Seafile Password
+### Manage Seafile Password 
 
 We may **Modify** or **recover** Seafile administrator password
 

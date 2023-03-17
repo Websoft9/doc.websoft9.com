@@ -173,12 +173,8 @@ docker restart seafile
 
 **[域名五步设置](./administrator/domain_step)** 完成后，需设置 Seafile 的 URL:
 
-1. 使用 SFTP 登录云服务器，修改 [Docker-compose 配置文件](#path)，将其中的 **SEAFILE_SERVER_HOSTNAME** 项的值为你的域名
-   
-   ```text
-    - SEAFILE_SERVER_HOSTNAME=seafile.example.com  # Specifies your host name.
-   ```
-2. 保存配置文件，重启 [Seafile 服务](#service)
+登录 Seafile 后台，修改主机地址。必须修改，否则文件无法正常上传、下载。
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-seturl-websoft9.png)  
 
 ### 配置 HTTPS{#https}
 
@@ -187,28 +183,17 @@ docker restart seafile
 **前置条件**
 
 1. 在云控制台开启 **TCP:443** 端口
-2. 完成域名解析，确保 Seafile 可以通过域名访问
-3. 登录 Seafile 后台，修改主机地址
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-seturl-websoft9.png)
+2. 完成域名解析，确保 Seafile 可以通过域名访问 
 
 **基本设置**
 
 Seafile 默认支持 [Let's Encrypt](https://letsencrypt.org/) 免费证书自动部署方案，只需如下几步设置：
 
-1. 使用 SFTP 连接服务器，编辑 [docker-compose 配置文件](#path)
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-editconfig-websoft9.png)
+1. 参考网久软件提供[Let's Encrypt 自动配置 HTTPS 方案](./administrator/domain_https)，完成证书申请及配置等操作
+2. 登录 Seafile 后台，修改主机地址
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-seturl-websoft9.png)  
 
-2. 修改（检查）配置文件并保存，确保三个核心参数符合如下要求
-   ```
-   - "443:443" 启用
-   - SEAFILE_SERVER_LETSENCRYPT 设置为 true
-   - SEAFILE_SERVER_HOSTNAME 修改为你自己的域名
-   ```
-3. 运行 compose 重建命令
-   ```
-   sudo cd /data && docker-compose up -d
-   ```
-4. HTTPS 设置成功
+3. HTTPS 设置成功
 
 
 ### 管理员密码
