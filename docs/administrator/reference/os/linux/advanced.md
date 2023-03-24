@@ -1789,3 +1789,14 @@ SSH 密钥是一种远程登录 Linux 服务器的方式，其原理是利用密
 adduser 用于创建 Linux 系统账号，创建过程中会提示：用户名/密码，同时会创建用户家目录  
 useradd 仅创建无法登陆 Linux 系统的应用账号  
 
+#### CPU 100% 负荷导致服务器自动重启？
+
+如果 CPU 100% 负荷持续一段时间，系统可能会自动重启，其实这是 Linux 的一种设计。原因是 Linux 系统中有一个叫 [WatchDog](https://linux.die.net/man/8/watchdog) 的程序在起作用。但监测到系统异常且预计无法自愈，则只能触发重启机制以解决问题。  
+
+```
+The Linux kernel can reset the system if serious problems are detected. This can be implemented via special watchdog hardware, or via a slightly less reliable software-only watchdog inside the kernel.
+```
+
+因此，解决重启的问题，主要还是要找到 CPU 100% 的原因。当然，也可以修改 WatchDog 的配置以降低它通过重启解决问题的权重。  
+
+
