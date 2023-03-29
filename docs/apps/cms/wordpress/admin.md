@@ -283,6 +283,10 @@ WordPress 的后台管理是分权限的，而最高权限是超级管理员。�
 
 可以，访问`http://服务器公网IP` 即可
 
+#### WordPress 如何更改管理员邮箱？
+
+如果已经配置 [SMTP](../wordpress#smtp)，则可以直接在后台更改邮箱。 否则，需要修改数据库 **wp_option** 表中的邮箱信息。  
+
 #### WordPress 登录后台如何使用 SSL？
 
 在 wp-config.php 文件中的特定位置，添加如下两行代码
