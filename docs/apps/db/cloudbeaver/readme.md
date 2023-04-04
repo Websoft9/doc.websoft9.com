@@ -55,6 +55,17 @@ tags:
 
 ## CloudBeaver 常用操作
 
+### 共享数据连接
+共享数据连接是指管理员可以通过更改连接配置来向用户团队授予共享连接访问权限。
+
+1. 配置连接为 Shared（共享）
+
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-share-set-websoft9.png)
+
+2. 向用户授权
+
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-access-set-websoft9.png)
+
 ### 管理 MySQL
 
 下面介绍如何使用 CloudBeaver 管理 MySQL 数据库

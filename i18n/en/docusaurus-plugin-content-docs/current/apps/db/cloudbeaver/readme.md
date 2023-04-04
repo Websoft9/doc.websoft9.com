@@ -51,10 +51,22 @@ Below is for you to solve problem, and you can contact **[Websoft9 Support](./he
 
 ## CloudBeaver QuickStart
 
-> 需要了解更多 CloudBeaver 的使用，请参考[官方文档](https://cloudbeaver.io/docs/)
+> To learn more about the use of CloudBeaver, please refer to [Official Documentation](https://cloudbeaver.io/docs/)
 
 
 ## CloudBeaver Setup
+
+### Share Data Connection
+
+Administrators can grant access to all shared connections to the User team by changing one parameter in the configuration file.
+
+1. Configure the connection to Shared
+
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-share-set-websoft9.png)  
+
+2. Grant access to shared connections to the users
+
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-access-set-websoft9.png)  
 
 ### Manage MySQL
 
