@@ -106,6 +106,10 @@ ONLYOFFICE Docs 绑定域名符合：**[域名五步设置](./administrator/doma
 
 大多数情况下，调用 ONLYOFFICE Docs 的软件需要 ONLYOFFICE Docs 提供 HTTPS 服务，所以域名绑定后，需立即设置 HTTPS：
 
+#### 通过代理配置
+
+我们推荐使用 Proxy 代理对 ONLYOFFICE Docs 进行 HTTPS 配置：
+
 1. 参考通用的 [HTTPS 配置指南](./administrator/domain_https)
 
 2. 虚拟主机配置文件中增加下面的一行代码，使客户端和代理服务之间的连接所采用的传输协议
@@ -116,6 +120,26 @@ ONLYOFFICE Docs 绑定域名符合：**[域名五步设置](./administrator/doma
    # 以下适用于 Nginx
    proxy_set_header   X-Forwarded-Proto $scheme;
    ```
+
+#### 自签名配置
+
+ONLYOFFICE Docs 也提供了[自签名的 HTTPS](https://helpcenter.onlyoffice.com/installation/docs-community-install-docker.aspx) 方案，经过验证完全可用：
+
+1. 进入 ONLYOFFICE Docs 容器，创建 certs 文件夹
+   ```
+  mkdir /var/www/onlyoffice/Data/certs
+  cd /var/www/onlyoffice/Data/certs
+   ```
+
+2. 运行自签名命令（以[官方文档](https://helpcenter.onlyoffice.com/installation/docs-community-install-docker.aspx)为准）
+   ```
+   openssl genrsa -out onlyoffice.key 2048
+   openssl req -new -key onlyoffice.key -out onlyoffice.csr
+   openssl x509 -req -days 365 -in onlyoffice.csr -signkey onlyoffice.key -out onlyoffice.crt
+   ```
+3. 退出 ONLYOFFICE Docs 容器，重启它后生效
+
+
 
 ## 参数
 
