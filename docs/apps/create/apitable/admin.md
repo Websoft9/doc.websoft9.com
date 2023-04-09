@@ -15,16 +15,15 @@ tags:
 
 ### APITable 备份与恢复
 
+暂无
+
 ### APITable 升级
+
+暂无
 
 ## 故障排除{#troubleshoot}
 
 除以下列出的 APITable 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。  
-
-#### 更改域名导致无法访问 APITable ？
-
-#### 访问 APITable 出现 502 错误？{#502}
-
 
 ## 问题解答{#faq}
 

@@ -33,6 +33,10 @@ tags:
 2. 输入邮件和密码，登录到主页面
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apitable/apitable-main-websoft9.png)
 
+3. 点击左下角用户设定，选择属性标签即可设置自己想要的语言
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apitable/apitable-user-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apitable/apitable-preference-websoft9.png)
+
 ### 碰到问题？
 
 若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题。
@@ -45,43 +49,45 @@ tags:
 
 ## APITable 常用操作{#guide}
 
-### 配置 SMTP{#smtp}
+### 使用数学公式和函数
 
-1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
+如同 Excle 一样，APITable  可让使用非常方便的使用[公式](https://help.apitable.com/docs/guide/tutorial-getting-started-with-formulas)来编辑数据。
 
-2. 填写 APITable 邮件相关配置
+### 导入数据
 
-3. 测试邮件发送是否可用
+APITable  支持[导入导出 Excel 和 CSV 数据](https://help.apitable.com/docs/guide/manual-import-export)，方便数据迁移。
 
-### 安装插件{#plugin}
+### 数据筛选排序
 
-### 重置管理员密码{#resetpw}
+APITable  对于[数据过滤和排序](https://help.apitable.com/docs/guide/custom-view), 让用户可以轻松的编辑和展示数据。
 
-忘记管理员密码时，请参考如下方案重置密码：  
+### 创建数据模板
 
+APITable  能将现有空间创建成[模板](https://help.apitable.com/docs/guide/faq-how-create-template), 让用户快速构建类似系统数据。
 
 ## APITable 参数{#parameter}
 
-APITable 应用中包含 Docker, Portainer 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
+APITable 应用中包含 Docker, MySQL, Redis, RabbitMQ 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
 
 通过运行 `docker ps`，查看 APITable 运行时所有的服务组件：   
 
 ```bash
 CONTAINER ID   IMAGE                                      COMMAND                  CREATED          STATUS                    PORTS                                                                  NAMES
-af17feebaf9f   apitable/openresty:latest                  "/usr/bin/openresty …"   10 minutes ago   Up 7 minutes              0.0.0.0:9001->80/tcp, :::9001->80/tcp                                  apitable
-a818975b2753   apitable/backend-server:latest             "java -Djava.securit…"   10 minutes ago   Up 9 minutes (healthy)    8081/tcp                                                               apitable-backend-server-1
-8b1a98d4e740   apitable/room-server:latest                "/start-agenthub.sh …"   10 minutes ago   Up 10 minutes             3001-3002/tcp, 3005-3007/tcp, 3333-3334/tcp                            apitable-room-server-1
-93d1cbfd3d3c   apitable/web-server:latest                 "docker-entrypoint.s…"   10 minutes ago   Up 10 minutes             8080/tcp                                                               apitable-web-server-1
-852a34d31086   apitable/imageproxy-server:latest          "/bin/sh -c './app/i…"   10 minutes ago   Up 10 minutes             8080/tcp                                                               apitable-imageproxy-server-1
-d29ed28c9843   rabbitmq:3.11.9-management                 "docker-entrypoint.s…"   10 minutes ago   Up 10 minutes             4369/tcp, 5671-5672/tcp, 15671-15672/tcp, 15691-15692/tcp, 25672/tcp   apitable-rabbitmq-1
-acfd06f75fee   redis:7.0.8                                "docker-entrypoint.s…"   10 minutes ago   Up 10 minutes             6379/tcp                                                               apitable-redis-1
-0d4eca326535   minio/minio:RELEASE.2023-01-25T00-19-54Z   "/usr/bin/docker-ent…"   10 minutes ago   Up 10 minutes (healthy)   9000/tcp                                                               apitable-minio-1
-c62a5751024b   mysql:8.0.32                               "docker-entrypoint.s…"   10 minutes ago   Up 10 minutes (healthy)   3306/tcp, 33060/tcp
+c1dd6d335b10   apitable/openresty:latest                  "/usr/bin/openresty …"   33 minutes ago   Up 31 minutes             0.0.0.0:9001->80/tcp, :::9001->80/tcp                                  apitable
+0ee1201d2829   apitable/backend-server:latest             "java -Djava.securit…"   33 minutes ago   Up 32 minutes (healthy)   8081/tcp                                                               apitable-backendserver
+76b992ee1d74   apitable/room-server:latest                "/start-agenthub.sh …"   33 minutes ago   Up 33 minutes             3001-3002/tcp, 3005-3007/tcp, 3333-3334/tcp                            apitable-roomserver
+0fd5f8905d13   rabbitmq:3.11.9-management                 "docker-entrypoint.s…"   33 minutes ago   Up 33 minutes             4369/tcp, 5671-5672/tcp, 15671-15672/tcp, 15691-15692/tcp, 25672/tcp   apitable-rabbitmq
+9ff890d3b6c4   apitable/web-server:latest                 "docker-entrypoint.s…"   33 minutes ago   Up 33 minutes             8080/tcp                                                               apitable-webserver
+dabbd022bebe   apitable/imageproxy-server:latest          "/bin/sh -c './app/i…"   33 minutes ago   Up 33 minutes             8080/tcp                                                               apitable-imageproxyserver
+133a7aff674e   minio/minio:RELEASE.2023-01-25T00-19-54Z   "/usr/bin/docker-ent…"   33 minutes ago   Up 33 minutes (healthy)   9000/tcp                                                               apitable-minio
+6402cc3feae0   mysql:8.0.32                               "docker-entrypoint.s…"   33 minutes ago   Up 33 minutes (healthy)   3306/tcp, 33060/tcp                                                    apitable-db
+98165163f373   redis:7.0.8                                "docker-entrypoint.s…"   33 minutes ago   Up 33 minutes             6379/tcp                                                               apitable-redis
 ```
 
 ### 路径{#path}
 
-APITable 配置文件： *path/config.php*    
+APITable 安装目录： */data/apps/apitable*  
+APITable 数据目录： */data/apps/apitable/data*  
 
 ### 端口{#port}
 
@@ -89,14 +95,27 @@ APITable 配置文件： *path/config.php*
 
 ### 版本{#version}
 
-控制台查看
+```
+sudo docker exec -it apitable-webserver sed -n '3p' package.json
+```
 
 ### 服务{#service}
 
 ```shell
 sudo docker start | stop | restart | stats apitable
+sudo docker start | stop | restart | stats apitable-backendserver
+sudo docker start | stop | restart | stats apitable-roomserver
+sudo docker start | stop | restart | stats apitable-rabbitmq
+sudo docker start | stop | restart | stats apitable-webserver
+sudo docker start | stop | restart | stats apitable-imageproxyserver
+sudo docker start | stop | restart | stats apitable-minio
+sudo docker start | stop | restart | stats apitable-redis
 ```
 
 ### 命令行{#cli}
 
+无
+
 ### API{#api}
+
+APITable 对[REST API](https://developers.apitable.com/api/reference/)有良好的支持。
