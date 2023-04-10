@@ -12,7 +12,7 @@ tags:
 [APITable](https://apitable.com/) 作为新一代数据生产力平台，是一款面向 API 的智能多维表格。它将复杂的可视化数据库、电子表格、实时在线协同、低代码开发技术四合为一，就连一行代码都不懂的普通职员都能轻松上手获得 IT 能力，从而极大降低企业数字化成本。
 如果你正在寻找快捷可定制的业务系统、安全可靠的可视化数据库、高效协同的办公工具，那么 APITable 能满足你的丰富想象。 APITable 是自动化的项目管理工具。无论您是个人创业者还是大型团队的一员，APITable 都可以帮助您实现目标并提高生产力。
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apitable/apitable-head-websoft9.png)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apitable/apitable-websoft9.png)
 
 部署 Websoft9 提供的 APITable 之后，请参考下面的步骤快速入门。
 
@@ -30,12 +30,14 @@ tags:
 1. 使用本地电脑浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入初始化页面
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apitable/apitable-init-websoft9.png)
 
-2. 输入邮件和密码，登录到主页面
+2. 注册用户并登录
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apitable/apitable-main-websoft9.png)
 
 3. 点击左下角用户设定，选择属性标签即可设置自己想要的语言
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apitable/apitable-user-websoft9.png)
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apitable/apitable-preference-websoft9.png)
+
+> 需要了解更多 APITable 的使用，请参考官方文档：[APITable Docs](https://help.apitable.com/docs/guide/tutorial)
 
 ### 碰到问题？
 
@@ -44,7 +46,7 @@ tags:
 
 ## APITable 使用入门{#quickstart}
 
-下面以 **××××** 作为一个任务，帮助用户快速入门：
+APITable 提供详尽的使用[向导](https://help.apitable.com/docs/guide/tutorial)
 
 ## APITable 常用操作{#guide}
 
@@ -54,15 +56,19 @@ tags:
 
 ### 导入数据
 
-APITable  支持[导入导出 Excel 和 CSV 数据](https://help.apitable.com/docs/guide/manual-import-export)，方便数据迁移。
+APITable 支持[导入导出 Excel 和 CSV 数据](https://help.apitable.com/docs/guide/manual-import-export)，方便数据迁移。
+
+### 表单
+
+APITable [表单](https://help.apitable.com/docs/guide/magic-form)可用于快速收集信息并同步保存和组织数据结果。
 
 ### 数据筛选排序
 
-APITable  对于[数据过滤和排序](https://help.apitable.com/docs/guide/custom-view), 让用户可以轻松的编辑和展示数据。
+APITable 对于[数据过滤和排序](https://help.apitable.com/docs/guide/custom-view), 让用户可以轻松的编辑和展示数据。
 
 ### 创建数据模板
 
-APITable  能将现有空间创建成[模板](https://help.apitable.com/docs/guide/faq-how-create-template), 让用户快速构建类似系统数据。
+APITable 能将现有空间创建成[模板](https://help.apitable.com/docs/guide/faq-how-create-template), 让用户快速构建类似系统数据。
 
 ## APITable 参数{#parameter}
 

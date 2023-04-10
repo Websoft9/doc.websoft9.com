@@ -7,4 +7,4 @@ tags:
 
 # APITable Solution
 
-You can use [APITable](https://www.jenkins.io/solutions/) integrated other software for **xxxx**.
+You can use [APITable](https://apitable.com/) integrated other software for **xxxx**.
