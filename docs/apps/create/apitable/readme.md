@@ -41,7 +41,6 @@ tags:
 
 若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题。
 
-参阅：
 
 ## APITable 使用入门{#quickstart}
 
