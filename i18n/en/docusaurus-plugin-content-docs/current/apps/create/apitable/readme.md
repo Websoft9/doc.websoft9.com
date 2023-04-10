@@ -46,7 +46,7 @@ APITable provides [tutorials](https://help.apitable.com/docs/guide/tutorial)
 ### Import and Export Data
 
 1. You can directly [import](https://help.apitable.com/docs/guide/manual-import-export#importing-an-excel-file) a local Excel file into the APITable as a datasheet.
-2. You can edit and view data more quickly and efficiently by using the APITable. Additionally, it is supported that [exporting](You can edit and view data more quickly and efficiently by using the APITable. Additionally, it is supported that exporting APITable data to Excel files.) APITable data to Excel files.
+2. You can edit and view data more quickly and efficiently by using the APITable. Additionally, it is supported that [exporting](https://help.apitable.com/docs/guide/manual-import-export#exporting-data) APITable data to Excel files.
 
 ### Form
 
