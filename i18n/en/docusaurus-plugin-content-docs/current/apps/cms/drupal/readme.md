@@ -43,7 +43,7 @@ Below is for you to solve problem, and you can contact **[Websoft9 Support](./he
 
 ## Drupal QuickStart
 
-下面以 **使用 Drupal 构建内容管理系统** 作为一个任务，帮助用户快速入门：
+Coming soon...
 
 ## Drupal Setup
 
@@ -78,7 +78,7 @@ Below is for you to solve problem, and you can contact **[Websoft9 Support](./he
 
 ### DNS Additional Configure (Modify URL){#dns}
 
-Drupal needs to change the DNS, in addition to the [Drupal configuration file] (#path), you also need to modify the DNS in the '.htaccess' in the Drupal root directory.
+Drupal needs to change the DNS, in addition to the [Drupal configuration file](#path), you also need to modify the DNS in the '.htaccess' in the Drupal root directory.
 
 ### Set languages{#setlang}
 
