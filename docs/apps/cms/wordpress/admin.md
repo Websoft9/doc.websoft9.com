@@ -268,6 +268,13 @@ WordPress 的后台管理是分权限的，而最高权限是超级管理员。�
 错误信息： You don't have permission to access /wp-admin/admin.php on this server?  
 解决方案：待研究
 
+#### 数据库连接和用户权限 100% 正确，而 WordPress 容器仍然连不上数据库？  
+
+错误信息： Database connection error  
+问题原因：容器版 WordPress 不支持 www.abc.com 这个格式的数据库名称  
+解决方案：修改数据库名称为 www_abc_com  
+
+
 
 ## 问题解答
 
