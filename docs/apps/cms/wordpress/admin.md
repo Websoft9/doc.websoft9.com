@@ -104,6 +104,17 @@ WordPress插件库中有数量众多的备份插件，我们推荐使用：[Updr
 * 可以备份网站文件和数据库
 * 可以实现一键恢复
 
+### 虚拟机部署迁移至 Docker 部署
+
+将传统的虚拟机部署的 WordPress 迁移至 Docker 部署是必要的，也是可行的。  
+
+我们在实践中，发现需要注意的问题：   
+
+1. 需将 /var/www/html 挂载到已有的 WordPress 根目录，并修改权限至 0755 （此权限代码有待进一步优化）  
+2. 需考虑 WordPress 容器镜像版本，以适应原网站
+3. 需从 Docker 版的 wp-config.php 文件中的差异部署，根据实际情况同步到原有网站源码  
+ 
+
 ### 计划任务
 
 WordPress 内置计划功能（wp cron），并默认启动了插件更新检查、主题检查等十多个任务。wp cron 不依赖操作系统的计划任务而独立运行。  
@@ -273,6 +284,13 @@ WordPress 的后台管理是分权限的，而最高权限是超级管理员。�
 错误信息： Database connection error  
 问题原因：容器版 WordPress 不支持 www.abc.com 这个格式的数据库名称  
 解决方案：修改数据库名称为 www_abc_com  
+
+#### Cannot modify header information - headers already sent by...?
+
+错误信息： "Warning: Cannot modify header information - headers already sent by (output started at /home/user/public_html/index.php:581) in /home/user/public_html/system/sessions.php on line 180"   
+问题原因： 未知
+解决方案： 检查有<?php ... ?> 后面没有空白行，特别是include或者require的文件。不少问题是这些空白行导致的。  (**验证可用**)
+  
 
 
 
