@@ -110,9 +110,11 @@ WordPress插件库中有数量众多的备份插件，我们推荐使用：[Updr
 
 我们在实践中，发现需要注意的问题：   
 
-1. 需将 /var/www/html 挂载到已有的 WordPress 根目录，并修改权限至 0755 （此权限代码有待进一步优化）  
-2. 需考虑 WordPress 容器镜像版本，以适应原网站
-3. 需从 Docker 版的 wp-config.php 文件中的差异部署，根据实际情况同步到原有网站源码  
+1. 将 /var/www/html 挂载到已有的 WordPress 根目录，并将其目录的 owner 更改为容器中 www-data 用户的 UID，这样便可以避免诸多权限问题。    
+2. 需匹配 WordPress 容器镜像版本，以适应原网站
+3. 关注 wp-config.php 在 Docker 版与原有网站之间的差异，必要的时候做出修正 
+
+> 权限问题可能导致网站无法访问或插件无法在线安装的问题  
  
 
 ### 计划任务
@@ -338,6 +340,10 @@ chown -R nginx.nginx /data/wwwroot
 find /data/wwwroot -type d -exec chmod 750 {} \;
 find /data/wwwroot -type f -exec chmod 640 {} \;
 ```
+
+#### WordPress 可以使用 mount volume 吗？
+
+可以。与 named volume 相比，仅需将目录的 owner 更改为容器中 www-data 用户的 UID  
 
 #### 换回 Classic Editor 经典编辑器？
 
