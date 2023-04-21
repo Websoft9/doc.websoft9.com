@@ -102,6 +102,28 @@ ONLYOFFICE Docs 绑定域名符合：**[域名五步设置](./administrator/doma
     ProxyPassReverse / http://127.0.0.1:9002/
     </VirtualHost>
     ```
+
+### 增加字体{#addfonts}
+
+我们已经验证 ONLYOFFICE Docs 官方文档 [Adding fonts to ONLYOFFICE Docs](https://helpcenter.onlyoffice.com/installation/docs-community-install-fonts-linux.aspx) 是完全可以用的。 
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/onlyoffice/onlyofficedocs-addfonts-websoft9.png)
+
+同时，我们记录了如下的事项供您参考：
+
+1. 需清空浏览器缓存或使用隐私模式打开新的浏览器页面，方可看到新增字体
+2. Windows 系统上拷贝的 ttf 字体是可用的
+3. 网上下载的 ttf 字体是可用的
+
+### 多版本
+
+ONLYOFFICE Docs 默认设置是支持[多版本](https://helpcenter.onlyoffice.com/onlyoffice-editors/onlyoffice-document-editor/HelpfulHints/VersionHistory.aspx)的，可以通过：【文件】>【版本历史】进行查看。  
+
+下面是 ownCloud 下打开文档后，ONLYOFFICE Docs 多版本的查看结果：  
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/onlyoffice/onlyofficedocs-docsversions-websoft9.png)
+
+
 ### HTTPS 设置
 
 大多数情况下，调用 ONLYOFFICE Docs 的软件需要 ONLYOFFICE Docs 提供 HTTPS 服务，所以域名绑定后，需立即设置 HTTPS：
