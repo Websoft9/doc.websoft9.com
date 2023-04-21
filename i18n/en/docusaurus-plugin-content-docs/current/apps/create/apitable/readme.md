@@ -52,6 +52,10 @@ APITable provides [tutorials](https://help.apitable.com/docs/guide/tutorial)
 
 [Forms](https://help.apitable.com/docs/guide/magic-form) can be used to quickly collect information and synchronously save and organize the data results. You can use a form to collect product requirements and contacts, track sale progress, etc.
 
+### Dashboad
+
+The [dashboard](https://help.apitable.com/docs/guide/intro-dashboard/) is a new file type, it is like a container, and you can add a variety of [widgets](https://help.apitable.com/docs/guide/intro-widget) to it, thus extending more capabilities to the data.For example, adding multiple "chart" widgets can quickly expand data visualization capabilities, and build beautiful business charts in a few minutes.
+
 ## Reference sheet
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage APITable

@@ -54,13 +54,9 @@ APITable 提供详尽的使用[向导](https://help.apitable.com/docs/guide/tuto
 
 如同 Excle 一样，APITable  可让使用非常方便的使用[公式](https://help.apitable.com/docs/guide/tutorial-getting-started-with-formulas)来编辑数据。
 
-### 导入数据
+### 数据导入导出
 
 APITable 支持[导入导出 Excel 和 CSV 数据](https://help.apitable.com/docs/guide/manual-import-export)，方便数据迁移。
-
-### 表单
-
-APITable [表单](https://help.apitable.com/docs/guide/magic-form)可用于快速收集信息并同步保存和组织数据结果。
 
 ### 数据筛选排序
 
@@ -69,6 +65,14 @@ APITable 对于[数据过滤和排序](https://help.apitable.com/docs/guide/cust
 ### 创建数据模板
 
 APITable 能将现有空间创建成[模板](https://help.apitable.com/docs/guide/faq-how-create-template), 让用户快速构建类似系统数据。
+
+### 表单
+
+APITable [表单](https://help.apitable.com/docs/guide/magic-form)可用于快速收集信息并同步保存和组织数据结果。
+
+### 仪表板
+
+[仪表板](https://help.apitable.com/docs/guide/intro-dashboard/)就像一个容器，您可以向其添加各种[小部件](https://help.apitable.com/docs/guide/intro-widget)，从而为数据扩展更多功能。例如，添加多个“图表”小部件可以快速扩展数据可视化功能，并在几分钟内构建出漂亮的业务图表。
 
 ## APITable 参数{#parameter}
 
