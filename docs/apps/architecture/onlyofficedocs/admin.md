@@ -44,3 +44,8 @@ DEVELOPER EDITION 和 ENTERPRISE EDITION 是收费版本，Websoft9 可以帮助
 
 支持！集成到云盘软件后，打开文档，通过 ONLYOFFICE Docs  【文件】-【另存为】或【下载为】，将文件保存为 PDF 文件。
 
+#### ONLYOFFICE Docs 如何开启 Debug 日志？ 
+
+1. 进入容器修改 */etc/onlyoffice/documentserver/log4js/production.json* 文件，将  "level": "WARN" 更改为 "level": "DEBUG"
+2. 运行 *supervisorctl restart all* 命令后生效。  
+

@@ -41,3 +41,8 @@ ONLYOFFICE offers different versions:
 COMMUNITY EDITION is free, while [DEVELOPER EDITION](https://www.onlyoffice.com/en/developer-edition-prices.aspx) is a paid version for developers.
 
 Websoft9 可以帮助用户采购收费版本，最少 10% 的折扣。
+
+#### How to enable ONLYOFFICE Docs Debug logs? 
+
+1. Open */etc/onlyoffice/documentserver/log4js/production.json* file inside container, modify "level": "WARN" to "level": "DEBUG"
+2. Save the changes and execute supervisorctl restart all to apply the changes. 
