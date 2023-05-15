@@ -133,13 +133,13 @@ Nextcloud 后台集成了 [Marketplace](https://apps.nextcloud.com) 大量的扩
 
 Nextcloud 支持多种流行的企业存储服务，具体使用步骤如下：
 
-1. 登录 Nextcloud 后台，安装 **External storage support** 扩展
+1. 登录 Nextcloud 后台，通过 **应用** 管理，启用 **External storage support** 扩展
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/nextcloud/nextcloud-enablestorage-websoft9.png)
 
-2. 打开：【Admin】>【Add storage】>【External Storage】，选择一个外部存储服务
+2. 打开：【管理设置】>【外部存储】>【Add storage】>【External Storage】，选择一个外部存储服务。选择S3能兼容目前大多数对象存储工具，如S3,OSS,OBS等。
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/nextcloud/nextcloud-enablestorage002-websoft9.png)
 
-3. 根据实际情况进行设置
+3. 根据实际情况配置，连接到相应的对象存储。使用云平台的秘钥对连接成功后，会在 Nextcloud 中生成对应的外部存储目录。
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/nextcloud/nextcloud-auth_mechanism-websoft9.png)
 
 更多详情参考官方文档：[External Storage](https://docs.nextcloud.com/server/latest/admin_manual/configuration_files/external_storage_configuration_gui.html)
