@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-slug: /cells/solution
+slug: /pydio/solution
 tags:
   - Pydio Cells
   - 网盘
