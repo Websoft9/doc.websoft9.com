@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-slug: /kodcloud/admin
+slug: /kodbox/admin
 tags:
   - KodCloud
   - 网盘
@@ -16,10 +16,10 @@ tags:
 
 ## 故障排除
 
-除以下列出的 Kodcloud 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
+除以下列出的 KodBox 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
 
 ## 问题解答
 
-#### KodExplore 与 Kodcloud 有什么区别？
+#### KodExplore 与 KodBox 有什么区别？
 
-Kodcloud 是 KodExplore 的新一代版本。
+KodBox 是 KodExplore 的新一代版本。
