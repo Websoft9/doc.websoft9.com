@@ -71,7 +71,7 @@ ead45db0cdab   mysql:5.7           "docker-entrypoint.s…"   3 hours ago   Up 3
 ### 路径{#path}
 
 Matomo 数据目录： */data/apps/matomo*  
-Matomo 数据目录： */data/apps/matom/data/matomo* 
+Matomo 数据目录： */data/apps/matomo/data/matomo* 
 
 ### 端口{#port}
 
