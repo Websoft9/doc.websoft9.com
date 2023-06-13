@@ -28,7 +28,7 @@ tags:
 
 ### 详细步骤
 
-1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*https://域名* 或 *https://服务器公网IP*, 进入安装向导  
+1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入安装向导  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wp01.png)
 
 2. 设置您的管理员账号、密码和邮箱， 点击“安装WordPress”; 
