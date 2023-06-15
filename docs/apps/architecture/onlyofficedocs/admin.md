@@ -13,6 +13,11 @@ slug: /onlyofficedocs/admin
 
 除以下列出的 ONLYOFFICE Docs 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
 
+#### 包含中文的 csv 文件打开乱码？
+
+ONLYOFFICE 在打开 csv 文件时，会让客户选择字符编码和字段分隔符。下面的组合一般能解决乱码的问题：  
+
+- 【GB2313】+【逗号】
 
 ## 问题解答
 
