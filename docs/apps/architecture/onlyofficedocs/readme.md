@@ -170,7 +170,8 @@ ONLYOFFICE Docs 应用中包含 Nginx, Docker 等组件，可通过 **[通用参
 通过运行`docker ps`，可以查看到 ONLYOFFICE Docs 运行时所有的 Container：
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                             COMMAND                  CREATED              STATUS              PORTS                                                                                                             NAMES
+1a27919d2201   onlyoffice/documentserver:7.3     "/app/ds/run-documen…"   About a minute ago   Up About a minute   443/tcp, 0.0.0.0:9002->80/tcp, :::9002->80/tcp                                                                    onlyofficedocs
 ```
 
 下面仅列出 ONLYOFFICE Docs  本身的参数：
@@ -184,7 +185,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 ### 版本
 
 ```shell
-docker image inspect onlyoffice/communityserver  | grep onlyoffice.community.version | sed -n 1p
+docker exec -i onlyofficedocs bash -c 'apt-cache show onlyoffice-documentserver |grep -i version |cut -d: -f2'
 ```
 
 ### 服务
