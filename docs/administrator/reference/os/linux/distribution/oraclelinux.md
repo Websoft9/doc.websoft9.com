@@ -26,13 +26,17 @@ slug: /oraclelinux
 
 ## 场景
 
-### 升级
+### 升级{#upgrade}
 
 升级是一个很有必要的工作，担心升级系统会导致业务出现问题是典型的保守主义。   
 
 Oracle Linux 在一个维护周期内可能会发布数百个安全漏洞和 Bug 补丁，如果不去升级谁又能保证这些 Bug 不会影响自己的业务呢？  
 
-优先使用 Oracle 官方提供的升级工具[Ksplice](https://ksplice.oracle.com/try/trial)进行升级。  
+1. 订阅 Oracle 官方的[补丁通知邮件](https://www.oracle.com/cn/security-alerts/)：注册免费 Oracle 账号 > 用户控制面板 > 订阅管理 > Oracle 安全通知
+
+2. 选择一种升级方案：
+    - 普通升级方案：[Linux 标准的软件包升级方案](https://docs.oracle.com/en/operating-systems/oracle-linux/software-management/sfw-mgmt-UpdateSoftwareonOracleLinux.html#update-software)  
+    - 不停机升级方案：Oracle 官方提供的升级工具[Ksplice](https://ksplice.oracle.com/try/trial) 
 
 ## 问题解答
 
