@@ -128,8 +128,7 @@ If you want to change domain for PrestaShop, these steps you need to do:
 
 1. Completed domain resolution and domain binding
 2. Enable PrestaShop's Maintenance mode
-3. Edit the PrestaShop's [configuration file](#path), modify the domain
-4. Log in PrestaShop console, open:【Shop Parameters】>【Traffic&SEO】, modify the shop URL
+3. Log in PrestaShop console, open:【Shop Parameters】>【Traffic&SEO】, modify the shop URL
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-seturl-websoft9.png)
 
 ### PrestaShop import

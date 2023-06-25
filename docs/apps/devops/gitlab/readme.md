@@ -232,6 +232,7 @@ c5b22639c668   gitlab/gitlab-ce:latest       "/assets/wrapper"        2 hours ag
 GitLab 安装目录： */data/apps/gitlab*   
 GitLab 数据目录： */data/apps/gitlab/data/gitlab_data*  
 GitLab 日志目录： */data/apps/gitlab/data/gitlab_logs*  
+GitLab 配置文件:  */data/apps/gitlab/data/gitlab_config/gitlab.rb*  
 
 ### 端口{#port}
 

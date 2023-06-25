@@ -139,11 +139,9 @@ if (!defined('_PS_MODE_DEMO_')) {
 
 **[域名五步设置](./administrator/domain_step)** 完成后，需设置 PrestaShop URL:
 
-1. 将 PrestaShop [设置为维护模式](#maintenance)
+1. 登录 PrestaShop 后台，将 PrestaShop [设置为维护模式](#maintenance)
 
-2. 打开 PrestaShop 的[配置文件](#path)，修改其中与域名有关的内容
-
-3. 登录 PrestaShop 后台，打开：【Shop Parameters】>【Traffic&SEO】，修改它
+2. 打开：【Shop Parameters】>【Traffic&SEO】，修改它
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-seturl-websoft9.png)
 
 ### 导入演示数据

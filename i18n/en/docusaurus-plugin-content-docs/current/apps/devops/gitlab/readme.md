@@ -229,6 +229,7 @@ c5b22639c668   gitlab/gitlab-ce:latest       "/assets/wrapper"        2 hours ag
 GitLab installation directory: */data/apps/gitlab*  
 GitLab data directory: */data/apps/gitlab/data/gitlab_data*  
 GitLab log directory: */data/apps/gitlab/data/gitlab_logs*  
+GitLab configuration file: */data/apps/gitlab/data/gitlab_config/gitlab.rb*  
 
 ### Port{#port}
 
