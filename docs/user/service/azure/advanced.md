@@ -9,7 +9,7 @@ slug: /azure/advanced
 
 ### API/CLI
 
-Azure 提供了原生 [API/CLI](https://docs.azure.cn/zh-cn/cli/reference-index?view=azure-cli-latest) 。[安装](https://docs.azure.cn/zh-cn/cli/install-azure-cli-linux?view=azure-cli-latest)完成后即可使用。  
+Azure 提供了原生 [API/CLI](https://learn.microsoft.com/zh-cn/cli/azure/) ，安装后需验证方可使用。  
 
 #### 验证
 
@@ -20,7 +20,7 @@ azure cli 运行时需服务器登录到 Azure 作为一种额外的账号验证
    az account clear
    az login --use-device-code
    ```
-2. 本地浏览器打开：https://microsoft.com/devicelogin，输入上一步骤的授权码，开始验证
+2. 根据命令行提示信息，开始验证
 
 #### 导入存储账号
 
