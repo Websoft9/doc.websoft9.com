@@ -17,6 +17,7 @@
     "@docusaurus/core": "^2.4.1",
     "@docusaurus/plugin-content-docs": "^2.4.1",
     "@docusaurus/preset-classic": "^2.4.1",
+    "@docusaurus/theme-mermaid": "^2.4.1",
     "@mdx-js/react": "^1.6.21",
     "clsx": "^1.1.1",
     "docusaurus-theme-search-typesense": "^0.9.0-3",
