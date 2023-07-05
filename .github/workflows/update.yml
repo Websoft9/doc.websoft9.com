@@ -1,0 +1,22 @@
+name: Update docusaurus
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          yarn install
+          yarn upgrade @docusaurus/core@latest @docusaurus/preset-classic@latest
+          yarn add @docusaurus/theme-mermaid
+          
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+           commit-message: Update docusaurus
