@@ -35,7 +35,7 @@ tags:
 2. 通过本地浏览器访问：*http://服务器公网IP*， 直接进入 Portainer 界面
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/docker/portainer/portainer-login-websoft9.png)
 
-> Portainer官方容器启动后，如果不设置初始密码，会提示超时，需要执行`sudo docker restart portainer`
+> Portainer官方容器启动后，如果不设置初始密码，超过5分钟会提示超时，需要执行`sudo docker restart portainer`
 
 3. 自行设置管理员账号密码，点击【Create user】
 
