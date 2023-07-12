@@ -13,7 +13,7 @@ Websoft9 目前仅支持在 Linux 主机下安装。
 如果您不具备以上所需的 Docker, Git, Ansible 等环境，推荐使用我们**脚本安装**。
 
 ```
-sudo wget -N https://raw.githubusercontent.com/Websoft9/StackHub/main/docker-installer.sh; sudo bash docker-installer.sh -r akeneo
+sudo wget -N https://websoft9.github.io/stackhub/scripts/install.sh; sudo bash install.sh -r akeneo
 ```
 
 ## 手动安装
