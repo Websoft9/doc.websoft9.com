@@ -28,6 +28,8 @@ tags:
 1. 本地电脑浏览器访问：*http://域名* 或 *http://服务器公网IP*，进入初始化页面 
    ![GitLab 登录](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-login-websoft9.png)
 
+> 一般服务器启动后需要1到2分钟才能显示 Gitlab 页面，如果 GitLab 页面还无法显示的情况下强制重启服务器会导致重新生成新密码，导致密码无法登陆
+
 2. 输入账号密码（[不知道账号密码？](./user/credentials)），进入 GitLab 控制台
    ![GitLab 后台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-backend-websoft9.png)
 
