@@ -46,10 +46,6 @@ If running multiple Redis instances, make sure that the ports in the configurati
 
 Redis client is a program used to communicate with Redis-Server, for example: redis-cli is client tool
 
-#### What's relationship between Redis Labs and Redis?
-
-[Redis Labs](https://redislabs.com/) is the parent company of Redis, that is, Redis is a product of Redis Labs.
-
 #### Does Redis need a password to log in?
 
 No password authentication required

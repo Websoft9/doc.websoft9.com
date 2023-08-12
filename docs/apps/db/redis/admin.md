@@ -74,10 +74,6 @@ redis 127.0.0.1:6379> SELECT 1
 * Redis社区版：兼容开源Redis的高性能数据缓存服务，适用于标准的、无特殊业务需求的Redis使用场景。
 * Redis企业版：在Redis社区版的基础上开发的强化版Redis服务，从访问延时、持久化需求、整体成本这三个核心维度考量，基于DRAM、NVM和ESSD云盘等存储介质，推出了多种不同形态的产品，为您提供更强的性能、更多的数据结构和更灵活的存储方式，满足不同场景下的业务需求。
 
-#### Redis Labs 与 Redis 有什么关系？
-
-[Redis Labs](https://redislabs.com/) 是 Redis 的母公司，即 Redis 是 Redis Labs 公司旗下的产品。
-
 #### Redis需要密码才能登录吗？
 
 可以无需设置密码验证，只要外网访问才需要开启数据库密码
