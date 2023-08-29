@@ -45,6 +45,9 @@ If you have installed Websoft9 PrestaShop, the following steps is for your quick
 
 Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
 
+**After HTTPS is configured successfully, the background can be accessed normally, but the foreground access error occurs**  
+Through http://IP:9090, access phpMyAdmin and modify the table ps_configuration properties PS_SSL_ENABLED_EVERYWHERE and PS_SSL_ENABLED to 1
+
 ## PrestaShop QuickStart
 
 Let's take **Building an online store with PrestaShop** as a task to help users get started quickly:
