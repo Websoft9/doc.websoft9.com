@@ -84,26 +84,17 @@ ActiveMQ 附带了许多 Web 演示，这些演示说明了如何将 ActiveMQ �
 
 ## 参数
 
-ActiveMQ 应用中包含 Nginx, Docker 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
+ActiveMQ 应用中包含 Docker 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
-下面仅列出 ActiveMQ 本身的参数：
+通过运行 `docker ps`，查看 ActiveMQ 运行时所有的服务组件：
+
+CONTAINER ID   IMAGE                                                 COMMAND                  CREATED          STATUS          PORTS                                                                                                                                                                                NAMES
+abeaf50ef7ec   alfresco/alfresco-activemq:5.18.2-jre17-rockylinux8   "/bin/sh -c './init.…"   37 minutes ago   Up 37 minutes   0.0.0.0:5672->5672/tcp, :::5672->5672/tcp, 0.0.0.0:8161->8161/tcp, :::8161->8161/tcp, 0.0.0.0:61613->61613/tcp, :::61613->61613/tcp, 0.0.0.0:61616->61616/tcp, :::61616->61616/tcp   activemq
 
 ### 路径{#path}
 
-虽然运行 `whereis` 命令可以查看相关安装路径，但接下来我们仍然对路径信息进行更为准确的说明。
-
-```
-whereis activemq
-whereis java
-```
-
-ActiveMQ 安装目录： */opt/apache-activemq/*  
-ActiveMQ 配置目录： */opt/apache-activemq/conf*  
-ActiveMQ 数据目录： */opt/apache-activemq/data*  
-ActiveMQ 日志目录： */opt/apache-activemq/data/activemq.log*
-
-> 通过修改 */opt/apache-activemq/conf/jetty-realm.propertie* 重置管理密码
-
+ActiveMQ 安装目录： */data/apps/activemq*   
+ActiveMQ 配置目录： */data/apps/activemq/data*   
 
 ### 端口{#port}
 
@@ -116,7 +107,7 @@ ActiveMQ 日志目录： */opt/apache-activemq/data/activemq.log*
 ### 版本{#version}
 
 ```shell
-ls /opt/apache-activemq | grep activemq
+sudo docker exec -it activemq find /opt/activemq -name activemq-all* | cut -d- -f3
 ```
 
 ### 服务{#service}
@@ -127,9 +118,7 @@ sudo systemctl start | stop | restart | status activemq
 
 ### 命令行{#cmd}
 
-```
-/opt/apache-activemq -h
-```
+暂无
 
 ### API
 

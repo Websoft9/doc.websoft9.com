@@ -171,28 +171,21 @@ AWX 支持从项目之外注入所需的变量，它是通过**额外变量**机
 
 AWX 应用中包含 Nginx, Docker, PostgreSQL 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
 
-通过运行`docker ps`，可以查看到 AWX 运行时所有的 Container：
+通过运行 `docker ps`，查看 AWX 运行时所有的服务组件：
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
-e240ed8209cd        awx_task:1.0.0.8    "/tini -- /bin/sh ..."   2 minutes ago       Up About a minute   8052/tcp                             awx_task
-1cfd02601690        awx_web:1.0.0.8     "/tini -- /bin/sh ..."   2 minutes ago       Up About a minute   0.0.0.0:443->8052/tcp                 awx_web
-55a552142bcd        memcached:alpine    "docker-entrypoint..."   2 minutes ago       Up 2 minutes        11211/tcp                            memcached
-84011c072aad        rabbitmq:3          "docker-entrypoint..."   2 minutes ago       Up 2 minutes        4369/tcp, 5671-5672/tcp, 25672/tcp   rabbitmq
-97e196120ab3        postgres:9.6        "docker-entrypoint..."   2 minutes ago       Up 2 minutes        5432/tcp                             postgres
+CONTAINER ID   IMAGE                        COMMAND                  CREATED         STATUS         PORTS                                       NAMES
+36a4c73b8127   awx-awx                      "dumb-init -- sh /us…"   8 seconds ago   Up 3 seconds   8052/tcp                                    awx-task
+1045b845de8a   quay.io/ansible/awx:22.5.0   "dumb-init -- /usr/b…"   8 seconds ago   Up 7 seconds   0.0.0.0:9001->8052/tcp, :::9001->8052/tcp   awx
+5220404d4ca5   postgres:12                  "docker-entrypoint.s…"   8 seconds ago   Up 7 seconds   5432/tcp                                    awx_postgres
+27ab5f733161   quay.io/ansible/awx:22.5.0   "dumb-init -- /usr/b…"   8 seconds ago   Up 7 seconds   8052/tcp                                    awx_rsyslog
+6934c773da4c   redis                        "redis-server /usr/l…"   8 seconds ago   Up 7 seconds   6379/tcp                                    awx_redis                            postgres
 ```
-
-
-下面仅列出 AWX 本身的参数：
 
 ### 路径{#path}
 
-AWX 配置文件目录 */data/.awx*  
-awx_postgres 挂载的目录：*/var/lib/postgresql/data*  
-awx_postgres 数据持久存储：*/data/pgdocker*
-awx_rabbitmq 挂载的目录：*/var/lib/rabbitmq*  
-awx_web 挂载的目录：*/var/lib/nginx*   
-awx_task 挂载的目录：*/var/lib/nginx* 
+AWX 配置文件目录 */data/apps/awx*  
+AWX 数据目录： */data/apps/awx/data*   
 
 ### 端口
 

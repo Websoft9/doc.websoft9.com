@@ -187,26 +187,21 @@ php bin/magento cache:flush  #将基础URL更改为https并刷新缓存
 
 ## 参数{#parameter}
 
-Magento 应用中包含Apache, Nginx, Docker, MySQL, phpMyAdmin, Varnish, RabbitMQ, Elasticsearch等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+Magento 应用中包含 Nginx, Docker, MySQL, phpMyAdmin, Varnish, RabbitMQ, Elasticsearch等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
-通过运行`docker ps`，可以查看到 Magento 运行时所有的 Container：
+通过运行`docker ps`，可以查看到 Magento 运行时所有的 运行时所有的服务组件：
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                     COMMAND                  CREATED              STATUS              PORTS                                                       NAMES
+0cb53e8158c3   bitnami/magento:latest    "/opt/bitnami/script…"   About a minute ago   Up About a minute   8080/tcp, 8443/tcp, 0.0.0.0:9001->80/tcp, :::9001->80/tcp   magento
+99a9a1e1e20d   bitnami/elasticsearch:7   "/opt/bitnami/script…"   About a minute ago   Up About a minute   9200/tcp, 9300/tcp                                          magento-elasticsearch
+09b196940f88   bitnami/mariadb:10.4      "/opt/bitnami/script…"   About a minute ago   Up About a minute   3306/tcp                                                    magento-db
 ```
-
-
-下面仅列出 Magento 本身的参数：
 
 ### 路径{#path}
 
-Magento 安装目录： */data/wwwroot/magento*  
-Magento 配置文件： */data/wwwroot/magento/app/etc/env.php*  
-Magento 多语言目录： */data/wwwroot/magento/vendor/magento/language-zh_hans_cn*   
-Magento 命令行工具：* /data/wwwroot/magento/bin/magento*  
-
-
-> Magento 配置文件中包含数据库连接信息，更改了 MySQL 数据库账号密码，此处也需要对应修改
+Magento 配置文件目录 */data/apps/magento*  
+Magento 数据目录： */data/apps/magento/data*     
 
 ### 端口{#port}
 
@@ -215,19 +210,21 @@ Magento 命令行工具：* /data/wwwroot/magento/bin/magento*
 ### 版本{#version}
 
 ```shell
-magento -V
+sudo docker exec -it magento magento -V
 ```
 
 ### 服务{#service}
 
 ```shell
 systemctl start | stop | restart | status magento
+systemctl start | stop | restart | status magento-elasticsearch
+systemctl start | stop | restart | status magento-db
 ```
 
 ### 命令行{#cli}
 
 ```
-$ /data/wwwroot/magento/bin/magento list
+$ sudo docker exec -it magento magento list
 Magento CLI 2.4.2
 
 Usage:
