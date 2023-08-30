@@ -88,8 +88,10 @@ ActiveMQ 应用中包含 Docker 等组件，可通过 **[通用参数表](./admi
 
 通过运行 `docker ps`，查看 ActiveMQ 运行时所有的服务组件：
 
+```bash
 CONTAINER ID   IMAGE                                                 COMMAND                  CREATED          STATUS          PORTS                                                                                                                                                                                NAMES
 abeaf50ef7ec   alfresco/alfresco-activemq:5.18.2-jre17-rockylinux8   "/bin/sh -c './init.…"   37 minutes ago   Up 37 minutes   0.0.0.0:5672->5672/tcp, :::5672->5672/tcp, 0.0.0.0:8161->8161/tcp, :::8161->8161/tcp, 0.0.0.0:61613->61613/tcp, :::61613->61613/tcp, 0.0.0.0:61616->61616/tcp, :::61616->61616/tcp   activemq
+```
 
 ### 路径{#path}
 
