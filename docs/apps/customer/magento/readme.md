@@ -141,7 +141,8 @@ Cache（缓存）是 Magento 的一项重要设置：
 
 3. 使用 SSH 工具登录到服务器，使用命令方式安装 Magento SMTP 扩展
    ```
-    cd /data/wwwroot/magento` 
+   	docker exec -it magento bash #进入Magento容器
+	cd /bitnami/magento/
 	composer require mageplaza/module-smtp
 	php bin/magento setup:upgrade 
 	php bin/magento setup:di:compile
@@ -170,7 +171,8 @@ Cache（缓存）是 Magento 的一项重要设置：
 通过SSH连接云服务器，运行下面的 CLI 命令进行参数配置
    
    ```shell
-   cd /data/wwwroot/magento
+   docker exec -it magento bash #进入Magento容器
+   cd /bitnami/magento
    php bin/magento config:set web/unsecure/base_url http://www.mydomain.com/ # 修改成您的实际域名，必须以 / 结束
    php bin/magento config:set web/secure/base_url http://www.mydomain.com/ # 修改成您的实际域名，必须以 / 结束
    ```
@@ -180,7 +182,8 @@ Cache（缓存）是 Magento 的一项重要设置：
 **[标准 HTTPS 配置](./administrator/domain_https)** 完成后，还需运行下面的 CLI 命令进行配置：
 
 ```
-cd /data/wwwroot/magento
+docker exec -it magento bash #进入Magento容器
+cd /bitnami/magento/
 php bin/magento setup:store-config:set --use-secure=1 --use-secure-admin=1 --base-url-secure="https://www.yourdomain.com/"
 php bin/magento cache:flush  #将基础URL更改为https并刷新缓存
 ```
