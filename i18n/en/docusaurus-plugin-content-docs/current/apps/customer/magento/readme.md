@@ -142,7 +142,8 @@ Taking **SendGrid's SMTP Service** as an example, refer to the following steps t
 2. Make sure your Magento is [linking Magento's Marketplace](#link-magento-marketplace)
 3. Connect Server, use below commands for installing Magento SMTP module
    ```
-    cd /data/wwwroot/magento` 
+	docker exec -it magento bash #Enter into Magento docker container 
+	cd /bitnami/magento/
 	composer require mageplaza/module-smtp
 	php bin/magento setup:upgrade 
 	php bin/magento setup:di:compile
@@ -173,7 +174,8 @@ Complete **[Five steps for Domain](./administrator/domain_step)** ，Set the URL
 Connect to server via SSH and run  CLI commands to configure parameters
    
    ```shell
-   cd /data/wwwroot/magento
+   docker exec -it magento bash #Enter into Magento docker container 
+   cd /bitnami/magento/
    php bin/magento config:set web/unsecure/base_url http://www.mydomain.com/ 
    php bin/magento config:set web/secure/base_url http://www.mydomain.com/ 
    ```
@@ -183,7 +185,8 @@ Connect to server via SSH and run  CLI commands to configure parameters
 **[Standard HTTPS Configuration](./administrator/domain_https)** Once complete, you also need to run the following CLI command to configure:
 
 ```
-cd /data/wwwroot/magento
+docker exec -it magento bash #Enter into Magento docker container 
+cd /bitnami/magento/
 php bin/magento setup:store-config:set --use-secure=1 --use-secure-admin=1 --base-url-secure="https://www.yourdomain.com/"
 php bin/magento cache:flush  
 ```
@@ -200,10 +203,8 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 ### Path{#path}
   
-Magento installation directory: */data/wwwroot/magento*  
-Magento configuration file: */data/wwwroot/magento/app/etc/env.php*  
-Magento languag directory： */data/wwwroot/magento/vendor/magento/language-zh_hans_cn*   
-Magento CLI：* /data/wwwroot/magento/bin/magento*  
+Magento installation directory: */data/apps/magento*  
+Magento data directory: */data/apps/magento/data*
   
 > The Magento configuration file contains database connection information, and the MySQL database account password has been changed, which also needs to be changed here
   
@@ -219,13 +220,13 @@ Magento CLI：* /data/wwwroot/magento/bin/magento*
 ### Version{#version}
 
 ```shell
-magento -V
+sudo docker exec -it magento magento -V
 ```
 
 ### Service{#service}
 
 ```shell
-systemctl start | stop | restart | status magento
+docker start | stop | restart magento
 ```
 
 ### CLI{#cli}
