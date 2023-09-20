@@ -42,6 +42,13 @@ For details, please refer to [Akeneo Data Import and Export](https://docs.akeneo
 
 ## Akeneo Setup
 
+### Connect  App Store {#Appstore}  
+Akeneo extends functionality through the App Store. Connecting to the App Store requires 2 steps:  
+1. Authorized users to manage the App Store： System - Users - Roles - Administrator - Permissions - System - Manager apps / Open apps  
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/akeneo/akeneo-appmanager-websoft9.png)
+   
+2. Configure AKENEO_PIM_URL ：Modify the /data/apps/akeneo/data/akeneo/.env.local file to change the AKENEO_PIM_URL to the server IP or DNS, for example AKENEO_PIM_URL=http://100.100.100.100 
+
 ## Reference sheet
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Akeneo
