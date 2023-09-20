@@ -48,7 +48,14 @@ Akeneo 通过 App Store 通过扩展应用。连接到 App Store 需要2个步�
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/akeneo/akeneo-appmanager-websoft9.png)
 2. 配置 AKENEO_PIM_URL ：修改 /data/apps/akeneo/data/akeneo/.env.local 文件，将 AKENEO_PIM_URL 值修改成服务器 IP 或域名，比如 AKENEO_PIM_URL=http://100.100.100.100 
 
-
+### 设置中文{#setlan}
+Akeneo 完美支持中文，可以通过如下操作进行设置中文：  
+1. 设置登陆页面为中文：点击 System - Configuration 进行设置  
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/akeneo/akeneo-setlanguage01-websoft9.png)
+   
+2. 设置后台页面为中文：点击右上角个人头像进行设置  
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/akeneo/akeneo-setlanguage02-websoft9.png)
+   
 ## 参数{#parameter}
 
 Akeneo 应用中包含 Docker, Portainer 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
