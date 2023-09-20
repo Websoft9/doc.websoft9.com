@@ -42,6 +42,13 @@ tags:
 
 ## Akeneo 常用操作{#guide}
 
+### 连接 App Store {#Appstore}  
+Akeneo 通过 App Store 通过扩展应用。连接到 App Store 需要2个步骤：  
+1. 给用户授权管理App Store。依次点击：System - Users - Roles - Administrator - Permissions - System - Manager apps / Open apps  
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/akeneo/akeneo-appmanager-websoft9.png)
+2. 配置 AKENEO_PIM_URL ：修改 /data/apps/akeneo/data/akeneo/.env.local 文件，将 AKENEO_PIM_URL 值修改成服务器 IP 或域名，比如 AKENEO_PIM_URL=http://100.100.100.100 
+
+
 ## 参数{#parameter}
 
 Akeneo 应用中包含 Docker, Portainer 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
