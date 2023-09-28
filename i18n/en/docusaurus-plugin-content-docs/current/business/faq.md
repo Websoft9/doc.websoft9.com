@@ -35,3 +35,39 @@ Yes, we provide free support for our Enterprise subscription customer
 #### Can I resell your product?
 
 Yes, We very much welcome you to resell our product which we can 40% rebate for you.  
+
+#### Inquiry about AMI Images - Features, Maintenance, and Scalabilit
+
+```
+- Immutability and Ownership: Is the AMI image immutable, and who owns the admin user?  
+
+Owner is customer, it have installed to you Server
+
+- Maintenance: How is the image maintained? If there arises a need for a patch (due to vulnerabilities), is there a process in place to ship a new image?  
+
+If bug or new features, we will publish it to Marketplace offer
+
+- Release Schedule: Are there scheduled releases for the image? Do they cover both system and application updates?  
+
+1-3 months to pulish, also system and apps updates
+
+- Data Migration: Do you have smooth data migration procedures in place when images are updated, such as when installing a new image of a particular application? How might this be achieved during deployments? 
+
+No,migration is difficult and serious
+
+- Scalability Model: What's the scalability model for the AMI images? If needed, can I instantiate multiple instances for higher availability or load balancing? 
+
+Yes, you can configure it by you self if you don't want to use local HTTP server or Database
+
+- Logging and Metrics: What type of logging and metric solutions are integrated or can be used with the AMI? 
+
+Apps/ http server/database logs and system logs, we don't add any other logs system
+
+- Support and Responsibility: In the event of issues, could you please share details about your support model and responsibility matrix?  
+
+refer to: Support Docs
+
+-  Hardening: How is the image hardened to ensure security? 
+
+All images passed the Marketplace's baseline check 
+```
