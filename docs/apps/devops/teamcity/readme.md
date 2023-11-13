@@ -25,8 +25,14 @@ TeamCity 介绍
 ### 详细步骤
 
 1. 使用本地电脑浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入初始化页面
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teamcity/teamcity-start-websoft9.png)
 
-2. 完成初始化工作
+2. 点击[proceed],进入[Database connection setup]页面，选择数据库类型为MySQL，并下载JDBC驱动，填写数据库连接信息
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teamcity/teamcity-setupdb-websoft9.png)
+
+3. 完成数据库初始化需要几分钟的时间，承认license协议后，创建账号就完成初始化向导
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teamcity/teamcity-account-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teamcity/teamcity-main-websoft9.png)
 
 ### 碰到问题？
 
@@ -79,7 +85,10 @@ TeamCity 应用中包含 Docker, Portainer 等组件，可通过 **[通用参数
 通过运行 `docker ps`，查看 TeamCity 运行时所有的服务组件：   
 
 ```bash
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+CONTAINER ID   IMAGE                              COMMAND                  CREATED          STATUS          PORTS                                       NAMES
+b1ab51af14f8   jetbrains/teamcity-server:latest   "/run-services.sh"       21 minutes ago   Up 21 minutes   0.0.0.0:8111->8111/tcp, :::8111->8111/tcp   teamcity
+bd4d59a4adcf   mysql:8.0                          "docker-entrypoint.s…"   21 minutes ago   Up 21 minutes   3306/tcp, 33060/tcp                         teamcity-db
+
 ```
 
 ### 路径{#path}
@@ -88,11 +97,7 @@ TeamCity 配置文件： *path/config.php*
 
 ### 端口{#port}
 
-除 80, 443 等常见端口需开启之外，以下端口可能会用到：  
-
-| 端口号 | 用途                                          | 必要性 |
-| ------ | --------------------------------------------- | ------ |
-| 8080   | TeamCity 原始端口，已通过 Nginx 转发到 80 端口 | 可选   |
+无特殊端口
 
 ### 版本{#version}
 
@@ -102,6 +107,7 @@ TeamCity 配置文件： *path/config.php*
 
 ```shell
 sudo docker start | stop | restart | stats teamcity
+sudo docker start | stop | restart | stats teamcity-db
 ```
 
 ### 命令行{#cli}
