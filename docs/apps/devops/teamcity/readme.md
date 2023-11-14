@@ -48,16 +48,33 @@ TeamCity 介绍
 
 ## TeamCity 常用操作{#guide}
 
-### 配置 SMTP{#smtp}
+### 创建项目
 
-1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
+创建项目的方式可以通过外部URL或者手动创建，下面我们通过已有github项目创建一个项目
 
-2. 填写 TeamCity 邮件相关配置
+1. 输入外部URL以及用户和密码信息
 
-3. 测试邮件发送是否可用
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teamcity/teamcity-createprj-websoft9.png)
 
-### 安装插件{#plugin}
+2. 点击[proceed]，项目会提示创建成功
 
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teamcity/teamcity-createconfirm-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teamcity/teamcity-createsuccess-websoft9.png)
+
+ > [更多信息请参照官方文档](https://www.jetbrains.com/help/teamcity/creating-and-editing-projects.html)
+ 
+### 创建构建配置
+
+创建构建配置是自动化的核心，会指定是对哪个项目，做一个具体化的具体构建过程。
+这里需要说明一点，当指定外部URL构建时，构建是针对外部项目的，teamcity本地项目的代码提交不会触发构建。
+
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teamcity/ teamcity-createbuild-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teamcity/teamcity-createbuild2-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teamcity/teamcity-createbuild3-websoft9.png)
+
+ > [创建详细请参照官方文档](https://www.jetbrains.com/help/teamcity/creating-and-editing-build-configurations.html)
+ > 创建触发器可是构建过程自动发生，无须手动执行，[更多详细操作请参照官方文档](https://www.jetbrains.com/help/teamcity/configuring-build-triggers.html) 
+ 
 ### 重置管理员密码{#resetpw}
 
 忘记管理员密码时，请参考如下方案重置密码：  
@@ -93,7 +110,9 @@ bd4d59a4adcf   mysql:8.0                          "docker-entrypoint.s…"   21 
 
 ### 路径{#path}
 
-TeamCity 配置文件： *path/config.php*    
+TeamCity 安装目录： */data/apps/teamcity*   
+TeamCity 数据目录： */data/apps/teamcity/data/teamcity_data*  
+TeamCity 日志目录： */data/apps/teamcity/data/teamcity_logs*  
 
 ### 端口{#port}
 
