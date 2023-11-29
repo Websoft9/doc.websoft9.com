@@ -8,15 +8,31 @@ title: 要求
 
 此页面包含有关支持的操作系统以及安装和使用 Websoft9 所需的最低要求的信息。
 
-## 操作系统
+## 操作系统{#os}
 
-Websoft9 支持在 Red Hat, CentOS, Debian, Ubuntu 等主流 Linux 发行版上安装。
+Websoft9 支持在 Red Hat, CentOS, Debian, Ubuntu 等[主流 Linux 发行版](https://websoft9.github.io/websoft9/version.json)上安装。
 
-暂不支持 Windows 和 macOS 等操作系统  
+> 暂不支持 Windows 和 macOS 等操作系统  
 
-## 硬件
+## 域名{#domain}
 
-### 虚拟化技术
+虽然域名不是 Websoft9 所必须的，但我们强烈建议您为 Websoft9 准备一个域名（可以是二级域名），并为域名提供**泛解析**的方式。一次设置后，所有应用都可以通过域名访问。  
+
+域名的泛解析通过 A 记录的一种类型，它主要是以 * 替代部分或全部的主机记录。  
+
+假设您有 abc.com 这个域名，下面是使用泛解析的几个范例：
+
+| 记录类型 | 主机记录（域名前缀） | 记录值（服务器 IP） | 结果                                                         |
+| -------- | -------------------- | ------------------- | ------------------------------------------------------------ |
+| A        | *                    | 47.92.175.172       | 以 abc.com 结尾的域名可用，例如：n1.abc.com, n2.abc.com ...  |
+| A        | *.test               | 47.92.175.172       | 以 test.abc.com 结尾的域名可用。例如：n1.test.abc.com, n2.test.abc.com ... |
+| A        | *.test.web           | 47.92.175.172       | 以 test.web.abc.com 结尾的域名可用。例如：n1.test.web.abc.com, n2.test.web.abc.com ... |
+
+
+
+## 硬件{#hd}
+
+### 系统
 
 不管是公有云还是私有云，甚至没有使用虚拟化的服务器都可以安装 Websoft9
 
@@ -33,7 +49,6 @@ Websoft9 支持在 Red Hat, CentOS, Debian, Ubuntu 等主流 Linux 发行版上�
 
 内存不少于 2 G
 
-
 ### 磁盘
 
 Websoft9 自身程序以及依赖环境大约 1.5 G，考虑用户增加多个应用，建议磁盘空间不低于 20 G
@@ -42,29 +57,8 @@ Websoft9 自身程序以及依赖环境大约 1.5 G，考虑用户增加多个�
 
 安装过程中会从 Linux 系统仓库，Docker 镜像仓库上拉取相关资源，请确保您的 Internet 网络带宽不低于 10M/s。
 
-
 ## 软件
 
-提供的开源软件集成方案 由 Python 包，Shell 脚本和 JS 前端组成。
+Python 是安装 Websoft9 的必选项，所需版本：Python 3.8 以上 + pip。  
 
-### Python
-
-Python 是安装 Websoft9 的必选项，所需版本：Python 3.8 以上 + pip 
-
-### Docker
-
-Docker 19.10 以上，Docker-Compose 1.29 以上。  
-
-如果您的服务器上没有安装 Docker，参考[ Docker 在线安装命令](../docker#install) 快速安装。  
-
-### Git
-
-Websoft9 在线安装过程中需要通过 Git 拉取软件包，所以 Git 是必选项。  
-
-### Nginx (可选)
-
-用户的应用如果需要通过域名开放给外部访问，那么像 Nginx 这种 Web Server 是必不可少的组件。  
-
-### Ansible（可选）
-
-Ansible 是使用 Websoft9 产品在运维过程中的一个高效率工具。  
+其他组件均通过在线安装脚本自动安装。   

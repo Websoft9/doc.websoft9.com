@@ -9,9 +9,12 @@ import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 # 安装后配置
 
-安装 Websoft9 的产品后，用户朋友最想做的事情肯定是立即能够看到软件的界面，投入使用。   
+安装 Websoft9 的产品后，便可以通过**服务器公网IP+端口**的方式访问可视化面板。  
 
-但现实却是一个应用真正的能让用户快速使用上，它是需要一些必不可少的配置的：
+- 默认的访问 URL 是： *http://服务器公网IP:9000*  
+- 默认账号是服务器 root 账号
+
+如果上面的说明无法满足您的需求，请参考一下准备步骤：  
 
 ## 准备{#prepare}
 

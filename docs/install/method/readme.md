@@ -6,11 +6,15 @@ slug: /install
 
 # 安装
 
-Websoft9 可以安装在大多数 GNU/Linux 发行版中，并与多个[云提供商](./install/cloud)镜像服务（购买即安装）。要从 Websoft9 获得最佳体验，您必须平衡性能、可靠性、易于管理（备份、升级和故障排除）以及托管成本。
+Websoft9 可以在大多数 GNU/Linux 发行版中安装，点击[此处](https://websoft9.github.io/websoft9/version.json)可查看 Websoft9 所支持的发行版清单。  
+
+如果您打算自行托管 Websoft9，获得 Websoft9 最佳体验，您必须平衡性能、可靠性、易于管理（备份、升级和故障排除）以及托管成本。  
+
+如果您不打算自行托管，可以直接使用我们在[公有云平台](./install/cloud)上提供了云版本，购买即使用，同时可以获得商业级支持服务。
 
 ## 要求
 
-在安装 Websoft9 之前，请务必查看[系统要求](./install/requirements)。系统要求包括有关支持 Websoft9 的最低硬件、软件、数据库和其他要求的详细信息。
+在安装 Websoft9 之前，请务必查看[系统要求](./install/requirements)。系统要求包括有关支持 Websoft9 的最低硬件、软件、域名和其他要求的详细信息。
 
 ## 选择一种安装方式
 

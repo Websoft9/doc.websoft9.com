@@ -8,22 +8,20 @@ slug: /install/linux
 
 Websoft9 目前仅支持在 Linux 主机下安装。  
 
-## 脚本安装
+## 在线安装
 
-如果您不具备以上所需的 Docker, Git, Ansible 等环境，推荐使用我们**脚本安装**。
+安装 Websoft9 需要您具有操作系统的 root 权限，否则需要 *sudo su* 进行提权后再运行如下的脚本：
 
 ```
-sudo wget -N https://websoft9.github.io/stackhub/scripts/install.sh; sudo bash install.sh -r akeneo
+# 快速安装
+wget -O install.sh https://websoft9.github.io/websoft9/install/install.sh && bash install.sh
+
+# 自定义参数安装。-- channel 有 release 和 dev 两个可选项，分别代表生产版和测试版，默认值为 release
+wget -O install.sh https://websoft9.github.io/websoft9/install/install.sh && bash install.sh --port 9000 --channel release --path "/data/websoft9/source" --version "latest"
 ```
 
-## 手动安装
-
-1. 安装命令行工具 StackHub
-      ```
-   pip install stackhub
-   ```
-2. 使用 stackhub 安装应用
+> 升级 Websoft9 也只需要运行上面的脚本。  
 
 ## 离线安装
 
-针对无法访问 Internet 的政企用户或等保用户，我们即将提供了离线安装包服务。
+针对无法访问 Internet 的政企用户或等保用户，我们通过人工服务的方式提供安装服务。
