@@ -115,12 +115,20 @@ magento setup:config:set --db-host=DB-HOST --db-name=DB-NAME --db-user=DB-USER -
 
 中文包 zh_Hans_CN 已经存在 [Magento 多语言目录](#path)中 
 
-需要启用中文请完成如下两个步骤：
+需要启用中文方法如下：  
 
-1.  如果你希望你的前台是中文，进入到Magento管理员界面，后台 Stores > Configuration > General > Local 中设置Local为Chinese(China)
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setlan-websoft9.png)
+1.  网页后台设置中文：在管理员页面右上角点击你的账户 Account Setting > Interface Local 中设置 Interface Local 为Chinese（China）
 
-2.  如果你希望你的账户后台是中文，那么请在管理员页面右上角点击你的账户 Account Setting > Interface Local 中设置 Interface Local 为Chinese（China）
+2.  网页前台设置中文：
+   - 安装前台语言包：
+   ```
+	docker exec -it magento bash #进入Magento容器
+	cd /bitnami/magento/
+	php bin/magento config:set --scope=stores --scope-code=default general/locale/code zh_Hans_CN
+	php bin/magento cache:clean
+	php bin/magento cache:flush
+   ```
+   - 进入到Magento管理员界面，后台 Stores > Configuration > General > Local 中设置Local为Chinese(China)
 
 ### 刷新缓存
 
