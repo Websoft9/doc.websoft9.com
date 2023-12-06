@@ -21,18 +21,19 @@ ActiveMQ upgrade is similar to installation, you can upgrade it by the following
 
 1. Prepare for upgrade
    ```
+   docker exec -it activemq bash
    # stop ActiveMQ service
    systemctl stop activemq
 
    # rename the dir of ActiveMQ for backup
-   mv /opt/apache-activemq  /opt/apache-activemqBK
+   mv /opt/activemq  /opt/activemqBK
    ```
-2. [Download ActiveMQ](http://activemq.apache.org/components/classic/download/) and upload it to the directory */opt* after unzip it, then renamed the directory to *apache-activemq*
+2. [Download ActiveMQ](http://activemq.apache.org/components/classic/download/) and upload it to the directory */opt* after unzip it, then renamed the directory to *activemq*
 3. Run the following modify permissions separately
    ```
-   chown -R activemq. /opt/apache-activemq
-   chmod 640  /opt/apache-activemq/examples/stomp/php/*
-   chmod +x /opt/apache-activemq/bin/activemq
+   chown -R activemq. /opt/activemq
+   chmod 640  /opt/activemq/examples/stomp/php/*
+   chmod +x /opt/activemq/bin/activemq
    ```
 4. Restart the [ActiveMQ Service](../activemq#service)
 
@@ -44,9 +45,10 @@ In addition to the ActiveMQ issues listed below, you can refer to [Troubleshoot 
 
 1. Use the debug mode of `activemq console` and you can see the errors
    ```
-   /opt/apache-activemq/bin/activemq
+   docker exec -it activemq bash
+   /opt/activemq/bin/activemq
    ```
-2. Search the keywords **Failed** or **error** in the log file: */opt/apache-activemq/data/activemq.log*
+2. Search the keywords **Failed** or **error** in the log file: */opt/activemq/data/activemq.log*
 
 3. The most common reasons are as follows:
 
@@ -66,8 +68,9 @@ ActiveMQ Artemis is the next generation of ActiveMQClassic. Refer to: [ActiveMQ 
 #### How can I enable the debug mode of ActiveMQ service?
 
 ```
+docker exec -it activemq bash  
 systemctl stop activemq
-/opt/apache-activemq/bin/activemq console
+/opt/activemq/bin/activemq console
 ```
 
 #### How can I log out ActiveMQ console?
@@ -83,13 +86,14 @@ Yes, ActiveMQ integrated the Tomcat
 Yes, but you should reset the PATH of ActiveMQ by the following command
   
 ```
-echo 'export PATH="$PATH:/opt/apache-activemq/bin"' >> /etc/profile
+echo 'export PATH="$PATH:/opt/activemq/bin"' >> /etc/profile
 ```
 
 #### How to change the permissions of file system?
 
 ```shell
-chown -R activemq.activemq /opt/apache-activemq
-find /opt/apache-activemq -type d -exec chmod 750 {} \;
-find /opt/apache-activemq -type f -exec chmod 640 {} \;
+docker exec -it activemq bash
+chown -R activemq.activemq /opt/activemq
+find /opt/activemq -type d -exec chmod 750 {} \;
+find /opt/activemq -type f -exec chmod 640 {} \;
 ```

@@ -47,13 +47,13 @@ tags:
 
 ### 修改控制台密码
 
-通过 */opt/apache-activemq/conf/jetty-realm.properties* 文件修改，重启 [ActiveMQ 服务](#service)后生效
+进入ActiveMQ容器，通过 */opt/apache-activemq/conf/jetty-realm.properties* 文件修改，重启 [ActiveMQ 服务](#service)后生效
 
 ### 运行 ActiveMQ 演示
 
 ActiveMQ 附带了许多 Web 演示，这些演示说明了如何将 ActiveMQ 代理与 REST 和 AJAX 一起使用。 Web 演示在默认配置中未激活，因此您必须按照以下步骤运行它们：
 
-1. 编辑 /opt/apache-activemq/examples/conf/activemq-demo.xml 文件并更改位置属性以反映加密凭证文件的位置，该文件位于 /opt/activemq/conf/credentials-enc.properties：
+1. 进入ActiveMQ容器，编辑 /opt/apache-activemq/examples/conf/activemq-demo.xml 文件并更改位置属性以反映加密凭证文件的位置，该文件位于 /opt/activemq/conf/credentials-enc.properties：
 
   ```shell
   <property name="locations">
@@ -64,12 +64,13 @@ ActiveMQ 附带了许多 Web 演示，这些演示说明了如何将 ActiveMQ �
 2. 如果 ActiveMQ 服务器当前正在运行，先停止：
    
   ```shell
-  systemctl stop activemq
+  docker stop activemq
   ```
 
 3. 运行示例：
    
   ```shell
+  docker exec -it activemq bash
   cd /opt/activemq
   sudo ./bin/activemq console xbean:/opt/activemq/examples/conf/activemq-demo.xml
   ```
@@ -115,7 +116,7 @@ sudo docker exec -it activemq find /opt/activemq -name activemq-all* | cut -d- -
 ### 服务{#service}
 
 ```shell
-sudo systemctl start | stop | restart | status activemq
+sudo docker start | stop | restart activemq
 ```
 
 ### 命令行{#cmd}

@@ -82,22 +82,18 @@ Refer to the official docs: http://activemq.apache.org/configuration.html
 ## Reference sheet
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage ActiveMQ
+Run docker ps command, view all Containers when ActiveMQ is running:   
+
+```bash
+CONTAINER ID   IMAGE                                                 COMMAND                  CREATED          STATUS          PORTS                                                                                                                                                                                NAMES
+abeaf50ef7ec   alfresco/alfresco-activemq:5.18.2-jre17-rockylinux8   "/bin/sh -c './init.…"   37 minutes ago   Up 37 minutes   0.0.0.0:5672->5672/tcp, :::5672->5672/tcp, 0.0.0.0:8161->8161/tcp, :::8161->8161/tcp, 0.0.0.0:61613->61613/tcp, :::61613->61613/tcp, 0.0.0.0:61616->61616/tcp, :::61616->61616/tcp   activemq
+```
 
 ### Path
   
-You can check the file path by the cmd `whereis` of ActiveMQ, and we have prepared more detail for your reference
+ActiveMQ installation directory： */data/apps/activemq*   
+ActiveMQ  configuration directory： */data/apps/activemq/data*   
 
-```
-whereis activemq
-whereis java
-```
-  
-ActiveMQ installation directory: */opt/apache-activemq/*  
-ActiveMQ configuration directory: */opt/apache-activemq/conf*  
-ActiveMQ data directory: */opt/apache-activemq/data*  
-ActiveMQ logs directory: */opt/apache-activemq/data/activemq.log*
-
-> you can reset the administrator password of ActiveMQ by modify the file: */opt/apache-activemq/conf/jetty-realm.propertie* 
 
 ### Port{#port}
 
@@ -109,13 +105,13 @@ ActiveMQ logs directory: */opt/apache-activemq/data/activemq.log*
 ### Version{#version}
 
 ```shell
-ls /opt/apache-activemq | grep activemq
+sudo docker exec -it activemq find /opt/activemq -name activemq-all* | cut -d- -f3
 ```
 
 ### Service{#service}
 
 ```shell
-sudo systemctl start | stop | restart | status ActiveMQ
+sudo docker start | stop | restart activemq
 ```
 
 ### CLI{#cli}

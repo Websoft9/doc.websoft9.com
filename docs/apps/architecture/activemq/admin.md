@@ -17,20 +17,21 @@ tags:
 
 ActiveMQ 主要采用二级制安装方式，其升级方案差不多等于安装：
 
-1. 依次运行如下的命令做好准备：
+1. 进入容器，依次运行如下的命令做好准备：
    ```
+   docker exec -it activemq bash
    # stop ActiveMQ service
    systemctl stop activemq
 
    # rename the dir of ActiveMQ for backup
-   mv /opt/apache-activemq  /opt/apache-activemqBK
+   mv /opt/activemq  /opt/activemqBK
    ```
-2. 访问 ActiveMQ 官方网站，[下载](http://activemq.apache.org/components/classic/download/)后解压并上传到：*/opt* 目录，并命名为 *apache-activemq*
+2. 访问 ActiveMQ 官方网站，[下载](http://activemq.apache.org/components/classic/download/)后解压并上传到：*/opt* 目录，并命名为 *activemq*
 3. 分别运行下面的修改权限
    ```
-   chown -R activemq. /opt/apache-activemq
-   chmod 640  /opt/apache-activemq/examples/stomp/php/*
-   chmod +x /opt/apache-activemq/bin/activemq
+   chown -R activemq. /opt/activemq
+   chmod 640  /opt/activemq/examples/stomp/php/*
+   chmod +x /opt/activemq/bin/activemq
    ```
 4. 重启 [ActiveMQ服务](../activemq#service) 后升级完成
 
@@ -42,9 +43,10 @@ ActiveMQ 主要采用二级制安装方式，其升级方案差不多等于安�
 
 1. 以调试模式运行`activemq console`，便可以查看启动状态和错误
    ```
-   /opt/apache-activemq/bin/activemq
+   docker exec -it activemq bash
+   /opt/activemq/bin/activemq
    ```
-2. 打开日志文件：*/opt/apache-activemq/data/activemq.log*，检索 **failed** 关键词，分析错误原因
+2. 打开日志文件：*/opt/activemq/data/activemq.log*，检索 **failed** 关键词，分析错误原因
 
 3. 常见的无法启动ActiveMQ服务的原因有如下几点：
 
@@ -63,8 +65,9 @@ ActiveMQ Artemis 是 ActiveMQ 下一代产品，未来将替换 ActiveMQ Classic
 #### 如何以调试模式启动ActiveMQ服务？
 
 ```
+docker exec -it activemq bash
 systemctl stop activemq
-/opt/apache-activemq/bin/activemq console
+/opt/activemq/bin/activemq console
 ```
 #### 如何退出 ActiveMQ 控制台？
 
@@ -78,13 +81,14 @@ ActiveMQ 官方提供的二级制包中包含 Tomcat，但已经集成到 Active
 
 可以，但要参考如下的命令重试设置环境变量
 ```
-echo 'export PATH="$PATH:/opt/apache-activemq/bin"' >> /etc/profile
+echo 'export PATH="$PATH:/opt/activemq/bin"' >> /etc/profile
 ```
 
 #### 如何修改上传的文件权限?
 
 ```shell
-chown -R activemq.activemq /opt/apache-activemq
-find /opt/apache-activemq -type d -exec chmod 750 {} \;
-find /opt/apache-activemq -type f -exec chmod 640 {} \;
+docker exec -it activemq bash
+chown -R activemq.activemq /opt/activemq
+find /opt/activemq -type d -exec chmod 750 {} \;
+find /opt/activemq -type f -exec chmod 640 {} \;
 ```
