@@ -68,7 +68,7 @@ TeamCity 介绍
 创建构建配置是自动化的核心，会指定是对哪个项目，做一个具体化的具体构建过程。
 这里需要说明一点，当指定外部URL构建时，构建是针对外部项目的，teamcity本地项目的代码提交不会触发构建。
 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teamcity/ teamcity-createbuild-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teamcity/teamcity-createbuild-websoft9.png)
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teamcity/teamcity-createbuild2-websoft9.png)
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teamcity/teamcity-createbuild3-websoft9.png)
 
