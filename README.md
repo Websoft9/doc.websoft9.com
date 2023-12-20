@@ -25,7 +25,9 @@ yarn upgrade @docusaurus/core@latest @docusaurus/preset-classic@latest
 
 ## Versioning
 
-You can use the versioning CLI to create a new documentation version based on the latest content in the ```docs``` directory. That specific set of documentation will then be preserved and accessible even as the documentation in the ```docs```` directory continues to evolve.
+[Tutorials](https://docusaurus.io/docs/versioning)
+
+You can use the versioning CLI to create a new documentation version based on the latest content in the ```docs``` directory. That specific set of documentation will then be preserved and accessible even as the documentation in the ```docs``` directory continues to evolve.
 
 ### Overview
 
