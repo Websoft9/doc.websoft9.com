@@ -113,7 +113,7 @@ The following details the deployment of WordPress through Portainer and WordPres
 
 **Nginx 容器绑定域名**
 
-以上一章节中的 Wordpress 网站作为示例，在 WordPress 部署完成后，需要在浏览器内输入 *http://公网IP地址：端口* 的形式访问网站，但我们不加端口就能访问域名，所以这时就要用到 Nginx 的端口转发功能。  
+以上一章节中的 Wordpress 网站作为示例，在 WordPress 部署完成后，需要在浏览器内输入 *`http://公网IP地址：端口`* 的形式访问网站，但我们不加端口就能访问域名，所以这时就要用到 Nginx 的端口转发功能。  
 
 我们使用使用一款可视化的 Nginx 管理器：[Nginx Proxy Manager](https://hub.docker.com/r/jc21/nginx-proxy-manager)
 

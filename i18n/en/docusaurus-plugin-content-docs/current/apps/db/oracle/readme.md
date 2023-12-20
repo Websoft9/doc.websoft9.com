@@ -7,7 +7,7 @@ tags:
 
 # Oracle Getting Started
 
-Oracle Database offers market-leading performance, scalability, reliability, and security. 
+Oracle Database offers market-leading performance, scalability, reliability, and security.
 
 ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/oracle/oracle-database-1024x410.jpg)
 
@@ -29,6 +29,7 @@ If you have installed Websoft9 Oracle, the following steps is for your quick sta
       ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/oracle/oracle-registryagreess-websoft9.png)
 
    - Connect your Server and run the below commands to run Oracle Database by yourself.
+
      ```
      cd /data/apps/oracle
      docker login container-registry.oracle.com/database/enterprise
@@ -39,7 +40,7 @@ If you have installed Websoft9 Oracle, the following steps is for your quick sta
 
 ### Steps for you
 
-1. Using local browser to visit the URL *https://Server's Internet IP:5500/em*, you will enter Oracle EM login page
+1. Using local browser to visit the URL *`<https://Server's Internet IP:5500/em>`*, you will enter Oracle EM login page
 
    > URL must use https
 
@@ -52,6 +53,7 @@ If you have installed Websoft9 Oracle, the following steps is for your quick sta
 3. When you can see Oracle EM, it means you Oracle instance is running.  
 
 4. Then you can use sqlplus by below commands
+
    ```
    sudo docker exec -it oracle bash
    sqlplus SYS  AS SYSDBA
@@ -89,12 +91,14 @@ docker exec -it oracle ./setPassword.sh <your_password>
 
 ### Get SID Or Servce Name{#getsid}
 
-1. 进入 sqlplus 
+1. 进入 sqlplus
+
     ```
-    $ docker exec -it oracle sqlplus / as sysdba 
+    docker exec -it oracle sqlplus / as sysdba 
     ```
 
 2. 运行查询实例信息的 SQL 命令，instance_name 即所需的信息
+
     ```
     SQL> show parameter instance
 
@@ -111,21 +115,20 @@ docker exec -it oracle ./setPassword.sh <your_password>
     parallel_instance_group              string
     ```
 
-
 ### Oracle Clients{#client}
 
 Oracle Database 支持多种客户端，有第三方工具，也有官方工具。
 
 连接客户端所需的主要连接信息如下：
 
-* 用户名: sys
-* Role：SYSDBA
-* Port: 1521 或 其他自定义的端口
-* [服务名称或 SID](#getsid)
+- 用户名: sys
+- Role：SYSDBA
+- Port: 1521 或 其他自定义的端口
+- [服务名称或 SID](#getsid)
 
 #### Web Based client: CloudBeaver{#cloudbeaver}
 
-1. 本地浏览器访问：*http://服务器公网IP:9090*，访问 [CloudBeaver](./cloudbeaver)
+1. 本地浏览器访问：*`http://服务器公网IP:9090`*，访问 [CloudBeaver](./cloudbeaver)
 
 2. 新建一个 Oracle 数据库连接
     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/oracle/oracle-cloudbeaver001-websoft9.png)
@@ -142,7 +145,7 @@ Oracle Database 支持多种客户端，有第三方工具，也有官方工具�
     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/oracle/oracle-navicat001-websoft9.png)
     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/oracle/oracle-navicat002-websoft9.png)
 
-3.  连接成功后的界面
+3. 连接成功后的界面
     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/oracle/oracle-navicat003-websoft9.png)
 
 #### Command line client: SQL*Plus
@@ -175,7 +178,7 @@ e8214ddd441c   dbeaver/cloudbeaver:latest                              "./run-se
 
 ### Path{#path}
 
-Oracle configuration file： */data/apps/oracle/dbconfig*    
+Oracle configuration file： */data/apps/oracle/dbconfig*
 
 ### Port{#port}
 
@@ -202,10 +205,10 @@ sudo docker start | stop | restart | stats oracle
 
 Oracle Database 提供了大量的命令工具：
 
-* sqlplus 客户端工具
-* expdp 导出
-* impdp 导出
-* rman 备份与恢复
+- sqlplus 客户端工具
+- expdp 导出
+- impdp 导出
+- rman 备份与恢复
 
 ### API {#api}
 

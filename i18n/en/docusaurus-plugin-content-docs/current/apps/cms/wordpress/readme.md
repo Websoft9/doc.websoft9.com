@@ -22,13 +22,12 @@ If you have installed Websoft9 WordPress, the following steps is for your quick 
 2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:80** is allowed
 3. **[Get](./user/credentials)** default username and password of WordPress
 4. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for WordPress
- 
 
 ## WordPress Initialization
 
 ### Steps for you
 
-1. Using local Chrome or Firefox to visit the URL *http://domain name* or *http://Internet IP*, you will enter the WordPress   
+1. Using local Chrome or Firefox to visit the URL *`<http://domain name>`* or *`<http://Internet IP>`*, you will enter the WordPress
    ![Wordpress installation language](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-installsetlanguage-websoft9.png)  
 
 2. Select your language, then go to next step  
@@ -39,7 +38,7 @@ If you have installed Websoft9 WordPress, the following steps is for your quick 
 4. OK, it has been installed successfully.
    ![Wordpress installation ok](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-installss-websoft9.png)  
 
-5. Use *http://domain or Internet IP/wp-admin*  to login to WordPress's dashboard
+5. Use *`<http://domain or Internet IP/wp-admin>`*  to login to WordPress's dashboard
    ![Wordpress installation dashbaord](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-bkdashboard-websoft9.png)
 
 > More useful WordPress guide, please refer to [WordPress Documentation](https://wordpress.org/support/)
@@ -50,7 +49,7 @@ Below is for you to solve problem, and you can contact **[Websoft9 Support](./he
 
 ## WordPress QuickStart
 
-The following is ** xxx ** as a task, it helps users get started quickly.
+The following is **xxx** as a task, it helps users get started quickly.
 
 ## WordPress Setup
 
@@ -71,7 +70,6 @@ The following is ** xxx ** as a task, it helps users get started quickly.
 6. Click the **Send Email**, you can get the feedback *"Your email was sent successfully!..."* if SMTP is useful
    ![WordPress SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-mailss-websoft9.png)
 
-
 ### DNS Additional Configure{#dns}
 
 Complete **[Five steps for Domain](./administrator/domain_step)** ，Set the URL for WordPress：
@@ -85,8 +83,7 @@ Complete **[Five steps for Domain](./administrator/domain_step)** ，Set the URL
 
 > If you cannot access the background operation in step 3 after step 2 is completed, please visit the WordPress database and change the home and siteurl attributes in the option table to [new domain name]
 
-> Through the MySQL visualization tool phpMyAdmin that has been configured in websoft9(http://ip:phpmyadmin or http://ip:9090)Perform shortcuts
-
+> Through the MySQL visualization tool phpMyAdmin that has been configured in websoft9(`http://ip:phpmyadmin` or `http://ip:9090`)Perform shortcuts
 
 ### HTTPS Additional Configure {#https}
 
@@ -96,10 +93,11 @@ Complete **[Five steps for Domain](./administrator/domain_step)** ，Set the URL
 
 ### WordPress File type limit extend
 
-WordPress supports uploading of most image formats such as images by default, but some file formats are not supported. According to personal needs, we need to add some formats. Of course, some formats can be prohibited from being uploaded. 
+WordPress supports uploading of most image formats such as images by default, but some file formats are not supported. According to personal needs, we need to add some formats. Of course, some formats can be prohibited from being uploaded.
 
 1. Edit `function.php` file on your Theme directory
 2. Copy the code section to functions.php file
+
   ```
   function edit_upload_types($existing_mimes = array()) {
 
@@ -220,7 +218,7 @@ The woocommerce wechat payment plug-in is very simple to use. You can add wechat
 -Get wechat payment key and log in to [wechat payment merchant platform](https://pay.weixin.qq.com) Find and set the key in account settings-API security. The key is 32 bits. Please note that it is reserved for use after obtaining the key
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/plugins/woocommerce/weichatpay-help002-websoft9.png)
 
-3. Add authorized payment directory on [wechat public platform](https://mp.weixin.qq.com).Click wechat payment-development configuration, and set the authorized payment directory. The authorized payment directory of wechat payment plug-in is: (https://your domain/WP content/plugins/wechat Weixin payments for woocommerce)
+3. Add authorized payment directory on [wechat public platform](https://mp.weixin.qq.com).Click wechat payment-development configuration, and set the authorized payment directory. The authorized payment directory of wechat payment plug-in is: (`<https://your domain/WP content/plugins/wechat>` Weixin payments for woocommerce)
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/plugins/woocommerce/weichatpay-help003-websoft9.png)
 
 4. Set callback domain name on [wechat public platform](https://mp.weixin.qq.com). In development-Interface permissions, find Web Services-web account modification authorization callback page domain name. The domain name is your website domain name. Pay attention to distinguish between WWW and without WWW;
@@ -279,7 +277,7 @@ d43ecff5608c   wordpress:latest    "docker-entrypoint.s…"   39 seconds ago   U
 ### Path{#path}
 
 WordPress installation directory: */data/apps/wordpress*  
-WordPress configuration file: */data/apps/wordpress/data/wordpress/wp-config.php*   
+WordPress configuration file: */data/apps/wordpress/data/wordpress/wp-config.php*
 WordPress data directory: /data/apps/wordpress/data/mysql_data
 
 ### Port{#port}

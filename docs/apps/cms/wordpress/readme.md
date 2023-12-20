@@ -18,26 +18,25 @@ tags:
 
 部署 Websoft9 提供的 WordPress 之后，需完成如下的准备工作：
 
-1. 在云控制台获取您的 **服务器公网IP地址** 
+1. 在云控制台获取您的 **服务器公网IP地址**
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启
 3. 在服务器中查看 WordPress 的 **[默认账号和密码](./user/credentials)**  
 4. 若想用域名访问  WordPress **[域名五步设置](./administrator/domain_step)** 过程
-
 
 ## WordPress 初始化向导{#init}
 
 ### 详细步骤
 
-1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入安装向导  
+1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*`<http://域名>`* 或 *`<http://服务器公网IP>`*, 进入安装向导  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wp01.png)
 
-2. 设置您的管理员账号、密码和邮箱， 点击“安装WordPress”; 
+2. 设置您的管理员账号、密码和邮箱， 点击“安装WordPress”;
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-install004-websoft9.png)
 
 3. 恭喜，成功安装
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-install005-websoft9.png)
 
-4. 进入后台（http//域名或IP/wp-admin），试试 WordPress 的功能 
+4. 进入后台（http//域名或IP/wp-admin），试试 WordPress 的功能
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-install006-websoft9.png)
 
 5. 开始使用商业主题（部分产品预装）：
@@ -56,17 +55,17 @@ tags:
 
 被组合的应用以及其参考文档如下：  
 
-* [MinIO 指南](./minio)
-* [Matomo 指南](./matomo)
+- [MinIO 指南](./minio)
+- [Matomo 指南](./matomo)
 
 ### 免费主题
 
 如果您安装了 Websoft9 提供的 WordPress 免费主题版，请通过下面地址下载:  
 
-* [Avada 主题](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/avada/avada.zip)，包含插件：[LayerSlider](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/avada/LayerSlider.zip)、[fusion-builder](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/avada/fusion-builder.zip)、[ fusion-core](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/avada/fusion-core.zip)、[revslider](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/avada/revslider.zip)
-* [Divi 主题](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/divi/Divi.zip)，包含插件：[Divi-Builder-Layouts-147](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/divi/Divi-Builder-Layouts-147.zip)
-* [Porto 主题](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/porto/porto.zip)，包含插件：[Addons](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/porto/Ultimate_VC_Addons.zip)、[image](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/porto/dynamic-featured-image.zip)、[composer](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/porto/js_composer.zip)、[functionality](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/porto/porto-functionality.zip)、[revslider](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/porto/revslider.zip)、[sliderrevolution](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/porto/sliderrevolution.zip)、[wpbakerybuilder](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/porto/wpbakerybuilder.zip)
-* [The7 主题](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/the7/dt-the7.zip)，包含插件：[dt-the7-core](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/the7/dt-the7-core.zip)、[go_pricing](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/the7/go_pricing.zip)、[js_composer](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/the7/js_composer.zip)、[Ultimate_VC_Addons](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/the7/Ultimate_VC_Addons.zip)、[revslider](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/the7/revslider.zip)
+- [Avada 主题](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/avada/avada.zip)，包含插件：[LayerSlider](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/avada/LayerSlider.zip)、[fusion-builder](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/avada/fusion-builder.zip)、[fusion-core](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/avada/fusion-core.zip)、[revslider](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/avada/revslider.zip)
+- [Divi 主题](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/divi/Divi.zip)，包含插件：[Divi-Builder-Layouts-147](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/divi/Divi-Builder-Layouts-147.zip)
+- [Porto 主题](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/porto/porto.zip)，包含插件：[Addons](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/porto/Ultimate_VC_Addons.zip)、[image](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/porto/dynamic-featured-image.zip)、[composer](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/porto/js_composer.zip)、[functionality](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/porto/porto-functionality.zip)、[revslider](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/porto/revslider.zip)、[sliderrevolution](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/porto/sliderrevolution.zip)、[wpbakerybuilder](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/porto/wpbakerybuilder.zip)
+- [The7 主题](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/the7/dt-the7.zip)，包含插件：[dt-the7-core](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/the7/dt-the7-core.zip)、[go_pricing](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/the7/go_pricing.zip)、[js_composer](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/the7/js_composer.zip)、[Ultimate_VC_Addons](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/the7/Ultimate_VC_Addons.zip)、[revslider](https://libs-websoft9-com.oss-accelerate.aliyuncs.com/apps/wordpress/the7/revslider.zip)
 
 ### 出现问题？
 
@@ -82,15 +81,14 @@ tags:
 
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/avada/wordpress-classiceditor-websoft9.png)
 
-
 ## WordPress 使用入门
 
 下面以 **[WordPress 使用 Avada 主题建站](./wordpress/solution#avada)** 作为一个任务，帮助用户快速入门。
 
-
 ## WordPress 常用操作
 
 ### 禁用 WordPress目录浏览
+
 禁用目录浏览可以降低 WordPress 文件信息泄露，提高站点的安全性。未禁用之前如下图：
 
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-disable-directory-browsing-websoft9.png)
@@ -102,12 +100,12 @@ tags:
 ### 配置 SMTP{#smtp}
 
 1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
-   
-2. 登录 WordPress后台-设置-常规，设置好需要用于发件的邮件地址 
-   
+
+2. 登录 WordPress后台-设置-常规，设置好需要用于发件的邮件地址
+
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-mailcg-websoft9.png)
 3. 安装SMTP插件：[WP Mail SMTP by WPForms](https://wordpress.org/plugins/wp-mail-smtp/)
-   
+
 4. 后台-设置-Email，配置WP Mail SMTTP 插件的参数
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-mailconf-websoft9.png)
 
@@ -131,7 +129,7 @@ tags:
 
 > 如果更换域名后，网站中有一部分图片地址还是原来的域名，此时需要手工逐一修正
 > 如果在第2步操作完成后，无法进入第3步访问后台操作，请访问 Wordpress 数据库，将 option 表中的 home 和 siteurl 两个属性修改为【新的域名】
-> 通过 Websoft9 已经配置好的 MySQL 可视化工具 phpMyAdmin (http://ip/phpmyadmin 或 http://ip:9090 )进行快捷操作
+> 通过 Websoft9 已经配置好的 MySQL 可视化工具 phpMyAdmin (`<http://ip/phpmyadmin>` 或 `<http://ip:9090>` )进行快捷操作
 
 ### HTTPS 额外设置{#https}
 
@@ -139,27 +137,28 @@ tags:
 
 - [配置HTTPS后，网站部分资源无法加载？](./wordpress/admin#httpsmore)
 
-
 ### 修改上传文件类型
 
 WordPress 默认支持大部分图片等文件格式的上传，但也有一些文件格式是不支持的，根据实际需要，可以增加或禁止一些格式的文件上传。设置方法如下：
 
 把以下代码加到主题目录（```/wp-content/themes/twentysixteen```）下的 functions.php 文件中：
-	
-   	function edit_upload_types($existing_mimes = array()) {
-	// 允许上传的文件类型
-	$existing_mimes['woff'] = 'application/woff';
-	$existing_mimes['rar'] = 'application/rar';
-	
-    // 如需添加更多文件类型支持，在其后增加代码即可
 
-	// 不允许上传的的文件类型
-	unset( $existing_mimes['jpg'] );
+```
+   function edit_upload_types($existing_mimes = array()) {
+   // 允许上传的文件类型
+   $existing_mimes['woff'] = 'application/woff';
+   $existing_mimes['rar'] = 'application/rar';
+   
+      // 如需添加更多文件类型支持，在其后增加代码即可
 
-	return $existing_mimes;
-	}
-	add_filter('upload_mimes', 'edit_upload_types');
-    
+   // 不允许上传的的文件类型
+   unset( $existing_mimes['jpg'] );
+
+   return $existing_mimes;
+   }
+   add_filter('upload_mimes', 'edit_upload_types');
+```
+
 > 以上是以自带主题 twentysixteen 为例，如果您使用的不是这款主题，则需要到对应主题目录下的 functions.php 文件中添加。
 
 ### 增加备案号
@@ -183,7 +182,7 @@ WordPress 默认支持大部分图片等文件格式的上传，但也有一些�
 
 寻找所需的插件，有三种方式：
 
-1. 通过WordPress后台-外观-安装插件，在线获取[WordPress插件库](https://wordpress.org/plugins/)的插件 
+1. 通过WordPress后台-外观-安装插件，在线获取[WordPress插件库](https://wordpress.org/plugins/)的插件
 2. 通过百度、google等搜索“WordPress插件”，淘到自己喜欢的主题
 3. 通过插件交易市场购买功能强大的插件，例如：[codecanyon.net](https://codecanyon.net/?osr=tn)
 
@@ -222,6 +221,7 @@ WordPress 默认支持大部分图片等文件格式的上传，但也有一些�
 | Essential Grid | 排版与布局 | 文章、页面网格工具 | 免费 |
 | Post Grid, List for WordPress – Content Views | 排版与布局 | 文档、页面调用工具 | 免费 |
 | Fat Rat Collect | 数据采集 | 批量采集文章数据的开源插件，采集含括微信、简书、知乎、列表详情等 | 免费 |
+
 ### 主题管理
 
 WordPress 官方仅提供简单外观的背后有着数十万社区驱动的精美主题：  
@@ -253,15 +253,15 @@ WooCommerce微信支付插件使用非常简单，只需要如下步骤，就可
 1. 安装微信支付插件（如果没有支付宝插件，请通过此处购买）
 
 2. 获取微信公众号APPID，密钥，微信支付密钥以及微信支付授权目录
-   - 获取微信公众号的AppID\(应用ID\) 和AppSecret\(应用密钥\) AppID\(应用ID\) 和AppSecret\(应用密钥\)是微信公众号与第三方网站（wordpress）通信的授权ID和密码，非常重要，必须填写。 请登录微信公众平台（https://mp.weixin.qq.com），点击开发-配置获取：AppID 和AppSecret
+   - 获取微信公众号的AppID\(应用ID\) 和AppSecret\(应用密钥\) AppID\(应用ID\) 和AppSecret\(应用密钥\)是微信公众号与第三方网站（wordpress）通信的授权ID和密码，非常重要，必须填写。 请登录微信公众平台（[https://mp.weixin.qq.com](https://mp.weixin.qq.com)），点击开发-配置获取：AppID 和AppSecret
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/plugins/woocommerce/wechatpay-help001-websoft9.png)
-   - 获取微信支付密钥登录微信支付商户平台（https://pay.weixin.qq.com），在账户设置-API安全中找到并设置密钥，密钥为32位，注意一下，获取密钥后保留备用
+   - 获取微信支付密钥登录微信支付商户平台（[https://pay.weixin.qq.com](https://pay.weixin.qq.com)），在账户设置-API安全中找到并设置密钥，密钥为32位，注意一下，获取密钥后保留备用
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/plugins/woocommerce/weichatpay-help002-websoft9.png)
 
-3. 添加授权支付目录在微信公众平台（https://mp.weixin.qq.com）点击-微信支付-开发配置，设置授权支付目录 微信支付插件的授权支付目录为：https://你的域名/wp-content/plugins/wechat-weixin-payments-for-woocommerce/
+3. 添加授权支付目录在微信公众平台（[https://mp.weixin.qq.com](https://mp.weixin.qq.com)）点击-微信支付-开发配置，设置授权支付目录 微信支付插件的授权支付目录为：`<https://你的域名/wp-content/plugins/wechat-weixin-payments-for-woocommerce/>`
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/plugins/woocommerce/weichatpay-help003-websoft9.png)
 
-4. 设置回调域名在微信公众平台（https://mp.weixin.qq.com）-开发-接口权限中找到-网页服务-网页账号修改授权回调页面域名，域名为你的网站域名，注意区分www和不带www；
+4. 设置回调域名在微信公众平台（[https://mp.weixin.qq.com](https://mp.weixin.qq.com)）-开发-接口权限中找到-网页服务-网页账号修改授权回调页面域名，域名为你的网站域名，注意区分www和不带www；
       ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/plugins/woocommerce/weichatpay-help004-websoft9.png)
 
 5. 配置微信支付插件在woocommerce设置，支付设置中找到微信支付设置，填入微信公众号appid和微信支付密钥
@@ -275,7 +275,7 @@ WooCommerce微信支付插件使用非常简单，只需要如下步骤，就可
 
 1. 以管理员账号登录后台
 2. 依次打开：【用户】>【所有用户】，编辑需要修改密码的账号
-3. 往下拉倒【账号管理】项，点击【生成密码】，然后修改密码，并更新个人资料 
+3. 往下拉倒【账号管理】项，点击【生成密码】，然后修改密码，并更新个人资料
    ![Wordpress 修改密码](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-modifypw-websoft9.png)
 
 #### 找回密码
@@ -317,8 +317,8 @@ d43ecff5608c   wordpress:latest    "docker-entrypoint.s…"   39 seconds ago   U
 ### 路径{#path}
 
 WordPress 安装目录： */data/apps/wordpress*  
-WordPress 配置文件： */data/apps/wordpress/data/wordpress/wp-config.php*   
-WordPress 数据目录： */data/apps/wordpress/data/mysql_data*   
+WordPress 配置文件： */data/apps/wordpress/data/wordpress/wp-config.php*
+WordPress 数据目录： */data/apps/wordpress/data/mysql_data*
 
 ### 端口{#port}
 
@@ -346,6 +346,7 @@ sudo docker start | stop | restart  phpmyadmin
 下面通过具体示例展示 wp-cli 的用法：
 
 1. 验证  wp-cli 是否安装成功
+
   ```
   $ docker exec -it wordpress bash
   $ wp --info
@@ -381,7 +382,7 @@ sudo docker start | stop | restart  phpmyadmin
   Success: Plugin already installed. 
   ```
 
-  > 更多用法请参照 [ wp-cli ](https://wp-cli.org/)
+  > 更多用法请参照 [wp-cli](https://wp-cli.org/)
 
 ### API
 
@@ -394,5 +395,3 @@ curl -X OPTIONS -i http://yourdomain.com/wp-json/
 curl -X GET -i http://yourdomain.com/wp-json/wp/v2/posts
 curl -X GET -i http://yourdomain.com/wp-json/wp/v2/pages
 ```
-
-

@@ -63,7 +63,6 @@ Linux系统的启动过程分为如下几个阶段：
 
 同样的文件内容，在屏幕上的输出同时取决于用什么编码和字体。
 
-
 ##### 查看编码
 
 我们在Linux中输入 `locale` 命令，会得到如下的结果：
@@ -93,6 +92,7 @@ en_US.UTF-8 是 UTF-8 的子集，也就是说en_US.UTF-8也是支持中文字�
 如果想切换操作系统的默认显示的语言，就必须修改默认的编码。  
 
 登录 Zabbix 所在的服务器，运行下面的命令之一
+
 ```
 ##方案一
 locale-gen zh_CN.UTF-8
@@ -113,6 +113,7 @@ dpkg-reconfigure locales
 ```
 yum groupinstall "fonts"
 ```
+
 这是为什么呢？ 这个要从计算图形学的角度去分析。编码解决了字符是否可以被计算的问题，而字体解决的是字符渲染成图像，被人识别的问题。
 
 即，如果你希望可以显示中文，你的服务器就必须有中文字体。
@@ -125,8 +126,8 @@ yum groupinstall "fonts"
 
 Linux 支持多种接口类型的存储设备：
 
-- hd：IDE 设备，实际名称为 hda, hdb，即第一个 IDE 设备，第二个 IDE设备，以此类推
-- sd：SATA, USB, SCSI 设备，实际名称为 sda, sdb，同上
+* hd：IDE 设备，实际名称为 hda, hdb，即第一个 IDE 设备，第二个 IDE设备，以此类推
+* sd：SATA, USB, SCSI 设备，实际名称为 sda, sdb，同上
 
 每个设备又可以被分区，例如第一个 IDE 设备的第一个分区，就被命名为 hda1，以此类推...  
 
@@ -152,7 +153,7 @@ vda    253:0    0  40G  0 disk
 └─vda1 253:1    0  40G  0 part /
 ```
 
-TYPE 项中的：disk 表示磁盘， part 表示分区， lvm 
+TYPE 项中的：disk 表示磁盘， part 表示分区， lvm
 
 #### 分区
 
@@ -193,6 +194,7 @@ Disk identifier: 0x000c5246
 1. 规划好新增的磁盘应该对应的分区，假设为 /dev/vda1 分区
 
 2. 对分区进行扩容操作
+
    ```
    #1 安装分区扩容软件 growpart
    yum install -y cloud-utils-growpart
@@ -261,6 +263,7 @@ $ lvdisplay
 
 1. 云控制台通过购买，新增20G系统盘空间
 2. 对根目录所在分区进行扩容操作
+
    ```
    #1 安装分区扩容软件 growpart
    yum install -y cloud-utils-growpart
@@ -271,7 +274,9 @@ $ lvdisplay
    #3 增大或收缩 ext2/ext3/ext4 文件系统
    resize2fs /dev/vda2 
    ```
+
 3. 运行 `lvdisplay` 查看是否存在 LVM 的分区
+
    ```
       --- Logical volume ---
    LV Path                /dev/rootvg/crashlv
@@ -290,7 +295,9 @@ $ lvdisplay
    - currently set to     8192
    Block device           252:1
    ```
+
 4. 先扩容 PV
+
    ```
    pvdisplay
    pvresize <pvname>
@@ -298,6 +305,7 @@ $ lvdisplay
    ```
 
 5. 扩容 LV （最终所需的分区）
+
    ```
    lvextend -l +100%FREE <LV's Path>
    lvdisplay
@@ -305,6 +313,7 @@ $ lvdisplay
    ```
 
 6. 修正文件系统
+
    ```
    # ext4 文件系统
    resize2fs <LV's Path>
@@ -321,6 +330,7 @@ $ lvdisplay
 #将/dev下的 sda5 磁盘格式化为 ext2 的格式类型
 mkfs.ext2 /dev/sda5
 ```
+
 #### 挂载
 
 对于Linux系统来说，挂载是将格式化后的分区与系统中的目录匹配起来，使得访问这个目录就相当于访问这个分区。
@@ -329,6 +339,7 @@ mkfs.ext2 /dev/sda5
 #将 /dev/sda5 挂载到 test 中
 mount /dev/sda5/test
 ```
+
 #### 文件系统
 
 Linux除支持Ext4文件系统外，还支持其他各种不同的文件系统，例如集群文件系统以及加密文件系统等。Linux将各种不同文件系统的操作和管理纳入到一个统一的框架中，使得用户程序可以通过同一个文件系统界面，也就是同一组系统调用，能够对各种不同的文件系统以及文件进行操作。这样，用户程序就可以不关心各种不同文件系统的实现细节，而使用系统提供的统一、抽象、虚拟的文件系统界面。这种统一的框架就是所谓的虚拟文件系统转换（Virtual Filesystem Switch），一般简称虚拟文件系统 (VFS)。虚拟文件系统描述如下所示：
@@ -405,8 +416,6 @@ Linux系统是一种典型的多用户系统，不同的用户处于不同的地
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/linux/keypairs-websoft9.png)
 
-
-
 ### 软件包
 
 Linux生态中的软件包资源非常丰富，从某种程度上看，用户是否熟练的下载安装以及更新这些包，决定了能够为所在的企业创作的价值的大小。
@@ -453,19 +462,18 @@ Linux生态中的软件包资源非常丰富，从某种程度上看，用户是
 
 |  名称  | 地址 |             概要              |
 | :----: | :--: | :---------------------------: |
-| RPM Fusion | https://rpmfusion.org/ | RPM Fusion provides software that the Fedora Project or Red Hat doesn't want to ship. That software is provided as precompiled RPMs for all current Fedora versions and current Red Hat Enterprise Linux or clones versions;  |
-| EPEL | https://fedoraproject.org/wiki/EPEL | EPEL (Extra Packages for Enterprise Linux), 是由 Fedora Special Interest Group 维护的 Enterprise Linux（RHEL、CentOS）中经常用到的包。 |
-| RepoForge | http://repoforge.org/ |Repoforge 是 RHEL 系统下的软件仓库，拥有 10000 多个软件包，被认为是最安全、最稳定的一个软件仓库。|
-| Remi | https://www.remi.com |Remi repository 是包含最新版本 PHP 和 MySQL 包的 Linux 源，由 Remi 提供维护。|
-| PackMan | http://packman.links2linux.org/ | Packman 是 OpenSUSE 最大的第三方软件源，主要为 OpenSUSE 提供额外的软件包，包括音视频解码器、多媒体应用、游戏等。 |
-| Dotdeb | http://www.debian.org/ | Dotdeb is an extra repository providing up-to-date packages for your Debian 8 “Jessie” servers .|
-| Gentoo portage | https://www.gentoo.org | Gentoo Portage 软件源 |
-| Fedora altarch | https://archives.fedoraproject.org/pub/ | Fedora altarch 是 Fedora Linux 额外平台的安装镜像和官方软件包仓库。 |
-| Ubuntu Ports | http://ports.ubuntu.com | Ubuntu Ports 是 Arm64，Armhf 等平台的 Ubuntu 软件仓库 |
-| Centos altarch | http://mirror.centos.org/altarch/ | CentOS 额外平台的安装镜像和官方软件包仓库 |
-| IUS | https://ius.io/ | IUS（Inline with Upstream Stable）是一个社区项目，它旨在为 Linux 企业发行版提供可选软件的最新版 RPM 软件包。 |
-| ATOMIC | http://www.atomicorp.com/channels/atomic/ | Atomic源支持Fedora，RHEL和CentOS的YUM包管理。 |
-
+| RPM Fusion | [https://rpmfusion.org/](https://rpmfusion.org/) | RPM Fusion provides software that the Fedora Project or Red Hat doesn't want to ship. That software is provided as precompiled RPMs for all current Fedora versions and current Red Hat Enterprise Linux or clones versions;  |
+| EPEL | [https://fedoraproject.org/wiki/EPEL](https://fedoraproject.org/wiki/EPEL) | EPEL (Extra Packages for Enterprise Linux), 是由 Fedora Special Interest Group 维护的 Enterprise Linux（RHEL、CentOS）中经常用到的包。 |
+| RepoForge | [http://repoforge.org/](http://repoforge.org/) |Repoforge 是 RHEL 系统下的软件仓库，拥有 10000 多个软件包，被认为是最安全、最稳定的一个软件仓库。|
+| Remi | [https://www.remi.com](https://www.remi.com) |Remi repository 是包含最新版本 PHP 和 MySQL 包的 Linux 源，由 Remi 提供维护。|
+| PackMan | [http://packman.links2linux.org/](http://packman.links2linux.org/) | Packman 是 OpenSUSE 最大的第三方软件源，主要为 OpenSUSE 提供额外的软件包，包括音视频解码器、多媒体应用、游戏等。 |
+| Dotdeb | [http://www.debian.org/](http://www.debian.org/) | Dotdeb is an extra repository providing up-to-date packages for your Debian 8 “Jessie” servers .|
+| Gentoo portage | [https://www.gentoo.org](https://www.gentoo.org) | Gentoo Portage 软件源 |
+| Fedora altarch | [https://archives.fedoraproject.org/pub/](https://archives.fedoraproject.org/pub/) | Fedora altarch 是 Fedora Linux 额外平台的安装镜像和官方软件包仓库。 |
+| Ubuntu Ports | [http://ports.ubuntu.com](http://ports.ubuntu.com) | Ubuntu Ports 是 Arm64，Armhf 等平台的 Ubuntu 软件仓库 |
+| Centos altarch | [http://mirror.centos.org/altarch/](http://mirror.centos.org/altarch/) | CentOS 额外平台的安装镜像和官方软件包仓库 |
+| IUS | [https://ius.io/](https://ius.io/) | IUS（Inline with Upstream Stable）是一个社区项目，它旨在为 Linux 企业发行版提供可选软件的最新版 RPM 软件包。 |
+| ATOMIC | [http://www.atomicorp.com/channels/atomic/](http://www.atomicorp.com/channels/atomic/) | Atomic源支持Fedora，RHEL和CentOS的YUM包管理。 |
 
 ##### 仓库搜索引擎
 
@@ -473,9 +481,7 @@ Linux生态中的软件包资源非常丰富，从某种程度上看，用户是
 
 |  名称  | 地址 |             概要              |
 | :----: | :--: | :---------------------------: |
-| Linux Packages | https://linux-packages.com/ | 轻松找到有关 Linux 上所有软件包的信息，包括 Ubuntu、Centos、Arch、Debian... |
-
-
+| Linux Packages | [https://linux-packages.com/](https://linux-packages.com/) | 轻松找到有关 Linux 上所有软件包的信息，包括 Ubuntu、Centos、Arch、Debian... |
 
 以上是"大卖场"式的仓库源，实际上很多知名的开源软件，例如：MySQL,Apache等还提供自建的仓库，供用户使用。
 
@@ -555,13 +561,11 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-$releasever-$ba
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/linux/installwithyum-websoft9.jpg)
 
-
 ##### 自建仓库
 
 在安装MySQL的时候，我们就发现，MySQL官方提供了自己的仓库以供用户使用。也就意味着，仓库是可以自行建设的。
 
 参考：[《配置本地Yum仓库》](https://www.runoob.com/linux/linux-yum.html)
-
 
 #### 管理包
 
@@ -583,7 +587,6 @@ Debian 及其衍生产品如：Ubuntu、Linux Mint 和 Raspbian 的包格式为.
 CentOS、Fedora 及 Red Hat 系列 Linux 使用RPM包文件，并使用yum命令管理包文件及与软件库交互。
 
 在最新的 Fedora 版本中，yum命令已被dnf取代进行包管理。
-
 
 ##### 更新本地数据库
 
@@ -631,7 +634,6 @@ CentOS、Fedora 及 Red Hat 系列 Linux 使用RPM包文件，并使用yum命令
 |                 |       yum deplist 包名       |         列出包的以来         |
 |     Fedora      |        dnf info 包名         |                              |
 |                 | dnf repoquery –requires 包名 |         列出包的以来         |
-
 
 ```
 # 通过 rpm 命令查看已安装软件包的信息
@@ -726,10 +728,12 @@ yum install yum-plugin-versionlock
 安装 **yum-plugin-versionlock** 之后，系统新增一个配置文件：*/etc/yum/pluginconf.d/versionlock.list*  
 
 可以直接编辑此文件，往其中添加锁定项，也可以通过下面的命令添加锁定项
+
 ```
 yum versionlock gcc-*
 
 ```
+
 上述配置不允许将gcc软件包升级到大于执行锁定时安装的软件包的版本。
 
 #### 制作包
@@ -786,12 +790,14 @@ install -m 755 hello-world.sh %{buildroot}/usr/bin/hello-world.sh
 ```
 
 将以上文件的内容保存到 Spec 文件后，运行如下的命令，便完成一个 RPM 包的制作。
+
 ```
 rpmdev-setuptree
 rpmbuild -ba hello.spec
 ```
 
 通过 `tree` 命令查询安装结果：
+
 ```
 $ tree rpmbuild
 rpmbuild
@@ -826,17 +832,16 @@ Makefile 顾名思义是 `make` 时所需的一个编排文件，如果用不着
 
 **交叉编译**
 
-
 #### 生态工具
 
 在云计算发展的今天，包管理丰富多彩。在实践中，有一些非常好用好玩的工具：
 
 * packagecloud.io: 提供包管理托管的网站，范例参考：[RabbitMQ on packagecloud](https://packagecloud.io/rabbitmq/rabbitmq-server/)
-* 软件分发即服务：https://bintray.com/
-* C/C++编译工具: https://conan.io/
-* 包检索工具：https://pkgs.org/
-* Snap包:https://snapcraft.io/
-* Flatpak包：https://www.flatpak.org/
+* 软件分发即服务：[https://bintray.com/](https://bintray.com/)
+* C/C++编译工具: [https://conan.io/](https://conan.io/)
+* 包检索工具：[https://pkgs.org/](https://pkgs.org/)
+* Snap包: [https://snapcraft.io/](https://snapcraft.io/)
+* Flatpak包：[https://www.flatpak.org/](https://www.flatpak.org/)
 
 #### 发行版特别说明
 
@@ -922,8 +927,6 @@ chown -R nginx.nginx /data/wwwroot
 
 Linux系统对不同的用户访问同一文件（包括目录文件）的权限做了不同的规定。  
 
-
-
 范例：
 
 ```
@@ -946,7 +949,7 @@ cat  由第一行开始显示文件内容
 tac  从最后一行开始显示  
 nl   显示的时候，同时输出行号  
 more 一页一页的显示文件内容  
-less 一页一页的显示文件内容+往前翻页 
+less 一页一页的显示文件内容+往前翻页
 head 只显示头几行  
 tail 只显示尾几行  
 
@@ -962,8 +965,6 @@ rmdir：删除一个空的目录
 cp: 复制文件或目录
 rm: 移除文件或目录
 mv: 移动文件与目录，或修改文件与目录的名称
-
-
 
 ### 软（硬）连接
 
@@ -1051,7 +1052,6 @@ ln /data/mymedia.mp4  mymedia2.mp4
 3. 硬连接文件存储的是真实数据块位置
 4. 只能对文件建立硬连接，而不能对一个目录建立硬连接
 
-
 > 硬链接与域名管理中的同一个网站，用A记录配置上两个域名是同类原理。  
 软连接与域名管理中的cname解析是同类原理。
 
@@ -1103,6 +1103,7 @@ root        12     2  0 Apr26 ?        00:00:00 [watchdog/1]
 如果仅ps命令不带参数，其仅列出所在Shell所调度运行的进程（不会列出如何系统的守护进程）  
 
 运行 `ps tree` 命令，列出进程树  
+
 ```
 systemd─┬─NetworkManager─┬─dhclient
         │                └─2*[{NetworkManager}]
@@ -1251,7 +1252,6 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/docker.service 
 
 当然，直接把 httpd.service 文件拷贝到 /etc/systemd/system 也能起到同样的效果。
 
-
 ##### 维护命令
 
 监控和控制 Systemd 主要使用的指令是`systemctl`。主要是从来看系统状态、服务状态，以及管理系统和服务。
@@ -1282,6 +1282,7 @@ systemctl list-unit-files
 挂载点和设备会自动转化为对应的后缀单元，比如/home就等价于home.mount, /dev/sda等价于dev-sda.device。
 
 systemctl在enable、disable、mask子命令里面增加了--now选项，可以激活同时启动服务，激活同时停止服务等。
+
 ```
 立刻激活单元：$ systemctl start <unit>
 立刻停止单元：$ systemctl stop <unit>
@@ -1303,6 +1304,7 @@ systemctl在enable、disable、mask子命令里面增加了--now选项，可以�
 一个服务怎么启动，完全由它的配置文件决定。下面就来看，配置文件有些什么内容。
 
 systemctl cat命令可以用来查看配置文件，下面以sshd.service文件为例，它的作用是启动一个 SSH 服务器，供其他用户以 SSH 方式登录。
+
 ```
 $ systemctl cat sshd.service
 
@@ -1324,7 +1326,9 @@ RestartSec=42s
 [Install]
 WantedBy=multi-user.target
 ```
+
 ###### [Unit]区域
+
 ###### [Service]区域
 
 Service区块定义如何启动当前服务。
@@ -1339,6 +1343,7 @@ dbus：类似于simple，但会等待 D-Bus 信号后启动
 notify：类似于simple，启动结束后会发出通知信号，然后 Systemd 再启动其他服务
 idle：类似于simple，但是要等到其他任务都执行完，才会启动该服务。一种使用场合是为让该服务的输出，不与其他服务的输出相混合
 ```
+
 **启动命令**字段  
 
 ```
@@ -1451,7 +1456,6 @@ Linux命令是对Linux系统进行管理的命令。对于Linux系统来说，�
 
 更多命令参考：[《Linux命令大全》](https://man.linuxde.net/)
 
-
 Shell 是一个用 C 语言编写的程序，它是用户使用 Linux 的桥梁。Shell 既是一种命令语言，又是一种程序设计语言。
 
 通俗的说：用户向Linux发送Shell命令（或多个命令组成的程序体）来控制Linux，故 Shell 也是一种应用程序，这个应用程序提供了一个界面，用户通过这个界面访问操作系统内核的服务。
@@ -1489,9 +1493,11 @@ Shell语法并不复杂，边学边用就能掌握。
 Shell脚本可以保存为 .sh 文件后运行，也可以直接在Linux交互式命令中运行
 
 加入我们编写了一段Shell程序，内容如下
+
 ```
 if [ $(ps -ef | grep -c "ssh") -gt 1 ]; then echo "true"; fi
 ```
+
 将上面的代码保存为 test.sh，并 cd 到相应目录，然后选择如下的一种执行命令的方式：
 
 ```
@@ -1510,7 +1516,6 @@ if [ $(ps -ef | grep -c "ssh") -gt 1 ]; then echo "true"; fi
 
 ```
 
-
 ## 常见问题
 
 #### Linux 有哪些专业认证体系？
@@ -1525,13 +1530,12 @@ Linux认证指获得专业Linux培训后通过考试得到的资格。国际上�
 | RHCE     | RH254                          | 红帽认证工程师     |
 | RHCA     | RH401,RH436,RH423,RH442,RHS333 | 红帽认证架构师     |
 
-
 #### 字符编码的原理？
 
-Ubuntu参考：https://help.ubuntu.com/community/Locale
-
+Ubuntu参考：[https://help.ubuntu.com/community/Locale](https://help.ubuntu.com/community/Locale)
 
 #### 如何查询当前服务器的连接数？
+
 ```
 ps aux | grep httpd | wc -l
 ```
@@ -1555,7 +1559,7 @@ RTC time: Tue 2021-11-23 10:08:04
 * Real Time Clock：RTC, CMOS or BIOS clock
 * System clock：系统时间，开机的时候读取 RTC 时间
 
-NTP 是指网络时间服务，用于校对时间。 
+NTP 是指网络时间服务，用于校对时间。
 
 #### Linux 有哪些发行版？
 
@@ -1573,7 +1577,6 @@ Linux 内核最初只是由芬兰人林纳斯·托瓦兹（Linus Torvalds）在�
 
 * Redhat, Fedora, CentOS 由 Redhat 驱动
 * Debian 是完全社区驱动，Ubuntu 是公司驱动，商业上没有关联关系
-
 
 #### Linux 系统有哪些特殊字符？
 
@@ -1639,10 +1642,13 @@ rpm 安装只针对单个rpm文件安装，不会安装相关的依赖；yum ins
 Linux 发行版比较多，同时还有很多个人或组织维护了某些特定用途的安装/升级源。Yum Priorities 插件可以用来强制保护源。它通过给各个源设定不同的优先级，使得系统管理员可以将某些源（比如 Linux 发行版的官方源）设定为最高优先级，从而保证系统的稳定性（同时也可能无法更新到其它源上提供的软件最新版本）。
 
 1. 安装优先级插件
+
     ```
     rpm -q yum-priorities
     ```
+
 2. 编辑 /etc/yum.repos.d/目录下的*.repo 文件来设置优先级
+
     ```
     [base]
     name=CentOS-$releasever – Base
@@ -1658,6 +1664,7 @@ Linux 发行版比较多，同时还有很多个人或组织维护了某些特�
 #### 如何查看软件所需的依赖？
 
 以RabbitMQ为例，命令以及结果如下：
+
 ```
 [root@iZ8vb7it5p19lxxol367u0Z rpm]# yum deplist rabbitmq-server
 Loaded plugins: fastestmirror
@@ -1680,7 +1687,6 @@ package: rabbitmq-server.noarch 3.8.3-1.el7
 ```
 
 > yum deplist 命令与被查询的软件包是否安装没有关系，即没有被安装的软件包也可以查询其依赖
-
 
 #### yum list 结果是本地换成吗？
 
@@ -1711,7 +1717,7 @@ It should be used mainly for testing purposes
 
 #### Systemd 服务名中的 @ 是什么？
 
-例如：name@.service。 “@”提示符是Systemd的一个高级功能，@可以被实际的参数替换。举一个例子可以更好的说明其作用：
+例如：`<<name@.service>>`。 “@”提示符是Systemd的一个高级功能，@可以被实际的参数替换。举一个例子可以更好的说明其作用：
 
 通过 Docker 部署了MySQL和Nginx，假如我们需要为这两个应用增加service文件，正常的处理方式是写两个服务单元，但如果我们学会使用@的话，一个单元就可以搞定
 
@@ -1782,10 +1788,9 @@ SSH 密钥是一种远程登录 Linux 服务器的方式，其原理是利用密
 
 * 基于镜像可以直接创建一个虚拟机，基于虚拟机也可以直接创建一个镜像
 
-总结：（磁盘-->快照） --> （镜像<-->虚拟机）
+总结：`（磁盘-->快照） --> （镜像<-->虚拟机）`
 
 #### useradd 和 adduser 区别？
 
 adduser 用于创建 Linux 系统账号，创建过程中会提示：用户名/密码，同时会创建用户家目录  
 useradd 仅创建无法登陆 Linux 系统的应用账号  
-

@@ -128,7 +128,7 @@ Oracle Database 支持多种客户端，有第三方工具，也有官方工具�
 
 #### Web 可视化客户端 CloudBeaver{#cloudbeaver}
 
-1. 本地浏览器访问：*http://服务器公网IP:9090*，访问 [CloudBeaver](./cloudbeaver)
+1. 本地浏览器访问：*`http://服务器公网IP:9090`*，访问 [CloudBeaver](./cloudbeaver)
 
 2. 新建一个 Oracle 数据库连接
     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/oracle/oracle-cloudbeaver001-websoft9.png)

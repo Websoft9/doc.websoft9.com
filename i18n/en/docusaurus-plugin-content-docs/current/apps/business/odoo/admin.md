@@ -15,7 +15,7 @@ This chapter is special guide for Odoo maintenance and settings. And you can ref
 
 ### Enable PostgreSQL remote connection
 
-Odoo default installed PostgreSQL does not enable the database account, the official solution:https://www.odoo.com/documentation/13.0/setup/deploy.html#postgresql
+Odoo default installed PostgreSQL does not enable the database account, the official solution:[https://www.odoo.com/documentation/13.0/setup/deploy.html#postgresql](https://www.odoo.com/documentation/13.0/setup/deploy.html#postgresql)
 
 ### Odoo Upgrade
 
@@ -28,7 +28,6 @@ Odoo can be upgraded from Console, online follow the steps below to complete the
 4. Click the **Update Apps list** to upgrade all Odoo's Modules if you need
 
 More details please refer to official docs [Odoo Update](https://www.odoo.com/documentation/master/setup/update.html)
-
 
 ## Troubleshoot{#troubleshoot}
 
@@ -44,7 +43,8 @@ The upload file size is limit 1M by default of Nginx, so you should lift this re
 
 1. Use WinSCP to connect Server
 2. Edit [Nginx vhost configuration file](../nginx#virtualHosx)
-3. Insert `client_max_body_size 0;` 
+3. Insert `client_max_body_size 0;`
+
    ```
    server {
     listen 80;
@@ -52,6 +52,7 @@ The upload file size is limit 1M by default of Nginx, so you should lift this re
     client_max_body_size 0; #insert here
     ...
    ```
+
 4. Save it and [Restart Nginx Service](../administrator/parameter#service)
 
 #### Odoo always appears database setting reminder?
@@ -79,12 +80,12 @@ sudo apt-get install ttf-wqy-microhei
 ~~~
 
 #### Command pg_dump not found？
+
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/odoo/odoo-backuperror-websoft9.png)
 
 Phenomenon: When Odoo backs up data, an error is reported: Command pg_dump not found
 Reason: PostgreSQL backup command not found
 Solution: Need to further check the PostgreSQL installation problem, or the problem of Odoo itself
-
 
 ## FAQ{#faq}
 
@@ -109,26 +110,25 @@ It is recommended to delete the database directly and then add it again (the Dem
 Yes, you can test it from the modules: Invoice, Purchase
 ![Odoo print to PDF](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-printtopdf-websoft9.png)
 
-
 #### Is there a web-base GUI database management tools?
 
-Yes, Odoo includes the database GUI functions, refer to [Odoo Mange Database function](../odoo#pgadmin) 
+Yes, Odoo includes the database GUI functions, refer to [Odoo Mange Database function](../odoo#pgadmin)
 
 #### Which implementers does Odoo have in China?
 
 If you need Odoo configuration, consulting, implementation and development services, please contact a professional service provider. What we learned is as follows:
 
-* Suzhou Yuanding http://www.chinamaker.net/
-* Open source intelligent manufacturing http://www.oscg.cn/
-* Shanghai Huanxiang Network Technology Co., Ltd. https://www.elico-corp.com/zh_CN/
-* Beijing Kaiyuan Technology Co., Ltd. https://www.kalway.cn/
-* Zhuhai Xinlaide Software Development Co., Ltd. http://www.zhsunlight.cn/
-* Chengdu Oodoo System Technology Co., Ltd. http://www.odoostart.com/
-* Shanxi Qingshui Odu Information Technology Co., Ltd. http://www.odooqs.com (54773801@qq.com)
+* Suzhou Yuanding [http://www.chinamaker.net/](http://www.chinamaker.net/)
+* Open source intelligent manufacturing [http://www.oscg.cn/](http://www.oscg.cn/)
+* Shanghai Huanxiang Network Technology Co., Ltd. [https://www.elico-corp.com/zh_CN/](https://www.elico-corp.com/zh_CN/)
+* Beijing Kaiyuan Technology Co., Ltd. [https://www.kalway.cn/](https://www.kalway.cn/)
+* Zhuhai Xinlaide Software Development Co., Ltd. [http://www.zhsunlight.cn/](http://www.zhsunlight.cn/)
+* Chengdu Oodoo System Technology Co., Ltd. [http://www.odoostart.com/](http://www.odoostart.com/)
+* Shanxi Qingshui Odu Information Technology Co., Ltd. [http://www.odooqs.com](http://www.odooqs.com) (`<54773801@qq.com>`)
 
 #### What are some good Odoo learning resources?
 
-* Odoo fan blog: https://alanhou.org/category/odoo/
+* Odoo fan blog: [https://alanhou.org/category/odoo/](https://alanhou.org/category/odoo/)
 
 #### Does the enterprise image provided by your company include license?
 

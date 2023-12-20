@@ -13,19 +13,19 @@
   },
   "link.item.label.应用": {
     "message": "Applications",
-    "description": "The label of footer link with label=应用 linking to /docs/apps"
+    "description": "The label of footer link with label=应用 linking to https://www.websoft9.com/apps"
   },
   "link.item.label.解决方案": {
     "message": "Solution",
-    "description": "The label of footer link with label=解决方案 linking to /docs/solution"
+    "description": "The label of footer link with label=解决方案 linking to https://www.websoft9.com/solutions"
   },
   "link.item.label.技术服务": {
     "message": "Professional support",
-    "description": "The label of footer link with label=技术服务 linking to /docs/helpdesk"
+    "description": "The label of footer link with label=技术服务 linking to https://www.websoft9.com/services"
   },
   "link.item.label.分发服务": {
     "message": "Software Distribution",
-    "description": "The label of footer link with label=分发服务 linking to /docs/helpdesk"
+    "description": "The label of footer link with label=分发服务 linking to https://www.websoft9.com/services/business-process-outsourcing/cloud-distribution-for-isv"
   },
   "link.item.label.文档 ": {
     "message": "Documentation ",
@@ -37,15 +37,15 @@
   },
   "link.item.label.7×24 工单": {
     "message": "7×24 Ticket",
-    "description": "The label of footer link with label=7×24 工单 linking to https://www.websoft9.com/cn/ticket"
+    "description": "The label of footer link with label=7×24 工单 linking to https://www.websoft9.com/ticket"
   },
   "link.item.label.人工支持": {
     "message": "HelpDesk",
-    "description": "The label of footer link with label=人工支持 linking to https://www.websoft9.com/cn/contact"
+    "description": "The label of footer link with label=人工支持 linking to https://www.websoft9.com/contact-us"
   },
   "link.item.label.博客": {
     "message": "Blog",
-    "description": "The label of footer link with label=博客 linking to https://blog.websoft9.com"
+    "description": "The label of footer link with label=博客 linking to https://www.websoft9.com/blog"
   },
   "link.item.label.GitHub": {
     "message": "GitHub",
@@ -54,5 +54,9 @@
   "copyright": {
     "message": "Copyright ©2014- 2022 Websoft9 Inc.",
     "description": "The footer copyright"
+  },
+  "logo.alt": {
+    "message": "Websoft9 Open Source Logo",
+    "description": "The alt text of footer logo"
   }
 }

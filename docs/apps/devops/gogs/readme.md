@@ -8,17 +8,15 @@ tags:
 
 # 快速入门
 
-[Gogs](https://gogs.io/) 是一款极易搭建的自助 Git 仓库系统，相对于 GitLab 而言 Gogs 更加轻量级。Gogs 的目标是打造一个最简单、最快速和最轻松的方式搭建自助 Git 服务。使用 Go 语言开发使得 Gogs 能够通过独立的二进制分发，并且支持 Go 语言支持的 所有平台，包括 Linux、Mac OS X、Windows 以及 ARM 平台。 
+[Gogs](https://gogs.io/) 是一款极易搭建的自助 Git 仓库系统，相对于 GitLab 而言 Gogs 更加轻量级。Gogs 的目标是打造一个最简单、最快速和最轻松的方式搭建自助 Git 服务。使用 Go 语言开发使得 Gogs 能够通过独立的二进制分发，并且支持 Go 语言支持的 所有平台，包括 Linux、Mac OS X、Windows 以及 ARM 平台。
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-guistart-websoft9.png)
-
-
 
 部署 Websoft9 提供的 Gogs 之后，请参考下面的步骤快速入门。
 
 ## 准备
 
-1. 在云控制台获取您的 **服务器公网IP地址** 
+1. 在云控制台获取您的 **服务器公网IP地址**
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80和10022** 端口已经开启
 3. 在服务器中查看 Gogs 的 **[默认管理员账号和密码](./user/credentials)**  
 4. 若想用域名访问  Gogs，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
@@ -27,7 +25,7 @@ tags:
 
 ### 详细步骤
 
-1. 使用本地电脑浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入初始化页面。进入页面底部选择合适的语言。  
+1. 使用本地电脑浏览器访问网址：*`<http://域名>`* 或 *`<http://服务器公网IP>`*, 进入初始化页面。进入页面底部选择合适的语言。  
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-language-websoft9.png)
 
 2. 设置数据库连接（**[查看预装的数据库账号密码](./user/credentials)** ）
@@ -37,12 +35,12 @@ tags:
 
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-db-websoft9.png)
 
-2. 设置 Gogs 的应用基本参数   
+2. 设置 Gogs 的应用基本参数
 
    - 域名：公网IP 或 真实域名
    - SSH 端口： 10022， 可从 Gogs 根目录 .env 文件中查询
    - HTTP 端口： 80
-   - 应用 URL：http://公网IP  或  http://域名:端口
+   - 应用 URL：`http://公网IP`  或  `http://域名:端口`
 
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-admin-websoft9.png)
 
@@ -50,10 +48,9 @@ tags:
 
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-installadmin-websoft9.png)
 
-4. 安装成功后，进入系统后台 
+4. 安装成功后，进入系统后台
 
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-dashboard-websoft9.png)
-
 
 ### 出现问题？
 
@@ -62,7 +59,6 @@ tags:
 **安装的时候忘记设置管理账号？**  
 
 创建管理员帐号并不是必须的，因为用户表中的第一个用户将自动获得管理员权限。
-
 
 ## Gogs 常用操作
 
@@ -74,9 +70,9 @@ tags:
 
 ## Gogs 参数
 
-Gogs 应用中包含 Docker, MySQL 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
+Gogs 应用中包含 Docker, MySQL 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
 
-通过运行 `docker ps`，查看 Gogs 运行时所有的服务组件：   
+通过运行 `docker ps`，查看 Gogs 运行时所有的服务组件：
 
 ```bash
 CONTAINER ID   IMAGE              COMMAND                  CREATED          STATUS                    PORTS                                                                                NAMES
@@ -141,4 +137,3 @@ GLOBAL OPTIONS:
 ### API
 
 参考：[Web 钩子](https://gogs.io/docs/features/webhook)
-

@@ -439,7 +439,7 @@ networks:
 
 #### 去掉 Named volume 挂载的前缀名？
 
-Named volume 挂载的目录名称默认为 {project_name}_dirname。这样做的好处是避免多个同类应用挂载导致冲突。  
+Named volume 挂载的目录名称默认为 `{project_name}_dirname`。这样做的好处是避免多个同类应用挂载导致冲突。  
 
 如何去掉这个前缀呢？下面是具体的范例：  
 

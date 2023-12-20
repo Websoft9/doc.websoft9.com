@@ -26,7 +26,7 @@ tags:
 
 ### 详细步骤
 
-1. 使用本地电脑的浏览器访问网址：*http://域名:9090* 或 *http://服务器公网IP:9090*，准备登陆 RethinkDB 控制台
+1. 使用本地电脑的浏览器访问网址：*`http://域名:9090`* 或 *`http://服务器公网IP:9090`*，准备登陆 RethinkDB 控制台
 
 2. 输入[用户名和密码](./user/credentials)，成功登录到 RethinkDB 后台  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rethinkdb/rethinkdb-gui-websoft9.png)
@@ -117,7 +117,7 @@ sudo sed -n "s/^#bind=/bind=0.0.0.0/g" /etc/rethinkdb/instances.d/instance.conf
 
 RethinkDB 可视化控制台是它的重要组成部分，是其重要的产品特征。  
 
-1. 使用本地电脑的浏览器访问网址：*http://服务器公网IP:9090*，准备登陆 RethinkDB 控制台
+1. 使用本地电脑的浏览器访问网址：*`http://服务器公网IP:9090`*，准备登陆 RethinkDB 控制台
 
 2. 输入用户名和密码（[不知道账号密码？](./user/credentials)）
 

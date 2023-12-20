@@ -247,7 +247,7 @@ The background management of WordPress is divided into permissions, and the high
 * Log in to the database management tool phpMyAdmin: http://server ip/phpMyAdmin/
 * Find data tables related to users: wp_users and wp_usermeta;
 * First enter wp_users, check your own administrator user name, the super administrator user id is generally 1, if not, modify it;
-* Enter the wp_usermeta table again and find the wp_user_level, wp_capabilities fields. If the value of the corresponding account wp_user_level is not 10, please change it to 10 (half of the super administrators are 10, the highest authority); check the wp_capabilities value, if it is not "administrator", you can directly change it to: a:1:{s:13 :"administrator";b:1;};
+* Enter the wp_usermeta table again and find the wp_user_level, wp_capabilities fields. If the value of the corresponding account wp_user_level is not 10, please change it to 10 (half of the super administrators are 10, the highest authority); check the wp_capabilities value, if it is not "administrator", you can directly change it to: `a:1:{s:13 :"administrator";b:1;}`;
 * re-register.
 
 #### Wordpress does not have permission to import demo data?

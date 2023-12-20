@@ -215,7 +215,7 @@ In addition to the base modules, Odoo offers a number of premium third-party mod
 
 The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage Odoo 
 
-Run docker ps, view all containers when {{trademark}} is running:
+Run docker ps, view all containers when `{{trademark}}` is running:
 
 ```bash
 CONTAINER ID   IMAGE                   COMMAND                  CREATED         STATUS         PORTS                                                      NAMES

@@ -7,7 +7,7 @@ tags:
 
 # 快速入门
 
-[ONLYOFFICE Docs ](https://www.onlyoffice.com/zh/office-suite.aspx) 是一个文档中间件，为文档管理软件提供 Office 格式的文档的在线预览与编辑。支持主流格式：docx、xlsx、pptx、odt、ods、odp、doc、xls、ppt、pdf、txt、rtf、html、epub、csv。
+[ONLYOFFICE Docs](https://www.onlyoffice.com/zh/office-suite.aspx) 是一个文档中间件，为文档管理软件提供 Office 格式的文档的在线预览与编辑。支持主流格式：docx、xlsx、pptx、odt、ods、odp、doc、xls、ppt、pdf、txt、rtf、html、epub、csv。
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/onlyoffice/onlyofficedocs-gui-websoft9.png)
 
@@ -15,22 +15,20 @@ tags:
 
 ## 准备
 
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80,9002** 端口已经开启 
+1. 在云控制台获取您的 **服务器公网IP地址**
+2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80,9002** 端口已经开启
 3. 若想用域名访问  ONLYOFFICE Docs，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
-
 
 ## ONLYOFFICE Docs 初始化向导
 
 ### 详细步骤
 
-1. 本地电脑浏览器访问：*http://服务器公网IP:9002* 可看到 OnlyOffice Docs 正在运行的提示。  
+1. 本地电脑浏览器访问：*`http://服务器公网IP:9002`* 可看到 OnlyOffice Docs 正在运行的提示。  
    ![ONLYOFFICE Document Server is running](https://libs.websoft9.com/Websoft9/DocsPicture/zh/onlyoffice/onlyoffice-dkisrunning-websoft9.png)
 
 > 如果画面的提示不是*OnlyOffice Docs is running*，则说明服务运行异常。
 
 2. 完成域名解析后，请针对不同的 Web 服务器下，完成对应的域名绑定操作。
-
 
 ### 出现问题？
 
@@ -44,7 +42,7 @@ tags:
 
 ### 启用 JWT Key
 
-JWT Key 用于第三方软件与 ONLYOFFICE Docs 的密码验证，确保 ONLYOFFICE Docs 在授权的情况下才可以被调用。   
+JWT Key 用于第三方软件与 ONLYOFFICE Docs 的密码验证，确保 ONLYOFFICE Docs 在授权的情况下才可以被调用。
 
 只需修改 ONLYOFFICE Docs  根目录下的 `.env` 中 JWT_ENABLED=true 即可。  
 
@@ -63,6 +61,7 @@ ONLYOFFICE Docs 绑定域名符合：**[域名五步设置](./administrator/doma
 但是 Apache 或 Nginx **虚拟主机配置文件**请采用下面的模板：
 
 ##### Nginx
+
     ```
     server {
         listen 80;
@@ -105,7 +104,7 @@ ONLYOFFICE Docs 绑定域名符合：**[域名五步设置](./administrator/doma
 
 ### 增加字体{#addfonts}
 
-我们已经验证 ONLYOFFICE Docs 官方文档 [Adding fonts to ONLYOFFICE Docs](https://helpcenter.onlyoffice.com/installation/docs-community-install-fonts-linux.aspx) 是完全可以用的。 
+我们已经验证 ONLYOFFICE Docs 官方文档 [Adding fonts to ONLYOFFICE Docs](https://helpcenter.onlyoffice.com/installation/docs-community-install-fonts-linux.aspx) 是完全可以用的。
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/onlyoffice/onlyofficedocs-addfonts-websoft9.png)
 
@@ -123,7 +122,6 @@ ONLYOFFICE Docs 默认设置是支持[多版本](https://helpcenter.onlyoffice.c
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/onlyoffice/onlyofficedocs-docsversions-websoft9.png)
 
-
 ### HTTPS 设置
 
 大多数情况下，调用 ONLYOFFICE Docs 的软件需要 ONLYOFFICE Docs 提供 HTTPS 服务，所以域名绑定后，需立即设置 HTTPS：
@@ -135,6 +133,7 @@ ONLYOFFICE Docs 默认设置是支持[多版本](https://helpcenter.onlyoffice.c
 1. 参考通用的 [HTTPS 配置指南](./administrator/domain_https)
 
 2. 虚拟主机配置文件中增加下面的一行代码，使客户端和代理服务之间的连接所采用的传输协议
+
    ```
    # 以下适用于 Apache
    RequestHeader set X-Forwarded-Proto "https
@@ -149,15 +148,19 @@ ONLYOFFICE Docs 也提供了[自签名的 HTTPS](https://helpcenter.onlyoffice.c
 
 1. 进入 ONLYOFFICE Docs 容器，创建 certs 文件夹
    ```
+
   mkdir /var/www/onlyoffice/Data/certs
   cd /var/www/onlyoffice/Data/certs
+
    ```
 
 2. 运行自签名命令（以[官方文档](https://helpcenter.onlyoffice.com/installation/docs-community-install-docker.aspx)为准）
    ```
+
    openssl genrsa -out onlyoffice.key 2048
    openssl req -new -key onlyoffice.key -out onlyoffice.csr
    openssl x509 -req -days 365 -in onlyoffice.csr -signkey onlyoffice.key -out onlyoffice.crt
+
    ```
 3. 退出 ONLYOFFICE Docs 容器，重启它后生效
 
@@ -201,4 +204,3 @@ sudo systemctl start | stop | restart | status onlyofficedocs
 ### API
 
 [ONLYOFFICE Docs API](https://api.onlyoffice.com/editors/basic)
-

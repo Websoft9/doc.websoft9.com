@@ -53,7 +53,7 @@ export ANSIBLE_SUDO_USER=root
 
 运行 `cat /etc/ansible/ansible.cfg` 文件，便可以查看几乎所有的配置项。
 
-<AnsibleCfg name="cgf" />;
+<AnsibleCfg name="cgf" />
 
 ## 原理
 
@@ -372,10 +372,10 @@ ansible localhost -m service -a "name=httpd state=started"
 
 Ansible 中使用 `when` 作为条件判断的关键词，条件判断注意事项：
 
-* 变量名不需要双大括号“{{}}”
-* 运算符兼容 jinja2 格式：==, !=, >, >=
-* 支持逻辑运算符：and, or, not
-* 支持变量的定义判断：defined, undefined, none
+* 变量名不需要双大括号`“{{}}”`
+* 运算符兼容 jinja2 格式：`==, !=, >, >=`
+* 支持逻辑运算符：`and, or, not`
+* 支持变量的定义判断：`defined, undefined, none`
 
 详情参考：[Ansible条件判断详解](https://www.ityoudao.cn/posts/ansible-conditionals/)
 
@@ -387,10 +387,13 @@ Ansible 中使用 `when` 作为条件判断的关键词，条件判断注意事�
 
 #### 交互
 
+```
 - name: Create file1
   ansible.builtin.file:
     state: touch
     path: /tmp/file1
+
+```
 
 ### Role
 
@@ -658,7 +661,7 @@ ansible-playbook activemq.yml -c local
 
 #### jinja2 模板中如何判断一个变量 varA 是否未定义，为空或 false:
 
-使用 {% if varA %} 即可，等同于{% if varA is defined and varA is not none %}
+使用 `{% if varA %}` 即可，等同于`{% if varA is defined and varA is not none %}`
 
 #### 本项目中 Ansible 采用何种安装方式？
 

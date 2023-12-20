@@ -16,7 +16,7 @@ tags:
 
 部署 Websoft9 提供的 Memcached 之后，需完成如下的准备工作：
 
-1. 在云控制台获取您的 **服务器公网IP地址** 
+1. 在云控制台获取您的 **服务器公网IP地址**
 2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 TCP：**11211 和 9090** 端口已经开启
 3. 在服务器中查看 Memcached 的 **[默认账号和密码](./user/credentials)**  
 4. 若想用域名访问  Memcached，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
@@ -26,18 +26,22 @@ tags:
 ### 详细步骤
 
 1. 通过 SSH 工具连接 Memcached服务器，安装 telnet
+
    ```
    yum install telnet
    ```
 
 2. 运行 telnet 命令，连接 Memcached
+
    ```
    telnet 127.0.0.1 11211
    Trying 127.0.0.1...
    Connected to 127.0.0.1.
    Escape character is '^]'.
    ```
+
 3. 连接成功，系统进入 Memcached 命令行输入状态，输入命令 `stats`
+
    ```
    STAT pid 651
    STAT uptime 891
@@ -90,6 +94,7 @@ tags:
    END
 
    ```
+
 4. 输入命令 `quit` 退出系统
 
 5. 体验 Memcached 可视化管理工具 [Memcached-admin](#可视化管理)
@@ -98,7 +103,7 @@ tags:
 
 若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
 
-**Telnet 无法连接 Memcached？**   
+**Telnet 无法连接 Memcached？**
 
 请检查服务器是否已安装 telnet，同时查看云控制台安全组 **TCP:11211** 端口是否开启
 
@@ -114,7 +119,7 @@ Memcached 预装方案中内置可视化数据库管理工具 `Memcached-admin` 
 
 1. 登录云控制台，开启 Memcached-admin 所需的[端口](#port)
 
-2. 本地浏览器 Chrome 或 Firefox 访问：*http://服务器公网IP:9090*，进入登录页面
+2. 本地浏览器 Chrome 或 Firefox 访问：*`http://服务器公网IP:9090`*，进入登录页面
 
 3. 输入数据库用户名和密码，进入控制面板
   ![Memcached-admin](https://libs.websoft9.com/Websoft9/DocsPicture/zh/memcached/memcached-gui-websoft9.png)
@@ -139,13 +144,12 @@ f3956c005325   hatamiarash7/memcached-admin:latest   "docker-php-entrypoi…"   
 
 Memcached 安装目录：*/data/apps/memcached*  
 
-### 端口{#port} 
+### 端口{#port}
 
 | 端口号 | 用途                                          | 必要性 |
 | ------ | --------------------------------------------- | ------ |
 | 11211   | 远程访问 Memcached | 可选   |
 | 9090  | 访问 Memcached Admin 可视化工具| 可选   |
-
 
 ### 版本
 
@@ -168,6 +172,7 @@ sudo docker start | stop | restart | stats memcached-admin
 Memcached 是通过 Telnet 来运行客户端命令的：
 
 1. 远程登录到服务器，运行 telnet 命令，连接到 Memcached
+
 ```
 telnet 127.0.0.1 11211
 Trying 127.0.0.1...
@@ -181,11 +186,12 @@ Escape character is '^]'.
 
 #### 服务端
 
-Memcached 没有传统意义上的客户端，只有服务端命令 `memcached -h`，但本项目中采用 Docker 部署 Memcached，虽不能直接使用服务端命令，但可以预先配置再启动容器。 
+Memcached 没有传统意义上的客户端，只有服务端命令 `memcached -h`，但本项目中采用 Docker 部署 Memcached，虽不能直接使用服务端命令，但可以预先配置再启动容器。
 
-服务端设置，需要在运行容器的时候带入配置参数，具体操作步骤：    
+服务端设置，需要在运行容器的时候带入配置参数，具体操作步骤：
 
 1. 编辑 Memcached 容器编排文件 *path/docker-compose.yml*，修改增加更多的 **command** 项，然后保存
+
     ```
     version: '3.8'
     services:
@@ -199,6 +205,7 @@ Memcached 没有传统意义上的客户端，只有服务端命令 `memcached -
     ```
 
 2. 重新创建容器后生效
+
    ```
    cd path
    sudo docker-compose up -d

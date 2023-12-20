@@ -104,7 +104,7 @@ pgAdmin 支持 Linux, Unix, Mac, Windows 等多种桌面操作系统，它采用
 
 我们的部署方案默认安装了 pgAdmin， 可以直接采用如下方式使用：
 
-1. 本地电脑浏览器访问：*http://服务器公网IP:9090*，进入 pgAdmin
+1. 本地电脑浏览器访问：*`http://服务器公网IP:9090`*，进入 pgAdmin
    ![登录pgAdmin](https://libs.websoft9.com/Websoft9/DocsPicture/zh/postgresql/pgadmin-loginui-websoft9.png)
 
 2. 输入 pgAdmin 管理员的用户名和密码([查看账号密码](./user/credentials))之后，进入控制台

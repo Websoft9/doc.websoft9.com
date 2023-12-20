@@ -22,28 +22,27 @@ SQLServer 数据库存储目录更改:
 
 1. 打开服务列表，先将 SQL Server (MSSQLSERVER) 服务停止；
 
-	![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-1-websoft9.png)
+ ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-1-websoft9.png)
 
 2. 将默认的数据库文件拷贝到新的存放位置；
-	```默认存放目录为：C:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL```
-    
+ ```默认存放目录为：C:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL```
+
 3. 再次启动服务，打开SQL客户端，找到实例，右键实例选择属性；
 
-	![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-2-websoft9.png)
-    
+ ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-2-websoft9.png)
+
 4. 在属性中选择 数据库设置，修改数据的存放目录；
 
-	![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-3-websoft9.png)
-    
+ ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-3-websoft9.png)
+
 5. 最后重启 SQL Server (MSSQLSERVER) 服务，新建一个数据库测试是否在新的存放目录下生成该数据库；
 6. 确保新目录生效后，再将原来的目录下的数据库文件删除。
-
 
 ### SQL Server Manual Backup{#backup}
 
 通用的手动备份操作步骤如下：
 
-1. 访问SQLServer企业管理器，在需要备份的数据库上点右键，选择任务->备份，弹出备份数据库窗口。 
+1. 访问SQLServer企业管理器，在需要备份的数据库上点右键，选择任务->备份，弹出备份数据库窗口。
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-backup-websoft9.png)
 2. 根据备份向导逐步完成备份工作
 
@@ -51,7 +50,7 @@ SQLServer 数据库存储目录更改:
 
 SQL Server Express的数据库由于没有SQL Server Agent服务，所以也就不支持维护计划功能，自动备份数据库就成了一个十分麻烦的问题。
 
-**引入 SQL Backup Master{#sqlbackupmaster}**
+**引入 SQL Backup Master**
 
 经过研究，我们建议采用第三方工具 [SQL Backup Master](https://www.sqlbackupmaster.com/)  实现自动备份。SQL Backup Master 是一款免费可靠的 SQL Server 数据库备份工具，主要特性:
 
@@ -64,7 +63,6 @@ SQL Server Express的数据库由于没有SQL Server Agent服务，所以也就�
 * 支持操作系统: Windows 10, 8, 7, Vista 和 Windows Server 2008/2012/2016
 * 支持SQL Server版本 : SQL Server 2017, 2016, 2014, 2012, 2008, 2005
 
-
 **SQL Backup Master 指南**
 
 1. 从官网下载安装好 SQL Server Master，双击【运行程序】。
@@ -72,7 +70,7 @@ SQL Server Express的数据库由于没有SQL Server Agent服务，所以也就�
 2. 创建数据库备份任务  
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-bak-websoft9.png)
 
-3. 选择数据库,并连接数据库   
+3. 选择数据库,并连接数据库
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-bak2-websoft9.png.png)
 
 4. 选择需要备份的数据库,并进行设置  
@@ -80,15 +78,15 @@ SQL Server Express的数据库由于没有SQL Server Agent服务，所以也就�
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-bak4-websoft9.png)
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-bak5-websoft9.png.png)
 
- 1. 设置计划任务  
+1. 设置计划任务  
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-bak6-websoft9.png)
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-bak7-websoft9.png)
-    
- 2. 保存设置  
+
+2. 保存设置  
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-bak8-websoft9.png)
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-bak9-websoft9.png)
-    
-**备选方案：计划任务{#backupschedule}**
+
+**备选方案：计划任务**
 
 除了使用 SQL Backup Master 这个工具之外，也可以采用服务器系统的任务计划和备份数据库的存储过程来实现，参考：
 
@@ -101,7 +99,6 @@ SQL Server Express的数据库由于没有SQL Server Agent服务，所以也就�
 ## Troubleshoot{#troubleshoot}
 
 In addition to the SQL Server Express issues listed below, you can refer to [Troubleshoot + FAQ](../troubleshoot) to get more.  
-
 
 #### 应用程序无法连接 SQLServer数据库？
 
@@ -134,14 +131,13 @@ SQL Server Management Studio (SSMS) 是用于管理任何 SQL 基础结构的集
 
 本部署方案默认已经安装SQLServer企业管理器
 
-
 #### SQL Server Express 有自动备份功能吗？
 
 不包含，但本部署包提供了一个免费的自动备份软件，参考本文档的 [SQLServer自动备份](#autobackup)相关章节
 
 #### 浏览器访问 Management Studio？
 
-SQL Server Management Studio 托管一个 Microsoft Internet Explorer 版本。 此 Web 浏览器允许您浏览 URL，并查看 MSDN Library 帮助主题，而无需离开 SQL Server Management Studio。 您可以通过指向视图菜单上的 Web 浏览器，然后单击显示浏览器来访问 Web 浏览器。 参考：https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-web-browser?view=sql-server-ver15
+SQL Server Management Studio 托管一个 Microsoft Internet Explorer 版本。 此 Web 浏览器允许您浏览 URL，并查看 MSDN Library 帮助主题，而无需离开 SQL Server Management Studio。 您可以通过指向视图菜单上的 Web 浏览器，然后单击显示浏览器来访问 Web 浏览器。 参考：[https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-web-browser?view=sql-server-ver15](https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-web-browser?view=sql-server-ver15)
 
 #### SQL Server 有哪些发行版？
 
@@ -166,4 +162,4 @@ SQL Server Management Studio 托管一个 Microsoft Internet Explorer 版本。 
 #### 修改 SQL Server 默认的数据存储路径？
 
 可以。SQL Server 企业管理器中：【属性】>【数据库设置】修改
-https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-3-websoft9.png
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-3-websoft9.png)

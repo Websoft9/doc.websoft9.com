@@ -226,28 +226,31 @@ RewriteRule ^(.*)$ https://www.yourdomain.com/folder/$1 [R,L]
 要想开启自动跳转功能，请确保 Apache 的 Rewirte 模块加载，然后按照以下方案进行设置：
 1. 整站跳转
     如果需要整站跳转，则在网站的配置文件（/etc/http/vhost/vhost.conf）的 \<Directory\> 标签内添加：
-    
-    
+        ```
         RewriteEngine on
         RewriteCond %{SERVER_PORT} !^443$
         RewriteRule ^(.*)?$ https://%{SERVER_NAME}/$1 [L,R=301]
+        ```
 2. 只对某个目录的页面进行自动跳转，请将 **yourfolder** 改成自己的目录名 
-  
+        ```
         RewriteEngine on
         RewriteBase /yourfolder
         RewriteCond %{SERVER_PORT} !^443$
         #RewriteRule ^(.*)?$ https://%{SERVER_NAME}/$1 [L,R]
         RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R=301]
+        ```
 3. 只将带 www 的 URL 跳转至 HTTPS，请将 **www.yourdomain.com** 改成自己想要设置跳转的域名
-  
+        ```
         RewriteEngine On 
         RewriteRule ^/(.*)$ www.yourdomain.com/$1 [R=301]
+        ```
 4. 对除了某一个页面的其他所有页面进行 HTTPS 跳转
-
+        ```
         RewriteEngine on 
         RewriteCond %{SERVER_PORT} !^443$ 
         RewriteCond %{REQUEST_URI} !^/tz.php 
         RewriteRule (.*) https://%{SERVER_NAME}/$1 [R]
+        ```
     这段配置的作用是指除了 /tz.php 页面用 http 访问，其他页面均为 https 访问，/tz.php 可改为自己实际要 http 访问的后缀。
 
 ### 设置网站默认首页{#defaultpage}

@@ -40,7 +40,8 @@ tags:
     	protocolHeader="X-Forwarded-Proto" protocolHeaderHttpsValue="https"/>
 	 </Host>
    ```
-5. 编辑 Nginx 配置文件 *default.conf* 文件，启用 `include jsp.conf`，注释掉 `#include php.conf`，然后修改 server_name, root 等参数   ```
+5. 编辑 Nginx 配置文件 *default.conf* 文件，启用 `include jsp.conf`，注释掉 `#include php.conf`，然后修改 server_name, root 等参数   
+   ```nginx
    server
     {
         listen 80;

@@ -47,7 +47,7 @@ Kafka 正常运行会得到 " STATUS: running(3) " 的反馈
 
 本预装包中内置 Kafka 可视化集群管理工具 [CMAK](https://github.com/yahoo/CMAK) ，使用请参考如下步骤：
 
-1. 本地浏览器 Chrome 或 Firefox 访问：*http://服务器公网IP:9091*，进入 CMAK 登录页面([不知道密码？](./user/credentials))
+1. 本地浏览器 Chrome 或 Firefox 访问：*`http://服务器公网IP:9091`*，进入 CMAK 登录页面([不知道密码？](./user/credentials))
 
 2. 成功登录后，开始新建集群
    ![创建kafka集群](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kafka/kafka-addcluster001-websoft9.png)

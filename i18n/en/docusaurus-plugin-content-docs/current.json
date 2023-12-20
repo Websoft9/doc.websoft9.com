@@ -598,5 +598,73 @@
   "sidebar.docs.category.参与开源": {
     "message": "Contribute",
     "description": "The label for category 参与开源 in sidebar docs"
+  },
+  "sidebar.docs.category.FASTPANEL": {
+    "message": "FASTPANEL",
+    "description": "The label for category FASTPANEL in sidebar docs"
+  },
+  "sidebar.docs.category.Rainbond": {
+    "message": "Rainbond",
+    "description": "The label for category Rainbond in sidebar docs"
+  },
+  "sidebar.docs.category.TeamCity": {
+    "message": "TeamCity",
+    "description": "The label for category TeamCity in sidebar docs"
+  },
+  "sidebar.docs.category.MinIO": {
+    "message": "MinIO",
+    "description": "The label for category MinIO in sidebar docs"
+  },
+  "sidebar.docs.category.SRS": {
+    "message": "SRS",
+    "description": "The label for category SRS in sidebar docs"
+  },
+  "sidebar.docs.category.Budibase": {
+    "message": "Budibase",
+    "description": "The label for category Budibase in sidebar docs"
+  },
+  "sidebar.docs.category.APEX": {
+    "message": "APEX",
+    "description": "The label for category APEX in sidebar docs"
+  },
+  "sidebar.docs.category.APITable": {
+    "message": "APITable",
+    "description": "The label for category APITable in sidebar docs"
+  },
+  "sidebar.docs.category.Elastic Stack": {
+    "message": "Elastic Stack",
+    "description": "The label for category Elastic Stack in sidebar docs"
+  },
+  "sidebar.docs.category.Akeneo": {
+    "message": "Akeneo",
+    "description": "The label for category Akeneo in sidebar docs"
+  },
+  "sidebar.docs.category.Matomo": {
+    "message": "Matomo",
+    "description": "The label for category Matomo in sidebar docs"
+  },
+  "sidebar.docs.category.OwnCloud": {
+    "message": "OwnCloud",
+    "description": "The label for category OwnCloud in sidebar docs"
+  },
+  "sidebar.docs.category.KodBox": {
+    "message": "KodBox",
+    "description": "The label for category KodBox in sidebar docs"
+  },
+  "sidebar.docs.category.Oracle Database": {
+    "message": "Oracle Database",
+    "description": "The label for category Oracle Database in sidebar docs"
+  },
+  "sidebar.docs.category.OpenStack": {
+    "message": "OpenStack",
+    "description": "The label for category OpenStack in sidebar docs"
+  },
+  "sidebar.docs.category.Github": {
+    "message": "Github",
+    "description": "The label for category Github in sidebar docs"
+  },
+  "sidebar.docs.category.发行版": {
+    "message": "发行版",
+    "description": "The label for category 发行版 in sidebar docs"
   }
 }
