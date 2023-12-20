@@ -1,0 +1,399 @@
+---
+sidebar_position: 1
+slug: /mysql
+tags:
+  - MySQL
+  - MariaDB
+  - Cloude Native Database
+---
+
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# MySQL/MariaDB Getting Started
+
+[MySQL](https://www.mysql.com/products/community/) is a popular open source database. Whether you are a fast growing web property, technology ISV or large enterprise, MySQL can cost-effectively help you deliver high performance, scalable database applications. It is intend to provide a high reliable database management system. MariaDB is one of the most popular database servers. Made by the original developers of MySQL. Guaranteed to stay open source.
+
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/mysql-mariadb-ui-websoft9.png)
+
+[MariaDB](https://mariadb.org/) is one of the most popular database servers in the world. It’s made by the original developers of MySQL and guaranteed to stay open source. Notable users include Wikipedia, WordPress.com and Google. MariaDB is developed as open source software and as a relational database it provides an SQL interface for accessing data. The latest versions of MariaDB also include GIS and JSON features.
+
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mariadb/mariadb-gui-websoft9.png)
+
+If you have installed Websoft9 MySQL/MariaDB, the following steps is for your quick start
+
+## Preparation
+
+1. Get the **Internet IP** of your Server on Cloud
+2. Check your **[Inbound of Security Group Rule](./administrator/firewall#security)** of Cloud Console to ensure the **TCP:3306,9090** is allowed
+3. Complete **[Five steps for Domain](./administrator/domain_step)** if you want to use Domain for Jenkins
+4. [Get](./user/credentials) default username and password of Jenkins
+
+## MySQL/MariaDB Initialization
+
+### Steps for you
+
+<Tabs>
+<TabItem value="linuxwizard" label="Linux" default>
+
+1. Use the **SSH** to connect Server, and run these command below to view the installation information and running status
+   ```
+   cd /data/apps/mysql && sudo docker compose ls
+   ```
+
+2. You can ge the message from SSH " STATUS: running(1) " when MySQL is running
+
+3. Using SSH to connect MySQL Server, run the following command
+   ~~~
+   #assume the root password is `7j5vc0EttEUDtC!`
+   docker exec -it mariadb mysql -uroot -p7j5vc0EttEUDtC!
+   ~~~
+
+4. You can find the MySQL version from the message
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mysql/mysql_command.png)
+
+5. Login MySQL with [phpMyAdmin](#phpmyadmin)
+   
+
+</TabItem>
+
+<TabItem value="winwizard" label="Windows">
+
+1.  Remote to Windows Server, run the following command with Windows-CMD Window
+   ~~~
+   #assume the root password is `123456`
+   mysql -uroot –p123456
+   ~~~
+2. Using Navicat on the Server Desktop
+
+</TabItem>
+</Tabs>
+
+
+### Having trouble?
+
+Below is for you to solve problem, and you can contact **[Websoft9 Support](./helpdesk)** or refer to **[Troubleshoot + FAQ](./faq#setup)** to get more.  
+
+
+## MySQL/MariaDB QuickStart
+
+## MySQL/MariaDB Setup
+
+### Modify and reset MySQL password
+
+Modify password: Change the current password to another password  
+Reset password: Have forgotten your password, need to get an initial password
+
+**Modify password**
+
+You can modify password by MySQL GUI or commands:
+
+1. Use phpMyAdmin(Recommend)
+
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/websoft9-modifymysqlpw.gif)
+
+2. Use Commands
+```
+docker exec -it mysql mysqladmin -u root -p oldpassword password 'newpassword' 
+```
+
+**Reset password**
+
+You can reset your MySQL password by the following two solution:  
+
+1. Use SSH to connect MySQL Server, access into the mysql container
+   ```
+   docker exec -it mysql bash
+   ```
+2. Run the following command
+   ```
+   wget -N https://raw.githubusercontent.com/websoft9dev/role_mysql/master/tools/reset_password.sh; bash reset_password.sh
+   ```
+
+
+### Set Remote Connection{#remote}
+
+Most of the time, if you want to use GUI tools to manage MySQL/MariaDB on you local computer, you shoud open the remote connection of MySQL/MariaDB. 
+
+Database is high security application, you need two steps for remote connection settings at least:
+
+1. Enable the TCP:3306 port
+   
+2. Open MySQL remote connection
+   
+    * [phpMyAdmin Quick set (recommended）](#phpmyadminremote)
+    * Use commands
+     ```
+     # Log in MySQL
+     docker exec -i mysql mysql -u root -p 
+     
+     # Enable Remote
+     mysql>  use mysql;
+     mysql>  update user set host = '%' where user = 'root';
+    
+     # Restart MySQL
+     sudo docker restart mysql
+
+     ```
+
+### Modify MySQL Data Directory{#datadirectory}
+
+The data directory for MySQL is set to */data/mysql* by default. If you want to modify MySQL Data Directory, following are the steps for you:
+
+1. Edit [MySQL compose file](#path)
+   ```shell
+   version: '3.8'
+   services:
+    mariadb:
+      image: $APP_REPO:$APP_VERSION
+      container_name: $APP_NAME
+      restart: always
+      environment:
+        - MARIADB_ROOT_PASSWORD=$APP_PASSWORD
+      ports:
+        - $APP_PORT:3306
+      command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+      volumes:
+        - ./src/newdata:/var/lib/mysql
+   ```
+
+2. Recreate the MySQL container, date derectory is ok
+   ```shell
+   cd /data/apps/mysql && sudo docker compose up -d
+   ```
+
+### Set The Binary Log
+
+You can modify the [MySQL configuration] (#path) to change the binary log settings<br />
+
+```
+log_bin = mysql-bin      # enable Binary log
+binlog_format = mixed    # Binary log format
+expire_logs_days = 7     # Binary log expire time
+```
+
+Some times, there a lot of event for your database, then the binary log file size very rapid growth and your disk space may not enough, if there no space on disk, your MySQL Service can not start.
+
+Suggest you change the expire_logs_day to more smaller if you binary log file size is too big
+
+### GUI
+
+Working on a relational database using only command line tools to writing queries can be hard, luckily we found the best Free GUI tools for your MySQL work. Most uses of MySQL for Web development allow you to get around a lot of back end requirements with the use of PHP and other tools that work the database without having to do more than set up. However, as the use of SQL for Web development has increased, and the complexities, so has the availability of tools to manage your SQL database. Here are some of the best tools for working with your MySQL database.
+
+
+| **Name**                                                     | **Description**                                              | **Cross platform**                            | **Price** |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | --------------------------------------------- | --------- |
+| [MySQL Workbench](https://dev.mysql.com/downloads/workbench/) | MySQL Workbench is a unified visual tool for database architects, developers, and DBAs. MySQL Workbench provides data modeling, SQL development, and comprehensive administration tools for server configuration, user administration, backup, and much more. | Windows,Linux,MacOS                           | Free      |
+| [phpMyAdmin](https://www.phpmyadmin.net/)                    | phpMyAdmin is a free software tool written in PHP, intended to handle the administration of MySQL over the Web. phpMyAdmin supports a wide range of operations on MySQL and MariaDB. Frequently used operations (managing databases, tables, columns, relations, indexes, users, permissions, etc) can be performed via the user interface, while you still have the ability to directly execute any SQL statement. | Based on Web,one installation, use everywhere | Free      |
+| [Navicat](https://www.navicat.com/en/products/navicat-for-mysql) | Navicat for MySQL is the ideal solution for MySQL/MariaDB administration and development. It is a single application that allows you to connect to MySQL and MariaDB databases simultaneously. | Windows,MacOS,IOS                             | Not free  |
+| [MySQL-Front](http://www.mysqlfront.de/)                     | MySQL-Front is a Windows front end program for the MySQL database server. The database structure and data can be handled via dialogs or SQL commands. Import and Export in standard file formats is supported. The database server can be connected directly or via HTTP tunneling. | Windows                                       | Free      |
+| [Sequel Pro](https://sequelpro.com/)                         | Sequel Pro is a fast, easy-to-use Mac database management application for working with MySQL databases. | MacOS                                         | Free      |
+| [HeidiSQL](https://www.heidisql.com/download.php)            | HeidiSQL is a useful and reliable tool designed for web developers using the popular MariaDB or MySQL server, Microsoft SQL databases or PostgreSQL. Support for multiple languages (including Chinese) | Windows                                       | Free      |
+| [DBeaver Community](https://dbeaver.io/)                     | Free multi-platform database tool for developers, SQL programmers, database administrators and analysts. Supports all popular databases: MySQL, PostgreSQL, MariaDB, SQLite, Oracle, DB2, SQL Server, Sybase, MS Access, Teradata, Firebird, Derby, etc. | Windows                                       | Free      |
+| [dbForge Studio for MySQL Express](https://www.devart.com/dbforge/mysql/) | dbForge Studio for MySQL is a universal GUI tool for MySQL and MariaDB database development, management, and administration. The IDE allows you to create and execute queries, develop and debug stored routines, automate database object management, analyze table data via an intuitive interface. The MySQL client delivers data and schema comparison and synchronization tools, database reporting tools, backup options with scheduling, and much more. | Windows                                       | Free      |
+
+GUI tools gives you direct access to your MySQL Databases on local and remote servers.
+
+### WEB GUI - phpMyAdmin{#phpmyadmin}
+
+[phpMyAdmin](https://www.phpmyadmin.net/) is a very popular MySQL database management tool. The following describes the common phpMyAdmin operations.
+
+
+1. Using local Chrome or Firefox to visit the URL http://Internet IP:9090, you will enter the  _phpMyAdmin_
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mysql/mysql-login-websoft9.png)
+
+2. Select you language, Username is `root`,Password should get from the Chapter"[Administrator usenames and password](./user/credentials)"
+   
+3. Click the button "Go"
+
+#### Modify the root password{#phpmyadminmodifypw}
+
+1. Login to phpMyAdmin, you can see the "Modify the password" link in dashboard page, then click it
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/phpmyadmin/phpmyadmin-changepwds-websoft9.png)
+
+2. After the modification of password, exit phpMyAdmin and refresh the log in page to restart it
+
+#### Add new database{#phpmyadmindb}
+
+1. Login to phpMyAdmin, click "New" in the left menu to start creating a new database
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/phpmyadmin/phpmyadmin-createdb-websoft9.png)
+
+2. Fill in the suitable Database Name, select the character coding, then click "Create" button to complete this step
+
+#### Add user account{#phpmyadminuser}
+
+> The database user is separated from the database and is a "many-to-many" relationship. You can associate a user with the permissions of a database by associating
+
+
+1. Login to phpMyAdmin, Click one database on the left menu which you want to add user account for it
+2. Click "**Privileges**" tab, you can see the users belong to this database listed
+3. Click "**Add user account**", start to add new user
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/mysql/mysql-adduser-websoft9.png)
+
+4. Fill in suitable User name/Host name/Password, click "go" button to complete this step
+5. You can also go to User account->Add user account to manage users
+
+#### Export/Impoft database{#phpmyadminexportimport}
+
+In phpMyAdmin, Export is to back up the database, import and restore the database.
+
+**Export**
+
+1. Login to phpMyAdmin, select your database then click "Export" tab on the top menu
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/phpmyadmin/phpmyadmin-export-websoft9.png)
+
+2. Select suitable Export method,Format for you, then click the "Go" button to start export
+
+3. After the database backup file (.sql suffix) is generated, save it to the local computer
+
+**Import**
+
+1. Restore the database, corresponding to the "Import" operation, refer to the following
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/mysql/mysql-import-websoft9.png)
+
+2. Import files should pay special attention to character set compatibility
+
+#### MySQL Remote {#phpmyadminremote}
+
+To enable remote in phpMyAdmin, you only need to change the access mode of the root account to "any way to access", as follows:
+
+1. Log in phpMyAdmin, go to User account->Edit privileges of root account
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/phpmyadmin/phpmyadmin-modifypw001-websoft9.png)
+
+2. Select the tab Login Information, Host Name fill in "%", click "Go" button completing this setting
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/phpmyadmin/phpmyadmin-modifypw002-websoft9.png)
+
+#### Manage multiple MySQL instances
+
+phpMyAdmin supports multiple MySQL instances.
+
+Modify the corresponding environment variable of the docker-compose file of phpMyAdmin (PMA_HOST is changed to PMA_HOSTS) to support:
+```
+version: "3.7"
+services:
+  phpmyadmin:
+      image: phpmyadmin/phpmyadmin
+      container_name: "phpmyadmin"
+      environment:
+       - PMA_HOSTS=172.17.0.1,172.17.0.2
+       - PMA_PORTS=3306
+       - UPLOAD_LIMIT=20M 
+```
+
+#### Modify import file size limit
+
+The default file size that phpMyAdmin can import is limited, you can modify it by the following steps:
+
+1. Use SFTP to connect to the server, edit [phpmyadmin compose file](#path), and add a field to the environment variable `- UPLOAD_LIMIT=20M`
+  ```
+  version: "3.7"
+  services: 
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        container_name: "phpmyadmin"
+        environment:
+         - PMA_HOST=172.17.0.1
+         - PMA_PORT=3306
+         - UPLOAD_LIMIT=20M
+  ```
+
+2. Restart phpMyAdmin
+  ```
+  cd /data/apps/phpmyadmin && docker-compose up -d
+  ```
+
+## Reference sheet
+
+The below items and **[General parameter sheet](./administrator/parameter)** is maybe useful for you manage MySQL/MariaDB 
+
+
+Run `docker ps`, view all containers when MySQL/MariaDB is running:
+
+```bash
+CONTAINER ID   IMAGE               COMMAND                  CREATED          STATUS          PORTS                                       NAMES
+4c7eb560231d   phpmyadmin:latest   "/docker-entrypoint.…"   10 minutes ago   Up 10 minutes   0.0.0.0:9090->80/tcp, :::9090->80/tcp       phpmyadmin
+d5c4ba36ce50   mariadb:10.8        "docker-entrypoint.s…"   10 minutes ago   Up 10 minutes   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp   mariadb 
+```
+
+### Path{#path}
+<Tabs>
+<TabItem value="linuxpath" label="Linux" default>
+
+MySQL installation directory:  */data/apps/mysql*  
+MySQL data directory: */data/apps/mysql/data/mysql_data*    
+MySQL configure file: */data/apps/mysql/src/conf.d/mysql.cnf*     
+MySQL compose file: */data/apps/mysql/docker-compose.yml*    
+
+MariaDB installation directory: */data/apps/mariadb*   
+MariaDB data directory: */data/apps/mariadb/data/mariadb_data*    
+MariaDB configure file: */data/apps/mariadb/src/conf.d/mysql.cnf*    
+MariaDB compose file: */data/apps/mariadb/docker-compose.yml*  
+
+phpMyAdmin installation directory: */data/apps/phpmyadmin*  
+phpMyAdmin configure file: */data/apps/phpmyadmin/src/config.user.inc.php*     
+phpMyAdmin compose file: */data/apps/phpmyadmin/docker-compose.yml*      
+
+</TabItem>
+<TabItem value="winpath" label="Windows">
+
+* directory: C:/websoft9/mysql
+* configure file: C:/websoft9/mysql/etc/my.ini
+* data directory: C:/websoft9/mysql/data
+
+</TabItem>
+</Tabs>
+
+### Port
+
+| Port | Use                                          | Necessity |
+| ------ | --------------------------------------------- | ------ |
+| 3306   | MySQL/MariaDB Remote port| Optional   |
+| 9090   | HTTP Access phpMyAdmin on Docker | Optional   |
+
+### Version
+
+```shell
+docker exec -it mysql mysql -V
+```
+
+### Service
+
+<Tabs>
+<TabItem value="linuxservice" label="Linux" default>
+
+```shell
+sudo docker start | stop | restart  phpmyadmin
+sudo docker start | stop | restart  mysql
+sudo docker start | stop | restart  mariadb
+```
+
+</TabItem>
+  <TabItem value="winservice" label="Windows">
+
+The service management function of the operating system is used to realize the start, stop and restart of MySQL.  
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/mysql-servicewin-websoft9.png)
+
+  </TabItem>
+</Tabs>
+
+
+### CLI
+
+After MySQL installation, the following tools are available by default:
+
+* mysql
+* mysqladmin
+* mysqldump 
+* mysqlhotcopy
+* mysqlcheck
+* mysqlshow
+* mysqlimport
+* mysqlbinlog
+* myisampack
+
+### API
+
+[Connectors and APIs](https://dev.mysql.com/doc/index-connectors.html)
+

@@ -1,0 +1,5 @@
+position: 8
+label: "Discuz"
+collapsible: true
+collapsed: true
+className: "red"

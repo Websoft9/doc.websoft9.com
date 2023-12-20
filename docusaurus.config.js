@@ -71,6 +71,11 @@ const config = {
 
           { to: '/docs/helpdesk', label: '技术支持', position: 'left' },
 
+          {
+            type: 'docsVersionDropdown',
+            position: 'right',
+          },
+
           { type: 'localeDropdown', position: 'right', },
 
           {

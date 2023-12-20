@@ -1,0 +1,5 @@
+position: 2
+label: "数据库"
+collapsible: true
+collapsed: true
+className: "red"

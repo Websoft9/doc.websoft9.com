@@ -1,0 +1,5 @@
+position: 1
+label: "WampServer"
+collapsible: true
+collapsed: true
+className: "red"

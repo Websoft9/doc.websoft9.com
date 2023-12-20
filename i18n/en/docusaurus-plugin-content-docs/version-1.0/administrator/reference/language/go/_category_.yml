@@ -1,0 +1,5 @@
+position: 6
+label: "Go"
+collapsible: true
+collapsed: true
+className: "red"

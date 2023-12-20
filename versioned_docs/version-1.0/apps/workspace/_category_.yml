@@ -1,0 +1,5 @@
+position: 20
+label: "云桌面"
+collapsible: true
+collapsed: true
+className: "red"

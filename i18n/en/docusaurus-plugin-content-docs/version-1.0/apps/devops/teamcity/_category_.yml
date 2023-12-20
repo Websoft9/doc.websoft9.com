@@ -1,0 +1,5 @@
+position: 100
+label: "TeamCity"
+collapsible: true
+collapsed: true
+className: "red"

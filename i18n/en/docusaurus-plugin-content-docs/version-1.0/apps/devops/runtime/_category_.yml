@@ -1,0 +1,5 @@
+position: 12
+label: "Web 应用环境"
+collapsible: true
+collapsed: true
+className: "red"

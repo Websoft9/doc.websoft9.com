@@ -1,0 +1,99 @@
+---
+sidebar_position: 1
+slug: /python
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+# Guide
+
+## Tutorial
+
+### uWsgi for application Server
+
+uWsgi is a application Server of Python, you can use it to publish your Python  Web application:   
+
+1. Install uWsgi for your isolated environment
+   ```
+   cd /data/wwwroot/mydjango && source bin/activate
+   pip install uwsgi
+   ```
+
+2. Add uWsgi configuration file at your application directory, named it, e.g `django.ini`
+   ```
+   [uwsgi]
+   master        = true
+   protocol      = uwsgi
+   http          = 0.0.0.0:8001
+   wsgi-file     = mysite1/mysite1/wsgi.py
+   chdir         = /data/wwwroot/mydjango
+   buffer-size   = 8192
+   enable-threads= true
+   close-on-exec = true
+   uid           = nginx
+   gid           = nginx
+   ```
+
+3. Start uWsgi Service
+   ```
+   /data/wwwroot/mydjango/bin/uwsgi --ini /data/wwwroot/mydjango/django.ini
+   ```
+
+4. Local computer browser access URL：*http://Server's Internet IP:8001* to test it
+
+
+## Troubleshoot{#troubleshoot}
+
+#### django start error?
+
+Error message:  You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+
+Solution:    
+
+```
+python manage.py migrate
+```
+
+## Parameters
+
+### Path{#path}
+
+Python site directory: */data/wwwroot*  
+Python framework directory: */data/wwwroot*  
+Python source code directory： */usr/lib/python*  
+Python logs directory: */data/logs/python*   
+
+Django installation directory: */data/wwwroot/django*  
+Django systemd name: django  
+
+### Version{#checkversion}
+
+```shell
+# Python version
+python3 -V
+python -V
+
+# pip version
+pip -V
+
+# Django version
+/data/wwwroot/django/bin/pip show django
+``````
+
+### Service{#service}
+
+```shell
+systemctl start django
+systemctl stop django
+systemctl restart django
+systemctl status django
+```
+
+### CLI{#cmd}
+
+* pip,
+* django-admin
+* python

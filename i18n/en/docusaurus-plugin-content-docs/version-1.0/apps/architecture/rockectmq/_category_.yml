@@ -1,0 +1,5 @@
+position: 3
+label: "RocketMQ"
+collapsible: true
+collapsed: true
+className: "red"

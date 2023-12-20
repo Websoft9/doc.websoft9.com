@@ -1,0 +1,265 @@
+---
+sidebar_position: 1
+slug: /sqlserver
+tags:
+  - SQL Server
+  - 云数据库
+---
+
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+# 快速入门
+
+[SQL Server Express](https://www.sqlserver.com) 是 Microsoft 官方 SQL Server 免费发行版（[版权与约束](#license)）。易于部署并可无偿获取并可以随应用程序免费再分发。如果需要更多的高级数据库功能，可将 SQL Server Express 无缝升级到 SQL Server 商业版本。
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/microsoft-sql-server-express.png)
+
+Windows 服务器适用于： SQL Server Express 2005, 2008, 2012, 2014, 2016, 2017
+Linux 服务器适用于： SQL Server Express 2017 2019 2022
+
+## 准备
+
+部署 Websoft9 提供的 SQL Server 之后，需完成如下的准备步骤方可进入初始化向导：
+
+1. 在云控制台获取您的 **服务器公网IP地址** 
+2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:1433,9090** 端口是否开启
+3. 若想用域名访问 SQLServer，请先到 **域名控制台** 完成一个域名解析
+4. 远程桌面至服务器，[启用 SQL Server 管理员密码](#enablepw)
+
+## SQLServer 初始化安装向导
+
+### 详细步骤
+
+<Tabs>
+<TabItem value="linuxinit" label="Linux" default>
+
+Linux环境下使用 CloudBeaver 来验证 SQL Server 数据库：
+
+1. 使用本地电脑浏览器访问：*`http://域名:9090`* 或 *`http://服务器公网IP:9090`*, 进入初始化页面
+   ![初始化 CloudBeaver](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-wizard001-websoft9.png)
+
+2. 设置用户名和密码，然后点击【Next】进入下一步
+   ![初始化 CloudBeaver](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-wizard002-websoft9.png)
+
+3. 继续点击【Next】进入下一步，最后点击【FINISH】完成初始化
+   ![初始化 CloudBeaver](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-wizard003-websoft9.png)
+
+4. 连接【SQL SERVER】，管理数据库：点击右上角【Settings】图标，选择【Administration】>【Connection Management】，添加 SQL SERVER
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-connection-websoft9.png)
+
+5. 填写数据库基本信息（[不知道账号密码？](./user/credentials)），点击【Create】
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-connsetting-websoft9.png)
+
+6. 点击左上角 Cloud Beaver 图标，SQL Server 数据库连接成功，可以方便管理数据库
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/sqlserver-main-websoft9.png)
+
+</TabItem>
+<TabItem value="wininit" label="Windows">
+
+1. 使用本地电脑的 **远程桌面**工具，登录到服务器  
+2. 打开 **SQLServer企业管理器**，通过：【服务器名称】>【浏览更多...】选择服务器，并以【Windows身份】登录数据库  
+
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-getsqlserver-websoft9.png)
+
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-getsqlserver2-websoft9.png)
+   
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-winlogin-websoft9.png)
+
+3. [启用密码（开启 SQL Server 身份验证模式）](#enablepw)（可选）
+4. [重启 SQL Server 服务](#service)，使配置生效。
+
+</TabItem>
+</Tabs>
+
+### 出现问题？
+
+若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
+
+**无法使用 SQLServer 密码登录？**  
+
+为了安全考虑，本部署方案没有创建 SQLServer 的登录密码。参考：[启用密码](#enablepw)
+
+**SQLServer 服务启动失败？**  
+
+请检查服务器名称是否正确：在【服务器名称】中通过【浏览更多...】选择正确的服务器
+
+
+## SQLServer 使用入门
+
+> 需要了解更多 SQLServer 的使用，请参考官方文档：[SQL Server 技术文档](https://docs.microsoft.com/zh-cn/sql/sql-server)
+
+## SQLServer 常用操作
+
+### 获取服务器名称（ID）
+
+使用 SQLServer 企业管理器 连接数据库时，除了填写 `.` 或 `(local)` 之外，也可以直接填写服务器名称（ID）。
+
+这个 ID 获取的方式有两种：
+
+* 从 **Windows 系统**中获取：【我的电脑】>【属性】，计算机名即我们所需的 ID
+
+  ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver2008express/sqlserver-servnames-websoft9.png)
+
+2. 从 **SQLServer企业管理器**获取：【服务器名称】>【浏览更多...】选择服务器，并以【Windows身份】登录数据库  
+
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-getsqlserver-websoft9.png)
+
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-getsqlserver2-websoft9.png)
+
+
+
+### 启用密码（SQL Server 身份验证模式）{#enablepw}
+
+默认没有启用密码登录方式（SQL Server 身份验证模式），参考下面的步骤设置：
+
+1. SQLServer 企业管理器中：通过【属性】>【安全性】>【服务器身份验证】，选择 **SQLServer 和 Windows 身份验证模式**  
+
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-winlogin-pw1-websoft9.png)
+   
+2. 启用 sa 账户，并设置密码：依次展开【安全性】、【登录名】，找到默认登录名【sa】，右键【属性】，在弹出的窗口中点击【状态】，将登录选项选择【已启用】，也可以在【常规】选项卡里设置你的登录密码，点击确认保存.  
+
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-winlogin-pw2-websoft9.png)
+
+3. [重启 SQL Server 服务](#service)，使配置生效。
+
+### Reporting Services 设置
+
+待研究
+
+
+### 开启远程访问{#remote}
+
+通过本地电脑远程访问 SQLServer，需完成如下设置：  
+
+#### SQLServer 服务端开启远程连接{#remotess}
+
+本镜像默认完成了SQLServer远程访问的配置，但为了能够顺利访问，SQLServer所在的服务器还需完成如下两个设置：
+
+1. 打开**SQLServer企业管理器**工具，在服务器【连接】属性中，勾选【允许远程连接到本服务器】
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-remote1-websoft9.png)
+   
+2. 打开**SQL Server 配置管理器**工具，在网络配置中，启用【TCP/IP】协议
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-remote2-websoft9.png)
+
+#### Windows 服务器设置防火墙和端口{#remotefirewall}
+   
+1. 在Windows服务器防火墙设置中开启远程访问：【控制面板】>【系统和安全】>【Windows防火墙】>【允许程序或功能通过Windows防火墙】  
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver2014/sqlserver-firewall001-websoft9.png)
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver2014/sqlserver-firewall002-websoft9.png)
+
+2. 在云控制台中，开启服务器安全组的**1433端口**  
+
+#### 客户端工具范例{#navicat}
+
+设置完成上面的服务器之后，下面以Navicat为例来说明如何在本地电脑访问并管理SQLServer
+
+1. [下载](http://www.navicat.com.cn/download)并安装Navicat
+
+2. 在Windows服务器防火墙设置中开启远程访问（请见上一章）
+
+3. 在Navicat->新建一个SQLServer连接，填写好连接参数
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver2008express/sqlserver2008-navicat-websoft9.png)
+
+4.  点击【连接测试】，成功表明参数没有问题。
+
+5.  点击【确认】后，进入数据库管理界面
+
+
+## SQL Server 参数
+
+SQL Server 应用中包含 IIS 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+
+通过运行 `docker ps`，查看 SQL Server 运行时所有的服务组件： 
+```
+CONTAINER ID   IMAGE                                        COMMAND                  CREATED          STATUS          PORTS                                       NAMES
+7918843fec4a   mcr.microsoft.com/mssql/server:2022-latest   "/opt/mssql/bin/perm…"   30 seconds ago   Up 24 seconds   0.0.0.0:1433->1433/tcp, :::1433->1433/tcp   mssql
+f1780694066a   dbeaver/cloudbeaver:latest                   "./run-server.sh"        2 hours ago      Up 2 hours      0.0.0.0:9090->8978/tcp, :::9090->8978/tcp   cloudbeaver
+```
+
+### 路径{#path}
+
+<Tabs>
+<TabItem value="linuxpath" label="Linux" default>
+
+SQL Server 安装目录： */data/apps/sqlserver*  
+SQL Server 数据目录： */data/apps/sqlserver/data/mssql_data*  
+
+</TabItem>
+<TabItem value="winpath" label="Windows">
+
+以SQL Server 2014为例，集成包中包括 SQL Server 2014 数据库引擎和 SQL Server Management Studio Express，具体包括：
+
+* 操作系统： Windows Server系统
+* 软件版本： SQL Server2014 R2 SP2 Express Edition,SQL Server Management Studio, Microsoft .Net Framework 4.6,IIS7
+* 软件目录： C:\Program Files\Microsoft SQL Server
+* 数据库引擎数据目录：C:\Program Files (x86)\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA
+
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver2014/sqlserver2014-install-websoft9.png)
+
+</TabItem>
+</Tabs>
+
+### 端口
+
+| 端口号 | 用途                                          | 必要性 |
+| ------ | --------------------------------------------- | ------ |
+| 1433   | 远程访问 SQLServer | 必选   |
+| 9090   | 可视化 SQLServer 工具 | 必选   |
+
+### 版本
+
+使用 SQL Server Management Studio 查看
+
+### 服务{#service}
+
+<Tabs>
+<TabItem value="linuxserver" label="Linux" default>
+sudo docker start | stop | restart | stats mssql  
+sudo docker start | stop | restart | stats cloudbeaver   
+</TabItem>
+<TabItem value="winserver" label="Windows">
+##### 可视化界面管理
+
+使用 SQL Server 身份验证登录数据库。打开**SQL Server 配置管理器**工具，重启 SQL Server 服务。  
+
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-config-websoft9.png)
+
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-restart-websoft9.png)
+</TabItem>
+</Tabs>
+
+##### 命令行管理
+
+也可以使用 cmd 工具，通过命令的方式启动或关闭数据库
+
+*   快速启动命令：net start mssqlserver
+*   关闭服务：net stop mssqlserver
+*   SQL Server 管理器打开的命令是：ssms
+
+
+### 命令行
+
+[mssql-cli](https://docs.microsoft.com/en-us/sql/tools/mssql-cli)
+
+
+### API
+
+
+[SQL Assessment API](https://docs.microsoft.com/en-us/sql/tools/sql-assessment-api/sql-assessment-api-overview?view=sql-server-ver15)
+
+
+### 版权与约束{#license}
+
+本文档中所涉及的 SQLServer 均为 Express 版本，可以免费使用或分发。详情参考官方：[许可条款](https://www.microsoft.com/zh-cn/download/details.aspx?id=29693)
+
+产品 License 清单： 
+
+* [license_Expr_2005.rtf](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/license/license_Expr_2005.rtf)
+* [license_Expr_2008R2.rtf](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/license/license_Expr_2008R2.rtf)
+* [license_Expr_2008.rtf](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/license/license_Expr_2008.rtf)
+* [license_Expr_2012.rtf](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/license/license_Expr_2012.rtf)
+
+Express版本与企业版相比，功能更少（例：[SQLServer 2016 各个版本功能对比](https://docs.microsoft.com/zh-cn/sql/sql-server/editions-and-components-of-sql-server-2016?view=sql-server-ver15#Cross-BoxScaleLimits)）。另外，它针对服务器有如下的限制：不超过1个处理器，不超过10G数据存储

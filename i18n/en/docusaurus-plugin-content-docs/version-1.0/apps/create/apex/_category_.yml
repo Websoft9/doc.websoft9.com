@@ -1,0 +1,5 @@
+position: 100
+label: "APEX"
+collapsible: true
+collapsed: true
+className: "red"

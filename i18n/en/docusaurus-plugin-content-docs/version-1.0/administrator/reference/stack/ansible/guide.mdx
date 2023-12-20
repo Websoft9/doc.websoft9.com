@@ -1,0 +1,179 @@
+---
+sidebar_position: 1
+slug: /ansible
+tags:
+  - Configure Cloud
+  - DevOps
+---
+
+import AnsibleFacts from './_facts.md';
+
+# Guide
+
+## Tutorial
+
+### Ansible quick start
+
+If you have use Websoft9 Ansible, you can quick start it below:  
+
+1. Use SSH to connect Server, and run the command `ansible -h` to list all help
+   ```
+   usage: ansible [-h] [--version] [-v] [-b] [--become-method BECOME_METHOD]
+                  [--become-user BECOME_USER] [-K] [-i INVENTORY] [--list-hosts]
+                  [-l SUBSET] [-P POLL_INTERVAL] [-B SECONDS] [-o] [-t TREE] [-k]
+                  [--private-key PRIVATE_KEY_FILE] [-u REMOTE_USER]
+                  [-c CONNECTION] [-T TIMEOUT]
+                  [--ssh-common-args SSH_COMMON_ARGS]
+                  [--sftp-extra-args SFTP_EXTRA_ARGS]
+                  [--scp-extra-args SCP_EXTRA_ARGS]
+                  [--ssh-extra-args SSH_EXTRA_ARGS] [-C] [--syntax-check] [-D]
+                  [-e EXTRA_VARS] [--vault-id VAULT_IDS]
+                  [--ask-vault-pass | --vault-password-file VAULT_PASSWORD_FILES]
+                  [-f FORKS] [-M MODULE_PATH] [--playbook-dir BASEDIR]
+                  [-a MODULE_ARGS] [-m MODULE_NAME]
+                  pattern
+
+   Define and run a single task 'playbook' against a set of hosts
+
+   positional arguments:
+   pattern               host pattern
+
+   ```
+
+2. Run the command `ansible localhost -m setup` to get the facts of machine
+   ```
+   localhost | SUCCESS => {
+    "ansible_facts": {
+        "ansible_all_ipv4_addresses": [
+            "172.23.0.1",
+            "172.27.0.1",
+            "172.22.0.1",
+            "172.18.0.1",
+            "172.28.0.1",
+            "172.17.0.1",
+            "172.19.0.11"
+        ],
+        "ansible_all_ipv6_addresses": [
+            "fe80::42:9fff:fe11:a0f3",
+            "fe80::42:b5ff:feb0:13b3",
+            "fe80::42:1fff:fe68:d58b",
+            "fe80::8874:21ff:fe2a:cada",
+            "fe80::42:2cff:fefd:f576",
+            "fe80::688a:7ff:fea2:9a76",
+            "fe80::42:bdff:fe4e:d3ab",
+            "fe80::42:edff:fef4:5bd3",
+            "fe80::5054:ff:fe4a:8b63",
+            "fe80::14d0:b6ff:fecb:a383",
+            "fe80::2cae:e1ff:fee1:aa10"
+        ],
+        "ansible_apparmor": {
+            "status": "disabled"
+        },
+        "ansible_architecture": "x86_64",
+        "ansible_bios_date": "04/01/2014",
+        "ansible_bios_version": "seabios-1.9.1-qemu-project.org",
+        ...
+   ```
+4. Run the playbook of Ansible
+   ```
+   cd /data/apps/ansible
+   ansible-playbook -i hosts test.yml -c local
+   ``` 
+
+### Use Role{#installrole}
+
+Websoft9 have maintenance some useful [Ansible role](https://github.com/websoft9?q=role&type=all&language=&sort=)）for you to install Apache, Nginx, PHP, MySQL, JDK easily.  
+
+e.g  Install LAMP runtime by Ansible roles
+
+1. SSH to connect Server and run the below commands
+   ```
+   # MySQL
+   git clone https://github.com/Websoft9/role_mysql.git
+   ansible-playbook role_mysql/tests/test.yml
+
+   # PHP
+   git clone https://github.com/Websoft9/role_php.git
+   ansible-playbook role_php/tests/test.yml
+
+   # Apache
+   git clone https://github.com/Websoft9/role_apache.git
+   ansible-playbook role_apache/tests/test.yml
+   ```
+2. You can select version for PHP, MySQL when you running these roles
+
+## Troubleshoot{#troubleshoot}
+
+#### No python-urllib3? 
+
+```
+yum install python-urllib3
+```
+
+#### Can't connect hosts always?
+
+Try to clear */root/.ssh/known_hosts*  
+
+## Parameters
+
+### Path{#path}
+
+Ansible configuration file: */etc/ansible/ansible.cfg*  
+Ansible sample directory: */data/apps/ansible*  
+
+### Version{#version}
+
+```shell
+# Ansible  Version
+ansible --version
+```
+
+### CLI{#cmd}
+
+Most users are familiar with ansible and ansible-playbook, but those are not the only utilities Ansible provides. Below is a complete list of Ansible utilities. Each page contains a description of the utility and a listing of supported parameters.
+
+- [ansible](https://docs.ansible.com/ansible/latest/cli/ansible.html)
+- [ansible-config](https://docs.ansible.com/ansible/latest/cli/ansible-config.html)
+- [ansible-console](https://docs.ansible.com/ansible/latest/cli/ansible-console.html)
+- [ansible-doc](https://docs.ansible.com/ansible/latest/cli/ansible-doc.html)
+- [ansible-galaxy](https://docs.ansible.com/ansible/latest/cli/ansible-galaxy.html)载
+- [ansible-inventory](https://docs.ansible.com/ansible/latest/cli/ansible-inventory.html)
+- [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html)
+- [ansible-pull](https://docs.ansible.com/ansible/latest/cli/ansible-pull.html)
+- [ansible-vault](https://docs.ansible.com/ansible/latest/cli/ansible-vault.html)
+
+ansible-playbook is the most popular command to run Ansible program, but Ansible have [Ad-doc](https://docs.ansible.com/ansible/2.9/user_guide/intro_adhoc.html) to run the single program:  
+
+```
+# Print disk information
+ansible localhost -m command -a 'df -h'
+
+# Get facts
+ansible localhost -m setup
+
+# Test ping
+ansible all -m ping
+
+# Install docker-composer
+ansible localhost -m get_url -a "url=https://getcomposer.org/composer-stable.phar dest=/usr/bin/composer mode=0750"
+```
+
+### Configuration file{#cfg}
+
+You can use different [ansible.cfg](https://docs.ansible.com/ansible/latest/reference_appendices/config.html) for you Ansible
+
+- `ANSIBLE_CONFIG` (environment variable if set)
+- `ansible.cfg` (in the current directory)
+- `~/.ansible.cfg` (in the home directory)
+- `/etc/ansible/ansible.cfg`
+
+### Role resource
+
+Open source [Ansible role](https://github.com/search?q=org%3AWebsoft9+role) powered by Websoft9
+
+### Environment{#facts}
+
+<AnsibleFacts name="facts" />;
+
+
+

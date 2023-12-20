@@ -1,0 +1,5 @@
+position: 4
+label: "nopCommerce"
+collapsible: true
+collapsed: true
+className: "red"

@@ -1,0 +1,262 @@
+---
+sidebar_position: 3
+slug: /bt/admin
+tags:
+  - BT
+  - 宝塔面板
+  - 运行环境
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+# 维护指南
+
+本章提供的是本应用自身特殊等维护与配置。而**配置域名、HTTPS设置、数据迁移、应用集成、Web Server 配置、Docker 配置、修改数据库连接、服务器上安装更多应用、操作系统升级、快照备份**等操作通用操作请参考：[管理员指南](../administrator) 和 [安装后配置](../install/setup) 相关章节。
+
+## 场景
+
+### 重置密码
+
+<Tabs>
+  <TabItem value="linuxrepw" label="Linux" default>
+
+如果是忘记了密码，请使用WinSCP或Putty运行如下命令，重置密码
+~~~
+
+//示例：将admin用户的密码重置为admin123
+
+cd /www/server/panel && python tools.pyc panel admin123 admin
+
+//如果提示多次登录失败，暂时禁止登录 请输入以下命令，清除登录限制
+rm -f /www/server/panel/data/*.login
+
+~~~
+
+  </TabItem>
+
+  <TabItem value="windowsrepw" label="Windows">
+
+当忘记了宝塔Web端密码时，请远程桌面到Windows服务器，打开客户端->右上角菜单->修改密码 ，即可修改用户名和密码
+
+![宝塔Windows 重置密码](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btwin/bt-winresetpw-websoft9.png)
+
+  </TabItem>
+</Tabs>
+
+
+### 自动备份
+
+宝塔提供的计划任务功能，可以实现自动网站的自动备份
+
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btwin/bt-taskbackup-websoft9.png)
+
+
+### 升级
+
+#### 内核升级
+
+宝塔提供了一键在线升级功能，只要根据系统提示，点击升级按钮即可完成升级
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/btlinux/bt-update001-websoft9.png)
+
+#### 组件升级
+
+宝塔在使用中一般会安装大量的软件或组件，包括：php，mysql，phpmyadmin等，
+
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btwin/bt-win-intallhj-websoft9.png)
+
+## 故障排除
+
+除以下列出的 BT 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
+
+#### 导入SQL出现乱码？
+
+问：用宝塔里边的上传导入SQL，导入的SQL都是乱码！如果使用PHPMyAdmin就不会
+
+答：不同的数据库客户端工具默认的编码格式可能有差异，宝塔里也可以使用phpmyadmin工具。
+
+#### 网站数量过多，服务经常自动重启
+
+问：一台服务器网站数量100个，发现服务经常自动重启
+
+答：一台服务器上管理网站的数量请勿超过20个，否则初始资源不充裕的情况下会导致内存和CPU消耗殆尽，从而服务自动重启。理论上，一个网站最少需要0.5G的内存容量，如果有20个网站话，最低是16G内存。
+
+#### BT 面板奔溃了怎么办？
+
+宝塔面板会奔溃吗？任何软件都会出问题
+宝塔奔溃的几率大吗？不大，但需要预防
+
+宝塔是面板，面板工具都是调用操作系统层面的东西。对应宝塔奔溃之后的处理，需要掌握如下知识点：
+
+*   宝塔的基础环境安装在哪里？是否可用？
+*   数据库是否可用？
+*   网站文件在哪里？
+*   是否能够实现快速备份
+
+掌握以上几点，也许能够力挽狂澜
+
+#### IIS解析漏洞告警怎么处理？
+
+云鼎实验室在日常安全运营中发现，宝塔 Windows 面板默认安装的 IIS+PHP 环境存在 IIS 解析漏洞，攻击者可以在任意文件上传点上传一个包含着恶意 PHP 代码的文件（图片、TXT、压缩包等）后，通过利用 IIS 解析漏洞即可执行 PHP 代码，可能会导致用户代码、数据库泄露。
+
+如果您通过宝塔安装了IIS，就会产生一个IIS的解析漏洞，您需要做出如下修改：
+
+1.修改由IIS在根目录中自动生成“web.config”的文件（路径：“C:\inetpub\wwwroot”），将“resourceType”对应的"Unspecified"修改为“File”。
+2.如果您新建了网站中包含了web.config文件，也需要做出上述修改
+
+如果安装了IIS，又安装了PHP，您需要修改如下配置：
+
+1. 打开“C:\Windows\System32\inetsrv\config\applicationHost.config”文件
+2. 将“<add name="PHP_FastCGI" path="*.php" verb="*" modules="FastCgiModule" scriptProcessor="C:\BtSoft\WebSoft\php\5.4\php-cgi.exe" resourceType="Unspecified" />”中“resourceType”对应的"Unspecified"修改为“File”。
+
+以上路径以PHP5.4为例，如果安装了多个php版本，每个PHP目录均需要进行修改
+
+#### 为什么 BT 防火墙设置没有生效？
+
+宝塔的【安全】>【防火墙】设置中，有灵活的服务器操作系统的端口设置功能。但不建议通过此处设置端口，为什么呢？  
+
+当我们在云服务器上使用宝塔的时候，云服务器厂商的安全组中已经有了端口设置，且云厂商安全组的设置优先级大于宝塔防火墙对应的设置。
+
+例如：在宝塔中开放了80端口，而安全组中80端口是关闭，最终结果80端口仍然是关闭的。即宝塔中设置与否，不起决定作用，所以还是不设置为好。
+
+
+## 问题解答
+
+#### BT 支持多语言吗？
+
+支持中英文语言，但需要在部署之前选定语言，即安装中文版或英文版
+
+#### BT Windows 面板支持哪些操作系统？
+
+支持 Windows Server 2008/2012/2016/2019 64位
+
+#### 宝塔的账号绑定是必须的吗？
+
+不是。您可以直接访问： *http://服务器公网IP:8888/soft* 绕开绑定。
+
+#### 宝塔 Linux 版 VS 宝塔 Window 版？
+
+下面按照操作系统的不同，将宝塔的功能清单做一个对比说明，供您参考：
+
+|  功能  |  Linux  |  Windows  |
+| --- | --- | --- |
+| 应用服务   |  Apache, Nginx, Tomcat, OpenLiteSpeed  | Apache, Nginx, IIS   |
+|  程序语言  |   PHP5.2-php8.0, Java, Node |   PHP5.2-php8.0, Node |
+|   FTP |  Pure-Ftpd  |  FileZilla Server |
+|   数据库 |  MySQL, MongoDB  |  MySQL, SQLServer Express, MongoDB  |
+|  数据库工具  | phpMyAdmin   |  phpMyAdmin  |
+|  缓存  |  Redis, Memcached  |  Redis, Memcached   |
+| 外部存储接口    |  七牛云，阿里云，又拍云，FTP存储空间  | 阿里云，又拍云，FTP存储空间   |
+|  插件 |   宝塔运维，宝塔安全登录，云解析，PHP守护，宝塔跑分，宝塔一键迁移等 |  宝塔运维，宝塔安全登录，宝塔-主服务，宝塔一键部署源码，宝塔一键迁移等   |
+|  其他  |  Linux工具箱, Docker  | ImageMagick，Windows设置工具   |
+
+> 建议选更稳定可靠的 宝塔 Linux 版
+
+#### 宝塔能帮我做什么？是必须的吗？
+
+**从业务场景的角度看**，宝塔适合多网站、多用户管理，即您的服务器上管理多个网站，每个网站属于不同的用户/客户，这种情况下，宝塔非常管用。
+
+**从技术的角度上看**，如果您有如下的技术需求，宝塔是可以帮助您的：
+
+* 需要服务器支持PHP多版本，甚至Java，.NET共存（虽然不建议这样做）
+* 不擅长通过修改配置文件去实现多网站、https等设置
+* 不擅长设置多个FTP
+* 希望可以监控服务器运行状态（CPU、内存、流量监控图表等）
+* 希望通过可视化解决管理防火墙和端口更改
+* 希望通过可视化界面计划任务设置
+* 希望常见的服务器软件可以在线安装
+
+总之，如果在技术配置上有可视化需求的您，您会觉得宝塔是很贴心的工具。
+
+但需要注意的是，对运行服务器来说，环境越简单、所安装的软件越少、网站数量越少，服务运行就更加稳定可靠。万事万物都不完美，宝塔良好的用户体验和全面覆盖性，也是有代价的。
+
+> 总结：宝塔是很好用的，但是宝塔不是必须的
+
+#### 宝塔可以管理多少网站？
+
+宝塔官方并没有关于网站数量上限的说明。但从实际运维经验来看，建议一台使用宝塔的云服务器上最好不要超过20个网站。
+
+
+#### 如果没有域名是否可以部署 BT？
+
+可以
+
+#### 是否有可视化的数据库管理工具？
+
+宝塔安装 LAMP 或 LNMP 的时候默认安装 phpMyAdmin
+
+#### 宝塔 Windows 服务器客户端作用？
+
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btwin/bt-wintools-websoft9.png)
+
+主要用于配置域名、安装授权、重置密码、启停宝塔服务等。
+
+#### 修改文件所属用户（组）和读写权限?
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btlinux/bt-quanxian-websoft9.png)
+
+
+#### phpMyAdmin 还是宝塔后台管理数据库？
+
+虽然宝塔有数据库管理功能，但实际上数据库管理是一件复杂而严谨的事情，与 MySQL 最匹配的可视化管理工具是 phpMyAdmin，建议使用 phpMyAdmin 完成如下操作：
+
+*   数据导入与导出
+*   修改数据库密码
+*   增加用户
+*   修改字符集
+*   SQL语言的运用
+
+#### 可以使用 BT 网站搬家功能吗？
+
+慎用
+
+##### 桌面端和Web端
+
+宝塔 Windows 面板有两个访问端口：一个是服务器的桌面端，一个是通过PC浏览器访问的Web端。
+
+##### 桌面应用端
+
+*   传统的软件端操作界面，可以对服务器的站点进行高效的管理
+*   高效的操作管理，可快速搭建站点、数据库、FTP等服务
+    ![](https://www.bt.cn/Public/images/win_pc.png)
+
+##### Web应用端
+
+*   相对于桌面应用端有更好的体验，跨终端、跨平台
+*   高效的操作管理，可快速搭建站点、数据库、FTP等服务
+*   完善的在线文件管理器，轻松实现图片查看，文本编辑，文件打包解压
+    ![](https://www.bt.cn/Public/images/win_web.png)
+    
+
+> Web端的功能更为全面，只要SQLServer的安装需要使用客户端，其他的都可以在Web端完成，因此后续的指南我们均以Web端作为范例来进行具体说明。
+
+#### PHP, Java 和 Node.js 全部装上？
+
+可以。虽然宝塔可选的组件很多，但请把握一个原则："不用的不装，什么时候用什么时候装"。
+
+#### 需要运行 PHP 网站怎么安装环境？
+
+安装推荐套餐，即安装：Apache，MySQL，PHP， phpMyAdmin 等
+
+#### 安装哪个 PHP 版本合适？
+
+根据你的应用决定 PHP 版本，如果应用没有明确所需的版本，建议安装 PHP7.2 或以上版本。另外，除非有多版本需求，请不要主动安装多个PHP版本
+
+#### 有哪些软件是必须安装的吗？
+
+没有必须安装的软件，请根据应用要求去安装。原则："不用的不装，什么时候用什么时候装"。
+
+#### 宝塔中 SQLServer 怎么安装？
+
+建议自行下载 Microsoft 官方的包进行安装。
+
+#### IIS 与 Apache，Nginx 可以同时安装吗？
+
+三者选其一，否则会引起不必要的软件冲突
+
+#### 宝塔 Windows 装哪个 Web 服务器？
+
+推荐 IIS
+
+

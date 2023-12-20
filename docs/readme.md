@@ -5,7 +5,7 @@ slug: /
 
 # 导读
 
-欢迎来到 Websoft9 文档。
+欢迎来到 Websoft9-Next 文档。
 
 在这里，您可以访问 Websoft9 的完整文档，掌握云原生架构的技能，获得主流开源应用的使用知识。  
 
@@ -15,7 +15,7 @@ Websoft9 是一个以应用为中心的开源 PaaS 平台，也是云原生的�
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/websoft9/websoft9-dashboard.png)
 
-它简单易用，界面友好，无需任何技术知识。Websoft9 将企业部署软件的时间由 1-2 天缩短到 1 分钟。 
+它简单易用，界面友好，无需任何技术知识。Websoft9 将企业部署软件的时间由 1-2 天缩短到 1 分钟。
 
 从此，企业部署开源系统的工作不再是专业 IT 人员的专属技能，企业的 CEO 以及业务部门的管理人员，都可以自行运行所需的应用。
 

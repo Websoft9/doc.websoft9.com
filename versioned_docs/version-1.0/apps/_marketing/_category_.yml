@@ -1,0 +1,5 @@
+position: 11
+label: "市场营销"
+collapsible: true
+collapsed: true
+className: "red"

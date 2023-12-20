@@ -1,0 +1,392 @@
+---
+sidebar_position: 1
+slug: /mysql
+tags:
+  - MySQL
+  - MariaDB
+  - Cloude Native Database
+---
+
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# 快速入门
+
+[MySQL](https://www.mysql.com/products/community/) 是全球知名的关系型数据库管理系统，由瑞典 MySQL AB 公司开发，几经易手目前属于 Oracle 旗下产品。
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/mysql-dbgui-websoft9.png)
+
+[MariaDB](https://mariadb.org/) 是一个在全球广受欢迎的关系型数据库系统。它由 MySQL 创始人 Michael Widenius 于2014年联合旧部在芬兰创立。MariaDB最初被设计为 MySQL 的增强，直接替代品，之所以被使用是因为它具有快速，可扩展和强大的功能，并具有丰富的存储引擎，插件和许多其他工具生态系统，因此对于各种用例都非常通用。
+
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mariadb/mariadb-gui-websoft9.png)
+
+## 准备
+
+部署 Websoft9 提供的 MySQL/MariaDB 之后，需完成如下的准备工作：
+
+1. 在云控制台获取您的 **服务器公网IP地址** 
+2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:3306,9090** 端口已经开启
+3. 在服务器中查看 MySQL/MariaDB 的 **[默认账号和密码](./user/credentials)**  
+4. 若想用域名访问  MySQL/MariaDB，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
+
+
+## MySQL/MariaDB 初始化向导
+
+### 详细步骤
+
+部署 MySQL/MariaDB 之后，依次完成下面的步骤，验证其可用性
+
+<Tabs>
+<TabItem value="linuxwizard" label="Linux" default>
+
+1. 使用 SSH 连接 MySQL/MariaDB 所在的服务器
+
+2. 运行下面的命令，查看 MySQL/MariaDB 的安装信息和运行状态
+    ```
+    cd /data/apps/mysql && sudo docker compose ls
+    ```
+   MySQL 正常运行会得到 " STATUS: running(1)" 的反馈
+
+3. 使用 root [账号密码](./user/credentials) 登录 MySQL/MariaDB 服务端
+    ~~~
+    #假设初始密码是：7j5vc0EttEUDtC!
+    docker exec -it mariadb mysql -uroot -p7j5vc0EttEUDtC!
+    ~~~
+
+    登录成功会显示如下信息：
+
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mysql/mysql_command.png)
+
+4. 使用 MySQL 可视化管理工具 [phpMyAdmin](#phpmyadmin) 验证
+
+
+</TabItem>
+
+<TabItem value="winwizard" label="Windows">
+
+1. 远程桌面登录到 Windows-CMD 窗口，运行下面的命令
+    ~~~
+    #假设初始密码是：123456
+    mysql -uroot –p123456
+    ~~~
+2. 使用服务器桌面上的 
+
+</TabItem>
+</Tabs>
+
+
+### 出现问题？
+
+若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题。
+
+
+## MySQL/MariaDB 常用操作
+
+
+### 密码管理
+
+- 修改密码，即使用已有密码登录 MySQL，然后修改成另外一个密码。  
+- 重置密码，即忘记了密码，需要通过重置密码找回
+
+##### 修改密码{#modifypw}
+
+可以通过 MySQL 管理工具修改密码，也通过命令上修改密码
+
+##### phpMyAdmin修改密码
+
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/websoft9-modifymysqlpw.gif)
+
+##### 命令行修改密码
+
+执行一下命令:
+```
+docker exec -it mysql mysqladmin -u 用户名 -p 旧密码 password '新密码' 
+```
+
+##### 重置密码{#resetpw}
+
+如果忘记了 root 密码，就需要通过命令操作，实现MySQL密码重置。我们提供了一个重置密码的脚本：
+
+1. 使用SSH远程连接到 MySQL 服务器，进入容器
+   ```
+   docker exec -it mysql bash
+   ```
+   
+2. 运行如下命令，按提示输入新密码即可。
+   ```
+   wget -N https://ghproxy.com/https://raw.githubusercontent.com/websoft9dev/role_mysql/master/tools/reset_password.sh; bash reset_password.sh
+   ```
+
+### 设置 MySQL 远程访问{#remote}
+
+本地电脑连接 MySQL 时，需设置 MySQL 远程访问：
+
+1. 云控制台安全组开启 TCP:3306 端口
+2. 设置 MySQL 的远程配置
+    * [phpMyAdmin 快速配置（推荐）](#phpmyadminremote)
+    * 命令行配置
+     ```
+     # 登录
+     docker exec -i mariadb mysql -uroot -p YOURPASSWORD
+     
+     # 开启远程访问
+     mysql>  use mysql;
+     mysql>  update user set host = '%' where user = 'root';
+    
+     # 重启后生效
+     sudo docker restart mysql
+
+     ```
+
+### 更换 MySQL 数据目录
+
+修改 MySQL 数据目录，按以下步骤操作：
+
+1. 修改[MySQL compose 文件](#path)中数据挂载目录
+   ```shell
+   version: '3.8'
+   services:
+    mariadb:
+      image: $APP_REPO:$APP_VERSION
+      container_name: $APP_NAME
+      restart: always
+      environment:
+        - MARIADB_ROOT_PASSWORD=$APP_PASSWORD
+      ports:
+        - $APP_PORT:3306
+      command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+      volumes:
+        - ./src/newdata:/var/lib/mysql
+   ```
+2. 重新创建 MySQL 容器，数据文件在设置的目录已经生成
+   ```shell
+   cd /data/apps/mysql && sudo docker compose up -d
+   ```
+
+### 设置 Binary Log
+
+MySQL默认没有开启 Binary Log，修改 [MySQL 配置文件](#path)相关项
+
+```
+log_bin = mysql-bin      # enable Binary log
+binlog_format = mixed    # Binary log format
+expire_logs_days = 7     # Binary log expire time
+```
+
+如果您的二进制日志文件太大，建议将 expire_logs_day 更改为更小，定时清理日志文件。
+
+### 图形化客户端
+
+使用 MySQL 官方的 [Workbench](https://www.mysql.com/products/workbench/) 或 [第三方客户端工具](./tools#dbclient)在本地管理数据库。
+
+###  图形化 Web 端（phpMyAdmin）{#phpmyadmin}
+
+[phpMyAdmin](https://www.phpmyadmin.net/) 是很受欢迎的 MySQL 数据库管理工具，下面介绍常见的 phpMyAdmin 操作
+
+#### 连接 MySQL{#phpmyadminconnect}
+
+如果部署方案中包含 phpMyAdmin 等图形化工具，使用就更加便捷方便：
+
+1. 本地浏览器电脑浏览器访问：*`http://服务器公网IP:9090`*，进入phpMyAdmin
+
+  ![登录phpMyadmin](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-login-websoft9.png)
+
+2. 输入数据库用户名和密码([不知道密码？](./user/credentials))
+
+3. 登录成功后，可以管理任意数据库
+
+  ![phpMyadmin](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-adddb-websoft9.png)
+
+#### 修改 root 密码{#phpmyadminmodifypw}
+
+1. 登录phpMyAdmin后，默认页面-常规设置，点击【修改密码】
+
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/websoft9-modifymysqlpw.gif)
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-modifypw-websoft9.png)
+
+2. 修改密码-&gt;保存-&gt;退出登录，刷新浏览器后便可以使用新密码登录了
+
+#### 新增数据库{#phpmyadmindb}
+
+1. 登录phpMyAdmin后，点击左侧菜单栏的“新建”，进入如下的数据库创建界面 
+
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-adddb-websoft9.png)
+
+2. 填写数据库名-&gt;点击创建按钮，一个新的数据库变建立成功
+
+3. 默认情况下，root拥有新建的数据库的全部权限
+
+#### 新增数据库用户{#phpmyadminuser}
+
+> 数据库用户与数据库是分离的，是“多对多”的关系。可以通过关联使得某个用户具有某个数据库的权限
+
+1. 登录phpMyAdmin后，点击左侧菜单栏中新打算对其新增用户的数据库（例如：mywebsoft9）
+2. 点击顶部菜单栏的“权限”，找到“新增用户账户”，如下新增用户界面 ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-adduser-websoft9.png)
+3. 根据上图填写用户名、主机地址和密码，然后关联对应的数据库和勾选权限设置
+4. 点击“执行”，就完成新增用户和数据库关联了
+
+说明：也可以登录phpMyAdmin的默认页面后，点击顶部菜单上“账户”，对用户和权限进行管理
+
+#### 数据库导入和导出{#phpmyadminexportimport}
+
+> 导出即备份数据库，导入即恢复数据库。这个两个操作对 phpMyAdmin 来说比较简单，具体如下：
+
+1. 登录phpMyAdmin后，选择您需要操作的数据库后，点击顶部菜单栏的“导出” 
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-export-websoft9.png)
+
+2. 选择导出方式（默认为“快速”）和格式（默认为“SQL”），点击“执行”按钮
+
+3. 数据库备份文件（.sql后缀）生成后，保存到本地完成导出工具
+
+4. 恢复数据库，对应的是“导入”操作，具体参考下图 
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-import-websoft9.png)
+
+5. 导入文件特别要注意字符集兼容性
+
+#### MySQL 远程访问{#phpmyadminremote}
+
+在phpMyAdmin中开启远程只需要将root账号的访问方式改成“任意方式访问”，具体如下：
+
+1. 打开账户->找到主机名为127.0.0.1的root用户，点击“修改权限”
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/mysql-openremote001-websoft9.png)
+2. 在“登录信息”选项卡中，将“主机名”下拉菜单选项更改为“任意主机”，点击执行
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/mysql-openremote002-websoft9.png)
+3. 以上两步就完成了开启远程连接的工作
+
+#### 管理多个 MySQL 实例
+
+phpMyAdmin 支持多个 MySQL 实例。
+
+修改 phpMyAdmin 的 [phpmyadmin compose 文件](#path)的对应的环境变量（PMA_HOST 更改为 PMA_HOSTS）即可支持：
+
+```
+version: "3.7"
+services:
+  phpmyadmin:
+      image: phpmyadmin/phpmyadmin
+      container_name: "phpmyadmin"
+      environment:
+       - PMA_HOSTS=172.17.0.1,172.17.0.2
+       - PMA_PORTS=3306
+       - UPLOAD_LIMIT=20M 
+...
+```
+
+#### 修改导入文件大小限制
+
+phpMyAdmin 默认可导入的文件大小有限制，可通过如下步骤修改它：
+
+1. 使用 SFTP 连接服务器，编辑 [phpmyadmin compose 文件](#path)，在环境变量处增加一个字段 `- UPLOAD_LIMIT=20M`
+  ```
+  version: "3.7"
+  services: 
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        container_name: "phpmyadmin"
+        environment:
+         - PMA_HOST=172.17.0.1
+         - PMA_PORT=3306
+         - UPLOAD_LIMIT=20M
+  ```
+
+2. 重新创建 phpMyAdmin 容器后生效
+  ```
+  cd /data/apps/phpmyadmin && docker-compose up -d
+  ```
+
+## MySQL/MariaDB 参数
+
+MySQL 应用中包含 Docker, phpMyAdmin 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。
+
+通过运行`docker ps`，可以查看到 MySQL 运行时所有的 Container：
+
+```bash
+CONTAINER ID   IMAGE               COMMAND                  CREATED          STATUS          PORTS                                       NAMES
+4c7eb560231d   phpmyadmin:latest   "/docker-entrypoint.…"   10 minutes ago   Up 10 minutes   0.0.0.0:9090->80/tcp, :::9090->80/tcp       phpmyadmin
+d5c4ba36ce50   mariadb:10.8        "docker-entrypoint.s…"   10 minutes ago   Up 10 minutes   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp   mariadb
+
+```
+
+下面仅列出 MySQL 本身的参数：
+
+### 路径{#path}
+<Tabs>
+<TabItem value="linuxpath" label="Linux" default>
+
+MySQL 安装目录: */data/apps/mysql*    
+MySQL 数据目录：*/data/apps/mysql/data/mysql_data*   
+MySQL 配置文件: */data/apps/mysql/src/conf.d/mysql.cnf*  
+MySQL compose 文件: */data/apps/mysql/docker-compose.yml*  
+
+MariaDB 安装目录: */data/apps/mariadb*  
+MariaDB 数据目录: */data/apps/mariadb/data/mariadb_data*  
+MariaDB 配置文件: */data/apps/mariadb/src/conf.d/mysql.cnf*  
+MariaDB compose 文件: */data/apps/mariadb/docker-compose.yml*  
+
+phpMyAdmin 安装路径: */data/apps/phpmyadmin*  
+phpMyAdmin 配置文件: */data/apps/phpmyadmin/src/config.user.inc.php*      
+phpMyAdmin compose 文件: */data/apps/phpmyadmin/docker-compose.yml*  
+
+</TabItem>
+<TabItem value="winpath" label="Windows">
+
+* 目录：C:/websoft9/mysql
+* 配置文件：C:/websoft9/mysql/etc/my.ini
+* 数据文件目录:：C:/websoft9/mysql/data
+
+</TabItem>
+</Tabs>
+
+### 端口
+
+| 端口号 | 用途                                          | 必要性 |
+| ------ | --------------------------------------------- | ------ |
+| 3306   | MySQL/MariaDB 远程端口 | 可选   |
+| 9090   | HTTP 访问 phpMyAdmin on Docker | 可选   |
+
+### 版本
+
+```shell
+docker exec -it mysql mysql -V
+```
+
+### 服务
+
+<Tabs>
+<TabItem value="linuxservice" label="Linux" default>
+
+```shell
+sudo docker start | stop | restart | stats phpmyadmin
+sudo docker start | stop | restart | stats mysql
+```
+
+</TabItem>
+  <TabItem value="winservice" label="Windows">
+
+采用操作系统的服务管理功能，来实现 MySQL 的启动、停止和重启操作  
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/mysql-servicewin-websoft9.png)
+
+  </TabItem>
+</Tabs>
+
+
+### 命令行
+
+MySQL 安装完成后，默认有如下可用工具：
+
+* mysql
+* mysqladmin
+* mysqldump 
+* mysqlhotcopy
+* mysqlcheck
+* mysqlshow
+* mysqlimport
+* mysqlbinlog
+* myisampack
+
+### API
+
+[Connectors and APIs](https://dev.mysql.com/doc/index-connectors.html)
+

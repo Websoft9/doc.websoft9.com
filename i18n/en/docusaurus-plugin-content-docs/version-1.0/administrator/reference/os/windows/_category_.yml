@@ -1,0 +1,5 @@
+position: 3
+label: "Windows"
+collapsible: true
+collapsed: true
+className: "red"
