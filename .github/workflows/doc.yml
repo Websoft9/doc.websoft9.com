@@ -18,7 +18,7 @@ jobs:
     - uses: actions/checkout@master
     - uses: actions/setup-node@v3
       with:
-        node-version: 16        
+        node-version: 18.2.0        
     - name: Docusaurus build
       run: |
         yarn install
