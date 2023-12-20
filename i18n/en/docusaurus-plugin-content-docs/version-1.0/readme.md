@@ -5,7 +5,7 @@ slug: /
 
 # Tutorials
 
-Welcome to GitLab documentation.  
+Welcome to Websoft9 documentation.  
 
 Here you can access the complete documentation for Websoft9, the collection applications for the entire Cloud Native open source.  
 
