@@ -150,7 +150,7 @@ ONLYOFFICE Docs 也提供了[自签名的 HTTPS](https://helpcenter.onlyoffice.c
 
 2. 进入 ONLYOFFICE Docs 容器，下载配置HTTPS的自动化脚本
    ```
-  wget -N -P /var/www/onlyoffice/Data https://raw.githubusercontent.com/Websoft9/docker-library/main/apps/onlyofficedocs/src/createCA.sh
+  wget -N -P /var/www/onlyoffice/Data https://websoft9.github.io/docker-library/apps/onlyofficedocs/src/createCA.sh
    ```
 
 3. 运行自动化脚本
