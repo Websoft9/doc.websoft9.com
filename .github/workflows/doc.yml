@@ -5,6 +5,7 @@ on:
     branches: [ main ]
     paths: 
       - 'docs/**'
+      - 'versioned_docs/**'
       - 'i18n/**'
       - 'src/**'
       - 'static/**'
