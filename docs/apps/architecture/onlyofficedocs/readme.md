@@ -148,19 +148,12 @@ ONLYOFFICE Docs 也提供了[自签名的 HTTPS](https://helpcenter.onlyoffice.c
 
 1. ONLYOFFICE Docs 容器新增443端口，映射到宿主机
 
-2. 进入 ONLYOFFICE Docs 容器，下载配置HTTPS的自动化脚本
+2. 进入 ONLYOFFICE Docs 容器，下载并运行创建证书的脚本
    ```
-  wget -N -P /var/www/onlyoffice/Data https://websoft9.github.io/docker-library/apps/onlyofficedocs/src/createCA.sh
-   ```
-
-3. 运行自动化脚本
-   ```
+   wget -N -P /var/www/onlyoffice/Data https://websoft9.github.io/docker-library/apps/onlyofficedocs/src/createCA.sh
    bash /var/www/onlyoffice/Data/createCA.sh
    ```
-
-4. 退出 ONLYOFFICE Docs 容器，重启它后生效
-
-
+3. 退出 ONLYOFFICE Docs 容器，重启后生效
 
 ## 参数
 
