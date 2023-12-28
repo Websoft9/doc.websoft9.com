@@ -316,9 +316,9 @@ d43ecff5608c   wordpress:latest    "docker-entrypoint.s…"   39 seconds ago   U
 
 ### 路径{#path}
 
-WordPress 安装目录： */data/apps/wordpress*  
-WordPress 配置文件： */data/apps/wordpress/data/wordpress/wp-config.php*
-WordPress 数据目录： */data/apps/wordpress/data/mysql_data*
+WordPress 安装目录： */data/apps/wordpress*    
+WordPress 配置文件： */data/apps/wordpress/data/wordpress/wp-config.php*  
+WordPress 数据目录： */data/apps/wordpress/data/mysql_data*  
 
 ### 端口{#port}
 
