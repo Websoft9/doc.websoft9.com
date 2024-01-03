@@ -153,7 +153,12 @@ ONLYOFFICE Docs 也提供了[自签名的 HTTPS](https://helpcenter.onlyoffice.c
    wget -N -P /var/www/onlyoffice/Data https://websoft9.github.io/docker-library/apps/onlyofficedocs/src/createCA.sh
    bash /var/www/onlyoffice/Data/createCA.sh
    ```
-3. 退出 ONLYOFFICE Docs 容器，重启后生效
+3. Modify the container configuration file
+   ```
+   sed -i 's/"rejectUnauthorized": true/"rejectUnauthorized": false/g' /etc/onlyoffice/documentserver/default.json
+   supervisorctl restart all
+   ```
+4. 退出 ONLYOFFICE Docs 容器，重启后生效
 
 ## 参数
 
