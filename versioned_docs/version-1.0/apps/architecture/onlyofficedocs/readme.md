@@ -146,24 +146,19 @@ ONLYOFFICE Docs 默认设置是支持[多版本](https://helpcenter.onlyoffice.c
 
 ONLYOFFICE Docs 也提供了[自签名的 HTTPS](https://helpcenter.onlyoffice.com/installation/docs-community-install-docker.aspx) 方案，经过验证完全可用：
 
-1. 进入 ONLYOFFICE Docs 容器，创建 certs 文件夹
+1. ONLYOFFICE Docs 容器新增443端口，映射到宿主机
+
+2. 进入 ONLYOFFICE Docs 容器，下载并运行创建证书的脚本
    ```
-
-  mkdir /var/www/onlyoffice/Data/certs
-  cd /var/www/onlyoffice/Data/certs
-
+   wget -N -P /var/www/onlyoffice/Data https://websoft9.github.io/docker-library/apps/onlyofficedocs/src/createCA.sh
+   bash /var/www/onlyoffice/Data/createCA.sh
    ```
-
-2. 运行自签名命令（以[官方文档](https://helpcenter.onlyoffice.com/installation/docs-community-install-docker.aspx)为准）
+3. Modify the container configuration file
    ```
-
-   openssl genrsa -out onlyoffice.key 2048
-   openssl req -new -key onlyoffice.key -out onlyoffice.csr
-   openssl x509 -req -days 365 -in onlyoffice.csr -signkey onlyoffice.key -out onlyoffice.crt
-
+   sed -i 's/"rejectUnauthorized": true/"rejectUnauthorized": false/g' /etc/onlyoffice/documentserver/default.json
+   supervisorctl restart all
    ```
-3. 退出 ONLYOFFICE Docs 容器，重启它后生效
-
+4. 退出 ONLYOFFICE Docs 容器，重启后生效
 
 
 ## 参数
