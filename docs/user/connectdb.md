@@ -1,9 +1,9 @@
 ---
-sidebar_position: 3
+sidebar_position: 5
 slug: /user/dbgui
 ---
 
-# 可视化管理数据库
+# 数据库
 
 连接数据库除了登录服务器以命令行形式连接之外，还可以使用本地电脑客户端和预装的 Web 在线工具连接 
 

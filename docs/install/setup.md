@@ -13,7 +13,7 @@ import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 ## 登录
 
-登录 Websoft9 不需要额外的特别设置，只需要了解或准备如下几个要素：  
+登录 Websoft9 不需要额外的特别设置，只需要从本地浏览器访问服务器对应的端口即可：  
 
 - 访问地址： *http://服务器公网IP:9000*  
 - 默认密码：服务器的 root 账号与密码
