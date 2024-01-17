@@ -1,5 +1,5 @@
-position: 3
-label: "应用中心"
+position: 5
+label: "应用"
 collapsible: true
 collapsed: true
 className: "red"
