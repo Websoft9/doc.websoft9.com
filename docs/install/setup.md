@@ -9,11 +9,11 @@ import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 # 安装后配置
 
-安装 Websoft9 的产品后，如下几个部署是必要的：
+安装 Websoft9 到服务器后，便可以参考一下章节完成开始正式使用：
 
-## 登录
+## 登录控制台
 
-登录 Websoft9 不需要额外的特别设置，只需要从本地浏览器访问服务器对应的端口即可：  
+登录 Websoft9 不需要额外的特别设置，只需要从**本地浏览器**访问服务器对应的端口即可：  
 
 - 访问地址： *http://服务器公网IP:9000*  
 - 默认密码：服务器的 root 账号与密码
@@ -31,13 +31,13 @@ import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 虽然 Websoft9 可以在无域名的情况下访问，但为了更好的用户体验和安全保护，我们强烈您为 Websoft9 [配置域名](../administrator/domain_step)。  
 
-
 ## 备份措施
 
-* [服务器备份](../administrator/backup_server)：在云控制台设置服务器的自动化备份策略（例如：快照备份）
-* [应用备份](../administrator/backup_app)：在应用的控制台设置自动化备份策略（参考每个应用的文档）
+需要尽早设置备份策略，不能存在侥幸心理。建议的备份优先级如下：
 
+1. [服务器备份](../administrator/backup_server)：在云控制台设置服务器的自动化备份策略（例如：快照备份）
+2. [Websoft9 备份](../administrator/backup_app)：Websoft9 平台以及所安装的应用的备份
 
 ## 升级
 
-* [应用升级](../administrator/upgrade_app)：预装的应用无法满足需求时，参考升级指南
+如果您安装的不是最新的 Websoft9，建议您立即进行[更新升级](../administrator/upgrade_app)
