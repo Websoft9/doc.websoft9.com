@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-slug: /administrator/domain_https
+slug: /user/domain_https
 ---
 
 # 给域名配置 HTTPS

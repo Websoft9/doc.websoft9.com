@@ -1,0 +1,5 @@
+position: 3
+label: "设置域名"
+collapsible: true
+collapsed: true
+className: "red"

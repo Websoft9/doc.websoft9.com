@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-slug: /administrator/domain_step
+slug: /user/domain_step
 ---
 
 # 域名五步设置

@@ -1,13 +1,13 @@
 ---
 sidebar_position: 1
-slug: /administrator/domain
+slug: /user/core
 ---
 
 import DocCardList from '@theme/DocCardList';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-# 域名
+# 核心功能
 
-在本章中，你可以了解到与域名配置有关的操作：  
+本章主要介绍 Websoft9 的核心功能以及典型的设置，帮助用户快速理解功能要点。  
 
 <DocCardList items={useCurrentSidebarCategory().items}/>

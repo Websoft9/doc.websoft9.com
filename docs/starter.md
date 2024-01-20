@@ -5,7 +5,7 @@ slug: /starter
 
 # 快速入门
 
-一旦用户安装或订阅 Websoft9 之后，就可以参考下面的入门向导，快速上手：
+一旦[安装](./install)或[订阅](./business) Websoft9 之后，就可以参考下面的入门向导，快速上手：
 
 ## 登录控制台
 
@@ -43,7 +43,7 @@ slug: /starter
 2. 从 Websoft9 控制台的【设置】栏目，设置全局域名
    ![Websoft9 控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/websoft9/websoft9-settings-globaldomain.png)
 
-## 使用应用
+## 体验应用
 
 完成上述设置后，我们开始体验如何快速部署一个应用：
 

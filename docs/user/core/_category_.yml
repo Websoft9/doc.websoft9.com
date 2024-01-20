@@ -1,5 +1,5 @@
 position: 1
-label: "域名"
+label: "功能"
 collapsible: true
 collapsed: true
 className: "red"

@@ -1,10 +1,10 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 slug: /user/credentials
 ---
 
 
-# 账号
+# 用户账号
 
 Websoft9 控制台与 Linux 系统共享同样的账户。  
 
