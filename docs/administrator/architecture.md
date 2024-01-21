@@ -18,6 +18,7 @@ Websoft9 是一个以应用为中心的微服务架构模式，它入门极简�
 - 专注于连接，减少非必要的创作
 - 使用已经流行的技术要素，避免再创造新的技术规范
 - GitOps 云原生持续交付模型
+- Unix 哲学 KISS 原则： Keep It Simple, Stupid!
 
 我们采用的技术要素包括：Linux, Docker, K8s, API 网关，服务发现，应用网关，应用编排，Git等。  
 
