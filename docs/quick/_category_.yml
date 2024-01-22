@@ -1,5 +1,5 @@
-position: 11
-label: "云服务"
+position: 2
+label: "快速入门"
 collapsible: true
 collapsed: true
 className: "red"

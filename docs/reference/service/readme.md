@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-slug: /user/cloud
+slug: cloud
 ---
 
 import DocCardList from '@theme/DocCardList';

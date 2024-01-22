@@ -1,6 +1,6 @@
 ---
 sidebar_position: 9
-slug: /user/terminal
+slug: /function/terminal
 ---
 
 # 文件与终端

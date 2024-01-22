@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-slug: /user/core
+slug: /function
 ---
 
 import DocCardList from '@theme/DocCardList';

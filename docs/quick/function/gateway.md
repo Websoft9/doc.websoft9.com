@@ -1,6 +1,6 @@
 ---
 sidebar_position: 5
-slug: /user/gateway
+slug: /function/gateway
 ---
 
 # 网关

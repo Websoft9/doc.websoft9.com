@@ -1,6 +1,6 @@
 ---
 sidebar_position: 6
-slug: /user/container
+slug: /function/container
 ---
 
 # 容器

@@ -3,9 +3,9 @@ sidebar_position: 2
 slug: /starter
 ---
 
-# 快速入门
+# 入门向导
 
-一旦[安装](./install)或[订阅](./business) Websoft9 之后，就可以参考下面的入门向导，快速上手：
+[安装](./install)或[订阅](./business) Websoft9 之后，就可以参考下面的入门向导，快速上手：
 
 ## 登录控制台
 

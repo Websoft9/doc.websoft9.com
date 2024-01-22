@@ -1,6 +1,6 @@
 ---
 sidebar_position: 7
-slug: /user/git
+slug: /function/git
 ---
 
 # 仓库

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-slug: /user/appstore
+slug: /function/appstore
 ---
 
 # 应用商店
