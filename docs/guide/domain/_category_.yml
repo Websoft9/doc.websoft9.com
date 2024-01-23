@@ -1,5 +1,5 @@
-position: 3
-label: "设置域名"
+position: 1
+label: "为应用设置域名"
 collapsible: true
 collapsed: true
 className: "red"

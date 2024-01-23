@@ -3,7 +3,7 @@ sidebar_position: 7
 slug: /administrator/integration
 ---
 
-# 应用之间集成
+# 应用集成
 
 现代 IT 架构中，孤立的应用系统已经成为阻碍组织运行效率的制约，它导致企业无法充分共享业务数据实现流程协作。   
 

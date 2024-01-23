@@ -1,9 +1,9 @@
 ---
-sidebar_position: 10
-slug: /user/database
+sidebar_position: 2
+slug: /guide/dbconnect
 ---
 
-# 管理数据库
+# 连接应用的数据库
 
 虽然 Websoft9 在默认情况下，没有安装任何一个数据库管理工具。但是，我们在应用商店的【数据库】>【管理与迁移】类目提供了诸多热门的 Web 版的数据库管理工具。  
 

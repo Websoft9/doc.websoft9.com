@@ -3,7 +3,7 @@ sidebar_position: 10
 slug: /administrator/parameter
 ---
 
-# 路径、端口和服务
+# 技术参数
 
 Websoft9 将各个应用和组件的目录到一个约定的目录中，大大的简化了用户维护：  
 

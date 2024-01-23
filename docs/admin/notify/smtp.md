@@ -3,7 +3,7 @@ sidebar_position: 6
 slug: /administrator/smtp
 ---
 
-# SMTP 发送邮件
+# SMTP
 
 应用中配置 SMTP 邮件发送功能是非常重要的设置，它可以用于密码找回和重要操作的通知。  
 

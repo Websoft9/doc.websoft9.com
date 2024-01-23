@@ -1,9 +1,9 @@
 ---
 sidebar_position: 1
-slug: /user/domain_step
+slug: /reference/domain
 ---
 
-# 域名五步设置
+# 准备域名
 
 ## 设置步骤
 

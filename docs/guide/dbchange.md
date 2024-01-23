@@ -1,9 +1,9 @@
 ---
-sidebar_position: 2
-slug: /administration/db_change
+sidebar_position: 3
+slug: /guide/dbchange
 ---
 
-# 更换为外部数据库
+# 更换应用的数据库
 
 Websoft9 每个应用都预装了默认数据库，并且这些数据库也按照应用的要求进行了必要的个性化设置，确保用户可以直接使用。虽然如此，每个用户可能面临使用习惯、企业 IT 规范要求等不同的因素，导致需要更换默认数据库为用户自己的特定数据库。  
 

@@ -1,5 +1,5 @@
-position: 16
-label: "故障问题"
+position: 7
+label: "通知"
 collapsible: true
 collapsed: true
 className: "red"
