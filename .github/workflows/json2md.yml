@@ -1,0 +1,37 @@
+name: Generate Markdown from JSON
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install unzip utility
+        run: sudo apt-get install unzip
+
+      - name: Download and unzip JSON files
+        run: |
+          curl -L -o media-latest.zip https://w9artifact.blob.core.windows.net/release/websoft9/plugin/media/media-latest.zip
+          unzip media-latest.zip "media/json/product_zh.json" "media/json/product_en.json" -d ./extracted
+
+      - name: Generate Markdown for product_zh
+        run: |
+          python .github/build/json2md.py ./extracted/media/json/product_zh.json product_zh.md
+
+      - name: Generate Markdown for product_en
+        run: |
+          python .github/build/json2md.py ./extracted/media/json/product_en.json product_en.md
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update Product Catalog Markdown
