@@ -38,4 +38,4 @@ jobs:
           add: |
             product_zh.md
             product_en.md
-
+          commit_options: "-- '*.md'"
