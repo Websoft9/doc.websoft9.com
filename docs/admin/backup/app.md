@@ -1,9 +1,9 @@
 ---
 sidebar_position: 3
-slug: /administrator/backup_app
+slug: /backup/app
 ---
 
-# 应用程序备份与还原
+# Websoft9 管理的应用程序备份
 
 与整个服务器备份不同的是，应用程序的备份主要备份应用相关的：源代码、配置文件、数据和数据库。  
 

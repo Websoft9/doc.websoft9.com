@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-slug: /administrator/backup
+slug: /backup
 ---
 
 import DocCardList from '@theme/DocCardList';
@@ -8,11 +8,15 @@ import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 # 备份恢复
 
-为了以防万一，如下的备份操作是必不可少的：
+备份对于任何数字化的组织来说，都是至关重要的。  
+
+备份并不是一个可有可无的工作，它极其重要。设想，当系统出现故障或灾难后，没有可以恢复的备份，其造成的损失如何弥补？    
+
+所以，一定要尽早将备份工作落实下去，切莫存在任何侥幸心理。  
 
 ## 备份方式
 
-> 一定要养成备份的习惯，切莫存在侥幸心理
+使用 Websoft9 时，有三种备份的方式：  
 
 <DocCardList items={useCurrentSidebarCategory().items}/>
 
@@ -32,9 +36,9 @@ import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 #### 没有备份能恢复数据吗？
 
-不能，极少数情况下在专业人士的帮助下也仅能够恢复少量数据（不完整）。
+不能。在极少数情况下，专业人士也仅能够恢复少量不完整的数据。
 
 #### 怎么检查备份的效果？
 
-对备份进行一次恢复工作是有必要的，它可以以实践的形式证明备份的可用性。
+对备份进行一次恢复工作是有必要的，它可以证明备份在实践上的可用性。
 
