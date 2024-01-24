@@ -35,3 +35,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Update Product Catalog Markdown
+          add: |
+            product_zh.md
+            product_en.md
+
