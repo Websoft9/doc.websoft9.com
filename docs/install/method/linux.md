@@ -25,3 +25,11 @@ wget -O install.sh https://websoft9.github.io/websoft9/install/install.sh && bas
 ## 离线安装
 
 针对无法访问 Internet 的政企用户或等保用户，我们通过人工服务的方式提供安装服务。
+
+## 卸载
+
+Websoft9 支持[卸载](https://github.com/Websoft9/websoft9?tab=readme-ov-file#uninstall)，且卸载后不会在服务器中存留数据。
+
+```
+curl https://websoft9.github.io/websoft9/install/uninstall.sh | bash
+```

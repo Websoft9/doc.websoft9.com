@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-slug: /user/installapp
+slug: /quik/installapp
 ---
 
 # 安装应用
@@ -39,7 +39,7 @@ slug: /user/installapp
 4. 等待应用状态由 **Installing** 变成 **Active** 即表明安装成功
 
 
-## 安装自定义应用
+## 安装自定义应用{#not-from-appstore}
 
 安装应用商店之外的应用，我们称之为自定义应用的安装。
 

@@ -13,7 +13,7 @@ Websoft9 集成 Portainer 作为唯一个容器可视化管理平台，100% 保�
 
 ## 操作
 
-### 安装个性化应用
+### 在 Portainer 中安装应用{#installapp}
 
 如果 Websoft9 应用商店不满足安装需求，用户可以在容器管理平台中自定义安装 Docker 应用
 

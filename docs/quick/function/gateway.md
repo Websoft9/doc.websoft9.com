@@ -5,11 +5,11 @@ slug: /function/gateway
 
 # 网关
 
-网关需具备一定的 HTTP 服务应用经验的用户使用，否则很容易破坏已安装应用的访问。  
+## 关于
 
-![应用网关](https://libs.websoft9.com/Websoft9/DocsPicture/zh/websoft9/websoft9-gateway-dashboard.png)
+网关是 Websoft9 最具特殊的功能，它集成了 Nginx Proxy Manager（简称 NPM） 作为**应用程序网关**，并 100% 保持其原生性。  
 
-Websoft9 控制台集成了 Nginx Proxy Manager（简称 NPM） 作为**应用程序网关**。[NPM](https://nginxproxymanager.com/guide/) 是一个基于 Nginx 的免费、开源的代理服务器管理面板，它为用户提供了一个友好的 web 界面，用于管理和部署 Nginx 代理服务器的功能，包括：
+[NPM](https://nginxproxymanager.com/guide/) 是一个 Nginx 开源管理面板，它为用户提供了一个友好的 web 界面，用于管理和部署 Nginx 代理服务器的功能，包括：
 
 - 反向代理
 - 负载均衡
@@ -18,76 +18,63 @@ Websoft9 控制台集成了 Nginx Proxy Manager（简称 NPM） 作为**应用�
 - 自动化的 SSL 证书申请与续期
 - 访问控制与白名单
 
-通过 Websoft9 应用商店安装的程序，会自动发布为 **域名** 访问。其中就是通过调用网关的接口，自动创建域名绑定到容器端口。  
+> 网关需具备一定的 HTTP 服务应用经验的用户使用，否则很容易破坏已安装应用的访问。  
 
-## 操作
+![应用网关](https://libs.websoft9.com/Websoft9/DocsPicture/zh/websoft9/websoft9-gateway-dashboard.png)
+
+## 工作原理
+
+此处不介绍网关的自身的功能原理，只阐述一个问题：
+
+**网关是如何与 Websoft9 应用商店进行协作的？**     
+
+当用户通过 Websoft9 应用商店安装的程序，应用管理器会调用网关的 API 接口，基于接口自动创建域名绑定到容器端口，帮助程序实现 **域名** 访问。 依次类推，修改域名、删除应用等操作，都会调用网关的 API 接口，完成所需的操作。  
+
+## 常用功能
 
 [NPM 官方文档](https://nginxproxymanager.com/guide/) 很全面的介绍了它的使用和配置，下面我结合一些配置场景进行更灵活的运用：
 
-### 配置 HTTPS 证书{#sethttps}
+### 增加 Proxy Host{#add-proxhost}
 
-Websoft9 的网关支持自动证书和上传证书两种类型：
-
-#### 前置条件
-
-Websoft9 网关虽然支持便捷的 HTTPS 配置，但配置 HTTPS 还有两个因素需要准备的：
-
-- 开启服务器安全组的 443 端口
-- 网站可以通过 HTTP 的方式访问域名
-
-具体以上条件后，便可以登录服务器配置 HTTPS。此处提供两种方案，请根据实际情况选择：  
-
-#### 自动证书
-
-网关默认支持 [Let's Encrypt](https://letsencrypt.org/) 免费的证书部署程序
+Proxy Host 即一个实现代理转发的**虚拟主机**，它可以将一个运行在服务器或容器内部的应用，通过 Nginx 虚拟主机的 proxy 功能，把应用绑定到域名发布出去，供 Internet 用户访问。  
 
 1. 控制台依次打开：【网关】>【Hosts】>【Proxy Hosts】项
 
-2. 编辑 SSL 项，点击保存即启动证书自动设置
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/websoft9/websoft9-gateway-setautohttps.png)
+2. 点击【Add Proxy Host】，注意重要信息的填写：
 
-   > Email 建议填写为可以收到邮件的常用邮箱，以便于及时了解证书的状态
+   - Domain Names: 一个或多个域名
 
-#### 上传证书
+   - Scheme：应用被代理之前的访问的协议（一般都是 HTTP）
 
-Websoft9 的网关采用先上传证书，再绑定到 Proxy Host 的这种模式：
+   - Forward Port
+      
+     - 容器类应用填写容器端口
+     - 非容器类应用填写服务器端口
 
-1. 控制台依次打开：【网关】>【SSL Certificates】
+   - Forward Hostname / IP：应用当前可以访问的地址。
+     - 容器应用，填写容器名称（container_name）
+     - 非容器应用，打开 Websoft9 控制台，通过：【容器】>【Networks】，查看 websoft9 网络的 IPV4 Gateway
+       ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/websoft9/websoft9-container-gateway.png)
 
-2. 点击【Add SSL Certificate】子菜单下的【Custom】项，开始增加自上传证书
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/websoft9/websoft9-gateway-addcustomssl.png)
+3. 根据实际情况设置 [Custom location](./gateway##proxy-location) 或 [Advanced](./gateway#proxy-advanced) 覆盖设置默认的 **location /**
 
-3. 在 Add Custom Certificate 选项卡中上传已有的证书
+### 配置 HTTPS 证书{#sethttps}
 
-4. 转到网关的：【Hosts】>【Proxy Hosts】项，编辑应用的配置文件的 SSL 项，指定上面上传的证书
+Websoft9 的网关支持自动证书和上传证书两种类型，具体参考：[HTTP 设置指南](../guide/appsethttps)
 
-### 为应用设置密码访问
+### 应用安全访问控制{#access-auth}
 
-有些应用安装后，并没有密码（例如：Netdata），这样直接暴露给互联网用户是不合理的。  
+Websoft9 的网关支持密码和白名单等访问控制，具体参考：[应用安全访问控制指南](../guide/appauth)
 
-Websoft9 的网关具备为此类应用设置密码访问，具体步骤如下：
+### 转发 TCP/UDP 端口{#tcp-forward}
 
-1. 控制台依次打开：【网关】>【Access Lists】
-
-2. 点击【New Access List】，新增一个访问控制项
-
-   - Details: 输入英文名称
-   - Authorization：输入账号密码
-   - Access：allow 出输入可以访问的[白名单](https://nginx.org/en/docs/http/ngx_http_access_module.html#allow)，0.0.0.0/ 表示允许所有 IP 访问
-
-3. 转到网关的：【Hosts】>【Proxy Hosts】项，编辑应用的配置文件，选择上面配置的 Access
-   ![设置 Access](https://libs.websoft9.com/Websoft9/DocsPicture/zh/websoft9/websoft9-gateway-setaccess.png)
-
-
-### 转发数据库端口
-
-如果数据库容器没有绑定到宿主机端口，也没有关系，只需要通过网关的 **Streams** 功能设置即可：
+网关的 **Streams** 功能可以设置 TCP/UDP 端口转发，非常合适数据库这种期望临时开启外网访问的应用：  
 
 1. 控制台依次打开：【网关】>【Hosts】>【Streams】项
 
 2. 填写好 Incoming Port 以及被转发的 Forward Host 和 Forward Port
 
-### Proxy Host 的 Advanced 设置
+### Proxy Host 的 Advanced 设置{#proxy-advanced}
 
 Advanced 是一个 server 级作用域（非 location / 作用域），但可以自定义 location / 覆盖默认值
 
@@ -107,7 +94,7 @@ location / {
     }
 ```
 
-### Proxy Host 增加 Location 指令
+### Proxy Host 增加 Location 指令{#proxy-location}
 
 直接把指令的内容（参考下面的模板）复制到设置框（通过 location 【齿轮】图标打开）
 

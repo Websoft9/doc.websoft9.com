@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-slug: /user/credentials
+slug: /quick/credentials
 ---
 
 

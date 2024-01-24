@@ -27,21 +27,7 @@ slug: /starter
 
 虽然 Websoft9 支持在无域名下使用，但仍然建议先为 Websoft9 设置**全局域名**，这样今后安装每个应用都不需额外再配置域名。 
 
-1. 从域名注册服务商的控制台，增加一个**泛域名解析**。假设域名为：abc.com，泛解析的设置为：  
 
-   - 记录类型：A
-   - 主机记录：*.websoft9  （注意 *. 的使用，这是泛解析的关键）
-   - 记录值：服务器公网IP
-
-2. 解析成功后，可以任意使用以 websoft9.abc.com 为后缀的子域名。下面是测试范例：  
-   ```
-   ping app1.websoft9.abc.com
-   ping app2.websoft9.abc.com
-   ping app3.websoft9.abc.com
-   ```
-
-2. 从 Websoft9 控制台的【设置】栏目，设置全局域名
-   ![Websoft9 控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/websoft9/websoft9-settings-globaldomain.png)
 
 ## 体验应用
 

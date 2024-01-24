@@ -3,10 +3,6 @@ sidebar_position: 3
 slug: /install/setup
 ---
 
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
-
-
 # 安装后配置
 
 安装 Websoft9 到服务器后，便可以参考一下章节完成开始正式使用：
@@ -29,7 +25,7 @@ import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 ## 配置域名{#domain}
 
-虽然 Websoft9 可以在无域名的情况下访问，但为了更好的用户体验和安全保护，我们强烈您为 Websoft9 [配置域名](../administrator/domain_step)。  
+虽然 Websoft9 可以在无域名的情况下访问，但为了更好的用户体验和安全保护，我们强烈您为 Websoft9 [配置域名](../guide/appsetdomain.md)。  
 
 ## 备份措施
 
