@@ -11,7 +11,9 @@ with open(json_file_path) as json_file:
     data = json.load(json_file)
 
 # Create a dictionary to hold the titles and their corresponding keys and trademarks
+# and a set to keep track of added sub-titles to avoid duplicates
 catalog_dict = {}
+added_sub_titles = set()
 
 # Traverse the JSON data to fill the dictionary
 for entry in data:
@@ -24,9 +26,12 @@ for entry in data:
             subitems = item['catalogCollection']['items']
             for subitem in subitems:
                 sub_title = subitem['title']
-                if sub_title not in catalog_dict:
-                    catalog_dict[sub_title] = []
-                catalog_dict[sub_title].append((trademark, key))
+                # Only add the sub_title if it hasn't been added before
+                if sub_title not in added_sub_titles:
+                    added_sub_titles.add(sub_title)
+                    if sub_title not in catalog_dict:
+                        catalog_dict[sub_title] = []
+                    catalog_dict[sub_title].append((trademark, key))
 
 # Now, generate the Markdown content
 markdown_content = ""
