@@ -1,3 +1,7 @@
+# Apps
+
+Docs of hundreds of pre-packaged apps below
+
 ## AI + Machine Learning
 
 - [AutoGPT Next Web](/apps/autogptnextweb)
