@@ -8,21 +8,39 @@
 
 - [TensorFlow](/apps/tensorflow)
 
-## Automation
+## Data Analytics
 
-- [Ansible](/apps/ansible)
+- [Appsmith](/apps/appsmith)
 
-- [GitLab](/apps/gitlab)
+- [Budibase](/apps/budibase)
 
-- [Gitea](/apps/gitea)
+- [Directus](/apps/directus)
 
-- [Huginn](/apps/huginn)
+- [Elastic Stack](/apps/elastic)
 
-- [Jenkins](/apps/jenkins)
+- [Elasticsearch](/apps/elasticsearch)
 
-- [TeamCity](/apps/teamcity)
+- [Grafana](/apps/grafana)
 
-- [n8n](/apps/n8n)
+- [Graylog](/apps/graylog)
+
+- [Knowage](/apps/knowage)
+
+- [Matomo Analytics](/apps/matomo)
+
+- [Metabase](/apps/metabase)
+
+- [OpenSearch](/apps/opensearch)
+
+- [Plausible](/apps/plausible)
+
+- [Strapi](/apps/strapi)
+
+- [SuperSet](/apps/superset)
+
+- [Typesense](/apps/typesense)
+
+- [Umami](/apps/umami)
 
 ## Business Operation
 
@@ -48,43 +66,31 @@
 
 - [Zammad](/apps/zammad)
 
-## Collaboration & Office
+## Design & Create
 
-- [Alfresco](/apps/alfresco)
+- [AITable](/apps/aitable)
+
+- [APEX](/apps/apex)
+
+- [Appsmith](/apps/appsmith)
+
+- [Budibase](/apps/budibase)
+
+- [Directus](/apps/directus)
 
 - [Excalidraw](/apps/excalidraw)
 
-- [Focalboard](/apps/focalboard)
+- [NocoDB](/apps/nocodb)
 
-- [Kasmweb](/apps/kasmweb)
+- [Nocobase](/apps/nocobase)
 
-- [Kodbox](/apps/kodbox)
+- [Scratch](/apps/scratch)
 
-- [Nextcloud ](/apps/nextcloud)
+- [Strapi](/apps/strapi)
 
-- [ONLYOFFICE Workspace](/apps/onlyoffice)
+- [TensorFlow](/apps/tensorflow)
 
-- [OwnCloud ](/apps/owncloud)
-
-- [Pydio Cells](/apps/pydio)
-
-- [Redmine](/apps/redmine)
-
-- [Seafile](/apps/seafile)
-
-- [Zentao](/apps/zentao)
-
-- [mattermost](/apps/mattermost)
-
-## Communication
-
-- [Chatwoot ](/apps/chatwoot)
-
-- [Rocket.Chat](/apps/rocketchat)
-
-- [SRS](/apps/srs)
-
-- [mattermost](/apps/mattermost)
+- [WordPress](/apps/wordpress)
 
 ## Content Management
 
@@ -124,39 +130,59 @@
 
 - [nopCommerce](/apps/nopcommerce)
 
-## Data Analytics
+## Communication
 
-- [Appsmith](/apps/appsmith)
+- [Chatwoot ](/apps/chatwoot)
 
-- [Budibase](/apps/budibase)
+- [Rocket.Chat](/apps/rocketchat)
 
-- [Directus](/apps/directus)
+- [SRS](/apps/srs)
 
-- [Elastic Stack](/apps/elastic)
+- [mattermost](/apps/mattermost)
 
-- [Elasticsearch](/apps/elasticsearch)
+## Collaboration & Office
 
-- [Grafana](/apps/grafana)
+- [Alfresco](/apps/alfresco)
 
-- [Graylog](/apps/graylog)
+- [Excalidraw](/apps/excalidraw)
 
-- [Knowage](/apps/knowage)
+- [Focalboard](/apps/focalboard)
 
-- [Matomo Analytics](/apps/matomo)
+- [Kasmweb](/apps/kasmweb)
 
-- [Metabase](/apps/metabase)
+- [Kodbox](/apps/kodbox)
 
-- [OpenSearch](/apps/opensearch)
+- [Nextcloud ](/apps/nextcloud)
 
-- [Plausible](/apps/plausible)
+- [ONLYOFFICE Workspace](/apps/onlyoffice)
 
-- [Strapi](/apps/strapi)
+- [OwnCloud ](/apps/owncloud)
 
-- [SuperSet](/apps/superset)
+- [Pydio Cells](/apps/pydio)
 
-- [Typesense](/apps/typesense)
+- [Redmine](/apps/redmine)
 
-- [Umami](/apps/umami)
+- [Seafile](/apps/seafile)
+
+- [Zentao](/apps/zentao)
+
+- [mattermost](/apps/mattermost)
+
+## Automation
+
+- [Ansible](/apps/ansible)
+
+- [GitLab](/apps/gitlab)
+
+- [Gitea](/apps/gitea)
+
+- [Huginn](/apps/huginn)
+
+- [Jenkins](/apps/jenkins)
+
+- [TeamCity](/apps/teamcity)
+
+- [n8n](/apps/n8n)
 
 ## Databases
 
@@ -208,71 +234,15 @@
 
 - [phpMyAdmin](/apps/phpmyadmin)
 
-## Design & Create
+## IoT
 
-- [AITable](/apps/aitable)
+- [Chronograf](/apps/chronograf)
 
-- [APEX](/apps/apex)
+- [Home Assistant](/apps/homeassistant)
 
-- [Appsmith](/apps/appsmith)
+- [ThingsBoard](/apps/thingsboard)
 
-- [Budibase](/apps/budibase)
-
-- [Directus](/apps/directus)
-
-- [Excalidraw](/apps/excalidraw)
-
-- [NocoDB](/apps/nocodb)
-
-- [Nocobase](/apps/nocobase)
-
-- [Scratch](/apps/scratch)
-
-- [Strapi](/apps/strapi)
-
-- [TensorFlow](/apps/tensorflow)
-
-- [WordPress](/apps/wordpress)
-
-## IT Architecture
-
-- [ActiveMQ](/apps/activemq)
-
-- [Apache HTTP Server](/apps/apache)
-
-- [Caddy](/apps/caddy)
-
-- [Duplicati](/apps/duplicati)
-
-- [Elasticsearch](/apps/elasticsearch)
-
-- [HAProxy](/apps/haproxy)
-
-- [HashiCorp Vault](/apps/vault)
-
-- [Kafka](/apps/kafka)
-
-- [Kasmweb](/apps/kasmweb)
-
-- [Kong](/apps/kong)
-
-- [Kopia](/apps/kopia)
-
-- [MinIO](/apps/minio)
-
-- [ONLYOFFICE Docs](/apps/onlyofficedocs)
-
-- [RabbitMQ](/apps/rabbitmq)
-
-- [Redpanda Console](/apps/redpandaconsole)
-
-- [SRS](/apps/srs)
-
-- [Tinyproxy](/apps/tinyproxy)
-
-- [Traefik Proxy](/apps/traefik)
-
-- [Typesense](/apps/typesense)
+- [influxdb](/apps/influxdb)
 
 ## IT Developer
 
@@ -316,6 +286,46 @@
 
 - [code-server](/apps/codeserver)
 
+## IT Architecture
+
+- [ActiveMQ](/apps/activemq)
+
+- [Apache HTTP Server](/apps/apache)
+
+- [Caddy](/apps/caddy)
+
+- [Duplicati](/apps/duplicati)
+
+- [Elasticsearch](/apps/elasticsearch)
+
+- [HAProxy](/apps/haproxy)
+
+- [HashiCorp Vault](/apps/vault)
+
+- [Kafka](/apps/kafka)
+
+- [Kasmweb](/apps/kasmweb)
+
+- [Kong](/apps/kong)
+
+- [Kopia](/apps/kopia)
+
+- [MinIO](/apps/minio)
+
+- [ONLYOFFICE Docs](/apps/onlyofficedocs)
+
+- [RabbitMQ](/apps/rabbitmq)
+
+- [Redpanda Console](/apps/redpandaconsole)
+
+- [SRS](/apps/srs)
+
+- [Tinyproxy](/apps/tinyproxy)
+
+- [Traefik Proxy](/apps/traefik)
+
+- [Typesense](/apps/typesense)
+
 ## IT Monitor
 
 - [Duplicati](/apps/duplicati)
@@ -347,22 +357,4 @@
 - [Dolibarr](/apps/dolibarr)
 
 - [SSCMS](/apps/sscms)
-
-## IoT
-
-- [Chronograf](/apps/chronograf)
-
-- [Home Assistant](/apps/homeassistant)
-
-- [ThingsBoard](/apps/thingsboard)
-
-- [influxdb](/apps/influxdb)
-
-## Product
-
-- [Jenkins](/apps/jenkins)
-
-- [TeamCity](/apps/teamcity)
-
-- [XWiki](/apps/xwiki)
 
