@@ -1,6 +1,6 @@
 ---
-sidebar_position: 1
-slug: /administrator/upgrade_os
+sidebar_position: 3
+slug: /upgrade/os
 ---
 
 # 操作系统更新

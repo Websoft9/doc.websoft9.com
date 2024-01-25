@@ -1,35 +1,28 @@
 ---
 sidebar_position: 2
-slug: /administrator/upgrade_app
+slug: /upgrade/app
 ---
 
 # 应用程序升级
 
-下面介绍两种应用程序升级的方式：  
-
-## 在线升级
-
-在线升级是利用应用程序自身的 CLI 或控制台界面提供的升级工具（或插件）的一种简单可靠的升级方式。  
-
-具体需要参考[应用中心](../apps)各个应用的章节。  
-
-## 手工升级
-
-本节，只介绍基于 Docker 部署的应用的升级流程（通用型强）：拉取镜像 > 删除容器 > 重建容器
+应用程序的有多种升级手段，主要有如下两种：  
 
 > 升级之前请确保您已经完成了服务器的镜像（快照）备份
 
-1. 修改 Docker 应用的根目录 [.env 文件](../administrator/parameter)中的版本号
+## 应用程序自带升级
 
-2. 拉取目标版本的镜像
-   ```
-   cd /data/wwwroot/appname
-   docker-compose pull
-   ```
-   > 如果显示没有镜像可拉取，则无需升级
+部分应用程序自带的 CLI 或控制台界面、或额外的升级工具（或插件）提供了一种简单可靠的在线升级方式。  
 
-3. 删除旧容器，重新创建 appname 容器
-    ```
-    docker-compose down
-    docker-compose up -d
-    ```
+具体需要参考[应用中心](../apps)各个应用的章节。  
+
+## 应用编排升级
+
+应用编排升级是通过修改应用的编排文件，然后重新拉去新的镜像部署应用的升级过程：
+
+1. 通过 Websoft9 控制台【我的应用】，进入[应用编排](../quick/manageapp#howto-reup)界面
+
+2. 修改 .env 和 docker-compose.yml 文件中与版本有关的参数。例如：W9_VERSION 
+
+   > 建议参考 Websoft9 的 [docker-library](https://github.com/Websoft9/docker-library/tree/main/apps) 项目，它是 Websoft9 应用商店的安装编排文件源头。
+
+3. 修改完成后，重建容器

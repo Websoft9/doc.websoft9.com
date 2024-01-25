@@ -13,8 +13,4 @@ slug: /administrator/migration_db
 * 从收购中合并新数据
 * 部署附加系统  
 
-数据库迁移很常见的运维工作，因此围绕数据库迁移有大量的工具和手段，具体参考数据库文档中相关章节。  
-
-* [SQL Server 迁移](../sqlserver/admin#migration)
-* [MySQL/MariaDB 迁移](../mysql/admin#migration)
-* [PostgreSQL 迁移](../postgresql/admin#migration)
+数据库迁移除了使用自带的导入导出工具之外，购买使用第三方的数据库迁移工具也是很常见的方案。    
