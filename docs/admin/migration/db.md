@@ -1,11 +1,11 @@
 ---
 sidebar_position: 3
-slug: /administrator/migration_db
+slug: /migration/db
 ---
 
 # 数据库迁移
 
-组织可能出于以下原因进行数据迁移：
+数据库迁移是经典的维护工作，组织可能出于各种原因需要迁移：
 
 * 建立新的数据仓库
 * 检修整个系统

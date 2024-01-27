@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-slug: /administrator/upgrade
+slug: /upgrade
 ---
 
 import DocCardList from '@theme/DocCardList';

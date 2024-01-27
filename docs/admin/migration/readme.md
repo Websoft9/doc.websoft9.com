@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-slug: /administrator/migration
+slug: /migration
 ---
 
 import DocCardList from '@theme/DocCardList';

@@ -1,13 +1,13 @@
 ---
 sidebar_position: 1
-slug: /administrator/db
+slug: /admin/settings
 ---
 
 import DocCardList from '@theme/DocCardList';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-# 数据库配置
+# 设置
 
-在本章中，你可以了解到与数据库配置有关的操作：    
+本节详细介绍 Websoft9 控制台的**设置**功能：    
 
 <DocCardList items={useCurrentSidebarCategory().items}/>
