@@ -23,5 +23,9 @@ slug: /settings/system
 
 点击 **Reset** 按钮重置 API Key
 
+## SMTP
+
+目前 Websoft9 没有提供 SMTP 设置。  
+
 
 

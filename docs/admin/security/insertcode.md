@@ -16,7 +16,7 @@ slug: /administrator/security_insertcode
 
 虽然以上问题比较棘手，但实际上诊断这些问题存在标准化的流程：
 
-1. 使用类似 [sitecheck.sucuri.net] 这种网站安全分析平台，对网站进行初步分析
+1. 使用类似 [sitecheck.sucuri.net](https://sitecheck.sucuri.net/) 这种网站安全分析平台，对网站进行初步分析
 
 2. 使用 Linux 杀毒软件 ClamAV 对系统进行全面扫描
 
@@ -55,7 +55,7 @@ slug: /administrator/security_insertcode
 4. 使用[Datalog](https://www.datadoghq.com/) 或 [Cloudcare](https://www.cloudcare.cn/) 这种在线的监控平台，对系统进行深度的分析。
 5. 根据分析结果进行处理 
 
-## 范例
+## 范例：WordPress 代理植入处理
 
 下面以 WordPress 为例，介绍系统被代码植入后的处理方案。  
 
@@ -68,7 +68,7 @@ slug: /administrator/security_insertcode
    
 4. 对于【Critical】标记的结果，手工一一处理
 
-## 工具
+## 扫描工具
 
 其他扫描工具：
 

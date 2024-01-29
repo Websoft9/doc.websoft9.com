@@ -1,0 +1,5 @@
+position: 4
+label: "按用途"
+collapsible: true
+collapsed: true
+className: "red"

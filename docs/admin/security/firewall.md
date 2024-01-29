@@ -9,9 +9,7 @@ slug: /administrator/firewall
 
 在 Linux 中，防火墙是以一个守护进程的方式存在，服务的名字是 firewalld ，它能够定义一组规则来控制外部传入系统中的网络访问。  
 
-虽然与 Linux 防火墙流行的工具有：[firewalld](https://firewalld.org/)、iptables 和 nftables，但 firewalld 功能最为强大，它甚至支持图形化。
-
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/linux/firewalld-gui-websoft9.png)
+虽然与 Linux 防火墙流行的工具有：[firewalld](https://firewalld.org/)、iptables 和 nftables，但 firewalld 功能最为强大。  
 
 ## 安全组设置{#security}
 

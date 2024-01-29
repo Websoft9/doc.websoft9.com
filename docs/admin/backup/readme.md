@@ -16,7 +16,7 @@ import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 ## 备份方式
 
-使用 Websoft9 时，有三种备份的方式：  
+使用 Websoft9 时，有两种备份的方式：  
 
 <DocCardList items={useCurrentSidebarCategory().items}/>
 
