@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-slug: /administrator/security_ddos
+slug: /admin/security_ddos
 ---
 
 # DDoS 防御

@@ -7,4 +7,4 @@ slug: /guide/ssh-tunnel
 
 SSH 隧道是服务器与客户端之间的虚拟通道，它允许应用通过隧道进行转发，从客户端到服务端，反之亦可。   
 
-参考 []()服务端的应用通过 SSH 隧道转发到本地，以实现更简单快捷的访问方式。  
+参考 [SSH 隧道和代理](https://www.baeldung.com/linux/ssh-tunneling-and-proxying) 将应用转到到本地，无需开启安全组亦可以以实现更简单快捷的访问。  

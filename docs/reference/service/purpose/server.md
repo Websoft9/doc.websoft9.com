@@ -161,8 +161,9 @@ Putty 虽然可以单独运行，但把 Putty 集成到 WinSCP 上使用更加�
    |  云平台   |  管理员账号   | 其他|
    | --- | --- | --- |
    |  Azure   |  创建服务器的时候自行设置   | [如何开启root账户？](../azure#enableroot) |
-   |  AWS   |  AmazonLinux:ec2  CentOS:centos  Ubuntu:ubuntu  Debian:admin   | [如何开启root账户？](../aws#enableroot)|
-   |  阿里云，华为云，腾讯云   |  都是 root 除腾讯云 Ubuntu 之外(ubuntu)  | |
+   |  AWS   |  AmazonLinux（ec2）  CentOS（centos）  Ubuntu（ubuntu）  Debian（admin）   | [如何开启root账户？](../aws#enableroot)|
+   |  阿里云，华为云，腾讯云   |  root | |
+   |  腾讯云 Ubuntu 系统   |  ubuntu | |
 
   </TabItem>
   <TabItem value="windowsaccount" label="Windows">
@@ -174,3 +175,36 @@ Putty 虽然可以单独运行，但把 Putty 集成到 WinSCP 上使用更加�
 
   </TabItem>
 </Tabs>
+
+#### 如何向服务器上传文件？
+
+向服务器上传文件，完全**不需要**额外设置服务器：  
+
+* Windows服务器：直接 [远程桌面](./user/cloud#connectwindows) 登录后，通过拷贝和粘贴的方式管理文件
+* Linux服务器：请使用 [SFTP 连接服务器](./user/cloud#connectlinux) 后，通过可视化界面管理文件
+
+#### 云服务器连不上？
+
+下图显示了无法连接云服务器的主要原因分类及出现概率，按照对应的原因进行排查：  
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/ecs-cannotconnect.jpeg)
+
+#### 连接 SFTP，出现 Disconnected...publickey{#sftpnokey}
+
+错误原因：服务器初始化的适合，启用的是密钥对登录方式（密码登录会不开启）    
+解决方案：设置 WinSCP 为秘钥对登录 或 云控制台更改登录凭证方式
+
+#### 无法连接 Windows 远程桌面？{#notconnectwin}
+
+检查账号和密码是正确，请保证 **服务器安全组** 3389 端口是开启的，下图是排查方法  
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aliyun/aliyun-guzhangpaichu.png)
+
+#### Windows 容器无法访问外网？{#winnonetwork}
+
+在使用阿里云官方提供的 Windows 2019 数据中心版（含 Container） 的时候发现网络不通，后面采用如下的办法解决了此问题：
+
+1. 远程桌面登录到服务器
+2. 到【网络管理】中禁用本地网络，此时远程桌面断开
+3. 到阿里云 VNC 连接中重新远程到服务器，重新开启被禁用的本地网络
+
+以上解决办法的根本原因未知。 

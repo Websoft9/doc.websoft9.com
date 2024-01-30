@@ -7,88 +7,28 @@ slug: /faq
 
 请根据您的工作场景参考对应的问题。如果找不到您所需的问题，请回到[故障主页](./troubleshoot)或联系[技术支持](./helpdesk)。  
 
-## 初始化场景{#setup}
+## Websoft9 问题
 
-下面是初始化向导过程中可能会碰到的问题：
+#### Websoft9 核心功能不可用？
 
-#### *http://服务器公网IP* 无法进入初始化？{#blank}
+当 Websoft9 控制台可以登录，但无法访问应用商店、容器、网关等核心功能时，最大的原因可能是网关工作异常导致应用之间的连接与集成出现了问题。  
+
+可运行 **docker logs websoft9-proxy** 进行诊断。  
+
+
+#### 无法访问 Websoft9 控制台？{#blank}
 
 常见的原因如下：
 
-* 您的服务器安全组**80** 端口没有开启（**最常见因素**）
-* 你所安装的镜像不支持此类访问
-* 安装的不是目标镜像
+* 您的服务器[安全组](./administrator/firewall#security) **9000** 端口没有开启（**最常见因素**）
+* 安装的不是 Websoft9 的产品
 * 你的服务器网络故障
 * 产品本身的故障导致
 * 其他
 
 不管哪种原因，一旦无法出现问题，请第一时刻联系：[人工支持](./helpdesk)  
 
-#### 如何配置安全组？
-
-参考：[《云服务器安全组设置》](./administrator/firewall#security)  
-
-#### 账号密码是什么？
-
-账号密码存储在您的服务器指定文件中：`/credentials/password.txt` ，更多参考[相关指引](./user/credentials)。
-
-#### 怎么连接/登录云服务器？
-
-参考本文档[《云服务器操作》](./user/cloud#connect)章节
-
-#### 如何向服务器上传文件？
-
-向服务器上传文件，完全**不需要**额外设置服务器：  
-
-* Windows服务器：直接 [远程桌面](./user/cloud#connectwindows) 登录后，通过拷贝和粘贴的方式管理文件
-* Linux服务器：请使用 [SFTP 连接服务器](./user/cloud#connectlinux) 后，通过可视化界面管理文件
-
-#### 云服务器连不上？
-
-下图显示了无法连接云服务器的主要原因分类及出现概率，按照对应的原因进行排查：  
-
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/ecs-cannotconnect.jpeg)
-
-#### 连接 SFTP，出现 Disconnected...publickey{#sftpnokey}
-
-错误原因：服务器初始化的适合，启用的是密钥对登录方式（密码登录会不开启）    
-解决方案：设置 WinSCP 为秘钥对登录 或 云控制台更改登录凭证方式
-
-#### 无法连接 Windows 远程桌面？{#notconnectwin}
-
-检查账号和密码是正确，请保证 **服务器安全组** 3389 端口是开启的，下图是排查方法  
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aliyun/aliyun-guzhangpaichu.png)
-
-#### Windows 容器无法访问外网？{#winnonetwork}
-
-在使用阿里云官方提供的 Windows 2019 数据中心版（含 Container） 的时候发现网络不通，后面采用如下的办法解决了此问题：
-
-1. 远程桌面登录到服务器
-2. 到【网络管理】中禁用本地网络，此时远程桌面断开
-3. 到阿里云 VNC 连接中重新远程到服务器，重新开启被禁用的本地网络
-
-以上解决办法的根本原因未知。 
-
-#### Nginx 出现 502 错误？{#nginx502}
-
-Nginx 的 502 错误全称为 “Nginx 502 Bad Gateway”。错误不在 Nginx 本身，而是 Nginx 转发的后端服务运行异常。  
-
-后端服务异常包括：
-
-* 计算资源不够
-* 后端服务停止运行
-
-#### 如何给应用配置域名？
-
-参考本文档 **[配置域名](./administrator/domain)** 的专题章节
-
-#### 如果没有域名是否可以访问应用？
-
-可以，直接通过服务器公网IP访问即可
-
-## 管理维护场景
-
-#### 应用程序的服务无法启动？
+#### Websoft9 服务无法启动？
 
 1. 先排查计算资源是否异常
     ```shell
@@ -101,38 +41,49 @@ Nginx 的 502 错误全称为 “Nginx 502 Bad Gateway”。错误不在 Nginx �
     # 查看内存使用
     free -lh
     ```
-2. 再查看错误日志（appname 为应用名称，例如：gitlab, wordpress 等） 
+2. 再查看错误日志 
     ```shell
-    # 查看容器日志
-    docker logs appname
+    # 查看 Websoft9 服务容器日志
+    docker logs websoft9-apphub
+    docker logs websoft9-git
+    docker logs websoft9-proxy
 
-    # 查看服务状态和日志
-    systemctl status appname
-    journalctl -u appname
+    # 查看 Websoft9 服务状态和日志
+    systemctl status websoft9
+    journalctl -u websoft9
     ```
 3. 根据错误日志进行诊断
 
-#### 程序、数据和配置文件目录在哪里？
+#### Websoft9 默认端口被占用？{#portconflict}
 
-参考：[约定的目录和路径](./administrator/parameter)
+运行 `netstat -tunlp` 命令，查看服务器上已经使用的端口情况。 
 
-#### 如何远程管理数据库？
+#### Docker service 无法启动？{#dockernotstart}
 
-详情参考：[可视化管理数据库](./user/dbgui)。
+先通过 `systemctl status docker` 和 `journalctl -xe` 查看错误日志。
+
+如果错误日志是  Unit docker.socket entered failed state，表明系统缺少 docker 用户组，运行 `groupadd docker` 增加用户组  
+
+## 应用问题
+
+#### 访问应用出现 502 错误？{#nginx502}
+
+502 错误全称为 “Nginx 502 Bad Gateway”。错误不在 Nginx 网关本身，而是 Nginx 转发的后端服务运行异常。  
+
+后端服务异常包括：  
+
+* 计算资源不够
+* 后端服务停止运行
+* 后端服务端口错误
 
 #### 修改了数据库密码，应用不能访问？
 
-需要修改应用的 **配置文件** 对应的数据库 password 参数即可
+修改了数据库密码，如果应用不能访问。需要通过 **应用编排** 功能中修改应用的 .env 或 docker-compose.yml 中数据库连接信息。  
 
-#### 如何设置 HTTPS 访问？
+重建应用后生效。  
 
-参考专题章节：[HTTPS 设置](./administrator/domain_https) 
 
-#### 如何查看错误日志？
-
-参阅: [日志诊断](./troubleshoot/logs)
-
-#### 如何清楚 Docker 容器日志？
+#### 如何清空应用的容器日志？
 
 ```
 # 获取容器日志路径
@@ -142,14 +93,11 @@ docker inspect --format='{{.LogPath}}' Container_Name
 echo "" > log_path
 ```
 
-#### 端口被占用导致应用无法启动或报错？{#portconflict}
-
-运行 `netstat -tunlp` 命令，查看服务器上已经使用的端口情况。 
-
-#### 网站访问量很小，但访问很慢？{#siteslow}
+#### 网站应用访问很慢？{#siteslow}
 
 网站慢最常见的原因包括如下几个方面：
 
+* 访问量太大
 * 带宽不够
 * 服务器满负荷运转
 * 图片、视频、CSS/JS等静态资源太多
@@ -197,9 +145,9 @@ echo "" > log_path
 **原因分析**：死循环或重定向目标不存在   
 **解决方案**：分析网站根目录下的 `.htaccess` 文件，看看有没有死循环规则  
 
-#### 升级或安装扩展时网络超时？{#timeout}
+#### 应用网络超时？{#timeout}
 
-在使用 WordPress, ownCloud 等应用时，可能出现在线升级等操作由于网络原因导致失败。  
+在使用 WordPress, ownCloud 等应用时，可能出现打开后台、访问页面、在线升级等操作由于网络原因导致失败。  
 
 常见网络超时场景：  
 
@@ -212,44 +160,27 @@ echo "" > log_path
 * Docker pull 镜像
 * yum / apt 升级 
 
-这些场景的根本原因都只有一个：而 *应用服务器 -- 应用提供商服务器* 受制于地域原因，可能会出现偶尔或持续网络不通的情况。  
+这些场景的根本原因都是一样的，即：**应用中的服务无法畅通的访问其上游** 。  
 
-一旦网络不通，那么以上场景所对应的服务自然无法访问，最后只能接受系统超时的结果。  
+结果会导致用户无法获取对应的服务，最后只能接受系统超时的结果。
 
-如何解决呢？
+如何解决呢？  
 
 既然是网络不通导致，而我们又无法对应用提供商服务器的网络做出任何动作。显然，只有从应用或应用所在的服务器网络情况做出应对，才能探索合适的解决方案：
 
-1. 修改应用中的代码，将网络不通的服务替换。例如：更换 Docker 仓库地址。
-2. 临时修改应用自身的网络访问，让应用可以直接与应用提供商服务器连通。例如：在 WordPress 中安装代理插件，临时让 WordPress 访问国外的升级服务器。
-3. 临时改变自身服务器的网络，使之与应用提供商服务器连通。例如：应用服务器中安装代理客户端，使应用服务器可以通过代理去访问国外升级服务器。
+1. 通过 Websoft9 网关的 sub_filter 指令，替换应用中不畅通的 URL
+2. 修改应用中的代码，将网络不通的服务替换。例如：更换 Docker 仓库地址。
+3. 临时修改应用自身的网络访问，让应用可以直接与应用提供商服务器连通。例如：在 WordPress 中安装代理插件，临时让 WordPress 访问国外的升级服务器。
+4. 临时改变自身服务器的网络，使之与应用提供商服务器连通。例如：应用服务器中安装代理客户端，使应用服务器可以通过代理去访问国外升级服务器。
 
 以上提出的方案基本包括涵盖全部场景，但详细操作需根据具体的应用而定。
 
-#### Docker 容器无法启动？{#containernotstart}
 
-常见的原因包括：必要的环境变量没有设置，存储没有权限等。具体问题通过日志查看：  
+## 安全问题
 
-```shell
-#查看容器日志，name是容器名称
-sudo docker logs name
-```
+#### Websoft9 存在病毒、木马和安全漏洞吗？
 
-#### Docker service 无法启动？{#dockernotstart}
-
-先通过 `systemctl status docker` 和 `journalctl -xe` 查看错误日志。
-
-如果错误日志是  Unit docker.socket entered failed state，表明系统缺少 docker 用户组，运行 `groupadd docker` 增加用户组  
-
-## 安全场景
-
-#### 如何备份应用？
-
-备份是及其重要的工作，如果您还没有重视备份或不知道如何备份，请参考本文档的 **[备份](./administrator/backup)** 章节。
-
-#### 镜像默认存在病毒、木马和安全漏洞吗？
-
-首先，可以肯定的说，镜像在上架的时候已经经过严格的安全测试，绝对不会默认存在病毒或木马、后门。  
+Websoft9 在上架到云市场时，已经过严格的安全测试，绝对不会默认存在病毒或木马、后门。  
 
 但需要澄清的是，仅保证**默认**不存在，无法保证后续没有漏洞。原因见下一个问题。  
 
@@ -268,18 +199,3 @@ sudo docker logs name
 * 合作选择：保证服务商有丰富的云服务器系统维护和环境配置经验，拥有专业的运维团队；
 * 流程控制：要求服务商严格遵循《云平台安全审核标准》，只有通过安全审核的镜像才可以售卖；
 * 合规机制：要求服务商须与每一个用户签订《镜像使用许可协议》，对镜像安全向用户作出承诺；
-
-#### root 账户修改文件权限，报错 "Operation not permitted"？{#rootnoauth}
-
-使用root修改文件权限，如下。查看文件属性也不是 i 属性导致。
-
-```
-$ chmod 750 index.php
-chmod: changing permissions of ‘index.php’: Operation not permitted
-$ lsattr index.php
--------------e-- index.php
-```
-
-可能是云平台【网页防篡改】保护，如果为文件/目录添加了该保护，在系统中修改文件/目录 权限就会被禁止。  
-![](https://libs.websoft9.com/Websoft9/blog/zh/2020/12/linux-safe-websoft9.png)
-

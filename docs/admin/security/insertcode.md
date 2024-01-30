@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-slug: /administrator/security_insertcode
+slug: /admin/security_insertcode
 ---
 
 # 代码植入问题处理
@@ -67,6 +67,20 @@ slug: /administrator/security_insertcode
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-wordfence-websoft9.png)
    
 4. 对于【Critical】标记的结果，手工一一处理
+
+## 范例：锁定与解锁文件系统
+
+锁定文件系统建议使用云平台提供的【网页防篡改】进行保护。  
+
+而需要修改的时候，也需要到平台进行解锁，否则会出现 "Operation not permitted" 的问题
+
+```
+$ chmod 750 index.php
+chmod: changing permissions of ‘index.php’: Operation not permitted
+$ lsattr index.php
+-------------e-- index.php
+```
+
 
 ## 扫描工具
 
