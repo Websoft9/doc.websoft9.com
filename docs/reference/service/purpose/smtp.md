@@ -1,6 +1,6 @@
 ---
 sidebar_position: 6
-slug: /smtp-lists
+slug: /smtps
 ---
 
 # SMTP 服务

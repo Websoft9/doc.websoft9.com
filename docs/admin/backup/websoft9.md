@@ -7,7 +7,9 @@ slug: /backup/websoft9
 
 由于 Websoft9 完全基于 Docker，故一旦备份了 Websoft9 以及应用程序的 Docker volumes，那么就实现了全部数据的备份。  
 
-## 备份 Volumes（推荐）
+## 备份/恢复 Volumes（推荐）
+
+### 备份
 
 Websoft9 以及应用的可视化 Volumes 备份（回复）功能，主要通过安装一个名称 **Duplicati** 的应用来实现： 
 
@@ -47,10 +49,12 @@ Websoft9 以及应用的可视化 Volumes 备份（回复）功能，主要通�
 
 7. 设置其他选型
 
-8. 设置完成后，可立即运行备份或恢复备份
+8. 设置完成后，可立即运行备份
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/websoft9/websoft9-duplicati-editbkfile.png)
 
+### 恢复
 
+Duplicati 可以很方便的恢复备份。需要注意的恢复时，务必勾选**恢复读写权限**。
 
 ## 其他备份方式
 

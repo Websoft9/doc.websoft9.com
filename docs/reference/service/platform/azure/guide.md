@@ -102,10 +102,11 @@ sudo passwd root
 
 1. Download and Install [PUTTYGEN](https://www.ssh.com/ssh/putty/windows/puttygen).
 
-2. Click "Generate"  
-![image.png](https://libs.websoft9.com/Websoft9/DocsPicture/en/putty/puttygen-generate-websoft9.png)
+2. Click "Generate"    
+   ![image.png](https://libs.websoft9.com/Websoft9/DocsPicture/en/putty/puttygen-generate-websoft9.png)
 
-3. Public key and Private key is OK, you can copy public to Azure(format starting with "ssh-rsa") ,and Save the public key and private key on your local computer for backups
+3. Public key and Private key is OK, you can copy public to Azure(format starting with "ssh-rsa")   
+   Save the public key and private key on your local computer for backups  
    ![image.png](https://libs.websoft9.com/Websoft9/DocsPicture/en/putty/puttygen-generatesave-websoft9.png)
 
 4. When connect Linux on your local computer, you can use private key for authentication 

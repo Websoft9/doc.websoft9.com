@@ -1,6 +1,6 @@
 ---
-sidebar_position: 20
-slug: /user/glossary
+sidebar_position: 3.2
+slug: /glossary
 ---
 
 # 词汇表

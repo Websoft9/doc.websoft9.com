@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-slug: /reference/domain
+slug: /domains
 ---
 
 # 域名服务

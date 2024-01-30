@@ -1,9 +1,12 @@
+---
+sidebar_position: 2
+slug: /cloud-list
+---
+
 import DocCardList from '@theme/DocCardList';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-
-# 基础组件
-
-管理各种软件系统需要涉及的组件：
+# 云平台
 
 <DocCardList items={useCurrentSidebarCategory().items}/>
+

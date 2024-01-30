@@ -69,6 +69,8 @@ const config = {
             label: '文档',
           },
 
+          { to: 'https://support.websoft9.com/apidocs', label: 'API', position: 'left' },
+
           { to: '/docs/helpdesk', label: '技术支持', position: 'left' },
 
           {

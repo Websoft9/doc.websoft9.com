@@ -20,14 +20,19 @@ Docker 需要重点掌握的内容包括：
 * 用户权限：容器中的用户与宿主机的用户之间的关系
 * 编排：通过多容器互联，实现所需的业务场景
 
-> [Docker 官方文档](https://docs.docker.com/)非常完善，而且非常有层次结构。
+编写本章，参阅了大量资料，主要包括：
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/docker/docker-documentation-websoft9.png)
-
+* [Docker 官方文档](https://docs.docker.com/)
+* 《Docker 技术入门与实践》 杨宝华等著
+* 《第一本 Docker 书》，James Turnbull 著，李兆海 刘斌 巨震 译
+* 《Docker 技术入门与实战 第三版》，杨保华 戴王剑 曹亚仑 编著
+* [《菜鸟教程：Docker》](https://www.runoob.com/docker/docker-tutorial.html)
+* [《Docker - 从入门到实践》](https://yeasy.gitbook.io/docker_practice/)
 
 ## 概念与原理
 
 ### 原理
+
 #### 轻量级虚拟机
 
 Docker 是利用 Linux **虚拟隔离技术（namespace）**将操作系统分割为多个子操作系统，子操作系统之间互不干扰的一种虚拟化技术。

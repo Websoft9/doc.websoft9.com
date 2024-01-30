@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-slug: /administrator/integration
+slug: /guide/integration
 ---
 
 # 多个应用相互连接、集成
