@@ -1,5 +1,5 @@
 ---
-slug: /community/contributing
+slug: /contribute
 ---
 
 # 如何参与贡献？
@@ -9,6 +9,16 @@ slug: /community/contributing
 对于一个开源项目来说，不仅仅局限于代码的开发，像功能建议、文档整理、错误报告、Bug 修复建议等方面与代码开发同等重要。  
 
 也就是说，您只要有想法，就可以马上行动，参与到 Websoft9 的产品改进中来吧。  
+
+## 产品架构
+
+参与贡献之前，先了解 [Websoft9 产品架构](./architecture) 有助于宏观上理解产品，更有效的参与工作。  
+
+## 项目
+
+- [Websoft9](https://github.com/Websoft9/websoft9)
+- [Docker-library](https://github.com/Websoft9/docker-library)
+- [文档](https://github.com/Websoft9/doc.websoft9.com)
 
 ## 参与方式{#method}
 

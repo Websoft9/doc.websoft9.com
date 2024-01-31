@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 2
 slug: /troubleshoot/5why 
 ---
 
@@ -41,7 +41,7 @@ slug: /troubleshoot/5why
 
 ## 怎么用？
 
-#### pip install 在宿主机上运行正常，而在容器中无法使用？
+#### pip install 在容器中运行异常？
 
 ```
 1. 无法使用的表现是什么？
@@ -58,11 +58,13 @@ py.org 的仓库在国外，不稳定是合理的
 
 4. 宿主机访问 py.org 的网络稳定？
 
-不符合逻辑，宿主机的网络与容器是一样的。那只能是访问的对象有差异？
+不稳定，但宿主机 pip install 正常。  
 
 5. 宿主机连接的 python 仓库与容器连接的 Python 仓库有什么不一样？
 
-经过排查，发现宿主机 pip.conf 中设置了国内的源。此时问题已有答案
+不一样。宿主机并不是访问 py.org 的仓库。  
+
+原来宿主机 pip.conf 中设置了国内的源，此时问题已有答案。
 
 ```
 
@@ -85,7 +87,7 @@ apt 有一个仓库优先级的设置，通过 apt-cache policy 可以查看优�
 
 ```
 
-#### ONLYOFFICE 项目 docker compose up 超时? 
+#### ONLYOFFICE 运行超时? 
 
 ```
 1. 什么导致超时？
@@ -109,22 +111,26 @@ ERROR: for onlyoffice-community-server  UnixHTTPConnectionPool(host='localhost',
 解决了
 ```
 
-#### 删除了 /usr/bin 下的 node 命令导致 pm2 start 快照项目报错? 
+#### pm2 start 快照项目报错? 
 
 ```
-1. pm2 start 与 node 有关系吗？
+1. 刚做了什么操作？
+
+删除了 /usr/bin 下的 node 命令导致 
+
+2. pm2 start 与 node 有关系吗？
 
 pm2 start 会调用 npm run
 
-2. pm2 start 新项目报错吗？
+3. pm2 start 新项目报错吗？
 
 不会。即说明旧项目保存了 node 进程的默写参数，其中包含 node 命令快捷方式
 
-3. 新项目是如何调用 node 命令的？
+4. 新项目是如何调用 node 命令的？
 
 通过环境变量初始化命令，即没有直接使用  node 命令快捷方式
 
-4. 删掉快照，重新启动可以吗？
+5. 删掉快照，重新启动可以吗？
 
 可以，此时问题已经
 ```

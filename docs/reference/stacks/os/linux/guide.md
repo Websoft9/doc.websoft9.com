@@ -154,10 +154,39 @@ Cron是一个Linux下的定时执行工具，可以在无需人工干预的情�
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cockpit/cockpit-gui-websoft9.png)
 
-### 分析日志
+### 分析日志{#logs}
 
 日志是诊断故障的关键，大部分的问题都会在日志中留下“蛛丝马迹”。所以，学会分析日志是运维中最重要的技能之一。  
 
-参考：[Linux 日志诊断](./troubleshoot#linux)
+应用报错后，有如下几个可以分析日志的入口： 
+
+1. 日志文件路径：*/data/logs/appname*
+
+2. 日志管理查看方法
+
+   ```
+   # 指定服务日志
+   systemctl status service_name
+   journalctl -u service_name
+
+   # 查看 systemd 的错误日志，-p 支持 emerg alert err crit warning notice info debug 等值
+   journalctl -p err
+
+   # 查看内核日志
+   journalctl -k
+
+   # 查看脚本的日志
+   journalctl /usr/bin/bash
+
+   # 查看指定用户的日志
+   journalctl UID=33 --since today
+   ```
+
+3. Docker 容器日志查看方法
+   ```
+   docker logs appname
+   ```
+
+检索关键词 **Failed** 或者 **error** 查看错误
 
 ## 故障排除{#troubleshoot}

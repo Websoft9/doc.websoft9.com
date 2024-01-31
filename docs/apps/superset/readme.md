@@ -88,6 +88,9 @@ pip install mysqlclient
 
 # 范例：安装 PostgreSQL 驱动
 pip install psycopg2
+
+# 范例：通过 pip 镜像仓库安装 PostgreSQL 驱动，解决网络慢的问题
+pip install psycopg2 -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 更多驱动参考官方[Database dependencies](https://superset.apache.org/docs/databases/installing-database-drivers)

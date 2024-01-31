@@ -1,17 +1,15 @@
 ---
-sidebar_position: 3
-slug: /troubleshoot/method
+sidebar_position: 4
+slug: /troubleshoot/type
 ---
 
-# 故障诊断三分法
+# 问题归类，有的放矢
 
-三分法：任何软件的故障只能在**资源瓶颈、连接障碍和组件失效** 三个方面之一或组合，除此之外便没有其他。  
+问题定性即鉴别问题的类型。Websoft9 在实践中发现问题基本集中在三个方面：**资源瓶颈、连接障碍和组件失效**  
 
-它对软件故障的一种归类描述，它是 Websoft9 结合运维实践与 Triz 理论后的创新认知和哲学思考。   
+同一个类型的问题，解决方案具有高度一致性。  
 
-> 笛卡尔说：最有价值的知识是关于方法的知识。 
-
-### 资源瓶颈
+#### 资源瓶颈
 
 资源瓶颈主要指计算资源不足：CUP 超负荷、内存不足、硬盘空间已满、带宽太小、进程互斥、端口被占用等。
 
@@ -32,11 +30,10 @@ netstat -tunlp
 典型范例：  
 
 * [MySQL 日志太大，导致磁盘空间不足？](../mysql/admin#binlogexceed)
-* [端口被占用导致应用无法启动或报错？](../faq#portconflict)
+* [Websoft9 默认端口被占用？](../faq#portconflict)
 * [访问量很小，但网站访问很慢？](../faq#siteslow)
-* [root 账户修改文件权限，报错 "Operation not permitted"？](../faq#rootnoauth)
 
-### 连接障碍
+#### 连接障碍
 
 网络不通、访问权限不足、账号错误、黑名单问题、错误的连接对象等特征下，都是技术组件的连接问题。  
 
@@ -79,24 +76,17 @@ mtr websoft9.com
 
 典型范例：  
 
-* [无法连接 Windows 远程桌面？](../faq#notconnectwin)
-* [http://服务器公网IP 无法打开初始化界面？](../faq#blank)
-* [网站重定向错误导致打不开？](../faq#redirect)
-* [升级或安装扩展时网络超时？](../faq#timeout)
-* [Windows 容器无法访问外网？](../faq#winnonetwork)
-* [连接 SFTP，出现 Disconnected...publickey](../faq#sftpnokey)
-* [域名解析迟迟没有生效？](../administrator/domain_step#effect)
-* [容器应用无法远程访问？](../docker/advanced#noremote)
-* [Apache mod_evasive for DDoS](https://www.howtogeek.com/devops/how-to-configure-mod_evasive-for-apache-ddos-protection/)：mod_evasive 不合理的设置会频繁导致 403 错误
+* [无法访问 Websoft9 控制台？](../faq#blank)
+* [应用网络超时？](../faq#timeout)
+* [连接 SFTP，出现 Disconnected...publickey](../servers#sftpnokey)
+* [域名解析迟迟没有生效？](../domains#effect)
 
-### 组件失效
+#### 组件失效
 
 一个系统的子系统（或组件）失效，会导致周边依赖此系统的其他系统出现故障。  
 
 系统（组件）的失效特征包括：不可操作、损坏、无法启动、非计划停止、锁定、商业因素（欠费）、安全事故等  
 
-典型范例：  
+典型范例： 
 
-* [Nginx 出现 502 错误？](../faq#nginx502)
-* [Docker 容器无法启动？](../faq#containernotstart)
-* [Docker service 无法启动？](../faq#dockernotstart)
+* [访问应用 出现 502 错误？](../faq#nginx502)

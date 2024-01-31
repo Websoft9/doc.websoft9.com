@@ -6,44 +6,13 @@ import DocCardList from '@theme/DocCardList';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 
-# 故障处理
+# 问题
 
 
-我们对故障的定义：除了软件报错之外，一切给用户使用带来困扰的情景都可称之为故障（或问题）。  
+此章对问题的定义：给用户使用带来困扰的情景都可称之为问题（或故障）。  
 
 
-* 如果您是[付费客户](./docs/business/)，请随时联系我们的 [技术支持](./helpdesk) 创建 **专属服务群**，我们会组织专家团队帮助您解决故障。  
+* 如果您是[付费客户](./business)，请随时联系我们的 [技术支持](./helpdesk) 创建 **专属服务群**，我们会组织专家团队帮助您解决故障。  
+* 如果您是免费用户，请到我们的 Github 上的[开源项目](https://github.com/websoft9/websoft9)中提交 Issue 获取支持。  
 
-* 如果您是开源用户，请到我们的 Github 上的[开源项目](https://github.com/websoft9)中提交 Issue 获取支持。  
-
-
-## 热门问题
-
-* [30个最常见的技术问题](./faq)
-* [商务问题](./business/faq)
-
-## 故障问题（汇总）
-
-除[应用](./apps)自身的故障问题之外，管理员还需关注支持应用的系统组件的故障：  
-
-| 组         | 组件                                                         |
-| ---------- | ------------------------------------------------------------ |
-| 程序环境   | [PHP](./php#troubleshoot), [Java](./java#troubleshoot), [Python](./python#troubleshoot), [Node](./nodejs#troubleshoot), [Ruby](./ruby#troubleshoot), [Go](./go#troubleshoot), [.NET](./dotnet#troubleshoot) |
-| Web Server | [Apache](./apache#troubleshoot), [Nginx](./nginx#troubleshoot), [IIS](./iis#troubleshoot), [Traefik](./traefik#troubleshoot), [Caddy](./caddy#troubleshoot) |
-| 基础架构   | [Docker](./docker#troubleshoot), [Ansible](./ansible#troubleshoot)  |
-| [数据库](./apps/db/)   | [MySQL/MariaDB](./mysql/admin#troubleshoot), [SQLSever](./sqlserver/admin#troubleshoot), [PostgreSQL](./postgresql/admin#troubleshoot), [MongoDB](./mongodb/admin#troubleshoot), [Redis](./redis/admin#troubleshoot) |
-| 操作系统   | [Linux](./linux/advanced#troubleshoot), [Windows](./windows/advanced#troubleshoot)  |
-
-
-## 诊断技术
-
-参考下面的专项，提升诊断和处理故障的能力。  
-
-* [故障诊断三分法](./troubleshoot/method)
-* [日志诊断技术](./troubleshoot/logs)
-
-## 故障工具
-
-* [HTTP 状态码速查](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
-
-
+<DocCardList items={useCurrentSidebarCategory().items}/>

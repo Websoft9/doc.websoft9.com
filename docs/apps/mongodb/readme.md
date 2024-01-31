@@ -134,12 +134,10 @@ MongoDB Compass 官方提供的客户端工具，我们的部署方案已经将�
 2. 点击web桌面的 MongoDB Compass 图标，进入MongoDB Compass
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/mongodbcompass-click-websoft9.png)
 
-3. 填写准确的字段，连接 MongoDB
-   ```
-   # 示例连接字符串
-   mongodb://root:1cTFecwTEs@mongodb:27017
-   ```
+3. 点击【New Connection】，展开 **Advanced Connection Options**，输入连接信息和账号
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/mongodbcompass001-websoft9.png)
+
+   > 不建议使用 URI 的方式，它受限于字符串格式
 
 4. 连接成功，进入控制台
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/mongodbcompass002-websoft9.png)

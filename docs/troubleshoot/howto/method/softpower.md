@@ -1,9 +1,9 @@
 ---
-sidebar_position: 6 
+sidebar_position: 3 
 slug: /troubleshoot/softpower
 ---
 
-# 故障解决者的软实力
+# 人的因素：不可低估的意志
 
 掌握了方法论，也只是解决故障的一个方面。实际上，还有一个方面与它是相辅相成的，那就是问题处理者的软实力。  
 

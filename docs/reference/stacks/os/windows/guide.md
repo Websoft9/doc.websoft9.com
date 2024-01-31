@@ -40,6 +40,13 @@ Visual Studio 所有发行版中均包含 MSBuild。在 Visual Studio IDE 中编
 | 是否支持多站点 | 支持 | 支持 | 支持 | 支持 |
 | 是否支持IP访问 | 支持 | 支持 | 支持 | 支持 |
 
+### 分析日志{#logs}
+
+按照下列图中所示，进入到 Windows 系统的**事件查看器**，选择 Windows 日志下的应用程序，然后在右侧的事件列表查看出现错误的应用程序，单击即可在下方弹出详细的错误信息，最后就可以根据错误原因来纠正错误。
+
+![event](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wampserver/wampserver-eventerror-websoft9-1.png)
+![event](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wampserver/wampserver-eventerror-websoft9-2.png)
+
 ## 参数
 
 ### 路径{#path}
