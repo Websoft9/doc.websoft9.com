@@ -34,22 +34,26 @@ catalog_dict = {}
 
 # Traverse the JSON data to fill the dictionary
 for entry in data:
-    parent_key = entry['key']  # This is the key for the parent item
-    trademark = entry['trademark']
-    items = entry['catalogCollection']['items']
-    for item in items:
-        # Check if the item has a 'catalogCollection' and process accordingly
-        if 'catalogCollection' in item:
-            subitems = item['catalogCollection']['items']
-            for subitem in subitems:
-                sub_title = subitem['title']
-                position = subitem.get('position', 0)  # Use 0 as a default if position is not specified
-                # Initialize the dictionary for this sub_title if it hasn't been added before
-                if sub_title not in catalog_dict:
-                    catalog_dict[sub_title] = {'positions': [], 'entries': set()}
-                # Add position and the (trademark, parent_key) tuple to the dictionary for this sub_title
-                catalog_dict[sub_title]['positions'].append(position)
-                catalog_dict[sub_title]['entries'].add((trademark, parent_key))
+    try:
+        parent_key = entry['key']  # This is the key for the parent item
+        trademark = entry['trademark']
+        items = entry['catalogCollection']['items']
+        for item in items:
+            # Check if the item has a 'catalogCollection' and process accordingly
+            if 'catalogCollection' in item:
+                subitems = item['catalogCollection']['items']
+                for subitem in subitems:
+                    sub_title = subitem['title']
+                    position = subitem.get('position', 0)  # Use 0 as a default if position is not specified
+                    # Initialize the dictionary for this sub_title if it hasn't been added before
+                    if sub_title not in catalog_dict:
+                        catalog_dict[sub_title] = {'positions': [], 'entries': set()}
+                    # Add position and the (trademark, parent_key) tuple to the dictionary for this sub_title
+                    catalog_dict[sub_title]['positions'].append(position)
+                    catalog_dict[sub_title]['entries'].add((trademark, parent_key))
+    except Exception as e:
+        print(f"Error processing entry: {entry.get('title', 'Unknown')}")
+        print(e)
 
 # Now, generate the Markdown content sorted by position in ascending order
 markdown_content = ""
