@@ -1,7 +1,7 @@
 ---
-sidebar_position: 1
-name: ActiveMQ
+title: ActiveMQ
 slug: /activemq2
+sidebar_exclude: true
 tags:
   - ActiveMQ 
   - IT 架构
@@ -14,19 +14,11 @@ import Meta from './_include/activemq.md';
 
 ## ActiveMQ 初始化
 
-Websoft9 控制台安装完 ActiveMQ 后，即可根据【访问】标签页获取登录地址和账号。
-
-![ActiveMQ初始化页面](http://libs.websoft9.com/Websoft9/DocsPicture/zh/activemq/activemq-login-websoft9.png)
-
-![ActiveMQ控制台](http://libs.websoft9.com/Websoft9/DocsPicture/zh/activemq/activemq-logined-websoft9.png)
+Websoft9 控制台安装 ActiveMQ 后，通过【我的应用】进入它的编辑窗口，在**访问**标签页中获取登录地址和账号。
 
 ## ActiveMQ 指南
 
-[Using Apache ActiveMQ](https://activemq.apache.org/using-activemq)
-
-### 修改控制台密码
-
-进入ActiveMQ容器，通过 */opt/apache-activemq/conf/jetty-realm.properties* 文件修改，重启 [ActiveMQ 服务](#service)后生效
+阅读官方文档 [Using Apache ActiveMQ](https://activemq.apache.org/using-activemq) 并结合下面的指南快速掌握它的使用。
 
 ### 运行 ActiveMQ 演示
 
@@ -64,6 +56,10 @@ ActiveMQ 附带了许多 Web 演示，这些演示说明了如何将 ActiveMQ �
 
 ## ActiveMQ 管理
 
+### 修改控制台密码
+
+进入 ActiveMQ 容器，通过 */opt/apache-activemq/conf/jetty-realm.properties* 文件修改，重启 [ActiveMQ 服务](#service)后生效
+
 ### ActiveMQ 升级
 
 ActiveMQ 主要采用二级制安装方式，其升级方案差不多等于安装：
@@ -78,6 +74,7 @@ ActiveMQ 主要采用二级制安装方式，其升级方案差不多等于安�
    mv /opt/activemq  /opt/activemqBK
    ```
 2. 访问 ActiveMQ 官方网站，[下载](http://activemq.apache.org/components/classic/download/)后解压并上传到：*/opt* 目录，并命名为 *activemq*
+
 3. 分别运行下面的修改权限
    ```
    chown -R activemq. /opt/activemq
@@ -93,7 +90,6 @@ docker exec -it activemq bash
 systemctl stop activemq
 /opt/activemq/bin/activemq console
 ```
-
 
 
 ## ActiveMQ 故障

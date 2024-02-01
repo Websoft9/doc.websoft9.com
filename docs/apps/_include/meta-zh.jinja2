@@ -2,9 +2,9 @@
 
 {{overview}}。  
 
-简而言之，[{{trademark}}](websiteurl) 是一个 **{{summary}}**，它被用于 {% for catalog in catalog %} {{catalog.name}} {% endfor %} 等场景。   
+简而言之，[{{trademark}}]({{websiteurl}}) 是一个 **{{summary}}**，它被用于 {% for catalog in catalog %} {{catalog.name}} {% endfor %} 等场景。   
 
-![screenshots[1].name]({{screenshots[1].url}})
+![{{screenshots[1].name}}]({{screenshots[1].url}})
 
 ## 准备
 
@@ -13,3 +13,7 @@
 - 应用是基于 Websoft9 安装的
 - 应用的用途符合 [{{license}}](license_url) 开源许可协议
 - 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+
+## {{trademark}} 初始化
+
+Websoft9 控制台安装 {{trademark}} 后，通过【我的应用】进入它的编辑窗口，在**访问**标签页中获取登录地址和账号。
