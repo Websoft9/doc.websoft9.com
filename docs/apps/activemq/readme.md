@@ -26,7 +26,7 @@ tags:
 
 ## ActiveMQ 初始化向导
 
-### 详细步骤
+
 
 1. 使用本地电脑浏览器访问网址：*http://域名:8161* 或 *http://服务器公网IP:8161*, 进入初始化页面
    ![ActiveMQ初始化页面](http://libs.websoft9.com/Websoft9/DocsPicture/zh/activemq/activemq-login-websoft9.png)
@@ -35,53 +35,17 @@ tags:
    ![ActiveMQ控制台](http://libs.websoft9.com/Websoft9/DocsPicture/zh/activemq/activemq-logined-websoft9.png)
 
 
-### 出现问题？
-
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题。
-
 ## ActiveMQ 使用入门
+
+### 访问
+
+###
 
 [Using Apache ActiveMQ](https://activemq.apache.org/using-activemq)
 
 ## ActiveMQ 常用操作
 
-### 修改控制台密码
 
-进入ActiveMQ容器，通过 */opt/apache-activemq/conf/jetty-realm.properties* 文件修改，重启 [ActiveMQ 服务](#service)后生效
-
-### 运行 ActiveMQ 演示
-
-ActiveMQ 附带了许多 Web 演示，这些演示说明了如何将 ActiveMQ 代理与 REST 和 AJAX 一起使用。 Web 演示在默认配置中未激活，因此您必须按照以下步骤运行它们：
-
-1. 进入ActiveMQ容器，编辑 /opt/apache-activemq/examples/conf/activemq-demo.xml 文件并更改位置属性以反映加密凭证文件的位置，该文件位于 /opt/activemq/conf/credentials-enc.properties：
-
-  ```shell
-  <property name="locations">
-        <value>file:${activemq.conf}/credentials-enc.properties</value>
-  </property>
-  ```
-
-2. 如果 ActiveMQ 服务器当前正在运行，先停止：
-   
-  ```shell
-  docker stop activemq
-  ```
-
-3. 运行示例：
-   
-  ```shell
-  docker exec -it activemq bash
-  cd /opt/activemq
-  sudo ./bin/activemq console xbean:/opt/activemq/examples/conf/activemq-demo.xml
-  ```
-
-4. 等待 ActiveMQ 代理启动。
-
-5. 登录到 Web 管理面板查看演示： *http://服务器公网 IP:8161/demo* 
-
-### 配置消息
-
-官方方案：http://activemq.apache.org/configuration.html
 
 ## 参数
 

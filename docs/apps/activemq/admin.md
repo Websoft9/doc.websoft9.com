@@ -58,37 +58,3 @@ ActiveMQ 主要采用二级制安装方式，其升级方案差不多等于安�
 
 ## 常见问题
 
-#### Active Classic vs ActiveMQ Artemis？
-
-ActiveMQ Artemis 是 ActiveMQ 下一代产品，未来将替换 ActiveMQ Classic。 具体参考：[ActiveMQ Classic](https://activemq.apache.org/getting-started), [ActiveMQ Artemis](https://activemq.apache.org/components/artemis/documentation/)
-
-#### 如何以调试模式启动ActiveMQ服务？
-
-```
-docker exec -it activemq bash
-systemctl stop activemq
-/opt/activemq/bin/activemq console
-```
-#### 如何退出 ActiveMQ 控制台？
-
-暂无方案
-
-#### ActiveMQ 中是否包含 Tomcat？
-
-ActiveMQ 官方提供的二级制包中包含 Tomcat，但已经集成到 ActiveMQ 服务中。
-
-#### 是否可以修改 ActiveMQ 的源码路径？
-
-可以，但要参考如下的命令重试设置环境变量
-```
-echo 'export PATH="$PATH:/opt/activemq/bin"' >> /etc/profile
-```
-
-#### 如何修改上传的文件权限?
-
-```shell
-docker exec -it activemq bash
-chown -R activemq.activemq /opt/activemq
-find /opt/activemq -type d -exec chmod 750 {} \;
-find /opt/activemq -type f -exec chmod 640 {} \;
-```
