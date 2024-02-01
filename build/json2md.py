@@ -57,14 +57,14 @@ for entry in data:
 
 # Now, generate the Markdown content sorted by position in ascending order
 markdown_content = ""
-try:
-    for title, info in sorted(catalog_dict.items(), key=lambda x: min(x[1]['positions'])):
+for title, info in sorted(catalog_dict.items(), key=lambda x: min(x[1]['positions'])):
+    try:
         markdown_content += f"## {title}\n\n"
         for trademark, key in sorted(info['entries']):
             markdown_content += f"- [{trademark}](/apps/{key})\n\n"
-except Exception as e:
-    print(f"Error title: {title}")
-    print(e)
+    except Exception as e:
+        print(f"Error generating Markdown for title: '{title}' with info: {info}")
+        print(e)
 
 # Write the Markdown content to the specified output file
 with open(output_md_file_name, 'w') as md_file:
