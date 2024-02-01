@@ -1,7 +1,6 @@
 ---
 title: ActiveMQ
-slug: /activemq2
-sidebar_exclude: true
+slug: /activemq
 tags:
   - ActiveMQ 
   - IT 架构
@@ -12,11 +11,7 @@ import Meta from './_include/activemq.md';
 
 <Meta name="meta" />
 
-## ActiveMQ 初始化
-
-Websoft9 控制台安装 ActiveMQ 后，通过【我的应用】进入它的编辑窗口，在**访问**标签页中获取登录地址和账号。
-
-## ActiveMQ 指南
+## 入门指南
 
 阅读官方文档 [Using Apache ActiveMQ](https://activemq.apache.org/using-activemq) 并结合下面的指南快速掌握它的使用。
 
@@ -54,13 +49,13 @@ ActiveMQ 附带了许多 Web 演示，这些演示说明了如何将 ActiveMQ �
 
 官方方案：http://activemq.apache.org/configuration.html
 
-## ActiveMQ 管理
+## 管理维护
 
 ### 修改控制台密码
 
 进入 ActiveMQ 容器，通过 */opt/apache-activemq/conf/jetty-realm.properties* 文件修改，重启 [ActiveMQ 服务](#service)后生效
 
-### ActiveMQ 升级
+### 升级
 
 ActiveMQ 主要采用二级制安装方式，其升级方案差不多等于安装：
 
@@ -92,7 +87,7 @@ systemctl stop activemq
 ```
 
 
-## ActiveMQ 故障
+## 故障
 
 #### ActiveMQ 服务无法启动？
 
@@ -127,13 +122,3 @@ chown -R activemq.activemq /opt/activemq
 find /opt/activemq -type d -exec chmod 750 {} \;
 find /opt/activemq -type f -exec chmod 640 {} \;
 ```
-
-## ActiveMQ 问答
-
-#### Active Classic vs ActiveMQ Artemis？
-
-ActiveMQ Artemis 是 ActiveMQ 下一代产品，未来将替换 ActiveMQ Classic。 具体参考：[ActiveMQ Classic](https://activemq.apache.org/getting-started), [ActiveMQ Artemis](https://activemq.apache.org/components/artemis/documentation/)
-
-#### ActiveMQ 中是否包含 Tomcat？
-
-ActiveMQ 官方提供的二级制包中包含 Tomcat，但已经集成到 ActiveMQ 服务中。
