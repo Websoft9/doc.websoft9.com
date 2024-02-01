@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+name: ActiveMQ
 slug: /activemq2
 tags:
   - ActiveMQ 
@@ -8,8 +9,6 @@ tags:
 ---
 
 import Meta from './_include/activemq.md';
-
-# ActiveMQ
 
 <Meta name="meta" />
 
