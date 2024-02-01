@@ -52,7 +52,7 @@ for entry in data:
                     catalog_dict[sub_title]['positions'].append(position)
                     catalog_dict[sub_title]['entries'].add((trademark, parent_key))
     except Exception as e:
-        print(f"Error processing entry: {entry.get('title', 'Unknown')}")
+        print(f"Error processing entry: {entry.get('key', 'Unknown')}")
         print(e)
 
 # Now, generate the Markdown content sorted by position in ascending order
