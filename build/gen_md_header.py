@@ -80,7 +80,7 @@ for entry in entries:
     
     # 获取 trademark 作为文件名
     trademark = fields.get('trademark', entry.sys['id'])
-    md_filename = f"{trademark}.md"
+    md_filename = f"{trademark.rstrip()}.md"
     
     # 完整的文件路径
     md_file_path = os.path.join(OUTPUT_DIR, md_filename)
