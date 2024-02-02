@@ -2,7 +2,7 @@
 
 {{ overview }}
 
-简而言之，[{{ trademark }}]({{ websiteurl }}) 是一个 **{{ summary }}**，它被用于 {% for item in catalog %}{{ item.fields.name }} {% endfor %}等场景
+简而言之，[{{ trademark }}]({{ websiteurl }}) 是一个 **{{ summary }}**，它被用于 {% for item in catalog %}{{ item.title }} {% endfor %} 等场景
 
 {% if screenshots %}
 ![{{ screenshots[0].key }}]({{ screenshots[0].value }})
@@ -14,7 +14,7 @@
 
 - 应用是基于 Websoft9 安装的
 {% if license %}
-- 应用的用途符合 [{{ license.fields.title }}](https://some_license_url) 开源许可协议
+- 应用的用途符合 [{{ license.title }}]({{license.url}}) 开源许可协议
 {% else %}
 - 请检查应用的使用许可协议，确保符合要求
 {% endif %}
