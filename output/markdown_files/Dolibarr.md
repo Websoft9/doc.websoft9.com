@@ -1,11 +1,11 @@
 # Dolibarr
 
-Dolibarr是一个流行的开源ERP/CRM系统，模块可以即插即用，生态完善，全球范围内都有定制和服务商。
+Dolibarr is a software suite for small and micro enterprises, freelancers and other enterprises, which used for resource planning and customer relationship management. 
 
-简而言之，[Dolibarr](https://www.dolibarr.org/) 是一个 **一个流行的开源ERP/CRM系统**，它被用于    等场景
+简而言之，[Dolibarr](https://www.dolibarr.org/) 是一个 **A  ERP & CRM software**，它被用于 ERP & Finance CRM & Distribution & Order Supply Chain & Manufacturing & Logistic  等场景
 
 
-![ui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/dolibarr/dolibarr-gui-websoft9.webp)
+![ui](http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/dolibarr-gui-websoft9.png)
 
 
 ## 准备
@@ -14,6 +14,6 @@ Dolibarr是一个流行的开源ERP/CRM系统，模块可以即插即用，生�
 
 - 应用是基于 Websoft9 安装的
 
-- 应用的用途符合 [](https://some_license_url) 开源许可协议
+- 应用的用途符合 [](https://opensource.org/licenses/GPL-3.0) 开源许可协议
 
 - 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口

@@ -1,11 +1,11 @@
 # DataHub
 
-DataHub 的可扩展元数据平台支持数据发现、数据可观测性和联合治理，有助于控制数据生态系统的复杂性。
+DataHub's extensible metadata platform enables data discovery, data observability and federated governance that helps tame the complexity of your data ecosystem.
 
-简而言之，[DataHub](https://datahubproject.io/) 是一个 **开源企业级元数据平台**，它被用于  等场景
+简而言之，[DataHub](https://datahubproject.io/) 是一个 **The Metadata Platform for the Modern Data Stack**，它被用于 Master Data  等场景
 
 
-![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/datahub/datahub-gui-websoft9.png)
+![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/datahub/datahub-gui-websoft9.png)
 
 
 ## 准备
@@ -14,6 +14,6 @@ DataHub 的可扩展元数据平台支持数据发现、数据可观测性和联
 
 - 应用是基于 Websoft9 安装的
 
-- 应用的用途符合 [](https://some_license_url) 开源许可协议
+- 应用的用途符合 [](https://opensource.org/licenses/Apache-2.0) 开源许可协议
 
 - 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口

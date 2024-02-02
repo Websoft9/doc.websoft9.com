@@ -1,11 +1,11 @@
 # Mastodon
 
-Mastodon是一个基于ActivityPub的免费开源社交网络服务器，用户可以在其中关注朋友并发现新朋友。
+Mastodon is a free, open-source social network server based on ActivityPub where users can follow friends and discover new ones. 
 
-简而言之，[Mastodon](https://joinmastodon.org/) 是一个 **自托管微博系统**，它被用于  等场景
+简而言之，[Mastodon](https://joinmastodon.org/) 是一个 **Your self-hosted and globally interconnected microblogging community**，它被用于 Online Community  等场景
 
 
-![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mastodon/mastodon-gui-websoft9.png)
+![Interface](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mastodon/mastodon-gui-websoft9.png)
 
 
 ## 准备
@@ -14,6 +14,6 @@ Mastodon是一个基于ActivityPub的免费开源社交网络服务器，用户�
 
 - 应用是基于 Websoft9 安装的
 
-- 应用的用途符合 [](https://some_license_url) 开源许可协议
+- 应用的用途符合 [](https://opensource.org/licenses/AGPL-3.0) 开源许可协议
 
 - 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口

@@ -1,8 +1,8 @@
 # Odoo
 
-Odoo是面向全球用户的开源ERP/CRM软件，它有强大而灵活的系统架构，产品迭代速度非常快，用户可模块化修改、升级、新增功能。
+Odoo is a suite of web based open source business apps. Odoo Apps can be used as stand-alone applications, but they also integrate seamlessly so you get a full-featured Open Source ERP when you install several Apps.
 
-简而言之，[Odoo](https://www.odoo.com/) 是一个 **面向全球用户的开源ERP/CRM软件**，它被用于        等场景
+简而言之，[Odoo](https://www.odoo.com/) 是一个 **A suite of web based open source business apps**，它被用于 ERP & Finance CRM & Distribution & Order Supply Chain & Manufacturing & Logistic Strategy & Legal & HR Support & Customer Success PLM & PDM Marketing  等场景
 
 
 ![ui](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odooui-websoft9.png)
@@ -14,6 +14,6 @@ Odoo是面向全球用户的开源ERP/CRM软件，它有强大而灵活的系统
 
 - 应用是基于 Websoft9 安装的
 
-- 应用的用途符合 [](https://some_license_url) 开源许可协议
+- 应用的用途符合 [](https://opensource.org/licenses/LGPL-3.0) 开源许可协议
 
 - 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口

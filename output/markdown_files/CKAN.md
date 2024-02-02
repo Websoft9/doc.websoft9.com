@@ -1,8 +1,8 @@
 # CKAN
 
-CKAN是一个开源DMS（数据管理系统），用于为数据中心和数据门户提供支持。CKAN 使发布、共享和使用数据变得容易。它为全球数百个数据门户提供支持。
+CKAN is an open-source DMS (data management system) for powering data hubs and data portals. CKAN makes it easy to publish, share and use data. It powers hundreds of data portals worldwide.
 
-简而言之，[CKAN](https://ckan.org/) 是一个 **开源大数据分享与发布平台**，它被用于   等场景
+简而言之，[CKAN](https://ckan.org/) 是一个 **A tool for making open data websites**，它被用于 Business Intelligence Content Management  等场景
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/ckan/ckan-gui-websoft9.png)
@@ -14,6 +14,6 @@ CKAN是一个开源DMS（数据管理系统），用于为数据中心和数据�
 
 - 应用是基于 Websoft9 安装的
 
-- 应用的用途符合 [](https://some_license_url) 开源许可协议
+- 应用的用途符合 [](https://opensource.org/licenses/MIT) 开源许可协议
 
 - 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口

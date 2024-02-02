@@ -1,8 +1,8 @@
 # ClickHouse
 
-ClickHouse支持您需要的所有数据源，为您的应用程序和需要卓越性能的用例提供支持。
+ClickHouse supports all the data sources you need to power your apps and use cases that require exceptional performance.
 
-简而言之，[ClickHouse](https://clickhouse.com/) 是一个 **面向实时应用程序与分析的 OLAP**，它被用于    等场景
+简而言之，[ClickHouse](https://clickhouse.com/) 是一个 **Open-source OLAP database for real-time apps and analytics**，它被用于 NewSQL Database Data Analytics Data Warehouse  等场景
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/clickhouse/clickhouse-gui-websoft9.png)
@@ -14,6 +14,6 @@ ClickHouse支持您需要的所有数据源，为您的应用程序和需要卓�
 
 - 应用是基于 Websoft9 安装的
 
-- 应用的用途符合 [](https://some_license_url) 开源许可协议
+- 应用的用途符合 [](https://opensource.org/licenses/Apache-2.0) 开源许可协议
 
 - 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口

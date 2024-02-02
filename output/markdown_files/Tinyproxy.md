@@ -1,8 +1,8 @@
 # Tinyproxy
 
-Tinyproxy 是一个小型、高效的 HTTP/SSL 代理守护进程，在 GNU 通用公共许可证。Tinyproxy 在小型网络中非常有用 设置，其中较大的代理要么过于占用资源，要么 安全风险。Tinyproxy 的主要功能之一是缓冲 连接概念。
+Tinyproxy is a small, efficient HTTP/SSL proxy daemon released under the GNU General Public License. Tinyproxy is very useful in a small network setting, where a larger proxy would either be too resource intensive, or a security risk. One of the key features of Tinyproxy is the buffering connection concept. 
 
-简而言之，[Tinyproxy](https://github.com/tinyproxy/tinyproxy) 是一个 **轻量级 HTTP/HTTPS 代理软件**，它被用于   等场景
+简而言之，[Tinyproxy](https://github.com/tinyproxy/tinyproxy) 是一个 **A light-weight HTTP/HTTPS proxy software**，它被用于 HTTP Server Application Gateway  等场景
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/tinyproxy/tinyproxy-gui-websoft9.png)
@@ -14,6 +14,6 @@ Tinyproxy 是一个小型、高效的 HTTP/SSL 代理守护进程，在 GNU 通�
 
 - 应用是基于 Websoft9 安装的
 
-- 应用的用途符合 [](https://some_license_url) 开源许可协议
+- 应用的用途符合 [](https://opensource.org/licenses/GPL-2.0) 开源许可协议
 
 - 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口

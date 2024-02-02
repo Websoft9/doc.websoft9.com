@@ -1,8 +1,8 @@
 # PostgreSQL
 
-PostgreSQL被业界誉为“超先进的开源数据库”，面向企业复杂SQL处理的OLTP在线事务处理场景，支持NoSQL数据类型（JSON/XML/hstore）、支持GIS地理信息处理。
+PostgreSQL is a powerful,open source object-relational database system(ORDBMS). 
 
-简而言之，[PostgreSQL](https://www.postgresql.org/) 是一个 **面向企业复杂SQL处理的开源数据库**，它被用于  等场景
+简而言之，[PostgreSQL](https://www.postgresql.org/) 是一个 **A open source object-relational database system**，它被用于 Relational Databases  等场景
 
 
 ![pgadmin](http://libs.websoft9.com/Websoft9/DocsPicture/zh/postgresql/pgadmin4-websoft9.png)
@@ -14,6 +14,6 @@ PostgreSQL被业界誉为“超先进的开源数据库”，面向企业复杂S
 
 - 应用是基于 Websoft9 安装的
 
-- 应用的用途符合 [](https://some_license_url) 开源许可协议
+- 应用的用途符合 [](https://opensource.org/licenses/PostgreSQL) 开源许可协议
 
 - 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口

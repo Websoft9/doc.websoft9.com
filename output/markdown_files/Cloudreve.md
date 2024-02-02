@@ -1,8 +1,8 @@
 # Cloudreve
 
-Cloudreve 是一个支持多家云存储的云盘系统。支持使用本机、从机、七牛、阿里云 OSS、腾讯云 COS、又拍云、AWS S3、OneDrive 作为存储端，上传/下载 均支持客户端直传，无需服务器中转。
+Cloudreve is a self-hosted file management system with muilt-cloud support. It support storing files into Local storage, Remote storage, Qiniu, Aliyun OSS, Tencent COS, Upyun, OneDrive, S3 compatible API.
 
-简而言之，[Cloudreve](https://cloudreve.org/) 是一个 **支持多家云存储的云盘系统**，它被用于  等场景
+简而言之，[Cloudreve](https://cloudreve.org/) 是一个 **Self-hosted file management system with muilt-cloud support.**，它被用于 Document Collaboration  等场景
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudreve/cloudreve-gui-websoft9.png)
@@ -14,6 +14,6 @@ Cloudreve 是一个支持多家云存储的云盘系统。支持使用本机、�
 
 - 应用是基于 Websoft9 安装的
 
-- 应用的用途符合 [](https://some_license_url) 开源许可协议
+- 应用的用途符合 [](https://opensource.org/licenses/GPL-3.0) 开源许可协议
 
 - 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口

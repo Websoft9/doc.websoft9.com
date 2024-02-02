@@ -1,11 +1,11 @@
 # Passbolt
 
-保留数据的完全所有权。凭借 passbolt Pro 的自托管能力，对于那些重视隐私或更多控制权的人来说，它是完美的搭档。
+Keep full ownership of your data. With passbolt pro's ability to self host it's the perfect sidekick for those who value privacy or more control.
 
-简而言之，[Passbolt](https://www.passbolt.com/) 是一个 **开源团队密码管理**，它被用于   等场景
+简而言之，[Passbolt](https://www.passbolt.com/) 是一个 **Self-Hosted Password Manager**，它被用于 Password Management Collaboration & Office  等场景
 
 
-![管理面板](https://libs.websoft9.com/Websoft9/DocsPicture/zh/passbolt/passbolt-gui-websoft9.webp)
+![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/passbolt/passbolt-gui-websoft9.webp)
 
 
 ## 准备
@@ -14,6 +14,6 @@
 
 - 应用是基于 Websoft9 安装的
 
-- 应用的用途符合 [](https://some_license_url) 开源许可协议
+- 应用的用途符合 [](https://opensource.org/licenses/AGPL-3.0) 开源许可协议
 
 - 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
