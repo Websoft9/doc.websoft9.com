@@ -40,8 +40,12 @@ entries = client.entries({
 # 确保输出目录存在
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
+# 计数器
+count = 0
+
 # 使用 Jinja2 模板和从 Contentful 获取的数据生成 Markdown 文件
 for entry in entries:
+    count += 1
     # 调用 fields() 方法来获取字段的字典
     fields = entry.fields(locale=locale)
 
@@ -74,8 +78,8 @@ for entry in entries:
         url = license_fields.get('url', None)
         # 将key和url添加到fields中
         fields['license'] = {'key': key, 'url': url}
-
-    print(fields)
+    
+    print(f"count {count}: fields")
     
     # 获取 key 作为文件名
     key = fields.get('key', entry.sys['id'])
