@@ -1,4 +1,4 @@
-name: Generate Markdown from JSON
+name: Generate Apps list for docs
 
 on:
   workflow_dispatch:

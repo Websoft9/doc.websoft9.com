@@ -15,6 +15,16 @@ tags:
 
 部署 Websoft9 提供的 code-server 之后，请参考下面的步骤快速入门。
 
+
+```
+sudo apt update
+sudo apt install python3-pip
+
+# 删除正在运行的 npm run
+ps aux
+kill -9
+```
+
 ## 准备
 
 1. 在云控制台获取您的 **服务器公网IP地址** 

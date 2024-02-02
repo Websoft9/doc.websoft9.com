@@ -46,14 +46,4 @@ Akeneo 完美支持多语言，下面以中文作为范例：
 
 参阅官方文档： [Import and Export data](https://docs.akeneo.com/6.0/import_and_export_data/index.html)
 
-## 故障
-
-#### 更改域名导致无法访问 Akeneo ？
-
-#### 访问 Akeneo 出现 502 错误？{#502}
-
-## 问答
-
-## 参数
-
-暂无特殊需要说明的参数
+## 故障pip i

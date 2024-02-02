@@ -1,4 +1,4 @@
-name: Generate Markdown Header File
+name: Generate Apps header file
 
 on:
   workflow_dispatch:
