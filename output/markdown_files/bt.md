@@ -1,16 +1,16 @@
-# aaPanel
+# 宝塔面板
 
-aaPanel provides the one-click function such as one-click install LNMP/LAMP developing environment and software, manage the web server through web-base GUI(Graphical User Interface). 
+支持一键LAMP/LNMP/监控/网站/FTP/数据库/JAVA等100多项服务器管理功能。可以通过 Web 端轻松管理服务器，提升运维效率
 
-简而言之，[aaPanel]() 是一个 **A simple but powerful control panel**，它被用于   等场景
+简而言之，[宝塔面板]() 是一个 **可视化的服务器管理软件**，它被用于   等场景
 
 
-![ui](https://libs.websoft9.com/Websoft9/DocsPicture/en/bt/bt-guien-websoft9.png)
+![ui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btlinux/bt-linux_pc.png)
 
 
 ## 准备
 
-在参阅本文档使用 aaPanel 时，需要确保如下几点：
+在参阅本文档使用 宝塔面板 时，需要确保如下几点：
 
 - 应用是基于 Websoft9 安装的
 

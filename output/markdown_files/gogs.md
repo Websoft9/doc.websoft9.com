@@ -1,8 +1,8 @@
 # Gogs
 
-A painless self-hosted Git service. Aims to build a simple, stable and extensible self-hosted Git service.
+极易搭建的自助 Git 仓库系统，能够通过独立的二进制分发，并且支持 Go 语言支持的所有平台
 
-简而言之，[Gogs](https://gogs.io/) 是一个 **A painless self-hosted Git service**，它被用于  等场景
+简而言之，[Gogs](https://gogs.io/) 是一个 **一款易搭建的轻量级自助 Git 仓库系统**，它被用于  等场景
 
 
 ![gui start](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-guistart-websoft9.png)

@@ -1,11 +1,11 @@
 # RocketMQ
 
-A distributed messaging and streaming platform with low latency, high performance and reliability, trillion-level capacity and flexible scalability
+RocketMQ 是阿里主导开发的分布式开源消息队列系统，是一个低延迟、高并发、高可用、高可靠的分布式消息中间件。
 
-简而言之，[RocketMQ](https://rocketmq.apache.org/) 是一个 **A distributed messaging and streaming platform**，它被用于  等场景
+简而言之，[RocketMQ](https://rocketmq.apache.org/) 是一个 **分布式开源消息队列系统**，它被用于  等场景
 
 
-![console](https://libs.websoft9.com/Websoft9/DocsPicture/en/rocketmq/rocketmq-console-websoft9.png)
+![console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rocketmq/rocketmq-console-websoft9.png)
 
 
 ## 准备

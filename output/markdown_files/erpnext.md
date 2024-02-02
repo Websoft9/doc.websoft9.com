@@ -1,8 +1,8 @@
 # ERPNext
 
-ERPNext can help users manage their project management concerns, accounting tasks, and HR responsibilities within a single interface.
+ERPNext是一个 基于 Python 和 Node 开发的开源ERP系统 ，它功能全面，非常合适作为 SAP 的替代品。
 
-简而言之，[ERPNext](https://erpnext.com/) 是一个 **An open source ERP**，它被用于   等场景
+简而言之，[ERPNext](https://erpnext.com/) 是一个 **开源ERP系统**，它被用于   等场景
 
 
 ![ui](http://libs.websoft9.com/Websoft9/DocsPicture/en/erpnext/erpnext-adminui-websoft9.png)

@@ -1,8 +1,8 @@
 # CouchDB
 
-CouchDB is a terrific single-node database that works just like any other database behind an application server of your choice.
+Apache CouchDB™ 是一个原生 HTTP/JSON API 驱动的文档数据库，可以作为后端即服务使用。
 
-简而言之，[CouchDB](https://couchdb.apache.org/) 是一个 **A terrific single-node database**，它被用于  等场景
+简而言之，[CouchDB](https://couchdb.apache.org/) 是一个 **原生 HTTP/JSON API 驱动的文档数据库**，它被用于  等场景
 
 
 ![ui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/couchdb/couchdb-gui-websoft9.png)

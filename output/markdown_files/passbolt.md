@@ -1,11 +1,11 @@
 # Passbolt
 
-Keep full ownership of your data. With passbolt pro's ability to self host it's the perfect sidekick for those who value privacy or more control.
+保留数据的完全所有权。凭借 passbolt Pro 的自托管能力，对于那些重视隐私或更多控制权的人来说，它是完美的搭档。
 
-简而言之，[Passbolt](https://www.passbolt.com/) 是一个 **Self-Hosted Password Manager**，它被用于   等场景
+简而言之，[Passbolt](https://www.passbolt.com/) 是一个 **开源团队密码管理**，它被用于   等场景
 
 
-![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/passbolt/passbolt-gui-websoft9.webp)
+![管理面板](https://libs.websoft9.com/Websoft9/DocsPicture/zh/passbolt/passbolt-gui-websoft9.webp)
 
 
 ## 准备

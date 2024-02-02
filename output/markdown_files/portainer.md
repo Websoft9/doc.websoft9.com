@@ -1,11 +1,11 @@
 # Portainer
 
-A powerful open-source management toolset that allows you to easily build, manage and maintain Docker environments.
+是一个可视化的 Docker 操作界面，功能十分全面，基本能满足中小型单位对容器管理的全部需求。
 
-简而言之，[Portainer](https://www.portainer.io/) 是一个 **A powerful container management toolset**，它被用于  等场景
+简而言之，[Portainer](https://www.portainer.io/) 是一个 **一个轻量级的 Docker 环境管理 GUI**，它被用于  等场景
 
 
-![addcontainer](http://libs.websoft9.com/Websoft9/DocsPicture/zh/potainer/portainer-addcontainer-websoft9.png)
+![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/docker/portainer/portainer-sc001-websoft9.png)
 
 
 ## 准备

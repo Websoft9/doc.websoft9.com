@@ -1,9 +1,11 @@
 # Canvas
 
+由Websoft9提供的Canvas LMS 镜像，预装了Canvas LMS, PostgreSQL等组件，可一键安装。Canvas 是21世纪的新型LMS，适应当前中国高等教育学习环境。Canvas数据可靠、功能强大、使用方便，我们让每个界面更直观简洁。
+
+简而言之，[Canvas]() 是一个 **高校在线学习管理系统**，它被用于  等场景
 
 
-简而言之，[Canvas]() 是一个 **The World's Popular Learning Management System**，它被用于  等场景
-
+![gui](https://libs.websoft9.com/Websoft9/DocsPicture/en/canvas/canvas-gui-websoft9.png)
 
 
 ## 准备

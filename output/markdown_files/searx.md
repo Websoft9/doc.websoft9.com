@@ -1,8 +1,8 @@
 # searx
 
-Searx is a free internet metasearch engine which aggregates results from more than 70 search services. Users are neither tracked nor profiled. Additionally, searx can be used over Tor for online anonymity.
+Searx是一个免费的互联网元搜索引擎，它汇总了来自更多 超过 70 个搜索服务。既不跟踪也不分析用户。此外 searx可以通过Tor用于在线匿名。
 
-简而言之，[searx](https://searx.github.io/searx/) 是一个 **Privacy-respecting, hackable metasearch engine**，它被用于  等场景
+简而言之，[searx](https://searx.github.io/searx/) 是一个 **聚合互联网搜索引擎**，它被用于  等场景
 
 
 ![Site](https://libs.websoft9.com/Websoft9/DocsPicture/zh/searx/searx-gui-websoft9.png)

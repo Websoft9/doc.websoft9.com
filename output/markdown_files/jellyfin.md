@@ -1,8 +1,8 @@
 # Jellyfin
 
-Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media.  It is an alternative to the proprietary Emby and Plex, to provide media from a dedicated server to end-user devices via multiple apps. 
+Jellyfin是一个自由软件媒体系统，可让您控制管理和流式传输媒体。它是专有的Emby和Plex的替代方案，通过多个应用程序将媒体从专用服务器提供给最终用户设备。
 
-简而言之，[Jellyfin](https://jellyfin.org/) 是一个 **The Free Software Media System**，它被用于  等场景
+简而言之，[Jellyfin](https://jellyfin.org/) 是一个 **开源流媒体系统，构建自己影音平台**，它被用于  等场景
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jellyfin/jellyfin-gui-websoft9.png)

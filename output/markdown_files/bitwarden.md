@@ -1,11 +1,11 @@
 # Bitwarden
 
-Open source password management solutions for individuals, teams, and business organizations.
+适用于个人、团队和商业组织的开源密码管理解决方案。
 
-简而言之，[Bitwarden](https://bitwarden.com/) 是一个 **Open source password management solutions**，它被用于   等场景
+简而言之，[Bitwarden](https://bitwarden.com/) 是一个 **开源团队密码管理**，它被用于   等场景
 
 
-![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/bitwarden/bitwarden-gui-websoft9.webp)
+![管理面板](https://libs.websoft9.com/Websoft9/DocsPicture/zh/bitwarden/bitwarden-gui-websoft9.webp)
 
 
 ## 准备

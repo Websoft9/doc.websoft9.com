@@ -1,11 +1,11 @@
 # code-server
 
-code-server is a web based IDE, it help you run VS Code on any machine anywhere and access it in the browser. 
+code-server 是Web 版 VS Code，后端运行在服务器中，开发者基于浏览器运行 IDE。
 
-简而言之，[code-server](https://coder.com/) 是一个 **a web based IDE that run VS Code**，它被用于   等场景
+简而言之，[code-server](https://coder.com/) 是一个 **浏览器版本的 VS Code**，它被用于   等场景
 
 
-![ui](https://libs.websoft9.com/Websoft9/DocsPicture/en/codeserver/codeserver-consolegui-websoft9.png)
+![ui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/codeserver/codeserver-consolegui-websoft9.png)
 
 
 ## 准备

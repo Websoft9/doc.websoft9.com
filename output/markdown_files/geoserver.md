@@ -1,8 +1,8 @@
 # GeoServer
 
-GeoServer is an open source server for sharing geospatial data.Designed for interoperability, it publishes data from any major spatial data source using open standards.
+地理服务器是用于共享地理空间数据的开源服务器。它专为互操作性而设计，使用开放标准发布来自任何主要空间数据源的数据。
 
-简而言之，[GeoServer](https://geoserver.org/) 是一个 **Open source server for sharing geospatial data**，它被用于  等场景
+简而言之，[GeoServer](https://geoserver.org/) 是一个 **开源地理信息系统**，它被用于  等场景
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/geoserver/geoserver-gui-websoft9.png)

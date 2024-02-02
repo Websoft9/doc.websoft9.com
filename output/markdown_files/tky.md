@@ -1,8 +1,8 @@
 # Tyk
 
-Seriously reliable, configurable, and easy to use, Tyk’s proven API management platform helps developers build, publish, and monetise APIs quickly and easily – across all kinds of on-premises environments, containers, and clouds.
+Tyk 经过验证的 API 管理平台非常可靠、可配置且易于使用，可帮助开发人员跨各种本地环境、容器和云快速轻松地构建、发布 API
 
-简而言之，[Tyk](https://tyk.io/) 是一个 **The Cloud Native API Management Platform**，它被用于  等场景
+简而言之，[Tyk](https://tyk.io/) 是一个 **云原生 API 网关 **，它被用于  等场景
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/tyk/tyk-gui-websoft9.svg)

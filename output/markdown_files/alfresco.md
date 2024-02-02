@@ -1,11 +1,11 @@
 # Alfresco
 
-Alfresco Community Edition is open source Enterprise Content Management software that handles any type of content, allowing users to easily share and collaborate on content.
+Alfresco提供企业内容管理解决方案，使客户能够跨云，跨移动设备，并可以在混合式部署和内部部署环境中保留、管理和共享文档，处理分析文件和流程。
 
-简而言之，[Alfresco](https://www.alfresco.com/) 是一个 **An open source Enterprise Content Management software**，它被用于  等场景
+简而言之，[Alfresco](https://www.alfresco.com/) 是一个 **企业内容管理系统**，它被用于  等场景
 
 
-![gui](https://libs.websoft9.com/Websoft9/DocsPicture/en/alfresco/alfresco-arcgui-websoft9.png)
+![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/alfresco/alfresco-arcgui-websoft9.png)
 
 
 ## 准备

@@ -1,8 +1,8 @@
 # influxdb
 
-InfluxDB is a strong database built specifically for time series data. It has made working with such data seamless and easy.
+InfluxDB是一个专门为时间序列数据构建的强大数据库。它使处理此类数据变得无缝而简单。
 
-简而言之，[influxdb](https://www.influxdata.com/) 是一个 **Manage all types of time series data in a single, purpose-built database. **，它被用于   等场景
+简而言之，[influxdb](https://www.influxdata.com/) 是一个 **在单个专用数据库中管理所有类型的时间序列数据。**，它被用于   等场景
 
 
 ![arch](https://libs.websoft9.com/Websoft9/DocsPicture/zh/influxdb/influxdb-gui-websoft9.svg)

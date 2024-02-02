@@ -1,11 +1,11 @@
 # Redis 
 
-Redis is an open source, advanced key-value store
+Redis是一个开源的使用ANSI C语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库，并提供多种语言的API。
 
-简而言之，[Redis ](https://redis.io/) 是一个 **An open source, advanced key-value store**，它被用于  等场景
+简而言之，[Redis ](https://redis.io/) 是一个 **开源的日志型Key-Value数据库**，它被用于  等场景
 
 
-![login](https://libs.websoft9.com/Websoft9/DocsPicture/en/redis/redisinsight-login-websoft9.png)
+![login](https://libs.websoft9.com/Websoft9/DocsPicture/zh/redis/redisinsight-login-websoft9.png)
 
 
 ## 准备

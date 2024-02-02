@@ -1,11 +1,11 @@
 # Docker
 
-Docker takes away repetitive, mundane configuration tasks and is used throughout the development lifecycle for fast, easy and portable application development
+Docker 消除了重复、繁琐的配置任务，在整个开发生命周期中用于快速、轻松和可移植的应用程序开发
 
-简而言之，[Docker](https://www.docker.com/) 是一个 **Accelerate how you build, share, and run modern applications.**，它被用于  等场景
+简而言之，[Docker](https://www.docker.com/) 是一个 **一次构建打包，随处运行的虚拟化技术**，它被用于  等场景
 
 
-![架构](https://libs.websoft9.com/Websoft9/DocsPicture/zh/docker/container-what-is-container.png)
+![arch](https://libs.websoft9.com/Websoft9/DocsPicture/zh/docker/container-what-is-container.png)
 
 
 ## 准备
