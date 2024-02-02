@@ -14,6 +14,6 @@ Odoo是面向全球用户的开源ERP/CRM软件，它有强大而灵活的系统
 
 - 应用是基于 Websoft9 安装的
 
-- 应用的用途符合 [](https://opensource.org/licenses/LGPL-3.0) 开源许可协议
+- 应用的用途符合 [GNU Lesser General Public v3](https://opensource.org/licenses/LGPL-3.0) 开源许可协议
 
 - 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
