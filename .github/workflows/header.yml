@@ -23,7 +23,7 @@ jobs:
         pip install Jinja2 requests contentful
 
     - name: Generate Markdown files
-      run: python build/your-script.py
+      run: python build/gen_md_header.py
 
     - name: Commit and push changes
       uses: stefanzweifel/git-auto-commit-action@v4
