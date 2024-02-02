@@ -4,7 +4,9 @@
 
 简而言之，[{{trademark}}]({{websiteurl}}) 是一个 **{{summary}}**，它被用于 {% for catalog in catalog %} {{catalog.name}} {% endfor %} 等场景。   
 
-![{{screenshots[1].name}}]({{screenshots[1].url}})
+{% if entry.screenshots %}
+![{{ entry.screenshots[0].key }}]({{ entry.screenshots[0].value }})
+{% endif %}
 
 ## 准备
 
