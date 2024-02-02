@@ -17,6 +17,12 @@ template = env.get_template(TEMPLATE_FILE)
 # 根据模板文件名判断使用的语言
 locale = 'zh-CN' if 'zh' in TEMPLATE_FILE else 'en-US'
 
+# 设置 Markdown 文件的输出目录
+if locale == 'zh-CN':
+    OUTPUT_DIR = 'docs/apps/_include'
+else:
+    OUTPUT_DIR = 'i18n/en/current/apps/_include'
+
 CONTENTFUL_SPACE_ID = "ffrhttfighww"
 CONTENTFUL_ACCESS_TOKEN = os.environ['CONTENTFUL_ACCESS_TOKEN']
 
@@ -31,9 +37,6 @@ entries = client.entries({
     'content_type': content_type_id,
     'select': 'fields.key,fields.catalog,fields.license,fields.trademark,fields.overview,fields.summary,fields.websiteurl,fields.screenshots'
 })
-
-# 设置 Markdown 文件的输出目录
-OUTPUT_DIR = 'output/markdown_files'
 
 # 确保输出目录存在
 os.makedirs(OUTPUT_DIR, exist_ok=True)
