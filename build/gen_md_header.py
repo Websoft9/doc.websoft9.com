@@ -10,7 +10,7 @@ args = parser.parse_args()
 
 # 设置 Jinja2 模板环境
 TEMPLATE_FILE = args.template_file
-template = os.path.basename(TEMPLATE_FILE)
+template = env.get_template(TEMPLATE_FILE)
 
 # 根据模板文件名判断使用的语言
 locale = 'zh-CN' if 'zh' in TEMPLATE_FILE else 'en-US'
