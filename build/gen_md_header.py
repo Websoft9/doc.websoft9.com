@@ -39,8 +39,8 @@ for entry in entries:
     # 完整的文件路径
     md_file_path = os.path.join(OUTPUT_DIR, md_filename)
     
-    # 渲染模板
-    rendered_content = template.render(entry=entry)
+    # 渲染模板，直接传递 fields 字典给模板
+    rendered_content = template.render(**fields)
     
     # 将渲染后的内容写入 Markdown 文件
     with open(md_file_path, 'w', encoding='utf-8') as md_file:
