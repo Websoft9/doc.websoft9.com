@@ -79,7 +79,7 @@ for entry in entries:
         # 将key和url添加到fields中
         fields['license'] = {'key': key, 'url': url}
     
-    print(f"count {count}: fields")
+    print(f"count {count}: {fields}")
     
     # 获取 key 作为文件名
     key = fields.get('key', entry.sys['id'])
