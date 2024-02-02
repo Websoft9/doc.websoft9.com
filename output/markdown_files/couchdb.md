@@ -1,8 +1,8 @@
 # CouchDB
 
-CouchDB is a terrific single-node database that works just like any other database behind an application server of your choice.。  
+CouchDB is a terrific single-node database that works just like any other database behind an application server of your choice.
 
-简而言之，[CouchDB](https://couchdb.apache.org/) 是一个 **A terrific single-node database**，它被用于  等场景。   
+简而言之，[CouchDB](https://couchdb.apache.org/) 是一个 **A terrific single-node database**，它被用于  等场景
 
 
 ![ui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/couchdb/couchdb-gui-websoft9.png)

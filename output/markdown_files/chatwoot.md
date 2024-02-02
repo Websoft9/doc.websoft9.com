@@ -1,8 +1,8 @@
 # Chatwoot 
 
-Chatwoot gives you all the tools to manage conversations, build relationships and delight your customers from one place.。  
+Chatwoot gives you all the tools to manage conversations, build relationships and delight your customers from one place.
 
-简而言之，[Chatwoot ](https://www.chatwoot.com/) 是一个 **Omnichannel customer engagement center**，它被用于   等场景。   
+简而言之，[Chatwoot ](https://www.chatwoot.com/) 是一个 **Omnichannel customer engagement center**，它被用于   等场景
 
 
 ![Console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/chatwoot/chatwoot-gui-websoft9.webp)

@@ -1,8 +1,8 @@
 # Ghost
 
-Ghost is the world's most popular open source headless Node.js CMS for professional publishing.。  
+Ghost is the world's most popular open source headless Node.js CMS for professional publishing.
 
-简而言之，[Ghost](https://ghost.org/) 是一个 **The Creator Economy Platform**，它被用于  等场景。   
+简而言之，[Ghost](https://ghost.org/) 是一个 **The Creator Economy Platform**，它被用于  等场景
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/en/ghost/ghost-ui-websoft9.png)

@@ -1,8 +1,8 @@
 # CockroachDB
 
-CockroachDB is a cloud-native distributed SQL database designed to build, scale, and manage modern, data-intensive applications.。  
+CockroachDB is a cloud-native distributed SQL database designed to build, scale, and manage modern, data-intensive applications.
 
-简而言之，[CockroachDB](https://www.cockroachlabs.com/) 是一个 **Database designed to build, scale, and manage modern, data-intensive applications.**，它被用于  等场景。   
+简而言之，[CockroachDB](https://www.cockroachlabs.com/) 是一个 **Database designed to build, scale, and manage modern, data-intensive applications.**，它被用于  等场景
 
 
 ![Admin UI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cockroachdb/cockroachdb-gui-websoft9.png)

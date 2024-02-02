@@ -1,8 +1,8 @@
 # TensorFlow
 
-This product integrates TensorFlow, which is an end-to-end open source platform for machine learning. It has a comprehensive, flexible ecosystem of tools, libraries and community resources that lets researchers push the state-of-the-art in ML and developers easily build and deploy ML powered applications.。  
+This product integrates TensorFlow, which is an end-to-end open source platform for machine learning. It has a comprehensive, flexible ecosystem of tools, libraries and community resources that lets researchers push the state-of-the-art in ML and developers easily build and deploy ML powered applications.
 
-简而言之，[TensorFlow](https://www.tensorflow.org/) 是一个 **TensorFlow is an end-to-end open source machine learning platform. **，它被用于    等场景。   
+简而言之，[TensorFlow](https://www.tensorflow.org/) 是一个 **TensorFlow is an end-to-end open source machine learning platform. **，它被用于    等场景
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/en/tensorflow/tensowflow-gui-websoft9.jpg)

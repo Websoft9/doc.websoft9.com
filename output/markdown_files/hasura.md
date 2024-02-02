@@ -1,8 +1,8 @@
 # Hasura
 
-Blazing fast, instant realtime GraphQL APIs on your DB with fine grained access control, also trigger webhooks on database events.。  
+Blazing fast, instant realtime GraphQL APIs on your DB with fine grained access control, also trigger webhooks on database events.
 
-简而言之，[Hasura](https://hasura.io/) 是一个 **The Open Source Airtable Alternative**，它被用于  等场景。   
+简而言之，[Hasura](https://hasura.io/) 是一个 **The Open Source Airtable Alternative**，它被用于  等场景
 
 
 ![architecture](https://libs.websoft9.com/Websoft9/DocsPicture/zh/hasura/hasura-gui-websoft9.png)

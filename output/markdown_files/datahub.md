@@ -1,8 +1,8 @@
 # DataHub
 
-DataHub's extensible metadata platform enables data discovery, data observability and federated governance that helps tame the complexity of your data ecosystem.。  
+DataHub's extensible metadata platform enables data discovery, data observability and federated governance that helps tame the complexity of your data ecosystem.
 
-简而言之，[DataHub](https://datahubproject.io/) 是一个 **The Metadata Platform for the Modern Data Stack**，它被用于  等场景。   
+简而言之，[DataHub](https://datahubproject.io/) 是一个 **The Metadata Platform for the Modern Data Stack**，它被用于  等场景
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/datahub/datahub-gui-websoft9.png)

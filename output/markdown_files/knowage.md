@@ -1,8 +1,8 @@
 # Knowage
 
-Knowage is the full capabilities open source suite for modern business analytics over traditional sources and big data systems.。  
+Knowage is the full capabilities open source suite for modern business analytics over traditional sources and big data systems.
 
-简而言之，[Knowage](https://www.knowage-suite.com/site/) 是一个 **The full capabilities open source suite for modern business analytics**，它被用于  等场景。   
+简而言之，[Knowage](https://www.knowage-suite.com/site/) 是一个 **The full capabilities open source suite for modern business analytics**，它被用于  等场景
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/en/knowage/knowage-gui-websoft9.png)

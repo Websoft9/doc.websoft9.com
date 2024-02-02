@@ -1,8 +1,8 @@
 # Jitsi Meet
 
-Jitsi Meet - Secure, Simple and Scalable Video Conferences that you use as a standalone app or embed in your web application.。  
+Jitsi Meet - Secure, Simple and Scalable Video Conferences that you use as a standalone app or embed in your web application.
 
-简而言之，[Jitsi Meet](https://jitsi.org/) 是一个 **Open Source video conferencing platforms with state-of-the-art video quality and features.**，它被用于   等场景。   
+简而言之，[Jitsi Meet](https://jitsi.org/) 是一个 **Open Source video conferencing platforms with state-of-the-art video quality and features.**，它被用于   等场景
 
 
 ![Create meeting](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jitsi/jitsi-gui-websoft9.png)

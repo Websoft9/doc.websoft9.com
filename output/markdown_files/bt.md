@@ -1,8 +1,8 @@
 # aaPanel
 
-aaPanel provides the one-click function such as one-click install LNMP/LAMP developing environment and software, manage the web server through web-base GUI(Graphical User Interface). 。  
+aaPanel provides the one-click function such as one-click install LNMP/LAMP developing environment and software, manage the web server through web-base GUI(Graphical User Interface). 
 
-简而言之，[aaPanel]() 是一个 **A simple but powerful control panel**，它被用于   等场景。   
+简而言之，[aaPanel]() 是一个 **A simple but powerful control panel**，它被用于   等场景
 
 
 ![ui](https://libs.websoft9.com/Websoft9/DocsPicture/en/bt/bt-guien-websoft9.png)

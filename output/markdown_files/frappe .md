@@ -1,8 +1,8 @@
 # Frappe
 
-Low code, open source, web framework in Python and Javascript for the 21st century, eliminate 97.42% of your software development effort。  
+Low code, open source, web framework in Python and Javascript for the 21st century, eliminate 97.42% of your software development effort
 
-简而言之，[Frappe](https://frappeframework.com/) 是一个 **Open Source Low Code Framework for business applications**，它被用于   等场景。   
+简而言之，[Frappe](https://frappeframework.com/) 是一个 **Open Source Low Code Framework for business applications**，它被用于   等场景
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/frappe/frappe-gui-websoft9.png)

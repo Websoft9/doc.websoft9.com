@@ -1,8 +1,8 @@
 # Apache Airflow
 
-Apache Airflow (or simply Airflow) is a platform to programmatically author, schedule, and monitor workflows.。  
+Apache Airflow (or simply Airflow) is a platform to programmatically author, schedule, and monitor workflows.
 
-简而言之，[Apache Airflow](https://airflow.apache.org/) 是一个 **Platform to programmatically author, schedule and monitor workflows.**，它被用于  等场景。   
+简而言之，[Apache Airflow](https://airflow.apache.org/) 是一个 **Platform to programmatically author, schedule and monitor workflows.**，它被用于  等场景
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/airflow/airflow-gui-websoft9.png)

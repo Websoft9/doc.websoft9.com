@@ -1,8 +1,8 @@
 # JumpServer
 
-JumpServer Privileged Access Management (PAM) Complying with 4A Protocol of Operation and Security Auditing。  
+JumpServer Privileged Access Management (PAM) Complying with 4A Protocol of Operation and Security Auditing
 
-简而言之，[JumpServer](http://www.jumpserver.org/) 是一个 **A Better Open Source PAM in Multi-Cloud Environment**，它被用于  等场景。   
+简而言之，[JumpServer](http://www.jumpserver.org/) 是一个 **A Better Open Source PAM in Multi-Cloud Environment**，它被用于  等场景
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jumpserver/jumpserver-gui-websoft9.png)

@@ -1,8 +1,8 @@
 # RocketMQ
 
-A distributed messaging and streaming platform with low latency, high performance and reliability, trillion-level capacity and flexible scalability。  
+A distributed messaging and streaming platform with low latency, high performance and reliability, trillion-level capacity and flexible scalability
 
-简而言之，[RocketMQ](https://rocketmq.apache.org/) 是一个 **A distributed messaging and streaming platform**，它被用于  等场景。   
+简而言之，[RocketMQ](https://rocketmq.apache.org/) 是一个 **A distributed messaging and streaming platform**，它被用于  等场景
 
 
 ![console](https://libs.websoft9.com/Websoft9/DocsPicture/en/rocketmq/rocketmq-console-websoft9.png)

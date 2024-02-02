@@ -1,8 +1,8 @@
 # Drupal
 
-Drupal includes 40,000+ modules and 2500+ themes available to extend site functionality and appearance. You can create and develop a website locally on your personal computer by Drupal.。  
+Drupal includes 40,000+ modules and 2500+ themes available to extend site functionality and appearance. You can create and develop a website locally on your personal computer by Drupal.
 
-简而言之，[Drupal](https://www.drupal.org/) 是一个 **An open-source content-management framework**，它被用于   等场景。   
+简而言之，[Drupal](https://www.drupal.org/) 是一个 **An open-source content-management framework**，它被用于   等场景
 
 
 ![ui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-gui-websoft9.png)

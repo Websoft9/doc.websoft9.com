@@ -1,8 +1,8 @@
 # Penpot
 
-Penpot is the only design & prototype platform that is deployment agnostic. You can use it or deploy it anywhere.。  
+Penpot is the only design & prototype platform that is deployment agnostic. You can use it or deploy it anywhere.
 
-简而言之，[Penpot](https://penpot.app/) 是一个 **Design & Prototype platform, Figma open source alternative**，它被用于  等场景。   
+简而言之，[Penpot](https://penpot.app/) 是一个 **Design & Prototype platform, Figma open source alternative**，它被用于  等场景
 
 
 ![Console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/penpot/penpot-gui-websoft9.png)

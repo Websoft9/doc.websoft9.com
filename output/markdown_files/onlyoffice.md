@@ -1,8 +1,8 @@
 # ONLYOFFICE Workspace
 
-ONLYOFFICE is a multifunctional portal for business collaboration, document and project management. 。  
+ONLYOFFICE is a multifunctional portal for business collaboration, document and project management. 
 
-简而言之，[ONLYOFFICE Workspace](https://www.onlyoffice.com/) 是一个 **A free open-source collaborative system**，它被用于   等场景。   
+简而言之，[ONLYOFFICE Workspace](https://www.onlyoffice.com/) 是一个 **A free open-source collaborative system**，它被用于   等场景
 
 
 ![ui](https://libs.websoft9.com/Websoft9/DocsPicture/en/onlyoffice/onlyoffice-websoft9-002.png)

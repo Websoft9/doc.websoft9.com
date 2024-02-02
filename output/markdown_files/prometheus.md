@@ -1,8 +1,8 @@
 # Prometheus
 
-An open-source monitoring system with a dimensional data model, flexible query language, efficient time series database and modern alerting approach.。  
+An open-source monitoring system with a dimensional data model, flexible query language, efficient time series database and modern alerting approach.
 
-简而言之，[Prometheus](https://prometheus.io/) 是一个 **Power your metrics and alerting with the leading open-source monitoring solution.**，它被用于  等场景。   
+简而言之，[Prometheus](https://prometheus.io/) 是一个 **Power your metrics and alerting with the leading open-source monitoring solution.**，它被用于  等场景
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prometheus/prometheus-gui-websoft9.webp)

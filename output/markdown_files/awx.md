@@ -1,8 +1,8 @@
 # AWX
 
-Ansible® delivers simple IT automation that ends repetitive tasks and frees up DevOps teams for more strategic work.。  
+Ansible® delivers simple IT automation that ends repetitive tasks and frees up DevOps teams for more strategic work.
 
-简而言之，[AWX](https://www.ansible.com/community/awx-project) 是一个 **The Ansible Tower's open source edition**，它被用于  等场景。   
+简而言之，[AWX](https://www.ansible.com/community/awx-project) 是一个 **The Ansible Tower's open source edition**，它被用于  等场景
 
 
 ![login](https://libs.websoft9.com/Websoft9/DocsPicture/en/awx/awx-login-websoft9.png)

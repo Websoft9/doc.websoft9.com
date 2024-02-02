@@ -1,8 +1,8 @@
 # RethinkDB
 
-RethinkDB is a NoSQL database that stores schemaless JSON documents. 。  
+RethinkDB is a NoSQL database that stores schemaless JSON documents. 
 
-简而言之，[RethinkDB](https://rethinkdb.com/) 是一个 **A NoSQL database that stores schemaless JSON documents**，它被用于  等场景。   
+简而言之，[RethinkDB](https://rethinkdb.com/) 是一个 **A NoSQL database that stores schemaless JSON documents**，它被用于  等场景
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/en/rethinkdb/rethinkdb-gui-websoft9.png)

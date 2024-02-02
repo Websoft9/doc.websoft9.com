@@ -1,8 +1,8 @@
 # Redis 
 
-Redis is an open source, advanced key-value store。  
+Redis is an open source, advanced key-value store
 
-简而言之，[Redis ](https://redis.io/) 是一个 **An open source, advanced key-value store**，它被用于  等场景。   
+简而言之，[Redis ](https://redis.io/) 是一个 **An open source, advanced key-value store**，它被用于  等场景
 
 
 ![login](https://libs.websoft9.com/Websoft9/DocsPicture/en/redis/redisinsight-login-websoft9.png)

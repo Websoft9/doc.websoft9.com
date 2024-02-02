@@ -1,8 +1,8 @@
 # Bytebase
 
-Bytebase is GitLab/GitHub for Database DevOps, built for developers, DBAs and platform teams.。  
+Bytebase is GitLab/GitHub for Database DevOps, built for developers, DBAs and platform teams.
 
-简而言之，[Bytebase](https://www.bytebase.com/) 是一个 **Open-source database DevOps tool**，它被用于  等场景。   
+简而言之，[Bytebase](https://www.bytebase.com/) 是一个 **Open-source database DevOps tool**，它被用于  等场景
 
 
 ![Architecture](https://libs.websoft9.com/Websoft9/DocsPicture/zh/bytebase/bytebase-arch-websoft9.webp)

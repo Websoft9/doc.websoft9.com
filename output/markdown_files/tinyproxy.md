@@ -1,8 +1,8 @@
 # Tinyproxy
 
-Tinyproxy is a small, efficient HTTP/SSL proxy daemon released under the GNU General Public License. Tinyproxy is very useful in a small network setting, where a larger proxy would either be too resource intensive, or a security risk. One of the key features of Tinyproxy is the buffering connection concept. 。  
+Tinyproxy is a small, efficient HTTP/SSL proxy daemon released under the GNU General Public License. Tinyproxy is very useful in a small network setting, where a larger proxy would either be too resource intensive, or a security risk. One of the key features of Tinyproxy is the buffering connection concept. 
 
-简而言之，[Tinyproxy](https://github.com/tinyproxy/tinyproxy) 是一个 **A light-weight HTTP/HTTPS proxy software**，它被用于   等场景。   
+简而言之，[Tinyproxy](https://github.com/tinyproxy/tinyproxy) 是一个 **A light-weight HTTP/HTTPS proxy software**，它被用于   等场景
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/tinyproxy/tinyproxy-gui-websoft9.png)

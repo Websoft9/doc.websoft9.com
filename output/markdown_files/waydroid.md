@@ -1,8 +1,8 @@
 # Waydroid
 
-A container-based approach to boot a full Android system on a regular GNU/Linux system like Ubuntu.。  
+A container-based approach to boot a full Android system on a regular GNU/Linux system like Ubuntu.
 
-简而言之，[Waydroid](https://waydro.id/) 是一个 **Android system on a regular GNU/Linux system**，它被用于  等场景。   
+简而言之，[Waydroid](https://waydro.id/) 是一个 **Android system on a regular GNU/Linux system**，它被用于  等场景
 
 
 ![Console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/waydroid/waydroid-gui-websoft9.png)

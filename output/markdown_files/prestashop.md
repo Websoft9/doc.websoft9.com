@@ -1,8 +1,8 @@
 # Prestashop
 
-PrestaShop is one of the world's most popular ecommerce platforms, and most successful open source projects.。  
+PrestaShop is one of the world's most popular ecommerce platforms, and most successful open source projects.
 
-简而言之，[Prestashop](https://www.prestashop.com/en) 是一个 **A popular ecommerce platforms**，它被用于  等场景。   
+简而言之，[Prestashop](https://www.prestashop.com/en) 是一个 **A popular ecommerce platforms**，它被用于  等场景
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/pretashopui-websoft9.png)

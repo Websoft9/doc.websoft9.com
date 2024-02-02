@@ -1,8 +1,8 @@
 # Mastodon
 
-Mastodon is a free, open-source social network server based on ActivityPub where users can follow friends and discover new ones. 。  
+Mastodon is a free, open-source social network server based on ActivityPub where users can follow friends and discover new ones. 
 
-简而言之，[Mastodon](https://joinmastodon.org/) 是一个 **Your self-hosted and globally interconnected microblogging community**，它被用于  等场景。   
+简而言之，[Mastodon](https://joinmastodon.org/) 是一个 **Your self-hosted and globally interconnected microblogging community**，它被用于  等场景
 
 
 ![Interface](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mastodon/mastodon-gui-websoft9.png)

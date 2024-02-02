@@ -1,8 +1,8 @@
 # Nextcloud 
 
-Nextcloud is an open source file sync and share software for everyone, provides a safe, secure, and compliant file synchronization and sharing solution on servers that you control.。  
+Nextcloud is an open source file sync and share software for everyone, provides a safe, secure, and compliant file synchronization and sharing solution on servers that you control.
 
-简而言之，[Nextcloud ](https://nextcloud.com/) 是一个 **An open source file sync and share software for everyone**，它被用于  等场景。   
+简而言之，[Nextcloud ](https://nextcloud.com/) 是一个 **An open source file sync and share software for everyone**，它被用于  等场景
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/nextcloud/nextcloud-gui-websoft9.png)
