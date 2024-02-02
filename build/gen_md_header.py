@@ -31,7 +31,6 @@ client = Client(CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN)
 
 # 设置查询数据
 content_type_id = 'product'
-# entries = client.entries({'content_type': content_type_id})
 entries = client.entries({
     'locale': locale,
     'content_type': content_type_id,
