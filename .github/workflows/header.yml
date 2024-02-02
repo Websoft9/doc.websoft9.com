@@ -23,6 +23,8 @@ jobs:
         pip install Jinja2 requests contentful
 
     - name: Generate Markdown files
+      env:
+        CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_TOKEN }}
       run: python build/gen_md_header.py
 
     - name: Commit and push changes
