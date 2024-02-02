@@ -21,7 +21,7 @@ locale = 'zh-CN' if 'zh' in TEMPLATE_FILE else 'en-US'
 if locale == 'zh-CN':
     OUTPUT_DIR = 'docs/apps/_include'
 else:
-    OUTPUT_DIR = 'i18n/en/current/apps/_include'
+    OUTPUT_DIR = 'i18n/en/docusaurus-plugin-content-docs/current/apps/_include'
 
 CONTENTFUL_SPACE_ID = "ffrhttfighww"
 CONTENTFUL_ACCESS_TOKEN = os.environ['CONTENTFUL_ACCESS_TOKEN']
