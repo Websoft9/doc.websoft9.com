@@ -18,8 +18,7 @@ template = env.get_template(TEMPLATE_FILE)
 locale = 'zh-CN' if 'zh' in TEMPLATE_FILE else 'en-US'
 
 CONTENTFUL_SPACE_ID = "ffrhttfighww"
-# CONTENTFUL_ACCESS_TOKEN = os.environ['CONTENTFUL_ACCESS_TOKEN']
-CONTENTFUL_ACCESS_TOKEN = "BZz6LDz-PeMhqiWhd9zElh1lKz-TxZC5Gdk-oB1JdOA"
+CONTENTFUL_ACCESS_TOKEN = os.environ['CONTENTFUL_ACCESS_TOKEN']
 
 # 创建 Contentful 客户端实例
 client = Client(CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN)
