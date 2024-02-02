@@ -37,9 +37,9 @@ for entry in entries:
 
     print(fields)
     
-    # 获取 key 作为文件名
-    key = fields.get('key', entry.sys['id'])
-    md_filename = f"{key}.md"
+    # 获取 trademark 作为文件名
+    trademark = fields.get('trademark', entry.sys['id'])
+    md_filename = f"{trademark}.md"
     
     # 完整的文件路径
     md_file_path = os.path.join(OUTPUT_DIR, md_filename)
