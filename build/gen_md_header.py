@@ -29,6 +29,8 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 for entry in entries:
     # 调用 fields() 方法来获取字段的字典
     fields = entry.fields()
+
+    print(fields)
     
     # 获取 key 作为文件名
     key = fields.get('key', entry.sys['id'])
