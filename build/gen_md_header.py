@@ -36,6 +36,19 @@ for entry in entries:
     fields = entry.fields()
 
     print(fields)
+
+    # 解析 catalog 引用字段
+    if 'catalog' in fields:
+        catalog_items = []
+        for catalog_link in fields['catalog']:
+            catalog_entry = client.entry(catalog_link.sys['id'], select='fields.title', locale='zh-CN')
+            catalog_items.append(catalog_entry.fields())
+        fields['catalog'] = catalog_items
+
+    # 解析 license 引用字段
+    if 'license' in fields:
+        license_entry = client.entry(fields['license'].sys['id'], select='fields.name,fields.url', locale='zh-CN')
+        fields['license'] = license_entry.fields()
     
     # 获取 trademark 作为文件名
     trademark = fields.get('trademark', entry.sys['id'])
