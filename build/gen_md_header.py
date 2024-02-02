@@ -33,22 +33,33 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 # 使用 Jinja2 模板和从 Contentful 获取的数据生成 Markdown 文件
 for entry in entries:
     # 调用 fields() 方法来获取字段的字典
-    fields = entry.fields()
-
-    print(fields)
+    fields = entry.fields(locale='zh-CN')
 
     # 解析 catalog 引用字段
     if 'catalog' in fields:
         catalog_items = []
         for catalog_link in fields['catalog']:
-            catalog_entry = client.entry(catalog_link.sys['id'], select='fields.title', locale='zh-CN')
-            catalog_items.append(catalog_entry.fields())
+            # 获取整个entry
+            catalog_entry = client.entry(catalog_link.sys['id'], locale='zh-CN')
+            # 从entry的fields中获取title字段
+            catalog_fields = catalog_entry.fields(locale='zh-CN')
+            title = catalog_fields.get('title', None)
+            # 将title添加到catalog_items列表中
+            catalog_items.append({'title': title})
         fields['catalog'] = catalog_items
 
     # 解析 license 引用字段
     if 'license' in fields:
-        license_entry = client.entry(fields['license'].sys['id'], select='fields.name,fields.url', locale='zh-CN')
-        fields['license'] = license_entry.fields()
+        # 获取整个entry
+        license_entry = client.entry(fields['license'].sys['id'], locale='zh-CN')
+        # 从entry的fields中获取name和url字段
+        license_fields = license_entry.fields(locale='zh-CN')
+        name = license_fields.get('name', None)
+        url = license_fields.get('url', None)
+        # 将name和url添加到fields中
+        fields['license'] = {'name': name, 'url': url}
+
+    print(fields)
     
     # 获取 trademark 作为文件名
     trademark = fields.get('trademark', entry.sys['id'])
@@ -63,5 +74,6 @@ for entry in entries:
     # 将渲染后的内容写入 Markdown 文件
     with open(md_file_path, 'w', encoding='utf-8') as md_file:
         md_file.write(rendered_content)
+
 
 print("Markdown files have been created.")
