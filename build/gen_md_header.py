@@ -9,7 +9,9 @@ parser.add_argument('template_file', help='The template file to use for generati
 args = parser.parse_args()
 
 # 设置 Jinja2 模板环境
-TEMPLATE_FILE = args.template_file
+TEMPLATE_DIR = os.path.dirname(args.template_file)
+TEMPLATE_FILE = os.path.basename(args.template_file)
+env = Environment(loader=FileSystemLoader(TEMPLATE_DIR))
 template = env.get_template(TEMPLATE_FILE)
 
 # 根据模板文件名判断使用的语言
