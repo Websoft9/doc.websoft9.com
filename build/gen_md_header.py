@@ -3,7 +3,7 @@ from jinja2 import Environment, FileSystemLoader
 import os
 
 CONTENTFUL_SPACE_ID = "ffrhttfighww"
-CONTENTFUL_ACCESS_TOKEN = os.getenv('CONTENTFUL_TOKEN')
+CONTENTFUL_ACCESS_TOKEN = os.environ['CONTENTFUL_ACCESS_TOKEN']
 
 # 创建 Contentful 客户端实例
 client = Client(CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN)
@@ -18,16 +18,26 @@ TEMPLATE_FILE = 'meta-zh.jinja2'
 env = Environment(loader=FileSystemLoader(TEMPLATE_DIR))
 template = env.get_template(TEMPLATE_FILE)
 
+# 设置 Markdown 文件的输出目录
+OUTPUT_DIR = 'output/markdown_files'
+
+# 确保输出目录存在
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+
 # 使用 Jinja2 模板和从 Contentful 获取的数据生成 Markdown 文件
 for entry in entries:
-    # 你可以根据 entry 的 key 属性来创建文件名
-    md_filename = f"{entry.key.replace(' ', '_')}.md"
+    # 获取 key 作为文件名
+    key = entry.fields.get('key', entry.sys.id)
+    md_filename = f"{key}.md"
+    
+    # 完整的文件路径
+    md_file_path = os.path.join(OUTPUT_DIR, md_filename)
     
     # 渲染模板
     rendered_content = template.render(entry=entry)
     
     # 将渲染后的内容写入 Markdown 文件
-    with open(md_filename, 'w') as md_file:
+    with open(md_file_path, 'w', encoding='utf-8') as md_file:
         md_file.write(rendered_content)
 
 print("Markdown files have been created.")
