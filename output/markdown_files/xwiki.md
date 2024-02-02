@@ -1,17 +1,19 @@
-# 
+# XWiki
 
-。  
+XWiki是一个开源的企业级Wiki平台。它允许用户创建和编辑内容，以便团队成员可以协作工作、共享知识和文档。。  
 
-简而言之，[]() 是一个 ****，它被用于 等场景。   
+简而言之，[XWiki](https://www.xwiki.org/) 是一个 **The Advanced Open Source Enterprise Wiki**，它被用于  等场景。   
 
+
+![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/xwiki/xwiki-gui-websoft9.png)
 
 
 ## 准备
 
-在参阅本文档使用  时，需要确保如下几点：
+在参阅本文档使用 XWiki 时，需要确保如下几点：
 
 - 应用是基于 Websoft9 安装的
 
-- 请检查应用的使用许可协议，确保符合要求
+- 应用的用途符合 [](https://some_license_url) 开源许可协议
 
 - 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口

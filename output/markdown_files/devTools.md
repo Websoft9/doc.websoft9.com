@@ -1,14 +1,14 @@
-# 
+# DevTools
 
 。  
 
-简而言之，[]() 是一个 ****，它被用于 等场景。   
+简而言之，[DevTools]() 是一个 **A Swiss Army knife for developers**，它被用于 等场景。   
 
 
 
 ## 准备
 
-在参阅本文档使用  时，需要确保如下几点：
+在参阅本文档使用 DevTools 时，需要确保如下几点：
 
 - 应用是基于 Websoft9 安装的
 

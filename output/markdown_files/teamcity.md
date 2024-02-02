@@ -1,14 +1,16 @@
-# 
+# TeamCity
 
-。  
+TeamCity is a general-purpose CI/CD software platform that allows for flexible workflows, collaboration and development practices.。  
 
-简而言之，[]() 是一个 ****，它被用于 等场景。   
+简而言之，[TeamCity](https://www.jetbrains.com.cn/en-us/teamcity/) 是一个 **self-contained, open source automation server**，它被用于  等场景。   
 
+
+![devops](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teamcity/teamcity-gui-websoft9.webp)
 
 
 ## 准备
 
-在参阅本文档使用  时，需要确保如下几点：
+在参阅本文档使用 TeamCity 时，需要确保如下几点：
 
 - 应用是基于 Websoft9 安装的
 
