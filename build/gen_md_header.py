@@ -9,13 +9,15 @@ CONTENTFUL_ACCESS_TOKEN = "BZz6LDz-PeMhqiWhd9zElh1lKz-TxZC5Gdk-oB1JdOA"
 # 创建 Contentful 客户端实例
 client = Client(CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN)
 
+# 设置查询语言
+client.default_locale = 'zh-CN'
+
 # 设置查询数据
 content_type_id = 'product'
 # entries = client.entries({'content_type': content_type_id})
 entries = client.entries({
     'content_type': content_type_id,
-    'select': 'fields.key,fields.catalog,fields.license,fields.trademark,fields.overview,fields.summary,fields.websiteurl,fields.screenshots',
-    'locale': 'zh-CN' 
+    'select': 'fields.key,fields.catalog,fields.license,fields.trademark,fields.overview,fields.summary,fields.websiteurl,fields.screenshots'
 })
 
 # 设置 Jinja2 模板环境
@@ -40,9 +42,9 @@ for entry in entries:
         catalog_items = []
         for catalog_link in fields['catalog']:
             # 获取整个entry
-            catalog_entry = client.entry(catalog_link.sys['id'], locale='zh-CN')
+            catalog_entry = client.entry(catalog_link.sys['id'])
             # 从entry的fields中获取title字段
-            catalog_fields = catalog_entry.fields(locale='zh-CN')
+            catalog_fields = catalog_entry.fields()
             title = catalog_fields.get('title', None)
             # 将title添加到catalog_items列表中
             catalog_items.append({'title': title})
@@ -51,9 +53,9 @@ for entry in entries:
     # 解析 license 引用字段
     if 'license' in fields:
         # 获取整个entry
-        license_entry = client.entry(fields['license'].sys['id'], locale='zh-CN')
+        license_entry = client.entry(fields['license'].sys['id'])
         # 从entry的fields中获取name和url字段
-        license_fields = license_entry.fields(locale='zh-CN')
+        license_fields = license_entry.fields()
         name = license_fields.get('name', None)
         url = license_fields.get('url', None)
         # 将name和url添加到fields中
