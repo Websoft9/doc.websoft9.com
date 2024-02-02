@@ -11,8 +11,11 @@ client = Client(CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN)
 
 # 设置查询数据
 content_type_id = 'product'
-entries = client.entries({'content_type': content_type_id})
-# entries = client.entries({'content_type': content_type_id, 'include': 2})
+# entries = client.entries({'content_type': content_type_id})
+entries = client.entries({
+    'content_type': content_type_id,
+    'select': 'fields.key,fields.catalog,fields.license,fields.trademark,fields.overview,fields.summary,fields.websiteurl,fields.screenshots'
+})
 
 # 设置 Jinja2 模板环境
 TEMPLATE_DIR = 'docs/apps/_include'
