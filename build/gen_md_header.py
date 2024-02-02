@@ -5,6 +5,8 @@ import os
 CONTENTFUL_SPACE_ID = "ffrhttfighww"
 CONTENTFUL_ACCESS_TOKEN = os.environ['CONTENTFUL_ACCESS_TOKEN']
 
+print(CONTENTFUL_ACCESS_TOKEN)
+
 # 创建 Contentful 客户端实例
 client = Client(CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN)
 
