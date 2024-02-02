@@ -69,10 +69,10 @@ for entry in entries:
         })[0]
         # 从entry的fields中获取name和url字段
         license_fields = license_entry.fields()
-        name = license_fields.get('name', None)
+        key = license_fields.get('key', None)
         url = license_fields.get('url', None)
-        # 将name和url添加到fields中
-        fields['license'] = {'name': name, 'url': url}
+        # 将key和url添加到fields中
+        fields['license'] = {'key': key, 'url': url}
 
     print(fields)
     
