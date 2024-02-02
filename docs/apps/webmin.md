@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+title: Webmin
 slug: /webmin
 tags:
   - Webmin
@@ -7,28 +7,17 @@ tags:
   - Web 可视化 Linux 管理员工具
 ---
 
-# 快速入门
+import Meta from './_include/webmin.md';
 
-[Webmin](https://www.webmin.com) 是基于 Web 的 Linux/Unix 可视工具，它可以管理 Apache, MySQL等基础环境软件，也可以管理 DNS, FTP, 用户, 防火墙等系统级配置。它的操作有一定的复杂性，适合于系统管理员使用。  
+<Meta name="meta" />
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/webmin/webmin-dashboard-websoft9.png)
+## 入门指南{#guide}
 
+### 初始化{#wizard}
 
-部署 Websoft9 提供的 Webmin 之后，请参考下面的步骤快速入门。
+Websoft9 控制台安装 Webmin 后，通过【我的应用】进入它的编辑窗口，在**访问**标签页中获取登录地址和账号。  
 
-## 准备
-
-1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，确保 **Inbound（入）规则** 下的 **TCP:80** 端口已经开启  
-3. 若想用域名访问  Webmin，务必先完成 **[域名五步设置](./administrator/domain_step)** 过程
-4. 准备好服务器 root 密码（Webmin 直接使用服务器账号登录）
-
-
-## Webmin 初始化向导
-
-### 详细步骤
-
-1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://服务器公网IP*, 进入登录页面
+1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问后，进入登录页面
 
    ![Webmin 登录页面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/webmin/webmin-login-websoft9.png)
 
@@ -60,33 +49,9 @@ tags:
 
 > Webmin 监控的不是云服务器本身，对应的容器内系统主要用作学习使用。其他请参考官方文档：[Webmin Documentation](http://doxfer.webmin.com/Webmin/Main_Page)
 
-### 出现问题？
+### 快速了解
 
-若碰到问题，请第一时刻联系 **[技术支持](./helpdesk)**。也可以先参考下面列出的问题定位或  **[FAQ](./faq#setup)** 尝试快速解决问题：
-
-**服务器使用的是秘钥对，如何登录 Webmin？**   
-
-由于 Webmin 不支持密钥对登录，因此需要用户自行设置 root 密码：
-```
-sudo su -
-passwd 'your password'
-```
-
-## Webmin 使用入门
-
-下面以 **通过 Webmin 安装一个 WordPress 网站作**为一个任务，帮助用户快速入门：  
-
-> 需提前将域名解析至服务器
-
-1. 安装 PHP，MySQL 环境 （[参考](./ansible#installrole)）
-2. 本地下载 WordPress 源码上传至服务器 */data/wwwroot* 目录，然后在线解压（[参考](#file)）
-3. 修改解压后的文件夹拥有者为 www（[参考](#file)）
-4. 打开[数据库管理](#db)界面，增加一个名称为 wordpress 的数据库
-5. 通过修改 WordPress 的配置文件中数据库相关项目 */data/wwwroot/wordpress/wp-config.php*  
-6. 为 WordPress 网站创建一个虚拟主机（[参考](#apachevhost)）
-7. 本地浏览器访问：http://域名，测试 WordPress
-
-## 常用操作
+- [Webmin API](https://doxfer.webmin.com/Webmin/The_Webmin_API)
 
 ### 安装组件
 
@@ -178,49 +143,25 @@ Webmin 提供了可视化的 MySQL 数据库管理界面，可以很方面的创
 3. 保存配置文件，重启 [Apache 服务](#service)
 
 
+## 管理维护{#administrator}
+
+#### 禁用 Webmin 继承系统账号
+
+默认的【Unix验证】 更改为 【设置为】，同时设置新密码和用户
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/webmin/webmin-usermode-websoft9.png)
+
 ### 修改密码
 
 Webmin 默认使用的是服务器 root 账号，修改服务器密码即修改 Webmin 密码。  
 
 故，用 `passwd` 系统命令即可
 
+### 升级
 
-## Webmin 参数
+Webmin 提供了可视化的在线升级功能，升级非常方便
 
-Webmin 应用中包含 Apache, Docker 等组件，可通过 **[通用参数表](./administrator/parameter)** 查看路径、服务、端口等参数。 
+![升级](https://libs.websoft9.com/Websoft9/DocsPicture/zh/webmin/webmin-upgrade-websoft9.png)
 
-通过运行 `docker ps`，查看 Jenkins 运行时所有的服务组件： 
 
-```bash
-CONTAINER ID   IMAGE                       COMMAND                  CREATED        STATUS          PORTS                                         NAMES
-c49af4b962a2   websoft9dev/webmin:latest   "/bin/sh -c /home/en…"   20 hours ago   Up 10 seconds   0.0.0.0:9001->10000/tcp, :::9001->10000/tcp   webmin
-```  
-
-### 路径{#path}
-
-Webmin 安装目录： */data/apps/webmin*  
-
-### 端口
-
-无特殊端口
-
-### 版本
-
-```shell
-docker exec -i webmin cat /etc/webmin/version
-```
-
-### 服务
-
-```shell
-sudo systemctl start | stop | restart | status webmin
-```
-
-### 命令行
-
-Webmin 没有提供命令行程序
-
-### API
-
-参考:[Webmin API](https://doxfer.webmin.com/Webmin/The_Webmin_API)
-
+## 故障
