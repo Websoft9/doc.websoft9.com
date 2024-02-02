@@ -1,4 +1,4 @@
-name: Generate Markdown
+name: Generate Markdown Header File
 
 on:
   workflow_dispatch:
