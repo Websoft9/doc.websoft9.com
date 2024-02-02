@@ -42,7 +42,7 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 # 使用 Jinja2 模板和从 Contentful 获取的数据生成 Markdown 文件
 for entry in entries:
     # 调用 fields() 方法来获取字段的字典
-    fields = entry.fields(ocale=locale)
+    fields = entry.fields(locale=locale)
 
     # 解析 catalog 引用字段
     if 'catalog' in fields:
