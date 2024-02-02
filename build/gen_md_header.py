@@ -3,7 +3,8 @@ from jinja2 import Environment, FileSystemLoader
 import os
 
 CONTENTFUL_SPACE_ID = "ffrhttfighww"
-CONTENTFUL_ACCESS_TOKEN = os.environ['CONTENTFUL_ACCESS_TOKEN']
+# CONTENTFUL_ACCESS_TOKEN = os.environ['CONTENTFUL_ACCESS_TOKEN']
+CONTENTFUL_ACCESS_TOKEN = "BZz6LDz-PeMhqiWhd9zElh1lKz-TxZC5Gdk-oB1JdOA"
 
 print(CONTENTFUL_ACCESS_TOKEN)
 
