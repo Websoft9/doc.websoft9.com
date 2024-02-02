@@ -49,7 +49,7 @@ for entry in entries:
         catalog_items = []
         for catalog_link in fields['catalog']:
             # 获取整个entry
-             catalog_entry = client.entries({
+            catalog_entry = client.entries({
                 'sys.id': catalog_link.sys['id'],
                 'locale': locale
             })[0]
