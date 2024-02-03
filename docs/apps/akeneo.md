@@ -46,4 +46,4 @@ Akeneo 完美支持多语言，下面以中文作为范例：
 
 参阅官方文档： [Import and Export data](https://docs.akeneo.com/6.0/import_and_export_data/index.html)
 
-## 故障pip i
+## 故障

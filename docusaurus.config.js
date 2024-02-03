@@ -38,6 +38,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl: 'https://github.com/websoft9/doc.websoft9.com/tree/main',
+          // exclude: ['**/apps/**']
         },
         blog: {
           showReadingTime: true,
