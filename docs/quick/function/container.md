@@ -24,6 +24,21 @@ Websoft9 集成 Portainer 作为唯一个容器可视化管理平台，100% 保�
 
 Websoft9 容器管理平台可以通过 Environments 方便的接入 K8s，将多个集群纳入到统一的管理界面。  
 
+### 容器中运行命令{#docker-exec}
+
+Portainer 提供了可视化的运行容器命令的功能，它等同于 **docker exec -it**。
+
+1. 在容器列表，点击下图中 MySQL 的 **Quick actions** 一栏下的 **>_** 图标；
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/potainer/portainer-containerlist-websoft9.png)
+
+2. 在新打开的页面，点击 **Connetc** 按钮，准备连接；
+    ![](http://libs-websoft9-com.oss-cn-qingdao.aliyuncs.com/Websoft9/DocsPicture/zh/potainer/portainer-createdatabase-websoft9.png)
+
+    - Command：选择可用的命令执行（三选一，总有一个可用）
+    - user: 默认 root（推荐）
+
+3. 点击 "Connect"，成功连接到即可运行命令
+
 ## 常见问题？
 
 #### 可以删除已有的 Environments 吗？
