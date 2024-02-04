@@ -24,7 +24,9 @@ import Meta from './_include/sqlserver.md';
 * [license_Expr_2008.rtf](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/license/license_Expr_2008.rtf)
 * [license_Expr_2012.rtf](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/license/license_Expr_2012.rtf)
 
-Express版本与企业版相比，功能更少（例：[SQLServer 2016 各个版本功能对比](https://docs.microsoft.com/zh-cn/sql/sql-server/editions-and-components-of-sql-server-2016?view=sql-server-ver15#Cross-BoxScaleLimits)）。另外，它针对服务器有如下的限制：不超过1个处理器，不超过10G数据存储
+Express版本与企业版相比，功能更少（例：[SQLServer 2016 各个版本功能对比](https://docs.microsoft.com/zh-cn/sql/sql-server/editions-and-components-of-sql-server-2016?view=sql-server-ver15#Cross-BoxScaleLimits)）。  
+
+另外，它针对服务器有如下的限制：不超过1个处理器，不超过10G数据存储
 
 ## 入门指南{#guide}
 
@@ -38,22 +40,13 @@ Websoft9 控制台安装 SQLServer 后，通过【我的应用】进入它的编
 
 Linux环境下使用 CloudBeaver 来验证 SQL Server 数据库：
 
-1. 使用本地电脑浏览器访问：*`http://域名:9090`* 或 *`http://服务器公网IP:9090`*, 进入初始化页面
-   ![初始化 CloudBeaver](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-wizard001-websoft9.png)
-
-2. 设置用户名和密码，然后点击【Next】进入下一步
-   ![初始化 CloudBeaver](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-wizard002-websoft9.png)
-
-3. 继续点击【Next】进入下一步，最后点击【FINISH】完成初始化
-   ![初始化 CloudBeaver](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-wizard003-websoft9.png)
-
-4. 连接【SQL SERVER】，管理数据库：点击右上角【Settings】图标，选择【Administration】>【Connection Management】，添加 SQL SERVER
+1. 登录 CloudBeaver，连接【SQL SERVER】，管理数据库：点击右上角【Settings】图标，选择【Administration】>【Connection Management】，添加 SQL SERVER
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-connection-websoft9.png)
 
-5. 填写数据库基本信息（[不知道账号密码？](./user/credentials)），点击【Create】
+2. 填写数据库基本信息，点击【Create】
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-connsetting-websoft9.png)
 
-6. 点击左上角 Cloud Beaver 图标，SQL Server 数据库连接成功，可以方便管理数据库
+3. 点击左上角 Cloud Beaver 图标，SQL Server 数据库连接成功，可以方便管理数据库
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/sqlserver-main-websoft9.png)
 
 </TabItem>
@@ -366,4 +359,5 @@ SQL Server Management Studio 托管一个 Microsoft Internet Explorer 版本。 
 #### 修改 SQL Server 默认的数据存储路径？
 
 可以。SQL Server 企业管理器中：【属性】>【数据库设置】修改
-https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-3-websoft9.png
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-3-websoft9.png)

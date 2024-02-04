@@ -27,13 +27,13 @@ Websoft9 控制台安装 Redmine 后，通过【我的应用】进入它的编�
 4. 打开：【项目】，新建一个项目
    ![Redmine 新建项目](https://libs.websoft9.com/Websoft9/DocsPicture/zh/redmine/redmine-createproject-websoft9.png)
 
-5. 通过：【管理】>【配置】>【显示】，设置 Redmine 项目区语言
+### 设置语言
+
+1. 依次打开：【管理】>【配置】>【显示】，设置 Redmine 项目区语言
    ![Redmine 设置语言](https://libs.websoft9.com/Websoft9/DocsPicture/zh/redmine/redmine-language-websoft9.png)
 
-6. 通过：【管理】>【配置】>【用户】，设置 Redmine 用户语言（区别于项目区语言）
+2. 依次打开：【管理】>【配置】>【用户】，设置 Redmine 用户语言（区别于项目区语言）
    ![Redmine SSH key](https://libs.websoft9.com/Websoft9/DocsPicture/en/redmine/redmine-userlanguage-websoft9.png)
-   
-7. 激活新注册用户：通过【管理】>【用户】，在【状态】选项中选择 已注册用户，然后激活用户，该用户才能登陆。
 
 ### 创建项目
 
@@ -70,6 +70,19 @@ Websoft9 控制台安装 Redmine 后，通过【我的应用】进入它的编�
 
 5. 插件卸载操作相反，即只需删除插件对应的目录
 
+## 配置选项
+
+- 站点目录：*/path/data/redmine*  
+- 配置目录：*/path/data/redmine/config*  
+- 配置文件：*//path/data/redmine/config/configuration.yml*  
+- [CLI](https://pypi.org/project/Redmine-CLI/)
+- [API](https://www.redmine.org/projects/redmine/wiki/Rest_api)
+- SCM 支持：SVN, CVS, Git, Mercurial and Bazaar
+- 多语言（√）
+- [Email Configuration](https://www.redmine.org/projects/redmine/wiki/EmailConfiguration)
+
+## 管理维护{#administrator}
+
 ### 设置 SMTP{#smtp}
 
 1. 修改 `configuration.yml` 文件，找到 “production:”, 在 production 下面添加并完善你的 SMTP 参数:  
@@ -101,20 +114,6 @@ Websoft9 控制台安装 Redmine 后，通过【我的应用】进入它的编�
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/redmine/redmine-smtp-websoft9.png)
 
 
-Redmine 官方提供了数十种不同 SMTP 配置方法，请参考官方文档： [Email Configuration](https://www.redmine.org/projects/redmine/wiki/EmailConfiguration)
-
-## 管理维护{#administrator}
-
-### 配置参数
-
-- 站点目录：*/path/data/redmine*  
-- 配置目录：*/path/data/redmine/config*  
-- 配置文件：*//path/data/redmine/config/configuration.yml*  
-- [CLI](https://pypi.org/project/Redmine-CLI/)
-- [API](https://www.redmine.org/projects/redmine/wiki/Rest_api)
-- SCM 支持：SVN, CVS, Git, Mercurial and Bazaar
-- 多语言（√）
-
 ### 备份与恢复
 
 参考：[《RedmineBackupRestore》](https://redmine.org/projects/redmine/wiki/RedmineBackupRestore)
@@ -124,3 +123,8 @@ Redmine 官方提供了数十种不同 SMTP 配置方法，请参考官方文档
 #### 新建工程名为中文时，系统报错？
 
 数据库字符编码导致，需修改数据库字符编码为 utf8
+
+#### 新注册用户不能登录？
+
+新注册用户需要激活：通过【管理】>【用户】，在【状态】选项中选择 已注册用户，然后激活用户，该用户才能登陆。
+

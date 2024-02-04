@@ -12,6 +12,8 @@ import Meta from './_include/wordpress.md';
 
 <Meta name="meta" />
 
+
+
 ## 入门指南{#guide}
 
 ### 初始化{#wizard}
@@ -29,13 +31,6 @@ Websoft9 控制台安装 WordPress 后，通过【我的应用】进入它的编
 4. 进入后台（http//域名或IP/wp-admin），试试 WordPress 的功能
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wordpress/wordpress-install006-websoft9.png)
 
-### 参数
-
-如下的各种说明可能在使用时会需要：  
-
-- 配置文件：wp-config.php
-- 数据文件夹：wp-contents
-- www-data 用户的 UID 
 
 ### 商业主题下载
 
@@ -218,6 +213,13 @@ WordPress [集成Matomo](https://wordpress.org/plugins/wp-piwik/#installation) �
 1. WordPress 启用 WP-Matomo(WP-Piwik) 插件
 2. 在WP-Matomo (WP-Piwik) 设置菜单按照说明配置您的 Matomo 连接即可
 
+## 配置选项
+
+如下的各种说明可能在使用时会需要：  
+
+- 配置文件：wp-config.php
+- 数据文件夹：wp-contents
+- www-data 用户的 UID 
 
 ## 管理维护{#administrator}
 
