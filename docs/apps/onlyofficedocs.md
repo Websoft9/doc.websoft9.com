@@ -15,7 +15,7 @@ import Meta from './_include/onlyofficedocs.md';
 
 ### 初始化{#wizard}
 
-Websoft9 控制台安装 ONLYOFFICE Docs 后，通过【我的应用】进入它的编辑窗口，在**访问**标签页中获取登录地址和账号。  
+Websoft9 控制台安装 ONLYOFFICE Docs 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
 
 本地浏览器访问成功，会看到 OnlyOffice Docs 运行成功的画面。如果页面打不开或报错，则表示运行异常。  
    ![ONLYOFFICE Document Server is running](https://libs.websoft9.com/Websoft9/DocsPicture/zh/onlyoffice/onlyoffice-dkisrunning-websoft9.png)

@@ -19,7 +19,7 @@ Websoft9 是 Seafile 的企业版合作伙伴，通过 Websoft9 购买企业版�
 
 ### 初始化{#wizard}
 
-Websoft9 控制台安装 Seafile 后，通过【我的应用】进入它的编辑窗口，在**访问**标签页中获取登录地址和账号。  
+Websoft9 控制台安装 Seafile 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
 
 1. 本地浏览器访问, 进入Seafile 登录页面
    ![Seafile登录页面](http://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-login-websoft9.png)

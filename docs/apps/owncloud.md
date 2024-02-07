@@ -16,7 +16,7 @@ import Meta from './_include/owncloud.md';
 
 ### 初始化{#wizard}
 
-Websoft9 控制台安装 OwnCloud 后，通过【我的应用】进入它的编辑窗口，在**访问**标签页中获取登录地址和账号。  
+Websoft9 控制台安装 OwnCloud 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
 
 1. 本地浏览器访问成功后，进入引导首页
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-init1-websoft9.png)

@@ -14,7 +14,7 @@ import Meta from './_include/redmine.md';
 
 ### 初始化{#wizard}
 
-Websoft9 控制台安装 Redmine 后，通过【我的应用】进入它的编辑窗口，在**访问**标签页中获取登录地址和账号。  
+Websoft9 控制台安装 Redmine 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
 
 1. 使用本地 Chrome 或 Firefox 浏览器访问后， 进入Redmine主页。
 
