@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-slug: /dolibarr
+slug: /dolibarr2
 tags:
   - Dolibarr
   - CRM
@@ -89,4 +89,3 @@ sudo docker start | stop | restart | stats dolibarr-db
 
 ### API
 
-[Module Web Services API REST](https://wiki.dolibarr.org/index.php?title=Module_Web_Services_API_REST_(developer))
