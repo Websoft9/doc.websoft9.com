@@ -2,9 +2,11 @@
 title: phpMyAdmin
 slug: /phpmyadmin
 tags:
-  - Web 面板
-  - 可视化
-  - GUI
+  - 数据库
+  - 可视化管理
+  - Web
+  - MySQL
+  - MariaDB
 ---
 
 import Meta from './_include/phpmyadmin.md';
@@ -21,24 +23,22 @@ Websoft9 控制台安装 phpMyAdmin 后，通过【我的应用】管理应用�
 
 如果部署方案中包含 phpMyAdmin 等图形化工具，使用就更加便捷方便：
 
-1. 本地浏览器电脑浏览器访问：*`http://服务器公网IP:9090`*，进入phpMyAdmin
+1. 本地浏览器电脑浏览器访问后，进入phpMyAdmin
+   ![登录phpMyadmin](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-login-websoft9.png)
 
-  ![登录phpMyadmin](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-login-websoft9.png)
-
-2. 输入数据库用户名和密码([不知道密码？](./user/credentials))
+2. 输入 MySQL 的连接信息
+   - 服务器：MySQL 主机名（Websoft9 控制台安装的 MySQL 的容器名）
+   - 账号：root
 
 3. 登录成功后，可以管理任意数据库
-
-  ![phpMyadmin](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-adddb-websoft9.png)
+   ![phpMyadmin](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-adddb-websoft9.png)
 
 ### 修改 root 密码{#phpmyadminmodifypw}
 
-1. 登录phpMyAdmin后，默认页面-常规设置，点击【修改密码】
+1. 登录 phpMyAdmin 后，默认页面-常规设置，点击【修改密码】
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-modifypw-websoft9.png)
 
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/websoft9-modifymysqlpw.gif)
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-modifypw-websoft9.png)
-
-2. 修改密码-&gt;保存-&gt;退出登录，刷新浏览器后便可以使用新密码登录了
+2. 修改密码并保存，然后退出刷新浏览器后生效
 
 ### 新增数据库{#phpmyadmindb}
 
@@ -91,69 +91,15 @@ Websoft9 控制台安装 phpMyAdmin 后，通过【我的应用】管理应用�
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/mysql-openremote002-websoft9.png)
 3. 以上两步就完成了开启远程连接的工作
 
-### 管理多个 MySQL 实例
-
-phpMyAdmin 支持多个 MySQL 实例。
-
-修改 phpMyAdmin 的 [phpmyadmin compose 文件](#path)的对应的环境变量（PMA_HOST 更改为 PMA_HOSTS）即可支持：
-
-```
-version: "3.7"
-services:
-  phpmyadmin:
-      image: phpmyadmin/phpmyadmin
-      container_name: "phpmyadmin"
-      environment:
-       - PMA_HOSTS=172.17.0.1,172.17.0.2
-       - PMA_PORTS=3306
-       - UPLOAD_LIMIT=20M 
-...
-```
-
 ### 修改导入文件大小限制
 
-phpMyAdmin 默认可导入的文件大小有限制，可通过如下步骤修改它：
-
-1. 使用 SFTP 连接服务器，编辑 [phpmyadmin compose 文件](#path)，在环境变量处增加一个字段 `- UPLOAD_LIMIT=20M`
-  ```
-  version: "3.7"
-  services: 
-    phpmyadmin:
-        image: phpmyadmin/phpmyadmin
-        container_name: "phpmyadmin"
-        environment:
-         - PMA_HOST=172.17.0.1
-         - PMA_PORT=3306
-         - UPLOAD_LIMIT=20M
-  ```
-
-2. 重新创建 phpMyAdmin 容器后生效
-  ```
-  cd /data/apps/phpmyadmin && docker-compose up -d
-  ```
+phpMyAdmin 默认可导入的文件大小有限制，可通过修改编排文件的 .env 中的 `UPLOAD_LIMIT=20M` 字段。  
 
 ## 配置选项{#configs}
+
+- 多语言（✅）
+- 配置文件：/etc/phpmyadmin/config.user.inc.php
+
 ## 管理维护{#administrator}
 
-### 重置管理员密码{#resetpw}
-
-### 更换 URL{#url}
-
-### HTTPS 额外设置{#https}
-
-**[标准 HTTPS 配置](./guide/appsethttps)** 完成后，可能还需要如下步骤： 
-
-1. 步骤1
-
-2. 步骤2
-
-### 备份与恢复
-
-### 升级
-
-
 ## 故障
-
-#### 更改域名导致无法访问 phpMyAdmin ？
-
-#### 访问 phpMyAdmin 出现 502 错误？{#502}
