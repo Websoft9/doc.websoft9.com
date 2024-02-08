@@ -28,7 +28,7 @@ Websoft9 控制台安装 Elasticsearch 后，通过【我的应用】管理应�
 
 Elasticsearch 应用中默认不含 Logstash，可在 Websoft9 应用商店中安装或提前准确其他的 Logstash。
 
-### 连接 Logstash 并分析
+### 连接 Logstash 并分析{#logstash}
 
 Logstash 作为数据的采集者，它是如何将数据传输到 Elasticsearch 这个数据存储中的呢？
 
