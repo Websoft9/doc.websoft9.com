@@ -15,23 +15,6 @@ tags:
 
 ### MySQL 备份与恢复{#backup}
 
-##### 备份（导出）
-
-1. 使用 phpMyAdmin等可视化工具，[导出](../mysql#phpmyadminexportimport)数据库（建议SQL格式）
-
-2. 或使用 **mysqldump** 工具导出（效率更高，通用性更强）
-   ```
-   docker exec -it mariadb mysqldump -uroot -p databasename>databasename.sql
-   ```
-3. 将备份文件下载到本地，备份工作完成
-
-
-##### 恢复（导入）
-
-1. 登录 phpMyAdmin，打开顶部的【导入】标签页，根据向导开始导入
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-import-websoft9.png)
-
-2. 导入过程中可能会出现数据库字符集不兼容的情况，需要人工干预处理
 
 
 ### MySQL 大版本升级{#upgrade}
@@ -49,11 +32,7 @@ Windows 上的 MySQL 升级分为两部分：
 mysql_upgrade -u root -p 13456
 ```
 
-### MySQL 迁移{#migration}
 
-MySQL 到 MySQL 的迁移，可以通过数据的**导入导出**快速实现。    
-
-但是，其他 DBMS 到 MySQL 的迁移最好是使用迁移工具，例如：[MySQL Workbench: Database Migration](https://www.mysql.com/products/workbench/migrate/)
 
 ## 故障排除{#troubleshoot}
 
@@ -61,89 +40,7 @@ MySQL 到 MySQL 的迁移，可以通过数据的**导入导出**快速实现。
 除以下列出的 MySQL 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
 
 
-#### 导入数据库报错？
 
-查看脚本里面是否有创建数据库的脚本
-
-#### 数据库服务无法启动？
-
-导致 MySQL 无法启动的主要原因有：
-
-* 磁盘空间不足（二进制日志文件大小增长过快）
-* 死锁
-* MySQL 配置文件错误
-
-建议先通过命令进行排查  
-
-```shell
-# 查看磁盘空间
-df -lh
-
-# 查看内存使用
-free -lh
-
-# MySQL 状态
-cd /data/apps/mysql && sudo docker compose ls
-
-# 查看数据库日志
-docker exec -it mysql cat /var/log/mysql/error.log
-```
-
-#### MySQL 日志太大，导致磁盘空间不足？{#binlogexceed}
-
-默认安装，mysql没有开启binlog，binlog是一个二进制格式的文件，用于记录用户对数据库**更新的****SQL语句****信息**，例如更改数据库表和更改内容的SQL语句都会记录到binlog里。
-
-binlog主要用于出现没有备份的情况下，恢复数据库。但binlog会占用较大空间，如果用户开启binlog后长期不清理会让剩余磁盘空间为0，从而影响数据库或服务器无法启动
-
-如果对自己的备份有信心，不需要binlog功能，参考如下步骤关闭之：
-
-1. 编辑 [MySQL 配置文件](../mysql#path)
-  ~~~
-  #log_bin=mysql-bin 
-  ~~~
-2. 重启mysql
-  ~~~
-  sudo docker restart mysql
-  ~~~
-
-#### 磁盘空间不足导致数据库无法启动？
-
-增加磁盘或增加一个新的数据文件地址
-```
-innodb_data_file_path= /data/mysql/data1:2000M;/data2/mysql/data2:2000M:autoextend
-```
-
-#### MySQL 容器无法远程访问？
-
-导致这个问题的可能原因有三点：
-
-1. 端口映射设置错误，导致容器没有网络
-2. 容器没有开启远程访问权限
-3. MySQL 8.0 特殊设置要求
-
-#### mysqladmin 修改普通用户密码报错 ？
-
-错误："Access denied; you need the SUPER privilege for this operation"  
-原因：mysqlamdin 命令需 SUPER 权限，而普通用户默认没有这个权限。    
-方案：使用 `set password=password("newpassword")` 命令修改密码  
-
-#### 一次性删除数据库中的所有表难以成功？
-
-数据表之间的**外键约束**导致有些数据表无法删除
-
-#### 数据库出现死锁？
-
-死锁一般是应用程序设计问题导致，其中事务操作出现死锁的几率更大。  
-
-一旦出现死锁，可以用如下命令确认死锁的原因：
-
-```
-MariaDB [(none)]> show innodb status \G;
-```
-#### 提示 */var/lib/mysql/mysql.sock* 不存在？
-
-原因：使用 mysqldump 或 mysqladmin 等工具时，默认使用 Unix 套接字连接，而不是 TCP/IP。而这个套接字文件（mysql.sock）由于安装原因，并不会一定在 */var/lib/mysql/mysql.sock* 目录。  
-方案： 配置文件中指定 mysql.sock 目录
 
 
 ## 问题解答
