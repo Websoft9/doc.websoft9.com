@@ -57,14 +57,21 @@ for entry in data:
 
 # Now, generate the Markdown content sorted by position in ascending order
 markdown_content = ""
+title = None
+info = None
+
 try:
     for title, info in sorted(catalog_dict.items(), key=lambda x: min(x[1]['positions'])):
         markdown_content += f"## {title}\n\n"
         for trademark, key in sorted(info['entries']):
             markdown_content += f"- [{trademark}](./{key})\n\n"
 except TypeError as e:
-    print(f"排序时发生错误，相关数据：{title}, {info['positions']}")
-    raise e 
+    if title is not None and info is not None:
+        print(f"排序时发生错误，相关数据：{title}, {info['positions']}")
+    else:
+        print("排序时发生错误，但无法确定具体的数据项。")
+    raise e  # 如果你想让程序中断，可以选择重新抛出异常
+
 
 # Write the Markdown content to the specified output file
 with open(output_md_file_name, 'w') as md_file:
