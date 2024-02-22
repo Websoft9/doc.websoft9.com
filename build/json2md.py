@@ -56,15 +56,32 @@ for entry in data:
         print(e)
 
 # Now, generate the Markdown content sorted by position in ascending order
-markdown_content = ""
-for title, info in sorted(catalog_dict.items(), key=lambda x: min(x[1]['positions'])):
+markdown_content = ""  
+
+# 首先检查每个条目的positions是否会导致排序出错
+for title, info in catalog_dict.items():
     try:
+        # 尝试获取每个条目的最小positions值
+        _ = min(info['positions'])
+    except Exception as e:
+        # 如果出错，打印出错的title和错误信息
+        print(f"Error with title '{title}': {e}")
+        # 可以选择跳过出错的条目或者停止处理
+        break  # 或者使用continue来跳过当前条目
+
+# 如果上面没有错误发生，或者你决定忽略错误继续执行，可以进行排序
+try:
+    sorted_items = sorted(catalog_dict.items(), key=lambda x: min(x[1]['positions']))
+except Exception as e:
+    # 如果排序时发生异常，这里只是额外的保障，理论上应该不会到达这里
+    print(f"Error sorting the catalog: {e}")
+else:
+    # 如果排序成功，则继续生成Markdown内容
+    for title, info in sorted_items:
         markdown_content += f"## {title}\n\n"
         for trademark, key in sorted(info['entries']):
             markdown_content += f"- [{trademark}](./{key})\n\n"
-    except Exception as e:
-        print(f"Error generating Markdown for title: '{title}' with info: {info}")
-        print(e)
+
 
 # Write the Markdown content to the specified output file
 with open(output_md_file_name, 'w') as md_file:
