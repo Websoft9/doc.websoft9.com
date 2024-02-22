@@ -55,6 +55,10 @@ for entry in data:
         print(f"Error processing entry: {entry.get('key', 'Unknown')}")
         print(e)
 
+for title, info in catalog_dict.items():
+    if None in info['positions']:
+        print(f"Title '{title}' has None in positions")
+
 # Now, generate the Markdown content sorted by position in ascending order
 markdown_content = ""
 for title, info in sorted(catalog_dict.items(), key=lambda x: min(x[1]['positions'])):
