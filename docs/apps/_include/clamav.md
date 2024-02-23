@@ -1,8 +1,4 @@
-# ClamAV
-
-ClamAV是一个开源的防病毒引擎，用于检测木马，病毒，恶意软件和其他 恶意威胁。
-
-简而言之，[ClamAV](https://ckan.org/) 是一个 **开源病毒扫描与检测**，它被用于 扫描监测  等场景
+[ClamAV](https://ckan.org/) 是一个 **开源病毒扫描与检测**，它被用于 扫描监测  等场景。ClamAV是一个开源的防病毒引擎，用于检测木马，病毒，恶意软件和其他 恶意威胁。
 
 
 ![architecture](https://libs.websoft9.com/Websoft9/DocsPicture/zh/clamav/clamav-arch-websoft9.webp)

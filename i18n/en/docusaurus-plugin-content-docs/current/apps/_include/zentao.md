@@ -1,8 +1,4 @@
-# Zentao
-
- It is a professional project management software, covering the core process of software development projects.
-
-简而言之，[Zentao](https://www.zentao.net/) 是一个 **A professional project management software, covering the core process of software development projects**，它被用于 Agile Boards Task Collaboration Project and Task  等场景
+[Zentao](https://www.zentao.net/) 是一个 **A professional project management software, covering the core process of software development projects**，它被用于 Agile Boards Task Collaboration Project and Task  等场景。 It is a professional project management software, covering the core process of software development projects.
 
 
 ![zentao](https://libs.websoft9.com/Websoft9/DocsPicture/en/zentao/zentao-gui-websoft9.png)

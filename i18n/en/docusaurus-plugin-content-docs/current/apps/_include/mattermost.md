@@ -1,8 +1,4 @@
-# mattermost
-
-Mattermost is a self-hosted Slack-alternative, flexible, messaging platform that enables secure team collaboration.
-
-简而言之，[mattermost](https://mattermost.com/) 是一个 **A self-hosted Slack-alternative, flexible, messaging platform**，它被用于 Chat Project and Task  等场景
+[mattermost](https://mattermost.com/) 是一个 **A self-hosted Slack-alternative, flexible, messaging platform**，它被用于 Chat Project and Task  等场景。Mattermost is a self-hosted Slack-alternative, flexible, messaging platform that enables secure team collaboration.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mattermost/mattermost-gui-websoft9.webp)

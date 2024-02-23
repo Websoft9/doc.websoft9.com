@@ -1,8 +1,4 @@
-# DevTools
-
-
-
-简而言之，[DevTools]() 是一个 **A Swiss Army knife for developers**，它被用于  等场景
+[DevTools]() 是一个 **A Swiss Army knife for developers**，它被用于  等场景。
 
 
 

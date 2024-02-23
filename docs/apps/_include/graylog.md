@@ -1,8 +1,4 @@
-# Graylog
-
-开源日志管理工具，支持TB级别机器数据的聚合、分析、审计、展现和预警。
-
-简而言之，[Graylog](https://www.graylog.org/) 是一个 **一个领先的集中式日志管理解决方案**，它被用于 数据集成 日志管理  等场景
+[Graylog](https://www.graylog.org/) 是一个 **一个领先的集中式日志管理解决方案**，它被用于 日志管理 数据应用与可视化  等场景。开源日志管理工具，支持TB级别机器数据的聚合、分析、审计、展现和预警。
 
 
 ![ui](https://libs.websoft9.com/Websoft9/DocsPicture/en/graylog/graylog-gui-websoft9.png)

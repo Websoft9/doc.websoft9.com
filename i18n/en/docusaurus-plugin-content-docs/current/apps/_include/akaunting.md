@@ -1,8 +1,4 @@
-# Akaunting
-
-Akaunting is a free, open source and online accounting software designed for small businesses and freelancers. 
-
-简而言之，[Akaunting](https://akaunting.com/) 是一个 **Open Source and online accounting software**，它被用于 ERP & Finance  等场景
+[Akaunting](https://akaunting.com/) 是一个 **Open Source and online accounting software**，它被用于 ERP & Finance  等场景。Akaunting is a free, open source and online accounting software designed for small businesses and freelancers. 
 
 
 ![Console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/akaunting/akaunting-gui-websoft9.png)

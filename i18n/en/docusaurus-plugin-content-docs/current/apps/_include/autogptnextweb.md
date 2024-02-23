@@ -1,8 +1,4 @@
-# AutoGPT Next Web
-
-Assemble, configure, and deploy autonomous AI Agents in your browser.
-
-简而言之，[AutoGPT Next Web](https://github.com/ConnectAI-E/AutoGPT-Next-Web) 是一个 **Well-designed cross-platform AutoGPT web UI**，它被用于 AIGC  等场景
+[AutoGPT Next Web](https://github.com/ConnectAI-E/AutoGPT-Next-Web) 是一个 **Well-designed cross-platform AutoGPT web UI**，它被用于 AIGC  等场景。Assemble, configure, and deploy autonomous AI Agents in your browser.
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/autogptnextweb/autogptnextweb-gui-websoft9.png)

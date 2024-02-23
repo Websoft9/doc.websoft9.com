@@ -1,8 +1,4 @@
-# Appsmith
-
-Stop grappling with data, scouring for the perfect React library, and coding everything from scratch. Build internal tools 10X faster with Appsmith.
-
-简而言之，[Appsmith](https://www.appsmith.com/) 是一个 **Appsmith | Open-source Workbench for Internal Tools**，它被用于 Master Data Low Code and No Code  等场景
+[Appsmith](https://www.appsmith.com/) 是一个 **Appsmith | Open-source Workbench for Internal Tools**，它被用于 Master Data Low Code and No Code  等场景。Stop grappling with data, scouring for the perfect React library, and coding everything from scratch. Build internal tools 10X faster with Appsmith.
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/appsmith/appsmith-gui-websoft9.png)

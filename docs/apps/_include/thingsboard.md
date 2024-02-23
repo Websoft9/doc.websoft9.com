@@ -1,8 +1,4 @@
-# ThingsBoard
-
-联网解决方案的设备管理、数据收集、处理和可视化
-
-简而言之，[ThingsBoard](https://thingsboard.io/) 是一个 **物联网控制平台**，它被用于 设备管理  等场景
+[ThingsBoard](https://thingsboard.io/) 是一个 **物联网控制平台**，它被用于 设备管理  等场景。联网解决方案的设备管理、数据收集、处理和可视化
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/thingsboard/thingsboard-gui-websoft9.png)

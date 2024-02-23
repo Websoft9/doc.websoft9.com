@@ -1,8 +1,4 @@
-# BigBlueButton
-
-BigBlueButton is a purpose-built virtual classroom that empowers teachers to teach and learners to learn.
-
-简而言之，[BigBlueButton](https://bigbluebutton.org/) 是一个 **Virtual Classroom Software**，它被用于 Education Meeting  等场景
+[BigBlueButton](https://bigbluebutton.org/) 是一个 **Virtual Classroom Software**，它被用于 Education Meeting  等场景。BigBlueButton is a purpose-built virtual classroom that empowers teachers to teach and learners to learn.
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/bigbluebutton/bigbluebutton-gui-websoft9.png)

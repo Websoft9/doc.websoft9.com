@@ -1,8 +1,4 @@
-# MongoDB
-
-MongoDB is a scalable, high-performance, open source NoSQL database written in C++.
-
-简而言之，[MongoDB](https://www.mongodb.com/) 是一个 **A scalable, high-performance, open source NoSQL database**，它被用于 NoSQL Database  等场景
+[MongoDB](https://www.mongodb.com/) 是一个 **A scalable, high-performance, open source NoSQL database**，它被用于 NoSQL Database  等场景。MongoDB is a scalable, high-performance, open source NoSQL database written in C++.
 
 
 ![gui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/mongodb-gui-websoft9.png)

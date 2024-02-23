@@ -1,8 +1,4 @@
-# FASTPANEL
-
-
-
-简而言之，[FASTPANEL]() 是一个 ****，它被用于 Web Runtime  等场景
+[FASTPANEL]() 是一个 ****，它被用于 Web Runtime  等场景。
 
 
 

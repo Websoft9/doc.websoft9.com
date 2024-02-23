@@ -1,8 +1,4 @@
-# Pydio Cells
-
-Secure, cloud-native, scalable, self-hosted, open-core document sharing and collaboration without putting your data at risk.
-
-简而言之，[Pydio Cells](https://pydio.com/) 是一个 **Secure and open-core document sharing and collaboration**，它被用于 Document Collaboration  等场景
+[Pydio Cells](https://pydio.com/) 是一个 **Secure and open-core document sharing and collaboration**，它被用于 Document Collaboration  等场景。Secure, cloud-native, scalable, self-hosted, open-core document sharing and collaboration without putting your data at risk.
 
 
 ![GUI](http://libs.websoft9.com/Websoft9/DocsPicture/en/cells/cells-gui-websoft9.png)

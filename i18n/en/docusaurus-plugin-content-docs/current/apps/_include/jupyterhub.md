@@ -1,8 +1,4 @@
-# JupyterHub
-
-JupyterHub brings the power of notebooks to groups of users. It gives users access to computational environments and resources without burdening the users with installation and maintenance tasks. 
-
-简而言之，[JupyterHub](https://jupyter.org/) 是一个 **Multi-user server for Jupyter notebooks**，它被用于 Code Repository Web IDE  等场景
+[JupyterHub](https://jupyter.org/) 是一个 **Multi-user server for Jupyter notebooks**，它被用于 Code Repository Web IDE  等场景。JupyterHub brings the power of notebooks to groups of users. It gives users access to computational environments and resources without burdening the users with installation and maintenance tasks. 
 
 
 ![Notebook](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jupyterhub/jupyterhub-gui-websoft9.webp)

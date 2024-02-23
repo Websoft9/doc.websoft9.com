@@ -1,8 +1,4 @@
-# Prometheus
-
-具有维度数据模型、灵活的查询语言、高效的时间序列数据库和现代警报方法的开源监视系统。
-
-简而言之，[Prometheus](https://prometheus.io/) 是一个 **系统监控与报警平台**，它被用于 全面监控  等场景
+[Prometheus](https://prometheus.io/) 是一个 **系统监控与报警平台**，它被用于 全面监控  等场景。具有维度数据模型、灵活的查询语言、高效的时间序列数据库和现代警报方法的开源监视系统。
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prometheus/prometheus-gui-websoft9.webp)

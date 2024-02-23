@@ -1,8 +1,4 @@
-# Ansible
-
-Ansible® delivers simple IT automation that ends repetitive tasks and frees up DevOps teams for more strategic work. 
-
-简而言之，[Ansible](https://www.ansible.com/) 是一个 **A radically simple IT automation platform**，它被用于 RPA  等场景
+[Ansible](https://www.ansible.com/) 是一个 **A radically simple IT automation platform**，它被用于 RPA  等场景。Ansible® delivers simple IT automation that ends repetitive tasks and frees up DevOps teams for more strategic work. 
 
 
 ![plateform](https://libs.websoft9.com/Websoft9/DocsPicture/zh/ansible/redhat-automation-platform_content-collections.png)

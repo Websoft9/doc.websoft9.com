@@ -1,8 +1,4 @@
-# HashiCorp Vault
-
-Secure, store and tightly control access to tokens, passwords, certificates, encryption keys for protecting secrets and other sensitive data using a UI, CLI, or HTTP API.
-
-简而言之，[HashiCorp Vault](https://www.vaultproject.io/) 是一个 **Manage Secrets & Protect Sensitive Data with Vault**，它被用于 Access Control Key Management  等场景
+[HashiCorp Vault](https://www.vaultproject.io/) 是一个 **Manage Secrets & Protect Sensitive Data with Vault**，它被用于 Access Control Key Management  等场景。Secure, store and tightly control access to tokens, passwords, certificates, encryption keys for protecting secrets and other sensitive data using a UI, CLI, or HTTP API.
 
 
 ![Console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/vault/vault-gui-websoft9.jpeg)

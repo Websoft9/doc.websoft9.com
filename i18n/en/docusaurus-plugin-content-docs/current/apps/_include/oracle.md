@@ -1,8 +1,4 @@
-# Oracle Database
-
-Oracle Database offers market-leading performance, scalability, reliability, and security, both on-premises and in the cloud.
-
-简而言之，[Oracle Database](https://www.oracle.com/) 是一个 **Oracle Database Express Edition**，它被用于 Relational Databases  等场景
+[Oracle Database](https://www.oracle.com/) 是一个 **Oracle Database Express Edition**，它被用于 Relational Databases  等场景。Oracle Database offers market-leading performance, scalability, reliability, and security, both on-premises and in the cloud.
 
 
 ![gui](http://libs.websoft9.com/Websoft9/DocsPicture/en/oracle/oracle-database-1024x410.jpg)

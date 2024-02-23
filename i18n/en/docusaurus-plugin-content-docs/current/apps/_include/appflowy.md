@@ -1,8 +1,4 @@
-# AppFlowy
-
-AppFlowy is an open-source alternative to Notion. You are in charge of your data and customizations. Built with Flutter and Rust.
-
-简而言之，[AppFlowy](https://appflowy.io/) 是一个 **Open Source Notion Alternative**，它被用于 Project and Task Whiteboard and Note  等场景
+[AppFlowy](https://appflowy.io/) 是一个 **Open Source Notion Alternative**，它被用于 Project and Task Whiteboard and Note  等场景。AppFlowy is an open-source alternative to Notion. You are in charge of your data and customizations. Built with Flutter and Rust.
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/appflowy/appflowy-gui-websoft9.png)

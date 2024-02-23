@@ -1,8 +1,4 @@
-# PostgreSQL
-
-PostgreSQL is a powerful,open source object-relational database system(ORDBMS). 
-
-简而言之，[PostgreSQL](https://www.postgresql.org/) 是一个 **A open source object-relational database system**，它被用于 Relational Databases  等场景
+[PostgreSQL](https://www.postgresql.org/) 是一个 **A open source object-relational database system**，它被用于 Relational Databases  等场景。PostgreSQL is a powerful,open source object-relational database system(ORDBMS). 
 
 
 ![pgadmin](http://libs.websoft9.com/Websoft9/DocsPicture/zh/postgresql/pgadmin4-websoft9.png)

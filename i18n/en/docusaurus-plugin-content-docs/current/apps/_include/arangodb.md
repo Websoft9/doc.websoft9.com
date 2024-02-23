@@ -1,8 +1,4 @@
-# ArangoDB
-
-ArangoDB is a scalable graph database system to drive value from connected data, faster.
-
-简而言之，[ArangoDB](https://www.arangodb.com/) 是一个 **A scalable graph database system**，它被用于 Graph Databases  等场景
+[ArangoDB](https://www.arangodb.com/) 是一个 **A scalable graph database system**，它被用于 Graph Databases  等场景。ArangoDB is a scalable graph database system to drive value from connected data, faster.
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/arangodb/arangodb-gui-websoft9.png)

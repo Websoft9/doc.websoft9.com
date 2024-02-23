@@ -1,8 +1,4 @@
-# OpenSearch
-
-OpenSearch 是一个可扩展、灵活且可扩展的开源软件套件，适用于根据 Apache 2.0 许可的搜索、分析和可观测性应用程序。
-
-简而言之，[OpenSearch](https://opensearch.org/) 是一个 **由社区共同推动的 Elasticsearch 与 Kibana 开源分支**，它被用于 存储/搜索 数据仓库 数据呈现  等场景
+[OpenSearch](https://opensearch.org/) 是一个 **由社区共同推动的 Elasticsearch 与 Kibana 开源分支**，它被用于 大数据存储 数据仓库 数据应用与可视化  等场景。OpenSearch 是一个可扩展、灵活且可扩展的开源软件套件，适用于根据 Apache 2.0 许可的搜索、分析和可观测性应用程序。
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/opensearch/opensearch-gui-websoft9.png)

@@ -1,8 +1,4 @@
-# MySQL
-
-MySQL can cost-effectively help you deliver high performance, scalable database applications.
-
-简而言之，[MySQL](https://www.mysql.com/) 是一个 **MySQL-a high reliable database management system**，它被用于 Relational Databases  等场景
+[MySQL](https://www.mysql.com/) 是一个 **MySQL-a high reliable database management system**，它被用于 Relational Databases  等场景。MySQL can cost-effectively help you deliver high performance, scalable database applications.
 
 
 ![ui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/mysql-mariadb-ui-websoft9.png)

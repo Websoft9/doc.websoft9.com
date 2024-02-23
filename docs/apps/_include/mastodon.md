@@ -1,8 +1,4 @@
-# Mastodon
-
-Mastodon是一个基于ActivityPub的免费开源社交网络服务器，用户可以在其中关注朋友并发现新朋友。
-
-简而言之，[Mastodon](https://joinmastodon.org/) 是一个 **自托管微博系统**，它被用于 社交/论坛  等场景
+[Mastodon](https://joinmastodon.org/) 是一个 **自托管微博系统**，它被用于 社交/论坛  等场景。Mastodon是一个基于ActivityPub的免费开源社交网络服务器，用户可以在其中关注朋友并发现新朋友。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mastodon/mastodon-gui-websoft9.png)

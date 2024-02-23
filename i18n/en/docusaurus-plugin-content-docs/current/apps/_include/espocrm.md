@@ -1,8 +1,4 @@
-# EspoCRM 
-
-EspoCRM is a web-based CRM solution, lightning fast and easily customizable. It provide you with the tools to understand your consumers’ behavior and cater your products and services specifically to their needs.
-
-简而言之，[EspoCRM ](https://www.espocrm.com/) 是一个 **An open-source Customer Relationship Management helps businesses grow**，它被用于 CRM & Distribution & Order  等场景
+[EspoCRM ](https://www.espocrm.com/) 是一个 **An open-source Customer Relationship Management helps businesses grow**，它被用于 CRM & Distribution & Order  等场景。EspoCRM is a web-based CRM solution, lightning fast and easily customizable. It provide you with the tools to understand your consumers’ behavior and cater your products and services specifically to their needs.
 
 
 ![gui](http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/espocrm-gui-websoft9.jpg)

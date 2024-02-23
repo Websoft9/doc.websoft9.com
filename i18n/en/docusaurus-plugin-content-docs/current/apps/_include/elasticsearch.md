@@ -1,8 +1,4 @@
-# Elasticsearch
-
-Elasticsearch is a distributed, free and open search and analytics engine for all types of data, including textual, numerical, geospatial, structured, and unstructured. 
-
-简而言之，[Elasticsearch](https://www.elastic.co/) 是一个 **Distributed, free and open search and analytics engine**，它被用于 Storage and Search Data Warehouse Business Intelligence Search Engine  等场景
+[Elasticsearch](https://www.elastic.co/) 是一个 **Distributed, free and open search and analytics engine**，它被用于 Data Storage Data Warehouse Data Application and Visualization Search Engine  等场景。Elasticsearch is a distributed, free and open search and analytics engine for all types of data, including textual, numerical, geospatial, structured, and unstructured. 
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-gui-websoft9.gif)

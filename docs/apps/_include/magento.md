@@ -1,8 +1,4 @@
-# Magento
-
-面向全球的企业级开源电商系统，支持B2C、B2B等应用场景，广泛应用于企业电商、独立站建站。
-
-简而言之，[Magento](https://business.adobe.com/products/magento/open-source.html) 是一个 **面向全球用户的开源电商系统**，它被用于 电子商务  等场景
+[Magento](https://business.adobe.com/products/magento/open-source.html) 是一个 **面向全球用户的开源电商系统**，它被用于 电子商务  等场景。面向全球的企业级开源电商系统，支持B2C、B2B等应用场景，广泛应用于企业电商、独立站建站。
 
 
 ![mall](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-mall-websoft9.png)

@@ -1,8 +1,4 @@
-# Countly
-
-Countly 是可用于本地移动和 Web 应用程序分析的平台，具有更多功能、更直观的 UI、完整的 API 支持和原始数据访问
-
-简而言之，[Countly](https://countly.com/) 是一个 **网站与移动应用分析平台 **，它被用于 Web 分析  等场景
+[Countly](https://countly.com/) 是一个 **网站与移动应用分析平台 **，它被用于 访问统计  等场景。Countly 是可用于本地移动和 Web 应用程序分析的平台，具有更多功能、更直观的 UI、完整的 API 支持和原始数据访问
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/countly/countly-gui-websoft9.webp)

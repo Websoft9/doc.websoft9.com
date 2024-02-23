@@ -1,8 +1,4 @@
-# Webmin
-
-Webmin is a web-based interface for system administration for Unix. Using any modern web browser, you can setup user accounts, Apache, DNS, file sharing and much more.
-
-简而言之，[Webmin](https://www.webmin.com/) 是一个 **A web-based interface for system administration for Unix**，它被用于 Cloud Infrastructure Monitoring  等场景
+[Webmin](https://www.webmin.com/) 是一个 **A web-based interface for system administration for Unix**，它被用于 Cloud Infrastructure Monitoring  等场景。Webmin is a web-based interface for system administration for Unix. Using any modern web browser, you can setup user accounts, Apache, DNS, file sharing and much more.
 
 
 ![webmin](https://libs.websoft9.com/Websoft9/DocsPicture/en/webmin/webmin-dashboard-websoft9.png)

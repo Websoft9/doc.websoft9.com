@@ -1,8 +1,4 @@
-# Joomla
-
-Joomla! is an award-winning content management system (CMS), which enables you to build Web sites and powerful online applications.
-
-简而言之，[Joomla](https://www.joomla.org/) 是一个 **An award-winning content management system (CMS)**，它被用于 Website Builder eCommerce  等场景
+[Joomla](https://www.joomla.org/) 是一个 **An award-winning content management system (CMS)**，它被用于 Website Builder eCommerce  等场景。Joomla! is an award-winning content management system (CMS), which enables you to build Web sites and powerful online applications.
 
 
 ![login](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-wizard6-websoft9.png)

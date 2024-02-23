@@ -1,8 +1,4 @@
-# Typo3
-
-TYPO3 CMS is an Open Source Enterprise Content Management System with a large global community, backed by the approximately 900 members of the TYPO3 Association.
-
-简而言之，[Typo3](https://typo3.org/) 是一个 **The Professional, Flexible Content Management System**，它被用于 Website Builder eCommerce  等场景
+[Typo3](https://typo3.org/) 是一个 **The Professional, Flexible Content Management System**，它被用于 Website Builder eCommerce  等场景。TYPO3 CMS is an Open Source Enterprise Content Management System with a large global community, backed by the approximately 900 members of the TYPO3 Association.
 
 
 ![ui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/typo3/typo3-gui-websoft9.png)

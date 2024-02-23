@@ -1,8 +1,4 @@
-# GitLab
-
-GitLab CE is an integrated product that unifies issues, code review, CI and CD into a single UI. 
-
-简而言之，[GitLab](https://about.gitlab.com/) 是一个 **An integrated product that unifies issues, code review, CI and CD into a single UI**，它被用于 Code Repository Pipeline  等场景
+[GitLab](https://about.gitlab.com/) 是一个 **An integrated product that unifies issues, code review, CI and CD into a single UI**，它被用于 Code Repository Pipeline DevOps All  等场景。GitLab CE is an integrated product that unifies issues, code review, CI and CD into a single UI. 
 
 
 ![devops](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-devopsall-websoft9.png)

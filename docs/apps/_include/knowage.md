@@ -1,8 +1,4 @@
-# Knowage
-
-Knowage是一个完整的开源现代商业智能套件，用于现代商业数据分析。
-
-简而言之，[Knowage](https://www.knowage-suite.com/site/) 是一个 **一套适合现代商业分析的开源工具套装**，它被用于 数据呈现  等场景
+[Knowage](https://www.knowage-suite.com/site/) 是一个 **一套适合现代商业分析的开源工具套装**，它被用于 数据应用与可视化  等场景。Knowage是一个完整的开源现代商业智能套件，用于现代商业数据分析。
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/en/knowage/knowage-gui-websoft9.png)

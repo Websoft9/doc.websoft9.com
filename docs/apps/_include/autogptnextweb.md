@@ -1,8 +1,4 @@
-# AutoGPT Next Web
-
-一键免费部署你的私人AutoGPT 网页应用
-
-简而言之，[AutoGPT Next Web](https://github.com/ConnectAI-E/AutoGPT-Next-Web) 是一个 **AutoGPT 私有化应用**，它被用于 AIGC  等场景
+[AutoGPT Next Web](https://github.com/ConnectAI-E/AutoGPT-Next-Web) 是一个 **AutoGPT 私有化应用**，它被用于 AIGC  等场景。一键免费部署你的私人AutoGPT 网页应用
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/autogptnextweb/autogptnextweb-gui-websoft9.png)

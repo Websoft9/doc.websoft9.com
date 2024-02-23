@@ -1,8 +1,4 @@
-# GeminiProChat
-
-与 Gemini Pro 聊天的最简 WebUI
-
-简而言之，[GeminiProChat](https://github.com/babaohuang/GeminiProChat) 是一个 **与 Gemini Pro 聊天的最简 WebUI**，它被用于 AIGC  等场景
+[GeminiProChat](https://github.com/babaohuang/GeminiProChat) 是一个 **与 Gemini Pro 聊天的最简 WebUI**，它被用于 AIGC  等场景。与 Gemini Pro 聊天的最简 WebUI
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/geminiprochat/geminiprochat-gui-websoft9.png)

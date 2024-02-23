@@ -1,8 +1,4 @@
-# Focalboard
-
-Focalboard is an open source project management for technical teams. Keep everything and everyone on track, all in the Mattermost platform.
-
-简而言之，[Focalboard](https://www.focalboard.com/) 是一个 **Open source project management for technical teams**，它被用于 Agile Boards Project and Task  等场景
+[Focalboard](https://www.focalboard.com/) 是一个 **Open source project management for technical teams**，它被用于 Agile Boards Project and Task  等场景。Focalboard is an open source project management for technical teams. Keep everything and everyone on track, all in the Mattermost platform.
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/focalboard/focalboard-gui-websoft9.png)

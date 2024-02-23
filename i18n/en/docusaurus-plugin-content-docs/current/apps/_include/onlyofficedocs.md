@@ -1,8 +1,4 @@
-# ONLYOFFICE Docs
-
-ONLYOFFICE Document Server Community is a free collaborative online office suite
-
-简而言之，[ONLYOFFICE Docs](https://www.onlyoffice.com/) 是一个 **A powerful online editor for ECM**，它被用于 Document Service  等场景
+[ONLYOFFICE Docs](https://www.onlyoffice.com/) 是一个 **A powerful online editor for ECM**，它被用于 Document Service  等场景。ONLYOFFICE Document Server Community is a free collaborative online office suite
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/onlyoffice/onlyofficedocs-gui-websoft9.png)

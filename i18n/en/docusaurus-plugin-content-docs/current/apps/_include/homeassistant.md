@@ -1,8 +1,4 @@
-# Home Assistant
-
-Open source home automation that puts local control and privacy first.
-
-简而言之，[Home Assistant](https://www.home-assistant.io/) 是一个 **Home Open-source IoT Platform**，它被用于 Device Management  等场景
+[Home Assistant](https://www.home-assistant.io/) 是一个 **Home Open-source IoT Platform**，它被用于 Device Management  等场景。Open source home automation that puts local control and privacy first.
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/homeassistant/homeassistant-gui-websoft9.png)

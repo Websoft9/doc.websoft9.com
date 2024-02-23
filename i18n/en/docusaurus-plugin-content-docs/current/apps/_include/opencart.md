@@ -1,8 +1,4 @@
-# OpenCart
-
-OpenCart is an easy to-use, powerful, open source online store management program that can manage multiple online stores from a single back-end.
-
-简而言之，[OpenCart](https://www.opencart.com/) 是一个 **An online store management program**，它被用于 eCommerce  等场景
+[OpenCart](https://www.opencart.com/) 是一个 **An online store management program**，它被用于 eCommerce  等场景。OpenCart is an easy to-use, powerful, open source online store management program that can manage multiple online stores from a single back-end.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/opencart/opencart-gui-websoft9.png)

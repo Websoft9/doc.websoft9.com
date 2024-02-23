@@ -1,8 +1,4 @@
-# Mingdao
-
-Provide rapid development Tool and middle-ground application solution for enterprise customer.
-
-简而言之，[Mingdao](https://www.mingdao.com/) 是一个 **leader of APaaS, No Code Platform**，它被用于 Low Code and No Code Software Platform  等场景
+[Mingdao](https://www.mingdao.com/) 是一个 **leader of APaaS, No Code Platform**，它被用于 Low Code and No Code Software Platform  等场景。Provide rapid development Tool and middle-ground application solution for enterprise customer.
 
 
 ![mdfeature](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mingdao/mingdao-tables-websoft9.jpg)

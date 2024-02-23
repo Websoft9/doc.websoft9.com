@@ -1,8 +1,4 @@
-# Docker
-
-Docker 消除了重复、繁琐的配置任务，在整个开发生命周期中用于快速、轻松和可移植的应用程序开发
-
-简而言之，[Docker](https://www.docker.com/) 是一个 **一次构建打包，随处运行的虚拟化技术**，它被用于 容器  等场景
+[Docker](https://www.docker.com/) 是一个 **一次构建打包，随处运行的虚拟化技术**，它被用于 容器  等场景。Docker 消除了重复、繁琐的配置任务，在整个开发生命周期中用于快速、轻松和可移植的应用程序开发
 
 
 ![arch](https://libs.websoft9.com/Websoft9/DocsPicture/zh/docker/container-what-is-container.png)

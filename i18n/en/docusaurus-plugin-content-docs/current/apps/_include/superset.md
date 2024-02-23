@@ -1,8 +1,4 @@
-# SuperSet
-
-Apache Superset is a modern data exploration and visualization platform.
-
-简而言之，[SuperSet](https://superset.apache.org/) 是一个 **A modern, enterprise-ready business intelligence web application**，它被用于 Business Intelligence  等场景
+[SuperSet](https://superset.apache.org/) 是一个 **A modern, enterprise-ready business intelligence web application**，它被用于 Data Application and Visualization  等场景。Apache Superset is a modern data exploration and visualization platform.
 
 
 ![superset](https://libs.websoft9.com/Websoft9/DocsPicture/en/superset/superset-dash-websoft9.png)

@@ -1,8 +1,4 @@
-# Odoo
-
-Odoo is a suite of web based open source business apps. Odoo Apps can be used as stand-alone applications, but they also integrate seamlessly so you get a full-featured Open Source ERP when you install several Apps.
-
-简而言之，[Odoo](https://www.odoo.com/) 是一个 **A suite of web based open source business apps**，它被用于 ERP & Finance CRM & Distribution & Order Supply Chain & Manufacturing & Logistic Strategy & Legal & HR Support & Customer Success PLM & PDM Marketing  等场景
+[Odoo](https://www.odoo.com/) 是一个 **A suite of web based open source business apps**，它被用于 ERP & Finance CRM & Distribution & Order Supply Chain & Manufacturing & Logistic Strategy & Legal & HR Support & Customer Success PLM & PDM Marketing  等场景。Odoo is a suite of web based open source business apps. Odoo Apps can be used as stand-alone applications, but they also integrate seamlessly so you get a full-featured Open Source ERP when you install several Apps.
 
 
 ![ui](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odooui-websoft9.png)

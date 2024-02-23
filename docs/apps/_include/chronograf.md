@@ -1,8 +1,4 @@
-# Chronograf
-
-Chronograf 是 InfluxDB 1.x 平台的用户界面和管理组件。
-
-简而言之，[Chronograf](https://www.influxdata.com/) 是一个 **InfluxDB 可视化管理工具**，它被用于 时序数据库 设备管理  等场景
+[Chronograf](https://www.influxdata.com/) 是一个 **InfluxDB 可视化管理工具**，它被用于 时序数据库 设备管理  等场景。Chronograf 是 InfluxDB 1.x 平台的用户界面和管理组件。
 
 
 ![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/chronograf/chronograf-gui-websoft9.png)

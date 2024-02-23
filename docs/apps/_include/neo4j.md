@@ -1,8 +1,4 @@
-# Neo4j
-
-Neo4j 是一个关系信息存储为一等实体的数据库技术，广泛用于知识图谱，社交关系链，商品推荐，IT架构，商品主数据等领域。
-
-简而言之，[Neo4j](https://neo4j.com/) 是一个 **高性能的 NoSQL 图数据库**，它被用于 图引擎数据库  等场景
+[Neo4j](https://neo4j.com/) 是一个 **高性能的 NoSQL 图数据库**，它被用于 图数据库  等场景。Neo4j 是一个关系信息存储为一等实体的数据库技术，广泛用于知识图谱，社交关系链，商品推荐，IT架构，商品主数据等领域。
 
 
 ![console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/neo4j/neo4j-console-websoft9.png)

@@ -1,8 +1,4 @@
-# MediaWiki
-
-MediaWiki is a free and open-source wiki software package written in PHP. It serves as the platform for Wikipedia and the other Wiki projects, used by hundreds of millions of people each month. 
-
-简而言之，[MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) 是一个 **A free and open-source wiki software package**，它被用于 Knowledge Management  等场景
+[MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) 是一个 **A free and open-source wiki software package**，它被用于 Knowledge Management  等场景。MediaWiki is a free and open-source wiki software package written in PHP. It serves as the platform for Wikipedia and the other Wiki projects, used by hundreds of millions of people each month. 
 
 
 ![ui](https://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mediawikiui.gif)

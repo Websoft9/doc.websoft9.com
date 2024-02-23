@@ -1,8 +1,4 @@
-# pgAdmin
-
-pgAdmin is a popular and feature rich Open Source administration and development platform for PostgreSQL, the advanced Open Source database in the world.
-
-简而言之，[pgAdmin](https://www.pgadmin.org/) 是一个 **Web-based GUI tool for PostgreSQL**，它被用于 Management and Migration  等场景
+[pgAdmin](https://www.pgadmin.org/) 是一个 **Web-based GUI tool for PostgreSQL**，它被用于 Database Management Tools  等场景。pgAdmin is a popular and feature rich Open Source administration and development platform for PostgreSQL, the advanced Open Source database in the world.
 
 
 ![gui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/postgresql/pgadmin4-websoft9.png)

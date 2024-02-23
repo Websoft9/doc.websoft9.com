@@ -1,8 +1,4 @@
-# Pimcore
-
-Fastest time-to-market and rapid digitization with the Open Source data and experience management platform for PIM/MDM, DAM, DXP/CMS, CDP, and digital commerce.
-
-简而言之，[Pimcore](https://pimcore.com/) 是一个 **Data and experience management platform**，它被用于 Master Data eCommerce Website Builder  等场景
+[Pimcore](https://pimcore.com/) 是一个 **Data and experience management platform**，它被用于 Master Data eCommerce Website Builder  等场景。Fastest time-to-market and rapid digitization with the Open Source data and experience management platform for PIM/MDM, DAM, DXP/CMS, CDP, and digital commerce.
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/pimcore/pimcore-gui-websoft9.png)

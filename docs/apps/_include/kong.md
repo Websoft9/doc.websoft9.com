@@ -1,8 +1,4 @@
-# Kong
-
-使用 Kong（最快的云原生 API 平台）构建令人愉悦的客户体验并释放开发人员的工作效率。
-
-简而言之，[Kong](https://konghq.com/) 是一个 **云原生 API 网关 **，它被用于 API 网关  等场景
+[Kong](https://konghq.com/) 是一个 **云原生 API 网关 **，它被用于 API 网关  等场景。使用 Kong（最快的云原生 API 平台）构建令人愉悦的客户体验并释放开发人员的工作效率。
 
 
 ![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kong/kong-gui-websoft9.webp)

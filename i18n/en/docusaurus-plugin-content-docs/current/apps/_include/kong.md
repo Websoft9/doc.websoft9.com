@@ -1,8 +1,4 @@
-# Kong
-
-Build delightful customer experiences and unleash developer productivity with Kong, the fastest cloud native API platform.
-
-简而言之，[Kong](https://konghq.com/) 是一个 **The Cloud Native API Management Platform**，它被用于 API Gateway  等场景
+[Kong](https://konghq.com/) 是一个 **The Cloud Native API Management Platform**，它被用于 API Gateway  等场景。Build delightful customer experiences and unleash developer productivity with Kong, the fastest cloud native API platform.
 
 
 ![Console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kong/kong-gui-websoft9.webp)

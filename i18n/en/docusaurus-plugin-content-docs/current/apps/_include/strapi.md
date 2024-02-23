@@ -1,8 +1,4 @@
-# Strapi
-
-Strapi is the next-gen headless CMS, open-source, javascript, enabling content-rich experiences to be created, managed and exposed to any digital device.
-
-简而言之，[Strapi](https://strapi.io/) 是一个 **Open source Node.js Headless CMS**，它被用于 Low Code and No Code Master Data Headless CMS  等场景
+[Strapi](https://strapi.io/) 是一个 **Open source Node.js Headless CMS**，它被用于 Low Code and No Code Master Data Headless CMS  等场景。Strapi is the next-gen headless CMS, open-source, javascript, enabling content-rich experiences to be created, managed and exposed to any digital device.
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/strapi/strapi-gui-websoft9.png)

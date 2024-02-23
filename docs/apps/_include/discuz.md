@@ -1,8 +1,4 @@
-# Discuz
-
-Discuz 是一个以社区为基础的专业建站平台，帮助网站实现一站式服务
-
-简而言之，[Discuz](https://www.discuz.net/) 是一个 **面向全球用户的论坛系统**，它被用于 企业建站 社交/论坛  等场景
+[Discuz](https://www.discuz.net/) 是一个 **面向全球用户的论坛系统**，它被用于 企业建站 社交/论坛  等场景。Discuz 是一个以社区为基础的专业建站平台，帮助网站实现一站式服务
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuz-gui-websoft9.png)

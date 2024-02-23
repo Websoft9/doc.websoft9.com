@@ -1,8 +1,4 @@
-# Umami
-
-Umami is a simple, fast, privacy-focused alternative to Google Analytics.
-
-简而言之，[Umami](https://umami.is/) 是一个 **Open source, privacy-focused alternative to Google Analytics**，它被用于 Web Analytics  等场景
+[Umami](https://umami.is/) 是一个 **Open source, privacy-focused alternative to Google Analytics**，它被用于 Web Analytics  等场景。Umami is a simple, fast, privacy-focused alternative to Google Analytics.
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/umami/umami-gui-websoft9.png)

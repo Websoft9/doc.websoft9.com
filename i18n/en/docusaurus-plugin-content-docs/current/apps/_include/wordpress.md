@@ -1,8 +1,4 @@
-# WordPress
-
-42% of the web is built on WordPress. More bloggers, small businesses, and Fortune 500 companies use WordPress than all other options combined. Join the millions of people that call WordPress.com home.
-
-简而言之，[WordPress](https://wordpress.com/) 是一个 **WordPress is open source software you can use to create a beautiful website, blog, or app**，它被用于 Website Builder Low Code and No Code eCommerce Marketing  等场景
+[WordPress](https://wordpress.com/) 是一个 **WordPress is open source software you can use to create a beautiful website, blog, or app**，它被用于 Website Builder Low Code and No Code eCommerce Marketing  等场景。42% of the web is built on WordPress. More bloggers, small businesses, and Fortune 500 companies use WordPress than all other options combined. Join the millions of people that call WordPress.com home.
 
 
 

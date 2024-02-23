@@ -1,8 +1,4 @@
-# Caddy
-
-Caddy 2 is a powerful, enterprise-ready, open source web server with automatic HTTPS written in Go
-
-简而言之，[Caddy](https://caddyserver.com/) 是一个 **The Ultimate Server with Automatic HTTPS**，它被用于 HTTP Server  等场景
+[Caddy](https://caddyserver.com/) 是一个 **The Ultimate Server with Automatic HTTPS**，它被用于 HTTP Server  等场景。Caddy 2 is a powerful, enterprise-ready, open source web server with automatic HTTPS written in Go
 
 
 ![architecture](https://libs.websoft9.com/Websoft9/DocsPicture/zh/caddy/caddy-arch-websoft9.svg)

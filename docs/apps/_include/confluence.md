@@ -1,8 +1,4 @@
-# Confluence
-
-Confluence Server 是您创建、组织和讨论工作的地方 团队。给每个团队、项目或部门都有自己的空间来创造他们需要的东西， 无论是会议记录、产品要求、文件列表还是项目计划， 您可以在 Confluence 中完成更多工作。
-
-简而言之，[Confluence](https://www.atlassian.com/zh/software/confluence) 是一个 **团队知识协作与项目管理**，它被用于 需求/看板/缺陷 任务协作 项目/任务  等场景
+[Confluence](https://www.atlassian.com/zh/software/confluence) 是一个 **团队知识协作与项目管理**，它被用于 需求/看板/缺陷 任务协作 项目/任务  等场景。Confluence Server 是您创建、组织和讨论工作的地方 团队。给每个团队、项目或部门都有自己的空间来创造他们需要的东西， 无论是会议记录、产品要求、文件列表还是项目计划， 您可以在 Confluence 中完成更多工作。
 
 
 ![白板](https://libs.websoft9.com/Websoft9/DocsPicture/zh/confluence/confluence-gui-websoft9.png)

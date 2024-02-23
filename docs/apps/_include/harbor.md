@@ -1,8 +1,4 @@
-# Harbor
-
-Harbor 是一个开源注册表，它使用策略和基于角色的访问控制来保护工件，确保图像被扫描且没有漏洞，并将图像标记为受信任。
-
-简而言之，[Harbor](https://goharbor.io/) 是一个 **安全受信的容器镜像仓库平台**，它被用于 软件供应链 容器 制品仓库  等场景
+[Harbor](https://goharbor.io/) 是一个 **安全受信的容器镜像仓库平台**，它被用于 软件供应链 容器 制品仓库  等场景。Harbor 是一个开源注册表，它使用策略和基于角色的访问控制来保护工件，确保图像被扫描且没有漏洞，并将图像标记为受信任。
 
 
 ![Dashbord](https://libs.websoft9.com/Websoft9/DocsPicture/zh/harbor/harbor-gui-websoft9.png)

@@ -1,8 +1,4 @@
-# Kafka
-
-Apache Kafka® is used for building real-time data pipelines and streaming apps.
-
-简而言之，[Kafka](https://kafka.apache.org/) 是一个 **an open-source stream-processing software platform developed by LinkedIn and donated to the Apache Software Foundation**，它被用于 Message Queue  等场景
+[Kafka](https://kafka.apache.org/) 是一个 **an open-source stream-processing software platform developed by LinkedIn and donated to the Apache Software Foundation**，它被用于 Message Queue  等场景。Apache Kafka® is used for building real-time data pipelines and streaming apps.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/en/kafka/kafka-gui-websoft9.png)

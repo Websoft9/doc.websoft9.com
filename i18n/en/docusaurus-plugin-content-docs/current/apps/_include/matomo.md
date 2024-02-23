@@ -1,8 +1,4 @@
-# Matomo Analytics
-
-Matomo is the ethical alternative where you won’t make privacy sacrifices or compromise your site. Matomo's the Google Analytics alternative that protects your data and your customer's privacy
-
-简而言之，[Matomo Analytics](https://matomo.org/) 是一个 **A powerful web analytics platform that gives you 100% data ownership.**，它被用于 Web Analytics  等场景
+[Matomo Analytics](https://matomo.org/) 是一个 **A powerful web analytics platform that gives you 100% data ownership.**，它被用于 Web Analytics  等场景。Matomo is the ethical alternative where you won’t make privacy sacrifices or compromise your site. Matomo's the Google Analytics alternative that protects your data and your customer's privacy
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/matomo/matomo-show-websoft9.png)

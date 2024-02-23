@@ -1,8 +1,4 @@
-# OpenCart
-
-OpenCart是面向全球用户的开源电子商务系统，简单、易用、速度快，广泛应用于企业电商、独立站建站。
-
-简而言之，[OpenCart](https://www.opencart.com/) 是一个 **面向全球用户的开源电子商务系统**，它被用于 电子商务  等场景
+[OpenCart](https://www.opencart.com/) 是一个 **面向全球用户的开源电子商务系统**，它被用于 电子商务  等场景。OpenCart是面向全球用户的开源电子商务系统，简单、易用、速度快，广泛应用于企业电商、独立站建站。
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/opencart/opencart-gui-websoft9.png)

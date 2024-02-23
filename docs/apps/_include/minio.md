@@ -1,8 +1,4 @@
-# MinIO
-
-MinIO 是一种高性能、兼容 S3 的对象存储。它专为大规模 AI/ML、数据湖和数据库工作负载而构建。
-
-简而言之，[MinIO](https://min.io/) 是一个 **云原生高性能对象存储**，它被用于 对象存储  等场景
+[MinIO](https://min.io/) 是一个 **云原生高性能对象存储**，它被用于 对象存储  等场景。MinIO 是一种高性能、兼容 S3 的对象存储。它专为大规模 AI/ML、数据湖和数据库工作负载而构建。
 
 
 ![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/minio/minio-gui-websoft9.png)

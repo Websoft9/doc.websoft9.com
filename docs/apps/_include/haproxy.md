@@ -1,8 +1,4 @@
-# HAProxy
-
-提供高可用性、负载均衡，以及基于 TCP 和 HTTP 的应用程序代理，适用于负载特大的web站点。
-
-简而言之，[HAProxy](http://www.haproxy.org/) 是一个 **一个提供高可用性、负载均衡，以及基于 TCP 和 HTTP 的应用程序代理的解决方案**，它被用于 负载均衡   等场景
+[HAProxy](http://www.haproxy.org/) 是一个 **一个提供高可用性、负载均衡，以及基于 TCP 和 HTTP 的应用程序代理的解决方案**，它被用于 负载均衡   等场景。提供高可用性、负载均衡，以及基于 TCP 和 HTTP 的应用程序代理，适用于负载特大的web站点。
 
 
 ![configuration](https://libs.websoft9.com/Websoft9/DocsPicture/zh/haproxy/HAProxy-configuration.png)

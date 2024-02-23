@@ -1,8 +1,4 @@
-# DataHub
-
-DataHub 的可扩展元数据平台支持数据发现、数据可观测性和联合治理，有助于控制数据生态系统的复杂性。
-
-简而言之，[DataHub](https://datahubproject.io/) 是一个 **开源企业级元数据平台**，它被用于 主数据管理  等场景
+[DataHub](https://datahubproject.io/) 是一个 **开源企业级元数据平台**，它被用于 企业主数据  等场景。DataHub 的可扩展元数据平台支持数据发现、数据可观测性和联合治理，有助于控制数据生态系统的复杂性。
 
 
 ![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/datahub/datahub-gui-websoft9.png)

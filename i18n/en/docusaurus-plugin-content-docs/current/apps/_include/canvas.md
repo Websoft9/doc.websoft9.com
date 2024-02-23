@@ -1,8 +1,4 @@
-# Canvas
-
-
-
-简而言之，[Canvas]() 是一个 **The World's Popular Learning Management System**，它被用于 eLearning  等场景
+[Canvas]() 是一个 **The World's Popular Learning Management System**，它被用于 eLearning  等场景。
 
 
 

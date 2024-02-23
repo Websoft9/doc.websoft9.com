@@ -1,8 +1,4 @@
-# chat2DB
-
-An intelligent and versatile general-purpose SQL client and reporting tool for databases which integrates ChatGPT capabilities
-
-简而言之，[chat2DB](https://chat2db.ai/) 是一个 **Multi-database client with AI SQL**，它被用于 Management and Migration  等场景
+[chat2DB](https://chat2db.ai/) 是一个 **Multi-database client with AI SQL**，它被用于 Database Management Tools  等场景。An intelligent and versatile general-purpose SQL client and reporting tool for databases which integrates ChatGPT capabilities
 
 
 ![Connect DB](https://libs.websoft9.com/Websoft9/DocsPicture/zh/chat2db/chat2db-gui-websoft9.png)

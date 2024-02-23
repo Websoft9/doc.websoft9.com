@@ -1,8 +1,4 @@
-# ERPNext
-
-ERPNext can help users manage their project management concerns, accounting tasks, and HR responsibilities within a single interface.
-
-简而言之，[ERPNext](https://erpnext.com/) 是一个 **An open source ERP**，它被用于 ERP & Finance Supply Chain & Manufacturing & Logistic  等场景
+[ERPNext](https://erpnext.com/) 是一个 **An open source ERP**，它被用于 ERP & Finance Supply Chain & Manufacturing & Logistic  等场景。ERPNext can help users manage their project management concerns, accounting tasks, and HR responsibilities within a single interface.
 
 
 ![ui](http://libs.websoft9.com/Websoft9/DocsPicture/en/erpnext/erpnext-adminui-websoft9.png)

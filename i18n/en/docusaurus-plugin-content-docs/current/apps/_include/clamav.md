@@ -1,8 +1,4 @@
-# ClamAV
-
-ClamAV is an open-source antivirus engine for detecting trojans, viruses, malware & other malicious threats.
-
-简而言之，[ClamAV](https://ckan.org/) 是一个 **open-source antivirus engine**，它被用于 Detection and Monitor  等场景
+[ClamAV](https://ckan.org/) 是一个 **open-source antivirus engine**，它被用于 Detection and Monitor  等场景。ClamAV is an open-source antivirus engine for detecting trojans, viruses, malware & other malicious threats.
 
 
 ![architecture](https://libs.websoft9.com/Websoft9/DocsPicture/zh/clamav/clamav-arch-websoft9.webp)

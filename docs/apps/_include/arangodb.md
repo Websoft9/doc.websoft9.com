@@ -1,8 +1,4 @@
-# ArangoDB
-
-ArangoDB是一个可扩展的图形数据库系统，可以从连接的数据中驱动价值， 更快
-
-简而言之，[ArangoDB](https://www.arangodb.com/) 是一个 **开源图数据库平台**，它被用于 图引擎数据库  等场景
+[ArangoDB](https://www.arangodb.com/) 是一个 **开源图数据库平台**，它被用于 图数据库  等场景。ArangoDB是一个可扩展的图形数据库系统，可以从连接的数据中驱动价值， 更快
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/arangodb/arangodb-gui-websoft9.png)

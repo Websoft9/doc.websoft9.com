@@ -1,8 +1,4 @@
-# Jenkins
-
-Jenkins is an automation server for supporting practically every tool as a part of the delivery pipelines.
-
-简而言之，[Jenkins](https://www.jenkins.io/) 是一个 **self-contained, open source automation server**，它被用于 Pipeline  等场景
+[Jenkins](https://www.jenkins.io/) 是一个 **self-contained, open source automation server**，它被用于 Pipeline  等场景。Jenkins is an automation server for supporting practically every tool as a part of the delivery pipelines.
 
 
 ![devops](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins_is_the_hub_CD_Devops.png)

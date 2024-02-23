@@ -1,8 +1,4 @@
-# Budibase
-
-Budibase saves teams 100s of hours building tools that integrate perfectly with any workflow
-
-简而言之，[Budibase](https://budibase.com/) 是一个 **Internal tools made easy**，它被用于 Master Data Low Code and No Code  等场景
+[Budibase](https://budibase.com/) 是一个 **Internal tools made easy**，它被用于 Master Data Low Code and No Code  等场景。Budibase saves teams 100s of hours building tools that integrate perfectly with any workflow
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/budibase/budibase-main-websoft9.png)

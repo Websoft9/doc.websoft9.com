@@ -1,8 +1,4 @@
-# ActiveMQ
-
-Apache ActiveMQ is the most popular and powerful open source messaging and Integration Patterns server. 
-
-简而言之，[ActiveMQ](https://activemq.apache.org/) 是一个 **An open source messaging and Integration Patterns server**，它被用于 Message Queue  等场景
+[ActiveMQ](https://activemq.apache.org/) 是一个 **An open source messaging and Integration Patterns server**，它被用于 Message Queue  等场景。Apache ActiveMQ is the most popular and powerful open source messaging and Integration Patterns server. 
 
 
 ![login](http://libs.websoft9.com/Websoft9/DocsPicture/zh/activemq/activemq-login-websoft9.png)

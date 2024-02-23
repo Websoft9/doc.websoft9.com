@@ -1,8 +1,4 @@
-# Drupal
-
-Drupal是全球三大开源内容管理系统之一，也是一个开发框架，它的内核中的有功能强大的PHP类库、函数库和API，能够通过二次化开发来构建复杂多用的企业级应用。
-
-简而言之，[Drupal](https://www.drupal.org/) 是一个 **网站内容管理系统**，它被用于 企业建站 电子商务  等场景
+[Drupal](https://www.drupal.org/) 是一个 **网站内容管理系统**，它被用于 企业建站 电子商务  等场景。Drupal是全球三大开源内容管理系统之一，也是一个开发框架，它的内核中的有功能强大的PHP类库、函数库和API，能够通过二次化开发来构建复杂多用的企业级应用。
 
 
 ![ui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-gui-websoft9.png)

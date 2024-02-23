@@ -1,8 +1,4 @@
-# Webmin
-
-Webmin 是流行的 Linux 可视化面板管理工具，免费开源，可轻松管理文件、配置域名、修改配置文件、备份数据等。
-
-简而言之，[Webmin](https://www.webmin.com/) 是一个 **一款流行的 Linux 可视化面板管理工具**，它被用于 云设施监控  等场景
+[Webmin](https://www.webmin.com/) 是一个 **一款流行的 Linux 可视化面板管理工具**，它被用于 云设施监控  等场景。Webmin 是流行的 Linux 可视化面板管理工具，免费开源，可轻松管理文件、配置域名、修改配置文件、备份数据等。
 
 
 ![webmin](https://libs.websoft9.com/Websoft9/DocsPicture/zh/webmin/webmin-dashboard-websoft9.png)

@@ -1,8 +1,4 @@
-# Saleor
-
-Saleor is customer-centric e-commerce on a modern stack. A headless, GraphQL commerce platform delivering ultra-fast, dynamic, personalized shopping experiences. Beautiful online stores, anywhere, on any device.
-
-简而言之，[Saleor](https://saleor.io/) 是一个 **The Open Source Headless Commerce**，它被用于 eCommerce  等场景
+[Saleor](https://saleor.io/) 是一个 **The Open Source Headless Commerce**，它被用于 eCommerce  等场景。Saleor is customer-centric e-commerce on a modern stack. A headless, GraphQL commerce platform delivering ultra-fast, dynamic, personalized shopping experiences. Beautiful online stores, anywhere, on any device.
 
 
 ![Console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/saleor/saleor-gui-websoft9.png)

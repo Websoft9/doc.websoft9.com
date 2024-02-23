@@ -1,8 +1,4 @@
-# Scratch
-
-Scratch is  coding community for children and a coding language with a simple visual interface that allows young people to create digital stories, games, and animations.
-
-简而言之，[Scratch](https://scratch.mit.edu/) 是一个 **Scratch is  coding community for children and a coding language **，它被用于 Low Code and No Code  等场景
+[Scratch](https://scratch.mit.edu/) 是一个 **Scratch is  coding community for children and a coding language **，它被用于 Low Code and No Code  等场景。Scratch is  coding community for children and a coding language with a simple visual interface that allows young people to create digital stories, games, and animations.
 
 
 ![scratch](https://libs.websoft9.com/Websoft9/DocsPicture/en/scratch/scratch-gui-websoft9.png)

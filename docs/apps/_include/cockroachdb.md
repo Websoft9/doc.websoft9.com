@@ -1,8 +1,4 @@
-# CockroachDB
-
-CockroachDB 是一个云原生分布式 SQL 数据库，旨在构建、扩展和管理现代数据密集型应用程序。
-
-简而言之，[CockroachDB](https://www.cockroachlabs.com/) 是一个 **可伸缩的、支持地理位置处理、支持事务处理的数据存储系统**，它被用于 NewSQL 数据库  等场景
+[CockroachDB](https://www.cockroachlabs.com/) 是一个 **可伸缩的、支持地理位置处理、支持事务处理的数据存储系统**，它被用于 NewSQL 数据库  等场景。CockroachDB 是一个云原生分布式 SQL 数据库，旨在构建、扩展和管理现代数据密集型应用程序。
 
 
 ![Admin UI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cockroachdb/cockroachdb-gui-websoft9.png)

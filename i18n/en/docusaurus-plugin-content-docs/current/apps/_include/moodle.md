@@ -1,8 +1,4 @@
-# Moodle
-
-Moodle™ LMS is a learning platform designed to provide educators, administrators and learners
-
-简而言之，[Moodle](https://moodle.com/) 是一个 **An online learning platform**，它被用于 eLearning  等场景
+[Moodle](https://moodle.com/) 是一个 **An online learning platform**，它被用于 eLearning  等场景。Moodle™ LMS is a learning platform designed to provide educators, administrators and learners
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodlegui-websoft9.jpg)

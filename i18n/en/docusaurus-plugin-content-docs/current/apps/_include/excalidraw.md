@@ -1,9 +1,5 @@
-# Excalidraw
+[Excalidraw](https://github.com/excalidraw/excalidraw) 是一个 **Virtual whiteboard for sketching hand-drawn like diagrams**，它被用于 Whiteboard and Note Task Collaboration  等场景。Excalidraw is an open source virtual hand-drawn style whiteboard. It can help you to create collaborative and end-to-end encrypted diagrams.
 
-Excalidraw is an open source virtual hand-drawn style whiteboard. It can help you to create collaborative and end-to-end encrypted diagrams.
-
-
-简而言之，[Excalidraw](https://github.com/excalidraw/excalidraw) 是一个 **Virtual whiteboard for sketching hand-drawn like diagrams**，它被用于 Whiteboard and Note Task Collaboration  等场景
 
 
 ![Console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/excalidraw/excalidraw-gui-websoft9.png)

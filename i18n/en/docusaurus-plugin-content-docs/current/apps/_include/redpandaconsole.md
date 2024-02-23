@@ -1,8 +1,4 @@
-# Redpanda Console
-
-Redpanda Console (previously known as Kowl) is a web application that helps you manage and debug your Kafka/Redpanda workloads effortlessly.
-
-简而言之，[Redpanda Console](https://redpanda.com/) 是一个 **A UI for Kafka/Redpanda workloads**，它被用于 Message Queue  等场景
+[Redpanda Console](https://redpanda.com/) 是一个 **A UI for Kafka/Redpanda workloads**，它被用于 Message Queue  等场景。Redpanda Console (previously known as Kowl) is a web application that helps you manage and debug your Kafka/Redpanda workloads effortlessly.
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/redpandaconsole/redpandaconsole-gui-websoft9.png)

@@ -1,8 +1,4 @@
-# Magento
-
-Magento delivers the features you need to build and grow a unique online store from the ground up.
-
-简而言之，[Magento](https://business.adobe.com/products/magento/open-source.html) 是一个 **one of the world's most popular ecommerce platforms**，它被用于 eCommerce  等场景
+[Magento](https://business.adobe.com/products/magento/open-source.html) 是一个 **one of the world's most popular ecommerce platforms**，它被用于 eCommerce  等场景。Magento delivers the features you need to build and grow a unique online store from the ground up.
 
 
 ![mall](http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-mall-websoft9.png)

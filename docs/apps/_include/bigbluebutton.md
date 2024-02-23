@@ -1,8 +1,4 @@
-# BigBlueButton
-
-围绕现实世界的学生、教师和学校设计的虚拟课堂软件
-
-简而言之，[BigBlueButton](https://bigbluebutton.org/) 是一个 **虚拟课堂软件**，它被用于 教育 会议/直播  等场景
+[BigBlueButton](https://bigbluebutton.org/) 是一个 **虚拟课堂软件**，它被用于 教育 会议/直播  等场景。围绕现实世界的学生、教师和学校设计的虚拟课堂软件
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/bigbluebutton/bigbluebutton-gui-websoft9.png)

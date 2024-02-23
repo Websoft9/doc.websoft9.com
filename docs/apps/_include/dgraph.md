@@ -1,8 +1,4 @@
-# Dgraph
-
-在分布式图形数据库上构建为容错能力，为开发人员提供了快速构建和大规模建模应用程序的工具
-
-简而言之，[Dgraph](https://dgraph.io/) 是一个 **高性能的 NoSQL 图数据库**，它被用于 图引擎数据库  等场景
+[Dgraph](https://dgraph.io/) 是一个 **高性能的 NoSQL 图数据库**，它被用于 图数据库  等场景。在分布式图形数据库上构建为容错能力，为开发人员提供了快速构建和大规模建模应用程序的工具
 
 
 ![architecture](https://libs.websoft9.com/Websoft9/DocsPicture/zh/dgraph/dgraph-gui-websoft9.svg)

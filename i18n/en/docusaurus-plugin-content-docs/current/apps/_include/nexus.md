@@ -1,8 +1,4 @@
-# Sonatype Nexus Repository
-
-Sonatype Nexus  can build and distribute software fast Build quickly and reliably Publish and cache components in a central repository that connects natively to all popular package managers. 
-
-简而言之，[Sonatype Nexus Repository](https://www.sonatype.com/products/sonatype-nexus-repository) 是一个 **Binary & Artifact Management**，它被用于 Software supply chain Container Artifact Repository  等场景
+[Sonatype Nexus Repository](https://www.sonatype.com/products/sonatype-nexus-repository) 是一个 **Binary & Artifact Management**，它被用于 Software supply chain Container Artifact Repository  等场景。Sonatype Nexus  can build and distribute software fast Build quickly and reliably Publish and cache components in a central repository that connects natively to all popular package managers. 
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/nexus/nexus-gui-websoft9.webp)

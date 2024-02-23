@@ -1,8 +1,4 @@
-# Redash
-
-Use Redash to connect to any data source (PostgreSQL, MySQL, Redshift, BigQuery, MongoDB and many others), query, visualize and share your data to make your company data driven.
-
-简而言之，[Redash](https://redash.io/) 是一个 **Helps you make sense of your data**，它被用于 Business Intelligence  等场景
+[Redash](https://redash.io/) 是一个 **Helps you make sense of your data**，它被用于 Data Application and Visualization  等场景。Use Redash to connect to any data source (PostgreSQL, MySQL, Redshift, BigQuery, MongoDB and many others), query, visualize and share your data to make your company data driven.
 
 
 ![Console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/redash/redash-gui-websoft9.png)

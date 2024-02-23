@@ -1,8 +1,4 @@
-# MediaWiki
-
-MediaWiki的作用在于对知识的归档，可用于构建企业/个人知识库。
-
-简而言之，[MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) 是一个 **“维基百科”网站开源的 Wiki 程序**，它被用于 知识管理  等场景
+[MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) 是一个 **“维基百科”网站开源的 Wiki 程序**，它被用于 知识管理  等场景。MediaWiki的作用在于对知识的归档，可用于构建企业/个人知识库。
 
 
 ![ui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mediawiki/MediaWiki_UI.png)

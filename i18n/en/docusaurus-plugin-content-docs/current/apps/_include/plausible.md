@@ -1,8 +1,4 @@
-# Plausible
-
-Plausible is intuitive, lightweight and open source web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. Made and hosted in the EU, powered by European-owned cloud infrastructure 🇪🇺
-
-简而言之，[Plausible](https://plausible.io/) 是一个 **Easy to use and privacy-friendly Google Analytics alternative**，它被用于 Web Analytics  等场景
+[Plausible](https://plausible.io/) 是一个 **Easy to use and privacy-friendly Google Analytics alternative**，它被用于 Web Analytics  等场景。Plausible is intuitive, lightweight and open source web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. Made and hosted in the EU, powered by European-owned cloud infrastructure 🇪🇺
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/plausible/plausible-gui-websoft9.webp)

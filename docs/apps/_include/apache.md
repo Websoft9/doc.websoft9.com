@@ -1,8 +1,4 @@
-# Apache HTTP Server
-
-Apache HTTP Server 是一个流行的开源 HTTP 服务器，为应用程序提供 HTTP 服务。
-
-简而言之，[Apache HTTP Server](https://httpd.apache.org/) 是一个 **HTTP 服务器软件**，它被用于 HTTP 服务器  等场景
+[Apache HTTP Server](https://httpd.apache.org/) 是一个 **HTTP 服务器软件**，它被用于 HTTP 服务器  等场景。Apache HTTP Server 是一个流行的开源 HTTP 服务器，为应用程序提供 HTTP 服务。
 
 
 ![architecture](https://libs.websoft9.com/Websoft9/DocsPicture/zh/linux/apachehttp-architecture.gif)

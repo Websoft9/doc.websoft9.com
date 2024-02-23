@@ -1,8 +1,4 @@
-# OpenSearch
-
-OpenSearch is a scalable, flexible, and extensible open-source software suite for search, analytics, and observability applications
-
-简而言之，[OpenSearch](https://opensearch.org/) 是一个 **Open source fork of Elasticsearch and Kibana**，它被用于 Storage and Search Data Warehouse Business Intelligence  等场景
+[OpenSearch](https://opensearch.org/) 是一个 **Open source fork of Elasticsearch and Kibana**，它被用于 Data Storage Data Warehouse Data Application and Visualization  等场景。OpenSearch is a scalable, flexible, and extensible open-source software suite for search, analytics, and observability applications
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/opensearch/opensearch-gui-websoft9.png)

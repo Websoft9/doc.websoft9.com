@@ -1,8 +1,4 @@
-# RedisInsight
-
-RedisInsight provides an intuitive and efficient UI for Redis and Redis Stack and supports CLI interaction in a fully-featured desktop UI client.
-
-简而言之，[RedisInsight](https://redis.io/) 是一个 **官方出品的 Redis 可视化管理工具**，它被用于 管理与迁移  等场景
+[RedisInsight](https://redis.io/) 是一个 **官方出品的 Redis 可视化管理工具**，它被用于 数据库管理工具  等场景。RedisInsight provides an intuitive and efficient UI for Redis and Redis Stack and supports CLI interaction in a fully-featured desktop UI client.
 
 
 ![sitegui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/redis/redisinsight-dashboard-illustration-2.svg)

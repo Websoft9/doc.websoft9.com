@@ -1,8 +1,4 @@
-# Kasmweb
-
-Streaming containerized apps and desktops to end-users. The Workspaces platform provides enterprise-class orchestration, data loss prevention, and web streaming technology to enable the delivery of containerized workloads to your browser.
-
-简而言之，[Kasmweb](https://www.kasmweb.com/) 是一个 **The Container Streaming Platform**，它被用于 Cloud Workspaces Container  等场景
+[Kasmweb](https://www.kasmweb.com/) 是一个 **The Container Streaming Platform**，它被用于 Cloud Workspaces Container  等场景。Streaming containerized apps and desktops to end-users. The Workspaces platform provides enterprise-class orchestration, data loss prevention, and web streaming technology to enable the delivery of containerized workloads to your browser.
 
 
 ![Console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kasmweb/kasmweb-gui-websoft9.webp)

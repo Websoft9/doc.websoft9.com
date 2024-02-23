@@ -1,8 +1,4 @@
-# Nextcloud 
-
-Nextcloud是一款用于自建私有网盘的云存储开源软件，采用PHP+MySQL开发，功能类似百度云盘，提供了PC、IOS和Android三个同步客户端支持多种设备访问
-
-简而言之，[Nextcloud ](https://nextcloud.com/) 是一个 **用于自建私有网盘的云存储开源软件，功能类似百度云盘**，它被用于 文档协作  等场景
+[Nextcloud ](https://nextcloud.com/) 是一个 **用于自建私有网盘的云存储开源软件，功能类似百度云盘**，它被用于 文档协作  等场景。Nextcloud是一款用于自建私有网盘的云存储开源软件，采用PHP+MySQL开发，功能类似百度云盘，提供了PC、IOS和Android三个同步客户端支持多种设备访问
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/nextcloud/nextcloud-gui-websoft9.png)

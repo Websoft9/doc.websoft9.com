@@ -1,8 +1,4 @@
-# XWiki
-
-XWiki是一个开源的企业级Wiki平台。它允许用户创建和编辑内容，以便团队成员可以协作工作、共享知识和文档。
-
-简而言之，[XWiki](https://www.xwiki.org/) 是一个 **The Advanced Open Source Enterprise Wiki**，它被用于 Knowledge Management  等场景
+[XWiki](https://www.xwiki.org/) 是一个 **The Advanced Open Source Enterprise Wiki**，它被用于 Knowledge Management  等场景。XWiki是一个开源的企业级Wiki平台。它允许用户创建和编辑内容，以便团队成员可以协作工作、共享知识和文档。
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/xwiki/xwiki-gui-websoft9.png)

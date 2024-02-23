@@ -1,8 +1,4 @@
-# Neo4j
-
-Neo4j® graph database is the world's leading Graph Database. It is a high performance graph store with all the features expected of a mature and robust database.
-
-简而言之，[Neo4j](https://neo4j.com/) 是一个 **A high performance graph store with all the features expected of a mature and robust database**，它被用于 Graph Databases  等场景
+[Neo4j](https://neo4j.com/) 是一个 **A high performance graph store with all the features expected of a mature and robust database**，它被用于 Graph Databases  等场景。Neo4j® graph database is the world's leading Graph Database. It is a high performance graph store with all the features expected of a mature and robust database.
 
 
 ![console](https://libs.websoft9.com/Websoft9/DocsPicture/en/neo4j/neo4j-console-websoft9.png)

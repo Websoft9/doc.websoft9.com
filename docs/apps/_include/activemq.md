@@ -1,8 +1,4 @@
-# ActiveMQ
-
-Apache ActiveMQ 是老牌的开源消息总线，完全支持 JMS1.1 和 J2EE 1.4 规范，它支持多种语言和协议编写客户端。
-
-简而言之，[ActiveMQ](https://activemq.apache.org/) 是一个 **Apache出品的开源消息总线**，它被用于 消息队列  等场景
+[ActiveMQ](https://activemq.apache.org/) 是一个 **Apache出品的开源消息总线**，它被用于 消息队列  等场景。Apache ActiveMQ 是老牌的开源消息总线，完全支持 JMS1.1 和 J2EE 1.4 规范，它支持多种语言和协议编写客户端。
 
 
 ![login](http://libs.websoft9.com/Websoft9/DocsPicture/zh/activemq/activemq-login-websoft9.png)

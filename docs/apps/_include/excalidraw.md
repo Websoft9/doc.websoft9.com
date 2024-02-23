@@ -1,8 +1,4 @@
-# Excalidraw
-
-Excalidraw是一个开源的虚拟手绘风格的白板。它可以帮助您创建协作和端到端加密逻辑示意图。
-
-简而言之，[Excalidraw](https://github.com/excalidraw/excalidraw) 是一个 **在线虚拟白板系统**，它被用于 白板/笔记 任务协作  等场景
+[Excalidraw](https://github.com/excalidraw/excalidraw) 是一个 **在线虚拟白板系统**，它被用于 白板/笔记 任务协作  等场景。Excalidraw是一个开源的虚拟手绘风格的白板。它可以帮助您创建协作和端到端加密逻辑示意图。
 
 
 ![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/excalidraw/excalidraw-gui-websoft9.png)

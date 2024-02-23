@@ -1,8 +1,4 @@
-# memcached
-
-Memcached is an in-memory key-value store for small chunks of arbitrary data (strings, objects) from results of database calls, API calls, or page rendering. 
-
-简而言之，[memcached](https://www.memcached.org/) 是一个 **a free & open source, high-performance, distributed memory object caching system**，它被用于 In-memory Database  等场景
+[memcached](https://www.memcached.org/) 是一个 **a free & open source, high-performance, distributed memory object caching system**，它被用于 In-memory Database  等场景。Memcached is an in-memory key-value store for small chunks of arbitrary data (strings, objects) from results of database calls, API calls, or page rendering. 
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/en/memcached/memcached-gui-websoft9.png)

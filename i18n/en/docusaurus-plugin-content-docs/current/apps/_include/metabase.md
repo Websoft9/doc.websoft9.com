@@ -1,8 +1,4 @@
-# Metabase
-
-Metabase is a user-contributed database of biological databases, listing all the biological databases currently available on the internet. 
-
-简而言之，[Metabase](https://www.metabase.com/) 是一个 **a user-contributed database of biological databases**，它被用于 Business Intelligence  等场景
+[Metabase](https://www.metabase.com/) 是一个 **a user-contributed database of biological databases**，它被用于 Data Application and Visualization  等场景。Metabase is a user-contributed database of biological databases, listing all the biological databases currently available on the internet. 
 
 
 ![ui](https://libs.websoft9.com/Websoft9/DocsPicture/en/metabase/metabase-product-screenshot.png)

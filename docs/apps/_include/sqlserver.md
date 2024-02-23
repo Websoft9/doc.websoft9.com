@@ -1,8 +1,4 @@
-# SQL Server Express
-
-SQL Server Express 是 Microsoft 官方 SQL Server 免费发行版。易于部署并可无偿获取并可以随应用程序免费再分发。
-
-简而言之，[SQL Server Express](https://www.sqlserver.com/) 是一个 **SQL Server Express 是 Microsoft 官方 SQL Server 免费发行版**，它被用于 关系型数据库  等场景
+[SQL Server Express](https://www.sqlserver.com/) 是一个 **SQL Server Express 是 Microsoft 官方 SQL Server 免费发行版**，它被用于 SQL 数据库/关系数据库  等场景。SQL Server Express 是 Microsoft 官方 SQL Server 免费发行版。易于部署并可无偿获取并可以随应用程序免费再分发。
 
 
 ![sqlserver](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-getsqlserver-websoft9.png)

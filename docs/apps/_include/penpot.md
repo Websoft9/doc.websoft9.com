@@ -1,8 +1,4 @@
-# Penpot
-
-Penpot是唯一与部署无关的设计和原型平台。您可以使用它或将其部署到任何地方。
-
-简而言之，[Penpot](https://penpot.app/) 是一个 **原型设计平台，Figma 自托管替代品**，它被用于 数字创意  等场景
+[Penpot](https://penpot.app/) 是一个 **原型设计平台，Figma 自托管替代品**，它被用于 数字创意  等场景。Penpot是唯一与部署无关的设计和原型平台。您可以使用它或将其部署到任何地方。
 
 
 ![Console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/penpot/penpot-gui-websoft9.png)

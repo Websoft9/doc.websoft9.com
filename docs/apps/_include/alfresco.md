@@ -1,8 +1,4 @@
-# Alfresco
-
-Alfresco提供企业内容管理解决方案，使客户能够跨云，跨移动设备，并可以在混合式部署和内部部署环境中保留、管理和共享文档，处理分析文件和流程。
-
-简而言之，[Alfresco](https://www.alfresco.com/) 是一个 **企业内容管理系统**，它被用于 文档协作  等场景
+[Alfresco](https://www.alfresco.com/) 是一个 **企业内容管理系统**，它被用于 文档协作  等场景。Alfresco提供企业内容管理解决方案，使客户能够跨云，跨移动设备，并可以在各种云架构中搜索、管理和共享文档，处理分析文件和流程，与领先业务应用程序 SAP, IBM Lotus, Microsoft Office, SharePoint 和 Google Docs 等轻松集成。
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/alfresco/alfresco-arcgui-websoft9.png)

@@ -1,8 +1,4 @@
-# Gitea
-
-Gitea 是一个轻量级的 DevOps 平台软件。从开发计划到产品成型的整个软件生命周期，他都能够高效而轻松的帮助团队和开发者。
-
-简而言之，[Gitea](https://about.gitea.cn/) 是一个 **The lite DevOps platform**，它被用于 Code Repository Pipeline  等场景
+[Gitea](https://about.gitea.cn/) 是一个 **The lite DevOps platform**，它被用于 Code Repository Pipeline  等场景。Gitea 是一个轻量级的 DevOps 平台软件。从开发计划到产品成型的整个软件生命周期，他都能够高效而轻松的帮助团队和开发者。
 
 
 ![Gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitea/gitea-gui-websoft9.png)

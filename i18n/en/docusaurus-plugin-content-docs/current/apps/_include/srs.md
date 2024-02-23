@@ -1,8 +1,4 @@
-# SRS
-
-SRS is a simple and efficient real-time video server that supports various real-time streaming protocols such as RTMP, WebRTC, HLS, HTTP-FLV, SRT, and more. 
-
-简而言之，[SRS](https://ossrs.net/) 是一个 **A simple, high-efficiency, and real-time video server**，它被用于 Video Server Meeting  等场景
+[SRS](https://ossrs.net/) 是一个 **A simple, high-efficiency, and real-time video server**，它被用于 Video Server Meeting  等场景。SRS is a simple and efficient real-time video server that supports various real-time streaming protocols such as RTMP, WebRTC, HLS, HTTP-FLV, SRT, and more. 
 
 
 ![Console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/srs/srs-console-websoft9.png)

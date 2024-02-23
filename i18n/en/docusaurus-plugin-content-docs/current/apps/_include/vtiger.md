@@ -1,8 +1,4 @@
-# Vtiger
-
-Vtiger Community Edition is an opensource CRM system that helps you create and automate a better customer journey.
-
-简而言之，[Vtiger](https://www.vtiger.com/) 是一个 ** An opensource CRM system that helps you create and automate a better customer journey**，它被用于 CRM & Distribution & Order  等场景
+[Vtiger](https://www.vtiger.com/) 是一个 ** An opensource CRM system that helps you create and automate a better customer journey**，它被用于 CRM & Distribution & Order  等场景。Vtiger Community Edition is an opensource CRM system that helps you create and automate a better customer journey.
 
 
 ![vtigercrm](http://libs.websoft9.com/Websoft9/DocsPicture/zh/vtigercrm/vtigercrm-backend-websoft9.png)

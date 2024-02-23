@@ -1,8 +1,4 @@
-# Palworld 幻兽帕鲁
-
-即开即用的 幻兽帕鲁 Palworld 私有服务器
-
-简而言之，[Palworld 幻兽帕鲁](https://www.pocketpair.jp/palworld) 是一个 **Palworld（幻兽帕鲁 ）独立服务器**，它被用于 游戏私服  等场景
+[Palworld 幻兽帕鲁](https://www.pocketpair.jp/palworld) 是一个 **Palworld（幻兽帕鲁 ）独立服务器**，它被用于 游戏私服  等场景。即开即用的 幻兽帕鲁 Palworld 私有服务器
 
 
 ![Palworld](https://libs.websoft9.com/Websoft9/DocsPicture/zh/palworld/palworld-gui-websoft9.png)

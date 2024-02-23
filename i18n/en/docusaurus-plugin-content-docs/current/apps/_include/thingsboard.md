@@ -1,8 +1,4 @@
-# ThingsBoard
-
-Device management, data collection, processing and visualization for your IoT solution
-
-简而言之，[ThingsBoard](https://thingsboard.io/) 是一个 **Open-source IoT Platform ThingsBoard**，它被用于 Device Management  等场景
+[ThingsBoard](https://thingsboard.io/) 是一个 **Open-source IoT Platform ThingsBoard**，它被用于 Device Management  等场景。Device management, data collection, processing and visualization for your IoT solution
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/thingsboard/thingsboard-gui-websoft9.png)

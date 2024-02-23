@@ -1,11 +1,7 @@
-# OwnCloud 
-
-ownCloud provides access to your data through a web interface, sync clients or WebDAV while providing a platform to view, sync and share across devices easily-all under your control.
-
-简而言之，[OwnCloud ](https://owncloud.com/) 是一个 **A self-hosted file sync and share server software**，它被用于 Document Collaboration  等场景
+[OwnCloud ](https://owncloud.com/) 是一个 **A self-hosted file sync and share server software**，它被用于 Document Collaboration  等场景。ownCloud provides access to your data through a web interface, sync clients or WebDAV while providing a platform to view, sync and share across devices easily-all under your control.
 
 
-![init](https://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-init1-websoft9.png)
+![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-gui-websoft9.png)
 
 
 ## 准备

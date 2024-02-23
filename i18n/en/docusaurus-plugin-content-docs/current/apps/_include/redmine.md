@@ -1,8 +1,4 @@
-# Redmine
-
-Redmine is a flexible project management web application. Written using the Ruby on Rails framework, it is cross-platform and cross-database.
-
-简而言之，[Redmine](https://www.redmine.org/) 是一个 **A web-based project management and issue tracking tool**，它被用于 Cloud Infrastructure Monitoring Agile Boards  等场景
+[Redmine](https://www.redmine.org/) 是一个 **A web-based project management and issue tracking tool**，它被用于 Cloud Infrastructure Monitoring Agile Boards  等场景。Redmine is a flexible project management web application. Written using the Ruby on Rails framework, it is cross-platform and cross-database.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/redmine/redmine-gui-websoft9.jpg)

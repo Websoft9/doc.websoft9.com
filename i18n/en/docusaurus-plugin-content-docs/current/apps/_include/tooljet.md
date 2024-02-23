@@ -1,8 +1,4 @@
-# Tooljet
-
-Open-source low-code framework to build & deploy internal tools, dashboards and business applications in minutes.
-
-简而言之，[Tooljet](https://www.tooljet.com/) 是一个 **Open-source low-code platform to build internal tools**，它被用于 Master Data Low Code and No Code  等场景
+[Tooljet](https://www.tooljet.com/) 是一个 **Open-source low-code platform to build internal tools**，它被用于 Master Data Low Code and No Code  等场景。Open-source low-code framework to build & deploy internal tools, dashboards and business applications in minutes.
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/tooljet/tooljet-gui-websoft9.png)

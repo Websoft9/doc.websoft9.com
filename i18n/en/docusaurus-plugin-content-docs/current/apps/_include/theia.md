@@ -1,8 +1,4 @@
-# Eclipse Theia
-
-Eclipse Theia is an extensible framework to develop full-fledged multi-language Cloud & Desktop IDEs and tools with state-of-the-art web technologies.
-
-简而言之，[Eclipse Theia](https://theia-ide.org/) 是一个 **Cloud & Desktop IDE Platform**，它被用于 Code Repository Web IDE  等场景
+[Eclipse Theia](https://theia-ide.org/) 是一个 **Cloud & Desktop IDE Platform**，它被用于 Code Repository Web IDE  等场景。Eclipse Theia is an extensible framework to develop full-fledged multi-language Cloud & Desktop IDEs and tools with state-of-the-art web technologies.
 
 
 ![ui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/theia/theia-gui-websoft9.jpg)

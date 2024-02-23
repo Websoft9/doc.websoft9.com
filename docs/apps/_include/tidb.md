@@ -1,8 +1,4 @@
-# TiDB
-
-TiDB 是一个开源的分布式 SQL 数据库，支持混合事务和分析处理 （HTAP） 工作负载。它与 MySQL 兼容，并具有水平可扩展性、强一致性和高可用性。
-
-简而言之，[TiDB](https://github.com/pingcap/tidb) 是一个 **支持事务与分析的融合性数据库**，它被用于 NewSQL 数据库  等场景
+[TiDB](https://github.com/pingcap/tidb) 是一个 **支持事务与分析的融合性数据库**，它被用于 NewSQL 数据库  等场景。TiDB 是一个开源的分布式 SQL 数据库，支持混合事务和分析处理 （HTAP） 工作负载。它与 MySQL 兼容，并具有水平可扩展性、强一致性和高可用性。
 
 
 ![structure](https://libs.websoft9.com/Websoft9/DocsPicture/zh/tidb/tidb-gui-websoft9.png)

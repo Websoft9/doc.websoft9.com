@@ -1,8 +1,4 @@
-# MariaDB
-
-MariaDB is designed to be fully compatible with MySQL, including APIs and command lines, making it easy to be a replacement for MySQL.
-
-简而言之，[MariaDB](https://mariadb.org/) 是一个 **A branch of MySQL**，它被用于 Relational Databases  等场景
+[MariaDB](https://mariadb.org/) 是一个 **A branch of MySQL**，它被用于 Relational Databases  等场景。MariaDB is designed to be fully compatible with MySQL, including APIs and command lines, making it easy to be a replacement for MySQL.
 
 
 ![gui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mariadb/mariadb-gui-websoft9.png)

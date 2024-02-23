@@ -1,8 +1,4 @@
-# APEX
-
-Oracle APEX 是 Oracle 出品的以 Oracle Database 为底层的低代码开发平台 
-
-简而言之，[APEX](https://apex.oracle.com/) 是一个 **Oracle 出品的低代码应用开发平台**，它被用于 低代码/零代码  等场景
+[APEX](https://apex.oracle.com/) 是一个 **Oracle 出品的低代码应用开发平台**，它被用于 低代码/零代码  等场景。Oracle APEX 是 Oracle 出品的以 Oracle Database 为底层的低代码开发平台 
 
 
 ![apex](https://libs.websoft9.com/Websoft9/DocsPicture/zh/apex/apex-oracle-wordpress.png)

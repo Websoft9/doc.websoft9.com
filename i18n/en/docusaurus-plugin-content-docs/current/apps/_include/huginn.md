@@ -1,8 +1,4 @@
-# Huginn
-
-Huginn is a system for building agents that perform automated tasks for you online. They can read the web, watch for events, and take actions on your behalf. 
-
-简而言之，[Huginn](https://github.com/huginn/huginn) 是一个 **Workflow automation for technical people**，它被用于 Workflow automation  等场景
+[Huginn](https://github.com/huginn/huginn) 是一个 **Workflow automation for technical people**，它被用于 Workflow automation  等场景。Huginn is a system for building agents that perform automated tasks for you online. They can read the web, watch for events, and take actions on your behalf. 
 
 
 ![Dashboard](http://libs.websoft9.com/Websoft9/DocsPicture/zh/huginn/huginn-gui-websoft9.png)

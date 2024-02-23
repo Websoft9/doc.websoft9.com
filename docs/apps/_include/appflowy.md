@@ -1,8 +1,4 @@
-# AppFlowy
-
-AppFlowy是Notion的开源替代品。您负责您的数据和自定义。用Flutter and Rust构建。
-
-简而言之，[AppFlowy](https://appflowy.io/) 是一个 **Notion  开源替代品 **，它被用于 项目/任务 白板/笔记  等场景
+[AppFlowy](https://appflowy.io/) 是一个 **Notion  开源替代品 **，它被用于 项目/任务 白板/笔记  等场景。AppFlowy是Notion的开源替代品。您负责您的数据和自定义。用Flutter and Rust构建。
 
 
 ![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/appflowy/appflowy-gui-websoft9.png)

@@ -1,8 +1,4 @@
-# Apache HTTP Server
-
-Apache HTTP Server Project is an effort to develop and maintain an open-source HTTP server
-
-简而言之，[Apache HTTP Server](https://httpd.apache.org/) 是一个 **Apache HTTP Server**，它被用于 HTTP Server  等场景
+[Apache HTTP Server](https://httpd.apache.org/) 是一个 **Apache HTTP Server**，它被用于 HTTP Server  等场景。Apache HTTP Server Project is an effort to develop and maintain an open-source HTTP server
 
 
 ![architecture](https://libs.websoft9.com/Websoft9/DocsPicture/zh/linux/apachehttp-architecture.gif)

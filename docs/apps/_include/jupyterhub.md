@@ -1,8 +1,4 @@
-# JupyterHub
-
-JupyterHub将笔记本的强大功能带给用户组。它给 用户无需负担即可访问计算环境和资源 具有安装和维护任务的用户。
-
-简而言之，[JupyterHub](https://jupyter.org/) 是一个 **多用户版的 Jupyter notebooks**，它被用于 源码仓库 在线 IDE  等场景
+[JupyterHub](https://jupyter.org/) 是一个 **多用户版的 Jupyter notebooks**，它被用于 源码仓库 在线 IDE  等场景。JupyterHub将笔记本的强大功能带给用户组。它给 用户无需负担即可访问计算环境和资源 具有安装和维护任务的用户。
 
 
 ![Notebook](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jupyterhub/jupyterhub-gui-websoft9.webp)

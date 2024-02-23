@@ -1,8 +1,4 @@
-# nopCommerce
-
-The popular ASP.NET Core shopping cart in the world based on Microsoft technologies
-
-简而言之，[nopCommerce](https://www.nopcommerce.com/) 是一个 **Free and open-source eCommerce platform**，它被用于 eCommerce  等场景
+[nopCommerce](https://www.nopcommerce.com/) 是一个 **Free and open-source eCommerce platform**，它被用于 eCommerce  等场景。The popular ASP.NET Core shopping cart in the world based on Microsoft technologies
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/en/nopcommerce/nopcommerce-devices.png)

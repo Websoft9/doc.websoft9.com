@@ -1,8 +1,4 @@
-# Grafana
-
-开源的度量分析与可视化套件，常用于时间序列数据及应用程序分析的可视化展示
-
-简而言之，[Grafana](https://grafana.com/) 是一个 **开源的度量分析与可视化套件**，它被用于 数据呈现 数据集成  等场景
+[Grafana](https://grafana.com/) 是一个 **开源的度量分析与可视化套件**，它被用于 数据应用与可视化 日志管理  等场景。开源的度量分析与可视化套件，常用于时间序列数据及应用程序分析的可视化展示
 
 
 ![dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/en/grafana/grafana-dashboard-websoft9.png)

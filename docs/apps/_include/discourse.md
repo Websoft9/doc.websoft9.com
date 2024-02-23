@@ -1,8 +1,4 @@
-# Discourse
-
-Discourse 是适用于您社区的现代论坛软件。它必须绑定域名方可使用。
-
-简而言之，[Discourse](https://www.discourse.org/) 是一个 **用户社区运营与论坛系统**，它被用于 客服/售后 社交/论坛  等场景
+[Discourse](https://www.discourse.org/) 是一个 **用户社区运营与论坛系统**，它被用于 客服/售后 社交/论坛  等场景。Discourse 是适用于您社区的现代论坛软件。它必须绑定域名方可使用。
 
 
 ![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discourse/discourse-gui-websoft9.webp)

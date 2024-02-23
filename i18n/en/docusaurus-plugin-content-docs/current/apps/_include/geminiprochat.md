@@ -1,8 +1,4 @@
-# GeminiProChat
-
-Minimal web UI for GeminiPro
-
-简而言之，[GeminiProChat](https://github.com/babaohuang/GeminiProChat) 是一个 **Minimal web UI for GeminiPro**，它被用于 AIGC  等场景
+[GeminiProChat](https://github.com/babaohuang/GeminiProChat) 是一个 **Minimal web UI for GeminiPro**，它被用于 AIGC  等场景。Minimal web UI for GeminiPro
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/geminiprochat/geminiprochat-gui-websoft9.png)

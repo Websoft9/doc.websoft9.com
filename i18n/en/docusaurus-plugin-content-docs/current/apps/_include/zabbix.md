@@ -1,8 +1,4 @@
-# Zabbix
-
-Zabbix is the ultimate enterprise-level software designed for real-time monitoring of millions of metrics collected from tens of thousands of servers, virtual machines and network devices.
-
-简而言之，[Zabbix](GNU ) 是一个 **Enterprise-class open source distributed monitoring solution.**，它被用于 Full Monitoring  等场景
+[Zabbix](GNU ) 是一个 **Enterprise-class open source distributed monitoring solution.**，它被用于 Full Monitoring  等场景。Zabbix is the ultimate enterprise-level software designed for real-time monitoring of millions of metrics collected from tens of thousands of servers, virtual machines and network devices.
 
 
 ![zabbix](https://libs.websoft9.com/Websoft9/DocsPicture/en/zabbix/zabbix-gui-websoft9.png)

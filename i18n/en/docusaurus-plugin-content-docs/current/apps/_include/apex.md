@@ -1,8 +1,4 @@
-# APEX
-
-Oracle APEX is the world's most popular low-code platform for enterprise apps.
-
-简而言之，[APEX](https://apex.oracle.com/) 是一个 **Enterprise low-code application platform **，它被用于 Low Code and No Code  等场景
+[APEX](https://apex.oracle.com/) 是一个 **Enterprise low-code application platform **，它被用于 Low Code and No Code  等场景。Oracle APEX is the world's most popular low-code platform for enterprise apps.
 
 
 ![apex](https://libs.websoft9.com/Websoft9/DocsPicture/zh/apex/apex-oracle-wordpress.png)

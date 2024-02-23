@@ -1,8 +1,4 @@
-# Portainer
-
-A powerful open-source management toolset that allows you to easily build, manage and maintain Docker environments.
-
-简而言之，[Portainer](https://www.portainer.io/) 是一个 **A powerful container management toolset**，它被用于 Cloud Infrastructure Monitoring  等场景
+[Portainer](https://www.portainer.io/) 是一个 **A powerful container management toolset**，它被用于 Cloud Infrastructure Monitoring  等场景。A powerful open-source management toolset that allows you to easily build, manage and maintain Docker environments.
 
 
 ![addcontainer](http://libs.websoft9.com/Websoft9/DocsPicture/zh/potainer/portainer-addcontainer-websoft9.png)

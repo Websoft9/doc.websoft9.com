@@ -1,8 +1,4 @@
-# phpMyAdmin
-
-phpMyAdmin is a free software tool, intended to handle the administration of MySQL/MariaDB over the Web. 
-
-简而言之，[phpMyAdmin](https://www.phpmyadmin.net/) 是一个 **a web-based MySQL/MariaDB GUI tool**，它被用于 Management and Migration  等场景
+[phpMyAdmin](https://www.phpmyadmin.net/) 是一个 **a web-based MySQL/MariaDB GUI tool**，它被用于 Database Management Tools  等场景。phpMyAdmin is a free software tool, intended to handle the administration of MySQL/MariaDB over the Web. 
 
 
 ![Create DB](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-adddb-websoft9.png)

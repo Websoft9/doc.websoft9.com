@@ -1,8 +1,4 @@
-# SSCMS
-
-SSCMS 是一款跨平台、可分布式部署的产品，产品能够运行在各类操作系统之上，同时支持 MySql、SqlServer、PostgreSql、SQLite 以及国产达梦数据库。
-
-简而言之，[SSCMS](https://sscms.com/) 是一个 **基于微软 .NET Core 平台的多站点 CMS**，它被用于 企业建站 教育  等场景
+[SSCMS](https://sscms.com/) 是一个 **基于微软 .NET Core 平台的多站点 CMS**，它被用于 企业建站 教育  等场景。SSCMS 是一款跨平台、可分布式部署的产品，产品能够运行在各类操作系统之上，同时支持 MySql、SqlServer、PostgreSql、SQLite 以及国产达梦数据库。
 
 
 ![模板](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sscms/sscms-gui-websoft9.png)

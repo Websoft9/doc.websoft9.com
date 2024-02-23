@@ -1,8 +1,4 @@
-# RustDesk 
-
-远程桌面软件以及配套的注册/中继服务器，开箱即用，无需任何配置。您完全掌控数据，不用担心安全。TeamViewer 或 Citrix 的替代品
-
-简而言之，[RustDesk ](https://rustdesk.com/) 是一个 **虚拟与远程桌面服务端**，它被用于 云桌面  等场景
+[RustDesk ](https://rustdesk.com/) 是一个 **虚拟与远程桌面服务端**，它被用于 云桌面  等场景。远程桌面软件以及配套的注册/中继服务器，开箱即用，无需任何配置。您完全掌控数据，不用担心安全。TeamViewer 或 Citrix 的替代品
 
 
 ![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rustdesk/rustdesk-gui-websoft9.jpg)

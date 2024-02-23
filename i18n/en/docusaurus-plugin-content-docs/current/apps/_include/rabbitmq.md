@@ -1,8 +1,4 @@
-# RabbitMQ
-
-RabbitMQ is the most widely deployed open source message broker. 
-
-简而言之，[RabbitMQ](https://www.rabbitmq.com/) 是一个 **the most widely deployed open source message broker**，它被用于 Message Queue  等场景
+[RabbitMQ](https://www.rabbitmq.com/) 是一个 **the most widely deployed open source message broker**，它被用于 Message Queue  等场景。RabbitMQ is the most widely deployed open source message broker. 
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rabbitmq/rabbitmq-gui-websoft9.png)

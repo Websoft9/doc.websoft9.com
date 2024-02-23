@@ -1,8 +1,4 @@
-# Supabase
-
-Supabase is an open source Firebase alternative. Start your project with a Postgres database, Authentication, instant APIs, Edge Functions, Realtime subscriptions, Storage, and Vector embeddings.
-
-简而言之，[Supabase](https://supabase.com/) 是一个 **The Open Source Firebase alternative**，它被用于 Low Code and No Code  等场景
+[Supabase](https://supabase.com/) 是一个 **The Open Source Firebase alternative**，它被用于 Low Code and No Code  等场景。Supabase is an open source Firebase alternative. Start your project with a Postgres database, Authentication, instant APIs, Edge Functions, Realtime subscriptions, Storage, and Vector embeddings.
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/supabase/supabase-gui-websoft9.jpg)

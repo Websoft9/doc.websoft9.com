@@ -1,8 +1,4 @@
-# SearXNG
-
-SearXNG is a free internet metasearch engine which aggregates results from more than 70 search services. 
-
-简而言之，[SearXNG](https://docs.searxng.org/) 是一个 **Internet metasearch engine**，它被用于 Search Engine  等场景
+[SearXNG](https://docs.searxng.org/) 是一个 **Internet metasearch engine**，它被用于 Search Engine  等场景。SearXNG is a free internet metasearch engine which aggregates results from more than 70 search services. 
 
 
 ![Site](https://libs.websoft9.com/Websoft9/DocsPicture/zh/searxng/searxng-gui-websoft9.png)
