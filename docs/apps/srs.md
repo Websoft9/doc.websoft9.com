@@ -28,7 +28,7 @@ Websoft9 控制台安装 SRS 后，通过【我的应用】管理应用，在**�
 
 - [API接口](https://ossrs.net/lts/zh-cn/docs/v4/doc/http-api)
 
-### OBS 推送PC桌面流到 SRS
+### OBS 推流到 SRS
 
 下面以 **OBS 推送PC桌面流到 SRS** 作为一个任务，帮助用户快速入门：
 
@@ -56,6 +56,10 @@ Websoft9 控制台安装 SRS 后，通过【我的应用】管理应用，在**�
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/srs/srs-view1-websoft9.png)
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/srs/srs-view2-websoft9.png)
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/srs/srs-view3-websoft9.png)
+
+
+### Streamlabs 推流到 SRS
+
 
 
 ## 管理维护{#administrator}
