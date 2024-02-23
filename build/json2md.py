@@ -65,7 +65,7 @@ for title, info in sorted(catalog_dict.items(), key=lambda x: min(x[1]['position
     try:
         markdown_content += f"## {title}\n\n"
         for trademark, key in sorted(info['entries']):
-            markdown_content += f"- [{trademark}](./{key})\n\n"
+            markdown_content += f"- [{trademark}](../{key})\n\n"
     except Exception as e:
         print(f"Error generating Markdown for title: '{title}' with info: {info}")
         print(e)
