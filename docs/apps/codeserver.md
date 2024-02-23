@@ -70,17 +70,11 @@ apt install openjdk-8-jre
 java -version
 ```
 
-### 在线开发范例
+### Python 开发范例
 
 下面以 Python 开发为范例，介绍如何使用 code-server：
 
-1. 登录 code-server，在当前 WorkSpace 下克隆一个代码仓库
-   ```
-   git clone https://github.com/Websoft9/ansible-wordpress.git
-   ```
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/codeserver/codeserver-gitclone-websoft9.png)
-
-2. 在项目文件夹中新建一个文件，命名为：myfile.py，并拷贝下面的 Python 程序实例代码。
+1. 登录 code-server，新建一个文件夹和文件，文件命名为：myfile.py，并拷贝下面的 Python 程序实例代码。
    ```
    #!/usr/bin/env python2
    #!/usr/bin/env python3
@@ -92,10 +86,10 @@ java -version
    ```
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/codeserver/codeserver-createfile-websoft9.png)
 
-3. 在【窗口的终端栏】中执行 `python myfile.py` 命令，运行 Python 程序
+2. 在【窗口的终端栏】中执行 `python myfile.py` 命令，运行 Python 程序
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/codeserver/codeserver-runpython-websoft9.png)
 
-4. 查看正确的输出结果
+3. 查看正确的输出结果
 
 ### 预览应用
 
@@ -109,7 +103,7 @@ java -version
 
 ### 多开发者
 
-单个 code-server 应用并不支持多用户，所以不合适多开发协同工作的场景。  
+单个 code-server 应用不支持多用户开发协同工作的场景。    
 
 那么如何才能支持多开发者协作使用 code-server 呢？  
 
@@ -137,3 +131,8 @@ java -version
 #### 无法复制命令到 Terminal？
 
 ctrl+V
+
+#### git push 时与远程待拉取冲突？
+
+问题描述：  git push 时，由于有待 pull 的代码，导致冲突  
+解决方案：  `git pull --rebase origin main`
