@@ -31,9 +31,15 @@ Websoft9 控制台安装 Nextcloud 后，通过【我的应用】管理应用，
 
 ### 文档预览与编辑
 
-Nextcloud 自身不能对 Office 文件进行预览或编辑，需要集成 **第三方文档中间件** 才可以具备这样的功能。  
+#### 集成 Nextcloud Office
 
-下面介绍集成 OnlyOffice Docs 的详细使用方案：
+Nextcloud 内置 Nextcloud Office（基于 Collabora Online 开发版，简称 CODE）。 
+
+只需安装 CODE 插件，即可启用内置的 CODE 服务器，实现文档编辑与预览。
+
+#### 集成 ONLYOFFICE Docs
+
+Nextcloud 也支持集成第三方文档服务器，下面介绍集成 OnlyOffice Docs 的详细使用方案：
 
 1. 登陆到 Websoft9 控制台的“应用商店”，安装 OnlyOffice Docs
 
