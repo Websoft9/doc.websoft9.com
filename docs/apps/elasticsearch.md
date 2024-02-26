@@ -2,6 +2,7 @@
 title: Elasticsearch
 slug: /elasticsearch
 tags:
+  - Elastic Stacks
   - ELK
   - 日志分析
   - 大数据
@@ -17,20 +18,27 @@ import Meta from './_include/elasticsearch.md';
 
 Websoft9 控制台安装 Elasticsearch 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
 
-1. 使用本地电脑浏览器访问，进入 Elastic Stack 登录界面
-   ![ELK 登录页面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-login-websoft9.png)
+1. 使用本地电脑浏览器访问，进入 Elasticsearch API 认证提示
 
-2. 输入账号密码（[不知道账号密码？](./user/credentials)），成功登录到 Elastic Stack 后台  
-   ![ELK 后台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-bkreminder-websoft9.png)
-   ![ELK 控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-dashboard-websoft9.png)
+2. 输入用户名（elastic）和密码，成功后会输出 API 基本信息
 
-### 安装 Logstash
+### 获取 Enrollment Token{#token}
 
-Elasticsearch 应用中默认不含 Logstash，可在 Websoft9 应用商店中安装或提前准确其他的 Logstash。
+Enrollment Token 是用于 Kibana 除此连接的必要信息。可以在 Elasticsearch 中运行重置命令获取：
+
+```
+/usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kibana
+```
+
+### 使用 Kibana 管理{#kibaba}
+
+Elasticsearch 应用中默认不含 [Kibana](./kibana)。可以通过 Websoft9 应用商店中安装或提前准确其他的 Kibana  
+
+![Kibana](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kibana/kibana-gui-websoft9.png)
 
 ### 连接 Logstash 并分析{#logstash}
 
-Logstash 作为数据的采集者，它是如何将数据传输到 Elasticsearch 这个数据存储中的呢？
+[Logstash](./logstash) 是数据的采集、加工和传输管道，它是如何与 Elasticsearch 配套工作的呢？
 
 1. 编辑 Logstash 配置文件
 
@@ -82,10 +90,7 @@ Logstash 作为数据的采集者，它是如何将数据传输到 Elasticsearch
 
 ## 配置选项{#configs}
 
-- Kibana 配置文件：*/path/kibana/config/kibana.yml*   
-- Elasticsearch 配置文件：*/path/elasticsearch/config/elasticsearch.yml*  
-- Logstash 配置文件：*/path/logstash/pipeline/logstash.conf*  
-- [SQL CLI](https://www.elastic.co/guide/en/elasticsearch/reference/current/sql-cli.html)
+- 默认管理员账号：elastic
 - [Elasticsearch API](https://www.elastic.co/guide/en/elasticsearch/reference/current/http-clients.html)
 - 多语言（✅）：Kibana 配置文件中增加 `i18n.locale: "zh-CN"`
 - 开源许可：[ELASTIC-LICENSE](https://github.com/elastic/elasticsearch/blob/master/licenses/ELASTIC-LICENSE-2.0.txt)
@@ -94,21 +99,17 @@ Logstash 作为数据的采集者，它是如何将数据传输到 Elasticsearch
 
 ### 配置 SMTP
 
-Elasticsearch 配置 SMTP 发邮件的步骤：：
+1. 登录 Kibana 控制台，依次打开：【Stack Management】>【Watcher】，增加一个 [Email Action](https://www.elastic.co/guide/en/elasticsearch/reference/current/actions.html)
 
-1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
-
-2. 登录 Elasticsearch 控制台，依次打开：【Stack Management】>【Watcher】，增加一个 [Email Action](https://www.elastic.co/guide/en/elasticsearch/reference/current/actions.html)
-
-3. 编辑 Elasticsearch 的配置文件，增加 [Email 配置](https://www.elastic.co/guide/en/elasticsearch/reference/current/actions-email.html)
-
-### 修改密码
-
-登录 Kibana 后，右上角用户图标的【用户配置文件】即可修改密码
+3. 增加 [Email 配置](https://www.elastic.co/guide/en/elasticsearch/reference/current/actions-email.html)
 
 ### 重置密码
 
-修改编排文件 `.env` 中的 **DB_ES_PASSWORD** 变量即重置密码
+ElasticSearch 容器中运行下面的重置密码命令即可：
+
+   ```
+   /usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic
+   ```
 
 ### 备份与恢复
 
@@ -122,7 +123,7 @@ Elastic 内置快照备份功能（参考：[官方文档](https://www.elastic.c
 
 检查 Logstash 的 pipeline 配置文件中 Elasticsearch 账号密码是否正确
 
-#### Elasticsearch 无法登陆？
+#### TOO_MANY_REQUESTS ... disk usage？
 
 如果现实下面的错误信息，即表明磁盘空间不足。  
 ```
@@ -139,29 +140,13 @@ ES 对磁盘空间有较高的要求，建议准备足够的空间。
 
 - Elasticsearch 是一个存储数据和检索数据等数据库
 - Logstash 是数据提取、清洗和整理的中间件
-- Kibana 是 Elasticsearch 的可视化管理分析界面，Kibana 依赖 Elasticsearch，不能单独运行
+- Kibana 是 Elasticsearch 的可视化管理分析界面，Kibana 依赖 Elasticsearch
 
 另外，随着 Elastic 公司不断发展，他们把更多的产品加入到了 ELK 家族，例如：一个日志采集工具 Beats
 
 下面是 Elastic Stack 用于日志场景的典型架构图
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-arch001-websoft9.png)
-
-#### Elastic 认证机制是什么？
-
-Elastic 的[安全](https://elasticstack.blog.csdn.net/article/details/100548174)是由 x-pack 所提供的。在 7.0 版本之前，这个是商用的版本，需要进行安装，并购买。从 Elastic Stack 7.0 之后，x-pack 都已经在发布版中，只需配置即可。
-
-Elasticsearch 配置文件中启动下面的项，即开启账号密码认证。
-
-```
-xpack.security.enabled: true
-```
-
-Elasticsearch 镜像支持用户名和密码的环境变量，因此非常方便设置。   
-
-Elasticsearch 设置认证后，Kibana 和 Logstash 对应的认证处理方式如下：
-
-- Kibana：镜像提供 **ELASTICSEARCH_USERNAME** 和 **ELASTICSEARCH_PASSWORD** 两个环境变量参数
 
 #### Elasticsearch 全部免费吗？
 
