@@ -32,7 +32,7 @@ Enrollment Token 是用于 Kibana 除此连接的必要信息。可以在 Elasti
 
 ### 使用 Kibana 管理{#kibaba}
 
-Elasticsearch 应用中默认不含 [Kibana](./kibana)。可以通过 Websoft9 应用商店中安装或提前准确其他的 Kibana  
+Elasticsearch 应用中默认不含 [Kibana](./kibana)，用户可以通过 Websoft9 应用商店中安装 Kibana。    
 
 ![Kibana](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kibana/kibana-gui-websoft9.png)
 

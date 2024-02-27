@@ -29,11 +29,6 @@ Websoft9 控制台安装 Superset 后，通过【我的应用】管理应用，�
 4. 修改语言：通过右上角国旗图标设置你所需的语言
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/superset/superset-setlanguagech-websoft9.png)
 
-### 快速了解
-
-- CLI：Usage: superset [OPTIONS] COMMAND [ARGS]...
-- [API](https://superset.apache.org/docs/api) 
-- [Flask-AppBuilder](https://flask-appbuilder.readthedocs.io/en/latest/security.html#supported-authentication-types)
 
 ### 从 MySQL 中分析数据
 
@@ -74,26 +69,30 @@ pip install psycopg2
 pip install psycopg2 -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
+## 配置选项
+
+- CLI：Usage: superset [OPTIONS] COMMAND [ARGS]...
+- [API](https://superset.apache.org/docs/api) 
+- [Flask-AppBuilder](https://flask-appbuilder.readthedocs.io/en/latest/security.html#supported-authentication-types)
+- 配置文件：/src/docker/pythonpath_dev/superset_config.py，配置项参考：[config.py](https://github.com/apache/superset/blob/master/superset/config.py)
 
 ## 管理维护{#administrator}
 
 ### 更换 Logo
 
-如果打算用自己的 Logo 更换 Superset 容器中默认的 Logo，具体的步骤如下：
+SuperSet 不支持从界面上更换 Logo，所以只能从源码角度进行 Logo 替换：
 
-1. 使用 SFTP 上传你的 Logo 到服务器 /data 目录下
+1. 上传 Logo 到服务器，命名为：superset-logo-horiz.png
 
-2. 将 Logo 更名为 superset-logo-horiz
-
-3. 运行下面的命令，更换 Superset 官方默认 Logo
+2. 通过 docker cp 命令拷贝到容器。范例参考如下：
 
    ```
-   docker cp /data/superset-logo-horiz.png superset-app:/app/superset/static/assets/images/superset-logo-horiz.png
+   docker cp /path/superset-logo-horiz.png superset-containername:/app/superset/static/assets/images/superset-logo-horiz.png
    ```
 
-   > superset-app 为 SuperSet 容器名称。
+   > /path 是服务器上 Logo 所在的文件夹路径；superset-containername 为 SuperSet 容器名称
 
-4. 刷新 Superset 后台页面，查看更换效果
+3. 刷新 Superset 后台页面，查看更换效果
 
 ### 配置 SMTP
 
@@ -133,10 +132,6 @@ Superset 配置 SMTP 发邮件的步骤：
    ```
    update ab_user set password='pbkdf2:sha256:150000$w8vfDHis$b9c8fa353137417946766ed87cf20510da7e1e3a7b79eef37426330abef552bf' where username='admin';
    ```
-
-### 升级
-
-
 
 ## 故障
 

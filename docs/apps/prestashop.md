@@ -21,7 +21,7 @@ Websoft9 控制台安装 Prestashop 后，通过【我的应用】管理应用�
 1. 前台商城
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-site-websoft9.png)
 
-2. 登陆页面  
+2. 登陆页面
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-login-websoft9.png)
 
 3. 后台
@@ -102,6 +102,7 @@ if (!defined('_PS_MODE_DEMO_')) {
 
 配置过程可能需要用到的命令、配置文件等
 
+- 后台登录地址：通过 Websoft9 控制台我的应用查看
 - [configuring-prestashop](https://devdocs.prestashop-project.org/8/development/configuration/configuring-prestashop/)  
 - [list-of-settings](https://devdocs.prestashop-project.org/8/development/configuration/list-of-settings/)
 - CLI
@@ -115,6 +116,21 @@ if (!defined('_PS_MODE_DEMO_')) {
 
 ## 管理维护{#administrator}
 
+### 使用 CLI
+
+- [configuring-prestashop](https://devdocs.prestashop-project.org/8/development/configuration/configuring-prestashop/)  
+- [list-of-settings](https://devdocs.prestashop-project.org/8/development/configuration/list-of-settings/)
+
+进入 PrestaShop 容器，运行如下命令：
+
+   ```
+   # list all cli
+   php bin/console list
+
+   # get help of prestashop:config
+   php bin/console prestashop:config -h
+   ```
+
 ### 设置维护模式{#maintenance}
 
 登录 PrestaShop 后台，打开：【Shop Parameters】>【General】>【Maintenance】，设置维护模式
@@ -122,24 +138,19 @@ if (!defined('_PS_MODE_DEMO_')) {
 
 ### 配置 SMTP{#smtp}
 
-1. 登录到 PrestaShop 后台，完成 SMTP 参数设置  
-  
-   - 依次打开：【配置】>【高级参数】>【邮箱】，选择第二项【设置我的SMTP参数】
-     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-smtp-1-websoft9.png)
+1. 登录到 PrestaShop 后台，依次打开：【配置】>【高级参数】>【邮箱】，选择第二项【设置我的SMTP参数】
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-smtp-1-websoft9.png)
 
-   - 准确的填写你的 SMTP 参数
-     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-smtp-2-websoft9.png) 
-
-2. 发送测试邮件
+2. 准确的填写你的 SMTP 参数，发送测试邮件
      
 
 ### 修改 URL {#url}
 
 更换域名后，需设置 PrestaShop URL:
 
-1. 登录 PrestaShop 后台，将 PrestaShop [设置为维护模式](#maintenance)
+1. 登录 PrestaShop 后台，将 PrestaShop [设置为维护模式](#maintenance) （可选操作）
 
-2. 打开：【Shop Parameters】>【Traffic&SEO】，修改它
+2. 依次打开：Shop Parameters > SEO & URLs > Set shop URL 修改
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/prestashop-seturl-websoft9.png)
 
 ### 数据库备份
