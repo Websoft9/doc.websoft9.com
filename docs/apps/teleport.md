@@ -30,8 +30,9 @@ Websoft9 控制台安装 Teleport 后，还需要完成如下几个步骤，方�
 
 3. 在 Teleport 容器中运行如下命令，创建一个超级用户，同时会生产注册链接（URL）
    ```
-   tctl users add admin --roles=editor,auditor,access
+   tctl users add admin --roles=editor,auditor,access --logins=root,ubuntu,ec2-user
    ```
+   > --logins=root,ubuntu,ec2-user 是必须的，否则后面无法连接到被管理的 Linux
 
 4. 在本地浏览中运行注册链接，完成密码设置  
 
@@ -54,6 +55,7 @@ Websoft9 控制台安装 Teleport 后，还需要完成如下几个步骤，方�
 3. 登录到远程 Linux 服务器，将上一步的链接复制到命令行界面，开始安装
 
 4. 安装成功后，回到 Teleport 控制台，Teleport 会自动检测到客户端并提示用户根据向导完成后续步骤
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teleport/teleport-connectlinux-ss-websoft9.png)
 
 ## 配置选项{#configs}
 

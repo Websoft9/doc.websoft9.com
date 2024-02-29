@@ -37,7 +37,11 @@ output_file_name = f"{args.appname}.md"
 output_file_path = os.path.join(output_path, output_file_name)
 
 # 保存渲染后的内容到指定文件
-with open(output_file_path, 'w', encoding='utf-8') as f:
-    f.write(rendered_template)
+# 检查文件是否存在
+if os.path.exists(output_file_path):
+    raise FileExistsError(f"File '{output_file_path}' already exists.")
+else:
+    with open(output_file_path, 'w', encoding='utf-8') as f:
+        f.write(rendered_template)
 
 print(f"Template rendered and saved to {output_file_path}")
