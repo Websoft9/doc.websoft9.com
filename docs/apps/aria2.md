@@ -2,9 +2,9 @@
 title: Aria2
 slug: /aria2
 tags:
-  - Web 面板
-  - 可视化
-  - GUI
+  - 离线下载
+  - Web下载
+  - Bittorrent
 ---
 
 import Meta from './_include/aria2.md';
@@ -13,7 +13,7 @@ import Meta from './_include/aria2.md';
 
 ## 入门指南{#guide}
 
-### 初始化{#wizard}
+### 连接 Aria2 RPC 服务{#wizard}
 
 Websoft9 控制台安装 Aria2 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。
 
@@ -27,26 +27,16 @@ Websoft9 控制台安装 Aria2 后，通过【我的应用】管理应用，在*
 
    ![Aria2 配置](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aria2/aria2-connectok-websoft9.png)
 
-### 设置语言{#language}
-
-Aria2 支持中英文，可在【AriaNg 设置】菜单设置语言。
-
-   ![Aria2 配置](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aria2/aria2-language-websoft9.png)
-
-### 下载文件{#download}
-
-新建一个下载任务，可以支持多个文件同时下载。
-
-   ![Aria2 配置](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aria2/aria2-download-websoft9.png)
-
-   ![Aria2 配置](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aria2/aria2-downloadok-websoft9.png)
 
 ## 配置选项{#configs}
 
-- 配置文件：/config/aria2.conf
-- 多语言（✅）
+- 多语言（✅）：可在【AriaNg 设置】菜单设置语言
 
 ## 管理维护{#administrator}
 
 ## 故障
+
+#### Aria2 连接失败？
+
+确保 Aria2 的 RPC Secret 正确。例如：密码中包含 @ 会导致无法设置密码。  
 

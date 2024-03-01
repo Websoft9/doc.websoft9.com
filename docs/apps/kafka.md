@@ -13,24 +13,14 @@ import Meta from './_include/kafka.md';
 
 ## 入门指南{#guide}
 
-### 初始化{#wizard}
+### 可视化管理 Kafka 集群
 
-Websoft9 控制台安装 Kafka 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
-
-### 日志管理
-
-配置文件有如下日志相关的配置项：
-
-```
-log.cleanup.policy=delete #添加 启用删除策略配置段
-log.retention.hours=168    #默认7天
-log.retention.check.interval.ms=300000 #默认每5分钟检查一次
-log.segment.bytes=1073741824 #默认每个segment的大小为1GB
-```
+通过 Websoft9 应用商店，安装 [Redpanda Console](./redpandaconsole) 实现可视化管理 Kafka 集群
 
 ## 配置选项{#configs}
 
-- 配置文件：/opt/bitnami/kafka/config/server.propertie
+- 认证授权控制：Kafka 镜像支持多种认证授权机制，需自行设置
+- 自定义配置：建议通过环境变量设置
 - 命令行
   ```
   # kafka
@@ -44,12 +34,6 @@ log.segment.bytes=1073741824 #默认每个segment的大小为1GB
 
 ## 管理维护{#administrator}
 
-### 升级
-
-官方文档：[Upgrading From Previous Versions](https://kafka.apache.org/documentation/#upgrade)
-
-### Kafka 集群
-
-另见由 Websoft9 提供的 Kafka 集群解决方案。
+参考：[Bitnami Kafka Docs](https://github.com/bitnami/containers/tree/main/bitnami/kafka)
 
 ## 故障
