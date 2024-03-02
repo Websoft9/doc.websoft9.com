@@ -1,7 +1,13 @@
 # Template
 
-cd to this directory, and run below command to create application docs:
+## Create app docs
+
+Run below command at **/template** directory to create application docs:
 
 ```
-python3 create_app.py --appname teleport  --trademark Teleport  --i18n zh
+# for zh
+python3 create_app.py --appname homeassistant   --trademark "Home Assistant"   --i18n zh
+
+# for en
+python3 create_app.py --appname homeassistant   --trademark "Home Assistant"   --i18n en
 ```
