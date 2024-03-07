@@ -7,9 +7,7 @@ tags:
   - navidrome
 ---
 
-import Meta from './_include/navidrome.md';
 
-<Meta name="meta" />
 
 ## 入门指南{#guide}
 
