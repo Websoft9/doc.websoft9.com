@@ -13,6 +13,10 @@ import Meta from './_include/bitwarden.md';
 
 ## 入门指南{#guide}
 
+### 安装{#install}
+
+安装页面必须输入安装 ID 和 KEY，可以在 [Bitwarden 官网申请](https://bitwarden.com/host)。
+
 ### 初始化{#wizard}
 
 Websoft9 控制台安装 Bitwarden 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
