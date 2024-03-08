@@ -21,3 +21,11 @@
 #### 异常有哪些参数类型？
 
 Type: 'ignore' | 'log' | 'warn' | 'throw'
+
+#### Action json2md.yml（Generate Apps list for docs）执行失败？
+
+1. 下载最新的制品 media_latest.zip并解压
+2. 查找product_zh.json中【"title": "产品"】，并找出它的appname
+3. 需要保证这个app的父catalog不是一级目录
+4. 重新更新media制品后action即可正常执行
+
