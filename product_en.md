@@ -4,399 +4,443 @@ Docs of hundreds of pre-packaged apps below
 
 ## AI + Machine Learning
 
-- [AutoGPT Next Web](./autogptnextweb)
+- [AutoGPT Next Web](../autogptnextweb)
 
-- [ChatGPT Next Web](./chatgptnextweb)
+- [ChatGPT Next Web](../chatgptnextweb)
 
-- [GeminiProChat](./geminiprochat)
+- [GeminiProChat](../geminiprochat)
 
-- [TensorFlow](./tensorflow)
+- [TensorFlow](../tensorflow)
 
 ## Data Analytics
 
-- [Elasticsearch](./elasticsearch)
+- [Elastic Kibana](../kibana)
 
-- [Grafana](./grafana)
+- [Elastic Logstash](../logstash)
 
-- [Graylog](./graylog)
+- [Elasticsearch](../elasticsearch)
 
-- [Knowage](./knowage)
+- [Grafana](../grafana)
 
-- [Metabase](./metabase)
+- [Graylog](../graylog)
 
-- [OpenSearch](./opensearch)
+- [Knowage](../knowage)
 
-- [SuperSet](./superset)
+- [Metabase](../metabase)
 
-- [Typesense](./typesense)
+- [OpenSearch](../opensearch)
+
+- [SuperSet](../superset)
+
+- [Typesense](../typesense)
 
 ## Business Operation
 
-- [Akaunting](./akaunting)
+- [Akaunting](../akaunting)
 
-- [Appsmith](./appsmith)
+- [Appsmith](../appsmith)
 
-- [Budibase](./budibase)
+- [Budibase](../budibase)
 
-- [Chatwoot ](./chatwoot)
+- [Chatwoot ](../chatwoot)
 
-- [Directus](./directus)
+- [Directus](../directus)
 
-- [Discourse](./discourse)
+- [Discourse](../discourse)
 
-- [Dolibarr](./dolibarr)
+- [Dolibarr](../dolibarr)
 
-- [ERPNext](./erpnext)
+- [ERPNext](../erpnext)
 
-- [EspoCRM ](./espocrm)
+- [EspoCRM ](../espocrm)
 
-- [Mautic](./mautic)
+- [Frappe](../frappe)
 
-- [Odoo](./odoo)
+- [Mautic](../mautic)
 
-- [Rocket.Chat](./rocketchat)
+- [Odoo](../odoo)
 
-- [Strapi](./strapi)
+- [Rocket.Chat](../rocketchat)
 
-- [Tooljet](./tooljet)
+- [Strapi](../strapi)
 
-- [WordPress](./wordpress)
+- [Tooljet](../tooljet)
 
-- [Zammad](./zammad)
+- [WordPress](../wordpress)
+
+- [Zammad](../zammad)
 
 ## Design & Create
 
-- [AITable](./aitable)
+- [AITable](../aitable)
 
-- [APEX](./apex)
+- [APEX](../apex)
 
-- [Appsmith](./appsmith)
+- [Appsmith](../appsmith)
 
-- [Budibase](./budibase)
+- [Budibase](../budibase)
 
-- [Directus](./directus)
+- [Directus](../directus)
 
-- [Excalidraw](./excalidraw)
+- [Excalidraw](../excalidraw)
 
-- [NocoDB](./nocodb)
+- [Frappe](../frappe)
 
-- [Nocobase](./nocobase)
+- [NocoDB](../nocodb)
 
-- [Scratch](./scratch)
+- [Nocobase](../nocobase)
 
-- [Strapi](./strapi)
+- [Penpot](../penpot)
 
-- [TensorFlow](./tensorflow)
+- [Scratch](../scratch)
 
-- [Tooljet](./tooljet)
+- [Strapi](../strapi)
 
-- [WordPress](./wordpress)
+- [TensorFlow](../tensorflow)
+
+- [Tooljet](../tooljet)
+
+- [WordPress](../wordpress)
 
 ## Content Management
 
-- [Apache Answer](./answer)
+- [Apache Answer](../answer)
 
-- [Directus](./directus)
+- [Directus](../directus)
 
-- [Discourse](./discourse)
+- [Discourse](../discourse)
 
-- [Discuz](./discuz)
+- [Discuz](../discuz)
 
-- [Drupal](./drupal)
+- [Drupal](../drupal)
 
-- [Ghost](./ghost)
+- [Ghost](../ghost)
 
-- [HumHub](./humhub)
+- [HumHub](../humhub)
 
-- [Joomla](./joomla)
+- [Jellyfin](../jellyfin)
 
-- [Magento](./magento)
+- [Joomla](../joomla)
 
-- [Matomo Analytics](./matomo)
+- [Magento](../magento)
 
-- [MediaWiki](./mediawiki)
+- [Matomo Analytics](../matomo)
 
-- [Moodle](./moodle)
+- [MediaWiki](../mediawiki)
 
-- [Plausible](./plausible)
+- [Moodle](../moodle)
 
-- [Prestashop](./prestashop)
+- [Navidrome](../navidrome)
 
-- [SSCMS](./sscms)
+- [Plausible](../plausible)
 
-- [Strapi](./strapi)
+- [Prestashop](../prestashop)
 
-- [Typo3](./typo3)
+- [SSCMS](../sscms)
 
-- [Umami](./umami)
+- [Strapi](../strapi)
 
-- [WordPress](./wordpress)
+- [Typo3](../typo3)
 
-- [XWiki](./xwiki)
+- [Umami](../umami)
 
-- [nopCommerce](./nopcommerce)
+- [WordPress](../wordpress)
+
+- [XWiki](../xwiki)
+
+- [nopCommerce](../nopcommerce)
 
 ## Communication
 
-- [Chatwoot ](./chatwoot)
+- [Chatwoot ](../chatwoot)
 
-- [Rocket.Chat](./rocketchat)
+- [Rocket.Chat](../rocketchat)
 
-- [SRS](./srs)
+- [SRS](../srs)
 
-- [mattermost](./mattermost)
+- [mattermost](../mattermost)
 
-- [screego](./screego)
+- [screego](../screego)
 
 ## Collaboration & Office
 
-- [Alfresco](./alfresco)
+- [Alfresco](../alfresco)
 
-- [Cloudreve](./cloudreve)
+- [Bitwarden](../bitwarden)
 
-- [Excalidraw](./excalidraw)
+- [Cloudreve](../cloudreve)
 
-- [Focalboard](./focalboard)
+- [Excalidraw](../excalidraw)
 
-- [Kasmweb](./kasmweb)
+- [Focalboard](../focalboard)
 
-- [Kodbox](./kodbox)
+- [Kasmweb](../kasmweb)
 
-- [Nextcloud ](./nextcloud)
+- [Kodbox](../kodbox)
 
-- [ONLYOFFICE Workspace](./onlyoffice)
+- [Nextcloud ](../nextcloud)
 
-- [OwnCloud ](./owncloud)
+- [ONLYOFFICE Workspace](../onlyoffice)
 
-- [Pydio Cells](./pydio)
+- [OwnCloud ](../owncloud)
 
-- [Redmine](./redmine)
+- [Pydio Cells](../pydio)
 
-- [Seafile](./seafile)
+- [Redmine](../redmine)
 
-- [Zentao](./zentao)
+- [Seafile](../seafile)
 
-- [mattermost](./mattermost)
+- [Zentao](../zentao)
+
+- [aria2](../aria2)
+
+- [mattermost](../mattermost)
 
 ## Automation
 
-- [Ansible](./ansible)
+- [Ansible](../ansible)
 
-- [GitLab](./gitlab)
+- [GitLab](../gitlab)
 
-- [Gitea](./gitea)
+- [Gitea](../gitea)
 
-- [Huginn](./huginn)
+- [Huginn](../huginn)
 
-- [Jenkins](./jenkins)
+- [Jenkins](../jenkins)
 
-- [TeamCity](./teamcity)
+- [TeamCity](../teamcity)
 
-- [n8n](./n8n)
+- [n8n](../n8n)
 
 ## Databases
 
-- [ArangoDB](./arangodb)
+- [ArangoDB](../arangodb)
 
-- [Bytebase](./bytebase)
+- [Bytebase](../bytebase)
 
-- [Chronograf](./chronograf)
+- [Chronograf](../chronograf)
 
-- [ClickHouse](./clickhouse)
+- [ClickHouse](../clickhouse)
 
-- [CloudBeaver](./cloudbeaver)
+- [CloudBeaver](../cloudbeaver)
 
-- [CouchDB](./couchdb)
+- [CouchDB](../couchdb)
 
-- [Dgraph](./dgraph)
+- [Dgraph](../dgraph)
 
-- [Directus](./directus)
+- [Directus](../directus)
 
-- [Elasticsearch](./elasticsearch)
+- [Elasticsearch](../elasticsearch)
 
-- [MariaDB](./mariadb)
+- [MariaDB](../mariadb)
 
-- [MongoDB](./mongodb)
+- [MongoDB](../mongodb)
 
-- [MongoDB Compass](./mongocompass)
+- [MongoDB Compass](../mongocompass)
 
-- [MySQL](./mysql)
+- [MySQL](../mysql)
 
-- [Neo4j](./neo4j)
+- [Neo4j](../neo4j)
 
-- [OpenSearch](./opensearch)
+- [OpenSearch](../opensearch)
 
-- [Oracle Database](./oracle)
+- [Oracle Database](../oracle)
 
-- [PostgREST](./postgrest)
+- [PostgREST](../postgrest)
 
-- [PostgreSQL](./postgresql)
+- [PostgreSQL](../postgresql)
 
-- [Redis ](./redis)
+- [Redis ](../redis)
 
-- [RedisInsight](./redisinsight)
+- [RedisInsight](../redisinsight)
 
-- [RethinkDB](./rethinkdb)
+- [RethinkDB](../rethinkdb)
 
-- [SQL Server Express](./sqlserver)
+- [SQL Server Express](../sqlserver)
 
-- [chat2DB](./chat2db)
+- [chat2DB](../chat2db)
 
-- [influxdb](./influxdb)
+- [influxdb](../influxdb)
 
-- [memcached](./memcached)
+- [memcached](../memcached)
 
-- [pgAdmin](./pgadmin)
+- [pgAdmin](../pgadmin)
 
-- [phpMyAdmin](./phpmyadmin)
+- [phpMyAdmin](../phpmyadmin)
 
 ## IoT
 
-- [Chronograf](./chronograf)
+- [Chronograf](../chronograf)
 
-- [Home Assistant](./homeassistant)
+- [EMQX](../emqx)
 
-- [ThingsBoard](./thingsboard)
+- [Eclipse Mosquitto](../mosquitto)
 
-- [influxdb](./influxdb)
+- [Home Assistant](../homeassistant)
+
+- [MQTTX](../mqttx)
+
+- [ThingsBoard](../thingsboard)
+
+- [influxdb](../influxdb)
 
 ## Networking
 
-- [Apache HTTP Server](./apache)
+- [Apache HTTP Server](../apache)
 
-- [Caddy](./caddy)
+- [Apache ZooKeeper](../zookeeper)
 
-- [HAProxy](./haproxy)
+- [Caddy](../caddy)
 
-- [Kong](./kong)
+- [HAProxy](../haproxy)
 
-- [Tinyproxy](./tinyproxy)
+- [Kong Gateway (OSS)](../kong)
 
-- [Traefik Proxy](./traefik)
+- [Tinyproxy](../tinyproxy)
+
+- [Traefik Proxy](../traefik)
 
 ## Games
 
-- [Palworld](./palworld)
+- [Palworld](../palworld)
 
 ## IT Developer
 
-- [AITable](./aitable)
+- [AITable](../aitable)
 
-- [APEX](./apex)
+- [APEX](../apex)
 
-- [Appsmith](./appsmith)
+- [Appsmith](../appsmith)
 
-- [Budibase](./budibase)
+- [Budibase](../budibase)
 
-- [Directus](./directus)
+- [Directus](../directus)
 
-- [Focalboard](./focalboard)
+- [Focalboard](../focalboard)
 
-- [GitLab](./gitlab)
+- [Frappe](../frappe)
 
-- [Gitea](./gitea)
+- [GitLab](../gitlab)
 
-- [Gogs](./gogs)
+- [Gitea](../gitea)
 
-- [Jenkins](./jenkins)
+- [Gogs](../gogs)
 
-- [JupyterHub](./jupyterhub)
+- [Jenkins](../jenkins)
 
-- [NocoDB](./nocodb)
+- [JupyterHub](../jupyterhub)
 
-- [Nocobase](./nocobase)
+- [NocoDB](../nocodb)
 
-- [Redmine](./redmine)
+- [Nocobase](../nocobase)
 
-- [Scratch](./scratch)
+- [Redmine](../redmine)
 
-- [Strapi](./strapi)
+- [Scratch](../scratch)
 
-- [TeamCity](./teamcity)
+- [Strapi](../strapi)
 
-- [Tooljet](./tooljet)
+- [TeamCity](../teamcity)
 
-- [WordPress](./wordpress)
+- [Tooljet](../tooljet)
 
-- [Zentao](./zentao)
+- [WordPress](../wordpress)
 
-- [code-server](./codeserver)
+- [Zentao](../zentao)
+
+- [code-server](../codeserver)
 
 ## IT Architecture
 
-- [ActiveMQ](./activemq)
+- [ActiveMQ](../activemq)
 
-- [Apache HTTP Server](./apache)
+- [Apache HTTP Server](../apache)
 
-- [Caddy](./caddy)
+- [Apache Kafka](../kafka)
 
-- [Duplicati](./duplicati)
+- [Apache ZooKeeper](../zookeeper)
 
-- [Elasticsearch](./elasticsearch)
+- [Caddy](../caddy)
 
-- [HAProxy](./haproxy)
+- [Collabora Online Development Edition](../collabora)
 
-- [HashiCorp Vault](./vault)
+- [Duplicati](../duplicati)
 
-- [Kafka](./kafka)
+- [EMQX](../emqx)
 
-- [Kasmweb](./kasmweb)
+- [Eclipse Mosquitto](../mosquitto)
 
-- [Kong](./kong)
+- [Elasticsearch](../elasticsearch)
 
-- [Kopia](./kopia)
+- [HAProxy](../haproxy)
 
-- [MinIO](./minio)
+- [HashiCorp Vault](../vault)
 
-- [ONLYOFFICE Docs](./onlyofficedocs)
+- [Jellyfin](../jellyfin)
 
-- [PostgREST](./postgrest)
+- [Kasmweb](../kasmweb)
 
-- [RabbitMQ](./rabbitmq)
+- [Kong Gateway (OSS)](../kong)
 
-- [Redpanda Console](./redpandaconsole)
+- [MQTTX](../mqttx)
 
-- [SRS](./srs)
+- [MinIO](../minio)
 
-- [Syncthing](./syncthing)
+- [Navidrome](../navidrome)
 
-- [Tinyproxy](./tinyproxy)
+- [ONLYOFFICE Docs](../onlyofficedocs)
 
-- [Traefik Proxy](./traefik)
+- [PostgREST](../postgrest)
 
-- [Typesense](./typesense)
+- [RabbitMQ](../rabbitmq)
+
+- [Redpanda Console](../redpandaconsole)
+
+- [SRS](../srs)
+
+- [Syncthing](../syncthing)
+
+- [Tinyproxy](../tinyproxy)
+
+- [Traefik Proxy](../traefik)
+
+- [Typesense](../typesense)
 
 ## IT Monitor
 
-- [Duplicati](./duplicati)
+- [Duplicati](../duplicati)
 
-- [Grafana](./grafana)
+- [Grafana](../grafana)
 
-- [Graylog](./graylog)
+- [Graylog](../graylog)
 
-- [Kopia](./kopia)
+- [Netdata](../netdata)
 
-- [Netdata](./netdata)
+- [Prometheus](../prometheus)
 
-- [Redmine](./redmine)
+- [Redmine](../redmine)
 
-- [Syncthing](./syncthing)
+- [Syncthing](../syncthing)
 
-- [Zabbix](./zabbix)
+- [Uptime Kuma](../uptimekuma)
+
+- [Zabbix](../zabbix)
 
 ## IT Security
 
-- [ClamAV](./clamav)
+- [Bitwarden](../bitwarden)
 
-- [HashiCorp Vault](./vault)
+- [ClamAV](../clamav)
 
-- [Next Terminal](./nextterminal)
+- [HashiCorp Vault](../vault)
 
-- [Teleport](./teleport)
+- [Next Terminal](../nextterminal)
+
+- [Teleport](../teleport)
 
 ## Industries 
 
-- [AITable](./aitable)
+- [AITable](../aitable)
 
-- [SSCMS](./sscms)
+- [SSCMS](../sscms)
 

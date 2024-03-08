@@ -6,399 +6,443 @@
 
 ## 人工智能
 
-- [AutoGPT Next Web](./autogptnextweb)
+- [AutoGPT Next Web](../autogptnextweb)
 
-- [ChatGPT Next Web](./chatgptnextweb)
+- [ChatGPT Next Web](../chatgptnextweb)
 
-- [GeminiProChat](./geminiprochat)
+- [GeminiProChat](../geminiprochat)
 
-- [TensorFlow](./tensorflow)
+- [TensorFlow](../tensorflow)
 
 ## 大数据分析
 
-- [Elasticsearch](./elasticsearch)
+- [Elastic Kibana](../kibana)
 
-- [Grafana](./grafana)
+- [Elastic Logstash](../logstash)
 
-- [Graylog](./graylog)
+- [Elasticsearch](../elasticsearch)
 
-- [Knowage](./knowage)
+- [Grafana](../grafana)
 
-- [Metabase](./metabase)
+- [Graylog](../graylog)
 
-- [OpenSearch](./opensearch)
+- [Knowage](../knowage)
 
-- [SuperSet](./superset)
+- [Metabase](../metabase)
 
-- [Typesense](./typesense)
+- [OpenSearch](../opensearch)
+
+- [SuperSet](../superset)
+
+- [Typesense](../typesense)
 
 ## 企业运营
 
-- [Akaunting](./akaunting)
+- [Akaunting](../akaunting)
 
-- [Appsmith](./appsmith)
+- [Appsmith](../appsmith)
 
-- [Budibase](./budibase)
+- [Budibase](../budibase)
 
-- [Chatwoot ](./chatwoot)
+- [Chatwoot ](../chatwoot)
 
-- [Directus](./directus)
+- [Directus](../directus)
 
-- [Discourse](./discourse)
+- [Discourse](../discourse)
 
-- [Dolibarr](./dolibarr)
+- [Dolibarr](../dolibarr)
 
-- [ERPNext](./erpnext)
+- [ERPNext](../erpnext)
 
-- [EspoCRM](./espocrm)
+- [EspoCRM](../espocrm)
 
-- [Mautic](./mautic)
+- [Frappe](../frappe)
 
-- [Odoo](./odoo)
+- [Mautic](../mautic)
 
-- [Rocket.Chat](./rocketchat)
+- [Odoo](../odoo)
 
-- [Strapi](./strapi)
+- [Rocket.Chat](../rocketchat)
 
-- [Tooljet](./tooljet)
+- [Strapi](../strapi)
 
-- [WordPress](./wordpress)
+- [Tooljet](../tooljet)
 
-- [Zammad](./zammad)
+- [WordPress](../wordpress)
+
+- [Zammad](../zammad)
 
 ## 设计创作
 
-- [AITable 维格表](./aitable)
+- [AITable 维格表](../aitable)
 
-- [APEX](./apex)
+- [APEX](../apex)
 
-- [Appsmith](./appsmith)
+- [Appsmith](../appsmith)
 
-- [Budibase](./budibase)
+- [Budibase](../budibase)
 
-- [Directus](./directus)
+- [Directus](../directus)
 
-- [Excalidraw](./excalidraw)
+- [Excalidraw](../excalidraw)
 
-- [NocoDB](./nocodb)
+- [Frappe](../frappe)
 
-- [Nocobase](./nocobase)
+- [NocoDB](../nocodb)
 
-- [Scratch](./scratch)
+- [Nocobase](../nocobase)
 
-- [Strapi](./strapi)
+- [Penpot](../penpot)
 
-- [TensorFlow](./tensorflow)
+- [Scratch](../scratch)
 
-- [Tooljet](./tooljet)
+- [Strapi](../strapi)
 
-- [WordPress](./wordpress)
+- [TensorFlow](../tensorflow)
+
+- [Tooljet](../tooljet)
+
+- [WordPress](../wordpress)
 
 ## 网站
 
-- [Apache Answer](./answer)
+- [Apache Answer](../answer)
 
-- [Directus](./directus)
+- [Directus](../directus)
 
-- [Discourse](./discourse)
+- [Discourse](../discourse)
 
-- [Discuz](./discuz)
+- [Discuz](../discuz)
 
-- [Drupal](./drupal)
+- [Drupal](../drupal)
 
-- [Ghost](./ghost)
+- [Ghost](../ghost)
 
-- [HumHub](./humhub)
+- [HumHub](../humhub)
 
-- [Joomla](./joomla)
+- [Jellyfin](../jellyfin)
 
-- [Magento](./magento)
+- [Joomla](../joomla)
 
-- [Matomo Analytics](./matomo)
+- [Magento](../magento)
 
-- [MediaWiki](./mediawiki)
+- [Matomo Analytics](../matomo)
 
-- [Moodle](./moodle)
+- [MediaWiki](../mediawiki)
 
-- [Plausible](./plausible)
+- [Moodle](../moodle)
 
-- [Prestashop](./prestashop)
+- [Navidrome](../navidrome)
 
-- [SSCMS](./sscms)
+- [Plausible](../plausible)
 
-- [Strapi](./strapi)
+- [Prestashop](../prestashop)
 
-- [Typo3](./typo3)
+- [SSCMS](../sscms)
 
-- [Umami](./umami)
+- [Strapi](../strapi)
 
-- [WordPress](./wordpress)
+- [Typo3](../typo3)
 
-- [XWiki](./xwiki)
+- [Umami](../umami)
 
-- [nopCommerce](./nopcommerce)
+- [WordPress](../wordpress)
+
+- [XWiki](../xwiki)
+
+- [nopCommerce](../nopcommerce)
 
 ## 通信联络
 
-- [Chatwoot ](./chatwoot)
+- [Chatwoot ](../chatwoot)
 
-- [Rocket.Chat](./rocketchat)
+- [Rocket.Chat](../rocketchat)
 
-- [SRS](./srs)
+- [SRS](../srs)
 
-- [mattermost](./mattermost)
+- [mattermost](../mattermost)
 
-- [screego](./screego)
+- [screego](../screego)
 
 ## 协作办公
 
-- [Alfresco](./alfresco)
+- [Alfresco](../alfresco)
 
-- [Cloudreve](./cloudreve)
+- [Bitwarden](../bitwarden)
 
-- [Excalidraw](./excalidraw)
+- [Cloudreve](../cloudreve)
 
-- [Focalboard](./focalboard)
+- [Excalidraw](../excalidraw)
 
-- [Kasm Workspaces](./kasmweb)
+- [Focalboard](../focalboard)
 
-- [Kodbox 可道云](./kodbox)
+- [Kasm Workspaces](../kasmweb)
 
-- [Nextcloud ](./nextcloud)
+- [Kodbox 可道云](../kodbox)
 
-- [ONLYOFFICE Workspace](./onlyoffice)
+- [Nextcloud ](../nextcloud)
 
-- [OwnCloud ](./owncloud)
+- [ONLYOFFICE Workspace](../onlyoffice)
 
-- [Pydio Cells](./pydio)
+- [OwnCloud ](../owncloud)
 
-- [Redmine](./redmine)
+- [Pydio Cells](../pydio)
 
-- [Seafile](./seafile)
+- [Redmine](../redmine)
 
-- [Zentao](./zentao)
+- [Seafile](../seafile)
 
-- [mattermost](./mattermost)
+- [Zentao](../zentao)
+
+- [aria2](../aria2)
+
+- [mattermost](../mattermost)
 
 ## 自动化
 
-- [Ansible](./ansible)
+- [Ansible](../ansible)
 
-- [GitLab](./gitlab)
+- [GitLab](../gitlab)
 
-- [Gitea](./gitea)
+- [Gitea](../gitea)
 
-- [Huginn](./huginn)
+- [Huginn](../huginn)
 
-- [Jenkins](./jenkins)
+- [Jenkins](../jenkins)
 
-- [TeamCity](./teamcity)
+- [TeamCity](../teamcity)
 
-- [n8n](./n8n)
+- [n8n](../n8n)
 
 ## 数据库
 
-- [ArangoDB](./arangodb)
+- [ArangoDB](../arangodb)
 
-- [Bytebase](./bytebase)
+- [Bytebase](../bytebase)
 
-- [Chronograf](./chronograf)
+- [Chronograf](../chronograf)
 
-- [ClickHouse](./clickhouse)
+- [ClickHouse](../clickhouse)
 
-- [CloudBeaver](./cloudbeaver)
+- [CloudBeaver](../cloudbeaver)
 
-- [CouchDB](./couchdb)
+- [CouchDB](../couchdb)
 
-- [Dgraph](./dgraph)
+- [Dgraph](../dgraph)
 
-- [Directus](./directus)
+- [Directus](../directus)
 
-- [Elasticsearch](./elasticsearch)
+- [Elasticsearch](../elasticsearch)
 
-- [MariaDB](./mariadb)
+- [MariaDB](../mariadb)
 
-- [MongoDB](./mongodb)
+- [MongoDB](../mongodb)
 
-- [MongoDB Compass](./mongocompass)
+- [MongoDB Compass](../mongocompass)
 
-- [MySQL](./mysql)
+- [MySQL](../mysql)
 
-- [Neo4j](./neo4j)
+- [Neo4j](../neo4j)
 
-- [OpenSearch](./opensearch)
+- [OpenSearch](../opensearch)
 
-- [Oracle Database](./oracle)
+- [Oracle Database](../oracle)
 
-- [PostgreSQL](./postgresql)
+- [PostgREST](../postgrest)
 
-- [Redis ](./redis)
+- [PostgreSQL](../postgresql)
 
-- [RedisInsight](./redisinsight)
+- [Redis ](../redis)
 
-- [RethinkDB](./rethinkdb)
+- [RedisInsight](../redisinsight)
 
-- [SQL Server Express](./sqlserver)
+- [RethinkDB](../rethinkdb)
 
-- [Web server turns PostgreSQL into a RESTful API](./postgrest)
+- [SQL Server Express](../sqlserver)
 
-- [chat2DB](./chat2db)
+- [chat2DB](../chat2db)
 
-- [influxdb](./influxdb)
+- [influxdb](../influxdb)
 
-- [memcached](./memcached)
+- [memcached](../memcached)
 
-- [pgAdmin](./pgadmin)
+- [pgAdmin](../pgadmin)
 
-- [phpMyAdmin](./phpmyadmin)
+- [phpMyAdmin](../phpmyadmin)
 
 ## 物联网
 
-- [Chronograf](./chronograf)
+- [Chronograf](../chronograf)
 
-- [Home Assistant](./homeassistant)
+- [EMQX](../emqx)
 
-- [ThingsBoard](./thingsboard)
+- [Eclipse Mosquitto](../mosquitto)
 
-- [influxdb](./influxdb)
+- [Home Assistant](../homeassistant)
+
+- [MQTTX](../mqttx)
+
+- [ThingsBoard](../thingsboard)
+
+- [influxdb](../influxdb)
 
 ## 网络
 
-- [Apache HTTP Server](./apache)
+- [Apache HTTP Server](../apache)
 
-- [Caddy](./caddy)
+- [Apache ZooKeeper](../zookeeper)
 
-- [HAProxy](./haproxy)
+- [Caddy](../caddy)
 
-- [Kong](./kong)
+- [HAProxy](../haproxy)
 
-- [Tinyproxy](./tinyproxy)
+- [Kong Gateway (OSS)](../kong)
 
-- [Traefik Proxy](./traefik)
+- [Tinyproxy](../tinyproxy)
+
+- [Traefik Proxy](../traefik)
 
 ## 游戏
 
-- [Palworld 幻兽帕鲁](./palworld)
+- [Palworld 幻兽帕鲁](../palworld)
 
 ## IT 开发者
 
-- [AITable 维格表](./aitable)
+- [AITable 维格表](../aitable)
 
-- [APEX](./apex)
+- [APEX](../apex)
 
-- [Appsmith](./appsmith)
+- [Appsmith](../appsmith)
 
-- [Budibase](./budibase)
+- [Budibase](../budibase)
 
-- [Directus](./directus)
+- [Directus](../directus)
 
-- [Focalboard](./focalboard)
+- [Focalboard](../focalboard)
 
-- [GitLab](./gitlab)
+- [Frappe](../frappe)
 
-- [Gitea](./gitea)
+- [GitLab](../gitlab)
 
-- [Gogs](./gogs)
+- [Gitea](../gitea)
 
-- [Jenkins](./jenkins)
+- [Gogs](../gogs)
 
-- [JupyterHub](./jupyterhub)
+- [Jenkins](../jenkins)
 
-- [NocoDB](./nocodb)
+- [JupyterHub](../jupyterhub)
 
-- [Nocobase](./nocobase)
+- [NocoDB](../nocodb)
 
-- [Redmine](./redmine)
+- [Nocobase](../nocobase)
 
-- [Scratch](./scratch)
+- [Redmine](../redmine)
 
-- [Strapi](./strapi)
+- [Scratch](../scratch)
 
-- [TeamCity](./teamcity)
+- [Strapi](../strapi)
 
-- [Tooljet](./tooljet)
+- [TeamCity](../teamcity)
 
-- [WordPress](./wordpress)
+- [Tooljet](../tooljet)
 
-- [Zentao](./zentao)
+- [WordPress](../wordpress)
 
-- [code-server](./codeserver)
+- [Zentao](../zentao)
+
+- [code-server](../codeserver)
 
 ## IT 应用架构
 
-- [ActiveMQ](./activemq)
+- [ActiveMQ](../activemq)
 
-- [Apache HTTP Server](./apache)
+- [Apache HTTP Server](../apache)
 
-- [Caddy](./caddy)
+- [Apache Kafka](../kafka)
 
-- [Duplicati](./duplicati)
+- [Apache ZooKeeper](../zookeeper)
 
-- [Elasticsearch](./elasticsearch)
+- [Caddy](../caddy)
 
-- [HAProxy](./haproxy)
+- [Collabora 在线开发版](../collabora)
 
-- [HashiCorp Vault](./vault)
+- [Duplicati](../duplicati)
 
-- [Kafka](./kafka)
+- [EMQX](../emqx)
 
-- [Kasm Workspaces](./kasmweb)
+- [Eclipse Mosquitto](../mosquitto)
 
-- [Kong](./kong)
+- [Elasticsearch](../elasticsearch)
 
-- [Kopia](./kopia)
+- [HAProxy](../haproxy)
 
-- [MinIO](./minio)
+- [HashiCorp Vault](../vault)
 
-- [ONLYOFFICE Docs](./onlyofficedocs)
+- [Jellyfin](../jellyfin)
 
-- [RabbitMQ](./rabbitmq)
+- [Kasm Workspaces](../kasmweb)
 
-- [Redpanda Console](./redpandaconsole)
+- [Kong Gateway (OSS)](../kong)
 
-- [SRS](./srs)
+- [MQTTX](../mqttx)
 
-- [Syncthing](./syncthing)
+- [MinIO](../minio)
 
-- [Tinyproxy](./tinyproxy)
+- [Navidrome](../navidrome)
 
-- [Traefik Proxy](./traefik)
+- [ONLYOFFICE Docs](../onlyofficedocs)
 
-- [Typesense](./typesense)
+- [PostgREST](../postgrest)
 
-- [Web server turns PostgreSQL into a RESTful API](./postgrest)
+- [RabbitMQ](../rabbitmq)
+
+- [Redpanda Console](../redpandaconsole)
+
+- [SRS](../srs)
+
+- [Syncthing](../syncthing)
+
+- [Tinyproxy](../tinyproxy)
+
+- [Traefik Proxy](../traefik)
+
+- [Typesense](../typesense)
 
 ## IT 监控运维
 
-- [Duplicati](./duplicati)
+- [Duplicati](../duplicati)
 
-- [Grafana](./grafana)
+- [Grafana](../grafana)
 
-- [Graylog](./graylog)
+- [Graylog](../graylog)
 
-- [Kopia](./kopia)
+- [Netdata](../netdata)
 
-- [Netdata](./netdata)
+- [Prometheus](../prometheus)
 
-- [Redmine](./redmine)
+- [Redmine](../redmine)
 
-- [Syncthing](./syncthing)
+- [Syncthing](../syncthing)
 
-- [Zabbix](./zabbix)
+- [Uptime Kuma](../uptimekuma)
+
+- [Zabbix](../zabbix)
 
 ## IT 安全
 
-- [ClamAV](./clamav)
+- [Bitwarden](../bitwarden)
 
-- [HashiCorp Vault](./vault)
+- [ClamAV](../clamav)
 
-- [Next Terminal](./nextterminal)
+- [HashiCorp Vault](../vault)
 
-- [Teleport](./teleport)
+- [Next Terminal](../nextterminal)
+
+- [Teleport](../teleport)
 
 ## 行业
 
-- [AITable 维格表](./aitable)
+- [AITable 维格表](../aitable)
 
-- [SSCMS](./sscms)
+- [SSCMS](../sscms)
 
