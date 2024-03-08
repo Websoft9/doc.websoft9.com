@@ -32,6 +32,18 @@ Websoft9 控制台安装 MQTTX 后，通过【我的应用】管理应用，在*
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mqttx/mqttx-connect-rabbitmq-websoft9.png)
 
 
+### 集成 EMQX
+
+1. 准备好 EMQX
+
+   - Websoft9 应用商店安装 EMQX
+   - EMQX 配置 WebSocket 客户端连接，需开放 WebSocket 端口
+
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mqttx/mqttx-config-emqx-websoft9.png)
+
+2. MQTTX 连接 EMQX，并测试
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mqttx/mqttx-connect-emqx-websoft9.png)
+
 ## 配置选项{#configs}
 ## 管理维护{#administrator}
 
