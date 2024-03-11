@@ -33,3 +33,11 @@ Websoft9 支持[卸载](https://github.com/Websoft9/websoft9?tab=readme-ov-file#
 ```
 curl https://websoft9.github.io/websoft9/install/uninstall.sh | bash
 ```
+
+## 安装问题
+
+#### 安装成功，应用商店显示网络错误？
+
+这个问题的出现的常见原因有：
+
+- polkit.service 无法启动会导致 Cockpit 异常

@@ -13,20 +13,25 @@ import Meta from './_include/mosquitto.md';
 
 ## 入门指南{#guide}
 
-### 初始化{#wizard}
+### 开启认证
 
-Websoft9 控制台安装 Mosquitto 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。
+Mosquitto 开启认证有[多种方式](https://mosquitto.org/documentation/authentication-methods/)，下面我们介绍其中的[密码文件](https://mosquitto.org/man/mosquitto_passwd-1.html)方式：
 
-### 配置认证信息
+1. 进入 Mosquitto 容器，参考下面的命令创建一个密码文件（文件名、用户名和密码均可自定义）
+    ```
+    mosquitto_passwd -H sha512  -c -b /mosquitto/config/passwd_file yourusername yourpasssord
+    ```
 
-1. 进入容器，通过 **mosquitto_passwd** 命令设置用户名和密码
-```
-mosquitto_passwd -H sha512  -c -b /mosquitto/config/passwd_file username yourpasssord
-```
+2. 修改配置文件中的如下两项（必须）：
 
-2. 通过编排修改配置文件mosquitto.conf：指定密码文件路径，将 allow_anonymous 设置为 False
+   - password_file 设置为： /mosquitto/passwd_file
+   - allow_anonymous 设置为： false
 
-3. 重建应用，认证信息生效，需要用户名和密码才能连接
+3. 重建应用后生效
+
+### 可视化管理
+
+参考：[MQTTX](./mqttx)
 
 ## 配置选项{#configs}
 
