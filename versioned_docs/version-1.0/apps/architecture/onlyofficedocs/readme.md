@@ -160,6 +160,9 @@ ONLYOFFICE Docs 也提供了[自签名的 HTTPS](https://helpcenter.onlyoffice.c
    ```
 4. 退出 ONLYOFFICE Docs 容器，重启后生效
 
+### 企业版 License 激活
+
+将 License 文件放入容器内路径 **/var/www/onlyoffice/Data**, 可在对应的宿主机挂载目录去修改。
 
 ## 参数
 
