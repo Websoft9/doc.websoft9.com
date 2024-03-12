@@ -57,7 +57,7 @@ ONLYOFFICE Docs 默认设置是支持[多版本](https://helpcenter.onlyoffice.c
 
 ### 为什么通过 Websoft9 购买？
 
-Websoft9 是 ONLYOFFICE Docs 全球的合作伙伴，中国的技术支持中心之一。 通过 Websoft9 采购，可以帮助用户：
+Websoft9 是 ONLYOFFICE Docs [全球的合作伙伴](https://www.onlyoffice.com/search.aspx?search=websoft9)，中国的技术支持中心之一。 通过 Websoft9 采购，可以帮助用户：
 
 - 采购收费版本，最少 10% 的折扣
 - 更全面的产品支持
@@ -65,11 +65,11 @@ Websoft9 是 ONLYOFFICE Docs 全球的合作伙伴，中国的技术支持中心
 
 ### 同时连接数规则{#onlyofficedocsmaxconn}
 
-ONLYOFFICE Docs 同时连接数是指用户在编辑模式下打开文档的数量。  
-例如，对于具有200个同时连接的许可证，一个用户可以打开200个文档，200个用户每个可以打开一个，50个用户每个可以打开4个文档等。  
-以何种方式并不重要，但文档服务器只会根据您购买的许可证处理编辑请求的数量。  
-超过此数量的连接以预览模式打开文档。
+ONLYOFFICE Docs 同时连接数是指：所有用户在同一时间以**编辑模式**下打开文档的中数量，超过此数量的连接以**预览模式**打开文档。
 
+### 激活 License
+
+将 License 文件放入 ONLYOFFICE Docs 卷存 **data** 目录中即可立即生效。  
 
 ## 配置选项{#configs}
 
