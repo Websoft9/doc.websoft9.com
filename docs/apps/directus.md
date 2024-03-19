@@ -13,7 +13,7 @@ import Meta from './_include/directus.md';
 
 ## 入门指南{#guide}
 
-### 初始化{#wizard}
+### 立即访问{#wizard}
 
 Websoft9 控制台安装 Directus 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
 

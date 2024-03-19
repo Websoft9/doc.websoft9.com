@@ -15,8 +15,9 @@ import Meta from './_include/geminiprochat.md';
 
 ### 初始化{#wizard}
 
-Websoft9 控制台安装 GeminiProChat 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
+1. Websoft9 控制台安装 GeminiProChat 后，通过【我的应用】管理应用，在**编排**标签页修改 .env 中的 Key  
 
+2. 重建应用后生效
 
 ## 配置选项{#configs}
 
