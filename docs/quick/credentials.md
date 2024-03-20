@@ -44,6 +44,16 @@ usermod -aG sudo yourusername
 
 ## 新增用户
 
+### 命令行设置
+
+将下面命令的 youruser（两处）和 yourpassword 修改成自己所需的值后，运行到服务器运行即可创建 Websoft9 所需的用户：
+
+  ```
+  sudo useradd -m -G docker -s /bin/bash youruser && echo "youruser:yourpassword" | sudo chpasswd
+  ```
+
+### 控制台设置
+
 如果以 root 身份登录到 Websoft9 控制台后，可以很方便的增加更多用户：
 
 1. 打开左侧菜单工具组中的【用户账户】页面
