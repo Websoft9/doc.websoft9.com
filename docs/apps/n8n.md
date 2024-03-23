@@ -19,7 +19,7 @@ Websoft9 控制台安装 n8n 后，通过【我的应用】管理应用，在**�
 
 ## 配置选项{#configs}
 
-- CONFIG_FILE：./src/my-config.json
+- 配置文件： 应用**编排**目录中的 ./src/my-config.json
 
 ## 管理维护{#administrator}
 
