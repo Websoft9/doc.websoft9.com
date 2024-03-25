@@ -31,14 +31,15 @@ jobs:
         run: |
           python build/json2md.py ./extracted/media/json/product_en.json product_en.md
 
-      - name: Generate Markdown for allcatalogs.md
+      - name: Generate Markdown for allcatalogs.md(zh)
         run: |
-          python build/gen_allcatalogs.py --json_file ./extracted/media/json/catalog_en.json --output_file output.md
+          python build/gen_allcatalogs.py --json_file ./extracted/media/json/catalog_zh.json --output_file docs/apps/_include/allcatalogs.md
+
+      - name: Generate Markdown for allcatalogs.md(en)
+        run: |
+          python build/gen_allcatalogs.py --json_file ./extracted/media/json/catalog_en.json --output_file i18n/en/docusaurus-plugin-content-docs/current/apps/_include/allcatalogs.md
 
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Update Product Catalog Markdown
-          add: |
-            product_zh.md
-            product_en.md
