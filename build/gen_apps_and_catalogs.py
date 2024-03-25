@@ -7,62 +7,49 @@ client = Client(
     access_token=os.environ['CONTENTFUL_ACCESS_TOKEN']
 )
 
-def fetch_catalog_hierarchy(catalog_id, hierarchy=None):
-    if hierarchy is None:
-        hierarchy = []
-    
-    catalog_entry = client.entry(catalog_id)
-    hierarchy.insert(0, catalog_entry.name)
-    
-    # 如果存在父目录，递归调用
-    if hasattr(catalog_entry, 'catalog') and catalog_entry.parent_catalog:
-        fetch_catalog_hierarchy(catalog_entry.catalog.sys.id, hierarchy)
-    
-    return hierarchy
-    
-def generate_allcatalogs_md(products):
-    lines = []
-    for product in products:
-        # 确保调用 fields 方法来获取字段字典
-        product_fields = product.fields()
-        if 'Catalog' in product_fields:
-            # 产品可能属于多个目录，因此需要迭代列表
-            for catalog_link in product_fields['Catalog']:
-                # 使用正确的方法或属性来获取 catalog_id
-                catalog_id = catalog_link.id
-                # 获取目录层级
-                hierarchy = fetch_catalog_hierarchy(catalog_id)
-                # 构建 Markdown 行
-                line = f"## {hierarchy[0]}\n\n- [{product_fields['name']}](https://www.websoft9.com/apps/{product_fields['key'].lower()})"
-                lines.append(line)
-    return '\n\n'.join(lines)
+def fetch_all_products():
+    products = []
+    skip = 0
+    limit = 100  # Contentful API的最大条目限制，可以根据API文档调整
 
-# 获取所有产品条目
-products = client.entries({'content_type': 'product'})
+    while True:
+        response = client.entries({'content_type': 'product', 'skip': skip, 'limit': limit})
+        products.extend(response.items)
+        if len(response.items) < limit:
+            break
+        skip += limit
 
-# 提取 Trademark 字段并去重
-trademarks = list({entry.trademark for entry in products if hasattr(entry, 'trademark')})
+    return products
 
-# 按首字母升序排序
-trademarks.sort(key=lambda x: x.lower())
+def generate_markdown_files(products, lang):
+    apps_filename = f'allapps_{lang}.md'
+    catalog_filename = f'allcatalog_{lang}.md'
 
-# 转换为一行以逗号分隔的 Markdown 格式
-markdown_content_apps = ', '.join(trademarks)
+    # 生成apps文件
+    with open(f'docs/apps/_include/{apps_filename}', 'w', encoding='utf-8') as f_apps, \
+         open(f'i18n/en/docusaurus-plugin-content-docs/current/apps/_include/{apps_filename}', 'w', encoding='utf-8') as f_apps_en:
+        
+        trademarks = [product.fields()['trademark'][lang] for product in products]
+        f_apps.write(', '.join(trademarks))
+        f_apps_en.write(', '.join(trademarks))
 
-# 输出到 allapps.md 文件
-output_dir = 'i18n/en/docusaurus-plugin-content-docs/current/apps/_include'
-os.makedirs(output_dir, exist_ok=True)
-output_file_apps = os.path.join(output_dir, 'allapps.md')
+    # 生成catalog文件
+    with open(f'docs/apps/_include/{catalog_filename}', 'w', encoding='utf-8') as f_catalog, \
+         open(f'i18n/en/docusaurus-plugin-content-docs/current/apps/_include/{catalog_filename}', 'w', encoding='utf-8') as f_catalog_en:
+        
+        for product in products:
+            catalog_entries = product.fields()['catalog']
+            for entry in catalog_entries:
+                catalog = client.entry(entry.id)
+                parent_catalog = client.entry(catalog.fields()['catalog'].id)
+                f_catalog.write(f"## {parent_catalog.fields()['title']['zh-CN']}\n")
+                f_catalog.write(f"- [{catalog.fields()['title']['zh-CN']}](https://www.websoft9.com/apps/{product.fields()['key']})\n")
+                f_catalog_en.write(f"## {parent_catalog.fields()['title']['en-US']}\n")
+                f_catalog_en.write(f"- [{catalog.fields()['title']['en-US']}](https://www.websoft9.com/apps/{product.fields()['key']})\n")
 
-with open(output_file_apps, 'w') as f:
-    f.write(markdown_content_apps)
+# 获取所有产品
+products = fetch_all_products()
 
-# 生成 allcatalogs.md 文件
-markdown_content_catalogs = generate_allcatalogs_md(products)
-
-output_file_catalogs = os.path.join(output_dir, 'allcatalogs.md')
-
-with open(output_file_catalogs, 'w') as f:
-    f.write(markdown_content_catalogs)
-
-print(f'Successfully created {output_file_apps} and {output_file_catalogs}')
+# 生成中文和英文的Markdown文件
+generate_markdown_files(products, 'zh')
+generate_markdown_files(products, 'en')
