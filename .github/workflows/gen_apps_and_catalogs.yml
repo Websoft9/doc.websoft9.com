@@ -25,10 +25,9 @@ jobs:
       env:
         CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_GRAPHQLTOKEN }}
       run: |
-        python build/gen_md_header.py template/meta/zh.jinja2
-        python build/gen_md_header.py template/meta/en.jinja2
+        python build/gen_apps_and_catalogs.py
 
     - name: Commit and push changes
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        commit_message: Automated generation product markdown header
+        commit_message: Automated generation allapps.md and allcatalogs.md
