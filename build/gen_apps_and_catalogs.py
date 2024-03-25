@@ -23,12 +23,10 @@ def fetch_all_products(locale):
         if len(response.items) < limit:
             break
         skip += limit
-
-    print("产品数量："+str(len(products)))
-
     return products
 
 def generate_markdown_files(products, lang):
+    print("products:"+str(len(products)))
     # 根据语言设置输出文件路径
     if lang == 'zh-CN':
         apps_dirpath = os.path.join('docs', 'apps', '_include')
@@ -49,12 +47,14 @@ def generate_markdown_files(products, lang):
         key=lambda x: ('',) if x is None else (x.upper(),)
     )
 
+    print("trademarks:"+str(len(trademarks)))
+
     # 生成apps文件
     with open(apps_filepath, 'w', encoding='utf-8') as f_apps:
-        f_apps.write(', '.join(trademark for trademark in trademarks if trademark))  # 过滤掉None值
+        f_apps.write(', '.join(trademark for trademark in trademarks if trademark))
 
 products_zh = fetch_all_products('zh-CN')
-# generate_markdown_files(products_zh, 'zh-CN')
+generate_markdown_files(products_zh, 'zh-CN')
 
 products_en = fetch_all_products('en-US')
-# generate_markdown_files(products_en, 'en-US')
+generate_markdown_files(products_en, 'en-US')
