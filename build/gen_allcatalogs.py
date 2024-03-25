@@ -16,6 +16,9 @@ with open(args.json_file, 'r', encoding='utf-8') as file:
 # 用于存储Markdown内容的字符串
 markdown_content = ""
 
+# 对整个data列表按照每个item的position排序，如果position为None则默认为0
+data_sorted = sorted(data, key=lambda x: x.get('position') if x.get('position') is not None else 0)
+
 # 遍历JSON数据，生成Markdown内容
 for item in data:
     title = item.get('title', '')
