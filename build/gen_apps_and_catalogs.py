@@ -72,7 +72,7 @@ def generate_catalog_markdown_files(products, lang):
     catalogs_filepath = os.path.join(catalogs_dirpath, 'allcatalogs.md')
 
     # 组织catalog数据结构
-   catalog_structure = {}
+    catalog_structure = {}
     for product in products:
         product_fields = product.fields()
         key = product_fields.get('key')
