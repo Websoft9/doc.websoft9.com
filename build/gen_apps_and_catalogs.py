@@ -18,7 +18,7 @@ def fetch_all_products(locale):
             'skip': skip,
             'limit': limit,
             'locale': locale,
-            'select': 'fields.key,fields.trademark,fields.catalog'，
+            'select': 'fields.key,fields.trademark,fields.catalog',
             'fields.production': 'yes',
             'fields.appStore': 'yes'
         })
