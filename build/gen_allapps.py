@@ -11,7 +11,7 @@ args = parser.parse_args()
 
 # 读取JSON文件
 with open(args.json_file, 'r', encoding='utf-8') as file:
-    data = json.load(file)
+    apps = json.load(file)
 
 # 提取每个app的trademark，并按照字母升序排序
 trademarks = sorted(app['trademark'] for app in apps if app['trademark'] is not None)
