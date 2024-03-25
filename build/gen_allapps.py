@@ -21,10 +21,10 @@ trademarks_str = ', '.join(trademarks)
 
 # 将结果写入Markdown文件
 try:
-    with open(output_md_file, 'w') as file:
+    with open(args.output_file, 'w') as file:
         file.write(trademarks_str + '\n')
 except IOError as e:
-    print(f"Error: Could not write to file {output_md_file}: {e}")
+    print(f"Error: Could not write to file {args.output_file}: {e}")
     sys.exit(1)
 
-print(f'The {output_md_file} file has been created with sorted trademarks.')
+print(f'The {args.output_file} file has been created with sorted trademarks.')
