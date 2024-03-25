@@ -40,6 +40,11 @@ def generate_markdown_files(products, lang):
 
 # 获取所有产品，指定中文版本
 products_zh = fetch_all_products('zh-CN')
+# 为中文产品生成 Markdown 文件
+generate_markdown_files(products_zh, 'zh-CN')
 
 # 获取所有产品，指定英文版本
 products_en = fetch_all_products('en-US')
+# 为英文产品生成 Markdown 文件
+generate_markdown_files(products_en, 'en-US')
+
