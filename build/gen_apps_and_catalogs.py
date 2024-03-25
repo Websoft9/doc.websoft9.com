@@ -24,6 +24,8 @@ def fetch_all_products(locale):
         if len(response.items) < limit:
             break
         skip += limit
+    for product in products:
+        print(product.fields())  # 打印以查看数据结构
     return products
 
 def fetch_base_catalogs(locale):
@@ -46,6 +48,8 @@ def fetch_base_catalogs(locale):
         if len(response.items) < limit:
             break
         skip += limit
+    for id, catalog in catalogs.items():
+        print(id, catalog)  # 打印以查看数据结构
     return catalogs
 
 def generate_markdown_files(products,catalogs,lang):
@@ -93,8 +97,6 @@ def generate_markdown_files(products,catalogs,lang):
 
 products_zh = fetch_all_products('zh-CN')
 catalogs_zh = fetch_base_catalogs('zh-CN')
-print(len(products_zh))
-print(len(catalogs_zh))
 generate_markdown_files(products_zh, catalogs_zh, 'zh-CN')
 
 products_en = fetch_all_products('en-US')
