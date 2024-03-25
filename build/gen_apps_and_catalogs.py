@@ -41,7 +41,7 @@ def generate_markdown_files(products, lang):
     # 提取trademarks并根据首字母升序排序
     trademarks = sorted(
         (product.fields().get('trademark') for product in products),
-        key=lambda x: ('',) if x is None else (x[0].upper(), x.lower())
+        key=lambda x: ('',) if x is None else (x.upper(),)
     )
 
     # 生成apps文件
