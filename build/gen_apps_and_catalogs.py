@@ -26,7 +26,7 @@ def fetch_all_products(locale):
         if len(response.items) < limit:
             break
         skip += limit
-    for i in products
+    for i in products:
         print(i)
     return products
 
