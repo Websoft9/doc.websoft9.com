@@ -71,15 +71,14 @@ def generate_catalog_markdown_files(products, lang):
     # 文件名统一为allcatalogs.md
     catalogs_filepath = os.path.join(catalogs_dirpath, 'allcatalogs.md')
 
-    # 组织catalog数据结构
+# 组织catalog数据结构
     catalog_structure = {}
     for product in products:
         product_fields = product.fields()
         key = product_fields.get('key')
-        for catalog_entry in product_fields.get('catalog', []):
-            catalog_fields = catalog_entry.fields()
-            base_catalog = catalog_fields.get('catalog')
-            if base_catalog:
+        catalogs = product_fields.get('catalog', [])
+        for catalog_entry in catalogs:  # catalog_entry现在是一个列表
+            for base_catalog in catalog_entry:  # 遍历列表中的每个Base_Catalog
                 base_catalog_fields = base_catalog.fields()
                 category = base_catalog_fields.get('catalog')
                 title = base_catalog_fields.get('title')
