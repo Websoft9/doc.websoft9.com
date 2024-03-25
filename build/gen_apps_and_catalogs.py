@@ -80,9 +80,10 @@ def generate_markdown_files(products,catalogs,lang):
         for product in products:
             product_fields = product.fields()
             key = product_fields.get('key')
-            product_catalogs = product_fields.get('catalog')
+            product_catalogs = product_fields.get('catalog',[])
+            if not product_catalogs:  # 如果product_catalogs为空列表
+                print(f"Product {key} has no catalogs.")
             for catalog_id in product_catalogs:
-                print(catalog_id)
                 catalog = catalogs.get(catalog_id, {})
                 catalog_title = catalog.get('title')
                 parent_catalog = catalog.get('catalog')
