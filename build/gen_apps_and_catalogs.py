@@ -27,16 +27,27 @@ def fetch_all_products(locale):
     return products
 
 def generate_markdown_files(products, lang):
-    apps_filename = f'allapps_{lang}.md'
-    catalog_filename = f'allcatalog_{lang}.md'
+    # 根据语言设置输出文件路径
+    if lang == 'zh-CN':
+        apps_filepath = os.path.join('docs', 'apps', '_include', f'allapps_{lang}.md')
+    elif lang == 'en-US':
+        apps_filepath = os.path.join('i18n', 'en', 'docusaurus-plugin-content-docs', 'current', 'apps', '_include', f'allapps_{lang}.md')
+    else:
+        raise ValueError(f"Unsupported language: {lang}")
+
+    # 确保输出目录存在
+    os.makedirs(os.path.dirname(apps_filepath), exist_ok=True)
+
+    # 提取trademarks并根据首字母升序排序
+    trademarks = sorted(
+        (product.fields().get('trademark') for product in products),
+        key=lambda x: (x[0].upper(), x) if x else ('',)  # 确保None值排在最后，同时按首字母排序
+    )
 
     # 生成apps文件
-    with open(f'docs/apps/_include/{apps_filename}', 'w', encoding='utf-8') as f_apps, \
-         open(f'i18n/en/docusaurus-plugin-content-docs/current/apps/_include/{apps_filename}', 'w', encoding='utf-8') as f_apps_en:
-        
-        trademarks = [product.fields().get('trademark') for product in products]
-        f_apps.write(', '.join(trademarks))
-        f_apps_en.write(', '.join(trademarks))
+    with open(apps_filepath, 'w', encoding='utf-8') as f_apps:
+        f_apps.write(', '.join(trademark for trademark in trademarks if trademark))  # 过滤掉None值
+
 
 # 获取所有产品，指定中文版本
 products_zh = fetch_all_products('zh-CN')
