@@ -21,7 +21,7 @@ jobs:
       - name: Download and unzip JSON files
         run: |
           curl -L -o media-latest.zip https://w9artifact.blob.core.windows.net/release/websoft9/plugin/media/media-latest.zip
-          unzip media-latest.zip "media/json/product_zh.json" "media/json/product_en.json" -d ./extracted
+          unzip media-latest.zip "media/json/product_zh.json" "media/json/product_en.json" "media/json/catalog_zh.json" "media/json/catalog_en.json" -d ./extracted
 
       - name: Generate Markdown for product_zh
         run: |
