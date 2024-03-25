@@ -1,6 +1,5 @@
 import json
 import sys
-import os
 
 # The first command-line argument is the path to the JSON file
 json_file_path = sys.argv[1]
@@ -74,38 +73,3 @@ for title, info in sorted(catalog_dict.items(), key=lambda x: min(x[1]['position
 # Write the Markdown content to the specified output file
 with open(output_md_file_name, 'w') as md_file:
     md_file.write(fixed_content + markdown_content)
-
-# Function to generate allcatalogs Markdown content
-def generate_allcatalogs_markdown(catalog_dict, language):
-    markdown_content = ""
-    for title, info in sorted(catalog_dict.items(), key=lambda x: min(x[1]['positions'])):
-        try:
-            # Only add the section header if we haven't already
-            if title not in markdown_content:
-                markdown_content += f"## {title}\n\n"
-            for trademark, key in sorted(info['entries']):
-                # Assume the URL pattern includes the parent_key and language folder
-                url = f"https://www.websoft9.com/{language}/apps/{key.lower()}"
-                markdown_content += f"- [{trademark}]({url})\n\n"
-        except Exception as e:
-            print(f"Error generating Markdown for title: '{title}' with info: {info}")
-            print(e)
-    return markdown_content
-
-# Define the directories for the allcatalogs Markdown files
-output_dir_zh = "docs/apps/_include"
-output_dir_en = "i18n/en/docusaurus-plugin-content-docs/current/apps/_include"
-
-# Ensure the output directories exist
-os.makedirs(output_dir_zh, exist_ok=True)
-os.makedirs(output_dir_en, exist_ok=True)
-
-allcatalogs_content_zh = generate_allcatalogs_markdown(catalog_dict, 'zh')
-allcatalogs_content_en = generate_allcatalogs_markdown(catalog_dict, 'en')
-
-# Write the allcatalogs Markdown content to the specified output files
-with open(os.path.join(output_dir_zh, 'allcatalogs.md'), 'w', encoding='utf-8') as md_file_zh:
-    md_file_zh.write(allcatalogs_content_zh)
-
-with open(os.path.join(output_dir_en, 'allcatalogs.md'), 'w', encoding='utf-8') as md_file_en:
-    md_file_en.write(allcatalogs_content_en)
