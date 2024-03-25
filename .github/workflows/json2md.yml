@@ -39,6 +39,14 @@ jobs:
         run: |
           python build/gen_allcatalogs.py --json_file ./extracted/media/json/catalog_en.json --output_file i18n/en/docusaurus-plugin-content-docs/current/apps/_include/allcatalogs.md
 
+      - name: Generate Markdown for allapps.md(zh)
+        run: |
+          python build/gen_allapps.py --json_file ./extracted/media/json/product_zh.json --output_file docs/apps/_include/allapps.md
+
+      - name: Generate Markdown for allapps.md(en)
+        run: |
+          python build/gen_allappss.py --json_file ./extracted/media/json/product_en.json --output_file i18n/en/docusaurus-plugin-content-docs/current/apps/_include/allapps.md
+
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
