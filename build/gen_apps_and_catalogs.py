@@ -7,13 +7,18 @@ client = Client(
     access_token=os.environ['CONTENTFUL_ACCESS_TOKEN']
 )
 
-def fetch_all_products():
+def fetch_all_products(locale):
     products = []
     skip = 0
     limit = 100  # Contentful API的最大条目限制，可以根据API文档调整
 
     while True:
-        response = client.entries({'content_type': 'product', 'skip': skip, 'limit': limit})
+        response = client.entries({
+            'content_type': 'product',
+            'skip': skip,
+            'limit': limit,
+            'locale': locale  # 指定语言版本
+        })
         products.extend(response.items)
         if len(response.items) < limit:
             break
@@ -29,7 +34,7 @@ def generate_markdown_files(products, lang):
     with open(f'docs/apps/_include/{apps_filename}', 'w', encoding='utf-8') as f_apps, \
          open(f'i18n/en/docusaurus-plugin-content-docs/current/apps/_include/{apps_filename}', 'w', encoding='utf-8') as f_apps_en:
         
-        trademarks = [product.fields('zh-CN')['trademark'] for product in products]
+        trademarks = [product.get('trademark') for product in products]
         f_apps.write(', '.join(trademarks))
         f_apps_en.write(', '.join(trademarks))
 
@@ -38,18 +43,23 @@ def generate_markdown_files(products, lang):
          open(f'i18n/en/docusaurus-plugin-content-docs/current/apps/_include/{catalog_filename}', 'w', encoding='utf-8') as f_catalog_en:
         
         for product in products:
-            catalog_entries = product.fields()['catalog']
+            catalog_entries = product['catalog']
             for entry in catalog_entries:
-                catalog = client.entry(entry.id)
-                parent_catalog = client.entry(catalog.fields()['catalog'].id)
-                f_catalog.write(f"## {parent_catalog.fields('zh-CN')['title']}\n")
-                f_catalog.write(f"- [{catalog.fields('zh-CN')['title']}](https://www.websoft9.com/apps/{product.fields()['key']})\n")
-                f_catalog_en.write(f"## {parent_catalog.fields('en-US')['title']}\n")
-                f_catalog_en.write(f"- [{catalog.fields('en-US')['title']}](https://www.websoft9.com/apps/{product.fields()['key']})\n")
+                catalog = client.entry(entry.id, {'locale': lang})  # 获取指定语言版本的条目
+                parent_catalog = client.entry(catalog['catalog'].id, {'locale': lang})  # 同上
+                f_catalog.write(f"## {parent_catalog['title']}\n")
+                f_catalog.write(f"- [{catalog['title']}](https://www.websoft9.com/apps/{product['key']})\n")
+                
+                parent_catalog_en = client.entry(catalog['catalog'].id, {'locale': 'en-US'})
+                f_catalog_en.write(f"## {parent_catalog_en['title']}\n")
+                f_catalog_en.write(f"- [{catalog['title']}](https://www.websoft9.com/apps/{product['key']})\n")
 
-# 获取所有产品
-products = fetch_all_products()
+# 获取所有产品，指定中文版本
+products_zh = fetch_all_products('zh-CN')
+# 生成中文的Markdown文件
+generate_markdown_files(products_zh, 'zh-CN')
 
-# 生成中文和英文的Markdown文件
-generate_markdown_files(products, 'zh-CN')
-generate_markdown_files(products, 'en-US')
+# 获取所有产品，指定英文版本
+products_en = fetch_all_products('en-US')
+# 生成英文的Markdown文件
+generate_markdown_files(products_en, 'en-US')
