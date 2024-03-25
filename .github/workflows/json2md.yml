@@ -31,6 +31,10 @@ jobs:
         run: |
           python build/json2md.py ./extracted/media/json/product_en.json product_en.md
 
+      - name: Generate Markdown for allcatalogs.md
+        run: |
+          python build/gen_allcatalogs.py --json_file ./extracted/media/json/catalog_en.json --output_file output.md
+
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
