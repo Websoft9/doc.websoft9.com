@@ -26,7 +26,6 @@ def fetch_all_products(locale):
     return products
 
 def generate_markdown_files(products, lang):
-    print("products:"+str(len(products)))
     # 根据语言设置输出文件路径
     if lang == 'zh-CN':
         apps_dirpath = os.path.join('docs', 'apps', '_include')
@@ -46,9 +45,13 @@ def generate_markdown_files(products, lang):
         (product.fields().get('trademark') for product in products),
         key=lambda x: ('',) if x is None else (x.upper(),)
     )
-
-    print("trademarks:"+str(len(trademarks)))
-
+    
+    # 计算非 None 和非空字符串的 trademarks 的数量
+    trademarks_count = sum(1 for trademark in trademarks if trademark)
+    
+    # 打印统计结果
+    print(trademarks_count)
+    
     # 生成apps文件
     with open(apps_filepath, 'w', encoding='utf-8') as f_apps:
         f_apps.write(', '.join(trademark for trademark in trademarks if trademark))
