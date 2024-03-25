@@ -33,7 +33,7 @@ def fetch_base_catalogs(locale):
 
     while True:
         response = client.entries({
-            'content_type': 'baseCatalog',
+            'content_type': 'catalog',
             'skip': skip,
             'limit': limit,
             'locale': locale
