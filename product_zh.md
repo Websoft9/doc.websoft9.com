@@ -6,9 +6,11 @@
 
 ## 人工智能
 
-- [AutoGPT Next Web](../autogptnextweb)
+- [AutoGPT.NextWeb](../autogptnextweb)
 
 - [ChatGPT Next Web](../chatgptnextweb)
+
+- [Flowise](../flowise)
 
 - [GeminiProChat](../geminiprochat)
 
@@ -31,6 +33,8 @@
 - [Metabase](../metabase)
 
 - [OpenSearch](../opensearch)
+
+- [Redash](../redash)
 
 - [SuperSet](../superset)
 
@@ -85,6 +89,8 @@
 - [Directus](../directus)
 
 - [Excalidraw](../excalidraw)
+
+- [Flowise](../flowise)
 
 - [Frappe](../frappe)
 
@@ -210,6 +216,8 @@
 
 - [Jenkins](../jenkins)
 
+- [Rundeck](../rundeck)
+
 - [TeamCity](../teamcity)
 
 - [n8n](../n8n)
@@ -318,6 +326,8 @@
 
 - [Directus](../directus)
 
+- [Flowise](../flowise)
+
 - [Focalboard](../focalboard)
 
 - [Frappe](../frappe)
@@ -337,6 +347,8 @@
 - [Nocobase](../nocobase)
 
 - [Redmine](../redmine)
+
+- [Rundeck](../rundeck)
 
 - [Scratch](../scratch)
 
@@ -414,9 +426,13 @@
 
 - [Grafana](../grafana)
 
+- [Graphite](../graphite)
+
 - [Graylog](../graylog)
 
 - [Netdata](../netdata)
+
+- [Portainer](../portainer)
 
 - [Prometheus](../prometheus)
 

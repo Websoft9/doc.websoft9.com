@@ -4,9 +4,11 @@ Docs of hundreds of pre-packaged apps below
 
 ## AI + Machine Learning
 
-- [AutoGPT Next Web](../autogptnextweb)
+- [AutoGPT.NextWeb](../autogptnextweb)
 
 - [ChatGPT Next Web](../chatgptnextweb)
+
+- [Flowise](../flowise)
 
 - [GeminiProChat](../geminiprochat)
 
@@ -29,6 +31,8 @@ Docs of hundreds of pre-packaged apps below
 - [Metabase](../metabase)
 
 - [OpenSearch](../opensearch)
+
+- [Redash](../redash)
 
 - [SuperSet](../superset)
 
@@ -83,6 +87,8 @@ Docs of hundreds of pre-packaged apps below
 - [Directus](../directus)
 
 - [Excalidraw](../excalidraw)
+
+- [Flowise](../flowise)
 
 - [Frappe](../frappe)
 
@@ -208,6 +214,8 @@ Docs of hundreds of pre-packaged apps below
 
 - [Jenkins](../jenkins)
 
+- [Rundeck](../rundeck)
+
 - [TeamCity](../teamcity)
 
 - [n8n](../n8n)
@@ -316,6 +324,8 @@ Docs of hundreds of pre-packaged apps below
 
 - [Directus](../directus)
 
+- [Flowise](../flowise)
+
 - [Focalboard](../focalboard)
 
 - [Frappe](../frappe)
@@ -335,6 +345,8 @@ Docs of hundreds of pre-packaged apps below
 - [Nocobase](../nocobase)
 
 - [Redmine](../redmine)
+
+- [Rundeck](../rundeck)
 
 - [Scratch](../scratch)
 
@@ -412,9 +424,13 @@ Docs of hundreds of pre-packaged apps below
 
 - [Grafana](../grafana)
 
+- [Graphite](../graphite)
+
 - [Graylog](../graylog)
 
 - [Netdata](../netdata)
+
+- [Portainer](../portainer)
 
 - [Prometheus](../prometheus)
 
