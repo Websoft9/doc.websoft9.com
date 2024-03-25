@@ -29,7 +29,7 @@ def generate_markdown_files(products, lang):
     with open(f'docs/apps/_include/{apps_filename}', 'w', encoding='utf-8') as f_apps, \
          open(f'i18n/en/docusaurus-plugin-content-docs/current/apps/_include/{apps_filename}', 'w', encoding='utf-8') as f_apps_en:
         
-        trademarks = [product.fields(lang)['trademark'] for product in products]
+        trademarks = [product.fields('zh-CN')['trademark'] for product in products]
         f_apps.write(', '.join(trademarks))
         f_apps_en.write(', '.join(trademarks))
 
