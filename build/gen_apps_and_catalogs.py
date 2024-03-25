@@ -18,9 +18,9 @@ def fetch_all_products(locale):
             'skip': skip,
             'limit': limit,
             'locale': locale,
-            'select': 'fields.key,fields.trademark,fields.catalog',
-            'fields.production': 'yes',
-            'fields.appStore': 'yes'
+            'select': 'fields.key,fields.trademark,fields.catalog'
+            # 'fields.production': 'yes',
+            # 'fields.appStore': 'yes'
         })
         products.extend(response.items)
         if len(response.items) < limit:
