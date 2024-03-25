@@ -86,10 +86,11 @@ def generate_markdown_files(products,catalogs,lang):
             if not product_catalogs:  # 如果product_catalogs为空列表
                 print(f"Product {key} has no catalogs.")
             for catalog_id in product_catalogs:
+                print(catalog_id)
+            for catalog_id in product_catalogs:
                 catalog = catalogs.get(catalog_id, {})
                 catalog_title = catalog.get('title')
                 parent_catalog = catalog.get('catalog')
-                print(str(catalog)+"-"+str(catalog_title)+"-"+str(parent_catalog))
                 if parent_catalog:
                     parent_catalog_title = catalogs[parent_catalog].get('title')
                     f_catalogs.write(f"## {parent_catalog_title}\n\n")
