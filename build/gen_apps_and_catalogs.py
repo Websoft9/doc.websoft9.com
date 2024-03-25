@@ -29,7 +29,6 @@ def fetch_all_products(locale):
         skip += limit
     return products
 
-
 def generate_markdown_files(products,lang):
     # 根据语言设置输出文件路径
     if lang == 'zh-CN':
@@ -56,52 +55,8 @@ def generate_markdown_files(products,lang):
         f_apps.write(', '.join(trademark for trademark in trademarks if trademark))
 
 
-def generate_catalog_markdown_files(products, lang):
-    # 根据语言设置输出文件路径
-    if lang == 'zh-CN':
-        catalogs_dirpath = os.path.join('docs', 'catalogs', '_include')
-    elif lang == 'en-US':
-        catalogs_dirpath = os.path.join('i18n', 'en', 'docusaurus-plugin-content-docs', 'current', 'catalogs', '_include')
-    else:
-        raise ValueError(f"Unsupported language: {lang}")
-
-    # 确保输出目录存在
-    os.makedirs(catalogs_dirpath, exist_ok=True)
-
-    # 文件名统一为allcatalogs.md
-    catalogs_filepath = os.path.join(catalogs_dirpath, 'allcatalogs.md')
-
-    # 组织catalog数据结构
-    catalog_structure = {}
-    for product in products:
-        product_fields = product.fields()
-        key = product_fields.get('key')
-        catalog_entries = product_fields.get('catalog', [])
-        for catalog_entry in catalog_entries:  # catalog_entry是单个Entry对象
-            base_catalog_fields = catalog_entry.fields()
-            categories = base_catalog_fields.get('catalog')  # 这可能是一个列表
-
-            # 确保category是一个可哈希的类型，比如字符串
-            # 如果categories是一个列表，请选择一个合适的方式来获取单个category值
-            # 例如，如果列表中总是只有一个元素，可以直接取第一个
-            category = categories[0] if isinstance(categories, list) else categories
-            title = base_catalog_fields.get('title')
-
-            if category not in catalog_structure:
-                catalog_structure[category] = []
-            catalog_structure[category].append((title, key))
-
-    # 写入Markdown文件
-    with open(catalogs_filepath, 'w', encoding='utf-8') as f_catalogs:
-        for category, items in catalog_structure.items():
-            f_catalogs.write(f"## {category}\n\n")
-            for title, key in items:
-                f_catalogs.write(f"- [{title}](https://www.websoft9.com/apps/{key})\n\n")
-
 products_zh = fetch_all_products('zh-CN')
 generate_markdown_files(products_zh, 'zh-CN')
-generate_catalog_markdown_files(products_zh, 'zh-CN')
 
 products_en = fetch_all_products('en-US')
 generate_markdown_files(products_en, 'en-US')
-generate_catalog_markdown_files(products_en, 'en-US')
