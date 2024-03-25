@@ -46,15 +46,26 @@ def generate_markdown_files(products, lang):
         key=lambda x: ('',) if x is None else (x.upper(),)
     )
     
-    # 计算非 None 和非空字符串的 trademarks 的数量
-    trademarks_count = sum(1 for trademark in trademarks if trademark)
+    # 生成apps文件
+    # with open(apps_filepath, 'w', encoding='utf-8') as f_apps:
+        # f_apps.write(', '.join(trademark for trademark in trademarks if trademark))
+    
+    # 生成apps文件，并计数
+    trademarks_count = 0
+    with open(apps_filepath, 'w', encoding='utf-8') as f_apps:
+        for trademark in trademarks:
+            if trademark:
+                f_apps.write(trademark + ', ')
+                trademarks_count += 1
+    
+    # 移除最后一个多余的逗号和空格
+    with open(apps_filepath, 'rb+') as f_apps:
+        f_apps.seek(-2, 2)  # 移动到文件的倒数第二个字符
+        f_apps.truncate()   # 截断最后的逗号和空格
     
     # 打印统计结果
     print(trademarks_count)
-    
-    # 生成apps文件
-    with open(apps_filepath, 'w', encoding='utf-8') as f_apps:
-        f_apps.write(', '.join(trademark for trademark in trademarks if trademark))
+
 
 products_zh = fetch_all_products('zh-CN')
 generate_markdown_files(products_zh, 'zh-CN')
