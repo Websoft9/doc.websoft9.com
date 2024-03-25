@@ -29,14 +29,17 @@ def fetch_all_products(locale):
 def generate_markdown_files(products, lang):
     # 根据语言设置输出文件路径
     if lang == 'zh-CN':
-        apps_filepath = os.path.join('docs', 'apps', '_include', f'allapps_{lang}.md')
+        apps_dirpath = os.path.join('docs', 'apps', '_include')
     elif lang == 'en-US':
-        apps_filepath = os.path.join('i18n', 'en', 'docusaurus-plugin-content-docs', 'current', 'apps', '_include', f'allapps_{lang}.md')
+        apps_dirpath = os.path.join('i18n', 'en', 'docusaurus-plugin-content-docs', 'current', 'apps', '_include')
     else:
         raise ValueError(f"Unsupported language: {lang}")
 
     # 确保输出目录存在
-    os.makedirs(os.path.dirname(apps_filepath), exist_ok=True)
+    os.makedirs(apps_dirpath, exist_ok=True)
+
+    # 文件名统一为allapps.md
+    apps_filepath = os.path.join(apps_dirpath, 'allapps.md')
 
     # 提取trademarks并根据首字母升序排序
     trademarks = sorted(
@@ -48,7 +51,6 @@ def generate_markdown_files(products, lang):
     with open(apps_filepath, 'w', encoding='utf-8') as f_apps:
         f_apps.write(', '.join(trademark for trademark in trademarks if trademark))  # 过滤掉None值
 
-
 # 获取所有产品，指定中文版本
 products_zh = fetch_all_products('zh-CN')
 # 为中文产品生成 Markdown 文件
@@ -58,4 +60,3 @@ generate_markdown_files(products_zh, 'zh-CN')
 products_en = fetch_all_products('en-US')
 # 为英文产品生成 Markdown 文件
 generate_markdown_files(products_en, 'en-US')
-
