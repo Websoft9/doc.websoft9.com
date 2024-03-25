@@ -19,16 +19,17 @@ def fetch_catalog_hierarchy(catalog_id, hierarchy=None):
         fetch_catalog_hierarchy(catalog_entry.catalog.sys.id, hierarchy)
     
     return hierarchy
-
+    
 def generate_allcatalogs_md(products):
     lines = []
     for product in products:
-        # 调用 fields 方法来获取字段字典
+        # 确保调用 fields 方法来获取字段字典
         product_fields = product.fields()
-        if 'catalog' in product_fields:
+        if 'Catalog' in product_fields:
             # 产品可能属于多个目录，因此需要迭代列表
-            for catalog_link in product_fields['catalog']:
-                catalog_id = catalog_link['sys']['id']
+            for catalog_link in product_fields['Catalog']:
+                # 使用正确的方法或属性来获取 catalog_id
+                catalog_id = catalog_link.id
                 # 获取目录层级
                 hierarchy = fetch_catalog_hierarchy(catalog_id)
                 # 构建 Markdown 行
