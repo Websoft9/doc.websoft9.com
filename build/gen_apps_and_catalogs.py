@@ -48,6 +48,8 @@ def fetch_base_catalogs(locale):
         if len(response.items) < limit:
             break
         skip += limit
+    for cata in catalogs:
+        print(cata)
     return catalogs
 
 def generate_markdown_files(products,catalogs,lang):
@@ -85,8 +87,6 @@ def generate_markdown_files(products,catalogs,lang):
             product_catalogs = product_fields.get('catalog',[])
             if not product_catalogs:  # 如果product_catalogs为空列表
                 print(f"Product {key} has no catalogs.")
-            for catalog_id in product_catalogs:
-                print(catalog_id)
             for catalog_id in product_catalogs:
                 catalog = catalogs.get(catalog_id, {})
                 catalog_title = catalog.get('title')
