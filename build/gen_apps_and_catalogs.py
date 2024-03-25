@@ -72,14 +72,19 @@ def generate_catalog_markdown_files(products, lang):
     catalogs_filepath = os.path.join(catalogs_dirpath, 'allcatalogs.md')
 
     # 组织catalog数据结构
-    catalog_structure = {}
+   catalog_structure = {}
     for product in products:
         product_fields = product.fields()
         key = product_fields.get('key')
         catalog_entries = product_fields.get('catalog', [])
-        for catalog_entry in catalog_entries:
+        for catalog_entry in catalog_entries:  # catalog_entry是单个Entry对象
             base_catalog_fields = catalog_entry.fields()
-            category = base_catalog_fields.get('catalog')
+            categories = base_catalog_fields.get('catalog')  # 这可能是一个列表
+
+            # 确保category是一个可哈希的类型，比如字符串
+            # 如果categories是一个列表，请选择一个合适的方式来获取单个category值
+            # 例如，如果列表中总是只有一个元素，可以直接取第一个
+            category = categories[0] if isinstance(categories, list) else categories
             title = base_catalog_fields.get('title')
 
             if category not in catalog_structure:
