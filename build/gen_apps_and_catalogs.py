@@ -48,7 +48,7 @@ def fetch_base_catalogs(locale):
         skip += limit
     return catalogs
 
-def generate_markdown_files(products, lang):
+def generate_markdown_files(products,catalogs,lang):
     # 根据语言设置输出文件路径
     if lang == 'zh-CN':
         apps_dirpath = os.path.join('docs', 'apps', '_include')
@@ -92,9 +92,9 @@ def generate_markdown_files(products, lang):
 
 
 products_zh = fetch_all_products('zh-CN')
-generate_markdown_files(products_zh, 'zh-CN')
+catalogs_zh = fetch_base_catalogs('zh-CN')
 generate_markdown_files(products_zh, catalogs_zh, 'zh-CN')
 
 products_en = fetch_all_products('en-US')
-generate_markdown_files(products_en, 'en-US')
+catalogs_en = fetch_base_catalogs('en-US')
 generate_markdown_files(products_en, catalogs_en, 'en-US')
