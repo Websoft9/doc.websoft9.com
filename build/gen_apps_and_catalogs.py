@@ -29,7 +29,7 @@ def generate_markdown_files(products, lang):
     with open(f'docs/apps/_include/{apps_filename}', 'w', encoding='utf-8') as f_apps, \
          open(f'i18n/en/docusaurus-plugin-content-docs/current/apps/_include/{apps_filename}', 'w', encoding='utf-8') as f_apps_en:
         
-        trademarks = [product.fields()['trademark'][lang] for product in products]
+        trademarks = [product.fields(lang)['trademark'] for product in products]
         f_apps.write(', '.join(trademarks))
         f_apps_en.write(', '.join(trademarks))
 
@@ -42,10 +42,10 @@ def generate_markdown_files(products, lang):
             for entry in catalog_entries:
                 catalog = client.entry(entry.id)
                 parent_catalog = client.entry(catalog.fields()['catalog'].id)
-                f_catalog.write(f"## {parent_catalog.fields()['title']['zh-CN']}\n")
-                f_catalog.write(f"- [{catalog.fields()['title']['zh-CN']}](https://www.websoft9.com/apps/{product.fields()['key']})\n")
-                f_catalog_en.write(f"## {parent_catalog.fields()['title']['en-US']}\n")
-                f_catalog_en.write(f"- [{catalog.fields()['title']['en-US']}](https://www.websoft9.com/apps/{product.fields()['key']})\n")
+                f_catalog.write(f"## {parent_catalog.fields('zh-CN')['title']}\n")
+                f_catalog.write(f"- [{catalog.fields('zh-CN')['title']}](https://www.websoft9.com/apps/{product.fields()['key']})\n")
+                f_catalog_en.write(f"## {parent_catalog.fields('en-US')['title']}\n")
+                f_catalog_en.write(f"- [{catalog.fields('en-US')['title']}](https://www.websoft9.com/apps/{product.fields()['key']})\n")
 
 # 获取所有产品
 products = fetch_all_products()
