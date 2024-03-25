@@ -26,8 +26,14 @@ def fetch_all_products(locale):
         if len(response.items) < limit:
             break
         skip += limit
-    for i in products:
-        print(i)
+    for product in products:
+        product_fields = product.fields()  # 获取产品的所有字段
+        key = product_fields.get('key')  # 获取产品的key字段
+        catalogs = product_fields.get('catalog', [])  # 获取产品的catalog字段，如果没有则默认为空列表
+        print(f"Product {key} has catalogs: {catalogs}")
+        for catalog_id in catalogs:
+            print(f"Catalog ID: {catalog_id}")
+
     return products
 
 
