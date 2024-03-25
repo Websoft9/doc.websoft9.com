@@ -17,13 +17,35 @@ def fetch_all_products(locale):
             'content_type': 'product',
             'skip': skip,
             'limit': limit,
-            'locale': locale
+            'locale': locale,
+            'select': 'fields.key,fields.catalog'
         })
         products.extend(response.items)
         if len(response.items) < limit:
             break
         skip += limit
     return products
+
+def fetch_base_catalogs(locale):
+    catalogs = {}
+    skip = 0
+    limit = 100
+
+    while True:
+        response = client.entries({
+            'content_type': 'catalog',
+            'skip': skip,
+            'limit': limit,
+            'locale': locale
+        })
+        for item in response.items:
+            catalogs[item.sys['id']] = {
+                'title': item.fields().get('title'),
+                'catalog': item.fields().get('catalog')
+            }
+        if len(response.items) < limit:
+            break
+        skip += limit
 
 def generate_markdown_files(products, lang):
     # 根据语言设置输出文件路径
@@ -47,11 +69,31 @@ def generate_markdown_files(products, lang):
     )
     
     # 生成apps文件
-    # with open(apps_filepath, 'w', encoding='utf-8') as f_apps:
-        # f_apps.write(', '.join(trademark for trademark in trademarks if trademark))
+    with open(apps_filepath, 'w', encoding='utf-8') as f_apps:
+        f_apps.write(', '.join(trademark for trademark in trademarks if trademark))
+
+    catalogs_dirpath = apps_dirpath
+    catalogs_filepath = os.path.join(catalogs_dirpath, 'allcatalogs.md')
+
+    with open(catalogs_filepath, 'w', encoding='utf-8') as f_catalogs:
+        for product in products:
+            product_fields = product.fields()
+            key = product_fields.get('key')
+            product_catalogs = product_fields.get('catalog', [])
+            for catalog_id in product_catalogs:
+                catalog = catalogs.get(catalog_id, {})
+                catalog_title = catalog.get('title')
+                parent_catalog = catalog.get('catalog')
+                if parent_catalog:
+                    parent_catalog_title = catalogs[parent_catalog].get('title')
+                    f_catalogs.write(f"## {parent_catalog_title}\n\n")
+                    f_catalogs.write(f"- [{catalog_title}](https://www.websoft9.com/apps/{key})\n")
+
 
 products_zh = fetch_all_products('zh-CN')
 generate_markdown_files(products_zh, 'zh-CN')
+generate_markdown_files(products_zh, catalogs_zh, 'zh-CN')
 
 products_en = fetch_all_products('en-US')
 generate_markdown_files(products_en, 'en-US')
+generate_markdown_files(products_en, catalogs_en, 'en-US')
