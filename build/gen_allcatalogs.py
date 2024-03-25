@@ -20,7 +20,7 @@ markdown_content = ""
 data_sorted = sorted(data, key=lambda x: x.get('position') if x.get('position') is not None else 0)
 
 # 遍历JSON数据，生成Markdown内容
-for item in data:
+for item in data_sorted:
     title = item.get('title', '')
     linked_items = item.get('linkedFrom', {}).get('catalogCollection', {}).get('items', [])
     
