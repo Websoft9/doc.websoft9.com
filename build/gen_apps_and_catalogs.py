@@ -16,7 +16,7 @@ def fetch_catalog_hierarchy(catalog_id, hierarchy=None):
     
     # 如果存在父目录，递归调用
     if hasattr(catalog_entry, 'catalog') and catalog_entry.parent_catalog:
-        fetch_catalog_hierarchy(catalog_entry.parent_catalog.sys.id, hierarchy)
+        fetch_catalog_hierarchy(catalog_entry.catalog.sys.id, hierarchy)
     
     return hierarchy
 
