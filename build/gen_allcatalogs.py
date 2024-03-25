@@ -25,7 +25,7 @@ for item in data:
     markdown_content += f"## {title}\n\n"
     
     # 对linked_items按照position排序
-    linked_items_sorted = sorted(linked_items, key=lambda x: x['position'])
+    linked_items_sorted = sorted(linked_items, key=lambda x: x.get('position', 0))
     
     # 遍历每个linked item并添加到Markdown内容中
     for linked_item in linked_items_sorted:
