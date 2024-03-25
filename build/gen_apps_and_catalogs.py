@@ -24,7 +24,7 @@ def fetch_all_products(locale):
             break
         skip += limit
 
-    print("产品数量："+len(products))
+    print("产品数量："+str(len(products)))
 
     return products
 
