@@ -14,7 +14,10 @@ with open(args.json_file, 'r', encoding='utf-8') as file:
     apps = json.load(file)
 
 # 提取每个app的trademark，并按照字母升序排序
-trademarks = sorted(app['trademark'] for app in apps if app['trademark'] is not None)
+trademarks = sorted(
+    (app['trademark'] for app in apps if 'trademark' in app),
+    key=lambda x: ('',) if x is None else (x.upper(),)
+)
 
 # 将排序后的trademarks转换为字符串，并用逗号隔开
 trademarks_str = ', '.join(trademarks)
