@@ -23,15 +23,17 @@ def fetch_catalog_hierarchy(catalog_id, hierarchy=None):
 def generate_allcatalogs_md(products):
     lines = []
     for product in products:
-        if 'Catalog' in product.fields:
-            # 假设每个产品只属于一个目录
-            catalog_link = product.fields['Catalog']
-            catalog_id = catalog_link['sys']['id']
-            # 获取目录层级
-            hierarchy = fetch_catalog_hierarchy(catalog_id)
-            # 构建 Markdown 行
-            line = f"## {hierarchy[0]}\n\n- [{product.fields['name']}](https://www.websoft9.com/apps/{product.fields['key'].lower()})"
-            lines.append(line)
+        # 调用 fields 方法来获取字段字典
+        product_fields = product.fields()
+        if 'catalog' in product_fields:
+            # 产品可能属于多个目录，因此需要迭代列表
+            for catalog_link in product_fields['catalog']:
+                catalog_id = catalog_link['sys']['id']
+                # 获取目录层级
+                hierarchy = fetch_catalog_hierarchy(catalog_id)
+                # 构建 Markdown 行
+                line = f"## {hierarchy[0]}\n\n- [{product_fields['name']}](https://www.websoft9.com/apps/{product_fields['key'].lower()})"
+                lines.append(line)
     return '\n\n'.join(lines)
 
 # 获取所有产品条目
