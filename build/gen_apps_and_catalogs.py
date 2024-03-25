@@ -33,7 +33,7 @@ def fetch_base_catalogs(locale):
 
     while True:
         response = client.entries({
-            'content_type': 'catalog',
+            'content_type': 'baseCatalog',
             'skip': skip,
             'limit': limit,
             'locale': locale
@@ -46,6 +46,7 @@ def fetch_base_catalogs(locale):
         if len(response.items) < limit:
             break
         skip += limit
+    return catalogs
 
 def generate_markdown_files(products, lang):
     # 根据语言设置输出文件路径
