@@ -100,13 +100,11 @@ def generate_allcatalogs_files(products_with_catalogs, lang):
                     f_catalogs.write(f"- [{title}](https://www.websoft9.com/apps/{key})\n")
                 f_catalogs.write("\n")  # Add an extra newline for spacing
 
-# products_zh = fetch_all_products('zh-CN')
+products_zh = fetch_all_products('zh-CN')
 # generate_markdown_files(products_zh, 'zh-CN')
 
-# products_en = fetch_all_products('en-US')
+products_en = fetch_all_products('en-US')
 # generate_markdown_files(products_en, 'en-US')
 
-products_with_catalogs_zh = fetch_all_products_with_catalogs('zh-CN')
-generate_allcatalogs_files(products_with_catalogs_zh, 'zh-CN')
-products_with_catalogs_en = fetch_all_products_with_catalogs('en-US')
-generate_allcatalogs_files(products_with_catalogs_en, 'en-US')
+generate_allcatalogs_files(products_zh, 'zh-CN')
+generate_allcatalogs_files(products_en, 'en-US')
