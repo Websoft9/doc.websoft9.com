@@ -24,6 +24,8 @@ def fetch_all_products(locale):
             break
         skip += limit
 
+    print("产品数量："+len(products))
+
     return products
 
 def generate_markdown_files(products, lang):
