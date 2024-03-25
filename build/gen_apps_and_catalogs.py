@@ -93,6 +93,8 @@ def generate_markdown_files(products,catalogs,lang):
 
 products_zh = fetch_all_products('zh-CN')
 catalogs_zh = fetch_base_catalogs('zh-CN')
+print(len(products_zh))
+print(len(catalogs_zh))
 generate_markdown_files(products_zh, catalogs_zh, 'zh-CN')
 
 products_en = fetch_all_products('en-US')
