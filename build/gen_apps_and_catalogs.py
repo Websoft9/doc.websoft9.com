@@ -18,9 +18,9 @@ def fetch_all_products(locale):
             'skip': skip,
             'limit': limit,
             'locale': locale,
-            'select': 'fields.key,fields.trademark,fields.catalog'
-            # 'fields.production': 'yes',
-            # 'fields.appStore': 'yes'
+            'select': 'fields.key,fields.trademark,fields.catalog',
+            'fields.production': 'yes',
+            'fields.appStore': 'yes'
         })
         products.extend(response.items)
         if len(response.items) < limit:
@@ -89,6 +89,7 @@ def generate_markdown_files(products,catalogs,lang):
                 catalog = catalogs.get(catalog_id, {})
                 catalog_title = catalog.get('title')
                 parent_catalog = catalog.get('catalog')
+                print(str(catalog)+"-"+str(catalog_title)+"-"+str(parent_catalog))
                 if parent_catalog:
                     parent_catalog_title = catalogs[parent_catalog].get('title')
                     f_catalogs.write(f"## {parent_catalog_title}\n\n")
