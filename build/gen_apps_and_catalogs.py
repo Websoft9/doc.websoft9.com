@@ -51,5 +51,5 @@ def generate_markdown_files(products, lang):
 products = fetch_all_products()
 
 # 生成中文和英文的Markdown文件
-generate_markdown_files(products, 'zh')
-generate_markdown_files(products, 'en')
+generate_markdown_files(products, 'zh-CN')
+generate_markdown_files(products, 'en-US')
