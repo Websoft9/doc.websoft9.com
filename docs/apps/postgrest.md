@@ -20,7 +20,7 @@ Websoft9 控制台安装时，需要填写准确的 Postgresql 连接 URI，否�
 ## 配置选项{#configs}
 
 - 配置文件：可以通过环境变量传递配置项
-- 连接 Postgre 数据库：应用**编排**修改 .env 文件中的 **W9_POSTGRESQL_URI_SET**
+- 连接 Postgres 数据库：应用**编排**修改 .env 文件中的 **W9_POSTGRESQL_URI_SET**
 
 
 ## 管理维护{#administrator}

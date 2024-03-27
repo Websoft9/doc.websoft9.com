@@ -17,9 +17,6 @@ import Meta from './_include/netdata.md';
 
 Websoft9 控制台安装 Netdata 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
 
- > 账号设置以及监控其他服务器需要研究调查
-
-
 ## 配置选项{#configs}
 
 

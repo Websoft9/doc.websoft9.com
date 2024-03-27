@@ -20,9 +20,9 @@ Websoft9 控制台安装 Kasm Workspaces 后，通过【我的应用】管理应
 
 ## 配置选项{#configs}
 
+- 中文直接输入：不支持直接输入，需通过剪贴板传递
 
 ## 管理维护{#administrator}
-
 
 ## 故障
 

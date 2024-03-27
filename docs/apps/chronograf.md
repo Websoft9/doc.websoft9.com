@@ -13,19 +13,26 @@ import Meta from './_include/chronograf.md';
 
 ## 入门指南{#guide}
 
-### 初始化{#wizard}
+### 连接 InfluxDB {#wizard}
 
-Websoft9 控制台安装 Chronograf 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
+下面以连接 InfluxDB2.x 为例，详细介绍连接方式：
 
+1. 准备好需要管理的 InfluxDB 
+
+2. 访问 Chronograf，增加一个 InfluxDB 连接，首选勾选 "InfluxDB v2 Auth"，然后填写如下参数：
+   
+   - Connection URL: InfluxDB 的访问 URL
+   - Connection Name： 自定义
+   - Organization：InfluxDB 的 organization（必填项）
+   - Token：InfluxDB 的 token
 
 
 ## 配置选项{#configs}
 
+- 连接多个数据库（√）
+- 支持的 InfluxDB 版本：InfluxDB 1.x, InfluxDB 2.x
 
 ## 管理维护{#administrator}
 
+
 ## 故障
-
-#### 无法连接 InfluxDB 数据库?
-
-无法通过 InfluxDB 的用户认证或者 TOKEN 认证。

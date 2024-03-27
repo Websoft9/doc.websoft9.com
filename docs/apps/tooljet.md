@@ -4,7 +4,7 @@ slug: /tooljet
 tags:
   - 低代码平台
   - 企业生产力工具
-  - tooljet
+  - ToolJet
 ---
 
 import Meta from './_include/tooljet.md';
@@ -20,7 +20,7 @@ Websoft9 控制台安装 ToolJet 后，通过【我的应用】管理应用，�
 
 ## 配置选项{#configs}
 
-
+- 多语言：仅英文
 
 ## 管理维护{#administrator}
 

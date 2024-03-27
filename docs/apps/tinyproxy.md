@@ -13,25 +13,23 @@ import Meta from './_include/tinyproxy.md';
 
 ## 入门指南{#guide}
 
-### 开启允许客户端地址
+### 通过代理使用 git clone
 
-在控制台修改编排 .env 文件中的 ALLOWED 地址，添加你需要代理的服务器IP，重建应用后即可使用。
+下面我们介绍如何使用 Tinyproxy 来实现 git clone:
 
-### 如何使用代理 git clone?
+1. 在控制台修改编排 .env 文件中的 ALLOWED，重建应用后生效
 
-开启允许客户端地址后，执行下面命令：
-
-```
-git -c http.proxy=http://Tinyproxy服务端IP:TinyproxyPort clone --depth=1 https://github.com/Websoft9/docker-library
-```
+2. 使用下面的 git clone 命令
+    ```
+    git -c http.proxy=http://TinyproxyURL:Port clone --depth=1 https://github.com/Websoft9/docker-library
+    ```
 
 
 ## 配置选项{#configs}
 
-
+- 白名单设置：编排.env 文件的 ALLOWED，设置 0.0.0.0/0 表示允许所有 IP 访问
 
 ## 管理维护{#administrator}
-
 
 
 ## 故障
