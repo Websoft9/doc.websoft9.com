@@ -83,3 +83,11 @@ Websoft9 是一个以应用为中心的，它支持各种全面的应用的自�
 只要学会将这些工具进行有效的组合，那它将产生不可估量的效率提升。而 Websoft9 通过共享的原云生技术，可以帮助您物尽其用。   
 
 如果您的 IT 团队无法进行有效的支持与建议，[订阅](./buy/subscription) Websoft9 的服务，享受商业级支持给您带来的效率提升和保障吧。  
+
+## 应用列表
+
+目前可一键安装的应用如下：
+
+import Meta from './apps/_include/allapps.md';
+
+<Meta name="meta" />

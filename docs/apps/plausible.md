@@ -25,7 +25,3 @@ Websoft9 控制台安装 Plausible 后，通过【我的应用】管理应用，
 
 
 ## 故障
-
-#### 更改域名导致无法访问 Plausible ？
-
-#### 访问 Plausible 出现 502 错误？{#502}
