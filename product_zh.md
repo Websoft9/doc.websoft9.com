@@ -14,6 +14,8 @@
 
 - [GeminiProChat](../geminiprochat)
 
+- [Koishi](../koishi)
+
 - [TensorFlow](../tensorflow)
 
 ## 大数据分析
@@ -197,6 +199,8 @@
 - [Redmine](../redmine)
 
 - [Seafile](../seafile)
+
+- [Snapdrop](../snapdrop)
 
 - [Zentao](../zentao)
 

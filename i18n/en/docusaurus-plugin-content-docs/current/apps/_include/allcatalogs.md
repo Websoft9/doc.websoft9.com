@@ -1,15 +1,15 @@
 ## AI + Machine Learning
 
-- [Machine Vision](https://www.websoft9.com/apps/mvi)
 - [AI Simulation](https://www.websoft9.com/apps/aiapps)
-- [Training Framework](https://www.websoft9.com/apps/dl)
+- [Machine Vision](https://www.websoft9.com/apps/mvi)
 - [AI Gateway](https://www.websoft9.com/apps/ai-gateway)
+- [Training Framework](https://www.websoft9.com/apps/dl)
 - [AIGC](https://www.websoft9.com/apps/aigc)
 - [AIOps](https://www.websoft9.com/apps/aiops)
 ## Data Analytics
 
-- [Search Engine](https://www.websoft9.com/apps/search)
 - [Data Application and Visualization](https://www.websoft9.com/apps/bi)
+- [Search Engine](https://www.websoft9.com/apps/search)
 - [Data Storage](https://www.websoft9.com/apps/storage)
 - [ETL & ELT](https://www.websoft9.com/apps/etl)
 - [Data Collection](https://www.websoft9.com/apps/data-collection)
@@ -26,10 +26,10 @@
 - [Blockchain](https://www.websoft9.com/apps/blockchain)
 ## Design & Create
 
+- [Virtual Reality](https://www.websoft9.com/apps/virtual-reality)
+- [Industrial Design](https://www.websoft9.com/apps/industrial-design)
 - [Whiteboard and Note](https://www.websoft9.com/apps/whiteboard-and-note)
 - [Digital creativity](https://www.websoft9.com/apps/dcreativity)
-- [Industrial Design](https://www.websoft9.com/apps/industrial-design)
-- [Virtual Reality](https://www.websoft9.com/apps/virtual-reality)
 - [Low Code and No Code](https://www.websoft9.com/apps/low-code)
 ## Content Management
 
@@ -52,8 +52,8 @@
 - [Document Collaboration](https://www.websoft9.com/apps/document)
 - [Project and Task](https://www.websoft9.com/apps/pm-task)
 - [Password Management](https://www.websoft9.com/apps/teampassm)
-- [Files Management](https://www.websoft9.com/apps/files)
 - [Agile Boards](https://www.websoft9.com/apps/agile)
+- [Files Management](https://www.websoft9.com/apps/files)
 - [Cloud Workspaces](https://www.websoft9.com/apps/cloud-workspaces)
 ## Automation
 
@@ -74,23 +74,23 @@
 ## IoT
 
 - [MQTT](https://www.websoft9.com/apps/mqtt)
-- [Device Management](https://www.websoft9.com/apps/device-management)
 - [Device Security](https://www.websoft9.com/apps/device-security)
+- [Device Management](https://www.websoft9.com/apps/device-management)
 ## Networking
 
 - [API Gateway](https://www.websoft9.com/apps/api)
 - [Load Balancer](https://www.websoft9.com/apps/balancer)
 - [HTTP Server](https://www.websoft9.com/apps/httpserver)
-- [Application Gateway](https://www.websoft9.com/apps/application-gateway)
 - [DNS Server](https://www.websoft9.com/apps/dns)
+- [Application Gateway](https://www.websoft9.com/apps/application-gateway)
 ## Games
 
 - [Game Engine](https://www.websoft9.com/apps/game-engine)
 - [Games Server](https://www.websoft9.com/apps/games-server)
 ## IT Developer
 
-- [Web Runtime](https://www.websoft9.com/apps/runtime)
 - [DevOps All](https://www.websoft9.com/apps/devops)
+- [Web Runtime](https://www.websoft9.com/apps/runtime)
 - [Web Framework](https://www.websoft9.com/apps/webframework)
 - [Code Repository](https://www.websoft9.com/apps/repository)
 - [Artifact Repository](https://www.websoft9.com/apps/artifact-repository)
@@ -103,48 +103,48 @@
 - [Low Code and No Code](https://www.websoft9.com/apps/low-code)
 ## IT Architecture
 
+- [Work Flow](https://www.websoft9.com/apps/workflow)
+- [GIS Service](https://www.websoft9.com/apps/gis)
+- [Document Service](https://www.websoft9.com/apps/docs)
+- [Message Queue](https://www.websoft9.com/apps/mq)
 - [Web Runtime](https://www.websoft9.com/apps/runtime)
 - [Container](https://www.websoft9.com/apps/container)
 - [Object Storage](https://www.websoft9.com/apps/oss)
-- [Message Queue](https://www.websoft9.com/apps/mq)
-- [Document Service](https://www.websoft9.com/apps/docs)
-- [GIS Service](https://www.websoft9.com/apps/gis)
-- [Work Flow](https://www.websoft9.com/apps/workflow)
-- [API Gateway](https://www.websoft9.com/apps/api)
-- [Load Balancer](https://www.websoft9.com/apps/balancer)
-- [HTTP Server](https://www.websoft9.com/apps/httpserver)
 - [Search Engine](https://www.websoft9.com/apps/search)
-- [Game Engine](https://www.websoft9.com/apps/game-engine)
+- [API Gateway](https://www.websoft9.com/apps/api)
 - [Email Server](https://www.websoft9.com/apps/email)
+- [Load Balancer](https://www.websoft9.com/apps/balancer)
+- [Game Engine](https://www.websoft9.com/apps/game-engine)
+- [HTTP Server](https://www.websoft9.com/apps/httpserver)
+- [Backup & Restore](https://www.websoft9.com/apps/backup)
 - [Application Gateway](https://www.websoft9.com/apps/application-gateway)
 - [BaaS](https://www.websoft9.com/apps/baas)
-- [Backup & Restore](https://www.websoft9.com/apps/backup)
-- [Subscriptions and billing](https://www.websoft9.com/apps/subscriptions-and-billing)
 - [Licensing and distribution](https://www.websoft9.com/apps/licensing)
-- [Key Management](https://www.websoft9.com/apps/key-management)
+- [Subscriptions and billing](https://www.websoft9.com/apps/subscriptions-and-billing)
 - [Video Server](https://www.websoft9.com/apps/video-server)
+- [Key Management](https://www.websoft9.com/apps/key-management)
 ## IT Monitor
 
+- [Linux Desktop](https://www.websoft9.com/apps/desktop)
+- [Multicloud Management](https://www.websoft9.com/apps/cpm)
 - [Cloud Infrastructure Monitoring](https://www.websoft9.com/apps/itsm)
 - [Log Management](https://www.websoft9.com/apps/logs)
 - [Full Monitoring](https://www.websoft9.com/apps/fullmonitor)
-- [Linux Desktop](https://www.websoft9.com/apps/desktop)
-- [Multicloud Management](https://www.websoft9.com/apps/cpm)
 - [Backup & Restore](https://www.websoft9.com/apps/backup)
 - [APM](https://www.websoft9.com/apps/apm)
 ## IT Security
 
 - [Password Management](https://www.websoft9.com/apps/teampassm)
-- [Privileged Access Management](https://www.websoft9.com/apps/pam)
-- [Firewall](https://www.websoft9.com/apps/firewall)
-- [Detection and Monitor](https://www.websoft9.com/apps/security-detection)
 - [Access Control](https://www.websoft9.com/apps/access-control)
+- [Detection and Monitor](https://www.websoft9.com/apps/security-detection)
+- [Firewall](https://www.websoft9.com/apps/firewall)
+- [Privileged Access Management](https://www.websoft9.com/apps/pam)
 - [Software supply chain](https://www.websoft9.com/apps/softwarechain)
 ## Industries 
 
 - [Life sciences](https://www.websoft9.com/apps/life)
-- [Construction](https://www.websoft9.com/apps/construction)
-- [Automotive](https://www.websoft9.com/apps/automotive)
-- [Education](https://www.websoft9.com/apps/education)
 - [Software Platform](https://www.websoft9.com/apps/software-platform)
+- [Education](https://www.websoft9.com/apps/education)
+- [Automotive](https://www.websoft9.com/apps/automotive)
 - [Industrial Equipment](https://www.websoft9.com/apps/industrial-equipment)
+- [Construction](https://www.websoft9.com/apps/construction)

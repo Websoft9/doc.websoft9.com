@@ -12,6 +12,8 @@ Docs of hundreds of pre-packaged apps below
 
 - [GeminiProChat](../geminiprochat)
 
+- [Koishi](../koishi)
+
 - [TensorFlow](../tensorflow)
 
 ## Data Analytics
@@ -195,6 +197,8 @@ Docs of hundreds of pre-packaged apps below
 - [Redmine](../redmine)
 
 - [Seafile](../seafile)
+
+- [Snapdrop](../snapdrop)
 
 - [Zentao](../zentao)
 
