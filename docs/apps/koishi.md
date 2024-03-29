@@ -12,11 +12,11 @@ import Meta from './_include/koishi.md';
 
 ## 入门指南{#guide}
 
-### 聊天{#wizard}
+### 聊天测试{#test}
 
 1. Koishi 控制台页面，【沙盒】->【添加用户】可添加用户
 
-2. 输入默认指令即可得到聊天回复
+2. 输入 `help` 即可得到聊天回复
 
 
 ## 配置选项{#configs}
