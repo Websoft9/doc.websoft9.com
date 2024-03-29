@@ -1,7 +1,7 @@
-[Apache ZooKeeper](https://zookeeper.apache.org/) 是一个 **面向分布式应用程序的高性能协调服务**，它被用于 消息队列 负载均衡   等场景。Apache ZooKeeper is an effort to develop and maintain an open-source server which enables highly reliable distributed coordination.
+[Apache ZooKeeper](https://zookeeper.apache.org/) 是一个 **分布式应用的协调服务软件**，它被用于 消息队列 负载均衡   等场景。Apache ZooKeeper is an effort to develop and maintain an open-source server which enables highly reliable distributed coordination.
 
 
-![Console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zookeeper/zookeeper-gui-websoft9.png)
+![架构](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zookeeper/zookeeper-archi-websoft9.webp)
 
 
 ## 准备

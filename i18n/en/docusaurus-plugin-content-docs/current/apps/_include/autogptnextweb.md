@@ -1,4 +1,4 @@
-[AutoGPT Next Web](https://github.com/ConnectAI-E/AutoGPT-Next-Web) 是一个 **Well-designed cross-platform AutoGPT web UI**，它被用于 AIGC  等场景。Assemble, configure, and deploy autonomous AI Agents in your browser.
+[AutoGPT.NextWeb](https://github.com/ConnectAI-E/AutoGPT-Next-Web) 是一个 **Well-designed cross-platform AutoGPT web UI**，它被用于 AIGC  等场景。Assemble, configure, and deploy autonomous AI Agents in your browser.
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/autogptnextweb/autogptnextweb-gui-websoft9.png)
@@ -6,7 +6,7 @@
 
 ## 准备
 
-在参阅本文档使用 AutoGPT Next Web 时，需要确保如下几点：
+在参阅本文档使用 AutoGPT.NextWeb 时，需要确保如下几点：
 
 - 应用是基于 Websoft9 安装的
 

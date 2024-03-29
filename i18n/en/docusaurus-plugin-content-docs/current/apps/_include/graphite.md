@@ -1,4 +1,4 @@
-[Graphite](https://graphiteapp.org/) 是一个 **系统监控与报警平台**，它被用于 全面监控  等场景。Graphite 是专为 Web 开发人员设计的企业级监控和绘图工具。它使用户能够跟踪网站、应用程序、业务服务和网络服务器的性能。
+[Graphite](https://graphiteapp.org/) 是一个 **Power your metrics and alerting with the leading open-source monitoring solution.**，它被用于 Full Monitoring  等场景。Graphite is an enterprise-scale monitoring and graphing tool designed for web developers. It enables users to track the performance of websites, applications, business services, and networked servers.
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/graphite/graphite-gui-websoft9.jpg)

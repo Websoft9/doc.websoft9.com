@@ -1,4 +1,4 @@
-[Kong](https://konghq.com/) 是一个 **The Cloud Native API Management Platform**，它被用于 API Gateway  等场景。Build delightful customer experiences and unleash developer productivity with Kong, the fastest cloud native API platform.
+[Kong Gateway (OSS)](https://konghq.com/) 是一个 **The Cloud Native API Management Platform**，它被用于 API Gateway  等场景。Build delightful customer experiences and unleash developer productivity with Kong, the fastest cloud native API platform.
 
 
 ![Console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kong/kong-gui-websoft9.webp)
@@ -6,7 +6,7 @@
 
 ## 准备
 
-在参阅本文档使用 Kong 时，需要确保如下几点：
+在参阅本文档使用 Kong Gateway (OSS) 时，需要确保如下几点：
 
 - 应用是基于 Websoft9 安装的
 

@@ -1,7 +1,7 @@
 [influxdb](https://www.influxdata.com/) 是一个 **Manage all types of time series data in a single, purpose-built database. **，它被用于 Time Series Database Device Management  等场景。InfluxDB is a strong database built specifically for time series data. It has made working with such data seamless and easy.
 
 
-![arch](https://libs.websoft9.com/Websoft9/DocsPicture/zh/influxdb/influxdb-gui-websoft9.svg)
+![arch](https://libs.websoft9.com/Websoft9/DocsPicture/zh/influxdb/influxdb-gui-websoft9.png)
 
 
 ## 准备

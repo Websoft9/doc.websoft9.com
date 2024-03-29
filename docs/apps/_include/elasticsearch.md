@@ -1,4 +1,4 @@
-[Elasticsearch](https://www.elastic.co/) 是一个 **开放的分布式数据存储、搜索和分析引擎**，它被用于 大数据存储 数据仓库 数据应用与可视化 搜索服务  等场景。Elasticsearch 是一个分布式、免费和开放的搜索和分析引擎，适用于所有类型的数据，包括文本、数字、地理空间、结构化和非结构化。
+[Elasticsearch](https://www.elastic.co/) 是一个 **高性能数据存储、搜索和分析引擎**，它被用于 大数据存储 数据仓库 数据应用与可视化 搜索服务  等场景。Elasticsearch 是一个分布式、免费和开放的搜索和分析引擎，适用于所有类型的数据，包括文本、数字、地理空间、结构化和非结构化。
 
 
 ![wizard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-wizard1-websoft9.png)

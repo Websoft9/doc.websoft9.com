@@ -1,7 +1,7 @@
 [influxdb](https://www.influxdata.com/) 是一个 **在单个专用数据库中管理所有类型的时间序列数据。**，它被用于 时序数据库 设备管理  等场景。InfluxDB是一个专门为时间序列数据构建的强大数据库。它使处理此类数据变得无缝而简单。
 
 
-![arch](https://libs.websoft9.com/Websoft9/DocsPicture/zh/influxdb/influxdb-gui-websoft9.svg)
+![arch](https://libs.websoft9.com/Websoft9/DocsPicture/zh/influxdb/influxdb-gui-websoft9.png)
 
 
 ## 准备
