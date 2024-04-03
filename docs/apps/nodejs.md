@@ -15,7 +15,7 @@ import Meta from './_include/nodejs.md';
 
 ### 安装应用{#install}
 
-下面通过常见的 Node.js 应用 [docusaurus](https://docusaurus.io/docs)为例，描述应用安装过程：
+下面通过常见的 Node.js 应用 [docusaurus](https://docusaurus.io/docs) 为例，描述应用安装过程：
 
 1. Websoft9 控制台安装 Node.js 运行环境
 
@@ -27,7 +27,7 @@ import Meta from './_include/nodejs.md';
 
 3. 应用被安装在路径： **/home/node/app/classic**
 
-4. 在编排修改 **docker-comopse.yml**，使 **command**生效，重建应用后即可访问 docusaurus
+4. 在编排修改 **docker-comopse.yml**，使 **command** 生效，重建应用后即可访问 docusaurus
    ```
    - command: sh -c "cd /home/node/app/classic && npm run start -- --host 0.0.0.0"
    ```
@@ -37,7 +37,7 @@ import Meta from './_include/nodejs.md';
 您可以在**docker-comopse.yml** 的 **command** 添加您的命令，它支持多行和shell的语法，并支持  
 引入环境变量，也就是说，它可以做任何您想做的事情。以下是示例：
 
-      ```
+    ```
       command: |
         /bin/bash -c "
         if [ -z \"$W9_URL\" ]; then
