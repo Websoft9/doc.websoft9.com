@@ -13,101 +13,158 @@ import Meta from './_include/php.md';
 
 ## 入门指南{#guide}
 
-### PHP 环境配置{#environment}
+本环境所采用的 [PHP 原生容器](https://hub.docker.com/_/php) 仅包含 PHP 核心，而安装 PHP 应用时可能需要安装更多系统包和 PHP 扩展。  
 
-前提：进入容器并安装工具 **wget**
+所以，掌握安装系统包和 PHP 扩展是必须的工作。  
 
-1. 安装系统依赖包
+### PHP 扩展安装管理器（推荐）{#download-extension-installer}
 
-  ```
-  wget https://websoft9.github.io/docker-library/apps/php/src/os_packages.sh && bash os_packages.sh
-  ```
+[PHP 扩展安装管理器](https://github.com/mlocati/docker-php-extension-installer)是 Docker 官方推荐的一个命令行工具，它可以很方便的在容器中安装你想要的 PHP 扩展
 
-2. 安装 PHP 扩展包
+1. Websoft9 控制台 exec 到容器后，下载 PHP 扩展安装管理器到容器：
+    ```
+    curl -o /usr/local/bin/install-php-extensions -L https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions
+    chmod 0755 /usr/local/bin/install-php-extensions
+    ```
 
-  ```
-  wget https://websoft9.github.io/docker-library/apps/php/src/php_extension.sh && bash php_extension.sh
-  ```
+2. 安装所需的 PHP 扩展
+   ```
+   install-php-extensions mysqli jd
+   ```
 
-3. PHP 其他配置文件设置
+### 安装 PHP Composer
 
-  ```
-  wget https://websoft9.github.io/docker-library/apps/php/src/php_extra.ini -O /usr/local/etc/php/conf.d/php_extra.ini
-  wget https://websoft9.github.io/docker-library/apps/php/src/opcache_recommended.ini -O /usr/local/etc/php/conf.d/opcache_recommended.ini
-  ```
+使用 [PHP 扩展安装管理器](#download-extension-installer) 命令，可以很方便的安装所需的 Composer 版本：
 
-4. 退出后重启容器安装包即可生效
+    ```
+    # Install the latest version
+    install-php-extensions @composer
 
-### 安装应用{#install}
+    # Install the latest 1.x version
+    install-php-extensions @composer-1
+    # Install a specific version
+    install-php-extensions @composer-2.0.2
+    ```
+   
 
-#### 二进制包安装
+### 其他 PHP 扩展安装方法
 
-下面通过常见的 PHP 应用 **Wordpress**为例，描述应用安装过程：
+本容器还支持[其他扩展安装](https://hub.docker.com/_/php)的命令：
 
-1. 进入容器准备 **Wordpress** 源码
+- docker-php-ext-install：内置命令，安装 PHP 扩展时对操作系统包有依赖
+- pecl install redis-5.3.7; docker-php-ext-enable redis：内置命令
+- Websoft9 提供的一键安装 PHP 扩展脚本（这个脚本中包含了常见的扩展包，适应于许多 PHP 热门应用）
+   ```
+   # install some OS packages
+   curl -sS https://websoft9.github.io/docker-library/apps/php/src/os_packages.sh | bash
 
-  ```
-  cd /var/www/html 
-  wget https://wordpress.org/latest.zip
-  unzip latest.zip
-  mv wordpress/* ./
-  ```
+   # install some PHP extension
+   curl -sS https://websoft9.github.io/docker-library/apps/php/src/php_extension.sh | bash
+   ```
 
-2. Websoft9 控制台安装 MySQL
 
-3. Websoft9 控制台，通过【我的应用】管理应用，在**访问**标签页中获取 PHP 应用登录信息
+### 部署 PHP 网站{#sample}
 
-4. 使用本地浏览器后访问 URL，根据初始化向导输入步骤2中的数据库信息，wordpress即可初始化完成
+#### 下载源码部署
 
-#### composer 安装
+以 **Wordpress** 为例，描述应用部署过程：
 
-下面通过常见的 PHP 应用 **Laravel**为例，描述安装过程：
+1. Websoft9 控制台 exec 进入容器后
 
-1. 进入容器，安装 composer
-  ```
-  curl -sS https://getcomposer.org/installer -o composer-setup.php
-  php composer-setup.php --install-dir=/usr/local/bin --filename=composer
-  ```
+    - 下载并解压 **Wordpress** 源码到根目录下
+      ```
+      cd /var/www/html 
+      curl -O https://wordpress.org/latest.zip
+      unzip latest.zip
+      mv wordpress/* ./
+      ```
+    
+    - 修正网站文件权限
+      ```
+      chown -R www-data:www-data /var/www/html
+      ```
 
-2. 使用 Composer 创建 Laravel 项目
+2. Websoft9 控制台，通过【我的应用】管理应用，在**访问**标签页中获取 PHP 应用访问链接 URL
 
-  ```
-  composer create-project laravel/laravel /var/www/html/laravel --prefer-dist
-  ```
 
-3. 配置 Apache，修改 **/etc/apache2/sites-available/000-default.conf**，DocumentRoot 指向 Laravel 项目的 public 目录
+3. 本地浏览器后访问 URL，便进入 WordPress 的安装向导
 
-  ```
-  DocumentRoot /var/www/html/laravel/public
-  ```
+   > 安装过程可能会提示缺少某些 PHP 扩展，此时必须先完成所需的[扩展安装](#download-extension-installer)
 
-4. 设置文件权限
-  ```
-  chown -R www-data:www-data /var/www/html/laravel
-  chmod -R 755 /var/www/html/laravel/storage
-  chmod -R 755 /var/www/html/laravel/bootstrap/cache
-  ```
+#### Composer 部署
 
-5. 重启容器，即可正常访问 Laravel
+确保已经安装 Composer，再以 **Laravel** 为例，描述部署过程：
+
+1. 进入容器 exec 模式，使用 Composer 创建 Laravel 项目，并修正权限
+
+    ```
+    composer create-project laravel/laravel /var/www/html/laravel --prefer-dist
+    chown -R www-data:www-data /var/www/html/laravel
+    ```
+
+2. 配置 Apache 配置文件的 DocumentRoot 指向 */var/www/html/laravel/public*
+
+    ```
+    sed -i 's|DocumentRoot /var/www/html|DocumentRoot /var/www/html/laravel/public|' /etc/apache2/sites-available/000-default.conf
+    ```
+
+3. 重启容器后，即可正常访问 Laravel
+
+
+### 修改 PHP 配置文件
+
+PHP 容器默认的配置是不可以被直接更改的，只能向容器 */usr/local/etc/php/conf.d* 目录增加自己所需的配置文件。  
+
+下面是一个最简单的实现方式：
+
+1. 通过 Websoft9 控制台 exec 到容器中
+
+2. 将 Websoft9 提供的配置文件模板下载到目录
+    ```
+    wget https://websoft9.github.io/docker-library/apps/php/src/php_extra.ini -O /usr/local/etc/php/conf.d/php_extra.ini
+    wget https://websoft9.github.io/docker-library/apps/php/src/opcache_recommended.ini -O /usr/local/etc/php/conf.d/opcache_recommended.ini
+    ```
+
+3. 根据所需是否修改模板的内容
+
+4. 安装完后，重启容器后生效
 
 
 ## 配置选项{#configs}
 
-- 配置文件: opcache_recommended.ini，php_extra.ini
-  >容器内路径：**/usr/local/etc/php/conf.d**
-
+- PHP 大版本切换（√）：切换后再根据需要安装所需的扩展
+- 多应用支持：一个 PHP 容器仅支持一个应用，多个应用建议运行多个 PHP 容器
+- 应用根目录：*/var/www/html*
+- PHP 额外配置文件目录：*/usr/local/etc/php/conf.d*
+- Apache 配置文件：*/etc/apache2/sites-available/000-default.conf* 
+- 查询已安装的 PHP 扩展：`php -m`
+- PHP 扩展安装管理器：`install-php-extensions` 
+- 容器中安装操作系统包： 以安装 git 为例，安装命令为 `apt update -y && apt install git -y`
 
 ## 管理维护{#administrator}
 
+### PHP 版本切换
+
+1. 通过 Websoft9 控制台 PHP 编排文件修改 W9_VERSION
+
+2. 重建容器后生效
+
+3. 进入容器的 exec 模式，使用 [PHP 扩展管理器](#download-extension-installer) 安装所需的 PHP 扩展。  
 
 ## 故障
 
-#### PHP7.0以下 **apt update** 报错？
+#### PHP7.0 以下 **apt update** 报错？
 
-因为 PHP7.0以下的容器 Debian 操作系统版本太老，需要重新设定源，执行下面命令可恢复更新：
+原因：PHP7.0 以下的容器 Debian 操作系统版本太旧，导致源不可用   
 
-```
-sed -i s/deb.debian.org/archive.debian.org/g /etc/apt/sources.list
-sed -i 's|security.debian.org|archive.debian.org|g' /etc/apt/sources.list
-sed -i '/stretch-updates/d' /etc/apt/sources.list
-```
+方案：需要重新设定源  
+
+  ```
+  sed -i s/deb.debian.org/archive.debian.org/g /etc/apt/sources.list
+  sed -i 's|security.debian.org|archive.debian.org|g' /etc/apt/sources.list
+  sed -i '/stretch-updates/d' /etc/apt/sources.list
+  ```
+
+#### 应用目录没有写权限？
+
+容器中运行 `chown -R www-data:www-data /var/www/html` 修正权限即可
