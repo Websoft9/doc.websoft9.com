@@ -113,22 +113,14 @@ import Meta from './_include/php.md';
 
 ### 修改 PHP 配置文件
 
-PHP 容器默认的配置是不可以被直接更改的，只能向容器 */usr/local/etc/php/conf.d* 目录增加自己所需的配置文件。  
+PHP 容器通过 */usr/local/etc/php/conf.d* 目录增加自己所需的配置文件，Websoft9 已经将配置文件挂载到容器。  
 
-下面是一个最简单的实现方式：
+有两种修改它的方式：
 
-1. 通过 Websoft9 控制台 exec 到容器中
+- 在 Websoft9 控制台 exec 到容器，通过 vim 命令修改
+- 在 Websoft9 控制台 修改 PHP 应用的编排文件 src/php_extra.ini，重建应用后生效
 
-2. 将 Websoft9 提供的配置文件模板下载到目录
-    ```
-    wget https://websoft9.github.io/docker-library/apps/php/src/php_extra.ini -O /usr/local/etc/php/conf.d/php_extra.ini
-    wget https://websoft9.github.io/docker-library/apps/php/src/opcache_recommended.ini -O /usr/local/etc/php/conf.d/opcache_recommended.ini
-    ```
-
-3. 根据所需是否修改模板的内容
-
-4. 安装完后，重启容器后生效
-
+> 重建应用会删除已经安装的扩展，需慎重使用
 
 ## 配置选项{#configs}
 

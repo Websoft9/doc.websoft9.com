@@ -18,6 +18,7 @@ import Meta from './_include/openjdk.md';
 #### war包部署
 
 下面通过常见的 Java 应用 [Jenkins](https://www.jenkins.io) 为例，描述应用安装过程：
+
 > Jenkins 仅仅支持 OpenJDK 17，21
 
 1. Websoft9 控制台安装 OpenJDK 运行环境
