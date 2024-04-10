@@ -282,6 +282,14 @@
 
 - [phpMyAdmin](../phpmyadmin)
 
+## 运行环境
+
+- [Node.js](../nodejs)
+
+- [OpenJDK](../openjdk)
+
+- [PHP](../php)
+
 ## 物联网
 
 - [Chronograf](../chronograf)

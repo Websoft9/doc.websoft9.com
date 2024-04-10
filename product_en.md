@@ -280,6 +280,14 @@ Docs of hundreds of pre-packaged apps below
 
 - [phpMyAdmin](../phpmyadmin)
 
+## Web Runtime
+
+- [Node.js](../nodejs)
+
+- [OpenJDK](../openjdk)
+
+- [PHP](../php)
+
 ## IoT
 
 - [Chronograf](../chronograf)
