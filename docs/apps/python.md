@@ -13,11 +13,33 @@ import Meta from './_include/python.md';
 
 ## 入门指南{#guide}
 
-### 初始化{#wizard}
+下面通过 [ Web 框架 FastAPI](https://github.com/jekyll/jekyll) 为例，描述应用安装过程：
 
-Websoft9 控制台安装 Python 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
+1. Websoft9 控制台安装 Python 运行环境
 
 
+2. 在编排修改 **.src/cmd.sh**，使注释掉的安装脚本生效
+   ```
+    pip install fastapi uvicorn[standard]
+    cat << 'EOF' > main.py
+    from typing import Union
+
+    from fastapi import FastAPI
+
+    app = FastAPI()
+
+    @app.get("/")
+    def read_root():
+        return {"Hello": "World"}
+
+    @app.get("/items/{item_id}")
+    def read_item(item_id: int, q: Union[str, None] = None):
+        return {"item_id": item_id, "q": q}
+    EOF
+    uvicorn main:app --host 0.0.0.0 --port 5000
+   ```
+
+3. 重建应用生效后，即可访问访问示例 Web 应用 
 
 ## 配置选项{#configs}
 

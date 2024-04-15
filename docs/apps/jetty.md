@@ -2,9 +2,9 @@
 title: Jetty
 slug: /jetty
 tags:
-  - Web 面板
-  - 可视化
-  - GUI
+  - 运行环境
+  - Java Web 服务器
+  - Jetty
 ---
 
 import Meta from './_include/jetty.md';
@@ -13,42 +13,25 @@ import Meta from './_include/jetty.md';
 
 ## 入门指南{#guide}
 
-### 初始化{#wizard}
+### 安装应用{#install}
 
-Websoft9 控制台安装 Jetty 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
+下面通过 [ Tomcat war 包](https://tomcat.apache.org/tomcat-11.0-doc/appdev/sample/sample.war) 为例，描述应用安装过程：
 
-### 配置 SMTP{#smtp}
+1. Websoft9 控制台安装 Jetty 运行环境
 
-1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
 
-2. 填写 Jetty 邮件相关配置
+2. 在编排修改 **.src/cmd.sh**，使注释掉的安装脚本生效
+   ```
+   cd /var/lib/jetty/webapps
+   curl -o ROOT.war https://tomcat.apache.org/tomcat-11.0-doc/appdev/sample/sample.war
+   ```
 
-3. 测试邮件发送是否可用
-
-### 安装插件{#plugin}
+3. 重建应用生效后，即可访问访问示例 Web 应用 
 
 ## 配置选项{#configs}
+
+
 ## 管理维护{#administrator}
-
-### 重置管理员密码{#resetpw}
-
-### 更换 URL{#url}
-
-### HTTPS 额外设置{#https}
-
-**[标准 HTTPS 配置](./guide/appsethttps)** 完成后，可能还需要如下步骤： 
-
-1. 步骤1
-
-2. 步骤2
-
-### 备份与恢复
-
-### 升级
 
 
 ## 故障
-
-#### 更改域名导致无法访问 Jetty ？
-
-#### 访问 Jetty 出现 502 错误？{#502}

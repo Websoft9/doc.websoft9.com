@@ -24,10 +24,10 @@ fixed_content_en = (
 )
 
 # Check the language from the file name or another indicator
-if 'zh' in args.output_file:
-    fixed_content = fixed_content_zh
-else:  # Default to English if 'zh' is not found
+if 'en' in args.output_file:
     fixed_content = fixed_content_en
+else: 
+    fixed_content = fixed_content_zh
 
 # Load the JSON data
 with open(args.json_file) as json_file:

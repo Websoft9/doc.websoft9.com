@@ -9,7 +9,7 @@ slug: /migration/onboard
 
 ## 准备
 
-1. 停止当前服务器的 HTTP 服务，确保 80,443,9000 [端口](../parameter)未被占用
+1. 停止当前服务器的 HTTP 服务，确保 80,443,9000 [端口](../admin/parameter)未被占用
 
 2. 备份现有的 HTTP 虚拟主机配置，供迁移至 Websoft9 后使用
 

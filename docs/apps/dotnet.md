@@ -2,9 +2,9 @@
 title: .NET SDK
 slug: /dotnet
 tags:
-  - Web 面板
-  - 可视化
-  - GUI
+  - 运行环境
+  - runtime
+  - .NET
 ---
 
 import Meta from './_include/dotnet.md';
@@ -13,42 +13,27 @@ import Meta from './_include/dotnet.md';
 
 ## 入门指南{#guide}
 
-### 初始化{#wizard}
+### 安装应用{#install}
 
-Websoft9 控制台安装 .NET SDK 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
+下面通过 [dotnet-docker 示例](https://github.com/dotnet/dotnet-docker) 为例，描述应用安装过程：
 
-### 配置 SMTP{#smtp}
+1. Websoft9 控制台安装 .NET SDK 运行环境
 
-1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
 
-2. 填写 .NET SDK 邮件相关配置
+2. 在编排修改 **.src/cmd.sh**，使注释掉的安装脚本生效
+   ```
+   git clone --depth=1 https://github.com/dotnet/dotnet-docker
+   cd dotnet-docker/samples/aspnetapp/aspnetapp
+   otnet publish -c Release -o out
+   ./bin/container/Release/net8.0/aspnetapp
+   ```
 
-3. 测试邮件发送是否可用
-
-### 安装插件{#plugin}
+3. 重建应用生效后，即可访问访问示例 Web 应用 
 
 ## 配置选项{#configs}
+
+
 ## 管理维护{#administrator}
-
-### 重置管理员密码{#resetpw}
-
-### 更换 URL{#url}
-
-### HTTPS 额外设置{#https}
-
-**[标准 HTTPS 配置](./guide/appsethttps)** 完成后，可能还需要如下步骤： 
-
-1. 步骤1
-
-2. 步骤2
-
-### 备份与恢复
-
-### 升级
 
 
 ## 故障
-
-#### 更改域名导致无法访问 .NET SDK ？
-
-#### 访问 .NET SDK 出现 502 错误？{#502}

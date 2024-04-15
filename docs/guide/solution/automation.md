@@ -9,7 +9,7 @@ slug: /solution/automation
 
 自动化 Automation 是一项工作方式。它统一了信息、流程和用户，帮助企业在本地或云端自动执行数字化工作流程。创建能提高生产力的工作流程，改进团队之间的协作，获得新的洞察分析成果，解决问题并促成更好的业务成果。
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/n8n/n8n-gui-websoft9.png)
+![](https://libs.websoft9.com/Websoft9/resource/solution/automation-hero-websoft9.webp)
 
 ## 典型场景
 
