@@ -1,10 +1,14 @@
 import json
 import sys
+import argparse
 
-# The first command-line argument is the path to the JSON file
-json_file_path = sys.argv[1]
-# The second command-line argument is the output Markdown file name
-output_md_file_name = sys.argv[2]
+# 设置命令行参数
+parser = argparse.ArgumentParser(description='Convert JSON to Markdown.')
+parser.add_argument('--json_file', type=str, help='Path to the JSON file', required=True)
+parser.add_argument('--output_file', type=str, help='Path to the output Markdown file', required=True)
+
+# 解析命令行参数
+args = parser.parse_args()
 
 # Define the fixed content for both languages
 fixed_content_zh = (
@@ -20,13 +24,13 @@ fixed_content_en = (
 )
 
 # Check the language from the file name or another indicator
-if 'zh' in output_md_file_name:
+if 'zh' in args.output_file:
     fixed_content = fixed_content_zh
 else:  # Default to English if 'zh' is not found
     fixed_content = fixed_content_en
 
 # Load the JSON data
-with open(json_file_path) as json_file:
+with open(args.json_file) as json_file:
     data = json.load(json_file)
 
 # Create a dictionary to hold the titles and their corresponding keys, trademarks, and positions
@@ -71,5 +75,5 @@ for title, info in sorted(catalog_dict.items(), key=lambda x: min(x[1]['position
         print(e)
 
 # Write the Markdown content to the specified output file
-with open(output_md_file_name, 'w') as md_file:
+with open(args.output_file, 'w') as md_file:
     md_file.write(fixed_content + markdown_content)

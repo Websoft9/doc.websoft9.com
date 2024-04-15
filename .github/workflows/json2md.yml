@@ -23,13 +23,13 @@ jobs:
           curl -L -o media-latest.zip https://w9artifact.blob.core.windows.net/release/websoft9/plugin/media/media-latest.zip
           unzip media-latest.zip "media/json/product_zh.json" "media/json/product_en.json" "media/json/catalog_zh.json" "media/json/catalog_en.json" -d ./extracted
 
-      - name: Generate Markdown for product_zh
+      - name: Generate Markdown for app catalog README.mdx(zh)
         run: |
-          python build/json2md.py ./extracted/media/json/product_zh.json product_zh.md
+          python build/json2md.py --json_file ./extracted/media/json/product_zh.json --output_file docs/apps/README.mdx
 
-      - name: Generate Markdown for product_en
+      - name: Generate Markdown for app catalog README.mdx(en)
         run: |
-          python build/json2md.py ./extracted/media/json/product_en.json product_en.md
+          python build/json2md.py --json_file ./extracted/media/json/product_en.json --output_file i18n/en/docusaurus-plugin-content-docs/current/apps/README.mdx
 
       - name: Generate Markdown for allcatalogs.md(zh)
         run: |
