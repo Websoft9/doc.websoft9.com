@@ -5,9 +5,9 @@ slug: /function/gateway
 
 # 网关
 
-## 关于
-
 网关是 Websoft9 最具特殊的功能，它集成了 Nginx Proxy Manager（简称 NPM） 作为**应用程序网关**，并 100% 保持其原生性。  
+
+## 关于
 
 [NPM](https://nginxproxymanager.com/guide/) 是一个 Nginx 开源管理面板，它为用户提供了一个友好的 web 界面，用于管理和部署 Nginx 代理服务器的功能，包括：
 

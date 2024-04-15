@@ -18,7 +18,7 @@ slug: /starter
    - 用户名：服务器的管理员账号，一般为 `root`
    - 密码：服务器的管理员密码
 
-   > Websoft9 与服务器共享账号，故登录账号不限于管理账号，也可以是其他[符合要求的账号](./user/credentials)
+   > Websoft9 与服务器共享账号，故登录账号不限于管理账号，也可以是其他[符合要求的账号](./quick/credentials)
 
 3. 登录成功后会看到干净整洁的 Websoft9 控制台界面 
    ![Websoft9 控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/websoft9/websoft9-console-overview.png)
