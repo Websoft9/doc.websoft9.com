@@ -2,6 +2,10 @@
 sidebar_position: 1
 ---
 
+import DocCardList from '@theme/DocCardList';
+import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
+
+
 # 概要
 
 解决方案是我们一类特殊的产品，它主要满足一类用户对多个开源软件的组合需求。例如：WordPress 建站 + Prestashop 电商
@@ -18,3 +22,5 @@ sidebar_position: 1
 * 流程自动化开发
 
 同时，如果您是开源专家，我们很乐意与您合作开发解决方案。  
+
+<DocCardList items={useCurrentSidebarCategory().items}/>

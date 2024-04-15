@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-slug: /guide/install-app-self
+slug: /guide/deploy-app
 ---
 
 # 从应用商店之外部署应用
@@ -13,4 +13,4 @@ slug: /guide/install-app-self
 
 2. **测试**：软件安装完成之后通过 curl 测试是否可用
 
-3. **发布**：打开 Websoft9 控制台的 [网关](../quick/function/gateway)，为应用增加一个 **[Proxy Hosts](../function/gateway#add-proxhost)**，即为应用配置域名和证书，并对外发布。  
+3. **发布**：打开 Websoft9 控制台的 [网关](../function/gateway)，为应用增加一个 **[Proxy Hosts](../function/gateway#add-proxhost)**，即为应用配置域名和证书，并对外发布。  

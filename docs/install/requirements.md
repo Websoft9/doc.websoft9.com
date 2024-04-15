@@ -18,7 +18,7 @@ Websoft9 支持在 Red Hat, CentOS, Debian, Ubuntu 等[主流 Linux 发行版](h
 
 域名不是 Websoft9 运行的必要条件。但如果没有域名，应用访问会受限，建议为应用配置域名。    
 
-Websoft9 支持[全局域名](../reference/domain#wildcard)。它一次设置后，所有应用均可使用。  
+Websoft9 支持[全局域名](../guide/appsetdomain)。它一次设置后，所有应用均可使用。  
 
 ## 浏览器
 

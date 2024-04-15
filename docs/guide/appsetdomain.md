@@ -10,7 +10,7 @@ import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 Websoft9 提供了域名和证书配置的图形化界面--[网关](../function/gateway)，大大减轻了用户的负担。  
 
-为应用设置域名（包含HTTPS证书）的前提首先需要：[准备域名](../reference/domain)，再根据自身的需求完成对应的设置。
+为应用设置域名（包含HTTPS证书）的前提首先需要：[准备域名](../domains)，再根据自身的需求完成对应的设置。
 
 ## 配置域名
 
@@ -23,7 +23,7 @@ Websoft9 提供了域名和证书配置的图形化界面--[网关](../function/
 
 全局域名只需要做一次域名解析和绑定，即可被所有应用使用，具体步骤：
 
-1. 从域名注册服务商的控制台，增加一个**泛域名解析**。假设域名为：websoft9.cn，[泛解析](../reference/domain.md#wildcard)的设置为：  
+1. 从域名注册服务商的控制台，增加一个**泛域名解析**。假设域名为：websoft9.cn，[泛解析](../domains#wildcard)的设置为：  
 
    - 记录类型：A
    - 主机记录：*.inner  （注意 *. 的使用，这是泛解析的关键）
