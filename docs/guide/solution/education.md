@@ -3,7 +3,7 @@ sidebar_position: 2
 slug: /solution/edu
 ---
 
-# 高等开源教育
+# 高等教育实训
 
 ## 问题
 

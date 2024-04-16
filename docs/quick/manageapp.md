@@ -101,7 +101,10 @@ Websoft9 运行机制是 GitOps 驱动，即先在 Git 中定义应用所需的�
 
 所有，我们的编排工作步骤如下：
 
-1. 点击编排的【马上修改】，系统跳转到 Git 仓库的项目管理页面
+1. Websoft9 控制台，通过 **我的应用** 菜单进入任何一个应用的管理界面
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/websoft9/websoft9-composeedit.png)
+
+2. 点击 “编排” 标签页的【马上修改】按钮，系统跳转到 **Git 仓库**的项目管理页面
 
 2. 在可视化的仓库管理页面，选择 .env 或 docker-compose.yml 进行修改（所有文件均可修改）
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/websoft9/websoft9-gitea-repo.png)

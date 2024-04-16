@@ -1,22 +1,26 @@
 ---
-slug: /dotnet/advanced
+title: .NET SDK
+slug: /dotnet
+tags:
+  - 运行环境
+  - runtime
+  - .NET
 ---
 
-# 进阶
+import Meta from '../apps/_include/dotnet.md';
 
-[.NET](https://dotnet.microsoft.com/zh-cn) 是一个免费的、跨平台的、开源的开发者平台，用于构建许多不同类型的应用程序。借助 .NET，您可以使用多种语言、编辑器和库为 Web、移动、桌面、游戏和 IoT 进行构建。
+<Meta name="meta" />
 
-## 安装
+## 配置选项{#configs}
 
-参阅[官方文档](https://docs.microsoft.com/zh-cn/dotnet/core/install/)
+- 命令行：`dotnet -h`
+- 其他生态工具：ASP.NET, Visual Studio,
+- .NET 运行时[架构图](https://libs.websoft9.com/Websoft9/DocsPicture/zh/dotnet/swimlane-architecture-framework.svg)
 
-## 概念与原理
+## 管理维护{#administrator}
 
-### 体系架构
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/dotnet/swimlane-architecture-framework.svg)
-
-## 问题解答
+## 问题与故障
 
 #### 如何找到 .NET 资源？
 
