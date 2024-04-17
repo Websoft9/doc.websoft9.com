@@ -15,7 +15,7 @@ Web Runtime 在 Websoft9 的技术体系中，也是作为一个应用对待，�
 
 它仅仅需要用户在启动环境后，在通过 docker compose 编排在容器中完成两件事：
 
-- 将运行的代码放到指定的目录
+- 将需运行的程序放到容器中
 - 通过命令启动程序
 
 而 Websoft9 为用户在容器中完成这些工作提供了便捷的工作方式。请参考下面的快速入门进入实战吧。
@@ -51,6 +51,8 @@ Web Runtime 在 Websoft9 的技术体系中，也是作为一个应用对待，�
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/runtime/runtime-composeedit-cmd-websoft9.png)
 
    建议插入到 cmd.sh 的命令主要包括：
+
+   > 查看 cmd.sh 范例：[PHP](https://websoft9.github.io/docker-library/apps/php/src/cmd.sh), [Python](https://websoft9.github.io/docker-library/apps/python/src/cmd.sh), [Ruby](https://websoft9.github.io/docker-library/apps/ruby/src/cmd.sh), [Go](https://websoft9.github.io/docker-library/apps/go/src/cmd.sh), [Node.js](https://websoft9.github.io/docker-library/apps/nodejs/src/cmd.sh), [.NET](https://websoft9.github.io/docker-library/apps/dotnet/src/cmd.sh), [OpenJDK](https://websoft9.github.io/docker-library/apps/openjdk/src/cmd.sh), [Tomcat](https://websoft9.github.io/docker-library/apps/tomcat/src/cmd.sh), [Tomee](https://websoft9.github.io/docker-library/apps/tomee/src/cmd.sh), [Maven](https://websoft9.github.io/docker-library/apps/maven/src/cmd.sh)
    
    - 程序代码下载、解压
    - 代码编译
@@ -134,6 +136,22 @@ Web Runtime 中修改版本极其方便：
 1. 通过编排文件的 variables.json 查询所有的版本
 
 2. 修改编排文件中 .env 中的 W9_VERSION 的值，重建应用生效。  
+
+### 在容器的后台运行程序
+
+如果用户在开发测试中，不想通过 cmd.sh 带入应用的启动命令，也可以参考如下的命令在后台中运行应用程序：
+
+1. 进入 Python 容器的命令模式
+
+2. 以后台方式运行启动命令（将运行程序的命令插入 `nohup  Your CMD here  > output.log 2>&1 &` 中间）
+
+   ```
+   nohup python manage.py runserver 0.0.0.0:8080 > output.log 2>&1 &
+   ```
+
+3. 程序即可在后台运行，同时通过 output.log 查看日志
+
+4. 如果容器重启，需重新执行以上命令
 
 ## 问题与故障
 
