@@ -15,7 +15,7 @@ import Meta from '../apps/_include/python.md';
 
 ## 安装范例{#guide}
 
-下面通过 [ Web 框架 FastAPI](https://github.com/jekyll/jekyll) 为例，描述应用安装过程：
+下面通过 [ Web 框架 FastAPI](https://github.com/tiangolo/fastapi) 为例，描述应用安装过程：
 
 1. Websoft9 控制台安装 Python 运行环境
 
