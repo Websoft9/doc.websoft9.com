@@ -7,7 +7,7 @@ tags:
   - TomEE
 ---
 
-import Meta from './_include/tomee.md';
+import Meta from '../../apps/_include/tomee.md';
 
 <Meta name="meta" />
 

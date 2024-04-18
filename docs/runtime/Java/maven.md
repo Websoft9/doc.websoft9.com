@@ -7,7 +7,7 @@ tags:
   - Maven
 ---
 
-import Meta from './_include/maven.md';
+import Meta from '../../apps/_include/maven.md';
 
 <Meta name="meta" />
 

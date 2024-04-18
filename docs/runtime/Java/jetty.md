@@ -7,7 +7,7 @@ tags:
   - Jetty
 ---
 
-import Meta from './_include/jetty.md';
+import Meta from '../../apps/_include/jetty.md';
 
 <Meta name="meta" />
 

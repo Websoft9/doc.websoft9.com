@@ -119,6 +119,13 @@ Elastic 内置快照备份功能（参考：[官方文档](https://www.elastic.c
 
 ## 故障
 
+#### ERROR: exit code 137？
+
+错误详情：ERROR: Elasticsearch exited unexpectedly, with exit code 137    
+问题原因：启动或运行时，服务器可分配给 ES 的内存不足   
+
+实践发现可用内存超过 1G 时，此 ERROR 还不会出现   
+
 #### Logstash 无法输出到 ES？
 
 检查 Logstash 的 pipeline 配置文件中 Elasticsearch 账号密码是否正确

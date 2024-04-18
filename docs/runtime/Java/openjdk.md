@@ -7,7 +7,7 @@ tags:
   - OpenJDK
 ---
 
-import Meta from './_include/openjdk.md';
+import Meta from '../../apps/_include/openjdk.md';
 
 <Meta name="meta" />
 

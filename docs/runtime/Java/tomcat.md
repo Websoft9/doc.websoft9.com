@@ -7,7 +7,7 @@ tags:
   - Tomcat
 ---
 
-import Meta from './_include/tomcat.md';
+import Meta from '../../apps/_include/tomcat.md';
 
 <Meta name="meta" />
 
