@@ -73,6 +73,9 @@ APEX 支持多语言（包含中文），通过控制台即可修改语言。
 3. 点击【App Builder】，新APP已经创建，登陆即可开始体验
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-imp06-websoft9.png)
 
+## 配置选项{#configs}
+
+- 多语言（✅）
 
 ## 管理维护{#administrator}
 

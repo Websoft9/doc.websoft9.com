@@ -1,6 +1,10 @@
 ---
 sidebar_position: 2
 slug: /centos
+tags:
+  - Linux
+  - CentOS
+  - 操作系统
 ---
 
 # CentOS

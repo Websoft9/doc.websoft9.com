@@ -24,7 +24,7 @@ Websoft9 控制台安装 Alfresco 后，通过【我的应用】管理应用，�
 1. 访问地址打开后， 点击 "Alfresco Repository" > "Alfresco Share"
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/alfresco/alfresco-login-websoft9.png)
 
-2. 输入账号密码（[不知道账号密码？](./user/credentials)），成功登录到 Alfresco 后台  
+2. 输入账号密码，成功登录到 Alfresco 后台  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/alfresco/alfresco-consolegui-websoft9.png)
 
 3. Alfresco会自动根据浏览器语言来选择程序语言
@@ -42,7 +42,7 @@ Alfresco 后台支持多语言切换（包括中文），支持用户主页（Al
 - 数据存储目录：dir.root
 - 元数据：Alfreco 会自动对上传的文件创建后缀为 metadata.properties.xml 的[元数据文件](https://docs.alfresco.com/content-services/latest/develop/repo-ext-points/metadata-extractors/)
 - 官方文档：[Alfresco Documentation](https://docs.alfresco.com/content-services/community/using/content/) 
-- 官方视频[Alfresco Videos](https://docs.alfresco.com/content-services/latest/tutorial/video/)
+- 官方视频：[Alfresco Videos](https://docs.alfresco.com/content-services/latest/tutorial/video/)
 - [ReST API Guide](https://docs.alfresco.com/content-services/latest/develop/rest-api-guide/)
 
 #### 截图
@@ -75,14 +75,10 @@ Alfresco 后台支持多语言切换（包括中文），支持用户主页（Al
 但是针对 Office 文档，Alfresco 只能[离线编辑或集成 Google Docs](https://docs.alfresco.com/content-services/community/using/content/files-folders/)
 
 
+## 配置选项{#configs}
 
-### 配置 SMTP{#smtp}
-
-1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数
-
-2. 填写 Alfresco 邮件相关配置
-
-3. 测试邮件发送是否可用
+- 多语言（✅）
+- SMTP（✅）
 
 
 ## 管理维护{#administrator}

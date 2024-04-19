@@ -18,7 +18,7 @@ import Meta from './_include/bitwarden.md';
 
 Websoft9 控制台安装 Bitwarden 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
 
-1. 确保安装时已填写正确的 ID 和 Key。如果没有，需到 Bitwarden [申请](https://bitwarden.com/host) ，然后通过**应用编排**的方式重建容器。  
+1. 确保安装时已填写正确的 ID 和 Key。如果没有，需到 Bitwarden [申请](https://bitwarden.com/host) ，然后通过**应用编排**的方式重建容器  
 
 2. 将 Bitwarden 应用设置为 HTTPS 访问（必须）
 

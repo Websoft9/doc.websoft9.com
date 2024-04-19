@@ -27,9 +27,4 @@ import Meta from './_include/activemq.md';
 
 通过应用的**编排**修改密码
 
-### 升级
-
-ActiveMQ 可以直接通过容器进行升级，当需要根据自身需求是否迁移 */opt/activemq*
-
-
 ## 故障

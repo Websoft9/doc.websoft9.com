@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
 slug: /oraclelinux
+tags:
+  - Linux
+  - Redhat
+  - Oracle
 ---
 
 # Oracle Linux

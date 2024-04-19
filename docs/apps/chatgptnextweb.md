@@ -19,7 +19,7 @@ import Meta from './_include/chatgptnextweb.md';
 
 Websoft9 控制台安装 ChatGPT Next Web 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
 
-1. 点击 ChatGPT Next Web 右下角的 **设置** 按钮
+1. 点击 ChatGPT Next Web 左下角的 **设置** 按钮
 
 2. 找到设置项的 **访问密码**，设置从 Websoft9 控制台获得的密码
 
@@ -33,7 +33,7 @@ Azure 提供了优化后的 OpenAPi 服务，ChatGPT Next Web 支持 Azure AI �
 
 1. 编辑 ChatGPT Next Web 编排文件 .env
 
-2. 删除 OpenAI 的可以，输入 Azure 相关的信息
+2. 删除 OpenAI 的相关变量，输入 Azure 相关的信息
    ```
    AZURE_URL=
    AZURE_API_KEY=
@@ -45,6 +45,7 @@ Azure 提供了优化后的 OpenAPi 服务，ChatGPT Next Web 支持 Azure AI �
 ### 节省成本
 
 - 尽量使用**新的聊天**，减少不必要的连续对话：连续对话会消耗大量算力
+- 设置合适的**附带历史消息数量**：设置太大会消耗大量算力
 - 选用 preview 模型：preview 是官方提供的预览版模型，定价是正式版的1/5
 
 ## 配置选项{#configs}
