@@ -1,5 +1,5 @@
-position: 12
-label: "操作系统"
+position: 5.2
+label: "系统托管"
 collapsible: true
 collapsed: true
 className: "red"

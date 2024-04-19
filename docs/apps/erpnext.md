@@ -133,3 +133,7 @@ su - frapper
 
 原因：未知   
 方案：重复安装几次直至成功   
+
+#### ConnectionError: Error 111 for erpnext?
+
+ERP 初始化过程会出现 ConnectionError: Error 111 for erpnext 这种错误，[官方回复](https://github.com/frappe/frappe_docker/issues/1314)这是正常现象。因为 Only configuration job container completed, redis connection is correct。  

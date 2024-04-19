@@ -5,6 +5,8 @@ slug: /oraclelinux
 
 # Oracle Linux
 
+## 关于
+
 [Oracle Linux](https://www.oracle.com/linux/) 是一个完全免费、开源并可以自由分发的 Linux 发行版。  
 
 它与 CentOS 或 Ubuntu 等其他免费 Linux 相比，有几个特别之处：
@@ -24,7 +26,7 @@ slug: /oraclelinux
 
 5. Oracle 在云上提供了一个 Oracle Autonomous Linux 系统，具备自主更新升级的能力（零停机）
 
-## 场景
+## 管理维护
 
 ### 升级{#upgrade}
 
@@ -38,11 +40,9 @@ Oracle Linux 在一个维护周期内可能会发布数百个安全漏洞和 Bug
     - 普通升级方案：[Linux 标准的软件包升级方案](https://docs.oracle.com/en/operating-systems/oracle-linux/software-management/sfw-mgmt-UpdateSoftwareonOracleLinux.html#update-software)  
     - 不停机升级方案：Oracle 官方提供的升级工具[Ksplice](https://ksplice.oracle.com/try/trial) 
 
-## 问题解答
+## 配置选型
 
-#### Oracle Linux 使用的什么内核？
-
-Oracle 使用的其自己维护的 [Unbreakable Enterprise Kernel](https://github.com/oracle/linux-uek)，兼容 RHCK
+- Oracle Linux 内核：[Unbreakable Enterprise Kernel](https://github.com/oracle/linux-uek)，兼容 RHCK
 
 ## 故障排除
 

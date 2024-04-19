@@ -1,11 +1,17 @@
 ---
-sidebar_position: 2
-slug: /windows/advanced
+sidebar_position: 10
+slug: /windowsserver
 ---
 
-# 进阶
+# Windows Server
 
-## 核心原理
+## 关于
+
+Websoft9 在云端拥有丰富的 Microsoft 应用程序的经验，可帮助用户获得更高的性能和可靠性、更出色的安全和身份服务、更多迁移支持、广度和深度最高的功能、更低的总拥有成本以及灵活的许可选项。 
+
+Websoft9 还支持构建和运行 Windows 应用程序所需的一切，包括 Active Directory、.NET、Microsoft SQL Server、Windows 桌面即服务以及所有可支持的 Windows Server 版本。利用我们经过实践验证的专业知识，可以帮助您轻松地直接迁移、重构您的 Windows 工作负载，甚至对其进行现代化改造。
+
+## 技术栈
 
 ### 容器
 
@@ -16,7 +22,42 @@ Windows 系统可以同时支持 Linux 容器 和 Windows 容器两种方案。
 Windows 上的 Dockerfile 语法与 Linux 有一定的区别，所幸微软官方针对这些差异提供了较为详细的[文档](https://docs.microsoft.com/en-us/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile)说明。
 
 
-### 沙箱 SandBox 
+### SQL Server
+
+Websoft9 提供了在云上开机即用的包含 SQL Sever 的 Windows 托管镜像与服务。
+
+###  Visual Studio CI/CD
+
+我们知道 Visual Studio 除了是一个广泛支持多种开发语言的代码编辑器之外，它也支持多种生成（构建编译）方案：
+
+* IDE
+* CMake
+* MSBuild 命令行
+* Azure Pipelines
+
+[Visual Studio](https://github.com/Websoft9/docker-visualstudio) 所有发行版中均包含 MSBuild。在 Visual Studio IDE 中编写代码，使用 MSBuild 来运行生成
+
+### PowerShell
+
+PowerShell 既可以用在 Windows，也支持 Linux，PowerShell 使用“动词-名词”名称对来命名 cmdlet。    
+
+先运行下面几个命令做做实验，积累具体的使用经验。  
+
+```
+# 查看版本
+$PSVersionTable
+
+# 调用集成脚本环境
+ise
+
+# 显示帮助
+help
+
+# 安装 Powershell 软件库
+Install-PackageProvider -Name NuGet -Force
+```
+
+### SandBox 
 
 SandBox 是 Windows 下的一种虚拟化技术。但它的用法诸多限制：
 
@@ -116,8 +157,85 @@ Visual Studio IDE 为了满足开发者一站式的体验，也集成了部署�
 
 所以，此处我们不再细说。  
 
+### IIS
 
-## 常见问题{#faq}
+Websoft9 帮助客户在 Windows Server 通过 IIS 部署网站，充分发挥 Windows 平台的出色性能和体验。  
+
+#### 绑定域名{#binddomain}
+
+1. IIS 中右键点击需配置域名的网站，选择【编辑绑定】，选择一个待绑定域名的网站后 
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/iis-adddomain001-websoft9.png)
+
+2. 点击 "添加" 增加一个新的域名，点击 "编辑" 修改已有域名
+
+#### 修改根目录
+
+1. IIS 中右键点击需配置域名的网站，依次选择："管理网站" > "高级设置"
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/iis-changeroot-websoft9.png)
+
+2. 将物理路径修改为新的路径即可。若要考虑迁移网站，需将原网站的文件拷贝到新的路径
+
+3. 重启 IIS 后生效
+
+#### 设置伪静态{#rewrite}
+
+IIS 需先安装 **[URL重写](https://www.iis.net/downloads/microsoft/url-rewrite)** 组件后，方可开始设置：
+
+1. 进入IIS后选择具体的网站，打开 URL 重写工具
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/iis-urlrew-websoft9.png)
+
+2.  依次添加规则，重启 IIS 后生效
+
+#### 设置 HTTPS 访问{#https}
+
+准备域名和生成证书文件（[win-acme](https://github.com/PKISharp/win-acme/releases)）是设置 HTTPS 的前提，然后方可为网站设置 HTTPS：
+
+1. 点击 IIS 的主菜单，在 IIS 的配置页面找到 "服务器证书" 设置项
+   ![IIS 设置](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/IIS-SSL-TX3-websoft9.PNG)
+
+2. 导入证书
+
+3. 打开 IIS "网站绑定" 的设置页面，添加一个 HTTPS 绑定，然后选择已上传的证书
+   ![选择 HTTPS](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/IIS-SSL-TX7-websoft9.png)
+
+4. 设置完成后，测试 HTTPS 可用性
+
+5. 通过 "URL重写" 设置项，增加 HTTP 重定向到 HTTPS （可选）
+
+## 配置参数
+
+- IIS 网站根目录： *C:\inetpub\wwwroot*
+- 远程桌面端口：3389
+- 命令行：[shell](https://docs.microsoft.com/zh-cn/windows-server/administration/windows-commands/windows-commands) 和 [PowerShell](https://docs.microsoft.com/zh-cn/powershell/scripting/overview)。
+
+## 管理维护
+
+### 自动化安装
+
+自动化安装也被称之为静默安装参数（Silent Install  Parameters），它是 Windows 自动化安装中最棘手、最重要的活动。[msiexec](https://docs.microsoft.com/zh-cn/windows/win32/msi/command-line-options) 即 [Windows Installer](https://docs.microsoft.com/zh-cn/windows/win32/msi/windows-installer-portal)是 Windows 上自动化安装最常见的命令行程序。 
+
+    ```
+    # 安装程序
+    Msiexec /package Application.msi /quiet
+    Msiexec /uninstall Application.msi /quiet
+    Msiexec /update msipatch.msp /quiet
+    Msiexec /uninstall msipatch.msp /package Application.msi / quiet
+
+    # 查询静默安装参数（有些软件不支持）
+    ./Application.exe /?
+
+    # 打开记事本
+    notepad
+    ```
+
+### 分析日志{#logs}
+
+进入到 Windows 系统的**事件查看器**，选择 Windows 日志下的应用程序，然后在右侧的事件列表查看出现错误的应用程序，单击即可在下方弹出详细的错误信息，最后就可以根据错误原因来纠正错误。
+
+![event](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wampserver/wampserver-eventerror-websoft9-1.png)
+![event](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wampserver/wampserver-eventerror-websoft9-2.png)
+
+## 问题与故障{#troubleshoot}
 
 #### Windows 容器是图形化的吗？
 
