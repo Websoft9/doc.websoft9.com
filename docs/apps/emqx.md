@@ -14,9 +14,9 @@ import Meta from './_include/emqx.md';
 
 ## 入门指南{#guide}
 
-### 初始化{#wizard}
+### 可视化管理
 
-Websoft9 控制台安装 EMQX 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
+参考：[MQTTX](./mqttx)。  
 
 
 ## 配置选项{#configs}

@@ -13,10 +13,6 @@ import Meta from './_include/homeassistant.md';
 
 ## 入门指南{#guide}
 
-### 初始化{#wizard}
-
-Websoft9 控制台安装 Home Assistant 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
-
 ### 连接 MQTT
 
 Home Assistant 应用默认并不包括 MQTT 服务，建议在 Websoft9 控制台安装开源 MQTT 服务器 [Eclipse Mosquitto](./mosquitto)。   
@@ -33,3 +29,7 @@ Home Assistant 应用默认并不包括 MQTT 服务，建议在 Websoft9 控制�
 
 
 ## 故障
+
+#### 无法通过域名访问 Home Assistant？
+
+目前能仅通过 IP 和端口来访问，通过 Nginx 转发到域名还没有方案

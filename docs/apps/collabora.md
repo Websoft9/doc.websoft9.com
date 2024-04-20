@@ -36,7 +36,7 @@ Nextcloud 官方对 Collabora 有较好的[集成](https://www.collaboraoffice.c
 
 ## 管理控制台
 
-Collabora CODE 提供了 [Admin Console](https://sdk.collaboraonline.com/docs/installation/Configuration.html#admin-console)用于监控运行状态。
+Collabora CODE 提供了 [Admin Console](https://sdk.collaboraonline.com/docs/installation/Configuration.html#admin-console) 用于监控运行状态。
 
 ## 管理维护{#administrator}
 
