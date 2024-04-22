@@ -16,7 +16,7 @@ import Meta from './_include/pydio.md';
 
 ### 初始化{#wizard}
 
-Websoft9 控制台安装 Pydio 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
+Websoft9 控制台安装 Pydio Cells 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
 
 1. 本地浏览器访问后，进入安装向导（首选域名访问方式）
    
@@ -45,7 +45,3 @@ Websoft9 控制台安装 Pydio 后，通过【我的应用】管理应用，在*
 ## 管理维护{#administrator}
 
 ## 故障
-
-#### 更改域名导致无法访问 Pydio ？
-
-#### 访问 Pydio 出现 502 错误？{#502}

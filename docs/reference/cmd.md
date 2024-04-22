@@ -270,3 +270,25 @@ rpm -ivh <package_name>.rpm
 rpm -qa | grep <package>
 ```
 
+## 日志
+
+```
+# 指定服务日志
+systemctl status service_name
+journalctl -u service_name
+
+# 查看 systemd 的错误日志，-p 支持 emerg alert err crit warning notice info debug 等值
+journalctl -p err
+
+# 查看内核日志
+journalctl -k
+
+# 查看脚本的日志
+journalctl /usr/bin/bash
+
+# 查看指定用户的日志
+journalctl UID=33 --since today
+
+# Docker 容器日志查看方法
+docker logs appname
+```

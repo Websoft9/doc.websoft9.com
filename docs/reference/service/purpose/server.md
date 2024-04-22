@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 
 # 云服务器
 
-## 连接服务器（通用）{#connect}
+## 连接服务器（通用）{#connect} 
 
 如果你准备好了服务器的[管理员账号](#osaccount)密码、公网IP地址等信息，可以参考下面的通用教程开始连接服务器。
 
@@ -68,34 +68,7 @@ Putty 虽然可以单独运行，但把 Putty 集成到 WinSCP 上使用更加�
 2. 测试集成：通过 WinSCP 的窗口快捷方式打开 Putty  
    ![命令行工具](http://libs.websoft9.com/Websoft9/DocsPicture/zh/WinSCP/websoft9-WinSCP-puttyopen.png)
 
-### 连接 Windows{#connectwindows}
 
-可以通过本地电脑的远程桌面工具 (MSTSC) 连接 Window 服务器。具体步骤如下：
-
-1. 登录Azure Portal，找到需要登录的服务器的**公网IP地址**
-   ![image.png](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-publicip-websoft9.png)
-
-2. 选择一种打开本地电脑远程桌面的方式（三选一）:
-
-   - 打开 **开始菜单** -> **远程桌面连接**
-   - 打开 **开始菜单**，输入”mstsc“ ，系统会搜索远程桌面连接工具
-   - 通过 **Windows Logo** + **R** 打开系统的命令窗口，输入”mstsc“来启动远程桌面连接工具
-
-3. 打开远程桌面连接，输入公网IP地址
-
-   ![img](http://libs.websoft9.com/Websoft9/DocsPicture/zh/windows/windows-remote.png)
-
-4. 通过更多选项，设置默认用户名，例如”Administrator“，并勾选”允许我保存凭据“
-
-   ![img](http://libs.websoft9.com/Websoft9/DocsPicture/zh/windows/windows-remote-login.png)
-
-5. 点击连接，成功后会看到Windows界面
-   ![image.png](http://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-windows2019desktop-websoft9.png)
-
-6. 远程登录后，就可以直接从本地**拷贝**文件，然后**粘贴**文件到服务器上。
-   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-copyfilewin-websoft9.png)
-
-7. 如果需要使用FTP，需要自行安装FTP软件（推荐使用FileZilla Server）
 
 
 ## 云资源选购建议{#howbuy}
@@ -183,28 +156,4 @@ Putty 虽然可以单独运行，但把 Putty 集成到 WinSCP 上使用更加�
 * Windows服务器：直接 [远程桌面](./user/cloud#connectwindows) 登录后，通过拷贝和粘贴的方式管理文件
 * Linux服务器：请使用 [SFTP 连接服务器](./user/cloud#connectlinux) 后，通过可视化界面管理文件
 
-#### 云服务器连不上？
 
-下图显示了无法连接云服务器的主要原因分类及出现概率，按照对应的原因进行排查：  
-
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/ecs-cannotconnect.jpeg)
-
-#### 连接 SFTP，出现 Disconnected...publickey{#sftpnokey}
-
-错误原因：服务器初始化的适合，启用的是密钥对登录方式（密码登录会不开启）    
-解决方案：设置 WinSCP 为秘钥对登录 或 云控制台更改登录凭证方式
-
-#### 无法连接 Windows 远程桌面？{#notconnectwin}
-
-检查账号和密码是正确，请保证 **服务器安全组** 3389 端口是开启的，下图是排查方法  
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aliyun/aliyun-guzhangpaichu.png)
-
-#### Windows 容器无法访问外网？{#winnonetwork}
-
-在使用阿里云官方提供的 Windows 2019 数据中心版（含 Container） 的时候发现网络不通，后面采用如下的办法解决了此问题：
-
-1. 远程桌面登录到服务器
-2. 到【网络管理】中禁用本地网络，此时远程桌面断开
-3. 到阿里云 VNC 连接中重新远程到服务器，重新开启被禁用的本地网络
-
-以上解决办法的根本原因未知。 
