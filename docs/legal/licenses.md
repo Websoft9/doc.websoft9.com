@@ -3,7 +3,7 @@ sidebar_position: 1
 slug: /legal/licenses
 ---
 
-# 开源许可
+# 开源许可证
 
 使用 Websoft9 产品时，涉及大量的开源软件，它们的开源许可如下：  
 
