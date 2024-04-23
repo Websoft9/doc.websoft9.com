@@ -1,11 +1,11 @@
 ---
-sidebar_position: 3.1
+sidebar_position: 10.4
 slug: cmd
 ---
 
 # 常用命令
 
-管理 Websoft9 时，可能需要用到的 Linux 命令（来源：[linux_cheat_sheet](https://docs.gitlab.com/ee/administration/troubleshoot/linux_cheat_sheet.html)）
+管理 Websoft9 时，可能需要用到的 Linux 命令
 
 ## 版本
 

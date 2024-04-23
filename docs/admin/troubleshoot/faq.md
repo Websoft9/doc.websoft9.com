@@ -178,8 +178,5 @@ Websoft9 在上架到云市场时，已经过严格的安全测试，绝对不�
 
 | 组         | 组件                                                         |
 | ---------- | ------------------------------------------------------------ |
-| 程序环境   | [PHP](./php#troubleshoot), [Java](./java#troubleshoot), [Python](./python#troubleshoot), [Node](./nodejs#troubleshoot), [Ruby](./ruby#troubleshoot), [Go](./go#troubleshoot), [.NET](./dotnet#troubleshoot) |
-| Web Server | [Apache](./apache#troubleshoot), [Nginx](./nginx#troubleshoot), [IIS](./iis#troubleshoot), [Traefik](./traefik#troubleshoot), [Caddy](./caddy#troubleshoot) |
-| 基础架构   | [Docker](./docker#troubleshoot), [Ansible](./ansible#troubleshoot)  |
-| [数据库](./apps/db/)   | [MySQL/MariaDB](./mysql/admin#troubleshoot), [SQLSever](./sqlserver/admin#troubleshoot), [PostgreSQL](./postgresql/admin#troubleshoot), [MongoDB](./mongodb/admin#troubleshoot), [Redis](./redis/admin#troubleshoot) |
-| 操作系统   | [Linux](./linux/advanced#troubleshoot), [Windows](./windows/advanced#troubleshoot)  |
+| 基础架构   | [Docker](./docker#troubleshoot), [Linux](./linux#troubleshoot)  |
+| 数据库   | [MySQL/MariaDB](./mysql/admin#troubleshoot), [SQLSever](./sqlserver/admin#troubleshoot), [PostgreSQL](./postgresql/admin#troubleshoot), [MongoDB](./mongodb/admin#troubleshoot), [Redis](./redis/admin#troubleshoot) |

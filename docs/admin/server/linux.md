@@ -5,9 +5,23 @@ slug: /linux
 
 # Linux
 
+本章介绍使用 Websoft9 托管应用过程中，可能需要的 Linux 相关操作。   
+
 ## 指南
 
-### 连接 Linux
+### Linux 系统账号{#osaccount}
+
+不同的云平台操作系统账号是不一样的，有的云平台可以在创建服务器时自定义用户名称，有的是固定用户名`root`。
+
+具体参考下面的表格：  
+
+   |  云平台   |  管理员账号   | 其他|
+   | --- | --- | --- |
+   |  Azure   |  创建服务器的时候自行设置   | [如何开启root账户？](./azure#enableroot) |
+   |  AWS   |  AmazonLinux:ec2  CentOS:centos  Ubuntu:ubuntu  Debian:admin   | [如何开启root账户？](./aws#enableroot)|
+   |  阿里云，华为云，腾讯云   |  除腾讯云 Ubuntu 之外(ubuntu)，其他平台任何系统默认账号都是 root  | |
+
+### 连接 Linux{#connect}
 
 常见 Linux 连接方式包括：
 
@@ -17,11 +31,54 @@ slug: /linux
 * VNC 连接
 * Telnet 连接
 
-其中 SSH 和 SFTP 是最常见的两种连接方式。热门的连接工具包括：WinSCP, Putty, Xshell, Tabby, MobaXterm 等
+而连接的工具类型主要是两种：
 
-如果不想安装这些工具到本地电脑，也可以使用云平台提供的 Web 版在线连接工具。  
+- 本地电脑客户端，例如：WinSCP, Putty, Xshell, Tabby, MobaXterm 等
+- 在线 Web 客户端：各大云平台均提供的 Web 版在线连接工具  
 
-我们推荐使用 WinSCP，同时提供了[配套的说明文档](./user/cloud#connectlinux)。  
+下面以本地客户端 WinSCP（它具备**可视化管理文件**以及运行命令的能力） 这款 SFTP 工具为例，详细说明 SFTP 和 SSH 的使用。
+
+#### 配置 WinSCP
+
+1. 下载 [WinSCP](https://winscp.net/) 并安装。启动后，新建一个连接
+2. 设置验证密码：针对 **密码验证和秘钥对** 两种验证方式分别说明：
+   - 密码验证方式设置（最常见的方式）
+     ![密码验证方式](http://libs.websoft9.com/Websoft9/DocsPicture/zh/winscp/winscp-newsite.png)
+   - 秘钥对验证方式设置
+     ![秘钥对验证方式](http://libs.websoft9.com/Websoft9/DocsPicture/zh/winscp/winscp-secrets-websoft9.png)
+3. 验证方式设置好之后，点击"登录"。登录中过程中，系统提示您是否保存登录信息，选择"是"
+4. 成功连接后的界面
+   ![WinSCP管理界面](http://libs.websoft9.com/Websoft9/DocsPicture/zh/winscp/websoft9-winscp-success.png)
+
+#### 管理文件
+
+WinSCP 通过拖拽，就可以方便上传下载文件，可以对文件（夹）可以对进行多种设置与操作
+
+1. 右键单击服务器上一个文件或文件夹，可以对云服务器进行多种操作  
+   ![管理文件](http://libs.websoft9.com/Websoft9/DocsPicture/zh/winscp/websoft9-winscp-youjian.png)
+
+2. 以修改文件权限为例的相关界面如下  
+
+   ![管理文件](http://libs.websoft9.com/Websoft9/DocsPicture/zh/winscp/websoft9-winscp-quanxian.png)
+
+#### 运行命令
+
+WinSCP 自带命令运行的终端，对于初学者来说简单实用：  
+
+1. WinSCP登录到服务器，点击菜单来的命令窗口图标（快捷键Ctrl+T也可以）
+   ![命令行工具](http://libs.websoft9.com/Websoft9/DocsPicture/zh/winscp/winscp-ucmd-websoft9.png)
+
+2. 在弹出的命令运行窗口执行命令（每次一条命令），以查询内存使用为例，运行命令 `free -m`
+   ![命令行工具](http://libs.websoft9.com/Websoft9/DocsPicture/zh/winscp/wincp-showmemory-websoft9.png)
+
+#### 集成 Putty
+
+专业的 SSH 工具 Putty 虽然可以单独运行，但把 Putty 集成到 WinSCP 上使用更加方便。  
+
+1. 依次打开：WinSCP-选项-集成-应用程序，定位到本地 Putty 路径后保存即成功集成  
+   ![命令行工具](http://libs.websoft9.com/Websoft9/DocsPicture/zh/winscp/websoft9-winscp-putty.png)
+
+2. 测试集成：通过 WinSCP 的窗口快捷方式打开 Putty  
 
 
 ### 初始化数据磁盘

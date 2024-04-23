@@ -142,26 +142,21 @@ Directmail 是阿里云的邮件推送服务，相对于免费邮箱来说，自
 
 ## SMTP 诊断
 
-如果使用第三方提供的SMTP服务（如qq邮箱、网易邮箱等），配置也没有问题，但是仍然无法发送邮件。请检查如下几个问题：
+SMTP 配置准确无误下，仍然无法发送邮件，请检查如下几个方面：
 
-1. 通过服务器的telnet工具，验证服务器是否可以连接SMTP服务
+- 通过 Telnet 工具，连接 SMTP 服务。出现 **220 smtp.*.com Esmtp Mail Server** 或 **Escape character is '^]'** ，说明连接成功
 
-> 注意：本地电脑Telnet测试成功，不代表服务器Telnet成功，因为您的服务器IP地址由于某些原因可能会被STMP服务器列入黑名单。
+   ~~~
+   //安装telnet
+   yum install telnet -y
 
-~~~
-//安装telnet
-yum install telnet -y
+   //示例1：测试qq邮箱 端口有465和587
+   telnet smtp.qq.com 465
 
-//示例1：测试qq邮箱 端口有465和587
-telnet smtp.qq.com 465
+   //示例2：测试网易邮箱 端口有465和994
+   telnet smtp.163.com 465
+   ~~~
 
-//示例2：测试网易邮箱 端口有465和994
-telnet smtp.163.com 465
-
-~~~
-
-出现 `220 smtp.*.com Esmtp *Mail Server `或 `Escape character is '^]'` 类似反馈，说明可以连接
-
-2.  服务器安全组（出设置）禁止外部访问
-3.  服务器系统iptables，firewall设置关闭了465等端口
-4.  OpenSSL版本过低或者没有安装或其CA证书异常
+- 服务器安全组（出设置）是否禁止外部访问
+- 服务器系统 iptables，firewall 是否关闭 SMTP 所需的 465 等端口
+- OpenSSL 版本是否过低或者没有安装 CA 证书
