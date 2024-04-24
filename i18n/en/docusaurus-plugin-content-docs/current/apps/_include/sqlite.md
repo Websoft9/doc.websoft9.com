@@ -1,4 +1,4 @@
-[SQLite](https://www.sqlite.org/) 是一个 **Self-contained, high-reliability, full-featured, SQL database engine**，它被用于 Relational Databases  等场景。SQLite is a C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine. SQLite is the most used database engine in the world.
+[SQLite](https://www.sqlite.org/) 是一个 **嵌入式数据库**，它被用于 SQL 数据库/关系数据库  等场景。SQLite是一种嵌入式数据库，它的数据库就是一个文件。它体积很小，功能强大，经常被集成到各种应用程序中，甚至在 iOS 和 Android 的App中
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlite/sqlite-gui-websoft9.png)

@@ -1,34 +1,34 @@
 ## <Entry[catalog] id='2hZRCPvPqDhF7UcFCmnC0H'>
 
-- [Workflow automation](https://www.websoft9.com/apps/n8n)
+- [工作流](https://www.websoft9.com/apps/n8n)
 
 ## <Entry[catalog] id='3HjhIaDMod8KcMZ5dWq1j2'>
 
-- [Marketing](https://www.websoft9.com/apps/mautic)
+- [市场营销](https://www.websoft9.com/apps/mautic)
 
 ## <Entry[catalog] id='4mv9cboFR6s2EODk9Uzx4O'>
 
-- [Database Management Tools](https://www.websoft9.com/apps/bytebase)
+- [数据库管理工具](https://www.websoft9.com/apps/bytebase)
 
 ## <Entry[catalog] id='2hZRCPvPqDhF7UcFCmnC0H'>
 
-- [Workflow automation](https://www.websoft9.com/apps/huginn)
+- [工作流](https://www.websoft9.com/apps/huginn)
 
 ## <Entry[catalog] id='39cPd5ouPrNZMpi2R2Lzg7'>
 
-- [Cloud Infrastructure Monitoring](https://www.websoft9.com/apps/portainer)
+- [云设施监控](https://www.websoft9.com/apps/portainer)
 
 ## <Entry[catalog] id='5NnUPnn4oierElCt5AI0po'>
 
-- [Low Code and No Code](https://www.websoft9.com/apps/strapi)
+- [低代码/零代码](https://www.websoft9.com/apps/strapi)
 
 ## <Entry[catalog] id='3HjhIaDMod8KcMZ5dWq1j2'>
 
-- [Master Data](https://www.websoft9.com/apps/strapi)
+- [企业主数据](https://www.websoft9.com/apps/strapi)
 
 ## <Entry[catalog] id='4mF2lDUt1PNyZ5R6GP1VmF'>
 
-- [Headless CMS](https://www.websoft9.com/apps/strapi)
+- [无头 CMS](https://www.websoft9.com/apps/strapi)
 
 ## <Entry[catalog] id='6z8egY08PT8n8rPjdkjeMD'>
 
@@ -36,7 +36,7 @@
 
 ## <Entry[catalog] id='5NnUPnn4oierElCt5AI0po'>
 
-- [Pipeline](https://www.websoft9.com/apps/rundeck)
+- [流水线](https://www.websoft9.com/apps/rundeck)
 
 ## <Entry[catalog] id='6z8egY08PT8n8rPjdkjeMD'>
 
@@ -44,59 +44,59 @@
 
 ## <Entry[catalog] id='5NnUPnn4oierElCt5AI0po'>
 
-- [Low Code and No Code](https://www.websoft9.com/apps/flowise)
+- [低代码/零代码](https://www.websoft9.com/apps/flowise)
 
 ## <Entry[catalog] id='5NnUPnn4oierElCt5AI0po'>
 
-- [Web Framework](https://www.websoft9.com/apps/flowise)
+- [Web 开发框架](https://www.websoft9.com/apps/flowise)
 
 ## <Entry[catalog] id='39cPd5ouPrNZMpi2R2Lzg7'>
 
-- [Full Monitoring](https://www.websoft9.com/apps/graphite)
+- [全面监控](https://www.websoft9.com/apps/graphite)
 
 ## <Entry[catalog] id='65YrBrBlgXbR7BLCe6oP0K'>
 
-- [Data Storage](https://www.websoft9.com/apps/opensearch)
+- [大数据存储](https://www.websoft9.com/apps/opensearch)
 
 ## <Entry[catalog] id='4mv9cboFR6s2EODk9Uzx4O'>
 
-- [Data Warehouse](https://www.websoft9.com/apps/opensearch)
+- [数据仓库](https://www.websoft9.com/apps/opensearch)
 
 ## <Entry[catalog] id='65YrBrBlgXbR7BLCe6oP0K'>
 
-- [Data Application and Visualization](https://www.websoft9.com/apps/opensearch)
+- [数据应用与可视化](https://www.websoft9.com/apps/opensearch)
 
 ## <Entry[catalog] id='4mF2lDUt1PNyZ5R6GP1VmF'>
 
-- [Website Builder](https://www.websoft9.com/apps/joomla)
+- [企业建站](https://www.websoft9.com/apps/joomla)
 
 ## <Entry[catalog] id='4mF2lDUt1PNyZ5R6GP1VmF'>
 
-- [eCommerce](https://www.websoft9.com/apps/joomla)
+- [电子商务](https://www.websoft9.com/apps/joomla)
 
 ## <Entry[catalog] id='4mF2lDUt1PNyZ5R6GP1VmF'>
 
-- [Website Builder](https://www.websoft9.com/apps/drupal)
+- [企业建站](https://www.websoft9.com/apps/drupal)
 
 ## <Entry[catalog] id='4mF2lDUt1PNyZ5R6GP1VmF'>
 
-- [eCommerce](https://www.websoft9.com/apps/drupal)
+- [电子商务](https://www.websoft9.com/apps/drupal)
 
 ## <Entry[catalog] id='65YrBrBlgXbR7BLCe6oP0K'>
 
-- [Data Application and Visualization](https://www.websoft9.com/apps/redash)
+- [数据应用与可视化](https://www.websoft9.com/apps/redash)
 
 ## <Entry[catalog] id='6WADietOzYFgb9uMKFSjts'>
 
-- [Password Management](https://www.websoft9.com/apps/bitwarden)
+- [密码管理](https://www.websoft9.com/apps/bitwarden)
 
 ## <Entry[catalog] id='42xW7uUgXzPnNBRWmk2BHt'>
 
-- [Video Server](https://www.websoft9.com/apps/navidrome)
+- [视频服务](https://www.websoft9.com/apps/navidrome)
 
 ## <Entry[catalog] id='4mF2lDUt1PNyZ5R6GP1VmF'>
 
-- [Media System](https://www.websoft9.com/apps/navidrome)
+- [视频音频](https://www.websoft9.com/apps/navidrome)
 
 ## <Entry[catalog] id='22IAKOsOzywVrL2jh8Tdh5'>
 
@@ -104,31 +104,31 @@
 
 ## <Entry[catalog] id='42xW7uUgXzPnNBRWmk2BHt'>
 
-- [Message Queue](https://www.websoft9.com/apps/emqx)
+- [消息队列](https://www.websoft9.com/apps/emqx)
 
 ## <Entry[catalog] id='42xW7uUgXzPnNBRWmk2BHt'>
 
-- [Video Server](https://www.websoft9.com/apps/jellyfin)
+- [视频服务](https://www.websoft9.com/apps/jellyfin)
 
 ## <Entry[catalog] id='4mF2lDUt1PNyZ5R6GP1VmF'>
 
-- [Media System](https://www.websoft9.com/apps/jellyfin)
+- [视频音频](https://www.websoft9.com/apps/jellyfin)
 
 ## <Entry[catalog] id='5fhqDdiijbN558c2c6TkzN'>
 
-- [Digital creativity](https://www.websoft9.com/apps/penpot)
+- [数字创意](https://www.websoft9.com/apps/penpot)
 
 ## <Entry[catalog] id='39cPd5ouPrNZMpi2R2Lzg7'>
 
-- [Full Monitoring](https://www.websoft9.com/apps/uptimekuma)
+- [全面监控](https://www.websoft9.com/apps/uptimekuma)
 
 ## <Entry[catalog] id='39cPd5ouPrNZMpi2R2Lzg7'>
 
-- [Full Monitoring](https://www.websoft9.com/apps/prometheus)
+- [全面监控](https://www.websoft9.com/apps/prometheus)
 
 ## <Entry[catalog] id='6WADietOzYFgb9uMKFSjts'>
 
-- [Privileged Access Management](https://www.websoft9.com/apps/teleport)
+- [堡垒机](https://www.websoft9.com/apps/teleport)
 
 ## <Entry[catalog] id='22IAKOsOzywVrL2jh8Tdh5'>
 
@@ -136,7 +136,7 @@
 
 ## <Entry[catalog] id='42xW7uUgXzPnNBRWmk2BHt'>
 
-- [Message Queue](https://www.websoft9.com/apps/mqttx)
+- [消息队列](https://www.websoft9.com/apps/mqttx)
 
 ## <Entry[catalog] id='22IAKOsOzywVrL2jh8Tdh5'>
 
@@ -144,351 +144,351 @@
 
 ## <Entry[catalog] id='42xW7uUgXzPnNBRWmk2BHt'>
 
-- [Message Queue](https://www.websoft9.com/apps/mosquitto)
+- [消息队列](https://www.websoft9.com/apps/mosquitto)
 
 ## <Entry[catalog] id='3HjhIaDMod8KcMZ5dWq1j2'>
 
-- [Master Data](https://www.websoft9.com/apps/frappe)
+- [企业主数据](https://www.websoft9.com/apps/frappe)
 
 ## <Entry[catalog] id='5NnUPnn4oierElCt5AI0po'>
 
-- [Low Code and No Code](https://www.websoft9.com/apps/frappe)
+- [低代码/零代码](https://www.websoft9.com/apps/frappe)
 
 ## <Entry[catalog] id='39cPd5ouPrNZMpi2R2Lzg7'>
 
-- [Log Management](https://www.websoft9.com/apps/graylog)
+- [日志管理](https://www.websoft9.com/apps/graylog)
 
 ## <Entry[catalog] id='65YrBrBlgXbR7BLCe6oP0K'>
 
-- [Data Application and Visualization](https://www.websoft9.com/apps/graylog)
+- [数据应用与可视化](https://www.websoft9.com/apps/graylog)
 
 ## <Entry[catalog] id='4mv9cboFR6s2EODk9Uzx4O'>
 
-- [Relational Databases](https://www.websoft9.com/apps/postgrest)
+- [SQL 数据库/关系数据库](https://www.websoft9.com/apps/postgrest)
 
 ## <Entry[catalog] id='4mv9cboFR6s2EODk9Uzx4O'>
 
-- [Database Management Tools](https://www.websoft9.com/apps/postgrest)
+- [数据库管理工具](https://www.websoft9.com/apps/postgrest)
 
 ## <Entry[catalog] id='42xW7uUgXzPnNBRWmk2BHt'>
 
-- [BaaS](https://www.websoft9.com/apps/postgrest)
+- [后端即服务](https://www.websoft9.com/apps/postgrest)
 
 ## <Entry[catalog] id='42xW7uUgXzPnNBRWmk2BHt'>
 
-- [Message Queue](https://www.websoft9.com/apps/redpandaconsole)
+- [消息队列](https://www.websoft9.com/apps/redpandaconsole)
 
 ## <Entry[catalog] id='65YrBrBlgXbR7BLCe6oP0K'>
 
-- [Data Storage](https://www.websoft9.com/apps/elasticsearch)
+- [大数据存储](https://www.websoft9.com/apps/elasticsearch)
 
 ## <Entry[catalog] id='4mv9cboFR6s2EODk9Uzx4O'>
 
-- [Data Warehouse](https://www.websoft9.com/apps/elasticsearch)
+- [数据仓库](https://www.websoft9.com/apps/elasticsearch)
 
 ## <Entry[catalog] id='65YrBrBlgXbR7BLCe6oP0K'>
 
-- [Data Application and Visualization](https://www.websoft9.com/apps/elasticsearch)
+- [数据应用与可视化](https://www.websoft9.com/apps/elasticsearch)
 
 ## <Entry[catalog] id='42xW7uUgXzPnNBRWmk2BHt'>
 
-- [Search Engine](https://www.websoft9.com/apps/elasticsearch)
+- [搜索服务](https://www.websoft9.com/apps/elasticsearch)
 
 ## <Entry[catalog] id='42xW7uUgXzPnNBRWmk2BHt'>
 
-- [Message Queue](https://www.websoft9.com/apps/zookeeper)
+- [消息队列](https://www.websoft9.com/apps/zookeeper)
 
 ## <Entry[catalog] id='42xW7uUgXzPnNBRWmk2BHt'>
 
-- [Load Balancer](https://www.websoft9.com/apps/zookeeper)
+- [负载均衡 ](https://www.websoft9.com/apps/zookeeper)
 
 ## <Entry[catalog] id='42xW7uUgXzPnNBRWmk2BHt'>
 
-- [Message Queue](https://www.websoft9.com/apps/kafka)
+- [消息队列](https://www.websoft9.com/apps/kafka)
 
 ## <Entry[catalog] id='42xW7uUgXzPnNBRWmk2BHt'>
 
-- [API Gateway](https://www.websoft9.com/apps/kong)
+- [API 网关](https://www.websoft9.com/apps/kong)
 
 ## <Entry[catalog] id='1fQ5nJAUb768z7n09J7sdK'>
 
-- [Files Management](https://www.websoft9.com/apps/aria2)
+- [文件管理](https://www.websoft9.com/apps/aria2)
 
 ## <Entry[catalog] id='42xW7uUgXzPnNBRWmk2BHt'>
 
-- [Document Service](https://www.websoft9.com/apps/collabora)
+- [文档服务](https://www.websoft9.com/apps/collabora)
 
 ## <Entry[catalog] id='65YrBrBlgXbR7BLCe6oP0K'>
 
-- [Data Collection](https://www.websoft9.com/apps/logstash)
+- [数据采集](https://www.websoft9.com/apps/logstash)
 
 ## <Entry[catalog] id='65YrBrBlgXbR7BLCe6oP0K'>
 
-- [Data Application and Visualization](https://www.websoft9.com/apps/kibana)
+- [数据应用与可视化](https://www.websoft9.com/apps/kibana)
 
 ## <Entry[catalog] id='2Y9smp8fp4hEdZ0dmLINk8'>
 
-- [Meeting](https://www.websoft9.com/apps/screego)
+- [会议/直播](https://www.websoft9.com/apps/screego)
 
 ## <Entry[catalog] id='4mv9cboFR6s2EODk9Uzx4O'>
 
-- [NewSQL Database](https://www.websoft9.com/apps/clickhouse)
+- [NewSQL 数据库](https://www.websoft9.com/apps/clickhouse)
 
 ## <Entry[catalog] id='4mv9cboFR6s2EODk9Uzx4O'>
 
-- [Data Warehouse](https://www.websoft9.com/apps/clickhouse)
+- [数据仓库](https://www.websoft9.com/apps/clickhouse)
 
 ## <Entry[catalog] id='65YrBrBlgXbR7BLCe6oP0K'>
 
-- [Data Application and Visualization](https://www.websoft9.com/apps/grafana)
+- [数据应用与可视化](https://www.websoft9.com/apps/grafana)
 
 ## <Entry[catalog] id='39cPd5ouPrNZMpi2R2Lzg7'>
 
-- [Log Management](https://www.websoft9.com/apps/grafana)
+- [日志管理](https://www.websoft9.com/apps/grafana)
 
 ## <Entry[catalog] id='5NnUPnn4oierElCt5AI0po'>
 
-- [Code Repository](https://www.websoft9.com/apps/gitlab)
+- [源码仓库](https://www.websoft9.com/apps/gitlab)
 
 ## <Entry[catalog] id='5NnUPnn4oierElCt5AI0po'>
 
-- [Pipeline](https://www.websoft9.com/apps/gitlab)
+- [流水线](https://www.websoft9.com/apps/gitlab)
 
 ## <Entry[catalog] id='5NnUPnn4oierElCt5AI0po'>
 
-- [DevOps All](https://www.websoft9.com/apps/gitlab)
+- [开发全栈](https://www.websoft9.com/apps/gitlab)
 
 ## <Entry[catalog] id='3HjhIaDMod8KcMZ5dWq1j2'>
 
-- [Master Data](https://www.websoft9.com/apps/tooljet)
+- [企业主数据](https://www.websoft9.com/apps/tooljet)
 
 ## <Entry[catalog] id='5NnUPnn4oierElCt5AI0po'>
 
-- [Low Code and No Code](https://www.websoft9.com/apps/tooljet)
+- [低代码/零代码](https://www.websoft9.com/apps/tooljet)
 
 ## <Entry[catalog] id='1fQ5nJAUb768z7n09J7sdK'>
 
-- [Document Collaboration](https://www.websoft9.com/apps/owncloud)
+- [文档协作](https://www.websoft9.com/apps/owncloud)
 
 ## <Entry[catalog] id='5NnUPnn4oierElCt5AI0po'>
 
-- [Agile Boards](https://www.websoft9.com/apps/zentao)
+- [需求/看板/缺陷](https://www.websoft9.com/apps/zentao)
 
 ## <Entry[catalog] id='1fQ5nJAUb768z7n09J7sdK'>
 
-- [Task Collaboration](https://www.websoft9.com/apps/zentao)
+- [任务协作](https://www.websoft9.com/apps/zentao)
 
 ## <Entry[catalog] id='1fQ5nJAUb768z7n09J7sdK'>
 
-- [Project and Task](https://www.websoft9.com/apps/zentao)
+- [项目/任务](https://www.websoft9.com/apps/zentao)
 
 ## <Entry[catalog] id='1fQ5nJAUb768z7n09J7sdK'>
 
-- [Document Collaboration](https://www.websoft9.com/apps/alfresco)
+- [文档协作](https://www.websoft9.com/apps/alfresco)
 
 ## <Entry[catalog] id='39cPd5ouPrNZMpi2R2Lzg7'>
 
-- [Backup & Restore](https://www.websoft9.com/apps/syncthing)
+- [备份恢复](https://www.websoft9.com/apps/syncthing)
 
 ## <Entry[catalog] id='4mF2lDUt1PNyZ5R6GP1VmF'>
 
-- [Website Builder](https://www.websoft9.com/apps/ghost)
+- [企业建站](https://www.websoft9.com/apps/ghost)
 
 ## <Entry[catalog] id='3HjhIaDMod8KcMZ5dWq1j2'>
 
-- [ERP & Finance](https://www.websoft9.com/apps/akaunting)
+- [ERP/财税/后勤](https://www.websoft9.com/apps/akaunting)
 
 ## <Entry[catalog] id='4eMZilU0IvY176upPJZ6Id'>
 
-- [Games Server](https://www.websoft9.com/apps/palworld)
+- [游戏私服](https://www.websoft9.com/apps/palworld)
 
 ## <Entry[catalog] id='1fQ5nJAUb768z7n09J7sdK'>
 
-- [Document Collaboration](https://www.websoft9.com/apps/cloudreve)
+- [文档协作](https://www.websoft9.com/apps/cloudreve)
 
 ## <Entry[catalog] id='3HjhIaDMod8KcMZ5dWq1j2'>
 
-- [ERP & Finance](https://www.websoft9.com/apps/dolibarr)
+- [ERP/财税/后勤](https://www.websoft9.com/apps/dolibarr)
 
 ## <Entry[catalog] id='3HjhIaDMod8KcMZ5dWq1j2'>
 
-- [CRM & Distribution & Order](https://www.websoft9.com/apps/dolibarr)
+- [CRM/分销/订单](https://www.websoft9.com/apps/dolibarr)
 
 ## <Entry[catalog] id='3HjhIaDMod8KcMZ5dWq1j2'>
 
-- [Supply Chain & Manufacturing & Logistic](https://www.websoft9.com/apps/dolibarr)
+- [供应链/采购/生产/物流](https://www.websoft9.com/apps/dolibarr)
 
 ## <Entry[catalog] id='3HjhIaDMod8KcMZ5dWq1j2'>
 
-- [ERP & Finance](https://www.websoft9.com/apps/odoo)
+- [ERP/财税/后勤](https://www.websoft9.com/apps/odoo)
 
 ## <Entry[catalog] id='3HjhIaDMod8KcMZ5dWq1j2'>
 
-- [CRM & Distribution & Order](https://www.websoft9.com/apps/odoo)
+- [CRM/分销/订单](https://www.websoft9.com/apps/odoo)
 
 ## <Entry[catalog] id='3HjhIaDMod8KcMZ5dWq1j2'>
 
-- [Supply Chain & Manufacturing & Logistic](https://www.websoft9.com/apps/odoo)
+- [供应链/采购/生产/物流](https://www.websoft9.com/apps/odoo)
 
 ## <Entry[catalog] id='3HjhIaDMod8KcMZ5dWq1j2'>
 
-- [Strategy & Legal & HR](https://www.websoft9.com/apps/odoo)
+- [战略/合规/人事](https://www.websoft9.com/apps/odoo)
 
 ## <Entry[catalog] id='3HjhIaDMod8KcMZ5dWq1j2'>
 
-- [Support & Customer Success](https://www.websoft9.com/apps/odoo)
+- [客服/售后](https://www.websoft9.com/apps/odoo)
 
 ## <Entry[catalog] id='3HjhIaDMod8KcMZ5dWq1j2'>
 
-- [PLM & PDM](https://www.websoft9.com/apps/odoo)
+- [产品生命周期](https://www.websoft9.com/apps/odoo)
 
 ## <Entry[catalog] id='3HjhIaDMod8KcMZ5dWq1j2'>
 
-- [Marketing](https://www.websoft9.com/apps/odoo)
+- [市场营销](https://www.websoft9.com/apps/odoo)
 
 ## <Entry[catalog] id='3HjhIaDMod8KcMZ5dWq1j2'>
 
-- [ERP & Finance](https://www.websoft9.com/apps/erpnext)
+- [ERP/财税/后勤](https://www.websoft9.com/apps/erpnext)
 
 ## <Entry[catalog] id='3HjhIaDMod8KcMZ5dWq1j2'>
 
-- [Supply Chain & Manufacturing & Logistic](https://www.websoft9.com/apps/erpnext)
+- [供应链/采购/生产/物流](https://www.websoft9.com/apps/erpnext)
 
 ## <Entry[catalog] id='4mF2lDUt1PNyZ5R6GP1VmF'>
 
-- [Knowledge Management](https://www.websoft9.com/apps/xwiki)
+- [知识管理](https://www.websoft9.com/apps/xwiki)
 
 ## <Entry[catalog] id='5NnUPnn4oierElCt5AI0po'>
 
-- [Pipeline](https://www.websoft9.com/apps/teamcity)
+- [流水线](https://www.websoft9.com/apps/teamcity)
 
 ## <Entry[catalog] id='5NnUPnn4oierElCt5AI0po'>
 
-- [Pipeline](https://www.websoft9.com/apps/jenkins)
+- [流水线](https://www.websoft9.com/apps/jenkins)
 
 ## <Entry[catalog] id='22IAKOsOzywVrL2jh8Tdh5'>
 
-- [Device Management](https://www.websoft9.com/apps/homeassistant)
+- [设备管理](https://www.websoft9.com/apps/homeassistant)
 
 ## <Entry[catalog] id='4mv9cboFR6s2EODk9Uzx4O'>
 
-- [Relational Databases](https://www.websoft9.com/apps/oracle)
+- [SQL 数据库/关系数据库](https://www.websoft9.com/apps/oracle)
 
 ## <Entry[catalog] id='6WADietOzYFgb9uMKFSjts'>
 
-- [Privileged Access Management](https://www.websoft9.com/apps/nextterminal)
+- [堡垒机](https://www.websoft9.com/apps/nextterminal)
 
 ## <Entry[catalog] id='4mv9cboFR6s2EODk9Uzx4O'>
 
-- [Database Management Tools](https://www.websoft9.com/apps/cloudbeaver)
+- [数据库管理工具](https://www.websoft9.com/apps/cloudbeaver)
 
 ## <Entry[catalog] id='4mv9cboFR6s2EODk9Uzx4O'>
 
-- [In-memory Database](https://www.websoft9.com/apps/redis)
+- [缓存数据库](https://www.websoft9.com/apps/redis)
 
 ## <Entry[catalog] id='1fQ5nJAUb768z7n09J7sdK'>
 
-- [Document Collaboration](https://www.websoft9.com/apps/nextcloud)
+- [文档协作](https://www.websoft9.com/apps/nextcloud)
 
 ## <Entry[catalog] id='4mv9cboFR6s2EODk9Uzx4O'>
 
-- [Time Series Database](https://www.websoft9.com/apps/influxdb)
+- [时序数据库](https://www.websoft9.com/apps/influxdb)
 
 ## <Entry[catalog] id='22IAKOsOzywVrL2jh8Tdh5'>
 
-- [Device Management](https://www.websoft9.com/apps/influxdb)
+- [设备管理](https://www.websoft9.com/apps/influxdb)
 
 ## <Entry[catalog] id='42xW7uUgXzPnNBRWmk2BHt'>
 
-- [Object Storage](https://www.websoft9.com/apps/minio)
+- [对象存储](https://www.websoft9.com/apps/minio)
 
 ## <Entry[catalog] id='4mv9cboFR6s2EODk9Uzx4O'>
 
-- [Relational Databases](https://www.websoft9.com/apps/sqlserver)
+- [SQL 数据库/关系数据库](https://www.websoft9.com/apps/sqlserver)
 
 ## <Entry[catalog] id='65YrBrBlgXbR7BLCe6oP0K'>
 
-- [Data Application and Visualization](https://www.websoft9.com/apps/superset)
+- [数据应用与可视化](https://www.websoft9.com/apps/superset)
 
 ## <Entry[catalog] id='4mv9cboFR6s2EODk9Uzx4O'>
 
-- [NoSQL Database](https://www.websoft9.com/apps/couchdb)
+- [NoSQL 数据库](https://www.websoft9.com/apps/couchdb)
 
 ## <Entry[catalog] id='5NnUPnn4oierElCt5AI0po'>
 
-- [Code Repository](https://www.websoft9.com/apps/gogs)
+- [源码仓库](https://www.websoft9.com/apps/gogs)
 
 ## <Entry[catalog] id='6z8egY08PT8n8rPjdkjeMD'>
 
-- [Training Framework](https://www.websoft9.com/apps/tensorflow)
+- [训练框架](https://www.websoft9.com/apps/tensorflow)
 
 ## <Entry[catalog] id='6z8egY08PT8n8rPjdkjeMD'>
 
-- [AI Simulation](https://www.websoft9.com/apps/tensorflow)
+- [AI 仿真应用](https://www.websoft9.com/apps/tensorflow)
 
 ## <Entry[catalog] id='5fhqDdiijbN558c2c6TkzN'>
 
-- [Virtual Reality](https://www.websoft9.com/apps/tensorflow)
+- [虚拟仿真](https://www.websoft9.com/apps/tensorflow)
 
 ## <Entry[catalog] id='4mF2lDUt1PNyZ5R6GP1VmF'>
 
-- [Website Builder](https://www.websoft9.com/apps/wordpress)
+- [企业建站](https://www.websoft9.com/apps/wordpress)
 
 ## <Entry[catalog] id='5NnUPnn4oierElCt5AI0po'>
 
-- [Low Code and No Code](https://www.websoft9.com/apps/wordpress)
+- [低代码/零代码](https://www.websoft9.com/apps/wordpress)
 
 ## <Entry[catalog] id='4mF2lDUt1PNyZ5R6GP1VmF'>
 
-- [eCommerce](https://www.websoft9.com/apps/wordpress)
+- [电子商务](https://www.websoft9.com/apps/wordpress)
 
 ## <Entry[catalog] id='3HjhIaDMod8KcMZ5dWq1j2'>
 
-- [Marketing](https://www.websoft9.com/apps/wordpress)
+- [市场营销](https://www.websoft9.com/apps/wordpress)
 
 ## <Entry[catalog] id='5NnUPnn4oierElCt5AI0po'>
 
-- [Code Repository](https://www.websoft9.com/apps/codeserver)
+- [源码仓库](https://www.websoft9.com/apps/codeserver)
 
 ## <Entry[catalog] id='5NnUPnn4oierElCt5AI0po'>
 
-- [Web IDE](https://www.websoft9.com/apps/codeserver)
+- [在线 IDE](https://www.websoft9.com/apps/codeserver)
 
 ## <Entry[catalog] id='3HjhIaDMod8KcMZ5dWq1j2'>
 
-- [CRM & Distribution & Order](https://www.websoft9.com/apps/espocrm)
+- [CRM/分销/订单](https://www.websoft9.com/apps/espocrm)
 
 ## <Entry[catalog] id='65YrBrBlgXbR7BLCe6oP0K'>
 
-- [Data Application and Visualization](https://www.websoft9.com/apps/knowage)
+- [数据应用与可视化](https://www.websoft9.com/apps/knowage)
 
 ## <Entry[catalog] id='4mF2lDUt1PNyZ5R6GP1VmF'>
 
-- [eCommerce](https://www.websoft9.com/apps/prestashop)
+- [电子商务](https://www.websoft9.com/apps/prestashop)
 
 ## <Entry[catalog] id='4mv9cboFR6s2EODk9Uzx4O'>
 
-- [Relational Databases](https://www.websoft9.com/apps/postgresql)
+- [SQL 数据库/关系数据库](https://www.websoft9.com/apps/postgresql)
 
 ## <Entry[catalog] id='4mv9cboFR6s2EODk9Uzx4O'>
 
-- [NoSQL Database](https://www.websoft9.com/apps/rethinkdb)
+- [NoSQL 数据库](https://www.websoft9.com/apps/rethinkdb)
 
 ## <Entry[catalog] id='3HjhIaDMod8KcMZ5dWq1j2'>
 
-- [Support & Customer Success](https://www.websoft9.com/apps/chatwoot)
+- [客服/售后](https://www.websoft9.com/apps/chatwoot)
 
 ## <Entry[catalog] id='2Y9smp8fp4hEdZ0dmLINk8'>
 
-- [Chat](https://www.websoft9.com/apps/chatwoot)
+- [团队聊天](https://www.websoft9.com/apps/chatwoot)
 
 ## <Entry[catalog] id='39cPd5ouPrNZMpi2R2Lzg7'>
 
-- [Backup & Restore](https://www.websoft9.com/apps/duplicati)
+- [备份恢复](https://www.websoft9.com/apps/duplicati)
 
 ## <Entry[catalog] id='1fQ5nJAUb768z7n09J7sdK'>
 
-- [Document Collaboration](https://www.websoft9.com/apps/kodbox)
+- [文档协作](https://www.websoft9.com/apps/kodbox)
 
 ## <Entry[catalog] id='6z8egY08PT8n8rPjdkjeMD'>
 
@@ -496,307 +496,307 @@
 
 ## <Entry[catalog] id='42xW7uUgXzPnNBRWmk2BHt'>
 
-- [HTTP Server](https://www.websoft9.com/apps/tinyproxy)
+- [HTTP 服务器](https://www.websoft9.com/apps/tinyproxy)
 
 ## <Entry[catalog] id='42xW7uUgXzPnNBRWmk2BHt'>
 
-- [Application Gateway](https://www.websoft9.com/apps/tinyproxy)
+- [应用网关](https://www.websoft9.com/apps/tinyproxy)
 
 ## <Entry[catalog] id='1fQ5nJAUb768z7n09J7sdK'>
 
-- [Document Collaboration](https://www.websoft9.com/apps/onlyoffice)
+- [文档协作](https://www.websoft9.com/apps/onlyoffice)
 
 ## <Entry[catalog] id='1fQ5nJAUb768z7n09J7sdK'>
 
-- [Project and Task](https://www.websoft9.com/apps/onlyoffice)
+- [项目/任务](https://www.websoft9.com/apps/onlyoffice)
 
 ## <Entry[catalog] id='42xW7uUgXzPnNBRWmk2BHt'>
 
-- [Document Service](https://www.websoft9.com/apps/onlyofficedocs)
+- [文档服务](https://www.websoft9.com/apps/onlyofficedocs)
 
 ## <Entry[catalog] id='4mF2lDUt1PNyZ5R6GP1VmF'>
 
-- [Online Community](https://www.websoft9.com/apps/answer)
+- [社交/论坛](https://www.websoft9.com/apps/answer)
 
 ## <Entry[catalog] id='3HjhIaDMod8KcMZ5dWq1j2'>
 
-- [Support & Customer Success](https://www.websoft9.com/apps/zammad)
+- [客服/售后](https://www.websoft9.com/apps/zammad)
 
 ## <Entry[catalog] id='6WADietOzYFgb9uMKFSjts'>
 
-- [Access Control](https://www.websoft9.com/apps/vault)
+- [访问控制](https://www.websoft9.com/apps/vault)
 
 ## <Entry[catalog] id='42xW7uUgXzPnNBRWmk2BHt'>
 
-- [Key Management](https://www.websoft9.com/apps/vault)
+- [秘钥管理](https://www.websoft9.com/apps/vault)
 
 ## <Entry[catalog] id='4mF2lDUt1PNyZ5R6GP1VmF'>
 
-- [Website Builder](https://www.websoft9.com/apps/typo3)
+- [企业建站](https://www.websoft9.com/apps/typo3)
 
 ## <Entry[catalog] id='4mF2lDUt1PNyZ5R6GP1VmF'>
 
-- [eCommerce](https://www.websoft9.com/apps/typo3)
+- [电子商务](https://www.websoft9.com/apps/typo3)
 
 ## <Entry[catalog] id='42xW7uUgXzPnNBRWmk2BHt'>
 
-- [HTTP Server](https://www.websoft9.com/apps/traefik)
+- [HTTP 服务器](https://www.websoft9.com/apps/traefik)
 
 ## <Entry[catalog] id='42xW7uUgXzPnNBRWmk2BHt'>
 
-- [Application Gateway](https://www.websoft9.com/apps/traefik)
+- [应用网关](https://www.websoft9.com/apps/traefik)
 
 ## <Entry[catalog] id='22IAKOsOzywVrL2jh8Tdh5'>
 
-- [Device Management](https://www.websoft9.com/apps/thingsboard)
+- [设备管理](https://www.websoft9.com/apps/thingsboard)
 
 ## <Entry[catalog] id='1fQ5nJAUb768z7n09J7sdK'>
 
-- [Document Collaboration](https://www.websoft9.com/apps/seafile)
+- [文档协作](https://www.websoft9.com/apps/seafile)
 
 ## <Entry[catalog] id='2Y9smp8fp4hEdZ0dmLINk8'>
 
-- [Chat](https://www.websoft9.com/apps/rocketchat)
+- [团队聊天](https://www.websoft9.com/apps/rocketchat)
 
 ## <Entry[catalog] id='3HjhIaDMod8KcMZ5dWq1j2'>
 
-- [Support & Customer Success](https://www.websoft9.com/apps/rocketchat)
+- [客服/售后](https://www.websoft9.com/apps/rocketchat)
 
 ## <Entry[catalog] id='42xW7uUgXzPnNBRWmk2BHt'>
 
-- [Message Queue](https://www.websoft9.com/apps/rabbitmq)
+- [消息队列](https://www.websoft9.com/apps/rabbitmq)
 
 ## <Entry[catalog] id='1fQ5nJAUb768z7n09J7sdK'>
 
-- [Document Collaboration](https://www.websoft9.com/apps/pydio)
+- [文档协作](https://www.websoft9.com/apps/pydio)
 
 ## <Entry[catalog] id='4mF2lDUt1PNyZ5R6GP1VmF'>
 
-- [Web Analytics](https://www.websoft9.com/apps/plausible)
+- [访问统计](https://www.websoft9.com/apps/plausible)
 
 ## <Entry[catalog] id='4mv9cboFR6s2EODk9Uzx4O'>
 
-- [Database Management Tools](https://www.websoft9.com/apps/redisinsight)
+- [数据库管理工具](https://www.websoft9.com/apps/redisinsight)
 
 ## <Entry[catalog] id='4mF2lDUt1PNyZ5R6GP1VmF'>
 
-- [Web Analytics](https://www.websoft9.com/apps/umami)
+- [访问统计](https://www.websoft9.com/apps/umami)
 
 ## <Entry[catalog] id='65YrBrBlgXbR7BLCe6oP0K'>
 
-- [Data Storage](https://www.websoft9.com/apps/typesense)
+- [大数据存储](https://www.websoft9.com/apps/typesense)
 
 ## <Entry[catalog] id='42xW7uUgXzPnNBRWmk2BHt'>
 
-- [Search Engine](https://www.websoft9.com/apps/typesense)
+- [搜索服务](https://www.websoft9.com/apps/typesense)
 
 ## <Entry[catalog] id='4mF2lDUt1PNyZ5R6GP1VmF'>
 
-- [Website Builder](https://www.websoft9.com/apps/discuz)
+- [企业建站](https://www.websoft9.com/apps/discuz)
 
 ## <Entry[catalog] id='4mF2lDUt1PNyZ5R6GP1VmF'>
 
-- [Online Community](https://www.websoft9.com/apps/discuz)
+- [社交/论坛](https://www.websoft9.com/apps/discuz)
 
 ## <Entry[catalog] id='4mF2lDUt1PNyZ5R6GP1VmF'>
 
-- [Website Builder](https://www.websoft9.com/apps/sscms)
+- [企业建站](https://www.websoft9.com/apps/sscms)
 
 ## <Entry[catalog] id='35cww3ecSr45ovFjty4IZ'>
 
-- [Education](https://www.websoft9.com/apps/sscms)
+- [教育](https://www.websoft9.com/apps/sscms)
 
 ## <Entry[catalog] id='42xW7uUgXzPnNBRWmk2BHt'>
 
-- [Video Server](https://www.websoft9.com/apps/srs)
+- [视频服务](https://www.websoft9.com/apps/srs)
 
 ## <Entry[catalog] id='2Y9smp8fp4hEdZ0dmLINk8'>
 
-- [Meeting](https://www.websoft9.com/apps/srs)
+- [会议/直播](https://www.websoft9.com/apps/srs)
 
 ## <Entry[catalog] id='5NnUPnn4oierElCt5AI0po'>
 
-- [Low Code and No Code](https://www.websoft9.com/apps/scratch)
+- [低代码/零代码](https://www.websoft9.com/apps/scratch)
 
 ## <Entry[catalog] id='39cPd5ouPrNZMpi2R2Lzg7'>
 
-- [Cloud Infrastructure Monitoring](https://www.websoft9.com/apps/redmine)
+- [云设施监控](https://www.websoft9.com/apps/redmine)
 
 ## <Entry[catalog] id='5NnUPnn4oierElCt5AI0po'>
 
-- [Agile Boards](https://www.websoft9.com/apps/redmine)
+- [需求/看板/缺陷](https://www.websoft9.com/apps/redmine)
 
 ## <Entry[catalog] id='4mv9cboFR6s2EODk9Uzx4O'>
 
-- [Database Management Tools](https://www.websoft9.com/apps/phpmyadmin)
+- [数据库管理工具](https://www.websoft9.com/apps/phpmyadmin)
 
 ## <Entry[catalog] id='4mv9cboFR6s2EODk9Uzx4O'>
 
-- [Database Management Tools](https://www.websoft9.com/apps/pgadmin)
+- [数据库管理工具](https://www.websoft9.com/apps/pgadmin)
 
 ## <Entry[catalog] id='4mF2lDUt1PNyZ5R6GP1VmF'>
 
-- [eCommerce](https://www.websoft9.com/apps/nopcommerce)
+- [电子商务](https://www.websoft9.com/apps/nopcommerce)
 
 ## <Entry[catalog] id='5NnUPnn4oierElCt5AI0po'>
 
-- [Low Code and No Code](https://www.websoft9.com/apps/nocobase)
+- [低代码/零代码](https://www.websoft9.com/apps/nocobase)
 
 ## <Entry[catalog] id='5NnUPnn4oierElCt5AI0po'>
 
-- [Low Code and No Code](https://www.websoft9.com/apps/nocodb)
+- [低代码/零代码](https://www.websoft9.com/apps/nocodb)
 
 ## <Entry[catalog] id='39cPd5ouPrNZMpi2R2Lzg7'>
 
-- [Log Management](https://www.websoft9.com/apps/netdata)
+- [日志管理](https://www.websoft9.com/apps/netdata)
 
 ## <Entry[catalog] id='39cPd5ouPrNZMpi2R2Lzg7'>
 
-- [Full Monitoring](https://www.websoft9.com/apps/netdata)
+- [全面监控](https://www.websoft9.com/apps/netdata)
 
 ## <Entry[catalog] id='4mv9cboFR6s2EODk9Uzx4O'>
 
-- [Graph Databases](https://www.websoft9.com/apps/neo4j)
+- [图数据库](https://www.websoft9.com/apps/neo4j)
 
 ## <Entry[catalog] id='4mv9cboFR6s2EODk9Uzx4O'>
 
-- [Relational Databases](https://www.websoft9.com/apps/mysql)
+- [SQL 数据库/关系数据库](https://www.websoft9.com/apps/mysql)
 
 ## <Entry[catalog] id='4mF2lDUt1PNyZ5R6GP1VmF'>
 
-- [eLearning](https://www.websoft9.com/apps/moodle)
+- [在线学习](https://www.websoft9.com/apps/moodle)
 
 ## <Entry[catalog] id='4mv9cboFR6s2EODk9Uzx4O'>
 
-- [Database Management Tools](https://www.websoft9.com/apps/mongocompass)
+- [数据库管理工具](https://www.websoft9.com/apps/mongocompass)
 
 ## <Entry[catalog] id='65YrBrBlgXbR7BLCe6oP0K'>
 
-- [Data Application and Visualization](https://www.websoft9.com/apps/metabase)
+- [数据应用与可视化](https://www.websoft9.com/apps/metabase)
 
 ## <Entry[catalog] id='4mv9cboFR6s2EODk9Uzx4O'>
 
-- [In-memory Database](https://www.websoft9.com/apps/memcached)
+- [缓存数据库](https://www.websoft9.com/apps/memcached)
 
 ## <Entry[catalog] id='2Y9smp8fp4hEdZ0dmLINk8'>
 
-- [Chat](https://www.websoft9.com/apps/mattermost)
+- [团队聊天](https://www.websoft9.com/apps/mattermost)
 
 ## <Entry[catalog] id='1fQ5nJAUb768z7n09J7sdK'>
 
-- [Project and Task](https://www.websoft9.com/apps/mattermost)
+- [项目/任务](https://www.websoft9.com/apps/mattermost)
 
 ## <Entry[catalog] id='4mF2lDUt1PNyZ5R6GP1VmF'>
 
-- [Web Analytics](https://www.websoft9.com/apps/matomo)
+- [访问统计](https://www.websoft9.com/apps/matomo)
 
 ## <Entry[catalog] id='4mv9cboFR6s2EODk9Uzx4O'>
 
-- [Relational Databases](https://www.websoft9.com/apps/mariadb)
+- [SQL 数据库/关系数据库](https://www.websoft9.com/apps/mariadb)
 
 ## <Entry[catalog] id='4mF2lDUt1PNyZ5R6GP1VmF'>
 
-- [eCommerce](https://www.websoft9.com/apps/magento)
+- [电子商务](https://www.websoft9.com/apps/magento)
 
 ## <Entry[catalog] id='42xW7uUgXzPnNBRWmk2BHt'>
 
-- [Load Balancer](https://www.websoft9.com/apps/haproxy)
+- [负载均衡 ](https://www.websoft9.com/apps/haproxy)
 
 ## <Entry[catalog] id='4mv9cboFR6s2EODk9Uzx4O'>
 
-- [Time Series Database](https://www.websoft9.com/apps/chronograf)
+- [时序数据库](https://www.websoft9.com/apps/chronograf)
 
 ## <Entry[catalog] id='22IAKOsOzywVrL2jh8Tdh5'>
 
-- [Device Management](https://www.websoft9.com/apps/chronograf)
+- [设备管理](https://www.websoft9.com/apps/chronograf)
 
 ## <Entry[catalog] id='4mF2lDUt1PNyZ5R6GP1VmF'>
 
-- [Knowledge Management](https://www.websoft9.com/apps/mediawiki)
+- [知识管理](https://www.websoft9.com/apps/mediawiki)
 
 ## <Entry[catalog] id='1fQ5nJAUb768z7n09J7sdK'>
 
-- [Cloud Workspaces](https://www.websoft9.com/apps/kasmweb)
+- [云桌面](https://www.websoft9.com/apps/kasmweb)
 
 ## <Entry[catalog] id='42xW7uUgXzPnNBRWmk2BHt'>
 
-- [Container](https://www.websoft9.com/apps/kasmweb)
+- [容器](https://www.websoft9.com/apps/kasmweb)
 
 ## <Entry[catalog] id='5NnUPnn4oierElCt5AI0po'>
 
-- [Code Repository](https://www.websoft9.com/apps/jupyterhub)
+- [源码仓库](https://www.websoft9.com/apps/jupyterhub)
 
 ## <Entry[catalog] id='5NnUPnn4oierElCt5AI0po'>
 
-- [Web IDE](https://www.websoft9.com/apps/jupyterhub)
+- [在线 IDE](https://www.websoft9.com/apps/jupyterhub)
 
 ## <Entry[catalog] id='4mF2lDUt1PNyZ5R6GP1VmF'>
 
-- [Online Community](https://www.websoft9.com/apps/humhub)
+- [社交/论坛](https://www.websoft9.com/apps/humhub)
 
 ## <Entry[catalog] id='5NnUPnn4oierElCt5AI0po'>
 
-- [Code Repository](https://www.websoft9.com/apps/gitea)
+- [源码仓库](https://www.websoft9.com/apps/gitea)
 
 ## <Entry[catalog] id='5NnUPnn4oierElCt5AI0po'>
 
-- [Pipeline](https://www.websoft9.com/apps/gitea)
+- [流水线](https://www.websoft9.com/apps/gitea)
 
 ## <Entry[catalog] id='5NnUPnn4oierElCt5AI0po'>
 
-- [Agile Boards](https://www.websoft9.com/apps/focalboard)
+- [需求/看板/缺陷](https://www.websoft9.com/apps/focalboard)
 
 ## <Entry[catalog] id='1fQ5nJAUb768z7n09J7sdK'>
 
-- [Project and Task](https://www.websoft9.com/apps/focalboard)
+- [项目/任务](https://www.websoft9.com/apps/focalboard)
 
 ## <Entry[catalog] id='5fhqDdiijbN558c2c6TkzN'>
 
-- [Whiteboard and Note](https://www.websoft9.com/apps/excalidraw)
+- [白板/笔记](https://www.websoft9.com/apps/excalidraw)
 
 ## <Entry[catalog] id='1fQ5nJAUb768z7n09J7sdK'>
 
-- [Task Collaboration](https://www.websoft9.com/apps/excalidraw)
+- [任务协作](https://www.websoft9.com/apps/excalidraw)
 
 ## <Entry[catalog] id='3HjhIaDMod8KcMZ5dWq1j2'>
 
-- [Support & Customer Success](https://www.websoft9.com/apps/discourse)
+- [客服/售后](https://www.websoft9.com/apps/discourse)
 
 ## <Entry[catalog] id='4mF2lDUt1PNyZ5R6GP1VmF'>
 
-- [Online Community](https://www.websoft9.com/apps/discourse)
+- [社交/论坛](https://www.websoft9.com/apps/discourse)
 
 ## <Entry[catalog] id='5NnUPnn4oierElCt5AI0po'>
 
-- [Low Code and No Code](https://www.websoft9.com/apps/directus)
+- [低代码/零代码](https://www.websoft9.com/apps/directus)
 
 ## <Entry[catalog] id='3HjhIaDMod8KcMZ5dWq1j2'>
 
-- [Master Data](https://www.websoft9.com/apps/directus)
+- [企业主数据](https://www.websoft9.com/apps/directus)
 
 ## <Entry[catalog] id='4mF2lDUt1PNyZ5R6GP1VmF'>
 
-- [Headless CMS](https://www.websoft9.com/apps/directus)
+- [无头 CMS](https://www.websoft9.com/apps/directus)
 
 ## <Entry[catalog] id='4mv9cboFR6s2EODk9Uzx4O'>
 
-- [Database Management Tools](https://www.websoft9.com/apps/directus)
+- [数据库管理工具](https://www.websoft9.com/apps/directus)
 
 ## <Entry[catalog] id='4mv9cboFR6s2EODk9Uzx4O'>
 
-- [Graph Databases](https://www.websoft9.com/apps/dgraph)
+- [图数据库](https://www.websoft9.com/apps/dgraph)
 
 ## <Entry[catalog] id='6WADietOzYFgb9uMKFSjts'>
 
-- [Detection and Monitor](https://www.websoft9.com/apps/clamav)
+- [扫描监测](https://www.websoft9.com/apps/clamav)
 
 ## <Entry[catalog] id='3HjhIaDMod8KcMZ5dWq1j2'>
 
-- [Master Data](https://www.websoft9.com/apps/budibase)
+- [企业主数据](https://www.websoft9.com/apps/budibase)
 
 ## <Entry[catalog] id='5NnUPnn4oierElCt5AI0po'>
 
-- [Low Code and No Code](https://www.websoft9.com/apps/budibase)
+- [低代码/零代码](https://www.websoft9.com/apps/budibase)
 
 ## <Entry[catalog] id='6z8egY08PT8n8rPjdkjeMD'>
 
@@ -804,53 +804,53 @@
 
 ## <Entry[catalog] id='4mv9cboFR6s2EODk9Uzx4O'>
 
-- [Database Management Tools](https://www.websoft9.com/apps/chat2db)
+- [数据库管理工具](https://www.websoft9.com/apps/chat2db)
 
 ## <Entry[catalog] id='39cPd5ouPrNZMpi2R2Lzg7'>
 
-- [Full Monitoring](https://www.websoft9.com/apps/zabbix)
+- [全面监控](https://www.websoft9.com/apps/zabbix)
 
 ## <Entry[catalog] id='42xW7uUgXzPnNBRWmk2BHt'>
 
-- [HTTP Server](https://www.websoft9.com/apps/caddy)
+- [HTTP 服务器](https://www.websoft9.com/apps/caddy)
 
 ## <Entry[catalog] id='5NnUPnn4oierElCt5AI0po'>
 
-- [Low Code and No Code](https://www.websoft9.com/apps/apex)
+- [低代码/零代码](https://www.websoft9.com/apps/apex)
 
 ## <Entry[catalog] id='3HjhIaDMod8KcMZ5dWq1j2'>
 
-- [Master Data](https://www.websoft9.com/apps/appsmith)
+- [企业主数据](https://www.websoft9.com/apps/appsmith)
 
 ## <Entry[catalog] id='5NnUPnn4oierElCt5AI0po'>
 
-- [Low Code and No Code](https://www.websoft9.com/apps/appsmith)
+- [低代码/零代码](https://www.websoft9.com/apps/appsmith)
 
 ## <Entry[catalog] id='4mv9cboFR6s2EODk9Uzx4O'>
 
-- [Graph Databases](https://www.websoft9.com/apps/arangodb)
+- [图数据库](https://www.websoft9.com/apps/arangodb)
 
 ## <Entry[catalog] id='42xW7uUgXzPnNBRWmk2BHt'>
 
-- [HTTP Server](https://www.websoft9.com/apps/apache)
+- [HTTP 服务器](https://www.websoft9.com/apps/apache)
 
 ## <Entry[catalog] id='2hZRCPvPqDhF7UcFCmnC0H'>
 
-- [RPA](https://www.websoft9.com/apps/ansible)
+- [流程机器人](https://www.websoft9.com/apps/ansible)
 
 ## <Entry[catalog] id='5NnUPnn4oierElCt5AI0po'>
 
-- [Low Code and No Code](https://www.websoft9.com/apps/aitable)
+- [低代码/零代码](https://www.websoft9.com/apps/aitable)
 
 ## <Entry[catalog] id='35cww3ecSr45ovFjty4IZ'>
 
-- [Software Platform](https://www.websoft9.com/apps/aitable)
+- [软件与平台](https://www.websoft9.com/apps/aitable)
 
 ## <Entry[catalog] id='4mv9cboFR6s2EODk9Uzx4O'>
 
-- [NoSQL Database](https://www.websoft9.com/apps/mongodb)
+- [NoSQL 数据库](https://www.websoft9.com/apps/mongodb)
 
 ## <Entry[catalog] id='42xW7uUgXzPnNBRWmk2BHt'>
 
-- [Message Queue](https://www.websoft9.com/apps/activemq)
+- [消息队列](https://www.websoft9.com/apps/activemq)
 

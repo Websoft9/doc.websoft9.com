@@ -1,7 +1,7 @@
-[DataHub](https://datahubproject.io/) 是一个 **The Metadata Platform for the Modern Data Stack**，它被用于 Master Data  等场景。DataHub's extensible metadata platform enables data discovery, data observability and federated governance that helps tame the complexity of your data ecosystem.
+[DataHub](https://datahubproject.io/) 是一个 **开源企业级元数据平台**，它被用于 企业主数据  等场景。DataHub 的可扩展元数据平台支持数据发现、数据可观测性和联合治理，有助于控制数据生态系统的复杂性。
 
 
-![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/datahub/datahub-gui-websoft9.png)
+![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/datahub/datahub-gui-websoft9.png)
 
 
 ## 准备

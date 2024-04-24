@@ -1,4 +1,4 @@
-[Collabora Online Development Edition](https://collaboraonline.github.io/) 是一个 **Office suite integrated into your own infrastructure**，它被用于 Document Service  等场景。Collabora Online is a powerful collaborative Office suite that supports all major document, spreadsheet and presentation file formats, which you can integrate into your own infrastructure. 
+[Collabora 在线开发版](https://collaboraonline.github.io/) 是一个 **文档编辑与预览中间件**，它被用于 文档服务  等场景。Collabora Online 是一个功能强大的协作办公套件，支持所有主要的文档、电子表格和演示文稿文件格式，您可以将其集成到自己的基础架构中。
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/collabora/collabora-gui-websoft9.png)
@@ -6,7 +6,7 @@
 
 ## 准备
 
-在参阅本文档使用 Collabora Online Development Edition 时，需要确保如下几点：
+在参阅本文档使用 Collabora 在线开发版 时，需要确保如下几点：
 
 - 应用是基于 Websoft9 安装的
 

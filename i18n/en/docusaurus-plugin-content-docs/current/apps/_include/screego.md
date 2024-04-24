@@ -1,7 +1,7 @@
-[screego](https://app.screego.net) 是一个 **Screen sharing by browser**，它被用于 Meeting  等场景。Screego is a screen sharing tool that allows users to share their screens with others over the web.
+[screego](https://app.screego.net) 是一个 **无客户端的共享屏幕工具**，它被用于 会议/直播  等场景。Screen 是一个低延时、高质量的屏幕共享软件。它完全基于浏览器运行，不需要任何客户端即可支持多人使用。
 
 
-![Console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/screego/screego-gui-websoft9.png)
+![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/screego/screego-gui-websoft9.png)
 
 
 ## 准备

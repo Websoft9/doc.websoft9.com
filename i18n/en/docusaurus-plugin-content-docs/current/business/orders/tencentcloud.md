@@ -3,11 +3,11 @@ sidebar_position: 4
 slug: /order/tencentcloud
 ---
 
-# For Tencent Cloud
+# 腾讯云订单
 
 在腾讯云平台中，镜像部署完成后，就产生了相关的订单
 
-## 订单号{#listorders}
+## 订单号
 
 订单号是开具发票、申请服务等非常重要的凭据。
 

@@ -1,7 +1,7 @@
-[Elastic Logstash](https://www.elastic.co/logstash) 是一个 **Centralize, transform & stash your data**，它被用于 Data Collection  等场景。Logstash is a free and open server-side data processing pipeline that ingests data from a multitude of sources, transforms it, and then sends it to your favorite "stash."
+[Elastic Logstash](https://www.elastic.co/logstash) 是一个 **数据采集与转换软件**，它被用于 数据采集  等场景。Logstash 是免费且开放的服务器端数据处理管道，能够从多个来源采集数据，转换数据，然后将数据发送到您最喜欢的“存储库”中。
 
 
-![dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-gui-websoft9.gif)
+![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-wizard1-websoft9.png)
 
 
 ## 准备

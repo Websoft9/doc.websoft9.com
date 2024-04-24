@@ -1,7 +1,7 @@
-[Portainer](https://www.portainer.io/) 是一个 **Web-based tool for Docker and Kubernetes（built-in to Websoft9）**，它被用于 Cloud Infrastructure Monitoring  等场景。A powerful open-source management toolset that allows you to easily build, manage and maintain Docker environments.
+[Portainer](https://www.portainer.io/) 是一个 ** Docker 和 Kubernetes 可视化管理工具（Websoft9 已内置）**，它被用于 云设施监控  等场景。是一个可视化的 Docker 操作界面，功能十分全面，基本能满足中小型单位对容器管理的全部需求。
 
 
-![addcontainer](http://libs.websoft9.com/Websoft9/DocsPicture/zh/potainer/portainer-addcontainer-websoft9.png)
+![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/docker/portainer/portainer-sc001-websoft9.png)
 
 
 ## 准备

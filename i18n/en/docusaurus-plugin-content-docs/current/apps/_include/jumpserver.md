@@ -1,7 +1,7 @@
-[JumpServer](http://www.jumpserver.org/) 是一个 **A Better Open Source PAM in Multi-Cloud Environment**，它被用于 Privileged Access Management  等场景。JumpServer Privileged Access Management (PAM) Complying with 4A Protocol of Operation and Security Auditing
+[JumpServer](http://www.jumpserver.org/) 是一个 **开源堡垒机**，它被用于 堡垒机  等场景。JumpServer 是一个开源特权访问管理 （PAM） 或堡垒机/跳板机解决方案，它符合 4A 操作和安全审核协议。
 
 
-![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jumpserver/jumpserver-gui-websoft9.png)
+![控制面板](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jumpserver/jumpserver-gui-websoft9.png)
 
 
 ## 准备

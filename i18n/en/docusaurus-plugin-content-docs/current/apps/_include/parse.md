@@ -1,4 +1,4 @@
-[Parse Server](https://parseplatform.org/) 是一个 **Backend as Server based on Node**，它被用于 BaaS  等场景。Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. 
+[Parse Server](https://parseplatform.org/) 是一个 **基于 Node 的后端即服务平台**，它被用于 后端即服务  等场景。Parse Server 是一个 Node.js 开源后端，它通过对象和文件存储、用户身份验证、推送通知、仪表板等， 更快地构建应用程序。
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/en/parseserver/dashboard.png)

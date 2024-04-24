@@ -1,7 +1,7 @@
-[Elastic Kibana](https://www.elastic.co/kibana) 是一个 **Elasticsearch Dashboard**，它被用于 Data Application and Visualization  等场景。Kibana is a powerful tool for data analysis, visualization, and discovery on any data from any source. 
+[Elastic Kibana](https://www.elastic.co/kibana) 是一个 **Elasticsearch 仪表板**，它被用于 数据应用与可视化  等场景。Kibana 是一个基于 Elasticsearch 的数据分析平台，可以使用 ES|QL 语言进行全面透彻的数据分析，从威胁情报到搜索分析，从日志到应用程序监测。
 
 
-![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kibana/kibana-gui-websoft9.png)
+![仪表盘](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kibana/kibana-gui-websoft9.png)
 
 
 ## 准备

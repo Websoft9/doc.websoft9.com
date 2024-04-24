@@ -1,7 +1,7 @@
-[OpenJDK](https://container-registry.oracle.com/ords/ocr/ba/java/openjdk) 是一个 **OpenJDK  runtime for production and development**，它被用于 Java  等场景。The Oracle official OpenJDK container has been carefully engineered to provide you and your team with a highly reproducible Java production and development environment. 
+[OpenJDK](https://container-registry.oracle.com/ords/ocr/ba/java/openjdk) 是一个 **用于生产和开发的 OpenJDK 运行环境**，它被用于 Java  等场景。Oracle 官方 OpenJDK 容器经过精心设计，为您和您的团队提供高度可重复的 Java  生产与开发环境。
 
 
-![Architecture](https://libs.websoft9.com/Websoft9/DocsPicture/zh/java/java-gui-websoft9.png)
+![架构图](https://libs.websoft9.com/Websoft9/DocsPicture/zh/java/java-gui-websoft9.png)
 
 
 ## 准备

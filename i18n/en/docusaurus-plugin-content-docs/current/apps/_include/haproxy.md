@@ -1,4 +1,4 @@
-[HAProxy](http://www.haproxy.org/) 是一个 **a free, very fast and reliable solution offering high availability, load balancing, and proxying for TCP and HTTP-based applications**，它被用于 Load Balancer  等场景。Provides a high availability load balancer and proxy server for TCP and HTTP-based applications.
+[HAProxy](http://www.haproxy.org/) 是一个 **一个提供高可用性、负载均衡，以及基于 TCP 和 HTTP 的应用程序代理的解决方案**，它被用于 负载均衡   等场景。提供高可用性、负载均衡，以及基于 TCP 和 HTTP 的应用程序代理，适用于负载特大的web站点。
 
 
 ![configuration](https://libs.websoft9.com/Websoft9/DocsPicture/zh/haproxy/HAProxy-configuration.png)

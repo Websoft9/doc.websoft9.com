@@ -1,4 +1,4 @@
-[Traefik Proxy](https://traefik.io/traefik/) 是一个 **The Cloud Native Application Proxy**，它被用于 HTTP Server Application Gateway  等场景。Traefik (pronounced traffic) is a modern HTTP reverse proxy and load balancer that makes deploying microservices easy. 
+[Traefik Proxy](https://traefik.io/traefik/) 是一个 **云原生应用代理服务器软件**，它被用于 HTTP 服务器 应用网关  等场景。Traefik（发音流量）是一种现代 HTTP 反向代理和负载均衡器，可轻松部署微服务
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/traefik/traefik-gui-websoft9.webp)

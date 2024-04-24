@@ -1,7 +1,7 @@
-[SQL Server Express](https://www.sqlserver.com/) 是一个 **SQLServer Express edition is the entry-level, free database **，它被用于 Relational Databases  等场景。SQLServer Express Express edition is the entry-level, free database and is ideal for learning and building desktop and small server data-driven applications. 
+[SQL Server Express](https://www.sqlserver.com/) 是一个 **SQL Server Express 是 Microsoft 官方 SQL Server 免费发行版**，它被用于 SQL 数据库/关系数据库  等场景。SQL Server Express 是 Microsoft 官方 SQL Server 免费发行版。易于部署并可无偿获取并可以随应用程序免费再分发。
 
 
-![sqlserver](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/microsoft-sql-server-express.png)
+![sqlserver](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-getsqlserver-websoft9.png)
 
 
 ## 准备

@@ -1,4 +1,4 @@
-[MongoDB Compass](https://www.mongodb.com/products/compass) 是一个 **The GUI for MongoDB**，它被用于 Database Management Tools  等场景。Compass is a free interactive tool for querying, optimizing, and analyzing your MongoDB data. Get key insights, drag and drop to build pipelines, and more.
+[MongoDB Compass](https://www.mongodb.com/products/compass) 是一个 **MongoDB 官方可视化工具**，它被用于 数据库管理工具  等场景。Compass is a free interactive tool for querying, optimizing, and analyzing your MongoDB data. Get key insights, drag and drop to build pipelines, and more.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/mongodbcompass001-websoft9.png)

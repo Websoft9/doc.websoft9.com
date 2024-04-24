@@ -1,0 +1,15 @@
+[ONLYOFFICE Docs](https://www.onlyoffice.com/) 是一个 **A powerful online editor for ECM**，它被用于 Document Service  等场景。ONLYOFFICE Document Server Community is a free collaborative online office suite
+
+
+![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/onlyoffice/onlyofficedocs-gui-websoft9.png)
+
+
+## 准备
+
+在参阅本文档使用 ONLYOFFICE Docs 时，需要确保如下几点：
+
+- 应用是基于 Websoft9 安装的
+
+- 应用的用途符合 [LGPL-3.0](https://opensource.org/licenses/LGPL-3.0) 开源许可协议
+
+- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口

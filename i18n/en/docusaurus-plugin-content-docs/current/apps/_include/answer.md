@@ -1,4 +1,4 @@
-[Apache Answer](https://answer.apache.org/) 是一个 **Q&A platform software for teams at any scales**，它被用于 Online Community  等场景。A Q&A platform software for teams at any scales. Whether it’s a community forum, help center, or knowledge management platform, you can always count on Answer.
+[Apache Answer](https://answer.apache.org/) 是一个 **开源团队问答平台**，它被用于 社交/论坛  等场景。一款适合任何团队的问答平台软件。无论是社区论坛、帮助中心还是知识管理平台，你可以永远信赖 Answer。
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/answer/answer-gui-websoft9.png)

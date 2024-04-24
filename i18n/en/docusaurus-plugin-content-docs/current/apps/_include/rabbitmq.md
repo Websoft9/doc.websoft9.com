@@ -1,4 +1,4 @@
-[RabbitMQ](https://www.rabbitmq.com/) 是一个 **the most widely deployed open source message broker**，它被用于 Message Queue  等场景。RabbitMQ is the most widely deployed open source message broker. 
+[RabbitMQ](https://www.rabbitmq.com/) 是一个 **流行的开源消息队列系统**，它被用于 消息队列  等场景。流行的开源消息队列系统，用erlang语言开发，用于在分布式系统中存储转发消息，在易用性、扩展性、高可用性等方面表现不俗
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rabbitmq/rabbitmq-gui-websoft9.png)

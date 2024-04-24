@@ -1,4 +1,4 @@
-[JFrog Artifactory](https://jfrog.com/) 是一个 **Binary & Artifact Management**，它被用于 Software supply chain Container Artifact Repository  等场景。JFrog’s Artifactory open source project was created to speed up development cycles using binary repositories. It’s the world’s most advanced repository manager, creating a single place for teams to manage all their binary artifacts efficiently.
+[JFrog Artifactory](https://jfrog.com/) 是一个 **二进制包与软件制品管理**，它被用于 软件供应链 容器 制品仓库  等场景。JFrog’s Artifactory open source project was created to speed up development cycles using binary repositories. It’s the world’s most advanced repository manager, creating a single place for teams to manage all their binary artifacts efficiently.
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jfrog/jfrog-gui-websoft9.png)

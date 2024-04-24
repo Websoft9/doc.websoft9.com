@@ -1,4 +1,4 @@
-[PostgreSQL](https://www.postgresql.org/) 是一个 **A open source object-relational database system**，它被用于 Relational Databases  等场景。PostgreSQL is a powerful,open source object-relational database system(ORDBMS). 
+[PostgreSQL](https://www.postgresql.org/) 是一个 **面向企业复杂SQL处理的开源数据库**，它被用于 SQL 数据库/关系数据库  等场景。PostgreSQL被业界誉为“超先进的开源数据库”，面向企业复杂SQL处理的OLTP在线事务处理场景，支持NoSQL数据类型（JSON/XML/hstore）、支持GIS地理信息处理。
 
 
 ![pgadmin](http://libs.websoft9.com/Websoft9/DocsPicture/zh/postgresql/pgadmin4-websoft9.png)

@@ -1,4 +1,4 @@
-[Graylog](https://www.graylog.org/) 是一个 **A leading centralized log management solution**，它被用于 Log Management Data Application and Visualization  等场景。A log management solution for capturing, storing, and enabling real-time analysis of terabytes of machine data.
+[Graylog](https://www.graylog.org/) 是一个 **日志聚合、分析、审计、展现和预警**，它被用于 日志管理 数据应用与可视化  等场景。开源日志管理工具，支持TB级别机器数据的聚合、分析、审计、展现和预警。
 
 
 ![ui](https://libs.websoft9.com/Websoft9/DocsPicture/en/graylog/graylog-gui-websoft9.png)

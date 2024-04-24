@@ -1,7 +1,7 @@
-[Flowise](https://flowiseai.com/) 是一个 **Low-code tool for developers to build customized LLM apps**，它被用于 AIGC Low Code and No Code Web Framework  等场景。Open source low-code tool for developers to build customized LLM orchestration flow & AI agents
+[Flowise](https://flowiseai.com/) 是一个 **低代码 LLM 应用构建系统**，它被用于 AIGC 低代码/零代码 Web 开发框架  等场景。开源低代码工具，供开发人员构建定制的 LLM 编排流程和 AI 代理
 
 
-![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/flowise/flowise-gui-websoft9.png)
+![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/flowise/flowise-gui-websoft9.png)
 
 
 ## 准备

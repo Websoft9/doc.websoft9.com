@@ -1,7 +1,7 @@
-[Neo4j](https://neo4j.com/) 是一个 **A high performance graph store with all the features expected of a mature and robust database**，它被用于 Graph Databases  等场景。Neo4j® graph database is the world's leading Graph Database. It is a high performance graph store with all the features expected of a mature and robust database.
+[Neo4j](https://neo4j.com/) 是一个 **高性能的 NoSQL 图数据库**，它被用于 图数据库  等场景。Neo4j 是一个关系信息存储为一等实体的数据库技术，广泛用于知识图谱，社交关系链，商品推荐，IT架构，商品主数据等领域。
 
 
-![console](https://libs.websoft9.com/Websoft9/DocsPicture/en/neo4j/neo4j-console-websoft9.png)
+![console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/neo4j/neo4j-console-websoft9.png)
 
 
 ## 准备

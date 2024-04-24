@@ -1,4 +1,4 @@
-[Rocket.Chat](https://www.rocket.chat/) 是一个 **The ultimate Free Open Source Solution for team communications**，它被用于 Chat Support & Customer Success  等场景。Rocket.Chat is an open-source fully customizable communications platform developed in JavaScript for organizations with high standards of data protection.
+[Rocket.Chat](https://www.rocket.chat/) 是一个 **团队聊天和信息协作系统**，它被用于 团队聊天 客服/售后  等场景。Rocket.Chat是一个开源的完全可定制的通信平台，用JavaScript开发，适用于具有高标准数据保护的组织。
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rocketchat/rocketchat-gui-websoft9.png)

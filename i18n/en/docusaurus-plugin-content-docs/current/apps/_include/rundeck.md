@@ -1,7 +1,7 @@
-[Rundeck](https://www.rundeck.com) 是一个 **Job scheduler and runbook automation system**，它被用于 Pipeline  等场景。Rundeck automation can help DevOps and Operations teams can manage automation in a central UI while delegating tasks within different private networks or multi-cloud environments
+[Rundeck](https://www.rundeck.com) 是一个 **自动化作业调度系统**，它被用于 流水线  等场景。Rundeck 自动化可以让 DevOps 和运营团队可以在中央 UI 中管理自动化，同时在不同的专用网络或多云环境中执行任务。
 
 
-![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rundeck/rundeck-gui-websoft9.webp)
+![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rundeck/rundeck-gui-websoft9.webp)
 
 
 ## 准备

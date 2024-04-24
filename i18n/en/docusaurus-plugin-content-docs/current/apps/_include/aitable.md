@@ -1,4 +1,4 @@
-[AITable](https://aitable.ai/) 是一个 **Custom ChatGPT with Table in 1-Click**，它被用于 Low Code and No Code Software Platform  等场景。By using AITable, every individual, team, and company should be able to access and manipulate databases and data in ways never possible before, helping people save countless hours every day.
+[AITable 维格表](https://aitable.ai/) 是一个 **一键训练AI的多维表格**，它被用于 低代码/零代码 软件与平台  等场景。AITable（原名：APITable）是 vika 维格云的国际版，一款企业级的人工智能产品，可以让你一键构建AI 助手，处理复杂的数据工作流程。AITable可以用来自动化项目管理、市场营销、客户管理、财税管理、人事行政等数据整理与流转。
 
 
 ![apitable](https://libs.websoft9.com/Websoft9/DocsPicture/en/aitable/aitable-websoft9.png)
@@ -6,7 +6,7 @@
 
 ## 准备
 
-在参阅本文档使用 AITable 时，需要确保如下几点：
+在参阅本文档使用 AITable 维格表 时，需要确保如下几点：
 
 - 应用是基于 Websoft9 安装的
 

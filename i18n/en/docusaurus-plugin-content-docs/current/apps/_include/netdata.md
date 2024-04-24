@@ -1,4 +1,4 @@
-[Netdata](https://www.netdata.cloud/) 是一个 **Real-Time data collection and visualizatio**，它被用于 Log Management Full Monitoring  等场景。Netdata is a distributed, real-time, performance and health monitoring platform for systems, hardware, containers and applications, collecting thousands of useful metrics with zero configuration needed.
+[Netdata](https://www.netdata.cloud/) 是一个 **实时可视化的服务器监控系统**，它被用于 日志管理 全面监控  等场景。Netdata 是一个面向系统、硬件、容器和应用程序的分布式实时性能和运行状况监控平台，无需配置即可收集数千个有用的指标。
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/netdata/netdata-gui-websoft9.png)

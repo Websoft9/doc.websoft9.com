@@ -1,7 +1,7 @@
-[Dgraph](https://dgraph.io/) 是一个 **The Modern Graph Database**，它被用于 Graph Databases  等场景。Built to be fault-tolerant, on a distributed graph database, that gives developers the tools to rapidly build and model applications at scale
+[Dgraph](https://dgraph.io/) 是一个 **高性能的 NoSQL 图数据库**，它被用于 图数据库  等场景。在分布式图形数据库上构建为容错能力，为开发人员提供了快速构建和大规模建模应用程序的工具
 
 
-![guiarchitecture](https://libs.websoft9.com/Websoft9/DocsPicture/zh/dgraph/dgraph-gui-websoft9.svg)
+![architecture](https://libs.websoft9.com/Websoft9/DocsPicture/zh/dgraph/dgraph-gui-websoft9.svg)
 
 
 ## 准备

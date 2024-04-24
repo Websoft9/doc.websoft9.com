@@ -1,7 +1,7 @@
-[Chronograf](https://www.influxdata.com/) 是一个 **InfluxDB  user interface and administrative**，它被用于 Time Series Database Device Management  等场景。Chronograf is the user interface and administrative component of the InfluxDB 1.x platform.
+[Chronograf](https://www.influxdata.com/) 是一个 **InfluxDB 可视化管理工具**，它被用于 时序数据库 设备管理  等场景。Chronograf 是 InfluxDB 1.x 平台的用户界面和管理组件。
 
 
-![Console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/chronograf/chronograf-gui-websoft9.png)
+![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/chronograf/chronograf-gui-websoft9.png)
 
 
 ## 准备

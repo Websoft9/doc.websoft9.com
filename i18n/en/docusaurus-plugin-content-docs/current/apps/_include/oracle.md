@@ -1,7 +1,7 @@
-[Oracle Database](https://www.oracle.com/) 是一个 **Oracle Database Express Edition**，它被用于 Relational Databases  等场景。Oracle Database offers market-leading performance, scalability, reliability, and security, both on-premises and in the cloud.
+[Oracle Database](https://www.oracle.com/) 是一个 **Oracle Database 免费版**，它被用于 SQL 数据库/关系数据库  等场景。Oracle 数据库，是一个企业级产品。内置可以通过本地浏览器访问的可视化管理工具 Oracle EM 和 CloudBeaver，满足企业微服务架构的设计思想。
 
 
-![gui](http://libs.websoft9.com/Websoft9/DocsPicture/en/oracle/oracle-database-1024x410.jpg)
+![gui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/oracle/oracle-database-1024x410.jpg)
 
 
 ## 准备

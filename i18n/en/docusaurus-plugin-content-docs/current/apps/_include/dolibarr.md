@@ -1,7 +1,7 @@
-[Dolibarr](https://www.dolibarr.org/) 是一个 **A  ERP & CRM software**，它被用于 ERP & Finance CRM & Distribution & Order Supply Chain & Manufacturing & Logistic  等场景。Dolibarr is a software suite for small and micro enterprises, freelancers and other enterprises, which used for resource planning and customer relationship management. 
+[Dolibarr](https://www.dolibarr.org/) 是一个 **一个流行的开源ERP/CRM系统**，它被用于 ERP/财税/后勤 CRM/分销/订单 供应链/采购/生产/物流  等场景。Dolibarr是一个流行的开源ERP/CRM系统，模块可以即插即用，生态完善，全球范围内都有定制和服务商。
 
 
-![ui](http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/dolibarr-gui-websoft9.png)
+![ui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/dolibarr/dolibarr-gui-websoft9.webp)
 
 
 ## 准备

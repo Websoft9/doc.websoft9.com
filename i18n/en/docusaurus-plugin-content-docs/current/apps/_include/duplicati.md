@@ -1,4 +1,4 @@
-[Duplicati](https://www.duplicati.com/) 是一个 **Free backup software to store encrypted backups online**，它被用于 Backup & Restore  等场景。Duplicati is a free, open source, backup client that securely stores encrypted, incremental, compressed backups on cloud storage services and remote file servers.
+[Duplicati](https://www.duplicati.com/) 是一个 **在线加密备份软件**，它被用于 备份恢复  等场景。Duplicati 是一个免费的开源备份客户端，可将加密的增量压缩备份安全地存储在云存储服务和远程文件服务器上。
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/duplicati/duplicati-gui-websoft9.png)

@@ -1,4 +1,6 @@
-[Directus](https://directus.io/) 是一个 **Created  application based on many Database**，它被用于 Low Code and No Code Master Data Headless CMS Database Management Tools  等场景。Directus is a real-time API and App dashboard for managing SQL database content or create low-code application
+[Directus](https://directus.io/) 是一个 **数据驱动的低代码与后端即服务平台**，它被用于 低代码/零代码 企业主数据 无头 CMS 数据库管理工具  等场景。Directus 是一个实时 API 和应用程序仪表板，用于管理 SQL 数据库内容或创建低代码应用
+
+
 
 
 ![architecture](https://libs.websoft9.com/Websoft9/DocsPicture/zh/directus/directus-arch-websoft9.svg)

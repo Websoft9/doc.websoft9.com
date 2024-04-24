@@ -1,7 +1,7 @@
-[Maven](https://hub.docker.com/_/maven) 是一个 **Maven Runtime for build Java App**，它被用于 Java  等场景。This is multiply verion Maven runtime for build Java application powered by Websoft9, it based on offcial Docker image. You can custom it by yourself very easy
+[Maven](https://hub.docker.com/_/maven) 是一个 **Maven 容器环境，支持多个 JDK 版本**，它被用于 Java  等场景。这是一个支持多版本 Maven/JDK 构建环境，它由 Websoft9 基于 Docker 官方的 Maven 镜像制作，用户可以非常方便的对它进行客户化的设置。
 
 
-![Architecture](https://libs.websoft9.com/Websoft9/DocsPicture/en/runtime/runtime-web-websoft9.png)
+![架构图](https://libs.websoft9.com/Websoft9/DocsPicture/zh/runtime/runtime-web-websoft9.png)
 
 
 ## 准备

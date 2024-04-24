@@ -3,52 +3,37 @@ sidebar_position: 3
 slug: /install/setup
 ---
 
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
+# 安装后配置
+
+安装 Websoft9 到服务器后，便可以参考一下章节完成开始正式使用：
+
+## 登录控制台
+
+登录 Websoft9 不需要额外的特别设置，只需要从**本地浏览器**访问服务器对应的端口即可：  
+
+- 访问地址： *http://服务器公网IP:9000*  
+- 默认密码：服务器的 root 账号与密码
+- 需开启安全组端口：**80, 443, 9000**
+
+![Websoft9 登录界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/websoft9/websoft9-loginpage.png)
 
 
-# Steps after installing
+如果没有云服务器使用经验，可以先阅读下面的指引：  
 
-Here are a few resources you might want to check out after completing the installation.  
+* [操作云服务器](../user/cloud)：连接服务器和操作云控制台、获取服务器公网IP、开启安全组端口等
+* [获取账号密码](../user/credentials)：连接云服务器后，运行获取命令的命令
 
-## Prepare{#prepare}
+## 配置域名{#domain}
 
-* [Manage Server](../user/cloud): Connect Server, get Internet IP, enable port of Security Group.
-* [Get username and password](../user/credentials): Get credentials for your installation and setup. 
+虽然 Websoft9 可以在无域名的情况下访问，但为了更好的用户体验和安全保护，我们强烈您为 Websoft9 [配置域名](../guide/appsetdomain.md)。  
 
-## Configure Domain{#domain}
+## 备份措施
 
-* [Five steps for DNS](../administrator/domain_step): Register Domain to binding Domain.
+需要尽早设置备份策略，不能存在侥幸心理。建议的备份优先级如下：
 
-> You should complete Domain configure and modify the default URL before **Application initial Setup**
+1. [服务器备份](../administrator/backup_server)：在云控制台设置服务器的自动化备份策略（例如：快照备份）
+2. [Websoft9 备份](../administrator/backup_app)：Websoft9 平台以及所安装的应用的备份
 
-## Application initial Setup
+## 升级
 
-* [Initial Setup](../apps): Local computer to access URL: *http://Server's Internet IP* to start setup of application
-
-## Database{#db}
-
-* [Manage Database](../user/dbgui): GUI tools for your database management.  
-* [Change default database](../administration/db_change): Change the default database of application.  
-
-## Security{#security}
-
-* [Configure HTTPS](../administrator/domain_https): Configure HTTPS for your application
-
-## Notification
-
-* [SMTP](../administrator/smtp): Configure SMTP for email notification of application
-
-## Backup
-
-* [Server Backup](../administrator/backup_server): Backup your Cloud Server with automatic snapshots strategy on Cloud console
-* [Application Backup](../administrator/backup_app)：Set your application backup strategy at the backend of application
-
-## Extension
-
-* [Add more application](../user/app_create): Easily install more applications when the pre-installed applications cannot meet the needs
-* [Storage extension](../administrator/storage): Expansion of system disk, data disk and external object storage
-
-## Upgrade
-
-* [Application upgrade](../administrator/upgrade_app): Upgrade your installed application
+如果您安装的不是最新的 Websoft9，建议您立即进行[更新升级](../administrator/upgrade_app)

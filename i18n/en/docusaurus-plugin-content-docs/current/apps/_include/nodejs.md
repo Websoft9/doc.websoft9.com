@@ -1,7 +1,7 @@
-[Node.js](https://hub.docker.com/_/node) 是一个 **Node.js language runtime for web application**，它被用于 Node  等场景。This is multiply verion Node.js language runtime for web application powered by Websoft9, it based on offcial Docker image. You can custom it by yourself very easy
+[Node.js](https://hub.docker.com/_/node) 是一个 **部署 Node.js 应用的容器环境，支持任选 Node 版本**，它被用于 Node  等场景。这是一个支持多版本 Node.js 应用部署的运行环境，它由 Websoft9 基于 Docker 官方的 Node.js 镜像制作，用户可以非常方便的对它进行客户化的设置。
 
 
-![Architecture](https://libs.websoft9.com/Websoft9/DocsPicture/zh/nodejs/nodejs-gui-websoft9.png)
+![架构图](https://libs.websoft9.com/Websoft9/DocsPicture/zh/nodejs/nodejs-gui-websoft9.png)
 
 
 ## 准备

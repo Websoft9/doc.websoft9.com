@@ -1,4 +1,4 @@
-[OwnCloud ](https://owncloud.com/) 是一个 **A self-hosted file sync and share server software**，它被用于 Document Collaboration  等场景。ownCloud provides access to your data through a web interface, sync clients or WebDAV while providing a platform to view, sync and share across devices easily-all under your control.
+[OwnCloud ](https://owncloud.com/) 是一个 **一款云存储开源软件**，它被用于 文档协作  等场景。ownCloud用于自建私有网盘的云存储开源软件，功能类似百度云盘，提供了PC、IOS和Android三个同步客户端。
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-gui-websoft9.png)

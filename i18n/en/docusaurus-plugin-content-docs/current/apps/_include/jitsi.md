@@ -1,7 +1,7 @@
-[Jitsi Meet](https://jitsi.org/) 是一个 **Open Source video conferencing platforms with state-of-the-art video quality and features.**，它被用于 Education Meeting  等场景。Jitsi Meet - Secure, Simple and Scalable Video Conferences that you use as a standalone app or embed in your web application.
+[Jitsi Meet](https://jitsi.org/) 是一个 **高视频质量和功能的视频会议平台**，它被用于 教育 会议/直播  等场景。Jitsi Meet 是一个完全加密的 100% 开源视频会议解决方案，您可以全天免费使用，无需帐户
 
 
-![Create meeting](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jitsi/jitsi-gui-websoft9.png)
+![创建会议](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jitsi/jitsi-gui-websoft9.png)
 
 
 ## 准备

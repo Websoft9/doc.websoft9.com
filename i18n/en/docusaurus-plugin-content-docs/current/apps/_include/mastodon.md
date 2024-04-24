@@ -1,7 +1,7 @@
-[Mastodon](https://joinmastodon.org/) 是一个 **Your self-hosted and globally interconnected microblogging community**，它被用于 Online Community  等场景。Mastodon is a free, open-source social network server based on ActivityPub where users can follow friends and discover new ones. 
+[Mastodon](https://joinmastodon.org/) 是一个 **自托管微博系统**，它被用于 社交/论坛  等场景。Mastodon是一个基于ActivityPub的免费开源社交网络服务器，用户可以在其中关注朋友并发现新朋友。
 
 
-![Interface](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mastodon/mastodon-gui-websoft9.png)
+![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mastodon/mastodon-gui-websoft9.png)
 
 
 ## 准备

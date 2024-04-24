@@ -1,4 +1,4 @@
-[Syncthing](https://syncthing.net/) 是一个 **Continuous file synchronization program**，它被用于 Backup & Restore  等场景。Syncthing is a continuous file synchronization program. It synchronizes files between two or more computers in real time, safely protected from prying eyes.
+[Syncthing](https://syncthing.net/) 是一个 **点对点的跨平台文件同步工具**，它被用于 备份恢复  等场景。Syncthing是一个连续的文件同步程序。它同步 两台或多台计算机之间的实时文件，安全防止被窥探 眼睛。
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/syncthing/syncthing-gui-websoft9.png)

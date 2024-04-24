@@ -1,7 +1,7 @@
-[.NET SDK](https://mcr.microsoft.com/en-us/product/dotnet/sdk/about) 是一个 **.NET SDK Runtime for Web App**，它被用于 .NET  等场景。This is multiply verion .NET SDK runtime for running .NET application powered by Websoft9, it based on Microsoft official Docker image. You can custom it by yourself very easy
+[.NET SDK](https://mcr.microsoft.com/en-us/product/dotnet/sdk/about) 是一个 **.NET SDK 运行环境，支持多个 SDK 版本**，它被用于 .NET  等场景。这是一个支持多版本 .NET SDK 构建环境，它由 Websoft9 基于 Microsoft 官方的 .NET SDK 镜像制作，用户可以非常方便的对它进行客户化的设置。
 
 
-![Architecture](https://libs.websoft9.com/Websoft9/DocsPicture/en/runtime/runtime-web-websoft9.png)
+![架构图](https://libs.websoft9.com/Websoft9/DocsPicture/zh/runtime/runtime-web-websoft9.png)
 
 
 ## 准备

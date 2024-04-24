@@ -1,7 +1,7 @@
-[Mautic](https://www.mautic.org/) 是一个 **Open Source Marketing Automation Software**，它被用于 Marketing  等场景。Mautic provides free and open source marketing automation software available to everyone. Free email marketing software, lead management software and more
+[Mautic](https://www.mautic.org/) 是一个 **开源营销自动化系统**，它被用于 市场营销  等场景。Mautic为 所有人提供免费和开源 的营销自动化软件。免费电子邮件营销软件，潜在客户管理软件等。
 
 
-![Console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mautic/mautic-gui-websoft9.jpg)
+![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mautic/mautic-gui-websoft9.jpg)
 
 
 ## 准备

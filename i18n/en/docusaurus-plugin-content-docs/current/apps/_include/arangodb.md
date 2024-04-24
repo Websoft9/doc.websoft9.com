@@ -1,4 +1,4 @@
-[ArangoDB](https://www.arangodb.com/) 是一个 **A scalable graph database system**，它被用于 Graph Databases  等场景。ArangoDB is a scalable graph database system to drive value from connected data, faster.
+[ArangoDB](https://www.arangodb.com/) 是一个 **开源图数据库平台**，它被用于 图数据库  等场景。ArangoDB是一个可扩展的图形数据库系统，可以从连接的数据中驱动价值， 更快
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/arangodb/arangodb-gui-websoft9.png)

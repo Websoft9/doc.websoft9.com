@@ -1,4 +1,4 @@
-[MQTTX](https://mqttx.app/) 是一个 **All-in-One MQTT Client Toolbox**，它被用于 MQTT Message Queue  等场景。Eclipse Mosquitto is an open source implementation of a server for versions 5, 3.1.1, and 3.1 of the MQTT protocol.
+[MQTTX](https://mqttx.app/) 是一个 **MQTT 客户端工具箱**，它被用于 MQTT 消息队列  等场景。MQTTX端是一个开源的、跨平台的 MQTT 5.0 桌面客户端，最初由EMQ，可以在 macOS、Linux 和 Windows 上运行。
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mqttx/mqttx-gui-websoft9.png)

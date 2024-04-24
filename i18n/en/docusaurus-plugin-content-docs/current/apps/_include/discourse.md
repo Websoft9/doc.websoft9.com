@@ -1,7 +1,7 @@
-[Discourse](https://www.discourse.org/) 是一个 **The online home for your community**，它被用于 Support & Customer Success Online Community  等场景。Discourse is modern forum software for your community. Use it as a mailing list, discussion forum, long-form chat room, and more。Discourse will not work from an IP address, you must own a domain name such as example.com to proceed.
+[Discourse](https://www.discourse.org/) 是一个 **用户社区运营与论坛系统**，它被用于 客服/售后 社交/论坛  等场景。Discourse 是适用于您社区的现代论坛软件。它必须绑定域名方可使用。
 
 
-![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discourse/discourse-gui-websoft9.webp)
+![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discourse/discourse-gui-websoft9.webp)
 
 
 ## 准备

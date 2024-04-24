@@ -1,7 +1,7 @@
-[ONLYOFFICE Workspace](https://www.onlyoffice.com/) 是一个 **A free open-source collaborative system**，它被用于 Document Collaboration Project and Task  等场景。ONLYOFFICE is a multifunctional portal for business collaboration, document and project management. 
+[ONLYOFFICE Workspace](https://www.onlyoffice.com/) 是一个 **是一款开源的团队协作办公套件**，它被用于 文档协作 项目/任务  等场景。ONLYOFFICE Workspace是一款集成了文档、电子邮件、事件、任务和客户关系管理工具的团队协作办公套件与生产力工具。
 
 
-![ui](https://libs.websoft9.com/Websoft9/DocsPicture/en/onlyoffice/onlyoffice-websoft9-002.png)
+![ui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/onlyoffice/onlyoffice-websoft9-001.png)
 
 
 ## 准备

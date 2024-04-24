@@ -1,7 +1,7 @@
-[HumHub](https://www.humhub.com/) 是一个 **Open Source Enterprise Social Network**，它被用于 Online Community  等场景。HumHub is an intuitive to use and modular designed open-source software, used primarily as social network, knowledge database, intranet or information and communication platform.
+[HumHub](https://www.humhub.com/) 是一个 **企业社交软件，构建内部的 Facebook**，它被用于 社交/论坛  等场景。HumHub是一款直观易用和模块化设计的开源软件，主要用作社交网络，知识数据库，内部网或信息和通信平台。
 
 
-![Interface](https://libs.websoft9.com/Websoft9/DocsPicture/zh/humhub/humhub-gui-websoft9.png)
+![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/humhub/humhub-gui-websoft9.png)
 
 
 ## 准备

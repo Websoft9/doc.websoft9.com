@@ -1,7 +1,7 @@
-[Laravel](https://laravel.com/) 是一个 **Laravel for production and development**，它被用于 PHP Web Framework  等场景。The Bitnami Laravel Development Container has been carefully engineered to provide you and your team with a highly reproducible Laravel development environment. 
+[Laravel](https://laravel.com/) 是一个 **用于生产和开发的 Laravel**，它被用于 PHP Web 开发框架  等场景。Bitnami Laravel 开发容器经过精心设计，为您和您的团队提供高度可重复的 Laravel 开发环境。
 
 
-![Architecture](https://libs.websoft9.com/Websoft9/DocsPicture/zh/laravel/laravel-gui-websoft9.png)
+![架构图](https://libs.websoft9.com/Websoft9/DocsPicture/zh/laravel/laravel-gui-websoft9.png)
 
 
 ## 准备

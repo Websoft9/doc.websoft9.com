@@ -1,73 +1,111 @@
 ---
-sidebar_position: 9
+sidebar_position: 4
 slug: /business/faq
 ---
 
-# Business FAQ
+# 商务问题
 
-The following are common non-technical questions users have when you Subscribe Websoft9 Enterprise:
+下面是用户在购买镜像中常见的非技术问题：
 
-#### What is Enterprise Subscription?
+#### 什么是镜像？
 
-Enterprise Subscription is mean **Enterprise product + Support + Security enhancement**.   
+镜像=操作系统+应用软件，是一个打包好的可以被云服务器一键安装的程序体。  
 
-You can our **Enterprise Subscription** at the major [Cloud](../install/cloud).  
+#### 镜像中的操作系统是谁提供的？
 
-#### What is image?
+镜像中的操作系统一般使用云平台提供的原生操作系统。
 
-Image is a packaged application and it environment, e.g docker iamge, VM image
+#### 什么是云市场？
 
-User can running image for running application, no need any installation of application
+云市场（Marketplace）是由云平台提供的，汇聚了云平台的合作厂商的软件产品和各种技术服务。  
 
-#### What's Cloud Platform Marketplace?
+用户可以直接在云市场购买商品，然后由合作厂商提供对应的技术服务。  
 
-Cloud Platform Marketplace provides access and information on solutions and services available from its partners. Customers (IT pros and developers) can discover, try to buy cloud software solutions built on or built for  Marketplace.  Marketplace catalog of 8,000+ listings provides Cloud building blocks, such as Virtual Machines (VMs), APIs, Solution Templates and managed applications, SaaS apps, containers, and consulting services.
+交易和服务过程中，云平台主要作为中转作用，并承担监管的责任。
 
-#### How to list all Websoft9 products on Marketplace?
+#### 镜像怎么付费？
 
-Refer to: [Websoft9 on Marketplace](../buy/subscription#get)
+镜像是服务器的组件之一，一旦镜像被安装到服务器之后，镜像的计费（续费）可开始包含在服务器整体计费模型中的。
 
+#### 镜像是一成不变的吗？
 
-#### Can Websoft9 provide free support?
+不是，我们会根据应用、系统和 Bug 等情况不断的更新镜像，并发布到云市场。  
 
-Yes, we provide free support for our Enterprise subscription customer
+#### 谁拥有镜像的管理权限？
 
-#### Can I resell your product?
+用户。安装镜像到服务器后，镜像已经 100% 由用户自己控制。
 
-Yes, We very much welcome you to resell our product which we can 40% rebate for you.  
+#### 镜像更新周期是？
 
-#### Inquiry about AMI Images - Features, Maintenance, and Scalabilit
+1-3个月更新一次镜像，如果应用、系统和 Bug 有特殊变化和要求，我们也会更加频繁的更新。
 
-```
-- Immutability and Ownership: Is the AMI image immutable, and who owns the admin user?  
+#### 如何部署新镜像，并迁移数据？
 
-Owner is customer, it have installed to you Server
+部署新镜像即更换服务器操作系统，它是一个严肃的操作。故，在更新前您需要将数据被到系统盘之外的位置，然后待更换新镜像后再迁移回来。
 
-- Maintenance: How is the image maintained? If there arises a need for a patch (due to vulnerabilities), is there a process in place to ship a new image?  
+#### 镜像可以通过集群使用吗?
 
-If bug or new features, we will publish it to Marketplace offer
+可以。不过需要您更加应用、HTTP Server 的情况自主配置。
 
-- Release Schedule: Are there scheduled releases for the image? Do they cover both system and application updates?  
+#### 镜像有没有特殊的日志归集？
 
-1-3 months to pulish, also system and apps updates
+没有。我们保持系统、应用以及其他组件自身的日志，但不会做额外的归集或处理。
 
-- Data Migration: Do you have smooth data migration procedures in place when images are updated, such as when installing a new image of a particular application? How might this be achieved during deployments? 
+#### 镜像为什么收费？
 
-No,migration is difficult and serious
+镜像收费不是针对其中开源软件收费，而是针对于我们与镜像配套的：知识库、人工服务、长期的更新迭代、用户体验改进等软件使用过程中的必要因素付费。  
 
-- Scalability Model: What's the scalability model for the AMI images? If needed, can I instantiate multiple instances for higher availability or load balancing? 
+如果镜像免费，我们将无任何收入来源以提供各种支持和知识。
 
-Yes, you can configure it by you self if you don't want to use local HTTP server or Database
+#### 不续费还能用镜像吗？
 
-- Logging and Metrics: What type of logging and metric solutions are integrated or can be used with the AMI? 
+只要云服务器可用，镜像就可以使用。如果不需要云服务器，可以自定义一个镜像，下次需要使用的时候再基于自定义镜像重新创建服务器，此时镜像中的软件仍然可用。
 
-Apps/ http server/database logs and system logs, we don't add any other logs system
+#### 不删除镜像会停止计费吗？
 
-- Support and Responsibility: In the event of issues, could you please share details about your support model and responsibility matrix?  
+删除镜像=将服务器当前的镜像更换成其他镜像。  
 
-refer to: Support Docs
+如果不删除镜像，镜像会继续计费，直至删除为止。
 
--  Hardening: How is the image hardened to ensure security? 
+#### 如何更换（或重置）镜像？
 
-All images passed the Marketplace's baseline check 
-```
+更换镜像即重装系统，适用于**镜像退订，产品更换**等场景。  
+
+重置镜像即恢复最初安装镜像的状态，适用于测试等场景。  
+
+阿里云、华为云和腾讯云等国内云平台支持对已有的服务器进行更换镜像的操作，而 Azure 和 AWS 不支持这种操作。  
+
+如果您需要更换（或重置）镜像，请参考：[《云服务器操作》](../user/cloud)  
+
+#### 买服务器和买镜像有先后关系吗？
+
+镜像与服务器具有互生关系，即两种都需要存在，才可以使用：
+
+* 如果你没有服务器，通过**云市场**购买镜像的同时，系统会进入服务器购买页面，即配套购买服务器；  
+* 如果你已有服务器，需要通过云控制台采用**更换镜像**的方式购买镜像。
+
+#### 镜像对服务器有什么要求？
+
+每个镜像商品我们会提供一个最低配置要求。最优的配置，需要自身根据业务及时调整。
+
+我们也总结了一些云服务器的购买经验，参考[此处](../user/cloud#howbuy)。
+
+#### 服务器是你们提供的吗？
+
+不是，我们公司不提供服务器，服务器是云厂商提供的，并归属在用户自己的云账号中。
+
+#### 购买镜像你们会提供培训吗？
+
+会，除了文档指导之外，我们也不定期推出视频或直播来指导用户使用。
+
+#### 软件功能能教我吗？
+
+我们聚焦于安装部署和故障技术支持。我们不擅长软件的功能，因此我们的技术支持范围是不包含功能层面的。
+
+#### 你们提供个性化部署方案吗？
+
+可以提供，包括：HTTP 优化，读写分离，集群，高可用性，容器化等多种解决方案。欢迎与我们 [联系](https://www.websoft9.com)
+
+#### 集成商可以转售 Websoft9 的产品吗？
+
+我们非常欢迎您转售我们的镜像，我们可以提供多达 40% 的返佣。

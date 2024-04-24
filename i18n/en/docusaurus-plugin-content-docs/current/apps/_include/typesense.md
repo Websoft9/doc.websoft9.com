@@ -1,4 +1,4 @@
-[Typesense](https://typesense.org/) 是一个 **Fast, typo-tolerant open source search engine**，它被用于 Data Storage Search Engine  等场景。Typesense is a fast, typo-tolerant search engine for building delightful search experiences.
+[Typesense](https://typesense.org/) 是一个 **开源搜索引擎**，它被用于 大数据存储 搜索服务  等场景。Typesense 是一个快速、容错字的搜索引擎，用于构建令人愉悦的搜索体验。
 
 
 ![Site](https://libs.websoft9.com/Websoft9/DocsPicture/zh/typesense/typesense-gui-websoft9.jpg)

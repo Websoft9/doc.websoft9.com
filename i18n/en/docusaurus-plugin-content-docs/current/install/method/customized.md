@@ -3,15 +3,12 @@ sidebar_position: 3
 slug: /install/customized
 ---
 
-# Customized installation
+# 定制化安装
 
-Users may have different forms of customized installation requirements, including:
+用户可能存在不同形式的定制化安装需求，包括：
 
-* Multi-application integration installation, for example: GitLab + Jenkins is integrated as a GitOps solution.
-* Installation in special environment, for example: installation when the server has no external network
-* Project-based installation, for example: need to implement and install different software in 30 locations of the customer
+* 多应用集成安装，例如：Websoft9 + K8s 集成为 GitOps 方案。 
+* 特殊环境安装，例如：服务器无外网情况下安装
+* 项目型安装，例如：需要在客户 30 个地点实施安装不同的软件
 
-
-The above only lists some of the customized scenarios. 
-
-Websoft9 are happy to provide Customized installation for users. You can contact our **[Customer Success Team](../helpdesk)** for your customized requirements. 
+以上仅列举部分定制化场景，我们对用户的定制化保持开放态度，乐意为用户提供定制化安装相关的 **[人工服务](../helpdesk)**。  

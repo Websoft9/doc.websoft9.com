@@ -1,7 +1,7 @@
-[Hasura](https://hasura.io/) 是一个 **The Open Source Airtable Alternative**，它被用于 API Gateway  等场景。Blazing fast, instant realtime GraphQL APIs on your DB with fine grained access control, also trigger webhooks on database events.
+[Hasura](https://hasura.io/) 是一个 **将 MySQL 等数据库实时转换为 GraphQL/REST APIs**，它被用于 API 网关  等场景。Blazing fast, instant realtime GraphQL APIs on your DB with fine grained access control, also trigger webhooks on database events.
 
 
-![architecture](https://libs.websoft9.com/Websoft9/DocsPicture/zh/hasura/hasura-gui-websoft9.png)
+![架构](https://libs.websoft9.com/Websoft9/DocsPicture/zh/hasura/hasura-gui-websoft9.png)
 
 
 ## 准备

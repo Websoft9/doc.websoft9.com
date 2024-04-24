@@ -1,7 +1,7 @@
-[Seafile](https://www.seafile.com/home/) 是一个 **Reliable and Performant File Sync and Share Solution**，它被用于 Document Collaboration  等场景。Seafile is an open source file sync&share solution designed for high reliability, performance and productivity. 
+[Seafile](https://www.seafile.com/home/) 是一个 **一款开源的企业云盘，注重可靠性和性能**，它被用于 文档协作  等场景。Seafile 是一款开源的企业云盘，注重可靠性和性能。支持 Windows, Mac, Linux, iOS, Android 平台。支持文件同步或者直接挂载到本地访问。
 
 
-![seafile](https://libs.websoft9.com/Websoft9/DocsPicture/en/seafile/seafile-gui-websoft9.png)
+![seafile](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-gui-websoft9.png)
 
 
 ## 准备

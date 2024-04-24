@@ -1,7 +1,7 @@
-[EMQX](https://www.emqx.io/) 是一个 **Open-source MQTT broker for IoT, IIoT, and connected vehicles**，它被用于 MQTT Message Queue  等场景。EMQX is an open-source, highly scalable, and feature-rich MQTT broker designed for IoT and real-time messaging applications. 
+[EMQX](https://www.emqx.io/) 是一个 **物联网/车联网 MQTT 服务器**，它被用于 MQTT 消息队列  等场景。EMQX 是一款开源、可扩展性强、功能丰富的 MQTT 服务器，专为物联网和实时消息应用而设计。
 
 
-![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/emqx/emqx-gui-websoft9.png)
+![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/emqx/emqx-gui-websoft9.png)
 
 
 ## 准备

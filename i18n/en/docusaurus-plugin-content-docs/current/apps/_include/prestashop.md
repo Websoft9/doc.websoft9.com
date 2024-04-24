@@ -1,4 +1,4 @@
-[Prestashop](https://www.prestashop.com/en) 是一个 **A popular ecommerce platforms**，它被用于 eCommerce  等场景。PrestaShop is one of the world's most popular ecommerce platforms, and most successful open source projects.
+[Prestashop](https://www.prestashop.com/en) 是一个 **一款开源商城软件**，它被用于 电子商务  等场景。PrestaShop是一款多功能、跨平台的开源电子商务解决方案，采用PHP+MySQL开发。始于2008年，发展迅速，全球已超过四万家网店采用Prestashop进行部署。
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/pretashopui-websoft9.png)

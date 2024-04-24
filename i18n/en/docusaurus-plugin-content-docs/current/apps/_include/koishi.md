@@ -1,7 +1,7 @@
-[Koishi](https://koishi.chat) 是一个 **Cross-platform chatbot framework**，它被用于 AIGC  等场景。Koishi is a cross-platform, extensive, high-performance chatbot framework
+[Koishi](https://koishi.chat) 是一个 **开箱即用的聊天机器人框架**，它被用于 AIGC  等场景。Koishi 是一个跨平台、可扩展、高性能的聊天机器人框架
 
 
-![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/koishi/koishi-gui-websoft9.png)
+![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/koishi/koishi-gui-websoft9.png)
 
 
 ## 准备

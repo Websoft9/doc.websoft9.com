@@ -1,4 +1,4 @@
-[GitLab](https://about.gitlab.com/) 是一个 **An integrated product that unifies issues, code review, CI and CD into a single UI**，它被用于 Code Repository Pipeline DevOps All  等场景。GitLab CE is an integrated product that unifies issues, code review, CI and CD into a single UI. 
+[GitLab](https://about.gitlab.com/) 是一个 **一个平台覆盖 DevSecOps 全流程**，它被用于 源码仓库 流水线 开发全栈  等场景。GitLab 是一个完整的 DevOps 平台软件，提供开箱即用的完整 CI/CD 工具链。
 
 
 ![devops](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-devopsall-websoft9.png)

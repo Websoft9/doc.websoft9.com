@@ -1,4 +1,4 @@
-[MariaDB](https://mariadb.org/) 是一个 **A branch of MySQL**，它被用于 Relational Databases  等场景。MariaDB is designed to be fully compatible with MySQL, including APIs and command lines, making it easy to be a replacement for MySQL.
+[MariaDB](https://mariadb.org/) 是一个 **MySQL的一个分支数据库管理系统**，它被用于 SQL 数据库/关系数据库  等场景。MariaDB 数据库，是一个企业级产品。它基于 Docker 架构，内置可以通过本地浏览器访问的可视化管理工具 phpMyAdmin，满足企业微服务架构的设计思想。 
 
 
 ![gui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mariadb/mariadb-gui-websoft9.png)

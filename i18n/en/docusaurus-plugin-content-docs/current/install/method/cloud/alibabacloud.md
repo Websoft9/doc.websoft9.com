@@ -3,67 +3,87 @@ sidebar_position: 3
 slug: /install/alibabacloud
 ---
 
-# AlibabaCloud
+# 阿里云
 
-Websoft9 is Partner of AlibabaCloud Marketplace, you can install [Websoft9 product on AlibabaCloud](https://marketplace.alibabacloud.com/store/2116499.html) very conveniently.  
+Websoft9 在阿里云的云市场上提供了丰富的应用和解决方案，用户可以通过购买的方式实现自动化安装部署。
 
-## Installation
+- [Websoft9 on 阿里云](https://shop658hlt17.market.aliyun.com)
+- [Websoft9 on AlibabaCloud](https://marketplace.alibabacloud.com/store/2116499.html)
 
-How to deploy Websoft9 on AlibabaCloud? There are three methods:
+> 我们是全球为数不多能够支持中英文产品和服务的云原生技术商。
 
-### By Marketplace
+## 安装
 
-1. Login to [AlibabaCloud Marketplace](https://marketplace.alibabacloud.com) or [Websoft9 on AliababaCloud](https://marketplace.alibabacloud.com/store/2116499.html)
+一旦您注册了阿里云的账号，您可以通过如下多种方式安装我们的产品：
 
-2. Search the keyword `websoft9`, list all the image of Websoft9
-   ![Search websoft9 image](https://libs.websoft9.com/Websoft9/DocsPicture/en/aliyun/aliyun-searchwebs9-websoft9.png) 
+### 云市场安装
 
-3. Access to product detail page and click the 【Choose Your Plan】 button
-   ![Buy websoft9 image](https://libs.websoft9.com/Websoft9/DocsPicture/en/aliyun/aliyun-buyproduct-websoft9.png) 
+1. 访问 [阿里云云市场](https://shop658hlt17.market.aliyun.com/) 网站 或 [Websoft9店铺地址](https://shop658hlt17.market.aliyun.com/)
 
-4. Then you should start the process to get a suitable ECS for product
-   ![Buy websoft9 image](https://libs.websoft9.com/Websoft9/DocsPicture/en/aliyun/aliyun-buyproductecs-websoft9.png) 
+2. 搜索关键字"websoft9"，网站会列出所有相关的镜像
+   ![搜索Websoft9镜像](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aliyun/aliyun-buywebsoft9.gif) 
 
-5. When you complete the buy process, you have obtain an usable product and matched ECS 
-
-
-### By Creating ECS
-
-When you create a new ECS by Console, you can deploy Websoft9's image very easy
-
-1. Login to console, open【Elastic Compute Service】>【Instances】, click button 【Create Instance】
-   ![create instance](https://libs.websoft9.com/Websoft9/DocsPicture/en/aliyun/aliyun-createcs001-websoft9.png)
-
-2. At the 【Image】configuration, select the 【Marketplace Image】
-   ![Marketplace Image](https://libs.websoft9.com/Websoft9/DocsPicture/en/aliyun/aliyun-images-1-websoft9.png)
-
-3. Search the keyword `websoft9`, list all the image of Websoft9
-   ![Search websoft9 image](http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/aliyun-images-2-websoft9.png)
-
-4. Complete the next steps for running ECS
-
-5. When you complete the create process, you have obtain an usable product and matched ECS 
+3. 点击您所需的产品，进入产品详情页后点击"立即购买"按钮，镜像已经购买完成
+7. 接下来系统会自动要求购买一台新服务器：选择计费方式、实例类型、网络和安全组等设置
+8. 等待几分钟，ECS创建完成后，镜像会作为ECS实例的系统盘启动，即镜像自动部署到实例中
 
 
-### By Replacing Disk
+### 创建实例安装
 
-If you have a running ECS, you can also deploy our image buy **replacing System Disk**
+购买ECS或控制台创建实例过程中，可以选择Websoft9的镜像作为系统启动盘
 
-> Replace System Disk will clear all data of system disk of ECS, make sure this is suitable for you
+1. 登录到阿里云管理控制台->ECS，点击“创建实例”，
+   ![进入ecs控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aliyun/aliyun-createecs-websoft9.png)
+2. 在镜像一栏，选择镜像市场->从镜像市场获取更多选择（含操作系统）。
+3. 然后搜索关键件词“websoft9”，列出相关镜像
+   ![选择Websoft9镜像](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aliyun/aliyun-searchw9image-websoft9.png)
 
-1. Login to Console, Stop your ECS
+4. 选择一个你所需的镜像，开始创建ECS实例
+5. 后续动作基本都会要求用户完成：选择计费方式、实例类型、网络和安全组等设置
+6. 等待几分钟，ECS创建完成后，镜像会作为ECS实例的系统盘启动，即镜像自动部署到实例中
 
-2. Then open:【More】>【Disk and Image】>【Replace System Disk】
-   ![Replace System Disk](https://libs.websoft9.com/Websoft9/DocsPicture/en/aliyun/aliyun-changesysdisk-websoft9.png)
+### 更换系统盘安装
 
-2. Start to list the images by searching 【websoft9】, then select one product you want to use
-   ![Replace System Disk](https://libs.websoft9.com/Websoft9/DocsPicture/en/aliyun/aliyun-searchwebsoft9ls-websoft9.png)
+镜像除了可以在创建新服务器之时购买，针对已有服务器，也可以通过更换系统盘的方式使用镜像。
 
-3. Set your new password and waiting for the ECS restarting
+> 需要注意的是，重装系统意味着系统数据全部会格式化，所以请注意做好数据的备份。
 
-## After installation
+1. 登录到阿里云管理控制台，在”实例“中先停止服务器，依次选择：更多->磁盘和镜像->更换系统盘 
+   ![更换系统盘](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aliyun/aliyun-changesysdisk-websoft9.png)
 
-Here are a few resources you might want to check out after completing the installation on Cloud.
+2. 确认更换后，镜像类型选择“镜像市场”，然后输入搜索关键字”websoft9“，根据提示设置新密码
+   ![选择Websoft9镜像](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aliyun/aliyun-searchw9image-websoft9.png)
 
-* [Get the Internet IP of VM](../alibabacloud#ip)
-* [View purchased orders](../order/alibabacloud#listorders)
+3. 请耐心等待几分钟，直至更换完成
+
+除了镜像订阅部署之外，你还可以通过我们发布到 [Github](https://github.com/websoft9)上的 Ansible 脚本，来实现自动部署。
+
+## 安装后
+
+以上安装完成后，软件就自动化部署到您的服务器中。获取服务网公网 IP 之后，您便可以访问软件。
+
+### 获取服务器公网 IP
+
+参考...
+
+### 查看已购买
+
+1. 登录阿里云控制台，找到云市场频道
+2. 默认列出“已购买的服务”
+   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aliyun/aliyun-mkservices-websoft9.png)
+2. 每个服务可以看到：付费方式，服务商，联系方式，使用指南等信息
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aliyun/aliyun-getdocfromorder-websoft9.png)
+
+
+## 常见问题
+
+#### 中国地区用户可以使用 AlibabaCloud Marketplace 吗？
+
+可以，参考如下流程：
+
+1. 注册账号流程中，有一个增加付款账号，建议选择美国地区
+2. 然后绑定非中国大陆地区信用卡
+
+#### 支持哪些计费模型？
+
+我们在阿里云上支持按量（按小时）付费、包年包月付费、按次付费等多种模式。

@@ -1,7 +1,7 @@
-[Zammad](https://zammad.org/) 是一个 **Open source user support/ticketing solution**，它被用于 Support & Customer Success  等场景。Zammad is a web based open source helpdesk/customer support system with many features to manage customer communication via several channels like telephone, facebook, twitter, chat and e-mails. 
+[Zammad](https://zammad.org/) 是一个 **客服与工单系统**，它被用于 客服/售后  等场景。Zammad 是一个基于 Web 的开源帮助台/客户支持系统，具有许多 通过电话等多种渠道管理客户沟通的功能， 脸书、推特、聊天和电子邮件。
 
 
-![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zammad/zammad-gui-websoft9.png)
+![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zammad/zammad-gui-websoft9.png)
 
 
 ## 准备

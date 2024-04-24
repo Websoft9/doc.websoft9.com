@@ -1,4 +1,4 @@
-[Umbraco](https://umbraco.com/) 是一个 **The flexible open-source .NET (ASP.NET Core) CMS**，它被用于 Website Builder eCommerce  等场景。Umbraco is the leading open-source ASP.NET Core CMS | More than 700,000 websites worldwide are powered by our flexible and editor-friendly CMS
+[Umbraco](https://umbraco.com/) 是一个 **企业级内容管理系统 Umbraco**，它被用于 企业建站 电子商务  等场景。Umbraco 是领先的开源 ASP.NET 核心 CMS |全球超过 700，000 个网站由我们灵活且易于编辑的 CMS 提供支持
 
 
 ![ui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/umbraco/umbraco-gui-websoft9.png)

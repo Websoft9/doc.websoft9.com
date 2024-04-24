@@ -1,7 +1,7 @@
-[Confluence](https://www.atlassian.com/zh/software/confluence) 是一个 **Create, organise and discuss work with your team**，它被用于 Agile Boards Task Collaboration Project and Task  等场景。Confluence Server is where you create, organise and discuss work with your team. Give every team, project, or department its own space to create the things they need, whether it's meeting notes, product requirements, file lists, or project plans, you can get more done in Confluence.
+[Confluence](https://www.atlassian.com/zh/software/confluence) 是一个 **团队知识协作与项目管理**，它被用于 需求/看板/缺陷 任务协作 项目/任务  等场景。Confluence Server 是您创建、组织和讨论工作的地方 团队。给每个团队、项目或部门都有自己的空间来创造他们需要的东西， 无论是会议记录、产品要求、文件列表还是项目计划， 您可以在 Confluence 中完成更多工作。
 
 
-![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/confluence/confluence-gui-websoft9.png)
+![白板](https://libs.websoft9.com/Websoft9/DocsPicture/zh/confluence/confluence-gui-websoft9.png)
 
 
 ## 准备

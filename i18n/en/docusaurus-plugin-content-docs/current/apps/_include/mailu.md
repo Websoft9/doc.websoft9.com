@@ -1,7 +1,7 @@
-[Mailu](https://mailu.io/) 是一个 **Full-featured mail server**，它被用于 Email Server  等场景。Mailu is a simple yet full-featured mail server, it is free software, open to suggestions and external contributions.  support IMAP and IMAP+, SMTP
+[Mailu](https://mailu.io/) 是一个 **自建邮件服务器**，它被用于 企业邮箱  等场景。Mailu是一个简单但功能齐全的邮件服务器，它完全开源免费。支持 IMAP, IMAP+, SMTP 等邮件协议
 
 
-![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mailu/mailu-gui-websoft9.png)
+![管理面板](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mailu/mailu-gui-websoft9.png)
 
 
 ## 准备

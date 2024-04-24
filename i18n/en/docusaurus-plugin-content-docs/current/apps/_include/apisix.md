@@ -1,7 +1,7 @@
-[Apache APISIX]() 是一个 **Cloud Native API Gateway**，它被用于 API Gateway  等场景。Apache APISIX 是一个动态、实时、高性能的云原生 API 网关，提供了负载均衡、动态上游、灰度发布、服务熔断、身份认证、可观测性等丰富的流量管理功能。
+[Apache APISIX]() 是一个 **高性能的云原生 API 网关**，它被用于 API 网关  等场景。Apache APISIX provides rich traffic management features like Load Balancing, Dynamic Upstream, Canary Release, Circuit Breaking, Authentication, Observability, etc.
 
 
-![Route List](https://libs.websoft9.com/Websoft9/DocsPicture/zh/apisix/apisix-routelist-websoft9.png)
+![路由列表](https://libs.websoft9.com/Websoft9/DocsPicture/zh/apisix/apisix-routelist-websoft9.png)
 
 
 ## 准备

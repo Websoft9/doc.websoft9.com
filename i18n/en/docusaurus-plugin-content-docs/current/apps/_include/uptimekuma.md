@@ -1,7 +1,7 @@
-[Uptime Kuma](https://github.com/louislam/uptime-kuma) 是一个 **A fancy self-hosted monitoring tool**，它被用于 Full Monitoring  等场景。Uptime Kuma is an easy-to-use self-hosted monitoring tool. Monitoring uptime for HTTP(s) / TCP / HTTP(s) Keyword / Ping / DNS Record / Push / Steam Game Server
+[Uptime Kuma](https://github.com/louislam/uptime-kuma) 是一个 **网站与应用监控工具**，它被用于 全面监控  等场景。Uptime Kuma 是一个易于使用的自托管监控工具。Monitoring uptime for HTTP(s) / TCP / HTTP(s) Keyword / Ping / DNS Record / Push / Steam Game Server
 
 
-![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/uptimekuma/uptimekuma-gui-websoft9.jpg)
+![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/uptimekuma/uptimekuma-gui-websoft9.jpg)
 
 
 ## 准备

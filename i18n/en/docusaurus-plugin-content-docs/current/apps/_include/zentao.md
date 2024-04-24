@@ -1,7 +1,7 @@
-[Zentao](https://www.zentao.net/) 是一个 **A professional project management software, covering the core process of software development projects**，它被用于 Agile Boards Task Collaboration Project and Task  等场景。 It is a professional project management software, covering the core process of software development projects.
+[Zentao](https://www.zentao.net/) 是一个 **ZenTao（禅道） 是一款优秀的研发项目管理软件**，它被用于 需求/看板/缺陷 任务协作 项目/任务  等场景。ZenTao 是一款开源项目管理软件，集产品管理、项目管理、质量管理、文档管理和事物管理于一体。
 
 
-![zentao](https://libs.websoft9.com/Websoft9/DocsPicture/en/zentao/zentao-gui-websoft9.png)
+![zentao](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zentao/zentao-gui-websoft9.png)
 
 
 ## 准备

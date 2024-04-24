@@ -1,7 +1,7 @@
-[Magento](https://business.adobe.com/products/magento/open-source.html) 是一个 **one of the world's most popular ecommerce platforms**，它被用于 eCommerce  等场景。Magento delivers the features you need to build and grow a unique online store from the ground up.
+[Magento](https://business.adobe.com/products/magento/open-source.html) 是一个 **面向全球用户的开源电商系统**，它被用于 电子商务  等场景。面向全球的企业级开源电商系统，支持B2C、B2B等应用场景，广泛应用于企业电商、独立站建站。
 
 
-![mall](http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-mall-websoft9.png)
+![mall](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-mall-websoft9.png)
 
 
 ## 准备

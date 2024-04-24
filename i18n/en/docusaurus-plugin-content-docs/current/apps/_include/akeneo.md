@@ -1,4 +1,4 @@
-[Akeneo](https://www.akeneo.com/) 是一个 **Effective management of product information**，它被用于 Master Data eCommerce  等场景。Enable small and medium-sized businesses to start centralizing, managing, enriching, and distributing their product information at low cost.
+[Akeneo](https://www.akeneo.com/) 是一个 **开源产品信息管理**，它被用于 企业主数据 电子商务  等场景。使中小型企业能够以低成本开始集中、管理、丰富和分发其产品信息。
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/akeneo/akeneo-main-websoft9.png)
