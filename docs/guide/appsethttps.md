@@ -18,7 +18,7 @@ Websoft9 网关虽然支持便捷的 HTTPS 配置，但配置 HTTPS 还有两个
 
 ## 控制台配置 HTTPS{#console}
 
-### 自动证书
+### 自动证书{#auto}
 
 网关默认支持 [Let's Encrypt](https://letsencrypt.org/) 免费的证书部署程序
 
@@ -29,7 +29,7 @@ Websoft9 网关虽然支持便捷的 HTTPS 配置，但配置 HTTPS 还有两个
 
    > Email 建议填写为可以收到邮件的常用邮箱，以便于及时了解证书的状态
 
-### 上传证书
+### 上传证书{#upload}
 
 Websoft9 的网关采用先上传证书，再绑定到 Proxy Host 的这种模式：
 
