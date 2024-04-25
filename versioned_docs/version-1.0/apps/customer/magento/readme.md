@@ -95,21 +95,21 @@ magento setup:config:set --db-host=DB-HOST --db-name=DB-NAME --db-user=DB-USER -
 3. 保存 Access Key  
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-savemykey-websoft9.png)  
 
-4. SSH 登录到 Magento 服务器，进入根目录  `/data/wwwroot/magento` ，将 key 复制到 auth.json.example,并重命名为 auth.json 
+4. 进入 Magento 容器的网站根目录，将 key 复制到 auth.json.example,并重命名为 auth.json 
 
 ```
 {
     "http-basic": {
         "repo.magento.com": {
-            "username": "7023803e7e",
-            "password": "e1e52894a5b"
+            "username": "<public-key>",
+            "password": "<private-key>"
         }
     }
 }
 
 ```
 
-6. 连接后，就可以很方便的使用 Marketplace 上的资源
+5. 连接后，就可以很方便的使用 Marketplace 上的资源
 
 ### 安装中文包{#setlanguage}
 
@@ -143,33 +143,7 @@ Cache（缓存）是 Magento 的一项重要设置：
 
 ### 配置 SMTP{#smtp}
 
-1. 在邮箱管理控制台获取 [SMTP](./administrator/smtp) 相关参数 
-
-2. 确保你的 Magento 已经[连接到官方 Marketplace](#marketplace)
-
-3. 使用 SSH 工具登录到服务器，使用命令方式安装 Magento SMTP 扩展
-   ```
-   	docker exec -it magento bash #进入Magento容器
-	cd /bitnami/magento/
-	composer require mageplaza/module-smtp
-	php bin/magento setup:upgrade 
-	php bin/magento setup:di:compile
-   ```
-   如果不会使用命令，请直接在 Marketplace 上购买 SMTP 插件
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtpplugin-websoft9.png)
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-buysmtpplugin-websoft9.png)
-
-4. 登录到 Magento 后台，完成 SMTP 参数设置  
-   - 点击**STORES**，在右边菜单选择**Configuration**;    
-     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-config01-websoft9.png)  
-   - 按照下图输入相应的信息  
-     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-3-websoft9.png)  
-
-5. 登录到 Magento 后台，设置发件箱  
-   - 首先进入应用配置管理页面:  
-     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-4-websoft9.png)  
-   - 按照下图设置邮箱：  
-     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-5-websoft9.png)  
+请参照官方的 [SMTP 配置方案](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/communications/email-communications)
      
 
 ### 域名额外配置（修改 URL） {#dns}

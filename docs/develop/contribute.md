@@ -1,4 +1,5 @@
 ---
+sidebar_position: 3.2
 slug: /contribute
 ---
 
@@ -20,15 +21,14 @@ import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 - [Websoft9](https://github.com/Websoft9/websoft9)：我们的核心开源项目
 - [Docker-library](https://github.com/Websoft9/docker-library)：200+ 开源的 docker compose 模板
-- [文档](https://github.com/Websoft9/doc.websoft9.com)：产品文档
+- [产品文档](https://github.com/Websoft9/doc.websoft9.com)
 
 ## 赞助
 
 开源的发展离不开各种优秀的资源，当然也包括资金。Websoft9 乐意接受各种形式的赞助。  
 
-感谢如下企业给与我们的直接或间接的赞助： 
+感谢如下企业长期以来给与 Websoft9 直接或间接的赞助： 
 
+- Azure
 - 阿里云
 - 华为云
-- 腾讯云
-- Azure

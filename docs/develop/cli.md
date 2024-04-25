@@ -7,7 +7,7 @@ sidebar_position: 1.2
 
 Websoft9 的核心微服务 AppHub 提供了一个可以管理应用的 CLI。  
 
-docker exec 到 apphub 容器，即可以使用：
+进入到 Apphub 容器的命令模式下，即可使用：
 
 ```
 $ docker exec -it websoft9-apphub bash

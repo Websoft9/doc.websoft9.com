@@ -1,9 +1,11 @@
 ---
-sidebar_position: 3.2
+sidebar_position: 4
 slug: /glossary
 ---
 
 # 词汇表
+
+为了确保文档的一致性，文档写作者需要掌握如下词汇的运用。
 
 ## 产品
 
