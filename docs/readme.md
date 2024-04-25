@@ -20,7 +20,7 @@ Websoft9（微聚云） 是一个创新的**企业云应用托管平台**，只�
 
 对于创新型组织来说，Websoft9 消除了任何技术障碍。帮助擅长使用软件工具的工作者或企业，在几分钟的时间内便可以进入企业数字化和 AI 的大门。它让用户专注于工具的使用，极大提升工作效率和职业竞争力。
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/websoft9/websoft9-dashboard.png)
+![](/img/websoft9-dashboard.png)
 
 Websoft9 将云原生软件的应用时间由 1-2 天缩短到 2 分钟，部署和管理云原生应用不再是专业 IT 人员的专属技能。  
 

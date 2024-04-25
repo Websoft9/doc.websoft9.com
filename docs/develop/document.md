@@ -12,7 +12,7 @@ slug: /document
 
 ## 关键要点
 
-Websoft9 文档是由集体创作，使用 Markdown 格式，并遵循 DevOps 的持续集成原则。
+Websoft9 文档是由集体创作，使用 Markdown 格式，由 [Docusaurus](https://docusaurus.io/) 生成，并遵循 DevOps 的持续集成原则。
 
 下面是参与 Websoft9 文档需要注意的重要事项：
 
