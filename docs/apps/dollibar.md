@@ -13,15 +13,14 @@ import Meta from './_include/dolibarr.md';
 
 ## 入门指南{#guide}
 
-Websoft9 控制台安装 Dolibarr 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
+ 
 
-### 功能一览{#wizard}
+### 登录验证{#wizard}
 
-1. 登陆页面
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/dolibarr/dolibarr-init1-websoft9.png)
+1. Websoft9 控制台安装 Dolibarr 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。 
 
-2. 后台
-  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/dolibarr/dolibarr-backend-websoft9.png)
+2. 登陆到后台界面
+   ![](./assets/dolibarr-backend-websoft9.png)
 
 ## 配置选项{#configs}
 

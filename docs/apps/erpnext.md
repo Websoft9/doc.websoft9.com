@@ -19,33 +19,14 @@ import Meta from './_include/erpnext.md';
 
 Websoft9 控制台安装 ERPNext 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
 
-1. 使用本地电脑浏览器访问后，进入初始化页面
-   ![erpnext安装登录](https://libs.websoft9.com/Websoft9/DocsPicture/zh/erpnext/erpnext-login-websoft9.png)
+1. 使用本地电脑浏览器访问 URL，进入登录界面，登录后开始初始化过程，请选择自己的配置完成每一步
 
-2. 输入账号密码，选择语言，进入下一步 
-   ![erpnext安装](https://libs.websoft9.com/Websoft9/DocsPicture/zh/erpnext/erpnext-language-websoft9.png)
-
-3. 根据安装向导依次完成后续步骤
-
-4. 安装完成之后，ERPNext 会弹出如下界面
-   ![erpnext后台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/erpnext/erpnext-cpsetup-websoft9.png)
+2. 安装完成之后，ERPNext 会弹出如下界面
+   ![erpnext后台](./assets/erpnext-cpsetup-websoft9.png)
 
    可能会出现安装错误提示，此时需要反复安装：
-   ![erpnext 向导安装报错](https://libs.websoft9.com/Websoft9/DocsPicture/zh/erpnext/erpnext-wizarderror-websoft9.png)
+   ![erpnext 向导安装报错](./assets/erpnext-wizarderror-websoft9.png)
 
-5. ERPNext 顶部菜单中提供了搜索框，用于快速检索并进入 ERPNext 所有的功能
-   ![erpnext 快速检索](https://libs.websoft9.com/Websoft9/DocsPicture/zh/erpnext/erpnext-sbar-websoft9.png)
-
-6. 通过检索功能，进入【用户】设置，可以管理当前系统下所有账号
-   ![erpnext 用户管理](https://libs.websoft9.com/Websoft9/DocsPicture/zh/erpnext/erpnext-users-websoft9.png)
-
-### Frappe，bench，ERPNext
-
-- ERPNext 是基于 [Frappe](https://github.com/frappe/frappe) 框架开发的免费 ERP 。
-- Frappe 是一个用于快速开发JS和Python集成化应用的框架
-- [Bench](https://github.com/frappe/bench) 是Frappe框架体系中的 CLI 工具，用于创建和管理基于 Frappe 的应用程序。
-
-Frappe 框架主要由两个部分组成：app 和 site，app 是后端Python代码，site 是用于处理 HTTP 请求的前端部分。
 
 ## 配置选项{#configs}
 
@@ -55,15 +36,7 @@ Frappe 框架主要由两个部分组成：app 和 site，app 是后端Python代
 - [CLI to manage Multi-tenant deployments for Frappe apps](https://github.com/frappe/bench)
 - [API](https://frappeframework.com/docs/user/en/api)
 
-
 ## 管理维护{#administrator}
-
-#### 修改密码
-
-1. 登录 ERPNext后台，依次打开：【设置】>【个人设置】，找到修改密码项
-  ![ERPNext 修改密码](https://libs.websoft9.com/Websoft9/DocsPicture/zh/erpnext/erpnext-modifypw-websoft9.png)
-
-2. 直接设置新密码，保存后生效
 
 ### 重置管理员密码{#resetpw}
 
@@ -76,35 +49,23 @@ export GIT_PYTHON_REFRESH=quiet && /usr/local/bin/bench set-admin-password newpa
 
 支持自动备份和命令行备份两种方式： 
 
-#### 自动备份（建议）
-
-1. 登录 ERPNext 后，依次打开：【Settings】>【System Settings】
-   ![ERPNext backup](https://libs.websoft9.com/Websoft9/DocsPicture/zh/erpnext/erpnext-autobk-websoft9.png)
-
-2. 等待计划任务执行
+- 自动备份（建议）：登录 ERPNext 后，依次打开 【Settings】>【System Settings】
+- [命令行备份](https://frappeframework.com/docs/user/en/bench/reference/backup)：`bench --site URL backup`
 
 
-#### 命令行备份
+## 问题与故障
 
-[手动输入命令](https://frappeframework.com/docs/user/en/bench/reference/backup)也可以备份 ERPNext：
+#### 后台 Download Backups 处下载失败？
 
-1. 进入 ERPNext 主容器
-2. 在容器中运行备份命令
-   ```
-   # 查询项目文件夹名称（IP 或 域名）
-   ls
+原因有待研究
 
-   # 备份
-   bench --site 121.41.86.118 backup
-   ```
+#### Frappe，bench，ERPNext？
 
-#### 获取备份文件
+- ERPNext 是基于 [Frappe](https://github.com/frappe/frappe) 框架开发的免费 ERP 。
+- Frappe 是一个用于快速开发JS和Python集成化应用的框架
+- [Bench](https://github.com/frappe/bench) 是Frappe框架体系中的 CLI 工具，用于创建和管理基于 Frappe 的应用程序。
 
-备份文件存储 ERPNext 的持久存储中。
-
-   > 后台 Download Backups 处下载失败，原因有待研究。故，直接从上面的路径下载即可
-
-## 故障
+Frappe 框架主要由两个部分组成：app 和 site，app 是后端Python代码，site 是用于处理 HTTP 请求的前端部分。
 
 #### ERPNext 服务启动失败？
 

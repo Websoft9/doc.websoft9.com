@@ -27,7 +27,7 @@ import Meta from './_include/alfresco.md';
 
 
 
-### 截图
+### 功能一览
 
 常用的功能以及截图如下：  
 

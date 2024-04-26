@@ -13,7 +13,7 @@ import Meta from './_include/focalboard.md';
 
 ## 入门指南{#guide}
 
-### 初始化{#wizard}
+### 注册登录{#wizard}
 
 1. Websoft9 控制台安装 Focalboard 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息
 

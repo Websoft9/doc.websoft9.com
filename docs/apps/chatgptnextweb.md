@@ -48,6 +48,10 @@ Azure 提供了优化后的 OpenAPi 服务，ChatGPT Next Web 支持 Azure AI �
 - 设置合适的**附带历史消息数量**：设置太大会消耗大量算力
 - 选用 preview 模型：preview 是官方提供的预览版模型，定价是正式版的1/5
 
+## 购买 OpenAI 
+
+Websoft9 可以代理采购 Azure 提供的 OpenAI API 服务，有需要请联系我们的 [客户成功团队](./helpdesk)
+
 ## 配置选项{#configs}
 
 - 多语言（√）

@@ -32,9 +32,7 @@ Enrollment Token 是用于 Kibana 除此连接的必要信息。可以在 Elasti
 
 ### 使用 Kibana 管理{#kibaba}
 
-Elasticsearch 应用中默认不含 [Kibana](./kibana)，用户可以通过 Websoft9 应用商店中安装 Kibana。    
-
-![Kibana](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kibana/kibana-gui-websoft9.png)
+Elasticsearch 应用中默认不含 [Kibana](./kibana)，用户可以通过 Websoft9 **应用商店** 安装 Kibana。    
 
 ### 连接 Logstash 并分析{#logstash}
 
@@ -42,7 +40,7 @@ Elasticsearch 应用中默认不含 [Kibana](./kibana)，用户可以通过 Webs
 
 1. 编辑 Logstash 配置文件
 
-2. 新增一个 pipeline 的配置文件，其内容如下：
+2. 新增一个 pipeline 的配置文件（**output** 段需填写准确的 ES 账号），其内容如下：
    ```
    input{
       file{
@@ -64,29 +62,11 @@ Elasticsearch 应用中默认不含 [Kibana](./kibana)，用户可以通过 Webs
    }
    ```
 
-  > 以上配置段中的 **output** 需要使用 elasticsearch 的数据库连接账号。
+3. 运行命令 `curl http://URL/cat/indices?v` 验证 Elasticsearch 和 Logstash 的连接，索引是否生效
 
-3. 运行命令`curl http://URL/cat/indices?v` 验证 Elasticsearch 和 Logstash 的连接，索引是否生效
+4. 登陆 Kibana，点击【Manage】，创建一个【Index Patterns】
 
-4. 登陆 Kibana，点击【Manage】，再点击右侧菜单的【Index Patterns】
-
-   ![ELK Index](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-wizard1-websoft9.png)
-
-   ![ELK Index](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-wizard2-websoft9.png)
-
-   ![ELK Index](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-wizard3-websoft9.png)
-
-5. 检索"mytest"，根据提示完成创建
-
-   ![ELK Index](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-wizard4-websoft9.png)
-
-   ![ELK Index](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-wizard5-websoft9.png)
-
-6. 索引在 Kibana 创建成功，可以用时间戳在此检索数据
-
-   ![ELK Index](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-wizard6-websoft9.png)
-
-   ![ELK Index](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-wizard7-websoft9.png)
+5. 根据提示完成创建任务，最后用 **时间戳** 检索数据
 
 ## 配置选项{#configs}
 
@@ -114,8 +94,6 @@ ElasticSearch 容器中运行下面的重置密码命令即可：
 ### 备份与恢复
 
 Elastic 内置快照备份功能（参考：[官方文档](https://www.elastic.co/guide/en/elasticsearch/reference/7.13/snapshot-restore.html)）
-
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-backupsp-websoft9.png)
 
 ## 故障
 
@@ -153,7 +131,7 @@ ES 对磁盘空间有较高的要求，建议准备足够的空间。
 
 下面是 Elastic Stack 用于日志场景的典型架构图
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-arch001-websoft9.png)
+![](./assets/elastic-architecture-websoft9.png)
 
 #### Elasticsearch 全部免费吗？
 
