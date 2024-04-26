@@ -31,6 +31,18 @@ Websoft9 文档中的大多数页面都是用 Markdown 手动编写的。但是�
 - GitHub Action 自动化生产页面：json2md.yml, app_header.yml
 - 静态网站生成器自动化产生导航：左侧主导航、页面内容导航 
 
+## 图片
+
+图片存储位置存放各个语言的 docs 目录下的一级目录中的 assets 目录中，例如：
+
+- 应用目录的图片存储目录：*docs/apps/assets*
+- 程序环境目录的图片存储路径：*docs/runtime/assets*
+
+图片名称约定：
+
+- 应用图片名称：appname_xx_xx_websoft9.pnn
+- Websoft9 平台的图片名称：websoft9_xx_xx_version.png
+
 ## 翻译
 
 翻译的基本原则是对主语言进行内容同步与翻译，不包含基于主语言原版的扩展、删减或演绎等。  

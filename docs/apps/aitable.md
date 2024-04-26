@@ -19,47 +19,39 @@ import Meta from './_include/aitable.md';
 
 Websoft9 控制台安装 AITable 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
 
-1. 使用本地电脑浏览器访问后，进入初始化页面
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apitable/apitable-init-websoft9.png)
+1. 使用本地电脑浏览器访问后，进入 AITable 首次注册页面
+   ![](./assets/apitable-init-websoft9.png)
 
-2. 注册用户并登录
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apitable/apitable-main-websoft9.png)
+2. 注册管理员账号，即可开始使用
+   ![](./assets/apitable-main-websoft9.png)
 
-3. 点击左下角用户设定，选择属性标签即可设置自己想要的语言
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apitable/apitable-user-websoft9.png)
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apitable/apitable-preference-websoft9.png)
+### 快速使用
 
-### 使用数学公式和函数
+参考官网文档：[AITable入门](https://help.aitable.ai/docs/guide/tutorial-1-quick-start)
 
-如同 Excle 一样，APITable  可让使用非常方便的使用[公式](https://help.apitable.com/docs/guide/tutorial-getting-started-with-formulas)来编辑数据。
+## 企业版
 
-### 数据导入导出
+### 为什么通过 Websoft9 购买？
 
-APITable 支持[导入导出 Excel 和 CSV 数据](https://help.apitable.com/docs/guide/manual-import-export)，方便数据迁移。
+Websoft9 是 AITable 的合作伙伴，我们与 AITable 合作在全球主流的云市场上提供了 AITable 的镜像交付产品。 
 
-### 数据筛选排序
+通过 Websoft9 采购，企业可以更多价值：
 
-APITable 对于[数据过滤和排序](https://help.apitable.com/docs/guide/custom-view), 让用户可以轻松的编辑和展示数据。
+- 优惠的折扣
+- 私有化部署服务以及全面的托管支持
+- 业务系统开发定制服务 
 
-### 创建数据模板
+### 如何购买
 
-APITable 能将现有空间创建成[模板](https://help.apitable.com/docs/guide/faq-how-create-template), 让用户快速构建类似系统数据。
-
-### 表单
-
-APITable [表单](https://help.apitable.com/docs/guide/magic-form)可用于快速收集信息并同步保存和组织数据结果。
-
-### 仪表板
-
-[仪表板](https://help.apitable.com/docs/guide/intro-dashboard/)就像一个容器，您可以向其添加各种[小部件](https://help.apitable.com/docs/guide/intro-widget)，从而为数据扩展更多功能。  
-
-例如，添加多个“图表”小部件可以快速扩展数据可视化功能，并在几分钟内构建出漂亮的业务图表。
+联系 [Websoft9 客户成功团队](./helpdesk)，立即进入专业的企业购买流程。  
 
 ## 配置选项{#configs}
 
-- 多语言（✅）
+- 服务器最低配置：4 CPUs/8GB RAM
+- 多语言（✅）：My Settings > Preferences > Language
 - [REST API](https://developers.apitable.com/api/reference/)
 
 ## 管理维护{#administrator}
+
 
 ## 故障

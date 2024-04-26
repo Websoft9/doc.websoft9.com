@@ -16,31 +16,25 @@ import Meta from './_include/codeserver.md';
 
 ## 入门指南{#guide}
 
-### 初始化{#wizard}
+### 验证测试{#wizard}
 
 Websoft9 控制台安装 code-server 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
 
-1. 使用本地浏览器访问后，进入登录页面
-   ![code-server 登录界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/codeserver/codeserver-login-websoft9.png)
+1. 使用本地浏览器访问 URL ，进入登录页面
+   ![code-server 登录界面](./assets/codeserver-login-websoft9.png)
 
-2. 输入密码，成功登录到 code-server 后台  
-   ![code-server 后台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/codeserver/codeserver-consolegui-websoft9.png)
+2. 成功登录到 code-server 后台 
+   ![code-server 后台](./assets/codeserver-consolegui-websoft9.png)
 
-3. 在 code-server 界面上打开 workspace 文件夹  
-   ![code-server 打开项目目录](https://libs.websoft9.com/Websoft9/DocsPicture/zh/codeserver/codeserver-openfolder-websoft9.png)
+3. 在 code-server 后台，依次点击：File > Open Folder，打开 **/config/workspace/** 目录
+   ![code-server 打开项目目录](./assets/codeserver-openfolder-websoft9.png)
 
-4. 打开 Terminal，查看系统环境
-   ![code-server 打开Terminal](https://libs.websoft9.com/Websoft9/DocsPicture/zh/codeserver/codeserver-terminal-websoft9.png)
-
-5. 参考下一节安装所需的开发环境
+4. 在 code-server 后台，依次点击：View > Terminal，在 Terminal 区域输入测试命令
+   ![code-server 打开Terminal](./assets/codeserver-terminal-websoft9.png)
 
 ### 安装环境
 
-code-sever 默认并没有安装 Python, Node, Java 等环境。需要 `sudo su` 到管理员账号后开始安装
-
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/codeserver/codeserver-sudosu-websoft9.png)
-
-> 密码为 code-server 控制台登录密码
+code-sever 默认并没有安装 Python, Node, Java 等环境，因此需要在 **Terminal** 区域 `sudo su` 切换到管理员后开始安装环境。    
 
 #### Node.js
 
@@ -70,7 +64,7 @@ apt install openjdk-8-jre
 java -version
 ```
 
-### Python 开发范例
+### 程序开发范例
 
 下面以 Python 开发为范例，介绍如何使用 code-server：
 
@@ -84,34 +78,32 @@ java -version
 
    print("hello world")
    ```
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/codeserver/codeserver-createfile-websoft9.png)
+   ![](./assets/codeserver-createfile-websoft9.png)
 
 2. 在【窗口的终端栏】中执行 `python myfile.py` 命令，运行 Python 程序
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/codeserver/codeserver-runpython-websoft9.png)
+   ![](./assets/codeserver-runpython-websoft9.png)
 
 3. 查看正确的输出结果
 
-### 预览应用
+### 发布应用到公网
 
-通过 code-server 容器的 Terminal 以开发者模式构建应用后，如何发布外网访问呢？
+通过 code-server 发布应用到公网的具体步骤为：
 
-有两个方案：
+1. 假设应用的运行命令如下，即运行在容器的 3002 端口
+   ```
+   npm run start -- --host 0.0.0.0 --port 3002
+   ```
 
-- 推荐：使用 Websoft9 控制台的【网关】为预览端口做一个代理，这样不需要绑定端口到宿主机
-- docker-compose.yml 绑定容器端口到宿主机，构建时指定此端口。  
-  例如：npm run start -- --host 0.0.0.0 --port 3002
+2. 通过 Websoft9 控制台的【网关】，增加一个 Proxy Hosts 转发到 **容器中的应用端口**
+
 
 ### 多开发者
 
-单个 code-server 应用不支持多用户开发协同工作的场景。    
-
-那么如何才能支持多开发者协作使用 code-server 呢？  
-
-其实，非常简单，只需要通过 Websoft9 控制台安装多个 code-server 多个应用。
+单个 code-server 不支持多用户协同工作。多开发者，只需通过 Websoft9 控制台安装多个 code-server 多个应用。
 
 ## 配置选项{#configs}
 
-- sudo（✅）：密码与控制台密码相同
+- Terminal 中 sudo 密码：与 code-server 控制台密码相同
 - 代码编译构建（✅）
 
 
@@ -136,3 +128,7 @@ ctrl+V
 
 问题描述：  git push 时，由于有待 pull 的代码，导致冲突  
 解决方案：  `git pull --rebase origin main`
+
+#### 如何删除正在运行的进程？
+
+先运行 `ps aux` 命令查看，再运行 `kill -9 PID`

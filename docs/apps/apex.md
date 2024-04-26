@@ -13,78 +13,38 @@ import Meta from './_include/apex.md';
 
 ## 入门指南{#guide}
 
-### 初始化{#wizard}
+### 登录后台{#login}
 
-Websoft9 控制台安装 APEX 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
+1. Websoft9 控制台安装 APEX 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
 
-1. 本地浏览器打开访问地址（Apex 安装和启动时间都比较长，可能会超过 10 分钟或以上），进入登录页面
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-init-websoft9.png)
+2. 耐心等待 10 分钟，直至 APEX 初始化完成，方可进入登录页面
+   ![](./assets/apex-init-websoft9.png)
 
-2. 输入账号密码
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-chpwd-websoft9.png)  
+3. 登录成功后，系统提示修改密码后，进入后台
+   ![](./assets/apex-index-websoft9.png)   
 
-3. 密码修改完成后，开始体验后台
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-index-websoft9.png)    
+### 创建工作区{#workspace}
 
-### 快速了解
+虽然 APEX 默认有一个名为 internal 的工作区，但它仅用于管理。如需创建应用，必须再创建一个新的工作区：
 
-APEX 支持多语言（包含中文），通过控制台即可修改语言。  
+1. 登录后台，点击创建新的 WorkSpace
+   ![](./assets/apex-createwp-websoft9.png)
 
-- [API](https://apex.oracle.com/api)
+2. 根据向导：新建 schema，并设置新的工作区的用户名、密码及邮件地址，直至完成 WorkSpace 的新建
+   ![](./assets/apex-createdone-websoft9.png)
 
-### 基于模板数据创建 APP
 
-1. 完成初始化向导后，点击创建新的workspace
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-createwp-websoft9.png)
+### 创建应用
 
-2. 输入工作区名，并创建新的schema
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-createschema-websoft9.png)
+创建完工作区后，需**使用新的工作区登录**，然后再[创建应用](https://docs.oracle.com/en/database/oracle/apex/23.2/htmdb/choosing-an-application-creation-method.html)。 
 
-3. 输入工作区管理用户名、密码及邮件地址,点击下一步直至工作区创建成功
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-createuser-websoft9.png)
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-createdone-websoft9.png)
-
-4. 注销退出，使用上步骤3设定的用户和密码登陆
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-exit-websoft9.png)
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-applogin-websoft9.png)
-
-5. 根据模本数据创建一个APP应用
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-appcreate-websoft9.png)
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-appinstall-websoft9.png)
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-template-websoft9.png)
-
-6. 运行创建的APP，开始体验
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-runapp-websoft9.png)
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-appok-websoft9.png)
-
-  > 新建的工作区才是APEX应用APP的工作区，默认internal是管理工作区
-
-### 导入csv 创建 APP
-
-1. 点击创建APP，选择从一个文件创建APP
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-imp01-websoft9.png)
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-imp02-websoft9.png)
-
-2. 选择csv数据文件并根据提示导入
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-imp03-websoft9.png)
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-imp04-websoft9.png)
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-imp05-websoft9.png)
-
-3. 点击【App Builder】，新APP已经创建，登陆即可开始体验
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-imp06-websoft9.png)
 
 ## 配置选项{#configs}
 
-- 多语言（✅）
+- 多语言（✅）：登录控制台可以修改语言（包含中文）
+- [API](https://apex.oracle.com/api)
+- 应用备份： 可以在 APEX 控制台方便的对 "APP Builder" 进行应用的导入与导出，实现备份
 
 ## 管理维护{#administrator}
-
-### APEX 导入与导出
-
-APEX 可以在控制台非常方便的将工作区，应用 APP 导入导出进行备份
-
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-list-websoft9.png) 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-import-websoft9.png) 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/apex/apex-export-websoft9.png) 
 
 ## 故障
