@@ -13,9 +13,11 @@ import Meta from './_include/huginn.md';
 
 ## 入门指南{#guide}
 
-### 初始化{#wizard}
+### 登陆后台{#wizard}
 
-Websoft9 控制台安装 Huginn 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
+1. Websoft9 控制台安装 Huginn 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息
+
+2. 成功登陆后台，即可使用
 
 
 ## 配置选项{#configs}

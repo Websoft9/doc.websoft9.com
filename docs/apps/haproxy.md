@@ -14,9 +14,11 @@ import Meta from './_include/haproxy.md';
 
 ## 入门指南{#guide}
 
-### 初始化{#wizard}
+### 登陆设置密码{#wizard}
 
-Websoft9 控制台安装 HAProxy 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息，并在配置文件中设置密码。   
+1. Websoft9 控制台安装 HAProxy 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息
+
+2. 并在配置文件中设置密码。   
 
 ### 开启 HAProxy 监控
 
@@ -51,31 +53,10 @@ Websoft9 控制台安装 HAProxy 后，通过【我的应用】管理应用，�
 
 ## 配置选项{#configs}
 
-- 配置文件：/path/haproxy.cfg
+- 配置文件（已挂载）：*/usr/local/etc/haproxy/haproxy.cfg*
 - 命令行：`haproxy
 - [HAProxy APIS](https://www.haproxy.com/blog/haproxy-apis/)`
 
 ## 管理维护{#administrator}
 
-### 重置管理员密码{#resetpw}
-
-### 更换 URL{#url}
-
-### HTTPS 额外设置{#https}
-
-**[标准 HTTPS 配置](./guide/appsethttps)** 完成后，可能还需要如下步骤： 
-
-1. 步骤1
-
-2. 步骤2
-
-### 备份与恢复
-
-### 升级
-
-
 ## 故障
-
-#### 更改域名导致无法访问 HAProxy ？
-
-#### 访问 HAProxy 出现 502 错误？{#502}
