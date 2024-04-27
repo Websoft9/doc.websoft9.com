@@ -55,7 +55,7 @@ Discuz 有非常强大生态，官方[应用中心](https://addon.dismall.com/) 
 
 1. 在 Disucz 卷存的中找到 *uc_server/data/config.inc.php* 文件
 
-2. 用下面两行代码替换 `config.inc.php` 中已有的同名段，重启应用后，Ucenter 创始人的密码就变为: `123456789`
+2. 替换 `config.inc.php` 下面两个同名属性，重启应用后，Ucenter 创始人的密码变为: `123456789`
    ```
    define('UC_FOUNDERPW','047099adb883dc19616dae0ef2adc5b6');
    define('UC_FOUNDERSALT','311254');
