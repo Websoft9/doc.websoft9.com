@@ -17,19 +17,21 @@ import Meta from './_include/kong.md';
 
 Websoft9 控制台安装 Kong 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
 
-1. 根据访问方式，服务器安全组放通所需的端口（具体端口号在安装时设置，可以通过 Websoft9 控制台我的应用查看）
+1. Kong 共有 Kong HTTP, Kong Admin API, Kong GUI 三个服务，需按需开启端口
 
-   - 域名访问： 需开启 Kong Admin API 端口
-   - 端口访问：需开启 Kong HTTP, Kong Admin API, Kong GUI 等端口
+   - 如果配置域名访问： 仅需开启 Kong Admin API 端口
+   - 如果是端口访问：需开启 Kong HTTP, Kong Admin API, Kong GUI 所有端口
 
-2. 本地浏览器：*URL/admin* 或 *IP:Kong GUI Port/admin* 访问 Kong Manager 界面
+2. 本地浏览器访问 Kong Manager 界面：
+   - 域名访问：`http://域名/admin`
+   - IP 访问：`http://IP:Kong GUI Port/admin`
 
-3. 验证安装
+3. 验证 Kong HTTP 服务
    ```
    curl -i -X GET --url http://URL/services
    ```
 
-4. 通过 Kong Manager 后台或 curl 接口配置所需的路由和 API 服务
+4. 通过 Kong Manager 后台或 curl 配置 Kong Admin API
 
 ### Kong Manager 认证访问
 

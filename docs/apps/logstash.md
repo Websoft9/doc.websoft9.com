@@ -45,7 +45,7 @@ Websoft9 控制台安装 Logstash 后，通过【我的应用】管理应用，�
 
 ## 配置选项{#configs}
 
-- Logstash 配置文件：*/path/logstash/pipeline/logstash.conf*  
+- Logstash 配置文件（已挂载）：*usr/share/logstash/pipeline/logstash.conf*  
 
 
 ## 管理维护{#administrator}

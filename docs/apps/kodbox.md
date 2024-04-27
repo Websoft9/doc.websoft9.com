@@ -14,27 +14,21 @@ import Meta from './_include/kodbox.md';
 
 ## 入门指南{#guide}
 
-### 功能一览{#wizard}
+### 登陆验证{#wizard}
 
-Websoft9 控制台安装 KodBox（可道云） 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
+1. Websoft9 控制台安装 KodBox（可道云） 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
 
-1. 设置管理员账号
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kodcloud/kodcloud-install3-websoft9.png)
-
-2. 设置管理员账号后，系统转到登录界面
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kodcloud/kodcloud-login-websoft9.png)
-
-3. 文件管理：登录成功，进入系统后台，默认进入【文件管理】界面，便于文件管理
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kodcloud/kodcloud-file-websoft9.png)
+2. 先设置管理员账号，然后登陆后台，默认为文件管理界面
+    ![](./assets/kodbox-backend-websoft9.png)
 
 4. 桌面管理：点击左边菜单【桌面】，进入系统桌面，常用工具放置在桌面
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kodcloud/kodcloud-home-websoft9.png)
+    ![](./assets/kodbox-home-websoft9.png)
 
 5. 插件管理：点击桌面的【插件中心】，管理系统插件
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kodcloud/kodcloud-plugins-websoft9.png)   
+    ![](./assets/kodbox-plugins-websoft9.png)   
 
 6. 系统设置：点击左下方个人图形，进入个人设置和系统设置（管理员），比如部门、成员、权限等等 
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kodcloud/kodcloud-system-websoft9.png)
+    ![](./assets/kodbox-system-websoft9.png)
 
 ## 企业版
 
@@ -47,6 +41,9 @@ Websoft9 是 KodBox（可道云）的企业版合作伙伴，通过 Websoft9 购
 - 更全部的解决方案
 
 ## 配置选项{#configs}
+
+- 多语言(✅)
+
 ## 管理维护{#administrator}
 
 ## 故障
