@@ -35,7 +35,7 @@ Mosquitto 开启认证有[多种方式](https://mosquitto.org/documentation/auth
 
 ## 配置选项{#configs}
 
-- 配置文件：mosquitto.config
+- 配置文件（已挂载）：*/mosquitto/config/mosquitto.conf*
 - 用户认证（√）
 
 ## 管理维护{#administrator}

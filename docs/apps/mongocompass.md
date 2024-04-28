@@ -20,21 +20,22 @@ Websoft9 控制台安装 MongoDB Compass 后，通过【我的应用】管理应
 1. 浏览器访问后，登陆到 Mongo Compass 所在的桌面
 
 2. 点击桌面的 MongoDB Compass 图标，进入MongoDB Compass
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/mongodbcompass-click-websoft9.png)
+   ![](./assets/mongodbcompass-click-websoft9.png)
 
 3. 点击【New Connection】，展开 **Advanced Connection Options**，输入连接信息和账号
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/mongodbcompass001-websoft9.png)
+   ![](./assets/mongodbcompass001-websoft9.png)
 
    > 不建议使用 URI 的方式，它受限于字符串格式
 
 4. 连接成功，进入控制台
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mongodb/mongodbcompass002-websoft9.png)
+   ![](./assets/mongodbcompass002-websoft9.png)
 
 ## 配置选项{#configs}
+
 ## 管理维护{#administrator}
 
 ## 故障
 
 #### Mongo Compass 内存消耗大？
 
-是的，Mongo Compass 不是一个真正意义上的 Web 应用，它是有 Websoft9 提供的可以 Web 访问的容器版桌面
+是的，Mongo Compass 不是一个真正意义上的 Web 应用，它是 Websoft9 基于包含桌面的特殊容器而构建

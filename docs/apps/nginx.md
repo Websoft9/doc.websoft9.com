@@ -65,8 +65,8 @@ Websoft9 控制台安装 NGINX 后，通过【我的应用】管理应用，在*
 
 ## 配置选项{#configs}
 
-- NGINX 应用根目录：*/usr/share/nginx/html*
-- NGINX 配置文件：*/etc/nginx/conf.d/default.conf*
+- NGINX 应用根目录（已挂载）：*/usr/share/nginx/html*
+- NGINX 配置文件（已挂载）：*/etc/nginx/conf.d/default.conf*
 - NGINX 最大打开文件数：通过 */etc/security/limits.conf* 设置
 - NGINX 容器端口：80
 - CLI：`nginx -h`

@@ -118,45 +118,34 @@ To configure your application to send email through SendGrid’s SMTP service, u
 
 Directmail 是阿里云的邮件推送服务，相对于免费邮箱来说，自主性更强，同时更稳定可靠。   
 
-下面是Directmail的配置简要流程：
+下面是 Directmail 的配置简要流程：
 
-1. 登录阿里云邮件推送控制台，新增一个发信域名  
-   ![新增发信域名](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aliyun/aliyun-dmailadd-websoft9.png)
+1. 登录阿里云 Directmail 控制台，新增一个发信域名  
 
-2. 根据域名配置要求，在域名控制台完成对应的域名解析，并点击“验证”  
-   ![验证](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aliyun/aliyun-dmailverify-websoft9.png)
+2. 根据 Directmail 要求，在域名控制台完成域名解析，并“验证”  
 
-3. 验证通过后，设置发信地址  
-   ![设置发信地址](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aliyun/aliyun-dmailsetsendm-websoft9.png)
+3. 验证通过后，Directmail 控制台设置发信地址（一个发信域名支持多个发信地址）
 
-4. 如果需要接受用户的邮件回复，可以针对此发件地址配套一个回信地址。
-
-5. 完成所有配置后，您会得到一个如下的SMTP参数
+4. 完成所有配置后，您会得到一个如下的 SMTP 服务信息
    ```
-   SMTP地址：smtpdm.aliyun.com 
-   SMTP用户名：norelpy@smtp.websoft9.cn
-   SMTP密码：*******
-   SMTP端口：465 需要启用ssl加密
-   SMTP端口：80 无需加密 
+   Host：smtpdm.aliyun.com 
+   User：norelpy@smtp.websoft9.cn
+   Password：*******
+   SSL Port：465
    ```
 
 ## SMTP 诊断
 
-SMTP 配置准确无误下，仍然无法发送邮件，请检查如下几个方面：
+如果已经确认 SMTP 服务本身可用（[SMTP Test Tool](https://www.gmass.co/smtp-test)），但应用仍然无法发送邮件，从几个方面开始诊断：
 
-- 通过 Telnet 工具，连接 SMTP 服务。出现 **220 smtp.*.com Esmtp Mail Server** 或 **Escape character is '^]'** ，说明连接成功
+- 应用所在的服务器运行 `telnet` 命令 ，检查 SMTP 服务的连通性。下面是一个范例：
 
    ~~~
-   //安装telnet
-   yum install telnet -y
-
-   //示例1：测试qq邮箱 端口有465和587
    telnet smtp.qq.com 465
-
-   //示例2：测试网易邮箱 端口有465和994
-   telnet smtp.163.com 465
    ~~~
 
-- 服务器安全组（出设置）是否禁止外部访问
-- 服务器系统 iptables，firewall 是否关闭 SMTP 所需的 465 等端口
-- OpenSSL 版本是否过低或者没有安装 CA 证书
+   出现 **220 smtp.*.com Esmtp Mail Server** 或 **Escape character is '^]'** ，说明连接成功
+
+- 检查服务器安全组（出设置）是否禁止外部访问
+- 检查服务器 iptables，firewall 是否允许发起向外部 465 端口的连接
+- 检查应用程序的 OpenSSL 版本是否过低或 CA 证书与 SMTP 服务兼容性

@@ -13,39 +13,43 @@ import Meta from './_include/mqttx.md';
 
 ## 入门指南{#guide}
 
-### 初始化{#wizard}
+### 测试访问{#wizard}
 
-Websoft9 控制台安装 MQTTX 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
+1. Websoft9 控制台安装 MQTTX 后，通过【我的应用】管理应用，在**访问**标签页中获取访问信息。 
+
+2. 创建一个连接
+
+   - Client ID 是自动生成的
+   - 服务器地址：协议和地址、端口是被连接的服务的值
+
+   ![](./assets/mqttx-connection-websoft9.png)
 
 ### 集成 RabbitMQ
 
-1. 准备好 RabbitMQ
+1. 准保 RabbitMQ
 
-   - Websoft9 应用商店安装 RabbitMQ
-   - RabbitMQ 容器命令行启用插件
-     ```
-     rabbitmq-plugins enable rabbitmq_mqtt
-     rabbitmq-plugins enable rabbitmq_web_mqtt   
-     ```
+   1. Websoft9 应用商店安装 RabbitMQ
+   2. RabbitMQ 容器命令行启用插件
+      ```
+      rabbitmq-plugins enable rabbitmq_mqtt
+      rabbitmq-plugins enable rabbitmq_web_mqtt   
+      ```
 
-2. MQTTX 连接 RabbiMQ，并测试
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mqttx/mqttx-connect-rabbitmq-websoft9.png)
-
+2. MQTTX 中新建 RabbiMQ 连接，确保主机、端口、账号和连接协议准确
 
 ### 集成 EMQX
 
-1. 准备好 EMQX
+1. 准备 EMQX
 
-   - Websoft9 应用商店安装 EMQX
-   - EMQX 配置 WebSocket 客户端连接，需开放 WebSocket 端口
+   1. Websoft9 应用商店安装 EMQX
+   2. EMQX Dashboard 打开："问题分析" > "WebSocket 客户端" 页面，为默认的 WebSocket 连接设置**用户名、密码和协议版本**
 
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mqttx/mqttx-config-emqx-websoft9.png)
-
-2. MQTTX 连接 EMQX，并测试
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mqttx/mqttx-connect-emqx-websoft9.png)
+2. MQTTX 中新建 EMQX 连接，确保主机、端口、账号和连接协议准确
 
 ## 配置选项{#configs}
-## 管理维护{#administrator}
 
+- 多语言（√）
+
+## 管理维护{#administrator}
 
 ## 故障
