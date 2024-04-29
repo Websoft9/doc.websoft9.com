@@ -14,7 +14,7 @@ import Meta from './_include/neo4j.md';
 
 ### 访问 Neo4j Browser{#wizard}
 
-1. Websoft9 控制台安装 Neo4j 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
+1. Websoft9 控制台安装 Neo4j 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
 
 2. 本地浏览器访问 Neo4j Browser，填写准确的 Connection URL、账号和密码，即可登录成功
    ![Neo4j 控制台](./assets/neo4j-ssui-websoft9.png)

@@ -15,7 +15,7 @@ import Meta from './_include/typo3.md';
 
 ### 初始化{#wizard}
 
-Websoft9 控制台安装 Typo3 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
+Websoft9 控制台安装 Typo3 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
 
 1. 进入安装向导后，系统进入环境检测步骤通过后，填写数据库参数
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/typo3-installdb-websoft9.png)

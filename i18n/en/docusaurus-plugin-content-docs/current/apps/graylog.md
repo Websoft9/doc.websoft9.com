@@ -14,7 +14,7 @@ import Meta from './_include/graylog.md';
 
 ### 功能一览{#wizard}
 
-Websoft9 控制台安装 Graylog 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
+Websoft9 控制台安装 Graylog 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
 
 - 登陆界面
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/graylog/graylog-login-websoft9.png)

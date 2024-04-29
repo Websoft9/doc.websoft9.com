@@ -15,7 +15,7 @@ import Meta from './_include/onlyoffice.md';
 
 ### 初始化{#wizard}
 
-Websoft9 控制台安装 ONLYOFFICE Workspace 后，通过【我的应用】管理应用，在**访问**标签页中获取访问 URL。  
+Websoft9 控制台安装 ONLYOFFICE Workspace 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取访问 URL。  
 
 1. 使用本地浏览器访问 URL，进入初始化页面，耐心等2-5分钟，直至出现账号设置界面
    ![](./assets/onlyoffice-install-websoft9.png)

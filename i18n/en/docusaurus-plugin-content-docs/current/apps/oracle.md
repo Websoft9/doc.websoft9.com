@@ -21,7 +21,7 @@ Oracle Database XE 对安装主机的规模和 CPU 数量不作限制（每台�
 
 ### 初始化{#wizard}
 
-Websoft9 控制台安装 Oracle Database 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
+Websoft9 控制台安装 Oracle Database 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
 
 #### 在线获取镜像（可选）
 

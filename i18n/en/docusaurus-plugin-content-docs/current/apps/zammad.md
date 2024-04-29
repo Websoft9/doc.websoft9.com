@@ -15,7 +15,7 @@ import Meta from './_include/zammad.md';
 
 ### 立即登录{#wizard}
 
-1. Websoft9 控制台安装 Zammad 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。
+1. Websoft9 控制台安装 Zammad 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。
 
 2. Zammad 会自动进行初始化，由于初始化过程较长，需要等待几分钟后才能进入初始页面
 

@@ -15,12 +15,12 @@ import Meta from './_include/nextcloud.md';
 
 ### 登录后台{#wizard}
 
-1. Websoft9 控制台安装 Nextcloud 后，通过【我的应用】管理应用，在**访问**标签页中获取登录账号和 URL
+1. Websoft9 控制台安装 Nextcloud 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录账号和 URL
 
 2. 访问 Nextcloud 的 URL，登录后台开始使用
    ![](./assets/nextcloud-backend-websoft9.png)
 
-### 文档预览与编辑
+### 文档预览与编辑{#onlyoffice}
 
 #### 集成 Nextcloud Office
 

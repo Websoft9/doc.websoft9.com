@@ -14,12 +14,12 @@ import Meta from './_include/nopcommerce.md';
 
 ### 初始化{#wizard}
 
-1. Websoft9 控制台安装 nopCommerce 后，通过【我的应用】管理应用
+1. Websoft9 控制台安装 nopCommerce 后，通过 "我的应用" 查看应用详情
 
    - 在**数据库**标签页中获取数据库信息
      ![](./assets/nopcommerce-getdbconns-websoft9.png)
 
-   - 在**访问**标签页中获取访问 URL
+   - 在 "访问" 标签页中获取访问 URL
    
 2. 打开访问 URL，开始初始化，其中首先设置管理员账号
 

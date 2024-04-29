@@ -85,7 +85,7 @@ import Meta from '../apps/_include/php.md';
     chown -R www-data:www-data /var/www/html
     ```
 
-2. Websoft9 控制台，通过【我的应用】管理应用，在**访问**标签页中获取 PHP 应用访问链接 URL
+2. Websoft9 控制台，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取 PHP 应用访问链接 URL
 
 
 3. 本地浏览器后访问 URL，便进入 WordPress 的安装向导

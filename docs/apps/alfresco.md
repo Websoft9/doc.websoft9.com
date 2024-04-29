@@ -16,7 +16,7 @@ import Meta from './_include/alfresco.md';
 
 ### 登录后台{#wizard}
 
-1. Websoft9 控制台安装 Alfresco 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息
+1. Websoft9 控制台安装 Alfresco 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息
 
 2. 耐心等待 10 分钟，直至 Alfresco 首次安装初始化完成
 

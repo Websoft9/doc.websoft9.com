@@ -15,7 +15,7 @@ import Meta from './_include/influxdb.md';
 
 ### 初始化{#wizard}
 
-1. Websoft9 控制台安装 InfluxDB 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息
+1. Websoft9 控制台安装 InfluxDB 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息
 
 2. 根据安装向导创建组织、用户和 bucket，完成后点击 “Get Started” 进入 Dashboard 开始使用
 

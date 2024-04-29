@@ -15,7 +15,7 @@ import Meta from './_include/duplicati.md';
 
 ### 初始化{#wizard}
 
-1. Websoft9 控制台安装 Duplicati 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息
+1. Websoft9 控制台安装 Duplicati 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息
 
 2. 初次进入时可设置 **账号密码**
 

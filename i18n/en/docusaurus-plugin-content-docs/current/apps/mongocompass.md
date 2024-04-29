@@ -15,7 +15,7 @@ import Meta from './_include/mongocompass.md';
 
 ### 初始化{#wizard}
 
-Websoft9 控制台安装 MongoDB Compass 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
+Websoft9 控制台安装 MongoDB Compass 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
 
 1. 浏览器访问后，登陆到 Mongo Compass 所在的桌面
 

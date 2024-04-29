@@ -15,7 +15,7 @@ import Meta from './_include/aria2.md';
 
 ### 连接 Aria2 RPC 服务{#wizard}
 
-Websoft9 控制台安装 Aria2 后，通过【我的应用】管理应用，在**访问**标签页中获取 RPC 服务连接信息。
+Websoft9 控制台安装 Aria2 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取 RPC 服务连接信息。
 
 1. 本地电脑浏览器访问后，进入 AriaNg 页面
 

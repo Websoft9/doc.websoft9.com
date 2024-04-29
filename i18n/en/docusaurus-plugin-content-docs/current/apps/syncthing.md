@@ -15,7 +15,7 @@ import Meta from './_include/syncthing.md';
 
 ### 初始化{#wizard}
 
-1. Websoft9 控制台安装 Syncthing 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息
+1. Websoft9 控制台安装 Syncthing 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息
 
 2. 登录后，系统会提示设置账号（建议完成此项设置）
    

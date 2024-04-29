@@ -15,7 +15,7 @@ import Meta from './_include/nocodb.md';
 
 ### 注册登录{#wizard}
 
-1. Websoft9 控制台安装 NocoDB 后，通过【我的应用】管理应用，在**访问**标签页中获取访问 URL  
+1. Websoft9 控制台安装 NocoDB 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取访问 URL  
 
 2. 访问 URL，进入首次注册页面，注册后登录后台
    ![](./assets/nocodb-backend-websoft9.png)

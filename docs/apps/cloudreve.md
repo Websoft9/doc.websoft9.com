@@ -16,7 +16,7 @@ import Meta from './_include/cloudreve.md';
 
 ### 初始化密码{#wizard}
 
-Websoft9 控制台安装 Cloudreve 后，通过【我的应用】管理应用，在**容器**标签页中查看 Cloudreve 容器的日志，获得初始化账号密码
+Websoft9 控制台安装 Cloudreve 后，通过 "我的应用" 查看应用详情，在**容器**标签页中查看 Cloudreve 容器的日志，获得初始化账号密码
 
 ### 离线下载
 

@@ -22,7 +22,7 @@ import Meta from './_include/odoo.md';
 
 ### 初始化向导{#wizard}
 
-1. Websoft9 控制台安装 Odoo 后，通过【我的应用】管理应用，在**访问**标签页中获取访问 URL。 
+1. Websoft9 控制台安装 Odoo 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取访问 URL。 
 
 2. 使用本地浏览器访问 URL，开始初始化的第 1 步：创建数据库
    ![Odoo 社区版初始化页面](./assets/odoo-startcreatedb-websoft9.png)

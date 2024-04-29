@@ -17,7 +17,7 @@ import Meta from './_include/couchdb.md';
 
 ### 登录后台{#wizard}
 
-1. Websoft9 控制台安装 CouchDB 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。 
+1. Websoft9 控制台安装 CouchDB 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。 
 
 2. 本地浏览器访问 `http://URL/_utils/#login`，开始登录后台
    ![](./assets/couchdb-init-websoft9.png)

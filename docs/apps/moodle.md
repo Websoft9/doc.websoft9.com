@@ -16,7 +16,7 @@ import Meta from './_include/moodle.md';
 
 ### 登录后台{#wizard}
 
-1. Websoft9 控制台安装 Moodle 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
+1. Websoft9 控制台安装 Moodle 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
 
 2. 点击右上角 "Login" 按钮，登陆进入 Moodle 后台
    ![](./assets/moodle-backend-websoft9.png)

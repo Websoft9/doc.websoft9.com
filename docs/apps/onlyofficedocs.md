@@ -15,7 +15,7 @@ import Meta from './_include/onlyofficedocs.md';
 
 ### 验证安装{#wizard}
 
-1. Websoft9 控制台安装 ONLYOFFICE Docs 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
+1. Websoft9 控制台安装 ONLYOFFICE Docs 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
 
 2. 正常访问时，会出现 "ONLYOFFICE Docs Community Edition installed" 成功安装的提示页面
 
@@ -23,9 +23,9 @@ import Meta from './_include/onlyofficedocs.md';
 
 ### 与网盘系统集成
 
-* [ownCloud 集成  ONLYOFFICE Docs](./owncloud/solution#onlyoffice)
-* [Nextcloud 集成  ONLYOFFICE Docs](./nextcloud/solution#onlyoffice)
-* [Seafile 集成  ONLYOFFICE Docs](./seafile/solution#onlyoffice)
+* [ownCloud 集成  ONLYOFFICE Docs](./owncloud#onlyoffice)
+* [Nextcloud 集成  ONLYOFFICE Docs](./nextcloud#onlyoffice)
+* [Seafile 集成  ONLYOFFICE Docs](./seafile#onlyoffice)
 
 ### 增加字体{#addfonts}
 

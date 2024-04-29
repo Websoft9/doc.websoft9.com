@@ -14,7 +14,7 @@ import Meta from './_include/suitecrm.md';
 
 ### 初始化{#wizard}
 
-Websoft9 控制台安装 SuiteCRM 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
+Websoft9 控制台安装 SuiteCRM 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
 
 1. 本地浏览器访问，进入登陆页面
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-init1-websoft9.png)

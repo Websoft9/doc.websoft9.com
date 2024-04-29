@@ -15,7 +15,7 @@ import Meta from './_include/budibase.md';
 
 ### 登录后台{#wizard}
 
-1. Websoft9 控制台安装 Budibase 后，通过【我的应用】管理应用，在**访问**标签页中获取访问信息。  
+1. Websoft9 控制台安装 Budibase 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取访问信息。  
 
 2. 首次使用，需注册管理员用户
    

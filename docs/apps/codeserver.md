@@ -18,7 +18,7 @@ import Meta from './_include/codeserver.md';
 
 ### 验证测试{#wizard}
 
-Websoft9 控制台安装 code-server 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
+Websoft9 控制台安装 code-server 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
 
 1. 使用本地浏览器访问 URL ，进入登录页面
    ![code-server 登录界面](./assets/codeserver-login-websoft9.png)

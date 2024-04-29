@@ -15,7 +15,7 @@ import Meta from './_include/apex.md';
 
 ### 登录后台{#login}
 
-1. Websoft9 控制台安装 APEX 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
+1. Websoft9 控制台安装 APEX 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
 
 2. 耐心等待 10 分钟，直至 APEX 初始化完成，方可进入登录页面
    ![](./assets/apex-init-websoft9.png)

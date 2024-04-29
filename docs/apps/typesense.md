@@ -16,7 +16,7 @@ import Meta from './_include/typesense.md';
 
 ### 初始化{#wizard}
 
-1. Websoft9 控制台安装 Typesense 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息 
+1. Websoft9 控制台安装 Typesense 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息 
 
 2. 浏览器访问：URL+路径 **health** 可查看 Typesense 服务是否正常启动
     ```

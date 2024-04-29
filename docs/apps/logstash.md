@@ -14,7 +14,7 @@ import Meta from './_include/logstash.md';
 
 ## 入门指南{#guide}
 
-Websoft9 控制台安装 Logstash 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
+Websoft9 控制台安装 Logstash 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
 
 ### 采集（输入）数据
 

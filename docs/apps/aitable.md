@@ -17,7 +17,7 @@ import Meta from './_include/aitable.md';
 
 ### 初始化{#wizard}
 
-Websoft9 控制台安装 AITable 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
+Websoft9 控制台安装 AITable 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
 
 1. 使用本地电脑浏览器访问后，进入 AITable 首次注册页面
    ![](./assets/apitable-init-websoft9.png)

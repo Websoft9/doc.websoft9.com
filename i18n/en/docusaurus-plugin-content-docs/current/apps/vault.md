@@ -15,7 +15,7 @@ import Meta from './_include/vault.md';
 
 ### 初始化{#wizard}
 
-1. Websoft9 控制台安装 Vault 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息
+1. Websoft9 控制台安装 Vault 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息
 
 2. 通过 Websoft9 控制台查看 Vault 容器的日志信息获取 Token
 

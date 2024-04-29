@@ -15,7 +15,7 @@ import Meta from './_include/strapi.md';
 
 ### 初始化{#wizard}
 
-1. Websoft9 控制台安装 Strapi 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
+1. Websoft9 控制台安装 Strapi 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
 
 2. Strapi 容器启动首次启动时，会在线拉取外部软件包，需要等待几分钟后才能进入初始页面
 

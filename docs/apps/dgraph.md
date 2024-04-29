@@ -15,7 +15,7 @@ import Meta from './_include/dgraph.md';
 
 ### 初始化{#wizard}
 
-1. Websoft9 控制台安装 Dgraph 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息
+1. Websoft9 控制台安装 Dgraph 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息
 
 2. 【Launch Latest 】，进入 Console 界面
 

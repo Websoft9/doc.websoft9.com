@@ -15,7 +15,7 @@ import Meta from './_include/xwiki.md';
 
 ### 初始化{#wizard}
 
-Websoft9 控制台安装 XWiki 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
+Websoft9 控制台安装 XWiki 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
 
 1. 进入安装向导后，Xwiki 开始初始化，耐心等待  
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/xwiki/xwiki-initializing-websoft9.png)

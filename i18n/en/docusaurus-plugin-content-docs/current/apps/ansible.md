@@ -17,7 +17,7 @@ import Meta from './_include/ansible.md';
 
 在体验 Ansible 之前需准备好受控端的连接信息（IP,用户和密码），然后再开始测试：
 
-1. Websoft9 控制台安装 Ansible 后，通过【我的应用】管理应用，进入容器的命令模式
+1. Websoft9 控制台安装 Ansible 后，通过 "我的应用" 查看应用详情，进入容器的命令模式
 
 2. 运行如下几个测试命令以确认 Ansible 是否正常工作
    ```

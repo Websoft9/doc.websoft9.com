@@ -25,7 +25,7 @@ CloudBeaver 是用于管理数据库的工具，如果没有数据库，可以�
 
 ### 验证 CloudBeaver {#wizard}
 
-Websoft9 控制台安装 CloudBeaver 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
+Websoft9 控制台安装 CloudBeaver 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
 
 1. 使用本地电脑浏览器访问 URL，登录后点击 "NEXT" 按钮，直至 "FINISH" 完成
    ![初始化 CloudBeaver](./assets/cloudbeaver-wizard001-websoft9.png)

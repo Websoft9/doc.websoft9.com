@@ -14,13 +14,15 @@ import Meta from './_include/palworld.md';
 
 ## 入门指南{#guide}
 
-### 幻兽帕鲁私服使用说明
+### 连接使用
 
-1. 安装 [Steam](https://store.steampowered.com) 客户端
+1. Websoft9 控制台安装 Palworld， 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。
 
-2. 运行 Palworld， 选择加入**多人游戏（专用服务器）** 模式
+2. 本地电脑安装 [Steam](https://store.steampowered.com) 客户端
 
-3. 输入 Palworld 服务器 IP:PORT  即可连接
+2. 在 Steam 平台上运行 Palworld， 选择加入**多人游戏（专用服务器）** 模式
+
+3. 输入 Palworld  `服务器公网 IP:port`  即可连接
 
 
 ## 配置选项{#configs}

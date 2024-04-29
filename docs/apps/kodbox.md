@@ -16,7 +16,7 @@ import Meta from './_include/kodbox.md';
 
 ### 登陆验证{#wizard}
 
-1. Websoft9 控制台安装 KodBox（可道云） 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
+1. Websoft9 控制台安装 KodBox（可道云） 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
 
 2. 先设置管理员账号，然后登陆后台，默认为文件管理界面
     ![](./assets/kodbox-backend-websoft9.png)

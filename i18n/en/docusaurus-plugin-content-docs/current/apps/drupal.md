@@ -15,7 +15,7 @@ import Meta from './_include/drupal.md';
 
 ### 功能一览{#wizard}
 
-Websoft9 控制台安装 Drupal 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
+Websoft9 控制台安装 Drupal 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
 
 1. 默认首页
     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-main-websoft9.png)

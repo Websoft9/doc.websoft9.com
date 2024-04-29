@@ -16,7 +16,7 @@ import Meta from './_include/grafana.md';
 
 ### 功能一览{#wizard}
 
-Websoft9 控制台安装 Grafana 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
+Websoft9 控制台安装 Grafana 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
 
 - Grafana 控制台页面  
    ![Grafana 控制台](https://libs.websoft9.com/Websoft9/DocsPicture/en/grafana/grafana-dashboard-websoft9.png)

@@ -16,7 +16,7 @@ import Meta from './_include/haproxy.md';
 
 ### 初始化{#wizard}
 
-Websoft9 控制台安装 HAProxy 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息，并在配置文件中设置密码。   
+Websoft9 控制台安装 HAProxy 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息，并在配置文件中设置密码。   
 
 ### 开启 HAProxy 监控
 

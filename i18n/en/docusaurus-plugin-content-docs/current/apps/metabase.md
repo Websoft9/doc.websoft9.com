@@ -15,7 +15,7 @@ import Meta from './_include/metabase.md';
 
 ### 初始化{#wizard}
 
-Websoft9 控制台安装 Metabase 后，通过【我的应用】进入它的编辑窗口，在**访问**标签页中获取登陆信息。  
+Websoft9 控制台安装 Metabase 后，通过【我的应用】进入它的编辑窗口，在 "访问" 标签页中获取登陆信息。  
 
 1. 使用本地浏览器访问后，进入登陆页面
    ![Metabase登陆界面](https://libs.websoft9.com/Websoft9/DocsPicture/en/metabase/metabase-login-websoft9.png)

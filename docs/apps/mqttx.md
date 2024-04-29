@@ -15,7 +15,7 @@ import Meta from './_include/mqttx.md';
 
 ### 测试访问{#wizard}
 
-1. Websoft9 控制台安装 MQTTX 后，通过【我的应用】管理应用，在**访问**标签页中获取访问信息。 
+1. Websoft9 控制台安装 MQTTX 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取访问信息。 
 
 2. 创建一个连接
 

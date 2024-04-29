@@ -33,7 +33,7 @@ Express版本与企业版相比，功能更少（例：[SQLServer 2016 各个版
 
 ### 初始化{#wizard}
 
-Websoft9 控制台安装 SQLServer 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
+Websoft9 控制台安装 SQLServer 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
 
 <Tabs>
 <TabItem value="linuxinit" label="Linux" default>

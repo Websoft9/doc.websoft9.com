@@ -14,7 +14,7 @@ import Meta from './_include/mediawiki.md';
 
 ## 入门指南{#guide}
 
-Websoft9 控制台安装 Mediawiki 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
+Websoft9 控制台安装 Mediawiki 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
 
 - 安装扩展：[Manual:Extensions](https://www.mediawiki.org/wiki/Manual:Extensions/zh)
 - 可视化编辑器：[Help:Starting_a_new_page](https://www.mediawiki.org/wiki/Help:VisualEditor/User_guide/zh)

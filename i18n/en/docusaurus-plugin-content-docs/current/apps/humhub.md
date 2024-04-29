@@ -18,7 +18,7 @@ import Meta from './_include/humhub.md';
 
 ### 初始化{#wizard}
 
-1. Websoft9 控制台安装 HumHub 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
+1. Websoft9 控制台安装 HumHub 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
 
 2. 登陆  HumHub 后，可在 【管理】-> 【设置】中对 **URL** 和 **SMTP** 的属性进行设置。
 

@@ -16,7 +16,7 @@ import Meta from './_include/ghost.md';
 
 ### 初始化{#wizard}
 
-Websoft9 控制台安装 Ghost 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
+Websoft9 控制台安装 Ghost 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
 
 1. 使用本地电脑的浏览器访问后，进入前台界面
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/ghost/ghost-bootpage-websoft9.png)
