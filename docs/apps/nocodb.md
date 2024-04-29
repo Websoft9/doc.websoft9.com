@@ -13,9 +13,12 @@ import Meta from './_include/nocodb.md';
 
 ## 入门指南{#guide}
 
-### 初始化{#wizard}
+### 注册登录{#wizard}
 
-Websoft9 控制台安装 NocoDB 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息，并根据向导完成账号注册。  
+1. Websoft9 控制台安装 NocoDB 后，通过【我的应用】管理应用，在**访问**标签页中获取访问 URL  
+
+2. 访问 URL，进入首次注册页面，注册后登录后台
+   ![](./assets/nocodb-backend-websoft9.png)
 
 
 ## 配置选项{#configs}

@@ -13,41 +13,26 @@ import Meta from './_include/onlyofficedocs.md';
 
 ## 入门指南{#guide}
 
-### 初始化{#wizard}
+### 验证安装{#wizard}
 
-Websoft9 控制台安装 ONLYOFFICE Docs 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
+1. Websoft9 控制台安装 ONLYOFFICE Docs 后，通过【我的应用】管理应用，在**访问**标签页中获取登录信息。  
 
-本地浏览器访问成功，会看到 OnlyOffice Docs 运行成功的画面。如果页面打不开或报错，则表示运行异常。  
-   ![ONLYOFFICE Document Server is running](https://libs.websoft9.com/Websoft9/DocsPicture/zh/onlyoffice/onlyoffice-dkisrunning-websoft9.png)
+2. 正常访问时，会出现 "ONLYOFFICE Docs Community Edition installed" 成功安装的提示页面
 
+3. 运行提示页面的测试命令，测试可用性
 
 ### 与网盘系统集成
 
 * [ownCloud 集成  ONLYOFFICE Docs](./owncloud/solution#onlyoffice)
 * [Nextcloud 集成  ONLYOFFICE Docs](./nextcloud/solution#onlyoffice)
 * [Seafile 集成  ONLYOFFICE Docs](./seafile/solution#onlyoffice)
-* [Official ONLYOFFICE Docs connector for Moodle](https://www.onlyoffice.com/blog/2022/03/official-connector-for-moodle/)
-
 
 ### 增加字体{#addfonts}
 
-我们已经验证 ONLYOFFICE Docs 官方文档 [Adding fonts to ONLYOFFICE Docs](https://helpcenter.onlyoffice.com/installation/docs-community-install-fonts-linux.aspx) 是完全可以用的。
-
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/onlyoffice/onlyofficedocs-addfonts-websoft9.png)
-
-同时，我们记录了如下的事项供您参考：
+参考官方文档 [Adding fonts to ONLYOFFICE Docs](https://helpcenter.onlyoffice.com/installation/docs-community-install-fonts-linux.aspx)，并注意如下几点：
 
 1. 需清空浏览器缓存或使用隐私模式打开新的浏览器页面，方可看到新增字体
-2. Windows 系统上拷贝的 ttf 字体是可用的
-3. 网上下载的 ttf 字体是可用的
-
-### 多版本
-
-ONLYOFFICE Docs 默认设置是支持[多版本](https://helpcenter.onlyoffice.com/onlyoffice-editors/onlyoffice-document-editor/HelpfulHints/VersionHistory.aspx)的，可以通过：【文件】>【版本历史】进行查看。  
-
-下面是 ownCloud 下打开文档后，ONLYOFFICE Docs 多版本的查看结果：  
-
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/onlyoffice/onlyofficedocs-docsversions-websoft9.png)
+2. Windows 系统上拷贝的 ttf 或 字体网上下载的 ttf 字体可能无法使用，导致增加字体没有效果
 
 ### 导出 PDF
 
@@ -73,20 +58,23 @@ ONLYOFFICE Docs 同时连接数是指：所有用户在同一时间以**编辑�
 
 ## 配置选项{#configs}
 
+ - [文件历史版本（多版本）](https://helpcenter.onlyoffice.com/onlyoffice-editors/onlyoffice-document-editor/HelpfulHints/VersionHistory.aspx)（√）："文件" > "版本历史"
+
  - 支持主流格式：docx、xlsx、pptx、odt、ods、odp、doc、xls、ppt、pdf、txt、rtf、html、epub、csv等
+
  - OnlyOffice的产品家族主要分为：
+
     * ENTERPRISE EDITION：企业版（收费）
     * COMMUNITY EDITION：开源版（完全免费）
     * DEVELOPER EDITION：开发者版本（收费）
-- 授权访问控制（√）
+
+- 授权访问控制（√）：用于第三方软件与 ONLYOFFICE Docs 的密码验证，确保 ONLYOFFICE Docs 在授权的情况下才可以被调用，支持 JWT 等协议。
 
 ## 管理维护{#administrator}
 
 #### 启用 JWT Key
 
-JWT Key 用于第三方软件与 ONLYOFFICE Docs 的密码验证，确保 ONLYOFFICE Docs 在授权的情况下才可以被调用。
-
-只需修改 ONLYOFFICE Docs  根目录下的 `.env` 中 JWT_ENABLED=true 即可。  
+修改 ONLYOFFICE Docs 应用**编排文件**  `.env` 中 JWT_ENABLED=true 即可。  
 
 ```
 # [true, false]
@@ -98,9 +86,9 @@ JWT_IN_BODY=false
 
 #### 自签名配置 HTTPS
 
-除通过网关转发配置之外，ONLYOFFICE Docs 提供了[自签名的 HTTPS](https://helpcenter.onlyoffice.com/installation/docs-community-install-docker.aspx) 方案：
+ONLYOFFICE Docs [自签名的证书](https://helpcenter.onlyoffice.com/installation/docs-community-install-docker.aspx) 配置如下：
 
-1. ONLYOFFICE Docs 容器新增 443 端口，映射到宿主机
+1. ONLYOFFICE Docs 编排文件，为容器 443 端口映射到宿主机上（假设为：8089）
 
 2. 进入 ONLYOFFICE Docs 容器，下载并运行创建证书的脚本
    ```
@@ -112,7 +100,7 @@ JWT_IN_BODY=false
    sed -i 's/"rejectUnauthorized": true/"rejectUnauthorized": false/g' /etc/onlyoffice/documentserver/default.json
    supervisorctl restart all
    ```
-4. 退出 ONLYOFFICE Docs 容器，重启后生效
+4. 退出 ONLYOFFICE Docs 容器，重启通过 `http://URL:8089` 访问
 
 ## 故障
 
