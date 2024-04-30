@@ -75,6 +75,8 @@ Websoft9 控制台进入【网关】>【Proxy Hosts】，编辑域名的 SSL 设
 
 #### 向云平台申请免费证书要注意什么？
 
+全球主流云平台以及 [ZeroSSL](https://zerossl.com/) 都提供了免费证书申请：
+
 *   免费证书只能用于单个域名，例如: buy.example.com 或 next.buy.example.com,
 *   example.com 是通配符域名方式，不能用于申请免费证书
 *   申请证书的时候，请先解析好域名，有些证书会绑定域名对应的 IP 地址，即一旦申请后，IP 地址不能更换，否则证书不可用

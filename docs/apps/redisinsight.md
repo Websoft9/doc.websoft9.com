@@ -13,32 +13,35 @@ import Meta from './_include/redisinsight.md';
 
 ## 入门指南{#guide}
 
+Websoft9 控制台安装 Redash 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取访问 URL
+
 ### 连接 Redis 数据库{#wizard}
 
-RedisInsight 实现了多平台统一性，只要打开 RedisInsight 界面，使用方式是一模一样的：  
+1. 准备 Redis 数据库（可以通过 Websoft9 应用商店安装 [Redis](./redis)）
 
-1. 打开 RedisInsight 界面
-  
-   * 本地浏览器访问或启动桌面的 RedisInsight
+2. 打开 RedisInsight 界面，同意使用许可后，开始使用
+   ![打开RedisInsight](./assets/redisinsight-backend-websoft9.png)
 
-   ![打开RedisInsight](https://libs.websoft9.com/Websoft9/DocsPicture/zh/redis/redisinsight-login-websoft9.png)
+2. 点击 "Add Database Manually" 连接到 Redis 数据库
 
-2. 选择【Connect to a Redis Server】
-   ![选择RedisInsight连接方式](https://libs.websoft9.com/Websoft9/DocsPicture/zh/redis/redisinsight-connect001-websoft9.png)
+   * HOST：
+     - 内网：IP/容器名/服务名
+     - 外网：服务提供商处获取 URL
 
-3. 输入连接信息（[不知道密码](./user/credentials)）
-   ![登录RedisInsight](https://libs.websoft9.com/Websoft9/DocsPicture/zh/redis/redisinsight-connect002-websoft9.png)
-   
-   * HOST：localhost （推荐） 或 服务器公网IP（Redis已开启远程的状态）
    * Port：6379
+
    * Name：redis
 
-4. 成功建立一个连接
-   ![RedisInsight连接](https://libs.websoft9.com/Websoft9/DocsPicture/zh/redis/redisinsight-connectss-websoft9.png)
+   * Username：空
 
-5. RedisInsight 的功能十分强大，集管理、监控、配置和分析于一体，甚至还可以运行CLI命令。
-   ![RedisInsight后台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/redis/redisinsight-consolegui-websoft9.png)
+   * Password：Redis 数据库密码
+
 
 ## 配置选项{#configs}
+
+- 连接多个数据库（√）
+- 控制台认证：RedisInsight 控制台无需账号验证
+
 ## 管理维护{#administrator}
+
 ## 故障

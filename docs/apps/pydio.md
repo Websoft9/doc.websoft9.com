@@ -14,34 +14,41 @@ import Meta from './_include/pydio.md';
 
 ## 入门指南{#guide}
 
-### 初始化{#wizard}
+### 登录后台{#wizard}
 
 Websoft9 控制台安装 Pydio Cells 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
 
-1. 本地浏览器访问后，进入安装向导（首选域名访问方式）
-   
-2. 接受【安装协议】后，进入下一步  
+1. 登录后，默认显示用户的操作界面
+   ![](./assets/pydio-userconsole-websoft9.png)
 
-4. 设置数据库连接（[不知道数据库账号密码](./user/credentials)），然后进入下一步
-   ![cells 设置数据库连接](http://libs.websoft9.com/Websoft9/DocsPicture/en/cells/cells-installdbconfig-websoft9.png)
+2. 右上角 Admin > Cells Console，切换到管理员设置界面
+   ![](./assets/pydio-adminconsole-websoft9.png)
 
-5. 设置管理员账号密码，并牢记之
+### 外部存储
 
-6. 依次完成后续安装步骤，直至看到安装成功的提示
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/cells/cells-installdbss-websoft9.png)
+通过 Pydio 控制台 > Cells Console > Storage 进入存储管理界面，点击 "+datasource" 增加数据源
 
-7. 点击【Reload】后，登录进入 Cells 后台界面
+### 文档编辑与预览{#docs}
 
-### 文档编辑与预览
+Pydio 提供了对 [Collabora Online](./collabora) 和 [ONLYOFFICE](./onlyofficedocs)（仅限企业版）的文档中间件支持：
 
-需要自行配置 [ONLYOFFICE Docs](./onlyofficedocs) 等文档预览服务器
+1. 可选：Websoft9 应用商店安装 [Collabora Online](./collabora)
+2. Cells Console 控制台启用 Collabora Online 插件
+2. 设置与 Collabora Online 的连接
 
 ## 配置选项{#configs}
 
+- 插件市场（√）："Application Parameters" > "All Plugins"，企业版拥有更多插件
+- 兼容的外部存储：S3, Minio
 - [Cells Client](https://pydio.com/en/docs/developer-guide/cells-client)
 - [API Documentation](https://pydio.com/en/docs/developer-guide)
 - [移动端](https://pydio.com/en/download)
+- 配置文件：建议通过容器的环境变量实现个性化配置
 
 ## 管理维护{#administrator}
 
 ## 故障
+
+#### 没有 Application Parameters？
+
+Cells Console 左侧菜单上有一个 Application Parameters 的开关
