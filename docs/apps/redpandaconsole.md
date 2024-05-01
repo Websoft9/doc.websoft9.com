@@ -15,20 +15,20 @@ import Meta from './_include/redpandaconsole.md';
 
 ### 连接 Kafka {#wizard}
 
-Websoft9 控制台安装 Redpanda Console 时，若没有填写 Kafka brokers 或填写错误，也可以安装后通过应用编排的方式重新设置。
+Websoft9 控制台安装 Redpanda Console 时，若没有填写 Kafka brokers 或填写错误，可以通过**应用编排**的方式重新设置。
 
 1. 连接成功，会显示如下的界面
 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/redpandaconsole/redpandaconsole-console-websoft9.png)
+   ![](./assets/redpandaconsole-console-websoft9.png)
 
-2. 如果需要增加 Schema Registry，需修改应用编排的 .env 文件
+2. 要增加 Schema Registry，需修改应用编排的 .env 文件
 
-3. 如果需要增加更多 Kafka brokers，只需在应用编排的 .env 文件中 Kafka brokers 环境变量后追加更多主机信息（以 , 隔开）
+3. 要增加 Kafka brokers，在应用编排的 .env 文件 `Kafka brokers` 变量后填写主机信息（以 , 隔开）
 
 ## 配置选项{#configs}
 
 - Kafka 连接信息：应用编排的 .env 文件中
-- 配置项可以[转成环境变量](https://docs.redpanda.com/current/reference/console/config/#configuration-sources)，例如：kafka.brokers > KAFKA_BROKERS
+- 配置项可以转成[环境变量](https://docs.redpanda.com/current/reference/console/config/#configuration-sources)，例如：kafka.brokers > KAFKA_BROKERS
 - Redpanda Console [登录认证](https://docs.redpanda.com/current/reference/console/config/#redpanda-console-configuration-file)：企业版功能
 
 ## 管理维护{#administrator}

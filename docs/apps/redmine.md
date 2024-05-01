@@ -24,14 +24,14 @@ import Meta from './_include/redmine.md';
 
 获取匹配的插件版本后，将插件下载解压到 Redmine 容器目录 */usr/src/redmine/plugins* 中，即安装插件
 
-- 重启容器后生效
-- 容器下载解压的命令如下
+- 容器内下载解压插件的命令范例：
   ```
   apt update -y && apt install unzip
-  curl -L -o plugin_name.zip https://www.redmine.org/attachments/download/plugin_name.zip
+  curl -L -o plugin_name.zip https://url/plugin_name.zip
   unzip rplugin_name.zip -d /usr/src/redmine/plugins
   ```
-- 卸载插件即删除插件目录
+- 删除插件目录即卸载插件
+- 下载解压插件后，重启容器生效
 - 插件版本不匹配会导致容器无法启动，需卸载插件
 
 ## 配置选项
