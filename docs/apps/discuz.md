@@ -35,7 +35,8 @@ Discuz 有非常强大生态，官方[应用中心](https://addon.dismall.com/) 
 
 ## 配置选项{#configs}
 
-- 配置文件: */path/config/config_default.php*  
+- Discuz 配置文件（已挂载） */var/www/html/config/config_default.php*  
+- PHP 配置文件（已挂载） */usr/local/etc/php/conf.d/php_exra.ini*  
 - 多语言（×）
 - 移动端：官方没有提供移动端
 - 上传附件限制：**用户组**编辑页面中的 "论坛相关" > "附件相关" 菜单进行设置
