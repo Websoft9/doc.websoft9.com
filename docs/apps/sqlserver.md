@@ -13,9 +13,9 @@ import Meta from './_include/sqlserver.md';
 
 <Meta name="meta" />
 
-### 申明{#license}
+### 知识产权申明{#license}
 
-本文档中所涉及的 SQLServer 均为 Express 版本，可以免费使用或分发。详情参考官方：[许可条款](https://www.microsoft.com/zh-cn/download/details.aspx?id=29693)
+本文档中所涉及的 SQLServer 均为 Express 版本，可以免费使用或分发[（详情条款）](https://www.microsoft.com/zh-cn/download/details.aspx?id=29693)
 
 产品 License 清单： 
 
@@ -29,6 +29,23 @@ Express版本与企业版相比，功能更少（例：[SQLServer 2016 各个版
 另外，它针对服务器有如下的限制：不超过1个处理器，不超过10G数据存储
 
 ## 入门指南{#guide}
+
+
+### 获取服务器名称- For Windows
+
+使用 SQLServer 企业管理器 连接数据库时，除了填写 `.` 或 `(local)` 之外，也可以直接填写服务器名称（ID）。
+
+这个 ID 获取的方式有两种：
+
+* 从 **Windows 系统**中获取：【我的电脑】>【属性】，计算机名即我们所需的 ID
+
+  ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver2008express/sqlserver-servnames-websoft9.png)
+
+2. 从 **SQLServer企业管理器**获取：【服务器名称】>【浏览更多...】选择服务器，并以【Windows身份】登录数据库  
+
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-getsqlserver-websoft9.png)
+
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-getsqlserver2-websoft9.png)
 
 
 ### 初始化{#wizard}
@@ -68,21 +85,6 @@ Linux环境下使用 CloudBeaver 来验证 SQL Server 数据库：
 </Tabs>
 
 
-### 获取服务器名称（ID）
-
-使用 SQLServer 企业管理器 连接数据库时，除了填写 `.` 或 `(local)` 之外，也可以直接填写服务器名称（ID）。
-
-这个 ID 获取的方式有两种：
-
-* 从 **Windows 系统**中获取：【我的电脑】>【属性】，计算机名即我们所需的 ID
-
-  ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver2008express/sqlserver-servnames-websoft9.png)
-
-2. 从 **SQLServer企业管理器**获取：【服务器名称】>【浏览更多...】选择服务器，并以【Windows身份】登录数据库  
-
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-getsqlserver-websoft9.png)
-
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-getsqlserver2-websoft9.png)
 
 
 
