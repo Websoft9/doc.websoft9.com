@@ -19,7 +19,7 @@ import Meta from './_include/strapi.md';
 
 2. Strapi 容器启动首次启动时，会在线拉取外部软件包，需要等待几分钟后才能进入初始页面
 
-### 快速入门
+### 自建数据模型
 
 1. Plugins > Content-type Builder 增加一个数据集，假如名为为：websoft9
 
@@ -48,5 +48,5 @@ import Meta from './_include/strapi.md';
 
 #### Strapi 首次启动报错？
 
-问题分析：Strapi 首次启动会安装 **Node** 以及从 Github 下载软件包，这些需要一些时间，甚至由于网络不好的情况下无法完成。  
+问题分析：Strapi 首次启动会安装 **Node** 以及从 Github 下载软件包，可能由于网络问题导致失败。   
 解决方案：确保服务器可以顺利访问 npm 仓库和 Github
