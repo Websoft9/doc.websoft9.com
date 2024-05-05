@@ -14,7 +14,7 @@ import Meta from './_include/typesense.md';
 
 ## 入门指南{#guide}
 
-### 初始化{#wizard}
+### 验证服务{#wizard}
 
 1. Websoft9 控制台安装 Typesense 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息 
 

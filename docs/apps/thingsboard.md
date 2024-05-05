@@ -13,16 +13,15 @@ import Meta from './_include/thingsboard.md';
 
 ## 入门指南{#guide}
 
-### 安装后修改密码（必须）{#password}
+### 登录修改密码（必须）{#password}
 
 1. Websoft9 控制台安装 ThingsBoard 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。
 
 2. ThingsBoard 默认有三个账号，请务必一一登录后修改它的密码
-   ```
-   System Administrator: sysadmin@thingsboard.org / sysadmin
-   Tenant Administrator: tenant@thingsboard.org / tenant
-   Customer User: customer@thingsboard.org / customer
-   ```
+
+   - System Administrator: `sysadmin@thingsboard.org / sysadmin`
+   - Tenant Administrator: `tenant@thingsboard.org / tenant`
+   - Customer User: `customer@thingsboard.org / customer`
 
 ### 增加设备
 

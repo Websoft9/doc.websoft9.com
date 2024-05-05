@@ -15,48 +15,40 @@ import Meta from './_include/teamcity.md';
 
 ### 初始化{#wizard}
 
-Websoft9 控制台安装 TeamCity 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
+1. Websoft9 控制台安装 TeamCity 后，通过 "我的应用" 查看应用详情
+   - 在 "访问" 标签页中获取访问 URL
+   - 在 "数据库" 标签页获取数据库账号信息  
 
-1. 进入初始化页面
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teamcity/teamcity-start-websoft9.png)
+2. 访问 URL 进入初始化页面，点击 "proceed" 开始后续步骤
 
-2. 点击 "proceed", 进入 "Database connection setup" 页面，选择数据库类型为 MySQL，并下载 JDBC 驱动，填写数据库连接信息
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teamcity/teamcity-setupdb-websoft9.png)
+3. **Database connection setup** 步骤填写应用预制的数据库：
 
-3. 完成数据库初始化需要几分钟的时间，承认 License 协议后，创建账号就完成初始化向导
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teamcity/teamcity-account-websoft9.png)
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teamcity/teamcity-main-websoft9.png)
+   - database type: MySQL（选择后需点击下载 JDBC 驱动的链接）   
+   - Database host：从 TeamCity 应用管理界面获取
+   - Database Name: `teamcity`
+   - User name: `teamcity` 或 `root`
+   - Password: 从 TeamCity 应用管理界面获取
 
-### 快速了解
+5. 依次完成创建账号等后续步骤后，登录 TeamCity 后台
+   ![](./assets/teamcity-main-websoft9.png)
 
-### 创建项目
+6. 修正 Server URL："Administration" > "Global Settings"
 
-创建项目的方式可以通过外部URL或者手动创建，下面我们通过已有github项目创建一个项目
+### 连接 TeamCity Agent
 
-1. 输入外部URL以及用户和密码信息
+TeamCity 应用默认已启动  TeamCity Agent。  
 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teamcity/teamcity-createprj-websoft9.png)
+连接它，需进入 TeamCity 后台： "Agents" > "UNAUTHORIZED AGENTS" 中进行 **Authorize** 操作
 
-2. 点击[proceed]，项目会提示创建成功
 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teamcity/teamcity-createconfirm-websoft9.png)
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teamcity/teamcity-createsuccess-websoft9.png)
+## 配置选项{#configs}
 
- > [更多信息请参照官方文档](https://www.jetbrains.com/help/teamcity/creating-and-editing-projects.html)
- 
-### 创建构建配置
-
-创建构建配置是自动化的核心，会指定是对哪个项目，做一个具体化的具体构建过程。
-这里需要说明一点，当指定外部URL构建时，构建是针对外部项目的，teamcity本地项目的代码提交不会触发构建。
-
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teamcity/teamcity-createbuild-websoft9.png)
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teamcity/teamcity-createbuild2-websoft9.png)
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teamcity/teamcity-createbuild3-websoft9.png)
-
- > [创建详细请参照官方文档](https://www.jetbrains.com/help/teamcity/creating-and-editing-build-configurations.html)
- > 创建触发器可是构建过程自动发生，无须手动执行，[更多详细操作请参照官方文档](https://www.jetbrains.com/help/teamcity/configuring-build-triggers.html) 
-
+- 设置 Server URL：TeamCity 控制台 "Administration" > "Global Settings"
 
 ## 管理维护{#administrator}
 
 ## 故障
+
+#### Agent 无法连接到 TeamCity?
+
+TeamCity Agent 连接 TeamCity 时，不支持主机名中包含 "_"，确保符合这个要求。

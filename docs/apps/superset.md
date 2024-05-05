@@ -31,7 +31,7 @@ Websoft9 控制台安装 Superset 后，通过 "我的应用" 查看应用详情
 
 3. 开始对表进行分析
 
-## 配置选项
+## 配置选项{#configs}
 
 - 多语言（✅）：支持后台切换
 - CLI：`superset [OPTIONS] COMMAND [ARGS]...`

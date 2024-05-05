@@ -12,39 +12,39 @@ import Meta from './_include/tensorflow.md';
 
 ## 入门指南{#guide}
 
-### 初始化{#wizard}
+### 登录 Jupter{#wizard}
 
-Websoft9 控制台安装 TensorFlow 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
+Websoft9 控制台安装 TensorFlow 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取访问信息。  
 
-1. 进入登陆页面
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/tensorflow/tensorflow-login-websoft9.png)
+1. 本地浏览器访问 URL，进入 Jupter 登陆页面，提示需要 Token
 
-2. SSH登陆服务器，执行如下命令取得token后填入登陆页面，并点击【Login】
-   ```
-   $ docker exec -it tensorflow jupyter notebook list
-   Currently running servers:
-   http://0.0.0.0:8888/?token=c8929544462391e32bbf0d7763b7b5dda3ab00b2f14da5b9 :: /tf
+2. 进入 TensorFlow 容器的命令模式，运行 `jupyter notebook list`，获取 Token
 
-   ```
+3. 使用 Token 登录或设置一个密码后，登录到 Jupter 后台
+   ![](./assets/tensorflow-jupter-websoft9.png)
 
-3. 登陆控制台，体验jupyter的强大功能（编辑源码）
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/tensorflow/tensorflow-main-websoft9.png)
+### 运行 TensorBoard
 
-4. 产品集成了 TensorBoard 工具，通过下面命令启动
-   ```
-   $ docker exec -it tensorflow bash
-   $ cd /usr/local/lib/python3.8/dist-packages/tensorboard && tensorboard --logdir=/data/logs --port 6006 --host 0.0.0.0
-   ```
+1. Jupter 后台依次打开："New" > "Python 3 (ipykernel)"
 
-5. 浏览器访问 6006 端口，验证图形化工具 - TensorBoard
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/tensorflow/tensorflow-board-websoft9.png)
+2. 参考 [Using TensorBoard in Notebooks](https://tensorflow.google.cn/tensorboard/tensorboard_in_notebooks)，逐一运行范例程序。最后的命令增加一个参数`--host 0.0.0.0` （允许外网访问）
 
-### 快速了解
+4. 此时 TensorBoard 便显示在 Notebook 中
+   ![](./assets/tensorflow-dashjupter-websoft9.png)
 
-- CLI: tfx
-- [API](https://tensorflow.google.cn/api_docs)
-- [TensorFlow GPU 支持软硬件要求](https://www.tensorflow.org/install/gpu)
+
+## 配置选项{#configs}
+
+- 容器端口
+
+  - 8888：Jupter 端口
+  - 6606：TensorBoard 端口
 
 ## 管理维护{#administrator}
 
 ## 故障
+
+#### TensorBoard 在 Notebook 中不显示？
+
+- 确保启动 TensorBoard 命令时包含 `--host 0.0.0.0` 参数
+- 确保容器 6006 端口绑定的宿主机端口已开启

@@ -13,7 +13,7 @@ import Meta from './_include/umami.md';
 
 ## 入门指南{#guide}
 
-### 初始化{#wizard}
+### 首次修改密码{#wizard}
 
 1. Websoft9 控制台安装 Umami 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
 
