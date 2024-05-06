@@ -16,7 +16,9 @@ import Meta from './_include/traefik.md';
 
 ### 初始化{#wizard}
 
-Websoft9 控制台安装 Traefik 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
+1. Websoft9 控制台安装 Traefik 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息
+
+2. 可选：通过 Websoft9 网关，将 Traefik Dashboard 转发到外围访问
 
 ## 配置选项{#configs}
 
