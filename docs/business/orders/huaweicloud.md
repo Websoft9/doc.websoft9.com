@@ -13,10 +13,15 @@ slug: /order/huaweicloud
 订单号是开具发票、申请服务等非常重要的凭据。
 
 1. 登录华为云控制台
+
 2. 在顶部的**费用**菜单下，打开“我的订单”
+
    ![订单列表](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-odlists-websoft9.png)
+
 3. 点击“订单列表”
+
    ![订单列表](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-odlists2-websoft9.png)
+
 4. 第一列即订单号
 
 ## 发票
@@ -24,13 +29,16 @@ slug: /order/huaweicloud
 用户在云市场的消费，完善账户信息，且实名认证后，均可以通过华为云后台索取发票
 
 1. 登录华为云控制台
-2. 在顶部的**费用**菜单下，打开“发票管理”
-   ![发票管理](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-feeinvmenu-websoft9.png)
-3. 根据提示完成发票索取
-   ![发票管理](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-feeinvdetails-websoft9.png)
-4. 等待5个工作日之后，进入**发票列表**下载电子发票
 
-点击[此处](https://support.websoft9.com/docs/faq/bz-order.html#开具发票)，了解关于开具发票的更多注意事项
+2. 在顶部的**费用**菜单下，打开“发票管理”
+
+   ![发票管理](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-feeinvmenu-websoft9.png)
+
+3. 根据提示完成发票索取
+
+   ![发票管理](https://libs.websoft9.com/Websoft9/DocsPicture/zh/huaweicloud/huaweicloud-feeinvdetails-websoft9.png)
+
+4. 等待5个工作日之后，进入**发票列表**下载电子发票
 
 
 ## 退订
@@ -38,7 +46,6 @@ slug: /order/huaweicloud
 ### 退订镜像
 
 如果你想退订镜像，保留云服务器，只需通过[切换操作系统](../huaweicloud#reinstallos)操作即可
-
 
 ### 退订人工服务
 

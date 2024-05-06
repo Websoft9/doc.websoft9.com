@@ -12,9 +12,9 @@ slug: /order/alibabacloud
 订单编号是开具发票、申请服务等非常重要的凭据。
 
 1. 登录阿里云控制台，打开云市场频道
-   ![订单列表](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aliyun/aliyun-mk-websoft9.png)
+   ![订单列表](../assets/aliyun-mk-websoft9.png)
 2. 点击“订单列表”
-   ![订单列表](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aliyun/aliyun-orderslist-websoft9.png)
+   ![订单列表](../assets/aliyun-orderslist-websoft9.png)
 2. 第一列订单编号
 
 ## 发票
@@ -24,7 +24,7 @@ slug: /order/alibabacloud
 1. 登录阿里云控制台，进入：费用->发票栏目
 
 2. 系统默认进入“发票索取”，这时候请选择“云市场（非自营）”标签
-   ![发票索取](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aliyun/aliyun-getinvoice-websoft9.png)
+   ![发票索取](../assets/aliyun-getinvoice-websoft9.png)
 
 3. 根据提示完成发票索取
 
@@ -38,7 +38,7 @@ slug: /order/alibabacloud
 对于每一个镜像购买订单，我们提供电子合同下载
 
 1. 登录阿里云控制台，打开云市场频道后，点击“订单列表”
-   ![订单列表](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aliyun/aliyun-orderslist-websoft9.png)
+   ![订单列表](../assets/aliyun-orderslist-websoft9.png)
 
 2. 在操作一栏，选择“申请合同”
 
@@ -60,10 +60,10 @@ slug: /order/alibabacloud
 对于使用过的镜像商品，您可以给与评价，千万记得给我们好评哦
 
 1. 登录阿里云控制台，打开【云市场】频道后，系统默认显示已购买的服务
-   ![立即评价](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aliyun/aliyun-getdocfromorder-websoft9.png)
+   ![立即评价](../assets/aliyun-getdocfromorder-websoft9.png)
 
 2. 点击【订单列表】，进入订单列表选择对应商品，点击【待评价】进行评价和留言 
-   ![立即评价](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aliyun/aliyun-review-websoft9.png)
+   ![立即评价](../assets/aliyun-review-websoft9.png)
 
 3. 评价内容期待您客观反馈，但一定记得给我们打五星哦
 
@@ -75,8 +75,8 @@ slug: /order/alibabacloud
 
 2. 在“订单列表”下选择一个订单，点击“待追评”
 
-   ![订单列表](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aliyun/aliyun-mreview-websoft9.png)
+   ![订单列表](../assets/aliyun-mreview-websoft9.png)
 
 3. 修改评论，再保存提交
 
-   ![追评](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aliyun/aliyun-mreview2-websoft9.png)
+   ![追评](../assets/aliyun-mreview2-websoft9.png)

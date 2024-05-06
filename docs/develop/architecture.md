@@ -27,7 +27,7 @@ Websoft9 是一个以应用为中心的微服务架构模式，它入门极简�
 
 对应的产品架构图如下：  
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/websoft9/websoft9-architecture.png)
+![](/img/websoft9-architecture.png)
 
 
 - Apphub：应用管理服务，负责应用整个生命周期

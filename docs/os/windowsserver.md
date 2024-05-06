@@ -5,8 +5,6 @@ slug: /windowsserver
 
 # Windows Server
 
-## 关于
-
 Websoft9 在云端拥有丰富的 Microsoft 应用程序的经验，可帮助用户获得更高的性能和可靠性、更出色的安全和身份服务、更多迁移支持、广度和深度最高的功能、更低的总拥有成本以及灵活的许可选项。 
 
 Websoft9 还支持构建和运行 Windows 应用程序所需的一切，包括 Active Directory、.NET、Microsoft SQL Server、Windows 桌面即服务以及所有可支持的 Windows Server 版本。利用我们经过实践验证的专业知识，可以帮助您轻松地直接迁移、重构您的 Windows 工作负载，甚至对其进行现代化改造。
@@ -17,8 +15,7 @@ Websoft9 还支持构建和运行 Windows 应用程序所需的一切，包括 A
 
 可以通过本地电脑的远程桌面工具 (MSTSC) 连接 Window 服务器。具体步骤如下：
 
-1. 登录Azure Portal，找到需要登录的服务器的**公网IP地址**
-   ![image.png](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-publicip-websoft9.png)
+1. 获取需要登录的服务器的**公网IP地址**
 
 2. 选择一种打开本地电脑远程桌面的方式（三选一）:
 
@@ -28,64 +25,21 @@ Websoft9 还支持构建和运行 Windows 应用程序所需的一切，包括 A
 
 3. 打开远程桌面连接，输入公网IP地址
 
-   ![img](http://libs.websoft9.com/Websoft9/DocsPicture/zh/windows/windows-remote.png)
+   ![img](./assets/windows-remote.png)
 
-4. 通过更多选项，设置默认用户名，例如”Administrator“，并勾选”允许我保存凭据“
+4. 点击连接，成功后会看到Windows界面
+   ![image.png](./assets/windows-2019desktop-websoft9.png)
 
-   ![img](http://libs.websoft9.com/Websoft9/DocsPicture/zh/windows/windows-remote-login.png)
-
-5. 点击连接，成功后会看到Windows界面
-   ![image.png](http://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-windows2019desktop-websoft9.png)
-
-6. 远程登录后，就可以直接从本地**拷贝**文件，然后**粘贴**文件到服务器上。
-   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-copyfilewin-websoft9.png)
-
-7. 如果需要使用FTP，需要自行安装FTP软件（推荐使用FileZilla Server）
+5. 远程登录后，就可以直接从本地**拷贝**文件，然后**粘贴**文件到服务器上。
+   ![img](./assets/windows-copyfilewin-websoft9.png)
 
 ### IIS 网站管理
 
 Websoft9 帮助客户在 Windows Server 通过 IIS 部署网站，充分发挥 Windows 平台的出色性能和体验。  
 
-#### 绑定域名{#binddomain}
-
-1. IIS 中右键点击需配置域名的网站，选择【编辑绑定】，选择一个待绑定域名的网站后 
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/iis-adddomain001-websoft9.png)
-
-2. 点击 "添加" 增加一个新的域名，点击 "编辑" 修改已有域名
-
-#### 修改根目录
-
-1. IIS 中右键点击需配置域名的网站，依次选择："管理网站" > "高级设置"
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/iis-changeroot-websoft9.png)
-
-2. 将物理路径修改为新的路径即可。若要考虑迁移网站，需将原网站的文件拷贝到新的路径
-
-3. 重启 IIS 后生效
-
-#### 设置伪静态{#rewrite}
-
-IIS 需先安装 **[URL重写](https://www.iis.net/downloads/microsoft/url-rewrite)** 组件后，方可开始设置：
-
-1. 进入IIS后选择具体的网站，打开 URL 重写工具
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/iis-urlrew-websoft9.png)
-
-2.  依次添加规则，重启 IIS 后生效
-
-#### 设置 HTTPS 访问{#https}
-
-准备域名和生成证书文件（[win-acme](https://github.com/PKISharp/win-acme/releases)）是设置 HTTPS 的前提，然后方可为网站设置 HTTPS：
-
-1. 点击 IIS 的主菜单，在 IIS 的配置页面找到 "服务器证书" 设置项
-   ![IIS 设置](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/IIS-SSL-TX3-websoft9.PNG)
-
-2. 导入证书
-
-3. 打开 IIS "网站绑定" 的设置页面，添加一个 HTTPS 绑定，然后选择已上传的证书
-   ![选择 HTTPS](http://libs.websoft9.com/Websoft9/DocsPicture/zh/iis/IIS-SSL-TX7-websoft9.png)
-
-4. 设置完成后，测试 HTTPS 可用性
-
-5. 通过 "URL重写" 设置项，增加 HTTP 重定向到 HTTPS （可选）
+- 绑定域名：IIS 中右键点击需配置域名的网站，选择【编辑绑定】
+- 设置伪静态：IIS 需先安装 **[URL重写](https://www.iis.net/downloads/microsoft/url-rewrite)** 组件后，打开 IIS 选择具体的网站，打开 URL 重写工具
+- 设置 HTTPS 访问：准备证书后，点击 IIS 的主菜单，在 IIS 的配置页面找到 "服务器证书" 设置项
 
 ## 技术栈
 
@@ -100,7 +54,7 @@ Windows 上的 Dockerfile 语法与 Linux 有一定的区别，所幸微软官�
 
 ### SQL Server
 
-Websoft9 提供了在云上开机即用的包含 SQL Sever 的 Windows 托管镜像与服务。
+Websoft9 提供了在云上开机即用的包含 [SQL Sever](./sqlserver) 的 Windows 托管镜像与服务。
 
 ###  Visual Studio CI/CD
 
@@ -170,7 +124,7 @@ MSBuild.exe MyProj.proj -property:Configuration=Debug
 
 它的安装方式采用的是：通过**安装管理器**进行个性化安装的模式。  
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/windows/vs-installergui-websoft9.png)
+![](./assets/vs-installergui-websoft9.png)
 
 下面简要的对它的安装本质进行说明：  
 
@@ -245,7 +199,9 @@ Visual Studio IDE 为了满足开发者一站式的体验，也集成了部署�
 
 ### 自动化安装
 
-自动化安装也被称之为静默安装参数（Silent Install  Parameters），它是 Windows 自动化安装中最棘手、最重要的活动。[msiexec](https://docs.microsoft.com/zh-cn/windows/win32/msi/command-line-options) 即 [Windows Installer](https://docs.microsoft.com/zh-cn/windows/win32/msi/windows-installer-portal)是 Windows 上自动化安装最常见的命令行程序。 
+自动化安装也被称之为静默安装参数（Silent Install  Parameters），它是 Windows 自动化安装中最棘手、最重要的活动。  
+
+[msiexec](https://docs.microsoft.com/zh-cn/windows/win32/msi/command-line-options) 即 [Windows Installer](https://docs.microsoft.com/zh-cn/windows/win32/msi/windows-installer-portal) 是 Windows 上自动化安装最常见的命令行程序。 
 
     ```
     # 安装程序
@@ -265,8 +221,8 @@ Visual Studio IDE 为了满足开发者一站式的体验，也集成了部署�
 
 进入到 Windows 系统的**事件查看器**，选择 Windows 日志下的应用程序，然后在右侧的事件列表查看出现错误的应用程序，单击即可在下方弹出详细的错误信息，最后就可以根据错误原因来纠正错误。
 
-![event](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wampserver/wampserver-eventerror-websoft9-1.png)
-![event](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wampserver/wampserver-eventerror-websoft9-2.png)
+![event](./assets/windows-eventerror1-websoft9.png)
+![event](./assets/windows-eventerror2-websoft9.png)
 
 ## 问题与故障{#troubleshoot}
 
@@ -283,7 +239,7 @@ VS 中如何在容器中使用，请参考[官方文档](https://docs.microsoft.
 #### 无法连接 Windows 远程桌面？{#notconnectwin}
 
 检查账号和密码是正确，请保证 **服务器安全组** 3389 端口是开启的，下图是排查方法  
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aliyun/aliyun-guzhangpaichu.png)
+![](./assets/windows-remotefail-websoft9.png)
 
 #### Windows 容器无法访问外网？{#winnonetwork}
 
@@ -291,6 +247,6 @@ VS 中如何在容器中使用，请参考[官方文档](https://docs.microsoft.
 
 1. 远程桌面登录到服务器
 2. 到【网络管理】中禁用本地网络，此时远程桌面断开
-3. 到阿里云 VNC 连接中重新远程到服务器，重新开启被禁用的本地网络
+3. 到云控制台 VNC 连接中重新远程到服务器，重新开启被禁用的本地网络
 
 以上解决办法的根本原因未知。 

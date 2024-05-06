@@ -38,10 +38,10 @@ Websoft9 控制台安装 Teleport 后，还需要完成如下几个步骤，方�
 
    > 如果链接不可访问或不成功，则说明步骤 1-2 没有完成或有问题
 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teleport/teleport-invitelinux-ss-websoft9.png)
+   ![](./assets/teleport-invitelinux-ss-websoft9.png)
 
 5. 使用上述步骤生成的用户名和密码，便可以登录 Teleport 控制台
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teleport/teleport-loginss-websoft9.png)
+   ![](./assets/teleport-loginss-websoft9.png)
 
 ### 管理资源
 
@@ -50,25 +50,21 @@ Websoft9 控制台安装 Teleport 后，还需要完成如下几个步骤，方�
 1. 登录到 Teleport 控制台，Resource > Enroll New Resource
 
 2. 选择一个操作系统，并生成一个客户端安装链接
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teleport/teleport-linuxcreate-websoft9.png)
+   ![](./assets/teleport-linuxcreate-websoft9.png)
 
 3. 登录到远程 Linux 服务器，将上一步的链接复制到命令行界面，开始安装
 
 4. 安装成功后，回到 Teleport 控制台，Teleport 会自动检测到客户端并提示用户根据向导完成后续步骤
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teleport/teleport-connectlinux-ss-websoft9.png)
+   ![](./assets/teleport-connectlinux-ss-websoft9.png)
 
 ## 配置选项{#configs}
 
 - 配置文件：src/config/teleport.yaml
 - 多语言（×）
 - IP:端口的访问方式（×）：自生成证书不安全
+- Two-Factor 认证: 我们在 Teleport 默认配置文件中禁用了 Two-Factor 认证，如需开启请修改配置文件后重建应用。
 
 ## 管理维护{#administrator}
-
-### Two-Factor 认证
-
-我们在 Teleport 默认配置文件中禁用了 Two-Factor 认证，如需开启请修改配置文件后重建应用。
-
 
 ## 故障
 

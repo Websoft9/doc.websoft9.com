@@ -22,16 +22,16 @@ Linux 桌面并不是 Linux 的内核，而是一个扩展的应用程序。这�
 下面是最常见的几个 Linux 桌面版本：  
 
 ### Gnome
-![Gnome Desktop](https://libs.websoft9.com/Websoft9/DocsPicture/en/linux/linux-desktop-gnome-websoft9.jpg)
+![Gnome Desktop](./assets/linux-desktop-gnome-websoft9.jpg)
    
 ### KDE
-![Gnome Desktop](https://libs.websoft9.com/Websoft9/DocsPicture/en/linux/linux-desktop-kde-websoft9.jpg)
+![Gnome Desktop](./assets/linux-desktop-kde-websoft9.jpg)
 
 ### Mate
-![Gnome Desktop](https://libs.websoft9.com/Websoft9/DocsPicture/en/linux/linux-desktop-mate-websoft9.png)
+![Gnome Desktop](./assets/linux-desktop-mate-websoft9.png)
 
 ### Xfce
-![Gnome Desktop](https://libs.websoft9.com/Websoft9/DocsPicture/en/linux/linux-desktop-xfce-websoft9.png)
+![Gnome Desktop](./assets/linux-desktop-xfce-websoft9.png)
 
 ## 连接
 
@@ -49,15 +49,15 @@ Linux 桌面并不是 Linux 的内核，而是一个扩展的应用程序。这�
 1. 打开 开始菜单，输入”mstsc“ ，系统会搜索远程桌面连接工具  
 
 2. 输入 **服务器公网IP** ，点击【连接】  
-   ![image.png](https://libs.websoft9.com/Websoft9/DocsPicture/zh/linux/linux-remoteip-websoft9.png)
+   ![image.png](./assets/linux-remoteip-websoft9.png)
    
    > 确保云控制台中服务器安全组 3389 端口是开启状态
   
 3. 如果出现下面的提示，点击【是】继续  
-   ![image.png](https://libs.websoft9.com/Websoft9/DocsPicture/zh/linux/linux-remotereminder-websoft9.png)
+   ![image.png](./assets/linux-remotereminder-websoft9.png)
   
 4. XRDP 对话框中，输入服务器 root 账号和密码
-  ![enter image description here](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gnome/gnome-login-websoft9.png)
+  ![enter image description here](./assets/gnome-login-websoft9.png)
  
    > 建议采用普通用户登录 Linux 桌面，而不是 root 用户。请参照下面命令创建普通用户：
     ```
@@ -68,7 +68,7 @@ Linux 桌面并不是 Linux 的内核，而是一个扩展的应用程序。这�
 5. 成功登录后，就可以看到 Linux 桌面
 
 6. 以 Gnome 为例，打开：【Setting】>【Region&Lanuage】>【Language】设置中文（重启后生效）
-  ![enter image description here](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gnome/gnome-changelanguage-websoft9.png)
+  ![enter image description here](./assets/gnome-changelanguage-websoft9.png)
 
 ### VNC 连接
 
@@ -85,19 +85,19 @@ VNC 是一种传统的连接 Linux 服务器桌面的方式：
 3. 登录云服务器控制台，为你的云服务器安全组中开启 **5901** 端口
 
 4. 本地电脑打开 VNC 客户端，创建一个VNC连接（服务器公网IP地址：5901）
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/linux/vnc/vnc-connection001-websoft9.png)
+   ![](./assets/vnc-connection001-websoft9.png)
 
 5. 点击【Continue】进入下一步
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/linux/vnc/vnc-connection002-websoft9.png)
+   ![](./assets/vnc-connection002-websoft9.png)
 
 6. 输入VNC密码后登录即可进入图形化界面
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/linux/vnc/vnc-connection003-websoft9.png)
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/linux/vnc/vnc-setlanguage-websoft9.png)
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/linux/vnc/vnc-startuse-websoft9.png)
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/linux/vnc/vnc-gnomehome-websoft9.png)
+   ![](./assets/vnc-connection003-websoft9.png)
+   ![](./assets/vnc-setlanguage-websoft9.png)
+   ![](./assets/vnc-startuse-websoft9.png)
+   ![](./assets/vnc-gnomehome-websoft9.png)
 
 7. 如果服务器处于下图所示的锁定状态，请输入你的**服务器的密码**进行解锁
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/linux/vnc/vnc-connection-rootlogin-websoft9.png)
+   ![](./assets/vnc-connection-rootlogin-websoft9.png)
 
 
 8. VCN 使用过程中可参考如下命令进行维护  
@@ -135,7 +135,7 @@ VNC 是一种传统的连接 Linux 服务器桌面的方式：
 
 3. 远程登录 KDE 桌面，设置语言: [system settings] - [Commone Appearance and Behavior] - [Local] - [Languages]
 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/linux/kde-setlang-websoft9.png)
+   ![](./assets/kde-setlang-websoft9.png)
 
 ### 安装配置桌面{#desktop}
 

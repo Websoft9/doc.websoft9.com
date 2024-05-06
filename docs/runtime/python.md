@@ -18,7 +18,7 @@ import Meta from '../apps/_include/python.md';
 - 命令行：`pip`, `python`
 - 应用服务器：Gunicorn, [uWSGI](https://uwsgi-docs.readthedocs.io/)
 - 二进制编译工具：pyinstaller, cpython
-- 解释器：[CPython](https://libs.websoft9.com/Websoft9/DocsPicture/zh/python/python-interpreter-websoft9.png)
+- 解释器：[CPython](./assets/python-interpreter-websoft9.png)
 
 ## 部署网站
 
@@ -84,7 +84,7 @@ import Meta from '../apps/_include/python.md';
 ### 使用 uWsgi 发布网站
 
 上述的部署 Django 也可以通过 [uWSGI](https://uwsgi-docs.readthedocs.io/) 发布网站（替代 Django 内置的 web 服务器）。
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/python/django-behind-uwsgi-nginx.png)
+![](./assets/runtime-uwsgi-websoft9.png)
 
 下面是一个 uWsgi 应用在 Django 上的示例：
 

@@ -20,13 +20,13 @@ Azure 上的产品计费有如下几个维度：
 
 以我们发布的Gitlab商品为例，通过商品页面的 Plans+Pricing，列出的Software Cost就是镜像定价
 
-![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-fee-websoft9.png)
+![img](../assets/azure-fee-websoft9.png)
 
 
 ## 查看订阅
 
 1. 登录Azure控制台，打开：所有服务->常规->市场，进入门户中云市场频道
-   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-mkbackend-websoft9.png)
+   ![img](../assets/azure-mkbackend-websoft9.png)
 2. 点击“最近创建的内容”，查看已经安装的镜像
 
 ## 获取发票
@@ -35,13 +35,13 @@ Azure 上的产品计费有如下几个维度：
 
 1. 登录Azure控制台门户
 2. 打开成本管理+计费栏目->发票，选择“Azure市场和预留”选项卡，并选择一种需要发票的订阅号
-   ![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-getinvoice0-websoft9.png)
+   ![img](../assets/azure-getinvoice0-websoft9.png)
 
 3. 系统会根据选择自动生成发票，点击“下载发票”即可
-    ![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-getinvoice-websoft9.png)
+    ![img](../assets/azure-getinvoice-websoft9.png)
 
 ## 评价产品
 
 对于使用过的镜像商品，您可以给与评价，千万记得给我们好评哦
 
-![img](https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-review-websoft9.png)
+![img](../assets/azure-review-websoft9.png)

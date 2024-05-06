@@ -9,7 +9,11 @@ tags:
 
 # Oracle Linux
 
-## 关于
+Websoft9 在云端拥有丰富的 Oracle Linux 使用和维护经验，从部署软件到安全管理，我们都提供了全面的支持服务。
+
+我们在主流的云平台上提供了一部分 Oracle Linux 特殊发行版，满足用户的个性化需求。
+
+## 关于 Oracle Linux
 
 [Oracle Linux](https://www.oracle.com/linux/) 是一个完全免费、开源并可以自由分发的 Linux 发行版。  
 

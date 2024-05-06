@@ -5,7 +5,7 @@ slug: /legal/trademark
 
 # 商标条款
 
-![](https://libs.websoft9.com/common/websoft9-logo.png)
+![](/img/websoft9-logo.png)
 
 
 Websoft9 以及相关的图标 Logo 都是长沙网久软件有限公司的注册商标。  

@@ -15,7 +15,7 @@ import Meta from '../apps/_include/dotnet.md';
 
 - 命令行：`dotnet -h`
 - 其他生态工具：ASP.NET, Visual Studio,
-- .NET 运行时[架构图](https://libs.websoft9.com/Websoft9/DocsPicture/zh/dotnet/swimlane-architecture-framework.svg)
+- .NET 运行时 [架构图](./assets/swimlane-architecture-framework.svg)
 
 ## 部署网站{#deploy}
 

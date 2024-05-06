@@ -6,7 +6,7 @@ import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 Websoft9 程序语言环境（Web Runtime）提供一个可靠的程序语言和应用服务器环境，以方便用户**自行部署**应用程序。它支持多种主流的开发语言，如 Java、Python、Node.js、PHP、Go、Ruby和 .NET 等。同时，它基于 Git 的工作流、DevOps 流程，支持域名绑定和 HTTPS 设置，加速应用部署流程，提供极佳的体验。
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/runtime/runtime-web-websoft9.png)
+![](./assets/runtime-web-websoft9.png)
 
 
 ## 原理
@@ -27,7 +27,7 @@ Web Runtime 在 Websoft9 的技术体系中，也是作为一个应用对待，�
 ### 启动环境
 
 1. 登录 Websoft9 控制台，打开："应用商店" 的 **运行环境** 类目
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/runtime/runtime-catalog-websoft9.png)
+   ![](./assets/runtime-catalog-websoft9.png)
 
 2. 任选一个程序语言，例如：Python，点击**安装**
 
@@ -49,10 +49,10 @@ Web Runtime 在 Websoft9 的技术体系中，也是作为一个应用对待，�
 自动部署即将相关的命令写成一个脚本，让容器在启动时可以自动执行部署命令，实现持续部署：
 
 1. 登录 Websoft9 控制台，进入应用的管理界面的 [编排](../quick/manageapp#reup) 标签页
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/websoft9/websoft9-composeedit.png)
+   ![](./assets/runtime-editcompose-websoft9.png)
 
 2. 修改编排文件的 *src/cmd.sh* 脚本（它包含范例），**插入个性化命令**或**去掉范例的注释**，重建应用后生效
-  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/runtime/runtime-composeedit-cmd-websoft9.png)
+  ![](./assets/runtime-composeedit-cmd-websoft9.png)
 
    建议插入到 cmd.sh 的命令主要包括：
 

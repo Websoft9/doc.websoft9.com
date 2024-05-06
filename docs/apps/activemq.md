@@ -23,8 +23,6 @@ import Meta from './_include/activemq.md';
 
 ## 管理维护
 
-### 修改控制台密码
-
-通过应用的**编排**修改密码
+- 修改 ActiveMQ 控制台密码：通过应用的**编排**修改密码
 
 ## 故障

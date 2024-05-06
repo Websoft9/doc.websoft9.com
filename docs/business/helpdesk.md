@@ -12,14 +12,14 @@ Websoft9 客户成功团队从咨询、方案和技术支持全面的服务客�
 
 我们立志于成为用户的 **虚拟数字化专家团队** 的角色，向用户提供开源相关的咨询、部署、交付和连接集成服务，让全球中小企业能够平等的享受开源技术带来的生产力提升。    
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/cst-websoft9.png)
+![](/img/cst-websoft9.png)
 
 
 ## 支持范围
 
 下图是 Websoft9 技术支持的范围和支持方式：  
 
-![img](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/supportmind-websoft9.png)
+![img](/img/supportmind-websoft9.png)
 
 说明：
 
@@ -37,7 +37,7 @@ Websoft9 客户成功团队从咨询、方案和技术支持全面的服务客�
 | --- | --- | --- | --- |
 | 工单（推荐） | 7×24 | 处理故障 | [访问工单系统](https://www.websoft9.com/ticket)|
 | 邮箱 | 7×24 | 处理故障，合作 | help@websoft9.com|
-| 微信（扫一扫） | 5×8| 交流咨询 | ![](https://libs.websoft9.com/websites/zh/wx-lz.png) ![](https://libs.websoft9.com/websites/zh/wx-cdl.png) |
+| 微信（扫一扫） | 5×8| 交流咨询 | ![](/img/wx-lz.png) ![](/img/wx-cdl.png) |
 | 电话 | 7×8| 售前或紧急故障 | **0731-8957 2759**|
 
 
@@ -47,7 +47,7 @@ Websoft9 客户成功团队从咨询、方案和技术支持全面的服务客�
 
 不需要注册，它会通过将内容回复到您的邮箱中。
 
-[![alt text](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/workorder-ui.png "title")](https://www.websoft9.com/ticket)
+[![alt text](/img/workorder-ui.png "Click Here to submit ticket")](https://www.websoft9.com/ticket)
 
 #### 如何查看工单反馈？
 

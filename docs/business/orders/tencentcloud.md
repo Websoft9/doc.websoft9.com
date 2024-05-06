@@ -11,9 +11,10 @@ slug: /order/tencentcloud
 
 订单号是开具发票、申请服务等非常重要的凭据。
 
-1. 登录腾讯云[云市场控制台](https://console.cloud.tencent.com/servicemarket/services)
+1. 登录腾讯云控制台，进入云市场  
+
 2. 默认列出【已购买产品和服务】，以"market.."开头的即订单号
-   ![订单列表](https://libs.websoft9.com/Websoft9/DocsPicture/zh/qcloud/qcloud-ordernumb-websoft9.png)
+   ![订单列表](../assets/qcloud-ordernumb-websoft9.png)
 
 ## 订单改价
 
@@ -23,14 +24,15 @@ slug: /order/tencentcloud
 
 用户在云市场的消费，完善账户信息，且实名认证后，均可以通过腾讯云后台索取发票
 
-1. 登录[云市场控制台](https://console.cloud.tencent.com/servicemarket/services)
-2. 在左侧菜单中打开【发票管理】
-   ![发票列表](https://libs.websoft9.com/Websoft9/DocsPicture/zh/qcloud/qcloud-gotoinvoice-websoft9.png)
-3. 进入发票管理界面，注意区别【腾讯云】和【云市场】两种开票类型
-   ![订单列表](https://libs.websoft9.com/Websoft9/DocsPicture/zh/qcloud/qcloud-invoicestart-websoft9.png)
-4. 提交发票申请，等待5个工作日，我们给您提供电子发票
+1. 登录腾讯云控制台，进入云市场  
 
-点击[此处](https://cloud.tencent.com/document/product/555/7434)，了解关于开具发票的更多注意事项
+2. 在左侧菜单中打开【发票管理】  
+   ![发票列表](../assets/qcloud-gotoinvoice-websoft9.png)
+
+3. 进入发票管理界面，注意区别【腾讯云】和【云市场】两种开票类型
+   ![订单列表](../assets/qcloud-invoicestart-websoft9.png)
+
+4. 提交发票申请，等待5个工作日，我们给您提供电子发票
 
 
 ## 镜像退订
