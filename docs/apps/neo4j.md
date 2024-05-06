@@ -109,14 +109,7 @@ Websoft9 可以为 Neo4j 企业版提供全面的采购与托管支持服务。
 ## 管理维护{#administrator}
 
 
-### 找回密码
-
-Neo4j 官方提供 [Password and user recovery](https://neo4j.com/docs/operations-manual/current/configuration/password-and-user-recovery/) 方案：
-
-1. 配置文件增加配置 `dbms.security.auth_enabled=false`，禁用密码验证
-
-2. 重新设置密码后，复原配置文件 
-
+- **[找回密码](https://neo4j.com/docs/operations-manual/current/configuration/password-and-user-recovery)**：配置文件增加 `dbms.security.auth_enabled=false`，禁用密码验证，然后重置密码后复原。
 
 ## 故障
 

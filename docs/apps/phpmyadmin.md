@@ -42,6 +42,7 @@ import Meta from './_include/phpmyadmin.md';
 - 新建数据库：phpMyAdmin 左侧菜单 > 新建
 - 新建用户：phpMyAdmin 顶部菜单 > 账户
 - 备份恢复：phpMyAdmin 顶部菜单 > 导入或导入
+- 开启远程访问：phpMyAdmin 顶部菜单 > 账户，编辑用户的 "登录信息"，主机名选项中，选择 "任意主机"，点击 "执行" 后生效
 
 ## 配置选项{#configs}
 
@@ -50,16 +51,6 @@ import Meta from './_include/phpmyadmin.md';
 
 ## 管理维护{#administrator}
 
-### 远程访问{#remote}
-
-开启数据库的远程访问，只需将 root 账号的主机名修改为任意主机（%）：
-
-1. phpMyAdmin 顶部菜单 > 账户，编辑用户的 "登录信息"
-2. 主机名选项中，选择 "任意主机"，点击 "执行" 后生效
-
-
-### 文件大小限制
-
-phpMyAdmin 默认可导入的文件大小有限制，可通过修改编排文件的 .env 中的 `UPLOAD_LIMIT=20M` 字段。  
+- **文件大小限制**：phpMyAdmin 默认可导入的文件大小有限制，可通过修改编排文件的 .env 中的 `UPLOAD_LIMIT=20M` 字段
 
 ## 故障

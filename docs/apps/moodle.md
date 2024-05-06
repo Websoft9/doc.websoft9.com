@@ -68,12 +68,6 @@ Moodle 初始化之后，建议向 Moodle 官方注册会员，便于在线安�
 
 ## 管理维护{#administrator}
 
-### 找回密码
-
-Moodle 支持邮件找回密码。如果没有配置邮件，需通过修改数据库的方式找回密码：
-
-1. 使用 phpMyAdmin 等可视化工具，修改 Moodle 数据库的 *mdl_user* 表
-2. 编辑【admin】用户，将其中的 `password` 字段的值用 `21232f297a57a5a743894a0e4a801fc3` 替换
-3. 点击【执行】，新的密码就被重置为`admin`
+- **找回密码**：修改 Moodle 数据库的 *mdl_user* 表，将其中的 `password` 字段的值用 `21232f297a57a5a743894a0e4a801fc3` 替换，密码被重置为`admin`
 
 ## 故障

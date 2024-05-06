@@ -97,14 +97,9 @@ Nextcloud 支持多种流行的企业存储服务，具体使用步骤如下：
 
 ## 管理维护{#administrator}
 
+- **修改 URL**：配置文件参数 `overwrite.cli.url`，默认为通配符，即自动任何 URL 变更
 
-### 修改 URL{#dns}
-
-配置文件参数 `overwrite.cli.url`，默认为通配符，即自动任何 URL 变更
-
-### 备份插件
-
-安装 **[OwnBackup](https://apps.nextcloud.com/apps/ownbackup)** 实现在线备份
+- **在线备份**：安装 **[OwnBackup](https://apps.nextcloud.com/apps/ownbackup)** 实现在线备份
 
 
 ## 故障

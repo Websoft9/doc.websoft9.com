@@ -151,38 +151,24 @@ Successfully added user: { "user" : "webs_admin", "roles" : [ "userAdminAnyDatab
 
 ## 管理维护{#administrator}
 
-### 关闭 MongoDB 访问认证
+- **关闭 MongoDB 访问认证**：Websoft9 控制台修改**编排文件**，注释 **MONGO_INITDB_** 开头的环境变量，重建应用
 
-Websoft9 控制台修改**编排文件**，注释 **MONGO_INITDB_** 开头的环境变量，重建应用
-
-### 忘记管理员密码
-
-1. 关闭 MongoDB 访问认证
-
-2. 进入 mongodb 容器中运行重置密码命令
+- **忘记管理员密码**：关闭 MongoDB 访问认证后，进入容器运行重置命令，然后再复原
    ```
    mongo
    > db = db.getSiblingDB('admin')
    admin
    > db.changeUserPassword("root", "NEWPASSWORD")
    ```
-3. 复原编排文件，重建应用
 
-### 备份
-
-**mongodump** 和 **mongorestore** 是自带的 MongoDB 备份与恢复工具（[MongoDB Backup Methods](https://docs.mongodb.com/manual/core/backups/) ）
-
-1. 进入 MongoDB 容器
-2. 使用 **mongodump** 工具，导出数据库
-   ```
+- 备份：**mongodump** 和 **mongorestore** 是自带的 MongoDB 备份与恢复工具（[MongoDB Backup Methods](https://docs.mongodb.com/manual/core/backups/) ）
+  ```
    # 备份
    mongodump --authenticationDatabase admin --username root --password PASSWORD -d DATABASE_NAME -h localhost
-   ```
-3. 使用 **mongorestore** 工具，恢复数据库
-   ```
-   mongorestore --authenticationDatabase admin --username root --password PASSWORD PATH_TO_BACKUP_FILE
-   ```
 
+   # 恢复
+   mongorestore --authenticationDatabase admin --username root --password PASSWORD PATH_TO_BACKUP_FILE
+  ```
 
 ## 故障
 

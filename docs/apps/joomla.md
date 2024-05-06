@@ -50,22 +50,25 @@ Joomla 的模板安装，主要通过上传模板安装包的方式实现：
 ## 配置选项{#configs}
 
 - [Joomla! Extensions Directory™](https://extensions.joomla.org/) 
+
 - SMTP（✅）：后台【系统】>【全局设置】>【服务器设置】，服务器邮件类型选择：SMTP
+
 - 多语言（✅）：后台【扩展管理】>【语言管理】中安装语言，然后可选择所需的语言
+
 - 组件多语言（✅）
+
 - 缓存：后台【系统设置】>【清理过期缓存】
+
 - 配置文件：/path/configuration.php
+
 - [Joomla API](https://api.joomla.org/)
+
 - 后台地址：`http://URL/administrator`
+
+- 在线升级（✅）
 
 ## 管理维护{#administrator}
 
-### 在线备份
-
-通过安装 Joomla 扩展 [Akeeda](https://www.akeebabackup.com/download.html)，可以实现后台在线备份。
-
-### 在线升级
-
-Joomla 内置在线升级的功能
+- 在线备份：通过安装 Joomla 扩展 [Akeeda](https://www.akeebabackup.com/download.html)，可以实现后台在线备份
 
 ## 故障

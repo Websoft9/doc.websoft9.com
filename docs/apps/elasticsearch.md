@@ -74,28 +74,17 @@ Elasticsearch 应用中默认不含 [Kibana](./kibana)，用户可以通过 Webs
 - [Elasticsearch API](https://www.elastic.co/guide/en/elasticsearch/reference/current/http-clients.html)
 - 多语言（✅）：Kibana 配置文件中增加 `i18n.locale: "zh-CN"`
 - 开源许可：[ELASTIC-LICENSE](https://github.com/elastic/elasticsearch/blob/master/licenses/ELASTIC-LICENSE-2.0.txt)
+- SMTP（√）
 
 ## 管理维护{#administrator}
 
-### 配置 SMTP
+- [Email 配置](https://www.elastic.co/guide/en/elasticsearch/reference/current/actions-email.html)：Kibana 控制台，依次打开：【Stack Management】>【Watcher】，增加一个 [Email Action](https://www.elastic.co/guide/en/elasticsearch/reference/current/actions.html)
 
-1. 登录 Kibana 控制台，依次打开：【Stack Management】>【Watcher】，增加一个 [Email Action](https://www.elastic.co/guide/en/elasticsearch/reference/current/actions.html)
+- 重置密码：ElasticSearch 容器中运行命令 `/usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic`
 
-3. 增加 [Email 配置](https://www.elastic.co/guide/en/elasticsearch/reference/current/actions-email.html)
+- 备份与恢复：Elastic 内置快照[备份功能](https://www.elastic.co/guide/en/elasticsearch/reference/7.13/snapshot-restore.html)）
 
-### 重置密码
-
-ElasticSearch 容器中运行下面的重置密码命令即可：
-
-   ```
-   /usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic
-   ```
-
-### 备份与恢复
-
-Elastic 内置快照备份功能（参考：[官方文档](https://www.elastic.co/guide/en/elasticsearch/reference/7.13/snapshot-restore.html)）
-
-## 故障
+## 问题与故障
 
 #### ERROR: exit code 137？
 
@@ -116,8 +105,6 @@ kibana_task_manager_7.17.4_001/_mapping?timeout=60s error: [cluster_block_except
 ```
 
 ES 对磁盘空间有较高的要求，建议准备足够的空间。 
-
-## 常见问题
 
 #### Elastic 具体包含哪些应用？
 

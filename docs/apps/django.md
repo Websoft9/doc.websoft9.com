@@ -12,16 +12,10 @@ import Meta from './_include/django.md';
 
 ## 入门指南{#guide}
 
-### 原理
-
-Django 生产应用如下图所示的架构： 
-
-![Python 生产环境架构](https://libs.websoft9.com/Websoft9/DocsPicture/zh/python/python-webhttpstructure003-websoft9.jpg)
-
-
-
-
 ## 配置选项{#configs}
+
+- 架构图
+  ![Python 生产环境架构](./assets/django-arch-websoft9.jpg)
 
 ## 管理维护{#administrator}
 

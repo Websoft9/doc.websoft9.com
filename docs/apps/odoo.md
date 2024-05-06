@@ -78,9 +78,7 @@ Websoft9 提供 Odoo 企业版的采购、交付和全面托管服务：
 
 ## 管理维护{#administrator}
 
-### 数据库管理{#dbadmin}
-
-Odoo 自带数据库管理器，在 Odoo 登录页面的 "Manage Database" 链接中进入。它支持创建、复制、备份、恢复和删除等操作。
+- **数据库管理**：Odoo 自带数据库管理器，在 Odoo 登录页面的 "Manage Database" 链接中进入。它支持创建、复制、备份、恢复和删除等操作。
 
 
 ## 故障

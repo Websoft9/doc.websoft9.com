@@ -22,6 +22,14 @@ Websoft9 控制台安装 Graylog 后，通过 "我的应用" 查看应用详情�
 - 后台界面
   ![](./assets/graylog-console-websoft9.png)
 
+## 企业版
+
+Websoft9 是 Graylog 企业版的合作伙伴，Graylog 企业版的定价因素包括：  
+
+* 日志存储量：Graylog 企业版主要以日志存储量作为定价的参考指标
+* 集群：Graylog 集群部署也是定价的参考指标之一
+* ES：Elasticsearch 开源版支持集群，如果需要考虑更多功能， 需 订阅 Elasticsearch 商业版。
+
 ## 配置选项{#configs}
 
 - SMTP（✅）：配置文件的 **transport_email** 参数实现
@@ -36,20 +44,10 @@ Websoft9 控制台安装 Graylog 后，通过 "我的应用" 查看应用详情�
     ```
 - [Graylog API](https://docs.graylog.org/v1/docs/rest-api)
 
-## 企业版
-
-Websoft9 是 Graylog 企业版的合作伙伴，Graylog 企业版的定价因素包括：  
-
-* 日志存储量：Graylog 企业版主要以日志存储量作为定价的参考指标
-* 集群：Graylog 集群部署也是定价的参考指标之一
-* ES：Elasticsearch 开源版支持集群，如果需要考虑更多功能， 需 订阅 Elasticsearch 商业版。
-
 ## 管理维护{#administrator}
 
-### 集群
-
-Graylog 支持复杂的[集群](https://docs.graylog.org/v1/docs/multinode-setup)部署：  
-![Graylog 集群部署架构图](./assets/graylog-hasetup-websoft9.png)
+- 集群： Graylog 支持复杂的[集群](https://docs.graylog.org/v1/docs/multinode-setup)部署
+  ![Graylog 集群部署架构图](./assets/graylog-hasetup-websoft9.png)
 
 ## 故障
 

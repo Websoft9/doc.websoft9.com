@@ -71,24 +71,8 @@ import Meta from './_include/alfresco.md';
 
 ## 管理维护{#administrator}
 
-
-### 找回密码
-
-如果用户忘记了密码，需要通过修改数据库中的密码信息来重置密码：
-
-1. 使用 pgAdmin 连接到 Alfresco 应用的 PostgreSQL 数据库
-
-2. 运行如下的修改密码命令（新的密码设置为 **admin**）
-   ```
-   UPDATE alf_node_properties SET string_value='209c6174da490caeb422f3fa5a7ae634' WHERE node_id=4 and qname_id=10
-   ```
-
-3. 重启应用后生效
-
-### 备份与恢复
-
-参考官方文档：[Back up and restore](https://docs.alfresco.com/content-services/community/admin/backup-restore/)
-
+- 找回密码：连接到数据库，运行 SQL 命令 `UPDATE alf_node_properties SET string_value='209c6174da490caeb422f3fa5a7ae634' WHERE node_id=4 and qname_id=10`，密码重置为 **admin**
+- 备份与恢复：[Back up and restore](https://docs.alfresco.com/content-services/community/admin/backup-restore/)
 
 ## 故障
 

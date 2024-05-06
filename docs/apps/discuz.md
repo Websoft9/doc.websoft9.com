@@ -32,42 +32,6 @@ Discuz 有非常强大生态，官方[应用中心](https://addon.dismall.com/) 
 
 登录到 Discuz 后台，通过 "模板" 菜单 > "获取更多模板" 连接应用中心，下载所需的模板。  
 
-
-## 配置选项{#configs}
-
-- Discuz 配置文件（已挂载） */var/www/html/config/config_default.php*  
-- PHP 配置文件（已挂载） */usr/local/etc/php/conf.d/php_exra.ini*  
-- 多语言（×）
-- 移动端：官方没有提供移动端
-- 上传附件限制：**用户组**编辑页面中的 "论坛相关" > "附件相关" 菜单进行设置
-
-## 管理维护{#administrator}
-
-### 设置伪静态
-
-1. Discuz 后台，依次打开：全局 > SEO 优化设置 > URL 静态化 
-
-2. 勾选一个需要静态化的页面类型，"提交"后生产静态化规则
-
-3. 将静态化中的 Nginx 规则，配置到 Websoft9 控制台 **网关** 中 Discuz 应用所对应的 Proxy Hosts 中。
-
-
-### 找回管理员密码{#resetpw}
-
-1. 在 Disucz 卷存的中找到 *uc_server/data/config.inc.php* 文件
-
-2. 替换 `config.inc.php` 下面两个同名属性，重启应用后，Ucenter 创始人的密码变为: `123456789`
-   ```
-   define('UC_FOUNDERPW','047099adb883dc19616dae0ef2adc5b6');
-   define('UC_FOUNDERSALT','311254');
-   ```
-
-3. 访问 `http://服务器公网IP/uc_server`，使用新密码登录，然后更改管理员密码
-
-### 更换 URL{#url}
-
-Discuz 更换域名非常繁琐，参考社区方案：[discuz! X3 更改域名全程记录](https://www.discuz.net/thread-3528253-1-1.html)
-
 ### 配置 SMTP{#smtp}
  
 1. Discuz 后台，打开【全局】>【站点信息】，设置全局管理员邮箱为发信人邮件地址
@@ -79,13 +43,38 @@ Discuz 更换域名非常繁琐，参考社区方案：[discuz! X3 更改域名�
     
 3. 设置完成后，点击 "检测" 标签页，测试服务是否成功
 
-### 备份与恢复
 
-Discuz 后台提供了非常简单实用的在线备份功能：【后台】>【站长】>【数据库】，进入备份设置
+### 设置伪静态
 
-### 升级
+1. Discuz 后台，依次打开：全局 > SEO 优化设置 > URL 静态化 
 
-Discuz 并不容易，官方提供的是 [手工升级方案](https://gitee.com/Discuz/DiscuzX/wikis/%E5%8D%87%E7%BA%A7%E6%96%B9%E6%B3%95?sort_id=9978)
+2. 勾选一个需要静态化的页面类型，"提交"后生产静态化规则
+
+3. 将静态化中的 Nginx 规则，配置到 Websoft9 控制台 **网关** 中 Discuz 应用所对应的 Proxy Hosts 中。
+
+
+## 配置选项{#configs}
+
+- Discuz 配置文件（已挂载） */var/www/html/config/config_default.php*  
+- PHP 配置文件（已挂载） */usr/local/etc/php/conf.d/php_exra.ini*  
+- 多语言（×）
+- 移动端：官方没有提供移动端
+- 上传附件限制：**用户组**编辑页面中的 "论坛相关" > "附件相关" 菜单进行设置
+
+## 管理维护{#administrator}
+
+- **找回密码**：*uc_server/data/config.inc.php* 文件中插入下面两行，Ucenter 创始人的密码重置: `123456789`，处理完成后复原
+   ```
+   define('UC_FOUNDERPW','047099adb883dc19616dae0ef2adc5b6');
+   define('UC_FOUNDERSALT','311254');
+   ```
+
+- **更换 URL**：[discuz! X3 更改域名全程记录](https://www.discuz.net/thread-3528253-1-1.html)
+
+- **备份与服务**：Discuz 后台提供了非常简单实用的在线备份功能：【后台】>【站长】>【数据库】，进入备份设置
+
+- **升级**：[手工升级方案](https://gitee.com/Discuz/DiscuzX/wikis/%E5%8D%87%E7%BA%A7%E6%96%B9%E6%B3%95?sort_id=9978)
+
 
 ## 故障
 

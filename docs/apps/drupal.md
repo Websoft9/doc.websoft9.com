@@ -46,23 +46,11 @@ Drupal 支持多语言，但需要先安装再设置：
 
 ## 管理维护{#administrator}
 
-### 重置管理员密码{#resetpw}
+- [重置密码](https://www.drupal.org/node/44164) 
 
-参考：[官方重置密码](https://www.drupal.org/node/44164) 
+- 更换 URL：修改 Drupal 根目录下 `.htaccess` 中域名有关的值
 
-### 更换 URL{#url}
-
-更换域名后，修改 Drupal 根目录下 `.htaccess` 中域名有关的值
-
-### 在线备份
-
-通过安装 Drupal 扩展 [Backup and Migrate](https://www.drupal.org/project/backup_migrate)，可以实现后台在线备份和恢复：
-
-1. 获取 **Backup and Migrate** 下载地址
-
-2. 登录 Drupal 后台，通过上传压缩文件的方式安装 **Backup and Migrate** ，启用之
-
-3. 打开：【管理】>【配置】，打开【Backup and Migrate】，设置备份策略
+- 在线备份：安装 Drupal 扩展 [Backup and Migrate](https://www.drupal.org/project/backup_migrate) 可实现在线备份策略设置
 
 
 ## 故障

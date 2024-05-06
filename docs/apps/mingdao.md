@@ -66,9 +66,7 @@ Websoft9 具备基于明道云的软件快速构建能力。我们可以为客�
 
 ## 管理维护{#administrator}
 
-### 更换 URL{#url}
-
-服务器 IP 变化后，需要修改 docker-compose 配置文件，修改 ENV_MINGDAO_HOST 为新的IP，再用重启服务
+- **更换 URL**：URL 变化后，需修改 docker-compose 配置文件，修改 **ENV_MINGDAO_HOST** 为新的 URL，重启容器后生效
 
 ## 故障
 

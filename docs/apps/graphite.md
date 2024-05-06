@@ -23,8 +23,6 @@ import Meta from './_include/graphite.md';
 
 ## 管理维护{#administrator}
 
-### 修改管理员密码
-
-本地浏览器访问应用路径： **/admin/auth/user/1/**，进入用户编辑界面，点击 【this form】即会提示输入新密码。
+- **修改管理员密码**：本地浏览器访问应用路径： **/admin/auth/user/1/**，进入用户编辑，点击 【this form】改密。
 
 ## 故障

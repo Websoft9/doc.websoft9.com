@@ -52,14 +52,9 @@ Prestashop8.0 不支持后台在线连接 Marketplace，故安装市场的扩展
 
 ## 管理维护{#administrator}
      
+- **数据库备份**：PrestaShop 提供了后台数据库备份功能："Advanced Parameters" > "SQL Manager"
 
-### 数据库备份
-
-PrestaShop 提供了后台数据库备份功能："Advanced Parameters" > "SQL Manager"
-
-### 在线升级
-
-PrestaShop 模块管理中，安装并启用 **1-Click Upgrade**
+- **在线升级**：PrestaShop 模块管理中，安装并启用 **1-Click Upgrade**
 
 
 ## 故障

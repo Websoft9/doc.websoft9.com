@@ -17,7 +17,7 @@ import Meta from './_include/scratch.md';
 Websoft9 控制台安装 Scratch 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
 
 1. 浏览器直接访问，就进入了Scratch
-   ![Scratch初始化页面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/scratch/scratch-gui-websoft9.png)
+   ![Scratch初始化页面](./assets/scratch-gui-websoft9.png)
 
 2. Scratch首次加载数据超过 20 M，如果您的网络带宽不足的话，加载会很慢，耐心等待
 

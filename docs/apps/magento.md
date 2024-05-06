@@ -70,48 +70,38 @@ Access Key 是 Magento 使用 Marketplace 资源的凭据：
 ## 配置选项{#configs}
 
 - [扩展管理](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/tutorials/extensions)
+
 - 命令行： `magento list`
+
 - [API](https://devdocs.magento.com/guides/v2.2/get-started/bk-get-started-api.html)
+
 - 多语言（✅）：需下载语言包后导入
-- 备份：
+
+- 在线备份："Stores" > "Configuration" > "ADVANCED" > "Backup Settings"
+
+- SMTP（✅）：[Email communications](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/communications/email-communications)
 
 ## 管理维护{#administrator}
 
-### 配置 SMTP{#smtp}
-     
-请参照官方的 [SMTP 配置方案](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/communications/email-communications)
 
-### 更换 URL 额外设置{#url}
-
-Websoft9 控制台更换 Magneto 域名后，还需通过 CLI 更新 Magento URL:
-   
+- **更换 URL 额外设置**：Websoft9 控制台更换 Magneto 域名后，还需通过 CLI 更新 Magento URL
    ```shell
    php bin/magento config:set web/unsecure/base_url http://www.mydomain.com/ # 修改成您的实际域名，必须以 / 结束
    php bin/magento config:set web/secure/base_url http://www.mydomain.com/ # 修改成您的实际域名，必须以 / 结束
    ```
 
-### HTTPS 额外设置{#https}
+- **HTTPS 额外设置**：Websoft9 控制台设置 Magento 的 HTTPS 后，还需通过 CLI 命令进行配置：
+  ```
+  #1 set your url
+  php bin/magento setup:store-config:set --use-secure=1 --use-secure-admin=1 --base-url-secure="https://www.yourdomain.com/"
 
-Websoft9 控制台设置 Magento 的 HTTPS 后，还需通过 CLI 命令进行配置：
+  #2 flush cache
+  php bin/magento cache:flush 
+  ```
 
-```
-#1 set your url
-php bin/magento setup:store-config:set --use-secure=1 --use-secure-admin=1 --base-url-secure="https://www.yourdomain.com/"
-
-#2 flush cache
-php bin/magento cache:flush 
-```
-
-### 在线备份
-
-Magento 支持在线备份方案："Stores" > "Configuration" > "ADVANCED" > "Backup Settings"
-
-### 升级
-
-Magento 升级非常复杂，升级需参考的文档：
-
-- [Recommended reading for upgrade planning](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/resources/recommended-reading)
-- [Perform an upgrade](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/implementation/perform-upgrade)
+- **升级**：Magento 升级非常复杂，参考相关文档 
+  - [Recommended reading for upgrade planning](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/resources/recommended-reading)
+  - [Perform an upgrade](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/implementation/perform-upgrade)
 
 ## 故障
 

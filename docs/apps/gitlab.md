@@ -79,22 +79,12 @@ GitLab-EE（企业版），通过：【管理中心】>【许可证】导入后�
 - 配置文件（已挂载）：*/etc/gitlab/gitlab.rb*
 - [GitLab 架构](https://docs.gitlab.com/ee/development/architecture.html)：GitLab 包含[数十种组件](https://docs.gitlab.com/ee/development/architecture.html#component-list)，可通过 */opt/gitlab/version-manifest.txt* 查看
 
+- GitLab Runner：GitLab Runner 是额外的技术组件，需自行部署
+
 ## 管理维护{#administrator}
 
-### GitLab Runner
-
-GitLab Runner 是额外的技术组件，需自行部署
-
-### 重置管理员密码
-
-忘记管理员密码时，需 [reset_user_password](https://docs.gitlab.com/13.11/ee/security/reset_user_password.html)：  
-
-1. 进入 GitLab 容器的 exec 模式
-2. 输入 `gitlab-rails console` 命令，根据提示完成后续步骤
-
-### 修改仓库目录
-
-参考：[Repository storage paths](https://docs.gitlab.com/ee/administration/repository_storage_paths.html)
+- **重置管理员密码**：进入容器的命令模式，运行 `gitlab-rails console` 命令[重置密码](https://docs.gitlab.com/13.11/ee/security/reset_user_password.html)
+- **修改仓库目录**：[Repository storage paths](https://docs.gitlab.com/ee/administration/repository_storage_paths.html)
 
 ## 故障
 

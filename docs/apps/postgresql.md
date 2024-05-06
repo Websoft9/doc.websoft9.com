@@ -32,6 +32,13 @@ import Meta from './_include/postgresql.md';
     psql -d postgres -U postgres
     ```
 
+### 常用 SQL 语句
+
+```
+# 修改密码
+ALTER USER postgres WITH PASSWORD 'postgres'
+```
+
 ### 图形化工具{#pgadmin}
 
 参考：[pgAdmin](./pgadmin)
@@ -64,11 +71,6 @@ PostgreSQL 应用默认已经绑定到宿主机外网端口，只需要确保安
 
 ## 管理维护{#administrator}
 
-### 重置密码
-
-在容器命令模式下，使用 `psql -d postgres -U postgres` 无需验证下登录，再修改密码：
-```
-ALTER USER postgres WITH PASSWORD 'postgres'
-```
+- **重置密码**：在容器命令模式下，使用 `psql -d postgres -U postgres` 无需验证下登录，再运行 SQL 修改密码的语句
 
 ## 故障

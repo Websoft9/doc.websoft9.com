@@ -68,7 +68,6 @@ Windows 和 Linux 下安装的 SQL Server，只要服务器端允许，都可以
 #### Windows 系统端{#remotefirewall}
    
 1. Windows 系统中的 "Windows防火墙"，为 SQL Server 配置防火墙 **允许** 策略  
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver2014/sqlserver-firewall002-websoft9.png)
 
 2. 在云控制台中，开启服务器安全组的**1433端口**  
 
@@ -107,10 +106,6 @@ Windows 下的 SQL Server 启用 sa 密码的步骤：
 
 - [Express 升级到 SQL Server 的其他版本](https://docs.microsoft.com/zh-cn/sql/database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup?view=sql-server-ver15)
 
-
-## 配置选项{#configs}
-
-- cli：`sqlite3 --help` 
 
 ## 管理维护{#administrator}
 

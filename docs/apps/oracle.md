@@ -127,20 +127,7 @@ Websoft9 控制台安装 Oracle Database 应用，然后再 "我的应用" 查�
 
 ## 管理维护{#administrator}
 
-### 备份与恢复
-
-Oracle 备份与恢复主要通过 Recovery Manager (RMAN) 实现。  
-
-  ```
-  $ docker exec -it oracle rman
-
-  Recovery Manager: Release 21.0.0.0.0 - Production on Fri Jul 8 03:52:17 2022
-  Version 21.3.0.0.0
-
-  Copyright (c) 1982, 2021, Oracle and/or its affiliates.  All rights reserved.
-
-  RMAN>
-  ```
+- **备份与恢复**：Oracle 备份与恢复主要通过 Recovery Manager (RMAN) 实现，命令为 `rman`
 
 
 ## 问题与故障

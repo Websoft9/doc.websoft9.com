@@ -33,8 +33,6 @@ Websoft9 控制台安装 Redis 后，通过 "我的应用" 查看应用详情，
 
 ## 管理维护{#administrator}
 
-#### 重置密码
-
-进入 Redis 容器的命令行模式，运行 `redis-cli` 即进入交互式，再运行 `CONFIG SET requirepass "newpassword"`
+- 重置密码：进入 Redis 容器的命令行模式，运行 `redis-cli` 即进入交互式，再运行 `CONFIG SET requirepass "newpassword"`
 
 ## 故障

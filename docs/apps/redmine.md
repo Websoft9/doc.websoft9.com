@@ -34,19 +34,6 @@ import Meta from './_include/redmine.md';
 - 下载解压插件后，重启容器生效
 - 插件版本不匹配会导致容器无法启动，需卸载插件
 
-## 配置选项
-
-- [插件中心](https://www.redmine.org/plugins)（✅）
-- 多语言（✅）：支持项目多语言和用户多语言
-- 站点目录（已挂载）：*/usr/src/redmine*  
-- 配置目录（已挂载）：*/usr/src/redmine/config*  
-- 配置文件（已挂载）：*/usr/src/redmine/config/configuration.yml*  
-- [CLI](https://pypi.org/project/Redmine-CLI/)
-- [API](https://www.redmine.org/projects/redmine/wiki/Rest_api)
-- [SMTP](https://www.redmine.org/projects/redmine/wiki/EmailConfiguration)
-
-## 管理维护{#administrator}
-
 ### 设置 SMTP{#smtp}
 
 1. Redmine 容器中修改 `configuration.yml` 文件，在 production 下添加 SMTP:  
@@ -71,10 +58,21 @@ import Meta from './_include/redmine.md';
 
 3. Redmine 控制台设置 SMTP：“管理” > "配置" > "邮件通知"
 
+## 配置选项
 
-### 备份与恢复
+- [插件中心](https://www.redmine.org/plugins)（✅）
+- 多语言（✅）：支持项目多语言和用户多语言
+- 站点目录（已挂载）：*/usr/src/redmine*  
+- 配置目录（已挂载）：*/usr/src/redmine/config*  
+- 配置文件（已挂载）：*/usr/src/redmine/config/configuration.yml*  
+- [CLI](https://pypi.org/project/Redmine-CLI/)
+- [API](https://www.redmine.org/projects/redmine/wiki/Rest_api)
+- [SMTP](https://www.redmine.org/projects/redmine/wiki/EmailConfiguration)
 
-参考：[《RedmineBackupRestore》](https://redmine.org/projects/redmine/wiki/RedmineBackupRestore)
+## 管理维护{#administrator}
+
+
+- 备份与恢复：[《RedmineBackupRestore》](https://redmine.org/projects/redmine/wiki/RedmineBackupRestore)
 
 ## 故障
 

@@ -62,14 +62,9 @@ import Meta from './_include/owncloud.md';
 
 ## 管理维护{#administrator}
 
+- **修改 URL**：修改 OWNCLOUD_DOMAIN 和 OWNCLOUD_TRUSTED_DOMAINS [环境变量](https://doc.owncloud.com/server/10.13/admin_manual/configuration/server/config_sample_php_parameters.html#define-list-of-trusted-domains-that-users-can-log-into)，更改 config.php 无效
 
-### 修改 URL{#dns}
-
-容器通过[设置](https://doc.owncloud.com/server/10.13/admin_manual/configuration/server/config_sample_php_parameters.html#define-list-of-trusted-domains-that-users-can-log-into)：OWNCLOUD_DOMAIN 和 OWNCLOUD_TRUSTED_DOMAINS 环境变量修改，而 config.php 设置是无效的。
-
-### 在线备份
-
-通过 **[OwnBackup](https://en.websoft9.com/xdocs/owncloud-image-guide/#using-apps)** 应用实现在线备份
+- **在线备份**：通过 **[OwnBackup](https://en.websoft9.com/xdocs/owncloud-image-guide/#using-apps)** 应用实现在线备份
 
 
 ## 故障

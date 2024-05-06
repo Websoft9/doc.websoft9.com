@@ -38,6 +38,24 @@ import Meta from './_include/onlyofficedocs.md';
 
 集成到云盘软件后，打开文档，通过 ONLYOFFICE Docs  【文件】-【另存为】或【下载为】，将文件保存为 PDF 文件。
 
+### 自签名配置 HTTPS
+
+ONLYOFFICE Docs [自签名的证书](https://helpcenter.onlyoffice.com/installation/docs-community-install-docker.aspx) 配置如下：
+
+1. ONLYOFFICE Docs 编排文件，为容器 443 端口映射到宿主机上（假设为：8089）
+
+2. 进入 ONLYOFFICE Docs 容器，下载并运行创建证书的脚本
+   ```
+   wget -N -P /var/www/onlyoffice/Data https://websoft9.github.io/docker-library/apps/onlyofficedocs/src/createCA.sh
+   bash /var/www/onlyoffice/Data/createCA.sh
+   ```
+3. Modify the container configuration file
+   ```
+   sed -i 's/"rejectUnauthorized": true/"rejectUnauthorized": false/g' /etc/onlyoffice/documentserver/default.json
+   supervisorctl restart all
+   ```
+4. 退出 ONLYOFFICE Docs 容器，重启通过 `http://URL:8089` 访问
+
 ## 企业版
 
 ### 为什么通过 Websoft9 购买？
@@ -72,35 +90,7 @@ ONLYOFFICE Docs 同时连接数是指：所有用户在同一时间以**编辑�
 
 ## 管理维护{#administrator}
 
-#### 启用 JWT Key
-
-修改 ONLYOFFICE Docs 应用**编排文件**  `.env` 中 JWT_ENABLED=true 即可。  
-
-```
-# [true, false]
-JWT_ENABLED=false
-JWT_SECRET=sBPF1mjEbQ2bzj31entX
-JWT_HEADER=Authorization
-JWT_IN_BODY=false
-```
-
-#### 自签名配置 HTTPS
-
-ONLYOFFICE Docs [自签名的证书](https://helpcenter.onlyoffice.com/installation/docs-community-install-docker.aspx) 配置如下：
-
-1. ONLYOFFICE Docs 编排文件，为容器 443 端口映射到宿主机上（假设为：8089）
-
-2. 进入 ONLYOFFICE Docs 容器，下载并运行创建证书的脚本
-   ```
-   wget -N -P /var/www/onlyoffice/Data https://websoft9.github.io/docker-library/apps/onlyofficedocs/src/createCA.sh
-   bash /var/www/onlyoffice/Data/createCA.sh
-   ```
-3. Modify the container configuration file
-   ```
-   sed -i 's/"rejectUnauthorized": true/"rejectUnauthorized": false/g' /etc/onlyoffice/documentserver/default.json
-   supervisorctl restart all
-   ```
-4. 退出 ONLYOFFICE Docs 容器，重启通过 `http://URL:8089` 访问
+- **启用 JWT Key**：修改 ONLYOFFICE Docs 应用**编排文件**  `.env` 中 JWT_ENABLED=true 即可 
 
 ## 故障
 

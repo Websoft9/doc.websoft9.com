@@ -43,18 +43,15 @@ Websoft9 控制台安装 MinIO 后，通过 "我的应用" 查看应用详情，
 
 ## 管理维护{#administrator}
 
-### 安装 CLI{#install-cli}
+- **安装 CLI**：Websoft9 控制台进入 MinIO 容器的命令模式，安装并启用 CLI
+   ```
+   curl https://dl.min.io/client/mc/release/linux-amd64/mc \
+   --create-dirs \
+   -o $HOME/minio-binaries/mc
+   chmod +x $HOME/minio-binaries/mc
+   export PATH=$PATH:$HOME/minio-binaries/
 
-Websoft9 控制台进入 MinIO 容器的命令模式，安装并启用 CLI
-
-```
-curl https://dl.min.io/client/mc/release/linux-amd64/mc \
-  --create-dirs \
-  -o $HOME/minio-binaries/mc
-chmod +x $HOME/minio-binaries/mc
-export PATH=$PATH:$HOME/minio-binaries/
-
-mc --help    
-```
+   mc --help    
+   ```
 
 ## 故障

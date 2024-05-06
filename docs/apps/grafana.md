@@ -38,9 +38,7 @@ Websoft9 控制台安装 Grafana 后，通过 "我的应用" 查看应用详情�
 
 ## 管理维护{#administrator}
 
-### SMTP
-
-配置文件中增加 SMTP 配置段
+- **SMTP 配置**：配置文件中增加 SMTP 配置段
 
    ```
    #################################### SMTP / Emailing #####################
@@ -62,18 +60,9 @@ Websoft9 控制台安装 Grafana 后，通过 "我的应用" 查看应用详情�
    templates_pattern = emails/*.html
    ```
 
+- **重置管理员密码**：容器中运行命令 `grafana-cli admin reset-admin-password admin123`
 
-### 重置管理员密码{#resetpw}
-
-容器中运行如下命令：  
-
-```
-grafana-cli admin reset-admin-password admin123
-```
-
-### 升级
-
-请参考官方提供的升级文档：[Upgrading Grafana](https://grafana.com/docs/installation/upgrading/)
+- **升级**：[Upgrading Grafana](https://grafana.com/docs/installation/upgrading/)
 
 ## 问题和故障
 

@@ -65,16 +65,11 @@ Websoft9 控制台安装 CloudBeaver 后，通过 "我的应用" 查看应用详
 - 数据库连接驱动：JDBC
 - 配置文件：/path/GlobalConfiguration/.dbeaver/data-sources.json
 - [支持的数据库](https://dbeaver.com/databases/)
+- 导出数据（✅）：仅支持表格导出
 
 ## 管理维护{#administrator}
 
-### 驱动管理
-
-[Driver managements](https://cloudbeaver.io/docs/Driver-managements/)
-
-### 导出数据
-
-![](./assets/cloudbeaver-exportdata-websoft9.png)
+- 驱动管理：[Driver managements](https://cloudbeaver.io/docs/Driver-managements/)
 
 ## 故障
 

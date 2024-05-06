@@ -38,18 +38,10 @@ Websoft9 控制台安装 ERPNext 后，通过 "我的应用" 查看应用详情�
 
 ## 管理维护{#administrator}
 
-### 重置管理员密码{#resetpw}
-
-如果用户忘记了 ERPNext 密码，可以通过如下的命令直接设置一个新密码：
-
-```
-export GIT_PYTHON_REFRESH=quiet && /usr/local/bin/bench set-admin-password newpassword"
-```
-### 备份
-
-支持自动备份和命令行备份两种方式： 
+- 重置管理员密码：进入 ERPNext 容器，运行命令 `export GIT_PYTHON_REFRESH=quiet && /usr/local/bin/bench set-admin-password newpassword"`
 
 - 自动备份（建议）：登录 ERPNext 后，依次打开 【Settings】>【System Settings】
+
 - [命令行备份](https://frappeframework.com/docs/user/en/bench/reference/backup)：`bench --site URL backup`
 
 
@@ -80,20 +72,13 @@ hostnamectl set-hostname erpnext
 
 这个并不是服务器端的问题，只要更新浏览器即可。
 
-#### 运行 Bench 时报错 "You should not run this command as root" when run bench?
+#### 运行 Bench 命报错 ?
 
-Bench 只能通过 frapper 运行,必须先切换到此用户
-
-```shell
-su - frapper
-```
-
-#### ERPNext 安装向导最后报错？
-
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/erpnext/erpnext-wizarderror-websoft9.png)
-
-原因：未知   
-方案：重复安装几次直至成功   
+错误信息：You should not run this command as root" when run bench   
+问题原因：Bench 只能通过 frapper 运行，必须先切换到此用户
+  ```shell
+  su - frapper
+  ```
 
 #### ConnectionError: Error 111 for erpnext?
 

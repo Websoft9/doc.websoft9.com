@@ -14,6 +14,8 @@ import Meta from './_include/mediawiki.md';
 
 ## 入门指南{#guide}
 
+### 快速设置
+
 Websoft9 控制台安装 Mediawiki 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
 
 - 安装扩展：[Manual:Extensions](https://www.mediawiki.org/wiki/Manual:Extensions/zh)
@@ -21,15 +23,6 @@ Websoft9 控制台安装 Mediawiki 后，通过 "我的应用" 查看应用详�
 - 文件上传：[Help:FAQ:启用文件上传](https://www.mediawiki.org/wiki/Manual:FAQ/zh#如何启用文件上传?)
 - 语言设置：[Help:FAQ:语言设置](https://www.mediawiki.org/wiki/Manual:FAQ/zh#我如何更改界面语言？)
 - 界面定制：[Help:FAQ:定制界面](https://www.mediawiki.org/wiki/Manual:FAQ/zh#定制界面)，修改 Logo, 设置导航栏，修改 CSS 等 
-
-## 配置选项{#configs}
-
-- 配置文件（已挂载）：/bitnami/mediawiki/LocalSettings.php
-- [API:Main_page](https://www.mediawiki.org/wiki/API:Main_page/zh)
-- 多语言（✅）
-- 多媒体文件（✅）
-
-## 管理维护{#administrator}
 
 ### 设置 SMTP{#smtp}
 
@@ -63,6 +56,16 @@ Websoft9 控制台安装 Mediawiki 后，通过 "我的应用" 查看应用详�
    ```
 
 5. 设置完成后，重启应用后生效
+
+
+## 配置选项{#configs}
+
+- 配置文件（已挂载）：/bitnami/mediawiki/LocalSettings.php
+- [API:Main_page](https://www.mediawiki.org/wiki/API:Main_page/zh)
+- 多语言（✅）
+- 多媒体文件（✅）
+
+## 管理维护{#administrator}
 
 
 ## 故障
