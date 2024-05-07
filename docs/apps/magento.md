@@ -67,22 +67,6 @@ Access Key 是 Magento 使用 Marketplace 资源的凭据：
 - 通过 Magento 后台设置："System" > "Tools"
 - 命令行设置：`php bin/magento cache:flush`, `php magento indexer:reindex`
 
-### 邮件发送{#mail}
-
-#### 配置 SMTP
-
-请参照官方的 [SMTP 配置方案](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/communications/email-communications)
-
-#### 配置通用发送邮箱
-
-"后台"->"商店"->"设置"->"店铺电子邮件地址"->"通用联系方式"中配置发件人的电子邮箱
- > 发件人的电子邮箱和 SMTP 配置中的用户名相同
- 
-#### 配置收件邮箱
-
-"后台"->"商店"->"设置"->"联系人"中配置收件人的电子邮箱
- > 【联系我们】中客户发送的工单通过收件人的电子邮箱来接收
-
 ## 配置选项{#configs}
 
 - [扩展管理](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/tutorials/extensions)
@@ -95,7 +79,10 @@ Access Key 是 Magento 使用 Marketplace 资源的凭据：
 
 - 在线备份："Stores" > "Configuration" > "ADVANCED" > "Backup Settings"
 
-- SMTP（✅）：[Email communications](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/communications/email-communications)
+- SMTP（✅）
+  1. 参考 [Email communications](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/communications/email-communications) 填写 SMTP 参数
+
+  2. "后台" > "商店" > "设置" > "店铺电子邮件地址" > "通用联系方式" 中填写发件人的电子邮箱（与 SMTP 邮箱同名）
 
 ## 管理维护{#administrator}
 
