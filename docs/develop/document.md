@@ -72,7 +72,8 @@ Websoft9 文档中的大多数页面都是用 Markdown 手动编写的。但是�
 
 ## 参考
 
-以上未列出的规范，默认遵循以下的标准：  
+以上未列出的规范，默认遵循以下的标准：   
 
 - [Microsoft Style Guide](https://learn.microsoft.com/en-us/style-guide/welcome)
 - [GitLab Style Guide](https://docs.gitlab.com/ee/development/documentation/styleguide)
+- [The Grand Unified Theory of Documentation](https://docs.divio.com/)
