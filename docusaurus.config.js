@@ -94,12 +94,12 @@ const config = {
         typesenseServerConfig: {
           nodes: [
             {
-              host: 'search.websoft9.com',
+              host: 'search.www.websoft9.com',
               port: 443,
               protocol: 'https',
             },
           ],
-          apiKey: 'spJNF09yzwWJaG!',
+          apiKey: 'cJ9XqddokC3OCRdx1SFQRv+uFj5QHYOT',
         },
         // Optional: Typesense search parameters: https://typesense.org/docs/0.21.0/api/documents.md#search-parameters
         typesenseSearchParameters: {},
