@@ -25,9 +25,21 @@ const config = {
     defaultLocale: 'zh-cn',
     locales: ['zh-cn', 'en'],
   },
-  plugins: [
 
+  plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            to: '/docs/next/runtime', 
+            from: ['/docs/next/php', '/docs/next/nodejs', '/docs/next/ruby', '/docs/next/python', '/docs/next/dotnet', '/docs/next/openjdk', '/docs/next/maven', '/docs/next/tomcat', '/docs/next/tomee', '/docs/next/jetty'], 
+          },
+        ],
+      },
+    ],
   ],
+
   presets: [
     [
       'classic',

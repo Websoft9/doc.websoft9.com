@@ -1,15 +1,12 @@
 ---
 title: Node.js
-slug: /nodejs
+slug: /runtime/nodejs
 tags:
   - 运行环境
   - runtime
   - Node.js
 ---
 
-import Meta from '../apps/_include/nodejs.md';
-
-<Meta name="meta" />
 
 ## 配置选项{#configs}
 
@@ -23,49 +20,15 @@ import Meta from '../apps/_include/nodejs.md';
 
 ## 部署网站{#deploy}
 
-### 手动部署
+参考：[Web Runtime 入门指南](../runtime#quick)
 
-下面通过常见的 Node.js 应用 [docusaurus](https://docusaurus.io/docs) 为例，描述应用安装过程：
+## 环境管理{#administrator}
 
-1. Websoft9 控制台安装 Node.js 运行环境
+- **升级 Node 包**：以升级 npm 自身为范例，命令为 `npm install npm -g`
 
-2. 进入 Node.js 容器，分别运行如下命令：
-   ```
-   #1 创建应用基本框架
-   npx create-docusaurus@latest classic
+- **全局安装 Node 包**：以安装 pm2 为范例，命令为 `npm install -g pm2`
 
-   #2 安装应用所需的包
-   cd classic && yarn install
-
-   #3 直接运行程序或在后台运行程序（取其一）
-   npm run start -- --host 0.0.0.0  --port 8080
-   nohup npm run start -- --host 0.0.0.0  --port 8080 > output.log 2>&1 &
-   ```
-
-3. 此时，即可访问此 Web 程序 
-
-### 自动部署
-
-参考 Web Runtime 通用的文档章节：[自动部署指南](./runtime#auto)
-
-
-## 管理维护{#administrator}
-
-### 升级 Node 包
-
-以升级 npm 自身为范例，升级node 包的命令为：`npm install npm -g`
-
-### 安装 Node 全局包
-
-以安装 pm2 为范例，安装 Node 全局包的命令为： `npm install -g pm2`
-
-### 进程管理
-
-使用 PM2，可以更好的管理 Node 程序环境中的进程
-
-```
-pm2 start app.js
-```
+- **进程管理**：使用 PM2，可以更好的管理 Node 程序环境中的进程 `pm2 start app.js`
 
 ## 问题与故障
 
@@ -76,13 +39,3 @@ pm2 start app.js
 #### NPM broken？
 
 尝试运行 `npm cache clean` 命令，若仍然没有解决问题，需更新或重装 NPM
-
-#### YARN vs NPM？
-
-| npm | yarn |
-| ---: | :--- |
-| npm install | yarn |
-| npm install react --save | yarn add react |
-| npm uninstall react --save | yarn remove react |
-| npm install react --save-dev | yarn add react --dev |
-| npm update --save | yarn upgrade |

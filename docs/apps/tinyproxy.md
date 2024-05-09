@@ -27,7 +27,7 @@ import Meta from './_include/tinyproxy.md';
 
 ## 配置选项{#configs}
 
-- 白名单设置：编排.env 文件的 ALLOWED，设置 0.0.0.0/0 表示允许所有 IP 访问
+- 白名单设置：编排.env 文件的 ALLOWED，设置 0.0.0.0/0 表示允许所有 IP 访问，多个 IP 以空格分隔
 
 ## 管理维护{#administrator}
 

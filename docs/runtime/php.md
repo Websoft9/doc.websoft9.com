@@ -1,21 +1,20 @@
 ---
 title: PHP
-slug: /php
+slug: /runtime/php
 tags:
   - 运行环境
   - runtime
   - PHP
 ---
 
-import Meta from '../apps/_include/php.md';
-
-<Meta name="meta" />
 
 ## 配置选项{#configs}
 
 - PHP 大版本切换（√）：切换后需重建容器，并根据需要重新安装 PHP 扩展
 - 多应用支持：一个 PHP 容器仅支持一个应用，多个应用建议运行多个 PHP 容器
 - 应用根目录：*/var/www/html*
+- 应用目录用户：**www-data**
+- php-fpm（×）
 - PHP 额外配置文件目录：*/usr/local/etc/php/conf.d*
 - Apache 配置文件：*/etc/apache2/sites-available/000-default.conf* 
 - 查询已安装的 PHP 扩展：`php -m`
@@ -24,12 +23,19 @@ import Meta from '../apps/_include/php.md';
 - 命令行：`composer`, `php`
 - [phar](https://www.php.net/manual/zh/intro.phar.php) 包支持（？）
 - 支持的缓存扩展：OPcache, XCache, APCU, eAccelerator
+- 框架：Symfony, Laravel, CodeIgniter, Yii
 
-## PHP 扩展管理器
+## 部署网站{#deploy}
+
+参考：[Web Runtime 入门指南](../runtime#quick)
+
+## 环境管理{#administrator}
+
+### PHP 扩展管理器
 
 [PHP 原生容器](https://hub.docker.com/_/php) 仅包含 PHP 核心，而部署应用可能需要额外安装 PHP 扩展包，故掌握安装系统包和 PHP 扩展是必须的工作。  
 
-### 下载扩展管理器{#download-extension-installer}
+#### 下载扩展管理器{#download-extension-installer}
 
 下载 Docker 官方推荐的 [PHP 扩展安装管理器](https://github.com/mlocati/docker-php-extension-installer) 到容器，实现安装和管理扩展。
 
@@ -40,7 +46,7 @@ import Meta from '../apps/_include/php.md';
     ```
 2. 测试 install-php-extensions 可用性
 
-### 安装所需的 PHP 扩展
+#### 安装所需的 PHP 扩展
 
 1. Websoft9 控制台进入容器的命令模式后，安装所需的扩展
 
@@ -51,7 +57,7 @@ import Meta from '../apps/_include/php.md';
 2. 运行 `php -m` 查看扩展的安装情况
 
 
-### 安装 PHP Composer
+#### 安装 PHP Composer
 
 1. 确保已经下载 [PHP 扩展安装管理器](#download-extension-installer) 
 
@@ -67,54 +73,6 @@ import Meta from '../apps/_include/php.md';
     install-php-extensions @composer-2.0.2
     ```
 
-## 部署 PHP 网站{#sample}
-
-### 下载源码部署
-
-以 **Wordpress** 为例，描述应用部署过程：
-
-1. Websoft9 控制台 exec 进入容器后
-    ```
-    # 下载并解压 **Wordpress** 源码到根目录下
-    cd /var/www/html 
-    curl -O https://wordpress.org/latest.zip
-    unzip latest.zip
-    mv wordpress/* ./
-
-    # 修正网站文件权限
-    chown -R www-data:www-data /var/www/html
-    ```
-
-2. Websoft9 控制台，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取 PHP 应用访问链接 URL
-
-
-3. 本地浏览器后访问 URL，便进入 WordPress 的安装向导
-
-   > 安装过程可能会提示缺少某些 PHP 扩展，此时必须先完成所需的[扩展安装](#download-extension-installer)
-
-### Composer 部署
-
-确保已经安装 Composer，再以 **Laravel** 为例，描述部署过程：
-
-1. 进入容器 exec 模式，使用 Composer 创建 Laravel 项目，并修正权限
-
-    ```
-    composer create-project laravel/laravel /var/www/html/laravel --prefer-dist
-    chown -R www-data:www-data /var/www/html/laravel
-    ```
-
-2. 配置 Apache 配置文件的 DocumentRoot 指向 */var/www/html/laravel/public*
-
-    ```
-    sed -i 's|DocumentRoot /var/www/html|DocumentRoot /var/www/html/laravel/public|' /etc/apache2/sites-available/000-default.conf
-    ```
-
-3. 重启容器后，即可正常访问 Laravel
-
-
-
-## 管理维护{#administrator}
-
 ### 修改 PHP 配置文件
 
 PHP 容器通过 */usr/local/etc/php/conf.d* 目录增加自己所需的配置文件，Websoft9 已经将配置文件挂载到容器。  
@@ -126,13 +84,6 @@ PHP 容器通过 */usr/local/etc/php/conf.d* 目录增加自己所需的配置�
 
 > 重建应用会删除已经安装的扩展，需慎重使用
 
-### PHP 版本切换
-
-1. 通过 Websoft9 控制台 PHP 编排文件修改 W9_VERSION
-
-2. 重建容器后生效
-
-3. 进入容器的 exec 模式，使用 [PHP 扩展管理器](#download-extension-installer) 安装所需的 PHP 扩展。  
 
 ### 其他 PHP 扩展安装方法
 
@@ -149,7 +100,7 @@ PHP 容器通过 */usr/local/etc/php/conf.d* 目录增加自己所需的配置�
    curl -sS https://websoft9.github.io/docker-library/apps/php/src/php_extension.sh | bash
    ```
 
-## 故障
+## 问题与故障
 
 #### PHP 7.0 以下 **apt update** 报错？
 
@@ -175,31 +126,9 @@ PHP 容器通过 */usr/local/etc/php/conf.d* 目录增加自己所需的配置�
 sed -i 's|DocumentRoot /var/www/html|DocumentRoot /var/www/html/laravel/public|' /etc/apache2/sites-available/000-default.conf
 ```
 
-#### 什么是 PHP-FPM？
-
-PHP-FPM 用于管理 PHP 进程池，接受 Apache/Nginx 等 Web 服务器的请求。PHP-FPM 提供了更好的 PHP 进程管理方式，可以有效控制内存和进程、可以平滑重载 PHP 配置。
-
-#### 推荐流行的 PHP 框架？
-
-- Symfony
-- Laravel
-- CodeIgniter
-- Yii
-
 #### 支持应用 .htaccess 中修改 php.ini？
 
 支持
-
-#### PHP 不支持 SMTP？
-
-PHP 与 SMTP 相关的问题
-
-1.  需要了解你所使用的STMP功能是否调用了PHP软件包（或扩展类）
-
-   	* php官方提供的mail()类，这个类不支持SMTP验证
-    * php扩展包-[PHPMailer](https://github.com/PHPMailer/PHPMailer)，这个类功能比较全面
-
-2.  php_openss 版本过低或者没有安装，php_openssl 的 CA 证书缺失或异常
 
 #### PHP 扩展为何对操作系统有依赖？
 

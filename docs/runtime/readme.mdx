@@ -8,85 +8,11 @@ Websoft9 程序语言环境（Web Runtime）提供一个可靠的程序语言和
 
 ![](./assets/runtime-web-websoft9.png)
 
+## 配置参数
 
-## 原理
+在使用 Web Runtime 部署应用之前，需了解一下的基本配置参数： 
 
-Web Runtime 在 Websoft9 的技术体系中，也是作为一个应用对待，它与 WordPress 这种应用没有本质差异。  
-
-它仅仅需要用户在启动环境后，在通过 docker compose 编排在容器中完成两件事：
-
-- 将需运行的程序放到容器中
-- 通过命令启动程序
-
-而 Websoft9 为用户在容器中完成这些工作提供了便捷的工作方式。请参考下面的快速入门进入实战吧。
-
-## 快速入门
-
-如果已经安装 Websoft9，且绑定了全局域名，那么通过 Web Runtime 运行程序及其简单：
-
-### 启动环境
-
-1. 登录 Websoft9 控制台，打开："应用商店" 的 **运行环境** 类目
-   ![](./assets/runtime-catalog-websoft9.png)
-
-2. 任选一个程序语言，例如：Python，点击**安装**
-
-3. 等待安装完成，一个基于**容器**的程序运行环境已经启用
-
-4. 环境启动后 Websoft9 为它创建了三个资源：
-
-   - 一个 Python 容器
-   - 一个网关中的虚拟主机配置，将容器的 **8080** 端口转发到域名
-   - 一个 Git 仓库
-
-
-### 部署程序
-
-启动环境之后，我们如何将应用程序部署到这个环境呢？请选择如下的部署方式之一：
-
-#### 自动部署{#auto}
-
-自动部署即将相关的命令写成一个脚本，让容器在启动时可以自动执行部署命令，实现持续部署：
-
-1. 登录 Websoft9 控制台，进入应用的管理界面的 [编排](../quick/manageapp#reup) 标签页
-   ![](./assets/runtime-editcompose-websoft9.png)
-
-2. 修改编排文件的 *src/cmd.sh* 脚本（它包含范例），**插入个性化命令**或**去掉范例的注释**，重建应用后生效
-  ![](./assets/runtime-composeedit-cmd-websoft9.png)
-
-   建议插入到 cmd.sh 的命令主要包括：
-
-   > 查看 cmd.sh 范例：[PHP](https://websoft9.github.io/docker-library/apps/php/src/cmd.sh), [Python](https://websoft9.github.io/docker-library/apps/python/src/cmd.sh), [Ruby](https://websoft9.github.io/docker-library/apps/ruby/src/cmd.sh), [Go](https://websoft9.github.io/docker-library/apps/go/src/cmd.sh), [Node.js](https://websoft9.github.io/docker-library/apps/nodejs/src/cmd.sh), [.NET](https://websoft9.github.io/docker-library/apps/dotnet/src/cmd.sh), [OpenJDK](https://websoft9.github.io/docker-library/apps/openjdk/src/cmd.sh), [Tomcat](https://websoft9.github.io/docker-library/apps/tomcat/src/cmd.sh), [Tomee](https://websoft9.github.io/docker-library/apps/tomee/src/cmd.sh), [Maven](https://websoft9.github.io/docker-library/apps/maven/src/cmd.sh)
-   
-   - 程序代码下载、解压
-   - 代码编译
-   - 运行启动脚本（确保运行在容器的 8080 端口，同时允许 localhost 之外的主机访问）
-
-#### 手工部署
-
-手工部署即用户登录到容器中，手工运行相关命令的部署方式：
-
-1. Websoft9 控制台或 docker exec 进入容器的命令模式
-
-2. 在容器中运行程序下载、包安装等命令
-
-3. 以后台方式启动运行命令
-
-   ```
-   # 以 Python 为例
-   nohup python manage.py runserver 0.0.0.0:8080 > output.log 2>&1 &
-   ```
-
-   python manage.py runserver 0.0.0.0:8080 是真正的启动命令，而开头结尾的 nohup 和 > output.log 2>&1 & 都是辅助的命令
-
-4. 程序即可在后台运行，同时通过 output.log 查看日志
-
-5. 如果容器重启，需重新执行第 3 步命令
-
-
-## 通用参数
-
-以下配置与语言无关： 
+### 通用参数
 
 - 部署方式：docker compose
 - 容器端口：8080
@@ -95,51 +21,119 @@ Web Runtime 在 Websoft9 的技术体系中，也是作为一个应用对待，�
 - 自定义命令：存储在编排文件 *./src/cmd.sh*，挂载到容器的 */usr/local/bin/cmd.sh* 目录
 - 字符集：UTF-8
 - 多版本：每个语言都支持多版本，合计有几十个可选的版本
+- 应用根目录：进入容器后的默认的位置即应用根目录，可运行 `pwd` 查询
 
-## 个性配置
+  - PHP：*/var/www/html*
+  - Jetty: */var/lib/jetty/webapps*
+  - Tomee：*/usr/local/tomee*
+  - Tomee：*/usr/local/tomcat*
+  - 其他环境：*/usr/src/app*
 
-Web Runtime 不同的语言环境还有更多个性的配置：程序根目录、包管理器、安装扩展、编译、命令行、容器操作系统等。
+### 个性配置
 
-### Go
+Web Runtime 不同的语言环境拥有更多个性的配置：程序根目录、包管理器、安装扩展、编译、命令行、容器操作系统等。
 
-### Node.js
+<DocCardList items={useCurrentSidebarCategory().items}/>
 
-### PHP
+## 快速入门{#quick}
 
-### Python
+Web Runtime 在 Websoft9 的技术体系中，也是作为一个应用对待，它与 WordPress 这种应用没有本质差异。  
 
-### Ruby
+如果已经安装 Websoft9，且绑定了全局域名，那么通过 Web Runtime 运行程序及其简单：
 
-### .NET
+### 启动环境
 
-### Docker
+1. 登录 Websoft9 控制台，打开："应用商店" 的 **运行环境** 类目
+   ![](./assets/runtime-catalog-websoft9.png)
 
-### Java
-#### OpenJDK
-#### Maven
-#### Jetty
-#### Tomcat
-#### Tomee
+2. 任选一个环境应用，点击**安装**
 
-## 通用指南
+3. 等待安装完成，一个基于**容器**的程序运行环境已经启用
 
-以下操作与语言无关：  
+4. 环境启动后，Websoft9 为它创建了三个资源：
 
-### 绑定域名
+   - 1 个环境容器
+   - 1 个网关中的虚拟主机配置，将容器的 **8080** 端口转发到域名
+   - 1 个 Git 仓库
 
-创建环境时，已经在 Websoft9 [网关](./function/gateway)为程序环境增加了一个域名绑定（转发程序环境容器的 8080 端口）。所以，用户可以很方便的在**网关**菜单中设置域名、修改端口、启用 HTTPS 等操作。  
+### 准备源码
 
-### 发布可下载的源码
+Web Runtime 不建议通过 FTP 或 SFTP 上传代码的方式，而是需要用户准备一个**可以下载的源码**，这样做的好处：
 
-用户可能面临这样的场景：从他人处获得了一份源码压缩包，没有源码直接的下载地址导致无法将源码部署到容器中。  
+- 消除了服务器上的文件操作，避免文件权限问题，更安全
+- 便于实现部署自动化
 
-Websoft9 建议通过如下的方式解决：
+如果待部署的应用程序没有直接的下载地址，可以通过如下方式建一个下载通道：
 
 1. 通过 Websoft9 控制台的 **仓库** 菜单，新建一个公开仓库
 
 2. 将源码的压缩包上传到这个新建的仓库中
 
 3. 在仓库的呈现页面获取源码的公开下载地址
+
+### 部署程序
+
+部署应用程序，只需在环境容器中 **通过命令** 完成一下操作：
+
+- 上传代码：建议将程序代码以压缩包方式下载、解压到容器中的应用根目录
+- 编译构建：运行程序所需的编译或构建命令
+- 启动程序：运行程序的启动命令（确保运行在容器的 8080 端口，并允许外网访问）
+
+Websoft9 为用户提供了两种运行命令的方式，就对应了两种部署模式：  
+
+#### 自动部署{#auto}
+
+自动部署将相关的部署应用程序的命令写成一个脚本，让容器在启动时自动执行这个命令，从而实现持续部署：
+
+1. 登录 Websoft9 控制台，进入应用的管理界面的 [编排](../quick/manageapp#reup) 标签页
+   ![](./assets/runtime-editcompose-websoft9.png)
+
+2. 修改编排文件的 *src/cmd.sh* 脚本（它包含范例），**插入个性化命令**或**去掉范例的注释**，重建应用后生效
+  ![](./assets/runtime-composeedit-cmd-websoft9.png)
+
+
+#### 手工部署
+
+手工部署是用户登录到容器中，手工运行相关命令的部署方式：
+
+1. Websoft9 控制台或 docker exec 进入容器的命令模式
+
+2. 在容器中运行上传代码、编译构建等准备工作，具体范例参考：
+
+   - [PHP](https://websoft9.github.io/docker-library/apps/php/src/cmd.sh)
+   - [Python](https://websoft9.github.io/docker-library/apps/python/src/cmd.sh)
+   - [Ruby](https://websoft9.github.io/docker-library/apps/ruby/src/cmd.sh)
+   - [Go](https://websoft9.github.io/docker-library/apps/go/src/cmd.sh)
+   - [Node.js](https://websoft9.github.io/docker-library/apps/nodejs/src/cmd.sh)
+   - [.NET](https://websoft9.github.io/docker-library/apps/dotnet/src/cmd.sh)
+   - [Java with OpenJDK](https://websoft9.github.io/docker-library/apps/openjdk/src/cmd.sh)
+   - [Java with Tomcat](https://websoft9.github.io/docker-library/apps/tomcat/src/cmd.sh)
+   - [Java with Tomee](https://websoft9.github.io/docker-library/apps/tomee/src/cmd.sh)
+   - [Java with Maven](https://websoft9.github.io/docker-library/apps/maven/src/cmd.sh)
+   - [Java with Jetty](https://websoft9.github.io/docker-library/apps/jetty/src/cmd.sh)
+
+
+3. 以**后台方式启动**应用程序
+
+   ```
+   # 以 Python 为例
+   nohup python manage.py runserver 0.0.0.0:8080 > output.log 2>&1 &
+   ```
+
+   > python manage.py runserver 0.0.0.0:8080 启动命令，而开头结尾的 nohup 和 > output.log 2>&1 & 是辅助命令
+
+4. 程序在后台运行后，可以通过 `cat output.log` 查看日志
+
+5. 如果容器重启，需重新执行第 3 步命令
+
+
+### 版本变更
+
+Web Runtime 中修改版本极其方便：
+
+1. 通过编排文件的 variables.json 查询所有的版本
+
+2. 修改编排文件中 .env 中的 W9_VERSION 的值，重建应用生效。  
 
 ### 开发部署一体化
 
@@ -158,13 +152,6 @@ Websoft9 完全可以支持这个场景，下面介绍详细步骤：
    - docker-compose.yml 中增加 source 目录 volume mount 到容器
    - cmd.sh 中适用源码目录
 
-### 版本变更
-
-Web Runtime 中修改版本极其方便：
-
-1. 通过编排文件的 variables.json 查询所有的版本
-
-2. 修改编排文件中 .env 中的 W9_VERSION 的值，重建应用生效。  
 
 ## 问题与故障
 
