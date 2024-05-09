@@ -113,16 +113,11 @@ Websoft9 为用户提供了两种运行命令的方式，就对应了两种部�
    - [Java with Jetty](https://websoft9.github.io/docker-library/apps/jetty/src/cmd.sh)
 
 
-3. 以**后台方式启动**应用程序
+3. 以**后台方式启动**应用程序：nohup **Your Command** > output.log 2>&1 &
 
-   ```
-   # 以 Python 为例
-   nohup python manage.py runserver 0.0.0.0:8080 > output.log 2>&1 &
-   ```
-
-   > python manage.py runserver 0.0.0.0:8080 启动命令，而开头结尾的 nohup 和 > output.log 2>&1 & 是辅助命令
-
-4. 程序在后台运行后，可以通过 `cat output.log` 查看日志
+   - **Your Command** 用实际命令替换，例如：`nohup python manage.py runserver 0.0.0.0:8080 > output.log 2>&1 &`
+   - nohup 表示以后台运行，> output.log 2>&1 & 是指定日志路径
+   - 程序在后台运行后，可以通过 `cat output.log` 查看日志
 
 5. 如果容器重启，需重新执行第 3 步命令
 
