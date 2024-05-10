@@ -13,7 +13,7 @@ Websoft9 在云端拥有丰富的 Oracle Linux 使用和维护经验，从部署
 
 我们在主流的云平台上提供了一部分 Oracle Linux 特殊发行版，满足用户的个性化需求。
 
-## 关于 Oracle Linux
+## 关于
 
 [Oracle Linux](https://www.oracle.com/linux/) 是一个完全免费、开源并可以自由分发的 Linux 发行版。  
 
@@ -34,13 +34,13 @@ Websoft9 在云端拥有丰富的 Oracle Linux 使用和维护经验，从部署
 
 5. Oracle 在云上提供了一个 Oracle Autonomous Linux 系统，具备自主更新升级的能力（零停机）
 
-## 管理维护
+## 使用桌面
 
-### 升级{#upgrade}
+参考：[Linux 桌面](./desktop)
 
-升级是一个很有必要的工作，担心升级系统会导致业务出现问题是典型的保守主义。   
+## 系统升级{#upgrade}  
 
-Oracle Linux 在一个维护周期内可能会发布数百个安全漏洞和 Bug 补丁，如果不去升级谁又能保证这些 Bug 不会影响自己的业务呢？  
+Oracle Linux 在一个维护周期内会发布多个安全漏洞和 Bug 补丁，所以升级的流程包含： 
 
 1. 订阅 Oracle 官方的[补丁通知邮件](https://www.oracle.com/cn/security-alerts/)：注册免费 Oracle 账号 > 用户控制面板 > 订阅管理 > Oracle 安全通知
 
