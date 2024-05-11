@@ -136,16 +136,19 @@ Directmail 是阿里云的邮件推送服务，相对于免费邮箱来说，自
 
 ## SMTP 诊断
 
-如果已经确认 SMTP 服务本身可用（[SMTP Test Tool](https://www.gmass.co/smtp-test)），但应用仍然无法发送邮件，从几个方面开始诊断：
 
-- 应用所在的服务器运行 `telnet` 命令 ，检查 SMTP 服务的连通性。下面是一个范例：
+- 通过 [SMTP Test Tool](https://www.gmass.co/smtp-test)）确保 SMTP 账号可用
 
-   ~~~
-   telnet smtp.qq.com 465
-   ~~~
+- SMTP 可用，而仍然无法在应用中生效，参考下面诊断途径：
 
-   出现 **220 smtp.*.com Esmtp Mail Server** 或 **Escape character is '^]'** ，说明连接成功
+   - 应用所在的服务器运行 `telnet` 命令 ，检查 SMTP 服务的连通性。下面是一个范例：
 
-- 检查服务器安全组（出设置）是否禁止外部访问
-- 检查服务器 iptables，firewall 是否允许发起向外部 465 端口的连接
-- 检查应用程序的 OpenSSL 版本是否过低或 CA 证书与 SMTP 服务兼容性
+      ~~~
+      telnet smtp.qq.com 465
+      ~~~
+
+      出现 **220 smtp.*.com Esmtp Mail Server** 或 **Escape character is '^]'** ，说明连接成功
+
+   - 检查服务器安全组（出设置）是否禁止外部访问
+   - 检查服务器 iptables，firewall 是否允许发起向外部 465 端口的连接
+   - 检查应用程序的 OpenSSL 版本是否过低或 CA 证书与 SMTP 服务兼容性

@@ -15,7 +15,7 @@ slug: /settings/system
 
 全局域名非常实用，只需在此处做一次域名解析和绑定，即可被所有应用使用。  
 
-![设置全局域名](https://libs.websoft9.com/Websoft9/DocsPicture/zh/websoft9/websoft9-settings-globaldomain.png)
+![设置全局域名](./assets/websoft9-settings-globaldomain.png)
 
 详情参考：[设置应用的域名-全局域名](../guide/appsetdomain#global-domain)
 

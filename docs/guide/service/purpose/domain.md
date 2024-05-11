@@ -41,7 +41,7 @@ slug: /domains
 域名解析的作用是通过一段**容易识别的文字段**来指向服务器的**IP地址**。类似：abc.com 指向 80.123.9.11，好处是便于识别。  
 
 下面是是一个域名解析的范例：在域名控制台，将域名（或子域名）指向 IP：  
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/domain-websoft9.png)
+![](./assets/domain-websoft9.png)
 
 
 ### 绑定{#domainbind}
@@ -50,7 +50,7 @@ slug: /domains
 
 我们设想一个很常见的情况：有多个域名解析到同一个服务器时，服务器是如何区分并提供不同域名所需资源的？
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/apache/apache-vhostui-websoft9.png)
+![](./assets/apache-vhostui-websoft9.png)
 
 其实这个问题就是**域名绑定**要做的工作。通过修改服务器中的 HTTPS  服务器的 **虚拟主机配置文件**，即可实现域名绑定。  
 

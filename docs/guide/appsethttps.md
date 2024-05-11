@@ -25,7 +25,7 @@ Websoft9 网关虽然支持便捷的 HTTPS 配置，但配置 HTTPS 还有两个
 1. 控制台依次打开：【网关】>【Hosts】>【Proxy Hosts】项
 
 2. 编辑 SSL 项，点击保存即启动证书自动设置
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/websoft9/websoft9-gateway-setautohttps.png)
+   ![](./assets/websoft9-gateway-setautohttps.png)
 
    > Email 建议填写为可以收到邮件的常用邮箱，以便于及时了解证书的状态
 
@@ -36,7 +36,7 @@ Websoft9 的网关采用先上传证书，再绑定到 Proxy Host 的这种模�
 1. 控制台依次打开：【网关】>【SSL Certificates】
 
 2. 点击【Add SSL Certificate】子菜单下的【Custom】项，开始增加自上传证书
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/websoft9/websoft9-gateway-addcustomssl.png)
+   ![](./assets/websoft9-gateway-addcustomssl.png)
 
 3. 在 Add Custom Certificate 选项卡中上传已有的证书
 

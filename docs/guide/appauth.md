@@ -21,4 +21,4 @@ Websoft9 的网关具备为此类应用设置密码或白名单访问，具体�
    - Access：allow 出输入可以访问的[白名单](https://nginx.org/en/docs/http/ngx_http_access_module.html#allow)，0.0.0.0/ 表示允许所有 IP 访问
 
 3. 转到网关的：【Hosts】>【Proxy Hosts】项，编辑应用的配置文件，选择上面配置的 Access
-   ![设置 Access](https://libs.websoft9.com/Websoft9/DocsPicture/zh/websoft9/websoft9-gateway-setaccess.png)
+   ![设置 Access](./assets/websoft9-gateway-setaccess.png)

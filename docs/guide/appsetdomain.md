@@ -37,10 +37,10 @@ Websoft9 提供了域名和证书配置的图形化界面--[网关](../function/
    ```
 
 3. 从 Websoft9 控制台的【设置】栏目，设置全局域名
-   ![Websoft9 控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/websoft9/websoft9-settings-globaldomain.png)
+   ![Websoft9 控制台](./assets/websoft9-settings-globaldomain.png)
 
 4. 进入应用商店的任意一个应用，点击【安装】后会看到全局域名已经被默认关联到应用
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/websoft9/websoft9-setdomain-app.png)
+   ![](./assets/websoft9-setdomain-app.png)
 
 5. 输入任意一个应用名称，例如：erpnext，安装过程中就自动为应用绑定了 erpnext.inner.websoft9.cn 这样的域名
 
@@ -55,7 +55,7 @@ Websoft9 提供了域名和证书配置的图形化界面--[网关](../function/
    - 记录值：服务器公网IP
 
 2. 进入应用商店的任意一个应用，进入【安装】界面后，点击【+添加域名】按钮
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/websoft9/websoft9-setdomain-adddomain.png)
+   ![](./assets/websoft9-setdomain-adddomain.png)
 
 3. 绑定所需的域名，安装过程中就自动绑定该域名
 
@@ -66,7 +66,7 @@ Websoft9 支持应用安装后绑定域名或修改域名：
 1. 登录 Websoft9 控制台，通过 **我的应用** 菜单，打开应用管理的 "访问" 标签页
 
 2. 点击 "添加域名" 按钮，增加所需绑定的域名
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/websoft9/adddomain-access-websoft9.png)
+   ![](./assets/adddomain-access-websoft9.png)
 
 3. 保存后生效
 
