@@ -1,5 +1,5 @@
-position: 4
-label: "按用途"
+position: 10
+label: "功能教程"
 collapsible: true
 collapsed: true
 className: "red"

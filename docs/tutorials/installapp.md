@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-slug: /quik/installapp
+slug: /tutorials/installapp
 ---
 
 # 安装应用

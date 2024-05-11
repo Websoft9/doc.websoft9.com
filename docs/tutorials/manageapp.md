@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-slug: /quick/manageapp
+slug: /tutorials/manageapp
 ---
 
 # 管理应用

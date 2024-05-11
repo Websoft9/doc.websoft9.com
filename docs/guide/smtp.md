@@ -1,9 +1,9 @@
 ---
-sidebar_position: 6
+sidebar_position: 10.1
 slug: /smtps
 ---
 
-# SMTP 服务
+# 准备可用的 SMTP 服务
 
 应用中配置 SMTP 邮件发送功能是非常重要的设置，它可以用于密码找回和重要操作的通知。  
 

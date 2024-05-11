@@ -1,9 +1,9 @@
 ---
-sidebar_position: 1
+sidebar_position: 10.2
 slug: /domains
 ---
 
-# 域名服务
+# 准备可用的域名
 
 本节详细介绍用户从没有域名到域名可以访问的“艰难”旅程，同时给出一些域名使用过程中常见的问题。  
 
