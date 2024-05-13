@@ -1,5 +1,5 @@
-position: 4
-label: "按云平台"
+position: 1.0
+label: "快速入门"
 collapsible: true
 collapsed: true
 className: "red"

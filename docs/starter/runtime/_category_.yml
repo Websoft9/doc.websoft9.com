@@ -1,5 +1,5 @@
 position: 5.1
-label: "程序环境"
+label: "基于程序环境部署应用"
 collapsible: true
 collapsed: true
 className: "red"
