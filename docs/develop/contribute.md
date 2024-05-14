@@ -23,6 +23,11 @@ import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 - [Docker-library](https://github.com/Websoft9/docker-library)：200+ 开源的 docker compose 模板
 - [产品文档](https://github.com/Websoft9/doc.websoft9.com)
 
+## 用户社区{#community}
+
+- Social Media: [Linkedin](https://www.linkedin.com/company/websoft9), [Weibo](https://weibo.com/chendelin1982)
+- Chat Group: [微信群](https://libs.websoft9.com/Websoft9/feature/icon-userchatgroup-websoft9.png)
+
 ## 赞助
 
 开源的发展离不开各种优秀的资源，当然也包括资金。Websoft9 乐意接受各种形式的赞助。  

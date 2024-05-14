@@ -1,5 +1,5 @@
-position: 1.0
-label: "协议"
+position: 4
+label: "公有云配置参考"
 collapsible: true
 collapsed: true
 className: "red"

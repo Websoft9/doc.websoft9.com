@@ -1,9 +1,9 @@
 ---
-sidebar_position: 1.1
+sidebar_position: 1.0
 slug: /appstore-guide
 ---
 
-# 基于应用商店部署应用
+# 使用应用商店一键部署应用
 
 [安装](./install)或[订阅](./business) Websoft9 之后，就可以参考下面的入门向导，快速上手：
 

@@ -3,7 +3,7 @@ sidebar_position: 4
 slug: /troubleshoot/type
 ---
 
-# 问题归类，有的放矢
+# 问题定性，有的放矢
 
 问题定性即鉴别问题的类型。Websoft9 在实践中发现问题基本集中在三个方面：**资源瓶颈、连接障碍和组件失效**  
 
