@@ -3,19 +3,9 @@ sidebar_position: 3.0
 slug: /storage
 ---
 
-# 优化应用的存储
+# 优化存储空间
 
 在本章中，你可以了解到与应用存储空间有关的各种配置：  
-
-## 外部存储转换为磁盘
-
-外部存储是区别于服务器磁盘的一种第三方存储服务，它位于服务器之外。Websoft9 通过 [Rclone](https://rclone.org/) 将外部云存储挂载为网络磁盘。  
-
-1. 准备好第三方存储
-
-2. 运行 `rclone config` 命令，配置
-
-具体使用参考：[rclone mount](https://rclone.org/commands/rclone_mount/)
 
 ## 系统盘扩容
 
@@ -46,7 +36,7 @@ slug: /storage
     resize2fs /dev/vda1  
     ```
 
-## 数据盘挂载
+## 增加数据盘
 
 用户在云平台购买数据盘并将其附加到指定的服务器之后，还需要下面的工作方可使用：
 
@@ -151,6 +141,17 @@ mkfs -t xfs /dev/vdb1
 
 3. 重启服务器后生效
 
-## 容器持久化存储设置
 
-Websoft9 使用 Named Volumes 作为容器的持久化方案。  
+## 相关内容
+
+- 容器持久化存储设置
+
+## 外部存储转换为磁盘
+
+外部存储是区别于服务器磁盘的一种第三方存储服务，它位于服务器之外。Websoft9 通过 [Rclone](https://rclone.org/) 将外部云存储挂载为网络磁盘。  
+
+1. 准备好第三方存储
+
+2. 运行 `rclone config` 命令，配置
+
+具体使用参考：[rclone mount](https://rclone.org/commands/rclone_mount/)

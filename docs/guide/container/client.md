@@ -1,6 +1,6 @@
 ---
 sidebar_position: 6
-slug: /function/container
+slug: /container
 ---
 
 # 运行和管理容器
@@ -12,6 +12,28 @@ Websoft9 集成 Portainer 作为唯一个容器可视化管理平台，100% 保�
 [Portainer](https://docs.portainer.io/) 是一个开源工具，用于管理容器化应用程序。它提供了一个直观的基于 Web 的用户界面，使用户能够轻松地管理 Docker、Kubernetes、Docker Swarm 和其他容器化环境。Portainer 旨在帮助简化容器管理过程，并使得不论是新手还是有经验的系统管理员都能轻松上手。
 
 ## 操作
+
+### 查看容器内部服务
+
+- 监听的端口和服务：`netstat -tulnp`
+- 进程：`ps aux`
+- 活动进程：`top`
+
+### Docker Compose 升级容器
+
+Docker Compose 启动的多个容器，升级只需运行如下三条命令：
+
+```
+docker-compose down
+docker-compose pull
+docker-compose up -d
+```
+
+### 使用 Docker 安装应用
+
+Websoft9 提供了一个包含 200+ 的 [Docker compose 模板](https://github.com/Websoft9/docker-library)，只需 Docker Compose 命令启动，即可安装任何想要的应用。  
+
+[Docker-library](https://github.com/Websoft9/docker-library)：由 Websoft9 维护的 Docker Compose 模板，支持 200+ 开源应用
 
 ### 在 Portainer 中安装应用{#installapp}
 
@@ -55,3 +77,20 @@ Websoft9 的应用中的容器是通过 Portainer 的 Stack API 创建的，故 
 
 不能修改，因为 Portainer 完全进行了深度集成
 
+#### 容器 root 用户赋予宿主机权限？
+
+如果 Dockerfile 没有创建普通用户，容器就会默认以 root 用户权限运行。  
+
+容器的 root 与宿主机的 root 是同一个用户，但容器 root 的权限是有限的，加上 `--privileged=true`，就等同于宿主机 root 权限
+
+#### Named Volumes 对比 Bind Mounts？
+
+|          | Named Volumes                  | Bind Mounts                   |
+| -------- | ------------------------------ | ----------------------------- |
+| 路径     | /var/lib/docker/volumes 目录下 | 任意位置                      |
+| 启用方式 | my-volume:/usr/local/data      | /path/to/data:/usr/local/data |
+| 预先定义 | 可以先定义，也可以不定义       | 不需要                        |
+| 名称     | my-volume_default 或 my-volume | data                          |
+| 文件权限 | 权限宽松                       | 受制于宿主机文件权限          |
+| 空目录下数据方向 | 容器 → Named Volume                   | Bind Volume  → 容器                |
+| 非空目录下数据方向 | Named Volume  → 容器                   | Bind Volume  → 容器                |
