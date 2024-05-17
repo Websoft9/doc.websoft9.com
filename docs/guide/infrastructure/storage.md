@@ -3,155 +3,71 @@ sidebar_position: 3.0
 slug: /storage
 ---
 
-# 优化存储空间
+# 扩充或优化存储
 
 在本章中，你可以了解到与应用存储空间有关的各种配置：  
 
-## 系统盘扩容
+## 扩容系统盘
 
-系统盘容量不足的时候，可通过云控制台给系统盘扩容（增加更多的空间）。  
+大多少公有云都具备**购买即自动扩容**能力，用户无需任何多余配置。  
 
-一般来说，云平台具备**系统盘自动扩容**能力，用户无需任何配置。  
+而私有云下，可能需要手动操作：
 
-但是，少数情况下，可能需要我们手动操作：
+1. 运行 `df -Th` 命令检查磁盘状态
+2. 使用 growpart, GParted, fdisk 等软件调整分区
+3. 使用 resize2fs 增大或收缩 ext2/ext3/ext4 文件系统
 
-### 检查新增空间
+## 附件数据盘
 
-运行 `df -Th` 命令检查新增磁盘空间是否需要手工扩容
+数据盘是相对于系统盘而言的存储方式，从购买到最后使用需要经历如下几个阶段：
 
-### 扩容分区
+1. 在物理层面将数据盘附件到指定的服务器，运行 `lsblk -f` 命令检查是否附加成功（体现为 vdb 磁盘）
 
-1. 安装分区扩容软件 growpart
+2. 使用 parted 等工具为磁盘创建分区（GPT 或 MBR），运行 `lsblk -f` 命令检查
 
-    ```
-    yum install -y cloud-utils-growpart
-    ```
-
-2. 扩容分区（包含对应的文件系统）
-    ```
-    #1 扩容分区
-    growpart /dev/vda 1
-
-    #2 增大或收缩 ext2/ext3/ext4 文件系统
-    resize2fs /dev/vda1  
-    ```
-
-## 增加数据盘
-
-用户在云平台购买数据盘并将其附加到指定的服务器之后，还需要下面的工作方可使用：
-
-### 检查数据盘
-
-运行 `lsblk -f` 命令检查数据盘是否已经被附件到服务器
-
-```
-$ lsblk -f
-
-NAME    FSTYPE    LABEL        UUID                                    MOUNTPOINT
-vda                                                                       
-└─vda1 ext4     /     13843fcc-f592-4868-b87f-3784967cd0c4    1.8G    93% /
-vdb
-```
-
-vdb 表示这是一个全新的磁盘，它还没有创建分区。  
-
-### 创建分区
-
-分区的有 GPT 和 MBR 等几种标准，推荐使用 GPT 分区方式：
-
-1. 安装创建 GPT 类型分区所需的工具
-    ```
-    yum install -y parted e2fsprogs
-    ```
-
-2. 运行 `parted /dev/vdb` 命令进入工作状态，然后分别执行分区工作命令：
-
-    - `mklabel gpt` 
-    - `mkpart primary 1 100% ` 
-    - `align-check optimal 1 `
-    - `print `
-
-    ```
-    $ parted /dev/vdb
-    GNU Parted 3.3
-    Using /dev/vdb
-    Welcome to GNU Parted! Type 'help' to view a list of commands.
-    (parted) mklabel gpt                                                      
-    (parted) mkpart primary 1 100%                                            
-    (parted) align-check optimal 1                                            
-    1 aligned
-    (parted) print                                                            
-    Model: Virtio Block Device (virtblk)
-    Disk /dev/vdb: 21.5GB
-    Sector size (logical/physical): 512B/512B
-    Partition Table: gpt
-    Disk Flags: 
-
-    Number  Start   End     Size    File system  Name     Flags
-    1      1049kB  21.5GB  21.5GB               primary
-    ```
-
-3. 再次运行 `lsblk -f`，你会发现已经创建了一个 vdb1 的分区
-    ```
-    $ lsblk -f
-
-    NAME    FSTYPE    LABEL        UUID                                    MOUNTPOINT
-    vda                                                                       
-    └─vda1 ext4     /     13843fcc-f592-4868-b87f-3784967cd0c4    1.8G    93% /
-    vdb
-    └─vdb1
-    ```
-
-### 创建文件系统（格式化）
-
-给上面新建的分区创建文件系统，也就是格式化分区：
-
-```
-# 创建 ext4 分区（推荐）
-mkfs -t ext4 /dev/vdb1
-
-# 创建 xfs 分区
-mkfs -t xfs /dev/vdb1
-```
-
-### 挂载点处理
-
-经过上面的几个步骤之后，磁盘已经可用，但它还没有被挂载到 Linux 系统的文件管理体系中。
-
-下面我们介绍持久化挂载方案（区别于 mount 命令的临时挂载）： 
-
-1. Linux 上创建一个新文件夹
    ```
+   #1 Install tools
+   yum install -y parted e2fsprogs
+
+   #2 Start parting
+   parted /dev/vdb
+   ```
+
+3. 为分区创建文件系统（格式化）
+    ```
+    # 创建 ext4 分区（推荐）
+    mkfs -t ext4 /dev/vdb1
+
+    # 创建 xfs 分区
+    mkfs -t xfs /dev/vdb1
+    ```
+4. 为文件系统创建挂载点，使它纳入 Linux 文件系统的管辖中
+
+   ```
+   #1 Create directory
    mkdir /data2
+
+   #2 Get the UUID
+   blkid /dev/vdb1
+
+   #3 Add a permanent mount point
+   echo '/dev/sda1: UUID="uuid_value" TYPE="ext4" PARTUUID="7125fcc698a-01"' > /etc/fstab
+
+   #3 Or add a temp mount point
+   mount /dev/sda1 /data2
    ```
 
-1. 获取数据盘分区的 UUID
+## 附件网络磁盘
 
-    ```
-    $ blkid /dev/vdb1
+网络磁盘也称未外部存储，它位于服务器之外，是区别于服务器磁盘的一种第三方存储服务（例如：对象存储）。    
 
-    /dev/sda1: UUID="0935df16-40b0-4850-9d47-47cd2daf6e59" TYPE="ext4" PARTUUID="7125fcc698a-01"
-    ```
+Websoft9 建议您使用 [Rclone](https://rclone.org/commands/rclone_mount/) 将外部云存储挂载为网络磁盘。  
 
-2. 打开 */etc/fstab* 文件并为新的分区添加一行，注意 `<mount point>` 的值
-    ```
-    # <file system>           <mount point>     <type>  <options>   <dump>  <pass>
-    UUID=0935df16-40b0-48      /data2           ext4    defaults    0       0    
-    ```
+## 优化容器存储
 
-3. 重启服务器后生效
+Docker [Volume](https://docs.docker.com/storage/volumes/) 是容器生成和使用的数据的首选机制，优化的场景：
 
+- [Named Volumes](https://docs.docker.com/storage/volumes/) vs [Bind Mounts](https://docs.docker.com/storage/bind-mounts/) 
+- [更改默认存储卷位置](./docker-server#changepath)
 
-## 相关内容
-
-- 容器持久化存储设置
-
-## 外部存储转换为磁盘
-
-外部存储是区别于服务器磁盘的一种第三方存储服务，它位于服务器之外。Websoft9 通过 [Rclone](https://rclone.org/) 将外部云存储挂载为网络磁盘。  
-
-1. 准备好第三方存储
-
-2. 运行 `rclone config` 命令，配置
-
-具体使用参考：[rclone mount](https://rclone.org/commands/rclone_mount/)
+Websoft9 考虑数据权限和双向同步，使用 Named Volumes 作为应用的默认存储方式。  
