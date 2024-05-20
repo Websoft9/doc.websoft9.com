@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3.0
+sidebar_position: 1.2
 slug: /storage
 ---
 
