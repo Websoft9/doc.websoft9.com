@@ -5,12 +5,10 @@ slug: /install/huaweicloud
 
 # 华为云
 
-Websoft9 在华为云的云市场上提供了丰富的应用和解决方案，用户可以通过购买的方式实现自动化安装部署。
+Websoft9 在华为云和 HUAWEICLOUD 都提供了预制镜像，用户可以通过购买的方式实现自动化安装部署 Websoft9 多应用托管平台。  
 
 - [Websoft9 on 华为云](https://marketplace.huaweicloud.com/seller/e57458aa054b430fb2f82a066105f986)
-- [Websoft9 on HUAWEI CLOUD](https://marketplace-intl.huaweicloud.com/seller/a0d01460031d46639391c78a61de9a0f)
-
-> 我们是全球为数不多能够支持中英文产品和服务的云原生技术商。
+- [Websoft9 on HUAWEICLOUD](https://marketplace-intl.huaweicloud.com/seller/a0d01460031d46639391c78a61de9a0f)
 
 ## 安装
 

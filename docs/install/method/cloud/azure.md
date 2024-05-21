@@ -5,7 +5,7 @@ slug: /install/azure
 
 # Azure
 
-Websoft9 在 Azure 的提供了预制[云市场镜像](https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=vmlab&page=1)，用户可以通过购买的方式实现自动化安装部署 Websoft9 多应用托管平台。
+Websoft9 在 Azure 提供了预制[云市场镜像](https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=vmlab&page=1)，用户可以通过购买的方式实现自动化安装部署 Websoft9 多应用托管平台。
 
 下面的教程介绍如何在 Azure 上部署 Websoft9。
 
@@ -30,20 +30,22 @@ Websoft9 在 Azure 的提供了预制[云市场镜像](https://azuremarketplace.
 
 一旦您注册了 Azure 的账号，您可以通过如下多种方式安装 Websoft9：
 
-### 基于界面向导安装
+### 基于 Marketplace 安装
 
-Azure 提供了三种部署虚拟机镜像的入口界面：
+1. 访问 [Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps)，搜索 Websoft9 镜像
+  ![搜索Websoft9镜像](./assets/azure-mkss-websoft9.png)
 
-- [Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps)
-  ![搜索Websoft9镜像](https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-mkss-websoft9.png)
+2. 完成订阅步骤
 
-- Azure 后台门户（Portal）
+### 基于 Portal 安装
+
+Azure 后台门户（Portal）提供了两种部署镜像的入口：
 
   - Portal > "创建资源"，检索 Websoft9 镜像
-    ![Azure Portal 搜索镜像](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-portalmk-websoft9.png)
+    ![Azure Portal 搜索镜像](./assets/azure-portalmk-websoft9.png)
 
   - Portal > "创建虚拟机" > "浏览所有镜像"，检索 Websoft9 镜像
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-vmimage-websoft9.png)
+    ![](./assets/azure-vmimage-websoft9.png)
 
 不管哪种入口，最终的操作都是一致的：**基于预制的 Websoft9 镜像创建虚拟机**
 

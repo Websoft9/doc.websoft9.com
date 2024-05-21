@@ -17,7 +17,7 @@ slug: /storage
 2. 使用 growpart, GParted, fdisk 等软件调整分区
 3. 使用 resize2fs 增大或收缩 ext2/ext3/ext4 文件系统
 
-## 附件数据盘
+## 附加数据盘
 
 数据盘是相对于系统盘而言的存储方式，从购买到最后使用需要经历如下几个阶段：
 
@@ -57,13 +57,13 @@ slug: /storage
    mount /dev/sda1 /data2
    ```
 
-## 附件网络磁盘
+## 附加网络磁盘
 
-网络磁盘也称未外部存储，它位于服务器之外，是区别于服务器磁盘的一种第三方存储服务（例如：对象存储）。    
+网络磁盘也称为外部存储，它位于服务器之外，是区别于服务器磁盘的一种第三方存储服务（例如：对象存储）。    
 
 Websoft9 建议您使用 [Rclone](https://rclone.org/commands/rclone_mount/) 将外部云存储挂载为网络磁盘。  
 
-## 优化容器存储
+## 优化容器数据卷
 
 Docker [Volume](https://docs.docker.com/storage/volumes/) 是容器生成和使用的数据的首选机制，优化的场景：
 
