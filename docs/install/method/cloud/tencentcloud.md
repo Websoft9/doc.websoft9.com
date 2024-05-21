@@ -5,65 +5,80 @@ slug: /install/tencentcloud
 
 # 腾讯云
 
-Websoft9 在华为云的云市场上提供了丰富的应用和解决方案，用户可以通过购买的方式实现自动化安装部署。
+Websoft9 腾讯云 提供了[预制镜像](https://market.cloud.tencent.com/stores/1252192180)，用户可以通过购买的方式实现自动化安装部署 Websoft9 多应用托管平台。  
 
-- [Websoft9 on 腾讯云](https://market.cloud.tencent.com/stores/1252192180)
+## 先决条件
 
-> 我们是全球为数不多能够支持中英文产品和服务的云原生技术商。
+必须拥有腾讯云的账号：
+
+- 如果你或你的公司已经有一个订阅帐户，请使用该帐户
+- 如果没有，可以免费[开设自己的腾讯云帐户](https://partner.cloud.tencent.com/invitation/3121935004586f183f365f5)，免费使用 100+ 多种云产品
+
+
+## 规划虚拟机配置
+
+先阅读 [Websoft9 安装要求](./requirements)，了解所需的服务器规格、存储和带宽要求。 
+
+另外，在 腾讯云 上部署 Websoft9 时，需要填写重要的配置参数，下面先提前说明：
+
+- 操作系统磁盘类型，请选择 **SSD** 相关类型
+- 安全组端口开启：80, 443, 9000
+- 身份验证：密钥对
+
 
 ## 安装
 
 一旦您注册了腾讯云的账号，您可以通过如下多种方式安装我们的产品：
 
+## 安装 Websoft9
 
-### 云市场部署
+一旦您注册了腾讯云的账号，您可以通过如下多种方式安装我们的产品：
 
-1. 访问 [腾讯云云市场](https://market.cloud.tencent.com/search/websoft9) 网站 或 [Websoft9店铺地址](https://market.cloud.tencent.com/stores/1252192180)
+### 基于云市场安装
 
-2. 搜索关键字"websoft9"，网站会列出所有相关的镜像
-   ![搜索Websoft9镜像](https://libs.websoft9.com/Websoft9/DocsPicture/zh/qcloud/qcloud-simagefrommk-websoft9.png) 
+1. 注册[成为 Websoft9 客户](https://partner.cloud.tencent.com/invitation/3121935004586f183f365f5)，再访问 [Websoft9 云市场店铺](https://market.cloud.tencent.com/stores/1252192180)，找到所需安装的商品
 
-3. 进入产品详情页后点击"立即购买"按钮，镜像就选好了
-   ![立即购买](https://libs.websoft9.com/Websoft9/DocsPicture/zh/qcloud/qcloud-buyimage-websoft9.png) 
+2. 进入产品详情页后点击 "立即购买" 按钮
 
-4. 接下来系统会自动要求购买一台新服务器：选择计费模式、地域、规格、网络和安全组等设置
-   ![立即购买](https://libs.websoft9.com/Websoft9/DocsPicture/zh/qcloud/qcloud-buyimagebuycvm-websoft9.png) 
+3. 根据向导提示，完成服务器购买过程，包括：选择计费方式、实例类型、网络和安全组等设置
 
-   > 购买服务器过程中请勿再次选择镜像
-
-5. 等待几分钟，CVM创建完成后，镜像会作为CVM实例的系统盘启动，即镜像自动部署到实例中
+4. 等待几分钟，CVM 创建完成后，镜像会作为 CVM 实例的系统盘启动，即镜像自动部署到实例中
 
 
+### 基于控制台安装
+
+控制台**创建 CVM** 或**切换操作系统**时，均可设置 Websoft9 镜像作为系统盘，从而实现安装。
+
+1. 腾讯云控制台，进入 CVM 管理界面
+
+   - 购买 CVM
+   - 或对目标 CVM 进行 "切换操作系统" 操作
+
+2. 在镜像来源设置中，选择 **镜像市场**
+
+3. 然后搜索关键件词 “websoft9 托管平台”，选择对应的镜像
+
+4. 根据向导提示，完成服务器购买过程，包括：选择计费方式、实例类型、网络和安全组等设置
+
+5. 等待几分钟，CVM 创建完成后，镜像会作为 CVM 实例的系统盘启动，即镜像自动部署到实例中
 
 
-### 购买服务器部署
+### 基于 API/CLI 安装
 
-购买CVM或控制台创建实例过程中，可以选择Websoft9的镜像作为系统启动盘
+即将推出
 
-1. 登录腾讯云控制台->云服务器，点击“新建”，
-   ![进入ecs控制台购买服务器](https://libs.websoft9.com/Websoft9/DocsPicture/zh/qcloud/qcloud-buyecs-websoft9.png)
-2. 购买的第二步，选择镜像选择“镜像市场”
-   ![进入ecs控制台购买服务器](https://libs.websoft9.com/Websoft9/DocsPicture/zh/qcloud/qcloud-selectmkimage-websoft9.png)
-3. 然后搜索关键件词“**websoft9**”，列出相关镜像
-   ![选择Websoft9镜像](https://libs.websoft9.com/Websoft9/DocsPicture/zh/qcloud/qcloud-selectimage-websoft9.png)
+### 基于资源编排安装
 
-4. 选择一个你所需的镜像，开始创建CVM实例
-6. 等待几分钟，CVM创建完成后，镜像会作为CVM实例的系统盘启动，即镜像自动部署到实例中
+1. 提前准备部署模板
 
-### 重装系统部署
+2. 登录腾讯云控制台，将部署模板导入运行
 
-镜像除了可以在创建新服务器之时购买，针对已有了服务器，也可以通过**重装系统**的方式使用镜像。
+## 完成虚拟机部署
 
-> 需要注意的是，重装系统意味着系统数据全部会格式化，所以请注意做好数据的备份。
+选用以上任意安装方式，腾讯云都会开始部署新的 CVM。  
 
-1. 登录到腾讯云控制台，在“实例”中关机，然后选择：更多->重装系统 
-   ![重装系统](https://libs.websoft9.com/Websoft9/DocsPicture/zh/qcloud/qcloud-changesysdisk-websoft9.png)
+部署过程需要几分钟才能完成。完成后，通过腾讯云的控制台查看新的 CVM 的信息。  
 
-2. 确认更换后，镜像选择“服务市场”，搜索关键字“**websoft9**”，列出相关镜像
-   ![选择Websoft9镜像](https://libs.websoft9.com/Websoft9/DocsPicture/zh/qcloud/qcloud-changeimage-websoft9.png)
+## 后续配置 Websoft9
 
-3. 确认好所选镜像，重设操作系统密码
-
-4. 请耐心等待几分钟，直至更换完成
-
-## 安装后
+CVM 可用之后，还需要[完成配置域名等后续操作](./setup)，方可使用更好的使用 Websoft9
