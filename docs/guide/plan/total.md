@@ -1,6 +1,6 @@
 ---
-sidebar_position: 1
-slug: /basic
+sidebar_position: 1.0
+slug: /plan-total
 ---
 
 # 生产级应用的部署要求
@@ -15,6 +15,8 @@ Websoft9 多应用托管平台，是一个面向生产的企业级的系统，�
 - 引入自动化流程，提升部署效率，降低部署错误几率
 
 当前，针对于生产级部署，有一套最佳实践规范，它就是：GitOps
+
+![](./assets/gitops-workflow-websoft9.png)
 
 要达成以上的目标，
 

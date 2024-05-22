@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1.3
+sidebar_position: 2.1
 slug: /guide/appchangeurl
 ---
 

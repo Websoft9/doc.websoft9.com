@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10.2
+sidebar_position: 0.1
 slug: /domains
 ---
 

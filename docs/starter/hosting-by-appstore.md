@@ -3,9 +3,17 @@ sidebar_position: 1.0
 slug: /appstore-guide
 ---
 
-# 使用应用商店一键部署应用
+# 使用模板一键部署应用
 
-[安装](./install)或[订阅](./business) Websoft9 之后，就可以参考下面的入门向导，快速上手：
+Websoft9 控制台的 **应用商店** 功能模块预制 200+ 个应用模板，包含：数据分析、AI、网站、企业运营、设计创作、低代码、数据库等细分领域数百个顶尖工具。只需单击几下即可将您的应用程序部署到您自己的云设施中。
+
+[安装](./install)或[订阅](./business) Websoft9 之后，参考下面的任务，使用模板一键部署应用。
+
+## 准备
+
+- [登录 Websoft9 控制台](./login-console)
+- [为 Websoft9 设置全局域名](./guide/appsetdomain#global-domain)
+
 
 ## 登录控制台
 
