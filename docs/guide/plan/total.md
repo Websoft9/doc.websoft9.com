@@ -16,7 +16,7 @@ Websoft9 多应用托管平台，是一个面向生产的企业级的系统，�
 
 当前，针对于生产级部署，有一套最佳实践规范，它就是：GitOps
 
-![](./assets/gitops-workflow-websoft9.png)
+
 
 要达成以上的目标，
 

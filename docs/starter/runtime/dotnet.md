@@ -1,6 +1,7 @@
 ---
 title: .NET
 slug: /runtime/dotnet
+sidebar_position: 1.6
 tags:
   - 运行环境
   - runtime

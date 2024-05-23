@@ -1,13 +1,12 @@
 ---
 title: Python
 slug: /runtime/python
+sidebar_position: 1.3
 tags:
   - 运行环境
   - runtime
   - Python
 ---
-
-
 
 ## 配置选项{#configs}
 

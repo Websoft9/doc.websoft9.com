@@ -1,5 +1,6 @@
 ---
 title: Node.js
+sidebar_position: 1.2
 slug: /runtime/nodejs
 tags:
   - 运行环境

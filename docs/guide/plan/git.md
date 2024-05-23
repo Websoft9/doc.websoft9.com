@@ -5,7 +5,11 @@ slug: /plan-git
 
 # 使用 Git 管理自动化部署
 
+自动化部署是指使用专门的软件工具或脚本来自动执行软件安装与发布过程。它提高了软件交付的速度和可靠性，减少过程中的错误。
+
 Websoft9 遵循 [GitOps](https://about.gitlab.com/topics/gitops/) 思想，使用 Git 管理自动化部署代码。这样使得部署过程更加透明、可追溯、协作和安全，同时提供了强大的工具来支持自动化和集成，这对于现代软件开发和运维实践至关重要。
+
+![](./assets/gitops-workflow-websoft9.png)
 
 ## 使用 Git 带来的好处{#whygit}
 
@@ -27,19 +31,19 @@ Websoft9 遵循 [GitOps](https://about.gitlab.com/topics/gitops/) 思想，使�
 
 总结来说，使用 Git 管理自部署代码 vs 在服务器直接管理部署代码，前者无疑是更科学的选择。  
 
-## 平台内置 Gitea 作为 Git 管理工具{#gitea}
+## 内置 Gitea 作为 Git 管理工具{#gitea}
 
 Websoft9 控制台集成 [Gitea](https://gitea.com) 作为 Git 自动化部署代码的存储平台，并 100% 保持其原生性。   
 
 [Gitea](https://docs.gitea.com/)  是一个开源的自托管Git服务，它是用 Go 语言编写的。它旨在提供一个简单、轻量级和可扩展的方式来设置你自己的 Git 服务。它提供了一个简洁的用户界面，使得用户可以轻松地浏览仓库、提交、分支和更多功能。
 
-## 平台的 Git 部署逻辑{#process}
+## Git 部署的工作流程{#process}
 
 Websoft9 使用 Git 部署逻辑实际上非常简单，它只有四个步骤：
 
 1. 准备好云服务器
 
-2. 准备好 Docker 镜像或源码包等**待部署的软件包**
+2. 准备好 Docker 镜像或源码包等 **[待部署的软件包](./plan-package)**
 
 3. 增加一个 Git 仓库，其中包含安装、编排和配置脚本**自动化部署代码**
 
@@ -73,6 +77,7 @@ Gitea 支持用户手工创建仓库:
    - 使用 git 客户端，同步软件源码到远程仓库
 
 6. 获取软件包等下载地址或 git clone 地址，用于自动化部署代码中
+   ![](./assets/websoft9-gitea-links.png)
 
 ## 增加 Git 用户{#user}
 

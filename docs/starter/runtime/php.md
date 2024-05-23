@@ -1,6 +1,7 @@
 ---
 title: PHP
 slug: /runtime/php
+sidebar_position: 1.4
 tags:
   - 运行环境
   - runtime

@@ -35,6 +35,8 @@ Websoft9 是一个以应用为中心的微服务架构模式，它入门极简�
 - Deployment：负责与 Docker, K8s 交付的部署工作模块，同时提供可视化的管理容器的界面
 - App Gateway：发布和控制应用的访问
 
-采用 [Docker Compose](https://docs.docker.com/compose/) 作为应用程序的模板，同时开源由 Websoft9 维护的[模板库](https://github.com/Websoft9/docker-library)。
+## 开放兼容
+
+Websoft9 采用 [Docker Compose](https://docs.docker.com/compose/) 作为应用程序的模板，同时开源由 Websoft9 维护的[模板库](https://github.com/Websoft9/docker-library)。  
 
 也就是说，应用实际上最终运行在 Docker Compose 编排下，即使不使用 Websoft9 的控制台管理应用，也不会被任何技术体系绑架，做到绝对的收放自如、自主可控。  

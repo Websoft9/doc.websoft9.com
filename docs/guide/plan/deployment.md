@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-slug: /install-apps
+slug: /deployment
 ---
 
 # 使用 Websoft9 部署应用
@@ -54,31 +54,34 @@ Websoft9 应用部署它与同类产品相比，极具创新性：
 
 ## 从应用商店部署源码类应用
 
-Websoft9 **应用商店** 内置 Java、Python、Node.js、PHP、Go、Ruby 和 .NET 等语言环境，用于源码部署应用程序。
+Websoft9 **应用商店** 内置 Java、Python、Node.js、PHP、Go、Ruby、HTML 和 .NET 等语言环境，用于源码部署应用程序。
 
 使用参考：[基于程序环境部署应用](./runtime)
 
 ## 从应用商店部署镜像类应用
 
-虽然 Websoft9 [容器模块](./container) 可以直接部署 Docker 镜像类应用，但是这种方式有两个弊端：
+如果基于 Docker 镜像启动应用容器，先阅读[基本原理](./runtime/docker)，再参考如下的步骤：
 
-- 不是 GitOps 模式，无法持续部署
-- 无法自动配置域名
+1. Websoft9 **应用商店** 中进入 "运行环境" 下的 "Docker" 子类
 
-为了解决这个困扰，Websoft9 在 **应用商店** 上提供一个 Docker 镜像部署模板，基于此模板部署镜像非常方便。  
+2. 安装名称为 **Docker** 的应用   
+   ![](./assets/websoft9-installdockertp.png)
 
-使用参考：[基于 Docker 应用模板部署镜像程序](./runtime)
+3. 填写安装参数时，务必准确填写目标应用的容器端口（后续步骤被网关转发访问）
 
+4. 待应用运行后，通过 [Docker 个性化编排](./runtime#dockercompose) 实现个性化镜像部署
 
 ## 手动在操作系统上部署应用
 
 Websoft9 在设计的时候，充分考量了用户自主在服务器上直接部署应用的场景，建议的步骤：
 
-1. 手动在操作系统上安装应用程序，确保与 Websoft9 运行时不产生资源冲突
+1. 准备好与操作系统兼容的 [安装包（制品库）](./plan-package)
 
-2. 通过端口测试应用程序
+2. 编写部署脚本，部署时修正与 Websoft9 运行时产生的资源冲突
 
-3. 使用 Websoft9 控制台的网关模块，为应用配置 **[Proxy Hosts](../function/gateway#add-proxhost)**，即为应用配置域名和证书，并对外发布。  
+3. 通过端口测试应用程序
+
+3. 使用 Websoft9 控制台的网关模块，为应用配置 **[Proxy 访问](./gateway-proxy)**。  
 
 
 ## 问题与故障
@@ -126,3 +129,11 @@ cd /path/applibary/wordpress
 # 拉取镜像
 docker compose pull 
 ```
+
+#### 容器模块支持部署应用吗？
+
+支持，但是这种部署方式有两个弊端：
+
+- 非 GitOps 模式，无法持续部署
+- 无法自动配置域名
+- Websoft9 控制台无法管理它

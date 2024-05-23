@@ -1,6 +1,7 @@
 ---
 title: Ruby
 slug: /runtime/ruby
+sidebar_position: 1.7
 tags:
   - 运行环境
   - runtime

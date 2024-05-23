@@ -1,6 +1,7 @@
 ---
 title: Go
 slug: /runtime/go
+sidebar_position: 1.5
 tags:
   - 运行环境
   - runtime
