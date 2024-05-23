@@ -1,6 +1,6 @@
 ---
 sidebar_position: 0.2
-slug: /guide/appsetdomain
+slug: /domain-set
 ---
 
 import DocCardList from '@theme/DocCardList';

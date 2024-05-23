@@ -17,7 +17,6 @@ slug: /login-console
    - 可选端口：9001-9999
 
 - 获取服务器的 [账号密码](./credentials)（Websoft9 与服务器共享账号）
-- 解析一个[域名](./guide/appsetdomain)到服务器（建议）
 
 ## 登录
 

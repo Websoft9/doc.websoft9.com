@@ -53,6 +53,7 @@ Moodle 初始化之后，建议向 Moodle 官方注册会员，便于在线安�
 - [插件](https://moodle.org/plugins/)（✅）
 - [主题](https://moodle.org/plugins/)（✅）：主题也是插件的一种类型
 - 配置文件（已挂载）：*/bitnami/moodle/config.php*
+- PHP 配置修改：通过应用编排的 .env 文件修改
 - 媒体文件（✅）
 - 多语言（✅）：【Site administration】>【language】>【Language Packs】
 - SMTP（✅）：【网站管理】>【服务器】>【电子邮件】>【发送邮件设置】

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 0.1
-slug: /domains
+slug: /domain-prepare
 ---
 
 # 准备可用的域名

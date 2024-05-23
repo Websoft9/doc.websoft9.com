@@ -75,11 +75,11 @@ Nextcloud 支持多种流行的企业存储服务，具体使用步骤如下：
 
 将 Nextcloud 数据目录移动或复制到其他位置后，需运行 `occ files:scan --all` 重建索引
 
-### 安全使用 Https
+### 安全使用 HTTPS
 
 1. Websoft9 控制台进入 “网关” 菜单，编辑 Nextcloud 应用的代理，将 “Advance” 中 “Custom Nginx Configuration” 清空后保存
 
-2. 在 “编排” 中修改 **.env** 文件，将注释行 **#OVERWRITEPROTOCOL=https** 重新放开后重建应用即开启了安全的Https
+2. 修改应用的编排文件 **.env** ，取消 **OVERWRITEPROTOCOL** 行的注释，重建应用生效
 
 ## 配置选项{#configs}
 

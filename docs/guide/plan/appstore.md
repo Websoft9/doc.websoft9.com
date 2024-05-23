@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-slug: /function/appstore
+slug: /appstore
 ---
 
 # 搜索 Websoft9 模板化应用

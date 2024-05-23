@@ -1,26 +1,26 @@
 ---
 sidebar_position: 5
-slug: /function/gateway
+slug: /gateway
 ---
 
-# 网关
+import DocCardList from '@theme/DocCardList';
+import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-网关是 Websoft9 最具特殊的功能，它集成了 Nginx Proxy Manager（简称 NPM） 作为**应用程序网关**，并 100% 保持其原生性。  
+# 设置域名与安全访问
 
-## 关于
+所有的企业级应用部署，都会采用 HTTP 网关发布应用，控制应用的安全访问。   
 
-[NPM](https://nginxproxymanager.com/guide/) 是一个 Nginx 开源管理面板，它为用户提供了一个友好的 web 界面，用于管理和部署 Nginx 代理服务器的功能，包括：
+Websoft9 内置 Nginx Proxy Manager（简称 [NPM](https://nginxproxymanager.com/guide/)） 作为**应用程序网关**，并 100% 保持其原生性和独立开放性。  
 
-- 反向代理
-- 负载均衡
+![应用网关](./assets/websoft9-gateway-dashboard.png)
+
+它以 Proxy 代理作为核心功能基础，核心的功能包括：
+
+- HTTP 反向代理
 - TCP/UDP 端口转发
 - 404 重定向
 - 自动化的 SSL 证书申请与续期
 - 访问控制与白名单
-
-> 网关需具备一定的 HTTP 服务应用经验的用户使用，否则很容易破坏已安装应用的访问。  
-
-![应用网关](./assets/websoft9-gateway-dashboard.png)
 
 ## 工作原理
 
@@ -28,7 +28,13 @@ slug: /function/gateway
 
 **网关是如何与 Websoft9 应用商店进行协作的？**     
 
-当用户通过 Websoft9 应用商店安装的程序，应用管理器会调用网关的 API 接口，基于接口自动创建域名绑定到容器端口，帮助程序实现 **域名** 访问。 依次类推，修改域名、删除应用等操作，都会调用网关的 API 接口，完成所需的操作。  
+当用户通过 Websoft9 应用商店安装的程序，应用管理器会调用网关的 API 接口，基于接口自动创建域名绑定到容器端口，帮助程序实现 **域名** 访问。 依次类推，修改域名、删除应用等操作，都会调用网关的 API 接口，完成所需的操作。 
+
+网关需具备一定的 HTTP 服务应用经验的用户使用，否则很容易破坏已安装应用的访问。 
+
+## 使用指南
+
+<DocCardList items={useCurrentSidebarCategory().items}/>
 
 ## 常用功能
 
