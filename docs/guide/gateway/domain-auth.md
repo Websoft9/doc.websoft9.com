@@ -1,9 +1,13 @@
 ---
 sidebar_position: 1.2
-slug: /guide/appauth
+slug: /domain-auth
 ---
 
 # 设置应用的安全访问控制
+
+Websoft9 网关
+
+## 概述
 
 安装应用后，我们发现可能还有更多的安全访问控制需求：
 
