@@ -18,7 +18,7 @@ Websoft9 控制台的网关模块中支持**可视化的 HTTPS 设置**，支持
 
 可选的：
 
-- [上传已有证书](#upload)到 Websoft9 控制台
+- [上传已有 SSL 证书](#upload)到 Websoft9 控制台
 
 ## Websoft9 控制台配置 HTTPS{#console}
 
@@ -102,9 +102,9 @@ Websoft9 控制台进入【网关】>【Proxy Hosts】，编辑域名的 SSL 设
 
 可以通过 `openssl` 为 IP 创建自签名证书，但在线的证书颁发机构不支持 IP 申请证书。  
 
-## 问题解答
+## 问题与故障
 
-#### Docker 容器设置 HTTPS？
+#### 容器内设置 HTTPS 可行否？
 
 有些应用支持通过容器内设置 HTTPS，但适合局域网应用。  
 

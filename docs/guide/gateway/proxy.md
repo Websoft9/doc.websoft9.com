@@ -3,15 +3,43 @@ sidebar_position: 2.2
 slug: /gateway-proxy
 ---
 
-# 为应用设置 Proxy 访问
+# 为应用设置反向代理访问
 
-![](./assets/apache-vhostui-websoft9.png)
+如果您的应用未通过 Websoft9 应用商店部署，本教程将指导您配置反向代理以便将应用发布至互联网。  
+
+支持两种类型的反向代理服务：
+
+- [HTTP 反向代理](#http)
+- [TCP/UDP 反向代理](#stream)
+
+## 原理
+
+Websoft9 控制台默认集成 [NPM](https://nginxproxymanager.com/guide/) 作为反向代理服务（Reverse Proxy），作为后端应用与用户之间的访问桥梁。  
+
+反向代理是一种流行的网关服务器工作模式，它允许网关收来自客户端的请求，并将这些请求转发到**后端服务（运行中的应用）**。当后端服务处理完这些请求后，网关再将响应返回给客户端。
+
+Websoft9 反向代理服务的工作流程如下：
+
+1. 客户端发送请求到反向代理服务 NPM。
+2. NPM 接收到请求后，根据配置决定将请求转发到哪个后端容器服务。
+3. 后容器服务处理请求，并将响应返回给 NPM。
+4. NPM 再将后端服务器的响应转发给客户端。
+
+## 条件
+
+- 开启服务器安全组的 80, 443 端口
+
+- 获取后端服务的访问的访问地址和端口号
+
+  - 当后端服务运行在容器中时，**容器名** 可作为访问地址
+  - 当后端服务直接运行在服务器中时，Docker 的 **websoft9** 网络作为访问地址
+  - 提供后端服务准确的端口号
 
 ## 设置 HTTP 转发{#http}
 
 Proxy Host 即一个实现代理转发的**虚拟主机**，它可以将一个运行在服务器或容器内部的应用，通过 Nginx 虚拟主机的 proxy 功能，把应用绑定到域名发布出去，供 Internet 用户访问。  
 
-### 基本设置
+### 快速创建一个 HTTP 转发
 
 1. 控制台依次打开：【网关】>【Hosts】>【Proxy Hosts】项
 
@@ -66,11 +94,11 @@ proxy_set_header X-Forwarded-Proto $scheme;
 
 ### 为 Proxy Host 设置 HTTPS
 
-Websoft9 的网关支持自动证书和上传证书两种类型，具体参考：[HTTPS 设置指南](../guide/appsethttps)
+Websoft9 的网关支持自动证书和上传证书两种类型，具体参考：[HTTPS 设置指南](./domain-https)
 
 ### 应用安全访问控制{#access-auth}
 
-Websoft9 的网关支持密码和白名单等访问控制，具体参考：[应用安全访问控制指南](../guide/appauth)
+Websoft9 的网关支持密码和白名单等访问控制，具体参考：[应用安全访问控制指南](./domain-auth)
 
 ## 设置 TCP/UDP 转发{#stream}
 

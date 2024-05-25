@@ -12,7 +12,7 @@ import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 ![应用网关](./assets/websoft9-gateway-dashboard.png)
 
-NPM 以 NGINX 的 **Reverse Proxy（方向代理）** 为核心功能基础，为应用程序提供访问与控制服务：  
+NPM 以 NGINX 的 **Reverse Proxy（反向代理）** 为核心功能基础，为应用程序提供访问与控制服务：  
 
 - HTTP 反向代理转发
 - TCP/UDP 端口转发
