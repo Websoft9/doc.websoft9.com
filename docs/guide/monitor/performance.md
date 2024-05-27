@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+slug: /monitor-apm
 ---
 
 # 应用性能实时监控

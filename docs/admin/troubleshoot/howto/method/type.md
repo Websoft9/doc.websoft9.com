@@ -5,7 +5,7 @@ slug: /troubleshoot/type
 
 # 问题定性，有的放矢
 
-问题定性即鉴别问题的类型。Websoft9 在实践中发现问题基本集中在三个方面：**资源瓶颈、连接障碍和组件失效**  
+问题定性即鉴别问题的类型。Websoft9 在实践中托管维护的问题基本集中在三个方面：**资源瓶颈、连接障碍和组件失效**  
 
 同一个类型的问题，解决方案具有高度一致性。  
 
@@ -29,7 +29,7 @@ netstat -tunlp
 
 典型范例：  
 
-* [MySQL 日志太大，导致磁盘空间不足？](../mysql/admin#binlogexceed)
+* [MySQL 日志太大，导致磁盘空间不足？](./mysql#binlogexceed)
 * [Websoft9 默认端口被占用？](../faq#portconflict)
 * [访问量很小，但网站访问很慢？](../faq#siteslow)
 

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+slug: /monitor-status
 ---
 
 # 应用状态监测与告警
