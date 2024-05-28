@@ -9,7 +9,7 @@ slug: /plan-package
 
 ![](./assets/websoft9-artifactorys.png)
 
-如果 [Websoft9 模板化应用库](appstore) 中包含您所需的应用程序，那么您不需要准备此软件的制品。   
+当然，准备制品不是必须的。如果 [Websoft9 模板化应用库](appstore) 中包含您所需的应用程序，那么您不需要关注制品的问题。     
 
 否则，请根据下面的原则和教程，做好安装之前的准备。  
 

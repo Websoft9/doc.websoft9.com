@@ -10,11 +10,13 @@ tags:
   - HTML/JS
 ---
 
+Websoft9 帮助用户使用 Apache 或 NGINX 或 Caddy 等容器实现 HTML/JS 静态网站的部署。   
+
 ## 配置选项{#configs}
 
 - [Apache 配置选项](../apache#configs)
 - [Caddy  配置选项](../caddy#configs)
-- [Nginx 配置选项](../nginx#configs)
+- [NGINX 配置选项](../nginx#configs)
 
 ## 部署网站{#deploy}
 

@@ -16,6 +16,8 @@ slug: /app-getdetail
 - **应用版本**：应用的发行版本
 - **应用 HTTP 端口**：应用绑定到宿主机的可访问端口
 
+ ![](./assets/websoft9-myappsdetail.png)
+
 
 ## 访问信息
 

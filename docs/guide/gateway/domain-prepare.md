@@ -47,7 +47,7 @@ slug: /domain-prepare
 
 域名绑定通常指将不同域名关联到同服务器的特定应用上，此时需要一个中间代理区分不同域名与应用的对应关系。    
 
-Websoft9 平台使用网关的 [Proxy Hosts](./gateway-proxy) 实现域名绑定。  
+Websoft9 平台使用网关的 [Proxy Hosts](./gateway-proxy) 实现[域名绑定](./domain-set)。  
 
 ## 问题解答
 

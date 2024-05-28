@@ -112,11 +112,20 @@ Websoft9 网关管理界面支持对已有的 HTTP 设置个性化的 server {} 
 
 在 Websoft9 托管平台的网关模块中，**Streams**  是专门负责 TCP/UDP 方向代理功能的一个组件。
 
+### 前置准备
+
+- 为网关服务开启目的端口的[宿主机端口绑定操作](./backend-service#proxy-bind-port)
+- 确保容器允许来自 0.0.0.0 的外部访问或开启白名单
+
+### 转发操作
+
 1. 控制台依次打开：【网关】>【Hosts】>【Streams】项
 
-2. 填写好 Incoming Port 以及被转发的 Forward Host 和 Forward Port
+2. 填写好 Incoming Port 以及被转发的 Forward Host 和 Forward Port（）
 
 > TCP/UDP 转发适用于临时开启数据库类应用的外网访问。 
+
+
 
 ## 相关操作
 
