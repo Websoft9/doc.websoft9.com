@@ -86,7 +86,9 @@ Websoft9 的网关采用先上传证书，再绑定到 Proxy Host 的这种模�
 
 ### HTTP 自动跳转 HTTPS
 
-Websoft9 控制台进入【网关】>【Proxy Hosts】，编辑域名的 SSL 设置，勾选**Force SSL** 即可
+1. 登录 Websoft9 控制台，进入网关功能项
+
+2. 编辑目标应用的 "Proxy Host", "SSL" 标签页中勾选 **Force SSL** 即可
 
 ### 证书申请失败自检指南
 
@@ -97,10 +99,25 @@ Websoft9 控制台进入【网关】>【Proxy Hosts】，编辑域名的 SSL 设
 3. **单域名限制**：证书申请通常限于一个特定域名。
 4. **邮箱黑名单**：注册邮箱若被标记为不信任，可能导致申请被拒。
 5. **网络超时**：申请过程中的连接问题可能导致验证超时。
+6. **域名不被信任**：在申请证书之前为通过 [Let's Encrypt](https://letsencrypt.org/) 的信任检测
 
 ### IP 地址申请 HTTPS 证书
 
 可以通过 `openssl` 为 IP 创建自签名证书，但在线的证书颁发机构不支持 IP 申请证书。  
+
+### 验证域名解析可信
+
+当域名解析成功的域名不可信时，Websoft9 网关在线申请证书是无法成功的。  
+
+下面的步骤介绍如何判断解析不可信：  
+
+1. 登录 Websoft9 控制台，进入网关管理界面的 "SSL Certificates" 栏目
+
+2. 点击右上角 "Add SSL Certificate" > "Let's Encrypt"，进入 "Add Let's Encrypt Certificate" 窗口
+
+3. 输入域名，点击 "Test Server Reachability" 按钮
+
+4. 当检测结果包含 "...Invalid domain or IP."，意味着域名被判断为不可信
 
 ## 问题与故障
 
@@ -118,4 +135,6 @@ Websoft9 控制台进入【网关】>【Proxy Hosts】，编辑域名的 SSL 设
 问题描述：HTTPS 设置成功，仍显示“与此网站建立的连接并非完全安全”  
 原因分析：网站中存在 HTTP 访问的内部或外部资源  
 解决方案：逐一消除 HTTP 资源
+
+#### 
 
