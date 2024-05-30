@@ -31,4 +31,4 @@ import Meta from './_include/traefik.md';
 
 #### 无法访问 Traefik Dashboard？
 
-8080 端口由于安全考虑，没有直接绑定到宿主机
+8080 端口由于安全考虑，没有直接映射到宿主机

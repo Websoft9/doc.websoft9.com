@@ -45,13 +45,13 @@ ALTER USER postgres WITH PASSWORD 'postgres'
 
 ### 远程访问
 
-#### 端口绑定访问
+#### 端口映射访问
 
-PostgreSQL 应用默认已经绑定到宿主机外网端口，只需要确保安全组放通对应的端口即可。  
+PostgreSQL 应用默认已经映射到宿主机外网端口，只需要确保安全组放通对应的端口即可。  
 
 #### 转发桥接访问
 
-如果 PostgreSQL 容器端口没有绑定到宿主机，可以通过 Websoft9 网关的 **Streams** 转发模式桥接访问，但需确保：
+如果 PostgreSQL 容器端口没有映射到宿主机，可以通过 Websoft9 网关的 **Streams** 转发模式桥接访问，但需确保：
 
 1. postgresql.conf 配置项 `listen_addresses = '*'`
 2. pg_hba.conf 配置项 `host    all             all             0.0.0.0/0            md5`

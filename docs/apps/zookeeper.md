@@ -17,11 +17,11 @@ Websoft9 控制台安装 Zookeeper 后，通过 "我的应用" 查看应用详�
 
 ### 客户端连接
 
-1. 获取 Zookeeper 的容器名称
+1. 获取 Zookeeper 的容器名称，假定为 zk_name
 
-2. 运行下面的命令连接启动客户端连接 (your-zookeeper 为你的容器名称)
+2. 运行下面的命令连接启动客户端连接 (zk_name 替换为实际值)
    ```
-   docker run -it --rm --link your-zookeeper:zookeeper zookeeper zkCli.sh -server zookeeper
+   docker run -it --rm --net=container:zk_name zookeeper zkCli.sh -server zookeeper
    ```
 
 3. 连接成功后运行 `ls /` 查询 znode

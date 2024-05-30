@@ -47,4 +47,4 @@ Websoft9 控制台安装 TensorFlow 后，通过 "我的应用" 查看应用详�
 #### TensorBoard 在 Notebook 中不显示？
 
 - 确保启动 TensorBoard 命令时包含 `--host 0.0.0.0` 参数
-- 确保容器 6006 端口绑定的宿主机端口已开启
+- 确保容器 6006 端口映射的宿主机端口已开启

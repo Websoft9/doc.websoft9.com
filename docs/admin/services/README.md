@@ -18,6 +18,6 @@ slug: /backend-service
 
 Websoft9 后台服务基于 Docker Compose 运行，只需在[Websoft9 容器编排文件目录](./parameter#path)找到相关文件即可轻松编排。  
 
-### 为网关容器绑定更多的宿主机端口{#proxy-bind-port}
+### 为网关容器映射更多的宿主机端口{#proxy-bind-port}
 
-修改 Websoft9 后台服务的 docker-compose.yml 文件的 **proxy** 服务，为它绑定更多的 port 到宿主机。
+修改 Websoft9 后台服务的 docker-compose.yml 文件的 **proxy** 服务，为它映射更多的 port 到宿主机。

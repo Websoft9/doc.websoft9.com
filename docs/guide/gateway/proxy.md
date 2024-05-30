@@ -114,7 +114,7 @@ Websoft9 网关管理界面支持对已有的 HTTP 设置个性化的 server {} 
 
 ### 前置准备
 
-- 为网关服务开启目的端口的[宿主机端口绑定操作](./backend-service#proxy-bind-port)
+- 为网关服务开启目的端口的[宿主机端口映射操作](./backend-service#proxy-bind-port)
 - 确保容器允许来自 0.0.0.0 的外部访问或开启白名单
 
 ### 转发操作

@@ -3,7 +3,7 @@ sidebar_position: 1.2
 slug: /web-terminal
 ---
 
-# 使用 Web 终端连接服务器
+# 连接服务器
 
 ## 背景
 

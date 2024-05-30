@@ -27,7 +27,7 @@ Websoft9 应用部署它与同类产品相比，极具创新性：
 - 若通过**端口访问**应用，需服务器的安全组入方向开放端口：9001-9999
 
 
-## 从应用商店部署模板化应用
+## 从应用商店部署模板化应用{#appstore}
 
 通过 Websoft9 **应用商店** 部署模板化的应用是最简单的部署方式，它支持 WordPress, ONLYOFFICE, Odoo, GitLab, Teamcity, AITable, MySQL, Moodle, Zentao 等 200+ 个热门应用。  
 
@@ -52,13 +52,13 @@ Websoft9 应用部署它与同类产品相比，极具创新性：
 4. 等待模板应用状态由 **Installing** 变成 **Active** 状态，则说明安装成功
    ![](./assets/websoft9-myapps-active.png)
 
-## 从应用商店部署源码类应用
+## 从应用商店部署源码类应用{#runtime}
 
 Websoft9 **应用商店** 内置 Java、Python、Node.js、PHP、Go、Ruby、HTML 和 .NET 等语言环境，用于源码部署应用程序。
 
 使用参考：[基于程序环境部署应用](./runtime)
 
-## 从应用商店部署镜像类应用
+## 从应用商店部署镜像类应用{#image}
 
 如果基于 Docker 镜像启动应用容器，先阅读[基本原理](./runtime/docker)，再参考如下的步骤：
 
@@ -71,7 +71,7 @@ Websoft9 **应用商店** 内置 Java、Python、Node.js、PHP、Go、Ruby、HTM
 
 4. 待应用运行后，通过 [Docker 个性化编排](./runtime#dockercompose) 实现个性化镜像部署
 
-## 手动在操作系统上部署应用
+## 手动在操作系统上部署应用{#os}
 
 Websoft9 在设计的时候，充分考量了用户自主在服务器上直接部署应用的场景，建议的步骤：
 
