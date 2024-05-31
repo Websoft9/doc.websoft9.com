@@ -61,13 +61,6 @@ const config = {
           // Please change this to your repo.
           editUrl: 'https://github.com/websoft9/doc.websoft9.com/tree/main',
           // exclude: ['**/apps/**']
-          lastVersion: 'current',
-          versions: {
-            current: {
-              label: '2.0',
-              path: '2.0',
-            },
-          }
         },
         blog: {
           showReadingTime: true,

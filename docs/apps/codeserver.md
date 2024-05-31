@@ -116,7 +116,7 @@ java -version
 
 问题描述：切换到 root 账号 git clone 项目后，code-server 权限不足，导致无法修改或删除项目文件  
 原因分析：code-server 容器默认用户是 abc，无法修改 root 权限的文件   
-解决方案：`chown -R abc:abc workspace` 修正
+解决方案：`chown -R abc:abc /config/workspace` 修正
 
 #### Terminal 安装组件时权限不足？
 
