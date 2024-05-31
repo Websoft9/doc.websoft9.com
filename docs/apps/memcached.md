@@ -26,7 +26,7 @@ Websoft9 控制台安装 Memcached 后，通过 "我的应用" 查看应用详�
    - ports 中的宿主机端口
    - 删除 profiles 指令
 
-3. 重建应用后，本地浏览器访问 http://URL:port，进入控制面板
+3. 重建应用后，本地浏览器访问 `http://URL:port`，进入控制面板
   ![Memcached-admin](./assets/memcached-gui-websoft9.png)
 
 ### Telnet 连接
