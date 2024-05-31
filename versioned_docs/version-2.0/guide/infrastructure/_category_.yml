@@ -1,0 +1,5 @@
+position: 5.2
+label: "管理基础设施"
+collapsible: true
+collapsed: true
+className: "red"

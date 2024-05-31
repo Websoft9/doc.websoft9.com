@@ -1,0 +1,8 @@
+position: 3
+label: "安装"
+collapsible: true
+collapsed: true
+className: "red"
+link:
+  type: doc
+  id: install/method/readme

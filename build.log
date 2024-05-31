@@ -1,0 +1,257 @@
+yarn run v1.22.19
+$ docusaurus build
+[INFO] Website will be built for all these locales: 
+- zh-cn
+- en
+[INFO] Website will be built for all these locales: 
+- zh-cn
+- en
+[INFO] [zh-cn] Creating an optimized production build...
+ℹ Compiling Client
+ℹ Compiling Server
+(node:143277) [DEP0170] DeprecationWarning: The URL http://URL:port，进入控制面板 is invalid. Future versions of Node.js will throw an error.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ Server: Compiled successfully in 1.75m
+✔ Client: Compiled successfully in 2.79m
+[WARNING] Docusaurus found broken anchors!
+
+Please check the pages of your site in the list below, and make sure you don't reference any anchor that does not exist.
+Note: it's possible to ignore broken anchors with the 'onBrokenAnchors' Docusaurus configuration, and let the build pass.
+
+Exhaustive list of all broken anchors found:
+- Broken anchor on source page path = /docs/1.0/administrator/domain_step:
+   -> linking to ../caddy#domain (resolved as: /docs/1.0/caddy#domain)
+   -> linking to ../traefik#domain (resolved as: /docs/1.0/traefik#domain)
+   -> linking to ../iis#domain (resolved as: /docs/1.0/iis#domain)
+- Broken anchor on source page path = /docs/1.0/administrator/migration_db:
+   -> linking to ../postgresql/admin#migration (resolved as: /docs/1.0/postgresql/admin#migration)
+- Broken anchor on source page path = /docs/1.0/administrator/proxy:
+   -> linking to ../caddy#proxytemplate (resolved as: /docs/1.0/caddy#proxytemplate)
+   -> linking to ../traefik#proxytemplate (resolved as: /docs/1.0/traefik#proxytemplate)
+- Broken anchor on source page path = /docs/1.0/couchdb:
+   -> linking to #service (resolved as: /docs/1.0/couchdb#service)
+- Broken anchor on source page path = /docs/1.0/fastpanel:
+   -> linking to #%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81 (resolved as: /docs/1.0/fastpanel#%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81)
+- Broken anchor on source page path = /docs/1.0/kafka:
+   -> linking to #service (resolved as: /docs/1.0/kafka#service)
+- Broken anchor on source page path = /docs/1.0/linux:
+   -> linking to ./troubleshoot#linux (resolved as: /docs/1.0/troubleshoot#linux)
+- Broken anchor on source page path = /docs/1.0/magento:
+   -> linking to ./magento/admin##updateerror (resolved as: /docs/1.0/magento/admin##updateerror)
+- Broken anchor on source page path = /docs/1.0/magento/admin:
+   -> linking to #updateplugin (resolved as: /docs/1.0/magento/admin#updateplugin)
+- Broken anchor on source page path = /docs/1.0/memcached:
+   -> linking to #%E5%8F%AF%E8%A7%86%E5%8C%96%E7%AE%A1%E7%90%86 (resolved as: /docs/1.0/memcached#%E5%8F%AF%E8%A7%86%E5%8C%96%E7%AE%A1%E7%90%86)
+- Broken anchor on source page path = /docs/1.0/mingdao:
+   -> linking to ./mingdao/admin#workflow (resolved as: /docs/1.0/mingdao/admin#workflow)
+- Broken anchor on source page path = /docs/1.0/moodle:
+   -> linking to ./administrator/parameter#managedb (resolved as: /docs/1.0/administrator/parameter#managedb)
+- Broken anchor on source page path = /docs/1.0/nginx:
+   -> linking to ##wwwtemplate (resolved as: /docs/1.0/nginx##wwwtemplate)
+- Broken anchor on source page path = /docs/1.0/odoo/admin:
+   -> linking to ../nginx#virtualHosx (resolved as: /docs/1.0/nginx#virtualHosx)
+   -> linking to ../odoo#pgadmin (resolved as: /docs/1.0/odoo#pgadmin)
+- Broken anchor on source page path = /docs/1.0/phpstudy:
+   -> linking to ./apache#virtualHost (resolved as: /docs/1.0/apache#virtualHost)
+   -> linking to #apache (resolved as: /docs/1.0/phpstudy#apache)
+- Broken anchor on source page path = /docs/1.0/redmine:
+   -> linking to #plugin (resolved as: /docs/1.0/redmine#plugin)
+- Broken anchor on source page path = /docs/1.0/rethinkdb:
+   -> linking to ./nginx#auth_basic (resolved as: /docs/1.0/nginx#auth_basic)
+- Broken anchor on source page path = /docs/1.0/runtime:
+   -> linking to ./php#version (resolved as: /docs/1.0/php#version)
+   -> linking to ./mongodb#adminmongo (resolved as: /docs/1.0/mongodb#adminmongo)
+- Broken anchor on source page path = /docs/1.0/runtime/php:
+   -> linking to ../apache#aliatemplate (resolved as: /docs/1.0/apache#aliatemplate)
+- Broken anchor on source page path = /docs/1.0/troubleshoot:
+   -> linking to ./linux/advanced#troubleshoot (resolved as: /docs/1.0/linux/advanced#troubleshoot)
+   -> linking to ./windows/advanced#troubleshoot (resolved as: /docs/1.0/windows/advanced#troubleshoot)
+- Broken anchor on source page path = /docs/1.0/troubleshoot/method:
+   -> linking to ../docker/advanced#noremote (resolved as: /docs/1.0/docker/advanced#noremote)
+- Broken anchor on source page path = /docs/1.0/user/dbgui:
+   -> linking to ../mongodb#adminmongo (resolved as: /docs/1.0/mongodb#adminmongo)
+- Broken anchor on source page path = /docs/1.0/wamp:
+   -> linking to #./mysql#phpmyadmin (resolved as: /docs/1.0/wamp#./mysql#phpmyadmin)
+   -> linking to #service (resolved as: /docs/1.0/wamp#service)
+- Broken anchor on source page path = /docs/1.0/wamp/admin:
+   -> linking to #apache (resolved as: /docs/1.0/wamp/admin#apache)
+- Broken anchor on source page path = /docs/1.0/wampserver:
+   -> linking to #mysql-%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86 (resolved as: /docs/1.0/wampserver#mysql-%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86)
+   -> linking to #service (resolved as: /docs/1.0/wampserver#service)
+- Broken anchor on source page path = /docs/1.0/wampserver/admin:
+   -> linking to #apache (resolved as: /docs/1.0/wampserver/admin#apache)
+   -> linking to #mysql (resolved as: /docs/1.0/wampserver/admin#mysql)
+- Broken anchor on source page path = /docs/1.0/webmin:
+   -> linking to #service (resolved as: /docs/1.0/webmin#service)
+- Broken anchor on source page path = /docs/1.0/zabbix:
+   -> linking to #%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81 (resolved as: /docs/1.0/zabbix#%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81)
+   -> linking to #%E5%AE%89%E8%A3%85%E5%AE%A2%E6%88%B7%E7%AB%AF (resolved as: /docs/1.0/zabbix#%E5%AE%89%E8%A3%85%E5%AE%A2%E6%88%B7%E7%AB%AF)
+- Broken anchor on source page path = /docs/2.0/deployment:
+   -> linking to ./domain-set#global-domain (resolved as: /docs/2.0/domain-set#global-domain)
+- Broken anchor on source page path = /docs/2.0/docker-server:
+   -> linking to ./parameter#cmd (resolved as: /docs/2.0/parameter#cmd)
+- Broken anchor on source page path = /docs/2.0/faq:
+   -> linking to ./install/requirements#network (resolved as: /docs/2.0/install/requirements#network)
+- Broken anchor on source page path = /docs/2.0/mysql:
+   -> linking to ./cloudbeaver#mysql (resolved as: /docs/2.0/cloudbeaver#mysql)
+   -> linking to ./phpmyadmin#exportimport (resolved as: /docs/2.0/phpmyadmin#exportimport)
+- Broken anchor on source page path = /docs/2.0/onlyofficedocs:
+   -> linking to ./seafile#onlyoffice (resolved as: /docs/2.0/seafile#onlyoffice)
+- Broken anchor on source page path = /docs/2.0/runtime/docker:
+   -> linking to ../runtime#quick (resolved as: /docs/2.0/runtime#quick)
+- Broken anchor on source page path = /docs/2.0/runtime/dotnet:
+   -> linking to ../runtime#quick (resolved as: /docs/2.0/runtime#quick)
+- Broken anchor on source page path = /docs/2.0/runtime/go:
+   -> linking to ../runtime#quick (resolved as: /docs/2.0/runtime#quick)
+- Broken anchor on source page path = /docs/2.0/runtime/html:
+   -> linking to ../runtime#quick (resolved as: /docs/2.0/runtime#quick)
+- Broken anchor on source page path = /docs/2.0/runtime/java:
+   -> linking to ../runtime#quick (resolved as: /docs/2.0/runtime#quick)
+- Broken anchor on source page path = /docs/2.0/runtime/nodejs:
+   -> linking to ../runtime#quick (resolved as: /docs/2.0/runtime#quick)
+- Broken anchor on source page path = /docs/2.0/runtime/php:
+   -> linking to ../runtime#quick (resolved as: /docs/2.0/runtime#quick)
+- Broken anchor on source page path = /docs/2.0/runtime/python:
+   -> linking to ../runtime#quick (resolved as: /docs/2.0/runtime#quick)
+- Broken anchor on source page path = /docs/2.0/runtime/ruby:
+   -> linking to ../runtime#quick (resolved as: /docs/2.0/runtime#quick)
+- Broken anchor on source page path = /docs/2.0/solution/devops:
+   -> linking to ../apps#it-%E5%BC%80%E5%8F%91%E8%80%85 (resolved as: /docs/2.0/apps#it-%E5%BC%80%E5%8F%91%E8%80%85)
+- Broken anchor on source page path = /docs/2.0/solution/ha:
+   -> linking to ../apps#it-%E7%9B%91%E6%8E%A7%E8%BF%90%E7%BB%B4 (resolved as: /docs/2.0/apps#it-%E7%9B%91%E6%8E%A7%E8%BF%90%E7%BB%B4)
+- Broken anchor on source page path = /docs/2.0/troubleshoot/practice:
+   -> linking to ../linux#logs (resolved as: /docs/2.0/linux#logs)
+- Broken anchor on source page path = /docs/2.0/wordpress:
+   -> linking to #./matomo (resolved as: /docs/2.0/wordpress#./matomo)
+
+[SUCCESS] Generated static files in "build".
+[INFO] [en] Creating an optimized production build...
+ℹ Compiling Client
+ℹ Compiling Server
+✔ Server: Compiled successfully in 1.56m
+✔ Client: Compiled successfully in 2.55m
+[WARNING] Docusaurus found broken anchors!
+
+Please check the pages of your site in the list below, and make sure you don't reference any anchor that does not exist.
+Note: it's possible to ignore broken anchors with the 'onBrokenAnchors' Docusaurus configuration, and let the build pass.
+
+Exhaustive list of all broken anchors found:
+- Broken anchor on source page path = /en/docs/1.0/administrator/domain_step:
+   -> linking to ../caddy#domain (resolved as: /en/docs/1.0/caddy#domain)
+   -> linking to ../traefik#domain (resolved as: /en/docs/1.0/traefik#domain)
+   -> linking to ../iis#domain (resolved as: /en/docs/1.0/iis#domain)
+- Broken anchor on source page path = /en/docs/1.0/administrator/migration_db:
+   -> linking to ../postgresql/admin#migration (resolved as: /en/docs/1.0/postgresql/admin#migration)
+- Broken anchor on source page path = /en/docs/1.0/administrator/proxy:
+   -> linking to ../caddy#proxytemplate (resolved as: /en/docs/1.0/caddy#proxytemplate)
+   -> linking to ../traefik#proxytemplate (resolved as: /en/docs/1.0/traefik#proxytemplate)
+- Broken anchor on source page path = /en/docs/1.0/budibase:
+   -> linking to #quickstart (resolved as: /en/docs/1.0/budibase#quickstart)
+- Broken anchor on source page path = /en/docs/1.0/canvas/admin:
+   -> linking to ../canvas#plugin (resolved as: /en/docs/1.0/canvas#plugin)
+- Broken anchor on source page path = /en/docs/1.0/cloudbeaver/admin:
+   -> linking to ../nginx#virtualHosx (resolved as: /en/docs/1.0/nginx#virtualHosx)
+- Broken anchor on source page path = /en/docs/1.0/discuz:
+   -> linking to ./php#ini (resolved as: /en/docs/1.0/php#ini)
+- Broken anchor on source page path = /en/docs/1.0/kafka/admin:
+   -> linking to ../kafka#gui (resolved as: /en/docs/1.0/kafka#gui)
+- Broken anchor on source page path = /en/docs/1.0/linux:
+   -> linking to ./troubleshoot#linux (resolved as: /en/docs/1.0/troubleshoot#linux)
+- Broken anchor on source page path = /en/docs/1.0/moodle:
+   -> linking to ./administrator/parameter#managedb (resolved as: /en/docs/1.0/administrator/parameter#managedb)
+- Broken anchor on source page path = /en/docs/1.0/nginx:
+   -> linking to ##wwwtemplate (resolved as: /en/docs/1.0/nginx##wwwtemplate)
+- Broken anchor on source page path = /en/docs/1.0/odoo/admin:
+   -> linking to ../nginx#virtualHosx (resolved as: /en/docs/1.0/nginx#virtualHosx)
+   -> linking to ../odoo#pgadmin (resolved as: /en/docs/1.0/odoo#pgadmin)
+- Broken anchor on source page path = /en/docs/1.0/onlyoffice/admin:
+   -> linking to ../onlyofficedocs/admin#onlyofficedocsmaxconn (resolved as: /en/docs/1.0/onlyofficedocs/admin#onlyofficedocsmaxconn)
+- Broken anchor on source page path = /en/docs/1.0/opencart/admin:
+   -> linking to ../opencart#dns (resolved as: /en/docs/1.0/opencart#dns)
+- Broken anchor on source page path = /en/docs/1.0/phpstudy:
+   -> linking to ./apache#virtualHost (resolved as: /en/docs/1.0/apache#virtualHost)
+   -> linking to #apache (resolved as: /en/docs/1.0/phpstudy#apache)
+- Broken anchor on source page path = /en/docs/1.0/prestashop:
+   -> linking to #setlanguage (resolved as: /en/docs/1.0/prestashop#setlanguage)
+- Broken anchor on source page path = /en/docs/1.0/redis:
+   -> linking to #service (resolved as: /en/docs/1.0/redis#service)
+- Broken anchor on source page path = /en/docs/1.0/rethinkdb:
+   -> linking to ./nginx#auth_basic (resolved as: /en/docs/1.0/nginx#auth_basic)
+- Broken anchor on source page path = /en/docs/1.0/runtime:
+   -> linking to ./php#version (resolved as: /en/docs/1.0/php#version)
+   -> linking to ./python#changeversion (resolved as: /en/docs/1.0/python#changeversion)
+   -> linking to ./mongodb#adminmongo (resolved as: /en/docs/1.0/mongodb#adminmongo)
+- Broken anchor on source page path = /en/docs/1.0/runtime/java:
+   -> linking to ../java#tomcattp (resolved as: /en/docs/1.0/java#tomcattp)
+- Broken anchor on source page path = /en/docs/1.0/runtime/php:
+   -> linking to ../apache#aliatemplate (resolved as: /en/docs/1.0/apache#aliatemplate)
+- Broken anchor on source page path = /en/docs/1.0/troubleshoot:
+   -> linking to ./nginx#troubleshoot (resolved as: /en/docs/1.0/nginx#troubleshoot)
+   -> linking to ./linux/advanced#troubleshoot (resolved as: /en/docs/1.0/linux/advanced#troubleshoot)
+   -> linking to ./windows/advanced#troubleshoot (resolved as: /en/docs/1.0/windows/advanced#troubleshoot)
+- Broken anchor on source page path = /en/docs/1.0/troubleshoot/method:
+   -> linking to ../faq#siteslow (resolved as: /en/docs/1.0/faq#siteslow)
+   -> linking to ../faq#rootnoauth (resolved as: /en/docs/1.0/faq#rootnoauth)
+   -> linking to ../faq#notconnectwin (resolved as: /en/docs/1.0/faq#notconnectwin)
+   -> linking to ../faq#timeout (resolved as: /en/docs/1.0/faq#timeout)
+   -> linking to ../faq#winnonetwork (resolved as: /en/docs/1.0/faq#winnonetwork)
+   -> linking to ../faq#sftpnokey (resolved as: /en/docs/1.0/faq#sftpnokey)
+   -> linking to ../docker/advanced#noremote (resolved as: /en/docs/1.0/docker/advanced#noremote)
+- Broken anchor on source page path = /en/docs/1.0/user/cloud:
+   -> linking to ../user/credentials#osaccount (resolved as: /en/docs/1.0/user/credentials#osaccount)
+- Broken anchor on source page path = /en/docs/1.0/user/dbgui:
+   -> linking to ../mongodb#adminmongo (resolved as: /en/docs/1.0/mongodb#adminmongo)
+- Broken anchor on source page path = /en/docs/1.0/wamp:
+   -> linking to #./mysql#phpmyadmin (resolved as: /en/docs/1.0/wamp#./mysql#phpmyadmin)
+   -> linking to #service (resolved as: /en/docs/1.0/wamp#service)
+- Broken anchor on source page path = /en/docs/1.0/wamp/admin:
+   -> linking to #apache (resolved as: /en/docs/1.0/wamp/admin#apache)
+   -> linking to ../apache#require (resolved as: /en/docs/1.0/apache#require)
+- Broken anchor on source page path = /en/docs/1.0/wampserver:
+   -> linking to #mysql-%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86 (resolved as: /en/docs/1.0/wampserver#mysql-%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86)
+   -> linking to #service (resolved as: /en/docs/1.0/wampserver#service)
+- Broken anchor on source page path = /en/docs/1.0/wampserver/admin:
+   -> linking to #apache (resolved as: /en/docs/1.0/wampserver/admin#apache)
+   -> linking to #mysql (resolved as: /en/docs/1.0/wampserver/admin#mysql)
+   -> linking to ../apache#require (resolved as: /en/docs/1.0/apache#require)
+- Broken anchor on source page path = /en/docs/2.0/deployment:
+   -> linking to ./domain-set#global-domain (resolved as: /en/docs/2.0/domain-set#global-domain)
+- Broken anchor on source page path = /en/docs/2.0/design-infrastructure:
+   -> linking to ./install/requirements#server (resolved as: /en/docs/2.0/install/requirements#server)
+- Broken anchor on source page path = /en/docs/2.0/docker-server:
+   -> linking to ./parameter#cmd (resolved as: /en/docs/2.0/parameter#cmd)
+- Broken anchor on source page path = /en/docs/2.0/mysql:
+   -> linking to #path (resolved as: /en/docs/2.0/mysql#path)
+   -> linking to ./phpmyadmin#exportimport (resolved as: /en/docs/2.0/phpmyadmin#exportimport)
+- Broken anchor on source page path = /en/docs/2.0/redmine:
+   -> linking to #plugin (resolved as: /en/docs/2.0/redmine#plugin)
+- Broken anchor on source page path = /en/docs/2.0/runtime/docker:
+   -> linking to ../runtime#quick (resolved as: /en/docs/2.0/runtime#quick)
+- Broken anchor on source page path = /en/docs/2.0/runtime/dotnet:
+   -> linking to ../runtime#quick (resolved as: /en/docs/2.0/runtime#quick)
+- Broken anchor on source page path = /en/docs/2.0/runtime/go:
+   -> linking to ../runtime#quick (resolved as: /en/docs/2.0/runtime#quick)
+- Broken anchor on source page path = /en/docs/2.0/runtime/html:
+   -> linking to ../runtime#quick (resolved as: /en/docs/2.0/runtime#quick)
+- Broken anchor on source page path = /en/docs/2.0/runtime/java:
+   -> linking to ../runtime#quick (resolved as: /en/docs/2.0/runtime#quick)
+- Broken anchor on source page path = /en/docs/2.0/runtime/nodejs:
+   -> linking to ../runtime#quick (resolved as: /en/docs/2.0/runtime#quick)
+- Broken anchor on source page path = /en/docs/2.0/runtime/php:
+   -> linking to ../runtime#quick (resolved as: /en/docs/2.0/runtime#quick)
+- Broken anchor on source page path = /en/docs/2.0/runtime/python:
+   -> linking to ../runtime#quick (resolved as: /en/docs/2.0/runtime#quick)
+- Broken anchor on source page path = /en/docs/2.0/runtime/ruby:
+   -> linking to ../runtime#quick (resolved as: /en/docs/2.0/runtime#quick)
+- Broken anchor on source page path = /en/docs/2.0/solution/devops:
+   -> linking to ../apps#it-%E5%BC%80%E5%8F%91%E8%80%85 (resolved as: /en/docs/2.0/apps#it-%E5%BC%80%E5%8F%91%E8%80%85)
+- Broken anchor on source page path = /en/docs/2.0/solution/ha:
+   -> linking to ../apps#it-%E7%9B%91%E6%8E%A7%E8%BF%90%E7%BB%B4 (resolved as: /en/docs/2.0/apps#it-%E7%9B%91%E6%8E%A7%E8%BF%90%E7%BB%B4)
+- Broken anchor on source page path = /en/docs/2.0/sqlite:
+   -> linking to #path (resolved as: /en/docs/2.0/sqlite#path)
+- Broken anchor on source page path = /en/docs/2.0/troubleshoot/practice:
+   -> linking to ../linux#logs (resolved as: /en/docs/2.0/linux#logs)
+
+[SUCCESS] Generated static files in "build/en".
+[INFO] Use `npm run serve` command to test your build locally.
+Done in 492.18s.
