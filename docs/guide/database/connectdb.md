@@ -3,7 +3,7 @@ sidebar_position: 2.0
 slug: /connectdb
 ---
 
-# 连接并管理数据库
+# 连接应用的数据库
 
 Websoft9 提供了两种数据库连接方式：Web 在线连接和本地客户端连接。   
 
