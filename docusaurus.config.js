@@ -32,22 +32,13 @@ const config = {
       {
         redirects: [
           {
-            to: '/docs/1.0/runtime',
-            from: [
-              '/docs/1.0/php', '/docs/1.0/nodejs', '/docs/1.0/ruby', '/docs/1.0/python', '/docs/1.0/dotnet', '/docs/1.0/openjdk', '/docs/1.0/maven', '/docs/1.0/tomcat', '/docs/1.0/tomee', '/docs/1.0/jetty'
-            ],
-          },
-          {
-            to: '/docs/2.0/runtime',
-            from: [
-              '/docs/2.0/php', '/docs/2.0/nodejs', '/docs/2.0/ruby', '/docs/2.0/python', '/docs/2.0/dotnet', '/docs/2.0/openjdk', '/docs/2.0/maven', '/docs/2.0/tomcat', '/docs/2.0/tomee', '/docs/2.0/jetty'
-            ],
+            to: '/docs/next/runtime', 
+            from: ['/docs/next/php', '/docs/next/nodejs', '/docs/next/ruby', '/docs/next/python', '/docs/next/dotnet', '/docs/next/openjdk', '/docs/next/maven', '/docs/next/tomcat', '/docs/next/tomee', '/docs/next/jetty'], 
           },
         ],
       },
     ],
   ],
-
 
 
   presets: [
