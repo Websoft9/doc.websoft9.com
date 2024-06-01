@@ -38,7 +38,7 @@ import Meta from './_include/dgraph.md';
 
 ### 测试本应用的数据库节点（alpha）
 
-1. 连接到 http://URL:port 
+1. 连接到 `http://URL:port` 
 
    - URL 不支持容器名称，必须是公网 IP 或 域名
    - port 是 alpha（数据库）节点的外网端口
