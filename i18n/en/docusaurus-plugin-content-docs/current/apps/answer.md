@@ -2,8 +2,8 @@
 title: Answer
 slug: /answer
 tags:
-  - 问答平台
-  - 论坛社区
+  - Q&A platform 
+  - Forum Community
   - answer
 ---
 
@@ -11,26 +11,25 @@ import Meta from './_include/answer.md';
 
 <Meta name="meta" />
 
-## 入门指南{#guide}
+## Getting started{#guide}
 
-### 初始化{#wizard}
+### Login Verification{#verification}
 
-Websoft9 控制台安装 Answer 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
+1. Completed installation Answer at Websoft9 console, get the applicaiton's overview and access credentials from "My Apps"  
 
+2. Starting to verify it
 
-## 配置选项{#configs}
+## Configuration options{#configs}
 
-- 多语言（✅）
+- Multilingual (√)
 
+## Administer{#administrator}
 
-## 管理维护{#administrator}
+## Troubleshooting{#troubleshooting}
 
+#### Automatic installation failed?
 
-## 故障
+There may be two possible reasons for the failure of Answer automatic installation: 
 
-#### 自动安装失败?
-
-Answer 自动安装失败的原因可能有两点：
-
-1. Answer 镜像所有的环境变量都需要设置，否则就不会切换到自动安装模式
-2. Answer 容器启动后，如果在第一时刻没有连接到可用的数据库，自动安装就会跳过，不会尝试等待或再次安装
+1. All environment variables of the Answer image need to be set, otherwise it will not switch to automatic installation mode 
+2. After the Answer container is started, if there is no connection to an available database at the first moment, the automatic installation will be skipped and there will be no attempt to wait or install again
