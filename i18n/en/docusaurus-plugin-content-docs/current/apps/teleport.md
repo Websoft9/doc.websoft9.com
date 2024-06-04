@@ -39,7 +39,7 @@ After installing Teleport on the Websoft9 console, the following steps need to b
    
    ![](../../../../../docs/apps/assets/teleport-invitelinux-ss-websoft9.png)
 
-5. By using the username and password generated in the above steps, you can log in to the Teleport console 
+5. By using the username and password generated in the above steps, you can login to the Teleport console 
    
    ![](../../../../../docs/apps/assets/teleport-loginss-websoft9.png)
 
@@ -64,7 +64,7 @@ After installing Teleport on the Websoft9 console, the following steps need to b
 - Configuration file: *src/config/delete.yaml*
 - Multilingual (x) 
 - IP: Port access method (x): Self generated certificate is not secure 
-- Two Factor authentication: We have disabled Two Factor authentication in the default configuration file of Teleport. If you need to enable it, please modify the configuration file and rebuild the application.
+- Two Factor authentication: We have disabled Two Factor authentication in the default configuration file of Teleport. If you need to enable it, please modify the configuration file and rebuild the application
 
 ## Administer{#administrator}
 
