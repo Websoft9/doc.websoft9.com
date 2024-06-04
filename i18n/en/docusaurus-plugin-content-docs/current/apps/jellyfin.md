@@ -19,7 +19,7 @@ import Meta from './_include/jellyfin.md';
 
 2. Follow the wizard prompts to create a user and password 
 
-3. Set up your media library: Follow the wizard to start setting up, where **path** selects/media 
+3. Set up your media library: Follow the wizard to start setting up, where **path** selects */media*  
 
 4. Follow the prompts to complete other subsequent settings
 
