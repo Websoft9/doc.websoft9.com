@@ -19,7 +19,7 @@ Completed installation Kong at Websoft9 console, get the applicaiton's overview 
 
 1. Kong has three services: Kong HTTP, Kong Admin API, and Kong GUI. Ports need to be opened as needed
    - If access by domain: simply enable the Kong Admin API port
-   - If access by ip and port: it is necessary to enable Kong HTTP port, Kong Admin API port , and Kong Admin GUI port
+   - If access by ip and port: it is necessary to enable Kong HTTP port, Kong Admin API port , and Kong GUI port
 
 2. Local browser access to the Kong Manager interface:
    - Access by domain: `http://domain/admin`
@@ -53,7 +53,7 @@ Detail refer to: [Authentication Reference](https://docs.konghq.com/gateway/late
 - Port Description:
   - Kong HTTP Port(Gateway HTTP service API port)
   - Kong Admin API Port(Management API service port)
-  - Kong Admin GUI Port(Management GUI console port)
+  - Kong GUI Port(Management GUI console port)
 
 ## Administer{#administrator}
 
