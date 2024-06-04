@@ -15,9 +15,9 @@ import Meta from './_include/teleport.md';
 
 ## Getting started{#guide}
 
-### Installation steps(necessary){# create user}  
+### Follow up steps for installation(necessary){#create-user}  
 
-After installing Teleport on the Websoft9 console, the following steps need to be completed in order to log in to the backend:  
+After installing Teleport on the Websoft9 console, the following steps need to be completed in order to login to the background:  
 
 1. Ensure that the domain name is bound to Teleport and HTTPS access is set(**Required**)  
 
