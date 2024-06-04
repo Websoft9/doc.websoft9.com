@@ -36,8 +36,12 @@ After installing Teleport on the Websoft9 console, the following steps need to b
 4. Run the registration link in local browsing to complete password settings 
 
    > If the link is inaccessible or unsuccessful, it indicates that steps 1-2 have not been completed or there is an issue   
+   
+   ![](../../../../../docs/apps/assets/teleport-invitelinux-ss-websoft9.png)
 
 5. By using the username and password generated in the above steps, you can log in to the Teleport console 
+   
+   ![](../../../../../docs/apps/assets/teleport-loginss-websoft9.png)
 
 ### Manage resources  
 
@@ -46,10 +50,14 @@ After installing Teleport on the Websoft9 console, the following steps need to b
 1. Login to the Teleport console, Resource > Enroll New Resource  
 
 2. Select an operating system and generate a client installation link  
+   
+   ![](../../../../../docs/apps/assets/teleport-linuxcreate-websoft9.png)
 
 3. Login to the remote Linux server, copy the previous link to the command line interface, and start the installation  
 
-4. After successful installation, return to the Teleport console. Teleport will automatically detect the client and prompt the user to follow the wizard to complete the next steps 
+4. After successful installation, return to the Teleport console. Teleport will automatically detect the client and prompt the user to follow the wizard to complete the next steps  
+
+   ![](../../../../../docs/apps/assets/teleport-connectlinux-ss-websoft9.png)
 
 ## Configuration options{#configs}
 
