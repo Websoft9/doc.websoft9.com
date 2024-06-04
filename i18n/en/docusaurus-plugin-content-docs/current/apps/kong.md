@@ -23,7 +23,7 @@ Completed installation Kong at Websoft9 console, get the applicaiton's overview 
 
 2. Local browser access to the Kong Manager interface:
    - Access by domain: `http://domain/admin`
-   - Access by ip and port: `http://IP:Kong GUI Port/admin`
+   - Access by ip and port: `http://IP:Kong GUI port/admin`
 
 3. Verify Kong HTTP service
    ```
