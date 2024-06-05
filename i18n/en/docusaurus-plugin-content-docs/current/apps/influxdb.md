@@ -2,8 +2,8 @@
 title: InfluxDB
 slug: /influxdb
 tags:
-  - 时间序列数据库
-  - 物联网数据库
+  - Time series database 
+  - IoT database
   - influxdb
 ---
 
@@ -11,25 +11,24 @@ import Meta from './_include/influxdb.md';
 
 <Meta name="meta" />
 
-## 入门指南{#guide}
+## Getting started{#guide}
 
-### 初始化{#wizard}
+### Initial setup{#wizard}
 
-1. Websoft9 控制台安装 InfluxDB 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息
+1. When completed installation of InfluxDB at Websoft9 console, get the applicaiton's overview and access information from "My Apps"  
 
-2. 根据安装向导创建组织、用户和 bucket，完成后点击 “Get Started” 进入 Dashboard 开始使用
+2. Create organizations, users, and buckets according to the installation wizard, and click "Get Started" to enter the dashboard and start using them 
 
+## Configuration options{#configs}
 
-## 配置选项{#configs}
+- Dashboard: InfluxDB2.x or above comes with
 
-- Dashboard：InfluxDB2.x 以上自带
+- There are three ways to set configuration parameters：
 
-- 配置参数的三种设置方式：
+  - Container configuration file: */etc/influxdb2/config.yml*
+  - Container environment variables
+  - Command in docker-compose.yml file (highest priority) 
 
-  - 容器配置文件：/etc/influxdb2/config.yml
-  - 容器环境变量
-  - 容器 docker-compose.yml 文件中的 command （优先级最高）
+## Administer{#administrator}
 
-## 管理维护{#administrator}
-
-## 故障
+## Troubleshooting{#troubleshooting}
