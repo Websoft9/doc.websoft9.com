@@ -42,7 +42,7 @@ Ghost supports websites selling articles to customers through subscription, maki
 
 2. Set **Enable members, Connect to Stripe, Subscription pricing** and other items  
 
-   ![Ghost Code Insertion] (../../../../../docs/apps/assets/ghost-setsubs-websoft9.png)
+   ![Ghost Code Insertion](../../../../../docs/apps/assets/ghost-setsubs-websoft9.png)
 
 ## Configuration options{#configs}
 
