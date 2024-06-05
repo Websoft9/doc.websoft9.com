@@ -38,7 +38,7 @@ Ghost's backend does not support Chinese, but the frontend supports Chinese(if t
 
 Ghost supports websites selling articles to customers through subscription, making it a productivity tool for knowledge paid entrepreneurs.  
 
-1. Log in to Ghost and click on [SETTING]>[Labs] in the left menu
+1. Login to Ghost and click on [SETTING]>[Labs] in the left menu
 
 2. Set **Enable members, Connect to Stripe, Subscription pricing** and other items  
 
