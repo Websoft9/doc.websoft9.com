@@ -2,8 +2,8 @@
 title: Strapi
 slug: /strapi
 tags:
-  - 后端即服务
-  - 无头内容管理系统
+  - Backend as a Service 
+  - Headless CMS
   - strapi
 ---
 
@@ -11,42 +11,40 @@ import Meta from './_include/strapi.md';
 
 <Meta name="meta" />
 
-## 入门指南{#guide}
+## Getting started{#guide}
 
-### 初始化{#wizard}
+### Initial setup{#wizard}
 
-1. Websoft9 控制台安装 Strapi 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
+1. When completed installation of Strapi at Websoft9 console, get the applicaiton's overview and access information from "My Apps"  
 
-2. Strapi 容器启动首次启动时，会在线拉取外部软件包，需要等待几分钟后才能进入初始页面
+2. When the Strapi container starts for the first time, it will pull external software packages online and wait for a few minutes before entering the initial page
 
-### 快速入门
+### Built data model by self
 
-1. Plugins > Content-type Builder 增加一个数据集，假如名为为：websoft9
+1. "Plugins" > "Content-type Builder" Add a dataset, if named: websoft9 
 
-2. Users 菜单下增加一个用户，设置角色为 public
+2. Add a user under the "Users" and set the role to public 
 
-3. Settings > USERS & PERMISSIONS PLUGIN > Roles 编辑 public role，使之有权限访问 websoft9 数据集
+3. "Settings" > "USERS & PERMISSIONS PLUGIN" > "Roles" Edit public role to grant access to the websoft9 dataset 
 
-4. 访问下面的 URL 便可以获取数据
+4. Access the following URL to obtain data 
+    ``` 
+    #Get all data 
+    http://URL/websoft9 
+        
+    #Get the first piece of data 
+    http://URL/websoft9/1 
+    ```
 
-   ```
-   # 获取所有数据
-   http://URL/websoft9
-   
-   # 获取第 1 条数据
-   http://URL/websoft9/1
-   ```
+## Configuration options{#configs}
 
+- Multilingual (√)
 
-## 配置选项{#configs}
+## Administer{#administrator}
 
-- 多语言（✅）
+## Troubleshooting{#troubleshooting}
 
-## 管理维护{#administrator}
+#### Strapi first startup error?
 
-## 故障
-
-#### Strapi 首次启动报错？
-
-问题分析：Strapi 首次启动会安装 **Node** 以及从 Github 下载软件包，这些需要一些时间，甚至由于网络不好的情况下无法完成。  
-解决方案：确保服务器可以顺利访问 npm 仓库和 Github
+Problem analysis: When Strapi is first launched, it will install **Node** and download software packages from Github, which may fail due to network issues  
+Solution: Ensure that the server can smoothly access the npm repository and Github

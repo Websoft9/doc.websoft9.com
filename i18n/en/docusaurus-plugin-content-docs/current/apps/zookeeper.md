@@ -2,55 +2,52 @@
 title: Zookeeper
 slug: /zookeeper
 tags:
-  - Web 面板
-  - 可视化
+  - Web panel
   - GUI
+  - zookeeper
 ---
 
 import Meta from './_include/zookeeper.md';
 
 <Meta name="meta" />
 
-## 入门指南{#guide}
+## Getting started{#guide}
 
-### 初始化{#wizard}
+Completed installation Zookeeper at Websoft9 console, get the applicaiton's overview and access information from "My Apps"  
 
-Websoft9 控制台安装 Zookeeper 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
+### Client connection 
 
-### 客户端连接
+1. Get the container name for Zookeeper, assuming zkname 
 
-1. 获取 Zookeeper 的容器名称
+2. Run the following command to connect and start the client connection (replace zkname with the actual value) 
+    ``` 
+    docker run -it --rm --net=container:zk_name zookeeper zkCli.sh -server zookeeper 
+    ``` 
 
-2. 运行下面的命令连接启动客户端连接 (your-zookeeper 为你的容器名称)
-   ```
-   docker run -it --rm --link your-zookeeper:zookeeper zookeeper zkCli.sh -server zookeeper
-   ```
+3. After successful connection, run 'ls/' to query znode
 
-3. 连接成功后运行 `ls /` 查询 znode
+### Setup super_digest authentication
 
-### 设置 super_digest 认证
-
-1. 客户端连接 Zookeeper 节点，运行 `getAcl /` 会看到下面的信息，表示节点面向任何用户开放
-   ```
-    [zk: zookeeper(CONNECTED) 3] getAcl /
+1. When the client connects to the Zookeeper node and runs' getAcl/', it will see the following information, indicating that the node is open to any user 
+    ``` 
+    [zk: zookeeper (CONNECTED) 3] getAcl/ 
     'world,'anyone
-    : cdrwa
-   ```
+    : cdrwa 
+    ``` 
 
-2. 运行下面的命令修改权限
-   ```
-   addauth digest super:yourpassword
-   setAcl / digest:super:password:cdrwa
-   ```
+2. Run the following command to modify permissions 
+    ``` 
+    addauth digest super:yourpassword 
+    setAcl / digest:super:password:cdrwa 
+    ``` 
 
-3. 再次运行 `getAcl /` 会发现出现 **Insufficient permission : /**
+3. If you run `getAcl/` again, you will find that **Insufficient permission : /**
 
+## Configuration options{#configs}
 
-## 配置选项{#configs}
+- ACL authentication mode(√) 
+- Configuration file(√), but not enabled, using environment variable settings
 
-- ACL 认证模式（√）
-- 配置文件（√），但未启用，采用环境变量设置
+## Administer{#administrator}
 
-## 管理维护{#administrator}
-
-## 故障
+## Troubleshooting{#troubleshooting}

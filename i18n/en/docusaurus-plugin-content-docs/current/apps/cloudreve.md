@@ -2,38 +2,40 @@
 title: Cloudreve
 slug: /cloudreve
 tags:
-  - 企业网盘
-  - 下载
-  - 文档管理
-  - 对象存储
+  - Enterprise cloud storage 
+  - Download 
+  - Document management 
+  - Object storage  
 ---
 
 import Meta from './_include/cloudreve.md';
 
 <Meta name="meta" />
 
-## 入门指南{#guide}
+## Getting started{#guide}
 
-### 初始化密码{#wizard}
+### Login Verification{#verification}
 
-Websoft9 控制台安装 Cloudreve 后，通过 "我的应用" 查看应用详情，在**容器**标签页中查看 Cloudreve 容器的日志，获得初始化账号密码
+1. Completed installation Cloudreve at Websoft9 console, get the applicaiton's overview and access credentials from "My Apps"  
 
-### 离线下载
+2. Starting to verify it
 
-1. 进入【个人中心】->【管理面板】->【离线下载节点】，编辑此节点
+### Offline download 
 
-2. 启用离线下载任务，参考Websoft9 控制台【访问】中的信息填写各种参数
+1. Go to [Personal Center] ->[Dashboard] ->[Nodes] and edit this Master node
 
-3. 进入【个人主页】->【离线下载】，可以开始离线下载任务了
+2. Enable offline download tasks and refer to the information in the Websoft9 console [Access] to fill in various parameters 
 
-### 文档编辑与预览
+3. Go to [My profile] ->[Remote Download], and you can start the offline download task 
 
-【我的文件】可查看或编辑已经下载的文档
+### Document editing and preview 
 
-## 配置选项{#configs}
+[My Files] can view or edit downloaded documents
 
-- 多语言（✅）
+## Configuration options{#configs}
 
-## 管理维护{#administrator}
+- Multilingual (√)
 
-## 故障
+## Administer{#administrator}
+
+## Troubleshooting{#troubleshooting}
