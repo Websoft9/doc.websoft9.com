@@ -1,6 +1,5 @@
 [RocketMQ](https://rocketmq.apache.org/) 是一个 **A distributed messaging and streaming platform**，它被用于 Message Queue  等场景。A distributed messaging and streaming platform with low latency, high performance and reliability, trillion-level capacity and flexible scalability
 
-
 ![console](https://libs.websoft9.com/Websoft9/DocsPicture/en/rocketmq/rocketmq-console-websoft9.png)
 
 
