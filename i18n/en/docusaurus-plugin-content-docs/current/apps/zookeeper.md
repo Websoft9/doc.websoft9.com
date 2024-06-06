@@ -2,9 +2,9 @@
 title: Zookeeper
 slug: /zookeeper
 tags:
-  - Web panel
-  - GUI
-  - zookeeper
+  - Distributed coordination
+  - HA
+  - Microservice
 ---
 
 import Meta from './_include/zookeeper.md';
@@ -17,9 +17,9 @@ Completed installation Zookeeper at Websoft9 console, get the applicaiton's over
 
 ### Client connection 
 
-1. Get the container name for Zookeeper, assuming zkname 
+1. Get the container name for Zookeeper, assuming `zk_name` 
 
-2. Run the following command to connect and start the client connection (replace zkname with the actual value) 
+2. Run the following command to connect and start the client connection (replace `zk_name` with the actual value) 
     ``` 
     docker run -it --rm --net=container:zk_name zookeeper zkCli.sh -server zookeeper 
     ``` 
@@ -46,7 +46,7 @@ Completed installation Zookeeper at Websoft9 console, get the applicaiton's over
 ## Configuration options{#configs}
 
 - ACL authentication mode(√) 
-- Configuration file(√), but not enabled, using environment variable settings
+- Configuration file(√): Not enabled by default, using environment variable settings
 
 ## Administer{#administrator}
 
