@@ -17,22 +17,22 @@ import Meta from './_include/jellyfin.md';
 
 1. When completed installation of Jellyfin at Websoft9 console, get the applicaiton's overview and access information from "My Apps"  
 
-2. Follow the wizard prompts to create a user and password 
+2. Access Jellyfin install wizard and create a user and password
 
-3. Set up your media library: Follow the wizard to start setting up, where **path** selects */media*  
+3. At set up your media library step, the **path** seleted for `/media`
 
-4. Follow the prompts to complete other subsequent settings
+4. Complete other steps
 
-### Add Song 
+### Add Music files
 
-1. Use Websoft9 file management to upload media files to the mounting directory corresponding to the media directory 
+1. Upload your music files to diretory which named mounted for container `/media`
 
-2. Jellyfin automatically completes scanning and adds it to the playlist (manual scanning is also supported)
+2. Waiting for Jellyfin automatically scanning or manual scanning it
 
 ## Configuration options{#configs}
 
-- Multilingual (√): Multiple languages including Chinese and English can be selected during initial installation
-- Media directory: The directory name is media and can be viewed through the **Volume Storage** managed by the application. You can also arrange and mount more Media directories
+- Multilingual (√): You can select languages during initial installation
+- Media directory: Jellyfin container media directory is `/media` and named mount to Server, you can get the path from  "My Apps" of Websoft9 console
 
 ## Administer{#administrator}
 
