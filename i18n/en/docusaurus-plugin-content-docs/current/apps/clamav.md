@@ -23,12 +23,12 @@ import Meta from './_include/clamav.md';
     sudo clamscan -ri /scandir --log=myscan.log 
     ``` 
 
-    > Myscan.log is the scan result. If it contains Infected files information, it indicates that the system has a virus
+    > `myscan.log` is the scan result. If it contains Infected files information, it indicates that the system has a virus
 
 ## Configuration options{#configs}
 
 - Set scan path: **W9-SCAN-PATH_SET**  in the .env file
-- Scanning commands: clamscan(deep scan) and clamdscan
+- Scanning commands: `clamscan`(deep scan) and `clamdscan`
 
 ## Administer{#administrator}
 
