@@ -21,7 +21,7 @@ import Meta from './_include/n8n.md';
 
 ## Configuration options{#configs}
 
-- Configuration file (volumed): */home/node/.n8n/my-config.json*
+- Configuration file at container (have named volumed to server): */home/node/.n8n/my-config.json*
 
 ## Administer{#administrator}
 
