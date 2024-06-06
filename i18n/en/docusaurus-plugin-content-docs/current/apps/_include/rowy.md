@@ -1,15 +1,15 @@
-[Rowy](http://rowy.io/) 是一个 **快速构建 Web 电子表格程序开源低代码平台**，它被用于 企业主数据 低代码/零代码  等场景。低代码后端平台。在类似电子表格的 UI 上管理数据库，并在 JS/TS 中构建云函数工作流，所有这些都在您的浏览器中完成。
+[Rowy](http://rowy.io/) is **Airtable-like UI for managing database**, used for Master Data Low Code and No Code . Low-code backend platform. Manage database on spreadsheet-like UI and build cloud functions workflows in JS/TS, all in your browser.
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rowy/rowy-gui-websoft9.png)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 Rowy 时，需要确保如下几点：
+When referring to this document to use **Rowy**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [apache2](https://opensource.org/licenses/Apache-2.0) 开源许可协议
+- The purpose of this application complies with the [apache2](https://opensource.org/licenses/Apache-2.0) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

@@ -1,15 +1,15 @@
-[Apache Answer](https://answer.apache.org/) 是一个 **开源团队问答平台**，它被用于 社交/论坛  等场景。一款适合任何团队的问答平台软件。无论是社区论坛、帮助中心还是知识管理平台，你可以永远信赖 Answer。
+[Apache Answer](https://answer.apache.org/) is **Q&A platform software for teams at any scales**, used for Online Community . A Q&A platform software for teams at any scales. Whether it’s a community forum, help center, or knowledge management platform, you can always count on Answer.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/answer/answer-gui-websoft9.png)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 Apache Answer 时，需要确保如下几点：
+When referring to this document to use **Apache Answer**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [apache2](https://opensource.org/licenses/Apache-2.0) 开源许可协议
+- The purpose of this application complies with the [apache2](https://opensource.org/licenses/Apache-2.0) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

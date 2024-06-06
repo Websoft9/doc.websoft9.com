@@ -1,15 +1,15 @@
-[pgAdmin](https://www.pgadmin.org/) 是一个 **Web 图形化 PostgreSQL 数据库管理工具**，它被用于 数据库管理工具  等场景。pgAdmin 官方出品具有 Web 界面的 PostgreSQL 数据库管理和开发平台。
+[pgAdmin](https://www.pgadmin.org/) is **Web-based GUI tool for PostgreSQL**, used for Database Management Tools . pgAdmin is a popular and feature rich Open Source administration and development platform for PostgreSQL, the advanced Open Source database in the world.
 
 
 ![gui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/postgresql/pgadmin4-websoft9.png)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 pgAdmin 时，需要确保如下几点：
+When referring to this document to use **pgAdmin**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 请检查应用的使用许可协议，确保符合要求
+- Please check the application's usage license agreement to ensure compliance.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

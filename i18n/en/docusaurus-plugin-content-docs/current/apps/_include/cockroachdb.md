@@ -1,15 +1,15 @@
-[CockroachDB](https://www.cockroachlabs.com/) 是一个 **可伸缩的、支持地理位置处理、支持事务处理的数据存储系统**，它被用于 NewSQL 数据库  等场景。CockroachDB 是一个云原生分布式 SQL 数据库，旨在构建、扩展和管理现代数据密集型应用程序。
+[CockroachDB](https://www.cockroachlabs.com/) is **Database designed to build, scale, and manage modern, data-intensive applications.**, used for NewSQL Database . CockroachDB is a cloud-native distributed SQL database designed to build, scale, and manage modern, data-intensive applications.
 
 
 ![Admin UI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cockroachdb/cockroachdb-gui-websoft9.png)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 CockroachDB 时，需要确保如下几点：
+When referring to this document to use **CockroachDB**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 请检查应用的使用许可协议，确保符合要求
+- Please check the application's usage license agreement to ensure compliance.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

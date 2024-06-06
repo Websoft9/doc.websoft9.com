@@ -1,15 +1,15 @@
-[Elastic Logstash](https://www.elastic.co/logstash) 是一个 **数据采集与转换软件**，它被用于 数据采集  等场景。Logstash 是免费且开放的服务器端数据处理管道，能够从多个来源采集数据，转换数据，然后将数据发送到您最喜欢的“存储库”中。
+[Elastic Logstash](https://www.elastic.co/logstash) is **Centralize, transform & stash your data**, used for Data Collection . Logstash is a free and open server-side data processing pipeline that ingests data from a multitude of sources, transforms it, and then sends it to your favorite "stash."
 
 
-![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-wizard1-websoft9.png)
+![dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-gui-websoft9.gif)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 Elastic Logstash 时，需要确保如下几点：
+When referring to this document to use **Elastic Logstash**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [SSPL](https://www.mongodb.com/licensing/server-side-public-license) 开源许可协议
+- The purpose of this application complies with the [SSPL](https://www.mongodb.com/licensing/server-side-public-license) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

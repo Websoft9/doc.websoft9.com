@@ -1,15 +1,15 @@
-[Confluence](https://www.atlassian.com/zh/software/confluence) 是一个 **团队知识协作与项目管理**，它被用于 需求/看板/缺陷 任务协作 项目/任务  等场景。Confluence Server 是您创建、组织和讨论工作的地方 团队。给每个团队、项目或部门都有自己的空间来创造他们需要的东西， 无论是会议记录、产品要求、文件列表还是项目计划， 您可以在 Confluence 中完成更多工作。
+[Confluence](https://www.atlassian.com/zh/software/confluence) is **Create, organise and discuss work with your team**, used for Agile Boards Task Collaboration Project and Task . Confluence Server is where you create, organise and discuss work with your team. Give every team, project, or department its own space to create the things they need, whether it's meeting notes, product requirements, file lists, or project plans, you can get more done in Confluence.
 
 
-![白板](https://libs.websoft9.com/Websoft9/DocsPicture/zh/confluence/confluence-gui-websoft9.png)
+![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/confluence/confluence-gui-websoft9.png)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 Confluence 时，需要确保如下几点：
+When referring to this document to use **Confluence**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [apache2](https://opensource.org/licenses/Apache-2.0) 开源许可协议
+- The purpose of this application complies with the [apache2](https://opensource.org/licenses/Apache-2.0) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

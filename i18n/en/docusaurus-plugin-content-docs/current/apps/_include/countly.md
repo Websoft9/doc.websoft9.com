@@ -1,15 +1,15 @@
-[Countly](https://countly.com/) 是一个 **网站与移动应用分析平台 **，它被用于 访问统计  等场景。Countly 是可用于本地移动和 Web 应用程序分析的平台，具有更多功能、更直观的 UI、完整的 API 支持和原始数据访问
+[Countly](https://countly.com/) is **Comprehensive and secure product analytics**, used for Web Analytics . Countly is the platform available for on-premise mobile and web app analytics, with far more features, more intuitive UI, full API support and raw data access
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/countly/countly-gui-websoft9.webp)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 Countly 时，需要确保如下几点：
+When referring to this document to use **Countly**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [AGPL-3.0](https://opensource.org/licenses/AGPL-3.0) 开源许可协议
+- The purpose of this application complies with the [AGPL-3.0](https://opensource.org/licenses/AGPL-3.0) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

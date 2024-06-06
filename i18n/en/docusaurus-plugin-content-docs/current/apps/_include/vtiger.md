@@ -1,15 +1,15 @@
-[Vtiger](https://www.vtiger.com/) 是一个 **一套开源的客户关系管理系统(CRM)**，它被用于 CRM/分销/订单  等场景。Vtiger Community Edition is an opensource CRM system that helps you create and automate a better customer journey.
+[Vtiger](https://www.vtiger.com/) is ** An opensource CRM system that helps you create and automate a better customer journey**, used for CRM & Distribution & Order . Vtiger Community Edition is an opensource CRM system that helps you create and automate a better customer journey.
 
 
 ![vtigercrm](http://libs.websoft9.com/Websoft9/DocsPicture/zh/vtigercrm/vtigercrm-backend-websoft9.png)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 Vtiger 时，需要确保如下几点：
+When referring to this document to use **Vtiger**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [MPL-2.0](https://opensource.org/licenses/MPL-2.0) 开源许可协议
+- The purpose of this application complies with the [MPL-2.0](https://opensource.org/licenses/MPL-2.0) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

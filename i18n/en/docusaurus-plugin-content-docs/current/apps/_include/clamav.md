@@ -1,15 +1,15 @@
-[ClamAV](https://ckan.org/) 是一个 **开源病毒扫描与检测**，它被用于 扫描监测  等场景。ClamAV是一个开源的防病毒引擎，用于检测木马，病毒，恶意软件和其他 恶意威胁。
+[ClamAV](https://ckan.org/) is **open-source antivirus engine**, used for Detection and Monitor . ClamAV is an open-source antivirus engine for detecting trojans, viruses, malware & other malicious threats.
 
 
 ![architecture](https://libs.websoft9.com/Websoft9/DocsPicture/zh/clamav/clamav-arch-websoft9.webp)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 ClamAV 时，需要确保如下几点：
+When referring to this document to use **ClamAV**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [GPL-2.0](https://opensource.org/licenses/GPL-2.0) 开源许可协议
+- The purpose of this application complies with the [GPL-2.0](https://opensource.org/licenses/GPL-2.0) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

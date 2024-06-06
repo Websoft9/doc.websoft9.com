@@ -1,15 +1,15 @@
-[Duplicati](https://www.duplicati.com/) 是一个 **在线加密备份软件**，它被用于 备份恢复  等场景。Duplicati 是一个免费的开源备份客户端，可将加密的增量压缩备份安全地存储在云存储服务和远程文件服务器上。
+[Duplicati](https://www.duplicati.com/) is **Free backup software to store encrypted backups online**, used for Backup & Restore . Duplicati is a free, open source, backup client that securely stores encrypted, incremental, compressed backups on cloud storage services and remote file servers.
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/duplicati/duplicati-gui-websoft9.png)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 Duplicati 时，需要确保如下几点：
+When referring to this document to use **Duplicati**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [LGPL-2.1](https://opensource.org/licenses/LGPL-2.1) 开源许可协议
+- The purpose of this application complies with the [LGPL-2.1](https://opensource.org/licenses/LGPL-2.1) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

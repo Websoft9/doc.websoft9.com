@@ -1,15 +1,15 @@
-[Neo4j](https://neo4j.com/) 是一个 **高性能的 NoSQL 图数据库**，它被用于 图数据库  等场景。Neo4j 是一个关系信息存储为一等实体的数据库技术，广泛用于知识图谱，社交关系链，商品推荐，IT架构，商品主数据等领域。
+[Neo4j](https://neo4j.com/) is **A high performance graph store with all the features expected of a mature and robust database**, used for Graph Databases . Neo4j® graph database is the world's leading Graph Database. It is a high performance graph store with all the features expected of a mature and robust database.
 
 
-![console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/neo4j/neo4j-console-websoft9.png)
+![console](https://libs.websoft9.com/Websoft9/DocsPicture/en/neo4j/neo4j-console-websoft9.png)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 Neo4j 时，需要确保如下几点：
+When referring to this document to use **Neo4j**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [GPL-3.0](https://opensource.org/licenses/GPL-3.0) 开源许可协议
+- The purpose of this application complies with the [GPL-3.0](https://opensource.org/licenses/GPL-3.0) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

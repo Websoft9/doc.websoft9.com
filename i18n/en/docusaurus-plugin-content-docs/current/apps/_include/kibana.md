@@ -1,15 +1,15 @@
-[Elastic Kibana](https://www.elastic.co/kibana) 是一个 **Elasticsearch 仪表板**，它被用于 数据应用与可视化  等场景。Kibana 是一个基于 Elasticsearch 的数据分析平台，可以使用 ES|QL 语言进行全面透彻的数据分析，从威胁情报到搜索分析，从日志到应用程序监测。
+[Elastic Kibana](https://www.elastic.co/kibana) is **Elasticsearch Dashboard**, used for Data Application and Visualization . Kibana is a powerful tool for data analysis, visualization, and discovery on any data from any source. 
 
 
-![仪表盘](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kibana/kibana-gui-websoft9.png)
+![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kibana/kibana-gui-websoft9.png)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 Elastic Kibana 时，需要确保如下几点：
+When referring to this document to use **Elastic Kibana**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [SSPL](https://www.mongodb.com/licensing/server-side-public-license) 开源许可协议
+- The purpose of this application complies with the [elv2-sspl](https://www.elastic.co/licensing/elastic-license) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

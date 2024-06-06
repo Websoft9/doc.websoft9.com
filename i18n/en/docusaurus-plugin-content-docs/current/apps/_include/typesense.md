@@ -1,15 +1,15 @@
-[Typesense](https://typesense.org/) 是一个 **开源搜索引擎**，它被用于 大数据存储 搜索服务  等场景。Typesense 是一个快速、容错字的搜索引擎，用于构建令人愉悦的搜索体验。
+[Typesense](https://typesense.org/) is **Fast, typo-tolerant open source search engine**, used for Data Storage Search Engine . Typesense is a fast, typo-tolerant search engine for building delightful search experiences.
 
 
 ![Site](https://libs.websoft9.com/Websoft9/DocsPicture/zh/typesense/typesense-gui-websoft9.jpg)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 Typesense 时，需要确保如下几点：
+When referring to this document to use **Typesense**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [GPL-3.0](https://opensource.org/licenses/GPL-3.0) 开源许可协议
+- The purpose of this application complies with the [GPL-3.0](https://opensource.org/licenses/GPL-3.0) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

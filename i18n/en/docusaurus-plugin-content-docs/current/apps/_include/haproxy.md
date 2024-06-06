@@ -1,15 +1,15 @@
-[HAProxy](http://www.haproxy.org/) 是一个 **一个提供高可用性、负载均衡，以及基于 TCP 和 HTTP 的应用程序代理的解决方案**，它被用于 负载均衡   等场景。提供高可用性、负载均衡，以及基于 TCP 和 HTTP 的应用程序代理，适用于负载特大的web站点。
+[HAProxy](http://www.haproxy.org/) is **a free, very fast and reliable solution offering high availability, load balancing, and proxying for TCP and HTTP-based applications**, used for Load Balancer . Provides a high availability load balancer and proxy server for TCP and HTTP-based applications.
 
 
 ![configuration](https://libs.websoft9.com/Websoft9/DocsPicture/zh/haproxy/HAProxy-configuration.png)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 HAProxy 时，需要确保如下几点：
+When referring to this document to use **HAProxy**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [GPL-2.0](https://opensource.org/licenses/GPL-2.0) 开源许可协议
+- The purpose of this application complies with the [GPL-2.0](https://opensource.org/licenses/GPL-2.0) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

@@ -1,15 +1,15 @@
-[Scratch](https://scratch.mit.edu/) 是一个 **少儿编程工具**，它被用于 低代码/零代码  等场景。Scratch 是一款由麻省理工学院设计开发的少儿编程工具。使用 Scratch，你可以编写属于你的互动程序，像是故事、游戏、动画，然后将你的创意分享给全世界。
+[Scratch](https://scratch.mit.edu/) is **Scratch is  coding community for children and a coding language **, used for Low Code and No Code . Scratch is  coding community for children and a coding language with a simple visual interface that allows young people to create digital stories, games, and animations.
 
 
-![scratch](https://libs.websoft9.com/Websoft9/DocsPicture/zh/scratch/scratch-gui-websoft9.png)
+![scratch](https://libs.websoft9.com/Websoft9/DocsPicture/en/scratch/scratch-gui-websoft9.png)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 Scratch 时，需要确保如下几点：
+When referring to this document to use **Scratch**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [BSD-3-Clause-LBNL](https://opensource.org/BSD-3-Clause-LBNL) 开源许可协议
+- The purpose of this application complies with the [BSD-3-Clause-LBNL](https://opensource.org/BSD-3-Clause-LBNL) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

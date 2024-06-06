@@ -1,15 +1,15 @@
-[SQL Server Express](https://www.sqlserver.com/) 是一个 **SQL Server Express 是 Microsoft 官方 SQL Server 免费发行版**，它被用于 SQL 数据库/关系数据库  等场景。SQL Server Express 是 Microsoft 官方 SQL Server 免费发行版。易于部署并可无偿获取并可以随应用程序免费再分发。
+[SQL Server Express](https://www.sqlserver.com/) is **SQLServer Express edition is the entry-level, free database **, used for Relational Databases . SQLServer Express Express edition is the entry-level, free database and is ideal for learning and building desktop and small server data-driven applications. 
 
 
-![sqlserver](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/sqlserver-getsqlserver-websoft9.png)
+![sqlserver](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/microsoft-sql-server-express.png)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 SQL Server Express 时，需要确保如下几点：
+When referring to this document to use **SQL Server Express**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 请检查应用的使用许可协议，确保符合要求
+- Please check the application's usage license agreement to ensure compliance.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

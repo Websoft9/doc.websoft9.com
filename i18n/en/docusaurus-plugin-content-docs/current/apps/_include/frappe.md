@@ -1,15 +1,15 @@
-[Frappe](https://frappeframework.com/) 是一个 **企业管理软件低代码开发框架**，它被用于 企业主数据 低代码/零代码  等场景。21 世纪 Python 和 Javascript 中的低代码、开源、Web 框架。消除 97.42% 的软件开发工作
+[Frappe](https://frappeframework.com/) is **Open Source Low Code Framework for business applications**, used for Master Data Low Code and No Code . Low code, open source, web framework in Python and Javascript for the 21st century, eliminate 97.42% of your software development effort
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/frappe/frappe-gui-websoft9.png)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 Frappe 时，需要确保如下几点：
+When referring to this document to use **Frappe**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 请检查应用的使用许可协议，确保符合要求
+- Please check the application's usage license agreement to ensure compliance.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

@@ -1,4 +1,4 @@
-[Teleport](https://goteleport.com/) 是一个 **开源堡垒机**，它被用于 堡垒机  等场景。The open source access platform used by DevSecOps teams for SSH, Kubernetes, databases, internal web applications and Windows.
+[Teleport](https://goteleport.com/) 是一个 **开源堡垒机**，它被用于 堡垒机 数据库管理工具  等场景。The open source access platform used by DevSecOps teams for SSH, Kubernetes, databases, internal web applications and Windows.
 
 
 ![控制面板](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teleport/teleport-gui-websoft9.png)

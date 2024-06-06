@@ -1,15 +1,15 @@
-[Webmin](https://www.webmin.com/) 是一个 **一款流行的 Linux 可视化面板管理工具**，它被用于 云设施监控  等场景。Webmin 是流行的 Linux 可视化面板管理工具，免费开源，可轻松管理文件、配置域名、修改配置文件、备份数据等。
+[Webmin](https://www.webmin.com/) is **A web-based interface for system administration for Unix**, used for Cloud Infrastructure Monitoring . Webmin is a web-based interface for system administration for Unix. Using any modern web browser, you can setup user accounts, Apache, DNS, file sharing and much more.
 
 
-![webmin](https://libs.websoft9.com/Websoft9/DocsPicture/zh/webmin/webmin-dashboard-websoft9.png)
+![webmin](https://libs.websoft9.com/Websoft9/DocsPicture/en/webmin/webmin-dashboard-websoft9.png)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 Webmin 时，需要确保如下几点：
+When referring to this document to use **Webmin**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [bsd3Clause](https://opensource.org/licenses/BSD-3-Clause) 开源许可协议
+- The purpose of this application complies with the [bsd3Clause](https://opensource.org/licenses/BSD-3-Clause) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

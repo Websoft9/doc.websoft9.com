@@ -1,7 +1,7 @@
-[Ansible](https://www.ansible.com/) 是一个 **一个非常简单的IT自动化平台**，它被用于 流程机器人  等场景。Ansible是一个非常简单的IT自动化平台，它使您的应用程序和系统更易于部署和维护。
+[Ansible](https://www.ansible.com/) 是一个 **开源 IT 自动化引擎**，它被用于 流程机器人 应用编排  等场景。Ansible 是一个开源 IT 自动化引擎，可自动执行配置、配置管理、应用程序部署、编排和许多其他 IT 流程。
 
 
-![plateform](https://libs.websoft9.com/Websoft9/DocsPicture/zh/ansible/redhat-automation-platform_content-collections.png)
+![架构](https://libs.websoft9.com/Websoft9/DocsPicture/zh/ansible/ansible-structure-websoft9.png)
 
 
 ## 准备

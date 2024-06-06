@@ -1,15 +1,15 @@
-[Discourse](https://www.discourse.org/) 是一个 **用户社区运营与论坛系统**，它被用于 客服/售后 社交/论坛  等场景。Discourse 是适用于您社区的现代论坛软件。它必须绑定域名方可使用。
+[Discourse](https://www.discourse.org/) is **The online home for your community**, used for Support & Customer Success Online Community . Discourse is modern forum software for your community. Use it as a mailing list, discussion forum, long-form chat room, and more。Discourse will not work from an IP address, you must own a domain name such as example.com to proceed.
 
 
-![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discourse/discourse-gui-websoft9.webp)
+![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discourse/discourse-gui-websoft9.webp)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 Discourse 时，需要确保如下几点：
+When referring to this document to use **Discourse**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [MPL-2.0](https://opensource.org/licenses/MPL-2.0) 开源许可协议
+- The purpose of this application complies with the [MPL-2.0](https://opensource.org/licenses/MPL-2.0) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

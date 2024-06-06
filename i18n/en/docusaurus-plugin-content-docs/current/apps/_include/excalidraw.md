@@ -1,15 +1,16 @@
-[Excalidraw](https://github.com/excalidraw/excalidraw) 是一个 **在线虚拟白板系统**，它被用于 白板/笔记 任务协作  等场景。Excalidraw是一个开源的虚拟手绘风格的白板。它可以帮助您创建协作和端到端加密逻辑示意图。
+[Excalidraw](https://github.com/excalidraw/excalidraw) is **Virtual whiteboard for sketching hand-drawn like diagrams**, used for Whiteboard and Note Task Collaboration . Excalidraw is an open source virtual hand-drawn style whiteboard. It can help you to create collaborative and end-to-end encrypted diagrams.
 
 
-![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/excalidraw/excalidraw-gui-websoft9.png)
+
+![Console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/excalidraw/excalidraw-gui-websoft9.png)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 Excalidraw 时，需要确保如下几点：
+When referring to this document to use **Excalidraw**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [MIT](https://opensource.org/licenses/MIT) 开源许可协议
+- The purpose of this application complies with the [MIT](https://opensource.org/licenses/MIT) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

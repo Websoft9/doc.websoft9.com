@@ -1,15 +1,15 @@
-[AppFlowy](https://appflowy.io/) 是一个 **Notion  开源替代品 **，它被用于 项目/任务 白板/笔记  等场景。AppFlowy是Notion的开源替代品。您负责您的数据和自定义。用Flutter and Rust构建。
+[AppFlowy](https://appflowy.io/) is **Open Source Notion Alternative**, used for Project and Task Whiteboard and Note . AppFlowy is an open-source alternative to Notion. You are in charge of your data and customizations. Built with Flutter and Rust.
 
 
-![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/appflowy/appflowy-gui-websoft9.png)
+![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/appflowy/appflowy-gui-websoft9.png)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 AppFlowy 时，需要确保如下几点：
+When referring to this document to use **AppFlowy**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [apache2](https://opensource.org/licenses/Apache-2.0) 开源许可协议
+- The purpose of this application complies with the [apache2](https://opensource.org/licenses/Apache-2.0) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

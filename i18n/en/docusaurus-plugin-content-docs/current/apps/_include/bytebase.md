@@ -1,15 +1,15 @@
-[Bytebase](https://www.bytebase.com/) 是一个 **数据库的 DevOps 工具**，它被用于 数据库管理工具  等场景。Bytebase 是面向数据库 DevOps 的 GitLab/GitHub，专为开发人员、DBA 和平台团队打造。
+[Bytebase](https://www.bytebase.com/) is **Open-source database DevOps tool**, used for Database Management Tools . Bytebase is GitLab/GitHub for Database DevOps, built for developers, DBAs and platform teams.
 
 
-![架构](https://libs.websoft9.com/Websoft9/DocsPicture/zh/bytebase/bytebase-arch-websoft9.webp)
+![Architecture](https://libs.websoft9.com/Websoft9/DocsPicture/zh/bytebase/bytebase-arch-websoft9.webp)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 Bytebase 时，需要确保如下几点：
+When referring to this document to use **Bytebase**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 请检查应用的使用许可协议，确保符合要求
+- Please check the application's usage license agreement to ensure compliance.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

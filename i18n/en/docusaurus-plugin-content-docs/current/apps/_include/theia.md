@@ -1,15 +1,15 @@
-[Eclipse Theia](https://theia-ide.org/) 是一个 **云 IDE 平台**，它被用于 源码仓库 在线 IDE  等场景。Eclipse Theia是一个可扩展的框架，用于开发具有最先进Web技术的成熟的多语言云和桌面IDE和工具。
+[Eclipse Theia](https://theia-ide.org/) is **Cloud & Desktop IDE Platform**, used for Code Repository Web IDE . Eclipse Theia is an extensible framework to develop full-fledged multi-language Cloud & Desktop IDEs and tools with state-of-the-art web technologies.
 
 
 ![ui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/theia/theia-gui-websoft9.jpg)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 Eclipse Theia 时，需要确保如下几点：
+When referring to this document to use **Eclipse Theia**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [GPL-2.0](https://opensource.org/licenses/GPL-2.0) 开源许可协议
+- The purpose of this application complies with the [GPL-2.0](https://opensource.org/licenses/GPL-2.0) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

@@ -1,15 +1,15 @@
-[APEX](https://apex.oracle.com/) 是一个 **Oracle 出品的低代码应用开发平台**，它被用于 低代码/零代码  等场景。Oracle APEX 是 Oracle 出品的以 Oracle Database 为底层的低代码开发平台 
+[APEX](https://apex.oracle.com/) is **Enterprise low-code application platform **, used for Low Code and No Code . Oracle APEX is the world's most popular low-code platform for enterprise apps.
 
 
 ![apex](https://libs.websoft9.com/Websoft9/DocsPicture/zh/apex/apex-oracle-wordpress.png)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 APEX 时，需要确保如下几点：
+When referring to this document to use **APEX**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 请检查应用的使用许可协议，确保符合要求
+- Please check the application's usage license agreement to ensure compliance.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.
