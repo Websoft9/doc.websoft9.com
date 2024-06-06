@@ -20,21 +20,25 @@ import Meta from './_include/cloudreve.md';
 
 2. Starting to verify it
 
-### Offline download 
+### Enable Offline download 
 
-1. Go to [Personal Center] ->[Dashboard] ->[Nodes] and edit this Master node
+Cloudreve powered by Websoft9 have installed RPC server container by default, you just need to enable it by below steps:  
 
-2. Enable offline download tasks and refer to the information in the Websoft9 console [Access] to fill in various parameters 
+1. Websoft9 console get RPC credentials from "My Apps"
 
-3. Go to [My profile] ->[Remote Download], and you can start the offline download task 
+2. Login Cloudreve, go to "Personal Center" > "Dashboard" > "Nodes" and edit this "Master (Local machine)"
+  
+3. Then, enable the download task and fill the RPC parameters from step one
 
 ### Document editing and preview 
 
-[My Files] can view or edit downloaded documents
+Refer to: [Cloudreve wopi](https://docs.cloudreve.org/use/wopi)
 
 ## Configuration options{#configs}
 
 - Multilingual (√)
+- [wopi](https://docs.cloudreve.org/use/wopi) (√): ONLYOFFICE, CODE
+- RPC container (√)
 
 ## Administer{#administrator}
 
