@@ -19,8 +19,8 @@ import Meta from './_include/redash.md';
 
 2. In the initialization wizard, set the user, email, and password, and complete the registration
 
-3. Start using it on the background
-   ![](../../../../../docs/apps/assets/redash-backend-websoft9.png)
+3. Login Redash dashboard to use it
+   ![](./assets/redash-backend-websoft9.png)
    
 ## Configuration options{#configs}
 
