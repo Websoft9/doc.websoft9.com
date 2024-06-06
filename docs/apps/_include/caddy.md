@@ -1,4 +1,4 @@
-[Caddy](https://caddyserver.com/) 是一个 **自动 HTTPS 开源 Web 服务器**，它被用于 HTTP 服务器  等场景。Caddy 是一个强大且可扩展的 HTTP/2 Web 服务器，它默认使用 HTTPS 并自动获取和更新 TLS 证书
+[Caddy](https://caddyserver.com/) 是一个 **自动 HTTPS 开源 Web 服务器**，它被用于 HTTP 服务器 HTML  等场景。Caddy 是一个强大且可扩展的 HTTP/2 Web 服务器，它默认使用 HTTPS 并自动获取和更新 TLS 证书
 
 
 ![architecture](https://libs.websoft9.com/Websoft9/DocsPicture/zh/caddy/caddy-arch-websoft9.svg)

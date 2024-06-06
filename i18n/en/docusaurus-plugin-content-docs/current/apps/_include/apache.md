@@ -1,15 +1,15 @@
-[Apache HTTP Server](https://httpd.apache.org/) 是一个 **HTTP 服务器软件**，它被用于 HTTP 服务器  等场景。Apache HTTP Server 是一个流行的开源 HTTP 服务器，为应用程序提供 HTTP 服务。
+[Apache HTTP Server](https://httpd.apache.org/) is **Apache HTTP Server**, used for HTTP Server HTML . Apache HTTP Server Project is an effort to develop and maintain an open-source HTTP server
 
 
 ![architecture](https://libs.websoft9.com/Websoft9/DocsPicture/zh/linux/apachehttp-architecture.gif)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 Apache HTTP Server 时，需要确保如下几点：
+When referring to this document to use **Apache HTTP Server**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [LGPL-2.1](https://opensource.org/licenses/LGPL-2.1) 开源许可协议
+- The purpose of this application complies with the [LGPL-2.1](https://opensource.org/licenses/LGPL-2.1) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

@@ -1,15 +1,15 @@
-[EMQX](https://www.emqx.io/) 是一个 **物联网/车联网 MQTT 服务器**，它被用于 MQTT 消息队列  等场景。EMQX 是一款开源、可扩展性强、功能丰富的 MQTT 服务器，专为物联网和实时消息应用而设计。
+[EMQX](https://www.emqx.io/) is **Open-source MQTT broker for IoT, IIoT, and connected vehicles**, used for MQTT Message Queue . EMQX is an open-source, highly scalable, and feature-rich MQTT broker designed for IoT and real-time messaging applications. 
 
 
-![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/emqx/emqx-gui-websoft9.png)
+![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/emqx/emqx-gui-websoft9.png)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 EMQX 时，需要确保如下几点：
+When referring to this document to use **EMQX**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [apache2](https://opensource.org/licenses/Apache-2.0) 开源许可协议
+- The purpose of this application complies with the [apache2](https://opensource.org/licenses/Apache-2.0) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

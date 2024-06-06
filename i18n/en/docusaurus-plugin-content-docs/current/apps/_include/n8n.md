@@ -1,15 +1,15 @@
-[n8n](https://n8n.io) 是一个 **工作流与任务自动化**，它被用于 工作流  等场景。n8n 可以帮助用户在没有任何技术背景下，实现流程与任务自动化。同时，预制300+个系统集成模板，很方便的供客户连接多个软件
+[n8n](https://n8n.io) is **Workflow automation for technical people**, used for Workflow automation . n8n allows you to build flexible workflows focused on deep data integration. And with sharable templates and a user-friendly UI, the less technical people on your team can collaborate on them too. 
 
 
 ![process](https://libs.websoft9.com/Websoft9/DocsPicture/zh/n8n/n8n-gui-websoft9.png)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 n8n 时，需要确保如下几点：
+When referring to this document to use **n8n**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 请检查应用的使用许可协议，确保符合要求
+- Please check the application's usage license agreement to ensure compliance.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

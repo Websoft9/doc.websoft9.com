@@ -1,15 +1,15 @@
-[mattermost](https://mattermost.com/) 是一个 **开源的团队通讯服务系统**，它被用于 团队聊天 项目/任务  等场景。Mattermost是一个 Slack 的开源替代品，基于团队聊天为核心，集成文件、邮件等，把各种碎片化的企业沟通和协作集中到一起。
+[mattermost](https://mattermost.com/) is **A self-hosted Slack-alternative, flexible, messaging platform**, used for Chat Project and Task . Mattermost is a self-hosted Slack-alternative, flexible, messaging platform that enables secure team collaboration.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mattermost/mattermost-gui-websoft9.webp)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 mattermost 时，需要确保如下几点：
+When referring to this document to use **mattermost**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [MIT](https://opensource.org/licenses/MIT) 开源许可协议
+- The purpose of this application complies with the [MIT](https://opensource.org/licenses/MIT) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

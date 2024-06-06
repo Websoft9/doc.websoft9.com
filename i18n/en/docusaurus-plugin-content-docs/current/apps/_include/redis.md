@@ -1,15 +1,15 @@
-[Redis ](https://redis.io/) 是一个 **开源的日志型Key-Value数据库**，它被用于 缓存数据库  等场景。Redis是一个开源的使用ANSI C语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库，并提供多种语言的API。
+[Redis ](https://redis.io/) is **An open source, advanced key-value store**, used for In-memory Database . Redis is an open source, advanced key-value store
 
 
-![login](https://libs.websoft9.com/Websoft9/DocsPicture/zh/redis/redisinsight-login-websoft9.png)
+![login](https://libs.websoft9.com/Websoft9/DocsPicture/en/redis/redisinsight-login-websoft9.png)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 Redis  时，需要确保如下几点：
+When referring to this document to use **Redis **, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [BSD-3-Clause-LBNL](https://opensource.org/BSD-3-Clause-LBNL) 开源许可协议
+- The purpose of this application complies with the [BSD-3-Clause-LBNL](https://opensource.org/BSD-3-Clause-LBNL) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

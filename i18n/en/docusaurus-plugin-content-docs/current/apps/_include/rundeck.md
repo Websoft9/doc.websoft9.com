@@ -1,15 +1,15 @@
-[Rundeck](https://www.rundeck.com) 是一个 **自动化作业调度系统**，它被用于 流水线  等场景。Rundeck 自动化可以让 DevOps 和运营团队可以在中央 UI 中管理自动化，同时在不同的专用网络或多云环境中执行任务。
+[Rundeck](https://www.rundeck.com) is **Job scheduler and runbook automation system**, used for Pipeline . Rundeck automation can help DevOps and Operations teams can manage automation in a central UI while delegating tasks within different private networks or multi-cloud environments
 
 
-![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rundeck/rundeck-gui-websoft9.webp)
+![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rundeck/rundeck-gui-websoft9.webp)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 Rundeck 时，需要确保如下几点：
+When referring to this document to use **Rundeck**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [apache2](https://opensource.org/licenses/Apache-2.0) 开源许可协议
+- The purpose of this application complies with the [apache2](https://opensource.org/licenses/Apache-2.0) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

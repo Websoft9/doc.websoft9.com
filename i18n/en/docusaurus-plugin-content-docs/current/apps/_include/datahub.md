@@ -1,15 +1,15 @@
-[DataHub](https://datahubproject.io/) 是一个 **开源企业级元数据平台**，它被用于 企业主数据  等场景。DataHub 的可扩展元数据平台支持数据发现、数据可观测性和联合治理，有助于控制数据生态系统的复杂性。
+[DataHub](https://datahubproject.io/) is **The Metadata Platform for the Modern Data Stack**, used for Master Data . DataHub's extensible metadata platform enables data discovery, data observability and federated governance that helps tame the complexity of your data ecosystem.
 
 
-![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/datahub/datahub-gui-websoft9.png)
+![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/datahub/datahub-gui-websoft9.png)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 DataHub 时，需要确保如下几点：
+When referring to this document to use **DataHub**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [apache2](https://opensource.org/licenses/Apache-2.0) 开源许可协议
+- The purpose of this application complies with the [apache2](https://opensource.org/licenses/Apache-2.0) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

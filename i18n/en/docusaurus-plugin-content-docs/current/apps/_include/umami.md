@@ -1,15 +1,15 @@
-[Umami](https://umami.is/) 是一个 **易于使用和隐私友好的谷歌分析替代方案**，它被用于 访问统计  等场景。Umami is a simple, fast, privacy-focused alternative to Google Analytics.
+[Umami](https://umami.is/) is **Open source, privacy-focused alternative to Google Analytics**, used for Web Analytics . Umami is a simple, fast, privacy-focused alternative to Google Analytics.
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/umami/umami-gui-websoft9.png)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 Umami 时，需要确保如下几点：
+When referring to this document to use **Umami**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [MIT](https://opensource.org/licenses/MIT) 开源许可协议
+- The purpose of this application complies with the [MIT](https://opensource.org/licenses/MIT) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

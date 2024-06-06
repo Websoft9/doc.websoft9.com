@@ -1,15 +1,15 @@
-[SuperSet](https://superset.apache.org/) 是一个 **开源的商业智能web应用软件，用户可以轻松实现对商业数据进行可视化分析**，它被用于 数据应用与可视化  等场景。Apache Superset 是一个开源的数据探查与可视化平台（曾用名 Panoramix、Caravel ），该工具在可视化、易用性和交互性上非常有特色，用户可以轻松对数据进行可视化分析。
+[SuperSet](https://superset.apache.org/) is **A modern, enterprise-ready business intelligence web application**, used for Data Application and Visualization . Apache Superset is a modern data exploration and visualization platform.
 
 
 ![superset](https://libs.websoft9.com/Websoft9/DocsPicture/en/superset/superset-dash-websoft9.png)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 SuperSet 时，需要确保如下几点：
+When referring to this document to use **SuperSet**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [apache2](https://opensource.org/licenses/Apache-2.0) 开源许可协议
+- The purpose of this application complies with the [apache2](https://opensource.org/licenses/Apache-2.0) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

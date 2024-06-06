@@ -1,15 +1,15 @@
-[Umbraco](https://umbraco.com/) 是一个 **企业级内容管理系统 Umbraco**，它被用于 企业建站 电子商务  等场景。Umbraco 是领先的开源 ASP.NET 核心 CMS |全球超过 700，000 个网站由我们灵活且易于编辑的 CMS 提供支持
+[Umbraco](https://umbraco.com/) is **The flexible open-source .NET (ASP.NET Core) CMS**, used for Website Builder eCommerce . Umbraco is the leading open-source ASP.NET Core CMS | More than 700,000 websites worldwide are powered by our flexible and editor-friendly CMS
 
 
 ![ui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/umbraco/umbraco-gui-websoft9.png)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 Umbraco 时，需要确保如下几点：
+When referring to this document to use **Umbraco**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [MIT](https://opensource.org/licenses/MIT) 开源许可协议
+- The purpose of this application complies with the [MIT](https://opensource.org/licenses/MIT) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

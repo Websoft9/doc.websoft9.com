@@ -1,15 +1,15 @@
-[Graylog](https://www.graylog.org/) 是一个 **日志聚合、分析、审计、展现和预警**，它被用于 日志管理 数据应用与可视化  等场景。开源日志管理工具，支持TB级别机器数据的聚合、分析、审计、展现和预警。
+[Graylog](https://www.graylog.org/) is **A leading centralized log management solution**, used for Log Management Data Application and Visualization . A log management solution for capturing, storing, and enabling real-time analysis of terabytes of machine data.
 
 
 ![ui](https://libs.websoft9.com/Websoft9/DocsPicture/en/graylog/graylog-gui-websoft9.png)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 Graylog 时，需要确保如下几点：
+When referring to this document to use **Graylog**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [SSPL](https://www.mongodb.com/licensing/server-side-public-license) 开源许可协议
+- The purpose of this application complies with the [SSPL](https://www.mongodb.com/licensing/server-side-public-license) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

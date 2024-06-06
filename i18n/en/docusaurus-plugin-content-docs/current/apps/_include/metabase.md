@@ -1,15 +1,15 @@
-[Metabase](https://www.metabase.com/) 是一个 **公司团队交互式可视化数据分析**，它被用于 数据应用与可视化  等场景。Metabase 是一个类似 Tableau，多用于公司团队交互式可视化数据分析。
+[Metabase](https://www.metabase.com/) is **a user-contributed database of biological databases**, used for Data Application and Visualization . Metabase is a user-contributed database of biological databases, listing all the biological databases currently available on the internet. 
 
 
 ![ui](https://libs.websoft9.com/Websoft9/DocsPicture/en/metabase/metabase-product-screenshot.png)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 Metabase 时，需要确保如下几点：
+When referring to this document to use **Metabase**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [AGPL-3.0](https://opensource.org/licenses/AGPL-3.0) 开源许可协议
+- The purpose of this application complies with the [AGPL-3.0](https://opensource.org/licenses/AGPL-3.0) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

@@ -1,15 +1,15 @@
-[ONLYOFFICE Docs](https://www.onlyoffice.com/) 是一个 **为网盘系统提供文档在线编辑与预览服务的中间件**，它被用于 文档服务  等场景。ONLYOFFICE Document Server是一个在线文档编辑和预览系统，可供第三方网盘软件或开发者实现文档的在线编辑和预览。
+[ONLYOFFICE Docs](https://www.onlyoffice.com/) is **A powerful online editor for ECM**, used for Document Service . ONLYOFFICE Document Server Community is a free collaborative online office suite
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/onlyoffice/onlyofficedocs-gui-websoft9.png)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 ONLYOFFICE Docs 时，需要确保如下几点：
+When referring to this document to use **ONLYOFFICE Docs**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [LGPL-3.0](https://opensource.org/licenses/LGPL-3.0) 开源许可协议
+- The purpose of this application complies with the [LGPL-3.0](https://opensource.org/licenses/LGPL-3.0) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

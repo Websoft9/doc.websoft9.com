@@ -1,15 +1,15 @@
-[GeminiProChat](https://github.com/babaohuang/GeminiProChat) 是一个 **与 Gemini Pro 聊天的最简 WebUI**，它被用于 AIGC  等场景。与 Gemini Pro 聊天的最简 WebUI
+[GeminiProChat](https://github.com/babaohuang/GeminiProChat) is **Minimal web UI for GeminiPro**, used for AIGC . Minimal web UI for GeminiPro
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/geminiprochat/geminiprochat-gui-websoft9.png)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 GeminiProChat 时，需要确保如下几点：
+When referring to this document to use **GeminiProChat**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [MIT](https://opensource.org/licenses/MIT) 开源许可协议
+- The purpose of this application complies with the [MIT](https://opensource.org/licenses/MIT) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

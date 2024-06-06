@@ -1,15 +1,15 @@
-[XWiki](https://www.xwiki.org/) 是一个 **企业级 Wiki 系统**，它被用于 知识管理  等场景。XWiki is an open-source enterprise wiki platform. It allows users to create and edit content so that team members can collaborate, share knowledge, and document information.
+[XWiki](https://www.xwiki.org/) is **The Advanced Open Source Enterprise Wiki**, used for Knowledge Management . XWiki是一个开源的企业级Wiki平台。它允许用户创建和编辑内容，以便团队成员可以协作工作、共享知识和文档。
 
 
-![https://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mediawikiui.gif](https://libs.websoft9.com/Websoft9/DocsPicture/zh/xwiki/xwiki-gui-websoft9.png)
+![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/xwiki/xwiki-gui-websoft9.png)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 XWiki 时，需要确保如下几点：
+When referring to this document to use **XWiki**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [LGPL-2.1](https://opensource.org/licenses/LGPL-2.1) 开源许可协议
+- The purpose of this application complies with the [LGPL-2.1](https://opensource.org/licenses/LGPL-2.1) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

@@ -1,15 +1,15 @@
-[RustDesk ](https://rustdesk.com/) 是一个 **虚拟与远程桌面服务端**，它被用于 云桌面  等场景。远程桌面软件以及配套的注册/中继服务器，开箱即用，无需任何配置。您完全掌控数据，不用担心安全。TeamViewer 或 Citrix 的替代品
+[RustDesk ](https://rustdesk.com/) is **Virtual and Remote desktop infrastructure **, used for Cloud Workspaces . 远程桌面软件以及配套的注册/中继服务器，开箱即用，无需任何配置。您完全掌控数据，不用担心安全。Open source TeamViewer / Citrix alternative.
 
 
-![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rustdesk/rustdesk-gui-websoft9.jpg)
+![Console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rustdesk/rustdesk-gui-websoft9.jpg)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 RustDesk  时，需要确保如下几点：
+When referring to this document to use **RustDesk **, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [AGPL-3.0](https://opensource.org/licenses/AGPL-3.0) 开源许可协议
+- The purpose of this application complies with the [AGPL-3.0](https://opensource.org/licenses/AGPL-3.0) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

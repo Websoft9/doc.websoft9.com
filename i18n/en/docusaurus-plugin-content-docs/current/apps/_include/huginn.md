@@ -1,15 +1,15 @@
-[Huginn](https://github.com/huginn/huginn) 是一个 **工作流与任务自动化**，它被用于 工作流  等场景。Huginn是一个用于构建代理的系统，可以在线为您执行自动化任务。他们可以阅读网络、监视事件并代表您采取行动。
+[Huginn](https://github.com/huginn/huginn) is **Workflow automation for technical people**, used for Workflow automation . Huginn is a system for building agents that perform automated tasks for you online. They can read the web, watch for events, and take actions on your behalf. 
 
 
 ![Dashboard](http://libs.websoft9.com/Websoft9/DocsPicture/zh/huginn/huginn-gui-websoft9.png)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 Huginn 时，需要确保如下几点：
+When referring to this document to use **Huginn**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [MIT](https://opensource.org/licenses/MIT) 开源许可协议
+- The purpose of this application complies with the [MIT](https://opensource.org/licenses/MIT) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

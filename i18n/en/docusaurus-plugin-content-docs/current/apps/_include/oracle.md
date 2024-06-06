@@ -1,15 +1,15 @@
-[Oracle Database](https://www.oracle.com/) 是一个 **Oracle Database 免费版**，它被用于 SQL 数据库/关系数据库  等场景。Oracle 数据库，是一个企业级产品。内置可以通过本地浏览器访问的可视化管理工具 Oracle EM 和 CloudBeaver，满足企业微服务架构的设计思想。
+[Oracle Database](https://www.oracle.com/) is **Oracle Database Express Edition**, used for Relational Databases . Oracle Database offers market-leading performance, scalability, reliability, and security, both on-premises and in the cloud.
 
 
-![gui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/oracle/oracle-database-1024x410.jpg)
+![gui](http://libs.websoft9.com/Websoft9/DocsPicture/en/oracle/oracle-database-1024x410.jpg)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 Oracle Database 时，需要确保如下几点：
+When referring to this document to use **Oracle Database**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 请检查应用的使用许可协议，确保符合要求
+- Please check the application's usage license agreement to ensure compliance.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

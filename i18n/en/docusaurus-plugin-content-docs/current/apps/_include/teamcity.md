@@ -1,15 +1,15 @@
-[TeamCity](https://www.jetbrains.com.cn/en-us/teamcity/) 是一个 **热门的开源持续集成（CI&CD）软件**，它被用于 流水线  等场景。TeamCity 是一个通用的 CI/CD 软件平台，可以实现灵活的工作流、协作和开发
+[TeamCity](https://www.jetbrains.com.cn/en-us/teamcity/) is **self-contained, open source automation server**, used for Pipeline . TeamCity is a general-purpose CI/CD software platform that allows for flexible workflows, collaboration and development practices.
 
 
 ![devops](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teamcity/teamcity-gui-websoft9.webp)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 TeamCity 时，需要确保如下几点：
+When referring to this document to use **TeamCity**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 请检查应用的使用许可协议，确保符合要求
+- Please check the application's usage license agreement to ensure compliance.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

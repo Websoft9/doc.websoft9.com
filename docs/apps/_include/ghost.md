@@ -1,4 +1,4 @@
-[Ghost](https://ghost.org/) 是一个 **博客创作与付费阅读平台**，它被用于 企业建站  等场景。Ghost 是一款功能强大的知识内容变现软件，供新媒体创作者围绕其内容发布、分享和发展业务。
+[Ghost](https://ghost.org/) 是一个 **开源的博客平台**，它被用于 企业建站  等场景。Ghost 旨在提供一个简洁、快速且功能强大的工具，帮助写作者、博主和媒体机构发布和管理内容，它的订阅付费阅读功能还可以方便的帮助内容结构变现。
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/ghost/ghost-dsgui-websoft9.png)

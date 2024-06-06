@@ -1,15 +1,15 @@
-[Odoo](https://www.odoo.com/) 是一个 **面向全球用户的开源ERP/CRM软件**，它被用于 ERP/财税/后勤 CRM/分销/订单 供应链/采购/生产/物流 战略/合规/人事 客服/售后 产品生命周期 市场营销  等场景。Odoo是面向全球用户的开源ERP/CRM软件，它有强大而灵活的系统架构，产品迭代速度非常快，用户可模块化修改、升级、新增功能。
+[Odoo](https://www.odoo.com/) is **A suite of web based open source business apps**, used for ERP & Finance CRM & Distribution & Order Supply Chain & Manufacturing & Logistic Strategy & Legal & HR Support & Customer Success PLM & PDM Marketing . Odoo is a suite of web based open source business apps. Odoo Apps can be used as stand-alone applications, but they also integrate seamlessly so you get a full-featured Open Source ERP when you install several Apps.
 
 
 ![ui](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odooui-websoft9.png)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 Odoo 时，需要确保如下几点：
+When referring to this document to use **Odoo**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [LGPL-3.0](https://opensource.org/licenses/LGPL-3.0) 开源许可协议
+- The purpose of this application complies with the [LGPL-3.0](https://opensource.org/licenses/LGPL-3.0) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

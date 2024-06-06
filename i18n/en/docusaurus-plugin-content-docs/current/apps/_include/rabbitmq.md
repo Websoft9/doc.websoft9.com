@@ -1,15 +1,15 @@
-[RabbitMQ](https://www.rabbitmq.com/) 是一个 **流行的开源消息队列系统**，它被用于 消息队列  等场景。流行的开源消息队列系统，用erlang语言开发，用于在分布式系统中存储转发消息，在易用性、扩展性、高可用性等方面表现不俗
+[RabbitMQ](https://www.rabbitmq.com/) is **the most widely deployed open source message broker**, used for Message Queue . RabbitMQ is the most widely deployed open source message broker. 
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rabbitmq/rabbitmq-gui-websoft9.png)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 RabbitMQ 时，需要确保如下几点：
+When referring to this document to use **RabbitMQ**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [apache2](https://opensource.org/licenses/Apache-2.0) 开源许可协议
+- The purpose of this application complies with the [apache2](https://opensource.org/licenses/Apache-2.0) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

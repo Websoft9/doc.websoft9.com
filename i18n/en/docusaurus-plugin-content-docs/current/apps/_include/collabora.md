@@ -1,15 +1,15 @@
-[Collabora 在线开发版](https://collaboraonline.github.io/) 是一个 **文档编辑与预览中间件**，它被用于 文档服务  等场景。Collabora Online 是一个功能强大的协作办公套件，支持所有主要的文档、电子表格和演示文稿文件格式，您可以将其集成到自己的基础架构中。
+[Collabora Online Development Edition](https://collaboraonline.github.io/) is **Office suite integrated into your own infrastructure**, used for Document Service . Collabora Online is a powerful collaborative Office suite that supports all major document, spreadsheet and presentation file formats, which you can integrate into your own infrastructure. 
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/collabora/collabora-gui-websoft9.png)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 Collabora 在线开发版 时，需要确保如下几点：
+When referring to this document to use **Collabora Online Development Edition**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [MPL-2.0](https://opensource.org/licenses/MPL-2.0) 开源许可协议
+- The purpose of this application complies with the [MPL-2.0](https://opensource.org/licenses/MPL-2.0) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

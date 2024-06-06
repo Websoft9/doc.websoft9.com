@@ -1,15 +1,15 @@
-[Prometheus](https://prometheus.io/) 是一个 **系统监控与报警平台**，它被用于 全面监控  等场景。具有维度数据模型、灵活的查询语言、高效的时间序列数据库和现代警报方法的开源监视系统。
+[Prometheus](https://prometheus.io/) is **Power your metrics and alerting with the leading open-source monitoring solution.**, used for Full Monitoring . An open-source monitoring system with a dimensional data model, flexible query language, efficient time series database and modern alerting approach.
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prometheus/prometheus-gui-websoft9.webp)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 Prometheus 时，需要确保如下几点：
+When referring to this document to use **Prometheus**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [apache2](https://opensource.org/licenses/Apache-2.0) 开源许可协议
+- The purpose of this application complies with the [apache2](https://opensource.org/licenses/Apache-2.0) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

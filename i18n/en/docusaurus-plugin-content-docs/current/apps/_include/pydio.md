@@ -1,15 +1,15 @@
-[Pydio Cells](https://pydio.com/) 是一个 **安全可靠的文档共享和协作平台**，它被用于 文档协作  等场景。安全、云原生、可扩展、自托管、开放核心的文档共享和协作，而不会使数据面临风险。
+[Pydio Cells](https://pydio.com/) is **Secure and open-core document sharing and collaboration**, used for Document Collaboration . Secure, cloud-native, scalable, self-hosted, open-core document sharing and collaboration without putting your data at risk.
 
 
 ![GUI](http://libs.websoft9.com/Websoft9/DocsPicture/en/cells/cells-gui-websoft9.png)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 Pydio Cells 时，需要确保如下几点：
+When referring to this document to use **Pydio Cells**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [AGPL-3.0](https://opensource.org/licenses/AGPL-3.0) 开源许可协议
+- The purpose of this application complies with the [AGPL-3.0](https://opensource.org/licenses/AGPL-3.0) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

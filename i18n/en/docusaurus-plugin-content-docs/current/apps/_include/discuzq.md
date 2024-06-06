@@ -1,15 +1,15 @@
-[DiscuzQ](https://www.discuz.chat) 是一个 **一套跨端全域的社区工具**，它被用于 企业建站 社交/论坛  等场景。Discuz!Q 是开源的论坛系统，用于构建知识付费、内容变现的圈子或私域流量应用。它拥有完全开源、提供丰富接口、前后端分离、轻量化、数据独立可控、敏捷上云、快速变现七大能力。
+[DiscuzQ](https://www.discuz.chat) is **一套跨端全域的社区工具**, used for Website Builder Online Community . Discuz!Q 是开源的论坛系统，用于构建知识付费、内容变现的圈子或私域流量应用。它拥有完全开源、提供丰富接口、前后端分离、轻量化、数据独立可控、敏捷上云、快速变现七大能力。
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuzq/discuzq-guim-websoft9.webp)
 
 
-## 准备
+## Prepare
 
-在参阅本文档使用 DiscuzQ 时，需要确保如下几点：
+When referring to this document to use **DiscuzQ**, please read and ensure the following points:
 
-- 应用是基于 Websoft9 安装的
+- This application is installed by Websoft9 console.
 
-- 应用的用途符合 [apache2](https://opensource.org/licenses/Apache-2.0) 开源许可协议
+- The purpose of this application complies with the [apache2](https://opensource.org/licenses/Apache-2.0) open source license agreement.
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.
