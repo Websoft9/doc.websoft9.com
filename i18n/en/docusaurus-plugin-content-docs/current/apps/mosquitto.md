@@ -15,21 +15,21 @@ import Meta from './_include/mosquitto.md';
 
 ### Enable authentication 
 
-There are multiple ways to [enable authentication for Mosquitto](https://mosquitto.org/documentation/authentication-methods/), we will introduce the [password file](https://mosquitto.org/man/mosquitto_passwd-1.html) Method:
+There are multiple ways to [enable authentication for Mosquitto](https://mosquitto.org/documentation/authentication-methods/), below is [password file](https://mosquitto.org/man/mosquitto_passwd-1.html) method:
 
-1. Access the Mosquitto container and create a password file using the following command (file name, username, and password can be customized) 
+1. Access to Mosquitto container and create a password file using the below command (file name, username, and password can be customized) 
    ``` 
    mosquitto_passwd -H sha512  -c -b /mosquitto/config/passwd_file yourusername yourpasssord 
    ``` 
 
-2. Modify the following two items in the configuration file (mandatory): 
+2. Modify below items in the configuration file */mosquito/config/mosquito.conf* : 
 
-   - Set password_file to: */mosquitto/passwd_file*
-   - allow_anonymous: false 
+   - password_file path: */mosquitto/passwd_file*
+   - allow_anonymous: `false`
 
-3. Effective after rebuilding the application  
+3. Rebuild the application
 
-### GUI
+### GUI for Mosquitto
 
 Reference: [MQTTX](./mqttx)
 
