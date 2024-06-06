@@ -14,25 +14,35 @@ import Meta from './_include/cloudreve.md';
 
 ## 入门指南{#guide}
 
-### 初始化密码{#wizard}
+### 登录验证{#wizard}
 
-Websoft9 控制台安装 Cloudreve 后，通过 "我的应用" 查看应用详情，在**容器**标签页中查看 Cloudreve 容器的日志，获得初始化账号密码
+1. Websoft9 控制台安装 Cloudreve 后，通过 "我的应用" 查看应用详情
 
-### 离线下载
+2. 在"我的应用" 管理界面的 **容器**标签页中查看 Cloudreve 容器的日志，获得初始化账号密码
 
-1. 进入【个人中心】->【管理面板】->【离线下载节点】，编辑此节点
+3. 登录验证 Cloudreve 可用性
 
-2. 启用离线下载任务，参考Websoft9 控制台【访问】中的信息填写各种参数
+### 启用离线下载
 
-3. 进入【个人主页】->【离线下载】，可以开始离线下载任务了
+Websoft9 提供的 Cloudreve 应用默认安装了离线下载 RPC  服务，只需要参考一下步骤启用它：
+
+1. Websoft9 控制台 "我的应用" 中获取 Cloudreve 的 RPC 账号信息
+
+1. 进入 "个人中心" > "管理面板" > "离线下载节点"，编辑此节点
+
+2. 启用离线下载任务，填写 RPC 账号信息
+
+4. 连接下载
 
 ### 文档编辑与预览
 
-【我的文件】可查看或编辑已经下载的文档
+参考：[Cloudreve wopi](https://docs.cloudreve.org/use/wopi) (√): ONLYOFFICE, CODE
 
 ## 配置选项{#configs}
 
 - 多语言（✅）
+- [wopi](https://docs.cloudreve.org/use/wopi) (√): ONLYOFFICE, CODE
+- RPC 服务 (√)
 
 ## 管理维护{#administrator}
 
