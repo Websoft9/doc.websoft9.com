@@ -2,31 +2,37 @@
 title: Prometheus
 slug: /prometheus
 tags:
-  - 监控
-  - 报警
-  - 时序数据库
+  - console
+  - other
 ---
 
 import Meta from './_include/prometheus.md';
 
 <Meta name="meta" />
 
-## 入门指南{#guide}
+## Getting started{#guide}
 
-### 初始化{#wizard}
+### Login Verification{#verification}
 
-Websoft9 控制台安装 Prometheus 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
+1. Completed installation Prometheus at Websoft9 console, get the applicaiton's overview and access information from "My Apps"  
 
-### 集成 Grafana {#grafana}
+2. Prometheus can be accessed without authentication.   
 
-Grafana 可以作为 Promethus 的可视化呈现，具体参考：[GRAFANA SUPPORT FOR PROMETHEUS](https://prometheus.io/docs/visualization/grafana/)
+   ![](./assets/prometheus-backend-websoft9.png)
+   
+4. Optional: If want to control access, please set it up through the **Websoft9 Gateway**
 
-## 配置选项{#configs}
+### Integrate Grafana{#grafana}
 
-- 数据采集方式：主要使用拉取（Pull）方式，同时引入 Pushgateway 接受被采集端的推送数据，然后再从 Pushgateway 中拉取。 
-- [basic auth](https://prometheus.io/docs/guides/basic-auth/#hashing-a-password)
-- 连接 Alertmanager 和 Pushgateway：需执行增加配置文件实现连接
+Grafana is visual tool for Prometheus, detail refer to: [GRAFANA SUPPORT FOR PROMETHEUS](https://prometheus.io/docs/visualization/grafana/)
 
-## 管理维护{#administrator}
+## Configuration options{#configs}
 
-## 故障
+- Configuration file in container (have mounted to server): */etc/prometheus/prometheus.yml* 
+- Data collection method: Pull directly from datasource and Pushgateway to receive push data
+- [Basic Auth](https://prometheus.io/docs/guides/basic-auth/#hashing-a-password)
+- Connecting Alertmanager and Pushgateway: requires adding configuration files to implement the connection
+
+## Administer{#administrator}
+
+## Troubleshooting{#troubleshooting}

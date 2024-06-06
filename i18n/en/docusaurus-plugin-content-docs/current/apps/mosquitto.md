@@ -2,47 +2,46 @@
 title: Mosquitto
 slug: /mosquitto
 tags:
-  - 物联网
+  - IOT
   - MQTT
-  - 消息
+  - MQ
 ---
 
 import Meta from './_include/mosquitto.md';
 
 <Meta name="meta" />
 
-## 入门指南{#guide}
+## Getting started{#guide}
 
-### 开启认证
+### Enable authentication 
 
-Mosquitto 开启认证有[多种方式](https://mosquitto.org/documentation/authentication-methods/)，下面我们介绍其中的[密码文件](https://mosquitto.org/man/mosquitto_passwd-1.html)方式：
+There are multiple ways to [enable authentication for Mosquitto](https://mosquitto.org/documentation/authentication-methods/), below is [password file](https://mosquitto.org/man/mosquitto_passwd-1.html) method:
 
-1. 进入 Mosquitto 容器，参考下面的命令创建一个密码文件（文件名、用户名和密码均可自定义）
-    ```
-    mosquitto_passwd -H sha512  -c -b /mosquitto/config/passwd_file yourusername yourpasssord
-    ```
+1. Access to Mosquitto container and create a password file using the below command (file name, username, and password can be customized) 
+   ``` 
+   mosquitto_passwd -H sha512  -c -b /mosquitto/config/passwd_file yourusername yourpasssord 
+   ``` 
 
-2. 修改配置文件中的如下两项（必须）：
+2. Modify below items in the configuration file */mosquito/config/mosquito.conf* : 
 
-   - password_file 设置为： /mosquitto/passwd_file
-   - allow_anonymous 设置为： false
+   - password_file path: */mosquitto/passwd_file*
+   - allow_anonymous: `false`
 
-3. 重建应用后生效
+3. Rebuild the application
 
-### 可视化管理
+### GUI for Mosquitto
 
-参考：[MQTTX](./mqttx)
+Reference: [MQTTX](./mqttx)
 
-## 配置选项{#configs}
+## Configuration options{#configs}
 
-- 配置文件：mosquitto.config
-- 用户认证（√）
+- Configuration file(volumed): */mosquito/config/mosquito.conf* 
+- User authentication(√)
 
-## 管理维护{#administrator}
+## Administer{#administrator}
 
+## Troubleshooting{#troubleshooting}
 
-## 故障
-
-#### 容器日志 Error: Address not available？
+#### docker logs Error: Address not available？
 
 Mosquitto 2.0 requires you to configure listeners and authentication before it will allow connections from anything other than the loopback interface. 

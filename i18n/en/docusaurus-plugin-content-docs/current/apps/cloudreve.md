@@ -2,38 +2,44 @@
 title: Cloudreve
 slug: /cloudreve
 tags:
-  - 企业网盘
-  - 下载
-  - 文档管理
-  - 对象存储
+  - Enterprise cloud storage 
+  - Download 
+  - Document management 
+  - Object storage  
 ---
 
 import Meta from './_include/cloudreve.md';
 
 <Meta name="meta" />
 
-## 入门指南{#guide}
+## Getting started{#guide}
 
-### 初始化密码{#wizard}
+### Login Verification{#verification}
 
-Websoft9 控制台安装 Cloudreve 后，通过 "我的应用" 查看应用详情，在**容器**标签页中查看 Cloudreve 容器的日志，获得初始化账号密码
+1. Completed installation Cloudreve at Websoft9 console, get the applicaiton's overview and access credentials from "My Apps"  
 
-### 离线下载
+2. Starting to verify it
 
-1. 进入【个人中心】->【管理面板】->【离线下载节点】，编辑此节点
+### Enable Offline download 
 
-2. 启用离线下载任务，参考Websoft9 控制台【访问】中的信息填写各种参数
+Cloudreve powered by Websoft9 have installed RPC server container by default, you just need to enable it by below steps:  
 
-3. 进入【个人主页】->【离线下载】，可以开始离线下载任务了
+1. Websoft9 console get RPC credentials from "My Apps"
 
-### 文档编辑与预览
+2. Login Cloudreve, go to "Personal Center" > "Dashboard" > "Nodes" and edit this "Master (Local machine)"
+  
+3. Then, enable the download task and fill the RPC parameters from step one
 
-【我的文件】可查看或编辑已经下载的文档
+### Document editing and preview 
 
-## 配置选项{#configs}
+Refer to: [Cloudreve wopi](https://docs.cloudreve.org/use/wopi)
 
-- 多语言（✅）
+## Configuration options{#configs}
 
-## 管理维护{#administrator}
+- Multilingual (√)
+- [wopi](https://docs.cloudreve.org/use/wopi) (√): ONLYOFFICE, CODE
+- RPC container (√)
 
-## 故障
+## Administer{#administrator}
+
+## Troubleshooting{#troubleshooting}

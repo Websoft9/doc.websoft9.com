@@ -2,84 +2,80 @@
 title: Teleport
 slug: /teleport
 tags:
-  - 堡垒机
-  - 代理访问
-  - 远程登陆
+  - Bastion machine
+  - Proxy access
+  - Remote login
   - SSH
-  - 应用访问
+  - Application access
 ---
 
 import Meta from './_include/teleport.md';
 
 <Meta name="meta" />
 
-## 入门指南{#guide}
+## Getting started{#guide}
 
-### 安装后续步骤（必要）{#create-user}
+### Follow up steps for installation(necessary){#create-user}  
 
-Websoft9 控制台安装 Teleport 后，还需要完成如下几个步骤，方可登录到后台：
+After installing Teleport on the Websoft9 console, the following steps need to be completed in order to login to the background:  
 
-1. 确保为 Teleport 绑定域名，并设置 HTTPS 访问（**必要条件**）
+1. Ensure have set domain for Teleport and enable HTTPS access (**Required**)  
 
-2. 修改 Teleport 的配置文件，将 public_addr 配置项中的范例域名更改为自己的真实域名（保留 443 端口），重建应用后生效。
+2. Modify the Teleport configuration file *public-addr* configuration item to your own real domain name (keeping port 443), and rebuild the application.  
+   ``` 
+   public_addr: 
+      - 'example.domain.com:443' 
+   ``` 
 
-   ```
-    public_addr:
-      - 'example.domain.com:443'
-   ```
+3. Run the following command in the Teleport container to create a super user and also produce a registration link (URL) 
+   ``` 
+   tctl users add admin --roles=editor,auditor,access --logins=root,ubuntu,ec2-user 
+   ``` 
+   > -- logins=root,ubuntu,ec2 user are required, otherwise you will not be able to connect to the managed Linux later on 
 
-3. 在 Teleport 容器中运行如下命令，创建一个超级用户，同时会生产注册链接（URL）
-   ```
-   tctl users add admin --roles=editor,auditor,access --logins=root,ubuntu,ec2-user
-   ```
-   > --logins=root,ubuntu,ec2-user 是必须的，否则后面无法连接到被管理的 Linux
+4. Run the registration link in local browsing to complete password settings 
 
-4. 在本地浏览中运行注册链接，完成密码设置  
+   > If the link is inaccessible or unsuccessful, it indicates that steps 1-2 have not been completed or there is an issue   
+   
+   ![](./assets/teleport-invitelinux-ss-websoft9.png)
 
-   > 如果链接不可访问或不成功，则说明步骤 1-2 没有完成或有问题
+5. Use the credentials to login to the Teleport console 
+   
+   ![](./assets/teleport-loginss-websoft9.png)
 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teleport/teleport-invitelinux-ss-websoft9.png)
+### Manage resources  
 
-5. 使用上述步骤生成的用户名和密码，便可以登录 Teleport 控制台
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teleport/teleport-loginss-websoft9.png)
+#### Connecting to remote Linux  
 
-### 管理资源
+1. Login to the Teleport console, go to "Resource" > "Enroll New Resource"
 
-#### 连接远程 Linux
+2. Select an operating system and generate a client installation link  
+   
+   ![](./assets/teleport-linuxcreate-websoft9.png)
 
-1. 登录到 Teleport 控制台，Resource > Enroll New Resource
+3. Login to the remote Linux server, copy the previous link for client installation  
 
-2. 选择一个操作系统，并生成一个客户端安装链接
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teleport/teleport-linuxcreate-websoft9.png)
+4. After client successful installation, return to the Teleport console. Teleport will automatically detect the client and prompt the user to follow the wizard to complete the next steps  
 
-3. 登录到远程 Linux 服务器，将上一步的链接复制到命令行界面，开始安装
+   ![](./assets/teleport-connectlinux-ss-websoft9.png)
 
-4. 安装成功后，回到 Teleport 控制台，Teleport 会自动检测到客户端并提示用户根据向导完成后续步骤
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teleport/teleport-connectlinux-ss-websoft9.png)
+## Configuration options{#configs}
 
-## 配置选项{#configs}
+- Configuration file in Teleport container (mounted to src directory): */etc/config/teleport.yaml*
+- Multilingual (x) 
+- IP: Port access method (x): Not support this because self generated certificate is not secure 
+- Two Factor authentication: Websoft9 have disabled Two Factor authentication in the Teleport configuration file
 
-- 配置文件：src/config/teleport.yaml
-- 多语言（×）
-- IP:端口的访问方式（×）：自生成证书不安全
+## Administer{#administrator}
 
-## 管理维护{#administrator}
+## Troubleshooting{#troubleshooting}
 
-### Two-Factor 认证
+#### After filling in the password, registration still failed?  
 
-我们在 Teleport 默认配置文件中禁用了 Two-Factor 认证，如需开启请修改配置文件后重建应用。
+Ensure that the registration link is accessed through HTTPS. 
 
+#### Failed to connect to the server by IP:Port?  
 
-## 故障
+Details: When adding resources, run the installation command on the connected server and display curl failed to verify   
 
-#### 注册过程中填写密码后，注册仍然失败？
-
-确保注册链接通过 HTTPS 访问。  
-
-#### 公网+端口方式连接服务器失败？
-
-问题描述：增加资源时，在被连接的服务器上运行安装命令，显示 curl failed to verify ...  
-
-问题原因：自签名证书被认定为不安全，不允许连接  
-
-解决方案：为 Teleport 配置域名，申请公共证书
+Reason: The self signed certificate has been identified as insecure and connection is not allowed

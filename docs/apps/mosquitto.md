@@ -4,7 +4,7 @@ slug: /mosquitto
 tags:
   - 物联网
   - MQTT
-  - 消息
+  - 消息队列
 ---
 
 import Meta from './_include/mosquitto.md';
@@ -24,7 +24,7 @@ Mosquitto 开启认证有[多种方式](https://mosquitto.org/documentation/auth
 
 2. 修改配置文件中的如下两项（必须）：
 
-   - password_file 设置为： /mosquitto/passwd_file
+   - password_file 设置为： */mosquitto/passwd_file*
    - allow_anonymous 设置为： false
 
 3. 重建应用后生效

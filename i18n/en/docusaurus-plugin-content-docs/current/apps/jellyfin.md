@@ -2,38 +2,38 @@
 title: Jellyfin
 slug: /jellyfin
 tags:
-  - 音乐播放器
-  - 流媒体
-  - jellyfin
+  - Music player 
+  - Streaming media 
+  - jellyfin 
 ---
 
 import Meta from './_include/jellyfin.md';
 
 <Meta name="meta" />
 
-## 入门指南{#guide}
+## Getting started{#guide}
 
-### 初始化{#wizard}
+### Initial setup{#wizard}
 
-Websoft9 控制台安装 Jellyfin 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
+1. When completed installation of Jellyfin at Websoft9 console, get the applicaiton's overview and access information from "My Apps"  
 
-1. 根据向导提示创建用户和密码
+2. Access Jellyfin install wizard and create a user and password
 
-2. 设置你的媒体库：根据向导开始设置，其中**路径**选择 /media
+3. At set up your media library step, the **path** seleted for `/media`
 
-3. 根据提示完成后续其他设置
+4. Complete other steps
 
-### 添加歌曲
+### Add Music files
 
-1. 使用 Websoft9 的文件管理，往 media 目录对应的挂载目录上传媒体文件
+1. Upload your music files to diretory which named mounted for container `/media`
 
-2. Jellyfin 自动完成扫描后添加到播放列表中（也支持手动扫描）
+2. Waiting for Jellyfin automatically scanning or manual scanning it
 
-## 配置选项{#configs}
+## Configuration options{#configs}
 
-- 多语言（✅）：初始化安装时可选择中英文在内的多种语言
-- 媒体目录：目录名称为 media，具体位置通过 Websoft9 控制台应用的**卷存**查看。也可以通过编排，挂载更多的 Media 目录。  
+- Multilingual (√): You can select languages during initial installation
+- Media directory: Jellyfin container media directory is `/media` and named mount to Server, you can get the path from  "My Apps" of Websoft9 console
 
-## 管理维护{#administrator}
+## Administer{#administrator}
 
-## 故障
+## Troubleshooting{#troubleshooting}

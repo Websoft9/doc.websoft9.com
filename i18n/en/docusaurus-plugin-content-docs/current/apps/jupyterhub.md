@@ -1,9 +1,8 @@
----
 title: JupyterHub
 slug: /jupyterhub
 tags:
-  - 在线文档编辑器
-  - Python开发环境
+  - Online Document Editor 
+  - Python development environment
   - JupyterHub
 ---
 
@@ -11,12 +10,18 @@ import Meta from './_include/jupyterhub.md';
 
 <Meta name="meta" />
 
-## 入门指南{#guide}
+## Getting started{#guide}
 
-## 配置选项{#configs}
+### Login Verification{#verification}
 
-- 创建多用户：在控制台 exec 进入容器，运行 `adduser youruser`
+1. Completed installation JupyterHub at Websoft9 console, get the applicaiton's overview and access credentials from "My Apps"  
 
-## 管理维护{#administrator}
+2. Starting to verify it
 
-## 故障
+## Configuration options{#configs}
+
+- Multiple users（√）: Access the container and run command `adduser your_username` to create it
+
+## Administer{#administrator}
+
+## Troubleshooting{#troubleshooting}
