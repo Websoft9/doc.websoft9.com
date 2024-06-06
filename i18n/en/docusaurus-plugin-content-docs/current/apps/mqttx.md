@@ -17,16 +17,16 @@ import Meta from './_include/mqttx.md';
 
 1. Completed installation MQTTX at Websoft9 console, get the applicaiton's overview and access information from "My Apps"  
 
-2. Create a connection 
+2. Create a connection in MQTTX console
 
    - The client ID is automatically generated 
    - Server address: Protocol and address, port are the values of the connected service
 
-   ![](../../../../../docs/apps/assets/mqttx-connection-websoft9.png)
+   ![](./assets/mqttx-connection-websoft9.png)
 
 ### Integrate RabbitMQ 
 
-1. Guaranteed RabbitMQ 
+1. Prepare RabbitMQ 
 
    1. Install RabbitMQ on the Websoft9 App Store 
    2. RabbitMQ container command line enable plugin 
