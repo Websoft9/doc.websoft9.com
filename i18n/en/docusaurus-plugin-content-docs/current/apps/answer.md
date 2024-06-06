@@ -29,7 +29,7 @@ import Meta from './_include/answer.md';
 
 #### Automatic installation failed?
 
-There may be two possible reasons for the failure of Answer automatic installation: 
+Two possible reasons for it: 
 
-1. All environment variables of the Answer image need to be set, otherwise it will not switch to automatic installation mode 
+1. All environment variables of the Answer docker image need to be set, otherwise it will not switch to automatic installation mode 
 2. After the Answer container is started, if there is no connection to an available database at the first moment, the automatic installation will be skipped and there will be no attempt to wait or install again
