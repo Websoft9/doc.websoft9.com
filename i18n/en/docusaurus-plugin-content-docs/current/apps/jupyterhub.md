@@ -20,7 +20,7 @@ import Meta from './_include/jupyterhub.md';
 
 ## Configuration options{#configs}
 
-- Create multiple users: Access the container in the console exec and run `adduser youraser`
+- Multiple users（√）: Access the container and run command `adduser your_username` to create it
 
 ## Administer{#administrator}
 
