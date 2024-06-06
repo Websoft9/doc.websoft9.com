@@ -18,12 +18,12 @@ import Meta from './_include/kong.md';
 Completed installation Kong at Websoft9 console, get the applicaiton's overview and access credentials from "My Apps"  
 
 1. Kong has three services: Kong HTTP, Kong Admin API, and Kong GUI. Ports need to be opened as needed
-   - If access by domain: simply enable the Kong Admin API port
-   - If access by ip and port: it is necessary to enable Kong HTTP port, Kong Admin API port , and Kong GUI port
+   - If access by domain: Just need enable the Kong Admin API port
+   - If access by IP and Port: it is necessary to enable Kong HTTP port, Kong Admin API port , and Kong GUI port
 
 2. Local browser access to the Kong Manager interface:
    - Access by domain: `http://domain/admin`
-   - Access by ip and port: `http://IP:Kong GUI port/admin`
+   - Access by IP and Port: `http://Internet IP:Kong GUI port/admin`
 
 3. Verify Kong HTTP service
    ```
@@ -34,23 +34,23 @@ Completed installation Kong at Websoft9 console, get the applicaiton's overview 
 
 ### Kong Manager Authentication
 
-Kong Manager OSS access is not supported account and password authentication by default. Users need to set access control for it through the **Websoft9 Gateway**.
+Kong Manager OSS access is not supported account and password authentication by default. You set access control for it through the **Websoft9 Gateway**.
 
 ### Kong Admin API Authentication
 
-To set up authentication access for the Kong Admin API, you can use Kong's own authentication plugin. Kong provides various authentication plugins, For example, Key Authentication, Basic Authentication, OAuth 2.0 Authentication, etc. 
+Use Kong authentication plugin for authentication access. e.g  Key Authentication, Basic Authentication, OAuth 2.0 Authentication
 
 Detail refer to: [Authentication Reference](https://docs.konghq.com/gateway/latest/kong-plugins/authentication/reference/)
 
 ## Configuration options{#configs}
 
-- GUI console Kong Manager OSS (√): Only the enterprise distribution supports account and password authentication
+- GUI console Kong Manager OSS (√): But only the enterprise distribution supports account and password authentication
 
 - [Kong CLI](https://docs.konghq.com/gateway/latest/reference/cli) (√)
 
-- Management access method: URL/admin(Changed Kong's default settings)
+- Kong Manager interface: `http://URL/admin`
 
-- Port Description:
+- Port description:
   - Kong HTTP Port(Gateway HTTP service API port)
   - Kong Admin API Port(Management API service port)
   - Kong GUI Port(Management GUI console port)
