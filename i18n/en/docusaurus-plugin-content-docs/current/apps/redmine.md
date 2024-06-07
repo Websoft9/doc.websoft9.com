@@ -36,7 +36,7 @@ After get the matching plugin version, download and extract the plugin to the Re
 
 ### Set SMTP{#smtp}  
 
-1. Modify the `configuration. yml` file in the Redmine container and add SMTP under production:  
+1. Modify the `configuration. yml` file in the Redmine container and add SMTP at **production**:  
 
 - Ensure the accuracy of the SMTP host/account/password  
 - Pay attention to indentation/spaces, otherwise Redmine will report an error 
@@ -44,14 +44,14 @@ After get the matching plugin version, download and extract the plugin to the Re
    production: 
    delivery_method: smtp 
    smtp_settings: 
-   address: smtp.exmail.qq.com 
-   port: 465 
-   ssl: true 
-   enable_starttls_auto: true 
-   domain: websoft9.com 
-   authentication: :login 
-   user_name:  help@websoft9.com 
-   password: ******** 
+      address: smtp.exmail.qq.com 
+      port: 465 
+      ssl: true 
+      enable_starttls_auto: true 
+      domain: websoft9.com 
+      authentication: :login 
+      user_name:  help@websoft9.com 
+      password: ******** 
    ``` 
 2. It works after restarting the Redmine container service 
 3. Redmine Console Settings for SMTP: "Administration" > "Configuration" > "Email Notification"

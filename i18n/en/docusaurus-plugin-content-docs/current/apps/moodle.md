@@ -25,7 +25,7 @@ import Meta from './_include/moodle.md';
  
 1. Login to the Moodle backend as an administrator  
 
-2. Open "Site administration"> "Plugins" in order to view or install plugins  
+2. Open "Site administration" > "Plugins" in order to view or install plugins  
 
 3. Supports two installation methods for plugins: 
     
