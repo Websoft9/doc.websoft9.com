@@ -3,53 +3,60 @@ sidebar_position: 1
 slug: /linux
 ---
 
-# Linux
+# Linux Server
 
-本章介绍使用 Websoft9 托管应用过程中，可能需要的 Linux 相关操作。   
+Websoft9 面向企业用户，提供个性化的操作系统以及托管技术支持服务，目前支持个性化的操作系统包括：
 
-## 指南
+- 纯净版的操作系统，例如：Oracle Linux, Rocky Linux, CentOS7.x
+- 含桌面的操作系统，例如：Oracle Linux with Gnome
+- 含软件包的操作系统，例如：Ubuntu with Docker, Ubuntu with AI 大模型
 
-### 系统账号{#osaccount}
+下面是管理和维护操作系统中相关的操作指南。  
 
-不同的云平台操作系统账号是不一样的，有的云平台可以在创建服务器时自定义用户名称，有的是固定用户名`root`。
+## 发行版
 
-具体参考下面的表格：  
+### Oracle Linux
 
-   |  云平台   |  管理员账号   | 其他|
-   | --- | --- | --- |
-   |  Azure   |  创建服务器的时候自行设置   | [如何开启root账户？](./azure#enableroot) |
-   |  AWS   |  AmazonLinux:ec2  CentOS:centos  Ubuntu:ubuntu  Debian:admin   | [如何开启root账户？](./aws#enableroot)|
-   |  阿里云，华为云，腾讯云   |  除腾讯云 Ubuntu 之外(ubuntu)，其他平台任何系统默认账号都是 root  | |
+[Oracle Linux](https://www.oracle.com/linux/) 是一个完全免费、开源并可以自由分发的 Linux 发行版。 
 
-### 连接 Linux{#connect}
+#### 为什么选 Oracle Linux？
 
-常见 Linux 连接方式包括：
+它与 CentOS 或 Ubuntu 等其他免费 Linux 相比，有几个特别之处：
 
-* SSH 和 SFTP 连接系统
-* RDP和 VNC 连接桌面
+1. 更兼容 Oracle 的其他产品线，例如：[Why Oracle Database Runs Best on Oracle Linux](https://www.oracle.com/a/ocom/docs/linux/oracle-database-runs-best-on-oracle-linux.pdf)
 
-连接的工具有两种类型：
+2. 修复补丁后无需重启（零停机）
 
-- 本地电脑客户端，例如：Terminus, WinSCP, Putty, Xshell, Tabby, MobaXterm 等
-- 在线 Web 客户端：云平台和 Websoft9 控制台均提供的 Web 版在线连接工具  
+3. Oracle Linux 官方提供了比较完善的配套支持：
+   * [Oracle Linux 认证应用程序](https://apexapps.oracle.com/pls/apex/f?p=10263:17::::::)
+   * [Oracle Linux 硬件兼容商](https://linux.oracle.com/ords/f?p=117:1)
+   * [Oracle Linux CVE](https://linux.oracle.com/ords/f?p=130:21:)
+   * [Oracle Linux 升级包](https://linux.oracle.com/ords/f?p=105:21:117077190823888:pg_R_1213672130548773998:NO&pg_min_row=1&pg_max_rows=50&pg_rows_fetched=50)
+   * [Oracle Linux 勘误表](https://oss.oracle.com/mailman/listinfo/el-errata)
+
+4. Oracle 官方提供了可选的[技术支持订阅](https://shop.oracle.com/apex/f?p=dstore:2:0::NO:RIR,RP,2:PROD_HIER_ID:4510272175861805728468)
+
+5. Oracle 在云上提供了一个 Oracle Autonomous Linux 系统，具备自主更新升级的能力（零停机）
+
+6. Oracle Linux 内核 [Unbreakable Enterprise Kernel](https://github.com/oracle/linux-uek)，兼容 RHCK
+
+#### 系统升级{#oracle-upgrade}  
+
+Oracle Linux 在一个维护周期内会发布多个安全漏洞和 Bug 补丁，所以升级的流程包含： 
+
+1. 订阅 Oracle 官方的[补丁通知邮件](https://www.oracle.com/cn/security-alerts/)：注册免费 Oracle 账号 > 用户控制面板 > 订阅管理 > Oracle 安全通知
+
+2. 选择一种升级方案：
+    - 普通升级方案：[Linux 标准的软件包升级方案](https://docs.oracle.com/en/operating-systems/oracle-linux/software-management/sfw-mgmt-UpdateSoftwareonOracleLinux.html#update-software)  
+    - 不停机升级方案：Oracle 官方提供的升级工具[Ksplice](https://ksplice.oracle.com/try/trial) 
 
 
-### 增设数据磁盘
+### CentOS7
 
-Websoft9 多应用托管平台由于运行的应用较多，用户可能需要增加数据盘以扩展存储。
-
-增加数据磁盘的主要步骤：
-
-* 购买数据磁盘
-* 磁盘分区与初始化
-* 磁盘设置为系统的挂载点
+### Rocky Linux
 
 
-### 使用 Linux 桌面
-
-阅读：[系统托管--Linux 桌面](./desktop)
-
-### 编码与字体设置
+## 设置编码与字体
 
 编码与字符虽然看似与语言文字有关系，但它们的本质是不一样的：
 
@@ -72,40 +79,16 @@ Websoft9 多应用托管平台由于运行的应用较多，用户可能需要�
 
 2. 运行 `yum groupinstall "fonts"`，装“fonts”这个包含大量字体的软件包组
 
-### 磁盘与文件系统
+
+## 管理磁盘与文件系统
 
 - 运行 `lsblk` 查看外设和磁盘分区，Linux 支持的外设：IDE, SATA, USB, SCSI 等
 - 运行 `fdisk -l`查看分区容量
 - 运行 `df -T` 查看文件系统，Linux 支持的文件系统类型：Btrfs、JFS、ReiserFS、ext、ext2、ext3、ext4、ISO9660、XFS、Minx、MSDOS、UMSDOS、VFAT、NTFS、HPFS、NFS、SMB、SysV、PROC 等。
 - 常见的分区工具：fdisk, lvm, gdisk, lsblk, parted
 
-### 软件仓库
 
-Linux 操作系统都提供了一个集中的软件包管理机制--软件仓库。 
-
-Linux 软件包由：共享库、应用程序（二进制）、服务和文档组成及其所需的依赖列表。
-
-![](./assets/linux-rpms-websoft9.png)
-
-下面我们列出全球比较流行的仓库：
-
-- [Linux Packages](https://linux-packages.com)：软件包的汇聚仓库，包括 Ubuntu、Centos、Arch、Debian
-- [Software Collections - scl](https://www.softwarecollections.org/en/)：软件包的汇聚仓库，包括 Ubuntu、Centos、Arch、Debian
-- [Ubuntu Packages](https://packages.ubuntu.com)：Ubuntu 官方仓库
-- [RPM Fusion](https://rpmfusion.org)：Fedora Project or Red Hat 额外的包
-- [EPEL](https://fedoraproject.org/wiki/EPEL)：由 Fedora Special Interest Group 维护的 Enterprise Linux（RHEL、CentOS）中经常用到的包
-- [RepoForge](http://repoforge.org)：RHEL 系统下的软件仓库
-- [PackMan](http://packman.links2linux.org)：OpenSUSE 最大的第三方软件源
-- [Remi](https://www.remi.com)：PHP 仓库
-- [Gentoo portage](https://www.gentoo.org)：Gentoo Portage 软件源
-- [Fedora copr](https://copr.fedorainfracloud.org/)：Fedora 软件源
-- [Ubuntu Ports](http://ports.ubuntu.com)：Arm64/Armhf 等平台的 Ubuntu 软件仓库
-- [Centos altarch](http://mirror.centos.org/altarch)： CentOS 额外的包
-- [IUS](https://ius.io)： RPM 上游软件包
-- [ATOMIC](http://www.atomicorp.com/channels/atomic)： CentOS 额外的包
-- [Centos altarch](http://mirror.centos.org/altarch)： Atomic RPM 包
-
-### 时间设置
+## 设置时间
 
 使用 `timedatectl`，您可以设置系统时间、日期和时区
 
@@ -117,10 +100,17 @@ sudo timedatectl set-time '2024-04-22 15:30:00'
 timedatectl status
 ```
 
-### 增加用户
+## 增加用户
 
 - adduser 用于创建 Linux 系统账号，创建过程中会提示：用户名/密码，同时会创建用户家目录
 - useradd 仅创建无法登陆 Linux 系统的应用账号
+
+
+
+阅读：[系统托管--Linux 桌面](./desktop)
+
+
+
 
 ## 故障排除{#troubleshoot}
 
@@ -134,6 +124,10 @@ The Linux kernel can reset the system if serious problems are detected. This can
 
 重启是果，CPU 100% 是根本原因。当然，也可以修改 WatchDog 的配置以降低它通过重启解决问题的权重。  
 
+#### IO 密集型计算下服务器重启？
+
+问题描述：数据库建索引等 IO 密集型计算负载下或资源耗尽 CPU 100%，服务器出现重启的情况？  
+解决方案：Oracle 官方建议及时升级补丁
 
 #### 磁盘已满，需要清理？
 
