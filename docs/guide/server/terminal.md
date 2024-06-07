@@ -5,11 +5,7 @@ slug: /web-terminal
 
 # 连接服务器
 
-## 背景
-
-虽然 Websoft9 托管平台在设计时，努力避免将应用的配置文件放到服务器上，以杜绝操作服务器。  
-
-但是，在实际使用过程中，仍然有极少数场景需要以服务器的视角，管理容器和操作文件。  
+本章介绍在 Websoft9 平台内通过在线的 SSH 终端连接服务器的几种方法： 
 
 ## 使用 Websoft9 内置终端
 
@@ -23,7 +19,7 @@ Websoft9 控制台内置 Web 终端，它可以免密连接 Websoft9 控制台�
 
 ## 使用独立安全 Web 终端
 
-Websoft9 应用商店安装 [Next Terminal](./nextterminal)，为连接到基础设施的每位工程师提供信任访问方案。
+Websoft9 应用商店安装堡垒机 [Next Terminal](./nextterminal)，实现服务器的安全连接与访问。
 
 
 
