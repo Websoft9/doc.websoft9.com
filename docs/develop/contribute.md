@@ -25,8 +25,9 @@ import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 ## 用户社区{#community}
 
-- Social Media: [Linkedin](https://www.linkedin.com/company/websoft9), [Weibo](https://weibo.com/chendelin1982)
-- Chat Group: [微信群](https://libs.websoft9.com/Websoft9/feature/icon-userchatgroup-websoft9.png)
+- 社交媒体: [Linkedin](https://www.linkedin.com/company/websoft9), [Weibo](https://weibo.com/chendelin1982)
+- 聊天组: [微信群](https://libs.websoft9.com/Websoft9/feature/icon-userchatgroup-websoft9.png)
+- 技术社区：[开源中国](https://www.oschina.net/p/websoft9)
 
 ## 赞助
 
