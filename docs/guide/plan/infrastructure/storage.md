@@ -14,10 +14,10 @@ slug: /storage
 而私有云下，可能需要手动操作：
 
 1. 运行 `df -Th` 命令检查磁盘状态
-2. 使用 growpart, GParted, fdisk 等软件调整分区
+2. 使用 growpart, GParted, fdisk, lvm, gdisk, lsblk, parted 等软件调整分区
 3. 使用 resize2fs 增大或收缩 ext2/ext3/ext4 文件系统
 
-## 附加数据盘{#data-disk}
+## 附加数据磁盘{#data-disk}
 
 Websoft9 多应用托管平台由于运行的应用较多，用户可能需要增加数据盘以扩展存储。
 
