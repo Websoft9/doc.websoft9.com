@@ -26,7 +26,7 @@ import Meta from './_include/espocrm.md';
 ## Configuration options{#configs}
 
 - Multilingual(✅): Set the language in the **upper right corner(Menu) > Preferences**   
-- Mobile end(✅)   
+- Mobile(✅)   
 - SMTP(✅): **Backend > Emails > Compose > Group Email Account**  
 - Command: [Console commands](https://docs.espocrm.com/administration/commands/)    
 - API: [EspoCRM REST API](https://docs.espocrm.com/development/api/)  
