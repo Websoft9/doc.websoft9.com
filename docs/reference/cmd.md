@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2.1
-slug: cmd
+slug: /linux-commands
 ---
 
 # 常用命令
@@ -42,9 +42,19 @@ netstat -tunlp
 
 # 查看所有环境变量
 env
+
+# 设置时间
+sudo timedatectl set-time '2024-04-22 15:30:00'
+
+# 查询时间
+timedatectl status
+
+# 系统升级
+yum update -y //升级所有包同时也升级软件和系统内核,-y当安装过程提示选择全部为"yes"
+yum upgrade -y //只升级所有包，不升级软件和系统内核,-y当安装过程提示选择全部为"yes"
 ```
 
-## 文件管理
+## 文件系统
 
 ```
 # create a new directory and all subdirectories
@@ -87,6 +97,12 @@ sudo setfacl -Rm g:groupnamehere:rwx /base/path/
 
 # Add groupnamehere to an new directory /base/path/
 sudo setfacl -Rdm g:groupnamehere:rwx /base/path/
+
+# 查看字体
+fc-list
+
+# 查看字符编码 
+locale 
 ```
 
 ## 搜索
@@ -104,7 +120,6 @@ history
 # search CLI history
 <ctrl>-R
 
-
 # -B/A = show 2 lines before/after search_term
 grep -B 2 -A 2 search_term <filename>
 
@@ -120,7 +135,6 @@ zgrep search_term <filename>
 # Fast grep printing lines containing a string pattern
 fgrep -R string_pattern <filename or directory>
 
-
 # View command history
 history
 
@@ -134,19 +148,11 @@ history
 sudo !!
 ```
 
-## 运维命令
+## 服务与进程
 
 ```
-# 重启Nginx服务，重启php-fpm
-systemctl restart nginx
-systemctl restart php-fpm 
-
-# 重启Apache服务
-systemctl restart apache
-
-# 系统升级
-yum update -y //升级所有包同时也升级软件和系统内核,-y当安装过程提示选择全部为"yes"
-yum upgrade -y //只升级所有包，不升级软件和系统内核,-y当安装过程提示选择全部为"yes"
+# 管理服务
+systemctl start | stop | status |restart <your_service>
 
 # 重启所有容器
 docker restart $(docker ps -a | awk '{ print $1}' | tail -n +2)
@@ -166,11 +172,18 @@ kill -9 PID
 tail -n /path/to/log/file
 ```
 
-## 资源
+## 磁盘与外设
 
 ```
+# 查看外设和磁盘分区
+lsblk
+
+# 查看分区容量
+fdisk -l
+
 # disk space info. The '-h' gives the data in human-readable values
 df -h
+df -T
 
 # size of each file/dir and its contents in the current dir
 du -hd 1
@@ -243,7 +256,7 @@ sudo tcpdump host www.example.com
 ## 包管理
 
 ```
-# Debian/Ubuntu
+##-------- Debian/Ubuntu
 
 # List packages
 dpkg -l
@@ -258,7 +271,7 @@ dpkg -i <package_name>.deb
 apt-get install <package>
 apt install <package>
 
-# CentOS/RedHat
+##-------- CentOS/RedHat
 
 # Install a package
 yum install <package>
@@ -270,7 +283,7 @@ rpm -ivh <package_name>.rpm
 rpm -qa | grep <package>
 ```
 
-## 日志
+## 日志{#logs}
 
 ```
 # 指定服务日志
@@ -291,4 +304,14 @@ journalctl UID=33 --since today
 
 # Docker 容器日志查看方法
 docker logs appname
+```
+
+## 用户
+
+```
+# 用于创建 Linux 系统账号，创建过程中会提示：用户名/密码，同时会创建用户家目录
+adduser 
+
+# 仅创建无法登陆 Linux 系统的应用账号
+useradd 
 ```

@@ -3,124 +3,229 @@ sidebar_position: 1
 slug: /linux
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Linux
 
-本章介绍使用 Websoft9 托管应用过程中，可能需要的 Linux 相关操作。   
+Websoft9 为企业用户提供个性化的 Linux 系统托管技术支持服务，满足用户 DevOps 以及应用托管的特殊需求场景。  
 
-## 指南
+## 系统支持
 
-### 系统账号{#osaccount}
+目前支持个性化的操作系统包括：
 
-不同的云平台操作系统账号是不一样的，有的云平台可以在创建服务器时自定义用户名称，有的是固定用户名`root`。
+- 纯净版的操作系统，例如：Oracle Linux, Rocky Linux, CentOS7.x
+- 含桌面的操作系统，例如：Oracle Linux with Gnome
+- 含软件包的操作系统，例如：Ubuntu with Docker, Ubuntu with AI 大模型
 
-具体参考下面的表格：  
+### Oracle Linux
 
-   |  云平台   |  管理员账号   | 其他|
-   | --- | --- | --- |
-   |  Azure   |  创建服务器的时候自行设置   | [如何开启root账户？](./azure#enableroot) |
-   |  AWS   |  AmazonLinux:ec2  CentOS:centos  Ubuntu:ubuntu  Debian:admin   | [如何开启root账户？](./aws#enableroot)|
-   |  阿里云，华为云，腾讯云   |  除腾讯云 Ubuntu 之外(ubuntu)，其他平台任何系统默认账号都是 root  | |
+[Oracle Linux](https://www.oracle.com/linux/) 是一个完全免费、开源并可以自由分发的 Linux 发行版。它与其他免费 Linux 相比，有几个特别之处：
 
-### 连接 Linux{#connect}
+1. 更兼容 Oracle 的其他产品线，例如：[Why Oracle Database Runs Best on Oracle Linux](https://www.oracle.com/a/ocom/docs/linux/oracle-database-runs-best-on-oracle-linux.pdf)
 
-常见 Linux 连接方式包括：
+2. 修复补丁后无需重启（零停机）
 
-* SSH 和 SFTP 连接系统
-* RDP和 VNC 连接桌面
+3. Oracle Linux 官方提供了比较完善的配套支持：
+   * [Oracle Linux 认证应用程序](https://apexapps.oracle.com/pls/apex/f?p=10263:17::::::)
+   * [Oracle Linux 硬件兼容商](https://linux.oracle.com/ords/f?p=117:1)
+   * [Oracle Linux CVE](https://linux.oracle.com/ords/f?p=130:21:)
+   * [Oracle Linux 升级包](https://linux.oracle.com/ords/f?p=105:21:117077190823888:pg_R_1213672130548773998:NO&pg_min_row=1&pg_max_rows=50&pg_rows_fetched=50)
+   * [Oracle Linux 勘误表](https://oss.oracle.com/mailman/listinfo/el-errata)
 
-连接的工具有两种类型：
+4. Oracle 官方提供了可选的[技术支持订阅](https://shop.oracle.com/apex/f?p=dstore:2:0::NO:RIR,RP,2:PROD_HIER_ID:4510272175861805728468)
 
-- 本地电脑客户端，例如：Terminus, WinSCP, Putty, Xshell, Tabby, MobaXterm 等
-- 在线 Web 客户端：云平台和 Websoft9 控制台均提供的 Web 版在线连接工具  
+5. Oracle 在云上提供了一个 Oracle Autonomous Linux 系统，具备自主更新升级的能力（零停机）
 
+6. Oracle Linux 内核 [Unbreakable Enterprise Kernel](https://github.com/oracle/linux-uek)，兼容 RHCK
 
-### 增设数据磁盘
+7. Oracle Linux 在一个维护周期内会发布多个安全漏洞和 Bug 补丁，更可靠的**升级流程** 
 
-Websoft9 多应用托管平台由于运行的应用较多，用户可能需要增加数据盘以扩展存储。
-
-增加数据磁盘的主要步骤：
-
-* 购买数据磁盘
-* 磁盘分区与初始化
-* 磁盘设置为系统的挂载点
+   1. 订阅 Oracle 官方的[补丁通知邮件](https://www.oracle.com/cn/security-alerts/)：注册免费 Oracle 账号 > 用户控制面板 > 订阅管理 > Oracle 安全通知
+   2. 选择一种升级方案：
+      - 普通升级方案：[Linux 标准的软件包升级方案](https://docs.oracle.com/en/operating-systems/oracle-linux/software-management/sfw-mgmt-UpdateSoftwareonOracleLinux.html#update-software)  
+      - 不停机升级方案：Oracle 官方提供的升级工具[Ksplice](https://ksplice.oracle.com/try/trial) 
 
 
-### 使用 Linux 桌面
+### CentOS7.x
 
-阅读：[系统托管--Linux 桌面](./desktop)
+CentOS7.x 是一个已经官方停止支持的操作系统发行版，Websoft9 当前为它继续提供支持。
 
-### 编码与字体设置
+## 桌面支持{#desktop}
 
-编码与字符虽然看似与语言文字有关系，但它们的本质是不一样的：
+Websoft9 在云平台上提供的 Linux 桌面，为企业用户提供了一个高效、安全、可靠且灵活的虚拟工作空间，助力企业提升工作效率，确保数据安全，降低运营成本。   
 
-- 编码是计算机存储各种文字的格式（UTF8，Unicode等），是面向机器的设计形式
-- 字体是计算机将字符显示出来的格式（中文黑体、 Google Fonts），是面向人类的设计形式
+无论是日常办公、软件开发还是数据分析，Websoft9 的 Linux 云桌面解决方案都能满足企业的多样化需求。   
 
-查看与设置编码的方法如下：
+<Tabs>
+  <TabItem value="Gnome" label="Gnome" default>
+    ![Gnome Desktop](./assets/linux-desktop-gnome-websoft9.jpg)
+  </TabItem>
+  <TabItem value="kde" label="KDE">
+    ![kde Desktop](./assets/linux-desktop-kde-websoft9.jpg)
+  </TabItem>
+  <TabItem value="mate" label="Mate">
+    ![mate Desktop](./assets/linux-desktop-mate-websoft9.png)
+  </TabItem>
+  <TabItem value="Xfce" label="Xfce">
+    ![Gnome Desktop](./assets/linux-desktop-xfce-websoft9.png)
+  </TabItem>
+</Tabs>
 
-1. 在系统中运行 `locale` 命令，查看当前已支持的字符编码
+### 准备
 
-2. 运行下面的命令之一，临时切换默认字符编码
+使用桌面之前，需要准备如下事项：  
+
+* 创建可登陆的用户：必须使用 `adduser` 创建
+
+* 开启服务器安全组端口
+  - XRDP 连接端口： 3389
+  - VNC 连接端口：5901
+
+* SSH 登录到服务器，设置 VNC 密码（仅适用 VNC 连接需要）
    ```
-   LANG="zh_CN.UTF-8"
+   vncpasswd
+   systemctl restart vnc
    ```
-3. 或修改 /etc/locale.conf 文件，永久性修改字符编码
+* 与桌面有关的服务
 
-安装与查看字体的方法如下：
+    ```
+    # For RDP
+    sudo systemctl start | stop | restart | status xrdp
 
-1. 在系统中运行 `fc-list` 命令，查询已安装的字体
+    # For Gnome
+    sudo systemctl start | stop | restart | status gdm
 
-2. 运行 `yum groupinstall "fonts"`，装“fonts”这个包含大量字体的软件包组
+    # For VNC
+    sudo systemctl start | stop | restart | status vncserver
+    ```
+* 默认的 VNC 服务器： [TigerVNC](https://github.com/TigerVNC/tigervnc)
 
-### 磁盘与文件系统
+### 连接桌面
 
-- 运行 `lsblk` 查看外设和磁盘分区，Linux 支持的外设：IDE, SATA, USB, SCSI 等
-- 运行 `fdisk -l`查看分区容量
-- 运行 `df -T` 查看文件系统，Linux 支持的文件系统类型：Btrfs、JFS、ReiserFS、ext、ext2、ext3、ext4、ISO9660、XFS、Minx、MSDOS、UMSDOS、VFAT、NTFS、HPFS、NFS、SMB、SysV、PROC 等。
-- 常见的分区工具：fdisk, lvm, gdisk, lsblk, parted
+连接 Linux 桌面主要有两种方式：XRDP 和 VNC 模式，推荐使用 [XRDP](https://cloudzy.com/rdp-vs-vnc-remote-desktop-comparison/)
 
-### 软件仓库
+|         | 速度 | 实现原理     | 多用户           | 平台                           | 安全协议   |
+| ------- | ---- | ------------ | ---------------- | ------------------------------ | ---------- |
+| **RDP** | 效率高，速度快 | 计算资源共享，本地渲染 | 继承操作系统用户 | Linux, Windows, macOS, Android | SSL/TLS    |
+| **VNC** | 效率底，速度慢 | 屏幕共享 ，服务端渲染    | 没有用户         | Linux, Windows, macOS          | SSH tunnel |
 
-Linux 操作系统都提供了一个集中的软件包管理机制--软件仓库。 
 
-Linux 软件包由：共享库、应用程序（二进制）、服务和文档组成及其所需的依赖列表。
+#### XRDP 连接（推荐）
 
-![](./assets/linux-rpms-websoft9.png)
+本地电脑如果是 Windows 系统，那么可以使用系统自带的远程桌面客户端去连接 Linux 桌面：  
 
-下面我们列出全球比较流行的仓库：
+1. 打开 开始菜单，输入”mstsc“ ，系统会搜索远程桌面连接工具  
 
-- [Linux Packages](https://linux-packages.com)：软件包的汇聚仓库，包括 Ubuntu、Centos、Arch、Debian
-- [Software Collections - scl](https://www.softwarecollections.org/en/)：软件包的汇聚仓库，包括 Ubuntu、Centos、Arch、Debian
-- [Ubuntu Packages](https://packages.ubuntu.com)：Ubuntu 官方仓库
-- [RPM Fusion](https://rpmfusion.org)：Fedora Project or Red Hat 额外的包
-- [EPEL](https://fedoraproject.org/wiki/EPEL)：由 Fedora Special Interest Group 维护的 Enterprise Linux（RHEL、CentOS）中经常用到的包
-- [RepoForge](http://repoforge.org)：RHEL 系统下的软件仓库
-- [PackMan](http://packman.links2linux.org)：OpenSUSE 最大的第三方软件源
-- [Remi](https://www.remi.com)：PHP 仓库
-- [Gentoo portage](https://www.gentoo.org)：Gentoo Portage 软件源
-- [Fedora copr](https://copr.fedorainfracloud.org/)：Fedora 软件源
-- [Ubuntu Ports](http://ports.ubuntu.com)：Arm64/Armhf 等平台的 Ubuntu 软件仓库
-- [Centos altarch](http://mirror.centos.org/altarch)： CentOS 额外的包
-- [IUS](https://ius.io)： RPM 上游软件包
-- [ATOMIC](http://www.atomicorp.com/channels/atomic)： CentOS 额外的包
-- [Centos altarch](http://mirror.centos.org/altarch)： Atomic RPM 包
+2. 输入 **服务器公网IP** ，点击【连接】  
+   ![image.png](./assets/linux-remoteip-websoft9.png)
+   
+   > 确保云控制台中服务器安全组 3389 端口是开启状态
+  
+3. 如果出现下面的提示，点击【是】继续  
+   ![image.png](./assets/linux-remotereminder-websoft9.png)
+  
+4. XRDP 对话框中，输入服务器 root 账号和密码
+  ![enter image description here](./assets/gnome-login-websoft9.png)
+ 
+   > 建议采用普通用户登录 Linux 桌面，而不是 root 用户。请参照下面命令创建普通用户：
+    ```
+    sudo su 
+    adduser xxxuser # 根据提示完成密码设置
+    ```
 
-### 时间设置
+5. 成功登录后，就可以看到 Linux 桌面
 
-使用 `timedatectl`，您可以设置系统时间、日期和时区
+6. 以 Gnome 为例，打开：【Setting】>【Region&Lanuage】>【Language】设置中文（重启后生效）
+  ![enter image description here](./assets/gnome-changelanguage-websoft9.png)
+
+
+#### VNC 连接
+
+VNC 是一种传统的连接 Linux 服务器桌面的方式：  
+
+1. 使用 SSH 登录 Linux 桌面所在的服务器，设置你的 VNC 服务端访问密码
+    ```
+    sudo su
+    rm -rf /root/.vnc/passwd
+    vncpasswd
+    ```
+2. 本地电脑安装 [VNC viewer](https://www.realvnc.com/download/viewer/) 客户端
+
+3. 登录云服务器控制台，为你的云服务器安全组中开启 **5901** 端口
+
+4. 本地电脑打开 VNC 客户端，创建一个VNC连接（服务器公网IP地址：5901）
+   ![](./assets/vnc-connection001-websoft9.png)
+
+5. 点击【Continue】进入下一步
+   ![](./assets/vnc-connection002-websoft9.png)
+
+6. 输入VNC密码后登录即可进入图形化界面
+   ![](./assets/vnc-connection003-websoft9.png)
+   ![](./assets/vnc-setlanguage-websoft9.png)
+   ![](./assets/vnc-startuse-websoft9.png)
+   ![](./assets/vnc-gnomehome-websoft9.png)
+
+7. 如果服务器处于下图所示的锁定状态，请输入你的**服务器的密码**进行解锁
+   ![](./assets/vnc-connection-rootlogin-websoft9.png)
+
+
+8. VCN 使用过程中可参考如下命令进行维护  
+   ```
+   # 查看已经运行的桌面编号
+   vncserver -list
+
+   # 终止2号桌面进程
+   kill -9 :1
+
+   # 管理桌面服务
+   systemctl start vncserver@:1.service
+   systemctl stop vncserver@:1.service
+   systemctl status vncserver@:1.service
+   systemctl restart vncserver@:1.service
+   ```
+
+### 设置桌面语言
+
+设置 Linux 桌面为中文一般分三个步骤，安装语言包、安装字体(防乱码)和设置区域和语言，下面以 CentOS KDE 桌面为例演示：
+
+1. 查询系统支持语言包并安装语言包
+   ```
+   yum search kde | grep -i chinese
+   yum install kde-l10n-Chinese.noarch
+   ```
+
+2. 安装字体
+   ```
+   yum groupinstall "fonts"
+   ```
+
+3. 远程登录 KDE 桌面，设置语言: [system settings] - [Commone Appearance and Behavior] - [Local] - [Languages]
+
+   ![](./assets/kde-setlang-websoft9.png)
+
+### 安装 Web 浏览器
+
+Linux 桌面安装 Google Chrome 为例：
 
 ```
-# 设置时间
-sudo timedatectl set-time '2024-04-22 15:30:00'
+# For CentOS7
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+sudo yum localinstall google-chrome-stable_current_x86_64.rpm
+/usr/bin/google-chrome --no-sandbox
 
-# 查询时间
-timedatectl status
+# For Ubuntu
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb
+vim /usr/bin/google-chrome/google-chrome
+exec -a "$0" "$HERE/chrome" "$@"  修改为 exec -a "$0" "$HERE/chrome" "$@" --no-sandbox
+rm -r ~/.config/google-chrome
 ```
 
-### 增加用户
+## 相关参考
 
-- adduser 用于创建 Linux 系统账号，创建过程中会提示：用户名/密码，同时会创建用户家目录
-- useradd 仅创建无法登陆 Linux 系统的应用账号
+- [Linux 命令](./linux-commands)
+- [Linux 使用容器](./guide/container/)
 
 ## 故障排除{#troubleshoot}
 
@@ -134,6 +239,10 @@ The Linux kernel can reset the system if serious problems are detected. This can
 
 重启是果，CPU 100% 是根本原因。当然，也可以修改 WatchDog 的配置以降低它通过重启解决问题的权重。  
 
+#### IO 密集型计算下服务器重启？ 
+
+问题描述：数据库建索引等 IO 密集型计算负载下或资源耗尽 CPU 100%，服务器出现重启的情况？  
+解决方案：Oracle 官方建议及时升级补丁
 
 #### 磁盘已满，需要清理？
 
@@ -155,4 +264,23 @@ The Linux kernel can reset the system if serious problems are detected. This can
 
 下图显示了无法连接云服务器的主要原因分类及出现概率，按照对应的原因进行排查：  
 
-![](./assets/ecs-cannotconnect.jpeg)
+![](./assets/ecs-cannotconnect.png)
+
+#### 编码与字体的区别？
+
+编码与字符虽然看似与语言文字有关系，但它们的本质是不一样的：
+
+- 编码是计算机存储各种文字的格式（UTF8，Unicode等），是面向机器的设计形式
+- 字体是计算机将字符显示出来的格式（中文黑体、 Google Fonts），是面向人类的设计形式
+
+#### 远程桌面报错：“由于安全设置错误，客户端无法连接到远程计算机...”  
+
+原因：本地远程桌面客户端与服务端协议不匹配      
+方案：需根据实际情况修正
+
+
+#### 桌面锁屏了怎么办？
+
+登录密码无法解锁，只能重启服务器后再登录。建议登录桌面后，关闭锁屏功能。
+
+以 Gnome 为例，关闭步骤：【Privacy】>【Screen Lock】，将【Automatic Screen Lock】设置为 off
