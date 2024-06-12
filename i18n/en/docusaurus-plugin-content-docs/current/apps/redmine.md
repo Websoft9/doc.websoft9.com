@@ -16,56 +16,50 @@ import Meta from './_include/redmine.md';
 
 1. When completed installation of Redmine at Websoft9 console, get the applicaiton's overview and access information from "My Apps"   
 
-2. Aceess the Redmine index page, click the "login"  
-
-3. According to the system prompt, change the password and use it  
+2. Login the Redmine and change password by system prompt
 
 ### Manage plugins  
 
-After get the matching plugin version, download and extract the plugin to the Redmine container directory */usr/src/redmine/plugins*
+Manage Redmine plugin is manage plugin sources at Redmine container directory */usr/src/redmine/plugins* and need restart Redmine container takes effect
 
-- Example command for downloading and decompressing plugins within a container: 
+- Install Plugins: Run below commands at Redmine container
    ``` 
    apt update -y && apt install unzip 
    curl -L -o plugin_name.zip  https://url/plugin_name.zip 
    unzip rplugin_name.zip -d /usr/src/redmine/plugins 
    ``` 
-- Delete the plugin directory to uninstall the plugin 
-- After downloading the decompression plugin, restarting the container takes effect 
-- Incompatible plugin versions can cause the container to fail to start, so the plugin needs to be uninstalled
+- Uninstall Plugin: Delete the plugin directory
 
 ### Set SMTP{#smtp}  
 
-1. Modify the `configuration. yml` file in the Redmine container and add SMTP at **production**:  
-
-- Ensure the accuracy of the SMTP host/account/password  
-- Pay attention to indentation/spaces, otherwise Redmine will report an error 
-   ``` 
-   production: 
-   delivery_method: smtp 
-   smtp_settings: 
-      address: smtp.exmail.qq.com 
-      port: 465 
-      ssl: true 
-      enable_starttls_auto: true 
-      domain: websoft9.com 
-      authentication: :login 
-      user_name:  help@websoft9.com 
-      password: ******** 
-   ``` 
-2. It works after restarting the Redmine container service 
+1. Prepare the your SMTP  
+2. Modify the `configuration. yml` file in the Redmine container and add below SMTP configurations at **production**:  
+     ``` 
+     production: 
+     delivery_method: smtp 
+     smtp_settings: 
+        address: smtp.exmail.qq.com 
+        port: 465 
+        ssl: true 
+        enable_starttls_auto: true 
+        domain: websoft9.com 
+        authentication: :login 
+        user_name:  help@websoft9.com 
+        password: ******** 
+     ``` 
+2. It works after restarting the Redmine container
 3. Redmine Console Settings for SMTP: "Administration" > "Configuration" > "Email Notification"
 
 ## Configuration options{#configs}
 
 - [Plugin Center](https://www.redmine.org/plugins)(✅)  
 - Multilingual(✅): Support project multilingualism and user multilingualism  
-- Site directory (mounted): */usr/src/redmine*  
-- Configuration directory (mounted): */usr/src/redmine/configure*  
-- Configuration file (mounted): */usr/src/redmine/configuration/configuration.yml*  
+- Site directory in container(Have mounted): */usr/src/redmine*  
+- Configuration directory in container(Have mounted): */usr/src/redmine/configure*  
+- Configuration file in container (Have mounted): */usr/src/redmine/configuration/configuration.yml*  
 - [CLI](https://pypi.org/project/Redmine-CLI/)  
 - [API](https://www.redmine.org/projects/redmine/wiki/Rest_api)  
-- [SMTP](https://www.redmine.org/projects/redmine/wiki/EmailConfiguration) 
+- [SMTP](https://www.redmine.org/projects/redmine/wiki/EmailConfiguration) (✅) 
 
 ## Administer{#administrator}
 
@@ -73,9 +67,9 @@ After get the matching plugin version, download and extract the plugin to the Re
 
 ## Troubleshooting{#troubleshooting}
 
-#### When the project name is Chinese, the system reports an error?
+#### System error when project name is Chinese?
 
-Database character encoding needs to be modified to utf8
+Redmine Database character encoding needs to be modified to `utf8`
 
 #### New registered users cannot login?
 
