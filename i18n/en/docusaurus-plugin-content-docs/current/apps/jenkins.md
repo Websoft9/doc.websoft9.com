@@ -16,20 +16,20 @@ import Meta from './_include/jenkins.md';
 
 ### Initial setup{#wizard}
 
-When completed installation of Jenkins at Websoft9 console, get the applicaiton's overview and access information from "My Apps"  
+1. When completed installation of Jenkins at Websoft9 console, get the applicaiton's overview and access information from "My Apps"  
 
-1. Access the initialization page, Jenkins prompts to unlock
+2. Access the initialization page, Jenkins prompts to unlock
    ![](./assets/jenkins-installstart-websoft9.png)
 
-2. Access jenkins container, and get unlock password as following
+3. Access jenkins container, and run below command to get unlock password
 
    ```
    cat /var/jenkins_home/secrets/initialAdminPassword
    ```
 
-3. After successful login, complete the following steps: installing plugins, creating administrators, etc
+4. After successful login, complete the following steps: installing plugins, creating administrators, etc
 
-4. Access the console and start using it
+5. Go to Jenkins Console and start using it
    ![](./assets/jenkins-backend-websoft9.png)
 
 ### Github + Jenkins automatic construction
@@ -40,7 +40,7 @@ The following is a task to help users quickly get started by using Jenkins to au
 
 2. Ensures that the Github plugin is installed and enabled in Jenkins
 
-3. Create a job, set the source code bit Github address during the configuration process, and set the triggering strategy
+3. Create a job at Jenkins, set the source code from Github, and set the triggering strategy
 
 ## Configuration options{#configs}
 
@@ -48,7 +48,7 @@ The following is a task to help users quickly get started by using Jenkins to au
 
 - [Multilingual](https://www.jenkins.io/doc/book/using/using-local-language/)(✅)
 
-- SMTP: Install Jenkins plugin first [Email Extension](https://plugins.jenkins.io/email-ext/), then **Manage Jenkins > Configure System**
+- SMTP: Install Jenkins plugin [Email Extension](https://plugins.jenkins.io/email-ext/), then **Manage Jenkins > Configure System**
 
 - [Jenkins CLI](https://www.jenkins.io/zh/doc/book/managing/cli/)
    ```
