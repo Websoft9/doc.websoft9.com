@@ -18,23 +18,9 @@ import Meta from './_include/joomla.md';
 
 1. Completed installation Joomla at Websoft9 console, get the applicaiton's overview and access credentials from "My Apps"  
 
-2. Starting to verify it, Joomla has powerful management and configuration capabilities, mainly accessed through the "System"
+2. Login to Joomla backend  
 
    ![](./assets/joomla-system-websoft9.png)
-
-### Install Language
-
-Joomla language is defaults to English, and requires other languages to login to the backend for installation:
-
-1. Joomla backend: **System > Install > Languages** The language required for installation
-
-2. Edit user attributes: **Edit Profile > Basic Settings** select the language for the front and backend respectively, and save it to take effect
-
-### Install extension{#plugin}
-
-1. Joomla backend: **System > Install > Extensions** access the extension management page
-
-2. Choose the online installation method(Install From Web)
 
 ### Install template{#template}
 
@@ -51,13 +37,15 @@ Joomla's template installation is mainly achieved by uploading template installa
 
 ## Configuration options{#configs}
 
-- [Joomla! Extensions Directory™](https://extensions.joomla.org/)
+- [Joomla Extensions](https://extensions.joomla.org/): Joomla backend **System > Install > Extensions** access the extension management page, install extensions from Web
 
-- SMTP(✅): Backend **System > Global Configuration > Server > Mail > Mailer**, server email type selection: SMTP
+- SMTP(✅): Backend **System > Global Configuration > Server > Mail > Mailer**, server email type selection `SMTP`
 
-- Multilingual(✅): Install the language in the backend **System > Install > Languages**, and select the desired language
+- Multilingual(✅): Install the language in the backend **System > Install > Languages**, and select your language
 
-- Component Multilingual(✅)
+- Multilingual(✅)
+  - Joomla backend **System > Install > Languages** to install lanuages
+  - Joomla backend **Edit Profile > Basic Settings** select the language for the frontend and backend
 
 - Cache: Backend **System > Maintenance > Clear Cache**
 
@@ -71,6 +59,6 @@ Joomla's template installation is mainly achieved by uploading template installa
 
 ## Administer{#administrator}
 
-- Online backup: By installing the Joomla extension [Akeeda](https://www.akeebabackup.com/download.html), can achieve online backup in the background
+- Online backup: By Joomla extension [Akeeda](https://www.akeebabackup.com/download.html)
 
 ## Troubleshooting{#troubleshooting}
