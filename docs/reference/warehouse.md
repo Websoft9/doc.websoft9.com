@@ -13,6 +13,7 @@ slug: /warehouse
 * [Oracle Container Registry](https://container-registry.oracle.com/)
 * [image at Github](https://github.com/search?q=wordpress+image&type=registrypackages)
 * [Docker 中文社区](https://registry.docker-cn.com)
+* [RED HAT Quay.io](https://quay.io/search)
 * [网易镜像仓库](http://hub-mirror.c.163.com)
 * [腾讯镜像仓库](https://mirror.ccs.tencentyun.com)
 
