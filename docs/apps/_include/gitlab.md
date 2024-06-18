@@ -1,4 +1,4 @@
-[GitLab](https://about.gitlab.com/) 是一个 **一个平台覆盖 DevSecOps 全流程**，它被用于 源码仓库 流水线 开发全栈  等场景。GitLab 是一个完整的 DevOps 平台软件，提供开箱即用的完整 CI/CD 工具链。
+[GitLab](https://about.gitlab.com/) 是一个 **一个平台覆盖 DevSecOps 全流程**，它被用于 源码仓库 流水线 开发全栈 制品仓库 需求/看板/缺陷 软件供应链  等场景。GitLab 是一个完整的 DevOps 平台软件，提供开箱即用的完整 CI/CD 工具链。
 
 
 ![devops](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-devopsall-websoft9.png)

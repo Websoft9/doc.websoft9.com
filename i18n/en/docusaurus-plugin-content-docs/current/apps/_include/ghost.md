@@ -1,4 +1,4 @@
-[Ghost](https://ghost.org/) is **The Creator Economy Platform**, used for Website Builder . Ghost is the world's most popular open source headless Node.js CMS for professional publishing.
+[Ghost](https://ghost.org/) is **The Creator Economy Platform**, used for Website Builder Blog . Ghost is the world's most popular open source headless Node.js CMS for professional publishing.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/en/ghost/ghost-ui-websoft9.png)
