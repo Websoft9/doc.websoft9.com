@@ -21,7 +21,7 @@ import Meta from './_include/registry.md';
 
 ## Configuration options{#configs}
 
-- Configure file: */etc/docker/registry/config.yml*
+- Configure file at container(Have mounted): */etc/docker/registry/config.yml*
 
 ## Administer{#administrator}
 
