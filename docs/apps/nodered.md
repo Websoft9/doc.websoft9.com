@@ -19,6 +19,7 @@ Websoft9 控制台安装 Node-RED 后，通过 "我的应用" 查看应用详情
 
 ## 配置选项{#configs}
 
+- 配置文件（已挂载）： */data/settings.js*  
 - 多语言（√）
 
 ## 管理维护{#administrator}

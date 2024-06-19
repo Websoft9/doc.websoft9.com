@@ -21,6 +21,7 @@ import Meta from './_include/nodered.md';
 
 ## Configuration options{#configs}
 
+- Configuration file(mounted): */data/settings.js*  
 - Multilingual (√)
 
 ## Administer{#administrator}

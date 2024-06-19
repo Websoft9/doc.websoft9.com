@@ -1,4 +1,4 @@
-[Moodle](https://moodle.com/) 是一个 **面向全球用户的开源在线教育系统**，它被用于 在线学习  等场景。Moodle是一个开源的在线教育系统（慕课）。采用PHP+MySQL开发，功能强大、界面简单，是全球各大中学院校建立开放式课程系统的首选软件。
+[Moodle](https://moodle.com/) 是一个 **流行的开源学习管理系统（LMS）**，它被用于 在线学习  等场景。Moodle广泛应用于高等院校、教育机构、企业培训和其他需要在线学习管理的平台。
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodlegui-websoft9.jpg)
