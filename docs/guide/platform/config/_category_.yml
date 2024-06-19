@@ -1,5 +1,5 @@
-position: 5
-label: "Apps"
+position: 0.3
+label: "平台配置"
 collapsible: true
 collapsed: true
 className: "red"

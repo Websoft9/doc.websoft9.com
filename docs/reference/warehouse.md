@@ -3,9 +3,9 @@ sidebar_position: 3
 slug: /warehouse
 ---
 
-# 仓库
+# 软件仓库
 
-## 镜像仓库{#docker}
+## 容器镜像{#docker}
 
 * [DockerHub](https://hub.docker.com/)
 * [Amazon ECR Public Gallery](https://gallery.ecr.aws/)

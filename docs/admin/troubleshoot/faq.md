@@ -9,6 +9,14 @@ slug: /faq
 
 ## Websoft9 问题
 
+#### 500 Internal Server Error?
+
+问题描述：查看 websoft9-apphub 容器的日志，出现 500 Internal Server Error  
+原因分析：websoft9-apphub 容器工作异常或它与被连接的其他微服务通讯异常，运行下面的命令查看错误原因   
+```
+docker exec -it websoft9-apphub cat /websoft9/apphub/logs/apphub_error.log
+```
+
 #### Websoft9 核心功能不可用？
 
 当 Websoft9 控制台可以登录，但无法访问应用商店、容器、网关等核心功能时，最大的原因可能是网关工作异常导致应用之间的连接与集成出现了问题。  
