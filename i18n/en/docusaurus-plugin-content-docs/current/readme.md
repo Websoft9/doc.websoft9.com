@@ -3,122 +3,142 @@ sidebar_position: 1
 slug: /
 ---
 
-# 介绍
+# Introduction
 
-欢迎来到 Websoft9 下一代产品的文档，它即将推出市场。  
+Welcome to the documentation for Websoft9's next-generation product, which has now been launched and is set to fully replace the old version.
 
-在这里，您可以访问 Websoft9 的完整文档，掌握云应用的托管全过程的知识。    
+Here, you can access the complete documentation for Websoft9 and gain knowledge about the entire process of cloud application management.
 
-## 什么是 Websoft9?
-
-Websoft9（微聚云） 是一个创新的**企业云应用托管平台**，只需单击几下即可将您的应用程序部署到您自己的云设施中。   
-
-
-它支持用户自己构建和部署软件，同时也预制可**一键部署**的[模板](https://www.websoft9.com/apps)，包含：数据分析、AI、网站、企业运营、设计创作、低代码、数据库等细分领域**数百个顶尖工具**。企业可以轻松选择、部署和管理所需的应用，享受无缝的技术支持，专注于业务增长。 
-
-从技术上讲， Websoft9 是一个微服务架构的 PaaS 平台，它为软件的寻找、测试、部署、维护、升级和监控等全生命周期提供支持。它支持 Docker, K8s 等原生架构，以 Nginx 作为应用网关，为应用提供了自动化的配置域名、HTTPS 证书生成和访问控制。
-
-对于创新型组织来说，Websoft9 消除了任何技术障碍。帮助擅长使用软件工具的工作者或企业，在几分钟的时间内便可以进入企业数字化和 AI 的大门。它让用户专注于工具的使用，极大提升工作效率和职业竞争力。
-
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/websoft9/websoft9-dashboard.png)
-
-Websoft9 将云原生软件的应用时间由 1-2 天缩短到 2 分钟，部署和管理云原生应用不再是专业 IT 人员的专属技能。  
-
-毫无疑问，Websoft9 是一个值得尝试的企业生产力工具，其降本增效价值完全可见。
-
-## 如何进入控制台？
-
-由于目前 Websoft9 还未提供 SaaS 模式，所以需要用户将 Websoft9 控制台先 [安装](./install) 到自己的云服务器上。  
-
-安装完成后，进入 Websoft9 控制台，方可开始安装所需的应用。
-
-## 应用托管在哪里？
-
-应用是被 **Websoft9 控制台** 所管理的对象，我们提供了灵活的托管方式：
-
-- 应用与 Websoft9 控制台部署在同一台服务器实例中
-- 应用与 Websoft9 控制台部署在不同的服务器实例中（即将推出）
-- 单个服务器上可以部署单个或多个应用，实现计算资源最大化利用
-- 单个应用采用 k8s 部署在多个服务器上（即将推出）
-- 服务器可由用户自行管理，也可以交付给 Websoft9 全面托管
-
-不同的部署方式，可以应对产品测试、试用、低负载生产、高负载生产等各种不同的场景。  
-
-## 文档导读
-
-| 章节              | 描述                                                     |
+| Section              | Description                                                     |
 | ----------------- | -------------------------------------------------------- |
-| [快速入门](./starter)   |  快速访问和熟悉 Websoft9 控制台，安装和管理应用  |
-| [安装](./install) | 将 Websoft9 控制台安装到用户服务器上 |
-| [指南](./guide)   |  应用生命生命周期管理，域名配置等产品通用操作  |
-| [管理员](./admin)   |  升级、备份等运维指南，数据、存储和安全配置指南  |
-| [应用](./apps) |  200+ 个开源应用的快速入门和配置指南  |
-| [程序环境](./runtime) |  自行部署 Java、Python、Node.js、PHP、Go、Ruby和 .NET 程序的环境  |
-| [使用场景](./guide/solution)  |    基于多个开源应用的集成化解决方案，满足行业和业务场景需求  |
-| [购买与支持](./business)   |  付费使用 Websoft9 产品，获得企业级商业支持服务 |
-| [故障问题](./faq)        |    常见的技术技术和故障问题   |
+| [Installation](./install) | Install the Websoft9 Console |
+| [Console](./login-console)   |  Login to the Websoft9 Console and experience the interactive management platform  |
+| [Quick Start](./starter)   |  Quickly deploy various types of applications using Websoft9  |
+| [Guide](./guide)   | General operations for product lifecycle management, domain configuration, etc.  |
+| [Administrator](./admin)   |  Maintenance guides for upgrades, backups, and configuration guides for data, storage, and security  |
+| [Applications](./apps) |  Quick start and configuration guides for 200+ open-source applications  |
+| [Runtime Environment](./runtime) |  Deploy environments for Java, Python, Node.js, PHP, Go, Ruby, and .NET programs  |
+| [Purchase and Support](./business)   |  Purchase Websoft9 products and receive enterprise-level commercial support services |
+| [Troubleshooting](./faq)        |    Technical issues and troubleshooting   |
 
+## About Websoft9
 
-## 热门话题
+Websoft9 is an enterprise-level **multi-application hosting platform** designed to enable anyone to easily deploy and manage software on their own infrastructure.
 
-* [账号密码是什么？](./quick/credentials)
-* [如何配置 HTTPS？](./guide/appsethttps)
-* [联系人工支持](./helpdesk)
+The Websoft9 hosting platform comes with over 200+ [one-click deployment templates](https://www.websoft9.com/apps), covering key applications such as data analysis, AI, websites, enterprise operations, design and creation, low-code, databases, and more. This greatly simplifies the traditional software installation and configuration process. Additionally, it supports custom deployments of programs in Java, Python, Node.js, PHP, Go, Ruby, and .NET.
 
-## Websoft9 价值
+![](/img/websoft9-dashboard.png)
 
-现代的软件架构越来越复杂，应用的背后，需要数十个其他的开源组件支撑，而且这些开源软件之间需要相互连接、集成才能形成一个整体。   
+Websoft9 is positioned as a graphical, user-friendly PaaS platform for innovative organizations, allowing users to utilize it without extensive IT backgrounds or complex technical knowledge. It is based on a microservices architecture and supports the entire lifecycle of software, including discovery, testing, deployment, release, access, maintenance, upgrades, and monitoring. It supports native architectures like Docker and Kubernetes (K8s), and uses Nginx as the application gateway, providing automated domain configuration, HTTPS certificate generation, and access control for applications.
 
-云原生的是一个充满创造力的世界，Websoft9 的核心价值观就是要将云原生的技术和产品进行整合，以便利性的方式将这些产品和服务普惠全球，让创新型组织专注于使用这些技术。
+For innovative organizations, Websoft9 eliminates any technical barriers. It helps professionals or companies proficient in using software tools to embark on digital transformation and AI within minutes. It allows users to focus on utilizing the tools, significantly enhancing work efficiency and professional competitiveness.
 
-可以说：**软件的安装、连接、集成、维护和托管是使用现代化应用的关键**。 
+Websoft9 reduces the application time for cloud-native software from 1-2 days to just 2 minutes. Deploying and managing cloud-native applications is no longer an exclusive skill of professional IT personnel.
 
-为了让用户使用应用更简单、更稳定、更安全，我们需要为应用的云原生化做很多工作，例如：
+Undoubtedly, Websoft9 is a productivity tool worth trying for enterprises, with its value in cost reduction and efficiency improvement being fully evident.
 
-* 基础 PaaS 平台研发与预配置
-* 预制安全相关组件
-* 预制可视化工具
-* 使用文档维护
-* 提供专业技术支持
-* 一对一的人工服务
-* 维护开源项目
-* 性能调优
-* 高可用性
-* 开源合规性审查
-* 用户体验设计
-* 扩展方案建议
+### Business Value
 
-Websoft9 通过对开源软件实现**云原生化**之后，简化了用户对软件部署、使用和配置，并提供商业支持服务，这就是我们的核心价值。
+In the era of cloud computing, innovative organizations are characterized by "small steps, quick runs, and agility". This means:
 
-企业在数字化推进中，传统的做法是立项后，将项目外包给软件商和实施商。这种复杂的项目组织方式，投入了巨大的人力，却由于跨度时间周期太长，无法持续迭代，导致结果大相庭径。   
+- **Streamlined Architecture**: Agile self-organization of small teams.
+- **Rapid Iteration**: Prompt response to market and technological changes.
+- **Diverse Tools**: Utilizing a variety of software to spur innovation.
+- **Open Collaboration**: Knowledge sharing to foster growth.
 
-云原生时代，小步快跑，轻盈灵活是创新组织的生存形态，它具备如下特点：
+To avoid traditional, cumbersome digitalization projects, innovative organizations need flexible technical solutions that match their pace.
 
-- 组织架构：小而美
-- 组织演化：持续迭代
-- 组织创新：生产力工具组合
-- 组织文件：开放协同
+The flourishing open-source ecosystem provides a wealth of options, allowing for the rapid integration of specialized small-scale software and components to build application systems quickly.
 
-而开源技术和小型软件具有**百家争鸣**的特征，这个生态中各种有特点的工具层出不穷，它非常符合创新型组织的特点。  
+Websoft9 offers a cloud-native multi-application hosting platform, enabling business units to quickly deploy and operate open-source tools, achieve integrated combinations, and address business challenges. By avoiding heavy software and outsourcing dependencies, Websoft9 accelerates organizational innovation through **combinatorial innovation**.
 
-只要学会将这些工具进行有效的组合，那它将产生不可估量的效率提升。而 Websoft9 通过共享的原云生技术，可以帮助您物尽其用。   
+### Technical Value
 
-如果您的 IT 团队无法进行有效的支持与建议，[订阅](./buy/subscription) Websoft9 的服务，享受商业级支持给您带来的效率提升和保障吧。  
+In the rapidly evolving field of technology, Websoft9's hosting services provide the stability and innovation that enterprises need:
 
-## 为什么要开源？
+- **One stop integration**: Our PaaS platform offers plug-and-play integration of open-source software, enabling seamless connection of diverse technical components for enterprises.    
+- **Professional Technical Support**: Our technical team provides round-the-clock professional operational support, ensuring system continuity and efficiency for enterprises.    
+- **High reliability**: Our service design adheres to the strictest availability standards, guaranteeing the continuous operation of critical business functions.  
+- **Rich knowledge resources**: We have built a comprehensive knowledge base covering a wide range of issues, supporting enterprises in quickly resolving technical problems through self-service.  
+- **Security Guarantee**: We commit to providing state-of-the-art security measures and regular compliance reviews to ensure the safety of enterprise data and applications.  
+- **Customized Services**: We recognize that each enterprise has unique needs, and thus offer personalized service plans to meet specific business requirements.  
 
-开源软件以其高效的社会化生产模式，在云原生时代成为不可获取的组成部分。任何组织都在使用开源软件处理业务，提升技术能力。 
+Websoft9's hosting services are dedicated to providing enterprises with a worry-free technical environment, allowing them to focus on core business development and market competition.
 
-开源对生态的好处是显而易见的：
+## Usage Scenarios
 
-* 没有预算的用户可以免费使用
-* 软件 100% 透明公开，降低信任成本
-* 让用户参与到研发中，全面拥抱社会化协作
+Refer to: [Websoft9 Solution](https://www.websoft9.com/solutions)
 
-## 应用列表
+## Hosting Options
 
-目前可一键安装的应用如下：
+In the Websoft9 architecture, applications are managed by the **Websoft9 Console**, while logically remaining independent from the console.     
+
+The servers are responsible for running the applications, and their usage strategy directly influences the choice of hosting mode.  
+
+In light of this, Websoft9 offers users a range of flexible hosting options:  
+
+**Deployment Location Options**    
+
+- Application and Websoft9 Console deployed on the same server instance  
+- Application and Websoft9 Console deployed on different server instances(coming soon)  
+
+**Compute Resource Utilization Options**    
+
+- Single server deployed with a single application
+- Single server deployed with multiple applications
+- Single application deployed in a k8s cluster across multiple servers(coming soon)
+
+**Server Management Options**   
+
+- User manages the server independently
+- User delegates full server management to Websoft9
+
+## Open Source and Free
+
+Open source software, with its efficient social production model, has become an indispensable component in the cloud-native era. Organizations of all kinds use open source software to handle their business operations and enhance their technical capabilities.   
+
+Websoft9 originates from open source and gives back to the open source community. The benefits of open source to the Websoft9 ecosystem are evident:  
+
+* Free for users
+* Software is 100% transparent and open, reducing the cost of trust
+* User participation, fully embracing the social collaboration of knowledge creation
+
+## Deployment Templates
+
+The Websoft9 Console supports the following [application deployment templates](./apps) that can be installed with one click:
 
 import Meta from './apps/_include/allapps.md';
 
 <Meta name="meta" />
+
+## Platform Comparison {#vs}
+
+### Websoft9 vs cPanel vs BaoTa
+
+Both cPanel and BaoTa are server panel tools designed to simplify PHP website deployment and server management.  
+
+Compared to them, Websoft9 offers:
+
+- **Application-Centric Approach**: Provides enterprise-level hosting services from deployment to operation, monitoring, and support for high availability, scalability, backup and recovery, and security compliance.  
+- **Diverse Deployment Capabilities**: Over 200 one-click deployment templates, supporting various programming environments such as PHP, Java, Python, Ruby, .NET, Go, Docker, and HTML.  
+- **Automation Capabilities**: GitOps-driven automated continuous deployment and rollback, enhancing operational and hosting efficiency while ensuring consistency and traceability of environments.  
+- **Cloud-Native Architecture**: A cloud-native architecture centered on microservices and containers, with core modules adopting an assembly-style integration that is replaceable, iterative, and upgradable.  
+
+### Websoft9 vs Heroku
+
+Heroku is a PaaS platform that abstracts the underlying infrastructure, allowing developers to focus on code rather than servers. 
+
+Compared to Heroku, Websoft9:
+
+- Is a PaaS that gives users control over the infrastructure, meeting the convenience of hosting applications while offering control and cost management.
+- Is built on a 100% open-source foundation, eliminating the possibility of vendor lock-in.
+
+### Websoft9 vs OpenShit vs KubeSphere
+
+OpenShift and KubeSphere are enterprise-grade container application platforms based on Kubernetes, providing complete DevOps toolchain support and automated operations capabilities. They support multi-tenancy and clusters, offering large enterprises the ability to isolate and manage different projects and teams while providing comprehensive security and compliance features. Their rich ecosystems help enterprises quickly achieve cloud-native application development, deployment, and management. 
+
+Compared to them, Websoft9:
+
+   - Is positioned as a platform centered on application deployment and maintenance, focusing on providing simplified application hosting solutions for innovative organizations and developers.  
+   - Offers pre-configured software stacks and one-click deployment features, enabling users to quickly launch and run various applications.  
+   - While it may not support the complete DevOps process or complex cluster deployments for large enterprises, it is an easy-to-manage GitOps platform.
