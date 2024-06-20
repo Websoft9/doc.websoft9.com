@@ -13,22 +13,8 @@ slug: /iaas-azure
 
 Azure 支持多种创建 VM 的来源：
 
-- 基于创建创建 VM
+- 基于镜像创建 VM
 - 基于系统盘创建，包括磁盘和 VHD
-
-### 启用 root 账号{#enable-root}
-
-Azure 默认没有开放 Linux 系统的 `root` 账号。如果您希望使用 root 账号，通过下面的步骤启用之：
-
-1. 登录 Azure 控制台，在控制台在线连接 VM
-
-2. 分别运行下面的命令
-    ```
-    sudo su
-    sudo sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
-    sudo systemctl restart sshd
-    sudo passwd root
-    ```
 
 ### 管理磁盘{#disk}
 
@@ -104,6 +90,7 @@ Azure 控制台提供了对网络安全的直接设置：**虚拟机控制台 > 
 
 ## 相关文档
 
+- [启用 root 账号密码](./linux#enable)
 - [Azure 上部署 Websoft9](./install/azure)
 - [Azure 虚拟机官方文档](https://learn.microsoft.com/zh-cn/azure/virtual-machines/)
 - [Azure Blob 存储官方文档](https://learn.microsoft.com/zh-cn/azure/storage/blobs/)

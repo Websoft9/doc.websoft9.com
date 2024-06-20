@@ -24,6 +24,7 @@ slug: /web-terminal
    |  AWS   |  AmazonLinux:ec2  CentOS:centos  Ubuntu:ubuntu  Debian:admin   | [如何开启root账户？](./aws#enableroot)|
    |  阿里云，华为云，腾讯云   |  除腾讯云 Ubuntu 之外(ubuntu)，其他平台任何系统默认账号都是 root  | |
 
+
 ## 运行终端
 
 ### 使用独立安全 Web 终端（推荐）{#third}

@@ -10,55 +10,61 @@ Websoft9 控制台与 Linux 系统共享同样的账户。
 
 即，理论上不管是 root 用户，还是普通用户，只要具备登录密码，都可以无障碍的登录到 Websoft9。 
 
-![Websoft9 登录界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/websoft9/websoft9-loginpage.png)
+![Websoft9 登录界面](./assets/websoft9-loginpage.png)
 
-## 设置用户
+## 修改已有用户{#modify}
 
-如果服务器上已经有了用户账号，请根据实际情况，进行额外的设置：  
+如果服务器上已经有了用户账号，请根据用户类型进行额外的设置：  
 
-### root 用户
+### root 用户{#root}
 
-如果 root 账号使用的是密钥对，需额外设置密码：  
+root 用户已经是具有最高权限的账号，无需额外设置：
 
-1. 使用密钥对登录 Linux
-2. 运行命令 `passwd` 为用户设置密码
+- 如果 root 账号使用密码，直接使用账号密码登录 Websoft9
+- 如果 root 账号使用密钥对，需 SSH 连接到 Linux，运行命令 `sudo passwd root` 设置密码后再登录 Websoft9
 
 ### 普通用户
 
-如果普通用户使用的是密钥对，需登录 Linux 后运行 `passwd` 设置密码。  
+针对于普通用于需要做出如下调整方可登录 Websoft9
 
-普通用户只要用于密码即可登录 Websoft9 控制台，但需进一步提升权限以方便在控制台进行各种操作。  
+1. 如果使用密钥对，需 SSH 连接到 Linux，运行命令 `passwd` 设置密码
 
-**任意**运行下面的提权命令**之一**，为普通用户设置权限：   
+2. 运行下面的**提权命令之一**，为普通用户设置 **Docker | sudo | 管理员** 权限：   
+    ```
+    # 设置 Docker 权限
+    usermod -aG docker yourusername
 
-```
-# 设置 Docker 权限
-usermod -aG docker yourusername
+    # 设置 sudo 权限
+    usermod -aG sudo yourusername
 
-# 设置 sudo 权限
-usermod -aG sudo yourusername
+    # 设置 管理员 权限
+    usermod -aG wheel yourusername
+    ```
 
-# 设置 管理员 权限
-  usermod -aG wheel yourusername
-```
+## 新增用户{#add}
 
-## 新增用户
+### 条件
 
-### 命令行设置
+新增用户的前提是：系统中必须存在具备创建新用户权限的 Linux 账号。  
 
-将下面命令的 youruser（两处）和 yourpassword 修改成自己所需的值后，运行到服务器运行即可创建 Websoft9 所需的用户：
+然后，选用下面的一种新增用户的方式：  
 
-  ```
-  sudo useradd -m -G docker -s /bin/bash youruser && echo "youruser:yourpassword" | sudo chpasswd
-  ```
+### 在 Websoft9 控制台新增用户（推荐）{#add-console}
 
-### 控制台设置
+1. 登录到 Websoft9 控制台后，通过左侧菜单工具组，打开 **用户账户** 页面
 
-如果以 root 身份登录到 Websoft9 控制台后，可以很方便的增加更多用户：
+2. 点击**创建新账号**，根据引导创建一个用户，并设置密码
 
-1. 打开左侧菜单工具组中的【用户账户】页面
+3. 对新建用户进行编辑操作，为**用户组**多选拉下项设置为 **docker**
+   ![赋予 docker 组权限](./assets/websoft9-addgroupdocker.png)
 
-2. 点击【创建新账号】，根据引导创建一个用户
+### 使用命令行新增用户{#add-command}
 
-3. 再次对新创建的用户进行编辑，用户组项中选中 **docker** 即可
-   ![赋予 docker 组权限](https://libs.websoft9.com/Websoft9/DocsPicture/zh/websoft9/websoft9-addgroupdocker.png)
+1. 通过 SSH 连接到服务器
+
+2. 运行下面的新增用户命令，其中 youruser（两处）和 yourpassword 需提前修改成自己所需的值
+    ```
+    sudo useradd -m -G docker -s /bin/bash youruser && echo "youruser:yourpassword" | sudo chpasswd
+    ```
+
+

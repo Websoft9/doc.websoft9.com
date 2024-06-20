@@ -19,13 +19,7 @@ slug: /warehouse
 
 ## Linux 仓库{#binary}
 
-Linux 操作系统都提供了一个集中的软件包管理机制--软件仓库。 
-
-Linux 软件包由：共享库、应用程序（二进制）、服务和文档组成及其所需的依赖列表。
-
-![](./assets/linux-rpms-websoft9.png)
-
-下面我们列出全球比较流行的仓库：
+全球比较流行的 Linux 软件仓库： 
 
 - [Linux Packages](https://linux-packages.com)：软件包的汇聚仓库，包括 Ubuntu、Centos、Arch、Debian
 - [Software Collections - scl](https://www.softwarecollections.org/en/)：软件包的汇聚仓库，包括 Ubuntu、Centos、Arch、Debian
