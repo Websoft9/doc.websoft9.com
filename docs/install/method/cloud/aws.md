@@ -81,4 +81,14 @@ Websoft9 在 AWS 提供了预制[云市场镜像](https://aws.amazon.com/marketp
 
 ## 后续配置 Websoft9
 
-EC2 可用之后，还需要[完成配置域名等后续操作](./setup)，方可使用更好的使用 Websoft9
+EC2 可用之后，参考下面的步骤设置完成后续操作：
+
+1. 登录 AWS 的 **EC2 Dashboard**，在线连接 EC2
+
+2. 运行下面的命令设置 root 密码
+   ```
+   sudo su
+   passwd
+   ```
+3. 登录 Websoft9 控制台，完成[配置域名](./setup)等后续操作
+

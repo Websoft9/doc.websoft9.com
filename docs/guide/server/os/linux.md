@@ -222,6 +222,37 @@ exec -a "$0" "$HERE/chrome" "$@"  修改为 exec -a "$0" "$HERE/chrome" "$@" --n
 rm -r ~/.config/google-chrome
 ```
 
+## 常用操作
+
+### 启用 root 账号密码{#enable}
+
+如果云平台默认没有开放 Linux 系统的 `root` 账号，那么请参考下面的步骤启用它：
+
+1. 通过云控制台的 Web 版 SSH 工具连接服务器
+
+2. 运行下面的命令为 root 账号设置密码
+    ```
+    sudo su
+    sudo passwd root
+    ```
+
+3. 编辑 */etc/ssh/sshd_config* 文件和 */etc/ssh/sshd_config.d* 目录的下的配置文件，确保最终为 sshd 服务端提供了准确的配置：
+
+   1. 增加的配置项：`PermitRootLogin yes` 和 `PasswordAuthentication yes`
+   2. 删除的配置项：`PermitRootLogin no` 和 `PasswordAuthentication no`
+
+3. 重启 sshd 服务后生效
+   ```
+   sudo systemctl restart sshd
+   ```
+
+### 编码与字体
+
+编码与字体两者都是为字符服务，但有本质差异：
+
+- 编码是计算机存储各种文字的格式（UTF8，Unicode等），是**面向机器**的设计形式，运行 `locale` 命令查看编码
+- 字体是计算机将字符显示出来的格式（中文黑体、 Google Fonts），是**面向人类**的设计形式
+
 ## 相关参考
 
 - [Linux 命令](./linux-commands)
@@ -266,12 +297,6 @@ The Linux kernel can reset the system if serious problems are detected. This can
 
 ![](./assets/ecs-cannotconnect.png)
 
-#### 编码与字体的区别？
-
-编码与字符虽然看似与语言文字有关系，但它们的本质是不一样的：
-
-- 编码是计算机存储各种文字的格式（UTF8，Unicode等），是面向机器的设计形式
-- 字体是计算机将字符显示出来的格式（中文黑体、 Google Fonts），是面向人类的设计形式
 
 #### 远程桌面报错：“由于安全设置错误，客户端无法连接到远程计算机...”  
 
