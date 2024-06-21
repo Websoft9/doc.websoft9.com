@@ -9,7 +9,7 @@ slug: /iaas-aws
 
 ## 快速参考
 
-### 创建 EC2{#create-EC2}
+### 创建 EC2 服务器{#create-EC2}
 
 AWS 支持多种创建 EC2 的方式，包括：
 
@@ -80,15 +80,13 @@ AWS 控制台提供了对网络安全的直接设置：**EC2 Dashboard > 网络�
 
 - EC2 更换镜像（×）
 
-- [AWS CLI](https://docs.aws.amazon.com/zh_cn/cli/) 
-
 
 ## 相关文档
 
-- [启用 root 账号密码](./linux#enable)
+- [启用服务器 root 账号密码](./linux#enable)
 - [AWS 上部署 Websoft9](./install/aws)
 - [AWS EC2 官方文档](https://docs.aws.amazon.com/zh_cn/ec2/)
-- [AWS CLI](https://learn.microsoft.com/zh-cn/cli/AWS/what-is-AWS-cli)
+- [AWS CLI](https://docs.aws.amazon.com/zh_cn/cli)
 
 
 ## 故障

@@ -9,7 +9,7 @@ slug: /iaas-alibabacloud
 
 ## 快速参考
 
-### 创建 ECS{#create-ecs}
+### 创建 ECS 服务器{#create-ecs}
 
 阿里云 支持多种创建 ECS 服务器的方式，包括：
 
@@ -60,25 +60,19 @@ slug: /iaas-alibabacloud
 ### 管理 IP 与域名{#ip-domain}
 
 - 支持静态 IP 和弹性 IP
-- 支持动态弹性 IP 到 ECS
+- 支持弹性 IP 绑定到 ECS
 - 提供域名注册与管理产品服务
-- 弹性公网 IP 
-
-### 域名备案申明
-
-阿里云的备案政策简述申明：
-
-- 购买服务器2个月或以上，就可以由阿里云免费提供备案服务（阿里云 7*24小时备案专线：95187转3）。  
-- 备案过程请通过[阿里云备案系统](https://beian.aliyun.com/order/index.htm)全程操作
-- 备案是纯粹的商务流程活动，没有任何技术门槛，建议用户自行完成
-- 服务器地区在中国大陆的对应的域名需要备案
 
 
 ### API 导出云市场商品{#exportoffers}
 
 1. 打开阿里云 [API 调试器](https://next.api.aliyun.com/api/Market/2015-11-01/DescribeProducts?lang=JAVA)
-2. SearchTerm 填写“长沙网久软件有限公司。筛选项：key=productType, vaule=MIRROR；
-3. 导出数据：复制 Json 内容到 [Jason转Excel](https://jsontoexcel.com/) 工具中导出
+
+2. 其中 **SearchTerm** 填写“长沙网久软件有限公司。筛选项：key=productType, vaule=MIRROR；
+
+3. 运行 API 后生产所需的数据，
+
+4. 将数据导出为 Json，再将 Json 内容通过 [Jason转Excel](https://jsontoexcel.com/) 工具中导出
 
     ```
    [
@@ -170,6 +164,7 @@ vim /etc/sysconfig/network-scripts/ifcfg-ens33，将ONBOOT=no改为yes，重启�
 - [OSS 挂载](https://help.aliyun.com/document_detail/134092.html)
 - [阿里云实例故障排查](https://help.aliyun.com/knowledge_detail/127067.html)
 - [阿里云机房区域分布](https://help.aliyun.com/document_detail/40654.html)
+- [阿里云备案系统](https://beian.aliyun.com/order/index.htm)
 
 ## 故障
 
