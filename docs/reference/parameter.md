@@ -3,7 +3,7 @@ sidebar_position: 2.0
 slug: /parameter
 ---
 
-# 参数列表
+# 配置参数
 
 Websoft9 所涉及的服务器、网络、端口和路径等各种参数如下：  
 

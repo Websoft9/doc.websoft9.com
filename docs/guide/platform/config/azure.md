@@ -9,7 +9,7 @@ slug: /iaas-azure
 
 ## 快速参考
 
-### 创建 VM{#create-vm}
+### 创建 VM 服务器{#create-vm}
 
 Azure 支持多种创建 VM 的来源：
 

@@ -22,7 +22,7 @@ Websoft9 控制台的网关模块中支持**可视化的 HTTPS 设置**，支持
 
 ## Websoft9 控制台配置 HTTPS{#console}
 
-1. 登录 Websoft9 控制台，进入网关管理界面
+1. 登录 Websoft9 控制台，进入**网关**管理界面
 
 2. 打开 "Hosts" > "Proxy Hosts" 菜单后，列出所有应用代理记录
 
