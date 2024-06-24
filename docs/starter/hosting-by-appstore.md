@@ -5,7 +5,7 @@ slug: /appstore-guide
 
 # 使用模板一键部署应用
 
-已经 [安装](./install) Websoft9 到云服务器，并 [登录 Websoft9 控制台](./login-console) 验证可用，接下来便开始规划应用部署。   
+已经 [安装](./install) Websoft9 到云服务器，并 [登录 Websoft9 控制台](./login-console) 验证可用后，接下来便开始规划应用的部署。    
 
 Websoft9 控制台的 **应用商店** 模块预制 200+ 个应用模板，包含：数据分析、AI、网站、企业运营、设计创作、低代码、数据库等细分领域数百个顶尖工具。  
 
@@ -59,6 +59,7 @@ Websoft9 部署模板化应用时，会从 DockerHub 在线拉取镜像。
 - [获取应用的访问信息](./app-getdetail#access)
 - [管理应用生命周期](./app-lifecycle)
 - [配置应用域名与安全访问](./gateway)
+- [设置应用的 HTTPS 访问](./domain-https)
 
 
 ## 第5步：重新部署

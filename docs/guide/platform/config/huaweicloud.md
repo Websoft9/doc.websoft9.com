@@ -9,7 +9,7 @@ slug: /iaas-huaweicloud
 
 ## 快速参考
 
-### 创建 ECS{#create-ecs}
+### 创建 ECS 服务器{#create-ecs}
 
 华为云 支持多种创建 ECS 服务器的方式，包括：
 
