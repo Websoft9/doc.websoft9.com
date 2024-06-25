@@ -5,7 +5,7 @@ slug: /login-console
 
 # 登录 Websoft9 控制台
 
-在成功安装 Websoft9 服务器后，接下来需要登录 Websoft9 控制台进行配置和管理。
+在成功[安装](./install) Websoft9 服务器后，接下来需要登录 Websoft9 控制台进行配置和管理。
 
 ## 准备
 

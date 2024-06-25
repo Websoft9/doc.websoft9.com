@@ -65,11 +65,11 @@ Websoft9 控制台提供对 WordPress 基本的监控，包括服务状态、资
 
 ## 统计 WordPress 访问
 
-虽然 WordPress 提供了访问统计相关的插件，但是这种应用的方式弊端较多：
+虽然 WordPress 提供了访问统计相关的插件，但这种方式存在诸多弊端：
 
-- 占用资源
-- 无法集中分析多个 WordPress 访问情况
-- 专业度不够
+- 抢占 WordPress 的计算资源
+- 无法提供集中式的网站访问统计界面
+- 插件机软件的专业性无法与专业统计软件媲美
 
 Websoft9 应用商店提供了 [Plausible](./plausible), [Umami](./umami), [Matomo](./matomo) 等专业的访问统计工具，一键部署即快速实现专业的统计。  
 
