@@ -14,9 +14,9 @@ const config = {
   tagline: '重新定义开源服务，让云原生应用快速普及',
   url: 'https://support.websoft9.com',
   baseUrl: '/',
-  onBrokenLinks: 'ignore',
-  onBrokenMarkdownLinks: 'ignore',
-  onDuplicateRoutes: 'ignore',
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'throw',
+  onDuplicateRoutes: 'throw',
   favicon: 'img/favicon.ico',
   organizationName: 'Websoft9', // Usually your GitHub org/user name.
   deploymentBranch: 'gh-pages',

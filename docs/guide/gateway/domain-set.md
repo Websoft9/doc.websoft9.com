@@ -8,7 +8,7 @@ import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 # 设置应用的域名
 
-用户可以通过 Websoft9 控制台的[网关模块](./gateway)为应用配置域名。  
+用户可以通过 Websoft9 控制台的 **[网关](./gateway)** 功能组件为应用配置域名。  
 
 ## 条件
 
