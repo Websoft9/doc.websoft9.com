@@ -5,14 +5,14 @@ slug: /
 
 # Introduction
 
-Welcome to the documentation for Websoft9's next-generation product, which has now been launched and is set to fully replace the old version.
+This is the documentation for the next generation of Websoft9, which has been released and will replace the old version.  
 
-Here, you can access the complete documentation for Websoft9 and gain knowledge about the entire process of cloud application management.
+It provides you with the best practices for self-hosting multiple applications.
 
 | Section              | Description                                                     |
 | ----------------- | -------------------------------------------------------- |
-| [Installation](./install) | Install the Websoft9 Console |
-| [Console](./login-console)   |  Login to the Websoft9 Console and experience the interactive management platform  |
+| [Installation](./install) | Install the Websoft9 Console on your Server |
+| [Login to Websoft9](./login-console)   |  Login to the Websoft9 Console and experience the interactive management platform  |
 | [Quick Start](./starter)   |  Quickly deploy various types of applications using Websoft9  |
 | [Guide](./guide)   | General operations for product lifecycle management, domain configuration, etc.  |
 | [Administrator](./admin)   |  Maintenance guides for upgrades, backups, and configuration guides for data, storage, and security  |

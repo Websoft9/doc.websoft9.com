@@ -34,6 +34,7 @@
 ## 网站
 
 - [企业建站](https://www.websoft9.com/apps/website)
+- [博客](https://www.websoft9.com/apps/blog)
 - [电子商务](https://www.websoft9.com/apps/ecommerce)
 - [知识管理](https://www.websoft9.com/apps/kms)
 - [社交/论坛](https://www.websoft9.com/apps/community)
@@ -78,14 +79,15 @@
 - [Java](https://www.websoft9.com/apps/java)
 - [Ruby](https://www.websoft9.com/apps/ruby)
 - [Python](https://www.websoft9.com/apps/python)
-- [静态文件](https://www.websoft9.com/apps/Staticfile)
+- [HTML](https://www.websoft9.com/apps/html)
 - [Node](https://www.websoft9.com/apps/node)
 - [Go](https://www.websoft9.com/apps/go)
+- [Docker](https://www.websoft9.com/apps/docker)
 ## 物联网
 
 - [MQTT](https://www.websoft9.com/apps/mqtt)
 - [设备安全](https://www.websoft9.com/apps/device-security)
-- [设备管理](https://www.websoft9.com/apps/device-management)
+- [设备管理与监控](https://www.websoft9.com/apps/device-management)
 ## 网络
 
 - [API 网关](https://www.websoft9.com/apps/api)
