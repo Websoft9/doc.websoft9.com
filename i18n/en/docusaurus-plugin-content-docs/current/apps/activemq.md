@@ -13,7 +13,7 @@ import Meta from './_include/activemq.md';
 
 ## Getting started{#guide}
 
-Read official documentations [Using Apache ActiveMQ](https://activemq.apache.org/using-activemq) and quickly grasp its usage by combining the following guidelines.  
+Read official documentations [Using Apache ActiveMQ](https://activemq.apache.org/using-activemq) and quickly grasp its usage by the following guidelines.  
 
 ## Configuration options{#configs}
 

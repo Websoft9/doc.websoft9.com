@@ -18,15 +18,15 @@ import Meta from './_include/alfresco.md';
 
 1. Completed installation AITable at Websoft9 console, get the applicaiton's overview and access credentials from "My Apps"  
 
-2. Please wait for 10 minutes until Alfresco's initial installation and initialization are completed
+2. Please wait for 10 minutes until Alfresco's initialization are completed
 
-3. Access the URL through a local browser, and after the page appears, click on **Alfresco Repository** > **Alfresco Share** to access the login page
+3. Access the URL through a local browser, and after the page appears, select **Alfresco Repository** > **Alfresco Share** to access the login page
 
 4. Login to the Alfresco backend and start using it
    ![](./assets/alfresco-consolegui-websoft9.png)
 
 
-### Function Overview
+### Function overview
 
 The commonly used functions and screenshots are as follows:
 
