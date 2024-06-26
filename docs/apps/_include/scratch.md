@@ -10,6 +10,6 @@
 
 - 应用是基于 Websoft9 安装的
 
-- 应用的用途符合 [BSD-3-Clause-LBNL](https://opensource.org/BSD-3-Clause-LBNL) 开源许可协议
+- 应用的用途符合 [bsd3Clause](https://opensource.org/licenses/BSD-3-Clause) 开源许可协议
 
 - 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口

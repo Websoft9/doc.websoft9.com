@@ -10,6 +10,6 @@ When referring to this document to use **Oracle Database**, please read and ensu
 
 - This application is installed by Websoft9 console.
 
-- Please check the application's usage license agreement to ensure compliance.
+- The purpose of this application complies with the [oracle-free](https://www.oracle.com/downloads/licenses/oracle-free-license.html) open source license agreement.
 
 - [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

@@ -10,6 +10,6 @@ When referring to this document to use **ONLYOFFICE Docs**, please read and ensu
 
 - This application is installed by Websoft9 console.
 
-- The purpose of this application complies with the [LGPL-3.0](https://opensource.org/licenses/LGPL-3.0) open source license agreement.
+- The purpose of this application complies with the [AGPL-3.0](https://opensource.org/licenses/AGPL-3.0) open source license agreement.
 
 - [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.
