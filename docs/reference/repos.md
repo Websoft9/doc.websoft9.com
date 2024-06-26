@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-slug: /warehouse
+slug: /software-repos
 ---
 
 # 软件仓库
@@ -22,17 +22,13 @@ slug: /warehouse
 全球比较流行的 Linux 软件仓库： 
 
 - [Linux Packages](https://linux-packages.com)：软件包的汇聚仓库，包括 Ubuntu、Centos、Arch、Debian
-- [Software Collections - scl](https://www.softwarecollections.org/en/)：软件包的汇聚仓库，包括 Ubuntu、Centos、Arch、Debian
 - [Ubuntu Packages](https://packages.ubuntu.com)：Ubuntu 官方仓库
 - [RPM Fusion](https://rpmfusion.org)：Fedora Project or Red Hat 额外的包
 - [EPEL](https://fedoraproject.org/wiki/EPEL)：由 Fedora Special Interest Group 维护的 Enterprise Linux（RHEL、CentOS）中经常用到的包
-- [RepoForge](http://repoforge.org)：RHEL 系统下的软件仓库
 - [PackMan](http://packman.links2linux.org)：OpenSUSE 最大的第三方软件源
-- [Remi](https://www.remi.com)：PHP 仓库
+- [Remi](https://remirepo.net/)：PHP 仓库
 - [Gentoo portage](https://www.gentoo.org)：Gentoo Portage 软件源
 - [Fedora copr](https://copr.fedorainfracloud.org/)：Fedora 软件源
 - [Ubuntu Ports](http://ports.ubuntu.com)：Arm64/Armhf 等平台的 Ubuntu 软件仓库
-- [Centos altarch](http://mirror.centos.org/altarch)： CentOS 额外的包
 - [IUS](https://ius.io)： RPM 上游软件包
-- [ATOMIC](http://www.atomicorp.com/channels/atomic)： CentOS 额外的包
-- [Centos altarch](http://mirror.centos.org/altarch)： Atomic RPM 包
+- [ATOMIC](http://www.atomicorp.com/channels/atomic)： 额外的 RPM 包

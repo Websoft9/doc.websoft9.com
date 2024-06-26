@@ -544,8 +544,8 @@
     "description": "The label for category Docker in sidebar docs"
   },
   "sidebar.docs.category.参考": {
-    "message": "Fleet",
-    "description": "The label for category 参考 in sidebar docs"
+    "message": "Reference",
+    "description": "The label for category reference in sidebar docs"
   },
   "sidebar.docs.category.Apache": {
     "message": "Apache",
@@ -666,5 +666,9 @@
   "sidebar.docs.category.发行版": {
     "message": "发行版",
     "description": "The label for category 发行版 in sidebar docs"
+  },
+  "sidebar.docs.category.协议": {
+    "message": "Legal",
+    "description": "The label for category Legal in sidebar docs"
   }
 }

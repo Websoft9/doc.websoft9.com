@@ -17,7 +17,7 @@ slug: /settings/system
 
 ![设置全局域名](./assets/websoft9-settings-globaldomain.png)
 
-详情参考：[设置应用的域名-全局域名](../guide/appsetdomain#global-domain)
+详情参考：[设置应用的域名-全局域名](../domain-set#wildcard)
 
 ## API Key
 
