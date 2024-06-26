@@ -11,67 +11,67 @@ import Meta from './_include/ansible.md';
 <Meta name="meta" />
 
 
-## 入门指南
+## Getting started{#guide}
 
-### 快速体验
+### Quick trial
 
-在体验 Ansible 之前需准备好受控端的连接信息（IP,用户和密码），然后再开始测试：
+Before experiencing Ansible, you need to prepare the connection information(IP, user, and password) for the console before you start testing:  
 
-1. Websoft9 控制台安装 Ansible 后，通过 "我的应用" 查看应用详情，进入容器的命令模式
+1. After installing Ansible in the Websoft9 console, view the application details in **My Apps**, and acccess to the container's by ***Exec Console**.  
 
-2. 运行如下几个测试命令以确认 Ansible 是否正常工作
+2. Run the following test commands to verify that Ansible is working properly.  
    ```
-   # 查看帮助
+   # Viewing the help
    ansible -h
 
-   # 查看系统信息
+   # View system information
    ansible localhost -m setup
    ```
 
-3. 运行容器中已经存在的 test 范例
+3. Run the test example that already exists in the container.
    ```
    cd test
 
-   # 设置受控端连接信息
+   # Set up the connection information for the console
    vim inventory
 
-   # 启动运行命令
+   # Start the run command
    ansible-playbook -i inventory playbook.yml
+   ``
+
+### Common commands
+
+Ansible-playbook is the most common command and the main entrypoint for running programs.  
+
+In fact, Ansible also supports running [Ad-doc](https://docs.ansible.com/ansible/2.9/user_guide/intro_adhoc.html) in a single command to use the module to achieve our deployment goals.  
+
+   ```
+   # Print local disk information
+   ansible localhost -m command -a 'df -h'
+
+   # Get facts information
+   ansible localhost -m setup
+
+   # Connectivity test
+   ansible all -m ping
+
+   # Install docker-composer locally
+   ansible localhost -m get_url -a "url=https://getcomposer.org/composer-stable.phar dest=/usr/bin/composer mode=0750"
    ```
 
-### 常用命令
+Command explanation:
 
-ansible-playbook 是最常见的命令，也是运行程序的主要入口。  
+* localhost/all: hostname/IP/grouping
+* -m: specify module (default is command, so you can remove the -m command one)
+* command/setup/ping: module name
+* -a: module parameters
+* 'df -h': parameter value
 
-实际上，Ansible 也支持在一条命令中运行[Ad-doc](https://docs.ansible.com/ansible/2.9/user_guide/intro_adhoc.html) 使用模块，实现我们的部署目标。  
+### Host inventory
 
-```
-# 打印本机磁盘信息
-ansible localhost -m command -a 'df -h'
+[Ansible Inventory](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#intro-inventory)(Host inventory) is a technical standard for flexible host information management. The following is an example of a hosts file that contains a wealth of information.  
 
-# 获取 facts 信息
-ansible localhost -m setup
-
-# 连通性测试
-ansible all -m ping
-
-# 本机上安装 docker-composer
-ansible localhost -m get_url -a "url=https://getcomposer.org/composer-stable.phar dest=/usr/bin/composer mode=0750"
-```
-
-命令解释：
-
-* localhost/all：主机名/IP/分组
-* -m：指定模块（默认是command，所以可以把-m command这个去掉）
-* command/setup/ping：模块名称
-* -a：模块参数
-* 'df -h'：参数值
-
-### 主机清单
-
-[Ansible Inventory](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#intro-inventory) （主机清单） 就是为了灵活的管理主机信息的技术标准。  
-
-下面先展示一个包含丰富信息的 hosts 文件示例：
+The following is an example of a hosts file that contains a wealth of information:  
 
 ```
 [webservers]
@@ -96,104 +96,105 @@ www[01:50].example.com
 proxy=proxy.websoft9.com
 ```
 
-主机清单中的变量说明：
+Description of the variables in the list of hosts:
 
-| ansible_ssh_host             | 远程主机                             |
+| ansible_ssh_host | Remote Host |
 | ---------------------------- | ------------------------------------ |
-| ansible_ssh_port             | 指定原创主机ssh端口                  |
-| ansible_ssh_root             | ssh连接远程主机的用户                |
-| ansible_ssh_pass             | ssh连接远程主机的密码                |
-| ansible_sudo_pass            | sudo密码                             |
-| ansible_connection           | 指定连接类型：local、ssh、paramiko   |
-| ansible_ssh_private_key_file | ssh连接使用的私钥                    |
-| ansible_shell_type           | 指定连接端的shell类型，sh、csh、fish |
-| ansible_python_interpreter   | 指定远程主机使用的python路径         |
+| ansible_ssh_port | Specifies the original host ssh port |
+| ansible_ssh_root | ssh user connecting to the remote host |
+| ansible_ssh_pass | Password for ssh connection to remote host | | ansible_ssh_pass
+| ansible_sudo_pass | sudo password |
+| ansible_connection | Specify connection type: local, ssh, paramiko |
+| ansible_ssh_private_key_file | The private key to use for ssh connections |
+| ansible_shell_type | Specify the type of shell to use for the connection, sh, csh, fish |
+| ansible_python_interpreter | Specify the python path to be used by the remote host |
 
 
-### 配置文件{#cfg}
+### Configuration file{#cfg}
 
-Ansible 支持多个位置存放 ansible.cfg 配置文件，包括：
+Ansible supports multiple locations for the ansible.cfg configuration file, including:
 
-* ./ansible.cfg 当前工作目录下的 ansible.cfg
-* ~/.ansible.cfg 当前用户家目录下的 .ansible.cfg
-* /etc/ansible/ansible.cfg 安装自动产生的 ansible.cfg
-* ANSIBLE_CONFIG 配置文件环境路径的环境变量
+* . /ansible.cfg ansible.cfg in the current working directory
+* ~/.ansible.cfg in the current user's home directory
+* /etc/ansible/ansible.cfg ansible.cfg automatically generated by installation
+* ANSIBLE_CONFIG Environment variable for the environment path of the configuration file
 
-如果有多个配置文件怎么办？ Ansible 有优先级原则：环境变量 > 当前工作目录 > 用户家目录 > etc
+What if there are multiple configuration files? Ansible has a prioritization scheme: environment variables > current working directory > user home directory > etc
 
 
-下面是常用的配置项：
+The following are commonly used configuration items:
 
-| 项                | 说明                                                         | 示例                            |
+| Item              | Description                                                  | Example                           |
 | ----------------- | ------------------------------------------------------------ | ------------------------------- |
-| log_path          | 日志文件地址，Ansible 默认不记录日志，需自定义             | log_path = /var/log/ansible.log |
-| inventory         | 资源清单（主机列表）文件位置                                 | inventory = /etc/ansible/hosts  |
-| library           | 模块目录，有默认值                                           | library = /usr/share/ansible    |
-| forks             | 工作进程最大值，默认值为 5                                   | forks = 10                      |
-| sudo_user         | 设置运行 Ansible 程序的默认用户                              | sudo_user = root                |
-| remote_port       | 远程主机的端口，用于连接被管理主机，默认值为 22              | remote_port = 22                |
-| host_key_checking | 是否检查 SSH 主机的秘钥，默认为 True。适用于同一台被管理主机秘钥发生变化的错误提示，如果不希望出现这种提示，可以设置本项为 False | host_key_checking = False       |
-| timeout           | 设置连接远程主机的 SSH 超时时间                              | timeout = 60                    |  
+| log_path          | The address of the log file, Ansible does not log by default, you need to customize it.             | log_path = /var/log/ansible.log |
+| inventory         | Resource list (host list) file location                                 | inventory = /etc/ansible/hosts  |
+| library           | Module directory with default values                                         | library = /usr/share/ansible    |
+| forks             | Maximum number of working processes, default value is 5                       | forks = 10                      |
+| sudo_user         | Setting the Default User for Running Ansible Programs                            | sudo_user = root                |
+| remote_port       | Port of the remote host, used to connect to the managed host, default value is 22      | remote_port = 22                |
+| host_key_checking | Whether to check the secret key of the SSH host, the default is True. it is applicable to the error message that the secret key of the same managed host has been changed, if you don't want to see this message, you can set this item to False.  | host_key_checking = False       |
+| timeout           | Setting the SSH timeout for connecting to a remote host                              | timeout = 60                    |  
 
 
-## 配置选项
+## Configuration options{#configs}
 
-- Ansible 配置文件： */etc/ansible/ansible.cfg*  
-- Ansible 示例目录： */ansible/project* 
-- 版本：`ansible --version`
-- 环境变量：以 ANSIBLE_ 开头的环境变量与 ansible.cfg 有对应关系。例如：export ANSIBLE_SUDO_USER=root
-- Ansible 可视化工具：Red Hat Ansible Automation Platform
-- 命令行:
-   - [ansible](https://docs.ansible.com/ansible/latest/cli/ansible.html)：主命令
-   - [ansible-config](https://docs.ansible.com/ansible/latest/cli/ansible-config.html)：配置文件和配置项修改
-   - [ansible-console](https://docs.ansible.com/ansible/latest/cli/ansible-console.html)：交互式运行 ansible 命令
-   - [ansible-doc](https://docs.ansible.com/ansible/latest/cli/ansible-doc.html)：查询文档
-   - [ansible-galaxy](https://docs.ansible.com/ansible/latest/cli/ansible-galaxy.html)：galaxy 项目库发布与下载
-   - [ansible-inventory](https://docs.ansible.com/ansible/latest/cli/ansible-inventory.html)：主机清单管理
-   - [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html)：运行 playbook 程序
-   - [ansible-pull](https://docs.ansible.com/ansible/latest/cli/ansible-pull.html)：拉取并运行 playbook 程序
-   - [ansible-vault](https://docs.ansible.com/ansible/latest/cli/ansible-vault.html)：加密处理
-
-## 管理维护
-
-## 问题与故障{#troubleshoot}
-
-#### python-urllib3 报错？
-
-python-urllib3 报错大部分情况下，通过 yum install python-urllib3 解决，而不是 pip install
-
-#### 账号准确，仍无法连接受控机？
-
-清空服务器中的 */root/.ssh/known_hosts* 文件
-
-#### Ansible 是否支持动态主机清单？
-
-支持。由于在实际生产场景中，如果清单采用手动维护这些列表将是一个非常繁琐的任务。  
-
-Ansible 支持动态生产主机清单，即 ansible.cfg 指向一个生产主机清单的程序，再由程序产生符合格式的清单列表。
-
-#### Ansible 有没有默认分组？
-
-有。默认有包含文件所有主机的 all 组，同时还有没有归属的 ungrouped 组。
+- Ansible Configuration file: */etc/ansible/ansible.cfg*  
+- Ansible Example catalog: */ansible/project* 
+- Version: `ansible --version`
+- Environment Variables: Environment variables that begin with ANSIBLE_ have a relationship to ansible.cfg. For example: export ANSIBLE_SUDO_USER=root
+- Ansible visualization tool: Red Hat Ansible Automation Platform
+- Command line: 
+   - [ansible](https://docs.ansible.com/ansible/latest/cli/ansible.html): Main command
+   - [ansible-config](https://docs.ansible.com/ansible/latest/cli/ansible-config.html): Configuration file and configuration item modifications
+   - [ansible-console](https://docs.ansible.com/ansible/latest/cli/ansible-console.html): Run ansible commands interactively
+   - [ansible-doc](https://docs.ansible.com/ansible/latest/cli/ansible-doc.html): Query Documentation
+   - [ansible-galaxy](https://docs.ansible.com/ansible/latest/cli/ansible-galaxy.html): galaxy project library release and download
+   - [ansible-inventory](https://docs.ansible.com/ansible/latest/cli/ansible-inventory.html): Mainframe inventory management
+   - [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html): Run the playbook
+   - [ansible-pull](https://docs.ansible.com/ansible/latest/cli/ansible-pull.html): Pull and run the playbook program
+   - [ansible-vault](https://docs.ansible.com/ansible/latest/cli/ansible-vault.html): Encryption processing
 
 
-#### Ansible 变量优先级有哪些？
+## Administer{#administrator}
 
-有高到低：ansible命令带入的变量 > cfg配置文件的变量 > 主项目的var变量 > role中的var变量 > role default 变量
+## Troubleshooting{#troubleshooting}
 
-#### Ansible 有全局变量的概念吗？
+#### python-urllib3 reporting errors?
 
-没有
+In most cases, python-urllib3 errors are solved by yum install python-urllib3, not pip install.
+
+#### account is accurate, but still can't connect to the controlled machine?
+
+Empty the */root/.ssh/known_hosts* file on the server.
+
+#### Does Ansible support dynamic host inventories?
+
+Yes. Because in a real-world production scenario, maintaining these lists manually would be a very tedious task if the manifests were used.  
+
+Ansible supports dynamic production of host lists, where ansible.cfg points to a program that produces host lists, which in turn produces a formatted list of lists.
+
+#### Does Ansible have default grouping?
+
+Yes. By default, there is an all group that contains all hosts of a file, and an ungrouped group that is unattributed.
 
 
-#### 客户端和服务端 Python 版本一致？
+#### What are the Ansible variable priorities?
 
-可以
+From highest to lowest: variables brought in by ansible commands > cfg configuration file variables > main project var variables > role var variables > role default variables
 
-#### Ansible 有哪些内置变量？
+#### Does Ansible have a concept of global variables?
 
-Ansible 有三种类型的内置变量：
+No, it doesn't.
 
-* 用于 ansible.cfg 配置的[系统变量（环境变量）](https://docs.ansible.com/ansible/latest/reference_appendices/config.html)
-* 用于工作过程的[特殊变量](https://docs.ansible.com/ansible/latest/reference_appendices/special_variables.html)
-* 收集到受控端的 [Facts 变量](https://docs.ansible.com/ansible/latest/user_guide/playbooks_vars_facts.html)
+
+#### Are the client and server Python versions the same?
+
+Yes, you can.
+
+#### What built-in variables does Ansible have?
+
+Ansible has three types of built-in variables:
+
+* [System variables (environment variables)](https://docs.ansible.com/ansible/latest/reference_appendices/config.html) used for ansible.cfg configuration
+* [Special Variables](https://docs.ansible.com/ansible/latest/reference_appendices/special_variables.html) used for work processes
+* [Facts variables](https://docs.ansible.com/ansible/latest/user_guide/playbooks_vars_facts.html) collected on the controlled side
