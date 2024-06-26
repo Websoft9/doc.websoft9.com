@@ -158,7 +158,7 @@ slug: /legal/licenses
 - https://github.com/drupal/drupal/blob/8.8.x/core/LICENSE.txt
 
 #### Elasticsearch
-- Elastic Lisence 2.0
+- Elastic Lisence 2.0 and SSPL V1
 - https://github.com/elastic/elasticsearch/blob/7.16/licenses/ELASTIC-LICENSE-2.0.txt
 - https://www.elastic.co/pricing/faq/licensing
 
@@ -167,7 +167,7 @@ slug: /legal/licenses
 - https://github.com/erlang/otp/blob/master/LICENSE.txt
 
 #### EspoCRM
-- GPL v3
+- AGPL v3
 - https://github.com/espocrm/espocrm/blob/master/LICENSE.txt
 
 #### ERPNext
@@ -202,6 +202,10 @@ slug: /legal/licenses
 - MIT
 - https://github.com/gogs/gogs/blob/master/LICENSE
 
+#### Go
+- BSD 3-Clause "New" or "Revised" License
+- https://github.com/golang/go/blob/master/LICENSE
+
 #### Grafana
 - AGPL-3.0
 - https://github.com/grafana/grafana/blob/master/LICENSE
@@ -234,18 +238,22 @@ slug: /legal/licenses
 - https://github.com/jenkinsci/jenkins/blob/master/LICENSE.txt
 
 #### Joomla
-- GPL v2
-- https://github.com/joomla/joomla-cms/blob/staging/LICENSE.txt
+- GPL v2 or later
+- https://github.com/joomla/joomla-cms/blob/4.4-dev/LICENSE.txt
 
 #### KDE
 - AGPL v3
 - https://community.kde.org/Policies/Licensing_Policy
 
+#### Kibana
+- Elastic Lisence 2.0 and SSPL V1
+- https://www.elastic.co/pricing/faq/licensing
+
 #### Knowage Community Edition
 - AGPL v3
 - https://github.com/KnowageLabs/Knowage-Server/blob/master/LICENSE
 
-#### KodExplore
+#### KodBox
 - GPL v3
 - https://github.com/kalcaddle/KodExplorer
 - https://www.gnu.org/licenses/gpl-3.0.en.html
@@ -295,6 +303,11 @@ slug: /legal/licenses
 - Apache 2.0
 - https://github.com/mingdaocom/pd/blob/master/LICENSE
 
+#### MinIO
+- AGPL v3
+- https://github.com/minio/minio/blob/master/LICENSE
+- https://blog.min.io/from-open-source-to-free-and-open-source-minio-is-now-fully-licensed-under-gnu-agplv3/
+
 #### ModSecurity
 - Apache 2.0
 - https://github.com/SpiderLabs/ModSecurity/blob/v3/master/LICENSE
@@ -310,7 +323,7 @@ slug: /legal/licenses
 
 #### MySQL
 - GPL v2
-- https://github.com/mysql/mysql-server/blob/8.0/LICENSE
+- https://github.com/mysql/mysql-server/blob/trunk/LICENSE
 
 #### Neo4j
 - GPL v3
@@ -325,7 +338,7 @@ slug: /legal/licenses
 - http://nginx.org/LICENSE
 
 #### Node.js
-- MIT License
+- MIT License (Node.js is available under the MIT license. Node.js also includes external libraries that are available under a variety of licenses.)
 - https://github.com/nodejs/node/blob/master/LICENSE
 
 #### OAuth
@@ -352,7 +365,7 @@ slug: /legal/licenses
 - https://github.com/opencart/opencart/blob/master/license.txt
 
 #### OpenJDK
-- GPL v2
+- GPL v2 with the Classpath Exception
 - http://openjdk.java.net/legal/gplv2+ce.html
 
 #### Openldap
@@ -376,6 +389,10 @@ slug: /legal/licenses
 
 ![image](https://user-images.githubusercontent.com/54173243/147203426-fb12b8c6-c559-4a80-88aa-50eff8121be1.png)
 
+#### Oracle database
+- Oracle Free License
+- https://www.oracle.com/downloads/licenses/oracle-free-license.html
+- https://docs.oracle.com/en/database/oracle/oracle-database/23/dblic/Licensing-Information.html#GUID-F796455D-C7EF-4836-9F69-2BCCDA49B7BD
 
 #### ownCloud
 - AGPL v3
@@ -430,7 +447,7 @@ slug: /legal/licenses
 - https://github.com/PrestaShop/PrestaShop/blob/develop/docs/licenses/LICENSE.txt
 
 #### Python
-- PSF License v2
+- GPL-compatible
 - https://docs.python.org/3/license.html
 - https://github.com/python/cpython/blob/master/LICENSE
 
@@ -438,16 +455,19 @@ slug: /legal/licenses
 - MPL-2.0
 - https://github.com/rabbitmq/rabbitmq-server/blob/master/LICENSE-MPL-RabbitMQ
 
-#### Redis
-- BSD 3-clause
+#### Redis (Starting on March 20th, 2024)
+- RSALv2+SSPLv1
 - https://redislabs.com/legal/licenses/
 - https://redis.io/topics/license
-- https://opensource.org/licenses/BSD-3-Clause
-- https://github.com/antirez/redis/blob/unstable/COPYING
+- https://github.com/redis/redis/blob/unstable/LICENSE.txt
+
+#### RedisInsight
+- SSPL
+- https://github.com/RedisInsight/RedisInsight/blob/main/LICENSE
 
 #### Redmine
 - GPL v2
-- https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+- https://github.com/redmine/redmine/blob/master/LICENSE.txt
 
 #### Reportserver
 - AGPL
@@ -496,8 +516,7 @@ slug: /legal/licenses
 - https://github.com/ossrs/srs/blob/develop/LICENSE
   - 官网说明：https://ossrs.net/lts/zh-cn/license
   - 具体内容：https://github.com/ossrs/srs/commit/67272f0721db044d98e324df23bc0d2a3e8817c8#commitcomment-51515520 
-- MIT or MulanPSL-2.0（from SRS 5)
-- https://github.com/ossrs/srs/blob/develop/LICENSE.DUAL
+- MIT（from SRS 5)
 
 #### Smarty
 - LGPL V3
@@ -539,7 +558,7 @@ slug: /legal/licenses
 - https://github.com/edgewall/trac/blob/trunk/COPYING
 
 #### Vtiger CRM
-- VPL 1.1
+- Vtiger Public License
 - https://www.vtiger.com/open-source-crm/vtiger-public-license/
 
 #### WAMPServer
@@ -572,7 +591,7 @@ slug: /legal/licenses
 - https://github.com/JetBrains/youtrack-workflows/blob/master/LICENSE.txt
 
 #### Zabbix
-- GPL v2
+- AGPL v3
 - https://github.com/zabbix/zabbix/blob/master/COPYING
 
 #### Zdoo
@@ -580,7 +599,7 @@ slug: /legal/licenses
 - https://www.zdoo.com/book/zdoo/63.html
 
 #### Zentao
-- ZPL 1.2
+- ZPL 1.2 and AGPL V3
 - https://github.com/easysoft/zentaopms/blob/master/COPYING
 
 #### ZSITE
