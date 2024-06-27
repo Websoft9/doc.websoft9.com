@@ -15,7 +15,7 @@ import Meta from './_include/apex.md';
 
 ### Login Verification{#verification}
 
-1. Completed installation AITable at Websoft9 console, get the applicaiton's overview and access credentials from "My Apps"     
+1. Completed installation APEX at Websoft9 console, get the applicaiton's overview and access credentials from "My Apps"     
 
 2. Wait patiently for 10 minutes until APEX initialization is complete to access the login page.
    ![](./assets/apex-init-websoft9.png)
