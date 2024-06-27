@@ -15,7 +15,7 @@ import Meta from './_include/aria2.md';
 
 ### Connect to the Aria2 RPC Service{#wizard}
 
-After installing Aria2 on the Websoft9 console, view the application details through "My Applications" and get the RPC service connection information in the "Access" tab.
+After installing Aria2 on the Websoft9 console, view the application details through **My Apps** and get the RPC service connection information in the **Access**.
 
 1. Access the AriaNg page from your local computer's browser
 
