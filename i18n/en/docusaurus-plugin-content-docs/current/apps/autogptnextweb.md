@@ -11,16 +11,18 @@ import Meta from './_include/autogptnextweb.md';
 
 <Meta name="meta" />
 
-## 入门指南{#guide}
+## Getting started{#guide}
 
-### 初始化{#wizard}
+### Initial setup{#wizard}
 
-1. Websoft9 控制台安装 AutoGPT.NextWeb 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息  
+1. When completed installation of AITable at Websoft9 console, get the applicaiton's overview and access information from "My Apps"  
 
-2. 通过 AutoGPT.NextWeb 左侧菜单的 "设置"，设置 OpenAI 的 Key
+2. Set the Key for OpenAI on **Settings** in the menu on the left side of AutoGPT.NextWeb
 
-## 管理维护{#administrator}
+## Configuration options{#configs}
 
-- 多语言（√）
+- Multilingual (√)
 
-## 故障
+## Administer{#administrator}
+
+## Troubleshooting{#troubleshooting}
