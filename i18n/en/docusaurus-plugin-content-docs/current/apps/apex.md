@@ -23,7 +23,7 @@ import Meta from './_include/apex.md';
 3. After successfully logging in, you will be prompted to change your password and enter the backend.
    ![](./assets/apex-index-websoft9.png)    
 
-### Create a workspace {#workspace}
+### Create a workspace{#workspace}
 
 Although APEX has a workspace named internal by default, it is only used for administrative purposes. To create an application, you must create a new workspace:
 
@@ -33,7 +33,7 @@ Although APEX has a workspace named internal by default, it is only used for adm
 2. Follow the wizard: create a new schema and set the username, password and e-mail address of the new workspace until you have finished creating the WorkSpace.
    ![](./assets/apex-createdone-websoft9.png)
 
-### Creating an application
+### Create an application
 
 After creating the workspace, you need to **Login with the new workspace** and then [Create Application](https://docs.oracle.com/en/database/oracle/apex/23.2/htmdb/choosing-an-application-creation-method.html). 
 

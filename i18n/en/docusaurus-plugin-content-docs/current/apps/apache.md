@@ -21,7 +21,7 @@ Websoft9 provides Apache applications for two purposes:
 
 The Apache container does not contain PHP, so if you want to deploy a PHP website, run the [PHP](. /php) container through the Websoft9 console.  
 
-### Deploying a static website
+### Deploy a static website
 
 1. After installing Apache in the Websoft9 console, view the application details through "My Applications" and get the access information in the "Access" tab.
 
@@ -29,7 +29,7 @@ The Apache container does not contain PHP, so if you want to deploy a PHP websit
 
 3. Refer to: [Deploying Applications Based on Program Environment}(runtime) to deploy a static website.
 
-### Mounting the httpd.conf configuration file
+### Mount the httpd.conf configuration file
 
 Although the Apache configuration file can be modified with the `sed` command, it is recommended that it be mounted outside the container:
 
@@ -41,7 +41,7 @@ Although the Apache configuration file can be modified with the `sed` command, i
 
 4. Rebuild the container to take effect
 
-### Setting up pseudo-static
+### Setup pseudo-static
 
 There are three steps to using and setting up Apache pseudo-static:
 
