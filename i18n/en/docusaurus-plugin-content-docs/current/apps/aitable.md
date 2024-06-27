@@ -19,13 +19,13 @@ import Meta from './_include/aitable.md';
 
 When completed installation of AITable at Websoft9 console, get the applicaiton's overview and access information from **My Apps**   
 
-1. After accessing using the local computer browser, goto the AITable first registration page
+1. Access AITable from your local browser, goto the AITable first registration page
    ![](./assets/apitable-init-websoft9.png)
 
 2. Register an administrator account to start using it
    ![](./assets/apitable-main-websoft9.png)
 
-### Quick start
+### Use Guide
 
 Refer to the official website document: [AITable Introduction](https://help.aitable.ai/docs/guide/tutorial-1-quick-start)
 
@@ -33,16 +33,18 @@ Refer to the official website document: [AITable Introduction](https://help.aita
 
 ### Why purchase through Websoft9? 
 
-Websoft9 is a partner of AITable, and we collaborate with AITable to provide AITable's image delivery products in the global cloud market. 
-Through Websoft9 procurement, enterprises can get more value: 
+Websoft9 is the Partner of AITable, and provide AITable products in the major global cloud platforms.  
+
+By purchasing AITable Enterprise Edition through Websoft9, you get more value: 
 
 - Preferential discounts 
-- Privatized deployment services and comprehensive hosting support 
-- Customized services for business system development 
+- On-Premises deployment
+- Advanced support 
+- Customized services
 
 ### How to purchase   
 
-Contact the [Websoft9 Customer Success Team](./helpdesk) and immediately enter the professional enterprise purchasing process.
+Contact the [Websoft9 Customer Success Team](./helpdesk)
 
 ## Configuration options{#configs}
 
