@@ -35,7 +35,7 @@ Although APEX has a workspace named internal by default, it is only used for adm
 
 ### Create an application
 
-After creating the workspace, you need to **Login with the new workspace** and then [Create Application](https://docs.oracle.com/en/database/oracle/apex/23.2/htmdb/choosing-an-application-creation-method.html). 
+After creating the workspace, you need to **login with the new workspace** and then [create application](https://docs.oracle.com/en/database/oracle/apex/23.2/htmdb/choosing-an-application-creation-method.html). 
 
 ## Configuration options{#configs}
 
