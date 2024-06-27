@@ -13,15 +13,27 @@ import Meta from './_include/activemq.md';
 
 ## Getting started{#guide}
 
+## Login ActiveMQ Console
+
+1. When completed installation of ActiveMQ at Websoft9 console, get the applicaiton's overview, credentials and access information from **My Apps**   
+
+2. After accessing using the local computer browser, login to ActiveMQ and you can see the Welcome page
+   ![](./assets/activemq-welcome-websoft9.png)
+
+3. Open the link **Manage ActiveMQ broker** to management page
+   ![](./assets/activemq-manage-websoft9.png)
+
+## Use Guide
+
 Read official documentations [Using Apache ActiveMQ](https://activemq.apache.org/using-activemq) and quickly grasp its usage by the following guidelines.  
 
 ## Configuration options{#configs}
 
-- [Config MQ](http://activemq.apache.org/configuration.html)
+- [Config ActiveMQ](http://activemq.apache.org/configuration.html)
 - [Web Samples](https://activemq.apache.org/components/classic/documentation/web-samples)
 
 ## Administer{#administrator}
 
-- Change ActiveMQ console password: Change password through **Compose** of the application
+- Change ActiveMQ Console password: By **Compose** of the application from **Websoft9 Console > MyApps**
 
 ## Troubleshooting{#troubleshooting}
