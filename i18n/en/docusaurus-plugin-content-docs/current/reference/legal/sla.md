@@ -1,88 +1,88 @@
 ---
-title: 服务等级协议（SLA）
+title: SLA
 sidebar_position: 5
 slug: /legal/sla
 ---
 
-# 服务等级协议
+# Service Level Agreement
 
-## 定义
+## Definitions
 
-“我们”/“我们”/“我们的”/“Websoft9” 是指注册于中国的 长沙网久软件有限公司和/或其任何参与提供服务的子公司和/或关联公司。
+"We"/"us"/"our"/"Websoft9" means the company registered in US. and/or any of its subsidiaries and/or affiliates involved in the provision of the Services.
 
-“您”/“您的”/“您自己”/“用户”/“客户” 是指本网站的用户和/或服务的客户。
+"You"/"Your"/"Yourself"/"User"/"Customer" means the user of the Website and/or the customer of the Services.
 
-“服务” 是指 Websoft9 在其网站上或其他云平台上提供的任何服务，包括但不限于云应用程序部署、镜像、管理和基础设施管理，通常称为“Websoft9 多应用托管平台”。
+"Services" means all services provided by Websoft9 on its website or other cloud platforms, including but not limited to cloud application deployment, mirroring, management and infrastructure management, commonly referred to as "Websoft9 Multi-Application Self-Hosted Platform". Websoft9 Multi-Application Hosting Platform".
 
-Websoft9 致力于提供高质量的服务，并以全面的服务水平协议为后盾。  
+Websoft9 is committed to providing high quality services backed by comprehensive Service Level Agreements.  
 
-Websoft9 会适时修改 SLA 协议，但在您的订购期限内，Websoft9 不会以实质性降低服务水平的方式修改您的 SLA 条款；如果您续订服务，则续订之时届时适用的 SLA 协议的版本将适用于您的续订期。您继续使用服务即代表您同意届时适用的 SLA。
+Websoft9 may modify the SLA Agreement from time to time, but Websoft9 will not modify the terms of your SLA in a way that materially reduces the level of service during the term of your subscription; if you renew your subscription to the Services, the version of the SLA Agreement in effect at the time of renewal will apply to the term of your renewal subscription. Your continued use of the Service constitutes your acceptance of the SLA in effect at that time.
 
-## 服务标准
+## Service Standards
 
-- Websoft9 的目标是确保客户每周 7 天、每天 24 小时、每年 365 天（服务可用性）为客户提供服务。
+- Websoft9's goal is to ensure that the services are available to our customers 24 hours a day, 7 days a week, 365 days a year (Service Availability).
 
-- 请注意，服务可用性是指 Websoft9 多应用托管平台和相关服务，在任何情况下，我们均不保证合作伙伴[云提供商的服务可用性](#cloud)
+- Please note that Service Availability refers to the Websoft9 multi-application self-hosted platform and related services, and under no circumstances do we guarantee the Service Availability of our partners [cloud providers](#cloud).
 
-- Websoft9 提供两个标准支持选项：
+- Websoft9 provides two standard support options:
 
-  - 实时沟通：交互式的及时沟通手段（**在线聊天和电话系统**）
-  - [工单系统](https://www.websoft9.com/ticket)：非实时的表单互动系统
+  - **Real-time communication**: interactive and timely communication tools (**Online message and phone**)
+  - **[Ticket System](https://www.websoft9.com/ticket)**: non-real-time interactive form system.
 
-- 实时沟通便于请求和接收基本信息和故障排除帮助。但实时沟通受制于资源约束需要排队，为了避免堵塞实时系统，交互式支持会话受最长持续时间的限制，具体取决于您所处的支持计划级别：
+- Real-time communication makes it easier to request and receive basic information and troubleshooting assistance. However, real-time communication is subject to resource constraints that require queuing, and to avoid clogging the real-time system, interactive support sessions are subject to a maximum duration depending on the level of support plan you are on:
 
-  - 标准支持 – 最长实时时长 20 分钟（工作日 8:00-18:00）
-  - 高级支持 – 最长实时时长 30 分钟（工作日 8:00-18:00）
-  - 尊享支持 - 无限制（周一到周日 8:00-22:00）
+  - Standard Support - maximum 20 minutes real-time (weekdays 8:00-18:00)
+  - Advanced Support - up to 30 minutes live (weekdays 8:00-18:00)
+  - Premium Support - unlimited (Monday-Sunday 8:00-22:00)
 
-- 当实时沟通无法解决问题或超过实时沟通的响应时间窗口，将由用户或我们的客户成功团队创建一个[工单](https://www.websoft9.com/ticket)，其中包含实时沟通记录，并由我们的高级工程师通过我们的工单系统进行跟进。工单预期响应时间如下：
+- When real-time communication fails to resolve the issue or exceeds the response time window for real-time communication, a [Ticket System](https://www.websoft9.com/ticket) will be created by the user or our Customer Success team containing a record of the real-time communication and will be followed up by one of our Senior Engineers through our Work Order system. The expected response time for a work order is as follows:
 
-  - 普通优先工单（24x7x365）
-    - 标准支持 – 12 小时
-    - 高级支持 – 6 小时
-    - 尊享支持 – 2 小时
+  - General Priority Work Order (24x7x365)
+    - Standard Support - 12 hours
+    - Advanced Support - 6 hours
+    - Premium Support - 2 hours
 
-  - 高优先级工单（24x7x365 ）
-    - 标准支持 – 3 小时
-    - 高级支持 – 30'
-    - 尊享支持 – 10'
+  - High Priority Work Orders (24x7x365)
+    - Standard Support - 3 hours
+    - Advanced Support - 30'
+    - Premium Support - 10'
 
-- 我们的响应时间目标是确认并仅具有“工作已开始”状态所需的时间，而不是解决问题所需的时间。
+- Our response time goal is the time it takes to identify and have a "Work Started" status only, not the time it takes to resolve the problem.
 
-- 高优先级工单必须与导致客户的基础设施和/或服务不可用/无法访问的事件相关。被客户评为“高优先级”且与此描述不符的其他类型的事件将由 Websoft9 的人员降级为“普通优先级”并进行相应处理。
+- High Priority Work Orders must be associated with an incident that results in the unavailability/inaccessibility of the customer's infrastructure and/or services. Other types of incidents that are rated "High Priority" by the customer that do not fit this description will be downgraded to "Normal Priority" by Websoft9 personnel and handled accordingly.
 
-- 尊享支持从周一到周日，每天 24 小时 （24x7x365） 提供。我们的目标是在 10 分钟内做出响应。  
+- Premium Support is available 24 hours a day (24x7x365), Monday through Sunday. Our goal is to respond within 10 minutes.  
 
-- Websoft9 意识到我们的服务可用性和响应时间目标可能并不总是得到满足。因此，第下面规定了如果我们未能达到服务可用性或响应时间目标的补偿。
+- Websoft9 recognizes that our service availability and response time goals may not always be met. Therefore, the following section outlines compensation if we do not meet our service availability or response time goals.
 
-## 未达标的补偿
+## Compensation for non-compliance
 
-如果我们的服务标准未达到，我们将对客户进行补偿，前提是客户会通过我们的支持门户进行申请。
+If our service standards are not met, we will compensate the customer, provided that the customer applies through our support portal.
 
-补偿将以代金券的方式发放，且该补偿是 Websoft9 针对服务不满足可用性承诺向您提供的全部及唯一补偿。
+The compensation will be issued in the form of vouchers, and this compensation is the full and sole remedy provided by Websoft9 for failure to meet the service availability commitment.
 
-补偿将通过记入您的下一个月的计费周期进行。  
+The compensation will be credited to your next billing cycle.
 
-对于我们未能达到服务标准水平的每个服务请求，您将获得当月订阅总费用的 5% 的补偿。  
+For each service request where we fail to meet the standard level of service, you will receive compensation equal to 5% of the total subscription fee for that month.
 
-SLA 可以月度累计，其总补偿不得超过您当月向我们支付的费用总额
+The SLA may be accumulated on a monthly basis, with the total compensation not to exceed the total amount you paid us for that month.
 
-## 限制
+## Limitations
 
-以下所列情形亦不适用于 SLA 补偿政策：
+The following situations are also not eligible for SLA compensation:
 
-- 因 Websoft9 计划内停机、紧急维护或不可抗力事件而未能达到服务标准
+- Failure to meet service standards due to Websoft9's scheduled downtime, emergency maintenance, or force majeure events.
 
-- 因客户或客户的服务商使用非标准环境、个性化代码或其他对平台的错误设置导致未能达到服务标准
+- Failure to meet service standards due to the customer's or their service provider's use of non-standard environments, custom code, or other incorrect configurations of the platform.
 
-- 云基础设施故障导致未能达到服务标准
+- Failure to meet service standards due to cloud infrastructure failures.
 
-## 第三方 SLA{#cloud}
+## Third-Party SLAs {#cloud}
 
-Websoft9 多应用托管平台相关的基础设施提供商 SLA：  
+The SLAs of the infrastructure providers related to the Websoft9 are as follows:
 
 - [Azure SLA](https://www.azure.cn/en-us/support/sla/summary/)
 - [AWS SLA](https://aws.amazon.com/cn/legal/service-level-agreements/)
-- [阿里云 SLA](https://help.aliyun.com/zh/ecs/support/the-agreement/)
-- [华为云 SLA](https://www.huaweicloud.com/declaration/sla.html)
-- [腾讯云 SLA](https://www.huaweicloud.com/declaration/sla.html)
+- [Alibaba Cloud SLA](https://help.aliyun.com/zh/ecs/support/the-agreement/)
+- [HUAWEICLOUD SLA](https://www.huaweicloud.com/declaration/sla.html)
+- [Tencent Cloud SLA](https://www.huaweicloud.com/declaration/sla.html)

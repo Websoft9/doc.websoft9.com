@@ -5,10 +5,12 @@ sidebar_position: 1.1
 
 # API
 
-Websoft9 提供了一个与核心微服务交互的 RESTful API，它的使用方式非常简单：
+Websoft9 provides a RESTful API to interact with core services.
 
-1. 登录 Websoft9 控制台，在【设置】界面直接获取 API Key
+1. Login to the Websoft9 Console and get the API key in the **Settings** interface. 
 
-2. 使用 API Key 调用 API 指令
+2. Access `http://server's Internet IP/api/docs` in your local browser to enter the **API explore** page.
 
-我们提供了详情的文档，参考：[API reference](https://support.websoft9.com/apidocs)
+3. Enter the API key to execute API commands online.
+
+For description of API commands, please refer to [API Reference](https://support.websoft9.com/apidocs)

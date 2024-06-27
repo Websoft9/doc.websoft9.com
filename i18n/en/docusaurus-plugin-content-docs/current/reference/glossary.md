@@ -12,15 +12,27 @@ For guidance not on this page, we defer to these style guides:
 - [GitLab Writing Style Guide word list](https://docs.gitlab.com/ee/development/documentation/styleguide/word_list.html)
 - [Microsoft Writing Style Guide word list](https://learn.microsoft.com/en-us/style-guide/a-z-word-list-term-collections/term-collections/cloud-computing-terms)
 
-Capitalize any proper nouns, e.g. Docker, Github
+Capitalize any proper nouns, e.g. Docker, Github, URL, Apache, Open Source
 
 ## customized
 
 Use enterpise as a modifier. E.g. **customized needs**, **customized deployment**. Don't use personalized which is not informal
 
+## application-centric
+
+Use application-centric not application-focused
+
 ## documentation
 
 Use **documentation**, don't use document
+
+## Internet IP
+
+Use Internet IP not Public IP
+
+## access
+
+Use the browser to **access** the URL
 
 ## enterprise
 

@@ -3,64 +3,55 @@ sidebar_position: 3
 slug: /legal/trademark
 ---
 
-# 商标条款
+# Trademark
 
 ![](/img/websoft9-logo.png)
 
 
-Websoft9 以及相关的图标 Logo 都是长沙网久软件有限公司的注册商标。  
+Websoft9 packages(“Image”,”Stack”) a wide range of opensource software and provide Images on the Cloud Platform(Include AWS,Azure,AlibabaCloud,HUAWEI CLOUD). Websoft9 software packages include trademarks that are the property of their respective owners and are made available under various trademark and licensing policies. You will need to reference those individual policies regarding the use of any trademarks contained within Websoft9 Images.
 
-## 使用条款
 
-- 合作伙伴可以直接使用图标或文字商标
-- 非合作伙伴在任何情况下均不允许使用图形商标
-- 非合作伙伴在使用文字商标时需遵循如下原则：
+#### Statement
 
-   * 可以在博客、产品介绍、技术文章的详情内容区域直接使用
-   * 在标题中使用商标时，必须在同一页面进行如下的商标申明
-     ```
-     Websoft9 以及相关的图标 Logo 都是长沙网久软件有限公司的注册商标。
-     ```
-   * 任何暗示与我司有关系，或代表我司的使用方式均不允许
+- You can install, deploy Websoft’s Image in the Cloud Platform according to the pricing policy
+- You can modify Websoft’s Image for personal or internal commercial use.
+- You can use our copyright, patent and design materials in accordance with this IPRights Policy.
+- You can be confident and can trust in the consistency of the Websoft9 experience.
+- You can rely on the standard expected of Websoft9.
 
-## 第三方商标
+#### Your use of  Websoft9 Product
 
-我们的网站、产品和文档中合规了第三方的商标，但我们没有资格授权任何方使用的权利。  
+Any redistribution of modified versions of Websoft9 must be approved, certified or provided by Websoft9 if you are going to associate it with the Trademarks. Otherwise you must remove and replace the Trademarks and will need to recompile the source code to create your own binaries. This does not affect your rights under any open source license applicable to any of the components of Websoft9. If you need us to approve, certify or provide modified versions for redistribution you will require a license agreement from Websoft9, for which you may be required to pay. For further information, please contact us (as set out below).
 
-涉及到的第三方商标包括：
+We do not recommend using modified versions of Websoft9 which are not modified in accordance with this IPRights Policy. Modified versions may be corrupted and users of such modified systems or images may find them to be inconsistent with the updates published by Websoft9 to its users. If they use the Trademarks, they are in contravention of this IPRights Policy. Websoft9 cannot guarantee the performance of such modified versions.
 
-### 开源软件商标
+#### Your use of Websoft9 trademarks
 
-参阅
+Websoft9’s Trademarks include: Websoft9, Websoft9 copyright,Websoft9 Media Material
 
-### 云平台商标
+- You can use the Trademarks, in accordance with Websoft9’s brand guidelines, with Websoft9’s permission in writing. If you require a Trademark license, please contact us (as set out below).
+- You will require Websoft9’s permission to use: (i) any mark ending with the letters Websoft9 that is sufficiently similar to the Trademarks or any other confusingly similar mark, and (ii) any Trademark in a domain name or URL or for merchandising purposes.
+- You cannot use the Trademarks in software titles. If you are producing software for use with or on Websoft9 you may reference Websoft9, but must avoid: (i) any implication of endorsement, or (ii) any attempt to unfairly or confusingly capitalize on the goodwill of Websoft9
+- You can use the Trademarks in discussion, commentary, criticism or parody, provided that you do not imply endorsement by Websoft9.
+- You can write articles, create websites, blogs or talk about Websoft9, provided that it is clear that you are in no way speaking for or on behalf of Websoft9 and that you do not imply endorsement by Websoft9
+- You can only use Websoft9’s copyright materials in accordance with the copyright licences therein and this IPRights Policy.
+- You cannot use Websoft9’s patented materials without our permission.
+- The installer and system images, together with Websoft9 packages and binary files, are in many cases copyright of Websoft9 (which copyright may be distinct from the copyright in the individual components therein) and can only be used in accordance with the copyright licenses therein and this IPRights Policy.
+- Websoft9 owns intellectual property rights in the trade dress and look and feel of Websoft9 (including the Websoft9 Cloud Hosting interface), along with various themes and components that may include unregistered design rights, registered design rights and design patents. Your use of Websoft9 is subject to these rights.
 
-- 阿里云 / Alibaba Cloud 是 阿里巴巴 以及关联公司的商标
-- 华为云 / HUAWEICLOUD 是 华为 以及关联公司的商标
-- 腾讯云 / Tencent Cloud 是 腾讯 以及关联公司的商标
-- Amazon Web Services / AWS  是 Amazon 以及关联公司的商标
-- Microsoft Azure 是 Microsoft 以及关联公司的商标
-- Google Cloud 是 Google 以及关联公司的商标
-- Oracle Cloud 是 Oracle 以及关联公司的商标
 
-## 问题解答
 
-#### 商标名称后面的®和TM是什么意思？
+#### Cloud Platform trademarks
 
-TM是TRADEMARK的缩写，美国的商标通常加注TM，并不一定是指已注册商标。  
-而®是REGISTER的缩写，用在商标上是指已经成功注册商标的意思  
+- Amazon Web Services is a registered trademark of Amazon and its affiliates.
+- Google Cloud Platform is a registered trademark of Google and its affiliates.
+- Oracle Cloud Platform is a registered trademark of Oracle and its affiliates.
+- Microsoft Azure is a registered trademark of Microsoft and its affiliates.
+- Open Telekom Cloud is a registered trademark of Open Telekom and its affiliates.
+- HUAWEI CLOUD is a registered trademark of Hauwei and its affiliates.
+- Alibaba CLOUD is a registered trademark of Hauwei and its affiliates.
+- All trademarks are property of their respective owners.
 
-#### 公司注册与商标有什么关系吗？
+**Contact us**
 
-商标和公司注册是两条线，相互不冲突。例如：公司名称中有【网久软件】这个关键词，但不代表你拥有这个商标。
-
-#### 什么是《马德里条约》？
-
-《马德里条约》用于批量向多个国家注册同一个商标（理解为商标（国家）注册团购），而不是商标互信。
-
-#### 商标怎么查询？
-[《全球商标查询数据库》](https://www3.wipo.int/branddb/en)
-
-## 联系我们
-
-如果您认为我们错误的引用了第三方商标，请及时与我们联系： legal@websoft9.com
+If you have any questions or concerns about our Trademarks or if you want to use our Trademarks, please send an email to legal@websoft9.com

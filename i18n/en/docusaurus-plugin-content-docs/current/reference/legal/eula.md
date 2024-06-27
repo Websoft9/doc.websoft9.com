@@ -1,9 +1,9 @@
 ---
-sidebar_position: 6
+sidebar_position: 2.0
 slug: /legal/eula
 ---
 
-# 用户许可
+# Websoft9 EULA
 
 End User Licence Agreement (“EULA”)  for Websoft9 Inc. (“Websoft9”, “we”, “our” and “us”) Software products and services (“Product” or “Soft” or "Service") are a legal agreement between you, either as an individual or a legal entity (“Customer”), and Websoft9.
 

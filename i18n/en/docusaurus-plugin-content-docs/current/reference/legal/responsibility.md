@@ -1,89 +1,63 @@
 ---
+title: Responsibility
 sidebar_position: 6
 slug: /legal/responsibility
 ---
 
-# 社会责任
+# Society Responsibility
 
-Websoft9 不仅仅只代表客户、员工和股东利益，同时承诺愿意承担更大的社会责任，与社会、政治和经济融为一体，在环境保护、税收、合法用工、社区责任、弱势群体关爱等各个方面投入。
+Today's enterprises not only represent the interests of customers, employees and shareholders, but also need to undertake greater social responsibilities, integrate with society, politics and economy, in environmental protection, taxation, legal employment, community responsibility, care for vulnerable groups, etc. Invest in all aspects.  
 
-“简化开源，普惠全球”是 Websoft9 的愿景和使命，为承接公司的愿景和使命，我们制定了社会战略：  
+"Simplify open source, benefit the world" is Websoft9's vision and mission. To undertake the company's vision and mission, we have formulated a social strategy:
 
-## 开源回馈
+## All in Open Source
 
-Websoft9 全面拥抱开源，我们 100% 开源[产品](https://github.com/websoft9)、[文档](https://support.websoft9.com/)。  
+Websoft9 stratgy is all in Open Source, you can get the source of use [Product](https://github.com/websoft9) and [Docs](https://support.websoft9.com/).  
 
-通过透明和公开的商业运作过程，降低沟通成本，提升合作效率，并更安全可靠。
+Through a transparent and open business operation process, communication costs are reduced, cooperation efficiency is improved, and security is more reliable.  
 
-## 多元用工
+## Multiple employment
 
-工业化时代的用工方式已经不适应知识型人才的用工特点，伴随互联网的深入发展，远程和全球用工已经成为未来的趋势。  
+The employment method in the industrial age has not adapted to the employment characteristics of knowledge-based talents. With the in-depth development of the Internet, remote and global employment has become the future trend.  
 
-Websoft9 从可持续发展的角度考虑，已经逐步展开多元化用工，我们广泛吸收国家定义的重点就业群体：高校毕业生、农民工、灵活就业人员、残疾人、零就业家庭成员、妇女、退役军人、大龄劳动者等。    
+From the perspective of sustainable development, Websoft9 has gradually started to diversify its employment. We have widely absorbed key employment groups defined by the state: college graduates, migrant workers, flexible employment personnel, disabled people, zero-employment family members, women, veterans, Older workers, etc.     
 
-## 公益活动
+## Public Welfare
 
-信息技术对于不发达乡村地区来说造就了数字鸿沟，我们成立了**乡村编程教育公益行活动**，计划 10 年内为 100 个乡村小学提供免费的编程技术教育服务，培养乡村少年儿童的编程兴趣，帮助孩子们种下一个打开未来之门的种子，最大程度上消除信息技术的不平等。    
+Information technology has created a digital divide for underdeveloped rural areas. We have established a rural programming education charity campaign, and plan to provide free programming technology education services to 100 rural primary schools within 10 years, cultivate rural children's interest in programming, and help children. We plant the seeds that will open the door to the future and eliminate the inequalities in information technology to the greatest extent possible.  
 
-公益组织为了提升工作效率，需要在工作中使用大量的软件。我们可以为公益组织提供免费的云计算、开源软件相关技术支持，帮助公益组织建立起更加高效的技术体系，实现业务自动化
+In order to improve work efficiency, non-profit organizations need to use a lot of software in their work. We can provide free cloud computing and open source software-related technical support for non-profit organizations to help non-profit organizations establish a more efficient technical system and realize business automation
 
-## 反垄断
+## Build technological civilization
 
-由于互联网平台存在网络效应和规模经济，Websoft9 抵制一切互联网平台的垄断行为。  
+Technology is undoubtedly the driving force behind current social development and economic prosperity. Technology-leading companies can bring huge productivity to customers around the world.  
 
-## 打造技术文明
+Technology also changes our human civilization, Websoft9 strives to eliminate the negative impact of technology on human beings.
 
-技术无疑是当前社会发展、经济繁荣的推动力。技术领先的企业，能够给全球客户带来巨大的生产力。
+## Bridging the digital divide
 
-技术同时也改变我们人类的文明，Websoft9 努力消除技术给人类带来的负面影响。  
+Digital Divide refers to the information gap between different countries, regions, industries, enterprises and communities due to the differences in the degree of possession, application and innovation ability of information and network technology in the process of global digitalization and further polarization between the rich and the poor. differentiation trend.  
 
-## 消除数字鸿沟
+Websoft9 will actively carry out the "Open Source Technology Inclusive Action" to lower the technology use threshold for underdeveloped countries and small and micro enterprises, so that more enterprises can successfully cross the "digital divide".  
 
-数字鸿沟（Digital Divide），是指在全球数字化进程中，不同国家、地区、行业、企业、社区之间，由于对信息、网络技术的拥有程度、应用程度以及创新能力的差别而造成的信息落差及贫富进一步两极分化的趋势。
+## Resist illegal use
 
-Websoft9 将积极开展“开源技术普惠行动”，降低不发达国家和小微企业的技术使用门槛，让更多企业成功跨越“数字鸿沟”。  
+In the process of using Websoft9 products or services, we will firmly resist the following illegal behaviors:
 
-## 抵制非法使用
+* Violating the national constitution, laws and administrative regulations;
+* Endangering national security, divulging state secrets, subverting state power, and undermining national unity;
+* Damage to national honor and interests;
+* Inciting ethnic hatred, ethnic discrimination, or undermining ethnic unity;
+* Those who undermine the state's religious policy and promote cults and feudal superstitions;
+* Spreading rumors, disrupting social order and undermining social stability;
+* Spreading obscenity, pornography, gambling, violence, murder, terror or instigating crimes;
+* Insulting or slandering others, infringing on the legitimate rights and interests of others;
 
-用户在使用 Websoft9 产品或服务的过程中，一旦出现下列的非法行为，我们将坚决抵制：
+## Sustainable development
 
-* 违反国家宪法、法律、行政法规的；
-* 危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；
-* 损害国家荣誉和利益的；
-* 煽动民族仇恨、民族歧视，破坏民族团结的；
-* 破坏国家宗教政策，宣扬邪教和封建迷信的；
-* 散布谣言，扰乱社会秩序，破坏社会稳定的；
-* 散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的；
-* 侮辱或者诽谤他人，侵害他人合法权益的；
+Websoft9 regards sustainable development as a priority criterion and fully integrates it into the overall development strategy of the enterprise.
 
-## 可持续发展
-
-Websoft9 将可持续发展作为一项优先的准则，全面融入到企业的整体发展战略当中。
-
-* 数字包容：数字技术将减少全球不平等现象，缩小数字鸿沟。
-* 绿色环保：致力于通过技术创新来解决全球环境问题，创造绿色未来，让人与自然和谐共处。
-* 和谐生态：致力于与产业链各方携手构建一个和谐、健康的产业生态环境。
-* 安全可信：支持并积极倡导开放、安全、稳定、和平的网络空间
-* 公司治理：我们通过开放式的审计原则，保障客户、员工、股东、供应商和合作伙伴的利益
-
-
-## 软件供应链
-
-与传统供应链不同，开源软件供应链具有产品迭代快、模块数量多、生产线上化、供应全球化、仓储集中化、用户多样化等特点，这也让开源软件供应链暴露在更多风险之下。开源软件供应链面临安全性风险，不法分子可以利用供应链中已有的漏洞进行组合攻击，或向供应链的上游注入恶意程序；知识产权风险，软件发布及使用过程中违反开源协议；维护性风险，因供应链条中的节点缺乏维护所致。  
-
-软件供应链的维护和升级合作已经成为企业的战略举措。  
-
-Websoft9 持续与上游软件供应链进行战略合作，确保客户的软件生命周期安全。 
-
-## 安全可信
-
-Websoft9 承诺，将构筑并全面实施端到端的全球网络安全保障体系作为公司的重要发展战略之一，将公司对网络和业务安全性保障的责任置于公司的商业利益之上。  
-
-我们将从如下举措中不断发展可信战略：  
-
-1. 网络安全与隐私保护
-2. 知识产权保护
-3. 商业机密保护
-4. 新技术安全
-5. AI安全
-6. 云安全
+* Digital inclusion: Digital technologies will reduce global inequalities and narrow the digital divide.  
+* Green environmental protection: Committed to solving global environmental problems through technological innovation, creating a green future, and allowing people to live in harmony with nature.  
+* Harmonious ecology: Committed to working with all parties in the industry chain to build a harmonious and healthy industrial ecological environment.  
+* Safe and credible: support and actively advocate an open, secure, stable and peaceful cyberspace   

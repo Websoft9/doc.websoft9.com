@@ -5,9 +5,9 @@ sidebar_position: 1.2
 
 # CLI
 
-Websoft9 的核心微服务 AppHub 提供了一个可以管理应用的 CLI。  
+AppHub, the core microservice of Microsoft9, provides a CLI for managing applications.  
 
-docker exec 到 apphub 容器，即可以使用：
+To use it, enter the Apphub container in command mode:
 
 ```
 $ docker exec -it websoft9-apphub bash

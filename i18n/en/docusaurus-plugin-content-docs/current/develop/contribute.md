@@ -1,34 +1,40 @@
 ---
+sidebar_position: 3.2
 slug: /contribute
 ---
 
 import DocCardList from '@theme/DocCardList';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-# 参与贡献
+# Contribute
 
-我们欢迎来自任何国家、任何地区的开源爱好者参与 Websoft9 的项目。
+Welcome open source enthusiasts from any country or region to participate in Websoft9 projects.
 
-对于一个开源项目来说，不仅仅局限于代码的开发，像功能建议、文档整理、错误报告、Bug 修复建议等方面与代码开发同等重要。  
+For an open source project, it is not only limited to code development, but also feature suggestions, documentation, bug reports, bug fixes, etc. are as important as code development.  
 
-也就是说，您只要有想法，就可以马上行动，参与到 Websoft9 的产品改进中来吧。  
+If you have an idea, you can take action now and participate in the improvement of Websoft9.  
 
 
-## 项目
+## Repository
 
-我们在 GitHub 上开源了大部分核心项目和组件，欢迎 fork 它们：
+We open source most of our core projects and components on GitHub, so feel free to fork them:
 
-- [Websoft9](https://github.com/Websoft9/websoft9)：我们的核心开源项目
-- [Docker-library](https://github.com/Websoft9/docker-library)：200+ 开源的 docker compose 模板
-- [文档](https://github.com/Websoft9/doc.websoft9.com)：产品文档
+- [Websoft9](https://github.com/Websoft9/websoft9): Core of Websoft9
+- [Docker-library](https://github.com/Websoft9/docker-library): 200+ docker compose templates
+- [Documentation](https://github.com/Websoft9/doc.websoft9.com): Websoft9 unique product documentation
 
-## 赞助
+## Cummunity{#community}
 
-开源的发展离不开各种优秀的资源，当然也包括资金。Websoft9 乐意接受各种形式的赞助。  
+- Social Media: [Linkedin](https://www.linkedin.com/company/websoft9)
+- Chat Groups: [WeChat Group](https://libs.websoft9.com/Websoft9/feature/icon-userchatgroup-websoft9.png)
+- Technical Community: [Github discusssion](https://github.com/Websoft9/websoft9/discussions)
 
-感谢如下企业给与我们的直接或间接的赞助： 
+## Sponsorships
 
-- 阿里云
-- 华为云
-- 腾讯云
+The development of Open Source depends on a variety of excellent resources, including of course funding, and Websoft9 is happy to accept sponsorship of any kind.  
+
+We would like to thank the following companies for their long-term direct and indirect sponsorship of Websoft9.  
+
 - Azure
+- Alibaba Cloud
+- HUAWEICLOUD
