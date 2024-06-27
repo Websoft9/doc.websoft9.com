@@ -36,7 +36,7 @@ Apache 容器中不包含 PHP，如果想部署 PHP 网站，通过 Websoft9 控
 
 1. 进入 Apache 容器，拷贝 */usr/local/apache2/conf/httpd.conf* 文件的内容
 
-2. 通过 **我的应用** > **Apache 应用** > **编排** > **马上修改**，进入应用的 Git 仓库
+2. 通过 **我的应用 > Apache 应用 > 编排 > 马上修改**，进入应用的 Git 仓库
 
 3. 将拷贝的 httpd.conf 内容粘贴到 *./src/httpd.conf* 中，再修改 **docker-compose.yml** 挂载设置
 

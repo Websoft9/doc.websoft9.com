@@ -35,7 +35,7 @@ Although the Apache configuration file can be modified with the `sed` command, i
 
 1. Enter the Apache container and copy the contents of the file: */usr/local/apache2/conf/httpd.conf*
 
-2. Select **My apps** > **Apache application** > **Compose** > **Prompt Adjustment**, go to your application's Git repository 
+2. Select **My apps > Apache application > Compose > Prompt Adjustment**, go to your application's Git repository 
 
 3. Paste the copied httpd.conf contents into *./src/httpd.conf*, and then modify the **docker-compose.yml** mount settings
 
