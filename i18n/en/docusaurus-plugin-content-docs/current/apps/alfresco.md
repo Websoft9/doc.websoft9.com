@@ -16,17 +16,17 @@ import Meta from './_include/alfresco.md';
 
 ### Login Verification{#verification}
 
-1. Completed installation Alfresco at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
+1. Completed installation Alfresco at **Websoft9 Console**, get the applicaiton's overview and access credentials from **My Apps**  
 
-2. Please wait for 10 minutes until Alfresco's initialization are completed
+2. Wait 10 minutes for Alfresco to initialize.
 
-3. Access the URL through a local browser, and after the page appears, select **Alfresco Repository** > **Alfresco Share** to access the login page
+3. Local browser access URL, homepage load, then select **Alfresco Repository** > **Alfresco Share** to access the login page
 
-4. Login to the Alfresco backend and start using it
+4. Login to the Alfresco console and start using it
    ![](./assets/alfresco-consolegui-websoft9.png)
 
 
-### Function overview
+### Features
 
 The commonly used functions and screenshots are as follows:
 
@@ -48,7 +48,7 @@ The commonly used functions and screenshots are as follows:
 - Workflow (Approval)
   ![Alfresco Workflow(Approval)](./assets/alfresco-workflow-websoft9.png)
 
-### Document Edit
+### Doc editors
 
 Refer to: [Files and folders](https://docs.alfresco.com/content-services/community/using/content/files-folders/)
 
@@ -67,13 +67,13 @@ Refer to: [Files and folders](https://docs.alfresco.com/content-services/communi
 
 ## Administer{#administrator}
 
-- Retrieve password: Connect to database, run SQL command `UPDATE alf_node_properties SET string_value='209c6174da490caeb422f3fa5a7ae634' WHERE node_id=4 and qname_id=10`, password reset to **admin**
-- [Back up and restore](https://docs.alfresco.com/content-services/community/admin/backup-restore/)
+- Reset password: Connect to database, run SQL command `UPDATE alf_node_properties SET string_value='209c6174da490caeb422f3fa5a7ae634' WHERE node_id=4 and qname_id=10`, password reset to **admin**
+- [Backup and restore](https://docs.alfresco.com/content-services/community/admin/backup-restore/)
 
 ## Troubleshooting{#troubleshooting}
 
 #### Chinese Markdown format preview garbled?
 
-Fault description: [View in browser] Not garbled, but garbled in Alfreco's built-in document details  
-Reason for problem: Unknown  
+Description: [View in browser] Not garbled, but garbled in Alfreco's built-in document details  
+Reason: Unknown  
 Solution: Currently unavailable  
