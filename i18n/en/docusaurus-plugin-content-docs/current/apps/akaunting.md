@@ -15,7 +15,7 @@ import Meta from './_include/akaunting.md';
 
 ### Initial setup{#wizard}
 
-1. When completed installation of Akaunting at Websoft9 console, get the applicaiton's overview and access information from **My Apps**  
+1. When completed installation of Akaunting at **Websoft9 Console**, get the applicaiton's overview and access information from **My Apps**  
 
 2. Complete the install wizard step by step
 
