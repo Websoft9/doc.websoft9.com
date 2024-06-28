@@ -15,22 +15,24 @@ import Meta from './_include/apex.md';
 
 ### Login Verification{#verification}
 
-1. Completed installation APEX at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**     
+1. Completed installation APEX at **Websoft9 Console**, get the applicaiton's overview and access credentials from **My Apps**     
 
-2. Wait patiently for 10 minutes until APEX initialization is complete to access the login page.
+2. Wait 10 minutes until APEX initialization is complete to access the login page.
    ![](./assets/apex-init-websoft9.png)
 
-3. After successfully logging in, you will be prompted to change your password and enter the backend.
+3. After successfully logging in, you will be prompted to change your password and enter the APEX console.
    ![](./assets/apex-index-websoft9.png)    
 
-### Create a workspace{#workspace}
+### Create a WorkSpace{#workspace}
 
-Although APEX has a workspace named internal by default, it is only used for administrative purposes. To create an application, you must create a new workspace:
+Although APEX has a workspace named internal by default, it is only used for administrative purposes.   
+
+You must create a new workspace if want to use APEX: 
 
 1. Log in to the backend and click Create New WorkSpace
    ![](./assets/apex-createwp-websoft9.png)
 
-2. Follow the wizard: create a new schema and set the username, password and e-mail address of the new workspace until you have finished creating the WorkSpace.
+2. Follow the wizard: create a new schema and set the username, password and emailof the new workspace until you have finished creating the WorkSpace.
    ![](./assets/apex-createdone-websoft9.png)
 
 ### Create an application
