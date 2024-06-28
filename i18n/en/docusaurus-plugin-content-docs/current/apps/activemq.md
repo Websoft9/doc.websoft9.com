@@ -2,29 +2,38 @@
 title: ActiveMQ
 slug: /activemq
 tags:
-  - ActiveMQ 
-  - IT 架构
-  - 中间件
+  - IT architecture
+  - Middleware
+  - activemq
 ---
 
 import Meta from './_include/activemq.md';
 
 <Meta name="meta" />
 
-## 入门指南
+## Getting started{#guide}
 
-阅读官方文档 [Using Apache ActiveMQ](https://activemq.apache.org/using-activemq) 并结合下面的指南快速掌握它的使用。
+## Login ActiveMQ Console
 
+1. When completed installation of ActiveMQ at Websoft9 console, get the applicaiton's overview, credentials and access information from **My Apps**   
 
-## 配置选项
+2. After accessing using the local computer browser, login to ActiveMQ and you can see the Welcome page
+   ![](./assets/activemq-welcome-websoft9.png)
 
-- [配置消息](http://activemq.apache.org/configuration.html)
+3. Open the link **Manage ActiveMQ broker** to management page
+   ![](./assets/activemq-manage-websoft9.png)
+
+## Use Guide
+
+Read official documentations [Using Apache ActiveMQ](https://activemq.apache.org/using-activemq) and quickly grasp its usage by the following guidelines.  
+
+## Configuration options{#configs}
+
+- [Config ActiveMQ](http://activemq.apache.org/configuration.html)
 - [Web Samples](https://activemq.apache.org/components/classic/documentation/web-samples)
 
-## 管理维护
+## Administer{#administrator}
 
-### 修改控制台密码
+- Change ActiveMQ Console password: By **Compose** of the application from **Websoft9 Console > MyApps**
 
-通过应用的**编排**修改密码
-
-## 故障
+## Troubleshooting{#troubleshooting}

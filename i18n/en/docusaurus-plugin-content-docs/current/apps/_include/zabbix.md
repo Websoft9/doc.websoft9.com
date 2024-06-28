@@ -10,6 +10,6 @@ When referring to this document to use **Zabbix**, please read and ensure the fo
 
 - This application is installed by Websoft9 console.
 
-- The purpose of this application complies with the [GPL-2.0](https://opensource.org/licenses/GPL-2.0) open source license agreement.
+- The purpose of this application complies with the [AGPL-3.0](https://opensource.org/licenses/AGPL-3.0) open source license agreement.
 
 - [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

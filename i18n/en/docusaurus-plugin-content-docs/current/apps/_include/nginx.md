@@ -10,6 +10,6 @@ When referring to this document to use **NGINX**, please read and ensure the fol
 
 - This application is installed by Websoft9 console.
 
-- The purpose of this application complies with the [BSD2Clause](https://opensource.org/licenses/BSD-2-Clause) open source license agreement.
+- The purpose of this application complies with the [nginx](https://github.com/nginx/njs/blob/master/LICENSE) open source license agreement.
 
 - [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

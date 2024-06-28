@@ -7,7 +7,7 @@ slug: /install/huaweicloud
 
 Websoft9 在华为云和 HUAWEICLOUD 都提供了预制镜像，用户可以通过购买的方式实现自动化安装部署 Websoft9 多应用托管平台。  
 
-- [Websoft9 on 华为云](https://marketplace.huaweicloud.com/seller/b8f57c06a0f7e39f4e206560e71afd76)
+- [Websoft9 on 华为云](https://marketplace.huaweicloud.com/contents/29458a42-64b7-4637-aa7c-8bfddea1fb72)
 - [Websoft9 on HUAWEICLOUD](https://marketplace-intl.huaweicloud.com/seller/a0d01460031d46639391c78a61de9a0f)
 
 ## 先决条件
@@ -19,14 +19,7 @@ Websoft9 在华为云和 HUAWEICLOUD 都提供了预制镜像，用户可以通�
 
 ## 规划虚拟机配置
 
-先阅读 [Websoft9 安装要求](./requirements)，了解所需的服务器规格、存储和带宽要求。 
-
-另外，在 华为云 上部署 Websoft9 时，需要填写重要的配置参数，下面先提前说明：
-
-- 操作系统磁盘类型，请选择 **SSD** 相关类型
-- 安全组端口开启：80, 443, 9000
-- 身份验证：密钥对
-
+先阅读 [Websoft9 安装要求](./requirements)，了解所需的服务器规格、SSD 存储和带宽要求。 
 
 ## 安装 Websoft9
 
@@ -34,9 +27,9 @@ Websoft9 在华为云和 HUAWEICLOUD 都提供了预制镜像，用户可以通�
 
 ### 基于云市场安装
 
-1. 本地浏览器访问 [Websoft9 多应用托管平台](https://marketplace.huaweicloud.com/contents/29458a42-64b7-4637-aa7c-8bfddea1fb72) 在华为云商店的产品页面
+1. 本地浏览器访问华为云上的 [Websoft9 多应用托管平台](https://marketplace.huaweicloud.com/contents/29458a42-64b7-4637-aa7c-8bfddea1fb72) 产品页
 
-2. 进入产品详情页后点击 "立即购买" 或 "自定义云主机" 按钮
+2. 进入产品详情页后，点击 "立即购买" 或 "自定义云主机" 按钮
    ![Websoft9 华为云商店](./assets/websoft9-offer-huaweicloud.png)
 
 3. 根据向导提示，完成服务器购买过程，包括：选择计费方式、实例类型、网络和安全组等设置
@@ -64,10 +57,17 @@ Websoft9 在华为云和 HUAWEICLOUD 都提供了预制镜像，用户可以通�
 
 ### 基于 API/CLI 安装
 
-1. 查询镜像 ID
-   ```
-   "owner": "055ae2aa08800fbd2f2dc00d29130294"
-   ```
+基于 API/CLI 安装的核心基础是提前获取 Websoft9 镜像ID，然后再运行自己的 API 或 CLI 命令。
+
+下面提供获取 Websoft9 镜像 ID 的方法：
+
+1. 登录华为云 [API Explorer](https://console.huaweicloud.com/apiexplorer) 查询特定目标区域镜像 ID，查询条件：
+
+   - name: `websoft9-basic-Ubuntu22.04` or `websoft9-standard-Ubuntu22.04`
+   - __imagetype: `market`
+   - Region: 需选择一个[可用区域](https://marketplace.huaweicloud.com/contents/29458a42-64b7-4637-aa7c-8bfddea1fb72)
+
+2. 查询结果中 **ID** 即镜像 ID
 
 ### 基于资源编排安装
 

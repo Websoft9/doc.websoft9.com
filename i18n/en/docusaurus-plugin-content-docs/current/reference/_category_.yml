@@ -1,2 +1,5 @@
-label: "参考"
-position: 18
+position: 20
+label: "Reference"
+collapsible: true
+collapsed: true
+className: "red"

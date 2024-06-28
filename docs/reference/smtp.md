@@ -136,10 +136,11 @@ Directmail 是阿里云的邮件推送服务，相对于免费邮箱来说，自
 
 ## SMTP 诊断
 
+应用设置 SMTP 后，仍然无法发送邮件。那么，可以根据下面的建议，测试 SMTP 的可用性：
 
-- 通过 [SMTP Test Tool](https://www.gmass.co/smtp-test)）确保 SMTP 账号可用
+1. 通过 [SMTP Test Tool](https://www.gmass.co/smtp-test) 测试是否可用
 
-- SMTP 可用，而仍然无法在应用中生效，参考下面诊断途径：
+2. 如果 SMTP 在上一步中验证成功，但仍然无法在应用中生效，则参考下面诊断途径：
 
    - 应用所在的服务器运行 `telnet` 命令 ，检查 SMTP 服务的连通性。下面是一个范例：
 

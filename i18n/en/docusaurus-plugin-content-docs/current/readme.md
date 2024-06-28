@@ -12,62 +12,25 @@ It provides you with the best practices for self-hosting multiple applications.
 | Section              | Description                                                     |
 | ----------------- | -------------------------------------------------------- |
 | [Installation](./install) | Install the Websoft9 Console on your Server |
-| [Login to Websoft9](./login-console)   |  Login to the Websoft9 Console and experience the interactive management platform  |
-| [Quick Start](./starter)   |  Quickly deploy various types of applications using Websoft9  |
-| [Guide](./guide)   | General operations for product lifecycle management, domain configuration, etc.  |
-| [Administrator](./admin)   |  Maintenance guides for upgrades, backups, and configuration guides for data, storage, and security  |
-| [Applications](./apps) |  Quick start and configuration guides for 200+ open-source applications  |
-| [Runtime Environment](./runtime) |  Deploy environments for Java, Python, Node.js, PHP, Go, Ruby, and .NET programs  |
-| [Purchase and Support](./business)   |  Purchase Websoft9 products and receive enterprise-level commercial support services |
-| [Troubleshooting](./faq)        |    Technical issues and troubleshooting   |
+| [Login to Websoft9](./login-console)   |  Log in to the Websoft9 console to interactively experience the hosting platform  |
+| [Getting started](./starter)   |  Use Websoft9 to quickly deploy various types of applications, including one-click template deployment and customized deployment, etc.  |
+| [User guide](./guide)   | Deploying, publishing, and managing applications using Websoft9  |
+| [Administrator](./admin)   |  Operations and maintenance guides for administrator users for user management, upgrades, backups, data, storage, and security configurations  |
+| [Applications](./apps) |  Websoft9 App Store 200+ One-Click Deployment Templates Quick Start and Configuration Guide  |
+| [Web Runtime](./runtime) |  Web runtime for your Java, Python, Node.js, PHP, Go, Ruby, and .NET applications  |
+| [Subscription & Support](./business)   |  Paid use of Websoft9 products for enterprise-level business support services |
+| [Troubleshooting](./faq)        |  Technical problems and failures   |
 
 ## About Websoft9
 
-Websoft9 is an enterprise-level **multi-application hosting platform** designed to enable anyone to easily deploy and manage software on their own infrastructure.
+Websoft9 is a **Self-Hosting PaaS platform** that can deploy multiple applications in your own cloud infrastructure.It brings the extremely simple user experience of deploying an application with just a few clicks into a cloud provider of your choice, whether that is Azure, AWS, GCP, or AlibabaCloud. 
 
-The Websoft9 hosting platform comes with over 200+ [one-click deployment templates](https://www.websoft9.com/apps), covering key applications such as data analysis, AI, websites, enterprise operations, design and creation, low-code, databases, and more. This greatly simplifies the traditional software installation and configuration process. Additionally, it supports custom deployments of programs in Java, Python, Node.js, PHP, Go, Ruby, and .NET.
+Websoft9 offers 200+ one-click deployment application templates and also supports customers in uploading their own Java, PHP, Ruby, and other artifacts to achieve custom application deployments.
+
+Websoft9 comes with 200+ [one-click deployment templates](https://www.websoft9.com/apps) pre-built and supports users' customized deployment of programs such as Java, Python, Node.js, PHP, Go, Ruby and dotNET.
 
 ![](/img/websoft9-dashboard.png)
 
-Websoft9 is positioned as a graphical, user-friendly PaaS platform for innovative organizations, allowing users to utilize it without extensive IT backgrounds or complex technical knowledge. It is based on a microservices architecture and supports the entire lifecycle of software, including discovery, testing, deployment, release, access, maintenance, upgrades, and monitoring. It supports native architectures like Docker and Kubernetes (K8s), and uses Nginx as the application gateway, providing automated domain configuration, HTTPS certificate generation, and access control for applications.
-
-For innovative organizations, Websoft9 eliminates any technical barriers. It helps professionals or companies proficient in using software tools to embark on digital transformation and AI within minutes. It allows users to focus on utilizing the tools, significantly enhancing work efficiency and professional competitiveness.
-
-Websoft9 reduces the application time for cloud-native software from 1-2 days to just 2 minutes. Deploying and managing cloud-native applications is no longer an exclusive skill of professional IT personnel.
-
-Undoubtedly, Websoft9 is a productivity tool worth trying for enterprises, with its value in cost reduction and efficiency improvement being fully evident.
-
-### Business Value
-
-In the era of cloud computing, innovative organizations are characterized by "small steps, quick runs, and agility". This means:
-
-- **Streamlined Architecture**: Agile self-organization of small teams.
-- **Rapid Iteration**: Prompt response to market and technological changes.
-- **Diverse Tools**: Utilizing a variety of software to spur innovation.
-- **Open Collaboration**: Knowledge sharing to foster growth.
-
-To avoid traditional, cumbersome digitalization projects, innovative organizations need flexible technical solutions that match their pace.
-
-The flourishing open-source ecosystem provides a wealth of options, allowing for the rapid integration of specialized small-scale software and components to build application systems quickly.
-
-Websoft9 offers a cloud-native multi-application hosting platform, enabling business units to quickly deploy and operate open-source tools, achieve integrated combinations, and address business challenges. By avoiding heavy software and outsourcing dependencies, Websoft9 accelerates organizational innovation through **combinatorial innovation**.
-
-### Technical Value
-
-In the rapidly evolving field of technology, Websoft9's hosting services provide the stability and innovation that enterprises need:
-
-- **One stop integration**: Our PaaS platform offers plug-and-play integration of open-source software, enabling seamless connection of diverse technical components for enterprises.    
-- **Professional Technical Support**: Our technical team provides round-the-clock professional operational support, ensuring system continuity and efficiency for enterprises.    
-- **High reliability**: Our service design adheres to the strictest availability standards, guaranteeing the continuous operation of critical business functions.  
-- **Rich knowledge resources**: We have built a comprehensive knowledge base covering a wide range of issues, supporting enterprises in quickly resolving technical problems through self-service.  
-- **Security Guarantee**: We commit to providing state-of-the-art security measures and regular compliance reviews to ensure the safety of enterprise data and applications.  
-- **Customized Services**: We recognize that each enterprise has unique needs, and thus offer personalized service plans to meet specific business requirements.  
-
-Websoft9's hosting services are dedicated to providing enterprises with a worry-free technical environment, allowing them to focus on core business development and market competition.
-
-## Usage Scenarios
-
-Refer to: [Websoft9 Solution](https://www.websoft9.com/solutions)
 
 ## Hosting Options
 
@@ -92,16 +55,6 @@ In light of this, Websoft9 offers users a range of flexible hosting options:
 
 - User manages the server independently
 - User delegates full server management to Websoft9
-
-## Open Source and Free
-
-Open source software, with its efficient social production model, has become an indispensable component in the cloud-native era. Organizations of all kinds use open source software to handle their business operations and enhance their technical capabilities.   
-
-Websoft9 originates from open source and gives back to the open source community. The benefits of open source to the Websoft9 ecosystem are evident:  
-
-* Free for users
-* Software is 100% transparent and open, reducing the cost of trust
-* User participation, fully embracing the social collaboration of knowledge creation
 
 ## Deployment Templates
 

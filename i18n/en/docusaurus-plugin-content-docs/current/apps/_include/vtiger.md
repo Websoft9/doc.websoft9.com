@@ -10,6 +10,6 @@ When referring to this document to use **Vtiger**, please read and ensure the fo
 
 - This application is installed by Websoft9 console.
 
-- The purpose of this application complies with the [MPL-2.0](https://opensource.org/licenses/MPL-2.0) open source license agreement.
+- The purpose of this application complies with the [vtiger](https://www.vtiger.com/open-source-crm/vtiger-public-license/) open source license agreement.
 
 - [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

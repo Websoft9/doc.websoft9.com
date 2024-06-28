@@ -17,7 +17,10 @@ We only provide English and Chinese language support.
 - **English files**: /i18n/docusaurus-plugin-content-docs/current
 - **Chinese files**: /docs
 
-If you want use tools for translation, we suggest you use [DeepL](https://www.deepl.com/)
+If you want use tools for translation, we suggest you:
+
+1. Use [DeepL](https://www.deepl.com/) and [Google Translate](https://translate.google.com/) to translate at first.
+2. Then use [DeepL Write](https://www.deepl.com/zh/write) checking the results of translations
 
 ### Test it
 

@@ -10,6 +10,6 @@ When referring to this document to use **Redis **, please read and ensure the fo
 
 - This application is installed by Websoft9 console.
 
-- The purpose of this application complies with the [BSD-3-Clause-LBNL](https://opensource.org/BSD-3-Clause-LBNL) open source license agreement.
+- The purpose of this application complies with the [redis](https://redis.io/legal/licenses/) open source license agreement.
 
 - [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

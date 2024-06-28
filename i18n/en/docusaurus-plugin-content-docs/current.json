@@ -15,10 +15,6 @@
     "message": "For Cloud",
     "description": "The label for category 云平台安装 in sidebar docs"
   },
-  "sidebar.docs.category.应用中心": {
-    "message": "Applications",
-    "description": "The label for category 应用中心 in sidebar docs"
-  },
   "sidebar.docs.category.开发运维": {
     "message": "DevOps",
     "description": "The label for category 开发运维 in sidebar docs"
@@ -407,9 +403,9 @@
     "message": "By Business",
     "description": "The label for category 通用方案 in sidebar docs"
   },
-  "sidebar.docs.category.购买与支持": {
+  "sidebar.docs.category.购买": {
     "message": "Subscription",
-    "description": "The label for category 购买与支持 in sidebar docs"
+    "description": "The label for category 购买 in sidebar docs"
   },
   "sidebar.docs.category.订单处理": {
     "message": "Manage Subscription",
@@ -422,10 +418,6 @@
   "sidebar.docs.category.清单": {
     "message": "Legal Fleet",
     "description": "The label for category 清单 in sidebar docs"
-  },
-  "sidebar.docs.category.用户指南": {
-    "message": "User Guide",
-    "description": "The label for category 用户指南 in sidebar docs"
   },
   "sidebar.docs.category.应用管理": {
     "message": "Manage Application",
@@ -455,9 +447,9 @@
     "message": "HUAWEI Cloud",
     "description": "The label for category 华为云 in sidebar docs"
   },
-  "sidebar.docs.category.管理员指南": {
+  "sidebar.docs.category.管理员": {
     "message": "Administrator",
-    "description": "The label for category 管理员指南 in sidebar docs"
+    "description": "The label for category 管理员 in sidebar docs"
   },
   "sidebar.docs.category.配置": {
     "message": "Configuration",
@@ -544,7 +536,7 @@
     "description": "The label for category Docker in sidebar docs"
   },
   "sidebar.docs.category.参考": {
-    "message": "Fleet",
+    "message": "Reference",
     "description": "The label for category 参考 in sidebar docs"
   },
   "sidebar.docs.category.Apache": {
@@ -666,5 +658,105 @@
   "sidebar.docs.category.发行版": {
     "message": "发行版",
     "description": "The label for category 发行版 in sidebar docs"
+  },
+  "sidebar.docs.category.协议": {
+    "message": "Legal",
+    "description": "The label for category 协议 in sidebar docs"
+  },
+  "sidebar.docs.category.快速入门": {
+    "message": "Getting Started",
+    "description": "The label for category Getting Started in sidebar docs"
+  },
+  "sidebar.docs.category.使用程序环境部署应用": {
+    "message": "使用程序环境部署应用",
+    "description": "The label for category 使用程序环境部署应用 in sidebar docs"
+  },
+  "sidebar.docs.category.公有云安装": {
+    "message": "公有云安装",
+    "description": "The label for category 公有云安装 in sidebar docs"
+  },
+  "sidebar.docs.category.指南": {
+    "message": "Guides",
+    "description": "The label for category Guides in sidebar docs"
+  },
+  "sidebar.docs.category.规划与部署应用": {
+    "message": "规划与部署应用",
+    "description": "The label for category 规划与部署应用 in sidebar docs"
+  },
+  "sidebar.docs.category.规划基础设施": {
+    "message": "规划基础设施",
+    "description": "The label for category 规划基础设施 in sidebar docs"
+  },
+  "sidebar.docs.category.管理与配置应用": {
+    "message": "管理与配置应用",
+    "description": "The label for category 管理与配置应用 in sidebar docs"
+  },
+  "sidebar.docs.category.配置应用的域名与安全访问": {
+    "message": "配置应用的域名与安全访问",
+    "description": "The label for category 配置应用的域名与安全访问 in sidebar docs"
+  },
+  "sidebar.docs.category.集成第三方网关": {
+    "message": "集成第三方网关",
+    "description": "The label for category 集成第三方网关 in sidebar docs"
+  },
+  "sidebar.docs.category.管理数据库": {
+    "message": "管理数据库",
+    "description": "The label for category 管理数据库 in sidebar docs"
+  },
+  "sidebar.docs.category.管理容器": {
+    "message": "管理容器",
+    "description": "The label for category 管理容器 in sidebar docs"
+  },
+  "sidebar.docs.category.管理服务器": {
+    "message": "管理服务器",
+    "description": "The label for category 管理服务器 in sidebar docs"
+  },
+  "sidebar.docs.category.系统托管": {
+    "message": "系统托管",
+    "description": "The label for category 系统托管 in sidebar docs"
+  },
+  "sidebar.docs.category.集成云平台": {
+    "message": "集成云平台",
+    "description": "The label for category 集成云平台 in sidebar docs"
+  },
+  "sidebar.docs.category.平台配置": {
+    "message": "平台配置",
+    "description": "The label for category 平台配置 in sidebar docs"
+  },
+  "sidebar.docs.category.运行自动化任务": {
+    "message": "运行自动化任务",
+    "description": "The label for category 运行自动化任务 in sidebar docs"
+  },
+  "sidebar.docs.category.监控应用的运行": {
+    "message": "监控应用的运行",
+    "description": "The label for category 监控应用的运行 in sidebar docs"
+  },
+  "sidebar.docs.category.管理 Websoft9 控制台": {
+    "message": "管理 Websoft9 控制台",
+    "description": "The label for category 管理 Websoft9 控制台 in sidebar docs"
+  },
+  "sidebar.docs.category.应用": {
+    "message": "Apps",
+    "description": "The label for category Apps in sidebar docs"
+  },
+  "sidebar.docs.category.备份": {
+    "message": "备份",
+    "description": "The label for category 备份 in sidebar docs"
+  },
+  "sidebar.docs.category.用户": {
+    "message": "用户",
+    "description": "The label for category 用户 in sidebar docs"
+  },
+  "sidebar.docs.category.故障": {
+    "message": "故障",
+    "description": "The label for category 故障 in sidebar docs"
+  },
+  "sidebar.docs.category.如何解决问题？": {
+    "message": "如何解决问题？",
+    "description": "The label for category 如何解决问题？ in sidebar docs"
+  },
+  "sidebar.docs.category.方法论": {
+    "message": "方法论",
+    "description": "The label for category 方法论 in sidebar docs"
   }
 }
