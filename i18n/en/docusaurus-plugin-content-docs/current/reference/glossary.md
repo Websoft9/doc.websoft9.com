@@ -22,13 +22,31 @@ Use enterpise as a modifier. E.g. **customized needs**, **customized deployment*
 
 Use application-centric not application-focused
 
+## major global cloud platforms
+
+ Major global cloud platforms meaning market-leading cloud platform companies, please use major not use mainstream 
+
 ## documentation
 
 Use **documentation**, don't use document
 
+## configure
+
+Use **configure**, don't use config which is not formal
+
 ## Internet IP
 
 Use Internet IP not Public IP
+
+## Private Cloud, Public Cloud
+
+- Public Cloud is the cloud infrastructure provider
+- Private Cloud is your own infrastructure
+
+## on-premises deployment, cloud deployment
+
+- The organization chose an **on-premises deployment** to maintain full control over their infrastructure.
+- The company opted for a **cloud deployment** to take advantage of scalability and cost-efficiency.
 
 ## access
 
@@ -97,3 +115,68 @@ Use **Websoft9 Console** as a whole, Console is ambiguous when used on its own
 
 Use **CLI**, not cli, and no need to use full-text **Command line Interface**
 
+## load
+
+The homepage will **load** when you enter the URL. Don't use appear, display, show these all mean content will show up on a exist page.
+
+## distribution, edition, version
+
+1. **distribution**: A packaged set of software, often including an operating system and related applications, designed for a specific purpose or audience.
+2. **edition**: A particular form or variant of a software product, typically distinguished by features or intended user base.
+3. **version**: A specific release of software, identified by a unique number, indicating updates, improvements, or fixes.
+
+## Features
+
+"Features" page highlights the key functionalities and capabilities of the software, demonstrating what it can do and how it benefits users.  
+
+Don't use **function overview** or **function** or **highlights**
+
+## named volume, bind mount
+
+- named volume: Managed by Docker, stored in Docker's storage, persistent.
+- bind mount: Links host directory/file to container, flexible, direct access to host filesystem.
+
+## backend, dashboard, console
+
+- Backend only used if application has frontend
+- Dashboard: Focuses on monitoring and visualization for high-level insights.
+- Console: Focuses on management, control, and detailed interaction with the system.
+
+## reset password
+
+Use reset password, don't use retrieve password or recover password
+
+## control node, managed nodes
+
+- **Control node**: The central system that runs Ansible commands and manages configurations.
+
+- **Managed nodes**: The systems or servers that are configured and managed by the control node using Ansible.
+
+## GUI
+
+GUI means Graphical User Interface. Use GUI not visualization
+
+## demo
+
+Use demo not demonstration
+
+## rewrite
+
+Use rewrite not pseudo-static
+
+## purchase, buy
+
+Use purchase not buy, buy is not informal
+
+## login, log in
+
+- Enter your login credentials
+- Please log in to your account.
+
+## email
+
+Use email not use e-mail
+
+## operating system, OS
+
+Use operating system not OS, OS is not informal

@@ -29,7 +29,7 @@ Websoft9 以及应用的可视化 Volumes 备份（回复）功能，主要通�
    - 存储路径选择 **本地文件夹或磁盘**，文件夹路径设置为： 【Computer】>【backups】  
      备份会直接保存到服务器目录 */data/websoft9/vl_backups*（它是 Duplicati 容器挂载的备份目录）  
 
-     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/websoft9/websoft9-duplicati-setlocalsource.png)
+     ![](./assets/websoft9-duplicati-setlocalsource.png)
 
 
    - 存储路径选择 **SFTP**，支持保存到 Websoft9 所在的服务器或第三方服务器
@@ -39,7 +39,7 @@ Websoft9 以及应用的可视化 Volumes 备份（回复）功能，主要通�
 
 5. 设置源数据，即备份对象。请点击【计算机】>【Source】列出可备份的 Volumes
 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/websoft9/websoft9-duplicati-setsource.png)
+   ![](./assets/websoft9-duplicati-setsource.png)
    
    - 以 websoft9_ 开头的文件夹，是 Websoft9 自身的数据目录
    - 其他文件夹是应用目录
@@ -50,7 +50,7 @@ Websoft9 以及应用的可视化 Volumes 备份（回复）功能，主要通�
 7. 设置其他选型
 
 8. 设置完成后，可立即运行备份
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/websoft9/websoft9-duplicati-editbkfile.png)
+   ![](./assets/websoft9-duplicati-editbkfile.png)
 
 ### 恢复
 

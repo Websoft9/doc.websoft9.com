@@ -43,7 +43,7 @@ Websoft9 客户成功团队的理念是：“消除技术复杂性，让客户�
 
 ### 专业服务
 
-[专业支持](https://www.websoft9.com/services)是 Websoft9 客户成功团队的一种**按需付费**的外延服务。   
+[专业服务](https://www.websoft9.com/services)是 Websoft9 客户成功团队的一种**按需付费**的外延服务。   
 
 它以**数字化专业顾问**作为服务主线，帮助充分发挥 Websoft9 多应用托管平台的价值，获得更好的回报：
 
