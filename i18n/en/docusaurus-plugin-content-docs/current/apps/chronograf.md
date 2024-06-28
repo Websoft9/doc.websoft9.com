@@ -2,8 +2,8 @@
 title: Chronograf
 slug: /chronograf
 tags:
-  - InfluxDB管理
-  - InfluxDB可视化
+  - InfluxDB Administration
+  - InfluxDB Visualization
   - chronograf 
 ---
 
@@ -11,28 +11,26 @@ import Meta from './_include/chronograf.md';
 
 <Meta name="meta" />
 
-## 入门指南{#guide}
+## Getting started{#guide}
 
-### 连接 InfluxDB {#wizard}
+### Connect to InfluxDB{#wizard}
 
-下面以连接 InfluxDB2.x 为例，详细介绍连接方式：
+The following is an example of how to connect to InfluxDB2.x:
 
-1. 准备好需要管理的 InfluxDB 
+1. Prepare the InfluxDB2.x 
 
-2. 访问 Chronograf，增加一个 InfluxDB 连接，首选勾选 "InfluxDB v2 Auth"，然后填写如下参数：
+2. Access Chronograf, create an InfluxDB connection, check the "InfluxDB v2 Auth" and fill in the following parameters:
    
-   - Connection URL: InfluxDB 的访问 URL
-   - Connection Name： 自定义
-   - Organization：InfluxDB 的 organization（必填项）
-   - Token：InfluxDB 的 token
+   - Connection URL: InfluxDB's access URL.
+   - Connection Name: Customized
+   - Organization: organization of InfluxDB (required)
+   - Token: InfluxDB's token
 
+## Configuration options{#configs}
 
-## 配置选项{#configs}
+- Connect to multiple databases (√)
+- Supported InfluxDB versions: InfluxDB 1.x, InfluxDB 2.x
 
-- 连接多个数据库（√）
-- 支持的 InfluxDB 版本：InfluxDB 1.x, InfluxDB 2.x
+## Administer{#administrator}
 
-## 管理维护{#administrator}
-
-
-## 故障
+## Troubleshooting{#troubleshooting}
