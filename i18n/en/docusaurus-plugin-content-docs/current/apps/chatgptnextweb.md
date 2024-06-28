@@ -5,55 +5,61 @@ tags:
   - ChatGPT
   - AI
   - OpenAI
-  - 人工智能
-  - 聊天
+  - Artificial Intelligence
+  - Chat
 ---
 
 import Meta from './_include/chatgptnextweb.md';
 
 <Meta name="meta" />
 
-## 入门指南{#guide}
+## Getting started{#guide}
 
-### 初始化{#wizard}
+### Initial setup{#wizard}
 
-Websoft9 控制台安装 ChatGPT Next Web 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
+1. When completed installation of ChatGPT Next Web at Websoft9 console, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
-1. 点击 ChatGPT Next Web 左下角的 **设置** 按钮
+2. Select **Settings** at the bottom left corner of ChatGPT Next Web.
 
-2. 找到设置项的 **访问密码**，设置从 Websoft9 控制台获得的密码
+3. Locate the **Access Password** in the Settings section and set the password from the Websoft9 console.
 
-3. 模型（Model）列表中选择一个所需的项
+4. Select a item from the Model list.
 
-3. 开始使用
+5. Start to use it
 
-### 切换 Azure 服务
+### Switch Azure Services
 
-Azure 提供了优化后的 OpenAPi 服务，ChatGPT Next Web 支持 Azure AI 的接入
+Azure provides optimized OpenAPi services, and ChatGPT Next Web supports access to Azure AI.
 
-1. 编辑 ChatGPT Next Web 编排文件 .env
+1. Select **My Apps > ChatGPT Next Web > Compose > Prompt Adjustment**, edit the file *.env*  
 
-2. 删除 OpenAI 的相关变量，输入 Azure 相关的信息
+2. Delete OpenAI related variables and enter Azure related information  
    ```
    AZURE_URL=
    AZURE_API_KEY=
    AZURE_API_VERSION=2023-12-01-preview
    ```
 
-3. 重建应用后生效
+3. Rebuild the application to take effect  
 
-### 节省成本
+### Cost savings
 
-- 尽量使用**新的聊天**，减少不必要的连续对话：连续对话会消耗大量算力
-- 设置合适的**附带历史消息数量**：设置太大会消耗大量算力
-- 选用 preview 模型：preview 是官方提供的预览版模型，定价是正式版的1/5
+- Use **New Chat** to minimize unnecessary ongoing conversations: ongoing conversations consume a lot of processing power.  
+- Set the right number of **Attached Messages Count**: setting it too high consumes a lot of power.  
+- Use the preview model: preview is the official preview model, priced at 1/5 the cost of the full version.  
 
-## 配置选项{#configs}
+## Purchase OpenAI 
 
-- 多语言（√）
-- 多模型提供商（√）
-- OpenAI 多版本（√）
-- 多用户（√）
-- 移动端（√）
+Websoft9 can procure OpenAI API services from Azure on behalf of our [Customer Success Team](./helpdesk).
 
-## 故障
+## Configuration options{#configs}
+
+- Multilingual (√)
+- Multi-model provider (√)
+- OpenAI Multiple versions (√)
+- Multi-user (√)
+- Mobile (√)
+
+## Administer{#administrator}
+
+## Troubleshooting{#troubleshooting}
