@@ -2,22 +2,22 @@
 title: ClickHouse
 slug: /clickhouse
 tags:
-  - 列数据库
+  - Column Database
   - clickhouse
-  - 数据仓库
+  - Data warehouse
 ---
 
 import Meta from './_include/clickhouse.md';
 
 <Meta name="meta" />
 
-## 入门指南{#guide}
+## Getting started{#guide}
 
-### 初始化{#wizard}
+### Initial setup{#wizard}
 
-1. Websoft9 控制台安装 ClickHouse 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中 “访问后台”
+1. When completed installation of ClickHouse at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
-2. 输入用户名和密码后，可执行下面命令：
+2. After entering the username and password, you can run the following command at ClickHouse Console:
 
     ```
     show users
@@ -26,10 +26,8 @@ import Meta from './_include/clickhouse.md';
     drop user websoft9
     ```
 
-## 配置选项{#configs}
+## Configuration options{#configs}
 
+## Administer{#administrator}
 
-## 管理维护{#administrator}
-
-## 故障
-
+## Troubleshooting{#troubleshooting}

@@ -4,7 +4,7 @@ This is the documentation repository of [Websoft9](https://github.com/Websoft9/w
 
 ## Contribute for it
 
-It based on [Docusaurus 3](https://docusaurus.io/) and you just need to edit markdown files for it.
+It based on [Docusaurus](https://docusaurus.io/) and you just need to edit markdown files for it.
 
 ### DevOps
 

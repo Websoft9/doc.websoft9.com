@@ -3,11 +3,19 @@ sidebar_position: 1
 slug: /faq
 ---
 
-# 常见问题
+# Troubleshooting
 
 请根据您的工作场景参考对应的问题。如果找不到您所需的问题，请联系[技术支持](./helpdesk)。  
 
 ## Websoft9 问题
+
+#### 500 Internal Server Error?
+
+问题描述：查看 websoft9-apphub 容器的日志，出现 500 Internal Server Error  
+原因分析：websoft9-apphub 容器工作异常或它与被连接的其他微服务通讯异常，运行下面的命令查看错误原因   
+```
+docker exec -it websoft9-apphub cat /websoft9/apphub/logs/apphub_error.log
+```
 
 #### Websoft9 核心功能不可用？
 
@@ -82,6 +90,13 @@ slug: /faq
 
 重建应用后生效。  
 
+#### 容器应用无法远程访问？{#noremote}
+
+导致这个问题的可能原因有三点：
+
+1. 端口没有正确映射到宿主机
+2. 容器内部拒绝远程访问
+3. 服务器安全组对应的端口没有开放
 
 #### 如何清空应用的容器日志？
 

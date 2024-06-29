@@ -2,8 +2,8 @@
 title: Chatwoot
 slug: /chatwoot
 tags:
-  - 客户管理
-  - 客户沟通平台
+  - Customer Management
+  - Customer Communication Platform
   - chatwoot
 ---
 
@@ -11,18 +11,18 @@ import Meta from './_include/chatwoot.md';
 
 <Meta name="meta" />
 
-## 入门指南{#guide}
+## Getting started{#guide}
 
-### 初始化{#wizard}
+### Initial setup{#wizard}
 
-Websoft9 控制台安装 Chatwoot 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息
+1. When completed installation of Chatwoot at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
+2. Complete the install wizard step by step
 
-## 配置选项{#configs}
+## Configuration options{#configs}
 
-- 多语言（✅）
+- Multilingual (√)
 
-## 管理维护{#administrator}
+## Administer{#administrator}
 
-
-## 故障
+## Troubleshooting{#troubleshooting}

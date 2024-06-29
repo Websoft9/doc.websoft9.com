@@ -1,5 +1,5 @@
-position: 3
-label: "存储"
+position: 6
+label: "服务"
 collapsible: true
 collapsed: true
 className: "red"

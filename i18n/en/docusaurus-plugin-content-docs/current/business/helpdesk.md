@@ -4,98 +4,66 @@ slug: /helpdesk
 description: Websoft9 客户成功团队从咨询、方案和技术支持全面的服务客户
 ---
 
-# 技术支持
+# Support
 
-## 客户成功
-
-Websoft9 客户成功团队的理念是：“消除技术复杂性，让客户工作更简单”。 
-
-我们立志于成为客户的 **企业应用管家** 的角色，向用户提供：云应用的咨询与全生命周期托管服务，解放创新性组织的生产力。    
+You can get any support from **Websoft9 Customer Success Team** who provides customers with a unified lifecycle from purchase consultation, configuration delivery, and technical support.  
 
 ![](/img/cst-websoft9.png)
 
 
-## 支持范围
+## Scope of support
 
-对于订阅 Websoft9 多应用托管平台的客户，我们提供免费支持和专业服务两种方式：
+Websoft9 offer both Standards support and Professional services for subscription customer:
 
-### 免费支持
+### Standards support
 
-免费支持是为付费的订阅客户提供的一种标准化的产品支持，它以**保障产品稳定运行**作为服务主线：
+Standard Support is a **free** product support for subscription customers, it includes:
 
-- 关于  Websoft9 产品功能、架构、多应用组合的咨询；
+- Consultation on the features, architecture, and multiple applications combinations of Websoft9;
 
-- 使用、配置 Websoft9 产品的文档；
+- Documentation for using and configuring Websoft9;
 
-- Websoft9 产品 / API 相关的使用咨询、技术问题、故障诊断、异常上报；
+- Usage consultation, technical issues, fault diagnosis, and anomaly reporting related to Websoft9 functions and APIs;
 
-- 基于 Websoft9 应用商店部署的应用问题的故障诊断（非应用商店部署的应用仅提供咨询建议）；
+- Issue diagnosis for applications deployed based on the Websoft9 AppStore 
 
-- 运行 Websoft9 的基础设置或操作系统故障问题技术支持（与基础设施提供商协作支持）；
+- Consultation and advice are provided for applications not deployed through the AppStore;
 
-- 与 Websoft9 的管理控制台或其他 Websoft9 官方工具相关的问题；
+- Technical support with with infrastructure providers for operating system issues running Websoft9;
 
-- 与 Websoft9 产品相关的部分第三方软件配置指导以及故障排查；
+- Issues related to the Websoft9 Console or other tools powered by Websoft9;
 
-- 与 Websoft9 相关的账号问题咨询支持；
+- Configuration guidance and troubleshooting for certain third-party software related to Websoft9;
 
-- 与 Websoft9 相关的财务合同问题的咨询支持；
+- Consultation support for account issues related to Websoft9;
 
-### 专业服务
+- Consultation support for financial and contract issues related to Websoft9.
 
-[专业支持](https://www.websoft9.com/services)是 Websoft9 客户成功团队的一种**按需付费**的外延服务。   
+### Professional services
 
-它以**数字化专业顾问**作为服务主线，帮助充分发挥 Websoft9 多应用托管平台的价值，获得更好的回报：
+[Professional Services](https://www.websoft9.com/services) is a **pay-as-you-go** technology service provided by the Websoft9 Customer Success Team.  
 
-- 应用系统代维服务（[下载白皮书](./assets/websoft9-app-hosting.pdf)）
-- 低代码开发服务
-- 云原生架构咨询服务
-- 私有云应用服务
-- 多应用集成服务
+## Service level agreement (SLA)
 
-## 服务标准（SLA）
+Refer to: [Websoft9 SLA](./legal/sla)
 
-参考：[Websoft9 服务等级协议（SLA）](./legal/sla)
+## Contact us{#contact}
 
-## 联系方式{#contact}
-
-有多种渠道可以联系我们的人工支持：
+It is recommended to contact us through the following channels:
   
-| 支持渠道 | 服务时间（周天×日时×年天） | 适用场景| 使用入口|
+| Channel | Time | Scenes| Access|
 | --- | --- | --- | --- |
-| 工单（推荐） | 7×24×365 / 任何时间| 处理故障 | [访问工单系统](https://www.websoft9.com/ticket)|
-| 用户社区 | 7×24×365 / 任何时间| 用户交流 | [微信群和论坛](./contribute#community)|
-| 邮箱 | 7×24×365 / 任何时间| 处理故障，合作 | help@websoft9.com|
-| 微信（扫一扫） | 5×10×365 / 8:00--18:00 | 交流咨询 | ![](/img/wx-lz.png) ![](/img/wx-cdl.png) |
-| 电话 | 7×10×365 / 8:00--18:00| 售前或紧急故障 | **0731-8957 2759**|
+| Ticket | 7×24×365 / 24h| issues | [Access Websoft9 ticket system](https://www.websoft9.com/ticket)|
+| Email | 7×24×365 / 24h| issues and Partnership | help@websoft9.com|
+| Phone | 7×10×365 / 8:00--18:00| presales or urgent issues | **+86731-8957 2759**|
+| Community | 7×24×365 / 24h| issues discussion | [Websoft9 open source community](./contribute#community)|
 
+## FAQ
 
-  
-选择哪一种联系方式？   
+#### Do I need to register Ticket System?
 
-- 工作日 8:00--18:00 是我们标准的工作时间段，在此时间区间内，欢迎通过**微信或电话**联系我们
-- 节假日或其他非工作时间段，建议通过**工单和邮件** 联系我们 
+No, you don't need to register [Websoft9 Ticket System](https://www.websoft9.com/ticket), it will reply to you email.
 
+### What languages for Websoft9 support?
 
-## 问题解答
-
-#### 工单系统需要注册吗？
-
-[工单系统](https://www.websoft9.com/ticket) 不需要注册，它会通过将内容回复到您的邮箱中。
-
-#### 如何查看工单反馈？
-
-如果不注册，请登录**邮箱**查看反馈并给予更多回复  
-如果注册，可以登录工单系统 或 登录邮箱 查看反馈并给予更多回复 
-
-#### 无法联系到人工？
-
-首先，我们可以向您保证：我们的客服成功团队时刻准备为用户服务，我们也非常乐意与用户沟通。  
-
-但有时候您没有联系到我们，可能是一些例外因素导致：电话占线或转接失败，午休，上厕所，消息没看到等。   
-
-此时，您可以等一会再联系或等待回复，也可以更换联系渠道再试。
-
-#### 免费用户如何获取支持？
-
-**免费**用户通过 Github [提交issue](https://github.com/Websoft9) 获得支持
+English and Chinese

@@ -1,72 +1,56 @@
 ---
 title: Caddy
 slug: /caddy
-tags:
-  - HTTP 服务器
+tags: /caddy
+  - HTTP Server
   - https
-  - 微服务
-  - 云原生
+  - Microservice
+  - Cloud Native
 ---
 
 import Meta from './_include/caddy.md';
 
 <Meta name="meta" />
 
-## 入门指南{#guide}
+## Getting started{#guide}
 
-Websoft9 提供的 Caddy 应用两个用途：
+Use Caddy on Websoft9 for the following:
 
-- 直接运行静态网站
-- 作为反向代理服务
+- Deploy a static website
+- Running the reverse proxy service for application
 
-下面我们分别对它的使用方法做出详细的说明
+### Deploy a static website
 
-### 部署静态网站
+1. When completed installation of Caddy at **Websoft9 Console**, get the applicaiton's overview and **access** information from **My Apps**  
 
-Websoft9 控制台安装 Caddy 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取访问信息。    
+2. Refer to [Deploying Applications Based on Program Environment](./runtime) to deploy a static website.
 
-支持两种**上传代码**的部署方式：
+### Reverse proxy applications
 
-#### 通过Git 仓库部署
+Follow the steps below to learn Caddy's reverse proxy:
 
-1. 通过 "我的应用" > "Caddy 容器" 的 **编排** 标签页，进入应用的 Git 仓库
-2. Git 上传自己的静态网站文件到 site 目录
-3. Websoft9 控制台**重建**应用后生效
+1. Select **Websoft9 Console > App Store**, install applications **Netdata** and **Caddy**
 
-#### 容器中下载源码部署
-
-1. 进入容器的 exec 命令模式
-2. 将源码下载并解压到 */srv* 目录下
-3. Websoft9 控制台**重启**应用后生效
-
-### 反向代理其他应用
-
-参考下面的步骤，体验 Caddy 方向代理的能力：
-
-1. Websoft9 控制台 "应用商店" 分别运行一个 **Netdata** 和 **Caddy**
-
-2. 通过 "我的应用" > "Caddy" 的**编排** 标签页中修改 src/Caddyfile 为如下的内容
+2. Select **My Apps > Caddy > Compose > Go to Edit Repository**, modify the *src/Caddyfile* as follows:
    ```
    :80 {
     reverse_proxy http://netdata_h31py:19999
    }
    ```
 
-3. 重启 Caddy 应用，访问 Caddy 的 URL，就会发现应用已指向了 Netdata 的页面
+3. Restart the Caddy application, access Caddy URL, and you will see the Netdata page
 
-在 Websoft9 托管平台中，上面的 Netdata 访问的路由： 用户 > Websoft9 网关 > Caddy > Netdata
+In the Websoft9, the Netdata access is routed: `User browser> Websoft9 Gateway > Caddy > Netdata container`
 
+## Configuration options{#configs}
 
-## 配置选项{#configs}
-
-- 容器中应用根目录：*/srv*
-- Caddy 容器端口：80
-- 监控所有 URL 的通配符写法： `:80`
+- Application root directory in the container: */srv*
+- Caddy container port: `80`
 - [API](https://caddyserver.com/docs/quick-starts/api)
-- CLI：`caddy help`
-- 配置[模板](https://caddy.community/c/wiki/13)
-- Caddy 配置文件：*/etc/caddy/Caddyfile*，已挂载到编排文件 /src/Caddyfile。 
+- CLI: `caddy help`
+- Configuration [template](https://caddy.community/c/wiki/13)
+- Caddy configuration file in container(have mounted bind): */etc/caddy/Caddyfile*
 
-## 管理维护{#administrator}
+## Administer{#administrator}
 
-## 故障
+## Troubleshooting{#troubleshooting}

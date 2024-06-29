@@ -64,7 +64,7 @@ slug: /admin/security_insertcode
 3. 登录WordPress后台，安装安全插件[Wordfence Scan Enabled](https://wordpress.org/plugins/wordfence/)
 
 5. 运行 Wordfence Scan Enabled，启动网站健康检查
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-wordfence-websoft9.png)
+   ![](./assets/wordpress-wordfence-websoft9.png)
    
 4. 对于【Critical】标记的结果，手工一一处理
 

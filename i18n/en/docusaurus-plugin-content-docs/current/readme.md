@@ -31,6 +31,7 @@ Websoft9 comes with 200+ [one-click deployment templates](https://www.websoft9.c
 
 ![](/img/websoft9-dashboard.png)
 
+## Features
 
 ## Hosting Options
 
