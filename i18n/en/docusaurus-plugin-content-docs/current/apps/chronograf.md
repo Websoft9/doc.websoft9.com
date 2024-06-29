@@ -22,8 +22,8 @@ The following is an example of how to connect to InfluxDB2.x:
 2. Access Chronograf, create an InfluxDB connection, check the "InfluxDB v2 Auth" and fill in the following parameters:
    
    - Connection URL: InfluxDB's access URL.
-   - Connection Name: Customized
-   - Organization: organization of InfluxDB (required)
+   - Connection Name: Your customization
+   - Organization: Organization of InfluxDB (required)
    - Token: InfluxDB's token
 
 ## Configuration options{#configs}
