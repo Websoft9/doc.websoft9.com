@@ -1,7 +1,7 @@
 ---
 title: Caddy
 slug: /caddy
-tags: /caddy
+tags: 
   - HTTP Server
   - https
   - Microservice
