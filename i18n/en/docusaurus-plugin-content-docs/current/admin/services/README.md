@@ -3,21 +3,25 @@ sidebar_position: 1
 slug: /backend-service
 ---
 
-#  Websoft9 后台服务
+#  Websoft9 Backend
 
-在阅读本节内容之前，请先通过 [Websoft9 架构](./developer/architecture) 对 Websoft9 有一个全面的架构认知。  
+Before reading this section, please read [Websoft9 Architecture](./developer/architecture) 
 
-## 关于
+## Services
 
-维护和管理 Websoft9 后台服务，实际上只需要关注两个技术组件：
+Maintaining and managing Websoft9's back-end services involves only the following two aspects: 
 
-- [容器组件](./parameter#docker-services)：构成 Websoft9 控制台的微服务
-- Systemd 系统服务 websoft9.service：协调容器组件的调度和通信传递
+- [Containers of Websoft9 Console](./parameter#docker-services): Microservices for the Websoft9 Console
+- [websoft9.service](./parameter#service): Systemd service that coordinates of Websoft9 containers
 
-## 设置后台服务
+## Settings
 
-Websoft9 后台服务基于 Docker Compose 运行，只需在[Websoft9 容器编排文件目录](./parameter#path)找到相关文件即可轻松编排。  
+### Set containers of Websoft9 backend
 
-### 为网关容器映射更多的宿主机端口{#proxy-bind-port}
+The Websoft9 container service is started using Docker Compose, via its [.env file](./parameter#path) and [docker-compose.yml file](./parameter#path). 
 
-修改 Websoft9 后台服务的 docker-compose.yml 文件的 **proxy** 服务，为它映射更多的 port 到宿主机。
+### Expose container ports for Gateway{#proxy-bind-port}
+
+Websoft9 Gateway is running at container, and only expose container ports **80,443** to host server.   
+
+You can expose more ports to host server by  [docker-compose.yml file](./parameter#path).
