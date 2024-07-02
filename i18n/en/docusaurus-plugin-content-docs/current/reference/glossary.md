@@ -180,3 +180,8 @@ Use email not use e-mail
 ## operating system, OS
 
 Use operating system not OS, OS is not informal
+
+## redeploy, rebuild
+
+- rebuild docker image
+- redeploy application by docker compose
