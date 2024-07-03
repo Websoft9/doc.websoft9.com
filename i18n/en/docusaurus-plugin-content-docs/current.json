@@ -748,12 +748,12 @@
     "description": "The label for category 用户 in sidebar docs"
   },
   "sidebar.docs.category.故障": {
-    "message": "故障",
-    "description": "The label for category 故障 in sidebar docs"
+    "message": "Troubleshoot",
+    "description": "The label for category Troubleshoot in sidebar docs"
   },
   "sidebar.docs.category.如何解决问题？": {
-    "message": "如何解决问题？",
-    "description": "The label for category 如何解决问题？ in sidebar docs"
+    "message": "How to solve issue?",
+    "description": "The label for category How to solve issue? in sidebar docs"
   },
   "sidebar.docs.category.方法论": {
     "message": "方法论",

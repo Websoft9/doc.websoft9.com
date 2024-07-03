@@ -1,5 +1,5 @@
 position: 6
-label: "服务"
+label: "后端服务"
 collapsible: true
 collapsed: true
 className: "red"
