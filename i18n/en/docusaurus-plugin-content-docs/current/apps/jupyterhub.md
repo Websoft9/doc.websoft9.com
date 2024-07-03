@@ -1,3 +1,4 @@
+---
 title: JupyterHub
 slug: /jupyterhub
 tags:
