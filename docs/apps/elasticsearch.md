@@ -82,7 +82,7 @@ Elasticsearch 应用中默认不含 [Kibana](./kibana)，用户可以通过 Webs
 
 - 重置密码：ElasticSearch 容器中运行命令 `/usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic`
 
-- 备份与恢复：Elastic 内置快照[备份功能](https://www.elastic.co/guide/en/elasticsearch/reference/7.13/snapshot-restore.html)）
+- 备份与恢复：Elastic 内置快照[备份功能](https://www.elastic.co/guide/en/elasticsearch/reference/7.13/snapshot-restore.html)
 
 ## 问题与故障
 
