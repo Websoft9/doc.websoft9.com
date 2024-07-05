@@ -25,7 +25,7 @@ Nextcloud has a good [integration](https://www.collaboraoffice.com/code/quick-tr
 
 1. Nextcloud will install the CODE plugin.
 
-2. Select **Manage Settings > Administration > Office**, check **Use your own server** and start the setup.
+2. Select **Administration Settings > Administration > Office**, check **Use your own server** and start the setup.
 
 3. Save successfully to use.
 

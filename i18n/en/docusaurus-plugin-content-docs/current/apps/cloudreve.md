@@ -24,11 +24,15 @@ import Meta from './_include/cloudreve.md';
 
 Cloudreve powered by Websoft9 have installed RPC server container by default, you just need to enable it by below steps:  
 
-1. Websoft9 console get RPC credentials from "My Apps"
+1. Websoft9 console get RPC credentials from **My Apps > Cloudreve > Aceess**
 
-2. Login Cloudreve, go to "Personal Center" > "Dashboard" > "Nodes" and edit this "Master (Local machine)"
+2. Login Cloudreve by URL, select **Personal Center > Dashboard > Nodes**, edit **Master (Local machine)**
   
-3. Then, enable the download task and fill the RPC parameters from step one
+3. Enable the download task and fill the RPC credentials from step one
+
+4. Select **Testing Aria2 Communication**, if the test is successful, it will prompt **Successfully connected**
+
+5. Select **Next** until complete
 
 ### Document editing and preview 
 
