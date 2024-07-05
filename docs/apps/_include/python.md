@@ -10,6 +10,6 @@
 
 - 应用是基于 Websoft9 安装的
 
-- 请检查应用的使用许可协议，确保符合要求
+- 应用的用途符合 [gpl-compatible](https://docs.python.org/3/license.html) 开源许可协议
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- 应用具备访问条件：[配置域名](./domain-set) 或 **服务器安全组**开启网外端口

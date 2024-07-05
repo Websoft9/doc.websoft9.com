@@ -12,4 +12,4 @@
 
 - 应用的用途符合 [AGPL-3.0](https://opensource.org/licenses/AGPL-3.0) 开源许可协议
 
-- 应用具备访问条件：[配置域名](./guide/appsetdomain) 或 **服务器安全组**开启网外端口
+- 应用具备访问条件：[配置域名](./domain-set) 或 **服务器安全组**开启网外端口
