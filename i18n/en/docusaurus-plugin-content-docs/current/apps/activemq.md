@@ -34,6 +34,6 @@ Read official documentations [Using Apache ActiveMQ](https://activemq.apache.org
 
 ## Administer{#administrator}
 
-- Change ActiveMQ Console password: Select By **Websoft9 Console > My Apps > ActiveMQ > Compose > Go to Edit Repository** to edit *.env*
+- Change ActiveMQ Console password: Select **Websoft9 Console > My Apps > ActiveMQ > Compose > Go to Edit Repository** to edit *.env*
 
 ## Troubleshooting{#troubleshooting}
