@@ -2,8 +2,8 @@
 title: Budibase
 slug: /budibase
 tags:
-  - 低代码
-  - 开发平台
+  - Low Code
+  - Development Platforms
   - Low-code
 ---
 

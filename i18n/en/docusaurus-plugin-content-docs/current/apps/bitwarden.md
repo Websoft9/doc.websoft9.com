@@ -21,7 +21,7 @@ import Meta from './_include/bitwarden.md';
 
 3. Set up the Bitwarden application for HTTPS access (required)
 
-4. Access Bitwarden via the domain name and start initialization (including creation of the initial administrator account)
+4. Access Bitwarden by the domain and start initialization (including creation of the initial administrator account)
 
 ## Configuration options{#configs}
 
