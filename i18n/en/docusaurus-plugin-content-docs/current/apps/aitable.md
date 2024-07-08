@@ -27,7 +27,7 @@ When completed installation of AITable at Websoft9 console, get the applicaiton'
 
 ### Use Guide
 
-Refer to the official website document: [AITable Introduction](https://help.aitable.ai/docs/guide/tutorial-1-quick-start)
+Refer to the official website documentation: [AITable Introduction](https://help.aitable.ai/docs/guide/tutorial-1-quick-start)
 
 ## Enterprise edition 
 
@@ -37,10 +37,9 @@ Websoft9 is the Partner of AITable, and provide AITable products in the major gl
 
 By purchasing AITable Enterprise Edition through Websoft9, you get more value: 
 
-- Preferential discounts 
-- On-Premises deployment
-- Advanced support 
-- Customized services
+- Preferential discounts
+- Private deployment services and full hosting support
+- Customized business system development services
 
 ### How to purchase   
 

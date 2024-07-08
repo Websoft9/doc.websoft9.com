@@ -156,6 +156,12 @@ Use reset password, don't use retrieve password or recover password
 
 GUI means Graphical User Interface. Use GUI not visualization
 
+## issue, problem, troubleshooting
+
+- We encountered an **issue** with the login process.  
+- We have a **problem** with the database connection.
+- We are **troubleshooting** the network issues to restore connectivity.
+
 ## demo
 
 Use demo not demonstration

@@ -1,4 +1,4 @@
-[Chatwoot ](https://www.chatwoot.com/) is **Omnichannel customer engagement center**, used for Support & Customer Success Chat . Chatwoot gives you all the tools to manage conversations, build relationships and delight your customers from one place.
+[Chatwoot](https://www.chatwoot.com/) is **Omnichannel customer engagement center**, used for Support & Customer Success Chat . Chatwoot gives you all the tools to manage conversations, build relationships and delight your customers from one place.
 
 
 ![Console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/chatwoot/chatwoot-gui-websoft9.webp)
@@ -6,7 +6,7 @@
 
 ## Prepare
 
-When referring to this document to use **Chatwoot **, please read and ensure the following points:
+When referring to this document to use **Chatwoot**, please read and ensure the following points:
 
 - This application is installed by Websoft9 console.
 

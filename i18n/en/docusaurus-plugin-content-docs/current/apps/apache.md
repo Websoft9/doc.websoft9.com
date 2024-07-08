@@ -19,7 +19,7 @@ Websoft9 provides Apache applications for two purposes:
 - Running static websites
 - Reverse proxy service (Not recommended)
 
-The Apache container does not contain PHP, so if you want to deploy a PHP website, run the [PHP](./php) container through the Websoft9 console.  
+The Apache container does not contain PHP, so if you want to deploy a PHP website, run the [PHP](./runtime/php) container through the Websoft9 console.  
 
 ### Deploy a static website
 

@@ -3,9 +3,9 @@ sidebar_position: 1
 slug: /faq
 ---
 
-# Troubleshooting
+# FAQs
 
-请根据您的工作场景参考对应的问题。如果找不到您所需的问题，请联系[技术支持](./helpdesk)。  
+Please refer to the FAQ below to resolve your issue, if you cannot find the solution, please contact [Websoft9 support](./helpdesk). 
 
 ## Websoft9 问题
 

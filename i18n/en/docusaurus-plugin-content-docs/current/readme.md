@@ -29,7 +29,7 @@ Websoft9 offers 200+ one-click deployment application templates and also support
 
 Websoft9 comes with 200+ [one-click deployment templates](https://www.websoft9.com/apps) pre-built and supports users' customized deployment of programs such as Java, Python, Node.js, PHP, Go, Ruby and dotNET.
 
-![](/img/websoft9-dashboard.png)
+![](/img/websoft9-appstore.png)
 
 ## Features
 

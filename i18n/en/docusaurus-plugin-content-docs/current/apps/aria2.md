@@ -38,4 +38,4 @@ After installing Aria2 on the Websoft9 console, view the application details thr
 
 #### Aria2 connection failed?
  
-Make sure the RPC Secret for Aria2 is correct. For example, a password that contains **@**will fail to connect. 
+Make sure the RPC Secret for Aria2 is correct. For example, a password that contains **@** will fail to connect. 

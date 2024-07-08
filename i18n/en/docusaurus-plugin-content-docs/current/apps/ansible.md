@@ -13,7 +13,7 @@ import Meta from './_include/ansible.md';
 
 ## Getting started{#guide}
 
-After installing Ansible in the **Websoft9 Console**, view the application details in **My Apps**, and acccess to the container's by ***Exec Console**.  
+After installing Ansible in the **Websoft9 Console**, view the application details in **My Apps**, and acccess to the container's by **Exec Console**.  
 
 ### Test Ansible
 

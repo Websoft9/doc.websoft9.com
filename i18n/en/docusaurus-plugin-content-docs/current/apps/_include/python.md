@@ -10,6 +10,6 @@ When referring to this document to use **Python**, please read and ensure the fo
 
 - This application is installed by Websoft9 console.
 
-- Please check the application's usage license agreement to ensure compliance.
+- The purpose of this application complies with the [gpl-compatible](https://docs.python.org/3/license.html) open source license agreement.
 
 - [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

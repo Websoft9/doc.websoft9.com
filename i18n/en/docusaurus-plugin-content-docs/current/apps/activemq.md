@@ -25,7 +25,7 @@ import Meta from './_include/activemq.md';
 
 ## Use Guide
 
-Read official documentations [Using Apache ActiveMQ](https://activemq.apache.org/using-activemq) and quickly grasp its usage by the following guidelines.  
+Read official documentations [Using Apache ActiveMQ](https://activemq.apache.org/using-activemq) and quickly grasp its usage.  
 
 ## Configuration options{#configs}
 
@@ -34,6 +34,6 @@ Read official documentations [Using Apache ActiveMQ](https://activemq.apache.org
 
 ## Administer{#administrator}
 
-- Change ActiveMQ Console password: By **Compose** of the application from **Websoft9 Console > MyApps**
+- Change ActiveMQ Console password: Select **Websoft9 Console > My Apps > ActiveMQ > Compose > Go to Edit Repository** to edit *.env*
 
 ## Troubleshooting{#troubleshooting}
