@@ -15,16 +15,16 @@ import Meta from './_include/rocketmq.md';
 
 ### 验证 RocketMQ{#verification}
 
-Websoft9 控制台安装 RocketMQ 后，通过 **我的应用** 查看应用详情，在 **访问** 和 **容器** 标签页中获取相关信息。
+1. Websoft9 控制台安装 RocketMQ 后，通过 **我的应用** 查看应用详情，在 **访问** 和 **容器** 标签页中获取相关信息。
 
-1. 查看集群列表，进入 `rmqnamesrv` 容器运行下列命令：  
+2. 进入 `rmqnamesrv` 容器运行命令， 查看集群列表。  
     ```
     sh-4.2$ ./mqadmin clusterList -n localhost:9876
     #Cluster Name           #Broker Name            #BID  #Addr                  #Version              #InTPS(LOAD)     #OutTPS(LOAD)  #Timer(Progress)        #PCWait(ms)  #Hour         #SPACE    #ACTIVATED
     DefaultCluster          ff0d7f2d94c3            0     172.18.0.10:10911      V5_2_0                 0.00(0,0ms)       0.00(0,0ms)  0-0(0.0w, 0.0, 0.0)               0  477942.14     0.5400          true
     ```
 
-2. 查看 Broker 状态，进入 `rmqbroker` 容器运行下列命令： 
+3. 进入 `rmqbroker` 容器运行下列命令，查看 Broker 状态。
     ```
     [rocketmq@ff0d7f2d94c3 bin]$ ./mqadmin brokerStatus -n rocketmq_rymr8-rmqnamesrv:9876 -b localhost:10911
     EndTransactionQueueSize         : 0
@@ -37,7 +37,7 @@ Websoft9 控制台安装 RocketMQ 后，通过 **我的应用** 查看应用详�
     ...
     ```
 
-3. 生产消息， 进入 `rmqbroker` 容器运行下列命令：
+4. 进入 `rmqbroker` 容器运行命令，生产一组消息。 
 
     ```
     [rocketmq@ff0d7f2d94c3 bin]$ sh tools.sh org.apache.rocketmq.example.quickstart.Producer
@@ -46,7 +46,7 @@ Websoft9 控制台安装 RocketMQ 后，通过 **我的应用** 查看应用详�
     SendResult [sendStatus=SEND_OK, msgId=AC12000A02CF7E6CBB7A2FBE0ED003DD, offsetMsgId=AC12000A00002A9F00000000000B1564, messageQueue=MessageQueue [topic=TopicTest, brokerName=ff0d7f2d94c3, queueId=2], queueOffset=751]
     ```
 
-4. 消费消息， 进入 `rmqbroker` 容器运行下列命令：
+5. 进入 `rmqbroker` 容器运行命令，消费一组消息。
 
     ```
     [rocketmq@ff0d7f2d94c3 bin]$ sh tools.sh org.apache.rocketmq.example.quickstart.Consumer
