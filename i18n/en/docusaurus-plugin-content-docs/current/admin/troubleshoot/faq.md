@@ -7,74 +7,82 @@ slug: /faq
 
 Please refer to the FAQ below to resolve your issue, if you cannot find the solution, please contact [Websoft9 support](./helpdesk). 
 
-## Websoft9 问题
+## Websoft9 Console
 
 #### 500 Internal Server Error?
 
-问题描述：查看 websoft9-apphub 容器的日志，出现 500 Internal Server Error  
-原因分析：websoft9-apphub 容器工作异常或它与被连接的其他微服务通讯异常，运行下面的命令查看错误原因   
-```
-docker exec -it websoft9-apphub cat /websoft9/apphub/logs/apphub_error.log
-```
+**Description**: When checking the logs of websoft9-apphub container, 500 Internal Server Error appears.  
 
-#### Websoft9 核心功能不可用？
+**Reason**: The websoft9-apphub container is working abnormally or it can not connect other websoft9 containers  
 
-当 Websoft9 控制台可以登录，但无法访问应用商店、容器、网关等核心功能时，最大的原因可能是网关工作异常导致应用之间的连接与集成出现了问题。  
+**Solution**: Run the following commands to check the cause of the error   
 
-可运行 `docker logs websoft9-proxy` 进行诊断。  
+    ```
+    docker exec -it websoft9-apphub cat /websoft9/apphub/logs/apphub_error.log
+    ```
 
+#### Can not open App Store or My Apps?
 
-#### 无法访问 Websoft9 控制台？{#blank}
+**Description**: I can login Websoft9 Console, but can not open "App Store" or "My Apps" interface   
 
-常见的原因如下：
+**Reason**: websoft9 containers working abnormally or **80** port not enabled
 
-* 您的服务器[安全组](./administrator/firewall#security) **9000** 端口没有开启（**最常见因素**）
-* 安装的不是 Websoft9 的产品
-* 你的服务器网络故障
-* 产品本身的故障导致
-* 其他
+**Solution**: Run the following commands to check the cause of the error   
 
-不管哪种原因，一旦无法出现问题，请第一时刻联系：[人工支持](./helpdesk)  
+    ```
+    docker logs websoft9-proxy
+    docker exec -it websoft9-apphub cat /websoft9/apphub/logs/apphub_error.log
+    ```
 
-#### Websoft9 服务无法启动？
+#### Login Websoft9 failed{#login}
 
-1. 先排查计算资源是否异常
+Using multiple reasons can cause login failure:
+
+* Security Group port **9000** not enabled
+* Websoft9 installation failed
+* Network access failed for your instance
+* Local browser's cookie or session
+* Your Linux not allowed password login
+
+#### websoft9.service starting failed?
+
+1. Troubleshooting compute resource limit
     ```shell
-    # 查看进程
+    # View processes
     ps aux
 
-    # 查看磁盘空间
+    # Check disk space
     df -lh
 
-    # 查看内存使用
+    # View memory usage
     free -lh
     ```
-2. 再查看错误日志 
+
+2. Check the error logs
     ```shell
-    # 查看 Websoft9 服务容器日志
+    # View the Websoft9 service container logs
     docker logs websoft9-apphub
     docker logs websoft9-git
     docker logs websoft9-proxy
+    docker logs websoft9-deployment
 
-    # 查看 Websoft9 服务状态和日志
+    # View Websoft9 service status and logs
     systemctl status websoft9
     journalctl -u websoft9
-    ```
-3. 根据错误日志进行诊断
+    ``
 
-#### Websoft9 默认端口被占用？{#portconflict}
+#### Websoft9 can not running at 9000 port?{#portconflict}
 
-运行 `netstat -tunlp` 命令，查看服务器上已经使用的端口情况。 
+Running `netstat -tunlp` to check which process is using port 9000, then free the port with `kill -9 PID`.
 
-#### Docker service 无法启动？{#dockernotstart}
+#### Docker starting failed?{#dockernotstart}
 
-先通过 `systemctl status docker` 和 `journalctl -xe` 查看错误日志。
+Running `systemctl status docker` and `journalctl -xe` to check error logs
 
-如果错误日志是  Unit docker.socket entered failed state，表明系统缺少 docker 用户组，运行 `groupadd docker` 增加用户组  
 
-## 应用问题
+## Applications
 
-#### 访问应用出现 502 错误？{#nginx502}
+#### Access application 502 error{#nginx502}
 
 502 错误全称为 “Nginx 502 Bad Gateway”。错误不在 Nginx 网关本身，而是 Nginx 转发的后端服务运行异常。  
 
@@ -163,7 +171,7 @@ echo "" > log_path
 以上提出的方案基本包括涵盖全部场景，但详细操作需根据具体的应用而定。
 
 
-## 安全问题
+## Security
 
 #### Websoft9 存在病毒、木马和安全漏洞吗？
 
@@ -187,7 +195,7 @@ Websoft9 在上架到云市场时，已经过严格的安全测试，绝对不�
 * 流程控制：要求服务商严格遵循《云平台安全审核标准》，只有通过安全审核的镜像才可以售卖；
 * 合规机制：要求服务商须与每一个用户签订《镜像使用许可协议》，对镜像安全向用户作出承诺；
 
-## 其他问题汇总（表）
+## Related topics
 
 除[应用](./apps)自身的故障问题之外，管理员还需关注支持应用的系统组件的故障：  
 

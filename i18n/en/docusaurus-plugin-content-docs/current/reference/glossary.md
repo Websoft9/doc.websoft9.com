@@ -191,3 +191,40 @@ Use operating system not OS, OS is not informal
 
 - rebuild docker image
 - redeploy application by docker compose
+
+## Fully-managed, Self-hosting
+
+- Fully-managed: Service provider handles all management and maintenance tasks.
+- Self-hosting: Customer manages and maintains their own system.
+
+## stack, software, component, package
+
+- The image contains various **software** products such as Websoft9, Docker, and ERPNext.
+- The image includes a technology **stack** consisting of Websoft9, Docker, and ERPNext.
+- The image is composed of several **components**, including Websoft9, Docker, and ERPNext.
+
+## install, deployment
+
+- If you are describing setting up software on a single system, use install
+- If you are describing the entire process of releasing and managing an application, use deployment
+
+## runtime
+
+PHP runtime, Web runtime
+
+## image
+
+- docker image
+- virtual machine image
+
+## framework
+
+Web development framework, e.g Django, Vue, React
+
+## tool, toolkit
+
+Toolkit is some ralated tools together for one topic
+
+## visual machine, instance
+
+Linux visual machine (VM) is the same with instance at cloud platform
