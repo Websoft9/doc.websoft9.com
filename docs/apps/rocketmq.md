@@ -19,7 +19,6 @@ Websoft9 控制台安装 RocketMQ 后，通过 **我的应用** 查看应用详�
 
 1. 查看集群列表，进入 `rmqnamesrv` 容器运行下列命令：  
     ```
-    docker exec -it nameserver_container sh
     sh-4.2$ ./mqadmin clusterList -n localhost:9876
     #Cluster Name           #Broker Name            #BID  #Addr                  #Version              #InTPS(LOAD)     #OutTPS(LOAD)  #Timer(Progress)        #PCWait(ms)  #Hour         #SPACE    #ACTIVATED
     DefaultCluster          ff0d7f2d94c3            0     172.18.0.10:10911      V5_2_0                 0.00(0,0ms)       0.00(0,0ms)  0-0(0.0w, 0.0, 0.0)               0  477942.14     0.5400          true
@@ -27,7 +26,6 @@ Websoft9 控制台安装 RocketMQ 后，通过 **我的应用** 查看应用详�
 
 2. 查看 Broker 状态，进入 `rmqbroker` 容器运行下列命令： 
     ```
-    docker exec -it brokerserver_container sh
     [rocketmq@ff0d7f2d94c3 bin]$ ./mqadmin brokerStatus -n rocketmq_rymr8-rmqnamesrv:9876 -b localhost:10911
     EndTransactionQueueSize         : 0
     EndTransactionThreadPoolQueueCapacity: 100000
