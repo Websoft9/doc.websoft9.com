@@ -665,7 +665,7 @@
   },
   "sidebar.docs.category.快速入门": {
     "message": "Getting Started",
-    "description": "The label for category Getting Started in sidebar docs"
+    "description": "The label for category 快速入门 in sidebar docs"
   },
   "sidebar.docs.category.使用程序环境部署应用": {
     "message": "使用程序环境部署应用",
@@ -677,7 +677,7 @@
   },
   "sidebar.docs.category.指南": {
     "message": "Guides",
-    "description": "The label for category Guides in sidebar docs"
+    "description": "The label for category 指南 in sidebar docs"
   },
   "sidebar.docs.category.规划与部署应用": {
     "message": "规划与部署应用",
@@ -737,26 +737,30 @@
   },
   "sidebar.docs.category.应用": {
     "message": "Apps",
-    "description": "The label for category Apps in sidebar docs"
+    "description": "The label for category 应用 in sidebar docs"
   },
   "sidebar.docs.category.备份": {
     "message": "备份",
     "description": "The label for category 备份 in sidebar docs"
   },
   "sidebar.docs.category.用户": {
-    "message": "用户",
+    "message": "Users",
     "description": "The label for category 用户 in sidebar docs"
   },
   "sidebar.docs.category.故障": {
     "message": "Troubleshoot",
-    "description": "The label for category Troubleshoot in sidebar docs"
+    "description": "The label for category 故障 in sidebar docs"
   },
   "sidebar.docs.category.如何解决问题？": {
     "message": "How to solve issue?",
-    "description": "The label for category How to solve issue? in sidebar docs"
+    "description": "The label for category 如何解决问题？ in sidebar docs"
   },
   "sidebar.docs.category.方法论": {
-    "message": "方法论",
+    "message": "Methodology",
     "description": "The label for category 方法论 in sidebar docs"
+  },
+  "sidebar.docs.category.控制台组件": {
+    "message": "Console Stacks",
+    "description": "The label for category Console Stacks in sidebar docs"
   }
 }

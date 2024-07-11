@@ -3,58 +3,57 @@ sidebar_position: 2
 slug: /credentials
 ---
 
+# User credentials
 
-# 用户账号
+The Websoft9 Console shares the same accounts as the Linux system and uses the PAM (Pluggable Authentication Module) for authentication. So whether you are a root user or a non-root user, you can log in to Websoft9 as long as you provide the password for logging in to Linux.   
 
-Websoft9 控制台与 Linux 系统共享同样的账户，使用系统的 PAM（可插拔认证模块）进行身份验证。  
+Please select one of the user account methods below:  
 
-即，理论上不管是 root 用户，还是普通用户，只要具备登录密码，都可以无障碍的登录到 Websoft9。 
+## Use the existing root account{#convert-root}
 
-请选择下面的一种用户账号方式：  
+The `root` user is already the Websoft9 account with the highest privileges:  
 
-## 将 root 转为 Websoft9 用户{#convert-root}
+- If `root` account can login Linux by password, it can login **Websoft9 Console** directly
+- If `root` account login Linux by key pair, it need to connect Linux and run command `sudo passwd root` to set password
 
-root 用户已经是具有最高权限的 Websoft9 账号：
+## Use the existing non-root account{#convert-normal}
 
-- 如果 root 账号使用密码，直接使用账号密码登录 Websoft9
-- 如果 root 账号使用密钥对，需 SSH 连接到 Linux，运行命令 `sudo passwd root` 设置密码后再登录 Websoft9
+For non-root account, you will need to follow the steps below to set up before login to Websoft9 Console
 
-## 将普通用户转为 Websoft9 用户{#convert-normal}
+- If non-root account use key pair, it need to connect Linux and run command `sudo passwd root` to set password
 
-针对于普通用户，请根据下面的步骤检查或设置为可以登录 Websoft9 的账号：
-
-- 如果使用密钥对，需 SSH 连接到 Linux，运行命令 `passwd` 设置密码
-
-- 如果普通用户不具备 **Docker | sudo | 管理员** 权限之一，需运行下面**对应的**赋权命令：   
+- Set user group for your non-root account, it need one of **Docker | sudo | root**
     ```
-    # 设置 Docker 权限（推荐）
+    # Setting Docker permissions (recommended)
     usermod -aG docker yourusername
 
-    # 设置 sudo 权限
+    # Setting sudo privileges
     usermod -aG sudo yourusername
 
-    # 设置 管理员 权限
+    # Setting Administrator Privileges
     usermod -aG wheel yourusername
     ```
 
-## 新增用户{#add}
+## Add new account{#add}
 
-### 在 Websoft9 控制台新增用户（推荐）{#add-console}
+### Add user at Websoft9 Console{#add-console}
 
-1. 登录到 Websoft9 控制台后，通过左侧菜单工具组，打开 **用户账户** 页面
+1. Login to **Websoft9 Console** as `root` user
 
-2. 点击**创建新账号**，根据引导创建一个用户，并设置密码
+2. Open the left menu **tool > Accounts** at **Websoft9 Console**
 
-3. 对新建用户进行编辑操作，为**用户组**多选拉下项设置为 **docker**
-   ![赋予 docker 组权限](./assets/websoft9-addgroupdocker.png)
+3. Click **Create new account** button to create username and password
 
-### 使用命令行新增用户{#add-command}
+4. Set group to **docker** or **root** for this new account by **edit user**
+   ![add docker group for user](./assets/websoft9-addgroupdocker.png)
 
-1. 使用 `root` 账号 SSH 连接到服务器
+### Add user by commands{#add-command}
 
-2. 运行下面的新增用户命令，其中 youruser（两处）和 yourpassword 需提前修改成自己所需的值
+1. Use `root` user to connect server by SSH
+
+2. Add user by below commands
     ```
-    sudo useradd -m -G docker -s /bin/bash youruser && echo "youruser:yourpassword" | sudo chpasswd
+    sudo useradd -m -G docker -s /bin/bash <youruser> && echo "<youruser>:<yourpassword>" | sudo chpasswd
     ```
 
 

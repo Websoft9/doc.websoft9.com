@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-slug: /migration/onboard
+slug: /migration-to-websoft9
 ---
 
 # 迁移至 Websoft9
@@ -27,7 +27,7 @@ slug: /migration/onboard
 
 ## 范例
 
-#### WordPress on LAMP 迁移至 Websoft9
+#### 迁移 WordPress 至 Websoft9
 
 本方案中假设 LAMP 环境运行一个 WordPress 网站，具体的迁移方案如下：
 
@@ -57,6 +57,16 @@ slug: /migration/onboard
 7. 更改 wp-content 的文件夹权限至 0755
 
 8. 迁移成功
+
+#### 迁移数据库至 Websoft9
+
+## 后续
+
+完成应用迁移之后，可能还有一些后续的工作：
+
+* 域名重新解析和绑定
+* 文件（文件夹）权限修正
+
 
 
 

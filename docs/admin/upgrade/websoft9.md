@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-slug: /upgrade/websoft9
+slug: /upgrade-websoft9
 ---
 
 # Websoft9 升级

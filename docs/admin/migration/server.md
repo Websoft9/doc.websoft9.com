@@ -1,6 +1,6 @@
 ---
-sidebar_position: 1
-slug: /migration/server
+sidebar_position: 3
+slug: /migration-server
 ---
 
 # 服务器整体迁移

@@ -6,7 +6,7 @@ slug: /migration
 import DocCardList from '@theme/DocCardList';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-# 升级
+# 迁移
 
 迁移网站就是将**网站数据**移动到新的位置，然后通过配置，保证移动后可正常访问。
 

@@ -1,11 +1,11 @@
 ---
 sidebar_position: 3
-slug: /upgrade/os
+slug: /upgrade-os
 ---
 
-# 操作系统更新
+# Upgrade Linux
 
-Linux服务器以及组件的更新，只需要运行一条命令即可完成：  
+Upgrade Linux core or its packages, just one command:
 
 ```
 # CentOS or Redhat
@@ -15,4 +15,4 @@ sudo yum update -y
 apt update && apt upgrade -y
 ```
 
-> 建议用户将更新命令设置成**计划任务**，实现自动升级。  
+> You can set the upgrade command to **Crontab** for an automatic upgrade if you need more real-time.  

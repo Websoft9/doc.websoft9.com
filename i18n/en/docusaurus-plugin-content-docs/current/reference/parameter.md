@@ -58,6 +58,7 @@ By default, a network named **websoft9** is created and all applications run on 
 
 You need to know Systemd and Docker services for administrator.  
 
+
 ### Systemd{#systemd}
 
 Three Systemd services: **websoft9, docker, cockpit**

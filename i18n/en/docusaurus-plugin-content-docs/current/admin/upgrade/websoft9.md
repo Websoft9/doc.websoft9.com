@@ -1,9 +1,10 @@
 ---
 sidebar_position: 1
-slug: /upgrade/websoft9
+slug: /upgrade-websoft9
 ---
 
-# Websoft9 升级
+#  Upgrade Websoft9
 
-Websoft9 控制台的【设置】页面提供了自动化的在线升级方案。
+The **Settings** page of the Websoft9 Console provides an automated online upgrade solution.  
+
 

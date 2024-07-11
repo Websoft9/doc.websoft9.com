@@ -1,28 +1,38 @@
 ---
 sidebar_position: 2
-slug: /upgrade/app
+slug: /upgrade-app
 ---
 
-# 应用程序升级
+# Upgrade application
 
-应用程序的有多种升级手段，主要有如下两种：  
+Websoft9 suggest application upgrades to ensure a better experience while minimizing security risks.  
 
-> 升级之前请确保您已经完成了服务器的镜像（快照）备份
+## Prepare
 
-## 应用程序自带升级
+1. Before upgrading, please make sure that you have completed the server image (snapshot) backup.
+2. When upgrading, stop the server and do not affect the business use.
 
-部分应用程序自带的 CLI 或控制台界面、或额外的升级工具（或插件）提供了一种简单可靠的在线升级方式。  
+## Upgrade application
 
-具体需要参考[应用中心](../apps)各个应用的章节。  
+There are two ways to upgrade your application: 
 
-## 应用编排升级
+### Upgrade tool comes with the application
 
-应用编排升级是通过修改应用的编排文件，然后重新拉去新的镜像部署应用的升级过程：
+Some applications come with their own online upgrade methonds:
 
-1. 通过 Websoft9 控制台【我的应用】，进入[应用编排](../quick/manageapp#howto-reup)界面
+- Upgrade interface
+- Upgrade plugin
+- Upgrade CLI
 
-2. 修改 .env 和 docker-compose.yml 文件中与版本有关的参数。例如：W9_VERSION 
+You can refer to upgrade content at [Apps docs](./apps) of Websoft9.  
 
-   > 建议参考 Websoft9 的 [docker-library](https://github.com/Websoft9/docker-library/tree/main/apps) 项目，它是 Websoft9 应用商店的安装编排文件源头。
 
-3. 修改完成后，重建容器
+### Upgrade by Application Compose
+
+Modify the image version at [Application Compose](./app-compose) and redeploy application for upgrade
+
+1. Login to Websoft9 Console and go to **My Apps**
+
+2. Modify the version-related parameters in the `.env` and `docker-compose.yml` files, e.g: **W9_VERSION**
+
+3. Redeploy application at Websoft9 Console, then upgrade completed
