@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-slug: /administrator/security
+slug: /admin-security
 ---
 
 import DocCardList from '@theme/DocCardList';

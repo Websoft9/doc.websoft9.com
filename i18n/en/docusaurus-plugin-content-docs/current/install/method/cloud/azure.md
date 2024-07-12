@@ -1,63 +1,92 @@
 ---
 sidebar_position: 1
-slug: /install/azure
+slug: /install-azure
 ---
 
 # Azure
 
-Websoft9 在Azure的云市场上提供了丰富的应用和解决方案，用户可以通过购买的方式实现自动化安装部署。
+Websoft9 在 Azure 提供了预制[云市场镜像](https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=vmlab&page=1)，用户可以通过购买的方式实现自动化安装部署 Websoft9 多应用托管平台。
 
-- [Websoft9 on Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=vmlab&page=1)
+下面的教程介绍如何在 Azure 上部署 Websoft9。
 
-> 我们是全球为数不多能够支持中英文产品和服务的云原生技术商。
+## 先决条件
 
-## 安装
+必须拥有 Azure 的账号：
 
-一旦您注册了Azure的账号，您可以通过如下多种方式安装我们的产品：
+- 如果你或你的公司已经有一个订阅帐户，请使用该帐户
+- 如果没有，可以免费[开设自己的 Azure 帐户](https://azure.microsoft.com/en-us/free/)，Azure 的免费试用版提供 200 美元的信用额度
 
-### Marketplace部署
+## 规划虚拟机配置
 
-1. 访问 [Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps) 网站
+先阅读 [Websoft9 安装要求](./requirements)，了解所需的服务器规格、存储和带宽要求。 
 
-2. 搜索关键字"websoft9"，网站会列出所有相关的镜像
-   ![搜索Websoft9镜像](https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-mkss-websoft9.png)
+另外，在 Azure 上部署 Websoft9 时，需要填写重要的配置参数，下面先提前说明：
 
-3. 点击您所需的产品，进入产品详情页后点击"GET IT NOW"按钮
-   ![安装镜像](https://libs.websoft9.com/Websoft9/DocsPicture/en/azure/azure-rs-websoft9.png)
+- 操作系统磁盘类型，请选择 **SSD** 相关类型
+- 安全组端口开启：80, 443, 9000
+- 身份验证：密钥对或密码均可
 
-4. 点击“创建”按钮，开始创建与镜像配套的虚拟机
-   ![创建虚拟机](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-imagecreate-websoft9.png)
+## 安装 Websoft9
 
-5. 在虚拟机的映像信息栏中，你会看到已经显示的你选择的镜像
-   ![选择镜像](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-imagevm-websoft9.png)
+一旦您注册了 Azure 的账号，您可以通过如下多种方式安装 Websoft9：
 
-6. 虚拟机创建完成后，镜像会作为虚拟机的系统盘启动，即镜像自动部署到虚拟机了
+### 基于 Marketplace 安装
 
+1. 访问 [Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps)，搜索 Websoft9 镜像
+  ![搜索Websoft9镜像](./assets/azure-mkss-websoft9.png)
 
+2. 完成订阅步骤
 
-### Portal部署
+### 基于 Portal 安装
 
-1. 登录到Azure后台门户（Portal），点击“创建资源”，等同于通过后台进入Marketplace
+Azure 后台门户（Portal）提供了两种部署镜像的入口：
 
-2. 搜索关键字“websoft9”，列出所有相关镜像
-   ![Azure Portal 搜索镜像](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-portalmk-websoft9.png)
+  - Portal > "创建资源"，检索 Websoft9 镜像
+    ![Azure Portal 搜索镜像](./assets/azure-portalmk-websoft9.png)
 
-3. 点击你所需的产品，开始订阅镜像
+  - Portal > "创建虚拟机" > "浏览所有镜像"，检索 Websoft9 镜像
+    ![](./assets/azure-vmimage-websoft9.png)
 
+不管哪种入口，最终的操作都是一致的：**基于预制的 Websoft9 镜像创建虚拟机**
 
+### 基于 API/CLI 安装
 
-### VM部署
+即将推出
 
-1. 登录到Azure后台门户（Portal），点击“虚拟机”，
-   ![创建虚拟机](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-vm-websoft9.png)
+### 基于编排模板安装
 
-2. 进入虚拟机管理项，点击“添加”，即开始创建一个新的虚拟机
-   ![创建虚拟机](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-addvm-websoft9.png)
+1. 提前准备部署模板
 
-3. 在映像一栏，点击“浏览所有公用和专用映像”，然后搜索关键件词“websoft9”，列出相关镜像
-   ![选择 Websoft9 镜像](https://libs.websoft9.com/Websoft9/DocsPicture/zh/azure/azure-vmimage-websoft9.png)
+2. 登录 Azure 门户，将部署模板导入运行
 
-4. 选择一个你所需的镜像，开始部署
+### 基于 VHD 安装
 
+如果用户已有一个包含 Websoft9 的 VHD，那么也可以基于此 VHD 创建新建，重新部署 Websoft9
 
-## 安装后
+1. 在 Azure 上运行 PowerShell 命令获取 Websoft9 镜像的 plan
+   ```
+   PS Azure:\> az vm image list --offer w9wordpress2 --all --output table
+   Offer         Publisher    Sku                          Urn                                                             Version
+   ------------  -----------  ---------------------------  --------------------------------------------------------------  ---------
+   w9wordpress2  websoft9inc  wordpress52-lemp72-centos76  websoft9inc:w9wordpress2:wordpress52-lemp72-centos76:5.2.20000  5.2.20000
+   ```
+
+2. 在编排模板的虚拟机属性中加入云市场镜像的计划
+   ```
+   "plan": {
+                  "name": "wordpress52-lemp72-centos76",
+                  "publisher": "websoft9inc",
+                  "product": "w9wordpress2"}
+   ```
+
+3. 基于编排模板重新部署 Websoft9
+
+## 完成虚拟机部署
+
+选用以上任意安装方式，Azure 都会开始部署新的 VM。  
+
+部署过程需要几分钟才能完成。完成后，通过 Azure 的仪表板查看新的 VM 的信息。  
+
+## 后续配置 Websoft9
+
+VM 可用之后，还需要[完成配置域名等后续操作](./setup)，方可使用更好的使用 Websoft9

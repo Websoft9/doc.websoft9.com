@@ -1,22 +1,19 @@
 ---
 sidebar_position: 1
-slug: /backup/server
+slug: /backup-server
 ---
 
-# 服务器备份与恢复
+# Backup the entire server
 
-服务器备份是云计算蓬勃发展带来的一种极简备份策略，它可以将服务器进行全局备份：**系统、配置、应用、数据和数据库。**   
+Backing up an entire server is usually accomplished with a snapshot backup of the cloud server.  
 
-所有的云平台都提供了针对服务器的全局自动备份功能。  
-
-它的基本原理是**对磁盘进行快照**。快照可以记录磁盘在指定时间点的数据，将其全部备份起来，并可以实现一键恢复。
+**Cloud server snapshot backup** is an efficient and quick method of data protection. By capturing the state of the server at a specific point in time, including the operating system, applications, and data, snapshots provide rapid recovery capabilities, especially in cases of data corruption or loss. Snapshots are typically stored in the cloud, making them easily accessible and recoverable at any time.
 
 ```
-- 备份范围: 系统、配置、应用、数据和数据库
-- 备份效果: 非常好
-- 备份频率: 分、小时、天、周备份均可
-- 恢复方式: 云平台一键恢复
-- 自动化：可设置自动备份策略
+- Backup scope: All data on a Disk
+- Backup effect: Very Good
+- Backup frequency: Automatic backup per hour/minute/day... if you need
+- Recovery method: One key recovery on Cloud platform
+- Skill requirement: Very easy 
+- Automation or Manual: Fully automated on backup strategy
 ```
-
-不同云平台的自动备份方案有一定的差异，详情参考 [云平台备份方案](../reference/service/cloud)

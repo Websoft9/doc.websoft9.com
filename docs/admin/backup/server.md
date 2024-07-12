@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-slug: /backup/server
+slug: /backup-server
 ---
 
 # 服务器备份与恢复

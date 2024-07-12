@@ -1,14 +1,20 @@
 ---
 sidebar_position: 3
-slug: /install/customized
+slug: /install-customized
 ---
 
-# 定制化安装
+# Customized installation
 
-用户可能存在不同形式的定制化安装需求，包括：
+Custom installation often means software installation, configuration, testing, and deployment don't follow a standardized, reproducible process. This can occur in the following special use cases:
 
-* 多应用集成安装，例如：Websoft9 + K8s 集成为 GitOps 方案。 
-* 特殊环境安装，例如：服务器无外网情况下安装
-* 项目型安装，例如：需要在客户 30 个地点实施安装不同的软件
+- **Special Hardware**: Custom servers, embedded systems, or special hardware.
+- **Isolated Network**: Deployment on servers without internet access.
+- **Project Delivery**: On-site delivery within a specific timeframe.
+- **High Availability**: Requires additional load balancing and high availability measures.
+- **Disaster Recovery**: Custom backup and disaster recovery plans for business continuity.
+- **Hybrid Cloud**: Deployment services based on hybrid cloud architecture.
+- **Security Compliance**: Extra compliance and security measures for specific industries.
+- **Process Integration**: Integrating deployment into strict DevOps processes.
+- **Multi-Tenant Environment**: Deployment for multiple classrooms, like in higher education.
 
-以上仅列举部分定制化场景，我们对用户的定制化保持开放态度，乐意为用户提供定制化安装相关的 **[人工服务](../helpdesk)**。  
+You can discuss non-standard deployments use cases with **[Websoft9 Customer Success Team](../helpdesk)** 

@@ -1,8 +1,20 @@
 ---
-sidebar_position: 3
-slug: /administrator/security_scan
+sidebar_position: 4
+slug: security-scan
 ---
 
-# 漏洞扫描
+# Vulnerability Scanning
 
-漏洞存在于容器映像、文件系统和 Git 存储库以及配置文件，推荐云原生安全工具：[Checkov](https://www.checkov.io/)、[Trivy](https://github.com/aquasecurity/trivy) 进行扫描。  
+Vulnerability Scanning is an automated process that identifies security weaknesses in computer systems, networks, or applications, helping to detect potential risks and enabling timely remediation and protection.  
+
+## Files and system scanning tools
+
+You can install [ClamAV](./clamav), [Trivi](./trivy), [Kaspersky](./kaspersky),[Checkov](./Checkov) by Websoft9 App Store for your vulnerability scanning in server.  
+
+## Website online scanning tools
+
+Online scanning tools for website:
+
+- [sitecheck.sucuri.net](https://sitecheck.sucuri.net/)
+- [Wordfence Scan Enabled](https://wordpress.org/plugins/wordfence/)
+- [Quttera Web Malware Scanner ](https://quttera.com)

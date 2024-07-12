@@ -1,6 +1,6 @@
 ---
 sidebar_position: 7
-slug: /admin/firewall
+slug: /security-firewall
 ---
 
 # 防火墙与安全组

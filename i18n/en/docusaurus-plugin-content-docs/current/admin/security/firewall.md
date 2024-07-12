@@ -1,62 +1,60 @@
 ---
-sidebar_position: 7
-slug: /admin/firewall
+sidebar_position: 1
+slug: /security-firewall
 ---
 
-# 防火墙与安全组
+# Firewall and Security Group
 
-## 关于防火墙
+A Linux firewall is a network security tool that control and filter incoming and outgoing data packets, protecting the system from unauthorized access and network attacks.  
 
-在 Linux 中，防火墙是以一个守护进程的方式存在，服务的名字是 firewalld ，它能够定义一组规则来控制外部传入系统中的网络访问。  
+## Managing firewalls in Linux
 
-虽然与 Linux 防火墙流行的工具有：[firewalld](https://firewalld.org/)、iptables 和 nftables，但 firewalld 功能最为强大。  
+On Linux systems, use tools such as [firewalld](https://firewalld.org/), iptables, and nftables to manage firewalls.    
 
-## 安全组设置{#security}
+After installing firewalld, it exists as a daemon on the system.  
 
-但是为了简化安全使用，云平台通过一个可视化的管理界面--**安全组**，来实现与防火墙的同等功能。  
+## Managing Security Group on cloud{#security}
 
-所以，一般使用云服务器的时候会关闭防火墙，用安全组替代它。
+If there no firewall tool in your Linux system, you can enable **Security Group** on your cloud. Security groups on cloud and Firewalld in Linux both serve to control network traffic.    
 
-安全组配置最常见的操作就是开启某一个端口，比如：TCP:80，详细设置参考：    
+Major Cloud platform security group settings for your references:  
 
-* [Azure 安全组设置](../azure#securitygroup)
-* [AWS 安全组设置](../aws#securitygroup)
-* [阿里云 安全组设置](../alibabacloud#securitygroup)
-* [腾讯云 安全组设置](../tencentcloud#securitygroup)
-* [华为云 安全组设置](../huaweicloud#securitygroup)
+* [Azure Security Group](./iaas-azure#security-group)
+* [AWS Security Group](./iaas-aws#security-group)
+* [Alibaba Cloud Security Group](./iaas-alibabacloud#security-group)
+* [HUAWEICLOUD Security Group](./iaas-huaweicloud#security-group)
+* [Tencent Cloud Security Group](./iaas-tencentcloud#security-group)
 
-## 问题解答
+## FAQ
 
-#### 如何判断已有服务的端口是否开放？
+#### How to test if a port is reachable?
 
-云控制台安全组可以查看所有端口的开放情况。  
+Use **nc** or **telnet** commands to test the port more efficiently than viewing the cloud console:  
 
-但是，登录云控制台查看会有一定的不便。针对**已经存在服务**的端口，可以通过 **nc** 或 **telnet** 去测试端口：
-
-* 使用 nc 命令测试
+* nc
 
     ```
-    # 成功
+    # Success result
     $ nc -zvw10 8.142.3.195 22
     Connection to 8.142.3.195 22 port [tcp/*] succeeded!
 
-    # 失败
+    # Failed result
     $ nc -zvw10 8.142.3.195 9091
     nc: connect to 8.142.3.195 port 9093 (tcp) failed: Connection refused
 
     ```
 
 
-* 使用 telnet 命令测试
+* telnet
 
     ```
-    # 成功
+    # Success result
     $ telnet 8.142.3.195 22
     Trying 8.142.3.195...
     Connected to 8.142.3.195.
     Escape character is '^]'.
 
-    # 失败
+    # Failed result
     $ telnet 8.142.3.195 9091
     Trying 8.142.3.195...
     telnet: Unable to connect to remote host: Connection refused
