@@ -38,7 +38,11 @@ Below steps is need:
 
 ## Related Topics
 
-- Binding Domains
-- Managing Applications
-- Databases
-- Setting Up Application Access
+- [User account and credentials](./credentials)
+- [Set Global domains for Websoft9](./domain-set#wildcard)
+
+## FAQ
+
+#### Can login Websoft9 using key pair?
+
+No, you should set password for user account and cany keep key pair for SSH

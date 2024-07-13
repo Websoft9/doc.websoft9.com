@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-slug: /install/customized
+slug: /install-customized
 ---
 
 # 定制化安装
