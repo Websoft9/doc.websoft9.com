@@ -14,7 +14,7 @@ import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 所以，一定要尽早将备份工作落实下去，切莫存在任何侥幸心理。  
 
-## 备份方式
+## 备份策略
 
 使用 Websoft9 时，有两种备份的方式：  
 

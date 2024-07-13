@@ -1,42 +1,45 @@
 ---
 sidebar_position: 2
-slug: /install/aws
+slug: /install-aws
 ---
 
 
 # AWS
 
+Websoft9 在 AWS 提供了预制[云市场镜像](https://aws.amazon.com/marketplace/seller-profile?id=c639a579-182c-4d30-8578-4d4d89fba658)，用户可以通过购买的方式实现自动化安装部署 Websoft9 多应用托管平台。
 
-Websoft9 在 AWS 的云市场上提供了丰富的应用和解决方案，用户可以通过购买的方式实现自动化安装部署。
+## 先决条件
 
-- [Websoft9 on AWS](https://aws.amazon.com/marketplace/seller-profile?id=c639a579-182c-4d30-8578-4d4d89fba658)
+必须拥有 AWS 的账号：
 
-> 我们是全球为数不多能够支持中英文产品和服务的云原生技术商。
+- 如果你或你的公司已经有一个订阅帐户，请使用该帐户
+- 如果没有，可以免费[开设自己的 AWS 帐户](https://aws.amazon.com/cn/free/)，AWS Free Tier 提供 100 多种 AWS 产品
 
-## 安装
+## 规划虚拟机配置
 
-一旦您注册了 AWS 的账号，您可以通过如下多种方式安装我们的产品：
+先阅读 [Websoft9 安装要求](./requirements)，了解所需的服务器规格、存储和带宽要求。 
 
-### Marketplace部署
+另外，在 AWS 上部署 Websoft9 时，需要填写重要的配置参数，下面先提前说明：
 
-1. 访问 [AWS Marketplace](https://aws.amazon.com/marketplace) 网站
+- 操作系统磁盘类型，请选择 **SSD** 相关类型
+- 安全组端口开启：80, 443, 9000
+- 身份验证：密钥对
 
-2. 搜索关键字"websoft9"，网站会列出所有相关的镜像
-   ![搜索Websoft9镜像](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-mkss-websoft9.png)  
+## 安装 Websoft9
 
-3. 点击您所需的产品（以 Odoo 为例），进入产品详情页后点击"Continue to Subscribe"开始订阅镜像
-   ![开始订阅镜像](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-rs-websoft9.png)
+一旦您注册了 AWS 的账号，您可以通过如下多种方式安装 Websoft9：
 
-4. 根据系统提示，接受许可协议（Terms and Conditions）
+### 基于 Marketplace 安装
 
-5. 待系统提示订阅成功后，点击“Continue to Configuration” 准备EC2创建前的检查
-   ![配置镜像](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-cc-websoft9.png)
+1. 访问 Websoft9 在 [AWS Marketplace 上的主页](https://aws.amazon.com/marketplace/seller-profile?id=c639a579-182c-4d30-8578-4d4d89fba658) 
 
-5. 检查镜像、版本和地区无误后，点击“Continue to Launch”开始创建EC2
-   ![开始载入镜像](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-imagecreate-websoft9.png)
+2. 找到所需的产品，点击 "Continue to Subscribe" 开始订阅
+   ![开始订阅镜像](./assets/aws-rs-websoft9.png)
 
-6. 创建EC2过程中，系统会提示您选择三种后续动作
-   ![开始载入镜像](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-imagecreate2-websoft9.png)
+3. 根据提示，逐渐完成后续步骤，直至 **Launch** 
+
+4. 此时，选择启动的入口 Choose Action 
+   ![开始载入镜像](./assets/aws-imagecreate2-websoft9.png)
 
    - Launch through EC2 （推荐）
    - Launch from Website
@@ -44,37 +47,48 @@ Websoft9 在 AWS 的云市场上提供了丰富的应用和解决方案，用户
 
 7. 后续动作基本都会要求用户完成：选择实例类型、VPC、Key Pair等设置
 
-8. 等待几分钟，EC2创建完成后，镜像会作为EC2实例的系统盘启动，即镜像自动部署到实例中
+8. 等待几分钟，EC2 创建完成后，镜像会作为 EC2 实例的系统盘启动，即镜像自动部署到实例中
 
+### 基于 Console 安装
 
-### EC2部署
+1. 登录到 AWS 管理控制台，开始创建一个 EC2 实例
 
-1. 登录到AWS管理控制台，点击“EC2”，
-   ![进入ec2控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-ec2-websoft9.png)
+2. 在 "应用程序和操作系统映像" 选项中，通过 "浏览其他 AMI" 进入镜像列表页
 
-2. 进入EC2控制面板，点击“启动实例”，即开始创建一个新的实例
-   ![启动实例](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-addec2-websoft9.png)
+3. 点击列表页的 "AWS Marketplace AMI" 标签栏，搜索关键件词 “websoft9”，列出 Websoft9 相关镜像
 
-3. 在映像一栏，点击“浏览所有公用和专用映像”，然后搜索关键件词“websoft9”，列出相关镜像
-   ![选择Websoft9镜像](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-ec2image-websoft9.png)
-
-4. 选择一个你所需的镜像，系统提示订阅，点击【Continue】，开始创建EC2实例
-   ![同意订阅](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-createdec2-imageselected-websoft9.png)
+3. 选择一个你所需的镜像，系统提示订阅，点击【Continue】，开始创建 EC2 实例
 
 5. 后续动作基本都会要求用户完成：选择实例类型、增加存储、配置安全组、设置秘钥对等设置
-   ![创建EC2](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aws/aws-createdec2-chooseinstances-websoft9.png)
 
-6. 等待几分钟，EC2创建完成后，镜像会作为EC2实例的系统盘启动，即镜像自动部署到实例中
+6. 等待几分钟，EC2 创建完成后，镜像会作为 EC2 实例的系统盘启动，即镜像自动部署到实例中
 
-### 部署非默认版本
+### 基于 API/CLI 安装
 
-每个商品支持多个版本，默认为最新版本，也可以通过下面的步骤修改版本：
+即将推出
 
-1. 选择镜像时，先点击【Previous version】链接
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-subs-odoo-websoft9.png)
+### 基于 CloudFormation 安装
 
-2. 通过【Software version】下拉菜单选择你所需的版本
-  ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/aws/aws-subs-odoooldversion-websoft9.png)
+1. 提前准备部署模板
 
+2. 登录 AWS 门户，将部署模板导入运行
 
-## 安装后
+## 完成虚拟机部署
+
+选用以上任意安装方式，AWS 都会开始部署新的 EC2。  
+
+部署过程需要几分钟才能完成。完成后，通过 AWS 的控制台查看新的 EC2 的信息。  
+
+## 后续配置 Websoft9
+
+EC2 可用之后，参考下面的步骤设置完成后续操作：
+
+1. 登录 AWS 的 **EC2 Dashboard**，在线连接 EC2
+
+2. 运行下面的命令设置 root 密码
+   ```
+   sudo su
+   passwd
+   ```
+3. 登录 Websoft9 控制台，完成[配置域名](./setup)等后续操作
+

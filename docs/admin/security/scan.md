@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-slug: /administrator/security_scan
+slug: /security-scan
 ---
 
 # 漏洞扫描

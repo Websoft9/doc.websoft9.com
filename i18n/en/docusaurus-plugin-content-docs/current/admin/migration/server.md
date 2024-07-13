@@ -1,27 +1,36 @@
 ---
-sidebar_position: 1
-slug: /migration/server
+sidebar_position: 3
+slug: /migration-server
 ---
 
-# 服务器整体迁移
+# Migrate entire server
 
-服务器整体迁移是从整个虚拟机层面保持不变的一种迁移要求，一般有如下两种情况：
+Migrate entire server is a migration requirement that remains unchanged from the entire VM level, and is generally characterized by the following two use cases:  
 
-## 跨区域迁移
+## Cross-regional migration
 
-跨区域迁移指的是在同一个云平台中，实现不同区域的迁移。  
+Cross-region migration refers to the migration of different regions within the same cloud platform or infrastructure.    
 
-这种迁移主要只需复制服务器自定义镜像到需迁移的区域，然后再基于镜像重新创建服务器即可。  
+You just need use **copy** action by your cloud infrastructure.  
 
-## 跨云迁移
+## Cross-infrastructure migration
 
-跨云迁移包括：将虚拟机迁移至不同的云平台或本地虚拟机上云。  
+Cross-infrastructure migration is migrating origin virtual machines to another infrastructure.  
 
-跨云迁移的主要步骤如下：
+If cloud provider have "migration VM tools", it may easy for migration. Otherwise, you may need migration are as follows:
 
-1. 针对目标云平台的要求，在待迁移的虚拟机上安装一系列所需的软件：Cloud-Init, virtio 驱动等
-2. 基于虚拟机创建镜像
-3. 将镜像导出为一个文件（格式：vhd, RAW 等）
-2. 将导出的文件上传到目标云平台的对象存储空间中
-3. 基于对象存储已上传的文件，创建云上的镜像
-4. 基于云上的镜像创建虚拟机
+1. Install a set of required software on the virtual machines to be migrated: 
+
+   - Cloud init
+   - Virtio drivers
+   - Other packages target cloud need
+
+2. Create a virtual machine image at source cloud
+
+3. Export the image to a file (format: vhd, RAW, etc.)
+
+2. Upload the exported file to the object store of the target cloud platform.
+
+3. Create a mirror in the cloud based on the uploaded file in the object store.
+
+4. Create a virtual machine based on the image in the cloud.

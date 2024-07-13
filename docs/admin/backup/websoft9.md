@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-slug: /backup/websoft9
+slug: /backup-websoft9
 ---
 
 # Websoft9 以及应用备份

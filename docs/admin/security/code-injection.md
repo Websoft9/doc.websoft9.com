@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-slug: /admin/security_insertcode
+slug: /security-code-injection
 ---
 
 # 代码植入问题处理

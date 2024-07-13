@@ -6,39 +6,24 @@ slug: /backup
 import DocCardList from '@theme/DocCardList';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-# 备份恢复
+# Backup and restore
 
-备份对于任何数字化的组织来说，都是至关重要的。  
+Regular backups are crucial to prevent data loss. They ensure that important documents and files are safe from accidental deletion, hardware failures, or cyberattacks. Always back up your data to avoid irreversible damage.
 
-备份并不是一个可有可无的工作，它极其重要。设想，当系统出现故障或灾难后，没有可以恢复的备份，其造成的损失如何弥补？    
+## Backup strategies
 
-所以，一定要尽早将备份工作落实下去，切莫存在任何侥幸心理。  
-
-## 备份方式
-
-使用 Websoft9 时，有两种备份的方式：  
+For Websoft9, the following backup strategies are required: 
 
 <DocCardList items={useCurrentSidebarCategory().items}/>
 
-## 问题解答
+## FAQ{#faq}
 
-#### 为什么需要备份？
+#### Why is backup so essential?
 
-“信息系统根本无法长时间保持 100% 稳定的状态，任何系统都可能会出现故障，只是故障出现的概率不同、危害程度不同而已”。  
+Backups are essential for several reasons:
 
-1. 工作几天的成果被误删了，怎么恢复？
-2. 网站被黑客攻击面目全非，能复原吗？
-3. 网站内容被改得乱七八糟，想要恢复到一个正常状态？ 
+1. **Data Loss Prevention and Disaster Recovery**: Protect against accidental deletion, hardware failures, or software corruption. Ensure quick recovery from events like natural disasters, cyberattacks, or system crashes.
+4. **Historical Record for Compliance and Legal Requirements**: Keep historical versions of files for reference or rollback purposes, meet regulatory requirements for data retention and protection.
 
-**墨菲定律** 告知我们：如果事情有变坏的可能，不管这种可能性有多小，它总会发生。  
-
-可见备份的工作就是未雨绸缪，防患于未然，是生活和工作中的常规哲学。  
-
-#### 没有备份能恢复数据吗？
-
-不能。在极少数情况下，专业人士也仅能够恢复少量不完整的数据。
-
-#### 怎么检查备份的效果？
-
-对备份进行一次恢复工作是有必要的，它可以证明备份在实践上的可用性。
+Regular backups are a fundamental part of any data management and security strategy.
 

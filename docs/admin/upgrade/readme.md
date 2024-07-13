@@ -35,6 +35,6 @@ import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 本文档约定：大版本变化为“**升级**”，小版本变化为“**更新**”
 
 
-#### 应用升级需要额外升级环境吗？
+#### 升级应用需要重新部署源码吗？
 
 不需要。Websoft9 提供的云原生应用，应用程序与环境封装在一个独立的容器中，升级容器即升级环境。  

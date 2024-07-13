@@ -65,11 +65,11 @@ import Meta from './apps/_include/allapps.md';
 
 <Meta name="meta" />
 
-## Platform Comparison {#vs}
+## Comparison {#vs}
 
-### Websoft9 vs cPanel vs BaoTa
+### Websoft9 vs cPanel vs Plesk
 
-Both cPanel and BaoTa are server panel tools designed to simplify PHP website deployment and server management.  
+Both cPanel and Plesk are server panel tools designed to simplify PHP website deployment and server management.  
 
 Compared to them, Websoft9 offers:
 

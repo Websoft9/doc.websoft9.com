@@ -32,3 +32,13 @@ docker-compose down
 docker-compose pull
 docker-compose up -d
 ```
+
+## 清空容器日志
+
+```
+# 获取容器日志路径
+docker inspect --format='{{.LogPath}}' Container_Name
+
+# 清空日志
+echo "" > log_path
+```
