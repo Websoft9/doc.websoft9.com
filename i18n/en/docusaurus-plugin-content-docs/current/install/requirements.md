@@ -37,6 +37,10 @@ Websoft9 supports major [Linux distributions](https://websoft9.github.io/websoft
 
 If you want to install Websoft9 at [Windows or macOS](./install-windows), you need to install VM software fist.  
 
+## Ports{#ports}
+
+Websoft9 need open **80, 443, 9000** ports of your Security Group or Linux firefall.
+
 ## Domain{#domain}
 
 A domain is not required for Websoft9 to run. However, without a domain, application access is limited. We recommend configuring a domain for your application.  

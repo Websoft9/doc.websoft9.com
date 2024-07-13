@@ -1,14 +1,14 @@
 ---
 sidebar_position: 3
-slug: /install/alibabacloud
+slug: /install-alibabacloud
 ---
 
 # 阿里云
 
 Websoft9 在阿里云和 Alibaba Cloud 都提供了预制镜像，用户可以通过购买的方式实现自动化安装部署 Websoft9 多应用托管平台。  
 
-- [Websoft9 on 阿里云](https://shop658hlt17.market.aliyun.com)
-- [Websoft9 on AlibabaCloud](https://shop658hlt17.market.aliyun.com)
+- [Websoft9 on 阿里云](https://market.aliyun.com/products/53690006/cmjj00065456.html)
+- [Websoft9 on AlibabaCloud](https://marketplace.alibabacloud.com/products/56680002/sgcmjj00034195.html)
 
 
 ## 先决条件

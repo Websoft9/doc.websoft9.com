@@ -6,89 +6,67 @@ slug: /install-aws
 
 # AWS
 
-Websoft9 在 AWS 提供了预制[云市场镜像](https://aws.amazon.com/marketplace/seller-profile?id=c639a579-182c-4d30-8578-4d4d89fba658)，用户可以通过购买的方式实现自动化安装部署 Websoft9 多应用托管平台。
+For users of the AWS, Websoft9 has a pre-configured offering in the [AWS Marketplace](https://aws.amazon.com/marketplace/seller-profile?id=c639a579-182c-4d30-8578-4d4d89fba658). This tutorial describes installing Websoft9 Enterprise Edition in a single Virtual Machine (EC2).   
 
-## 先决条件
+## Prerequisite
 
-必须拥有 AWS 的账号：
+You need an account on AWS. Use of the following methods to obtain an account:
 
-- 如果你或你的公司已经有一个订阅帐户，请使用该帐户
-- 如果没有，可以免费[开设自己的 AWS 帐户](https://aws.amazon.com/cn/free/)，AWS Free Tier 提供 100 多种 AWS 产品
+- If you or your company already have an account with a subscription, use that account. 
+- If not, you can open your own [AWS account for free](https://aws.amazon.com/cn/free). AWS free trial gives you 100+ product trials. 
 
-## 规划虚拟机配置
+## Deploy Websoft9
 
-先阅读 [Websoft9 安装要求](./requirements)，了解所需的服务器规格、存储和带宽要求。 
+AWS supports various ways to deploy Websoft9, essentially via EC2 image creation.  
 
-另外，在 AWS 上部署 Websoft9 时，需要填写重要的配置参数，下面先提前说明：
+Before deployment, you should understand EC2 [requirements](./requirements) first.     
 
-- 操作系统磁盘类型，请选择 **SSD** 相关类型
-- 安全组端口开启：80, 443, 9000
-- 身份验证：密钥对
+Regardless of which deployment method you choose, AWS will initiate the deployment of a new EC2.  
 
-## 安装 Websoft9
+### From AWS Marketplace
 
-一旦您注册了 AWS 的账号，您可以通过如下多种方式安装 Websoft9：
+1. Login to [AWS Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps), input the key "websoft9" to search image of Websoft9
 
-### 基于 Marketplace 安装
+2. Click **Continue to Subscribe** to start, and accept Terms and Conditions as the system prompts
 
-1. 访问 Websoft9 在 [AWS Marketplace 上的主页](https://aws.amazon.com/marketplace/seller-profile?id=c639a579-182c-4d30-8578-4d4d89fba658) 
-
-2. 找到所需的产品，点击 "Continue to Subscribe" 开始订阅
+3. Then click **Continue to Configuration** to go to **Launch** step
    ![开始订阅镜像](./assets/aws-rs-websoft9.png)
 
-3. 根据提示，逐渐完成后续步骤，直至 **Launch** 
-
-4. 此时，选择启动的入口 Choose Action 
+4. At **Launch** step, choose the **Choose Action**
    ![开始载入镜像](./assets/aws-imagecreate2-websoft9.png)
 
-   - Launch through EC2 （推荐）
+   - Launch through EC2 (recommendation)
    - Launch from Website
    - Copy to Service Catalog
 
-7. 后续动作基本都会要求用户完成：选择实例类型、VPC、Key Pair等设置
+5. Complete EC2 creation and Websoft9 image subscription as instructed.
 
-8. 等待几分钟，EC2 创建完成后，镜像会作为 EC2 实例的系统盘启动，即镜像自动部署到实例中
+### From AWS Console
 
-### 基于 Console 安装
+1. Login to the AWS Management Console, and start to create EC2 instance
 
-1. 登录到 AWS 管理控制台，开始创建一个 EC2 实例
+2. When choosing AMIs, click **View all public and private AMIs** and search keyword "websoft9" to see the list of images. 
 
-2. 在 "应用程序和操作系统映像" 选项中，通过 "浏览其他 AMI" 进入镜像列表页
+3. Select one of Websoft9 image, and complete EC2 creation and Websoft9 image subscription as instructed.
 
-3. 点击列表页的 "AWS Marketplace AMI" 标签栏，搜索关键件词 “websoft9”，列出 Websoft9 相关镜像
+### From AWS CloudFormation
 
-3. 选择一个你所需的镜像，系统提示订阅，点击【Continue】，开始创建 EC2 实例
+1. Prepare [AWS CloudFormation](https://aws.amazon.com/cloudformation) for Websoft9 deployment
 
-5. 后续动作基本都会要求用户完成：选择实例类型、增加存储、配置安全组、设置秘钥对等设置
+2. Run this template
 
-6. 等待几分钟，EC2 创建完成后，镜像会作为 EC2 实例的系统盘启动，即镜像自动部署到实例中
+   - Login to AWS Dashboard, load that AWS CloudFormation template and run it
+   - Use AWS CLI/API to load that AWS CloudFormation template and run it
 
-### 基于 API/CLI 安装
+## After deployment
 
-即将推出
+The deployment process will take a few minutes to complete. Once finished, you can:
 
-### 基于 CloudFormation 安装
-
-1. 提前准备部署模板
-
-2. 登录 AWS 门户，将部署模板导入运行
-
-## 完成虚拟机部署
-
-选用以上任意安装方式，AWS 都会开始部署新的 EC2。  
-
-部署过程需要几分钟才能完成。完成后，通过 AWS 的控制台查看新的 EC2 的信息。  
-
-## 后续配置 Websoft9
-
-EC2 可用之后，参考下面的步骤设置完成后续操作：
-
-1. 登录 AWS 的 **EC2 Dashboard**，在线连接 EC2
-
-2. 运行下面的命令设置 root 密码
+1. View the details of the new VM through the **EC2 Dashboard** of AWS console
+2. Run below command to set **root** account password
    ```
    sudo su
    passwd
    ```
-3. 登录 Websoft9 控制台，完成[配置域名](./setup)等后续操作
+3. [Login to Websoft9 Console](./login-console) and refer to [Post-Installation Setup](./install-setup) for next steps
 

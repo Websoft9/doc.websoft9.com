@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-slug: /install/setup
+slug: /install-setup
 ---
 
 # 安装后配置

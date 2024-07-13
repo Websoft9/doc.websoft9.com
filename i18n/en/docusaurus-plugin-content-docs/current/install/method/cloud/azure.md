@@ -5,88 +5,84 @@ slug: /install-azure
 
 # Azure
 
-Websoft9 在 Azure 提供了预制[云市场镜像](https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=vmlab&page=1)，用户可以通过购买的方式实现自动化安装部署 Websoft9 多应用托管平台。
+For users of the Microsoft Azure business cloud, Websoft9 has a pre-configured offering in the [Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=vmlab&page=1). This tutorial describes installing Websoft9 Enterprise Edition in a single Virtual Machine (VM).   
 
-下面的教程介绍如何在 Azure 上部署 Websoft9。
+## Prerequisite
 
-## 先决条件
+You need an account on Azure. Use of the following methods to obtain an account:
 
-必须拥有 Azure 的账号：
+- If you or your company already have an account with a subscription, use that account. 
+- If not, you can open your own [Azure account for free](https://azure.microsoft.com/en-us/free/). Azure’s free trial gives you $200 credit to explore Azure.
 
-- 如果你或你的公司已经有一个订阅帐户，请使用该帐户
-- 如果没有，可以免费[开设自己的 Azure 帐户](https://azure.microsoft.com/en-us/free/)，Azure 的免费试用版提供 200 美元的信用额度
+## Deploy Websoft9
 
-## 规划虚拟机配置
+Azure supports various ways to deploy Websoft9, essentially via VM image creation.   
 
-先阅读 [Websoft9 安装要求](./requirements)，了解所需的服务器规格、存储和带宽要求。 
+Before deployment, you should understand VM [requirements](./requirements) first.      
 
-另外，在 Azure 上部署 Websoft9 时，需要填写重要的配置参数，下面先提前说明：
+Regardless of which deployment method you choose, Azure will initiate the deployment of a new VM.  
 
-- 操作系统磁盘类型，请选择 **SSD** 相关类型
-- 安全组端口开启：80, 443, 9000
-- 身份验证：密钥对或密码均可
+### From Azure Marketplace
 
-## 安装 Websoft9
+1. Login to [Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps), input the key "websoft9" to search image of Websoft9
+  ![search websoft9](./assets/azure-mkss-websoft9.png)
 
-一旦您注册了 Azure 的账号，您可以通过如下多种方式安装 Websoft9：
+2. Select the target offer and click "GET IT NOW" button on product details page
 
-### 基于 Marketplace 安装
+3. Click "Create" button to create a VM with the image have selected
 
-1. 访问 [Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps)，搜索 Websoft9 镜像
-  ![搜索Websoft9镜像](./assets/azure-mkss-websoft9.png)
+4. Complete VM creation and Websoft9 image subscription as instructed.
 
-2. 完成订阅步骤
+### From Azure Portal
 
-### 基于 Portal 安装
+Azure Portal provides two entry points for deploying offer based on image
 
-Azure 后台门户（Portal）提供了两种部署镜像的入口：
+  - **Portal > Create a resource**, search Websoft9 image and deploy it
+    ![Azure Portal search websoft9](./assets/azure-portalmk-websoft9.png)
 
-  - Portal > "创建资源"，检索 Websoft9 镜像
-    ![Azure Portal 搜索镜像](./assets/azure-portalmk-websoft9.png)
-
-  - Portal > "创建虚拟机" > "浏览所有镜像"，检索 Websoft9 镜像
+  - **Portal > Visual Machines > + Add** to create VM, and select "websoft9" image for this VM
     ![](./assets/azure-vmimage-websoft9.png)
 
-不管哪种入口，最终的操作都是一致的：**基于预制的 Websoft9 镜像创建虚拟机**
 
-### 基于 API/CLI 安装
+### From ARM templates
 
-即将推出
+1. Prepare ARM template for Websoft9 deployment
 
-### 基于编排模板安装
+2. Run this template
 
-1. 提前准备部署模板
+   - Login to Azure Console, load that ARM template and run it
+   - Use Azure CLI/API to load that ARM template and run it
 
-2. 登录 Azure 门户，将部署模板导入运行
+## After deployment
 
-### 基于 VHD 安装
+The deployment process will take a few minutes to complete. Once finished, you can:
 
-如果用户已有一个包含 Websoft9 的 VHD，那么也可以基于此 VHD 创建新建，重新部署 Websoft9
-
-1. 在 Azure 上运行 PowerShell 命令获取 Websoft9 镜像的 plan
+1. View the details of the new EC2 through the Azure Portal
+2. Run below command to set **root** account password
    ```
-   PS Azure:\> az vm image list --offer w9wordpress2 --all --output table
-   Offer         Publisher    Sku                          Urn                                                             Version
-   ------------  -----------  ---------------------------  --------------------------------------------------------------  ---------
-   w9wordpress2  websoft9inc  wordpress52-lemp72-centos76  websoft9inc:w9wordpress2:wordpress52-lemp72-centos76:5.2.20000  5.2.20000
+   sudo su
+   passwd
+   ```
+3. [Login to Websoft9 Console](./login-console) and refer to [Post-Installation Setup](./install-setup) for next steps
+
+
+## Troubleshoot
+
+### VHD failed to create a VM?
+
+**Description**: I use Websoft9 and deleted the VM and kept the VHD. Now, when I create a VM based on the VHD, it fails.  
+**Solution**: This VHD contains a subscription relationship, but it cannot be passed to the Azure Portal  
+**Solution**: You can create VM from Azure Resource Manager templates and add subscription item to that template  
+
+1. Get the Run plan information by Azure CLI
+    ```
+    az vm image list --offer websoft9-enterpise --all --output table
    ```
 
-2. 在编排模板的虚拟机属性中加入云市场镜像的计划
-   ```
-   "plan": {
-                  "name": "wordpress52-lemp72-centos76",
-                  "publisher": "websoft9inc",
-                  "product": "w9wordpress2"}
-   ```
-
-3. 基于编排模板重新部署 Websoft9
-
-## 完成虚拟机部署
-
-选用以上任意安装方式，Azure 都会开始部署新的 VM。  
-
-部署过程需要几分钟才能完成。完成后，通过 Azure 的仪表板查看新的 VM 的信息。  
-
-## 后续配置 Websoft9
-
-VM 可用之后，还需要[完成配置域名等后续操作](./setup)，方可使用更好的使用 Websoft9
+2. Add item **plan** to template
+    ```
+      "plan": {
+                 "name": "websoft9-enterpise",
+                 "publisher": "websoft9inc",
+                 "product": "websoft9"}
+    ```

@@ -5,10 +5,10 @@ slug: /development
 import DocCardList from '@theme/DocCardList';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-# 开发贡献
+# Contribute to Websoft9
 
-了解如何为 Websoft9 产品的开发做出贡献。
+Learn how to contribute to the development of the Websoft9 product.   
 
-此内容适用于 Websoft9 团队成员和更广泛的社区成员。
+This content is intended for both Websoft9 team members and members of the wider community.   
 
 <DocCardList items={useCurrentSidebarCategory().items}/>

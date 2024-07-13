@@ -1,6 +1,6 @@
 ---
 sidebar_position: 5
-slug: /install/tencentcloud
+slug: /install-tencentcloud
 ---
 
 # 腾讯云

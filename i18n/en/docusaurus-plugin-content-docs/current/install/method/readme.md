@@ -21,7 +21,7 @@ Review the [System Requirements](./install-requirements) before installation
 | Method     | Description     | When to choose      |
 | ------------------------- | ------------- | ----------------- |
 | [Installation for Linux](./install-linux)| Automatic install scripts  | This method need user have Linux capabilities |
-| [Installation for Windows](./install-windows)|Installation on a Windows virtual Linux virtual machine | This method need user have Linux and Windows capabilities |
+| [Installation for Windows/macOS](./install-windows)|Installation on a Windows/macOS virtual Linux virtual machine | This method need user have Linux and Windows/macOS capabilities |
 | [Installation of cloud providers ](./install-cloud)     | Enterprise subscription by cloud provider, it mean buy as installation | Need full-managed and business support |
 | [Customized installation](./install-customized)       | Contact Websoft9 to deploy a customized installation             | If product not fully meet the requirements and you want to some personalized deployment services       |
 
