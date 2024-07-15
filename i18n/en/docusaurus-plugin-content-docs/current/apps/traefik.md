@@ -18,7 +18,7 @@ import Meta from './_include/traefik.md';
 
 1. When completed installation of Traefix at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
-2. Optional: Forwarding of Traefik Dashboard port 8080 to extranet access through the Websoft9 gateway
+2. Optional: Forward Traefik Dashboard port 8080 to extranet by Websoft9 gateway
 
 ## Configuration options{#configs}
 

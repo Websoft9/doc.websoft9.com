@@ -29,7 +29,7 @@ import Meta from './_include/typesense.md';
 
 ## Configuration options{#configs}
 
-- Scraper Config File configuration: environment variables for the typesense-scraper container in docker-compose.yml **CONFIG**
+- Scraper Config File configuration: environment variables **CONFIG** for the typesense-scraper container in docker-compose.yml
 - Architecture: typesense-scraper is the data crawler, typesense is the data store and search engine
 
 ## Administer{#administrator}

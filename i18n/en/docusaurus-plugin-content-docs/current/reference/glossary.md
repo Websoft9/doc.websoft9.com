@@ -192,10 +192,11 @@ Use operating system not OS, OS is not informal
 - rebuild docker image
 - redeploy application by docker compose
 
-## Fully-managed, Self-hosting
+## Fully-managed, Self-hosting, Managed hosting
 
 - Fully-managed: Service provider handles all management and maintenance tasks.
 - Self-hosting: Customer manages and maintains their own system.
+- Managed hosting: Offer rentable computer servers that are fully administered and maintained by the service provider.
 
 ## stack, software, component, package
 

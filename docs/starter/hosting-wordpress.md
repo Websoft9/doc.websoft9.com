@@ -69,7 +69,7 @@ Websoft9 控制台提供对 WordPress 基本的监控，包括服务状态、资
 
 - 抢占 WordPress 的计算资源
 - 无法提供集中式的网站访问统计界面
-- 插件机软件的专业性无法与专业统计软件媲美
+- 插件的专业性无法与专业统计软件媲美
 
 Websoft9 应用商店提供了 [Plausible](./plausible), [Umami](./umami), [Matomo](./matomo) 等专业的访问统计工具，一键部署即快速实现专业的统计。  
 
