@@ -18,7 +18,7 @@ import Meta from './_include/typesense.md';
 
 1. When completed installation of Typesense at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
-2. Browser access: URL + path **health** to see whether the Typesense service is up and running
+2. Browser access: append the **/health** path to the URL to check if the Typesense service is normal startup
     ```
     # test health
     curl "http://URL/health"
