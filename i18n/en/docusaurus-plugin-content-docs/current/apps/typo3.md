@@ -43,10 +43,12 @@ import Meta from './_include/typo3.md';
 
 - Multilingual(✅): [Changing The Backend Language](https://docs.typo3.org/m/typo3/tutorial-getting-started/main/en-us/Setup/BackendLanguages.html#backendlanguages)
 
-- Extensions(✅): Typo3 backend **[ADMIN TOOLS > Extensions]**
-- Template(✅): Typo3 backend **[WEB > Template]**
+- Extensions(✅): Typo3 backend **ADMIN TOOLS > Extensions**
+- Template(✅): Typo3 backend **WEB > Template**
 
 ## Administer{#administrator}
+
+- Online upgrade(✅): Typo3 backend **ADMIN TOOLS > Upgrade**
 
 ## Troubleshooting{#troubleshooting}
 
