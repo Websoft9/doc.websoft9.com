@@ -17,7 +17,7 @@ import Meta from './_include/umami.md';
 
 1. When completed installation of Umami at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
-2. After successfully logging in, go to [Users] to change the password
+2. After successfully logging in, go to **Users** to change the password
 
 ## Configuration options{#configs}
 
