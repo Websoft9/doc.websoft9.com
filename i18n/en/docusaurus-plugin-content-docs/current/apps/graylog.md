@@ -28,12 +28,12 @@ Websoft9 is a Graylog Enterprise Edition partner. Pricing factors for Graylog En
 
 * Log Storage: Graylog Enterprise Edition is priced primarily on log storage.
 * Clustering: Graylog cluster deployment is also a pricing reference.
-* ES: Clustering is supported in the open source version of Elasticsearch, but for more functionality, a subscription to the commercial version of Elasticsearch is required.
+* ES: Elasticsearch version offers open-source clustering, but advanced features require a commercial license. 
 
 ## Configuration options{#configs}
 
-- SMTP (✅): implemented by the **transport_email** parameter of the configuration file
-- Configuration file: configuration options can all be prefixed with upper case GRAYLOG_ Implementation of container environment variableization
+- SMTP (✅): edit the **transport_email** parameter in the configuration file to enabled.
+- Configuration file: To configure environment variables for containers, prefix all configuration variables with uppercase GRAYLOG_. 
     ```
     GRAYLOG_TRANSPORT_EMAIL_ENABLED: "true"
     GRAYLOG_TRANSPORT_EMAIL_HOSTNAME: smtp
@@ -46,7 +46,7 @@ Websoft9 is a Graylog Enterprise Edition partner. Pricing factors for Graylog En
 
 ## Administer{#administrator}
 
-- Clustering: Graylog supports complex [clustered](https://docs.graylog.org/v1/docs/multinode-setup) deployments!
+- Clustering: Graylog supports complex [clustered](https://docs.graylog.org/v1/docs/multinode-setup) deployments.
   ![Graylog cluster deployment architecture diagram](./assets/graylog-hasetup-websoft9.png)
 
 ## Troubleshooting{#troubleshooting}
@@ -54,17 +54,13 @@ Websoft9 is a Graylog Enterprise Edition partner. Pricing factors for Graylog En
 #### Alerts and errors after login ?
 
 Description: Prompt There is a node without any running inputs. this means ... ?
-![](./assets/graylog-nofiinput-websoft9.png)
+![](./assets/graylog-nofiinput-websoft9.png)  
+Reason: This is just a reminder that there is currently no input, not an error.  
+Solution: Create a new local input to get rid of this reminder.  
 
-Reason: This is just a reminder that there is currently no input, not an error.
-
-Solution: Create a new local input to get rid of this reminder!
-
-Description: Index rotation strategy null not found...? 
-
-Reason: This problem occurs when the free disk space is less than 15%.
-
-Solution: Free up redundant files or increase server disk space.
+Description: Index rotation strategy null not found...?   
+Reason: This problem occurs when the free disk space is less than 15%.  
+Solution: Free up redundant files or increase server disk space.  
 
 #### Does Graylog store data?
 

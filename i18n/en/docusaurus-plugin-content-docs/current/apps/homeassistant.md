@@ -17,7 +17,7 @@ import Meta from './_include/homeassistant.md';
 
 The Home Assistant application does not include the MQTT service by default:
 
-1. Prepare the MQTT service or install the open source MQTT server [Eclipse Mosquitto](. /mosquitto).    
+1. Prepare the MQTT service or install the open source MQTT server [Eclipse Mosquitto](./mosquitto).    
 
 2. Refer to: [MQTT Configuration](https://www.home-assistant.io/integrations/mqtt) to complete the connection and configuration.  
 
@@ -32,4 +32,4 @@ The Home Assistant application does not include the MQTT service by default:
 
 #### can't access Home Assistant through the domain name ?
 
-Currently it can be accessed only via IP and port, there is no solution for forwarding to a domain via Nginx.
+Currently it can be accessed only by IP and port, there is no solution for domain access.
