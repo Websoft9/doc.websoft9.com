@@ -16,13 +16,13 @@ import Meta from './_include/haproxy.md';
 
 ### Login verification{#verification}
 
-1. Completed installation HAProxy at **Websoft9 console**, get the applicaiton's overview and access credentials from **My Apps**  
+1. Completed installation HAProxy at **Websoft9 console**, get the applicaiton's overview and access credentials from **My Apps**.  
 
 2. Set the password in the configuration file.
 
 ### Enable HAProxy Monitoring
 
-HAProxy Statistics Report is set by default and can be viewed through the Websoft9 console application management interface.  
+HAProxy Statistics Report is set by default and can be viewed through the **Websoft9 console > access > Backend**.   
 
 ### High Availability
 
@@ -30,8 +30,8 @@ Deploy Keepalived for high availability of HAProxy.
 
 ### Cluster Configuration
 
-To enable HAProxy clustering, simply add information about the cluster servers you want to manage in the configuration file, as shown in the following example:
-
+To enable HAProxy clustering, add cluster server info to the configuration file.  
+Examples are as follows:
   ```
   ## HTTP Site Configuration]
   listen http_web 192.168.10.10:80
