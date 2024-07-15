@@ -31,6 +31,10 @@ slug: /legal/licenses
 - MIT
 - https://github.com/mrvautin/adminMongo/blob/master/LICENSE
 
+#### AITable
+- AGPL v3
+- https://github.com/apitable/apitable/blob/develop/LICENSE
+
 #### Akeneo
 - OSL V3
 - https://github.com/akeneo/pim-community-standard/blob/master/LICENCE.txt
@@ -188,7 +192,7 @@ slug: /legal/licenses
 
 #### Gitlab-CE
 - MIT
-- https://gitlab.com/gitlab-org/gitlab-foss/blob/master/LICENSE
+- https://gitlab.com/free-releases/gitlab-ce/-/blob/master/LICENSE
 - https://docs.gitlab.com/ce/development/licensing.html
 
 #### Gitlab-EE
@@ -236,6 +240,10 @@ slug: /legal/licenses
 #### Jenkins
 - MIT
 - https://github.com/jenkinsci/jenkins/blob/master/LICENSE.txt
+
+#### JIHU
+- JH License
+- https://gitlab.com/gitlab-jh/gitlab/-/blob/main-jh/jh/LICENSE
 
 #### Joomla
 - GPL v2 or later
@@ -313,7 +321,7 @@ slug: /legal/licenses
 - https://github.com/SpiderLabs/ModSecurity/blob/v3/master/LICENSE
 
 #### MongoDB Community
-- SSPL
+- SSPL v1
 - https://github.com/mongodb/mongo/blob/master/LICENSE-Community.txt
 
 #### Moodle
@@ -498,12 +506,12 @@ slug: /legal/licenses
 - https://github.com/LLK/scratch-gui/blob/develop/LICENSE
 
 #### Seafile
-- AGPL v3
+- Apache-2.0
 - Github注明：
  Seafile iOS client: Apache License v2
- Seafile Android client: GPLv3
- Desktop syncing client (this repository): GPLv2
- Seafile Server core: AGPLv3
+ Seafile Android client: GPLv3  
+ Desktop syncing client (this repository): GPLv2  
+ Seafile Server core: AGPLv3  
  Seahub (Seafile server Web UI): Apache License v2
 - https://github.com/haiwen/seafile/blob/master/LICENSE.txt
 
@@ -566,7 +574,7 @@ slug: /legal/licenses
 - https://opensource.org/licenses/gpl-license
 
 #### Webmin
-- All recent versions of Webmin are under a BSD-like licence, meaning that it may be freely distributed and modified for commercial and non-commercial use.
+- BSD 3-Clause
 - https://webmin.com/intro.html
 
 #### Wordpress

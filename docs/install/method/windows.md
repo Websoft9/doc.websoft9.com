@@ -1,16 +1,16 @@
 ---
 sidebar_position: 1.2
-slug: /install/windows
+slug: /install-windows
 ---
 
 
-# Windows 下安装
+# Windows/macOS 下安装
 
-在 Windows 下安装 Websoft9，需要先安装一个 Linux 虚拟机，然后在该虚拟机中安装 Websoft9。   
+在 Windows/macOS 下安装 Websoft9，需要先安装一个 Linux 虚拟机，然后在该虚拟机中安装 Websoft9。   
 
 主要步骤包括：
 
-1. **在 Windows 上安装虚拟机软件**：
+1. **在 Windows/macOS 上安装虚拟机软件**：
 
    - 下载并安装虚拟机软件，例如 [VirtualBox](https://www.virtualbox.org/) 或 [VMware Workstation Player](https://www.vmware.com/products/workstation-player.html)。
 
