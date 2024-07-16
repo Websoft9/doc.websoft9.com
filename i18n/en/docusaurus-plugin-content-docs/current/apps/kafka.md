@@ -13,7 +13,7 @@ import Meta from './_include/kafka.md';
 
 ## Getting started{#guide}
 
-### Visually managing a Kafka cluster
+### Visualize Kafka Cluster Management 
 
 Install the [Redpanda Console](./redpandaconsole) from the **Websoft9 App Store** to visually manage your Kafka cluster.
 

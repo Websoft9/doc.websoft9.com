@@ -17,9 +17,9 @@ import Meta from './_include/kibana.md';
 
 After installing Kibana in the Websoft9 console, view the application details through **My Applications** and get the login information in the **Access**.  
 
-1. Prepare the Elasticsearch Enrollment Token and password in advance.
+1. Prepare Elasticsearch Enrollment Token and account password information in advance. 
 
-2. Log in to the Kibana initialization interface, and enter [Elasticsearch Enrollment Token](./elasticsearch#token) (required for the first time). 
+2. Login Kibana's initialization interface and enter [Elasticsearch Enrollment Token](./elasticsearch#token) information for verification (required for first-time login) 
 
 3. After authentication, a screen will appear asking for a username and password.
  
