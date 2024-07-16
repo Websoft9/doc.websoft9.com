@@ -25,10 +25,10 @@ Once the kown what integration need, the next step is to create usable connectio
 
 The network method of connection needs to be clarified as soon as possible:  
 
-- **Intranet connection**: Connection through a local network to ensure security and efficiency.
+- **Private network connection**: Connection through a local network to ensure security and efficiency.
 - **Public network connection**: Public access via the Internet for application that require extensive access.
 
-### Intranet{#intranet}
+### Private network{#intranet}
 
 The containers for all applications share the same network **websoft9** with **container_name** as the DNS.   
 
