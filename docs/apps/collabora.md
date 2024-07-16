@@ -21,11 +21,13 @@ Websoft9 控制台安装 Collabora 后，通过 "我的应用" 查看应用详�
 
 Nextcloud 官方对 Collabora 有较好的[集成](https://www.collaboraoffice.com/code/quick-tryout-nextcloud-docker/)。
 
-1. Nextcloud 安装 CODE 插件
+1. Nextcloud 安装 **Collabora Online - Built-in CODE Server** 应用
 
-2. 管理设置 > 管理 > Office，选中**使用您的自有服务器**，开始设置
+2. **管理设置 > 管理 > 内建服务器(CODE)**，安装 Nextcloud Office 插件
 
-3. 保存成功即可使用
+3. **管理设置 > 管理 > Nextcloud Office > 使用您的自有服务器**，填写 Collabora Online 访问URL
+
+4. 保存成功即可使用
 
 ## 配置选项{#configs}
 
