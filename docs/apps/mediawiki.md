@@ -26,7 +26,7 @@ Websoft9 控制台安装 Mediawiki 后，通过 "我的应用" 查看应用详�
 
 ### 设置 SMTP{#smtp}
 
-1. 编辑根目录下的 `LocalSettings.php` 配置文件
+1. 编辑/bitnami/mediawiki目录下的 `LocalSettings.php` 配置文件
 
 2. 找到变量 $wgSMTP，并设置它
    
