@@ -20,7 +20,7 @@ import Meta from './_include/suitecrm.md';
 
 3. According to the guide prompts, select **Next** initialization settings
 
-4. Initialization settings are complete, start experiencing the backend
+4. Initialization settings completed, start experiencing the backend
 
 ## Configuration options{#configs}
 

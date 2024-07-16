@@ -19,7 +19,7 @@ import Meta from './_include/superset.md';
 
 2. Access the login page through your browser 
 
-3. Enter your password and login to the Superset backend.  
+3. Enter your account and login to the Superset backend.  
    ![](./assets/superset-console-websoft9.png)
 
 ### Analyzing data
@@ -35,7 +35,7 @@ import Meta from './_include/superset.md';
 - Multilingual(✅):Support for background switching
 - CLI: `superset [OPTIONS] COMMAND [ARGS]...`
 - [Configuration file](https://github.com/apache/superset/blob/master/superset/config.py)：*./src/docker/pythonpath_dev/superset_config.py*
-- SMTP(0✅): Add the following SMTP configuration segment in the configuration file and it will take effect after restarting the application.
+- SMTP(✅): Add the following SMTP configuration segment in the configuration file and it will take effect after restarting the application.
 
    ```
    # smtp server configuration
@@ -73,10 +73,10 @@ import Meta from './_include/superset.md';
 
 #### Superset Container Installation Driver Error?
 
-**Phenomenon description**: ERROR: Could not install packages due to an OSError: [Errno 13]
+**Description**: ERROR: Could not install packages due to an OSError: [Errno 13]
 Check the permissions.
 
-**Cause Analysis**: Insufficient permissions
+**Reason**: Insufficient permissions
 
 **Solution**: Enter the container command mode as `root` and install the driver.
 

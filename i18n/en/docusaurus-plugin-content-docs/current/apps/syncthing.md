@@ -34,9 +34,9 @@ Syncthing is mainly used to synchronize files or folders between multiple server
 
 4. Click **+Add Folder** in the Syncthing console of both servers.
 
-   - General > Folder ID (A and B use the same ID)
-   - General > Folder Path
-   - Shared (check)
+   - **General > Folder ID (A and B use the same ID)**
+   - **General > Folder Path**
+   - **Shared (check)**
 
 5. All settings are complete, and synchronization will now occur automatically.
 
