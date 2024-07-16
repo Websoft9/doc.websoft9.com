@@ -1,4 +1,4 @@
-[Graphite](https://graphiteapp.org/) is **Power your metrics and alerting with the leading open-source monitoring solution.**, used for Full Monitoring . Graphite is an enterprise-scale monitoring and graphing tool designed for web developers. It enables users to track the performance of websites, applications, business services, and networked servers.
+[Graphite](https://graphiteapp.org/) is **Power your metrics and alerting with the leading open-source monitoring solution**, used for Full Monitoring . Graphite is an enterprise-scale monitoring and graphing tool designed for web developers. It enables users to track the performance of websites, applications, business services, and networked servers.
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/graphite/graphite-gui-websoft9.jpg)
