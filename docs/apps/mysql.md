@@ -32,7 +32,7 @@ Websoft9 应用商店安装 [phpMyAdmin](./phpmyadmin) 或 [CloudBeaver](./cloud
 ## 配置选项{#configs}
 
 - 配置文件目录（已挂载）：/etc/mysql/conf.d
-- 初始化脚步目录（已挂载）：/docker-entrypoint-initdb.d
+- 初始化脚本目录（已挂载）：/docker-entrypoint-initdb.d
 - 端口：3306
 - 主从复制（√）：DDL 和 DML 操作通过二进制日志复传到从库，支持一主多从
 - 数据库主机名：容器名
@@ -53,7 +53,7 @@ Websoft9 应用商店安装 [phpMyAdmin](./phpmyadmin) 或 [CloudBeaver](./cloud
 
 ### 设置 Binary Log
 
-MySQL默认没有开启 Binary Log，修改 [MySQL 配置文件] (#configs)相关项
+MySQL默认没有开启 Binary Log，修改 [MySQL 配置文件](#configs)相关项
 
 ```
 log_bin = mysql-bin      # enable Binary log

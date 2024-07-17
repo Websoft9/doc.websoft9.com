@@ -30,7 +30,7 @@ import Meta from './_include/mediawiki.md';
 
 ### Setting up SMTP{#smtp}
 
-1. Edit the `LocalSettings.php` configuration file in the /bitnami/mediawiki directory.
+1. Edit the `/bitnami/mediawiki LocalSettings.php` configuration file.
 
 2. Find the variable $wgSMTP and set it as follows: 
    
@@ -45,7 +45,7 @@ import Meta from './_include/mediawiki.md';
     ).
    ```
 
-3. Find the variable $ wgEnableEmail and set its value to true.
+3. Find the variable $wgEnableEmail and set its value to true.
    
    ```
     $wgEnableEmail = true

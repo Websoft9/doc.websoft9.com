@@ -41,10 +41,10 @@ Websoft9 控制台安装 Mediawiki 后，通过 "我的应用" 查看应用详�
     );
    ```
 
-3. 找到变量 $ wgEnableEmail，设置其值为 true
+3. 找到变量 $wgEnableEmail，设置其值为 true
    
    ```
-    $ wgEnableEmail = true
+    $wgEnableEmail = true
    ```
 
 
