@@ -1,7 +1,7 @@
 [Trivy](https://trivy.dev/) is **open-source security vulnerability scanner**, used for Detection and Monitor . Trivy is an open-source tool for scanning container images, filesystems, and repositories for vulnerabilities.
 
 
-![]()
+![architecture](https://libs.websoft9.com/Websoft9/DocsPicture/zh/clamav/clamav-arch-websoft9.webp)
 
 
 ## Prepare
