@@ -1,4 +1,4 @@
-[Navidrome](https://www.navidrome.org/) is **Your Personal Streaming Service for music**, used for Video Server Media System . Navidrome 可以用作独立服务器，允许您使用 Web 浏览器浏览和收听您的音乐收藏。
+[Navidrome](https://www.navidrome.org/) is **Your Personal Streaming Service for music**, used for Video Server Media System . Navidrome can be used as a standalone server, that allows you to browse and listen to your music collection using a web browser.
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/navidrome/navidrome-gui-websoft9.png)

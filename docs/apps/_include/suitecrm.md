@@ -1,4 +1,4 @@
-[SuiteCRM](https://suitecrm.com/) 是一个 **开源的企业级CRM**，它被用于 CRM/分销/订单  等场景。SuiteCRM 是一个屡获殊荣的企业级的、强大的、可定制的，免费的CRM系统。
+[SuiteCRM](https://suitecrm.com/) 是一个 **开源的企业级CRM**，它被用于 CRM/分销/订单  等场景。SuiteCRM 是一个屡获殊荣的企业级的、强大的、可定制的，免费的CRM系统
 
 
 ![suitecrm](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-backend-websoft9.png)

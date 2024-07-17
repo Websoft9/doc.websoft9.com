@@ -7,28 +7,26 @@ tags:
   - Python
 ---
 
-# Deploy a Python App
+# For Python App
 
-## 配置选项{#configs}
+## Configuration options{#configs}
 
-- 版本号： `python3 -V`
-- Python 源码目录： */usr/lib/python*  
-- 命令行：`pip`, `python`
-- 应用服务器：Gunicorn, [uWSGI](https://uwsgi-docs.readthedocs.io/)
-- 二进制编译工具：pyinstaller, cpython
-- 解释器：[CPython](./assets/python-interpreter-websoft9.png)
+- Get Python version: `python3 -V`
+- Python source directory: */usr/lib/python*  
+- CLI: `pip`, `python`
+- Application server: Gunicorn, [uWSGI](https://uwsgi-docs.readthedocs.io/)
+- Compile tools: pyinstaller, cpython
 
-## 部署网站{#deploy}
+## Deploy a Python application{#deploy}
 
-参考：[Web Runtime 入门指南](../runtime#quick)
+Refer to: [App Runtime tutorials](../runtime#quick)
 
-## 环境管理{#administrator}
+## Manage runtime{#administrator}
 
-- 使用 uWsgi 发布 Django：`uwsgi --ini /path/django.ini`
-  ![](./assets/runtime-uwsgi-websoft9.png)
+- Use uWsgi for Django: `uwsgi --ini /path/django.ini`
 
-## 问题与故障
+## Troubleshoot
 
-#### 是否支持 Python 虚拟环境？
+### Do I need to use venv?
 
-支持 [venv](https://docs.python.org/zh-cn/3/tutorial/venv.html)，但不建议使用
+No, [venv](https://docs.python.org/zh-cn/3/tutorial/venv.html) is only need if you want to deploy multiply applications at one Python container

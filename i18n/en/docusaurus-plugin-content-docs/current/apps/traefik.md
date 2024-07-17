@@ -1,5 +1,5 @@
 ---
-title: Traefix
+title: Traefik
 slug: /traefik
 tags:
   - HTTP Server

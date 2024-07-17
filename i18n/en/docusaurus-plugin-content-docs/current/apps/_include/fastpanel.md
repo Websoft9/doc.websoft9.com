@@ -1,4 +1,4 @@
-[FASTPANEL]() is ****, used for Web Runtime . 
+[FASTPANEL]() is ****, used for App Runtime . 
 
 
 

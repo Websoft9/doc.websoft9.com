@@ -1,4 +1,4 @@
-[Redis ](https://redis.io/) is **An open source, advanced key-value store**, used for In-memory Database . Redis is an open source, advanced key-value store
+[Redis](https://redis.io/) is **An open source, advanced key-value store**, used for In-memory Database . Redis is an open source, advanced key-value store
 
 
 ![login](https://libs.websoft9.com/Websoft9/DocsPicture/en/redis/redisinsight-login-websoft9.png)
@@ -6,7 +6,7 @@
 
 ## Prepare
 
-When referring to this document to use **Redis **, please read and ensure the following points:
+When referring to this document to use **Redis**, please read and ensure the following points:
 
 - This application is installed by Websoft9 console.
 

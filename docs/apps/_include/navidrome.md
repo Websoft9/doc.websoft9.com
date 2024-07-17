@@ -1,4 +1,4 @@
-[Navidrome](https://www.navidrome.org/) 是一个 **开源流媒体平台，构建自己音乐网站**，它被用于 视频服务 视频音频  等场景。Navidrome can be used as a standalone server, that allows you to browse and listen to your music collection using a web browser.
+[Navidrome](https://www.navidrome.org/) 是一个 **开源流媒体平台，构建自己音乐网站**，它被用于 视频服务 视频音频  等场景。Navidrome 可以用作独立服务器，允许您使用 Web 浏览器浏览和收听您的音乐收藏。
 
 
 ![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/navidrome/navidrome-gui-websoft9.png)

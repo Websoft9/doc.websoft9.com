@@ -1,4 +1,4 @@
-[SuiteCRM](https://suitecrm.com/) is **An open source Customer Relationship Management (CRM) **, used for CRM & Distribution & Order . SuiteCRM is an open source Customer Relationship Management (CRM) software solution that provides a 360-degree view of your customers and business.
+[SuiteCRM](https://suitecrm.com/) is **An open source Customer Relationship Management**, used for CRM & Distribution & Order . SuiteCRM is an open source Customer Relationship Management (CRM) software solution that provides a 360-degree view of your customers and business.
 
 
 ![suitecrm](http://libs.websoft9.com/Websoft9/DocsPicture/zh/suitecrm/suitecrm-backend-websoft9.png)

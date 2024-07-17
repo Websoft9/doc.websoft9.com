@@ -1,4 +1,4 @@
-[SSCMS](https://sscms.com/) is **基于微软 .NET Core 平台的多站点 CMS**, used for Website Builder Education . SSCMS 是一款跨平台、可分布式部署的产品，产品能够运行在各类操作系统之上，同时支持 MySql、SqlServer、PostgreSql、SQLite 以及国产达梦数据库。
+[SSCMS](https://sscms.com/) is **CMS based on Microsoft for multiple websites**, used for Website Builder Education . SSCMS is a cross-platform, distributed deployment of the product can run on all kinds of operating systems, while supporting MySql, SqlServer, PostgreSql, SQLite and domestic Damon database.
 
 
 ![template](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sscms/sscms-gui-websoft9.png)
