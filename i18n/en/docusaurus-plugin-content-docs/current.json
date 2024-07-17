@@ -668,8 +668,8 @@
     "description": "The label for category 快速入门 in sidebar docs"
   },
   "sidebar.docs.category.使用程序环境部署应用": {
-    "message": "使用程序环境部署应用",
-    "description": "The label for category 使用程序环境部署应用 in sidebar docs"
+    "message": "Deploy from App Runtime",
+    "description": "The label for category Deploy from Runtime in sidebar docs"
   },
   "sidebar.docs.category.公有云安装": {
     "message": "Cloud providers",

@@ -1,4 +1,4 @@
-[Vtiger](https://www.vtiger.com/) is ** An opensource CRM system that helps you create and automate a better customer journey**, used for CRM & Distribution & Order . Vtiger Community Edition is an opensource CRM system that helps you create and automate a better customer journey.
+[Vtiger](https://www.vtiger.com/) is **An opensource CRM system that helps you create and automate a better customer journey**, used for CRM & Distribution & Order . Vtiger Community Edition is an opensource CRM system that helps you create and automate a better customer journey.
 
 
 ![vtigercrm](http://libs.websoft9.com/Websoft9/DocsPicture/zh/vtigercrm/vtigercrm-backend-websoft9.png)

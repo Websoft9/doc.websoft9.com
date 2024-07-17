@@ -23,11 +23,13 @@ import Meta from './_include/collabora.md';
 
 Nextcloud has a good [integration](https://www.collaboraoffice.com/code/quick-tryout-nextcloud-docker/) with Collabora.
 
-1. Nextcloud will install the CODE plugin.
+1. Nextcloud installs **Collabora Online - Built-in CODE Server** application
 
-2. Select **Administration Settings > Administration > Office**, check **Use your own server** and start the setup.
+2. **Administrative Settings > Administration > Built-in Server (CODE)**, install Nextcloud Office plugin
 
-3. Save successfully to use.
+3. **Administrative Settings > Administration >  Office > Use your own server**, fill in the Collabora Online access URL.
+
+4. Save successfully to use
 
 ## Configuration options{#configs}
 

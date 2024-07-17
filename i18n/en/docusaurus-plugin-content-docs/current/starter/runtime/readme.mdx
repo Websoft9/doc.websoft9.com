@@ -1,0 +1,244 @@
+---
+title: App Runtime
+slug: /runtime
+tags:
+  - 运行环境
+  - runtime
+  - 多语言环境
+  - PaaS
+---
+
+import DocCardList from '@theme/DocCardList';
+import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
+
+
+# Deploy from App Runtime
+
+Websoft9 **App Runtime** enables you to build and host web apps, mobile back ends, and RESTful APIs in the programming language of your choice. It enables automated deployments from GitHub, or any Git repo. It provides a programming language template such as Java, Python, Node.js, PHP, Go, Ruby, and .NET, as well as Docker image and static website deployment.  
+
+![](./assets/runtime-web-websoft9.png)
+
+## Learn about App Runtime
+
+Understand App Runtime types for use cases and basic configuration parameters.
+
+### Use cases
+
+Websoft9 **App Runtime**  includes below types for different use cases: 
+
+| App Runtime template                                           | Use case                   | 
+| -------------------------------------------------- | ---------------------- |
+| PHP, Node.js, Java, Python, Ruby, .NET     | Web application, Web development framework  |
+| Apache, Nginx, Caddy           | Static website |
+| Docker                                    | Docker application    |
+| Hugo, Jekyll, Gatsby, Hexo, Next.js | Static website application      |
+| Laravel, Django                    | Web framework application         |
+
+### How it work?
+
+App the **App Runtime** templates have the same deployment methods that based on GitOps and [IaC](https://aws.amazon.com/what-is/iac/):  
+
+- After launching the App Runtime, Websoft9 create three resources for user to deploy source code or binary, includes: 
+
+  - Git repository
+  - language container
+  - server block of Gateway
+
+- Then user can upload install packages and add deployment scripts to language container by updating App Runtime
+
+
+### Common parameters
+
+These are the common parameters for deployment by App Runtime:  
+
+- **Orchestration tool**: docker compose
+- **Container Port**: 8080
+- **Dockerfile build**: Not support now
+- **Execute commands at container**: Yes
+- **Preconfigured deploy scripts**: Container directory `/usr/local/bin/cmd.sh` that mount to `src/cmd.sh` of repository
+- **Character encoding**: UTF-8
+- **Multiply version**: Yes
+- **Root directory path**: Docker exec to container and command `pwd` to get path, and below for your references
+
+  - PHP: */var/www/html*
+  - Jetty: */var/lib/jetty/webapps*
+  - Tomee: */usr/local/tomee*
+  - Tomee: */usr/local/tomcat*
+  - Nginx: */usr/share/nginx/html*
+  - Caddy: */srv*
+  - Apache HTTP Server: */usr/local/apache2/htdocs*
+  - Other Runtime: */usr/src/app*
+
+### Language specific
+
+Language specific configurations you may need to know: root directory, package manager, install extensions, compilation, command line, container operating system, and more.
+
+<DocCardList items={useCurrentSidebarCategory().items}/>
+
+## Deploy application Guide{#guide}
+
+App Runtime is a special application of Websoft9. You just need a few steps to deploy application by App Runtime  
+
+### Prepration
+
+- [Set global domain for Websoft9](./domain-set#wildcard)
+- [Plan your install packages](./plan-package)
+
+### Step1: Prepare install packages
+
+Your installation package must to be downloaded for Websoft9 App Runtime, it is better than FTP/SFTP upload: 
+
+- No files permission issues and more secure
+- More suitable for automated deployment
+
+If your installation package not have download URL, you can create download URL by [Upload files to git repository](./plan-git#create).  
+
+### Step2: Launch App Runtime 
+
+1. [Login to Websoft9 Console](./login-console), go to the **APP Runtime** catalog of **App Store**
+   ![](./assets/runtime-catalog-websoft9.png)
+
+2. Install one of App Runtime at Websoft9 Console
+
+3. When App Runtime is running, three resources created for user to deploy source code or binary, includes: 
+
+   - One Git repository
+   - One language runtime container
+   - A Nginx proxy block in Websoft9 Gateway, it proxy to language runtime container's **80** port
+
+### Step3: Customize App Runtime{#dockercompose}
+
+You can update the App Runtime deployment by Git repository when it running, major operations includes: 
+
+   - Modify the image tag in the file `docker-compose.yml` to replace the default started container  
+   - Add more services or other elements to `docker-compose.yml` file 
+   - Add more environments to `.env` file  
+   - Modify **W9_VERSION** at file `.env` or other version item at file `docker-compose.yml` for upgrading containers  
+
+You should redeploy App Runtime after customizing any items, then it will take effect.  
+
+If you want to modify environments starting with **W9_**, you need to familiarize with [Websoft9 templates format](https://github.com/Websoft9/docker-library/blob/main/docs/code_owner.md#environments).
+
+### Step4: Deploy packages to App Runtime
+
+Deploying packages is mainly done below steps by commands in the App Runtime container:  
+
+1. **Upload packages**: Download packages to container and extract to the root directory
+
+2. **Build program (optional)**: Compile and build packages
+
+3. **Launch the program**: Run the program's startup command
+
+   - Make sure to run on port 8080 of the container
+   - Allow Internet access
+
+Websoft9 offers users two deployment modes to run commands.  
+
+#### Manual interactive deployments
+
+User docker exec to container and execute doployment commands, this is **Manual deployment**: 
+
+1. [Docker exec](./inner-container#docker-exec) to your container
+
+2. Upload your packages to container and build it or other operation, below samples for your reference: 
+
+   - [PHP](https://websoft9.github.io/docker-library/apps/php/src/cmd.sh)
+   - [Python](https://websoft9.github.io/docker-library/apps/python/src/cmd.sh)
+   - [Ruby](https://websoft9.github.io/docker-library/apps/ruby/src/cmd.sh)
+   - [Go](https://websoft9.github.io/docker-library/apps/go/src/cmd.sh)
+   - [Node.js](https://websoft9.github.io/docker-library/apps/nodejs/src/cmd.sh)
+   - [.NET](https://websoft9.github.io/docker-library/apps/dotnet/src/cmd.sh)
+   - [Java with OpenJDK](https://websoft9.github.io/docker-library/apps/openjdk/src/cmd.sh)
+   - [Java with Tomcat](https://websoft9.github.io/docker-library/apps/tomcat/src/cmd.sh)
+   - [Java with Tomee](https://websoft9.github.io/docker-library/apps/tomee/src/cmd.sh)
+   - [Java with Maven](https://websoft9.github.io/docker-library/apps/maven/src/cmd.sh)
+   - [Java with Jetty](https://websoft9.github.io/docker-library/apps/jetty/src/cmd.sh)
+
+
+3. Start program in the background, command like this `nohup <your startup commands> > output.log 2>&1 &`
+
+   - **your startup commands** sample:  `python manage.py runserver 0.0.0.0:8080`
+   - `nohup` command allows a process to continue running in the background when user has closed the terminal
+   - `> output.log 2>&1 &` is specify the logs path
+   - You need to execute nohup command again when restart container
+   
+#### Automated scripted deployment{#auto}
+
+Automated script deployment executes tasks without manual intervention.
+
+1. Login to Websoft9 Console, go to the [Compose](./app-compose) tab page of appli manage from **My Apps**
+   ![](./assets/runtime-editcompose-websoft9.png)
+
+2. Add your depoyment and startup process to *src/cmd.sh* which includes script sample for you references
+
+   > Your cmd.sh script needs to be more robust, considering container restarts and redeploy.
+    
+   ![](./assets/runtime-composeedit-cmd-websoft9.png)
+
+3. **Redeploy** the application, App Runtime container will execute the script for deployment
+
+## Updating your deployment
+
+Updating your deployment refers to the process of making changes to an already deployed application or service. This can involve a variety of tasks, including: 
+
+### Changing version
+
+It only need two steps for changing version for App Runtime: 
+
+1. Get the support version from file `variables.json` at your repository
+
+2. Change the value of W9_VERSION at file `.env` 
+
+3. Reploy the application
+
+### Convert to DevOps workflows 
+
+Websoft App Runtime, based on GitOps, easily transforms program environments into developer-friendly DevOps workflows.  
+
+1. Login to Websoft9 Console, and [Add user](./plan-git#user) at **Websoft9 Git**
+
+2. Grant the new user the authority to manage the Git repository
+
+3. Push your source code to Git repository for development
+
+4. Updating deployment for DevOps
+
+   - Add source code volume at file  `docker-compose.yml`
+   - Add build commands at  file `src/cmd.sh`
+
+## Troubleshooting
+
+#### Source of container images?
+
+All container images are officially maintained by Docker or provided by the program's original manufacturer, and are 100% native, with no modifications. 
+
+#### How can I customize deployment?
+
+You can customize deployment by these files at application's repository
+
+- `.env`
+- `docker-compose.yml`
+- `src/cmd.sh`
+
+#### Run multiply apps in one container?
+
+Don't suggest this
+
+#### How to change files permissions?
+
+Execute a command like `chown -R <owner>:<owner> /<path?`
+
+#### How to add startups to container?
+
+You can add your startup commands to container by below methods: 
+
+- Add commands to file `src/cmd.sh`
+- Exec to container and running the required process in the background, command like this `nohup  Your CMD here  > output.log 2>&1 &`
+
+#### How can see the process via **nohup**?
+
+Execute a command `jobs`
+
+#### How to delete the running process?
+
+Execute `ps aux` to find the PID, then execute `kill -9 PID`

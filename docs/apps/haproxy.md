@@ -54,8 +54,8 @@ import Meta from './_include/haproxy.md';
 ## 配置选项{#configs}
 
 - 配置文件（已挂载）：*/usr/local/etc/haproxy/haproxy.cfg*
-- 命令行：`haproxy
-- [HAProxy APIS](https://www.haproxy.com/blog/haproxy-apis/)`
+- 命令行：`haproxy`
+- [HAProxy APIS](https://www.haproxy.com/blog/haproxy-apis/)
 
 ## 管理维护{#administrator}
 
