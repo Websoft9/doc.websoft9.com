@@ -9,7 +9,7 @@ tags:
   - HTML/JS
 ---
 
-# Deploy a HTML App
+# For HTML App
 
 Websoft9 帮助用户使用 Apache 或 NGINX 或 Caddy 等容器实现 HTML/JS 静态网站的部署。   
 
@@ -21,7 +21,7 @@ Websoft9 帮助用户使用 Apache 或 NGINX 或 Caddy 等容器实现 HTML/JS �
 
 ## 部署网站{#deploy}
 
-参考：[Web Runtime 入门指南](../runtime#quick)
+参考：[App Runtime 入门指南](../runtime#quick)
 
 ## 问题与故障
 

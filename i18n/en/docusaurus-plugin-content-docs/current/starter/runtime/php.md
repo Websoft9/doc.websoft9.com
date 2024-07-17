@@ -7,7 +7,7 @@ tags:
   - PHP
 ---
 
-# Deploy a PHP App
+# For PHP App
 
 ## 配置选项{#configs}
 
@@ -28,7 +28,7 @@ tags:
 
 ## 部署网站{#deploy}
 
-参考：[Web Runtime 入门指南](../runtime#quick)
+参考：[App Runtime 入门指南](../runtime#quick)
 
 ## 环境管理{#administrator}
 

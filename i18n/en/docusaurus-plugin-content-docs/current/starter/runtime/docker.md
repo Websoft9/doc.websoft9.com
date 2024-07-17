@@ -7,7 +7,7 @@ tags:
   - Docker
 ---
 
-# Deploy a Docker App
+# For Docker App
 
 基于 Docker 模板环境部署镜像类应用，需要用户具备一定的 [Docker Compose](https://docs.docker.com/compose/) 知识，否则难以为继。 
 
@@ -24,6 +24,6 @@ tags:
 
 ## 部署网站{#deploy}
 
-参考：[Web Runtime 入门指南](../runtime#quick)
+参考：[App Runtime 入门指南](../runtime#quick)
 
 ## 问题与故障

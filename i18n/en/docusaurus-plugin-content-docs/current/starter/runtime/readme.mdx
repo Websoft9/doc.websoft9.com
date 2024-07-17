@@ -1,5 +1,5 @@
 ---
-title: Web Runtime
+title: App Runtime
 slug: /runtime
 tags:
   - 运行环境
@@ -51,14 +51,14 @@ App the **App Runtime** templates have the same deployment methods that based on
 
 These are the common parameters for deployment by App Runtime:  
 
-- Orchestration tool: **docker compose**
-- Container Port: 8080
-- Dockerfile build: Not support now
-- Execute commands at container: Yes
-- Automation scripts: 存储在编排文件 *./src/cmd.sh*，挂载到容器的 */usr/local/bin/cmd.sh* 目录
-- Character encoding: UTF-8
-- Multiply version: 每个语言都支持多版本，合计有几十个可选的版本
-- Root directory path: 进入容器后的默认的位置即应用根目录，可运行 `pwd` 查询
+- **Orchestration tool**: docker compose
+- **Container Port**: 8080
+- **Dockerfile build**: Not support now
+- **Execute commands at container**: Yes
+- **Preconfigured deploy scripts**: Container directory `/usr/local/bin/cmd.sh` that mount to `src/cmd.sh` of repository
+- **Character encoding**: UTF-8
+- **Multiply version**: Yes
+- **Root directory path**: Docker exec to container and command `pwd` to get path, and below for your references
 
   - PHP: */var/www/html*
   - Jetty: */var/lib/jetty/webapps*
@@ -67,62 +67,72 @@ These are the common parameters for deployment by App Runtime:
   - Nginx: */usr/share/nginx/html*
   - Caddy: */srv*
   - Apache HTTP Server: */usr/local/apache2/htdocs*
-  - 其他环境: */usr/src/app*
+  - Other Runtime: */usr/src/app*
 
 ### Language specific
 
-Web Runtime 不同的语言环境拥有更多个性的配置: 程序根目录、包管理器、安装扩展、编译、命令行、容器操作系统等。
+Language specific configurations you may need to know: root directory, package manager, install extensions, compilation, command line, container operating system, and more.
 
 <DocCardList items={useCurrentSidebarCategory().items}/>
 
 ## Deploy application Guide{#guide}
 
-Web Runtime 在 Websoft9 的技术体系中，也是作为一个应用对待，它与 WordPress 这种应用没有本质差异。  
+App Runtime is a special application of Websoft9. You just need a few steps to deploy application by App Runtime  
 
-如果已经安装 Websoft9，且绑定了全局域名，那么通过 Web Runtime 运行程序及其简单: 
+### Prepration
 
-### Step1: Launch App Runtime
+- [Set global domain for Websoft9](./domain-set#wildcard)
+- [Plan your install packages](./plan-package)
 
-1. 登录 Websoft9 控制台，打开: "应用商店" 的 **运行环境** 类目
+### Step1: Prepare install packages
+
+Your installation package must to be downloaded for Websoft9 App Runtime, it is better than FTP/SFTP upload: 
+
+- No files permission issues and more secure
+- More suitable for automated deployment
+
+If your installation package not have download URL, you can create download URL by [Upload files to git repository](./plan-git#create).  
+
+### Step2: Launch App Runtime 
+
+1. [Login to Websoft9 Console](./login-console), go to the **APP Runtime** catalog of **App Store**
    ![](./assets/runtime-catalog-websoft9.png)
 
-2. 任选一个环境应用，点击 "安装"  
+2. Install one of App Runtime at Websoft9 Console
 
-3. 待安装完成后，一个基于 **容器** 的程序运行环境已经启动。此时，Websoft9 为它创建了三个资源: 
+3. When App Runtime is running, three resources created for user to deploy source code or binary, includes: 
 
-   - 1 个环境容器
-   - 1 个网关中的虚拟主机配置，将容器的 **8080** 端口转发到域名
-   - 1 个 Git 仓库
+   - One Git repository
+   - One language runtime container
+   - A Nginx proxy block in Websoft9 Gateway, it proxy to language runtime container's **80** port
 
-### Step2: Customize App Runtime{#dockercompose}
+### Step3: Customize App Runtime{#dockercompose}
 
-启动环境后，可以根据需求对环境进行定制修改（也称之为应用编排），常见的场景包括: 
+You can update the App Runtime deployment by Git repository when it running, major operations includes: 
 
-   - 替换 docker-compose.yml 默认容器的**镜像标签**，替换 demo 容器，运行目标容器
-   - 向 docker-compose.yml 中增加其他容器配置
-   - 向 .env 中增加环境变量，并保护前缀为 **W9_** 的环境变量不被破坏
-   - 修改 .env 文件中的 W9_VERSION 的值，启用模板化安装中不可选的版本
+   - Modify the image tag in the file `docker-compose.yml` to replace the default started container  
+   - Add more services or other elements to `docker-compose.yml` file 
+   - Add more environments to `.env` file  
+   - Modify **W9_VERSION** at file `.env` or other version item at file `docker-compose.yml` for upgrading containers  
 
-定制修改后，重建应用后方可生效。
+You should redeploy App Runtime after customizing any items, then it will take effect.  
 
-### Step3: Prepare install packages
+If you want to modify environments starting with **W9_**, you need to familiarize with [Websoft9 templates format](https://github.com/Websoft9/docker-library/blob/main/docs/code_owner.md#environments).
 
-Web Runtime 需要 **所有安装包都可以被下载**，不建议使用 FTP 或 SFTP 上传代码的方式，这样做的好处: 
+### Step4: Deploy packages to App Runtime
 
-- 消除了服务器上的文件操作，避免文件权限问题，更安全可靠
-- 便于实现部署自动化
+Deploying packages is mainly done below steps by commands in the App Runtime container:  
 
-若软件包没有下载地址，需为之创建下载地址。参考教程: [手动创建 Git 仓库以存储软件包](plan-git#create) 
+1. **Upload packages**: Download packages to container and extract to the root directory
 
-### Step3: Deploy packages to App Runtime
+2. **Build program (optional)**: Compile and build packages
 
-部署安装包从流程上看，主要是围绕目标容器，通过运行命令，完成以下三个步骤: 
+3. **Launch the program**: Run the program's startup command
 
-1. **上传代码**: 建议将程序代码以压缩包方式下载、解压到容器中的应用根目录
-2. **编译构建**: 运行程序所需的编译或构建命令（[提前准备制品安装包](./plan-package)，避免编译操作）
-3. **启动程序**: 运行程序的启动命令（确保运行在容器的 8080 端口，并允许外网访问）
+   - Make sure to run on port 8080 of the container
+   - Allow Internet access
 
-Websoft9 为用户提供了两种运行命令的方式，对应两种部署模式:   
+Websoft9 offers users two deployment modes to run commands.  
 
 #### Manual interactive deployments
 
@@ -155,15 +165,17 @@ Websoft9 为用户提供了两种运行命令的方式，对应两种部署模�
 
 #### Automated scripted deployment{#auto}
 
-自动化脚本部署是通过预先编写的脚本自动执行一系列部署任务，无需人工干预: 
+Automated script deployment executes tasks without manual intervention.
 
-1. 登录 Websoft9 控制台，进入应用的管理界面的 [编排](../quick/manageapp#reup) 标签页
+1. Login to Websoft9 Console, go to the [Compose](./app-compose) tab page of appli manage from **My Apps**
    ![](./assets/runtime-editcompose-websoft9.png)
 
-2. 修改编排文件的 *src/cmd.sh* 脚本（它包含范例），**插入个性化命令**或**去掉范例的注释**，
+2. Add your depoyment and startup process to *src/cmd.sh* which includes script sample for you references
   ![](./assets/runtime-composeedit-cmd-websoft9.png)
 
-3. 启动**重建应用**操作后，脚本被推送到容器中自动运行，直至部署完成。
+3. **Redeploy** or **Restart** application, App Runtime container will execute the script for deployment
+
+4. 
 
   > 自动化脚本部署后重启容器会再次执行 *src/cmd.sh* 中的内容，用户应该保证脚本的健壮性防止重启容器时发生错误。
 
