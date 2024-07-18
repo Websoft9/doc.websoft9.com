@@ -208,11 +208,11 @@ Websoft App Runtime, based on GitOps, easily transforms program environments int
 
 ## Troubleshooting
 
-#### Source of container images?
+### Source of container images?
 
 All container images are officially maintained by Docker or provided by the program's original manufacturer, and are 100% native, with no modifications. 
 
-#### How can I customize deployment?
+### How can I customize deployment?
 
 You can customize deployment by these files at application's repository
 
@@ -220,25 +220,25 @@ You can customize deployment by these files at application's repository
 - `docker-compose.yml`
 - `src/cmd.sh`
 
-#### Run multiply apps in one container?
+### Run multiply apps in one container?
 
 Don't suggest this
 
-#### How to change files permissions?
+### How to change files permissions?
 
 Execute a command like `chown -R <owner>:<owner> /<path?`
 
-#### How to add startups to container?
+### How to add startups to container?
 
 You can add your startup commands to container by below methods: 
 
 - Add commands to file `src/cmd.sh`
 - Exec to container and running the required process in the background, command like this `nohup  Your CMD here  > output.log 2>&1 &`
 
-#### How can see the process via **nohup**?
+### How can see the process via **nohup**?
 
 Execute a command `jobs`
 
-#### How to delete the running process?
+### How to delete the running process?
 
 Execute `ps aux` to find the PID, then execute `kill -9 PID`

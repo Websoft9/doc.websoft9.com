@@ -2,25 +2,25 @@
 slug: /runtime/go
 sidebar_position: 1.5
 tags:
-  - 运行环境
+  - container
   - runtime
   - Go
 ---
 
 # For Golang App
 
-## 配置选项{#configs}
+## Configuration options{#configs}
 
-- 版本号： `go version`
-- Node 应用根目录： */usr/src/app*  
-- 包管理器：`go get`, `go mod`, `go list`
-- 命令行：`go`
-- 开发框架：Gin, Beego
+- Check version: `go version`
+- App root directory:  */usr/src/app*  
+- Package manager: `go get`, `go mod`, `go list`
+- CLI: `go`
+- Web framework: Gin, Beego
 
-## 部署网站{#deploy}
+## Deploy a Go application{#deploy}
 
-参考：[App Runtime 入门指南](../runtime#quick)
+Refer to: [App Runtime tutorials](../runtime#quick)
 
-## 环境管理{#administrator}
+## Manage runtime{#administrator}
 
-## 问题与故障
+## Troubleshoot

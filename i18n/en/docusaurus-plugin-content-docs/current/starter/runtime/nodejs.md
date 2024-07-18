@@ -2,7 +2,7 @@
 sidebar_position: 1.2
 slug: /runtime/nodejs
 tags:
-  - 运行环境
+  - container
   - runtime
   - Node.js
 ---
@@ -13,7 +13,7 @@ tags:
 
 - Get Node version: `node -v`
 - Node app root directory: `/usr/src/app`
-- Node package tools: npm, yarn
+- Node package manager: npm, yarn
 - CLI: `node`, `yarn`, `npm`
 - Web framework: Express, Vue, React, AngularJS, Nuxt, Next, Koa, Vuepress, Gatsby.js
 - Process management tool: [pm2](https://pm2.io)

@@ -2,7 +2,7 @@
 slug: /runtime/python
 sidebar_position: 1.3
 tags:
-  - 运行环境
+  - container
   - runtime
   - Python
 ---

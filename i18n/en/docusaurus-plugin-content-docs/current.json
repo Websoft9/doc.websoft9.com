@@ -9,7 +9,7 @@
   },
   "sidebar.docs.category.安装方式": {
     "message": "Installation methods",
-    "description": "The label for category Installation methods in sidebar docs"
+    "description": "The label for category 安装方式 in sidebar docs"
   },
   "sidebar.docs.category.云平台安装": {
     "message": "For Cloud",
@@ -485,7 +485,7 @@
   },
   "sidebar.docs.category.安全": {
     "message": "Security",
-    "description": "The label for category Security in sidebar docs"
+    "description": "The label for category 安全 in sidebar docs"
   },
   "sidebar.docs.category.故障问题": {
     "message": "Troubleshoot & FAQ",
@@ -669,11 +669,11 @@
   },
   "sidebar.docs.category.使用程序环境部署应用": {
     "message": "Deploy from App Runtime",
-    "description": "The label for category Deploy from Runtime in sidebar docs"
+    "description": "The label for category 使用程序环境部署应用 in sidebar docs"
   },
   "sidebar.docs.category.公有云安装": {
     "message": "Cloud providers",
-    "description": "The label for category Cloud providers in sidebar docs"
+    "description": "The label for category 公有云安装 in sidebar docs"
   },
   "sidebar.docs.category.指南": {
     "message": "Guides",
@@ -732,8 +732,8 @@
     "description": "The label for category 监控应用的运行 in sidebar docs"
   },
   "sidebar.docs.category.管理 Websoft9 控制台": {
-    "message": "管理 Websoft9 控制台",
-    "description": "The label for category 管理 Websoft9 控制台 in sidebar docs"
+    "message": "Admin Settings",
+    "description": "The label for category Admin Settings in sidebar docs"
   },
   "sidebar.docs.category.应用": {
     "message": "Apps",
@@ -741,7 +741,7 @@
   },
   "sidebar.docs.category.备份": {
     "message": "Backup",
-    "description": "The label for category Backup in sidebar docs"
+    "description": "The label for category 备份 in sidebar docs"
   },
   "sidebar.docs.category.用户": {
     "message": "Users",
@@ -761,6 +761,6 @@
   },
   "sidebar.docs.category.控制台组件": {
     "message": "Console Stacks",
-    "description": "The label for category Console Stacks in sidebar docs"
+    "description": "The label for category 控制台组件 in sidebar docs"
   }
 }
