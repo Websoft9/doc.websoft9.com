@@ -716,20 +716,20 @@
     "description": "The label for category 系统托管 in sidebar docs"
   },
   "sidebar.docs.category.集成云平台": {
-    "message": "集成云平台",
-    "description": "The label for category 集成云平台 in sidebar docs"
+    "message": "Integrate cloud providers",
+    "description": "The label for category Integrate cloud providers in sidebar docs"
   },
   "sidebar.docs.category.平台配置": {
-    "message": "平台配置",
-    "description": "The label for category 平台配置 in sidebar docs"
+    "message": "Setting up your cloud",
+    "description": "The label for category Setting up your cloud in sidebar docs"
   },
   "sidebar.docs.category.运行自动化任务": {
-    "message": "运行自动化任务",
-    "description": "The label for category 运行自动化任务 in sidebar docs"
+    "message": "Workflow automation",
+    "description": "The label for category Workflow automation in sidebar docs"
   },
   "sidebar.docs.category.监控应用的运行": {
-    "message": "监控应用的运行",
-    "description": "The label for category 监控应用的运行 in sidebar docs"
+    "message": "Monitor applications",
+    "description": "The label for category Monitor applications in sidebar docs"
   },
   "sidebar.docs.category.管理 Websoft9 控制台": {
     "message": "Admin Settings",

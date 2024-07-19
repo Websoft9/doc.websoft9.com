@@ -51,6 +51,14 @@ Regardless of which deployment method you choose, AWS will initiate the deployme
 
 ### From AWS CloudFormation
 
+Websoft9 product information at AWS:
+
+- **Product ID**: ef170715-3e45-4d1f-b753-bc0dbcf11dcd
+- **Product code**: e5khuz6bgm3khfdzxa1q9fs99
+- **ARN**: arn:aws:aws-marketplace:us-east-1:797851739507:AWSMarketplace/AmiProduct/ef170715-3e45-4d1f-b753-bc0dbcf11dcd
+
+Then you can follow below steps to deploy Websoft9:  
+
 1. Prepare [AWS CloudFormation](https://aws.amazon.com/cloudformation) for Websoft9 deployment
 
 2. Run this template

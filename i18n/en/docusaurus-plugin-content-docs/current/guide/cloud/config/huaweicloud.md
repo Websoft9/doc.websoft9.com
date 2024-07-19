@@ -3,7 +3,7 @@ sidebar_position: 1.4
 slug: /iaas-huaweicloud
 ---
 
-# 华为云
+# HUAWEICLOUD
 
 本章为在 华为云 上使用 Websoft9 托管平台的用户提供 华为云 操作的快速指南。
 

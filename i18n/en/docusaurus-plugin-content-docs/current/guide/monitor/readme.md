@@ -6,8 +6,10 @@ slug: /monitor
 import DocCardList from '@theme/DocCardList';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-# 监控
+# Monitor applications
 
-监控应用程序是托管工作必不可少的组成部分，它对确保应用程序性能、安全性和可靠性至关重要。
+Monitoring applications are essential for hosting, ensuring performance, security, and reliability. 
+
+Websoft9 provides a variety of tools to help operate and monitor your applications.  
 
 <DocCardList items={useCurrentSidebarCategory().items}/>

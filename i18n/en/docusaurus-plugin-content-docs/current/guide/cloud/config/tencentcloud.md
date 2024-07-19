@@ -3,7 +3,7 @@ sidebar_position: 1.5
 slug: /iaas-tencentcloud
 ---
 
-# 腾讯云
+# Tencent Cloud
 
 本章为在 腾讯云 上使用 Websoft9 托管平台的用户提供 腾讯云 操作的快速指南。
 

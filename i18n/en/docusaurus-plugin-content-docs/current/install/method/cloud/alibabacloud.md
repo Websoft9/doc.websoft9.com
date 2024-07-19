@@ -22,7 +22,7 @@ Before deployment, you should understand ECS [requirements](./requirements) firs
 
 ### From Alibaba Cloud Marketplace
 
-1. Open the product [Websoft9 applications hosting platform](https://marketplace.alibabacloud.com/products/56680002/sgcmjj00034195.html) at [Alibaba Cloud Marketplace](https://shop658hlt17.market.aliyun.com)
+1. Open the product [Websoft9 applications hosting platform](https://marketplace.alibabacloud.com/products/201072001/sgcmjj00034378.html) at [Alibaba Cloud Marketplace](https://shop658hlt17.market.aliyun.com)
 
 2. Click **Choose Your Plan** to start deploy Websoft9
    ![](./assets/alibabacloud-websoft9-choose.png)

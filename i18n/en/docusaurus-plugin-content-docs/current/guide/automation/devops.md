@@ -3,28 +3,27 @@ sidebar_position: 3
 slug: /automation-devops
 ---
 
-# 运行 DevOps 作业
+# Auto DevOps
 
-自动化在 DevOps 实践中扮演着核心角色，它涉及到从代码提交到软件部署的整个持续集成和持续部署（CI/CD）流程。自动化任务包括代码的自动审查、编译、测试、打包以及最终的部署，这些流程的自动化不仅加快了开发周期，还提高了软件交付的质量和一致性。通过实现DevOps自动化，团队可以减少手动错误，提升协作效率，从而更快地响应市场变化。  
+Auto DevOps is a collection of pre-configured features and integrations that work together to support your software delivery process. Auto DevOps detects your programming language and uses CI/CD templates to create and run default pipelines to build and test your application. Then, you can configure deployments to deploy your apps to staging and production, and set up review apps to preview your changes per branch.
 
-## 条件
+## Prepare
 
-- n8n 控制台，"Credentials" 页面中新增 DevOps 流程中计算节点的账号
-- 准备基于 git 仓库的项目
+- Prepare your Git repository from Github or GitLab or other git platform
+- Logint to **n8n** console, click **Credentials** of left memu to add your git credential
 
-## 创建 Git 工作流{#git}
+## Create git Workflow{#git}
 
-1. 登录到 n8n 控制台，新建一个 Workflow
+1. Logint to **n8n** console, click **Start from scratch** to create your workflow
 
-2. 在 **Add first step** 时，选择 "On a schedule" 作为任务的时间周期设置
+2. Select one git source for your trigger flow
+   ![](./assets/n8n-git.png)
 
-3. 接下来选择 **Github** 或 **GitLab** 等作为工作流任务模板
+3. Complete next steps
 
-4. 完成后续设置
+## Samples
 
-## 范例参考
-
-以下是来着 n8n 的官方范例：
+Below samples from n8n for you:  
 
 - [Save resources](https://n8n.io/engineering-resources/)
 - [Low-code workflow automation for SecOps](https://n8n.io/secops/)
