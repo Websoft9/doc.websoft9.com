@@ -25,7 +25,7 @@ import Meta from './_include/tensorflow.md';
 
 1. Open the Jupter backend in sequence: **New > Python 3 (ipykernel)**
 
-2. Refer to [Using TensorBoard in Notebooks](https://tensorflow.google.cn/tensorboard/tensorboard_in_notebooks),and run the example programs in sequence.Add a parameter`--host 0.0.0.0` to the last command (to allow external access).
+2. Refer to [Using TensorBoard in Notebooks](https://tensorflow.google.cn/tensorboard/tensorboard_in_notebooks), and run the example programs in sequence.Add a parameter`--host 0.0.0.0` to the last command (to allow external access).
 
 3. The TensorBoard is now displayed in the Notebook.
    ![](./assets/tensorflow-dashjupter-websoft9.png)

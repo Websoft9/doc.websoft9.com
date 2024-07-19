@@ -58,7 +58,7 @@ To configure TLS/SSL for RabbitMQ, the following three steps are required:
   - 15672: RabbitMQ console
   - 5672: AMQP port
   - 4369: Erlang port
-- Command line: `rabbitmqctl`
+- CML: `rabbitmqctl`
 - [API](https://www.rabbitmq.com/dotnet-api-guide.html)
 
 ## Administer{#administrator}
