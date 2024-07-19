@@ -16,7 +16,7 @@ import Meta from './_include/rethinkdb.md';
 
 1. When completed installation of RethinkDB at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
-   - The user name and password displayed on the page are the database account, not the console account
+   - The username and password displayed on the page are the database account, not the console account
    - The console does not need account authentication
 
 2. Use the browser on your local computer and go to the RethinkDB console
@@ -44,7 +44,7 @@ Most of the operations can be achieved by running the ReQL command directly Data
 
 ## Configuration options{#configs}
 
-- Server command line: `rethinkdb -h`
+- Server CML: `rethinkdb -h`
 
 - Backup and Restore:
   - `rethinkdb export abc.db`

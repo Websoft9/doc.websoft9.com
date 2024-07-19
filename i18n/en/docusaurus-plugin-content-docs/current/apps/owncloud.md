@@ -49,7 +49,7 @@ After moving or copying your ownCloud data directory to another location, you ne
 
 - Support third-party storage(✅)
 
-- Multilinguai(✅): OwnCloud background **Personal > General** to set the language
+- Multilingual(✅): OwnCloud background **Personal > General** to set the language
 
 - Mobile: OwnCloud Desktop Client, OwnCloud Android App, OwnCloud iOS App
 

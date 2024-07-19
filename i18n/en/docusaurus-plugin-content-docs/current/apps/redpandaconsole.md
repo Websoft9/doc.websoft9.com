@@ -21,7 +21,7 @@ import Meta from './_include/redpandaconsole.md';
 
    ![](./assets/redpandaconsole-console-websoft9.png)
 
-3. To add the Schema Registry, modify the .env file of the application orchestration.
+3. To add the Schema Registry, select **My Apps > Compose > Go to Edit Repository > .env** then  modify the .env file.
 
 4. To add Kafka brokers, add the host information (separated by ,) after the `Kafka brokers` variable in the .env file of the application orchestration.
 

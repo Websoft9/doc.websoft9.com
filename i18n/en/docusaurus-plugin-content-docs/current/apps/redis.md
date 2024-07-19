@@ -31,10 +31,10 @@ There are two ways to verify Redis availability:
 - [ACL](https://redis.io/topics/acl) authentication: enabled by default
 - [Redis API](https://docs.redis.com/latest/rs/references/rest-api/)
 - [Redis-CLI](https://redis.io/topics/rediscli): `redis-cli help`
-- Configuration file: This application lacks a configuration file by default, but is set by the **command** directive in the application orchestration file docker-compose.yml
+- Configuration file: This application lacks a configuration file by default, so select **My Apps > Compose > Go to Edit Repository > .env** to the file docker-compose.yml and set by the **command** directive
 
 ## Administer{#administrator}
 
-- Reset the password: enter the Redis container command line mode, run `redis-cli` to enter the interactive, and then run `CONFIG SET requirepass “newpassword”`
+- Reset the password: enter the Redis container CML mode, run `redis-cli` to enter the interactive, and then run `CONFIG SET requirepass "newpassword"`
 
 ## Troubleshooting{#troubleshooting}
