@@ -1,7 +1,7 @@
 [Trivy](https://trivy.dev/) 是一个 **开源安全漏洞扫描**，它被用于 扫描监测  等场景。Trivy 是一个开源工具，用于扫描容器镜像、文件系统和代码仓库的漏洞。
 
 
-![architecture](https://libs.websoft9.com/Websoft9/DocsPicture/zh/clamav/clamav-arch-websoft9.webp)
+![architecture](https://libs.websoft9.com/Websoft9/DocsPicture/zh/trivy/trivy-product-websoft9.png)
 
 
 ## 准备

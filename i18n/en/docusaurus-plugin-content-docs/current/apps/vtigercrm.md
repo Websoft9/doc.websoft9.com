@@ -38,7 +38,7 @@ import Meta from './_include/vtiger.md';
 
 - Module Import(✅): Select **Setting > CRM Setting > Module Management**
 
-- Online Marketplace: Set "Extension Store" in the background to enter the marketplace, and you can install online after registering and logging in.
+- Online Marketplace: Set **Extension Store** in the background to enter the marketplace, and you can install online after registering and logging in.
 
 - SMTP(✅): Select **Settings > CRM Settings > CONFIGURATION > Outgoing Server**
 
@@ -49,7 +49,7 @@ import Meta from './_include/vtiger.md';
 
 #### Can't access Vtiger CRM after changing domain name?
 
-ERROR: *Invalid compiled template for 'modules/Install/Header.tpl'*  
+Description: *Invalid compiled template for 'modules/Install/Header.tpl'*  
 Reason: Vtiger CRM will generate a cache file to record the access address after startup.    
 Solution: Access the Vtiger CRM container and delete the cache file with the following command  
 

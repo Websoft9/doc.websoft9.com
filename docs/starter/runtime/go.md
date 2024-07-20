@@ -13,7 +13,7 @@ tags:
 ## 配置选项{#configs}
 
 - 版本号： `go version`
-- Node 应用根目录： */usr/src/app*  
+- Go 应用根目录： */usr/src/app*  
 - 包管理器：`go get`, `go mod`, `go list`
 - 命令行：`go`
 - 开发框架：Gin, Beego
