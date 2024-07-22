@@ -15,17 +15,17 @@ import Meta from './_include/strapi.md';
 
 ### Initial setup{#wizard}
 
-1. When completed installation of Strapi at Websoft9 console, get the applicaiton's overview and access information from "My Apps"  
+1. When completed installation of Strapi at **Websoft9 console**, get the applicaiton's overview and access information from **My Apps**  
 
 2. Wait for Strapi container starting: At the first time starting, Strapi will pull external software packages online and wait for a few minutes before entering the initial page
 
 ### Create your Data model
 
-1. Login to Strapi, go to "Plugins" > "Content-type Builder" Add a dataset, if named: `websoft9`
+1. Login to Strapi, go to **Plugins > Content-type Builder** Add a dataset, if named: `websoft9`
 
-2. Add a user under the "Users" and set the role to `public` 
+2. Add a user under the **Users** and set the role to `public` 
 
-3. Go to "Settings" > "USERS & PERMISSIONS PLUGIN" > "Roles", and edit public role to grant access to the `websoft9` dataset 
+3. Go to **Settings > USERS & PERMISSIONS PLUGIN > Roles**, and edit public role to grant access to the `websoft9` dataset 
 
 4. Access the following URL to obtain data 
     ``` 

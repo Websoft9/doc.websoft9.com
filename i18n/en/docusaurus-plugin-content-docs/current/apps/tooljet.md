@@ -1,5 +1,5 @@
 ---
-title: Tooljet
+title: ToolJet
 slug: /tooljet
 tags:
   - Low-Code Platform

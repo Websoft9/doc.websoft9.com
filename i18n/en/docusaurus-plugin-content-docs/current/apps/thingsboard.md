@@ -15,9 +15,8 @@ import Meta from './_include/thingsboard.md';
 
 ### Login Verification{#verification}
 
-1. Completed installation Thingsboard at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
+1. After installing ThingsBoard on the **Websoft9 console**, view the application details through **My Applications** and get the login information in the **Access**
 
-2. Starting to verify it  
 
 3. ThingsBoard has three default accounts, please be sure to login and change their passwords  
 

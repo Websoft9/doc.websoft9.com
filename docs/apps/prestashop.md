@@ -31,15 +31,15 @@ Prestashop8.0 不支持后台在线连接 Marketplace，故安装市场的扩展
 
 ## 配置选项{#configs}
 
-- 维护模式（√）："Shop Parameters" > "General" >  "Maintenance"
+- 维护模式（√）：**Shop Parameters > General > Maintenance**
 - 扩展市场（√）
-- SMTP（√）："Advanced Parameters" > "Email"
-- 演示数据导入（√）："Advanced Parameters" > "Import"
+- SMTP（√）：**Advanced Parameters > Email**
+- 演示数据导入（√）：**Advanced Parameters > Import**
 - 在线安装扩展（√）：支持在线安装、卸载和升级扩展
 - 多语言（√）
-- 在线导入语言（√）："International" > "Translations" >  "Add / Update a language"，暂无**中文**导入选型
+- 在线导入语言（√）：**International > Translations > Add / Update a language**，暂无**中文**导入选型
 - 开发者模式（√）
-- URL 更新：左侧菜单 "Shop Parameters" 项，在页面中下拉到 "Set shop URL" 设置项
+- URL 更新：左侧菜单 **Shop Parameters** 项，在页面中下拉到 **Set shop URL** 设置项
 - 后台登录地址：通过 Websoft9 控制台我的应用查看
 - CLI
   ```

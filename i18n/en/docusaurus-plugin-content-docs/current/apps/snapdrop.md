@@ -18,7 +18,7 @@ import Meta from './_include/snapdrop.md';
 1. When completed installation of Snapdrop at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
 
-### Login verification{#verification}
+### File sharing
 
 1. Completed installation Snapdrop at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
 

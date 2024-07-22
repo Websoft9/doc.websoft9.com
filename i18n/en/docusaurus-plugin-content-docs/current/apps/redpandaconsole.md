@@ -15,7 +15,7 @@ import Meta from './_include/redpandaconsole.md';
 
 ### Initial setup{#wizard}
 
-1. When completed installation of Redpanda Console at **Websoft9 Console**, if Kafka brokers are not filled in or filled incorrectly, they can be reset by **application orchestration**  
+1. When completed installation of Redpanda Console at **Websoft9 Console**, if Kafka brokers are not filled in or filled incorrectly, they can be reset by **application compose**  
 
 2. When the connection is successful, the following screen will be displayed
 
@@ -23,11 +23,11 @@ import Meta from './_include/redpandaconsole.md';
 
 3. To add the Schema Registry, select **My Apps > Compose > Go to Edit Repository > .env** then  modify the .env file.
 
-4. To add Kafka brokers, add the host information (separated by ,) after the `Kafka brokers` variable in the .env file of the application orchestration.
+4. To add Kafka brokers, add the host information (separated by ,) after the `Kafka brokers` variable in the .env file of the application compose.
 
 ## Configuration options{#configs}
 
-- Kafka connection information: in the .env file of the application orchestration
+- Kafka connection information: in the .env file of the application compose
 - Configuration items can be converted to [environment variables](https://docs.redpanda.com/current/reference/console/config/#configuration-sources), e.g: **kafka.brokers > KAFKA_BROKERS**
 - Redpanda Console [login authentication](https://docs.redpanda.com/current/reference/console/config/#redpanda-console-configuration-file): Enterprise Edition functions
 

@@ -25,7 +25,7 @@ Websoft9 控制台安装 SuiteCRM 后，通过 "我的应用" 查看应用详情
 ## 配置选项{#configs}
 
 - 多语言（✅）：需下载[语言包](https://crowdin.com/project/suitecrmtranslations/zh-CN)后再上传安装，具体参考 [Install New Languages](https://docs.suitecrm.com/admin/installation-guide/languages/install-a-new-language/)
-- SMTP（✅）："Administartor" > "Admin" > "Email" > "Email Setting"
+- SMTP（✅）：**Administartor** > **Admin** > **Email** > **Email Setting**
 
 ## 管理维护{#administrator}
 

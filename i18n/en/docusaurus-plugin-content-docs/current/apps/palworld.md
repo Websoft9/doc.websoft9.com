@@ -22,13 +22,12 @@ import Meta from './_include/palworld.md';
 
 ### Login verification{#verification}
 
-1. Completed installation Palworld at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
 
-2. Install the [Steam](https://store.steampowered.com) client on your local computer
+1. Install the [Steam](https://store.steampowered.com) client on your local computer
 
-3. Run Palworld on the Steam platform and select Join **Multiplayer (Dedicated Server)** Mode
+2. Run Palworld on the Steam platform and select Join **Multiplayer (Dedicated Server)** Mode
 
-4. Enter Palworld `server public IP:port` to connect
+3. Enter Palworld `server public IP:port` to connect
 
 ## Configuration options{#configs}
 

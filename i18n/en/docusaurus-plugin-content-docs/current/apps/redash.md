@@ -15,7 +15,7 @@ import Meta from './_include/redash.md';
 
 ### Initial setup{#wizard}
 
-1. When completed installation of Redash at Websoft9 console, get the applicaiton's overview and access information from "My Apps"  
+1. When completed installation of Redash at **Websoft9 console**, get the applicaiton's overview and access information from **My Apps**  
 
 2. In the initialization wizard, set the user, email, and password, and complete the registration
 

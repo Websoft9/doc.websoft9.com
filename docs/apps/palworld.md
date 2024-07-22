@@ -16,7 +16,7 @@ import Meta from './_include/palworld.md';
 
 ### 连接使用
 
-1. Websoft9 控制台安装 Palworld， 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。
+1. Websoft9 控制台安装 Palworld， 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。
 
 2. 本地电脑安装 [Steam](https://store.steampowered.com) 客户端
 
