@@ -36,7 +36,7 @@ Prestashop 8.0 does not support backend online connection to Marketplace, so to 
 - SMTP(✅): **Advanced Parameters > Email**
 - Demo Data Import(✅): **Advanced Parameters > Import**
 - Online Installation of Extensions(✅): Supports online installation, uninstallation and upgrading of extensions
-- Multi-language(✅)
+- Multilingual(✅)
 - Import languages online(✅): **International > Translations > Add / Update a language**, no **Chinese** import option available at this time
 - Developer mode(✅)
 - URL update: left menu **Shop Parameters** item, scroll down to **Set shop URL** setting item in the page.

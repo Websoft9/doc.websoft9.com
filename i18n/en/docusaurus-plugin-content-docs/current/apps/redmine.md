@@ -14,9 +14,11 @@ import Meta from './_include/redmine.md';
 
 ### Login to reset password{#wizard}
 
-1. When completed installation of Redmine at Websoft9 console, get the applicaiton's overview and access information from "My Apps"   
+1. After installing Redmine in the **Websoft9 console**, view the application details through **My Applications** and get the login information in the “Access”.
 
-2. Login the Redmine and change password by system prompt
+2. After entering the Redmine interface, click **Login** in the upper right corner.
+
+3. According to the system prompts, change the password and officially access the console.
 
 ### Manage plugins  
 
@@ -28,7 +30,11 @@ Manage Redmine plugin is manage plugin sources at Redmine container directory */
    curl -L -o plugin_name.zip  https://url/plugin_name.zip 
    unzip rplugin_name.zip -d /usr/src/redmine/plugins 
    ``` 
-- Uninstall Plugin: Delete the plugin directory
+- Uninstall Plugin: Delete the plugin directory  
+
+- After downloading and unzipping the plug-in, restart the container to take effect
+
+- Plugin version mismatch will cause the container can not start, need to uninstall the plugin
 
 ### Set SMTP{#smtp}  
 
@@ -48,7 +54,7 @@ Manage Redmine plugin is manage plugin sources at Redmine container directory */
         password: ******** 
      ``` 
 2. It works after restarting the Redmine container
-3. Redmine Console Settings for SMTP: "Administration" > "Configuration" > "Email Notification"
+3. Redmine Console Settings for SMTP: **Administration > Configuration > Email Notification**
 
 ## Configuration options{#configs}
 

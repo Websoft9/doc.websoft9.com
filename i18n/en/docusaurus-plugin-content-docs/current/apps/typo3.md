@@ -17,8 +17,8 @@ import Meta from './_include/typo3.md';
 
 1. When completed installation of Typo3 at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
-   - Get access information in the "Access" tab
-   - Get **database account** in the "Database" tab 
+   - Get access information in the **Access** 
+   - Get **database account** in the **Database** 
 
 2. Enter the Typo3 installation wizard, and when the environment check step is passed, start to fill in the database parameters
 

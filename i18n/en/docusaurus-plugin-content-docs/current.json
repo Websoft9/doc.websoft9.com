@@ -708,12 +708,12 @@
     "description": "The label for category 管理容器 in sidebar docs"
   },
   "sidebar.docs.category.管理服务器": {
-    "message": "管理服务器",
-    "description": "The label for category 管理服务器 in sidebar docs"
+    "message": "Manage your server",
+    "description": "The label for category Manage your server in sidebar docs"
   },
   "sidebar.docs.category.系统托管": {
-    "message": "系统托管",
-    "description": "The label for category 系统托管 in sidebar docs"
+    "message": "Hosting server",
+    "description": "The label for category Hosting server in sidebar docs"
   },
   "sidebar.docs.category.集成云平台": {
     "message": "Integrate cloud providers",

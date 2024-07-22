@@ -15,9 +15,8 @@ import Meta from './_include/registry.md';
 
 ### Login Verification{#verification}
 
-1. Completed installation Registry at Websoft9 console, get the applicaiton's overview and access credentials from "My Apps"  
+1. Completed installation Registry at **Websoft9 console**, get the applicaiton's overview and access credentials from **My Apps**  
 
-2. Starting to verify it
 
 ## Configuration options{#configs}
 

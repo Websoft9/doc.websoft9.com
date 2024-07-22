@@ -19,7 +19,7 @@ import Meta from './_include/aitable.md';
 
 When completed installation of AITable at Websoft9 console, get the applicaiton's overview and access information from **My Apps**   
 
-1. Access AITable from your local browser, goto the AITable first registration page
+1. Access AITable from your local browser, go to the AITable first registration page
    ![](./assets/apitable-init-websoft9.png)
 
 2. Register an administrator account to start using it
@@ -48,7 +48,7 @@ Contact the [Websoft9 Customer Success Team](./helpdesk)
 ## Configuration options{#configs}
 
 - Minimum server configuration: 4 CPUs/8GB RAM
-- Multilingual(√): **My Settings** > **Preferences** > **Language**
+- Multilingual(✅): **My Settings > Preferences > Language**
 - [REST API](https://developers.apitable.com/api/reference/)
 
 ## Administer{#administrator}

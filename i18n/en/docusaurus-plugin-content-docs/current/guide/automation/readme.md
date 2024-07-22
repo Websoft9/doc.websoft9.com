@@ -6,7 +6,7 @@ slug: /automation
 import DocCardList from '@theme/DocCardList';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-# 自动化任务的实现与管理
+# Workflow automation 
 
 This chapter explores the concept of automated tasks that go beyond traditional server scheduling tasks such as Crontab.  
 
@@ -16,9 +16,9 @@ Automation not only increases work efficiency and reduces error rates, it also f
 
 Websoft9 suggest you use [n8n](./n8n) for automation, n8n is a user-friendly UI workflow automation with many use cases:  
 
-1. **Server Maintenance Tasks**: Automated data backup, log cleanup, time synchronization, and security scans.
-2. **DevOps Workflows**: Automated processes like code review, source code compilation, and automated testing.
-3. **Application Integration**: Automating data and process integration between different application systems.
+1. **Server Maintenance Tasks**: Automated data backup, log cleanup, time synchronization, and security scans.  
+2. **DevOps Workflows**: Automated processes like code review, source code compilation, and automated testing.  
+3. **Application Integration**: Automating data and process integration between different application systems.  
 
 ## Launch n8n
 

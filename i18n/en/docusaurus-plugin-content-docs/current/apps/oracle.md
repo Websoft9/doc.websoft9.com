@@ -100,7 +100,7 @@ We recommend using [CloudBeaver](./cloudbeaver) as the web-based management plat
 
 - Oracle Database configuration file path (mounted): */opt/oracle/oradata/dbconfig*  
 
-- Reset password command: `. /setPassword.sh <your_password>`
+- Reset password command: `./setPassword.sh <your_password>`
 
 - Client command:
 

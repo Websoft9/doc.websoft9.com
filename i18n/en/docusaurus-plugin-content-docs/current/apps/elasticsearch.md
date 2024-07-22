@@ -69,7 +69,7 @@ Elasticsearch applications do not include [Kibana](./kibana) by default, users c
 
 - Default administrator account: elastic
 - [Elasticsearch API](https://www.elastic.co/guide/en/elasticsearch/reference/current/http-clients.html)
-- Multi-language (✅): add `i18n.locale: "zh-CN"` to Kibana configuration file
+- Multilingual (✅): add `i18n.locale: "zh-CN"` to Kibana configuration file
 - Open source license: [ELASTIC-LICENSE](https://github.com/elastic/elasticsearch/blob/master/licenses/ELASTIC-LICENSE-2.0.txt)
 - SMTP (√)
 
@@ -104,7 +104,7 @@ ES has high disk space requirements and it is recommended to prepare enough spac
 
 #### What are the applications included in Elastic?
 
-The "Elastic Stack" is an acronym for three open source projects: Elasticsearch, Logstash, and Kibana.
+The **Elastic Stack** is an acronym for three open source projects: Elasticsearch, Logstash, and Kibana.
 
 - Elasticsearch is a database that stores and retrieves data.
 - Logstash is a middleware for data extraction, cleansing and organization.

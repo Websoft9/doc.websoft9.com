@@ -66,7 +66,9 @@ Reference: [Websoft9 Container Guide](./function/container)
 
 #### Portainer cannot enter the initialization page?
 
-Reason: Portainer's init page locks if not access after a few minutes of installation for security
+Reason : For security reasons, Portainer will lock the initialization page if it is not accessed within a few minutes after installation.
+
+Solution: Restart the Portainer application
 
 #### Can I delete existing Environments?
 

@@ -72,5 +72,5 @@ After moving or copying your ownCloud data directory to another location, you ne
 #### untrusted domain?
 
 Description: Initialization prompt You are accessing the server from an untrusted domain  
-Solution: Apply OWNCLOUD_DOMAIN and OWNCLOUD_TRUSTED_DOMAINS as real URLs in the orchestration file .env
+Solution: Apply OWNCLOUD_DOMAIN and OWNCLOUD_TRUSTED_DOMAINS as real URLs in the compose file .env
 
