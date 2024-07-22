@@ -1,4 +1,4 @@
-[Kaspersky](https://www.kaspersky.com/) is **Antivirus and security engine**, used for Detection and Monitor . Kaspersky offers comprehensive protection against malware, phishing, and cyber threats, ensuring security and privacy.
+[Kaspersky](https://www.kaspersky.com/) is **Antivirus and security engine**, used for Detection and Monitor . Kaspersky Endpoint Security for Linux offers robust antivirus protection and threat detection, ensuring comprehensive security for enterprise servers and critical infrastructure.
 
 
 ![product](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kaspersky/kaspersky-product-websoft9.png)

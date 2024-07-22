@@ -1,4 +1,4 @@
-[Kaspersky](https://www.kaspersky.com/) 是一个 **防病毒和安全引擎**，它被用于 扫描监测  等场景。卡巴斯基软件提供全面的恶意软件、网络钓鱼和网络威胁防护，确保安全和隐私。
+[Kaspersky](https://www.kaspersky.com/) 是一个 **防病毒和安全引擎**，它被用于 扫描监测  等场景。卡巴斯基Linux端点安全提供强大的防病毒保护和威胁检测，确保企业服务器和关键基础设施的全面安全。
 
 
 ![product](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kaspersky/kaspersky-product-websoft9.png)
