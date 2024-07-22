@@ -15,7 +15,7 @@ import Meta from './_include/prometheus.md';
 
 ### 访问后台{#wizard}
 
-1. Websoft9 控制台安装 Prometheus 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取访问信息
+1. Websoft9 控制台安装 Prometheus 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取访问信息
 
 2. Prometheus 无需认证即可访问，如需控制访问，请通过 Websoft9 网关设置。
    ![](./assets/prometheus-backend-websoft9.png)

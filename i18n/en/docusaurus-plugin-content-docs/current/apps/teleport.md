@@ -17,7 +17,7 @@ import Meta from './_include/teleport.md';
 
 ### Follow up steps for installation(necessary){#create-user}  
 
-After installing Teleport on the Websoft9 console, the following steps need to be completed in order to login to the background:  
+After installing Teleport on the **Websoft9 console**, the following steps need to be completed in order to login to the background:  
 
 1. Ensure have set domain for Teleport and enable HTTPS access (**Required**)  
 
@@ -47,7 +47,7 @@ After installing Teleport on the Websoft9 console, the following steps need to b
 
 #### Connecting to remote Linux  
 
-1. Login to the Teleport console, go to "Resource" > "Enroll New Resource"
+1. Login to the Teleport console, select **Resource > Enroll New Resource**
 
 2. Select an operating system and generate a client installation link  
    
@@ -77,5 +77,6 @@ Ensure that the registration link is accessed through HTTPS.
 #### Failed to connect to the server by IP:Port?  
 
 Details: When adding resources, run the installation command on the connected server and display curl failed to verify   
+Reason: The self signed certificate has been identified as insecure and connection is not allowed  
+Solution: Configure a domain name for Teleport and apply for a public certificate
 
-Reason: The self signed certificate has been identified as insecure and connection is not allowed

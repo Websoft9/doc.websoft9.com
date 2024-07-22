@@ -27,7 +27,7 @@ Here's how to use Tinyproxy to implement git clone:
 
 ## Configuration options{#configs}
 
-- Whitelist Setup: Edit the ALLOWED in the .env file, setting 0.0.0.0/0 means all IPs are allowed to access. Separate all IPs by spaces.
+- Whitelist Setup: Edit the ALLOWED in the .env file, setting 0.0.0.0/0 means all IP are allowed to access. Separate all IP by spaces.
 
 ## Administer{#administrator}
 

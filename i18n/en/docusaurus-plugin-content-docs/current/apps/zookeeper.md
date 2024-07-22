@@ -13,7 +13,7 @@ import Meta from './_include/zookeeper.md';
 
 ## Getting started{#guide}
 
-Completed installation Zookeeper at Websoft9 console, get the applicaiton's overview and access information from "My Apps"  
+Completed installation Zookeeper at **Websoft9 console**, get the applicaiton's overview and access information from **My Apps**  
 
 ### Client connection 
 
@@ -24,13 +24,13 @@ Completed installation Zookeeper at Websoft9 console, get the applicaiton's over
     docker run -it --rm --net=container:zk_name zookeeper zkCli.sh -server zookeeper 
     ``` 
 
-3. After successful connection, run 'ls/' to query znode
+3. After successful connection, run `ls /` to query znode
 
 ### Setup super_digest authentication
 
-1. When the client connects to the Zookeeper node and runs' getAcl/', it will see the following information, indicating that the node is open to any user 
+1. When the client connects to the Zookeeper node and runs `getAcl /`, it will see the following information, indicating that the node is open to any user 
     ``` 
-    [zk: zookeeper (CONNECTED) 3] getAcl/ 
+    [zk: zookeeper (CONNECTED) 3] getAcl / 
     'world,'anyone
     : cdrwa 
     ``` 
@@ -41,7 +41,7 @@ Completed installation Zookeeper at Websoft9 console, get the applicaiton's over
     setAcl / digest:super:password:cdrwa 
     ``` 
 
-3. If you run `getAcl/` again, you will find that **Insufficient permission : /**
+3. If you run `getAcl /` again, you will find that **Insufficient permission : /**
 
 ## Configuration options{#configs}
 

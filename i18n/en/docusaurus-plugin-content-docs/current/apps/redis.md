@@ -31,7 +31,7 @@ There are two ways to verify Redis availability:
 - [ACL](https://redis.io/topics/acl) authentication: enabled by default
 - [Redis API](https://docs.redis.com/latest/rs/references/rest-api/)
 - [Redis-CLI](https://redis.io/topics/rediscli): `redis-cli help`
-- Configuration file: This application lacks a configuration file by default, so select **My Apps > Compose > Go to Edit Repository > .env** to the file docker-compose.yml and set by the **command** directive
+- Configuration file: This application lacks a configuration file by default, so select **My Apps > Compose > Go to Edit Repository > docker-compose.yml** and set by the **command** directive
 
 ## Administer{#administrator}
 

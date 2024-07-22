@@ -84,5 +84,5 @@ Check if the Seafile URL matches the actual one!
 
 Description: After completing the ONLYOFFICE Docs configuration, Seafile Edit and Preview displays the error **Document security token not properly formed**   
 Reason: ONLYOFFICE docs security settings do not match  
-Solution: Modify the environment variable JWT_ENABLED in the ONLYOFFICE docs orchestration file and set it to false  
+Solution: Modify the environment variable JWT_ENABLED in the ONLYOFFICE docs .env file and set it to false  
 

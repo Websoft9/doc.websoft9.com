@@ -33,13 +33,13 @@ import Meta from './_include/zentao.md';
 - Zendo directory (already mounted): */data*
 - Plug-in path (mounted): */data/module*
 - Integrating Git (✅)
-- SMTP (✅): **Backend > Message > Mail**, select STMP as sending method
+- SMTP (✅): select **Backend > Message > Mail**, select STMP as sending method
 
 ## Administer{#administrator}
 
 - Install plugins: Support [Plugin Market](https://www.zentao.net/extension-browse.html) online installation, also supports downloading and unzipping to the plugin directory to install
 - Reset password: Modify the database **zt_user** table, change the password field value to `e10adc3949ba59abbe56e057f20f883e`, and the password will be reset to `123456`
-- Online backup: **Admin > System > Backup**
+- Online backup: select **Admin > System > Backup**
 
 ## Troubleshooting{#troubleshooting}
 

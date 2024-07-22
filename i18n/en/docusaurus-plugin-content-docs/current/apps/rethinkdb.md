@@ -44,7 +44,7 @@ Most of the operations can be achieved by running the ReQL command directly Data
 
 ## Configuration options{#configs}
 
-- Server CML: `rethinkdb -h`
+- Server CLI: `rethinkdb -h`
 
 - Backup and Restore:
   - `rethinkdb export abc.db`
