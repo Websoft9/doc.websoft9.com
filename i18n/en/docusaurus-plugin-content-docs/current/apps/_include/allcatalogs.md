@@ -72,7 +72,7 @@
 - [Data Warehouse](https://www.websoft9.com/apps/data-warehouse)
 - [Data Lake](https://www.websoft9.com/apps/data-lake)
 - [Database Management Tools](https://www.websoft9.com/apps/dbtools)
-## Web Runtime
+## App Runtime
 
 - [.NET](https://www.websoft9.com/apps/dotnet)
 - [PHP](https://www.websoft9.com/apps/php)
