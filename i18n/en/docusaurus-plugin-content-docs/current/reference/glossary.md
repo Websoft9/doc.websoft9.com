@@ -38,6 +38,10 @@ Use **configure**, don't use config which is not formal
 
 Use Internet IP not Public IP
 
+## ICP Filing
+
+you must apply for an Internet Content Provider (ICP) filing number before being allowed to provide Internet information services (such as websites and app services) in the Chinese mainland.
+
 ## Private Cloud, Public Cloud
 
 - Public Cloud is the cloud infrastructure provider

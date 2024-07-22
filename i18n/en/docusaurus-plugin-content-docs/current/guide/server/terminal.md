@@ -3,42 +3,44 @@ sidebar_position: 1.2
 slug: /web-terminal
 ---
 
-# 连接服务器
+# Connect your server
 
-连接 Linux 有两种常用的工具类型：
+Below is the main methods for connecting Linux by SSH:
 
-- 本地电脑客户端，例如：Terminus, WinSCP, Putty, Xshell, Tabby, MobaXterm 等
-- 在线 Web 客户端：云平台和 Websoft9 控制台均提供的 Web 版在线连接工具  
+- **Use local SSH terminal**: Need to install to local computer, like Terminus, WinSCP, Putty, Xshell, Tabby, MobaXterm, etc.
+- **Web-based SSH terminal**: Not need to install, just use online from Websoft9 Console or Cloud provider Console
 
-本章介绍 Websoft9 控制台运行 [在线 Web 客户端](./web-terminal) 的连接 Linux 的方法
+Next, we will describe how to use [Web-based SSH terminal](./web-terminal) connect to Linux from the Websoft9 Console.  
 
-## 准备账号{#osaccount}
+## Prepare user account{#osaccount}
 
-一般来说 Linux 默认用户名是 `root`，但在某些云平台或发行版，默认的账号并不完全一样。  
+Generally the Linux default username is `root`, but on some cloud provider the default account is not the same.  
 
-具体参考下面的表格：  
+For more information, see the below table:
 
-   |  云平台   |  管理员账号   | 其他|
+   |  cloud provider   |  username   | 其他|
    | --- | --- | --- |
-   |  Azure   |  创建服务器的时候自行设置   | [如何开启root账户？](./azure#enableroot) |
-   |  AWS   |  AmazonLinux:ec2  CentOS:centos  Ubuntu:ubuntu  Debian:admin   | [如何开启root账户？](./aws#enableroot)|
-   |  阿里云，华为云，腾讯云   |  除腾讯云 Ubuntu 之外(ubuntu)，其他平台任何系统默认账号都是 root  | |
+   |  Azure   |  username is set by user when created virtual machine   | [How to enbale root account?](./linux#enable) |
+   |  AWS   |  AmazonLinux is `ec2`,  CentOS is `centos`, Ubuntu is `ubuntu`, Debian is `admin`   | [How to enbale root account?](./linux#enable)|
+   |  Alibaba Cloud   |  root  | |
+   |  HUAWEICLOUD   |  root  | |
+   |  Tencent Cloud   |  Ubuntu is `ubuntu`, other Linux distribution is `root`  | |
 
 
-## 运行终端
+## Lauch web terminal
 
-### 使用独立安全 Web 终端（推荐）{#third}
+### Use a standalone secure web terminal{#third}
 
-Websoft9 应用商店安装堡垒机 [Next Terminal](./nextterminal)，实现服务器的安全连接与访问。
+We recommend install standalone secure **infrastructure access platform** from Websoft9 App Store to connect server, like [teleport](./teleport) and [Next Terminal](./nextterminal). 
 
-### 使用 Websoft9 内置终端{#inner}
+### Use Websoft9 built-in terminal{#inner}
 
-Websoft9 控制台内置 Web 终端，它可以免密连接 Websoft9 控制台所在的服务器（局限性），实现命令和文件操作：
+The Websoft9 Console has a built-in web terminal, which allows you to connect to the server where the Websoft9 Console is located (limitation) for command and file operations without confidentiality:
 
-- 在线 SSH，可以方便的对服务器进行各种符合权限的操作
+- SSH terminal for connect server the same with Websoft9 Console
    ![](./assets/websoft9-terminal.png) 
 
-- 文件管理器，可以方便的对文件进行各种符合权限的操作
+- File browser for you to manage files online
    ![](./assets/websoft9-file.png)
 
 
