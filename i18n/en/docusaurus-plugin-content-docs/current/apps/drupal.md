@@ -38,7 +38,7 @@ Drupal supports multi-language, but you need to do as following:
 
 ## Configuration options{#configs}
 
-- Configuration file: /path/sites/default/settings.php
+- Configuration file: */path/sites/default/settings.php*
 - Multilingual (✅)
 - SMTP (✅): Install [SMTP Authentication Support](https://www.drupal.org/project/smtp) plugin for SMTP.
 - [3rd Party CLI](https://drupalconsole.com/) 
@@ -62,7 +62,7 @@ Solution: Retry several times until it succeeds.
 
 #### Drupal status report has an error?
 
-This "Error" is actually a "Warning" and can be ignored.
+This **Error** is actually a **Warning** and can be ignored.
 
 #### Protecting against HTTP ...?
 

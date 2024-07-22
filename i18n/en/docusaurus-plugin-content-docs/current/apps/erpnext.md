@@ -47,14 +47,14 @@ Unknown.
 
 #### Frappe, Bench, ERPNext?
 
-- ERPNext is a free ERP based on the Frappe framework.
+- ERPNext is a free ERP based on the [Frappe](https://github.com/frappe/frappe) framework.
 - Frappe is a framework for rapid development of integrated JS and Python applications.
-- [Bench](https://github.com/frappe/bench) is the CLI tool in the Frappe framework architecture for creating and managing Frappe-based applications.
+- [Bench](https://github.com/frappe/bench) is a CLI tool in the Frappe framework architecture for creating and managing Frappe-based applications.
 
 The Frappe framework consists of two main parts: the app which is the back-end Python code, and the site which is the front-end part that handles HTTP requests.
 
 #### ERPNext service startup failed?
-  Make sure the hostname contains the char ".", e.g. erpnext12.14.0 is a non-compliant hostname.
+  Make sure the hostname contains the char **.** , e.g. erpnext12.14.0 is a non-compliant hostname.
 
 You can use the following command to change the hostname:
 
@@ -77,4 +77,4 @@ Solution: Bench can only be run from frapper, you must switch to this user first
 
 #### ConnectionError: Error 111 for erpnext?
 
-  ERP initialization process will appear ConnectionError: Error 111 for erpnext, [the official reply](https://github.com/frappe/frappe_docker/issues/1314) that this kind of error is a normal phenomenon. Because Only configuration job container completed, redis connection is correct.
+  ERP initialization process will appear ConnectionError: Error 111 for erpnext, [the official reply](https://github.com/frappe/frappe_docker/issues/1314) that it is normal. Because only configuration job container completed, redis connection is correct.
