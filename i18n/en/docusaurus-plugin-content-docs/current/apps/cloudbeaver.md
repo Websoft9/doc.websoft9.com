@@ -40,7 +40,7 @@ When completed installation of CloudBeaver at **Websoft9 Console**, get the appl
 1. CloudBeaver console, select **Settings > Administration > Connection Management**, add the required database connection.
    ![](./assets/cloudbeaver-connection-websoft9.png)
 
-2. Set the connection information: host address, port, account password, and then click [Save].
+2. Set the connection information: host address, port, account password, and then click **Save**.
 
 3. Test the connection availability.
 
@@ -61,7 +61,7 @@ Shared Data Connection is a shared connection access that the administrator can 
 
 - Multilingual(✅): Chinese not supported
 - Database connection driver: JDBC
-- Configuration file: /path/GlobalConfiguration/.dbeaver/data-sources.json
+- Configuration file: */opt/cloudbeaver/workspace/GlobalConfiguration/.dbeaver/data-sources.json*
 - [Supported databases](https://dbeaver.com/databases/)
 - Export data(✅): only table export is supported
 

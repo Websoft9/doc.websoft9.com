@@ -24,7 +24,7 @@ import Meta from './_include/couchdb.md';
 ## Configuration options{#configs}
 
 - Custom configuration file: mount into the container from the file *src/my.ini* in the repository.
-- Command line: CouchDB is API-driven and manipulates data using `curl'.
+- Command line: CouchDB is API-driven and manipulates data using `curl`.
 - [API](https://docs.couchdb.org/en/stable/api/index.html) 
 - [Partition](https://docs.couchdb.org/en/stable/partitioned-dbs/index.html#partitioned-databases)
 - Maximum number of connections: 2048

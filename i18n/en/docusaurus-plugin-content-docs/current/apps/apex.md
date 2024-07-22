@@ -29,7 +29,7 @@ Although APEX has a workspace named internal by default, it is only used for adm
 
 You must create a new workspace if want to use APEX: 
 
-1. Log in to the backend and click Create New WorkSpace
+1. Login to the backend and click Create New WorkSpace
    ![](./assets/apex-createwp-websoft9.png)
 
 2. Follow the wizard: create a new schema and set the username, password and emailof the new workspace until you have finished creating the WorkSpace.
@@ -43,7 +43,7 @@ After creating the workspace, you need to **login with the new workspace** and t
 
 - Multilingual (√): Login to the console to change the language (Chinese included)
 - [API](https://apex.oracle.com/api)
-- Application Backup: You can easily import and export applications to "APP Builder" from APEX console to realize backup.
+- Application Backup: You can easily import and export applications to **APP Builder** from APEX console to realize backup.
 
 ## Administer{#administrator}
 

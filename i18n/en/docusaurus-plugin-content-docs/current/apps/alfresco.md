@@ -28,7 +28,7 @@ import Meta from './_include/alfresco.md';
 
 ### Features
 
-The commonly used functions and screenshots are as follows:
+The common functions and screenshots are as follows:
 
 - Backend dashboard
   ![Alfresco Backend dashboard](./assets/alfresco-adminui-websoft9.png)
@@ -74,6 +74,6 @@ Refer to: [Files and folders](https://docs.alfresco.com/content-services/communi
 
 #### Chinese Markdown format preview garbled?
 
-Description: [View in browser] Not garbled, but garbled in Alfreco's built-in document details  
+Description: **View in browser** not garbled, but garbled in Alfreco's built-in document details  
 Reason: Unknown  
 Solution: Currently unavailable  

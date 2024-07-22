@@ -59,7 +59,7 @@ Error details: You don't have permission to access/on this server
 Solution:
 
 1. Check the permissions of the web directory
-2. Check whether the Apache configuration file has "AllowOverride All Require all granted" related content.
+2. Check whether the Apache configuration file has **AllowOverride All Require all granted** related content.
 
 #### Apache Frequent 403 Errors?
 

@@ -34,7 +34,7 @@ Completed installation code-server at Websoft9 console, get the applicaiton's ov
 
 ### Installing the environment
 
-code-sever does not install Python, Node, Java, etc. by default, so you need to `sudo su` in the **Terminal** area and switch to Administrator to start installing the environment. 
+Code-sever does not install Python, Node, Java, etc. by default, so you need to `sudo su` in the **Terminal** area and switch to Administrator to start installing the environment. 
 
 #### Node.js
 
@@ -97,11 +97,11 @@ To publish an application to the Internet, code-server proceed as follows:
 
 ### Multi-developer
 
-code-server does not support multi-user collaboration. For multi-developers, simply install multiple code-servers applications through the Websoft9 console.
+Code-server does not support multi-user collaboration. For multi-developers, simply install multiple code-servers applications through the Websoft9 console.
 
 ## Configuration options{#configs}
 
-- sudo password in Terminal: same as code-server console password
+- Sudo password in Terminal: same as code-server console password
 - Code compilation build(✅)
 
 ## Administer{#administrator}
@@ -120,7 +120,7 @@ Solution: `chown -R abc:abc /config/workspace` to fix the problem.
 
 #### Can't copy commands to Terminal?
 
-ctrl+V
+Ctrl+V
 
 #### Conflict with remote pending pull when git push?
 
