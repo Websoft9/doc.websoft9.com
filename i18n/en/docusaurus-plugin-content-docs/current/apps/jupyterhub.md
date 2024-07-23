@@ -15,13 +15,13 @@ import Meta from './_include/jupyterhub.md';
 
 ### Login Verification{#verification}
 
-1. Completed installation JupyterHub at Websoft9 console, get the applicaiton's overview and access credentials from "My Apps"  
+1. Completed installation JupyterHub at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
 
 2. Starting to verify it
 
 ## Configuration options{#configs}
 
-- Multiple users（√）: Access the container and run command `adduser your_username` to create it
+- Multiple users(✅): Access the container and run command `adduser your_username` to create it
 
 ## Administer{#administrator}
 

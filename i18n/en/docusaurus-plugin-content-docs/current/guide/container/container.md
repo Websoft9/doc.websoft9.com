@@ -3,29 +3,25 @@ sidebar_position: 6
 slug: /container
 ---
 
-# 容器生命周期与资源管理
+# Manage containers resource
 
-Websoft9 控制台是为管理应用的生命周期的而设计。实际托管中，也需要对容器的生命周期进行管理。
+The applications hosted by Websoft9 is based on containers, so user need to be familiar with container state and resource management.  
 
-## 管理工具
+There are several container management tools:  
 
-- Docker 官方客户端工具：[docker](https://docs.docker.com/engine/) 命令和 [docker compose](https://docs.docker.com/compose/) 命令
-- 可视化 Web 工具：Websoft9 集成 [Portainer](./portainer) 作为唯一个容器可视化管理平台，100% 保持其原生性。  
+- [docker client commands](https://docs.docker.com/engine/) 
+- [docker compose](https://docs.docker.com/compose/)
+- [Websoft9 Containers](./portainer): Integrated Portainer for container mangement platform
+   ![](./assets/websoft9-containers.png)
 
-   Websoft9 控制台的 "网关" 菜单即可进入 Portainer:  
-  ![](./assets/websoft9-portainer.png)
+## Running container
 
-
-## 运行容器
-
-Websoft9 完全兼容 Docker，所以用户可以不依赖于 Websoft9 控制台而直接使用 Docker 客户端工具部署由多容器组成的应用。  
-
-Websoft9 提供了一个包含 200+ 开源 [Docker compose 模板](https://github.com/Websoft9/docker-library)，只需 `docker compose` 命令启动，即可安装任何想要的应用。  
+Websoft9 is fully Docker-compatible, so users can deploy applications consisting of multiple containers directly using [Docker compose templates](https://github.com/Websoft9/docker-library) without relying on the Websoft9 Console.  
 
 
-## 升级多容器
+## Upgrade containers
 
-Docker Compose 升级应用只需运行如下三条命令：
+You can use Docker Compose to Upgrade containers by below commands
 
 ```
 docker-compose down
@@ -33,12 +29,12 @@ docker-compose pull
 docker-compose up -d
 ```
 
-## 清空容器日志
+## Clear container logs
 
 ```
-# 获取容器日志路径
+# Get the logs path in container
 docker inspect --format='{{.LogPath}}' Container_Name
 
-# 清空日志
+# Clear the logs
 echo "" > log_path
 ```

@@ -15,7 +15,7 @@ import Meta from './_include/manageiq.md';
 
 ### Login Verification{#verification}
 
-1. Completed installation ManageIQ at Websoft9 console, get the applicaiton's overview and access credentials from "My Apps"  
+1. Completed installation ManageIQ at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
 
 2. Ensure Domain Binding for ManageIQ and Set Up HTTPS Access(**Necessary Condition**)  
 
@@ -23,7 +23,7 @@ import Meta from './_include/manageiq.md';
 
 ## Configuration options{#configs}
 
-- Multilingual (√)
+- Multilingual(✅)
 
 ## Administer{#administrator}
 

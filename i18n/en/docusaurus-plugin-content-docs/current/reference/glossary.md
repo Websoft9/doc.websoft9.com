@@ -18,6 +18,10 @@ Capitalize any proper nouns, e.g. Docker, Github, URL, Apache, Open Source
 
 Use enterpise as a modifier. E.g. **customized needs**, **customized deployment**. Don't use personalized which is not informal
 
+## graphical
+
+Graphical User Interface, not use **visual** 
+
 ## application-centric
 
 Use application-centric not application-focused

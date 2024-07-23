@@ -3,7 +3,7 @@ sidebar_position: 1.1
 slug: /externaldb
 ---
 
-# 接入外部数据库到平台
+# Integrate external database
 
 接入外部数据库到平台是指将不在 Websoft9 平台直接控制下的数据库实例连接到该平台，以便集中管理和操作。   
 

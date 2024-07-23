@@ -22,7 +22,7 @@ import Meta from './_include/mongocompass.md';
 2. Click the MongoDB Compass icon on desktop to enter MongoDB Compass.
    ![](./assets/mongodbcompass-click-websoft9.png)
 
-3. select **New Connection > Advanced Connection Options**, enter the connection information and the account. 
+3. Select **New Connection > Advanced Connection Options**, enter the connection information and the account. 
    ![](./assets/mongodbcompass001-websoft9.png)
 
    > The URI method is not recommended, as it is limited by the string format.
@@ -38,4 +38,4 @@ import Meta from './_include/mongocompass.md';
 
 #### Does Mongo Compass consume a lot of memory? 
 
-Yes, Mongo Compass is not really a web application, it is built by Websoft9 based on a special container that contains the desktop.
+Yes, Mongo Compass is not a true web application, it is built by Websoft9 based on a special container that contains the desktop.

@@ -26,8 +26,8 @@ import Meta from './_include/mattermost.md';
 ## Configuration options{#configs}
 
 - Configuration file: /path/mattermost_config/config.json
-- Mobile (✅) : [download address](https://mattermost.com/download/#mattermostApps)
-- Multilingual (✅) : select  **Administration > Personal >  Settings > langugue**
+- Mobile (✅): [download address](https://mattermost.com/download/#mattermostApps)
+- Multilingual (✅): select  **Administration > Personal >  Settings > langugue**
 - SMTP (✅): select **Administration > System > General Settings > Email server settings** 
 - Server-side command line: [mattermost](https://docs.mattermost.com/administration/command-line-tools.html)
 - CLI: [mmctl](https://docs.mattermost.com/administration/mmctl-cli-tool.html)
@@ -40,7 +40,7 @@ import Meta from './_include/mattermost.md';
 
 ## Administer{#administrator}
 
-- Additional action for URL change: After changing the domain name through the Websoft9 console, you also need to change the "Site URL" in the Mattermost backend: **ENVIRONMENT > Web Server**.
+- Additional action for URL change: After changing the domain name through the Websoft9 console, you also need to change the **Site URL** in the Mattermost backend: **ENVIRONMENT > Web Server**.
 
 ## Troubleshooting{#troubleshooting}
 

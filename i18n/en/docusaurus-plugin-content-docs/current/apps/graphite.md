@@ -23,7 +23,7 @@ import Meta from './_include/graphite.md';
 
 ## Administer{#administrator}
 
-- **Change administrator password**: Using local browser to access the application path: **ip:port or domain name/admin/auth/user/1/**,login and  select the **CHANGE PASSWORD** on the upper right.
+- **Change administrator password**: Using local browser to access the application path: **ip:port or domain name/admin/auth/user/1/**, login and  select the **CHANGE PASSWORD** on the upper right.
 
 ## Troubleshooting{#troubleshooting}
 

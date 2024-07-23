@@ -1,15 +1,15 @@
 import DocCardList from '@theme/DocCardList';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-# 使用和管理容器
+# Manage and set container
 
-容器技术是 Websoft9 多应用托管平台的核心基础架构组件。因此，在管理应用时，您可能需要执行容器相关的操作。
+Container technology is the core infrastructure of Websoft9's multi-application hosting platform.  
 
-## 相关指南
+## Tutorials
 
 <DocCardList items={useCurrentSidebarCategory().items}/>
 
-## 容器引擎
+## Container engines
 
 - [Docker](https://www.docker.com/)
 - [Podman](https://podman.io/)

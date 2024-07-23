@@ -3,7 +3,7 @@ sidebar_position: 2.1
 slug: /migratedb
 ---
 
-# 更换应用的数据库
+# Replace App database
 
 Websoft9 托管平台支持用户根据个人偏好或企业IT标准将应用的默认数据库更换（迁移）为外部数据库。此功能确保了用户能够根据自己的需求选择合适的数据库产品。
 

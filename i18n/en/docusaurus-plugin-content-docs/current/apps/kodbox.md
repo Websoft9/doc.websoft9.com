@@ -16,7 +16,7 @@ import Meta from './_include/kodbox.md';
 
 ### Login Verification{#verification}
 
-1. Completed installation KodBox at Websoft9 console, get the applicaiton's overview and access credentials from "My Apps"  
+1. Completed installation KodBox at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
     
 2. Access the KodBox URL, the first step is create administrator account, then login to the KodBox console
     ![](./assets/kodbox-backend-websoft9.png)
@@ -33,8 +33,8 @@ Websoft9 is KodBox's Enterprise Edition partner, and purchasing the Enterprise E
 
 ## Configuration options{#configs}
 
-- Multilingual (√)
-- Plugin (√)
+- Multilingual(✅)
+- Plugin(✅)
 
 ## Administer{#administrator}
 

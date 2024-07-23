@@ -16,7 +16,7 @@ import Meta from './_include/jenkins.md';
 
 ### Initial setup{#wizard}
 
-1. When completed installation of Jenkins at Websoft9 console, get the applicaiton's overview and access information from "My Apps"  
+1. When completed installation of Jenkins at Websoft9 console, get the applicaiton's overview and access information from **My Apps**  
 
 2. Access the initialization page, Jenkins prompts to unlock
    ![](./assets/jenkins-installstart-websoft9.png)
@@ -38,7 +38,7 @@ The following is a task to help users quickly get started by using Jenkins to au
 
 1. Set **Personal access tokens** in GitHub for Jenkins connection
 
-2. Ensures that the Github plugin is installed and enabled in Jenkins
+2. Ensure that the Github plugin is installed and enabled in Jenkins
 
 3. Create a job at Jenkins, set the source code from Github, and set the triggering strategy
 
@@ -60,10 +60,10 @@ The following is a task to help users quickly get started by using Jenkins to au
    curl JENKINS_URL/job/JOB_NAME/buildWithParameters --user USER:TOKEN --data id=123 --data verbosity=high
    ```
 
-- Online upgrade( ✅): When there is an update, the backend will prompt and you can update and upgrade online through the backend
+- Online upgrade(✅): When there is an update, the backend will prompt and you can update and upgrade online through the backend
 
 ## Administer{#administrator}
 
-- Backup and Recovery:[Backup plugin](https://plugins.jenkins.io/backup/) provides backup and recovery capabilities for Jenkins.
+- Backup and Recovery: [Backup plugin](https://plugins.jenkins.io/backup/) provides backup and recovery capabilities for Jenkins.
 
 ## Troubleshooting{#troubleshooting}
