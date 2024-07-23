@@ -23,7 +23,7 @@ After installing Grafana in the **Websoft9 console**, view the application detai
 - Grafana console page  
    ![Grafana Console](./assets/grafana-dashboard-websoft9.png)
 
-- Select **Administration > Plugins**, Add a plugin    
+- Select **Administration > Plugins**, add a plugin    
    ![Grafana Add Plugins](./assets/grafana-plugins-websoft9.png)
 
 - Select **connections > Data Sources**, add a data source (analysis object)    
@@ -60,7 +60,7 @@ After installing Grafana in the **Websoft9 console**, view the application detai
    templates_pattern = emails/*.html
    ```
 
-- **Reset admin password**: run the command `grafana-cli admin reset-admin-password admin123` in the container.
+- **Reset admin password**: run the command `grafana-cli admin reset-admin-password admin123` in the container
 
 - **Upgrade**: [Upgrade Grafana](https://grafana.com/docs/installation/upgrading/)
 

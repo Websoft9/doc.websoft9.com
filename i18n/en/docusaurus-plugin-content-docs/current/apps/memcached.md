@@ -21,14 +21,14 @@ import Meta from './_include/memcached.md';
 
 **Memcached-admin** is pre-built in this application orchestration but is not enabled by default. If you need to enable it, please refer to the following steps:
 
-1. select **Websoft9 console > My apps > compose > Go to Edit Repository**.
+1. Select **Websoft9 console > My apps > compose > Go to Edit Repository**.
 
 2. Modify the Memcached docker-compose.yml.
 
    - Host ports in the ports element
    - Remove the profiles element.
 
-3. After rebuilt the application, your can access the control panel through `http:/URL:port` .
+3. After rebuilt the application, your can access the control panel through `http:/URL:port`.
   ![Memcached-admin](./assets/memcached-gui-websoft9.png)
 
 ### Telnet Connection
@@ -41,8 +41,9 @@ import Meta from './_include/memcached.md';
    Connected to 127.0.0.1.
    Escape character is '^]'.
    ^]'.
+   ```
 
-3. Connected successfully, the system enters the Memcached CLI, and enters the command `stats`.
+3. Connected successfully, the system enters the Memcached CLI, and inputs the command `stats`.
 
    ```
    $ stats

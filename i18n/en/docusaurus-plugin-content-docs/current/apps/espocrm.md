@@ -18,7 +18,7 @@ import Meta from './_include/espocrm.md';
 
 ### Login Verification{#verification}
 
-1. Completed installation EspoCRM at Websoft9 console, get the applicaiton's overview and access credentials from "My Apps"  
+1. Completed installation EspoCRM at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
 
 2. After login successfully, access the backend
    ![](./assets/espocrm-backend-websoft9.png)

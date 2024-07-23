@@ -16,7 +16,7 @@ import Meta from './_include/huginn.md';
 ### Initial setup{#wizard}
 
 1. When completed installation of Huginn at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**.  
-2. Successfully login the background and you can use it.
+2. Successfully login the backend and you can use it.
 
 ## Configuration options{#configs}
 

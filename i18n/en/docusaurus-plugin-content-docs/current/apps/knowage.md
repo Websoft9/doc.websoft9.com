@@ -19,7 +19,7 @@ import Meta from './_include/knowage.md';
 2. Wait for 3-6 minutes until Knowage started and you can access it using your local computer's browser to login.
    ![](./assets/knowage-login-websoft9.png)
 
-3. Enter your account and password to login to the Knowage backend.  
+3. Login your account and password to login to the Knowage backend.  
    ![](./assets/knowage-backend-websoft9.png)
 
 ### Data Modeling and Analysis

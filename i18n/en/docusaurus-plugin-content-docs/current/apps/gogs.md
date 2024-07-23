@@ -19,27 +19,27 @@ After installing Gogs on the **Websoft9 console**, view the application details 
 
 1. Use your local computer's browser to access the URL and enter the initialization page.   
 
-2. Database Settings: Please choose SQLite, if you choose any other database, you need to prepare available databases in advance.
+2. Database settings: Please choose SQLite, if you choose any other database, you need to prepare available databases in advance.
 
-3. Application Basic Settings: Refer to the instructions to avoid errors when filling.
+3. Application basic settings: Refer to the instructions to avoid errors when filling.
 
-   - Domain name: use the URL of the current browser access (may include the port), remove the `http://` prefix, keep the latter part.
+   - Domain name: Use the URL of the current browser access (may include the port), remove the `http://` prefix, keep the latter part.
    - Application URL: Use the URL currently accessed by your browser.
-   - SSH port: the port of the server that was set when Gogs was installed.
+   - SSH port: The port of the server that was set when Gogs was installed.
    - HTTP port: Do not modify.
 
 4. Set the admin account and email address (admin is not allowed as a username).
 
-5. After successful installation, enter the system background
+5. After successful installation, enter the system backend
 
     ![](./assets/gogs-dashboard-websoft9.png)
 
 
 ## Configuration options{#configs}
 
-- Cli: `. /gogs -h`
+- CLI: `./gogs -h`
 - [Webhook](https://gogs.io/docs/features/webhook)
-- Multilingual (✅ ): automatically adapts to the browser language, which can also be selected in the bottom menu
+- Multilingual (✅): Automatically adapts to the browser language, which can also be selected in the bottom menu
 
 ## Administer{#administrator}
 

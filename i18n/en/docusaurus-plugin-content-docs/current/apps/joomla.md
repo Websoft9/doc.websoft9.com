@@ -16,7 +16,7 @@ import Meta from './_include/joomla.md';
 
 ### Login Verification{#verification}
 
-1. Completed installation Joomla at Websoft9 console, get the applicaiton's overview and access credentials from "My Apps"  
+1. Completed installation Joomla at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
 
 2. Login to Joomla backend  
 

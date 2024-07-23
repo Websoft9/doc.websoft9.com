@@ -26,7 +26,7 @@ import Meta from './_include/mediawiki.md';
 - Visual Editor: [Help:Starting_a_new_page](https://www.mediawiki.org/wiki/Help:VisualEditor/User_guide/zh)
 - File Upload: [Help:FAQ:Enabling File Upload](https://www.mediawiki.org/wiki/Manual:FAQ/zh#如何启用文件上传?)
 - Language Settings: [Help:FAQ:Language Settings](https://www.mediawiki.org/wiki/Manual:FAQ/zh#我如何更改界面语言?)
-- Interface Customization:[Help:FAQ:Customize Interface](https://www.mediawiki.org/wiki/Manual:FAQ/zh#定制界面), modify Logo, set navigation bar, modify CSS, etc
+- Interface Customization: [Help:FAQ:Customize Interface](https://www.mediawiki.org/wiki/Manual:FAQ/zh#定制界面), modify Logo, set navigation bar, modify CSS, etc
 
 ### Setting up SMTP{#smtp}
 
@@ -52,21 +52,21 @@ import Meta from './_include/mediawiki.md';
    ```
 
 
-4. Find the following variables and set their values to the sender's email address.
+4. Find the following variables and set its values to the sender's email address.
    
    ```
     $wgEmergencyContact = "websoft9@163.com";
     $wgPasswordSender = "websoft9@163.com";
    ```
 
-5. Once the settings are complete, restart the application to take effect.
+5. After setting, restart the application to take effect.
 
 ## Configuration options{#configs}
 
-- Configuration file (mounted): /bitnami/mediawiki/LocalSettings.php
+- Configuration file (mounted): */bitnami/mediawiki/LocalSettings.php*
 - [API:Main_page](https://www.mediawiki.org/wiki/API:Main_page/zh)
-- Multi-language (✅ )
-- Multimedia files (✅ )
+- Multilingual(✅)
+- Multimedia files(✅)
 
 ## Administer{#administrator}
 

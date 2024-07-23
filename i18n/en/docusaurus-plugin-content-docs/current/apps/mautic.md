@@ -16,13 +16,13 @@ import Meta from './_include/mautic.md';
 
 ### Initial setup{#wizard}
 
-1. When completed installation of Mautic at Websoft9 console, get the applicaiton's overview and access information from "My Apps"  
+1. When completed installation of Mautic at Websoft9 console, get the applicaiton's overview and access information from **My Apps**  
 
 2. Complete database connection (keep default values) and initial account settings according to the wizard
 
 ## Configuration options{#configs}
 
-- Multilingual (√)
+- Multilingual(✅)
 
 ## Administer{#administrator}
 

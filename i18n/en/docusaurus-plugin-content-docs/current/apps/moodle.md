@@ -16,7 +16,7 @@ import Meta from './_include/moodle.md';
 
 ### Login Verification{#verification}
 
-1. Completed installation Moodle at Websoft9 console, get the applicaiton's overview and access credentials from "My Apps"  
+1. Completed installation Moodle at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**"  
 
 2. Starting to verify it
    ![](./assets/moodle-backend-websoft9.png)
@@ -25,7 +25,7 @@ import Meta from './_include/moodle.md';
  
 1. Login to the Moodle backend as an administrator  
 
-2. Open "Site administration" > "Plugins" in order to view or install plugins  
+2. Open **Site administration > Plugins** in order to view or install plugins  
 
 3. Supports two installation methods for plugins: 
     
@@ -34,9 +34,9 @@ import Meta from './_include/moodle.md';
 
 ### Install Theme{#theme}  
 
-1. The Moodle theme is actually a plugin, which can be installed first through the "install Plugin" method
+1. The Moodle theme is actually a plugin, which can be installed first through the **install Plugin** method
 
-2. Open "Site administration" > "Appearance" > "Theme selector" to change the theme
+2. Open **Site administration > Appearance > Theme selector** to change the theme
 
 ## Configuration options{#configs}
 
