@@ -15,7 +15,7 @@ import Meta from './_include/kong.md';
 
 ### Install Verification{#verification}
 
-Completed installation Kong at Websoft9 console, get the applicaiton's overview and access credentials from "My Apps"  
+Completed installation Kong at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
 
 1. Kong has three services: Kong HTTP, Kong Admin API, and Kong GUI. Ports need to be opened as needed
    - If access by domain: Just need enable the Kong Admin API port
@@ -44,9 +44,9 @@ Detail refer to: [Authentication Reference](https://docs.konghq.com/gateway/late
 
 ## Configuration options{#configs}
 
-- GUI console Kong Manager OSS (√): But only the enterprise distribution supports account and password authentication
+- GUI console Kong Manager OSS(✅): But only the enterprise distribution supports account and password authentication
 
-- [Kong CLI](https://docs.konghq.com/gateway/latest/reference/cli) (√)
+- [Kong CLI](https://docs.konghq.com/gateway/latest/reference/cli)(✅)
 
 - Kong Manager interface: `http://URL/admin`
 

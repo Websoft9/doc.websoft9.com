@@ -15,7 +15,7 @@ import Meta from './_include/jellyfin.md';
 
 ### Initial setup{#wizard}
 
-1. When completed installation of Jellyfin at Websoft9 console, get the applicaiton's overview and access information from "My Apps"  
+1. When completed installation of Jellyfin at Websoft9 console, get the applicaiton's overview and access information from **My Apps**  
 
 2. Access Jellyfin install wizard and create a user and password
 
@@ -31,8 +31,8 @@ import Meta from './_include/jellyfin.md';
 
 ## Configuration options{#configs}
 
-- Multilingual (√): You can select languages during initial installation
-- Media directory: Jellyfin container media directory is `/media` and named mount to Server, you can get the path from  "My Apps" of Websoft9 console
+- Multilingual(✅): You can select languages during initial installation
+- Media directory: Jellyfin container media directory is `/media` and named mount to Server, you can get the path from  **My Apps** of Websoft9 console
 
 ## Administer{#administrator}
 

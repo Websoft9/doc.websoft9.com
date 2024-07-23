@@ -27,11 +27,11 @@ For data processing, configure filtering plugins (for example, grok, mutate, dat
 
 ### Exporting data
 
-#### to Elasticsearch 
+#### To Elasticsearch 
 
 Refer to: [Elasticsearch Connection Logstash](./elasticsearch#logstash)
 
-#### to Kafka
+#### To Kafka
 
 1. Install the Kafka plugin.
 2. Adding Connection Configuration to the Configuration File. 

@@ -66,18 +66,18 @@ JiHu Gitlab is an independently owned and operated GitLab company in China that 
 
 ### Convert CE to EE
 
-Conversion [relationship](https://about.gitlab.com/install/ce-or-ee) between GitLab CE (Community Edition) and GitLab EE (Enterprise Edition):
+Conversion [relationship](https://about.gitlab.com/install/ce-or-ee) between GitLab CE and GitLab EE:
 
 - If GitLab EE is installed, EE functionality is disabled at the end of the trial period, but CE functionality is still available
-- If GitLab CE is installed, you need to change the image label to EE and rebuild the container to seamlessly [upgrade to EE](https://docs.gitlab.com/omnibus/update/README.html#updating-community-edition-to-) enterprise-editio)
+- If GitLab CE is installed, you need to change the image label to EE and rebuild the container to seamlessly [upgrade to EE](https://docs.gitlab.com/omnibus/update/README.html#updating-community-edition-to-)
 
 
 ## Configuration options{#configs}
 
-- Cli: `gitlab-ctl`
+- CLI: `gitlab-ctl`
 - [API](https://docs.gitlab.com/ee/api/) : `curl "https://gitlab.example.com/api/v4/projects"`
-- Multilingual (✅ ): Select **User Settings > Preferences** to set the language
-- SMTP (✅ ): The relevant values in the configuration file are as follows
+- Multilingual(✅): Select **User Settings > Preferences** to set the language
+- SMTP(✅): The relevant values in the configuration file are as follows
    ```
    gitlab_rails['smtp_enable'] = true
    gitlab_rails['smtp_address'] = "smtp.exmail.qq.com"

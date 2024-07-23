@@ -12,7 +12,7 @@ import Meta from './_include/graylog.md';
 
 ## Getting started{#guide}
 
-### Log in to the backend {#wizard}
+### Login to the backend {#wizard}
 
 After installing Graylog in the **Websoft9 console**, view the application details through **My Applications** and get the login information in the **Access** tab.  
 
@@ -32,8 +32,8 @@ Websoft9 is a Graylog Enterprise Edition partner. Pricing factors for Graylog En
 
 ## Configuration options{#configs}
 
-- SMTP (✅): edit the **transport_email** parameter in the configuration file to enabled.
-- Configuration file: To configure environment variables for containers, prefix all configuration variables with uppercase GRAYLOG_. 
+- SMTP (✅): Edit the **transport_email** parameter in the configuration file
+- Configuration file: To configure environment variables for containers, prefix all configuration variables with uppercase GRAYLOG_ 
     ```
     GRAYLOG_TRANSPORT_EMAIL_ENABLED: "true"
     GRAYLOG_TRANSPORT_EMAIL_HOSTNAME: smtp
@@ -72,7 +72,7 @@ Elasticsearch architecture:
 * Graylog is used to transfer data and present data, clustering improves availability
 * MongoDB is used to store configuration information, very little data, and clustering is limited.
 
-#### How is Graylog architected? 
+#### What is the architecture of Graylog?
 
 Please read the official [Architecture Guide](https://www.slideshare.net/Graylog/graylog-engineering-design-your-architecture)
 
