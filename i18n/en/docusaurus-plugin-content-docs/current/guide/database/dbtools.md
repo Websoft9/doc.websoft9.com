@@ -3,23 +3,23 @@ sidebar_position: 1.1
 slug: /dbtools
 ---
 
-# 部署数据库管理工具
+# Deploy database tools
 
-Websoft9 平台提供了丰富的**在线数据库工具**，支持导入导出、备份、SQL查询、可视化操作、用户管理、访问控制以及数据库审计等常用功能，确保用户能选用最适合的管理解决方案。  
+Websoft9 platform provides a wealth of **Online database management tools** that support common functions such as import/export, backup, SQL query, visualization, user management, access control and database auditing, ensuring that users can choose the most suitable management solution.  
 
 
-## 开始部署
+## Deploy datbase tools
 
-1. 登录 Websoft9 控制台，打开应用商店功能
+1. Login to Websoft9 Console, and enter to **App Store**
 
-2. 进入 "数据库" > "管理与迁移" 子类目
+2. List **Databases > Database Management Tools** catalog
    ![](./assets/websoft9-appstore-dbmanagelist.png)
 
-3. 选择目标数据库工具，开始 [部署应用](./deployment#appstore)
+2. Select and [Install](./deployment#appstore) one database tool you want to use
 
-## 相关操作
+## Related topics
 
-- [部署数据库服务](./createdb)
-- [连接并管理数据库](./connectdb)
-- [接入外部数据库实例](./externaldb)
+- [Deploy database service](./createdb)
+- [Connect and manage database](./connectdb)
+- [Integrate external database instances](./externaldb)
 

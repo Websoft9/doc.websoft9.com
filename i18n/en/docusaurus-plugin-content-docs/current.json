@@ -700,12 +700,12 @@
     "description": "The label for category 集成第三方网关 in sidebar docs"
   },
   "sidebar.docs.category.管理数据库": {
-    "message": "管理数据库",
+    "message": "Manage database",
     "description": "The label for category 管理数据库 in sidebar docs"
   },
   "sidebar.docs.category.管理容器": {
-    "message": "管理容器",
-    "description": "The label for category 管理容器 in sidebar docs"
+    "message": "Manage your container",
+    "description": "The label for category Manage your container in sidebar docs"
   },
   "sidebar.docs.category.管理服务器": {
     "message": "Manage your server",
