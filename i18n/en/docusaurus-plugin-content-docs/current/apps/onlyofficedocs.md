@@ -27,7 +27,7 @@ import Meta from './_include/onlyofficedocs.md';
 * [Nextcloud Integration ONLYOFFICE Docs](./nextcloud#onlyoffice)
 * [Seafile Integration ONLYOFFICE Docs](./seafile#onlyoffice)
 
-### Adding fonts {#addfonts}
+### Add fonts {#addfonts}
 
 Refer to the official documentation [Adding fonts to ONLYOFFICE Docs](https://helpcenter.onlyoffice.com/installation/docs-community-install-fonts-linux.aspx) and note the following few points:
 
@@ -60,7 +60,7 @@ ONLYOFFICE Docs [self-signed certificate](https://helpcenter.onlyoffice.com/inst
 
 ### Why buy through Websoft9?
 
-Websoft9 is one of the technical support centers of ONLYOFFICE Docs [a global partner](https://www.onlyoffice.com/search.aspx?search=websoft9) in China. Purchasing through Websoft9 can help users:
+Websoft9 is ONLYOFFICE Docs [a global partner](https://www.onlyoffice.com/search.aspx?search=websoft9) and one of the technical support centers in China. Purchasing through Websoft9 can help users:
 
 - Purchase paid version with at least 10% discount
 - More comprehensive product support
@@ -82,15 +82,15 @@ Place the License file in the ONLYOFFICE Docs volume **data** directory to take 
 
  - OnlyOffice product family is mainly divided into:
 
-    * ENTERPRISE EDITION: Enterprise Edition (paid)
-    * COMMUNITY EDITION: open source version (free)
-    * DEVELOPER EDITION: developer version (fee)
+    * ENTERPRISE EDITION
+    * COMMUNITY EDITION
+    * DEVELOPER EDITION
 
 - Authorization Access Control(✅): used for password authentication of third-party software with ONLYOFFICE Docs, ensuring that ONLYOFFICE Docs can be accessed when authorized, supporting protocols like JWT
 
 ## Administer{#administrator}
 
-- **Enable JWT Key**: Modify JWT_ENABLED=true in the ONLYOFFICE Docs application **Orchestration file** `.env` 
+- **Enable JWT Key**: Modify JWT_ENABLED=true in the ONLYOFFICE Docs application **compose** `.env` 
 
 ## Troubleshooting{#troubleshooting}
 

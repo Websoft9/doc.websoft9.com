@@ -49,7 +49,7 @@ ONLYOFFICE Docs [自签名的证书](https://helpcenter.onlyoffice.com/installat
    wget -N -P /var/www/onlyoffice/Data https://websoft9.github.io/docker-library/apps/onlyofficedocs/src/createCA.sh
    bash /var/www/onlyoffice/Data/createCA.sh
    ```
-3. Modify the container configuration file
+3. 修改容器的配置文件
    ```
    sed -i 's/"rejectUnauthorized": true/"rejectUnauthorized": false/g' /etc/onlyoffice/documentserver/default.json
    supervisorctl restart all
