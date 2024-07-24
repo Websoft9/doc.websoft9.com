@@ -3,7 +3,7 @@ sidebar_position: 2.1
 slug: /url
 ---
 
-# 管理应用的基础 URL
+# Manage Base URL
 
 基础 URL（Base URL） 又被称之为根 URL（Root URL），它在应用的配置阶段被**硬编码**在配置文件或代码库中，这个机制通常在内容管理系统（CMS）如 WordPress、Magento 中使用。  
 

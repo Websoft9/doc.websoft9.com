@@ -39,6 +39,10 @@ const config = {
             to: '/docs/next/gitlab', 
             from: ['/docs/next/jihu'], 
           },
+          {
+            to: '/docs/next/elasticsearch', 
+            from: ['/docs/next/elk','/docs/next/elastic'], 
+          },
         ],
       },
     ],

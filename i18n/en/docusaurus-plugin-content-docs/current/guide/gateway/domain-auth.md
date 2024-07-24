@@ -3,7 +3,7 @@ sidebar_position: 1.2
 slug: /domain-auth
 ---
 
-# 设置应用的安全访问控制
+# Set security access
 
 Websoft9 网关模块基于 Nginx HTTP Basic Authentication 和  Nginx HTTP Access 来管理和控制对应用的访问。
 

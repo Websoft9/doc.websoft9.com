@@ -3,7 +3,7 @@ sidebar_position: 2.2
 slug: /gateway-proxy
 ---
 
-# 为应用设置反向代理访问
+# Set proxy for application
 
 使用 Websoft9 应用商店部署应用，平台会自动为您的应用生成基于反向代理的域名绑定。   
 

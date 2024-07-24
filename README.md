@@ -8,7 +8,14 @@ It based on [Docusaurus](https://docusaurus.io/) and you just need to edit markd
 
 ### DevOps
 
-You can only add PR to **dev branch**, don't accept any PR for main branch
+- You can only add PR to **dev branch**, don't accept any PR for main branch
+- Automatic actions
+  - broken links check
+  - grammar and spell check
+  - npm run test
+  - build and deploy
+  - i18n have the same directory and files
+  - create head files and 
 
 ### i18n
 
@@ -22,7 +29,7 @@ If you want use tools for translation, we suggest you:
 1. Use [DeepL](https://www.deepl.com/) and [Google Translate](https://translate.google.com/) to translate at first.
 2. Then use [DeepL Write](https://www.deepl.com/zh/write) checking the results of translations
 
-### Test it
+### CLI
 
 ```
 # Install
