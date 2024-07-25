@@ -25,7 +25,7 @@ Websoft9 支持在 Red Hat, CentOS, Debian, Ubuntu 等[主流 Linux 发行版](h
 
 域名不是 Websoft9 运行的必要条件。但如果没有域名，应用访问会受限，建议为应用配置域名。    
 
-Websoft9 支持[全局域名](../domain-set#wildcard)。它一次设置后，所有应用均可使用。  
+Websoft9 支持[全局域名](./domain-set#wildcard)。它一次设置后，所有应用均可使用。  
 
 
 ## 软件
@@ -44,9 +44,9 @@ Python 是安装 Websoft9 的必选项，所需版本：Python 3.8 以上 + pip�
 
 ## 相关阅读
 
-- [规划整体基础设施](../design-infrastructure)
-- [规划带宽和流量](../brandwith-infra)
-- [扩充或优化存储](../storage)
+- [规划整体基础设施](./design-infrastructure)
+- [规划带宽和流量](./brandwith-infra)
+- [扩充或优化存储](./storage)
 
 
 

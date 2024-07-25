@@ -13,7 +13,7 @@ slug: /cloud-starter
 
 详情参考：
 
-- [公有云平台快速安装 Websoft9](./install/cloud)
+- [公有云平台快速安装 Websoft9](./install-cloud)
 
 ## 步骤2：在云平台创建服务器（可选）
 

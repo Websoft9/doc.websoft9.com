@@ -29,7 +29,7 @@ Websoft9 提供了两种数据库连接方式：Web 在线连接和本地客户�
 使用 Web 在线工具连接数据库，请参考对应的[数据库工具](./apps/#数据库)相关文档：  
 
 - [phpMyAdmin](./phpmyadmin)
-- [pgAdmin](./pgAdmin)
+- [pgAdmin](./pgadmin)
 - [CloudBeaver](./cloudbeaver)
 - [RedisInsight](./redisinsight)
 - [更多工具...](./apps/#数据库)
