@@ -3,76 +3,60 @@ sidebar_position: 0.1
 slug: /domain-prepare
 ---
 
-# 准备可用的域名
+# Prepare domain name
 
-域名是互联网上任何给定网站的独特名称，它作为人类可读的地址标识符存在，用于访问网站而不必记住其IP地址。  
+A domain is a unique address used to identify a website on the internet. Domains make it easier for users to access websites without needing to remember numerical IP addresses. 
 
-本节详细介绍用户从没有域名到域名可以访问的“艰难”旅程，同时给出一些域名使用过程中常见的问题。  
+There are five steps associated with domain names, of which registration (purchase), certification, and filing are business processes; resolution and binding are technical uses of the steps.     
 
-与域名有关的有五个步骤，其中注册（购买）、认证和备案属于商务流程；解析、绑定属于技术使用步骤。    
+## Prepare domain{#prepare-domain}
 
-## 准备域名{#prepare-domain}
+### Register your domain{#domainreg}
 
-### 域名注册{#domainreg}
+Subscribe to the desired domain name at the domain name service provider, usually on a yearly basis.  
 
-通过域名服务商注册（购买）所需的的域名，一般是按年付费
+### Authenticate domain ownership{#domainauth}
 
-### 域名实名制认证{#domainauth}
+Provide your personal or company's legal identity documents for the domain name owner's real name authentication.
 
-域名注册完成后，还需要提供个人或公司法人证件进行域名所有者的实名制认证。  
+### Filing domain (optional){#domainbei}
 
-### 域名备案{#domainbei}
+Some countries require that filing domains comply with their own laws. For example: **ICP filing** in China.  
 
-备案是中国大陆的一项监管法规：域名解析到中国大陆的服务器时，需提前备案方可使用。
+If you have **ICP filing** problem, you can get [support from Websoft9](./helpdesk)
 
-备案是纯粹的**商务流程活动**，没有任何技术门槛，需应用拥有者自行完成：
+## Use domain{#use-domain}
 
-* 购买服务器时满足云平台的免费备案要求，可由云平台供备案支持服务
-* 备案过程请通过云平台的**备案系统**全程操作
-* 云平台提供 7*24 域名备案咨询服务
+Using a domain name involves two sequential operations: resolution and binding.
 
-## 使用域名{#use-domain}
+### Resolve domain{#domainresolve}
 
-使用域名包含解析和绑定两个先后操作：  
+Resolving a domain refers to the process of translating a human-readable domain name (such as example.com) into an IP address (such as 192.0.2.1) that computers use to identify each other on the network.   
 
-### 域名解析{#domainresolve}
-
-域名解析是将域名转换为IP地址的过程，它需要通过域名控制台操作。   
-
-下面是一个解析范例：`www.abc.com` 指向 121.21.221.11  
-![](./assets/domain-websoft9.png)
+This process is handled by the Domain Name System (DNS) and management by Domain provider console.    
 
 
-### 域名绑定{#domainbind}
+### Bind domain{#domainbind}
 
-域名绑定通常指将不同域名关联到同服务器的特定应用上，此时需要一个中间代理区分不同域名与应用的对应关系。    
+Domain binding links different domains to specific applications on the same server via a HTTP Server.  
 
-Websoft9 平台使用网关的 [Proxy Hosts](./gateway-proxy) 实现[域名绑定](./domain-set)。  
+User can [bind domain](./domain-set) by [Proxy Hosts](./gateway-proxy) of Websoft9 Gateway.   
 
-## 问题解答
+## FAQs{#faq}
 
-#### 什么是一级域名？二级域名？
+#### Domain vs subdomain?
 
-当您成功注册了一个域名，就是拥有了一个一级域名，类似： abc.com   
+- `example.com` is domain
+- `www.example.com` is subdomain
 
-基于一级域名，可以通过域名提供商的控制台设置出无数个二级域名，类似：email.abc.com 或 help.abc.com
+#### What is wildcard of domain?{#wildcard}
 
-#### 服务器如何识别域名的级别？
+A wildcard is a domain name that includes a wildcard character (usually an asterisk *) to represent multiple subdomains. This allows a single domain name to match multiple subdomains without having to specify each one individually.   
 
-服务器不关注域名的级别，即一视同仁的对待
+Below is sample for domain `abc.com`,  it show what is wildcard of domain:  
 
-#### 什么是域名 Wildcard 泛解析 ？{#wildcard}
-
-泛解析是 A 记录的一种形式，它主要是以 * 替代部分或全部的主机记录（域名前缀）。  
-
-假设您有 abc.com 这个域名，下面是使用泛解析的几个范例：
-
-| 类型 | 主机记录 | 记录值（服务器 IP） | 结果                                                         |
+| Record type | Record | Record value (IP) | The result of domain name resolution                                                         |
 | -------- | -------------------- | ------------------- | ------------------------------------------------------------ |
-| A        | *                    | 47.92.175.172       | 以 abc.com 结尾的域名可用，例如：n1.abc.com |
-| A        | *.test               | 47.92.175.172       | 以 test.abc.com 结尾的域名可用。例如：n1.test.abc.com|
-| A        | *.test.web           | 47.92.175.172       | 以 test.web.abc.com 结尾的域名可用。例如：n1.test.web.abc.com |
-
-#### 域名解析迟迟没有生效？{#effect}
-
-解析生效之后，本地访问可能由于缓存问题导致仍然没有生效，请清空浏览器缓存和 DNS 缓存
+| A        | *                    | 47.92.175.172       | Ending in `abc.com` are available, like `n1.abc.com` |
+| A        | *.test               | 47.92.175.172       | Ending in `test.abc.com` are available, like `n1.test.abc.com`|
+| A        | *.test.web           | 47.92.175.172       | Ending in `test.web.abc.com` are available, like `n1.test.web.abc.com`|

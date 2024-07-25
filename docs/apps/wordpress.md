@@ -175,6 +175,21 @@ Websoft9 控制台安装 WordPress 后，通过 "我的应用" 查看应用详�
 
 - **禁用 Google 字体**：先尝试安装 Disable Gooogle Fonts 插件，如果插件无法解决问题，可以在 Websoft9 网关中处理
 
+- **支持多域名**：修改容器内 *wp-config.php* 文件可避免追加域名后修改 ROOT_URL 的问题
+
+    ```
+    # 在 define('WP_DEBUG', false)行后追加如下内容
+    if (true) {
+      $http_prefix = (!empty($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) !== 'off') ? 'https://' : 'http://';
+      //多域名支持
+      define('WP_SITEURL', $http_prefix . $_SERVER['HTTP_HOST']);
+      define('WP_HOME', $http_prefix . $_SERVER['HTTP_HOST']);
+      //媒体路径使用相对路径 如果使用第三方云储存 将下面这段附件路径地址注释即可
+      define('WP_CONTENT_URL', '/wp-content');
+    }
+
+    ```
+
 ## 故障
 
 

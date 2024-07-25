@@ -1,7 +1,7 @@
 ---
 title: HTML
 sidebar_position: 3.0
-slug: /runtime/html
+slug: /html
 tags:
   - 运行环境
   - runtime

@@ -1,9 +1,12 @@
 ---
 sidebar_position: 1.1
 slug: /app-network
+title: "Manage applications access"
 ---
 
-# 访问应用与网络联网
+# Manage applications access
+
+Websoft9 provides a variety of [app access](./app-getdetail#access) and connectivity options to ensure smooth user-application and application-application interactions:  
 
 Websoft9 的托管平台提供多样化的[应用访问](./app-getdetail#access)与连接选项，确保用户和应用、应用与应用的顺畅交互：  
 

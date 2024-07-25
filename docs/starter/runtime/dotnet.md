@@ -1,6 +1,6 @@
 ---
 title: .NET
-slug: /runtime/dotnet
+slug: /dotnet
 sidebar_position: 1.6
 tags:
   - 运行环境

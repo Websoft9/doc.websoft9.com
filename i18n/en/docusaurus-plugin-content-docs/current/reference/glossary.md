@@ -42,6 +42,10 @@ Use **configure**, don't use config which is not formal
 
 Use Internet IP not Public IP
 
+## built-in
+
+"Built-in" refers to features, functionalities, or components that are inherently included within a system, device, or software from the outset, without requiring additional installation or configuration.
+
 ## ICP Filing
 
 you must apply for an Internet Content Provider (ICP) filing number before being allowed to provide Internet information services (such as websites and app services) in the Chinese mainland.

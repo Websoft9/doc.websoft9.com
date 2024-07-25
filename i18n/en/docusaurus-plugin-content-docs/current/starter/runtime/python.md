@@ -1,5 +1,5 @@
 ---
-slug: /runtime/python
+slug: /python
 sidebar_position: 1.3
 tags:
   - container

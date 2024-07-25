@@ -3,67 +3,42 @@ sidebar_position: 2.1
 slug: /url
 ---
 
-# 管理应用的基础 URL
+# Manage base URL
 
-基础 URL（Base URL） 又被称之为根 URL（Root URL），它在应用的配置阶段被**硬编码**在配置文件或代码库中，这个机制通常在内容管理系统（CMS）如 WordPress、Magento 中使用。  
+When accessing web applications, it is common to encounter a setting called **base url** or **root url**. What is it exactly? What does it do? How is it set? This chapter will tell you all about it.
 
-设置了基础 URL 的应用具有如下特征：
+## Learn base URL
 
-- 应用的所有内部链接和资源都是基于这个预设的基础 URL 来生成
-- 即使配置了多少个域名，最终它都会重重定向到基础 URL 访问
-- 任何对基础 URL 的更改都需要手动更新配置文件或代码
+The base URL (or root URL) is the initial part of a URL that typically includes the protocol (such as HTTP or HTTPS) and the domain name (such as example.com). It serves as the starting point for constructing other URLs on the same website or web application. The base URL does not include any specific paths, parameters, or file names that come after the domain.
 
-硬编码的基础URL提供了稳定性，但也减少了灵活性。在进行域名变更、服务器迁移或者环境切换时，开发者必须记得更新所有的硬编码 URL，以防止服务中断和链接失效。
+The base url is usually **hardcoded** in a configuration file of application, often used in content management systems (CMS) such as WordPress, Magento. 
 
-## 基础 URL 与域名的区别
+Once your application have hardcoded base URL, it may have below features:  
 
-[域名](./domain-prepare.md)是站在用户的视角的地址标识符系统，它让用户不必记住 IP 就能访问应用。  
-
-基础 URL 是应用程序的架构视角（路由规则），应用程序中的请求、链接生成或资源引用都是从这个预定义的 URL 开始的。
-
-与域名相比，硬编码的基础 URL 可能包括以下部分：
-
-- **协议**：如`http://`或`https://`，指定了应用程序与服务器之间通信的协议。
-- **域名**：互联网上的一个唯一名称，如`example.com`。
-- **端口**（可选）：如果使用的是非标准端口，如`:8080`。
-- **路径**（可选）：如果应用程序或资源位于服务器上的特定子目录中，如`/blog`。
-
-例如，一个硬编码的基础URL可能看起来像这样：`https://www.example.com:8080/blog`
-
-简而言之，域名是基础URL的一部分，但基础URL通常比单纯的域名包含更多的信息。基础URL定义了网站内部链接的起始格式，而域名则是互联网上用于定位网站的一个标识。
-
-## 基于 URL 与 Trust URL 的区别
+- All internal links and resources are generated based on the preset base URL.
+- Regardless of configured domains, they eventually redirect to the base URL.
+- Any changes to the base URL require manual updates in configuration files or code.
 
 
+## Replace base URL
 
-## 更换基础 URL
+Hardcoded base URLs offer stability but reduce flexibility for domain changes or server migrations.  
 
-### 基本流程
+### Basic process
 
-更换基础 URL 是一个严肃而谨慎的操作，如果需要更改硬编码的基础 URL，以下步骤应被严格遵循：
+Changing the base URL is a serious and cautious task. Follow these steps:
 
-**备份：** 在进行任何更改之前，备份当前的配置文件和数据库。   
-**更新：** 在配置文件、数据库或代码中找到基础 URL 的定义，并将其更新为新的地址。 （Websoft9 优化为自动更新）  
-**测试：** 在更新后，全面测试网站以确保所有链接和资源均正常工作。   
-**部署：** 确认无误后，将更改部署到生产环境。   
-
-### 自动更换基础 URL{#domain}
-
-Websoft9 控制台简化了大部分应用的基础 URL 更换难度，只需更换域名即可更新基础 URL
-
-1. 在域名提供商的控制台，解析新的域名到应用所在的服务器
-
-2. 登录 Websoft9 控制台**我的应用**栏目，找到目标应用的管理界面
-
-3. 设置应用的域名处[修改域名](./domain-set#after)
-
-4. 等待域名和基础 URL 更换成功
+- **Backup:** Before any changes, backup current configuration files and database.
+- **Update:** Locate and update the base URL in configuration files, database, or code.
+- **Test:** Thoroughly test the website to ensure all links and resources work.
+- **Deploy:** Once confirmed, deploy the changes to the production environment.
 
 
-### 手工更换基础 URL{#root_url}
+### Replace URL at Websoft9 Console{#domain}
 
-极个别应用，仍然需要用户手工修改配置文件、数据库或代码的方式更换基础 URL，详情参考：[应用文档](../apps)
+The Websoft9 Console simplifies base URL replacement for most applications by [changing the domain](./domain-set#appmanage).   
 
+A few applications require manual changes to configure files, db, or code to replace base URL after changing the domain.
 
 
 

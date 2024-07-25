@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3.0
-slug: /runtime/html
+slug: /html
 tags:
   - container
   - runtime

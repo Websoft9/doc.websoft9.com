@@ -17,7 +17,7 @@ Websoft9 腾讯云 提供了[预制镜像](https://market.cloud.tencent.com/stor
 
 ## 规划虚拟机配置
 
-先阅读 [Websoft9 安装要求](./requirements)，了解所需的服务器规格、存储和带宽要求。 
+先阅读 [Websoft9 安装要求](./install-requirements)，了解所需的服务器规格、存储和带宽要求。 
 
 另外，在 腾讯云 上部署 Websoft9 时，需要填写重要的配置参数，下面先提前说明：
 
@@ -81,4 +81,4 @@ Websoft9 腾讯云 提供了[预制镜像](https://market.cloud.tencent.com/stor
 
 ## 后续配置 Websoft9
 
-CVM 可用之后，还需要[完成配置域名等后续操作](./setup)，方可使用更好的使用 Websoft9
+CVM 可用之后，还需要[完成配置域名等后续操作](./domain-set)，方可使用更好的使用 Websoft9

@@ -17,7 +17,7 @@ It provides you with the best practices for self-hosting multiple applications.
 | [User guide](./guide)   | Deploying, publishing, and managing applications using Websoft9  |
 | [Administrator](./admin)   |  Operations and maintenance guides for administrator users for user management, upgrades, backups, data, storage, and security configurations  |
 | [Applications](./apps) |  Websoft9 App Store 200+ One-Click Deployment Templates Quick Start and Configuration Guide  |
-| [Web Runtime](./runtime) |  Web runtime for your Java, Python, Node.js, PHP, Go, Ruby, and .NET applications  |
+| [App Runtime](./runtime) |  App runtime for your Java, Python, Node.js, PHP, Go, Ruby, and .NET applications  |
 | [Subscription](./busines)   |  Paid use of Websoft9 products for enterprise-level business support services |
 | [Support](./helpdesk)   |  Get any support from Websoft9 Customer Success Team |
 | [Troubleshooting](./faq)        |  Technical problems and failures   |

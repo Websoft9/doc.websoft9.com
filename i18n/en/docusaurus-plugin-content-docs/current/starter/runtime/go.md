@@ -1,5 +1,5 @@
 ---
-slug: /runtime/go
+slug: /go
 sidebar_position: 1.5
 tags:
   - container

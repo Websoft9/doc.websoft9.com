@@ -18,7 +18,7 @@ Websoft9 在 Azure 提供了预制[云市场镜像](https://azuremarketplace.mic
 
 ## 规划虚拟机配置
 
-先阅读 [Websoft9 安装要求](./requirements)，了解所需的服务器规格、存储和带宽要求。 
+先阅读 [Websoft9 安装要求](./install-requirements)，了解所需的服务器规格、存储和带宽要求。 
 
 另外，在 Azure 上部署 Websoft9 时，需要填写重要的配置参数，下面先提前说明：
 
@@ -89,4 +89,4 @@ Azure 后台门户（Portal）提供了两种部署镜像的入口：
 
 ## 后续配置 Websoft9
 
-VM 可用之后，还需要[完成配置域名等后续操作](./setup)，方可使用更好的使用 Websoft9
+VM 可用之后，还需要[完成配置域名等后续操作](./domain-set)，方可使用更好的使用 Websoft9

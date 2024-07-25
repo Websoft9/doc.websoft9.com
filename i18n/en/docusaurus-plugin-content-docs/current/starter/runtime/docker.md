@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3.1
-slug: /runtime/docker
+slug: /docker
 tags:
   - container
   - docker compose

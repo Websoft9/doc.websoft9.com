@@ -28,7 +28,7 @@ docker exec -it websoft9-apphub cat /websoft9/apphub/logs/apphub_error.log
 
 常见的原因如下：
 
-* 您的服务器[安全组](./administrator/firewall#security) **9000** 端口没有开启（**最常见因素**）
+* 您的服务器[安全组](./security-firewall#security) **9000** 端口没有开启（**最常见因素**）
 * 安装的不是 Websoft9 的产品
 * 你的服务器网络故障
 * 产品本身的故障导致
@@ -194,4 +194,4 @@ Websoft9 在上架到云市场时，已经过严格的安全测试，绝对不�
 | 组         | 组件                                                         |
 | ---------- | ------------------------------------------------------------ |
 | 基础架构   | [Docker](./docker#troubleshoot), [Linux](./linux#troubleshoot)  |
-| 数据库   | [MySQL/MariaDB](./mysql/admin#troubleshoot), [SQLSever](./sqlserver/admin#troubleshoot), [PostgreSQL](./postgresql/admin#troubleshoot), [MongoDB](./mongodb/admin#troubleshoot), [Redis](./redis/admin#troubleshoot) |
+| 数据库   | [MySQL/MariaDB](./mysql#问题与故障), [SQLSever](./sqlserver#问题与故障), [PostgreSQL](./postgresql#问题与故障), [MongoDB](./mongodb#问题与故障), [Redis](./redis#问题与故障) |

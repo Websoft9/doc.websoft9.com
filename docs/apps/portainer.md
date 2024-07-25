@@ -57,7 +57,7 @@ Portainer 提供了可视化的运行容器命令的功能，它等同于 **dock
 
 ### 操作指南
 
-参考：[Websoft9 容器指南](./function/container)
+参考：[Websoft9 容器指南](./guide/container)
 
 ## 配置选项
 
