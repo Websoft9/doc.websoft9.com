@@ -1,7 +1,7 @@
 ---
 title: Docker
 sidebar_position: 3.1
-slug: /runtime/docker
+slug: /docker
 tags:
   - 运行环境
   - runtime

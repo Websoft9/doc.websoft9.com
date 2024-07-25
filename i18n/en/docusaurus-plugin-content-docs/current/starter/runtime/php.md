@@ -1,5 +1,5 @@
 ---
-slug: /runtime/php
+slug: /php
 sidebar_position: 1.4
 tags:
   - PHP extension

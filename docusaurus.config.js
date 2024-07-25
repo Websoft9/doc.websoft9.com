@@ -32,14 +32,6 @@ const config = {
       {
         redirects: [
           {
-            to: '/docs/next/runtime', 
-            from: ['/docs/next/php', '/docs/next/nodejs', '/docs/next/ruby', '/docs/next/python', '/docs/next/dotnet', '/docs/next/openjdk', '/docs/next/maven', '/docs/next/tomcat', '/docs/next/tomee', '/docs/next/jetty'], 
-          },
-          {
-            to: '/docs/next/gitlab', 
-            from: ['/docs/next/jihu'], 
-          },
-          {
             to: '/docs/next/elasticsearch', 
             from: ['/docs/next/elk','/docs/next/elastic'], 
           },

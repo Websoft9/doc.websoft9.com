@@ -1,7 +1,7 @@
 ---
 title: Java
 sidebar_position: 1.0
-slug: /runtime/java
+slug: /java
 ---
 
 
