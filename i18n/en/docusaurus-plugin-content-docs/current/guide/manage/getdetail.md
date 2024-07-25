@@ -3,7 +3,7 @@ sidebar_position: 1.0
 slug: /app-getdetail
 ---
 
-# 获取应用详情
+# Get application detail
 
 应用详情是 Websoft9 托管平台上使用和维护应用时所需的必要参数，它主要通过 "我的应用" 功能界面获取。   
 

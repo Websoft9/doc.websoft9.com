@@ -34,25 +34,11 @@ Changing the base URL is a serious and cautious task. Follow these steps:
 - **Deploy:** Once confirmed, deploy the changes to the production environment.
 
 
-### Replace URL at Websoft9{#domain}
+### Replace URL at Websoft9 Console{#domain}
 
+The Websoft9 Console simplifies base URL replacement for most applications by [changing the domain](./domain-set#appmanage).   
 
-
-Websoft9 控制台简化了大部分应用的基础 URL 更换难度，只需更换域名即可更新基础 URL
-
-1. 在域名提供商的控制台，解析新的域名到应用所在的服务器
-
-2. 登录 Websoft9 控制台**我的应用**栏目，找到目标应用的管理界面
-
-3. 设置应用的域名处[修改域名](./domain-set#after)
-
-4. 等待域名和基础 URL 更换成功
-
-
-### 手工更换基础 URL{#root_url}
-
-极个别应用，仍然需要用户手工修改配置文件、数据库或代码的方式更换基础 URL，详情参考：[应用文档](../apps)
-
+A few applications require manual changes to configure files, db, or code to replace base URL after changing the domain.
 
 
 

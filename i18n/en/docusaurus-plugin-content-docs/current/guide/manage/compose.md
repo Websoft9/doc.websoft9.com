@@ -3,7 +3,7 @@ sidebar_position: 1.3
 slug: /app-compose
 ---
 
-# 应用编排与个性化配置
+# Update your deployment
 
 尽管基于 Websoft9 应用商店的部署模板能够快速启动应用，但这些模板并不总能预先满足所有用户的个性化需求。  
 

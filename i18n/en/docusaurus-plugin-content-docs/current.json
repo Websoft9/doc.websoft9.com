@@ -680,7 +680,7 @@
     "description": "The label for category 指南 in sidebar docs"
   },
   "sidebar.docs.category.规划与部署应用": {
-    "message": "规划与部署应用",
+    "message": "Plan and deploy App",
     "description": "The label for category 规划与部署应用 in sidebar docs"
   },
   "sidebar.docs.category.规划基础设施": {
@@ -688,16 +688,12 @@
     "description": "The label for category 规划基础设施 in sidebar docs"
   },
   "sidebar.docs.category.管理与配置应用": {
-    "message": "管理与配置应用",
-    "description": "The label for category 管理与配置应用 in sidebar docs"
+    "message": "Config and manage App",
+    "description": "The label for category Config and manage App in sidebar docs"
   },
   "sidebar.docs.category.配置应用的域名与安全访问": {
     "message": "Domain and secure access",
     "description": "The label for category Domain and secure access in sidebar docs"
-  },
-  "sidebar.docs.category.集成第三方网关": {
-    "message": "Use external Gateway",
-    "description": "The label for category Use external Gateway in sidebar docs"
   },
   "sidebar.docs.category.管理数据库": {
     "message": "Manage database",
