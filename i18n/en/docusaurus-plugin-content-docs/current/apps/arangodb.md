@@ -15,7 +15,7 @@ import Meta from './_include/arangodb.md';
 
 ### Login Verification{#verification}
 
-1. Completed installation ArangoDB at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**    
+1. After completing the installation of ArangoDB on the Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**    
 
 2. Starting to verify it
 
@@ -23,7 +23,7 @@ import Meta from './_include/arangodb.md';
 
 - Console (√)
 
-## Administer{#administrator}
+## Administration{#administrator}
 
 ## Troubleshooting{#troubleshooting}
 

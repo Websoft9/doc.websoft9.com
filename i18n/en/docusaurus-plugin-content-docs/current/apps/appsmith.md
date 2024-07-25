@@ -15,12 +15,12 @@ import Meta from './_include/appsmith.md';
 
 ### Initial setup{#wizard}
 
-1. When completed installation of Appsmith at Websoft9 console, get the applicaiton's overview and access information from **My Apps**  
+1. After completing the installation of Appsmith on the Websoft9 console, get the applicaiton's overview and access information from **My Apps**  
 
-2. Complete the install wizard step by step
+2. Complete the installation wizard step by step.
 
 ## Configuration options{#configs}
 
-## Administer{#administrator}
+## Administration{#administrator}
 
 ## Troubleshooting{#troubleshooting}

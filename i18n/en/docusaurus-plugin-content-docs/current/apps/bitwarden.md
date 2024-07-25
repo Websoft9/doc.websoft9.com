@@ -15,22 +15,22 @@ import Meta from './_include/bitwarden.md';
 
 ### Initial setup{#wizard}
 
-1. When completed installation of Bitwarden at Websoft9 console, get the applicaiton's overview and access information from **My Apps**  
+1. After completing the installation of Bitwarden on the Websoft9 console, get the applicaiton's overview and access information from **My Apps**  
 
-2. Ensure that you have the ID and Key for the installation. If not, go to the Bitwarden to [applicate](https://bitwarden.com/host) and rebuild the container by **Compose**.  
+2. Ensure that you have the ID and Key for the installation. If not, go to the Bitwarden at [applicate](https://bitwarden.com/host) and rebuild the container using **Compose**.  
 
-3. Set up the Bitwarden application for HTTPS access (required)
+3. Set up the Bitwarden application for HTTPS access (this is required)
 
-4. Access Bitwarden by the domain and start initialization (including creation of the initial administrator account)
+4. Access Bitwarden through the domain and start the initialization process (including creating the initial administrator account)
 
 ## Configuration options{#configs}
 
 - Multilingual (√)
 
-## Administer{#administrator}
+## Administration{#administrator}
 
 ## Troubleshooting{#troubleshooting}
 
 #### Initialization fails to create account ?
 
-Must use https access, otherwise account creation fails.
+You must use HTTPS to access the site; otherwise, account creation will fail.
