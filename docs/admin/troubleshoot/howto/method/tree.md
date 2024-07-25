@@ -31,7 +31,7 @@ netstat -tunlp
 
 典型范例：  
 
-* [MySQL 日志太大，导致磁盘空间不足？](./mysql#binlogexceed)
+* [MySQL 日志太大，导致磁盘空间不足？](../mysql#binlogexceed)
 * [Websoft9 默认端口被占用？](../faq#portconflict)
 * [访问量很小，但网站访问很慢？](../faq#siteslow)
 
@@ -79,7 +79,7 @@ mtr websoft9.com
 典型范例：  
 
 * [无法访问 Websoft9 控制台？](../faq#blank)
-* [应用网络超时？](../faq#timeout)
+* [应用网络超时？](../../faq#timeout)
 * [连接 SFTP，出现 Disconnected...publickey](../servers#sftpnokey)
 * [域名解析迟迟没有生效？](../domains#effect)
 
