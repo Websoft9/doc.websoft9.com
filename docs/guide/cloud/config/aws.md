@@ -84,7 +84,7 @@ AWS 控制台提供了对网络安全的直接设置：**EC2 Dashboard > 网络�
 ## 相关文档
 
 - [启用服务器 root 账号密码](./linux#enable)
-- [AWS 上部署 Websoft9](./install/aws)
+- [AWS 上部署 Websoft9](./install-aws)
 - [AWS EC2 官方文档](https://docs.aws.amazon.com/zh_cn/ec2/)
 - [AWS CLI](https://docs.aws.amazon.com/zh_cn/cli)
 

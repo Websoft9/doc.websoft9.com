@@ -26,4 +26,4 @@ slug: /install-windows
    - 启动 Linux 虚拟机，打开终端。
    - 根据 Websoft9 官方文档，执行相应的命令来下载并[安装 Websoft9](./linux)。
 
-完成以上步骤，即可访问 [Websoft9 控制台](../login-console)界面，开始配置。  
+完成以上步骤，即可访问 [Websoft9 控制台](./login-console)界面，开始配置。  

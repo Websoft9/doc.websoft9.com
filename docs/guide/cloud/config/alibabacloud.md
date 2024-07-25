@@ -158,7 +158,7 @@ vim /etc/sysconfig/network-scripts/ifcfg-ens33，将ONBOOT=no改为yes，重启�
 
 ## 相关文档
 
-- [阿里云 上部署 Websoft9](./install/alibabacloud)
+- [阿里云 上部署 Websoft9](./install-alibabacloud)
 - [阿里云 ECS 官方文档](https://help.aliyun.com/zh/ecs/)
 - [阿里云 CLI](https://help.aliyun.com/zh/cli/)
 - [OSS 挂载](https://help.aliyun.com/document_detail/134092.html)
