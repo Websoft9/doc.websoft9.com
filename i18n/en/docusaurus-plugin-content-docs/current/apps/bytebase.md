@@ -24,6 +24,6 @@ import Meta from './_include/bytebase.md';
 
 - Multilingual (√)
 
-## Administration{#administrator}
+## Administer{#administrator}
 
 ## Troubleshooting{#troubleshooting}

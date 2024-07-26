@@ -45,6 +45,6 @@ After creating the workspace, **log in with the new workspace** and [create appl
 - [API](https://apex.oracle.com/api)
 - Application Backup: You can easily import and export applications to **APP Builder** from the APEX console to facilitate backup.
 
-## Administration{#administrator}
+## Administer{#administrator}
 
 ## Troubleshooting{#troubleshooting}

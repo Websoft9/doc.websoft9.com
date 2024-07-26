@@ -27,7 +27,7 @@ import Meta from './_include/bitwarden.md';
 
 - Multilingual (√)
 
-## Administration{#administrator}
+## Administer{#administrator}
 
 ## Troubleshooting{#troubleshooting}
 

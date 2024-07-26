@@ -23,7 +23,7 @@ import Meta from './_include/answer.md';
 
 - Multilingual (√)
 
-## Administration{#administrator}
+## Administer{#administrator}
 
 ## Troubleshooting{#troubleshooting}
 

@@ -21,6 +21,6 @@ import Meta from './_include/appsmith.md';
 
 ## Configuration options{#configs}
 
-## Administration{#administrator}
+## Administer{#administrator}
 
 ## Troubleshooting{#troubleshooting}

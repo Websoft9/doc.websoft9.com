@@ -32,7 +32,7 @@ After installing Aria2 on the Websoft9 console, view the application details thr
 
 - Multilingual (√)
 
-## Administration{#administrator}
+## Administer{#administrator}
 
 ## Troubleshooting{#troubleshooting}
 

@@ -36,6 +36,6 @@ import Meta from './_include/budibase.md';
 - [API Reference](https://docs.budibase.com/docs/public-api)
 - Multilingual (√)
 
-## Administration{#administrator}
+## Administer{#administrator}
 
 ## Troubleshooting{#troubleshooting}

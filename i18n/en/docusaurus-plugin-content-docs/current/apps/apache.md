@@ -49,7 +49,7 @@ The Apache configuration file can be modified with the `sed` command, but it is 
 - Apache [Container Usage Guide](https://hub.docker.com/_/httpd)
 - Apache configuration file:*/usr/local/apache2/conf/httpd.conf*
 
-## Administration{#administrator}
+## Administer{#administrator}
 
 ## Troubleshooting{#troubleshooting}
 

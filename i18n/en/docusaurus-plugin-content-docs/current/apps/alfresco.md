@@ -65,7 +65,7 @@ Refer to: [Files and folders](https://docs.alfresco.com/content-services/communi
 - [ReST API Guide](https://docs.alfresco.com/content-services/latest/develop/rest-api-guide/)
 - Change password: In the Alfresco backend, go to the top right corner: **Administrator** > **My Profile**
 
-## Administration{#administrator}
+## Administer{#administrator}
 
 - Reset password: Connect to the database, and run the SQL command `UPDATE alf_node_properties SET string_value='209c6174da490caeb422f3fa5a7ae634' WHERE node_id=4 and qname_id=10`, The password will be reset to **admin**
 - [Backup and restore](https://docs.alfresco.com/content-services/community/admin/backup-restore/)

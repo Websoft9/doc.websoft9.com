@@ -23,6 +23,6 @@ import Meta from './_include/autogptnextweb.md';
 
 - Multilingual (√)
 
-## Administration{#administrator}
+## Administer{#administrator}
 
 ## Troubleshooting{#troubleshooting}

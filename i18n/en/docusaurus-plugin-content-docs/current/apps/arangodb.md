@@ -23,7 +23,7 @@ import Meta from './_include/arangodb.md';
 
 - Console (√)
 
-## Administration{#administrator}
+## Administer{#administrator}
 
 ## Troubleshooting{#troubleshooting}
 
