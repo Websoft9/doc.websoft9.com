@@ -15,7 +15,7 @@ import Meta from './_include/bitwarden.md';
 
 ### Initial setup{#wizard}
 
-1. After completing the installation of Bitwarden on the Websoft9 console, get the applicaiton's overview and access information from **My Apps**  
+1. After completing the installation of Bitwarden in the Websoft9 console, get the applicaiton's overview and access information from **My Apps**  
 
 2. Ensure that you have the ID and Key for the installation. If not, go to the Bitwarden at [applicate](https://bitwarden.com/host) and rebuild the container using **Compose**.  
 

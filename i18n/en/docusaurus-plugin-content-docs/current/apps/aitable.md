@@ -17,7 +17,7 @@ import Meta from './_include/aitable.md';
 
 ### Initial setup{#wizard}
 
-After completing the installation of AITable on the Websoft9 console, get the applicaiton's overview and access information from **My Apps**   
+After completing the installation of AITable in the Websoft9 console, get the applicaiton's overview and access information from **My Apps**   
 
 1. Access AITable from your local browser and go to the AITable first registration page
    ![](./assets/apitable-init-websoft9.png)

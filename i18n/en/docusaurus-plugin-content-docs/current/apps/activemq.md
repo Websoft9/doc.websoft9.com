@@ -15,7 +15,7 @@ import Meta from './_include/activemq.md';
 
 ## Login to ActiveMQ Console
 
-1. After completing the installation of ActiveMQ on the Websoft9 console, get the applicaiton's overview, credentials and access information from **My Apps**   
+1. After completing the installation of ActiveMQ in the Websoft9 console, get the applicaiton's overview, credentials and access information from **My Apps**   
 
 2. Use a local computer browser to access ActiveMQ, where you can see the Welcome page
    ![](./assets/activemq-welcome-websoft9.png)

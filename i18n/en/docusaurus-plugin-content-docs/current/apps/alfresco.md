@@ -16,7 +16,7 @@ import Meta from './_include/alfresco.md';
 
 ### Login Verification{#verification}
 
-1. Complete the installation of Alfresco on the  **Websoft9 Console**. Obtain the applicaiton's overview and access credentials from **My Apps**.  
+1. Complete the installation of Alfresco in the  **Websoft9 Console**. Obtain the applicaiton's overview and access credentials from **My Apps**.  
 
 2. Wait 10 minutes for Alfresco to initialize.
 

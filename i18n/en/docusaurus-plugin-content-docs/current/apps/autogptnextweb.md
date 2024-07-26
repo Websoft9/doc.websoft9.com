@@ -15,7 +15,7 @@ import Meta from './_include/autogptnextweb.md';
 
 ### Initial setup{#wizard}
 
-1.After completing the installation of AutoGPT.NextWeb on the Websoft9 console, access the application's overview and information from **My Apps**    
+1.After completing the installation of AutoGPT.NextWeb in the Websoft9 console, access the application's overview and information from **My Apps**    
 
 2. Select **Settings**, and set the Key for OpenAI
 

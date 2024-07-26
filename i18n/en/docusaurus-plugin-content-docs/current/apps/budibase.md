@@ -15,7 +15,7 @@ import Meta from './_include/budibase.md';
 
 ### Initial setup{#wizard}
 
-1. After completing the installation of Budibase on the Websoft9 console, get the applicaiton's overview and access information from **My Apps**   
+1. After completing the installation of Budibase in the Websoft9 console, get the applicaiton's overview and access information from **My Apps**   
 
 2. On first access, you need to register an administrator user
    
