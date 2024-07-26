@@ -31,4 +31,7 @@ Websoft9 应用商店进行了精选的多级分类，包含：数据分析、AI
 ## 收藏应用
 
 打开应用详情，可以看到 "收藏" 按钮，把喜欢的应用收藏起来，便于今后快速安装
+![](./assets/websoft9-favorite-app.png)
+
+收藏后的应用会显示在我的应用列表页
 ![](./assets/websoft9-appstore-favoritelist.png)
