@@ -22,7 +22,7 @@ import Meta from './_include/duplicati.md';
 
 ### 备份指南
 
-参考：[Websoft9 备份](./backup/websoft9)
+参考：[Websoft9 备份](./backup-websoft9)
 
 
 ## 配置选项{#configs}

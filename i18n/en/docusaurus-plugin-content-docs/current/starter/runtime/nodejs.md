@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1.2
-slug: /runtime/nodejs
+slug: /nodejs
 tags:
   - container
   - runtime

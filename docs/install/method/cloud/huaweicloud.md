@@ -19,7 +19,7 @@ Websoft9 在华为云和 HUAWEICLOUD 都提供了预制镜像，用户可以通�
 
 ## 规划虚拟机配置
 
-先阅读 [Websoft9 安装要求](./requirements)，了解所需的服务器规格、SSD 存储和带宽要求。 
+先阅读 [Websoft9 安装要求](./install-requirements)，了解所需的服务器规格、SSD 存储和带宽要求。 
 
 ## 安装 Websoft9
 
@@ -83,4 +83,4 @@ Websoft9 在华为云和 HUAWEICLOUD 都提供了预制镜像，用户可以通�
 
 ## 后续配置 Websoft9
 
-ECS 可用之后，还需要[完成配置域名等后续操作](./setup)，方可使用更好的使用 Websoft9
+ECS 可用之后，还需要[完成配置域名等后续操作](./domain-set)，方可使用更好的使用 Websoft9

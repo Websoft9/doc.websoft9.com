@@ -5,32 +5,32 @@ slug: /migratedb
 
 # Replace App database
 
-Websoft9 托管平台支持用户根据个人偏好或企业IT标准将应用的默认数据库更换（迁移）为外部数据库。此功能确保了用户能够根据自己的需求选择合适的数据库产品。
+Websoft9 allows users to migrate the default application database to an external one, ensuring flexibility.   
 
-请按照以下步骤操作，以便顺利将您的应用连接到指定的外部数据库（目标数据库）。
+Follow these steps to connect your application to the specified external database.
 
-## 准备
+## Prerequisites
 
-更换数据库是一个严谨的操作，需做好充分的准备：  
+Switching databases is a meticulous process, requiring thorough preparation:
 
-* 确保目标数据库是应用所支持的数据库类型和版本
-* 确保目标数据库支持应用所需的必要配置
-* 确保目标数据库与应用之间网络畅通，并可通过授权被应用访问
-* 备份应用已有的数据
-* 确认备份的数据可以导入到目标数据库中
-* 获得可用的数据库主机、端口和账号信息
+* Ensure target database type/version is supported
+* Ensure target database supports necessary configurations
+* Ensure network connectivity between app and target database
+* Backup existing application data
+* Verify backup data can be imported into target database
+* Obtain available database host, port, and credentials
 
-## 迁移更换
+## Migrate and replace database
 
-下面介绍更换数据库的通用操作指南：
+The following is a general steps for replacing a database:
 
-1. 登录 Websoft9 控制台，进入目标应用的[编排操作](./app-compose#dynamic)
+1. Login to Websoft9 Console, [update the application deployment](./app-compose#dynamic)
 
-2. 编排操作过程中，修改数据库连接和账号信息（存放在 `.env` 或 `docker-compose.yml` 文件中）
+2. Modify the database connection strings at `.env` or `docker-compose.yml` file
 
-3. 重建应用后生效
+3. It takes effect after redeploy
 
-## 更换后处理
+## Post-change steps
 
-对于已经投入生产的应用，更换数据库后，还需要导入备份的数据库，并测试可用性。  
+For production application, you should full test the application after import the database.    
 

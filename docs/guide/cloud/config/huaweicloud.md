@@ -105,7 +105,7 @@ docker exec -i websoft9-apphub apphub setconfig --section initial_apps --key key
 
 ## 相关文档
 
-- [华为云 上部署 Websoft9](./install/huaweicloud)
+- [华为云 上部署 Websoft9](./install-huaweicloud)
 - [华为云 ECS 官方文档](https://support.huaweicloud.com/ecs/index.html)
 - [华为云 CLI](https://support.huaweicloud.com/hcli/index.html)
 - [华为云地区和终端节点](https://developer.huaweicloud.com/endpoint)

@@ -5,23 +5,21 @@ slug: /externaldb
 
 # Integrate external database
 
-接入外部数据库到平台是指将不在 Websoft9 平台直接控制下的数据库实例连接到该平台，以便集中管理和操作。   
+Connecting external databases to the Websoft9 platform centralizes management, enhances security, simplifies backups, and improves user experience and technical support.
 
-它是一个将数据库资源集中化管理的过程，它不仅可以提高管理效率，还可以加强安全性，简化备份和恢复流程，改善用户体验，并可能获得更好的技术支持。这对于需要管理多个数据库实例的组织来说尤其重要，因为它可以显著降低管理复杂性和整体运营成本。
+## Prerequisites
 
-## 条件
+- External database allowed connection from Websoft9 Console network
+- Network reachable
+- Configuration for firewall and security group 
+- Test then connection strings of External database, includes: hostname, port, dbuser, dbpasword
 
-- 外部数据库允许 来自 Websoft9 托管平台的远程连接
-- 与 Websoft9 可以通过网络连接
-- 配置数据库的防火墙规则或者网络安全组
-- 外部数据库实例的基本连接信息，包括主机名（或IP地址）、端口号、数据库名称、用户名称以及密码
+## Integration Guide
 
-## 接入指南
+The generic steps for integrating an external database into the Websoft9 platform are as follows
 
-需要执行以下步骤来接入外部数据库到 Websoft9 平台：
+1. Login to Websoft9 Console, install database access tools like [Teleport](./teleport) or [Cloudbeaver](./cloudbeaver)
 
-1. 部署支持数据库接入的堡垒机 [Teleport](./teleport)
+2. Add database instance configuration to your tool
 
-2. 在 Teleport 中接入外部数据库
-
-3. 验证连接的可用性
+3. Test the database 

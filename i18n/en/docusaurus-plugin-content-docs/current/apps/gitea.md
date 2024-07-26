@@ -22,6 +22,7 @@ import Meta from './_include/gitea.md';
    - Base URL: The installation wizard program automatically gets the browser URL to fill in.
    - HTTP Service Port: This is the container port and cannot be changed.
    - SSH service port: This is the container port and the corresponding host port, which has been set by environment variables and cannot be changed.
+   - Database Setting: Please choose SQLite, if you choose other database, you need to prepare the available database in advance.
 
 3. Administrator account settings or Register the first account after login (both are administrator accounts)
 

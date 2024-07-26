@@ -3,27 +3,53 @@ sidebar_position: 1.3
 slug: /gateway-cloudflare
 ---
 
-# Cloudflare 安全网关
+# Cloudflare App services
 
-[Cloudflare](https://www.cloudflare.com/) 旨在作为一个互联网上的分布式代理和安全层，为世界各地的服务器提供服务。
+[Cloudflare application services](https://www.cloudflare.com/application-services/products/) is the web app security and delivery services run from a unified, cloud-native platform of security and connectivity solutions. Cloudflare application services help you block DDoS attacks and bad bots, close zero-days and other vulnerabilities, cache and accelerate content, manage APIs, and more.
 
-## 原理
+## Integrated with Websoft9
 
-在传统的应用程序网关或负载均衡器配置中，后端池（或服务器池）通常指的是在同一内网或数据中心内的服务器集合，负载均衡器会将流量分发到这些服务器上。但在 Cloudflare 的情况下，使用不同的方法来优化和保护您应用访问：
+Cloudflare App services can integrated with Websoft9 to build secure, scalable, highly available web front ends.  
 
-1. **全球性的 CDN 缓存**：缓存静态资源，并将这些资源从离用户最近的数据中心快速提供给用户，减少对源服务器的直接请求。
+- [Load balancing for backend service at Websoft9](#lb)
+- [Proxy to single backend service  at Websoft9](#proxy)
 
-2. **安全代理**：提供如 DDoS 保护、WAF、SSL/TLS 加密等措施，在流量到达您的服务器之前就已经起作用，充分保护应用安全。
 
-3. **智能路由（Argo Smart Routing）**：智能路避免互联网上的拥堵和中断，提高到达您服务器的流量的速度和可靠性。
+## Load balancing for backend services{#lb}
 
-4. **隧道技术（Cloudflare Tunnel）**：创建一个安全的隧道到您服务器，避免服务器的实际 IP 地址公开，增加了安全性。
+Cloudflare offers a variety of application services for [load balancing](https://www.cloudflare.com/application-services/products/load-balancing/), which can enhance the performance, reliability, and security of your web applications. Here are some key features and benefits of Cloudflare's load balancing services:  
 
-因此，Cloudflare 实际上是在互联网层面上为您的应用程序提供了一个额外的保护和性能优化层，而不是在传统意义上的内网负载均衡器或应用程序网关。这种设计允许 Cloudflare 为任何连接到互联网的服务器提供服务，而不受物理位置或网络拓扑的限制。
+1. **Global Load Balancing**: Distributes traffic across multiple servers worldwide for improved speed and reduced latency.
 
-## 与 Websoft9 集成
+2. **Health Checks**: Monitors server health and redirects traffic if a server fails.
 
-Websoft9 托管平台支持多种 Cloudflare 使用方式：
+3. **Automatic Failover**: Switches traffic to backup servers during primary server outages.
 
-- 用 Cloudflare 直接替代 Websoft9 网关
-- 保留 Websoft9 网关，Cloudflare 做为网关的前置 CDN，安全和路由服务
+4. **Geo-Steering**: Directs users to the nearest server based on their location.
+
+5. **Session Affinity**: Keeps users connected to the same server for consistent sessions.
+
+## Proxy to single backend service{#proxy}
+
+Cloudflare can provide multi-layered protection and optimization for your single backend service. To achieve this, you simply need to point your domain's DNS settings to Cloudflare and configure your backend service address in Cloudflare's dashboard. This way, all traffic will be forwarded to your backend service through Cloudflare.
+
+In this case, Cloudflare can still provide valuable functionalities:  
+
+1. **DDoS Protection**: Even with a single backend service, Cloudflare can provide robust DDoS protection to prevent malicious traffic attacks.
+
+2. **Web Application Firewall (WAF)**: Cloudflare's WAF can help protect your backend service from common web application attacks such as SQL injection and cross-site scripting (XSS).
+
+3. **SSL/TLS Encryption**: Cloudflare can provide SSL/TLS encryption for your backend service, ensuring that data is secure during transmission.
+
+4. **Content Delivery Network (CDN)**: Cloudflare's CDN can cache static content, reducing the load on your backend service and improving user access speed.
+
+5. **Caching and Optimization**: Cloudflare can cache static content and optimize dynamic content, reducing the load on your backend service and improving performance.
+
+6. **Access Control and Firewall**: Cloudflare offers granular access control and firewall rules, which can restrict access to your backend service and enhance security.
+
+7. **Analytics and Monitoring**: Cloudflare provides detailed analytics and monitoring capabilities, helping you understand traffic patterns and detect potential issues.
+
+
+## Related topics
+
+- [Cloudflare Tunnel](https://github.com/cloudflare/cloudflared)
