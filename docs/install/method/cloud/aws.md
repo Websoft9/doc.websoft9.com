@@ -17,7 +17,7 @@ Websoft9 在 AWS 提供了预制[云市场镜像](https://aws.amazon.com/marketp
 
 ## 规划虚拟机配置
 
-先阅读 [Websoft9 安装要求](./requirements)，了解所需的服务器规格、存储和带宽要求。 
+先阅读 [Websoft9 安装要求](./install-requirements)，了解所需的服务器规格、存储和带宽要求。 
 
 另外，在 AWS 上部署 Websoft9 时，需要填写重要的配置参数，下面先提前说明：
 
@@ -90,5 +90,5 @@ EC2 可用之后，参考下面的步骤设置完成后续操作：
    sudo su
    passwd
    ```
-3. 登录 Websoft9 控制台，完成[配置域名](./setup)等后续操作
+3. 登录 Websoft9 控制台，完成[配置域名](./domain-set)等后续操作
 

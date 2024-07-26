@@ -3,70 +3,58 @@ sidebar_position: 2.2
 slug: /gateway-proxy
 ---
 
-# Set proxy for application
+# Set proxy for backend service
 
-使用 Websoft9 应用商店部署应用，平台会自动为您的应用生成基于反向代理的域名绑定。   
+When you deploy an application using the Websoft9 App Store, the platform automatically generates reverse proxy-based domain bindings for your application.   
 
-对于非商店部署的应用，本教程将引导您手动配置反向代理，以实现应用的互联网发布。
+For backend services that not deploy from Websoft9 App Store, you can set up proxies manually to publish them.  
 
-Websoft9 支持两种类型的反向代理服务：
+Websoft9 supports two types of reverse proxy services:  
 
-- [HTTP 反向代理](#http)
-- [TCP/UDP 反向代理](#stream)
+- [HTTP reverse proxy](#http)
+- [TCP/UDP reverse proxy](#stream)
 
-## 原理
+## Prerequisites{#pre}
 
-Websoft9 控制台默认集成 [NPM](https://nginxproxymanager.com/guide/) 作为反向代理服务（Reverse Proxy），作为后端应用与用户之间的访问桥梁。  
+- Enable **80,443** port of Security Group of your server
 
-反向代理是一种流行的网关服务器工作模式，它允许网关收来自客户端的请求，并将这些请求转发到**后端服务（应用）**。当后端服务处理完这些请求后，网关再将响应返回给客户端。
+- Get the **hostname and port** of backend service
 
-Websoft9 反向代理服务的工作流程如下：
+  - For container service, if use network **websoft9**, the **container_name** is hostname 
+  - For not container service, **[docker0 network bridge](#gateway)** is hostname
+  - You need to specify the type of protocol used by the backend service, whether it's HTTP or TCP/UDP
 
-1. 客户端发送请求到反向代理服务 NPM。
-2. NPM 接收到请求后，根据配置决定将请求转发到哪个后端容器服务。
-3. 后容器服务处理请求，并将响应返回给 NPM。
-4. NPM 再将后端服务器的响应转发给客户端。
+## Create HTTP/HTTPS proxy{#http}
 
-## 条件{#pre}
+**Proxy Host** is the function module for HTTP/HTTPS proxy at Websoft9 Gateway.  
 
-- 开启服务器安全组的 80, 443 端口
+### Add HTTP proxy (bind domain){#create}
 
-- 获取后端服务的**访问地址和端口号**
+1. Login to Websoft9 Console, open **Hosts > Proxy Hosts** of Gateway
 
-  - 当后端服务运行在容器中时，**容器名** 作为访问地址，容器端口作为被转发的端口
-  - 当后端服务直接运行在服务器中时，**[docker0 网桥](#gateway)** 作为访问地址，后端服务实际端口作为被转发的端口
-  - 确保您了解后端服务所使用的协议类型，是 HTTP 还是 TCP/UDP
+2. Click **Add Proxy Host** to create a proxy
 
-## 转发 HTTP/HTTPS{#http}
+   - **Domain Names**: One or more domains
 
-在 Websoft9 托管平台的网关模块中，**Proxy Host** 是专门负责 HTTPS 反向代理功能的一个组件。   
+   - **Scheme**: Protocol of backend service
 
-### 快速创建 HTTP 转发（绑定域名）{#create}
-
-1. 进入 Websoft9 控制台 "网关" 模块，依次打开菜单： > "Hosts" > "Proxy Hosts"
-
-2. 点击 "Add Proxy Host"，新建 HTTP 转发
-
-   - Domain Names: 一个或多个域名
-
-   - Scheme：后端服务自身的访问协议（默认 HTTP）
-
-   - Forward Hostname 和 Forward Port 即[后端服务的访问地址和端口号](#pre)
+   - **Forward Hostname** is backend service hostname, **Forward Port** is backend service port
 
    ![](./assets/websoft9-npm-createhttp.png)
-  
-3. 点击 "Save" 后，网关中便新增了一个 server 级别的虚拟主机配置。
 
-### 自定义 location 指令{#proxy-location}
+3. Click **Save**, a proxy server {} have added to Websoft9 Gateway
 
-Websoft9 网关管理界面支持对已有的 HTTP 转发增加个性化的 location 设置
 
-1. 进入 Websoft9 控制台 "网关" 模块，编辑目标 Proxy Hosts
+### Set customized location block{#proxy-location}
 
-2. 打开 "Custom Locations" 标签页，开始设置 location, Forward Hostname 等
+User cat add or modify customized location block at Websoft9 Gateway
+
+1. Login to Websoft9 Console, edit the target **Proxy Hosts** of Gateway 
+
+2. Open the **Custom Locations** tab, fill in **location**, **Forward Hostname** to create new NGINX location
    ![](./assets/websoft9-npm-addlocations.png)
 
-3. 点击**齿轮图标**显示指令输入框，指令范例如下
+3. Click **Gear icon** to add your customized command-line 
     ```
     #proxy_pass http://$server:8080; 
     proxy_http_version 1.1;
@@ -75,16 +63,15 @@ Websoft9 网关管理界面支持对已有的 HTTP 转发增加个性化的 loca
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     ```
+4.  Click **Save** will take effect
 
-### 自定义 server 级全局指令
+### Customized global server block
 
-Websoft9 网关管理界面支持对已有的 HTTP 设置个性化的 server {} 的全局指令
+User cat customize a exist proxy server {} block at Websoft9 Gateway
 
-1. 进入 Websoft9 控制台 "网关" 模块，编辑目标 Proxy Hosts
+1. Login to Websoft9 Console, edit the target **Proxy Hosts** of Gateway 
 
-2. 打开 "Advanced" 标签页，开始设置
-
-3. 下面是一个可以覆盖默认 location / 的全局设置：  
+2. Open the **Advanced** tab to set it, below is sample that will cover the default **location /** values
 
     ```
     location / {
@@ -100,41 +87,44 @@ Websoft9 网关管理界面支持对已有的 HTTP 设置个性化的 server {} 
         }
     ```
 
-### 开启 SSL
+### Enable SSL{#https}
 
-参考：[HTTPS 设置指南](./domain-https)
+Refer to: [Set HTTPS at Websoft9](./domain-https)
 
-### 设置访问控制
+### Setting access control
 
-参考：[应用安全访问控制指南](./domain-auth)
+Refer to: [Set security access for application](./domain-auth)
 
-## 转发 TCP/UDP {#stream}
+## Create TCP/UDP proxy{#stream}
 
-在 Websoft9 托管平台的网关模块中，**Streams**  是专门负责 TCP/UDP 方向代理功能的一个组件。
+**Streams** is the function module for TCP/UDP proxy at Websoft9 Gateway.  
 
-### 前置准备
+### Prepare
 
-- 为网关服务开启目的端口的[宿主机端口映射操作](./backend-service#proxy-bind-port)
-- 确保容器允许来自 0.0.0.0 的外部访问或开启白名单
+- [Expose more ports to host machine for websoft9-gateway container](./backend-service#proxy-bind-port)
+- Ensure that the container allows external access from  `0.0.0.0` or enable whitelist
 
-### 转发操作
+### Add proxy for TCP/UDP
 
-1. 控制台依次打开：【网关】>【Hosts】>【Streams】项
+1. Login to Websoft9 Console, open **Hosts > Streams** of Gateway
 
-2. 填写好 Incoming Port 以及被转发的 Forward Host 和 Forward Port（）
+2. Fill in correct informations
 
-> TCP/UDP 转发适用于临时开启数据库类应用的外网访问。 
+   - **Incoming Port**: Host machine port that expose from **websoft9-gateway** container
+   - **Forward Host**: Backend service hostname
+   - **Forward Port**: Backend service port
 
+## Related guide
 
+### Check docker0 bridge address{#gateway}
 
-## 相关操作
+docker0 is a virtual network interface created by Docker on the host machine. When Docker is installed and a container is run, Docker sets up a bridge network named docker0. This bridge network allows containers to communicate with each other and with the host machine.
 
-### 查看 docker0 网桥地址？{#gateway}
+To see the docker0 interface and its configuration, 
 
-Docker 服务默认会创建一个 docker0 网桥（其上有一个 docker0 内部接口），它在内核层连通了其他的物理或虚拟网卡，这就将所有容器和本地主机都放到同一个物理网络。   
+- You can use the following commands on a Linux host
+  ```
+  docker network inspect bridge | grep Gateway
+  ```
 
-有两种查看 docker0 网桥地址的方法：
-
-- 服务器中运行 `docker network inspect bridge | grep Gateway` 查看
-- 打开 Websoft9 控制台，通过："容器">"Networks"，查看 websoft9 网络的 IPV4 Gateway
-  ![](./assets/websoft9-container-gateway.png)
+- Or check it from **Container > Network** at Websoft9 Containers

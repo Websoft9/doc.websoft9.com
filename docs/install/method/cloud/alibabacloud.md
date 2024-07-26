@@ -20,7 +20,7 @@ Websoft9 在阿里云和 Alibaba Cloud 都提供了预制镜像，用户可以�
 
 ## 规划虚拟机配置
 
-先阅读 [Websoft9 安装要求](./requirements)，了解所需的服务器规格、存储和带宽要求。 
+先阅读 [Websoft9 安装要求](./install-requirements)，了解所需的服务器规格、存储和带宽要求。 
 
 另外，在 阿里云 上部署 Websoft9 时，需要填写重要的配置参数，下面先提前说明：
 
@@ -86,4 +86,4 @@ Websoft9 在阿里云和 Alibaba Cloud 都提供了预制镜像，用户可以�
 
 ## 后续配置 Websoft9
 
-ECS 可用之后，还需要[完成配置域名等后续操作](./setup)，方可使用更好的使用 Websoft9
+ECS 可用之后，还需要[完成配置域名等后续操作](./domain-set)，方可使用更好的使用 Websoft9

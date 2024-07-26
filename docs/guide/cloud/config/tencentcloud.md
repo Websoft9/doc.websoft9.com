@@ -76,7 +76,7 @@ slug: /iaas-tencentcloud
 
 ## 相关文档
 
-- [腾讯云 上部署 Websoft9](./install/tencentcloud)
+- [腾讯云 上部署 Websoft9](./install-tencentcloud)
 - [腾讯云 CVM 官方文档](https://cloud.tencent.com/document/product/213)
 - [腾讯云 CLI](https://cloud.tencent.com/document/product/440)
 - [腾讯云地区和终端节点](https://cloud.tencent.com/document/product/213/6091)

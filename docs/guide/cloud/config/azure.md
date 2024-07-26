@@ -91,7 +91,7 @@ Azure 控制台提供了对网络安全的直接设置：**虚拟机控制台 > 
 ## 相关文档
 
 - [启用 root 账号密码](./linux#enable)
-- [Azure 上部署 Websoft9](./install/azure)
+- [Azure 上部署 Websoft9](./install-azure)
 - [Azure 虚拟机官方文档](https://learn.microsoft.com/zh-cn/azure/virtual-machines/)
 - [Azure Blob 存储官方文档](https://learn.microsoft.com/zh-cn/azure/storage/blobs/)
 - [Azure 存储账号](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-portal)

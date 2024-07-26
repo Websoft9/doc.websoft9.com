@@ -3,7 +3,7 @@ sidebar_position: 1.2
 slug: /app-lifecycle
 ---
 
-# 管理应用生命周期
+# Manage application lifecycle
 
 在本节中，我们将专注探讨应用的关键操作阶段：启动、停止、重启、卸载等。
 

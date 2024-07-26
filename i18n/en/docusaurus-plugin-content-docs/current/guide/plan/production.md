@@ -3,7 +3,7 @@ sidebar_position: 1.0
 slug: /production-deploy
 ---
 
-# 生产级应用的部署要求
+# Production deployment plan
 
 Websoft9 多应用托管平台，是一个面向生产的企业级的系统，即每个托管的应用都符合**生产级的部署方法**。
 
