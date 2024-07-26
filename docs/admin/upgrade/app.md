@@ -26,7 +26,7 @@ Websoft9 鼓励应用的不定期升级，以确保更好的体验的同时，�
 
 应用编排升级是通过修改应用的编排文件，然后重新拉去新的镜像部署应用的升级过程：
 
-1. 通过 Websoft9 控制台【我的应用】，进入[应用编排](../quick/manageapp#howto-reup)界面
+1. 通过 Websoft9 控制台【我的应用】，进入[应用编排](./app-compose)界面
 
 2. 修改 .env 和 docker-compose.yml 文件中与版本有关的参数。例如：W9_VERSION 
 

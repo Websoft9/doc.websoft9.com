@@ -20,8 +20,8 @@ slug: /web-terminal
 
    |  云平台   |  管理员账号   | 其他|
    | --- | --- | --- |
-   |  Azure   |  创建服务器的时候自行设置   | [如何开启root账户？](./azure#enableroot) |
-   |  AWS   |  AmazonLinux:ec2  CentOS:centos  Ubuntu:ubuntu  Debian:admin   | [如何开启root账户？](./aws#enableroot)|
+   |  Azure   |  创建服务器的时候自行设置   | [如何开启root账户？](./linux#enable) |
+   |  AWS   |  AmazonLinux:ec2  CentOS:centos  Ubuntu:ubuntu  Debian:admin   | [如何开启root账户？](./linux#enable)|
    |  阿里云，华为云，腾讯云   |  除腾讯云 Ubuntu 之外(ubuntu)，其他平台任何系统默认账号都是 root  | |
 
 
