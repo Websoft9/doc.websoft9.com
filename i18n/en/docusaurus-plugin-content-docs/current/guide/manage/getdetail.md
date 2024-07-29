@@ -13,49 +13,49 @@ After login to Websoft9 Console, click **My Apps** menu, it list all application
 
 ## Overview{#overview}
 
-- **应用ID**：自定义应用名称+随机字符，它是 Websoft9 托管平台管理应用的唯一标识
-- **应用名称**：应用商店的模板名称，具有唯一性
-- **应用版本**：应用的发行版本
-- **应用 HTTP 端口**：应用映射到宿主机的可访问端口
+- **Application ID**: ID number containing the application name
+- **Application Name**: Application template name at Websoft9 App Store
+- **Application Version**: The distribution number of application template
+- **Application HTTP Port**: The port of container exposed to host machine
 
  ![](./assets/websoft9-myappsdetail.png)
 
 
-## 访问信息{#access}
+## Access{#access}
 
-访问标签页包含两个核心功能：
+Access to the application and configure access
 
 ![](./assets/websoft9-myapps-access.png)
 
-- **访问 URL**：应用的 URL，域名优先，无域名时显示 `http://IP:port` 
-- **后台地址**：部分应用提供了登录后台的地址链接
-- **绑定域名**：对域名进行增删改查，并立即生效
-- **初始账号**：查看应用初始化的账号和密码（随机产生强型的密码，每个应用都不一样）
+- **Access URL**: Application URL, if not bind domain, it is `http://IP:port` 
+- **Backend URI**: Application backend URL
+- **Binding domain**: Bind, update or delete application domain
+- **Initial credential**: Initial credential or the method how to get credential of application
 
-## 容器组件{#containers}
+## Containers{#containers}
 
-容器标签页列出本应所包含的所有容器以及其状态等关键信息。同时，还提供了三个操作链接（点击图标使用）：  
+Application containers list columns includes status, actions, host machine port: container ports, IP  
 
 ![](./assets/websoft9-appmanage-containers.png)
 
-- Logs: 容器的[实时日志](./monitor-logs)，等同于 `docker logs containerID`
-- Stats：可视化的容器状态和[实时资源占用情况](./monitor-apm)
-- Exec console：[进入容器运行命令行](./inner-container)
+There three actions for user to manage containers
 
-还可以查看容器端口情况，显示格式："宿主机端口：容器端口"   
+- Logs: Get [container logs](./monitor-logs), the same with `docker logs containerID`
+- Stats: Container [status](./monitor-status) and [metrics](./monitor-apm)
+- Exec console: [Run commands in the container](./inner-container)
 
-## 容器数据卷{#volumes}
+## Container volumes{#volumes}
 
-卷存即应用容器的持久化数据存储目录（Volumes），这个目录通常需要考虑做异地备份
+All Named [volume](https://docs.docker.com/storage/volumes) of containers
 
 ![](./assets/websoft9-appmanage-volumes.png)
 
-## 数据库{#db}
+## Database{#db}
 
- "数据库" 标签页列出应用包含的主要数据库、账号以及其连接信息，以方便被 [phpMyAdmin](./phpmyadmin), [pgAdmin](./pgadmin) 管理。
+Database tab page list all database of application with connection strings that for you to connect database by web-based GUI tool includes: [phpMyAdmin](./phpmyadmin), [pgAdmin](./pgadmin) and other tools
 
-   - 名称：数据库类型，例如 MySQL, PostgreSQL 等
-   - 内网主机：用于内网连接的数据库主机名称
+   - Name: Database type, e.g MySQL, PostgreQL
+   - Intranet host: Intranet host name for database connection
 
     ![](./assets/websoft9-appmanage-dbdetail.png)
 
