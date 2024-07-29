@@ -22,6 +22,6 @@ When the App Runtime for Docker is running, there have a **Application managed b
 
 ## Deploy a Docker application{#deploy}
 
-Refer to: [App Runtime tutorials](../runtime#quick)
+Refer to: [App Runtime tutorials](./runtime)
 
 ## Troubleshoot

@@ -33,11 +33,11 @@ Websoft9 应用部署它与同类产品相比，极具创新性：
 
 1. 登录 Websoft9 控制台，[搜索 Websoft9 模板化应用](./appstore.md)
 
-1. 找到目标应用后，点击应用详情 "安装" 按钮
+2. 找到目标应用后，点击应用详情 "安装" 按钮
 
    ![](./assets/websoft9-appstoredetail.png)
 
-2. 填写或选择安装应用所需的参数：
+3. 填写或选择安装应用所需的参数：
 
    - 应用名称：建议填写为可识别的英文或拼音
    - 版本：自行选择，其中的 latest 版本可能不是稳定发行版
@@ -47,9 +47,9 @@ Websoft9 应用部署它与同类产品相比，极具创新性：
    ![](./assets/websoft9-installapp-fill.png)
 
 
-3. 点击 "安装" 按钮后，系统跳转到 **我的应用** 页面
+4. 点击 "安装" 按钮后，系统跳转到 **我的应用** 页面
 
-4. 等待模板应用状态由 **Installing** 变成 **Active** 状态，则说明安装成功
+5. 等待模板应用状态由 **Installing** 变成 **Active** 状态，则说明安装成功
    ![](./assets/websoft9-myapps-active.png)
 
 ## 从应用商店部署源码类应用{#runtime}

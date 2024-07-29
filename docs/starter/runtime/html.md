@@ -20,7 +20,7 @@ Websoft9 帮助用户使用 Apache 或 NGINX 或 Caddy 等容器实现 HTML/JS �
 
 ## 部署网站{#deploy}
 
-参考：[Web Runtime 入门指南](../runtime#quick)
+参考：[Web Runtime 入门指南](./runtime)
 
 ## 问题与故障
 

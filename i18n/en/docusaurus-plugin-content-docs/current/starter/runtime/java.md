@@ -18,7 +18,7 @@ Websoft9 App Runtime for Java covers the entire Java ecosystem including JDK, Je
 
 ## Deploy a Java application{#deploy}
 
-Refer to: [App Runtime tutorials](../runtime#quick)
+Refer to: [App Runtime tutorials](./runtime)
 
 ## Manage runtime{#administrator}
 

@@ -21,7 +21,7 @@ Websoft9 帮助用户使用 Apache 或 NGINX 或 Caddy 等容器实现 HTML/JS �
 
 ## Deploy a HTML/JS application{#deploy}
 
-Refer to: [App Runtime tutorials](../runtime#quick)
+Refer to: [App Runtime tutorials](./runtime)
 
 ## Troubleshoot
 

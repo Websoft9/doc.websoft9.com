@@ -3,13 +3,15 @@ sidebar_position: 1.0
 slug: /app-getdetail
 ---
 
-# Get application detail
+# Get application details
 
-应用详情是 Websoft9 托管平台上使用和维护应用时所需的必要参数，它主要通过 "我的应用" 功能界面获取。   
+Websoft9 provides an application management interface for each running application, through which you can get information about the application, check the status of the application, bind the domain name, update the deployment, and other operations. 
 
-进入到目标应用的**应用管理**窗口后，根据需要获取如下相关的信息：
+After login to Websoft9 Console, click **My Apps** menu, it list all applications management interface.  
 
-## 应用概述{#overview}
+![Websoft9 My Apps](./assets/websoft9-myapps.png)
+
+## Overview{#overview}
 
 - **应用ID**：自定义应用名称+随机字符，它是 Websoft9 托管平台管理应用的唯一标识
 - **应用名称**：应用商店的模板名称，具有唯一性
