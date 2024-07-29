@@ -17,9 +17,9 @@ import Meta from './_include/aitable.md';
 
 ### Initial setup{#wizard}
 
-When completed installation of AITable at Websoft9 console, get the applicaiton's overview and access information from **My Apps**   
+After completing the installation of AITable in the Websoft9 console, get the applicaiton's overview and access information from **My Apps**   
 
-1. Access AITable from your local browser, go to the AITable first registration page
+1. Access AITable from your local browser and go to the AITable first registration page
    ![](./assets/apitable-init-websoft9.png)
 
 2. Register an administrator account to start using it
@@ -33,22 +33,22 @@ Refer to the official website documentation: [AITable Introduction](https://help
 
 ### Why purchase through Websoft9? 
 
-Websoft9 is the Partner of AITable, and provide AITable products in the major global cloud platforms.  
+Websoft9 is a partner of AITable and provides AITable products on major global cloud platforms.  
 
-By purchasing AITable Enterprise Edition through Websoft9, you get more value: 
+By purchasing the AITable Enterprise Edition through Websoft9, you get more value: 
 
 - Preferential discounts
-- Private deployment services and full hosting support
+- Private deployment services and comprehensive hosting support
 - Customized business system development services
 
 ### How to purchase   
 
 Contact the [Websoft9 Customer Success Team](./helpdesk)
 
-## Configuration options{#configs}
+## Configuration Options{#configs}
 
 - Minimum server configuration: 4 CPUs/8GB RAM
-- Multilingual(✅): **My Settings > Preferences > Language**
+- Multilingual support(✅): **My Settings > Preferences > Language**
 - [REST API](https://developers.apitable.com/api/reference/)
 
 ## Administer{#administrator}
