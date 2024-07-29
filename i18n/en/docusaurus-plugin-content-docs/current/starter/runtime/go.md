@@ -19,7 +19,7 @@ tags:
 
 ## Deploy a Go application{#deploy}
 
-Refer to: [App Runtime tutorials](../runtime#quick)
+Refer to: [App Runtime tutorials](./runtime)
 
 ## Manage runtime{#administrator}
 

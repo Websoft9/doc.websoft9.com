@@ -17,7 +17,7 @@ slug: /java
 
 ## 部署网站{#deploy}
 
-参考：[Web Runtime 入门指南](../runtime#quick)
+参考：[Web Runtime 入门指南](./runtime)
 
 ## 环境管理{#administrator}
 
