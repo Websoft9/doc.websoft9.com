@@ -17,23 +17,23 @@ import Meta from './_include/clamav.md';
 
 1. Access the container through the Exec console  
 
-2. Run the following scan command(sudo is not necessary) 
+2. Run the following scan command(note that `sudo` is not required) 
     ``` 
     apk add sudo 
     sudo clamscan -ri /scandir --log=myscan.log 
     ``` 
 
-    > `myscan.log` is the scan result. If it contains Infected files information, it indicates that the system has a virus
+    > `myscan.log` contains the scan results. If it includes information about infected files, it indicates that the system has a virus
 
 ## Configuration options{#configs}
 
-- Set scan path: **W9-SCAN-PATH_SET**  in the .env file
-- Scanning commands: `clamscan`(deep scan) and `clamdscan`
+- Set Scan Path: Define the scan path using the **W9-SCAN-PATH_SET** variable in the `.env` file.
+- Scanning Commands: Use `clamscan` for a deep scan or `clamdscan` as an alternative scanning method.
 
 ## Administer{#administrator}
 
 ## Troubleshooting{#troubleshooting}
 
-#### clamscan doesn't have the permission to scan files? 
+#### ClamScan Lacks Permission to Scan Files? 
 
-After installing sudo, use `sudo clamscan` to scan
+If ClamScan does not have the necessary permissions to scan files, try using sudo to grant the required access. Run the scan with elevated privileges using `sudo clamscan` 
