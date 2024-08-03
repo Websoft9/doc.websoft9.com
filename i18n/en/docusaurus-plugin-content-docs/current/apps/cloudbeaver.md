@@ -49,7 +49,7 @@ After completing the installation of CloudBeaver in the **Websoft9 Console**, ge
 
 A Shared Data Connection allows an administrator to grant access to a team of users by modifying the connection configuration.
 
-1. Configure the connection as shared
+1. Configure the connection to be shared
 
    ![](./assets/cloudbeaver-share-set-websoft9.png)
 
