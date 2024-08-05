@@ -15,7 +15,7 @@ import Meta from './_include/aria2.md';
 
 ### Connect to the Aria2 RPC Service{#wizard}
 
-After installing Aria2 on the Websoft9 console, view the application details through **My Apps** and get the RPC service connection information in the **Access**.
+After installing Aria2 on the Websoft9 console, view the application details through **My Apps** and get the RPC service connection information in the **Access** section.
 
 1. Access the AriaNg page from your local computer's browser
 
@@ -26,7 +26,7 @@ After installing Aria2 on the Websoft9 console, view the application details thr
 
     ![Aria2 Configuration](./assets/aria2-rpc-websoft9.png)
 
-3. Reload the AriaNg page and the Connected status changes to Connected.
+3. Reload the AriaNg page and the status should change to **Connected**.
 
 ## Configuration options{#configs}
 

@@ -15,11 +15,11 @@ import Meta from './_include/answer.md';
 
 ### Login Verification{#verification}
 
-1. Completed installation Answer at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
+1. Complete the installation. Access the application’s overview and credentials from the **My Apps**  section in the Websoft9 console.  
 
-2. Starting to verify it
+2. Starting the verification process.
 
-## Configuration options{#configs}
+## Configuration Options{#configs}
 
 - Multilingual (√)
 
@@ -29,7 +29,7 @@ import Meta from './_include/answer.md';
 
 #### Automatic installation failed?
 
-Two possible reasons for it: 
+There are two possible reasons for this: 
 
-1. All environment variables of the Answer docker image need to be set, otherwise it will not switch to automatic installation mode 
-2. After the Answer container is started, if there is no connection to an available database at the first moment, the automatic installation will be skipped and there will be no attempt to wait or install again
+1. All environment variables of the Answer docker image need to be set. Otherwise, it will not switch to automatic installation mode. 
+2. If the Answer container is started and there is no connection to an available database at that moment, the automatic installation will be skipped and there will be no attempt to wait or reinstall.
