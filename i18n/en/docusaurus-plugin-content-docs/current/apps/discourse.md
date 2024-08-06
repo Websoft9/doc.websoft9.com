@@ -14,9 +14,9 @@ import Meta from './_include/discourse.md';
 
 ### Login verification{#verification}
 
-1. Completed installation Discourse at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
+1. After Completing the installation of Discourse in the Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
 
-2. Starting to verify it
+2. Starting to verify the application
 
 ## Configuration options{#configs}
 
