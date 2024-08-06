@@ -15,9 +15,9 @@ import Meta from './_include/chatwoot.md';
 
 ### Initial setup{#wizard}
 
-1. When completed installation of Chatwoot at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After completing the installation of Chatwoot in the **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
-2. Complete the install wizard step by step
+2. Follow the installation wizard step by step
 
 ## Configuration options{#configs}
 

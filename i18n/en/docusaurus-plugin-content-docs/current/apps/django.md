@@ -23,7 +23,7 @@ import Meta from './_include/django.md';
 
 #### Error reported executing django startup command?
 
-Description: You have 18 unapplied migrations. Your project may not run properly until you apply migrations for the following applications: admin, auth, contenttypes, sessions.Run "python manage.py migrate" to apply the migrations.    
+Description: You have 18 unapplied migrations. Your project may not run properly until you apply necessary migrations for the following applications: admin, auth, contenttypes, sessions. Run "python manage.py migrate" to apply these migrations.    
 Reason: unknown  
 Solution: Run the following command before starting the project    
   ```

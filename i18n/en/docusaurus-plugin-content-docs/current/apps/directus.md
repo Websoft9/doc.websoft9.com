@@ -15,9 +15,9 @@ import Meta from './_include/directus.md';
 
 ### Login verification{#verification}
 
-1. Completed installation Directus at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
+1. After Completing the installation Directus in the **Websoft9 console**, get the applicaiton's overview and access credentials from **My Apps**  
 
-2. Starting to verify it
+2. Beginning the verification process
 
 ## Configuration options{#configs}
 
