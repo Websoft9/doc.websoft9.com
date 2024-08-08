@@ -17,7 +17,7 @@ import Meta from './_include/aitable.md';
 
 ### 初始化{#wizard}
 
-Websoft9 控制台安装 AITable 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
+Websoft9 控制台安装 AITable 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
 
 1. 使用本地电脑浏览器访问后，进入 AITable 首次注册页面
    ![](./assets/apitable-init-websoft9.png)
@@ -48,7 +48,7 @@ Websoft9 是 AITable 的合作伙伴，我们与 AITable 合作在全球主流�
 ## 配置选项{#configs}
 
 - 服务器最低配置：4 CPUs/8GB RAM
-- 多语言（✅）：My Settings > Preferences > Language
+- 多语言（✅）：**My Settings > Preferences > Language**
 - [REST API](https://developers.apitable.com/api/reference/)
 
 ## 管理维护{#administrator}
