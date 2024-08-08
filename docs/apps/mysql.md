@@ -31,8 +31,8 @@ Websoft9 应用商店安装 [phpMyAdmin](./phpmyadmin) 或 [CloudBeaver](./cloud
 
 ## 配置选项{#configs}
 
-- 配置文件目录（已挂载）：/etc/mysql/conf.d
-- 初始化脚本目录（已挂载）：/docker-entrypoint-initdb.d
+- 配置文件目录（已挂载）：*/etc/mysql/conf.d*
+- 初始化脚本目录（已挂载）：*/docker-entrypoint-initdb.d*
 - 端口：3306
 - 主从复制（√）：DDL 和 DML 操作通过二进制日志复传到从库，支持一主多从
 - 数据库主机名：容器名
@@ -98,7 +98,7 @@ mysqladmin -u 用户名 -p 旧密码 password '新密码'
 
 ### 恢复（导入）
 
-1. 登录 phpMyAdmin，打开顶部的【导入】标签页，根据向导开始导入
+1. 登录 phpMyAdmin，打开顶部的**导入**标签页，根据向导开始导入
 
 2. 导入过程中可能会出现数据库字符集不兼容的情况，需要人工干预处理
 
@@ -176,7 +176,7 @@ innodb_data_file_path= /data/mysql/data1:2000M;/data2/mysql/data2:2000M:autoexte
 
 #### mysqladmin 命令报错 ？
 
-错误："Access denied; you need the SUPER privilege for this operation"  
+错误：**Access denied; you need the SUPER privilege for this operation**  
 原因：mysqlamdin 命令需 SUPER 权限，而普通用户默认没有这个权限。    
 
 #### 无法删除所有表？
