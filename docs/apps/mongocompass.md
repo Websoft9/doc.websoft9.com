@@ -22,7 +22,7 @@ Websoft9 控制台安装 MongoDB Compass 后，通过 "我的应用" 查看应�
 2. 点击桌面的 MongoDB Compass 图标，进入MongoDB Compass
    ![](./assets/mongodbcompass-click-websoft9.png)
 
-3. 点击【New Connection】，展开 **Advanced Connection Options**，输入连接信息和账号
+3. 点击**New Connection**，展开 **Advanced Connection Options**，输入连接信息和账号
    ![](./assets/mongodbcompass001-websoft9.png)
 
    > 不建议使用 URI 的方式，它受限于字符串格式

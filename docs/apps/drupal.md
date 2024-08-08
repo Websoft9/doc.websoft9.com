@@ -24,7 +24,7 @@ import Meta from './_include/drupal.md';
 
 Drupal 支持多语言，但需要先安装再设置：
 
-1. 登录 Drupal，在后台 【管理】>【配置】>【地区和语言】中安装语言
+1. 登录 Drupal，在后台 **管理 > 配置 > 地区和语言** 中安装语言
 
 2. 安装新语言后，再设置默认语言
 
@@ -32,13 +32,13 @@ Drupal 支持多语言，但需要先安装再设置：
 
 1. 从 [Drupal Themes](https://www.drupal.org/project/project_theme) 或 [Drupal Modules](https://www.drupal.org/project/project_module) 获取下载地址
 
-2. 打开 【扩展管理】>【安装扩展】，输入下载地址，开始 [安装](https://www.drupal.org/docs/extending-drupal/installing-modules)
+2. 打开 **扩展管理 > 安装扩展**，输入下载地址，开始 [安装](https://www.drupal.org/docs/extending-drupal/installing-modules)
 
 3. 安装成功后再启用
 
 ## 配置选项{#configs}
 
-- 配置文件：/path/sites/default/settings.php
+- 配置文件：*/path/sites/default/settings.php*
 - 多语言（✅）
 - SMTP（✅）：安装[SMTP Authentication Support](https://www.drupal.org/project/smtp) 插件实现 SMTP
 - [第三方 CLI](https://drupalconsole.com/) 

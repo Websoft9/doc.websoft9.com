@@ -27,7 +27,7 @@ Websoft9 控制台安装 MinIO 后，通过 "我的应用" 查看应用详情，
 
 ### 创建存储桶
 
-1. 登录后台，点击【Create Bucket】，创建新的存储桶
+1. 登录后台，点击 **Create Bucket**，创建新的存储桶
 
    ![](./assets/minio-bucket-websoft9.png)
 
@@ -38,7 +38,7 @@ Websoft9 控制台安装 MinIO 后，通过 "我的应用" 查看应用详情，
 ## 配置选项{#configs}
 
 - 多语言（×）
-- cli：需额外安装
+- CLI：需额外安装
 - 端口：本应用有后台端口和 API 端口
 
 ## 管理维护{#administrator}

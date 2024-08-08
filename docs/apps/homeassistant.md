@@ -24,7 +24,7 @@ Home Assistant 应用默认并不包括 MQTT 服务，故：
 
 ## 配置选项{#configs}
 
-- [配置文件](https://www.home-assistant.io/docs/configuration/)目录（已挂载）：/config
+- [配置文件](https://www.home-assistant.io/docs/configuration/)目录（已挂载）：*/config*
 - [Home Assistant Add-ons](https://github.com/home-assistant/addons)：仅 Linux 原生安装可用，容器版不可用。
 
 ## 管理维护{#administrator}

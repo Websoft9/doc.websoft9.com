@@ -30,7 +30,7 @@ import Meta from './_include/gitea.md';
 ## 配置选项{#configs}
 
 - 多语言（✅）
-- 配置文件：gitea/conf/app.ini
+- 配置文件：*gitea/conf/app.ini*
 
 ## 管理维护{#administrator}
 

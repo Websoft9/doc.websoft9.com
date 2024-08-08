@@ -31,16 +31,16 @@ Websoft9 控制台安装 ERPNext 后，通过 "我的应用" 查看应用详情�
 ## 配置选项{#configs}
 
 - 多语言（✅）
-- SMTP（✅）：控制台【设置】>【电子邮件域名】填写SMTP参数
+- SMTP（✅）：控制台**设置 > 电子邮件域名**填写SMTP参数
 - [ERPNext Documentation](https://docs.erpnext.com)
 - [CLI to manage Multi-tenant deployments for Frappe apps](https://github.com/frappe/bench)
 - [API](https://frappeframework.com/docs/user/en/api)
 
 ## 管理维护{#administrator}
 
-- 重置管理员密码：进入 ERPNext 容器，运行命令 `export GIT_PYTHON_REFRESH=quiet && /usr/local/bin/bench set-admin-password newpassword"`
+- 重置管理员密码：进入 ERPNext 容器，运行命令 `export GIT_PYTHON_REFRESH=quiet && /usr/local/bin/bench set-admin-password newpassword`
 
-- 自动备份（建议）：登录 ERPNext 后，依次打开 【Settings】>【System Settings】
+- 自动备份（建议）：登录 ERPNext 后，依次打开 **Settings > System Settings**
 
 - [命令行备份](https://frappeframework.com/docs/user/en/bench/reference/backup)：`bench --site URL backup`
 
@@ -74,7 +74,7 @@ hostnamectl set-hostname erpnext
 
 #### 运行 Bench 命报错 ?
 
-错误信息：You should not run this command as root" when run bench   
+错误信息：*You should not run this command as root* when run bench   
 问题原因：Bench 只能通过 frapper 运行，必须先切换到此用户
   ```shell
   su - frapper

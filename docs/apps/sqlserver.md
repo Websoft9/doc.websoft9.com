@@ -22,10 +22,10 @@ import Meta from './_include/sqlserver.md';
 
 产品 License 清单： 
 
-* [license_Expr_2005.rtf](./assets/license/license_Expr_2005.rtf)
-* [license_Expr_2008R2.rtf](./assets/license/license_Expr_2008R2.rtf)
-* [license_Expr_2008.rtf](./assets/license/license_Expr_2008.rtf)
-* [license_Expr_2012.rtf](./assets/license/license_Expr_2012.rtf)
+* [license_Expr_2005.rtf](./assets/sqlserver/license_Expr_2005.rtf)
+* [license_Expr_2008R2.rtf](./assets/sqlserver/license_Expr_2008R2.rtf)
+* [license_Expr_2008.rtf](./assets/sqlserver/license_Expr_2008.rtf)
+* [license_Expr_2012.rtf](./assets/sqlserver/license_Expr_2012.rtf)
 
 Express版本与企业版相比，功能更少（例：[SQLServer 2016 各个版本功能对比](https://docs.microsoft.com/zh-cn/sql/sql-server/editions-and-components-of-sql-server-2016?view=sql-server-ver15#Cross-BoxScaleLimits)）。  
 

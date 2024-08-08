@@ -15,10 +15,9 @@ import Meta from './_include/clickhouse.md';
 
 ### Initial setup{#wizard}
 
-1. When completed installation of ClickHouse at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After completing the installation of ClickHouse in the **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from the **My Apps** section. 
 
-2. After entering the username and password, you can run the following command at ClickHouse Console:
-
+2. Once you have entered the username and password, execute the following command in the ClickHouse Console:
     ```
     show users
     show databases

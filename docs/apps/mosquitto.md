@@ -45,4 +45,4 @@ Mosquitto 开启认证有[多种方式](https://mosquitto.org/documentation/auth
 
 #### 容器日志 Error: Address not available？
 
-Mosquitto 2.0 requires you to configure listeners and authentication before it will allow connections from anything other than the loopback interface. 
+Mosquitto 2.0 要求您在允许从除了回环接口以外的任何地方连接之前，必须配置监听器和身份验证。

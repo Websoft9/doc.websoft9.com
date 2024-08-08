@@ -26,9 +26,9 @@ import Meta from './_include/espocrm.md';
 
 ## 配置选项{#configs}
 
-- 多语言（✅）：通过右上角设置入口 > Preferences 中设置
+- 多语言（✅）：通过右上角 **设置入口 > Preferences** 中设置
 - 移动端（✅）
-- SMTP（✅）：后台 > Admin > 电子邮件账户
+- SMTP（✅）：**后台 > Admin > 电子邮件账户**
 - 命令行：[Console Commands](https://docs.espocrm.com/administration/commands/)
 - API：[EspoCRM REST API](https://docs.espocrm.com/development/api/)
 

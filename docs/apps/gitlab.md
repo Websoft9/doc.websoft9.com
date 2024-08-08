@@ -75,7 +75,7 @@ GitLab CE（社区版）和 GitLab EE（企业版）之间的转换[关系](http
 
 - 命令行工具：`gitlab-ctl`
 - [API](https://docs.gitlab.com/ee/api/) ：`curl "https://gitlab.example.com/api/v4/projects"`
-- 多语言（✅）：后台【User Settings】>【Preferences】设置语言
+- 多语言（✅）：后台**User Settings > Preferences**设置语言
 - SMTP（✅）：配置文件中相关值如下
    ```
    gitlab_rails['smtp_enable'] = true

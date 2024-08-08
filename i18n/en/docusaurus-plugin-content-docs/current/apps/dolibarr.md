@@ -15,9 +15,9 @@ import Meta from './_include/dolibarr.md';
 
 ### Initial setup{#wizard}
 
-1. When completed installation of Dolibarr at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After completing the installation of Dolibarr in the **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from the **My Apps** section
 
-2. Login to the backend interface
+2. Log in to the backend interface
    ![](./assets/dolibarr-backend-websoft9.png)
 
 ## Configuration options{#configs}

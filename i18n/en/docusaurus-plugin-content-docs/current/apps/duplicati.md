@@ -15,7 +15,7 @@ import Meta from './_include/duplicati.md';
 
 ### Initial setup{#wizard}
 
-1. When completed installation of Duplicati at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After completing the installation of Duplicati in the **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
 2. **Account** can be set for initial access
 
@@ -32,8 +32,8 @@ Refer to: [Websoft9 Backup](./backup/websoft9)
 
 ## Troubleshooting{#troubleshooting}
 
-#### Installing multiple Duplicati exceptions?
+#### Installing Multiple Instances of Duplicati 
 
-Description: Installing multiple Duplicati exceptions  
-Reason: Duplicati is bind to the host's **Fixed Path** by default, so when installing a second Duplicati, it will use the same path, and therefore attempts permissions issues.     
+Description: Installing multiple instances of Duplicati
+Reason: Duplicati is bound to the host's **Fixed Path** by default. When installing a second instance of Duplicati, it uses the same path, leading to  permissions issues.     
 Solution: It is not recommended to install more than one Duplicati.

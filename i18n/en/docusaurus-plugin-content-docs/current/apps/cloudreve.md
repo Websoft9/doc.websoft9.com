@@ -16,9 +16,9 @@ import Meta from './_include/cloudreve.md';
 
 ### Login Verification{#verification}
 
-1. Completed installation Cloudreve at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
+1. After completing the installation of Cloudreve in the Websoft9 console, get the applicaiton's overview and access credentials from the **My Apps** section 
 
-2. Starting to verify it
+2. Starting to verify the application
 
 ### Enable Offline download 
 

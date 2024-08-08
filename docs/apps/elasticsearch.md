@@ -64,7 +64,7 @@ Elasticsearch 应用中默认不含 [Kibana](./kibana)，用户可以通过 Webs
 
 3. 运行命令 `curl http://URL/cat/indices?v` 验证 Elasticsearch 和 Logstash 的连接，索引是否生效
 
-4. 登陆 Kibana，点击【Manage】，创建一个【Index Patterns】
+4. 登陆 Kibana，点击**Manage**，创建一个**Index Patterns**
 
 5. 根据提示完成创建任务，最后用 **时间戳** 检索数据
 
@@ -78,7 +78,7 @@ Elasticsearch 应用中默认不含 [Kibana](./kibana)，用户可以通过 Webs
 
 ## 管理维护{#administrator}
 
-- [Email 配置](https://www.elastic.co/guide/en/elasticsearch/reference/current/actions-email.html)：Kibana 控制台，依次打开：【Stack Management】>【Watcher】，增加一个 [Email Action](https://www.elastic.co/guide/en/elasticsearch/reference/current/actions.html)
+- [Email 配置](https://www.elastic.co/guide/en/elasticsearch/reference/current/actions-email.html)：Kibana 控制台，依次打开：**Stack Management > Watcher** ，增加一个 [Email Action](https://www.elastic.co/guide/en/elasticsearch/reference/current/actions.html)
 
 - 重置密码：ElasticSearch 容器中运行命令 `/usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic`
 

@@ -19,7 +19,7 @@ Websoft9 控制台安装 Next Terminal 后，通过 "我的应用" 查看应用�
 
 ## 配置选项{#configs}
 
-- 双因素验证（√）：【个人中心】->【两步认证】
+- 双因素验证（√）：**个人中心 > 两步认证**
 
 ## 管理维护{#administrator}
 
@@ -28,4 +28,4 @@ Websoft9 控制台安装 Next Terminal 后，通过 "我的应用" 查看应用�
 
 #### 资产更换IP后无法连接？
 
-使用其他ssh工具登录资产，清空 /root/.ssh/known_hosts  
+使用其他ssh工具登录资产，清空 */root/.ssh/known_hosts*  

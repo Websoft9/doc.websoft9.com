@@ -15,16 +15,16 @@ import Meta from './_include/chronograf.md';
 
 ### Connect to InfluxDB{#wizard}
 
-The following is an example of how to connect to InfluxDB2.x:
+The following is an example of how to connect to InfluxDB 2.x:
 
-1. Prepare the InfluxDB2.x 
+1. Prepare InfluxDB 2.x 
 
-2. Access Chronograf, create an InfluxDB connection, check the **InfluxDB v2 Auth** and fill in the following parameters:
+2. Access Chronograf and create a new InfluxDB connection. In the **InfluxDB v2 Auth** section, fill in the following parameters:
    
-   - Connection URL: InfluxDB's access URL.
-   - Connection Name: Your customization
-   - Organization: Organization of InfluxDB (required)
-   - Token: InfluxDB's token
+   - Connection URL: The access URL for your InfluxDB instance.
+   - Connection Name: Your preferred name for this connection.
+   - Organization: The organization associated with your InfluxDB account (required).
+   - Token: The authentication token for InfluxDB.
 
 ## Configuration options{#configs}
 

@@ -15,7 +15,7 @@ import Meta from './_include/activemq.md';
 
 ## 登录验证
 
-1. Websoft9 控制台安装 AITable 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。
+1. Websoft9 控制台安装 AITable 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。
 
 2. 本地浏览器访问登录 URL，输入账号验证成功后进入 ActiveMQ Welcome 页面
    ![](./assets/activemq-welcome-websoft9.png)

@@ -59,7 +59,7 @@ Joomla 的模板安装，主要通过上传模板安装包的方式实现：
 
 - 缓存：后台 **System > Maintenance > Clear Cache**
 
-- 配置文件：/path/configuration.php
+- 配置文件：*/path/configuration.php*
 
 - [Joomla API](https://api.joomla.org/)
 

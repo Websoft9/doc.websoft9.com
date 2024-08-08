@@ -82,7 +82,7 @@ Apache 容器中不包含 PHP，如果想部署 PHP 网站，通过 Websoft9 控
 解决办法：
 
 1.  检查网站目录的权限
-2.  检查 Apache 配置文件是否有 "AllowOverride All   Require all granted" 相关内容
+2.  检查 Apache 配置文件是否有 **AllowOverride All   Require all granted** 相关内容
 
 #### Apache 频繁 403 错误？
 

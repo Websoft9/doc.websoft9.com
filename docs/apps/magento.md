@@ -25,7 +25,7 @@ Websoft9 已经预制 Magento 的中文包文件 zh_Hans_CN，只需启用它：
 
 #### 后台
 
-以管理员身份登录 Magento，右上角 Account Setting > Interface Local， 选择 Interface Local 为中文
+以管理员身份登录 Magento，右上角 **Account Setting > Interface Local**， 选择 Interface Local 为中文
 
 #### 前台
 
@@ -37,7 +37,7 @@ Websoft9 已经预制 Magento 的中文包文件 zh_Hans_CN，只需启用它：
    php bin/magento cache:flush
    ```
 
-2. 以管理员身份登录 Magento，打开：Stores > Configuration > General > Locale Options，设置 Locale 为中文
+2. 以管理员身份登录 Magento，打开：**Stores > Configuration > General > Locale Options**，设置 Locale 为中文
 
 
 ### 安装扩展{#installplugin}
@@ -64,7 +64,7 @@ Access Key 是 Magento 使用 Marketplace 资源的凭据：
 
 对 Magento 进行配置后，可能需要刷新缓存或重建索引：
 
-- 通过 Magento 后台设置："System" > "Tools"
+- 通过 Magento 后台设置：**System > Tools**
 - 命令行设置：`php bin/magento cache:flush`, `php magento indexer:reindex`
 
 ## 配置选项{#configs}
@@ -77,12 +77,12 @@ Access Key 是 Magento 使用 Marketplace 资源的凭据：
 
 - 多语言（✅）：需下载语言包后导入
 
-- 在线备份："Stores" > "Configuration" > "ADVANCED" > "Backup Settings"
+- 在线备份：**Stores > Configuration > ADVANCED > Backup Settings**
 
 - SMTP（✅）
   1. 参考 [Email communications](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/communications/email-communications) 填写 SMTP 参数
 
-  2. "后台" > "商店" > "设置" > "店铺电子邮件地址" > "通用联系方式" 中填写发件人的电子邮箱（与 SMTP 邮箱同名）
+  2. **后台 > 商店 > 设置 > 店铺电子邮件地址 > 通用联系方式** 中填写发件人的电子邮箱（与 SMTP 邮箱同名）
 
 ## 管理维护{#administrator}
 
@@ -169,6 +169,6 @@ php bin/magento maintenance:disable
 
 #### 商品详情页不能正常显示？
 
-问题描述：前台无法正常显示商品信息，错误 "We can't find products matching the selection"   
-问题原因：日志排查后发现是商品属性 "eanl3" 字段异常   
-解决方案：“STORES” > "Attributes" > "Product" 重新设置此字段
+问题描述：前台无法正常显示商品信息，错误 **We can't find products matching the selection**   
+问题原因：日志排查后发现是商品属性 **eanl3** 字段异常   
+解决方案：**STORES > Attributes > Product** 重新设置此字段

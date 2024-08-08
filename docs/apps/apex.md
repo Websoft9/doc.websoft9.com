@@ -43,7 +43,7 @@ import Meta from './_include/apex.md';
 
 - 多语言（✅）：登录控制台可以修改语言（包含中文）
 - [API](https://apex.oracle.com/api)
-- 应用备份： 可以在 APEX 控制台方便的对 "APP Builder" 进行应用的导入与导出，实现备份
+- 应用备份： 可以在 APEX 控制台方便的对 **APP Builder** 进行应用的导入与导出，实现备份
 
 ## 管理维护{#administrator}
 

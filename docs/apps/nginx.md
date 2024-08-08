@@ -32,9 +32,9 @@ Websoft9 提供的 Nginx 应用两个用途：
 
 参考下面的步骤，体验 NGINX 方向代理的能力：
 
-1. Websoft9 控制台 "应用商店" 分别运行一个 **Netdata** 和 **Caddy**
+1. Websoft9 控制台 **应用商店** 分别运行一个 **Netdata** 和 **Caddy**
 
-2. 通过 "我的应用" > "NGINX" 的**编排** 标签页中修改 src/default.conf，将 **location /** 用以下的内容替换
+2. 通过 **我的应用 > NGINX** 的**编排** 标签页中修改 src/default.conf，将 **location /** 用以下的内容替换
    ```
     location / {
         proxy_pass http://netdata_h31py:19999;
@@ -48,7 +48,7 @@ Websoft9 提供的 Nginx 应用两个用途：
 
 3. 重启 NGINX 应用，访问 NGINX 的 URL，就会发现应用已指向了 Netdata 的页面
 
-在 Websoft9 托管平台中，上面的 Netdata 访问的路由： 用户 > Websoft9 网关 > NGINX > Netdata
+在 Websoft9 托管平台中，上面的 Netdata 访问的路由： **用户 > Websoft9 网关 > NGINX > Netdata**
 
 
 ## 配置选项{#configs}

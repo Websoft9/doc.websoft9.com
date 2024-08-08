@@ -26,10 +26,10 @@ Websoft9 控制台安装 code-server 后，通过 "我的应用" 查看应用详
 2. 成功登录到 code-server 后台 
    ![code-server 后台](./assets/codeserver-consolegui-websoft9.png)
 
-3. 在 code-server 后台，依次点击：File > Open Folder，打开 **/config/workspace/** 目录
+3. 在 code-server 后台，依次点击：**File > Open Folder**，打开 */config/workspace/* 目录
    ![code-server 打开项目目录](./assets/codeserver-openfolder-websoft9.png)
 
-4. 在 code-server 后台，依次点击：View > Terminal，在 Terminal 区域输入测试命令
+4. 在 code-server 后台，依次点击：**View > Terminal**，在 Terminal 区域输入测试命令
    ![code-server 打开Terminal](./assets/codeserver-terminal-websoft9.png)
 
 ### 安装环境
@@ -68,7 +68,7 @@ java -version
 
 下面以 Python 开发为范例，介绍如何使用 code-server：
 
-1. 登录 code-server，新建一个文件夹和文件，文件命名为：myfile.py，并拷贝下面的 Python 程序实例代码。
+1. 登录 code-server，新建一个文件夹和文件，文件命名为：*myfile.py*，并拷贝下面的 Python 程序实例代码。
    ```
    #!/usr/bin/env python2
    #!/usr/bin/env python3
@@ -80,7 +80,7 @@ java -version
    ```
    ![](./assets/codeserver-createfile-websoft9.png)
 
-2. 在【窗口的终端栏】中执行 `python myfile.py` 命令，运行 Python 程序
+2. 在**窗口的终端栏**中执行 `python myfile.py` 命令，运行 Python 程序
    ![](./assets/codeserver-runpython-websoft9.png)
 
 3. 查看正确的输出结果
@@ -94,7 +94,7 @@ java -version
    npm run start -- --host 0.0.0.0 --port 3002
    ```
 
-2. 通过 Websoft9 控制台的【网关】，增加一个 Proxy Hosts 转发到 **容器中的应用端口**
+2. 通过 Websoft9 控制台的**网关**，增加一个 Proxy Hosts 转发到 **容器中的应用端口**
 
 
 ### 多开发者
