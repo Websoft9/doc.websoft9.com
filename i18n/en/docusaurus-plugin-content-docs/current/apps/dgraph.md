@@ -15,15 +15,15 @@ import Meta from './_include/dgraph.md';
 
 ### Initial setup{#wizard}
 
-1. When completed installation of Dgraph at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After completing the installation of Dgraph in the **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from the **My Apps** section
 
-2. Select **Launch Latest**, access Dgraph console
+2. Select **Launch Latest** to access the Dgraph console
 
 ### Test publicly available database nodes
 
-1. Metal can connect to the official public instance https://play.dgraph.io for testing.
+1. Metal can connect to the official public instance at https://play.dgraph.io for testing.
 
-2. After connecting successfully, run the following code, then you can run to get the relationship graph.
+2. After a successful connection, run the following code to get the relationship graph.
    ```
    {
     user(func: eq(name, "Alice")) {
@@ -40,17 +40,17 @@ import Meta from './_include/dgraph.md';
 
 1. Connect to `http://URL:port` 
 
-   - The URL does not support container names and must be a public IP or domain name.
-   - port is the external port of the alpha(database) node
+   - The URL must be a public IP or domain name; container names are not supported.
+   - The port is the external port of the alpha(database) node
 
-2. Login without password
+2. Login without a password
 
-> groot Password setting is an enterprise feature(ACL)
+> Setting a password for the groot user is an enterprise feature(ACL)
 
 ## Configuration options{#configs}
 
-- Dgraph application contains three nodes: zero(cluster), alpha(database), ratel(graphical)
-- ACL: enterprise edition features
+- The Dgraph application consists of three nodes: zero(cluster), alpha(database), and ratel(graphical interface)
+- ACL (Access Control List) features are available in the enterprise edition.
 
 ## Administer{#administrator}
 
@@ -58,12 +58,12 @@ import Meta from './_include/dgraph.md';
 
 #### ratel load incomplete?
 
-The application itself contains some external js.
+The application includes some external JavaScript files.
 
 #### ratel can be accessed without password?
 
-Yes, it is recommended to use **Gateway** for setting password.
+Yes, it is recommended to use a **Gateway** to set a password.
 
 #### What is the purpose of whitelist and token?
 
-Controls administrative operations on the database, e.g. building tables. But it does not control queries, any external connection can be queried.
+They control administrative operations on the database, such as building tables. However, they do not control queries, allowing any external connection to perform queries.

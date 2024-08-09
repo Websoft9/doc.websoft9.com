@@ -21,10 +21,10 @@ import Meta from './_include/kodbox.md';
 2. 先设置管理员账号，然后登陆后台，默认为文件管理界面
     ![](./assets/kodbox-backend-websoft9.png)
 
-4. 桌面管理：点击左边菜单【桌面】，进入系统桌面，常用工具放置在桌面
+4. 桌面管理：点击左边菜单**桌面**，进入系统桌面，常用工具放置在桌面
     ![](./assets/kodbox-home-websoft9.png)
 
-5. 插件管理：点击桌面的【插件中心】，管理系统插件
+5. 插件管理：点击桌面的**插件中心**，管理系统插件
     ![](./assets/kodbox-plugins-websoft9.png)   
 
 6. 系统设置：点击左下方个人图形，进入个人设置和系统设置（管理员），比如部门、成员、权限等等 

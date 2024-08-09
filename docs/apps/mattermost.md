@@ -25,10 +25,10 @@ Websoft9 控制台安装 Mattermost 后，通过 "我的应用" 查看应用详�
 
 ## 配置选项{#configs}
 
-- 配置文件：/path/mattermost_config/config.json
+- 配置文件：*/path/mattermost_config/config.json*
 - 移动端（✅）：[下载地址](https://mattermost.com/download/#mattermostApps)
-- 多语言（✅）：【Settings】>【Display】设置
-- SMTP（✅）：Mattermost控制台，打开【ENVIROMENT】>【SMTP】
+- 多语言（✅）：**Settings > Display** 设置
+- SMTP（✅）：Mattermost控制台，打开**ENVIROMENT > SMTP**
 - 服务端命令行：[mattermost](https://docs.mattermost.com/administration/command-line-tools.html)
 - 客户端命令行：[mmctl](https://docs.mattermost.com/administration/mmctl-cli-tool.html)
   ```
@@ -36,11 +36,11 @@ Websoft9 控制台安装 Mattermost 后，通过 "我的应用" 查看应用详�
   /opt/mattermost/bin/mmctl -h
   ```
 - [Mattermost API Reference](https://api.mattermost.com/)
-- 设置团队最大用户数："SITE CONFIGURATION" > "Users and Teams" > "Max Users Per Team"
+- 设置团队最大用户数：**SITE CONFIGURATION > Users and Teams > Max Users Per Team**
 
 ## 管理维护{#administrator}
 
-- **更换 URL 额外操作**：通过 Websoft9 控制台更换域名后，还需要在 Mattermost 后台修改 "Site URL"："ENVIRONMENT" > "Web Server"
+- **更换 URL 额外操作**：通过 Websoft9 控制台更换域名后，还需要在 Mattermost 后台修改 **Site URL**：**ENVIRONMENT > Web Server**
 
 ## 问题与故障
 
