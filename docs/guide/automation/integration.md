@@ -9,14 +9,14 @@ slug: /automation-integration
 
 ## 条件
 
-- n8n 控制台，"Credentials" 页面中新增集成流程中应用的账号或 API 秘钥
+- n8n 控制台，**Credentials** 页面中新增集成流程中应用的账号或 API 秘钥
 - 理顺所需集成的数据格式和内容
 
 ## 创建 Git 工作流{#git}
 
 1. 登录到 n8n 控制台，新建一个 Workflow
 
-2. 在 **Add first step** 时，选择 "On a schedule" 作为任务的时间周期设置
+2. 在 **Add first step** 时，选择 **On a schedule** 作为任务的时间周期设置
 
 3. 接下来选择 **Github** 或 **GitLab** 等作为工作流任务模板
 

@@ -12,7 +12,7 @@ Websoft9 控制台是为管理应用的生命周期的而设计。实际托管�
 - Docker 官方客户端工具：[docker](https://docs.docker.com/engine/) 命令和 [docker compose](https://docs.docker.com/compose/) 命令
 - 可视化 Web 工具：Websoft9 集成 [Portainer](./portainer) 作为唯一个容器可视化管理平台，100% 保持其原生性。  
 
-   Websoft9 控制台的 **"网关** 菜单即可进入 Portainer:  
+   Websoft9 控制台的 **网关** 菜单即可进入 Portainer:  
   ![](./assets/websoft9-portainer.png)
 
 

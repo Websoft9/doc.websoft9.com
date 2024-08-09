@@ -31,10 +31,10 @@ slug: /login-console
 2. 登录成功后，进入控制台概述页面，显示服务器的状态信息
    ![](./assets/websoft9-console-index.png)
 
-3. 点击 "应用商店"，查看可安装的所有应用模板
+3. 点击 **应用商店**，查看可安装的所有应用模板
    ![](./assets/websoft9-appstore.png)
 
-4. 点击 "我的应用"，查看已安装的应用列表
+4. 点击 **我的应用**，查看已安装的应用列表
    ![](./assets/websoft9-myapps.png)
 
 ## 相关主题

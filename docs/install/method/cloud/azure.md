@@ -41,10 +41,10 @@ Websoft9 在 Azure 提供了预制[云市场镜像](https://azuremarketplace.mic
 
 Azure 后台门户（Portal）提供了两种部署镜像的入口：
 
-  - Portal > "创建资源"，检索 Websoft9 镜像
+  - Portal > **创建资源**，检索 Websoft9 镜像
     ![Azure Portal 搜索镜像](./assets/azure-portalmk-websoft9.png)
 
-  - Portal > "创建虚拟机" > "浏览所有镜像"，检索 Websoft9 镜像
+  - Portal > **创建虚拟机** > **浏览所有镜像**，检索 Websoft9 镜像
     ![](./assets/azure-vmimage-websoft9.png)
 
 不管哪种入口，最终的操作都是一致的：**基于预制的 Websoft9 镜像创建虚拟机**
@@ -74,7 +74,7 @@ Azure 后台门户（Portal）提供了两种部署镜像的入口：
 2. 在编排模板的虚拟机属性中加入云市场镜像的计划
    ```
    "plan": {
-                  "name": "wordpress52-lemp72-centos76",
+                  "name*: "wordpress52-lemp72-centos76",
                   "publisher": "websoft9inc",
                   "product": "w9wordpress2"}
    ```
