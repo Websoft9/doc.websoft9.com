@@ -30,8 +30,8 @@ Websoft9 控制台安装 pgAdmin 后，通过 "我的应用" 查看应用详情�
 
 ### 数据库管理
 
-- "Servers" > "Create" > "Database，创建数据库
-- "Servers" > "Create" > "Login/Group Role"，创建用户（PostgreSQL 用户即 Role）
+- **Servers > Create > Database**，创建数据库
+- **Servers > Create > Login/Group Role**，创建用户（PostgreSQL 用户即 Role）
 
 ## 配置选项{#configs}
 
