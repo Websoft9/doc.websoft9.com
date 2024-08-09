@@ -23,7 +23,7 @@ Websoft9 控制台安装 Seafile 后，通过 "我的应用" 查看应用详情�
 2. 输入用户名和密码，登录到Seafile后台管理界面
    ![Seafile后台界面](./assets/seafile-backend-websoft9.png)
 
-3. "系统管理" > "设置"，检查 Seafile 的 URL 是否符合，否则文件无法正常上传、下载。
+3. **系统管理 > 设置**，检查 Seafile 的 URL 是否符合，否则文件无法正常上传、下载。
 
 
 ### 文档编辑与预览{#docs}
@@ -66,9 +66,9 @@ Websoft9 是 Seafile 的企业版合作伙伴，通过 Websoft9 采购，可以�
   PBKDF2SHA256$10000$7289a20ae4fc2329415b0645fa3d106019cc61952ae1bc2f9eeef7b30dc47d88$5418ac28f06bd84f2bb701a10dbea6b0bd30676c8042e1f73b9ce12aac302a8d
   ```
 
-- SERVICE_URL：Seafile 控制台打开："系统管理" > "设置" > "URL"
+- SERVICE_URL：Seafile 控制台打开：**系统管理 > 设置 > URL**
 
-- 修改邮件通知签名：Seafile 控制台打开："系统管理" > "设置" > "品牌定制"
+- 修改邮件通知签名：Seafile 控制台打开：**系统管理 > 设置 > 品牌定制**
 
 ## 故障
 
@@ -83,6 +83,6 @@ Websoft9 是 Seafile 的企业版合作伙伴，通过 Websoft9 采购，可以�
 
 #### 文档安全令牌未正确形成？
 
-问题描述：完成 ONLYOFFICE Docs 配置，Seafile 编辑和预览显示错误 “文档安全令牌未正确形成”   
+问题描述：完成 ONLYOFFICE Docs 配置，Seafile 编辑和预览显示错误 **文档安全令牌未正确形成**   
 问题原因：ONLYOFFICE docs 安全设置不符     
 解决方案：需修改 ONLYOFFICE docs 编排文件中的环境变量 JWT_ENABLED，设置为 false  

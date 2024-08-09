@@ -28,7 +28,7 @@ Websoft9 控制台安装 Redpanda Console 时，若没有填写 Kafka brokers �
 ## 配置选项{#configs}
 
 - Kafka 连接信息：应用编排的 .env 文件中
-- 配置项可以转成[环境变量](https://docs.redpanda.com/current/reference/console/config/#configuration-sources)，例如：kafka.brokers > KAFKA_BROKERS
+- 配置项可以转成[环境变量](https://docs.redpanda.com/current/reference/console/config/#configuration-sources)，例如：**kafka.brokers > KAFKA_BROKERS**
 - Redpanda Console [登录认证](https://docs.redpanda.com/current/reference/console/config/#redpanda-console-configuration-file)：企业版功能
 
 ## 管理维护{#administrator}

@@ -25,7 +25,7 @@ Websoft9 控制台安装 Superset 后，通过 "我的应用" 查看应用详情
 
 ### 分析数据
 
-1. 登录 Superset 后，打开 "Datasets" 页面，新建一个数据库连接
+1. 登录 Superset 后，打开 **Datasets** 页面，新建一个数据库连接
 
 2. 连接成功后，系统会导入数据库表
 

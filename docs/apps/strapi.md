@@ -21,11 +21,11 @@ import Meta from './_include/strapi.md';
 
 ### 自建数据模型
 
-1. Plugins > Content-type Builder 增加一个数据集，假如名为为：websoft9
+1. **Plugins > Content-type Builder** 增加一个数据集，假如名为为：websoft9
 
 2. Users 菜单下增加一个用户，设置角色为 public
 
-3. Settings > USERS & PERMISSIONS PLUGIN > Roles 编辑 public role，使之有权限访问 websoft9 数据集
+3. **Settings > USERS & PERMISSIONS PLUGIN > Roles** 编辑 public role，使之有权限访问 websoft9 数据集
 
 4. 访问下面的 URL 便可以获取数据
 

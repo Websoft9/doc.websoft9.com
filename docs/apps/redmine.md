@@ -16,7 +16,7 @@ import Meta from './_include/redmine.md';
 
 1. Websoft9 控制台安装 Redmine 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
 
-2. 进入 Redmine 界面后，点击右上角【登录】
+2. 进入 Redmine 界面后，点击右上角**登录**
 
 3. 根据系统提示，修改密码后正式访问控制台
 
@@ -56,7 +56,7 @@ import Meta from './_include/redmine.md';
 
 2. 重启 Redmine 容器服务后生效
 
-3. Redmine 控制台设置 SMTP：“管理” > "配置" > "邮件通知"
+3. Redmine 控制台设置 SMTP：**管理 > 配置 > 邮件通知**
 
 ## 配置选项
 

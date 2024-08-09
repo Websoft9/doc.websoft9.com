@@ -64,8 +64,8 @@ PostgreSQL 应用默认已经映射到宿主机外网端口，只需要确保安
 - [四种连接方式](https://www.cnblogs.com/flying-tiger/p/5983588.html?tdsourcetag=s_pcqq_aiomsg)：local, host, hostssl, hostnossl
 - [认证方式](https://www.postgresql.org/docs/current/auth-methods.html)：reject, md5, password, trust, peer, scram-sha-256
 - 配置文件（已挂载）：
-  - /var/lib/postgresql/data/postgresql.conf
-  - /var/lib/postgresql/data/pg_hba.conf
+  - */var/lib/postgresql/data/postgresql.conf*
+  - */var/lib/postgresql/data/pg_hba.conf*
 - 命令行：`psql`
 - [API](https://www.postgresql.org/about/news/postgresql-restful-api-1616/)
 

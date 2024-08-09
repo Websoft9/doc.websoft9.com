@@ -47,7 +47,7 @@ Websoft9 控制台安装 Teleport 后，还需要完成如下几个步骤，方�
 
 #### 连接远程 Linux
 
-1. 登录到 Teleport 控制台，Resource > Enroll New Resource
+1. 登录到 Teleport 控制台，**Resource > Enroll New Resource**
 
 2. 选择一个操作系统，并生成一个客户端安装链接
    ![](./assets/teleport-linuxcreate-websoft9.png)
@@ -59,7 +59,7 @@ Websoft9 控制台安装 Teleport 后，还需要完成如下几个步骤，方�
 
 ## 配置选项{#configs}
 
-- 配置文件：src/config/teleport.yaml
+- 配置文件：*src/config/teleport.yaml*
 - 多语言（×）
 - IP:端口的访问方式（×）：自生成证书不安全
 - Two-Factor 认证: 我们在 Teleport 默认配置文件中禁用了 Two-Factor 认证，如需开启请修改配置文件后重建应用。

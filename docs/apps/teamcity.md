@@ -16,10 +16,10 @@ import Meta from './_include/teamcity.md';
 ### 初始化{#wizard}
 
 1. Websoft9 控制台安装 TeamCity 后，通过 "我的应用" 查看应用详情
-   - 在 "访问" 标签页中获取访问 URL
-   - 在 "数据库" 标签页获取数据库账号信息  
+   - 在 **访问** 标签页中获取访问 URL
+   - 在 **数据库** 标签页获取数据库账号信息  
 
-2. 访问 URL 进入初始化页面，点击 "proceed" 开始后续步骤
+2. 访问 URL 进入初始化页面，点击 **proceed** 开始后续步骤
 
 3. **Database connection setup** 步骤填写应用预制的数据库：
 
@@ -51,4 +51,4 @@ TeamCity 应用默认已启动  TeamCity Agent。
 
 #### Agent 无法连接到 TeamCity?
 
-TeamCity Agent 连接 TeamCity 时，不支持主机名中包含 "_"，确保符合这个要求。
+TeamCity Agent 连接 TeamCity 时，不支持主机名中包含 **_**，确保符合这个要求。

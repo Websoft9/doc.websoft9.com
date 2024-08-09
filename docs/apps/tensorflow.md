@@ -25,7 +25,7 @@ Websoft9 控制台安装 TensorFlow 后，通过 "我的应用" 查看应用详�
 
 ### 运行 TensorBoard
 
-1. Jupter 后台依次打开："New" > "Python 3 (ipykernel)"
+1. Jupter 后台依次打开：**New > Python 3 (ipykernel)**
 
 2. 参考 [Using TensorBoard in Notebooks](https://tensorflow.google.cn/tensorboard/tensorboard_in_notebooks)，逐一运行范例程序。最后的命令增加一个参数`--host 0.0.0.0` （允许外网访问）
 

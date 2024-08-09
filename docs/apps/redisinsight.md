@@ -22,7 +22,7 @@ Websoft9 控制台安装 Redash 后，通过 "我的应用" 查看应用详情�
 2. 打开 RedisInsight 界面，同意使用许可后，开始使用
    ![打开RedisInsight](./assets/redisinsight-backend-websoft9.png)
 
-2. 点击 "Add Database Manually" 连接到 Redis 数据库
+2. 点击 **Add Database Manually** 连接到 Redis 数据库
 
    * HOST：
      - 内网：IP/容器名/服务名

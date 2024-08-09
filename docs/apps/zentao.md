@@ -33,14 +33,14 @@ import Meta from './_include/zentao.md';
 - 禅道目录（已挂载）：*/data*
 - 插件路径（已挂载）：*/data/module*
 - 集成 Git（✅）
-- SMTP（✅）："后台" > "通知" > "邮件"，选择 STMP 作为发信方式
+- SMTP（✅）：**后台 > 通知 > 邮件**，选择 STMP 作为发信方式
 
 
 ## 管理维护{#administrator}
 
 - 安装插件：支持 [插件市场](https://www.zentao.net/extension-browse.html) 在线安装，也支持下载解压到插件目录中安装
 - 重置密码：修改数据库 **zt_user** 表，password 字段值改成 `e10adc3949ba59abbe56e057f20f883e` ，密码即重置为：`123456`
-- 在线备份："后台" > "系统设置" > "备份"
+- 在线备份：**后台 > 系统设置 > 备份**
 
 ## 故障
 

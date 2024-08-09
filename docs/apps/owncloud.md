@@ -23,17 +23,17 @@ import Meta from './_include/owncloud.md';
 
 ### 文档预览与编辑 ONLYOFFICE {#onlyoffice}
 
-1. 可选：Websoft9 控制台的 “应用商店”，安装 ONLYOFFICE
+1. 可选：Websoft9 控制台的 **应用商店**，安装 ONLYOFFICE
 
 2. 在 OwnCloud 后台 Market 中安装 ONLYOFFICE
 
-3. 安装完成后，settings > Admin > additional 设置 ONLYOFFICE 连接
+3. 安装完成后，**settings > Admin > additional** 设置 ONLYOFFICE 连接
    ![](./assets/owncloud-onlyoffice-websoft9.png)
 
 
 ### 连接外部存储{#oss}
 
-- ownCloud 后台：settings > admin > Storage 中可以设置外部存储。  
+- ownCloud 后台：**settings > admin > Storage** 中可以设置外部存储。  
 - 需 S3 支持，需到 Market 中安装 **External Storage: S3** 
 
 ### 重建索引
@@ -44,17 +44,17 @@ import Meta from './_include/owncloud.md';
 
 - [Marketplace](https://marketplace.owncloud.com/) 
 
-- SMTP（√）：settings > admin > Email server
+- SMTP（√）：**settings > admin > Email server**
 
 - 支持第三方存储（√）
 
-- 多语言（√）：ownCloud 后台 【Personal】>【General】中设置语言
+- 多语言（√）：ownCloud 后台 **Personal > General**中设置语言
 
 - 移动端：OwnCloud Desktop Client, OwnCloud Android App, OwnCloud iOS App
 
 - 文档编辑与预览：需集成 [ONLYOFFICE Docs](./onlyofficedocs) 等第三方中间件实现
 
-- 配置文件（已挂载）：/mnt/data/config/config.php
+- 配置文件（已挂载）：*/mnt/data/config/config.php*
 
 - CLI：[ownCloudcmd](https://doc.ownCloud.com/desktop/next/advanced_usage/command_line_client.html)
 

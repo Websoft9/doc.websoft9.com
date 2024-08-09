@@ -27,16 +27,16 @@ import Meta from './_include/odoo.md';
 2. 使用本地浏览器访问 URL，开始初始化的第 1 步：创建数据库
    ![Odoo 社区版初始化页面](./assets/odoo-startcreatedb-websoft9.png)
 
-3. 填写好所有参数（Email 和 Password 是登录账号），点击 "create database""，等待初始化完成
+3. 填写好所有参数（Email 和 Password 是登录账号），点击 **create database**，等待初始化完成
 
 4. 登录到后台，默认进入 Apps 页面  
    ![Odoo APPS](./assets/odoo-apps-websoft9.png)
 
-5. 点击左上角的设置图标，打开 "Settings" 项，可设置语言、企业信息等
+5. 点击左上角的设置图标，打开 **Settings** 项，可设置语言、企业信息等
 
 ### 开发者模式{#dev-mode}
 
-开发者模式开启方式："Settings" > "Developer Tools" > "Active the developer mode"
+开发者模式开启方式：**Settings > Developer Tools > Active the developer mode**
 
 ### 导出 PDF
 
@@ -60,11 +60,11 @@ Websoft9 提供 Odoo 企业版的采购、交付和全面托管服务：
 
 - [Odoo Apps 市场](https://www.odoo.com/apps/modules)（✅）
 
-- 自定义 Logo（✅）：Settings > My Company
+- 自定义 Logo（✅）：**Settings > My Company**
 
 - 多租户（多企业组织）（✅）：在 Odoo 登录界面的 "Manage Databases" 入口进入数据库管理，其中增加一个数据库，即增加一个企业，多个数据库可以共享 Odoo 运行时
 
-- 多语言（✅）：右上角设置菜单的 "Preferences" 设置语言
+- 多语言（✅）：右上角设置菜单的 **Preferences** 设置语言
 
 - Odoo 配置文件（已挂载）： */etc/odoo/odoo_config/odoo.conf*  
 
@@ -74,11 +74,11 @@ Websoft9 提供 Odoo 企业版的采购、交付和全面托管服务：
 
 - 社区版在线升级到企业版（✅）
 
-- SMTP（✅）：Settings > General Settings > Discuss > Use Custom Email Servers
+- SMTP（✅）：**Settings > General Settings > Discuss > Use Custom Email Servers**
 
 ## 管理维护{#administrator}
 
-- **数据库管理**：Odoo 自带数据库管理器，在 Odoo 登录页面的 "Manage Database" 链接中进入。它支持创建、复制、备份、恢复和删除等操作。
+- **数据库管理**：Odoo 自带数据库管理器，在 Odoo 登录页面的 **Manage Database** 链接中进入。它支持创建、复制、备份、恢复和删除等操作。
 
 
 ## 故障

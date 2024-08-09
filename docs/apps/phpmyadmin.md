@@ -38,16 +38,16 @@ import Meta from './_include/phpmyadmin.md';
 
 ### 管理数据库
 
-- 修改密码：phpMyAdmin 首页 > 常规设置 > 修改密码
-- 新建数据库：phpMyAdmin 左侧菜单 > 新建
-- 新建用户：phpMyAdmin 顶部菜单 > 账户
-- 备份恢复：phpMyAdmin 顶部菜单 > 导入或导入
-- 开启远程访问：phpMyAdmin 顶部菜单 > 账户，编辑用户的 "登录信息"，主机名选项中，选择 "任意主机"，点击 "执行" 后生效
+- 修改密码：**phpMyAdmin 首页 > 常规设置 > 修改密码**
+- 新建数据库：**phpMyAdmin 左侧菜单 > 新建**
+- 新建用户：**phpMyAdmin 顶部菜单 > 账户**
+- 备份恢复：**phpMyAdmin 顶部菜单 > 导入或导入**
+- 开启远程访问：**phpMyAdmin 顶部菜单 > 账户**，编辑用户的 **登录信息**，主机名选项中，选择 **任意主机**，点击 **执行** 后生效
 
 ## 配置选项{#configs}
 
 - 多语言（✅）
-- 配置文件：/etc/phpmyadmin/config.user.inc.php
+- 配置文件：*/etc/phpmyadmin/config.user.inc.php*
 
 ## 管理维护{#administrator}
 
