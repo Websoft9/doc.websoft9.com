@@ -42,7 +42,7 @@ import Meta from './_include/mqttx.md';
 1. 准备 EMQX
 
    1. Websoft9 应用商店安装 EMQX
-   2. EMQX Dashboard 打开："问题分析" > "WebSocket 客户端" 页面，为默认的 WebSocket 连接设置**用户名、密码和协议版本**
+   2. EMQX Dashboard 打开：**问题分析 > WebSocket 客户端** 页面，为默认的 WebSocket 连接设置**用户名、密码和协议版本**
 
 2. MQTTX 中新建 EMQX 连接，确保主机、端口、账号和连接协议准确
 

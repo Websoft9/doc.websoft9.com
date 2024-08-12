@@ -10,15 +10,15 @@ tags:
 
 # For Docker App
 
-Web App Runtime for Docker can create  [Docker Compose](https://docs.docker.com/compose/) templates for you deploy customized docker containers.  
+The Web App Runtime for Docker can generate [Docker Compose](https://docs.docker.com/compose/) templates to help you deploy customized Docker containers.  
 
 ## Concepts
 
-When the App Runtime for Docker is running, there have a **Application managed by Websoft9 Console**. Then, you can [Customize this deplolyment](./runtime#dockercompose) for your customized containers.
+When the App Runtime for Docker is active, you will have an **Application managed by Websoft9 Console**. You can then [Customize this deplolyment](./runtime#dockercompose) to suit your specific containers requirements.
 
 ## Configuration options{#configs}
 
-- W9_PROXY_PORT_SET: It is the container port that will expose to host machine.  
+- W9_PROXY_PORT_SET: This option specifies the container port that will be exposed to the host machine. 
 
 ## Deploy a Docker application{#deploy}
 

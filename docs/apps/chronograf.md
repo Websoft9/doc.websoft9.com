@@ -19,7 +19,7 @@ import Meta from './_include/chronograf.md';
 
 1. 准备好需要管理的 InfluxDB 
 
-2. 访问 Chronograf，增加一个 InfluxDB 连接，首选勾选 "InfluxDB v2 Auth"，然后填写如下参数：
+2. 访问 Chronograf，增加一个 InfluxDB 连接，首选勾选 **InfluxDB v2 Auth**，然后填写如下参数：
    
    - Connection URL: InfluxDB 的访问 URL
    - Connection Name： 自定义

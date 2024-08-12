@@ -20,7 +20,7 @@ import Meta from './_include/alfresco.md';
 
 2. 耐心等待 10 分钟，直至 Alfresco 首次安装初始化完成
 
-3. 本地浏览器访问 URL，出现页面后，点击 "Alfresco Repository" > "Alfresco Share" 可进入登录界面
+3. 本地浏览器访问 URL，出现页面后，点击 **Alfresco Repository > Alfresco Share** 可进入登录界面
 
 4. 登录到 Alfresco 后台开始使用
    ![](./assets/alfresco-consolegui-websoft9.png)
@@ -66,7 +66,7 @@ import Meta from './_include/alfresco.md';
 - 官方文档：[Alfresco Documentation](https://docs.alfresco.com/content-services/community/using/content/) 
 - 官方视频：[Alfresco Videos](https://docs.alfresco.com/content-services/latest/tutorial/video/)
 - [ReST API Guide](https://docs.alfresco.com/content-services/latest/develop/rest-api-guide/)
-- 修改密码：Alfresco 后台，右上角依次打开：【Administrator】>【我的个人档案】
+- 修改密码：Alfresco 后台，右上角依次打开：**Administrator > 我的个人档案**
 
 
 ## 管理维护{#administrator}
@@ -78,6 +78,6 @@ import Meta from './_include/alfresco.md';
 
 #### 中文 Markdown 格式预览乱码？
 
-故障描述：【在浏览器中查看】不乱码，但是在 Alfreco 内置 document-details 中乱码  
+故障描述：*在浏览器中查看*不乱码，但是在 Alfreco 内置 document-details 中乱码  
 问题原因：未知   
 解决方案：暂无  

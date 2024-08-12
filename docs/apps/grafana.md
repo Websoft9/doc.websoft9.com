@@ -23,15 +23,15 @@ Websoft9 控制台安装 Grafana 后，通过 "我的应用" 查看应用详情�
 - Grafana 控制台页面  
    ![Grafana 控制台](./assets/grafana-dashboard-websoft9.png)
 
-- 通过【Configuration】>【Plugins】添加插件  
+- 通过**Configuration > Plugins**添加插件  
    ![Grafana 添加插件](./assets/grafana-plugins-websoft9.png)
 
-- 通过【Configuration】>【Data Sources】添加数据源（分析对象）  
+- 通过**Configuration > Data Sources**添加数据源（分析对象）  
    ![Grafana 添加数据源](./assets/grafana-datasource-websoft9.png)
 
 ## 配置选项{#configs}
 
-- 配置文件（容器内路径）：/etc/grafana/grafana.ini
+- 配置文件（容器内路径）：*/etc/grafana/grafana.ini*	
 - [Grafana API](https://grafana.com/docs/grafana/latest/http_api)
 - 命令行：`grafana-cli`
 - 默认数据库：内置的 SQLite

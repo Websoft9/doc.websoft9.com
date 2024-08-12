@@ -19,7 +19,7 @@ Websoft9 控制台安装 Aria2 后，通过 "我的应用" 查看应用详情，
 
 1. 本地电脑浏览器访问后，进入 AriaNg 页面
 
-2. 【AriaNg 设置】配置 RPC 的连接信息
+2. **AriaNg 设置** 配置 RPC 的连接信息
 
    - 地址：http:Aria2 访问地址
    - 端口：RPC 端口
@@ -31,7 +31,7 @@ Websoft9 控制台安装 Aria2 后，通过 "我的应用" 查看应用详情，
 
 ## 配置选项{#configs}
 
-- 多语言（✅）：可在【AriaNg 设置】菜单设置语言
+- 多语言（✅）：可在 **AriaNg 设置** 菜单设置语言
 
 ## 管理维护{#administrator}
 

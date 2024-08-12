@@ -24,14 +24,14 @@ import Meta from './_include/knowage.md';
 
 ### 数据建模与分析
 
-基本步骤分：连接数据源 > 数据建模 > 配置数据 > 数据可视化呈现
+基本步骤分：**连接数据源 > 数据建模 > 配置数据 > 数据可视化呈现**
 
 ## 配置选项{#configs}
 
 - [Knowage API](https://knowage.docs.apiary.io) 
 - 多语言（✅）：不包含中文
-- 修改密码：后台 【Profile Management】>【Users Management】 修改密码
-- 配置：后台【Server Settings】>【Configuration Management】 配置 Knowage
+- 修改密码：后台 **Profile Management > Users Management** 修改密码
+- 配置：后台 **Server Settings > Configuration Management** 配置 Knowage
 
 ## 管理维护{#administrator}
 

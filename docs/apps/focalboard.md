@@ -21,7 +21,7 @@ import Meta from './_include/focalboard.md';
 
 ## 配置选项{#configs}
 
-- 容器配置文件：/opt/focalboard/config.json
+- 容器配置文件：*/opt/focalboard/config.json*
 - 多语言（✅）
 - 功能设置：没有传统意义上的管理的诸多设置项
 - 多用户：通过邀请其他用户注册
