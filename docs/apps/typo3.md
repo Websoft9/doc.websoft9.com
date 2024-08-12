@@ -23,8 +23,8 @@ import Meta from './_include/typo3.md';
 2. 进入 Typo3 安装向导，当环境检测步骤通过后，开始填写数据库参数
 
    - Username: `typo3`
-   - Password: 应用管理中获取
-   - Host:  应用管理中获取
+   - Password: 应用管理的 **数据库** 标签页获取
+   - Host:  应用管理的 **数据库** 标签页获取
 
      ![](./assets/typo3-installdb-websoft9.png)
 
@@ -49,6 +49,12 @@ import Meta from './_include/typo3.md';
 
 ## 管理维护{#administrator}
 
+
 - 在线升级（√）：Typo3后台 **ADMIN TOOLS > Upgrade**
+- 后台路径：`/typo3`
 
 ## 故障
+
+#### 初始化后前台 404 错误？
+
+这是正常的。Typo3 默认并没有创建任何前台页面，需创建页面并向页面增加内容后，前台才可以显示内容。  
