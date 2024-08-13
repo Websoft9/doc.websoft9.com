@@ -3,7 +3,7 @@ sidebar_position: 1.2
 slug: /plan-git
 ---
 
-# 使用 Git 管理自动化部署
+# Use Git for deployment
 
 自动化部署是指使用专门的软件工具或脚本来自动执行软件安装与发布过程。它提高了软件交付的速度和可靠性，减少过程中的错误。
 

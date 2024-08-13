@@ -3,52 +3,56 @@ sidebar_position: 1.3
 slug: /plan-package
 ---
 
-# 准备安装所需的软件包
+# Prepare software packages
 
-在 DevOps 流程中，被安装的软件包名为软件制品（Artifacts）。它是软件交付过程中生成的任何文件和结果物，这些可以是编译后的代码（二进制文件）、库文件、容器镜像、配置文件或数据库脚本等。简而言之，制品是软件构建过程的输出，它们是可以部署到服务器上以运行应用程序或服务的实体。
+The will be installed software packages discussed in this chapter refer to the product is named artifacts.  
+
+In DevOps, artifacts are the outputs of the software delivery process, including compiled code (binaries), libraries, container images, configuration files, or database scripts, deployable to servers for running applications or services.
 
 ![](./assets/websoft9-artifactorys.png)
 
-当然，准备制品不是必须的。如果 [Websoft9 模板化应用库](appstore) 中包含您所需的应用程序，那么您不需要关注制品的问题。     
+Deploy software packages isn't necessary because [Websoft9 App Store](./appstore) offers 200+ popular one-click deployment templates.   
 
-否则，请根据下面的原则和教程，做好安装之前的准备。  
+If your application is not listed, follow the principles and tutorials to prepare the software package before installation.  
 
-## 选用制品的原则
+## Principles for choosing artifacts
 
-在软件部署过程中选择和使用制品时，你可以遵循一些基本原则来确保流程的顺畅和产品的质量：
+When selecting and using artifacts in software deployment, follow these principles to ensure smooth processes and product quality:
 
-- 镜像优先：优先使用 Docker 镜像作为安装制品，可以大大持续部署的效率
-- 官方优先：优先使用软件原作者（官方）提供的制品
-- 可获取性：制品应该可以从一个稳定且可靠的来源轻松获取，并提供不错的下载速度
-- 许可合规：确认制品的许可证是否符合你的项目需求，以及是否符合任何法律或行业标准的合规要求
-- 维护和支持：选择那些有良好维护记录的制品，它们背后应有一个积极的开发团队和社区，以便在出现问题时可以获得支持
-- 文档和资源：优选那些有详细文档、教程和其他学习资源的制品，这样可以帮助团队更快地上手和解决问题
-- 依赖管理：选择的制品应该能够轻松地与项目中已有的依赖管理工具集成，无需再编译
-- 版本控制：选择的制品应该有清晰的版本控制策略，这样你可以轻松地跟踪和管理不同版本的制品
-- 兼容性：选择与你的开发环境、部署平台和其他系统组件兼容的制品
-- 可靠性：优先选用经过广泛测试并被证明是稳定可靠的制品
+- **Image First**: Prefer Docker images for installation to enhance deployment efficiency.
+- **Official First**: Use artifacts provided by the software's original authors.
+- **Availability**: Artifacts should be easily accessible from a stable and reliable source.
+- **License Compliance**: Ensure the artifact's license meets your project and legal requirements.
+- **Maintenance and Support**: Choose artifacts with good maintenance records and active support.
+- **Documentation and Resources**: Prefer artifacts with detailed documentation and learning resources.
+- **Dependency Management**: Artifacts should integrate easily with existing dependency tools.
+- **Version Control**: Artifacts should have a clear version control strategy.
+- **Compatibility**: Choose artifacts compatible with your development and deployment environment.
+- **Reliability**: Prefer artifacts that are well-tested and proven to be stable.
 
-选择制品是一个需要考虑多个因素的决策过程，它涉及评估、测试和与团队决策。  
+Choosing artifacts involves evaluating, testing, and team decision-making.
 
 
-## 构建企业制品库
+## Build your artifact repository
 
-当部署应用缺乏所需的制品时，传统的做法是 “手工编译构建，然后再部署”。这种做法缺乏体系，质量和兼容性得不到保障，当前已经被 **制品库（Artifact Repository）** 替代。  
+Building your own Artifact repository provides better control, security, customization, and integration with existing workflows, ensuring efficient artifact management tailored to your specific needs.
 
-制品库是存储、管理和分发软件制品的系统。它类似于一个版本控制库，可以帮助开发者存储不同版本的软件制品，并且能够支持在线检索和部署。  
-
-常见的制品库包括：
+If there not suitable artifacts for you, you should build your own artifact repository by below open source software:   
 
 - JFrog Artifactory
 - Sonatype Nexus
 - Apache Archiva。
 
-## 制品库 VS Git 仓库
+## Artifacts and Git repository relationship  
 
-制品库与 Git 仓库本质上都是具有版本控制的文件存储系统。 Git 仓库通常引用制品库的内容，从流程上看 Git 仓库是制品库的下游。  
+An artifact repository manages your end-to-end artifact lifecycle and supports different software package management systems while providing consistency to your CI/CD workflow. It’s a source for artifacts needed for a build and a target to which artifacts generated during a build process may be deployed.  
 
-所以 Git 仓库可以当做制品库使用，反之则不行。     
+Git is a distributed version control system that tracks changes in source code and other files. It allows multiple developers to work on a project simultaneously without interfering with each other's work.  
 
-主流的 Git 仓库软件平台，例如：GitLab, Gitea, GitLab 都提供了制品库的功能。  
+Both artifact repositories and [Git repositories](./plan-git) are version-controlled file storage systems. Git repositories typically reference artifact repositories, making Git downstream in the process.
 
-使用 Websoft9 托管平台过程中，可能会需要将 Git 仓库当做制品库：[手动创建 Git 仓库以存储软件包](./plan-git#create)
+In the Websoft9 deployment architecture, a Git repository stores deployment automation or IaC code that references packages in the artifact repository as the deployment source.  
+
+In fact, most Git software, such as GitLab, Github, Gitea, etc., provides the ability to repository Artifacts. 
+
+When use Websoft9 to deploy application, you may also [Create Artifacts repository at Git system](./plan-git#create).  

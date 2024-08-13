@@ -684,8 +684,8 @@
     "description": "The label for category 规划与部署应用 in sidebar docs"
   },
   "sidebar.docs.category.规划基础设施": {
-    "message": "规划基础设施",
-    "description": "The label for category 规划基础设施 in sidebar docs"
+    "message": "Plan your infrastructures",
+    "description": "The label for category Plan your infrastructures in sidebar docs"
   },
   "sidebar.docs.category.管理与配置应用": {
     "message": "Config and manage App",

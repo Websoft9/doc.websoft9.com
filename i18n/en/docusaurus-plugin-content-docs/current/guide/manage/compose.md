@@ -5,84 +5,79 @@ slug: /app-compose
 
 # Update your deployment
 
-尽管基于 Websoft9 应用商店的部署模板能够快速启动应用，但这些模板并不总能预先满足所有用户的个性化需求。  
+Although Websoft9 App Store templates quickly launch applications, they may not meet all user needs.   
 
-Websoft9 托管平台允许用户在应用启动后，使用**编排工具**对应用结构进行动态调整，并支持应用配置的深度个性化定制。    
+The platform allows dynamic update your deployment for customization.
 
-## 原理
+## Concept
 
-应用编排是重新配置应用的过程，其操作对象为存储在 Git 仓库中的原生 [docker compose](https://docs.docker.com/compose/) 项目。
+Update your deployment is the process to redeploy multi-containers applications. Since the Websoft9 application is based on [Docker Compose](https://docs.docker.com/compose), update deployment is equivalent to customizing a Compose project.  
 
-实现个性化配置仅需以下两个步骤：
+Docker Compose project is stored as [git repository](./plan-git#modify) at **Websoft9 Git**, the related files includes:  
 
-1. 修改[ Docker Compose 项目文件](./plan-git#modify) 中的编排对象
+   - **.env file**: environments for application
+   - **docker-compose.yml file**: YAML configuration file all the services defined
+   - **src direcotry**:  configuration files or other startup file for application
 
-   - src 目录：存放的是应用的配置文件，可能会挂载到容器
-   - .env：应用的环境变量文件
-   - docker-compose.yml：应用的编排文件
+Modify the items at these files and [Redeploy application](./app-lifecycle#redeploy) will take effective.  
 
-2. [重建应用](./app-lifecycle#rebuild)
+## Get started updating your deployment
 
+### Step 1: Go to edit repository{#edit}
 
-## 动态编排应用{#dynamic}
-
-动态应用编排指的是在应用正常运行的状态下进行的实时调整过程。该过程包括以下步骤：
-
-1. Websoft9 控制台，通过 "我的应用" 菜单进入目标应用的管理界面的 "编排" 标签页
+1. Login to Websoft9 Console and open the **My Apps > Application Management > Compose**
    ![](./assets/websoft9-composeedit.png)
 
-2. 点击 "马上修改"，系统跳转到应用对应的 **Git 仓库** 页面
+2. Click the **Go to edit repository** button, it will skip to files browser page of **Git repository**
    ![](./assets/websoft9-composeedit-repo.png)
 
-3. 调整目标配置文件（通常是修改 `.env` 文件）并保存更改
+3. Then you can edit any file you want
 
-   > 请勿修改命名以 **W9_** 开头的环境变量，除非熟悉 Websoft9 的[模板编排规则](https://github.com/Websoft9/docker-library/blob/main/docs/code_owner.md)
+### Step 2: Customized Configurations{#modify}
 
-4. 重新应用管理的 "编排" 标签页，点击 "重建应用" 按钮或右上角的重建图标
+You can customized application by git repository file editing interface:
 
-5. [重建应用](./app-lifecycle#rebuild)后生效
+   - **.env file**: environments for application
+   - **docker-compose.yml file**: YAML configuration file all the services defined
+   - **src direcotry**:  configuration files or other startup file for application
 
-## 全新编排应用{#reset}
+If want to modify environments beginning with **W9_**, you should familiar with [Websoft9 App Store templates rules](https://github.com/Websoft9/docker-library/blob/main/docs/code_owner.md). 
 
-全新编排应用相对于[动态编排](#dynamic)来说，它需要删除应用的容器以及数据卷，确保应用启动后处于初始的出厂设置。  
 
-1. 登录 Websoft9 控制台，点击左侧 "容器" 菜单，在容器管理中完成以下操作：
+### Step 3: Delete containers (optional){#dynamic}
+
+You can delete exist containers of application if you want to a fully new application:
+
+1. Login to Websoft9 Console, and click **Containers** menu
+
+2. Delete below resources
    
-   - 通过 "Stack" 删除目标应用下的所有容器
-   - 通过 "Volumes" 删除目标应用遗留的数据卷
+   - Delete all containers by **Stack** memu
+   - Delete all container volumes by **Volumes** memu
 
-2. 重建应用或参考[动态编排](#dynamic)进行个性化编排后再重建
+### Step 4: Rebuild the application services{#dynamic}
 
+1. Go to the **Compose** tab of application management of Websoft9 My Apps
 
-## 自定义应用的配置项{#configs}
+2. Click the **[Redeploy](./app-lifecycle#rebuild)** button and waiting for new services take effective
 
-为了满足用户设置应用的配置文件和配置项，Websoft9 托管平台提供了灵活的自定义配置选项：
+## Related docs
 
-- **环境变量自定义**：用户可以通过编辑 `.env` 文件来设置环境变量，这种方式简单快捷，适用于快速配置应用的运行参数。
+- [Docker Compose](https://docs.docker.com/compose/)
+- [Websoft9 App Store templates developer Guide](https://github.com/Websoft9/docker-library/blob/main/docs/code_owner.md)
 
-- **修改配置文件**：将自定义的配置文件提前挂载到容器中，用户只需要修改配置文件内容即可
+## Troubleshoot
 
-请根据应用提供的模板和文档进行相关配置的个性化设置。
+### Environments doesn't take effect?
 
-## 参考文档
+**Description**: When I change `MYSQL_PASSWORD` value at .env file of MySQL applicaton, it not take effect  
+**Reason**: This is normal, and the authors of the MySQL container designed it to be so  
 
-- [docker compose 官方文档](https://docs.docker.com/compose/)
-- [Websoft9 应用商店模板规范](https://github.com/Websoft9/docker-library)
+### Orchestration file error modification?
 
-## 问题与故障
+**Description**: I have wrong modification for .env or yml file, can I recover it?   
+**Solution**: Yes, all orchestration files based on git repository, you can recover by [git restore](./plan-git#modify)
 
-#### 修改环境变量后不生效？
+### Pull images error when redeploy?
 
-此情况是正常的。有些环境变量仅用于容器的首次创建，后续修改是不生效的。例如 MySQL 镜像的环境变量 `MYSQL_PASSWORD`。  
-
-这种情况是由容器镜像的作者在设计时的考量，并不是故障。    
-
-#### 编排文件改错了？
-
-基于 Git 仓库的编排文件，可以很方便进行[还原](./plan-git#modify)操作
-
-#### 重建应用时拉取镜像失败？
-
-可以再次重试或提前在服务器上拉取相关镜像
-
-
+You can try it again or pull images before redeploy by `docker compose pull` command on your server.  

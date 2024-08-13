@@ -1,9 +1,10 @@
 ---
 sidebar_position: 3
 slug: /deployment
+title: "Deploy Application"
 ---
 
-# 使用 Websoft9 部署应用
+# Deploy Application by Websoft9
 
 Websoft9 支持任何类型的应用部署方式：模板化自动化部署，Docker 镜像部署和源码部署等。   
 

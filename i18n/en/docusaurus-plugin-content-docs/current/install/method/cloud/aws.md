@@ -6,7 +6,7 @@ slug: /install-aws
 
 # AWS
 
-For users of the AWS, Websoft9 has a pre-configured offering in the [AWS Marketplace](https://aws.amazon.com/marketplace/seller-profile?id=c639a579-182c-4d30-8578-4d4d89fba658). This tutorial describes installing Websoft9 Enterprise Edition in a single Virtual Machine (EC2).   
+For users of the AWS, Websoft9 has a pre-configured offering in the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-5jziwpvx4puq4). This tutorial describes installing Websoft9 Enterprise Edition in a single Virtual Machine (EC2).   
 
 ## Prerequisite
 
@@ -25,15 +25,15 @@ Regardless of which deployment method you choose, AWS will initiate the deployme
 
 ### From AWS Marketplace
 
-1. Login to [AWS Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps), input the key "websoft9" to search image of Websoft9
+1. Open Websoft9 offer page at [AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-5jziwpvx4puq4)
 
 2. Click **Continue to Subscribe** to start, and accept Terms and Conditions as the system prompts
 
 3. Then click **Continue to Configuration** to go to **Launch** step
-   ![开始订阅镜像](./assets/aws-rs-websoft9.png)
+   ![Start to buy](./assets/aws-rs-websoft9.png)
 
 4. At **Launch** step, choose the **Choose Action**
-   ![开始载入镜像](./assets/aws-imagecreate2-websoft9.png)
+   ![Start to load](./assets/aws-imagecreate2-websoft9.png)
 
    - Launch through EC2 (recommendation)
    - Launch from Website
