@@ -3,35 +3,33 @@ sidebar_position: 2
 slug: /appstore
 ---
 
-# 搜索 Websoft9 模板化应用
+# Search templated applications
 
-Websoft9 **应用商店**通过一个友好的界面，集中了数百个开源软件和云原生生产力工具的**一键部署模板**。   
+**Websoft9 App Store** centralizes hundreds of open source software and cloud-native productivity tools through a user-friendly interface one-click **deployment templates**.   
 
-它支持分类、筛选和收藏，满足用户快速安装热门应用的需求。
+It supports categorization, filtering and favorites to install target applications.   
 
+## Categorization
 
-## 分类呈现
-
-Websoft9 应用商店进行了精选的多级分类，包含：数据分析、AI、网站、企业运营、设计创作、低代码、数据库等场景。  
+The Websoft9 App Store carries a selection of multi-level categorizations, including: data analytics, AI, websites, business operations, design creation, low-code, database, and other scenarios.  
 
 ![](./assets/websoft9-appstorefilter.png)
 
-## 关键词搜索
+## Keyword for search
 
-提供应用名称、标题和详情检索，快速找到所需的应用
-
+You can search applications by keyword which related to application name, application title, application detail.  
 ![](./assets/websoft9-appstoresearch.png)
 
-## 应用详情
+## Application details
 
-应用详情中可以查看截图、版本、资源要求、文档说明等重要信息，便于用户在安装应用之前充分了解应用
+You can get the version, shootscreen, resource limit, documentation and other detail of application before installation. 
 
 ![](./assets/websoft9-appstoredetail.png)
 
-## 收藏应用
+## Favorite applications
 
-打开应用详情，可以看到 "收藏" 按钮，把喜欢的应用收藏起来，便于今后快速安装
-![](./assets/websoft9-favorite-app.png)
+- You can favorite any application from application detail page
+  ![](./assets/websoft9-favorite-app.png)
 
-收藏后的应用会显示在我的应用列表页
-![](./assets/websoft9-appstore-favoritelist.png)
+- You can see the favorite applications list at **App Store** default page
+  ![](./assets/websoft9-appstore-favoritelist.png)

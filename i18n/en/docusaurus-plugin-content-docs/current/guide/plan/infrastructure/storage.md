@@ -3,7 +3,7 @@ sidebar_position: 1.2
 slug: /storage
 ---
 
-# 扩充或优化存储
+# Plan or extend storage
 
 在本章中，你可以了解到与应用存储空间有关的各种配置：  
 

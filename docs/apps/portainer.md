@@ -40,20 +40,20 @@ Portainer 提供了可视化的运行容器命令的功能，它等同于 **dock
 1. 在容器列表，点击下图中 MySQL 的 **Quick actions** 一栏下的 **>_** 图标；
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/potainer/portainer-containerlist-websoft9.png)
 
-2. 在新打开的页面，点击 **Connetc** 按钮，准备连接；
+2. 在新打开的页面，点击 **Connect** 按钮，准备连接；
     ![](http://libs-websoft9-com.oss-cn-qingdao.aliyuncs.com/Websoft9/DocsPicture/zh/potainer/portainer-createdatabase-websoft9.png)
 
     - Command：选择可用的命令执行（三选一，总有一个可用）
     - user: 默认 root（推荐）
 
-3. 点击 "Connect"，成功连接到即可运行命令
+3. 点击 **Connect**，成功连接到即可运行命令
 
 ### 在 Portainer 中安装应用{#installapp}
 
 如果 Websoft9 应用商店不满足安装需求，用户可以在容器管理平台中自定义安装 Docker 应用
 
-- Docker-Compose 应用的自定义安装：【容器】>【Stacks】>【Add Stack】
-- Docker 容器自定义安装：【容器】>【Containers】>【Add Container】
+- Docker-Compose 应用的自定义安装：**容器 > Stacks > Add Stack**
+- Docker 容器自定义安装：**容器 > Containers > Add Container**
 
 ### 操作指南
 

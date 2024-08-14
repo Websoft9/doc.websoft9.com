@@ -3,17 +3,16 @@ sidebar_position: 1.3
 slug: /intranet
 ---
 
-# 构建专有网络
+# Design your network
 
-使用 Websoft9 托管平台管理多个应用的部署时，为了确保应用间的顺畅交互和数据安全，建议构建一个易于管理且高效的虚拟局域网环境。以下是一些关键技术的详细说明，这些技术可以帮助您实现这一目标：
+When managing multiple applications on the Websoft9, constructing a manageable and efficient virtual LAN is essential. Here are key technologies:
 
-1. **虚拟私有云 (VPC)**：VPC 是一种提供逻辑隔离的网络服务，允许您在云中创建一个隔离的网络环境。在这个环境中，您可以完全控制您的网络配置，包括选择自己的IP地址范围、创建子网、配置路由表和网络网关。使用 VPC，您的应用可以在一个隔离的环境中运行，从而提高了安全性，并且不会受到外部网络的干扰。
+1. **Virtual Private Cloud (VPC)**: VPC provides a logically isolated network environment. It allows full control over network configurations, including IP address ranges, subnets, routing tables, and gateways. VPC ensures your applications run in an isolated environment, enhancing security and preventing external network interference.
 
-2. **虚拟私人网络 (VPN)**：VPN 可以安全地将您的本地网络扩展到云，从而在您的本地网络和您的 VPC 之间建立一个安全加密的连接。这对于需要安全远程访问云资源的场景非常有用，比如远程工作的员工或者分支机构之间的数据共享。
+2. **Virtual Private Network (VPN)**: VPN securely extends your local network to the cloud, creating an encrypted connection between your local network and VPC. This is useful for secure remote access to cloud resources, such as for remote workers or data sharing between branch offices.
 
-3. **私有 DNS**：私有 DNS 是一种 DNS 服务，它仅在您的虚拟私有云 (VPC) 或特定网络环境内部可见。与公共 DNS 相比，私有 DNS 为您的内部网络提供了域名解析服务，而不会暴露给互联网。这意味着您可以为内部网络资源使用自定义域名，而这些域名在公网上是不可解析的。
+3. **Private DNS**: Private DNS is a DNS service visible only within your VPC or specific network environment. Unlike public DNS, it provides domain name resolution for internal network resources without exposing them to the internet. This allows custom domain names for internal resources, unresolvable on the public internet.
 
-4. **服务发现**：在微服务架构中，服务发现是一个关键组件，它允许应用的各个部分在启动时动态地找到彼此。这意味着您的服务可以自动注册自己，其他服务可以查询这些注册信息来发现和通信。服务发现可以是基于 DNS 的，或者使用更专门的系统，如 Consul 或 Etcd。
+4. **Service Discovery**: In microservice architectures, service discovery is crucial. It enables application components to dynamically locate each other at startup. Services can auto-register, and others can query this registry to discover and communicate. Service discovery can be DNS-based or use specialized systems like Consul or Etcd.
 
-通过结合使用这些技术，您可以创建一个既安全又灵活的多应用部署环境，使得应用之间的连接和数据传输既安全又高效。这不仅有助于保护您的敏感数据，还可以提高整体系统的稳定性和可扩展性。
-
+Combining these technologies, you can create a secure, flexible multi-application deployment environment. This ensures safe and efficient inter-application connections and data transfers. It helps protect sensitive data and enhances overall system stability and scalability.

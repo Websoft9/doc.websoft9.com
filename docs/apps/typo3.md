@@ -43,13 +43,14 @@ import Meta from './_include/typo3.md';
 
 - 多语言（√）：[Changing The Backend Language](https://docs.typo3.org/m/typo3/tutorial-getting-started/main/en-us/Setup/BackendLanguages.html#backendlanguages)
 
-- 扩展（√）：Typo3后台 "ADMIN TOOLS" > "Extensions"
-- 模板（√）：Typo3后台 "WEB" > "Template"
+- 扩展（√）：Typo3后台 **ADMIN TOOLS > Extensions**
+- 模板（√）：Typo3后台 **WEB > Template**
 
 
 ## 管理维护{#administrator}
 
-- 在线升级（√）：Typo3后台 "ADMIN TOOLS" > "Upgrade"
+
+- 在线升级（√）：Typo3后台 **ADMIN TOOLS > Upgrade**
 - 后台路径：`/typo3`
 
 ## 故障

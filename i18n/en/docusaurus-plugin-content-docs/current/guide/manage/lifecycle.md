@@ -5,74 +5,75 @@ slug: /app-lifecycle
 
 # Manage application lifecycle
 
-在本节中，我们将专注探讨应用的关键操作阶段：启动、停止、重启、卸载等。
-
-Websoft9 托管平台提供了包括图形用户界面以简化这些操作的执行。为了适应复杂的部署和运维需求，平台还支持自动化脚本和 API 调用，使得生命周期管理可以无缝地集成到用户的现有工作流程中。
+Websoft9 simplify the main operations of the application: start, stop, restart, redeploy, uninstall, and so on.
 
 ![](./assets/websoft9-applife-manage.png)
 
-## 停止应用{#stop}
+## Stop application{#stop}
 
-停止目标应用中所有正在运行的容器
+Start application only stop all running containers
 
-## 启动应用{#start}
+## Start application{#start}
 
-启动目标应用中所有已经停止运行的容器
+Start application only start all stopped containers
 
-## 重启应用{#restart}
+## Restart application{#restart}
 
-重新启动目标应用中所有状态的容器
+Restart application will restart all containers
 
-## 卸载应用{#uninstall}
+## Uninstall application{#uninstall}
 
-卸载操作主要是删除应用的 Git 仓库、网关配置和所有相关容器资源（容器和数据卷）。  
+The Uninstall Application operation contains several items that will be uninstalled:
+
+- Git repository
+- Containers
+- Docker volumes
+- Gateway configs
 
 ![](./assets/websoft9-uninstall-gui.png)
 
-默认卸载仅会删除容器，保留其他的资源以方便后期重建。若需彻底卸载应用，需在进行卸载操作时，勾选 "是否清除数据"。
+## Redeploy application{#redeploy}
 
-## 重建应用{#rebuild}
-
-重建应用是一项 Websoft9 关键操作，旨在**保留数据的前提下**刷新应用的运行环境，确保应用以最新的状态和配置运行。   
+Redeploy application is a critical Websoft9 operation designed to **[Update your deployment](./app-compose)** for your customized configs or continuous deployment while retain data.   
 
 ![](./assets/websoft9-rebuild-app.png)
 
-重建的基本流程：
+The main steps for redeploy application includes:   
 
-1. 停止应用的服务
-2. 删除容器
-2. 重新拉去镜像（可选）
-3. 基于保留的数据进行容器重建
+1. Stop application and retain repository and docker volumes
+2. Delete containers
+3. Pull new docker image (optional)
+4. Run the application from retain data
 
-有诸多场景下会需要重建应用的操作：
+The redeploy application scenarios include the following: 
 
-- 当需要清除运行中容器的历史日志并维持容器在最佳运行状态时，可以直接重建应用
-- 为了确保使用最新的镜像，重建应用的过程中可拉取最新的镜像并更新容器
-- 修改应用配置或自动化部署代码后，重建应用以确保这些更改得以实现
+- Upgrade application to new version
+- Customize application configurations and make it effective
+- Clear running logs of container
+- Fix bugs 
+- Changes in dependent external services
 
-## 更新应用{#update}
+## Upgrade application{#update}
 
-上一步的[重建应用](#rebuild)中可以通过**拉取最新的镜像**，实现应用更新。
+You can change the version related environment by [Redeploy application](#redeploy) for upgrading application, the operation will pull your target docker image for redeployment.
 
-## 理解应用生命周期中的容器状态{#container-status}
+## Container status in the application{#container-status}
 
-容器的状态在一定程度上客观地反映了应用的整体状态。
+The status of the containers in the application can reflect the state of the application.
 
-### 容器 running 状态
+### Running status
 
-通常，running 的容器意味着其承载的业务也运行正常。然而，也存在特殊情况，即使业务终止或异常，容器状态依旧为 running。   
+A running application must at least have one **running** container, but a running container doesn't always mean the service in container is running; check logs or use [healthcheck](https://docs.docker.com/compose/compose-file/05-services/#healthcheck)  to accurately determine service status.
 
-此现象通常源于容器作者设计的初衷，故要准确判断容器的业务状态，需要结合容器日志进行分析或者实施 [healthcheck](https://docs.docker.com/compose/compose-file/05-services/#healthcheck) 机制。
+### Exit status
 
-### 容器 exit 状态
+When a container has an exit status, it does not indicate an application exception.  
 
-当容器出现 exit 状态时，并不表明应用异常。   
+This is means that application allows some container for one-time task, such as importing data, changing configs, and so on.  
 
-因为容器编排允许某些容器运行一次性任务之后（例如：导入数据、修改配置等），就自动退出。
+### Restarting status
 
-### 容器 restarting  状态
+The reason for the restart status must be differentiated: 
 
-需要分两种情况判断此问题：
-
-- 如果应用已经明确启动完成，但仍有 restarting 状态的容器，这些是异常的
-- 如果应用在启动中，有 restarting 状态的容，这些仅是过程状态允许的
+- If application is deployed for the first time or in startup, this restarting status is reasonable
+- If application is running after startup, this restarting status is abnormal
