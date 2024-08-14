@@ -3,7 +3,7 @@ sidebar_position: 1.1
 slug: /brandwith-infra
 ---
 
-# 规划带宽和流量
+# Plan bandwidth and traffic
 
 在使用 Websoft9 多应用托管平台时，合理规划带宽是非常重要的。  
 

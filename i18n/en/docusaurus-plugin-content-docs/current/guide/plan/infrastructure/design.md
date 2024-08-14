@@ -3,7 +3,7 @@ sidebar_position: 1.0
 slug: /design-infrastructure
 ---
 
-# 规划整体基础设施
+# Plan overall infrastructure
 
 使用 Websoft9 托管现代化的企业级云原生应用，需要一套完整、可靠且高效的基础设施作为支撑。  
 

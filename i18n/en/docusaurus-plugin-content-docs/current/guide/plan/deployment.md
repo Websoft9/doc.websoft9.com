@@ -6,135 +6,127 @@ title: "Deploy Application"
 
 # Deploy Application by Websoft9
 
-Websoft9 支持任何类型的应用部署方式：模板化自动化部署，Docker 镜像部署和源码部署等。   
+Websoft9 supports any type of application deployment methods, includes: templated one-click deployments, Docker image, source code building and binary file
+and any other packages
 
-## 特点
+This chapter guides the user in choosing the most effective deployment option based on the different deployments.  
 
-Websoft9 应用部署它与同类产品相比，极具创新性：   
+## Features
 
-- 遵循 **先安装，再配置** 的原则，实现极简安装的同时又开放给用户足够的可配置参数
-- 支持泛解析的域名，一次绑定域名，每个应用都可以用，避免反复绑定域名的麻烦
-- 兼容 **域名和端口** 两种常见的应用访问模式
-- 应用的部署代码和数据文件分离
-- 基于 [GitOps](./plan-git#gitops) 的技术哲学，保持应用的 **持续部署** 能力
-- 支持自动化配置的 HTTPS 证书和自上传证书两种模式
+Websoft9 application deployment is highly innovative compared to peers:
 
-总之，不具备技术背景的用户使用 Websoft9 部署应用毫无障碍，而开发者使用 Websoft9 拥有足够的权限和开放性体验。  
+- Follows **install first, configure later** for simplicity with configurable options
+- Supports [wildcard domain binding](./domain-set#wildcard), avoiding repeated domain binding
+- Compatible with both **domain** and **IP+Port** access modes
+- Separates deployment [IaC](https://www.ibm.com/topics/infrastructure-as-code) from application data
+- Based on [GitOps](./plan-git#gitops) philosophy for **continuous deployment**
+- Supports automated HTTPS certificates and manual uploads
+- Non-technical users can deploy apps with ease using Websoft9
+- Developers enjoy sufficient permissions and openness of Websoft9
 
-## 准备
+## Prerequisites
 
-- 若通过**域名访问**应用，需[准备域名](./domain-prepare)和[配置全局域名](./domain-set#global-domain)
+- For **domain** access application, you should [Prepare your domain](./domain-prepare) and [Set global domain for Websoft9](./domain-set#global-domain).
 
-- 若通过**端口访问**应用，需服务器的安全组入方向开放端口：9001-9999
+- For **IP:Port** access application, you need to open host machine ports (e.g 9001-9999) from **security group**.
 
 
-## 从应用商店部署模板化应用{#appstore}
+## Deploy templated app from App Store{#appstore}
 
-通过 Websoft9 **应用商店** 部署模板化的应用是最简单的部署方式，它支持 WordPress, ONLYOFFICE, Odoo, GitLab, Teamcity, AITable, MySQL, Moodle, Zentao 等 200+ 个热门应用。  
+Deploy applications easily from **Websoft9 App Store**, featuring [200+ templates](./#deployment-templates) one-click install application.
 
-1. 登录 Websoft9 控制台，[搜索 Websoft9 模板化应用](./appstore.md)
+1. Login to Websoft9 Console, and [Search templated application from App Store](./appstore.md)
 
-2. 找到目标应用后，点击应用详情 "安装" 按钮
+2. Click the target application to display application detail
 
    ![](./assets/websoft9-appstoredetail.png)
 
-3. 填写或选择安装应用所需的参数：
+3. Filing or select install parameters
 
-   - 应用名称：建议填写为可识别的英文或拼音
-   - 版本：自行选择，其中的 latest 版本可能不是稳定发行版
-   - 端口：应用的外网访问端口，需同时在安全组中放开方可生效
-   - 域名：若已提前[配置全局域名](./domain-set)此处会自动产生的子域名（可禁用），也支持额外增加域名
+   - **App Name**: It should English string not have any special characters, and it used for App ID and wildcard domain
+   - **Version**: Some application have many selection for user and you should know the `latest` may not a stable version
+   - **Port**: The port expose to your host machine and it should open at security group of your server
+   - **+ Add Doamin**：If have [Set global domain](./domain-set), here not need to add
 
    ![](./assets/websoft9-installapp-fill.png)
 
 
-4. 点击 "安装" 按钮后，系统跳转到 **我的应用** 页面
+4. Click the **Install** button to start deploy, and it will redirect to **My Apps** interface
 
-5. 等待模板应用状态由 **Installing** 变成 **Active** 状态，则说明安装成功
+5. Waiting for the application status from **Installing** becoming to **Active**, it show install completed
    ![](./assets/websoft9-myapps-active.png)
 
-## 从应用商店部署源码类应用{#runtime}
+## Deploy source from App Runtime{#runtime}
 
-Websoft9 **应用商店** 内置 Java、Python、Node.js、PHP、Go、Ruby、HTML 和 .NET 等语言环境，用于源码部署应用程序。
+Websoft9 can support deploy from source code such as Java, Python, Node.js, PHP, Go, Ruby, and .NET.   
 
-使用参考：[基于程序环境部署应用](./runtime)
+Refer to: [Deploy source from App Runtime](./runtime)
 
-## 从应用商店部署镜像类应用{#image}
+## Deploy docker image from App Runtime{#image}
 
-如果基于 Docker 镜像启动应用容器，先阅读[基本原理](./runtime/docker)，再参考如下的步骤：
+Websoft9 support deploy from Docker image, you can refer to below steps if you have read its [concepts](./runtime/docker): 
 
-1. Websoft9 **应用商店** 中进入 "运行环境" 下的 "Docker" 子类
+1. Go to the catalog **App Runtime > Docker** from Websoft9 App Store
 
-2. 安装名称为 **Docker** 的应用   
+2. Deploy the **Docker** template
    ![](./assets/websoft9-installdockertp.png)
 
-3. 填写安装参数时，务必准确填写目标应用的容器端口（后续步骤被网关转发访问）
+3. Filing or select install parameters
 
-4. 待应用运行后，通过 [Docker 个性化编排](./runtime#dockercompose) 实现个性化镜像部署
+   - Container port: It your Docker container port will expose to host machine
+   - HTTP port: It is host machine port
 
-## 手动在操作系统上部署应用{#os}
+4. When you application is running, you can [Update your deployment](./runtime#dockercompose) to replace or add your container service
 
-Websoft9 在设计的时候，充分考量了用户自主在服务器上直接部署应用的场景，建议的步骤：
+## Deploy not depend on Websoft9{#os}
 
-1. 准备好与操作系统兼容的 [安装包（制品库）](./plan-package)
+You can deploy any software packages or image not depend on Websoft9. The main steps below:  
 
-2. 编写部署脚本，部署时修正与 Websoft9 运行时产生的资源冲突
+1. Prepare your [Software packages(artifacts)](./plan-package) compatible with Linux
 
-3. 通过端口测试应用程序
+2. Check you deployment, make sure it not conflict with the following resources
 
-3. 使用 Websoft9 控制台的网关模块，为应用配置 **[Proxy 访问](./gateway-proxy)**。  
+   - port
+   - systemd service
+   - OS user
+   - container 
+
+3. Deploy application step-by-step
+
+4. Add access configuration of Nginx proxy from **[Websoft9 Gateway](./gateway-proxy)**。  
 
 
-## 问题与故障
+## Troubleshoot
 
-您在安装应用中可能会碰到各种问题，下面是常见的问题及说明：
+### Access error even if App status is Active?
 
-#### 应用显示 Active 了，但访问 URL 报错？
+**Description**: Completed the application installation and the status is active, but access URL is error  
+**Reason**: Application container is running, but the services at container is remain starting     
+**Solution**: Waiting 1-5 minutes      
 
-应用 Active 表示对应的容器已经运行，但可能容器内服务的初始化（应用的自动安装向导）还没有完成，需等待 1-5 分钟后再试
+### Can I use external db when install?
 
-#### 外网端口填写有什么建议吗？
+No, it not support now, you can only [Replace App database](./migratedb) after it running.  
 
-建议填写 9001-9999 之间的端口号，便于必要时方便管理对应的安全组。  
 
-#### 安装应用时，如何连接第三方的数据库？
+### Some installation timeout?
 
-目前不支持在安装时自定义数据库连接，但可以通过重建应用的方式实现
+This is unavoidable. Some application have large Docker image, pull image may timeout.  
 
-#### 同一个应用支持安装多个吗？
+### Can I pull image before install?
 
-支持
-
-#### 应用名称后面为什么加了一段字符？
-
-这是应用的 ID 号，避免应用冲突
-
-#### 有些应用安装过程很慢，甚至超时？
-
-安装应用时会在线拉取远程的 Docker 镜像，如何带宽太小或网络状况太差的情况下，慢或超时时正常现象。  
-
-#### 如何提前拉取应用的镜像？
-
-运行下面的命令即可提前拉取镜像，以 WordPress 为例：
+Yes, you can pull application's all images before installation. Take **wordpress** as example for your reference:  
 
 ```
-# 拷贝应用清单到服务器
-docker cp websoft9-apphub:/websoft9/library  /path/applibary
+# Copy docker compose library to host machine
+docker cp websoft9-apphub:/websoft9/library  /tmp/applibary
 
-# 查看应用名录
-ls /path/applibary
+# list all applications
+ls /tmp/applibary
 
-# cd 到应用的目录
-cd /path/applibary/wordpress
+# cd to your target application
+cd /tmp/applibary/wordpress
 
-# 拉取镜像
+# pull images
 docker compose pull 
 ```
-
-#### 容器模块支持部署应用吗？
-
-支持，但是这种部署方式有两个弊端：
-
-- 非 GitOps 模式，无法持续部署
-- 无法自动配置域名
-- Websoft9 控制台无法管理它
