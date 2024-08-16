@@ -1,9 +1,9 @@
 ---
-sidebar_position: 3.1
+sidebar_position: 3.2
 slug: /gateway-cdn
 ---
 
-# Use CDN
+# Use CDN for Web acceleration
 
 A Content Delivery Network ([CDN](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/)) is a system of distributed servers that deliver web content and other digital assets to users based on their geographic location, the origin of the webpage, and a content delivery server. CDNs are designed to improve the performance, speed, and reliability of delivering content to users globally.
 

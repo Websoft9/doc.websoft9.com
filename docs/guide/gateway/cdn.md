@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3.1
+sidebar_position: 3.2
 slug: /gateway-cdn
 ---
 

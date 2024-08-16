@@ -40,10 +40,12 @@ Websoft9 提供了两种数据库连接方式：Web 在线连接和本地客户�
 
 以 MySQL 为例，进行任务说明：
 
-1. 采用以下的方式之一，启动外部数据库允许
+1. 采用以下的方式之一，将数据库容器 3306 端口暴露到外网：
 
-   - 对包含 MySQL 的应用进行[重新编排](app-compose)，确保 MySQL 容器的 3306 端口已经映射到服务器
-   - 或基于网关进行转发
+   - [基于 Websoft9 网关进行 Streams 转发到宿主机](./gateway-proxy#stream)（推荐）
+   - [基于 SSH tunnel 进行转发到宿主机](./gateway-tunnel#ssh-port)
+   - [更新 MySQL 应用的部署](./app-compose)，在 docker-compose.yml 文件中 expose 端口到宿主机
+
 
 3. 本地客户端使用服务器的 IP 和 服务器对应的端口连接 MySQL 
 
