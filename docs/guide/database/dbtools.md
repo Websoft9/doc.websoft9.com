@@ -23,3 +23,8 @@ Websoft9 平台提供了丰富的**在线数据库工具**，支持导入导出�
 - [连接并管理数据库](./connectdb)
 - [接入外部数据库实例](./externaldb)
 
+## 免费客户端工具
+
+- [Navicat Premium Lite](https://www.navicat.com/en/products/navicat-premium-lite)
+- [DBeaver Community](https://dbeaver.io/)
+

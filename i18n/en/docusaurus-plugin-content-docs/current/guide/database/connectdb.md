@@ -40,7 +40,8 @@ Popular [database management tools](./apps/#databases) in different database pro
 
 The application database of Websoft9 not allowed from Internet access by default, if you want to use local client to connect it, you should enable the database to be accessed from Internet.  
 
-There two methods for you to enable database Internet access
+There one of below methods for you to expose database port for Internet access:
 
-- Add [TCP Proxy](./gateway-proxy#stream) for database
+- Add [TCP Proxy at Websoft9 Gateway](./gateway-proxy#stream) for database
+- Add [SSH tunnel proxy at host machine](./gateway-proxy#stream) for database
 - [Update the application deployment](./app-compose), expose the database container port to host machine

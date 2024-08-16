@@ -23,3 +23,9 @@ Websoft9 platform provides a wealth of **Online database management tools** that
 - [Connect and manage database](./connectdb)
 - [Integrate external database instances](./externaldb)
 
+## Free client tools
+
+- [Navicat Premium Lite](https://www.navicat.com/en/products/navicat-premium-lite)
+- [DBeaver Community](https://dbeaver.io/)
+
+
