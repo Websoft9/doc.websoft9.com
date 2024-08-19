@@ -27,7 +27,7 @@ import Meta from './_include/rocketchat.md';
 
 ## 配置选项{#configs}
 
-- SMTP（✅）：控制台 "管理" > "Workspace" > "设置" > "电子邮箱" > "SMTP"
+- SMTP（✅）：控制台 **管理 > Workspace > 设置 > 电子邮箱 > SMTP**
 
 ## 管理维护{#administrator}
 

@@ -3,65 +3,63 @@ sidebar_position: 1.0
 slug: /production-deploy
 ---
 
-# Production deployment plan
+# Tutorial: Production deploy
 
-Websoft9 多应用托管平台，是一个面向生产的企业级的系统，即每个托管的应用都符合**生产级的部署方法**。
+Websoft9 is a enterprise-grade, production-level deployment platform for each hosted app.  
 
-## 关于
+At this chapter, we introduce plan for production-level deployments by Websoft9.  
 
-在生产级部署中，仅仅让应用运行起来是远远不够的。   
+## Key points for production
 
-它涉及到一系列更深入的考量，确保部署过程和运行效果都能达到企业级标准。以下是几个关键点：
+In production deployment, merely running the application isn't enough. It involves deeper considerations to meet enterprise standards that includes:  
 
-1. **最大化基础设施性能**：确保应用充分利用可用的硬件和网络资源，以获得最佳性能。
+1. **Maximize infrastructure performance**: Ensure optimal use of hardware and network resources.
 
-2. **提高部署效率**：通过自动化和精细化的流程管理，减少部署过程中的错误，并缩短部署时间。
+2. **Increase deployment efficiency**: Use automation and detailed process management to reduce errors and time.
 
-3. **持续优化与迭代**：部署后不断监控应用表现，并基于反馈进行优化，支持无缝的更新和再部署，以适应不断变化的需求和环境。
+3. **Continuous optimization**: Monitor performance, optimize based on feedback, and support seamless updates.
 
-4. **安全性和可靠性**：确保所有的访问都是安全的，有防止数据泄露或未授权访问的措施，同时确保应用的高可用性和故障恢复能力。
+4. **Security and reliability**: Ensure secure access, prevent data breaches, and maintain high availability.
 
-通过这些综合措施，生产级部署能够保证应用不仅仅是在线，而且是高效、安全、可靠地服务于用户和业务需求。
+These measures ensure the application is not only online but also efficient, secure, and reliable for users and business needs.
 
-## 准备云设施
+## Step 1: Prepare infrastructure
 
-使用 Websoft9 托管现代化的企业级云原生应用，需要一套完整、可靠且高效的基础设施作为支撑。
+Using Websoft9 to host modern enterprise cloud-native apps requires a robust infrastructure.  
 
-- [准备可用的域名](./domain-prepare)
-- [规划整体基础设施](./design-infrastructure)
-- [规划带宽和流量](./brandwith-infra)
-- [扩充或优化存储](./storage)
+- [Prepare domain](./domain-prepare)
+- [Plan your infrastructure](./design-infrastructure)
+- [Plan network brandwith and traffic](./brandwith-infra)
+- [Extend and optimize storage](./storage)
 
 
-## 准备安装包
+## Step 2: Prepare software packages
 
-准备安装包是部署工作至关重要的一步，不应被视作简单的前置任务。   
+Preparing installation packages is crucial and shouldn't be seen as a simple task. This involves careful consideration of format, retrieval, and automated compilation strategies.  
 
-这一过程是独立而系统的，需要细致考虑安装包的格式、获取方式，以及实现安装包自动化编译的策略。
+- [Prepare your artifacts package for installation](./plan-package)
+- [Search templated application from Websoft9 App Store](./appstore)
 
-- [准备安装所需的软件包](./plan-package)
-- [搜索 Websoft9 模板化应用](./appstore)
+## Step 3: Deploy application
 
-## 部署应用
+Websoft9 enables users to use declarative infrastructure-as-code for deploying applications.  
 
-在 Websoft9 托管平台上，用户针对任何类型的安装包都能享受到最高效的部署体验。
+- [Deploy from Websoft9 App Store](./deployment)
+- [Use Git for automatic deployment](./plan-git)
 
-- [使用 Git 管理自动化部署](./plan-git)
-- [使用 Websoft9 部署应用](./deployment)
+## Step 4: Public application
 
-## 发布应用
+Websoft9 have a security module ensuring application availability and access at Internet.
 
-Websoft9 托管平台提供了一个专门的安全和访问控制模块，旨在保障应用的高可用性，确保应用发布的安全性和连续性。
+- [Set domain for application](./domain-set)
+- [Set HTTPS for application](./domain-https)
+- [Set CDN for access Acceleration](./gateway-cdn)
 
-- [设置应用的域名](./domain-set)
-- [设置应用的 HTTPS 访问](./domain-https)
-- [使用 CDN 实现全球加速](./gateway-cdn)
+## Step 5: Continuous optimization
 
-## 持续优化
+Websoft9 platform supports continuous deployment and optimization for running applications. 
 
-Websoft9 托管平台提供了一整套完善的机制，支持应用的持续部署和持续优化过程。
-
-- [设置 Docker 服务端](./docker-server)
-- [应用自主配置与编排](./app-compose)
-- [监控应用的运行情况](./monitor)
+- [Set your Docker](./docker-server)
+- [Customized configs and update deployment](./app-compose)
+- [Monitor the application](./monitor)
 

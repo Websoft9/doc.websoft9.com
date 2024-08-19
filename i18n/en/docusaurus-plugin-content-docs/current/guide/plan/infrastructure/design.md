@@ -3,92 +3,99 @@ sidebar_position: 1.0
 slug: /design-infrastructure
 ---
 
-# 规划整体基础设施
+# Plan overall infrastructure
 
-使用 Websoft9 托管现代化的企业级云原生应用，需要一套完整、可靠且高效的基础设施作为支撑。  
+Hosting modern, enterprise-grade, cloud-native applications with Websoft9 requires a complete, reliable and efficient infrastructure to support it.  
 
-以下是建立这样一个基础设施时需要考虑的关键组件。
+Here are the key components to consider when building such an infrastructure. 
 
-## 云类型
+## Cloud type
 
-Websoft9 支持在公有云、私有云或混合云上部署，但选择哪种云，应考虑组织的业务、合规和成本需求：
+Websoft9 supports deployment on public, private, or hybrid clouds, but choosing the right cloud depends on an organization's business, compliance, and cost requirements:
 
-- **公有云**：由专业的第三方服务商提供的云资源，适合需要快速部署和动态伸缩资源的应用。
-  - **成本效益**：通常采用按需付费模式，可以根据实际使用来优化成本。
-  - **全球部署**：能够在全球范围内部署服务，接近用户以减少延迟。
-  - **创新服务**：常有最新的云服务和技术可用。
+- **Public Cloud**: Cloud resources provided by professional third-party service providers
 
-- **私有云**：组织自建的数据中心或电信托管，满足特定的安全性、合规性或性能需求：
-  - **控制**：完全控制你的基础设施，包括硬件和软件。
-  - **按需定制**：可以根据具体需求定制环境，包括性能优化和安全性增强。
-  - **隐私保护**：数据保留在组织的控制范围内，有助于满足特定的隐私要求。
+  - **Cost Efficiency**: Typically uses a pay-as-you-go model, allowing cost optimization based on actual usage.
+  - **Global Deployment**: Enables service deployment worldwide, reducing latency by being closer to users.
+  - **Innovative Services**: Often offers the latest cloud services and technologies.
 
-- **混合云**：结合公有云和私有云的优势，允许数据和应用程序在两者之间流动：
-  - **灵活性**：根据需求将工作负载安排到最适合的环境。
-  - **成本优化**：对不同的工作负载选择最成本效益的云环境。
-  - **业务连续性**：通过在不同云环境之间分配资源，增强灾难恢复能力。
+- **Private Cloud**: Self-built data centers or telecom-hosted solutions
 
-## 云服务器
+  - **Control**: Complete control over your infrastructure, including hardware and software.
+  - **Customization**: Metting specific needs, including performance optimization and enhanced security.
+  - **Privacy Protection**: Data remains within the organization’s control, helping to meet specific privacy requirements.
 
-云服务器是应用托管的直接运行基础，你需要考虑以下因素：
+- **Hybrid Cloud**: Combines the advantages of public and private clouds
 
-- 性能规格：根据应用的性能需求，选择适当的 [CPU 和内存规格](./install/requirements#server)，预算有限时优先保障内存
-- 地域选择：理论上服务器区域尽量在物理位置上与客户地域相近
-- 可伸缩性：确保服务器可以根据应用负载自动或手动地伸缩。
-- 操作系统：选择支持你的应用程序的操作系统，如 Linux。
-- 兼容性：确保服务器支持容器化技术，如 Docker，以及容器编排工具，如 Docker Compose, k8s
-- 可用性：选择支持高可用性的云服务，以减少停机时间。
-- CPU 架构：确保应用支持常用的 CPU 架构，如 x86-64, ARM 32/64, x86/i686 等
-- 私有云虚拟化技术：私有云架构中，选择 KVM, VMware, VirtualBox, OpenStack 等主流虚拟化架构
+  - **Flexibility**: Allocates workloads to the most suitable environment based on needs.
+  - **Cost Optimization**: Selects the most cost-effective cloud environment for different workloads.
+  - **Business Continuity**: Enhances disaster recovery capabilities across different cloud environments.
+
+## Visual machine options
+
+Visual machine servers are the foundation for hosting applications. Consider these factors: 
+
+- **Performance specs:** Choose appropriate [CPU and memory](./install/requirements#server) based on performance needs.
+
+- **Region selection:** Server regions should be close to customer locations.
+
+- **Scalability:** Ensure servers can scale automatically or manually based on load.
+
+- **Operating system:** Choose an OS that supports your application, like Linux.
+
+- **Compatibility:** Ensure servers support containerization, like Docker and orchestration tools.
+
+- **Availability:** Choose cloud services that support high availability to reduce downtime.
+
+- **CPU architecture:** Ensure applications support common CPU architectures, like x86-64, ARM.
+
+- **Private cloud virtualization:** Choose KVM, VMware, VirtualBox, OpenStack for private cloud.
 
 
-## 快照备份
+## Snapshot for backup
 
-定期的快照备份可以防止数据丢失，并允许快速恢复到一个已知的良好状态。
+Regular snapshots prevent data loss and allow quick recovery to a known good state.
 
-- 自动化备份：设置自动备份策略，以定期创建系统和数据的快照。
-- 备份策略：根据业务需求制定备份频率和保留策略。
-- 恢复测试：定期进行恢复测试，确保备份是有效的。
+- **Automated backups**: Set up automated backup policies for regular snapshots of systems and data.
+- **Backup strategy**: Develop backup frequency and retention policies based on business needs.
+- **Recovery testing**: Regularly perform recovery tests to ensure backups are effective.
 
-## 网络
+## Network
 
-网络是云原生应用的核心，需确保网络的安全性、可靠性和性能。
+Network is the core of cloud-native applications, ensuring security, reliability, and performance.
 
-- 组网：设计一个适合应用架构的网络拓扑，包括子网划分和网络隔离。
-- 安全组：配置安全组以限制不必要的入口和出口流量，增强安全性。
-- CDN：使用内容分发网络（CDN）来缩短用户和服务之间的距离，提升访问速度和用户体验。
-- 负载均衡：部署负载均衡器以分散流量，确保服务的高可用性和可伸缩性。
-- 带宽：[选择足够的带宽](brandwith-infra)可以大幅度提升托管的成绩
+- **Networking:** Design a suitable network topology, including subnet division and isolation.
+- **Security Groups:** Configure security groups to restrict unnecessary inbound and outbound traffic.
+- **CDN:** Use a Content Delivery Network (CDN) to reduce distance between users and services.
+- **Load Balancing:** Deploy load balancers to distribute traffic, ensuring high availability and scalability.
+- **Bandwidth:** Choose sufficient [bandwidth](./brandwith-infra) to significantly improve hosting performance.
 
-## 磁盘与存储
+## Disk and storage
 
-根据所托管的应用对的存储需求，选择适合的磁盘和存储解决方案：
+Choose suitable disk and storage solutions based on application [storage needs](./storage):
 
-- 持久存储：对于需要持久化的数据，选择支持持久卷的存储服务。
-- 性能：根据需要选择不同的存储类型，如 SSD 用于高 IOPS 需求。
-- [扩容优化](./storage)：提前规划磁盘容量和存储方式可能的变化。
+- **Persistent Storage:** For persistent data, choose storage services supporting persistent volumes.
+- **Performance:** Select different storage types based on needs, like SSD for high IOPS.
+- **Scaling Optimization:** Plan disk capacity and storage changes in advance.
 
 ## API
 
-自动化可以提高应用托管的效率，而自动化的基础是通过 API 管理基础设施
+Automation boosts hosting efficiency, and it's based on API-managed infrastructure.
 
-## 域名
+## Domain Name
 
-域名是用户访问云原生应用的入口：
+Domains make it easier for users to access websites without needing to remember numerical IP addresses.
 
-- [准备可用的域名](./domains)：选择一个易于记忆且相关的域名，并进行注册、认证和备案
-- [设置应用的域名](./domain-set#wildcard)：域名解析并绑定到 Websoft9 控制台
+- [Prepare your domain](./domains)
+- [Set global domain for Websoft9](./domain-set#wildcard)
 
+## Security and compliance
 
-## 安全与合规性
+Infrastructure security is crucial for application hosting:
 
-在所有这些基础设施组件上，安全性是不可或缺的。
+- **Identity and Access Management (IAM)**: Ensure only authorized users access resources.
+- **Encryption**: Implement encryption for data in transit and at rest.
+- **Monitoring and Logging**: Track performance and security events; retain logs for audits.
+- **Compliance**: Adhere to industry standards and regulations like GDPR, HIPAA, etc.
 
-- **身份和访问管理**（IAM）：确保只有授权用户才能访问资源。
-- **加密**：在传输和静态数据上实施加密，保护敏感信息。
-- **监控和日志**：实施监控系统来跟踪性能和安全事件，并保留日志以供审计。
-- **合规性**：遵守行业标准和法规要求，如GDPR、HIPAA等。
-
-通过仔细规划和实施上述基础设施组件，你可以为你的 Websoft9 云原生应用打下一个坚实的基础。   
-
-这不仅有助于确保应用的平稳运行，还可以提升用户体验，最终推动业务成功。
+By carefully planning and implementing the above infrastructure services, you can build a solid foundation for your Websoft9 platform. This will ensure the smooth running of your application and also enhance the user experience and ultimately drive business success.  
