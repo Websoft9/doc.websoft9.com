@@ -1,4 +1,4 @@
-[PostgREST](https://postgrest.org) 是一个 **将 PostgreSQL 转换成 RESTful API 的中间件**，它被用于 SQL 数据库/关系数据库 数据库管理工具 后端即服务  等场景。PostgREST 是一个独立的 Web 服务器，可将您的 PostgreSQL 数据库直接转换为 RESTful API。数据库中的结构约束和权限决定了 API 端点和操作。
+[PostgREST](https://postgrest.org) 是一个 **将 PostgreSQL 转换成 RESTful API 的中间件**，它被用于 SQL 数据库/关系数据库 数据库工具 后端即服务  等场景。PostgREST 是一个独立的 Web 服务器，可将您的 PostgreSQL 数据库直接转换为 RESTful API。数据库中的结构约束和权限决定了 API 端点和操作。
 
 
 ![gui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/postgrest/postgrest-gui-websoft9.png)

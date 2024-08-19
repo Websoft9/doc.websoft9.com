@@ -33,7 +33,7 @@ Websoft9 平台可以一键部署任意数量的 WordPress：
 
 1. 登录 [Websoft9 控制台](./login-console)，进入 **应用商店** 窗口
 
-2. 搜索 "wordpress" 关键词，找到 WordPress 并选择安装
+2. 搜索 **wordpress** 关键词，找到 WordPress 并选择安装
    ![](./assets/install-wordpress-websoft9.png)
 
 3. 等待 1-2 分钟，直至 WordPress 安装成功

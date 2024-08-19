@@ -68,7 +68,7 @@ slug: /iaas-alibabacloud
 
 1. 打开阿里云 [API 调试器](https://next.api.aliyun.com/api/Market/2015-11-01/DescribeProducts?lang=JAVA)
 
-2. 其中 **SearchTerm** 填写“长沙网久软件有限公司。筛选项：key=productType, vaule=MIRROR；
+2. 其中 **SearchTerm** 填写“长沙网久软件有限公司”。筛选项：key=productType, vaule=MIRROR；
 
 3. 运行 API 后生产所需的数据，
 

@@ -24,9 +24,9 @@ Websoft9 控制台的网关模块中支持**可视化的 HTTPS 设置**，支持
 
 1. 登录 Websoft9 控制台，进入**网关**管理界面
 
-2. 打开 "Hosts" > "Proxy Hosts" 菜单后，列出所有应用代理记录
+2. 打开 **Hosts** > **Proxy Hosts** 菜单后，列出所有应用代理记录
 
-3. 编辑目前应用的记录，进入 "SSL" 标签页，开始设置 HTTPS
+3. 编辑目前应用的记录，进入 **SSL** 标签页，开始设置 HTTPS
 
    - SSL Certificate：选择一个[已上传的证书](#upload) 或 Request a new SSL Certificate（推荐）
    - Force SSL：是否强制 HTTP 转向到 HTTPS
@@ -34,7 +34,7 @@ Websoft9 控制台的网关模块中支持**可视化的 HTTPS 设置**，支持
 
    ![](./assets/websoft9-gateway-setautohttps.png)
 
-4. 点击 "Save" 后，开始自动配置 HTTPS
+4. 点击 **Save** 后，开始自动配置 HTTPS
 
 5. 若配置失败（在线申请证书可能会不成功），请检查邮箱可用性后再尝试一次
 
@@ -75,9 +75,9 @@ HTTPS 是不支持中文域名的，如果需要给中文域名配置 HTTPS，�
 
 Websoft9 的网关采用先上传证书，再绑定到 Proxy Host 的这种模式：
 
-1. 登录 Websoft9 控制台，进入网关管理界面的 "SSL Certificates" 栏目
+1. 登录 Websoft9 控制台，进入网关管理界面的 **SSL Certificates** 栏目
 
-2. 点击右上角 "Add SSL Certificate" > "Custom"，打开上传证书界面
+2. 点击右上角 **Add SSL Certificate** > **Custom**，打开上传证书界面
    ![](./assets/websoft9-gateway-addcustomssl.png)
 
 3. 上传证书，并检验是否上传成功
@@ -88,7 +88,7 @@ Websoft9 的网关采用先上传证书，再绑定到 Proxy Host 的这种模�
 
 1. 登录 Websoft9 控制台，进入网关功能项
 
-2. 编辑目标应用的 "Proxy Host", "SSL" 标签页中勾选 **Force SSL** 即可
+2. 编辑目标应用的 **Proxy Host**, **SSL** 标签页中勾选 **Force SSL** 即可
 
 ### 证书申请失败自检指南
 
@@ -111,13 +111,13 @@ Websoft9 的网关采用先上传证书，再绑定到 Proxy Host 的这种模�
 
 下面的步骤介绍如何判断解析不可信：  
 
-1. 登录 Websoft9 控制台，进入网关管理界面的 "SSL Certificates" 栏目
+1. 登录 Websoft9 控制台，进入网关管理界面的 **SSL Certificates** 栏目
 
-2. 点击右上角 "Add SSL Certificate" > "Let's Encrypt"，进入 "Add Let's Encrypt Certificate" 窗口
+2. 点击右上角 **Add SSL Certificate** > **Let's Encrypt**，进入 **Add Let's Encrypt Certificate** 窗口
 
-3. 输入域名，点击 "Test Server Reachability" 按钮
+3. 输入域名，点击 **Test Server Reachability** 按钮
 
-4. 当检测结果包含 "...Invalid domain or IP."，意味着域名被判断为不可信
+4. 当检测结果包含 **...Invalid domain or IP.**，意味着域名被判断为不可信
 
 ## 问题与故障
 
@@ -132,7 +132,7 @@ Websoft9 的网关采用先上传证书，再绑定到 Proxy Host 的这种模�
 
 #### 连接并非完全安全？
 
-问题描述：HTTPS 设置成功，仍显示“与此网站建立的连接并非完全安全”  
+问题描述：HTTPS 设置成功，仍显示“与此网站建立的连接并非完全安全”      
 原因分析：网站中存在 HTTP 访问的内部或外部资源  
 解决方案：逐一消除 HTTP 资源
 

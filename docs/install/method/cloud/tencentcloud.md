@@ -26,10 +26,6 @@ Websoft9 腾讯云 提供了[预制镜像](https://market.cloud.tencent.com/stor
 - 身份验证：密钥对
 
 
-## 安装
-
-一旦您注册了腾讯云的账号，您可以通过如下多种方式安装我们的产品：
-
 ## 安装 Websoft9
 
 一旦您注册了腾讯云的账号，您可以通过如下多种方式安装我们的产品：
@@ -38,7 +34,7 @@ Websoft9 腾讯云 提供了[预制镜像](https://market.cloud.tencent.com/stor
 
 1. 注册[成为 Websoft9 客户](https://partner.cloud.tencent.com/invitation/3121935004586f183f365f5)，再访问 [Websoft9 云市场店铺](https://market.cloud.tencent.com/stores/1252192180)，找到所需安装的商品
 
-2. 进入产品详情页后点击 "立即购买" 按钮
+2. 进入产品详情页后点击 **立即购买** 按钮
 
 3. 根据向导提示，完成服务器购买过程，包括：选择计费方式、实例类型、网络和安全组等设置
 
@@ -52,7 +48,7 @@ Websoft9 腾讯云 提供了[预制镜像](https://market.cloud.tencent.com/stor
 1. 腾讯云控制台，进入 CVM 管理界面
 
    - 购买 CVM
-   - 或对目标 CVM 进行 "切换操作系统" 操作
+   - 或对目标 CVM 进行 **切换操作系统** 操作
 
 2. 在镜像来源设置中，选择 **镜像市场**
 

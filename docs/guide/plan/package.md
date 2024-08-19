@@ -49,6 +49,6 @@ slug: /plan-package
 
 所以 Git 仓库可以当做制品库使用，反之则不行。     
 
-主流的 Git 仓库软件平台，例如：GitLab, Gitea, GitLab 都提供了制品库的功能。  
+主流的 Git 仓库软件平台，例如：GitLab, Gitea都提供了制品库的功能。  
 
 使用 Websoft9 托管平台过程中，可能会需要将 Git 仓库当做制品库：[手动创建 Git 仓库以存储软件包](./plan-git#create)

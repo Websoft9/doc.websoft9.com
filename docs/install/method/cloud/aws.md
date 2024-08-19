@@ -33,7 +33,7 @@ Websoft9 在 AWS 提供了预制[云市场镜像](https://aws.amazon.com/marketp
 
 1. 访问 Websoft9 在 [AWS Marketplace 上的镜像商品](https://aws.amazon.com/marketplace/pp/prodview-5jziwpvx4puq4) 
 
-2. 打开商品详情，点击 "Continue to Subscribe" 开始订阅
+2. 打开商品详情，点击 **Continue to Subscribe** 开始订阅
    ![开始订阅镜像](./assets/aws-rs-websoft9.png)
 
 3. 根据提示，逐渐完成后续步骤，直至 **Launch** 
@@ -53,7 +53,7 @@ Websoft9 在 AWS 提供了预制[云市场镜像](https://aws.amazon.com/marketp
 
 1. 登录到 AWS 管理控制台，开始创建一个 EC2 实例
 
-2. 在 "应用程序和操作系统映像" 选项中，通过 "浏览其他 AMI" 进入镜像列表页
+2. 在 **应用程序和操作系统映像** 选项中，通过 **浏览其他 AMI** 进入镜像列表页
 
 3. 在 "AWS Marketplace AMI" 标签栏搜索 **Websoft9 Applications Hosting Platform**，列出 Websoft9 所有产品
 

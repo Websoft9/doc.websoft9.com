@@ -42,7 +42,7 @@ Odoo 服务器有一个 kswapd0 进程占用大量 23.8% 的 CPU，kswapd0 就�
 
 ### MySQL 数据表拒绝更新？
 
-问题描述：访问任何页面，会报错 *UPDATE command denied to user 'hdm0660298'@'120.26.227.117' for table 'joelctgs_ecms_news' update ***_ecms_news set onclick=onclick+1 where id='125529' limit 1*。报错的信息转换成通俗描述即 **joelctgs_ecms_news 无法更新**
+问题描述：访问任何页面，会报错 **UPDATE command denied to user 'hdm0660298'@'120.26.227.117' for table 'joelctgs_ecms_news' update** **_ecms_news set onclick=onclick+1 where id='125529' limit 1**。报错的信息转换成通俗描述即 **joelctgs_ecms_news 无法更新**
 
 推理过程：  
 

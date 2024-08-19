@@ -30,9 +30,9 @@ Websoft9 网关模块基于 Nginx HTTP Basic Authentication 和  Nginx HTTP Acce
 
 Websoft9 的网关具备为此类应用设置密码或白名单访问，具体步骤如下：
 
-1. Websoft9 控制台进入 "网关" 功能模块，打开："Access Lists" 设置项
+1. Websoft9 控制台进入 **网关** 功能模块，打开：**Access Lists** 设置项
 
-2. 点击 "New Access List"，新增一个访问控制项
+2. 点击 **New Access List**，新增一个访问控制项
 
    - Details: 输入英文名称
    - Authorization：输入账号密码
@@ -44,9 +44,9 @@ Websoft9 的网关具备为此类应用设置密码或白名单访问，具体�
 
 ## 启用 Proxy Host 的访问控制
 
-1. Websoft9 控制台进入 "网关" 功能模块，编辑目标 "Proxy Host"
+1. Websoft9 控制台进入 **网关** 功能模块，编辑目标 **Proxy Host**
 
-2. 在 "Details" 标签页中，为 "Access List" 选择一个已经配置的选项
+2. 在 **Details** 标签页中，为 **Access List** 选择一个已经配置的选项
    ![设置 Access](./assets/websoft9-gateway-setaccess.png)
 
 ## 问题

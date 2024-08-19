@@ -1,4 +1,4 @@
-[Eclipse Mosquitto](https://mosquitto.org/) 是一个 **物联网消息队列平台**，它被用于 MQTT 消息队列  等场景。Eclipse Mosquitto is an open source implementation of a server for versions 5, 3.1.1, and 3.1 of the MQTT protocol.
+[Eclipse Mosquitto](https://mosquitto.org/) 是一个 **物联网消息队列平台**，它被用于 MQTT 消息队列  等场景。Eclipse Mosquitto 是 MQTT 协议第 5、3.1.1 和 3.1 版服务器的开源实现。
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mosquitto/mosquitto-gui-websoft9.png)

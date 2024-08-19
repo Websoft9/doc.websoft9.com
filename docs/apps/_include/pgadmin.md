@@ -1,4 +1,4 @@
-[pgAdmin](https://www.pgadmin.org/) 是一个 **Web 图形化 PostgreSQL 数据库管理工具**，它被用于 数据库管理工具  等场景。pgAdmin 官方出品具有 Web 界面的 PostgreSQL 数据库管理和开发平台。
+[pgAdmin](https://www.pgadmin.org/) 是一个 **Web 图形化 PostgreSQL 数据库管理工具**，它被用于 数据库工具  等场景。pgAdmin 官方出品具有 Web 界面的 PostgreSQL 数据库管理和开发平台。
 
 
 ![gui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/postgresql/pgadmin4-websoft9.png)
