@@ -9,25 +9,25 @@ slug: /automation-it
 
 ## 条件
 
-- n8n 控制台，"Credentials" 页面中新增目标服务器的 SSH 连接账号
+- n8n 控制台，**Credentials** 页面中新增目标服务器的 SSH 连接账号
 - 向目标服务器上传命令脚本（非必须）
 
 ## 创建服务器工作流{#server}
 
 1. 登录到 n8n 控制台，新建一个 Workflow
 
-2. 在 **Add first step** 时，选择 "On a schedule" 作为任务的时间周期设置
+2. 在 **Add first step** 时，选择 **On a schedule** 作为任务的时间周期设置
 
 3. 接下来选择 **ssh** 作为工作流任务模板
    ![](./assets/websoft9-n8n-addssh.png)
 
-4. Action 处选择 "Execute a command"
+4. Action 处选择 **Execute a command**
 
-5. 接下来选择模板服务器的 "credential"
+5. 接下来选择模板服务器的 **credential**
 
 6. 设置所需运行的命令，例如：`ls`
 
-7. 点击 "Test workflow" 验证任务
+7. 点击 **Test workflow** 验证任务
 
 ## 创建容器工作流{#container}
 
