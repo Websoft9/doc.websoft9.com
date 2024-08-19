@@ -6,16 +6,28 @@ This is the documentation repository of [Websoft9](https://github.com/Websoft9/w
 
 It based on [Docusaurus](https://docusaurus.io/) and you just need to edit markdown files for it.
 
-### DevOps
+### DevOps workflow
 
-- You can only add PR to **dev branch**, don't accept any PR for main branch
-- Automatic actions
-  - broken links check
-  - grammar and spell check
-  - npm run test
+- You can only add PR to **dev branch**, owner don't accept any PR for **main branch**
+
+- Automation for dev
+
+  | Task/Stage                     | Submit PR | Merge PR |
+  | ------------------------------ | --------- | -------- |
+  | Grammarly and Spell check      | √         |          |
+  | Broken links check             | √         | √        |
+  | Checking for i18n file matches | √         |          |
+  | npm run                        | √         |          |
+
+- Mannual actions for dev
+
   - build and deploy
-  - i18n have the same directory and files
-  - create head files and 
+  - create head files, applist files and other format file
+
+- Automation for main
+
+  - Broken links check
+  - Build and publish
 
 ### i18n
 
