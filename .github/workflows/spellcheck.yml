@@ -13,7 +13,7 @@ jobs:
     - uses: rojopolis/spellcheck-github-actions@0.41.0
       name: Spellcheck
       with:
-        source_files: i18n/en/docusaurus-plugin-content-docs/current/*
+        source_files: i18n/en/docusaurus-plugin-content-docs/current/**/*.md
         task_name: Markdown
         output_file: spellcheck-output.txt
     - uses: actions/upload-artifact@v3
