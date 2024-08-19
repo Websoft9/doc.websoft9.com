@@ -43,7 +43,7 @@ Websoft9 反向代理服务的工作流程如下：
 
 ### 快速创建 HTTP 转发（绑定域名）{#create}
 
-1. 进入 Websoft9 控制台 **网关** 模块，依次打开菜单： > **Hosts** > **Proxy Hosts**
+1. 进入 Websoft9 控制台 **网关** 模块，依次打开菜单： > **Hosts > Proxy Hosts**
 
 2. 点击 **Add Proxy Host**，新建 HTTP 转发
 
@@ -136,5 +136,5 @@ Docker 服务默认会创建一个 docker0 网桥（其上有一个 docker0 内�
 有两种查看 docker0 网桥地址的方法：
 
 - 服务器中运行 `docker network inspect bridge | grep Gateway` 查看
-- 打开 Websoft9 控制台，通过：**容器**>**Networks**，查看 websoft9 网络的 IPV4 Gateway
+- 打开 Websoft9 控制台，通过：**容器 > Networks**，查看 websoft9 网络的 IPV4 Gateway
   ![](./assets/websoft9-container-gateway.png)

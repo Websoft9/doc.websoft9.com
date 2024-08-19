@@ -33,7 +33,7 @@ Websoft9 在 AWS 提供了预制[云市场镜像](https://aws.amazon.com/marketp
 
 1. 访问 Websoft9 在 [AWS Marketplace 上的镜像商品](https://aws.amazon.com/marketplace/pp/prodview-5jziwpvx4puq4) 
 
-2. 找到所需的产品，点击 **Continue to Subscribe** 开始订阅
+2. 打开商品详情，点击 **Continue to Subscribe** 开始订阅
    ![开始订阅镜像](./assets/aws-rs-websoft9.png)
 
 3. 根据提示，逐渐完成后续步骤，直至 **Launch** 

@@ -56,7 +56,7 @@ Websoft9 在阿里云和 Alibaba Cloud 都提供了预制镜像，用户可以�
 2. 在镜像来源设置中，选择：镜像市场 > 从镜像市场获取更多选择（含操作系统）
    ![更换系统盘](./assets/aliyun-ecsbuy-mkimage-websoft9.png)
 
-3. 然后搜索关键件词 **websoft9 托管平台**，选择对应的镜像
+3. 然后搜索关键件词 “websoft9 托管平台”，选择对应的镜像
    ![选择Websoft9镜像](./assets/aliyun-ecsbuy-mkselect-websoft9.png)
 
 4. 根据向导提示，完成服务器购买过程，包括：选择计费方式、实例类型、网络和安全组等设置
