@@ -9,7 +9,7 @@ Vulnerability Scanning is an automated process that identifies security weakness
 
 ## Files and system scanning tools
 
-You can install [ClamAV](./clamav), [Trivi](./trivy), [Kaspersky](./kaspersky),[Checkov](./Checkov) by Websoft9 App Store for your vulnerability scanning in server.  
+You can install [ClamAV](../../clamav), [Trivi](../../trivy), [Kaspersky](../../kaspersky),[Checkov](../../Checkov) by Websoft9 App Store for your vulnerability scanning in server.  
 
 ## Website online scanning tools
 

@@ -48,7 +48,7 @@ Tencent Cloud Console can set [security group](https://support.huaweicloud.com/i
 
 ## Related HUAWEICLOUD docs
 
-- [Depyloy Websoft9 at Tencent Cloud](./install/tencentcloud)
+- [Depyloy Websoft9 at Tencent Cloud](./install-tencentcloud)
 - [Tencent Cloud CVM](https://www.tencentcloud.com/document/product/213)
 - [Tencent Cloud CLI](https://www.tencentcloud.com/document/product/1013/33463)
 - [ICP Filing](https://www.tencentcloud.com/document/product/363/46921)

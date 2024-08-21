@@ -58,7 +58,7 @@ Alibaba Cloud Console can set security group by: **ECS Dashboard > Network and S
 
 ## Related Alibaba Cloud docs
 
-- [Deploy Websoft9 at Alibaba Cloud](./install/alibabacloud)
+- [Deploy Websoft9 at Alibaba Cloud](./install-alibabacloud)
 - [ECS docs](https://www.alibabacloud.com/help/en/ecs/)
 - [CLI docs](https://www.alibabacloud.com/help/en/cli/)
 - [China ICP](https://www.alibabacloud.com/help/en/china-gateway-program)

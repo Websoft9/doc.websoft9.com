@@ -64,7 +64,7 @@ Refer to: [Deploy source from App Runtime](./runtime)
 
 ## Deploy docker image from App Runtime{#image}
 
-Websoft9 support deploy from Docker image, you can refer to below steps if you have read its [concepts](./runtime/docker): 
+Websoft9 support deploy from Docker image, you can refer to below steps if you have read its [concepts](./docker): 
 
 1. Go to the catalog **App Runtime > Docker** from Websoft9 App Store
 

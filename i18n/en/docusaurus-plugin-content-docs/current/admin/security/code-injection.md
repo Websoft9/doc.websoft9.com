@@ -23,7 +23,7 @@ Although have different types of Code injections, the standard process for diagn
 
 1. Use online check tool [sitecheck.sucuri.net](https://sitecheck.sucuri.net/) to check your webiste
 
-2. Use [ClamAV](./clamav) for a total [vulnerability scanning](./security-scan)
+2. Use [ClamAV](./clamav) for a total [vulnerability scanning](./admin/security/security-scan)
 
 3. Use [Datalog](https://www.datadoghq.com/) or [Cloudcare](https://www.cloudcare.cn/) for monitoring your website
 

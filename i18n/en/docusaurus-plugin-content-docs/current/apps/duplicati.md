@@ -21,7 +21,7 @@ import Meta from './_include/duplicati.md';
 
 ### Backup guide
 
-Refer to: [Websoft9 Backup](./backup/websoft9)
+Refer to: [Websoft9 Backup](./backup-websoft9)
 
 ## Configuration options{#configs}
 

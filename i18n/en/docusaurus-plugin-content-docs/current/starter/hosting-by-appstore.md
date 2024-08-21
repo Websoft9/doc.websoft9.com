@@ -49,7 +49,7 @@ After deployment application from **App Store**, get the applicaiton's overview,
 
 ![](./assets/websoft9-myapps-list.png)
 
-In addition, [Websoft9 gateway](./Gateway), provides domain binding, HTTPS setting, access and control services for applications.   
+In addition, [Websoft9 gateway](./gateway), provides domain binding, HTTPS setting, access and control services for applications.   
 
 ![](./assets/websoft9-gateway.png)
 
