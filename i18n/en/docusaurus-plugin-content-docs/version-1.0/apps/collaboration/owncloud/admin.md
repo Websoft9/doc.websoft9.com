@@ -70,7 +70,7 @@ Yes, includes: Nextcloud Desktop Client, Nextcloud Android App, Nextcloud iOS Ap
 
 #### How can OwnCloud view & edit file online?
 
-You should complete the [OnlyOffice setting](../OwnCloud/solution#onlyoffice) on your Nextcloud.
+You should complete the [OnlyOffice setting](../owncloud/solution#onlyoffice) on your Nextcloud.
 
 #### OwnCloud can integrate external storage?
 
