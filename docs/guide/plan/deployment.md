@@ -69,7 +69,7 @@ Websoft9 **应用商店** 内置 Java、Python、Node.js、PHP、Go、Ruby、HTM
 
 3. 填写安装参数时，务必准确填写目标应用的容器端口（后续步骤被网关转发访问）
 
-4. 待应用运行后，通过 [Docker 个性化编排](./runtime#dockercompose) 实现个性化镜像部署
+4. 待应用运行后，通过 [Docker 个性化编排](./app-compose) 实现个性化镜像部署
 
 ## 手动在操作系统上部署应用{#os}
 

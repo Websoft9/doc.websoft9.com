@@ -13,7 +13,7 @@ Websoft9 的托管平台提供多样化的[应用访问](./app-getdetail#access)
 
 - **[域名访问](./domain-set)**：通过网关为应用分配域名，简化用户的访问路径
 
-- **[TCP/UDP代理访问](/gateway-proxy#stream)**：允许应用通过 TCP 或 UDP 协议的代理服务器进行通信
+- **[TCP/UDP代理访问](./gateway-proxy#stream)**：允许应用通过 TCP 或 UDP 协议的代理服务器进行通信
 
 - **安全访问**：为应用[设置 HTTPS](./domain-https) 或 白名单[访问控制](./domain-auth)机制，保障数据和隐私
 

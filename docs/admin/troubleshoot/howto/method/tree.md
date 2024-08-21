@@ -81,7 +81,7 @@ mtr websoft9.com
 * [无法访问 Websoft9 控制台？](../faq#blank)
 * [应用网络超时？](../../faq#timeout)
 * [连接 SFTP，出现 Disconnected...publickey](../servers#sftpnokey)
-* [域名解析迟迟没有生效？](../domains#effect)
+* [域名解析迟迟没有生效？](../domain-prepare#effect)
 
 #### 组件失效
 

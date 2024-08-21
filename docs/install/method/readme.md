@@ -14,7 +14,7 @@ Websoft9 可以在[大多数](https://websoft9.github.io/websoft9/version.json) 
 
 ## 要求
 
-在安装 Websoft9 之前，请务必查看[系统要求](./install/requirements)，即最低硬件、软件、域名和其他要求的详细信息。
+在安装 Websoft9 之前，请务必查看[系统要求](../install/requirements)，即最低硬件、软件、域名和其他要求的详细信息。
 
 ## 选择一种安装方式
 

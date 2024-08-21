@@ -117,7 +117,7 @@ echo "" > log_path
 * 服务器满负荷运转
 * 图片、视频、CSS/JS等静态资源太多
 
-经过实践发现，90% 的情况都是由于[网络带宽不够](./install/requirements#network)导致。  
+经过实践发现，90% 的情况都是由于[网络带宽不够](../install/requirements#network)导致。  
 
 另外针对静态资源较多的情况，我们建议：
 
