@@ -45,7 +45,7 @@ tags:
 
 **Superset 密码正确，但仍然登录失败？**
 
-参阅：[此处](./Superset/admin#loginfail)
+参阅：[此处](./superset/admin#loginfail)
 
 ## Superset 使用入门
 
