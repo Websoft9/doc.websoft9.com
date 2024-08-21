@@ -70,7 +70,7 @@ Then, you can install them by one-click
 
 ## Related HUAWEICLOUD docs
 
-- [Deploy Websoft9 at HUAWEICLOUD](./install/huaweicloud)
+- [Deploy Websoft9 at HUAWEICLOUD](./install-huaweicloud)
 - [HUAWEICLOUD ECS](https://support.huaweicloud.com/intl/en-us/ecs/index.html)
 - [HUAWEICLOUD CLI](https://support.huaweicloud.com/intl/en-us/hcli/index.html)
 - [HUAWEICLOUD endpoint](https://developer.huaweicloud.com/endpoint)

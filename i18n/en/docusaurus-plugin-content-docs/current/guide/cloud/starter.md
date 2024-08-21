@@ -13,7 +13,7 @@ First, access the Websoft9 Console for app deployment and publishing.
 
 For more information, see the related chapter:  
 
-- [Install Websoft9 at major cloud](./install/cloud)
+- [Install Websoft9 at major cloud](./install-cloud)
 
 ## Step2: Create server at your cloud (optional)
 

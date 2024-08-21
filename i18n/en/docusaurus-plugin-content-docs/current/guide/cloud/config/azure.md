@@ -67,7 +67,7 @@ And it support **Application Security Groups (ASG)** security policy.
 ## Related Azure docs
 
 - [Enable root account password](./linux#enable)
-- [Deploy Websoft9 at Azure](./install/azure)
+- [Deploy Websoft9 at Azure](./install-azure)
 - [Azure Virtual machines](https://learn.microsoft.com/en-us/azure/virtual-machines/)
 - [Azure Blob](https://learn.microsoft.com/en-us/azure/storage/blobs/)
 - [Azure Storage account](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-portal)

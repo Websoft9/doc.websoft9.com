@@ -19,7 +19,7 @@ You need an account on AWS. Use of the following methods to obtain an account:
 
 AWS supports various ways to deploy Websoft9, essentially via EC2 image creation.  
 
-Before deployment, you should understand EC2 [requirements](./requirements) first.     
+Before deployment, you should understand EC2 [requirements](./install-requirements#server) first.     
 
 Regardless of which deployment method you choose, AWS will initiate the deployment of a new EC2.  
 

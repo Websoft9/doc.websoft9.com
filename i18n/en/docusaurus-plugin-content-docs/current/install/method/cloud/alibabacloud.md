@@ -18,7 +18,7 @@ You need an account on Alibaba Cloud. Use of the following methods to obtain an 
 
 Alibaba Cloud supports various ways to deploy Websoft9, essentially via ECS image creation. 
 
-Before deployment, you should understand ECS [requirements](./requirements) first.   
+Before deployment, you should understand ECS [requirements](./install-requirements#server) first.   
 
 ### From Alibaba Cloud Marketplace
 

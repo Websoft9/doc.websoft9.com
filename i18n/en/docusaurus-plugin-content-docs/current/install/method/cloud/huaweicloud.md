@@ -19,7 +19,7 @@ You need an account on HUAWEICLOUD. Use of the following methods to obtain an ac
 
 HUAWEICLOUD supports various ways to deploy Websoft9, essentially via ECS image creation. 
 
-Before deployment, you should understand ECS [requirements](./requirements) first.   
+Before deployment, you should understand ECS [requirements](./install-requirements#server) first.   
 
 
 ### From HUAWEICLOUD Marketplace

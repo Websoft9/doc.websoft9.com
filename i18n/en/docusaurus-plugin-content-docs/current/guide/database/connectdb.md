@@ -32,7 +32,7 @@ The two aspects required to connect to and manage a database:
 Popular [database management tools](./apps/#databases) in different database product ecosystems, here are the popular tools
 
 - [phpMyAdmin](./phpmyadmin)
-- [pgAdmin](./pgAdmin)
+- [pgAdmin](./pgadmin)
 - [CloudBeaver](./cloudbeaver)
 - [RedisInsight](./redisinsight)
 

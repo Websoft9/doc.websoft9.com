@@ -22,7 +22,7 @@ wget -O - https://websoft9.github.io/websoft9/install/install_docker.sh | bash
 
 You will need to set up docker registry-mirrors if the server is having network issues accessing DockerHub.  
 
-1. Prepare your [registry mirrors](./imagehub)
+1. Prepare your [registry mirrors](./software-repos#docker)
 
 2. Edit `/etc/docker/daemon.json` and add the **registry-mirrors** key and value, to make the change
     ```
