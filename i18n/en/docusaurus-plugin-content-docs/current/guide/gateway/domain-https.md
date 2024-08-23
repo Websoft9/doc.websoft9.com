@@ -75,6 +75,21 @@ You can upload your certificates to Websoft9 Gateway for proxy hosts:
 
 2. Edit the target application **Proxy Host**, open the **SSL** tab and checkmark **Force SSL**
 
+### Create self-signed certificates{#openssl-ca}
+
+Create self-signed certificates is more convenient and efficient than get from CA Authority for testing or inner access.    
+
+Just running below `openssl` commands at your server, you can create self-signed certificates for domain or IP access.   
+
+```
+openssl genpkey -algorithm RSA -out private.key -pkeyopt rsa_keygen_bits:2048
+openssl req -new -key private.key -out request.csr
+openssl x509 -req -days 365 -in request.csr -signkey private.key -out certificate.crt
+```
+
+### Use certificates for IP{#ip-ca}
+
+You can not get certificates from CA Authority, but you can use self-signed certificates for IP access.  
 
 ## Troubleshoot
 
