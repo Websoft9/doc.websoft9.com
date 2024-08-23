@@ -55,10 +55,6 @@ Portainer 提供了可视化的运行容器命令的功能，它等同于 **dock
 - Docker-Compose 应用的自定义安装：**容器 > Stacks > Add Stack**
 - Docker 容器自定义安装：**容器 > Containers > Add Container**
 
-### 操作指南
-
-参考：[Websoft9 容器指南](./guide/container)
-
 ## 配置选项
 
 - 企业版免费范围：5 个节点
