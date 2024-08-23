@@ -29,6 +29,6 @@ import Meta from './_include/vaultwarden.md';
 
 ## Troubleshooting{#troubleshooting}
 
-#### Why can't I register an account?
+#### Can't register an account?
 
-Because there is no SSL certificate, just configure it.
+Vaultwarden need to configure SSL certificate.

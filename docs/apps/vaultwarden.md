@@ -31,4 +31,4 @@ import Meta from './_include/vaultwarden.md';
 
 #### 为什么无法注册账号？
 
-因为没有SSL证书，配置后即可。
+因为Vaultwarden需要配置SSL证书。
