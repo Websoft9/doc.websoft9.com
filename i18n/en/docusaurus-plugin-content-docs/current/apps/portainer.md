@@ -49,10 +49,6 @@ If the Websoft9 App Store does not meet the installation requirements, users can
 - Custom installation of Docker-Compose apps: **Container > Stacks > Add Stack**
 - Customized installation of Docker containers: **Containers > Containers > Add Container**
 
-### Operation Guide
-
-Reference: [Websoft9 Container Guide](./function/container)
-
 ## Configuration options{#configs}
 
 - Enterprise Edition Free Range: 5 nodes
