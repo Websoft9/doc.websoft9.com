@@ -60,4 +60,4 @@ Websoft9 Gateway not support you change administrator Email
 
 Although it supports static websites, but it need uploading HTML to container, this way will breaks the architecture.  
 
-The better deployment for static webiste refer to: [Deploy static websites by Websoft9 App Runtime](./runtime/html).  
+The better deployment for static webiste refer to: [Deploy static websites by Websoft9 App Runtime](./runtime).  

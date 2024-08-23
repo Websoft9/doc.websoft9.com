@@ -8,7 +8,7 @@ import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 # Set domain for application
 
-User can set domain for applications at [Websoft9 Gateway](./get_started) or access managment page of **My Apps**, it includes:   
+User can set domain for applications at [Websoft9 Gateway](./gateway_learn) or access managment page of **My Apps**, it includes:   
 
 - Configure global domain
 - Binding domain for application

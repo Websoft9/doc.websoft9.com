@@ -18,7 +18,7 @@ You need an account on Azure. Use of the following methods to obtain an account:
 
 Azure supports various ways to deploy Websoft9, essentially via VM image creation.   
 
-Before deployment, you should understand VM [requirements](./requirements) first.      
+Before deployment, you should understand VM [requirements](./install-requirements#server) first.      
 
 Regardless of which deployment method you choose, Azure will initiate the deployment of a new VM.  
 

@@ -1,5 +1,5 @@
 ---
-title: JuHu Gitlab
+title: 极狐 Gitlab
 slug: /jihu
 tags:
   - DevOps

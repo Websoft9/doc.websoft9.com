@@ -62,7 +62,7 @@ AWS Console can set security group by: **EC2 Dashboard > Network and Security**
 ## Related AWS docs
 
 - [Enable root account password](./linux#enable)
-- [Deploy Websoft9 at AWS](./install/aws)
+- [Deploy Websoft9 at AWS](./install-aws)
 - [AWS EC2](https://docs.aws.amazon.com/en_us/ec2/)
 - [AWS CLI](https://docs.aws.amazon.com/en_us/cli)
 

@@ -35,7 +35,7 @@ Websoft9 supports deployment on public, private, or hybrid clouds, but choosing 
 
 Visual machine servers are the foundation for hosting applications. Consider these factors: 
 
-- **Performance specs:** Choose appropriate [CPU and memory](./install/requirements#server) based on performance needs.
+- **Performance specs:** Choose appropriate [CPU and memory](./install-requirements#server) based on performance needs.
 
 - **Region selection:** Server regions should be close to customer locations.
 
@@ -86,7 +86,7 @@ Automation boosts hosting efficiency, and it's based on API-managed infrastructu
 
 Domains make it easier for users to access websites without needing to remember numerical IP addresses.
 
-- [Prepare your domain](./domains)
+- [Prepare your domain](./domain-prepare)
 - [Set global domain for Websoft9](./domain-set#wildcard)
 
 ## Security and compliance
