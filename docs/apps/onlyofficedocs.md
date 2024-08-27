@@ -25,7 +25,7 @@ import Meta from './_include/onlyofficedocs.md';
 
 * [ownCloud 集成  ONLYOFFICE Docs](./owncloud#onlyoffice)
 * [Nextcloud 集成  ONLYOFFICE Docs](./nextcloud#onlyoffice)
-* [Seafile 集成  ONLYOFFICE Docs](./seafile#onlyoffice)
+* [Seafile 集成  ONLYOFFICE Docs](./seafile)
 
 ### 增加字体{#addfonts}
 
