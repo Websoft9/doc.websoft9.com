@@ -1,4 +1,4 @@
-[Ansible](https://www.ansible.com/) is **A radically simple IT automation platform**, used for RPA Application orchestration . Ansible is an open source IT automation engine that automates provisioning, configuration management, application deployment, orchestration, and many other IT processes. 
+[Ansible](https://www.ansible.com/) is **A radically simple IT automation platform**, used for Application orchestration Operations Automation . Ansible is an open source IT automation engine that automates provisioning, configuration management, application deployment, orchestration, and many other IT processes. 
 
 
 ![architecture](https://libs.websoft9.com/Websoft9/DocsPicture/zh/ansible/ansible-structure-websoft9.png)

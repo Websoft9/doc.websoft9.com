@@ -1,4 +1,4 @@
-[Huginn](https://github.com/huginn/huginn) 是一个 **工作流与任务自动化**，它被用于 工作流  等场景。Huginn是一个用于构建代理的系统，可以在线为您执行自动化任务。他们可以阅读网络、监视事件并代表您采取行动。
+[Huginn](https://github.com/huginn/huginn) 是一个 **工作流与任务自动化**，它被用于 运维自动化  等场景。Huginn是一个用于构建代理的系统，可以在线为您执行自动化任务。他们可以阅读网络、监视事件并代表您采取行动。
 
 
 ![Dashboard](http://libs.websoft9.com/Websoft9/DocsPicture/zh/huginn/huginn-gui-websoft9.png)

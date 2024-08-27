@@ -1,4 +1,4 @@
-[Ansible Semaphore](https://semaphoreui.com/) is **A modern UI for Ansible**, used for RPA Application orchestration . Ansible Semaphore is a modern UI for Ansible. It lets you easily run Ansible playbooks, get notifications about fails, control access to deployment system.
+[Semaphore UI](https://semaphoreui.com/) is **Modern UI for Ansible, Terraform, OpenTofu, Bash, Pulumi.**, used for Application orchestration CI/CD Pipeline Operations Automation . Semaphore is a modern UI for Ansible, Terraform, OpenTofu, Bash, Pulumi . It lets you easily run Ansible playbooks, get notifications about fails, control access to deployment system.
 
 
 ![Console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/semaphore/semaphore-gui-websoft9.png)
@@ -6,7 +6,7 @@
 
 ## Prepare
 
-When referring to this document to use **Ansible Semaphore**, please read and ensure the following points:
+When referring to this document to use **Semaphore UI**, please read and ensure the following points:
 
 - This application is installed by Websoft9 console.
 

@@ -1,4 +1,4 @@
-[Gitness](https://gitness.com/) 是一个 **开源代码托管和管道引擎**，它被用于 源码仓库 流水线  等场景。Gitness 是一个开源的 Git 服务，提供代码托管和协作功能。
+[Gitness](https://gitness.com/) 是一个 **开源代码托管和管道引擎**，它被用于 源码仓库 CI/CD 流水线  等场景。Gitness 是一个开源的 Git 服务，提供代码托管和协作功能。
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitness/gitness-gui-websoft9.png)

@@ -1,4 +1,4 @@
-[Huginn](https://github.com/huginn/huginn) is **Workflow automation for technical people**, used for Workflow automation . Huginn is a system for building agents that perform automated tasks for you online. They can read the web, watch for events, and take actions on your behalf. 
+[Huginn](https://github.com/huginn/huginn) is **Workflow automation for technical people**, used for Operations Automation . Huginn is a system for building agents that perform automated tasks for you online. They can read the web, watch for events, and take actions on your behalf. 
 
 
 ![Dashboard](http://libs.websoft9.com/Websoft9/DocsPicture/zh/huginn/huginn-gui-websoft9.png)

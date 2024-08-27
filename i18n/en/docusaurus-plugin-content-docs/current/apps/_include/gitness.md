@@ -1,4 +1,4 @@
-[Gitness](https://gitness.com/) is **Open-source code hosting & pipeline engine**, used for Code Repository Pipeline . Gitness is an open source Git service that provides code hosting and collaboration features.
+[Gitness](https://gitness.com/) is **Open-source code hosting & pipeline engine**, used for Code Repository CI/CD Pipeline . Gitness is an open source Git service that provides code hosting and collaboration features.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitness/gitness-gui-websoft9.png)
