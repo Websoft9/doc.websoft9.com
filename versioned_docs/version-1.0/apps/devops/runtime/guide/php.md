@@ -64,7 +64,7 @@ tags:
     | Apache     | **有域名，通过 http://域名 访问网站**         | [获取](../apache#wwwtemplate) |
     |            | **没有域名，通过 http://IP/mysite2 访问网站** | [获取](../apache#aliastemplate) |
     | Nginx      | **有域名，通过 http://域名 访问网站**         | [获取](../apache#wwwtemplate) |
-    |            | **没有域名，通过 http://IP/mysite2 访问网站** | [获取](../apache#aliatemplate) |
+    |            | **没有域名，通过 http://IP/mysite2 访问网站** | [获取](../apache#aliastemplate) |
 
 4. 保存虚拟主机配置文件，重启服务后生效
     ~~~
