@@ -104,15 +104,15 @@ phpStudy环境中部署网站主要分为5个步骤： **①**上传网站代码
 
 ### Apache 配置
 
-Apache 配置主要通过修改 [虚拟主机配置文件](#path) 中的 [VirtualHost 指令](./apache#virtualHost)去实现各种需求。  
+Apache 配置主要通过修改 [虚拟主机配置文件](#path) 中的 [VirtualHost 指令](./apache#virtualhost)去实现各种需求。  
 
 #### 绑定域名
 
-修改 [Apache虚拟机主机配置文件](#apache)，将其中的 **ServerName** 项的值修改为你的域名
+修改 [Apache虚拟机主机配置文件](./apache#path)，将其中的 **ServerName** 项的值修改为你的域名
 
 #### 修改网站目录
 
-修改 [Apache虚拟机主机配置文件](#apache)，将其中的 DocumentRoot 和 Directory 的值修改成你网站的路径 项的值修改为你的域名
+修改 [Apache虚拟机主机配置文件](./apache#path)，将其中的 DocumentRoot 和 Directory 的值修改成你网站的路径 项的值修改为你的域名
 
 
 #### 设置伪静态

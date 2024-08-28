@@ -44,12 +44,12 @@ Magento 可以通过两种方式升级：后台升级界面和 Composer 升级�
 3. 点击升级按钮，开始在线升级
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-sysupgradestarting-websoft9.png)
 
-4. 升级过程时间较长且报错，请查看[故障原因](#updateplugin)
+4. 升级过程时间较长且报错，请查看[故障原因](#troubleshoot)
 
 更多更新操作请参考官方文档：[Magento Upgrade](https://devdocs.magento.com/guides/v2.3/comp-mgr/bk-compman-upgrade-guide.html)
 
 
-## 故障排除
+## 故障排除 {#troubleshoot}
 
 除以下列出的 Magento 故障问题之外， [通用故障处理](../troubleshoot) 专题章节提供了更多的故障方案。 
 

@@ -175,7 +175,7 @@ Webmin 提供了可视化的 MySQL 数据库管理界面，可以很方面的创
 2. 修改 [Apache虚拟机主机配置文件](#path)，将其中的 **ServerName** 项的值修改为你的域名
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/webmin/webmin-confapache002-websoft9.png)
 
-3. 保存配置文件，重启 [Apache 服务](#service)
+3. 保存配置文件，重启 [Apache 服务](./apache#service)
 
 
 ### 修改密码

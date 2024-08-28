@@ -188,7 +188,7 @@ Moodle 主题实际上是一个插件，因此需要安装新主题，必须通�
 
 下面介绍通过数据库找回密码的方案：
 
-1. 登录 [phpMyAdmin](./administrator/parameter#managedb)，并找到你的网站数据库下的 *mdl_user*表
+1. 登录 [phpMyAdmin](./administrator/parameter)，并找到你的网站数据库下的 *mdl_user*表
 
   ![Moodle user表](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodle-phpmyadminuser-websoft9.png)
 

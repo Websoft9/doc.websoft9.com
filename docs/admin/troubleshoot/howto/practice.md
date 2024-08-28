@@ -17,7 +17,7 @@ slug: /troubleshoot/practice
 
 - 阅读官方文档
 - 保护问题现场
-- [分析日志](../linux#logs)
+- [分析日志](../linux)
 - 尝试让问题重现
 - 多人访谈与讨论
 

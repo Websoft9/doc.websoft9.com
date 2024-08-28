@@ -79,7 +79,7 @@ magento setup:config:set --db-host=DB-HOST --db-name=DB-NAME --db-user=DB-USER -
 
 6. 安装时会进行系统环境检查，条件全面满足才可以开始安装
 
-7. 安装过程时间较长且报错，请查看[故障原因](./magento/admin##updateerror)
+7. 安装过程时间较长且报错，请查看[故障原因](./magento/admin)
 
 ### 连接 Magento Marketplace{#marketplace}
 

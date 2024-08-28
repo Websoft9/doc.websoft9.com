@@ -30,7 +30,7 @@ tags:
 1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入登录界面
    ![Zabbix 登录界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zabbix/zabbix-login-websoft9.png)
 
-2. 输入账号密码后登录到后台（[不知道账号密码？](#账号密码)）
+2. 输入账号密码后登录到后台（[不知道账号密码？](#重置密码)）
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zabbix/zabbix-dashboard-websoft9.png)
 
 3. 打开用户管理界面，更换所需的语言（如果语言为灰色状态，参考[启用语言方案](#i18)）
@@ -51,7 +51,7 @@ tags:
    ```
    docker inspect zabbix-agent | grep IPAddress
    ```
-   > 若监控其他服务器，需先[安装Zabbix-Agent](#安装客户端)，然后参数上述步骤
+   > 若监控其他服务器，需先[安装Zabbix-Agent](https://www.zabbix.com/download?zabbix=5.0&os_distribution=centos&os_version=7&db=mysql&ws=apache)，然后参数上述步骤
 
 3. 登录到 Zabbix 控制台后， 依次打开：【配置】>【主机】，打开主机列表
    ![Zabbix 添加主机](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zabbix/zabbix-edithost001-websoft9.png)

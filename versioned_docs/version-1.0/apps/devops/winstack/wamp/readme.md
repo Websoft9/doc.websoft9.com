@@ -61,7 +61,7 @@ WAMP 集成 PHP 环境，由 Bitnami  维护。它除 Apache,MySQL,PHP 之外，
 *  [虚拟机主机配置文件](#path)：Apache vhost 配置文件 
 *  连接工具：使用 Windows自带的远程桌面工具 连接服务器
 *  域名：若需要使用域名，请确保备案后的域名成功解析到服务器IP
-*  数据库：使用 [phpMyAdmin](#./mysql#phpmyadmin) 管理数据库
+*  数据库：使用 [phpMyAdmin](./mysql#phpmyadmin) 管理数据库
 
 有一个宏观认知之后，我们开始部署网站
 
@@ -81,7 +81,7 @@ WAMP 集成 PHP 环境，由 Bitnami  维护。它除 Apache,MySQL,PHP 之外，
    ::: warning
    如果不绑定域名、不修改网站目录名称，请跳过步骤4和5
    :::
-5. 保存 **虚拟机主机配置文件**，然后 [重启所有服务](#service)
+5. 保存 **虚拟机主机配置文件**，然后 [重启所有服务](#服务)
 
 6. 本地浏览器访问：*http://域名* 或 *http://服务器公网IP* 即可访问您的网站
 
