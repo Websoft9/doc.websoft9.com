@@ -17,13 +17,13 @@ import Meta from './_include/pmm.md';
 
 Websoft9 控制台安装 PMM 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
 
-### 登录 PMM 连接数据库
+### 连接目标数据库
 
 1. 输入账号密码，登录 PMM
 
-2. 登录后，点击**PMM > PMM Add Instance** 进入控制台
+2. 点击 **PMM > PMM Add Instance**，选择所需连接的数据库
 
-3. 进入控制台后，点击**MYSQL**，填写各种连接信息后，点击**Add Service**可成功连接
+3. 填写目标数据库的连接信息后，点击 **Add Service** 测试可用性
 
 
 ## 配置选项{#configs}
