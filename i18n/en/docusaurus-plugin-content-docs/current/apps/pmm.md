@@ -13,15 +13,15 @@ import Meta from './_include/pmm.md';
 
 ## Getting started{#guide}
 
-### Initial setup{#wizard}
-
-1. When completed installation of PMM at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
-
 ### Connect to the database
 
-1. Login to PMM console
+1. Login to Websoft9 Console and click **Gateway** of left menu to [Set HTTPS for Vaultwarden](./domain-https#console) (**Required**)
 
-2. Then click **PMM > PMM Add Instance** to start add your database
+2. When completed installation of Vaultwarden at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps** 
+
+3. Login to PMM console
+
+4. Then click **PMM > PMM Add Instance** to start add your database
 
 ## Configuration options{#configs}
 
