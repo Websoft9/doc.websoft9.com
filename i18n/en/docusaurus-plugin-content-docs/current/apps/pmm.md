@@ -17,13 +17,11 @@ import Meta from './_include/pmm.md';
 
 1. When completed installation of PMM at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
-### Login to PMM and connect to the database
+### Connect to the database
 
-1. Enter **email or username** and **password** and login to PMM.
+1. Login to PMM console
 
-2. After logining, click **PMM > PMM Add Instance** to enter the console.
-
-3. After entering the console, click **MYSQL**, enter various connection information, and then click **Add Service** to connect successfully.
+2. Then click **PMM > PMM Add Instance** to start add your database
 
 ## Configuration options{#configs}
 
