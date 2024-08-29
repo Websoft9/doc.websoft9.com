@@ -130,7 +130,7 @@ docker exec -it kafka-cmak bash -c 'ls /cmak/lib/cmak.cmak-*-assets.jar'|awk -F"
 
 ```
 
-### 服务
+### 服务 {#service}
 
 ```shell
 sudo docker start | stop | restart kafka

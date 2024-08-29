@@ -111,7 +111,7 @@ tags:
 
 以将原目录 *c:\wwwroot* 下的 **mysite1** 迁移到 *d:\www* 目录下为例，具体步骤如下：
 
-1. 使用 **远程桌面** 连接服务器，停止 [Apache 服务](#apache)
+1. 使用 **远程桌面** 连接服务器，停止 [Apache 服务](../apache#service)
 2. 将 ***mysite1*** 文件夹整体拷贝到目标位置 *d:\www*
 3. 修改 [虚拟主机配置文件](../wamp#apache) 中 mysite1 这个网站对应的 VirtualHost 配置段 DocumentRoot, Directory 项的值，并保存它
 

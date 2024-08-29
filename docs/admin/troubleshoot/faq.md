@@ -193,5 +193,5 @@ Websoft9 在上架到云市场时，已经过严格的安全测试，绝对不�
 
 | 组         | 组件                                                         |
 | ---------- | ------------------------------------------------------------ |
-| 基础架构   | [Docker](./docker#troubleshoot), [Linux](./linux#troubleshoot)  |
-| 数据库   | [MySQL/MariaDB](./mysql#问题与故障), [SQLSever](./sqlserver#问题与故障), [PostgreSQL](./postgresql#问题与故障), [MongoDB](./mongodb#问题与故障), [Redis](./redis#问题与故障) |
+| 基础架构   | [Docker](./docker), [Linux](./linux#troubleshoot)  |
+| 数据库   | [MySQL/MariaDB](./mysql#问题与故障), [SQLSever](./sqlserver), [PostgreSQL](./postgresql), [MongoDB](./mongodb), [Redis](./redis) |

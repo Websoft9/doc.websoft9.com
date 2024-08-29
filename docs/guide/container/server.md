@@ -56,7 +56,7 @@ Docker 默认从 Dockerhub 下载镜像。如果想更换仓库地址，请参�
 ## 相关内容
 
 - [Docker 服务端配置参数](./parameter#path)
-- [Docker 命令行](./parameter#cmd)
+- [Docker 命令行](./parameter)
 - [开启 Docker API 外部访问](https://docs.docker.com/reference/cli/dockerd/#daemon-socket-option)
 
 ## 参考文档

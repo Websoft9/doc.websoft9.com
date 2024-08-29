@@ -113,7 +113,7 @@ tags:
 
 ## Memcached 常用操作
 
-### 图形化 Web 端
+### 图形化 Web 端 {#可视化管理}
 
 Memcached 预装方案中内置可视化数据库管理工具 `Memcached-admin` ，使用请参考如下步骤：
 

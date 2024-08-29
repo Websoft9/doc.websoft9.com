@@ -15,11 +15,11 @@ import Meta from './_include/vaultwarden.md';
 
 ### Initial setup{#wizard}
 
-1. When completed installation of Vaultwarden at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. Login to Websoft9 Console and click **Gateway** of left menu to [Set HTTPS for Vaultwarden](./domain-https#console) (**Required**)
 
-2. Follow the wizard to complete registration and login.
+2. When completed installation of Vaultwarden at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
-3. Access to the system.
+3. Follow the wizard to complete registration and login.
 
 ## Configuration options{#configs}
 
@@ -28,7 +28,3 @@ import Meta from './_include/vaultwarden.md';
 ## Administer{#administrator}
 
 ## Troubleshooting{#troubleshooting}
-
-#### Can't register an account?
-
-Vaultwarden need to configure SSL certificate.

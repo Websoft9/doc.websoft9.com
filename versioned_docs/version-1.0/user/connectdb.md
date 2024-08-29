@@ -29,7 +29,7 @@ Web 可视化客户端与数据库在同一台服务器，所以不需要开启�
 
 * [MySQL/Mariadb](../mysql#phpmyadmin)
 * [PostgreSQL](../postgresql#pgadmin)
-* [Mongodb](../mongodb#adminmongo)
+* [Mongodb](../mongodb#mongodb-入门指南)
 * [Oracle](../cloudbeaver)
 * [SQLServer](../cloudbeaver)
 

@@ -1,4 +1,4 @@
-[Apache Airflow](https://airflow.apache.org/) 是一个 **可视化作业调度平台**，它被用于 工作流  等场景。Apache Airflow (or simply Airflow) is a platform to programmatically author, schedule, and monitor workflows.
+[Apache Airflow](https://airflow.apache.org/) 是一个 **可视化作业调度平台**，它被用于 运维自动化  等场景。Apache Airflow (or simply Airflow) is a platform to programmatically author, schedule, and monitor workflows.
 
 
 ![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/airflow/airflow-gui-websoft9.png)

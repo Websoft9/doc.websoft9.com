@@ -1,4 +1,4 @@
-[Jenkins](https://www.jenkins.io/) 是一个 **热门的开源持续集成（CI&CD）软件**，它被用于 流水线  等场景。Jenkins是一款开源 CI&CD 软件，用于自动化各种任务，包括构建、测试和部署软件。
+[Jenkins](https://www.jenkins.io/) 是一个 **热门的开源持续集成（CI&CD）软件**，它被用于 CI/CD 流水线  等场景。Jenkins是一款开源 CI&CD 软件，用于自动化各种任务，包括构建、测试和部署软件。
 
 
 ![devops](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins_is_the_hub_CD_Devops.png)

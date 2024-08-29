@@ -1,4 +1,4 @@
-[Rundeck](https://www.rundeck.com) is **Job scheduler and runbook automation system**, used for Pipeline . Rundeck automation can help DevOps and Operations teams can manage automation in a central UI while delegating tasks within different private networks or multi-cloud environments
+[Rundeck](https://www.rundeck.com) is **Job scheduler and runbook automation system**, used for CI/CD Pipeline . Rundeck automation can help DevOps and Operations teams can manage automation in a central UI while delegating tasks within different private networks or multi-cloud environments
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rundeck/rundeck-gui-websoft9.webp)

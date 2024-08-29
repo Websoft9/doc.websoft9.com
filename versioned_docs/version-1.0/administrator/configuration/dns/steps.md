@@ -52,9 +52,9 @@ slug: /administrator/domain_step
 
 * [Apache 域名绑定](../apache#domain)
 * [Nginx  域名绑定](../nginx#domain)
-* [Caddy 域名绑定](../caddy#domain)
-* [Traefik 域名绑定](../traefik#domain)
-* [IIS 域名绑定](../iis#domain)
+* [Caddy 域名绑定](../caddy)
+* [Traefik 域名绑定](../traefik)
+* [IIS 域名绑定](../iis#binddomain)
 
 
 ## 问题解答

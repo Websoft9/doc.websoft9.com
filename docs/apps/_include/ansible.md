@@ -1,4 +1,4 @@
-[Ansible](https://www.ansible.com/) 是一个 **开源 IT 自动化引擎**，它被用于 流程机器人 应用编排  等场景。Ansible 是一个开源 IT 自动化引擎，可自动执行配置、配置管理、应用程序部署、编排和许多其他 IT 流程。
+[Ansible](https://www.ansible.com/) 是一个 **开源 IT 自动化引擎**，它被用于 应用编排 运维自动化  等场景。Ansible 是一个开源 IT 自动化引擎，可自动执行配置、配置管理、应用程序部署、编排和许多其他 IT 流程。
 
 
 ![架构](https://libs.websoft9.com/Websoft9/DocsPicture/zh/ansible/ansible-structure-websoft9.png)

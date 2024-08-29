@@ -42,7 +42,7 @@ Odoo 后台提供了在线升级能力，让升级工作变得非常简单。参
 
 这是由于 Nginx 默认安装下，上传文件最大为 1M，因此需要修改 Nginx 这个限制：
 1. 使用 WinSCP 远程连接服务器
-2. 编辑 [Nginx 虚拟机主机配置文件](../nginx#virtualHosx)
+2. 编辑 [Nginx 虚拟机主机配置文件](../nginx#path)
 3. 插入一行 `client_max_body_size 0;` 解除上传文件限制的配置项
    ```
    server {
@@ -114,7 +114,7 @@ Odoo 采用 [Peer Authentication](https://www.postgresql.org/docs/10/auth-method
 
 #### 是否有可视化的数据库管理工具？
 
-请直接通过 [Odoo 自带的数据库管理工具](../odoo#pgadmin)操作
+请直接通过 [Odoo 自带的数据库管理工具](../odoo#dbadmin)操作
 
 #### Odoo 在中国有哪些实施商？
 

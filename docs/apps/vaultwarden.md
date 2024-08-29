@@ -15,11 +15,11 @@ import Meta from './_include/vaultwarden.md';
 
 ### 初始化{#wizard}
 
-1. Websoft9 控制台安装 Vaultwarden 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
+1. 登录到 Websoft9 控制台，点击左侧的 **网关** 菜单[为 Vaultwarden 应用设置 HTTPS 访问](./domain-https#console)（必要操作，否则无法使用）
 
-2. 根据向导完成注册、登录
+2. Websoft9 控制台安装 Vaultwarden 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
 
-3. 访问系统
+3. 根据向导完成注册、登录
 
 ## 配置选项{#configs}
 
@@ -28,7 +28,3 @@ import Meta from './_include/vaultwarden.md';
 ## 管理维护{#administrator}
 
 ## 故障
-
-#### 为什么无法注册账号？
-
-因为Vaultwarden需要配置SSL证书。

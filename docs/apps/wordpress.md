@@ -44,7 +44,7 @@ Websoft9 控制台安装 WordPress 后，通过 "我的应用" 查看应用详�
 
 - 集成第三方网站统计软件（推荐），下面是使用范例：
 
-  1. Websoft9 应用商店安装开源网站统计软件 [Matomo](#./matomo)
+  1. Websoft9 应用商店安装开源网站统计软件 [Matomo](./matomo)
   2. Wordpress 安装 [WP-Matomo](https://wordpress.org/plugins/wp-piwik/) 插件，然后连接 Matomo 服务端
 
 - 使用 WordPress 网站统计相关的插件

@@ -31,7 +31,7 @@ FASTPANEL 面板是可视化的服务器管理软件，支持快速安装LAMP/LN
 2. 输入邮件地址，点击【申请许可证】，根据收取邮件内容点击链接，并刷新页面
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/fastpanel/fastpanel-active2-websoft9.png)
    
-3. 输入账号密码后登录（[不知道账号密码？](#账号密码)）
+3. 输入账号密码后登录（[不知道账号密码？](#resetpw)）
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/fastpanel/fastpanel-login-websoft9.png)
    
 4. 进入 FASTPANEL 主界面
@@ -85,7 +85,7 @@ FASTPANEL 面板是可视化的服务器管理软件，支持快速安装LAMP/LN
 3. 稍后PHP7.4已经正常安装成功
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/fastpanel/fastpanel-install3-websoft9.png)
    
-### 重置管理员密码{#resetpw}
+### 重置管理员密码 {#resetpw}
 
 忘记管理员密码时，请参考如下流程方案重置密码：  
 
