@@ -17,8 +17,9 @@ import Meta from './_include/drupal.md';
 
 1. After Completing the installation Drupal in the Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
 
-2. Starting to verify the application
-   ![](./assets/drupal-boardpage-websoft9.png)
+2. Complete the install wizard step by step
+   - Select **My Apps > Database** and **My Apps > Compose > Go to Edit Repository > docker-compose.yml** to confirm database connection information
+   - When selecting a non-English language, the translation will take a few minutes.
 
 ### Setting up multilingual{#setlang}
 

@@ -13,12 +13,13 @@ import Meta from './_include/drupal.md';
 
 ## 入门指南{#guide}
 
-### 登录验证{#wizard}
+### 初始化{#wizard}
 
 1. Websoft9 控制台安装 Drupal 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
 
-2. 后台界面如下
-   ![](./assets/drupal-boardpage-websoft9.png)
+2. 根据向导完成初始化
+   - **我的应用 > 数据库** 及 **我的应用 > 编排 > 马上修改 > docker-compose.yml** 中查看数据库连接信息
+   - 选择非英文时，翻译需要花费几分钟，请耐心等待
 
 ### 设置多语言{#setlang}
 
