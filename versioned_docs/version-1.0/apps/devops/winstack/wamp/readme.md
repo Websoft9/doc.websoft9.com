@@ -130,7 +130,7 @@ WAMP 集成 PHP 环境，由 Bitnami  维护。它除 Apache,MySQL,PHP 之外，
 	     Require all granted
 	    </Directory>
       ```
-4. 保存 [**虚拟机主机配置文件**](#apache)，然后 [重启Apache服务](#service)
+4. 保存 [**虚拟机主机配置文件**](#apache)，然后 [重启Apache服务](../apache#service)
 
 5. 根据有无域名，本地浏览器访问：*http://域名* 或 *http://服务器公网IP/sitename*  访问你的网站。
 
