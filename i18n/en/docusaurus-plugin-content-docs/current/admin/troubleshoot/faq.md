@@ -119,7 +119,7 @@ Running `systemctl status docker` and `journalctl -xe` to check error logs
 
 ## Related topics
 
-- [FAQs for application deployment at Websoft9 Console](./deployment#os#troubleshoot)
+- [FAQs for application deployment at Websoft9 Console](./deployment#troubleshoot)
 - [FAQs for Application Compose](./app-compose#troubleshoot)
 - [FAQs for Managing Docker](./docker-server#troubleshoot)
 - [FAQs for Linux](./linux#troubleshoot)
