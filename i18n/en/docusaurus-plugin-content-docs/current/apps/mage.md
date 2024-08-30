@@ -16,13 +16,15 @@ import Meta from './_include/mage.md';
 
 1. When completed installation of Mage at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
-2. Enter your information at the login screen to use it
-
 ### Run pipelines {#pipelines}
 
 1. Click **Pipelines > example_pipeline** in the left menu to enter the **Triggers** page.
 
-2. Click **Edit pipeline** in the left menu and select **Run block** in the top right corner of this page to run the pipeline.
+2. Click **New Triggers** to set the trigger properties.
+
+3. Click **Enable Triggers** to activate the triggers, which will run at the specified time.
+
+4. Click **Run@once** to run the Pipelines example immediately.
 
 ## Configuration options{#configs}
 
