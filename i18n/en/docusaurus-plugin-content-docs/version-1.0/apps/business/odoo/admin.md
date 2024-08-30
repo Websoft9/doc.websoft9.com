@@ -112,7 +112,7 @@ Yes, you can test it from the modules: Invoice, Purchase
 
 #### Is there a web-base GUI database management tools?
 
-Yes, Odoo includes the database GUI functions, refer to [Odoo Mange Database function](../odoo#pgadmin)
+Yes, Odoo includes the database GUI functions, refer to [Odoo Mange Database function](../odoo#dbadmin)
 
 #### Which implementers does Odoo have in China?
 

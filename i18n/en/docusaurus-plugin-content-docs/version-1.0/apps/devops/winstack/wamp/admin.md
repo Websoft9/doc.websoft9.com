@@ -21,7 +21,7 @@ tags:
 
 1. 将申请的证书、秘钥文件上传到 *C:\wwwroot\cert * 目录
 
-3. 打开 [bitnami-apps-vhosts.conf（虚拟主机配置配置文件）](../wamp#apache)
+3. 打开 [bitnami-apps-vhosts.conf（虚拟主机配置配置文件）](../wamp)
 
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wamp/wamp-addmorevhostconfig-websoft9.png)
 
@@ -192,7 +192,7 @@ prefork
 
 #### 如何将 phpMyAdmin 限制为本地访问？
 
-参考：[Apache Require](../apache#require)
+参考：[Apache Require](../apache)
 
 #### 上传的文件是否需修改拥有者权限？
 

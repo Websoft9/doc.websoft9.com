@@ -61,7 +61,7 @@ tags:
 *  虚拟机主机配置文件：*C:\websoft9\wampserver\bin\apache\apache2.4.x\conf\extra\httpd-vhosts.conf* 
 *  连接工具：使用 Windows自带的远程桌面工具 连接服务器
 *  域名：若需要使用域名，请确保备案后的域名成功解析到服务器IP
-*  数据库：网站安装向导过程中可能需要使用数据库，请使用 [phpMyAdmin 管理数据库](#mysql-数据管理)
+*  数据库：网站安装向导过程中可能需要使用数据库，请使用phpMyAdmin 管理数据库
 
 有一个宏观认知之后，我们开始部署网站
 
@@ -81,7 +81,7 @@ tags:
    ::: warning
    如果不绑定域名、不修改网站目录名称，请跳过步骤4和5
    :::
-5. 保存 httpd-vhosts.conf，然后 [重启所有服务](#service)
+5. 保存 httpd-vhosts.conf，然后重启所有服务
 
 6. 本地浏览器访问：*http://域名* 或 *http://服务器公网IP* 即可访问您的网站
 
