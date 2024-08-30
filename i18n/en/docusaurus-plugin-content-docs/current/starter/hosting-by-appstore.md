@@ -32,7 +32,7 @@ Websoft9 pulls images online from DockerHub when deploying templated application
 
 For more information, see the related chapter: 
 
-- [Set Docker registry-mirrors](./docker-server#registry-mirrors)
+- [Set Docker registry-mirrors](./docker-server#imagespeed)
 
 ## Step3: Launch your Application
 

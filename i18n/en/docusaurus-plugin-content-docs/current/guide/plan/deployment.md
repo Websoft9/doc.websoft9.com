@@ -26,7 +26,7 @@ Websoft9 application deployment is highly innovative compared to peers:
 
 ## Prerequisites
 
-- For **domain** access application, you should [Prepare your domain](./domain-prepare) and [Set global domain for Websoft9](./domain-set#global-domain).
+- For **domain** access application, you should [Prepare your domain](./domain-prepare) and [Set global domain for Websoft9](./domain-set#wildcard).
 
 - For **IP:Port** access application, you need to open host machine ports (e.g 9001-9999) from **security group**.
 

@@ -42,7 +42,7 @@ The easiest way is to connect to the server via SSH, run the command `odoo`, it 
 The upload file size is limit 1M by default of Nginx, so you should lift this restrictions
 
 1. Use WinSCP to connect Server
-2. Edit [Nginx vhost configuration file](../nginx#virtualHosx)
+2. Edit [Nginx vhost configuration file](../nginx#nginx-configure-wizard)
 3. Insert `client_max_body_size 0;`
 
    ```

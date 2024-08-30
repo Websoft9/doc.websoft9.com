@@ -69,7 +69,7 @@ Start to deploy the second application, you should add new VirtualHost segment t
     | Apache     | **有域名，通过 http://域名 访问网站**         | [获取](../apache#wwwtemplate) |
     |            | **没有域名，通过 http://IP/mysite2 访问网站** | [获取](../apache#aliastemplate) |
     | Nginx      | **有域名，通过 http://域名 访问网站**         | [获取](../apache#wwwtemplate) |
-    |            | **没有域名，通过 http://IP/mysite2 访问网站** | [获取](../apache#aliatemplate) |
+    |            | **没有域名，通过 http://IP/mysite2 访问网站** | [获取](../apache#httpstemplate) |
 
 4. Save virtual host configuration file and then restart service
     ~~~

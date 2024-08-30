@@ -35,7 +35,7 @@ If you have installed Websoft9 PrestaShop, the following steps is for your quick
 3. Input email and password([Don's know password?](./user/credentials)), accesss your administration console  
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/prestashop-backend-websoft9.png)
 
-4. Use [Set language](#setlanguage) to add multiple languages to your site
+4. Use Set language to add multiple languages to your site
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/prestashop-mutlan-websoft9.png)
 
 

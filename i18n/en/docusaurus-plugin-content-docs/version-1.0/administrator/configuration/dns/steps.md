@@ -43,9 +43,9 @@ You can refer to different Web Server for it:
 
 * [Binding domain on Apache](../apache#domain)
 * [Binding domain on Nginx](../nginx#domain)
-* [Binding domain on Caddy](../caddy#domain)
-* [Binding domain on Traefik](../traefik#domain)
-* [Binding domain on IIS](../iis#domain)
+* [Binding domain on Caddy](../caddy#template)
+* [Binding domain on Traefik](../traefik#binddomain)
+* [Binding domain on IIS](../iis#binddomain)
 
 
 ## FAQ

@@ -59,7 +59,7 @@ You can delete exist containers of application if you want to a fully new applic
 
 1. Go to the **Compose** tab of application management of Websoft9 My Apps
 
-2. Click the **[Redeploy](./app-lifecycle#rebuild)** button and waiting for new services take effective
+2. Click the **[Redeploy](./app-lifecycle#redeploy)** button and waiting for new services take effective
 
 ## Related docs
 

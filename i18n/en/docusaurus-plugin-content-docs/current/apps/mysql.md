@@ -28,7 +28,7 @@ import Meta from './_include/mysql.md';
 
 ### Graphical tools
 
-Websoft9 App Store installs [phpMyAdmin](./phpmyadmin) or [CloudBeaver](./cloudbeaver#mysql), you can manage MySQL **without opening an external network**.
+Websoft9 App Store installs [phpMyAdmin](./phpmyadmin) or [CloudBeaver](./cloudbeaver#verify-cloudbeaver-installation), you can manage MySQL **without opening an external network**.
 
 ## Configuration options{#configs}
 
@@ -89,7 +89,7 @@ To reset the password through a temporary container
 
 ### Backup (export) 
 
-- It is recommended to use a visualization tool such as phpMyAdmin, [Export](./phpmyadmin#exportimport) database (SQL format recommended)
+- It is recommended to use a visualization tool such as phpMyAdmin, [Export](./phpmyadmin#manage-database) database (SQL format recommended)
 
 - Developers can use **mysqldump** tool to export (more efficient and versatile)
    ```

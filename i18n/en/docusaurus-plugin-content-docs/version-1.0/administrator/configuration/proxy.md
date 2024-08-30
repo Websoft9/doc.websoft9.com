@@ -7,5 +7,5 @@ slug: /administrator/proxy
 
 * [Nginx Proxy](../nginx#proxytemplate)
 * [Apache Proxy](../apache#proxytemplate)
-* [Caddy Proxy](../caddy#proxytemplate)
+* [Caddy Proxy](../caddy#reverse-for-proxy)
 * [Traefik Proxy](../traefik#proxytemplate)
