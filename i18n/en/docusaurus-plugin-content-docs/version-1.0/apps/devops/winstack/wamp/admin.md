@@ -118,7 +118,7 @@ tags:
    原地址：c:\wwwroot\mysite1  
    目标地址：d:\www\mysite1
 
-4. 重启 [Apache 服务](#apache)
+4. 重启 [Apache 服务](../apache#service)
 5. 测试迁移后的结果，成功后可以删除原来的 *mysite1* 文件夹
 
 #### 迁移数据库文件（本地）

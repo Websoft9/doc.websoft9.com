@@ -130,7 +130,7 @@ WAMP 集成 PHP 环境，由 Bitnami  维护。它除 Apache,MySQL,PHP 之外，
 	     Require all granted
 	    </Directory>
       ```
-4. 保存 [**虚拟机主机配置文件**](#apache)，然后 [重启Apache服务](#service)
+4. 保存 [**虚拟机主机配置文件**](../apache#virtualhost)，然后 [重启Apache服务](../apache#service)
 
 5. 根据有无域名，本地浏览器访问：*http://域名* 或 *http://服务器公网IP/sitename*  访问你的网站。
 
@@ -156,11 +156,11 @@ Apache 配置主要通过修改 [虚拟主机配置文件](#path) 中的 [Virtua
 
 #### 绑定域名
 
-修改 [Apache虚拟机主机配置文件](#apache)，将其中的 **ServerName** 项的值修改为你的域名
+修改 [Apache虚拟机主机配置文件](./apache#virtualhost)，将其中的 **ServerName** 项的值修改为你的域名
 
 #### 修改网站目录
 
-修改 [Apache虚拟机主机配置文件](#apache)，将其中的 DocumentRoot 和 Directory 的值修改成你网站的路径 项的值修改为你的域名
+修改 [Apache虚拟机主机配置文件](./apache#virtualhost)，将其中的 DocumentRoot 和 Directory 的值修改成你网站的路径 项的值修改为你的域名
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wamp/wamp-mddfvhost-websoft9.png)
 
 
@@ -168,11 +168,11 @@ Apache 配置主要通过修改 [虚拟主机配置文件](#path) 中的 [Virtua
 
 使用 Apache 伪静态有三个步骤：
 
-1.  打开 [Apache 主配置文件](#apache)，检查 Rewrite 模块是否启用（WAMP 环境默认已经开启 Rewirte）
+1.  打开 [Apache 主配置文件](./apache)，检查 Rewrite 模块是否启用（WAMP 环境默认已经开启 Rewirte）
    ```
    LoadModule rewrite_module modules/mod_rewrite.so #若前面有"#"号则需要将其去掉，使之支持 mod_rewrite 模块；
    ```
-2.  保证 [Apache 虚拟主机配置文件](#apache)中 VirtualHost 配置段中增加 AllowOverride All
+2.  保证 [Apache 虚拟主机配置文件](./apache#virtualhost)中 VirtualHost 配置段中增加 AllowOverride All
 
 3.  给需要使用伪静态的网站的根目录中增加 `.htaccess` 文件，并在其中配置伪静态规则
 
