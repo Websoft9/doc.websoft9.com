@@ -167,7 +167,7 @@ If you have forgotten the password of Moodle, two methods for you tor retrieve i
 
 Follow the steps of retrieve database by modify database:
 
-1. Login [phpMyAdmin](./administrator/parameter#managedb), and find the database table *mdl_user*
+1. Login phpMyAdmin, and find the database table *mdl_user*
 
   ![Moodle user table](https://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/moodle-phpmyadminuser-websoft9.png)
 

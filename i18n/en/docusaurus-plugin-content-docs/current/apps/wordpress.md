@@ -43,7 +43,7 @@ There are two options available:
 
 - Integration of third-party web statistics software (recommended), below is an example of usage:
 
-  1. Install the open source web statistics software [Matomo](#./matomo)
+  1. Install the open source web statistics software Matomo
   2. Wordpress install [WP-Matomo](https://wordpress.org/plugins/wp-piwik/) plugin, and then connect to the Matomo server
 
 - Use WordPress website statistics related plugins

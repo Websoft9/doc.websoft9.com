@@ -174,7 +174,7 @@ Yes
   
 #### Is a web-based GUI management tool for Kafka?
 
-Yes, refer to [CMAK](../kafka#gui)
+Yes, refer to [CMAK](../kafka#kafka-guii)
   
 #### Cannot support the required Kafka version in cmak?
 

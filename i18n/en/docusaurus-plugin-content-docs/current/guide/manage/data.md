@@ -19,7 +19,7 @@ If your application use [external database](./app-getdetail#db), the database da
 
 ## Git repository for deployment
 
-Websoft9 is based GitOps and IaC principles, all deplopment files stored in a [Git repository](./app-compose#configs). 
+Websoft9 is based GitOps and IaC principles, all deplopment files stored in a [Git repository](./app-compose). 
 
 
 This approach to data categorization helps Websoft9 to efficiently manage application data while facilitating the separation of configuration and code, simplifying automated deployment and hosted maintenance processes.  

@@ -64,7 +64,7 @@ The default docker volume path is */var/lib/docker/volumes*, you can change it b
 ## Related topics
 
 - [Docker parameters](./parameter#path)
-- [Docker CLI](./parameter#cmd)
+- [Docker CLI](./parameter#cli)
 - [Enable Docker API](https://docs.docker.com/reference/cli/dockerd/#daemon-socket-option)
 - [Docker docs](https://docs.docker.com/)
 

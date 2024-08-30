@@ -58,7 +58,7 @@ There are three steps to using and set Nginx Rewrite:
 
 1. Make sure Rewrite module is enabled
 2. Add your [Rewrite rules file](https://github.com/Websoft9/role_nginx/tree/main/files/rewrite) at */etc/nginx/conf.d/rewrite* 
-3. Make sure you have include Rewrite rules file at your [Nginx vhost file](##wwwtemplate)
+3. Make sure you have include Rewrite rules file at your [Nginx vhost file](#template)
    ```text
    server
    {

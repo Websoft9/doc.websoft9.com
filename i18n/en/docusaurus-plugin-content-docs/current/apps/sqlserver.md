@@ -75,7 +75,7 @@ However, there are still alternative autobackup solutions that are widely used:
 
 #### Can't login with SQLServer password?
 
-Reference: [enable password](#enablepw)
+Reference: enable password
 
 #### SQLServer local connection failed?
 
