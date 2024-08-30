@@ -80,7 +80,7 @@ tags:
    chown www: -R /data/wwwroot/mysite2
    ```
 4. 编辑 Tomcat 配置文件 *server.xml* 文件   
-   新增 `<Host></Host>` 配置段，**插入**到 server.xml 中，并修改其中的 name, appBase, docBase, prefix等（[参数说明](../java#tomcattp)）
+   新增 `<Host></Host>` 配置段，**插入**到 server.xml 中，并修改其中的 name, appBase, docBase, prefix等（[参数说明](../java)）
     ```
     # host segment template
     <Host name="mysite2.yourdomain.com" appBase="/data/wwwroot/mysite2" unpackWARs="true" autoDeploy="true">

@@ -67,7 +67,7 @@ If you have installed Websoft9 Budibase, the following steps is for your quick s
 
   ![Budibase](https://libs.websoft9.com/Websoft9/DocsPicture/zh/budibase/budibase-element-amdin-websoft9.png)
 
-**Budibase also supports the automatic generation of pages based on the data table, the generation of pages based on the addition, deletion and modification of the data table to realize the CURD of the data, refer to [Automatically generate pages](#quickstart)**
+**Budibase also supports the automatic generation of pages based on the data table, the generation of pages based on the addition, deletion and modification of the data table to realize the CURD of the data, refer to Automatically generate pages**
 
 7. App preview: View the running effect of the program through the preview button
   
