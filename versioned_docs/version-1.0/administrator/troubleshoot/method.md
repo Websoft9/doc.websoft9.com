@@ -33,8 +33,8 @@ netstat -tunlp
 
 * [MySQL 日志太大，导致磁盘空间不足？](../mysql/admin#binlogexceed)
 * [端口被占用导致应用无法启动或报错？](../faq#portconflict)
-* [访问量很小，但网站访问很慢？](../faq#siteslow)
-* [root 账户修改文件权限，报错 "Operation not permitted"？](../faq#rootnoauth)
+* [访问量很小，但网站访问很慢？](../faq)
+* [root 账户修改文件权限，报错 "Operation not permitted"？](../faq)
 
 ### 连接障碍
 
@@ -79,12 +79,12 @@ mtr websoft9.com
 
 典型范例：  
 
-* [无法连接 Windows 远程桌面？](../faq#notconnectwin)
+* [无法连接 Windows 远程桌面？](../faq)
 * [http://服务器公网IP 无法打开初始化界面？](../faq#blank)
 * [网站重定向错误导致打不开？](../faq#redirect)
-* [升级或安装扩展时网络超时？](../faq#timeout)
-* [Windows 容器无法访问外网？](../faq#winnonetwork)
-* [连接 SFTP，出现 Disconnected...publickey](../faq#sftpnokey)
+* [升级或安装扩展时网络超时？](../faq)
+* [Windows 容器无法访问外网？](../faq)
+* [连接 SFTP，出现 Disconnected...publickey](../faq)
 * [域名解析迟迟没有生效？](../administrator/domain_step#effect)
 * [容器应用无法远程访问？](../docker/advanced#常见问题)
 * [Apache mod_evasive for DDoS](https://www.howtogeek.com/devops/how-to-configure-mod_evasive-for-apache-ddos-protection/)：mod_evasive 不合理的设置会频繁导致 403 错误
