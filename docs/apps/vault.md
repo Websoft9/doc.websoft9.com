@@ -7,26 +7,24 @@ tags:
   - vault
 ---
 
-import Meta from './_include/vault.md';
+import Meta from './\_include/vault.md';
 
 <Meta name="meta" />
 
-## 入门指南{#guide}
+## Getting Started {#guide}
 
-### 首次登录后台{#wizard}
+### First time logging into the backend {#wizard}
 
-1. Websoft9 控制台安装 Vault 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息
+1. After installing the Vault in the Websoft9 console, view the application details through “My Applications” and get the login information in the “Access” tab.
 
-2. 通过 Websoft9 控制台查看 Vault 容器的日志信息获取 Token
+2. View log messages from the Vault container through the Websoft9 console to obtain a Token
 
-3. 使用 Token 登陆系统
+3. Log in to the system using the provided Token.
 
+## Configuration options {#configs}
 
-## 配置选项{#configs}
+- CLI (√): link to the CLI icon in the upper left corner of the Vault console page
 
-- CLI（√）：Vault 控制台页面左上角 CLI 图标链接
+## Administrative maintenance {#administrator}
 
-## 管理维护{#administrator}
-
-
-## 故障
+## Troubleshooting.
