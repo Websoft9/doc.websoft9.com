@@ -9,42 +9,41 @@ tags:
   - 项目管理
 ---
 
-import Meta from './_include/zentao.md';
+import Meta from './\_include/zentao.md';
 
 <Meta name="meta" />
 
-## 入门指南{#guide}
+## Getting Started {#guide}
 
-### 初始化{#wizard}
+### Initializing {#wizard}
 
-1. Websoft9 控制台安装 Zentao（禅道） 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中访问地址 
+1. After installing Zentao in the Websoft9 console, view the application details through “My Applications” and access the address in the “Access” tab.
 
-2. 进入初始化界面，根据提示逐一完成后续步骤（建议保持默认的数据库连接设置）
+2. Enter the initialization screen and follow the prompts to complete the steps (it is recommended to keep the default database connection settings).
 
-3. 安装完成后，体验后台 
+3. After installation, explore the backend.
    ![](./assets/zentao-backend-websoft9.png)
 
-## 配置选项{#configs}
+## Configuration Options {#configs}
 
-- 多语言（✅）：支持后台切换
-- 命令行：[初始化管理脚本](https://www.zentao.net/book/zentaopmshelp/35.html)
-- 插件市场（✅）：[注册](https://www.zentao.net/user-register.html)官网账号，在线安装插件
-- 客户端（✅）：仅为禅道专业版和企业版用户提供
-- 禅道目录（已挂载）：*/data*
-- 插件路径（已挂载）：*/data/module*
-- 集成 Git（✅）
-- SMTP（✅）：**后台 > 通知 > 邮件**，选择 STMP 作为发信方式
+- Multilingual (✅): Supports backend switching
+- Command Line: [Initialization management script](https://www.zentao.net/book/zentaopmshelp/35.html)
+- Plugin Marketplace (✅): [Register](https://www.zentao.net/user-register.html) a website account to install plugins online
+- Client (✅): Available only for Zentao Professional and Enterprise users
+- Zentao Directory (Mounted): _/data_
+- Plugin Path (Mounted): _/data/module_
+- Git Integration (✅)
+- SMTP (✅): **Backend > Notifications > Email**, select SMTP as the sending method
 
+## Administration & Maintenance {#administrator}
 
-## 管理维护{#administrator}
+- Install Plugins: Supports [Plugin Marketplace](https://www.zentao.net/extension-browse.html) for online installation, or download and extract to the plugin directory for manual installation.
+- Reset Password: Modify the `password` field in the **zt_user** table of the database to `e10adc3949ba59abbe56e057f20f883e`, which resets the password to `123456`.
+- Online Backup: **Backend > System Settings > Backup**
 
-- 安装插件：支持 [插件市场](https://www.zentao.net/extension-browse.html) 在线安装，也支持下载解压到插件目录中安装
-- 重置密码：修改数据库 **zt_user** 表，password 字段值改成 `e10adc3949ba59abbe56e057f20f883e` ，密码即重置为：`123456`
-- 在线备份：**后台 > 系统设置 > 备份**
+## Troubleshooting
 
-## 故障
+#### Locked out due to multiple incorrect password attempts?
 
-#### 密码输入错误多次被锁？
-
-1. 10 分钟后会自动解锁。
-2. 管理员登录，组织 → 用户 操作栏里有解锁按钮。
+1. The account will automatically unlock after 10 minutes.
+2. The administrator can log in and use the unlock button in the organization → user action bar.
