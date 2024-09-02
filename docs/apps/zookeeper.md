@@ -7,48 +7,47 @@ tags:
   - GUI
 ---
 
-import Meta from './_include/zookeeper.md';
+import Meta from './\_include/zookeeper.md';
 
 <Meta name="meta" />
 
-## 入门指南{#guide}
+## Getting Started {#guide}
 
-Websoft9 控制台安装 Zookeeper 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取访问信息。
+After installing Zookeeper in the Websoft9 console, view the application details through “My Applications” and get access information in the “Access” tab.
 
-### 客户端连接
+### Client Connection
 
-1. 获取 Zookeeper 的容器名称，假定为 zk_name
+1. Get the container name of Zookeeper, assuming it is zk_name.
 
-2. 运行下面的命令连接启动客户端连接 (zk_name 替换为实际值)
-   ```
-   docker run -it --rm --net=container:zk_name zookeeper zkCli.sh -server zookeeper
-   ```
+2. Start the client connection by running the following command connection (replace zk_name with the actual value)
+   `docker run -it --rm --net=container:zk_name zookeeper zkCli.sh -server zookeeper`
 
-3. 连接成功后运行 `ls /` 查询 znode
+3. After a successful connection, run `ls /` to query the znode.
 
-### 设置 super_digest 认证
+### Setting up super_digest authentication
 
-1. 客户端连接 Zookeeper 节点，运行 `getAcl /` 会看到下面的信息，表示节点面向任何用户开放
+1. The client connects to the Zookeeper node and runs `getAcl /` and sees the following message, indicating that the node is open to any user
+
    ```
     [zk: zookeeper(CONNECTED) 3] getAcl /
     'world,'anyone
     : cdrwa
    ```
 
-2. 运行下面的命令修改权限
+2. Run the following command to change the permissions
+
    ```
    addauth digest super:yourpassword
    setAcl / digest:super:password:cdrwa
    ```
 
-3. 再次运行 `getAcl /` 会发现出现 **Insufficient permission : /**
+3. Run `getAcl /` again and you'll see **Insufficient permission : /**
 
+## Configuration options {#configs}
 
-## 配置选项{#configs}
+- ACL authentication mode (√)
+- Configuration file (√), but not enabled, set using environment variables
 
-- ACL 认证模式（√）
-- 配置文件（√），但未启用，采用环境变量设置
+## Administrative maintenance {#administrator}
 
-## 管理维护{#administrator}
-
-## 故障
+## Troubleshooting
