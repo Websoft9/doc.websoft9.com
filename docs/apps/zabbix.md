@@ -7,43 +7,41 @@ tags:
   - 日志
 ---
 
-import Meta from './_include/zabbix.md';
+import Meta from './\_include/zabbix.md';
 
 <Meta name="meta" />
 
-## 入门指南{#guide}
+## Getting Started {#guide}
 
-### 登录后台{#wizard}
+### Log in to the Backend {#wizard}
 
-Websoft9 控制台安装 Zabbix 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
+After installing Zabbix in the Websoft9 console, you can view the application details through “My Applications” and get the login information in the “Access” tab.
 
-1. 访问应用 URL, 进入登录界面
+1. Access the application URL, and go to the login screen
 
-2. 成功登录到 Zabbix 后台
-   ![](./assets/zabbix-dashboard-websoft9.png)
+2. Successfully log in to the Zabbix backend.
+   ! [](. /assets/zabbix-dashboard-websoft9.png)
 
+### Adding a Monitored Host
 
-### 增加被监控主机
+1. Install Zabbix-Agent on the target host (container installation is recommended). 2.
 
-1. 先到目标主机上安装 Zabbix-Agent （推荐容器安装）
+2. After logging in to the Zabbix console, open: **Configuration > Hosts**, add a new host, and fill in the connection information for the target host.
 
-2. 登录到 Zabbix 控制台后，打开：**配置 > 主机**，新增一个主机，填写目标主机的连接信息
+3. Refresh the host list page, and the host in the columns shows **green**, which indicates that the monitoring has been successful.
 
-4. 刷新主机列表页，列变中主机显示 **绿色** 即表明监控已成功
+## Configuration options {#configs}
 
-## 配置选项{#configs}
+- SMTP (√): background **Management > Alarm Media Type > Email**.
 
-- SMTP（√）:后台 **管理 > 报警媒介类型 > Email**
+- Multi-language (√): switch by background User Profile, no target language needs to be installed first [How to install locale](https://www.zabbix.com/community)
 
-- 多语言（√）：通过后台 User Profile 切换，无目标语言需先安装 [How to install locale](https://www.zabbix.com/community)
+- What to monitor: Monitor various IT components, including networks, servers, virtual machines, and cloud services.
 
-- 监控的对象：监控各种IT组件，包括网络、服务器、虚拟机和云服务
+- Components: Zabbix-Server, Zabbix-Web, Zabbix-Proxy, Zabbix-Agent, Zabbix-java-gateway
 
-- 组件：Zabbix-Server，Zabbix-Web，Zabbix-Proxy，Zabbix-Agent，Zabbix-java-gateway
+## Admin Maintenance {#administrator}
 
-## 管理维护{#administrator}
+- Reset passwords: run SQL in the Zabbix database `update zabbix.users set passwd=md5(new_password) where alias='Admin`
 
-- 重置密码：Zabbix 数据库中运行 SQL `update zabbix.users set passwd=md5(new_password) where alias='Admin`
-
-## 故障
-
+## Troubleshooting
