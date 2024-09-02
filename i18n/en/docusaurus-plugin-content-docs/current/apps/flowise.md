@@ -26,4 +26,4 @@ After installing Flowise in the **Websoft9 console**, view the application detai
 
 #### Can't access Flowise?
 
-Solution : The environment variable **CORS_ORIGINS** needs to be set to * to release all client restrictions.
+Solution : The environment variable **CORS_ORIGINS** needs to be set to * to remove all client restrictions.
