@@ -7,27 +7,26 @@ tags:
   - zammad
 ---
 
-import Meta from './_include/zammad.md';
+import Meta from './\_include/zammad.md';
 
 <Meta name="meta" />
 
-## 入门指南{#guide}
+## Getting started {#guide}
 
-### 初始化{#wizard}
+### Initializing {#wizard}
 
-1. Websoft9 控制台安装 Zammad 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。
+1. After installing Zammad on the Websoft9 console, view the application details through “My Applications” and get the login information in the “Access” tab.
 
-2. Zammad 会自动进行初始化，由于初始化过程较长，需要等待几分钟后才能进入初始页面
+2. Zammad will be initialized automatically, due to the long initialization process, you need to wait for a few minutes before you can access the initial page.
 
-## 配置选项{#configs}
+## Configuration options {#configs}
 
-- 多语言（✅）
+- Multilingual (✅)
 
-## 管理维护{#administrator}
+## Admin Maintenance {#administrator}
 
-## 故障
+## Troubleshooting
 
-#### 更换了数据库后无法连接？
+#### Unable to connect after changing the database?
 
-Zammad 数据库连接不支持主机名包含**_**，确保更换后的数据库主机名符合要求。
-
+Zammad does not support database hostnames that contain **\_**. Ensure that the hostname of the new database meets this requirement.
