@@ -6,19 +6,19 @@ tags:
   - WordPress
 ---
 
-import Meta from './_include/woocommerce.md';
+import Meta from './\_include/woocommerce.md';
 
 <Meta name="meta" />
 
-## 入门指南{#guide}
+## Getting Started {#guide}
 
-### 初始化{#wizard}
+### Initializing {#wizard}
 
-## 配置选项{#configs}
+## Configuration options {#configs}
 
-- 支付宝（✅）：支持支付宝即时到账
-- 微信支付（✅）
+- Alipay (✅): Support Alipay Instant Payment
+- WeChat Pay (✅)
 
-## 管理维护{#administrator}
+## Administrative maintenance {#administrator}
 
-## 故障
+## Troubleshooting.
