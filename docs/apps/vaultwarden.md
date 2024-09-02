@@ -13,7 +13,7 @@ import Meta from './\_include/vaultwarden.md';
 
 ## Getting Started {#guide}
 
-### Initialize {#wizard}
+### Initializing {#wizard}
 
 1. Log in to the Websoft9 console and click the **Gateway** menu on the left side [Set HTTPS access for Vaultwarden applications] (. /domain-https#console) (required action, otherwise it will not work)
 
