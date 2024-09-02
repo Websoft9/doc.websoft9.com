@@ -54,7 +54,7 @@ Yes
 
 #### Canvas 怎么安装插件？
 
-参考: [安装插件](../canvas#plugin)
+参考: [安装插件](../canvas#installplugin)
 
 #### Can I reset administrator password of Canvas by command?
 

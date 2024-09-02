@@ -25,7 +25,7 @@ import Meta from './_include/onlyofficedocs.md';
 
 * [OwnCloud Integration ONLYOFFICE Docs](./owncloud#onlyoffice)
 * [Nextcloud Integration ONLYOFFICE Docs](./nextcloud#onlyoffice)
-* [Seafile Integration ONLYOFFICE Docs](./seafile#onlyoffice)
+* [Seafile Integration ONLYOFFICE Docs](./seafile#docs)
 
 ### Add fonts {#addfonts}
 

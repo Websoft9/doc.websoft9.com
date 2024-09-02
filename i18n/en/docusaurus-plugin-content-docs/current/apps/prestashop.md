@@ -54,13 +54,13 @@ Prestashop 8.0 does not support backend online connection to Marketplace, so to 
 
 - **Database Backup**: PrestaShop provides a backend database backup function: **Advanced Parameters > SQL Manager**
 
-- **Online Upgrade**: In PrestaShop Module Manager, install and enable **1-Click Upgrade**.
+- **Online Upgrade**: In PrestaShop Module Manager, install and enable **1-Click Upgrade**
 
 ## Troubleshooting{#troubleshooting}
 
 #### Access to PrestaShop always appear port?
 
-You need to login to the backend and then click [Fix URL](#url)
+You need to login to the backend and then click Fix URL
 
 #### Failed to access frontend after configuring HTTPS? 
 

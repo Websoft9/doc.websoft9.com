@@ -54,7 +54,7 @@ These steps will show you how to create Database and Table by RethinkDB console:
 
 ### Console password management
 
-The RethinkDB console does not provide default login authentication, and this deployment solution uses [Nginx auth_bacic](./nginx#auth_basic) as the login authentication mode
+The RethinkDB console does not provide default login authentication, and this deployment solution uses [Nginx auth_bacic](./nginx#authbasic) as the login authentication mode
 
 ### Remote Connection{#remote}
 

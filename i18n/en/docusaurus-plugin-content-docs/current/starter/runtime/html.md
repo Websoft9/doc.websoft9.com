@@ -15,9 +15,9 @@ Websoft9 帮助用户使用 Apache 或 NGINX 或 Caddy 等容器实现 HTML/JS �
 
 ## Configuration options{#configs}
 
-- [Apache configuration options](../apache#configs)
-- [Caddy  configuration options](../caddy#configs)
-- [NGINX configuration options](../nginx#configs)
+- [Apache configuration options](../apache#use-special-port-for-apache)
+- [Caddy  configuration options](../caddy#configure-caddy-by-api)
+- [NGINX configuration options](../nginx#nginx-configure-wizard)
 
 ## Deploy a HTML/JS application{#deploy}
 

@@ -56,4 +56,4 @@ NO
 
 #### Can I access CloudBeaver from other port?
 
-Yes, you need to modify [Nginx vhost configuration file](../nginx#virtualHosx), and change **server_name** 's `listen 80` to `listen 8090` as sample
+Yes, you need to modify [Nginx vhost configuration file](../nginx#nginx-configure-wizard), and change **server_name** 's `listen 80` to `listen 8090` as sample

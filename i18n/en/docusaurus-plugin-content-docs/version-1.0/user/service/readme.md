@@ -16,7 +16,7 @@ You should have some skills about Cloud Server when you use open source software
 
 ## Connect Server{#connect}
 
-If you only need to connect to the Server, and you have prepared the server's [administrator account and password](../user/credentials#osaccount), Internet IP address and other information, you can refer to the following general tutorial to start connecting to the server.
+If you only need to connect to the Server, and you have prepared the server's [administrator account and password](../user/credentials), Internet IP address and other information, you can refer to the following general tutorial to start connecting to the server.
 
 ### For Linux{#connectlinux}
 

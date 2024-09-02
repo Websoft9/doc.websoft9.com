@@ -51,7 +51,7 @@ In addition to the OpenCart issues listed below, you can refer to [Troubleshoot 
 
 **原因分析**：先通过 IP 安装，再绑定域名，导致默认 URL 发生变化   
 
-**解决方案**：[修改 URL](../opencart#dns)
+**解决方案**：[修改 URL](../opencart)
 
 #### 安装插件，显示403权限不足？
 

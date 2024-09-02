@@ -27,7 +27,7 @@ Refer to:
 
 * [MySQL/Mariadb](../mysql#phpmyadmin)
 * [PostgreSQL](../postgresql#pgadmin)
-* [Mongodb](../mongodb#adminmongo)
+* [Mongodb](../mongodb#mongodb-web-gui)
 * [Oracle](../cloudbeaver)
 * [SQLServer](../cloudbeaver)
 
