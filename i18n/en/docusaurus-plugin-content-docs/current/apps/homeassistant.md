@@ -24,7 +24,7 @@ The Home Assistant application does not include the MQTT service by default:
 ## Configuration options{#configs}
 
 - [Configuration files](https://www.home-assistant.io/docs/configuration/) directory(mounted): /config
-- [Home Assistant Add-ons](https://github.com/home-assistant/addons): only available for Linux native installations, not containerized versions.
+- [Home Assistant Add-ons](https://github.com/home-assistant/addons): only available for Linux native installations, not for containerized versions.
 
 ## Administer{#administrator}
 
@@ -32,4 +32,4 @@ The Home Assistant application does not include the MQTT service by default:
 
 #### Can't access Home Assistant through the domain name?
 
-Currently it can be accessed only by IP and port, there is no solution for domain access.
+Currently it can be accessed only via IP and port. There is no solution for domain access at this time.
