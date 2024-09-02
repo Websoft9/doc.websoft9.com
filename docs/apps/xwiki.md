@@ -7,26 +7,25 @@ tags:
   - 文档
 ---
 
-import Meta from './_include/xwiki.md';
+import Meta from './\_include/xwiki.md';
 
 <Meta name="meta" />
 
-## 入门指南{#guide}
+## Getting Started {#guide}
 
-### 初始化{#wizard}
+### Initializing {#wizard}
 
-Websoft9 控制台安装 XWiki 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
+After installing XWiki in the Websoft9 console, view the application details in “My Applications” and get the login information in the “Access” tab.
 
-1. 进入安装向导后，Xwiki 开始初始化，耐心等待  
+1. After entering the installation wizard, Xwiki will start initialization, wait patiently!
 
-2. 依次完成后续步骤：设置管理账号、安装预制模板（**此步骤不能跳过,否则无法使用**）
-    ![](./assets/xwiki-install-flavor1-websoft9.png)
+2. Complete the following steps in order: set up an administrative account, install the pre-made templates (**this step cannot be skipped, otherwise it will not work**)
+   ! [](. /assets/xwiki-install-flavor1-websoft9.png)
 
-3. 等待所有安装完成
+3. Wait for all installations to complete
 
+## Configuration options {#configs}
 
-## 配置选项{#configs}
+## Administration {#administrator}
 
-## 管理维护{#administrator}
-
-## 故障
+## Troubleshooting
