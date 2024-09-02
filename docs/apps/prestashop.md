@@ -23,8 +23,6 @@ import Meta from './_include/prestashop.md';
 
 3. 点击左侧菜单 **Shop Parameters** 项，在页面中下拉到 **Set shop URL** 设置项
 
-4. 如果是域名访问 Prestashop，请去掉默认 URL 中的端口，**保存** 后生效
-
 ### 从 Marketplace 安装扩展
 
 Prestashop8.0 不支持后台在线连接 Marketplace，故安装市场的扩展需：**购买 > 下载扩展包 > 后台导入**
