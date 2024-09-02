@@ -7,24 +7,24 @@ tags:
   - vaultwarden
 ---
 
-import Meta from './_include/vaultwarden.md';
+import Meta from './\_include/vaultwarden.md';
 
 <Meta name="meta" />
 
-## 入门指南{#guide}
+## Getting Started {#guide}
 
-### 初始化{#wizard}
+### Initialize {#wizard}
 
-1. 登录到 Websoft9 控制台，点击左侧的 **网关** 菜单[为 Vaultwarden 应用设置 HTTPS 访问](./domain-https#console)（必要操作，否则无法使用）
+1. Log in to the Websoft9 console and click the **Gateway** menu on the left side [Set HTTPS access for Vaultwarden applications] (. /domain-https#console) (required action, otherwise it will not work)
 
-2. Websoft9 控制台安装 Vaultwarden 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
+2. After installing Vaultwarden on the Websoft9 console, view the application details through **My Applications** and get the login information in the **Access** tab.
 
-3. 根据向导完成注册、登录
+3. Follow the wizard to complete registration and login.
 
-## 配置选项{#configs}
+## Configuration options {#configs}
 
-- 多语言（√）
+- Multilingual (√)
 
-## 管理维护{#administrator}
+## Administrative maintenance {#administrator}
 
-## 故障
+## Troubleshooting.
