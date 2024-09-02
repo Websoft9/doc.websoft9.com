@@ -8,229 +8,223 @@ tags:
   - 博客系统
 ---
 
-import Meta from './_include/wordpress.md';
+import Meta from './\_include/wordpress.md';
 
 <Meta name="meta" />
 
+## Getting Started {#guide}
 
-## 入门指南{#guide}
+### Initializing {#wizard}
 
-### 初始化{#wizard}
+After installing WordPress in the Websoft9 console, you can view the application details through “My Applications” and get the access information in the “Access” tab.
 
-Websoft9 控制台安装 WordPress 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取访问信息。  
+1. Go to the installation wizard and select the language (you can switch the language after installation)
 
-1. 进入安装向导，选择语言（可安装后切换语言）
+2. Set your administrator account, password and email address
 
-2. 设置您的管理员账号、密码和邮箱
+3. After installation, enter the backend (backend address: /wp-admin)
+   ! [](. /assets/wordpress-backend-websoft9.png)
 
-3. 安装后，进入后台（后台地址：/wp-admin）
-  ![](./assets/wordpress-backend-websoft9.png)
+### Website Setup Process
 
-### 建站流程
+The steps to build a website based on WordPress are as follows:
 
-基于 WordPress 建站的步骤如下：
+1. Selected themes: can be purchased from the official theme marketplace or third-party theme marketplaces
 
-1. 选用主题：可从官方主题市场或第三方主题市场购买
+2. Theme-based customization of the public parts of the site: menu, top, bottom
 
-2. 基于主题定制网站的公共部分：菜单、顶部、底部
+3. Customize the page
 
-3. 定制页面
+4. Entering articles and integrating articles with pages
 
-4. 录入文章，并将文章与页面集成
+### Website Analytics {#analysis}
 
-### 网站统计{#analysis}
+There are two available options:
 
-有两种可选的方案：
+- Integration of third-party web statistics software (recommended), the following is an example of use:
 
-- 集成第三方网站统计软件（推荐），下面是使用范例：
+  1. Websoft9 App Store installs the open source web statistic software [Matomo](. /matomo)
+  2. Wordpress install [WP-Matomo](https://wordpress.org/plugins/wp-piwik/) plugin, and then connect to the Matomo server.
 
-  1. Websoft9 应用商店安装开源网站统计软件 [Matomo](./matomo)
-  2. Wordpress 安装 [WP-Matomo](https://wordpress.org/plugins/wp-piwik/) 插件，然后连接 Matomo 服务端
+- Using WordPress Website Statistics Related Plugins
 
-- 使用 WordPress 网站统计相关的插件
+## Best Practices
 
-## 最佳实践
+### Migration to Websoft9 hosting platform
 
-### 迁移至 Websoft9 托管平台
+Before migrating, first install a new WordPress application through the Websoft9 App Marketplace. This will be referred to as the destination site.
 
-在迁移之前，先通过 Websoft9 应用市场，安装一个全新的 WordPress 应用，此处称之为目的站。  
+Then, start the migration using one of the following options:
 
-然后，采用以下的方案之一开始迁移：
+##### Migrate Using a Plugin (Recommended)
 
-##### 使用插件迁移（推荐）
+1. Install the plug-in: [All-in-One WP Migration and Backup](https://wordpress.org/plugins/all-in-one-wp-migration/) on both the source and destination sites (the free version supports sites smaller than 900M).
 
-1. 源站和目的站均安装插件：[All-in-One WP Migration and Backup](https://wordpress.org/plugins/all-in-one-wp-migration/)（免费版支持小于 900M 的网站）
+2. Export a full backup file from the source site using a plugin and download it to your local machine.
 
-3. 源站中通过插件导出完整的备份文件，并下载到本地
+3. Import the backup file into the destination site using a plugin.
 
-4. 目的站中通过插件导入备份文件
+##### Manual Migration
 
-##### 手工迁移
+If the conditions for plugin migration are not met, manual migration is required:
 
-如果不符合通过插件迁移的条件，需要手工迁移：
+1. Use one of the following options to migrate the **wp-content** directory from the source site to the destination site:
 
-1. 采用下面的方案之一，将源站的 **wp-content** 目录迁移至目的站：
+   - **File copy**: the source and destination are not on the same server, migrate the directory by remote copy.
+   - **Directory mount**: The source and destination are on the same server, modify the application's orchestration file, and mount _/var/www/html/wp-content_.
 
-   - **文件拷贝**：源站与目的站在不属于同一台服务器，通过远程拷贝的方式迁移目录
-   - **目录挂载**：源站与目的站在同一台服务器上，修改应用的编排文件，挂载 */var/www/html/wp-content* 
+2. Change directory folder permissions to `www-data`.
+3. use [phpMyAdmin](. /phpmyadmin) to export the database from the source site and import it to the destination site.
+4. fix the database connection information in the **wp-config.php** file of the destination site.
 
-2. 修正目录文件夹权限为 `www-data`
-3. 使用 [phpMyAdmin](./phpmyadmin) 等可视化工具从源站导出数据库，再导入到目的站
-4. 修正目的站的 **wp-config.php** 文件中的数据库连接信息
+### Enable Object Storage
 
+When the images and media files on your WordPress site start affecting its performance, it is recommended to store the media files in object storage:
 
-### 启用对象存储
+1. Prepare a third-party object storage service or install [MinIO](./minio) from the Websoft9 App Store.
 
-当 WordPress 网站的图片和媒体文件已经影响网站的性能时，建议将媒体文件存储到对象存储中：
+2. Install the [Media Cloud](https://mediacloud.press/) or OSS Upload plugin on WordPress, and then connect it to the object storage service.
 
-1. 准备好第三方对象存储服务或 Websoft9 应用商店安装 [MinIO](./minio)
+### Three Principles for Maintaining WordPress
 
-2. Wordpress 安装 [Media Cloud](https://mediacloud.press/) 或 OSS Upload插件，然后连接到对象存储服务
+In order to make WordPress run more efficiently, be easier to maintain, and easier to migrate, we summarize three important principles in our practice:
 
-###  维护 WordPress 的三大原则
+##### Efficiency First
 
-为了使 WordPress 运行更有效率，方便维护、方便迁移，我们在实践中总结三个重要原则：
+The efficiency of a website is often more important than its aesthetics, so the principle of prioritizing efficiency needs to be followed at all times:
 
-##### 效率优先
+- Images should ideally not exceed 100k per file.
+- Separate multimedia files from WordPress.
+- Minimize the use of plugins.
 
-网站的访问效率往往比美观度更重要，因此需时刻遵循效率优先的原则：
+##### Separation Principle
 
-- 图片尽量不超过 100k/张
-- 多媒体文件从 WordPress 中剥离
-- 减少插件的使用
+For non-business functionality needs, try to avoid plugins and instead use solutions outside of WordPress:
 
-##### 分离原则
+- HTTPS setup: Implement using the Websoft9 gateway.
+- Image storage: Integrate object storage.
+- Website analytics: Integrate Matomo or other analytics systems.
+- Website acceleration: Use CDN.
+- Google Fonts disabling: If the plugin doesn’t solve it, consider handling it at the gateway level.
 
-非业务功能需求，尽量避免使用插件，而是采用 WordPress 之外的解决方案：
+##### Promotion First
 
-- HTTPS 设置：使用 Websoft9 网关实现
-- 图片存储：集成对象存储
-- 网站访问统计：集成 Matomo 等统计系统
-- 网站加速：使用 CDN
-- Google 字体禁用：插件无法解决时，考虑在网关中处理
+The website should be considered for promotion and SEO to realize the return of value:
 
-##### 推广优先
+- Image names, URL addresses in English for easy recognition
+- Use SEO plugin to set keywords for the page
+- Article image size ratio should be 600:400.
 
-网站要考虑推广和 SEO，实现价值回报：
+## Configuration options {#configs}
 
-- 图片名称、URL 地址采用英文，便于识别
-- 使用 SEO 插件设置页面的关键词
-- 文章图片大小比例最好为600:400
+- Root directory (mounted): _/var/www/html_
 
+- Configuration File: _/var/www/html/wp-config.php_
 
-## 配置选项{#configs}
+- Plugins directory: _/var/www/html/wp-contents/plugins_
 
-- 根目录（已挂载）：*/var/www/html*
+- Theme directory: _/var/www/html/wp-contents/themes_
 
-- 配置文件：*/var/www/html/wp-config.php*
+- Data folder: _/var/www/html/wp-contents_
 
-- 插件目录：*/var/www/html/wp-contents/plugins*
+- php configuration file (mounted): _/usr/local/etc/php/conf.d/php_exra.ini_
 
-- 主题目录：*/var/www/html/wp-contents/themes*
+- Container user: `www-data`
 
-- 数据文件夹：*/var/www/html/wp-contents*
-
-- php 配置文件（已挂载）：*/usr/local/etc/php/conf.d/php_exra.ini*
-
-- 容器用户：`www-data`
-
-- CLI（√）：`wp --info`, `wp plugin install akismet`
+- CLI (√): `wp --info`, `wp plugin install akismet`
 
 - [REST API](https://developer.wordpress.org/rest-api/)（√）
-   ```
-   curl -X OPTIONS -i http://yourdomain.com/wp-json/
-   curl -X GET -i http://yourdomain.com/wp-json/wp/v2/posts
-   curl -X GET -i http://yourdomain.com/wp-json/wp/v2/pages
-   ```
 
-- SMTP（√）：使用 [WP Mail SMTP by WPForms](https://wordpress.org/plugins/wp-mail-smtp/) 
+  ```
+  curl -X OPTIONS -i http://yourdomain.com/wp-json/
+  curl -X GET -i http://yourdomain.com/wp-json/wp/v2/posts
+  curl -X GET -i http://yourdomain.com/wp-json/wp/v2/pages
+  ```
 
-- 电商：使用 WooCommerce 插件实现电商功能，支持
+- SMTP (√): use [WP Mail SMTP by WPForms](https://wordpress.org/plugins/wp-mail-smtp/)
 
-- 切换经典编辑器：使用 **Classic Editor** 插件
+- E-commerce: Use the WooCommerce plugin to implement e-commerce functionality, support for
 
-- 第三方主题市场：[themeforest](https://themeforest.net/)
+- Toggle Classic Editor: use **Classic Editor** plugin
 
-- 第三方插件市场：[codecanyon.net](https://codecanyon.net/?osr=tn)
+- Third party theme market: [themeforest](https://themeforest.net/)
 
-- 在线升级（√）
+- Third-party plugin marketplace: [codecanyon.net](https://codecanyon.net/?osr=tn)
 
-- 多站点（√）：默认已允许多站点，通过 WordPress 控制台 **工具 > 配置网络** 实现
+- Online upgrade (√)
 
-## 管理维护{#administrator}
+- Multisite (√): multisite is already allowed by default, via WordPress console **Tools > Configure Networking**
 
-- **更改管理员邮箱**：如果未启用 SMTP，需修改数据库 **wp_option** 表中的邮箱信息
+## Administrative maintenance {#administrator}
 
-- **找回密码**：修改数据库 **wp_user** 表，将 `admin` 用户的密码文替换为 `21232f297a57a5a743894a0e4a801fc3`，密码重置为 `admin`
+- **Change administrator mailbox**: If SMTP is not enabled, you need to modify the mailbox information in the database **wp_option** table.
 
-- **更换域名 URL**：但 WP 控制台无法登陆修改 URL 时，可修改 **option** 表的 home 和 siteurl 字段实现
+- **Retrieve password**: Modify database **wp_user** table, replace the password text of `admin` user with `21232f297a57a5a743894a0e4a801fc3`, and reset the password to `admin`.
 
-- **自动化备份与恢复**：建议使用 [UpdraftPlus WordPress Backup Plugin ](https://wordpress.org/plugins/updraftplus/)
+- **Replace domain URL**: If you can't log in to change the URL in the WP console, you can change the home and siteurl fields in the **option** table.
 
-- **计划任务**：建议使用 [WP Crontrol](https://wordpress.org/plugins/wp-crontrol)
+- **Automated Backup and Restore**: We recommend [UpdraftPlus WordPress Backup Plugin](https://wordpress.org/plugins/updraftplus/).
 
-- **升级**：除在线升级 WordPress 内核、主题和插件之外，网络不好的情况下，需通过上传源码的方式到指定位置，实现手工升级
+- **Scheduled Tasks**: [WP Crontrol](https://wordpress.org/plugins/wp-crontrol) is recommended.
 
-- **SSL**：通过 Websoft9 网关实现，请勿安装任何 WordPress SSL 相关插件
+- **Upgrade**: In addition to upgrading the WordPress kernel, themes and plugins online, if the network is not good, you need to manually upgrade by uploading the source code to a specified location.
 
-- **禁用 Google 字体**：先尝试安装 Disable Gooogle Fonts 插件，如果插件无法解决问题，可以在 Websoft9 网关中处理
+- **SSL**: realized by Websoft9 gateway, please don't install any WordPress SSL related plugins.
 
-- **支持多域名**：修改容器内 *wp-config.php* 文件可避免追加域名后修改 ROOT_URL 的问题
+- **Disable Google Fonts**: Try to install Disable Gooogle Fonts plugin first, if the plugin can't solve the problem, you can deal with it in Websoft9 gateway.
 
-    ```
-    # 在 define('WP_DEBUG', false)行后追加如下内容
-    if (true) {
+- **Multi-domain support**: Modify the _wp-config.php_ file in the container to avoid the problem of modifying the ROOT_URL after appending a domain name.
+
+  ```
+  # Append the following after the define('WP_DEBUG', false) line
+  if (true) {
       $http_prefix = (!empty($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) !== 'off') ? 'https://' : 'http://';
-      //多域名支持
+      // Multi-domain support
       define('WP_SITEURL', $http_prefix . $_SERVER['HTTP_HOST']);
       define('WP_HOME', $http_prefix . $_SERVER['HTTP_HOST']);
-      //媒体路径使用相对路径 如果使用第三方云储存 将下面这段附件路径地址注释即可
+      // Use relative paths for media. If using third-party cloud storage, comment out the following media path.
       define('WP_CONTENT_URL', '/wp-content');
     }
 
-    ```
+  ```
 
-## 故障
+## Troubleshooting
 
+#### After configuring HTTPS, some website resources fail to load? {#httpsmore}
 
-#### 配置HTTPS后，网站部分资源无法加载？{#httpsmore}
+1. Special plug-ins cause? Some plugins come with HTTPS switch, you need to turn it on or off according to the actual situation.
+2. Enabled CDN service? Edit the **wp-config.php** file in the WordPress root directory and add the following code:
 
-1. 特殊插件导致？ 某些插件自带 HTTPS 开关，需要根据实际情况开启或关闭。 
-2. 开了 CDN 服务？ 编辑 WordPress 根目录下的 **wp-config.php** 文件，增加如下代码
+   ```
+      define('FORCE_SSL_ADMIN', true);
+      define('FORCE_SSL_LOGIN', true);
+      $_SERVER['HTTPS'] = 'ON';
+      define('CONCATENATE_SCRIPTS', false);
+   ```
 
-    ```
-       define('FORCE_SSL_ADMIN', true);
-       define('FORCE_SSL_LOGIN', true);
-       $_SERVER['HTTPS'] = 'ON';
-       define( 'CONCATENATE_SCRIPTS', false );
-    ```
+#### HTTPS access '...is not fully secure'?
 
-#### HTTPS 访问 “....并非完全安全”？
+Reason: WordPress webpage contains some static link resources such as images with HTTP header.  
+Solution: You need to manually modify them one by one
 
-原因：WordPress 网页中含有一部分 HTTP 开头的图片等静态链接资  
-方案：需要手工逐一修改  
+#### Frequent database connection errors?
 
-#### 频繁出现数据库连接错误？
+Cause：Insufficient memory is the most common reason for WordPress database errors.  
+Solution：Increase memory and enable CDN (CDN can accelerate the website while significantly reducing server memory usage).
 
-问题原因：内存不足导致 WordPress 数据库运行异常是最常见的   
-解决方案：增加内存+启用CDN（CDN可以在给网站加速的同时，大大降低服务器内存的开销）
+#### Error uploading images?
 
+- Multimedia folder permissions: make sure user:usergroup is `www-data`
+- Size exceeds the limit: need to modify the PHP configuration file
+- Format and suffix inconsistency: pic.jpg is actually pic.jpeg, which prevents uploading, change it to the actual suffix.
 
-#### 上传图片出错？
+#### Administrator unable to log in to the backend?
 
-- 多媒体文件夹权限：需确保用户:用户组为 `www-data`
-- 大小超过限制：需修改 PHP 配置文件
-- 格式与后缀不一致：pic.jpg 实际上是 pic.jpeg，就会导致无法上传，修改为实际后缀名即可
+Issue：The website is accessible, but the administrator cannot log in to the backend.  
+Cause：The permission settings in the database have been corrupted.
+Solution：Modify the `wp_user_level`, `wp_capabilities`, and other related fields in the `wp_users` and `wp_usermeta` tables.
 
+#### Database information is correct, but unable to connect?
 
-#### 管理员无法正常登录后台？
-
-问题描述：网站可以正常访问，管理员无法正常登录后台  
-原因分析：数据库中权限配置被破坏
-解决方案：修改 wp_users 和 wp_usermeta 表中与权限有关的字段 wp_user_level, wp_capabilities 等
-
-
-#### 数据库信息无误，但无法连接？  
-
-问题描述：数据库连接信息完全正确，但仍然显示 Database connection error    
-可能原因：容器版 WordPress 不支持 www.abc.com 这种数据库名称  
+Issue：The database connection information is entirely correct, but a "Database connection error" is still displayed.  
+Possible Cause：The containerized version of WordPress does not support database names like `www.abc.com`.
