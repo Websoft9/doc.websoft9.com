@@ -15,7 +15,7 @@ import Meta from './_include/graphite.md';
 
 ### Initial setup{#wizard}
 
-1. After installing Graphite in the **Websoft9 consol**e, view the application details through **My Applications** and obtain the login information in the **Access** tab. 
+1. After installing Graphite in the **Websoft9 console**, view the application details through **My Applications** and obtain the login information in the **Access** tab. 
 
 2. Change the administrator password.
 
@@ -23,7 +23,7 @@ import Meta from './_include/graphite.md';
 
 ## Administer{#administrator}
 
-- **Change administrator password**: Using local browser to access the application path: **ip:port or domain name/admin/auth/user/1/**, login and  select the **CHANGE PASSWORD** on the upper right.
+- **Change administrator password**: Access the application path via your local browser: **ip:port or domain name/admin/auth/user/1/**. Log in and select the **CHANGE PASSWORD** at the upper right.
 
 ## Troubleshooting{#troubleshooting}
 
