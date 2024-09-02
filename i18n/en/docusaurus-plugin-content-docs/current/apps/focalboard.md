@@ -15,18 +15,17 @@ import Meta from './_include/focalboard.md';
 
 ### Login verification{#verification}
 
-1. Completed installation Focalboard at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
+1. After Completing the installation of Focalboard in the Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
 
-2. Register the administrator user according to the wizard
+2. Register the administrator user following the wizard
 
 ## Configuration options{#configs}
 
-- Container configuration file: /opt/focalboard/config.json
+- Container configuration file: `/opt/focalboard/config.json`
 - Multilingual (✅)
-- Functional settings: without the many settings of the traditional sense of the management of the items
-- Multi-user: by inviting other users to register
+- Functional settings: Limited settings compared to traditional management of items
+- Multi-user: Invite other users to register
 
 ## Administer{#administrator}
 
 ## Troubleshooting{#troubleshooting}
-
