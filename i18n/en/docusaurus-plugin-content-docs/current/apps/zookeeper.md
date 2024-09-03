@@ -2,9 +2,9 @@
 title: Zookeeper
 slug: /zookeeper
 tags:
-  - Distributed Coordination
-  - High Availability
-  - Microservices
+  - Distributed coordination
+  - HA
+  - Microservice
 ---
 
 import Meta from './\_include/zookeeper.md';
