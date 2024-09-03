@@ -14,7 +14,7 @@ import Meta from './_include/graylog.md';
 
 ### Login to the backend {#wizard}
 
-After installing Graylog in the **Websoft9 console**, view the application details through **My Applications** and get the login information in the **Access** tab.  
+After installing Graylog in the **Websoft9 console**, view the application details through **My Applications** and get the login information from the **Access** tab.  
 
 - Login screen
   ![](./assets/graylog-login-websoft9.png)
@@ -26,13 +26,13 @@ After installing Graylog in the **Websoft9 console**, view the application detai
 
 Websoft9 is a Graylog Enterprise Edition partner. Pricing factors for Graylog Enterprise Edition include:  
 
-* Log Storage: Graylog Enterprise Edition is priced primarily on log storage.
-* Clustering: Graylog cluster deployment is also a pricing reference.
-* ES: Elasticsearch version offers open-source clustering, but advanced features require a commercial license. 
+* Log Storage: Graylog Enterprise Edition pricing is primarily based on log storage.
+* Clustering: The deployment of Graylog cluster also affects pricing.
+* ES: Elasticsearch offers open-source clustering, but advanced features require a commercial license. 
 
 ## Configuration options{#configs}
 
-- SMTP (✅): Edit the **transport_email** parameter in the configuration file
+- SMTP (✅): Edit the **transport_email** parameters in the configuration file
 - Configuration file: To configure environment variables for containers, prefix all configuration variables with uppercase GRAYLOG_ 
     ```
     GRAYLOG_TRANSPORT_EMAIL_ENABLED: "true"
@@ -51,28 +51,28 @@ Websoft9 is a Graylog Enterprise Edition partner. Pricing factors for Graylog En
 
 ## Troubleshooting{#troubleshooting}
 
-#### Alerts and errors after login ?
+#### Alerts and Errors after login ?
 
-Description: Prompt There is a node without any running inputs. this means ... ?
+Description: A prompt indicating "There is a node without any running inputs." What does this mean?
 ![](./assets/graylog-nofiinput-websoft9.png)  
-Reason: This is just a reminder that there is currently no input, not an error.  
-Solution: Create a new local input to get rid of this reminder.  
+Reason: This is just a reminder that there is currently no inputs, not an error.  
+Solution: Create a new local input to resolve this reminder.  
 
 Description: Index rotation strategy null not found...?   
-Reason: This problem occurs when the free disk space is less than 15%.  
+Reason: This issue occurs when the free disk space is less than 15%.  
 Solution: Free up redundant files or increase server disk space.  
 
 #### Does Graylog store data?
 
-It does not store, it relies on Elasticsearch to store the data.
+Graylog does not store data, it relies on Elasticsearch to store data.
 
 Elasticsearch architecture:
 
-* Elasticsearch is used to store logs and search for logs, clustering improves efficiency
-* Graylog is used to transfer data and present data, clustering improves availability
-* MongoDB is used to store configuration information, very little data, and clustering is limited.
+* Elasticsearch is used to store and search logs, with clustering improving efficiency
+* Graylog is used to transfer and present data, with clustering improving availability
+* MongoDB is used to store configuration information, which is minimal, and clustering is limited.
 
-#### What is the architecture of Graylog?
+#### What is the Architecture of Graylog?
 
 Please read the official [Architecture Guide](https://www.slideshare.net/Graylog/graylog-engineering-design-your-architecture)
 
