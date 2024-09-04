@@ -1,4 +1,4 @@
-name: Docs Build and Upload to Cloudflare
+name: Docs Build and Upload to Cloudflare(dev)
 
 on: 
   workflow_dispatch:
