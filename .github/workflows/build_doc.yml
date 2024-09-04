@@ -1,4 +1,4 @@
-name: Docs Build and Upload to Azure
+name: Docs Build and Upload to Cloudflare
 
 on: 
   workflow_dispatch:
@@ -28,7 +28,8 @@ jobs:
         yarn run build
       env:
         CI: true
-    
+        
+    - name: Debug
       run: ls
 
     - name: Publish to Cloudflare Pages
@@ -36,7 +37,7 @@ jobs:
       with:
         apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         accountId: eb79f13320db531d8cf1f3720966b695
-        projectName: Documentation
+        projectName: doc-websoft9-com
         directory: build
         # Optional: Enable this if you want to have GitHub Deployments triggered
         gitHubToken: ${{ secrets.GITHUB_TOKEN }}
