@@ -9,42 +9,39 @@ tags:
   - Project Management
 ---
 
-import Meta from './_include/zentao.md';
+import Meta from './\_include/zentao.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Initial setup{#wizard}
+1. After completing the installation of Zentao via the **Websoft9 Console**, retrieve the application’s **Overview** and **Access** information from **My Apps**.
 
-1. When completed installation of Zentao at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+2. Access the initialization interface and follow the prompts to complete the setup steps (it is recommended to keep the default database connection settings).
 
-2. Access the initialization interface, following the prompts to complete the steps (it is recommended to maintain the default database connection settings)
-
-3. After installation, experience the backend 
+3. Once installed, explore the backend.
    ![](./assets/zentao-backend-websoft9.png)
 
-## Configuration options{#configs}
+## Configuration Options {#configs}
 
-- Multilingual (✅): Support for backend switching
-- Command Line: [Initialization Admin Script](https://www.zentao.net/book/zentaopmshelp/35.html)
-- Plugin Marketplace (✅): [Register](https://www.zentao.net/user-register.html) official website account to install plugins online
-- Client (✅): only for Zendo Pro and Enterprise Edition users
-- Zendo directory (already mounted): */data*
-- Plug-in path (mounted): */data/module*
-- Integrating Git (✅)
-- SMTP (✅): select **Backend > Message > Mail**, select STMP as sending method
+- **Multilingual (✅)**: Supports backend language switching.
+- **Command Line**: Use the [Initialization Admin Script](https://www.zentao.net/book/zentaopmshelp/35.html).
+- **Plugin Marketplace (✅)**: [Register](https://www.zentao.net/user-register.html) for an official account to install plugins online.
+- **Client (✅)**: Available for Zentao Pro and Enterprise Edition users.
+- **Zentao Directory**: Already mounted at `/data`.
+- **Plugin Path**: Already mounted at `/data/module`.
+- **Git Integration (✅)**: Supports integration with Git.
+- **SMTP (✅)**: Set up SMTP via **Backend > Message > Mail**, select SMTP as the sending method.
 
-## Administer{#administrator}
+## Administration {#administrator}
 
-- Install plugins: Support [Plugin Market](https://www.zentao.net/extension-browse.html) online installation, also supports downloading and unzipping to the plugin directory to install
-- Reset password: Modify the database **zt_user** table, change the password field value to `e10adc3949ba59abbe56e057f20f883e`, and the password will be reset to `123456`
-- Online backup: select **Admin > System > Backup**
+- **Install Plugins**: Supports online installation from the [Plugin Market](https://www.zentao.net/extension-browse.html). You can also download and unzip to the plugin directory for manual installation.
+- **Reset Password**: Modify the password field in the **zt_user** table in the database to `e10adc3949ba59abbe56e057f20f883e`, which will reset the password to `123456`.
+- **Online Backup**: Navigate to **Admin > System > Backup** to schedule backups.
 
-## Troubleshooting{#troubleshooting}
+## Troubleshooting {#troubleshooting}
 
 #### Locked multiple times by wrong password entry?
 
-1. It will be unlocked automatically after 10 minutes
-2. Administrator login, selecting **System→ Users**, there is an unlock button in the action bar
-
+1. The system will automatically unlock after 10 minutes.
+2. Admin can log in, go to **System > Users**, and use the unlock button in the action bar.
