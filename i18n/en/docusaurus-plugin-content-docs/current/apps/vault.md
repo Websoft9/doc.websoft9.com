@@ -41,7 +41,7 @@ Once you have completed the installation of Vault via the **Websoft9 Console**, 
 - **Authentication Methods (✅)**: Supported authentication methods include Token, GitHub, LDAP, and AppRole.
 - **Audit Devices (✅)**: Enable auditing for security monitoring.
 
-## Administer {#administrator}
+## Administration {#administrator}
 
 1. **Backup and Restore**:
 
