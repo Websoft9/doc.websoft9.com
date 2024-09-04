@@ -16,17 +16,17 @@ import Meta from './_include/haproxy.md';
 
 ### Login verification{#verification}
 
-1. Completed installation HAProxy at **Websoft9 console**, get the applicaiton's overview and access credentials from **My Apps**.  
+1. After Completing the installation of HAProxy in the **Websoft9 console**, get the applicaiton's overview and access credentials from **My Apps**.  
 
 2. Set the password in the configuration file.
 
 ### Enable HAProxy Monitoring
 
-HAProxy Statistics Report is set by default and can be viewed through the **Websoft9 console > access > backend**.   
+HAProxy Statistics Report is set by default and can be viewed through **Websoft9 console > access > backend**.   
 
 ### High Availability
 
-High Availability of HAProxy by deploying Keepalived.
+Achieve High Availability of HAProxy by deploying Keepalived.
 
 ### Cluster Configuration
 

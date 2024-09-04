@@ -23,10 +23,10 @@ After installing Grafana in the **Websoft9 console**, view the application detai
 - Grafana console page  
    ![Grafana Console](./assets/grafana-dashboard-websoft9.png)
 
-- Select **Administration > Plugins**, add a plugin    
+- Select **Administration > Plugins**, and add a plugin    
    ![Grafana Add Plugins](./assets/grafana-plugins-websoft9.png)
 
-- Select **connections > Data Sources**, add a data source (analysis object)    
+- Select **connections > Data Sources**, and add a data source (analysis object)    
    ![Grafana Add Data Sources](./assets/grafana-datasource-websoft9.png)
 
 ## Configuration options{#configs}
@@ -34,11 +34,11 @@ After installing Grafana in the **Websoft9 console**, view the application detai
 - Configuration file (path within container): /etc/grafana/grafana.ini
 - [Grafana API](https://grafana.com/docs/grafana/latest/http_api)
 - Command line: `grafana-cli`
-- Default database: built-in SQLite
+- Default database: Built-in SQLite
 
 ## Administer{#administrator}
 
-- **smtp configuration**: add smtp configuration segment to configuration file
+- **smtp configuration**: add the smtp configuration segment to the configuration file
 
    ```
    #################################### SMTP / Send e-mail #####################
@@ -62,14 +62,14 @@ After installing Grafana in the **Websoft9 console**, view the application detai
 
 - **Reset admin password**: run the command `grafana-cli admin reset-admin-password admin123` in the container
 
-- **Upgrade**: [Upgrade Grafana](https://grafana.com/docs/installation/upgrading/)
+- **Upgrade**: Follow the instruction to [Upgrade Grafana](https://grafana.com/docs/installation/upgrading/)
 
 
 ## Troubleshooting{#troubleshooting}
 
 #### How do I change the database?
 
-Prepare the database, then select **My Apps > compose > Go to Edit Repository > .env**, add the **GF_DATABASE_URL** environment variable to the  **.env** file, and rebuild the application to take effect.
+Prepare the database, then select **My Apps > compose > Go to Edit Repository > .env**. Add the **GF_DATABASE_URL** environment variable to the  **.env** file, and rebuild the application to apply the changes.
 ```
 # mysql example
 GF_DATABASE_URL=mysql://grafana:123456@172.17.0.1:3306/grafana
