@@ -25,7 +25,7 @@ import Meta from './_include/jellyfin.md';
 
 ### Add Music files
 
-1. Upload your music files to the diretory named and mounted for the container at `/media`
+1. Upload your music files to the directory named and mounted for the container at `/media`
 
 2. Wait for Jellyfin to automatically scan or manually scan the files
 
