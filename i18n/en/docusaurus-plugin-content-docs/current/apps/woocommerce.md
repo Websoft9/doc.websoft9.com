@@ -23,22 +23,6 @@ tags:
 
 1. **Store Management**: Manage product listings, orders, and customer accounts through the WooCommerce dashboard.
 2. **Plugins and Extensions**: Install plugins to enhance WooCommerce’s functionality, such as additional payment gateways, marketing tools, and SEO enhancements.
-3. **Backup and Restore**: Use the Websoft9 Console to schedule regular backups of your WooCommerce data.
 
 ## Troubleshooting {#troubleshooting}
 
-### Common Issues
-
-1. **SSL Certificate Errors**:
-
-   - **Symptom**: SSL/TLS errors when accessing the store over HTTPS.
-   - **Solution**: Verify the SSL configuration and ensure that certificates are correctly installed.
-
-2. **Payment Gateway Failures**:
-
-   - **Symptom**: Alipay or WeChat Pay failing during checkout.
-   - **Solution**: Double-check the configuration settings for the payment gateways. Ensure that credentials and API keys are correct.
-
-3. **Slow Store Performance**:
-   - **Symptom**: Slow loading times or lag in the WooCommerce store.
-   - **Solution**: Review installed plugins and optimize the database. You may also consider using a Content Delivery Network (CDN) for faster load times.
