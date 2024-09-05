@@ -16,19 +16,19 @@ import Meta from './_include/kodbox.md';
 
 ### Login Verification{#verification}
 
-1. Completed installation KodBox at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
+1. After completing the installation of KodBox in the Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
     
-2. Access the KodBox URL, the first step is create administrator account, then login to the KodBox console
+2. Access the KodBox URL. The first step is to create an administrator account, then log in to the KodBox console
     ![](./assets/kodbox-backend-websoft9.png)
     
 ## Enterprise Edition  
 
-The Community Edition of kodbox adopts the GPLV3 License, supporting 10 users and 1 department.  
+The Community Edition of kodbox is licensed under GPLv3, supporting up to 10 users and 1 department.  
 
-Websoft9 is KodBox's Enterprise Edition partner, and purchasing the Enterprise Edition through Websoft9 can bring more value:  
+As Websoft9 is a partner of KodBox's Enterprise Edition, purchasing through Websoft9 offers additional benefits:  
 
 - More favorable discounts 
-- More integrated technical services with cloud storage systems, cloud storage, and more 
+- Enhanced technical services, including integration with cloud storage systems, and more 
 - More comprehensive solutions
 
 ## Configuration options{#configs}
