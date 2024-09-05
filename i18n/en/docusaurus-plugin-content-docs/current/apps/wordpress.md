@@ -114,7 +114,6 @@ To improve performance, move media files to an external object storage system:
 - **Change Administrator Email**: If SMTP is not enabled, update the email in the **wp_option** table in the database.
 - **Retrieve Password**: Modify the **wp_user** table and change the password for the `admin` user to `21232f297a57a5a743894a0e4a801fc3` (default password: `admin`).
 - **Replace Domain URL**: If you cannot access the WordPress dashboard, update the home and site URL values in the **option** table in the database.
-- **Automated Backup and Restore**: Use the [UpdraftPlus WordPress Backup Plugin](https://wordpress.org/plugins/updraftplus/) for scheduled backups and restores.
 - **Scheduled Tasks**: Use [WP Crontrol](https://wordpress.org/plugins/wp-crontrol) to manage scheduled tasks.
 - **SSL**: Managed by the Websoft9 gateway. Avoid using WordPress SSL-related plugins.
 - **Disable Google Fonts**: If the Disable Google Fonts plugin does not work, manage the issue using the Websoft9 gateway.
