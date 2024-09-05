@@ -22,6 +22,7 @@ tags:
 ## Administration {#administrator}
 
 1. **Store Management**: Manage product listings, orders, and customer accounts through the WooCommerce dashboard.
+
 2. **Plugins and Extensions**: Install plugins to enhance WooCommerce’s functionality, such as additional payment gateways, marketing tools, and SEO enhancements.
 
 ## Troubleshooting {#troubleshooting}

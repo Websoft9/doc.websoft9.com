@@ -36,6 +36,7 @@ import Meta from './\_include/zentao.md';
 ## Administration {#administrator}
 
 - **Install Plugins**: Supports online installation from the [Plugin Market](https://www.zentao.net/extension-browse.html). You can also download and unzip to the plugin directory for manual installation.
+
 - **Reset Password**: Modify the password field in the **zt_user** table in the database to `e10adc3949ba59abbe56e057f20f883e`, which will reset the password to `123456`.
 
 ## Troubleshooting {#troubleshooting}

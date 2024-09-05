@@ -24,6 +24,7 @@ import Meta from './\_include/zammad.md';
 ## Administration {#administrator}
 
 - **User Management**: Add and manage users through the Zammad admin dashboard.
+
 - **Ticket Management**: Configure ticket queues, response times, and assign support agents to specific tickets.
 
 ## Troubleshooting {#troubleshooting}
