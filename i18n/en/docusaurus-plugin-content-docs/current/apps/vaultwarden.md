@@ -30,16 +30,11 @@ import Meta from './\_include/vaultwarden.md';
 
 ## Administration {#administrator}
 
-1. **Backup and Restore**:
-
-   - **Backup**: Schedule regular backups through the Websoft9 Console to protect your Vaultwarden data. Backups are essential in case of data corruption or accidental deletion.
-   - **Restore**: If needed, use the Websoft9 Console to restore data from previous backups.
-
-2. **User and Role Management**:
+1. **User and Role Management**:
 
    - Admins can add, remove, and manage users within Vaultwarden. Roles and permissions can also be configured to ensure users only access the necessary data.
 
-3. **Security Configuration**:
+2. **Security Configuration**:
    - Enable **Two-Factor Authentication (2FA)** in Vaultwarden to enhance account security.
    - Ensure that HTTPS is always enabled to protect sensitive data during transmission.
 
