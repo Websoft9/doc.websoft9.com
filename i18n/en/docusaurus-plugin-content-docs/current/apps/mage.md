@@ -14,7 +14,7 @@ import Meta from './_include/mage.md';
 
 ### Initial setup{#wizard}
 
-1. When completed installation of Mage at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. When completing the installation of Mage in the **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
 ### Run pipelines {#pipelines}
 
@@ -24,7 +24,7 @@ import Meta from './_include/mage.md';
 
 3. Click **Enable Triggers** to activate the triggers, which will run at the specified time.
 
-4. Click **Run@once** to run the Pipelines example immediately.
+4. Click **Run@once** to execute the Pipelines example immediately.
 
 ## Configuration options{#configs}
 
