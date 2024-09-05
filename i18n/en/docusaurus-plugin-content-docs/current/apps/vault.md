@@ -43,22 +43,17 @@ Once you have completed the installation of Vault via the **Websoft9 Console**, 
 
 ## Administration {#administrator}
 
-1. **Backup and Restore**:
-
-   - Schedule regular backups of the Vault data to prevent data loss. Use Websoft9 console to automate this process.
-   - Restore data using the Websoft9 interface or by running CLI commands within the Vault container.
-
-2. **User and Role Management**:
+1. **User and Role Management**:
 
    - Manage users and their access through policies in Vault. Define roles and permissions via the CLI or Web UI.
    - Ensure each user or service has only the necessary privileges by regularly reviewing and updating their policies.
 
-3. **Security and Monitoring**:
+2. **Security and Monitoring**:
 
    - Set up **Audit Logging** in Vault. Enable this feature through the Websoft9 interface to log and monitor access to secrets.
    - Review the logs regularly for abnormal activities, such as unauthorized access attempts.
 
-4. **Token and Secret Rotation**:
+3. **Token and Secret Rotation**:
    - Regularly rotate tokens and secrets to maintain security, especially for sensitive environments. Use Vault’s built-in token rotation capabilities.
 
 ## Troubleshooting {#troubleshooting}
