@@ -34,12 +34,7 @@ import Meta from './\_include/xwiki.md';
    - Add, remove, and manage users from the XWiki admin panel.
    - Assign roles and permissions to different users based on their responsibilities.
 
-2. **Backup and Restore**:
-
-   - Use the Websoft9 Console to schedule regular backups of your XWiki instance to ensure data safety.
-   - Restore backups through the console if necessary.
-
-3. **Extension Manager**:
+2. **Extension Manager**:
    - Install and manage extensions through XWiki’s Extension Manager to expand functionality.
    - Keep extensions updated for security and performance improvements.
 
