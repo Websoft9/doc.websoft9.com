@@ -1,9 +1,9 @@
-name: Docs Build and Upload to Cloudflare
+name: Docs Build and Upload to Cloudflare(dev)
 
 on: 
   workflow_dispatch:
   push:
-    branches: [ main ]
+    branches: [ dev ]
     paths: 
       - 'docs/**'
       - 'versioned_docs/**'
@@ -43,4 +43,4 @@ jobs:
         gitHubToken: ${{ secrets.GITHUB_TOKEN }}
         # Optional: Switch what branch you are publishing to.
         # By default this will be the branch which triggered this workflow
-        branch: main
+        branch: dev
