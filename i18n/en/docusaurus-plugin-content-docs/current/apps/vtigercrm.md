@@ -42,8 +42,8 @@ import Meta from './\_include/vtiger.md';
 ## Administration {#administrator}
 
 1. **User Management**: Add or remove users and assign roles through the **Settings** menu in the Vtiger CRM backend.
-2. **Backup and Restore**: Schedule regular backups using the Websoft9 Console to safeguard CRM data.
-3. **Security Configuration**: Set up **Two-Factor Authentication (2FA)** for secure access to Vtiger CRM.
+
+2. **Security Configuration**: Set up **Two-Factor Authentication (2FA)** for secure access to Vtiger CRM.
 
 ## Troubleshooting {#troubleshooting}
 
