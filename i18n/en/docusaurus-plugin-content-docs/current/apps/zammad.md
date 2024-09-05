@@ -25,7 +25,6 @@ import Meta from './\_include/zammad.md';
 
 - **User Management**: Add and manage users through the Zammad admin dashboard.
 - **Ticket Management**: Configure ticket queues, response times, and assign support agents to specific tickets.
-- **Backup and Restore**: Use the Websoft9 Console to schedule regular backups of your Zammad instance.
 
 ## Troubleshooting {#troubleshooting}
 
