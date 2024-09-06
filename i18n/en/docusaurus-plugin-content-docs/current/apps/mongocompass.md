@@ -15,19 +15,19 @@ import Meta from './_include/mongocompass.md';
 
 ### Initial setup{#wizard}
 
-1. When completed installation of MongoDB Compass at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**.  
+1. When completing the installation of MongoDB Compass in the **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**.  
 
-1. Input your username and password to login to the desktop. 
+2. Input your username and password to log in to the desktop environment. 
 
-2. Click the MongoDB Compass icon on desktop to enter MongoDB Compass.
+3. Click the MongoDB Compass icon on the desktop to open MongoDB Compass.
    ![](./assets/mongodbcompass-click-websoft9.png)
 
-3. Select **New Connection > Advanced Connection Options**, enter the connection information and the account. 
+4. Select **New Connection > Advanced Connection Options**, enter the connection information and your account details. 
    ![](./assets/mongodbcompass001-websoft9.png)
 
-   > The URI method is not recommended, as it is limited by the string format.
+   Note: The URI method is not recommended due to its limitations with string format.
 
-4. The connection is successful, enter the console.
+5. Once the connection is successful, you will enter the console.
    ![](./assets/mongodbcompass002-websoft9.png)
 
 ## Configuration options{#configs}
@@ -36,6 +36,6 @@ import Meta from './_include/mongocompass.md';
 
 ## Troubleshooting{#troubleshooting}
 
-#### Does Mongo Compass consume a lot of memory? 
+#### Does MongoDB Compass consume a lot of memory? 
 
-Yes, Mongo Compass is not a true web application, it is built by Websoft9 based on a special container that contains the desktop.
+Yes, MongoDB Compass is not a true web application; it is built by Websoft9 as a special container that includes the desktop environment.
