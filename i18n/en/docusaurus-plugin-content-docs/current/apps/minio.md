@@ -15,7 +15,7 @@ import Meta from './_include/minio.md';
 
 ### Login verification{#verification}
 
-1. After installing MinIO in the Websoft9 console, view the application details through **My Applications** and get the login information in the **Access**.  
+1. After installing MinIO in the Websoft9 console, view the application details through **My Applications** and get the login information from **Access**.  
 
 2. Using a local computer browser, access the login page
 
@@ -27,7 +27,7 @@ import Meta from './_include/minio.md';
 
 ### Creating a Storage Bucket
 
-1. Login to the backend and click **Create Bucket** to create a new bucket.
+1. Log in to the backend and click **Create Bucket** to create a new bucket.
 
    ![](./assets/minio-bucket-websoft9.png)
 
@@ -38,12 +38,12 @@ import Meta from './_include/minio.md';
 ## Configuration options{#configs}
 
 - Multilingual (x)
-- CLI: additional installation required
+- CLI: Additional installation required
 - Ports: The application has a backend port and an API port.
 
 ## Administer{#administrator}
 
-- **Installing the CLI**: From Websoft9 console select **Myapps > Container > Exec console** to attach the MinIO container installs and enables the CLI
+- **Installing the CLI**: From the Websoft9 console, select **Myapps > Container > Exec console** to attach to the MinIO container and install the CLI
    ```
    curl https://dl.min.io/client/mc/release/linux-amd64/mc \
    --create-dirs \
