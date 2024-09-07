@@ -15,17 +15,17 @@ import Meta from './_include/memcached.md';
 
 ### Initial setup{#wizard}
 
-1. When completed installation of Memcached at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. When completing the installation of Memcached in the **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
 ### Login to the Console
 
-**Memcached-admin** is pre-built in this application orchestration but is not enabled by default. If you need to enable it, please refer to the following steps:
+**Memcached-admin** is pre-built into this application orchestration but is not enabled by default. To enable it, following these steps:
 
 1. Select **Websoft9 console > My apps > compose > Go to Edit Repository**.
 
-2. Modify the Memcached docker-compose.yml.
+2. Modify the Memcached `docker-compose.yml` file.
 
-   - Host ports in the ports element
+   - Update the host ports in the ports element
    - Remove the profiles element.
 
 3. After rebuilt the application, your can access the control panel through `http:/URL:port`.
@@ -43,7 +43,7 @@ import Meta from './_include/memcached.md';
    ^]'.
    ```
 
-3. Connected successfully, the system enters the Memcached CLI, and inputs the command `stats`.
+3. Once connected successfully, the system enters the Memcached CLI. Input the command `stats`.
 
    ```
    $ stats
@@ -57,9 +57,9 @@ import Meta from './_include/memcached.md';
 
 ## Configuration options{#configs}
 
-- Client command: [Memcached Commands](https://github.com/memcached/memcached/wiki/Commands) is run through Telnet.
-- Server-side commands: `memcached -h`.
-- Memcached-admin: You need to modify the compose file to enable it.
+- Client command: Use [Memcached Commands](https://github.com/memcached/memcached/wiki/Commands) through Telnet.
+- Server-side commands: Run `memcached -h`.
+- Memcached-admin: Modify the compose file to enable it.
 
 ## Administer{#administrator}
 

@@ -15,12 +15,12 @@ import Meta from './_include/mqttx.md';
 
 ### Login Verification{#verification}
 
-1. Completed installation MQTTX at Websoft9 console, get the applicaiton's overview and access information from "My Apps"  
+1. Complete the installation of MQTTX via the Websoft9 console,  and get the applicaiton's overview and access information from "My Apps"  
 
-2. Create a connection in MQTTX console
+2. Create a connection in the MQTTX console
 
    - The client ID is automatically generated 
-   - Server address: Protocol and address, port are the values of the connected service
+   - Server address: Use the protocol, address, and port values from the connected service.
 
    ![](./assets/mqttx-connection-websoft9.png)
 
@@ -28,22 +28,22 @@ import Meta from './_include/mqttx.md';
 
 1. Prepare RabbitMQ 
 
-   1. Install RabbitMQ on the Websoft9 App Store 
-   2. RabbitMQ container command line enable plugin 
+   1. Install RabbitMQ from the Websoft9 App Store 
+   2. Enable the RabbitMQ plugins using the following commands: 
       ``` 
       rabbitmq-plugins enable rabbitmq_mqtt 
       rabbitmq-plugins enable rabbitmq_web_mqtt  
       ``` 
-2. Create a new RabbiMQ connection in MQTTX to ensure the accuracy of the host, port, account, and connection protocol 
+2. Create a new RabbiMQ connection in MQTTX to verify the accuracy of the host, port, account, and connection protocol.
 
-### Integrated EMQX 
+### Integrate EMQX 
 
 1. Prepare EMQX 
 
-   1. Install EMQX on the Websoft9 App Store 
-   2. Open the EMQX Dashboard: "Problem Analysis">"WebSocket Client" page, and set **username, password, and protocol version**  for the default WebSocket connection
+   1. Install EMQX from the Websoft9 App Store 
+   2. Open the EMQX Dashboard, navigate to "Problem Analysis">"WebSocket Client", and configure the **username, password, and protocol version**  for the default WebSocket connection
 
-2. Create a new EMQX connection in MQTTX to ensure the accuracy of the host, port, account, and connection protocol
+2. Create a new EMQX connection in MQTTX to verify the accuracy of the host, port, account, and connection protocol.
 
 ## Configuration options{#configs}
 
