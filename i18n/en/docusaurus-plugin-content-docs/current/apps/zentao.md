@@ -39,9 +39,12 @@ import Meta from './\_include/zentao.md';
 
 - **Reset Password**: Modify the password field in the **zt_user** table in the database to `e10adc3949ba59abbe56e057f20f883e`, which will reset the password to `123456`.
 
+- **Online backup**: select **Admin > System > Backup**
+
 ## Troubleshooting {#troubleshooting}
 
 #### Locked multiple times by wrong password entry?
 
 1. The system will automatically unlock after 10 minutes.
+
 2. Admin can log in, go to **System > Users**, and use the unlock button in the action bar.
