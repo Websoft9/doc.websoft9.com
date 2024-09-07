@@ -16,7 +16,7 @@ import Meta from './_include/moodle.md';
 
 ### Login Verification{#verification}
 
-1. After completing the installation of Moodle in the Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**"  
+1. After completing the installation of Moodle in the Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**
 
 2. Verify the installation
    ![](./assets/moodle-backend-websoft9.png)
