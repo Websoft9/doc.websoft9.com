@@ -15,13 +15,13 @@ import Meta from './_include/kasmweb.md';
 
 ### Initial setup{#wizard}
 
-1. When completed installation of Kasm Workspaces at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After completing the installation of Kasm Workspaces in the **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
 2. Complete the install wizard step by step
 
 ## Configuration options{#configs}
 
-- Chinese direct input: does not support direct input, need to pass through the clipboard
+- Chinese direct input: Direct input in Chinese is not supported; you will need to use the clipboard for text input.
 
 ## Administer{#administrator}
 

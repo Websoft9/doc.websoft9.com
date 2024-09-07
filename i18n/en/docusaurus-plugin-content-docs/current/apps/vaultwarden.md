@@ -17,8 +17,8 @@ import Meta from './\_include/vaultwarden.md';
 
 1. **Set up HTTPS**:
    - Log in to the Websoft9 Console, go to **Gateway** in the left menu, and follow the steps to configure HTTPS for Vaultwarden (**Required**).
-2. **Application Overview**:
 
+2. **Application Overview**:
    - After completing the installation of Vaultwarden in the Websoft9 Console, retrieve the application's **Overview** and **Access** information from **My Apps**.
 
 3. **Registration and Login**:
