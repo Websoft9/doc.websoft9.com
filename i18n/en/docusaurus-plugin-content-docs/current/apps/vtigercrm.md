@@ -13,6 +13,8 @@ import Meta from './\_include/vtiger.md';
 
 ## Getting Started {#guide}
 
+### Initial Setup {#wizard}
+
 1. After completing the installation of Vtiger CRM through the **Websoft9 Console**, retrieve the application’s **Overview** and **Access** information from **My Apps**.
 
    - **Access Information**: Found in the **Access** section.

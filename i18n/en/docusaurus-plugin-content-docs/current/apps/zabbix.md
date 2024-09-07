@@ -12,6 +12,8 @@ import Meta from './\_include/zabbix.md';
 
 ## Getting Started {#guide}
 
+### Initial Setup {#wizard}
+
 1. After completing the installation of Zabbix via the **Websoft9 Console**, retrieve the application’s **Overview** and **Access** information from **My Apps**.
 
 2. Visit the application URL to access the login screen.

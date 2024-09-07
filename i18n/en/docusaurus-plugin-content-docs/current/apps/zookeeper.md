@@ -13,6 +13,8 @@ import Meta from './\_include/zookeeper.md';
 
 ## Getting Started {#guide}
 
+### Initial Setup {#wizard}
+
 After installing Zookeeper via the **Websoft9 console**, retrieve the application’s overview and access information from **My Apps**.
 
 ### Client Connection

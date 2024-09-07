@@ -13,6 +13,8 @@ import Meta from './\_include/zammad.md';
 
 ## Getting Started {#guide}
 
+### Initial Setup {#wizard}
+
 1. After installing Zammad via the **Websoft9 Console**, view the application details through **My Applications** and retrieve the login information from the **Access** tab.
 
 2. Zammad will initialize automatically. Due to the lengthy initialization process, please wait a few minutes before the initial page appears.

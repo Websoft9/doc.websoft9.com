@@ -12,6 +12,8 @@ import Meta from './\_include/woocommerce.md';
 
 ## Getting Started {#guide}
 
+### Initial Setup {#wizard}
+
 ## Configuration Options {#configs}
 
 - **Alipay (✅)**: Supports Alipay Instant Payment for easy payment processing.

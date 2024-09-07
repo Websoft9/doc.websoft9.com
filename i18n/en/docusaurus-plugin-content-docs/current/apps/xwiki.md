@@ -13,6 +13,8 @@ import Meta from './\_include/xwiki.md';
 
 ## Getting Started {#guide}
 
+### Initial Setup {#wizard}
+
 1. After completing the installation of XWiki via the **Websoft9 Console**, retrieve the application’s **Overview** and **Access** information from **My Apps**.
 
 2. Enter the setup wizard and allow XWiki to initialize. Be patient, as this process may take some time.

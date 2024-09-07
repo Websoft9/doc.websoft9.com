@@ -13,6 +13,8 @@ import Meta from './\_include/vaultwarden.md';
 
 ## Getting Started {#guide}
 
+### Initial Setup {#wizard}
+
 1. **Set up HTTPS**:
    - Log in to the Websoft9 Console, go to **Gateway** in the left menu, and follow the steps to configure HTTPS for Vaultwarden (**Required**).
 2. **Application Overview**:

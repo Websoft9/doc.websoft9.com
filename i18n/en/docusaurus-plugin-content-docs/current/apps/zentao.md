@@ -15,6 +15,8 @@ import Meta from './\_include/zentao.md';
 
 ## Getting Started {#guide}
 
+### Initial Setup {#wizard}
+
 1. After completing the installation of Zentao via the **Websoft9 Console**, retrieve the application’s **Overview** and **Access** information from **My Apps**.
 
 2. Access the initialization interface and follow the prompts to complete the setup steps (it is recommended to keep the default database connection settings).

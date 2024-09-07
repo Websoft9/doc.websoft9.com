@@ -14,6 +14,8 @@ import Meta from './\_include/wordpress.md';
 
 ## Getting Started {#guide}
 
+### Initial Setup {#wizard}
+
 1. After completing the installation of WordPress via the **Websoft9 Console**, retrieve the application’s **Overview** and **Access** information from **My Apps**.
 
 2. Enter the installation guide and select the language (you can change the language after installation).
