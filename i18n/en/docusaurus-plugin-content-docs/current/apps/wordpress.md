@@ -8,210 +8,152 @@ tags:
   - Blog System
 ---
 
-import Meta from './_include/wordpress.md';
+import Meta from './\_include/wordpress.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Initial setup{#wizard}
+1. After completing the installation of WordPress via the **Websoft9 Console**, retrieve the application’s **Overview** and **Access** information from **My Apps**.
 
-1. When completed installation of WordPress at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+2. Enter the installation guide and select the language (you can change the language after installation).
 
-2. Enter the installation guide, select the language (you can switch the language after installation)
+3. Set your administrator account, password, and e-mail address.
 
-3. Set your administrator account, password and e-mail address
+4. After installation, access the backend (admin dashboard URL: `/wp-admin`).
 
-4. After installation, enter the backend (backend address: /wp-admin)  
-  ![](./assets/wordpress-backend-websoft9.png)
+   ![](./assets/wordpress-backend-websoft9.png)
 
-### The process of building a website
+### Building a Website
 
-The steps to build a website based on WordPress are as follows:
+Steps to build a website using WordPress:
 
-1. Choose a theme: you can buy it from the official theme marketplace or a third-party theme marketplace
+1. Choose a theme: You can purchase it from the official theme marketplace or a third-party marketplace.
+2. Customize the public parts of the website based on the theme: Menu, header, footer, etc.
+3. Customize the pages.
+4. Add articles and integrate them with the pages.
 
-2. Customize the public parts of the website based on the theme: menu, top, bottom
+### Website Statistics {#analysis}
 
-3. Customize the pages
+There are two options available for tracking statistics:
 
-4. Enter articles and integrate them with the pages
+- **Third-party web statistics software (recommended)**:
 
-### Website statistics {#analysis}
+  1. Install the open-source web statistics software **Matomo**.
+  2. Install the [WP-Matomo](https://wordpress.org/plugins/wp-piwik/) plugin in WordPress and connect it to the Matomo server.
 
-There are two options available:
+- **WordPress Plugins**: Use WordPress-specific plugins for basic statistics tracking.
 
-- Integration of third-party web statistics software (recommended), below is an example of usage:
-
-  1. Install the open source web statistics software Matomo
-  2. Wordpress install [WP-Matomo](https://wordpress.org/plugins/wp-piwik/) plugin, and then connect to the Matomo server
-
-- Use WordPress website statistics related plugins
-
-## Best practices
+## Best Practices {#best-practices}
 
 ### Migrating to Websoft9 Hosting Platform
 
-Before migrating, install a brand new WordPress application through the Websoft9 App Marketplace, called the destination here  
+1. Install a new WordPress instance via the Websoft9 App Marketplace (destination site).
+2. Follow one of these migration methods:
 
-Then, start the migration using one of the following options:
+#### Migrate using a Plugin (Recommended)
 
-##### Migrate using a plugin (recommended)
+1. Install the [All-in-One WP Migration and Backup](https://wordpress.org/plugins/all-in-one-wp-migration/) plugin on both source and destination sites.
+2. Export the complete backup from the source site and download it locally.
+3. Import the backup file on the destination site using the same plugin.
 
-1. Source and destination sites are installed plug-in: [All-in-One WP Migration and Backup](https://wordpress.org/plugins/all-in-one-wp-migration/) (free version supports sites smaller than 900M)
+#### Manual Migration
 
-2. The source site export the complete backup file through the plug-in, and download it to local
+1. Transfer the **wp-content** directory from the source to the destination site:
+   - **File Copy**: If the source and destination are on different servers, use remote copying to transfer files.
+   - **Directory Mount**: If both sites are on the same server, modify the application’s orchestration file and mount `/var/www/html/wp-content`.
+2. Update the directory permissions to `www-data`.
+3. Export the database using [phpMyAdmin](./phpmyadmin) from the source site and import it into the destination site.
+4. Update the database connection details in the destination site's `wp-config.php` file.
 
-3. Import the backup file in the destination site through the plugin
+### Enabling Object Storage
 
-##### Manual Migration
+To improve performance, move media files to an external object storage system:
 
-If you do not meet the conditions for migrating through the plugin, you need to migrate manually:
+1. Prepare a third-party object storage service or install [MinIO](./minio).
+2. Install the [Media Cloud](https://mediacloud.press/) or OSS Upload plugin in WordPress to connect to the object storage service.
 
-1. Use one of the following options to migrate the **wp-content** directory from the source to the destination:
+## Three Principles for Maintaining WordPress
 
-   - **File Copy**: Migrate the directory by remote copy if the source and destination are not on the same server.
-   - **Directory mount**: Source and destination are on the same server, modify the orchestration file of the application and mount */var/www/html/wp-content*. 
+1. **Efficiency First**:
 
-2. Modify the directory folder permissions to `www-data`
-3. use [phpMyAdmin](./phpmyadmin) to export the database from the source site and import it to the destination site
-4. fix the database connection information in the **wp-config.php** file of the destination site
+   - Images should be optimized (under 100k per image).
+   - Offload multimedia files from WordPress to separate storage.
+   - Minimize the use of plugins for better performance.
 
+2. **Separation Principle**:
 
-### Enable Object Storage
+   - Use external services for non-core features like HTTPS setup, object storage, or analytics.
 
-When images and media files of a WordPress website have affected the performance of the website, it is recommended to store the media files in Object Storage:
+3. **Promotion Priority**:
+   - Optimize URLs and image names for SEO.
+   - Use an SEO plugin to configure keywords.
+   - Maintain a 600:400 aspect ratio for featured images.
 
-1. Prepare a third-party object storage service or install [MinIO](./minio)
+## Configuration Options {#configs}
 
-2. Wordpress install [Media Cloud](https://mediacloud.press/) or OSS Upload plugin and connect to the object storage service
+- **Root Directory**: `/var/www/html`
+- **Configuration File**: `/var/www/html/wp-config.php`
+- **Plugin Directory**: `/var/www/html/wp-content/plugins`
+- **Theme Directory**: `/var/www/html/wp-content/themes`
+- **Data Folder**: `/var/www/html/wp-content`
+- **PHP Configuration File**: `/usr/local/etc/php/conf.d/php_extra.ini`
+- **CLI Support (✅)**: `wp --info`, `wp plugin install akismet`
+- **[REST API](https://developer.wordpress.org/rest-api/)**:
+  ```
+  curl -X OPTIONS -i http://yourdomain.com/wp-json/
+  curl -X GET -i http://yourdomain.com/wp-json/wp/v2/posts
+  curl -X GET -i http://yourdomain.com/wp-json/wp/v2/pages
+  ```
+- **SMTP (✅)**: Use [WP Mail SMTP by WPForms](https://wordpress.org/plugins/wp-mail-smtp/).
+- **E-commerce**: Install the WooCommerce plugin for e-commerce functionality.
+- **Multisite (✅)**: Enable multi-site through **Tools > Configure Network** in the WordPress dashboard.
 
-### Three Principles for Maintaining WordPress
+## Administration {#administrator}
 
-In order to make WordPress run more efficiently, be easier to maintain, and easier to migrate, we summarize three important principles in practice:
+- **Change Administrator Email**: If SMTP is not enabled, update the email in the **wp_option** table in the database.
+- **Retrieve Password**: Modify the **wp_user** table and change the password for the `admin` user to `21232f297a57a5a743894a0e4a801fc3` (default password: `admin`).
+- **Replace Domain URL**: If you cannot access the WordPress dashboard, update the home and site URL values in the **option** table in the database.
+- **Scheduled Tasks**: Use [WP Crontrol](https://wordpress.org/plugins/wp-crontrol) to manage scheduled tasks.
+- **SSL**: Managed by the Websoft9 gateway. Avoid using WordPress SSL-related plugins.
+- **Disable Google Fonts**: If the Disable Google Fonts plugin does not work, manage the issue using the Websoft9 gateway.
 
-##### Efficiency First
+## Troubleshooting {#troubleshooting}
 
-Efficiency is often more important than beauty, so you should always follow the principle of efficiency first:
-- Images should not exceed 100k per image
-- Strip multimedia files from WordPress
-- Reduce the use of plugins
+#### After configuring HTTPS, some resources are not loading? {#httpsmore}
 
-##### Separation principle
+1. Caused by certain plugins? Check whether the plugin has an HTTPS switch.
+2. CDN enabled? Edit the **wp-config.php** file and add the following:
 
-For non-business functionality, try to avoid plugins and use solutions beyond WordPress:
-
-- HTTPS setup: realized using the Websoft9 gateway
-- Image storage: integrate object storage
-- Website access statistics: integrate Matomo and other statistical systems
-- Website acceleration: use CDN
-- Google Fonts Disable: when plugins can't solve the problem, consider handling it in the gateway
-
-##### Promotion Priority
-
-The website should be considered for promotion and SEO to realize the return of value:
-
-- Image name, URL address in English for easy recognition
-- Use SEO plugin to set keywords for pages
-- Article image size ratio should be 600:400
-
-## Configuration options{#configs}
-
-- Root directory (already mounted): */var/www/html*
-
-- Configuration file：*/var/www/html/wp-config.php*
-
-- Plugin Directory: */var/www/html/wp-contents/plugins*
-
-- Theme directory：*/var/ww/html/wp-contents/themes*
-
-- Data folder: */var/www/html/wp-contents*
-
-- Php configuration file (mounted):*/usr/local/etc/php/conf.d/php_exra.ini*
-
-- Container user: `www-data`
-
-- CLI(✅): `wp --info`, `wp plugin install akismet`
-
-- [REST API](https://developer.wordpress.org/rest-api/)（√）
    ```
-   curl -X OPTIONS -i http://yourdomain.com/wp-json/
-   curl -X GET -i http://yourdomain.com/wp-json/wp/v2/posts
-   curl -X GET -i http://yourdomain.com/wp-json/wp/v2/pages
+   define('FORCE_SSL_ADMIN', true);
+   define('FORCE_SSL_LOGIN', true);
+   $_SERVER['HTTPS'] = 'ON';
+   define('CONCATENATE_SCRIPTS', false);
    ```
 
-- SMTP(✅): use [WP Mail SMTP by WPForms](https://wordpress.org/plugins/wp-mail-smtp/) 
+#### HTTPS access shows “.... Not completely secure”?
 
-- E-commerce: use WooCommerce plugin for e-commerce functionality
-- Toggle Classic Editor: use **Classic Editor** plugin
+Reason: WordPress contains static link resources like images with an HTTP header.  
+Solution: Manually modify the affected links.
 
-- Third party theme market: [themeforest](https://themeforest.net/)
+#### Frequent database connection errors?
 
-- Third-party plugin marketplace: [codecanyon.net](https://codecanyon.net/?osr=tn)
+Reason: Insufficient memory can cause the WordPress database to fail.  
+Solution: Increase memory and enable CDN to reduce server memory usage.
 
-- Online upgrade(✅)
+#### Image upload errors?
 
-- Multisite(✅): multi-site is already allowed by default, through WordPress console **Tools > Configure Network**
+- **Permissions**: Ensure the **wp-content** folder's permissions are set to `www-data`.
+- **Size Limit**: Modify the PHP configuration to allow larger files.
+- **Incorrect Format**: Check the image extension and ensure it matches the actual file type.
 
-## Administer{#administrator}
+#### Administrator can’t log in?
 
-- **Change administrator mailbox**: If SMTP is not enabled, you need to modify the mailbox information in the database **wp_option** table
+Reason: Database permissions are misconfigured.  
+Solution: Modify the **wp_user_level** and **wp_capabilities** fields in the **wp_users** and **wp_usermeta** tables.
 
-- **Retrieve password**: Modify database  table **wp_user**, replace the password of `admin` user with `21232f297a57a5a743894a0e4a801fc3`, and reset the password to `admin`
+#### Correct database info but can't connect?
 
-- **Replace domain URL**: If you can't login to the WP console to change the URL, you can change the home and siteurl in the **option** table
-
-- **Automated Backup and Restore**: We recommend [UpdraftPlus WordPress Backup Plugin](https://wordpress.org/plugins/updraftplus/)
-
-- **Scheduled Tasks**: [WP Crontrol](https://wordpress.org/plugins/wp-crontrol) is recommended
-
-- **Upgrade**: In addition to upgrading the WordPress kernel, themes and plugins online, if the network is not good, you need to manually upgrade by uploading the source code to a specified location
-
-- **SSL**: Realized by Websoft9 gateway, please don't install any WordPress SSL related plugins
-
-- **Disable Google Fonts**: Try to install Disable Gooogle Fonts plugin first, if can't solve the problem, deal with it in Websoft9 gateway
-
-## Troubleshooting{#troubleshooting}
-
-
-#### After configuring HTTPS, some of the resources on the website are not loading? {#httpsmore}
-
-1. caused by special plug-ins? Some plugins have HTTPS switch, you need to turn it on or off based on the actual situation 
-2. CDN service is enabled? Edit the **wp-config.php** file in the WordPress root directory and add the following code
-
-    ```
-       define('FORCE_SSL_ADMIN', true);
-       define('FORCE_SSL_LOGIN', true);
-       $_SERVER['HTTPS'] = 'ON';
-       define( 'CONCATENATE_SCRIPTS', false );
-    ```
-
-#### HTTPS access to “.... Not completely secure”?
-
-Reason: WordPress webpage contains some static link resources such as images with HTTP header.  
-Solution: You need to manually modify them one by one  
-
-#### Frequent database connection error?
-
-Reason: Insufficient memory causes WordPress database to run abnormally, which is the most common problem.   
-Solution: Increase memory + enable CDN (CDN can accelerate the website while greatly reducing the server memory overhead)
-
-
-#### Error uploading image?
-
-- Multimedia folder permissions: Ensure that the user:user group is `www-data`
-- Size limit exceeded: Modify the PHP configuration file
-- Format and suffix are not consistent: pic.jpg is actually pic.jpeg, it will cause failure to upload, change it to the actual suffix
-
-
-#### Administrator can't log in the background normally?
-
-Description: The website can be accessed normally, but the administrator cannot login the background normally  
-Reason: The permission configuration in the database has been broken
-Solution：Modify the fields wp_user_level, wp_capabilities and so on in the wp_users and wp_usermeta tables
-
-
-#### Database information is correct, but cannot connect?  
-
-Description: The database connection information is correct, but it still shows Database connection error  Reason: The containerized version of WordPress does not support the database name www.abc.com  
-
+Reason: The containerized version of WordPress does not support database names like `www.abc.com`.  
+Solution: Use a different database name format.
