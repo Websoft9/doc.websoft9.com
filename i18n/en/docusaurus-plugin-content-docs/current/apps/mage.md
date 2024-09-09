@@ -18,13 +18,19 @@ import Meta from './_include/mage.md';
 
 ### Run pipelines {#pipelines}
 
-1. Click **Pipelines > example_pipeline** in the left menu to enter the **Triggers** page.
+The following is how to run pipelines by migrating MySQL data tables:
 
-2. Click **New Triggers** to set the trigger properties.
+1. Prepare two databases: the source database and the target database.
 
-3. Click **Enable Triggers** to activate the triggers, which will run at the specified time.
+2. Click **New Pipelines > Data Integration**, enter a name and create the pipeline.
 
-4. Click **Run@once** to execute the Pipelines example immediately.
+3. Choose **Select Source**, select "MySQL", fill in the original database information in **Configuration** (Click **Test Connection** to verify the database information).
+
+4. **Select the table you want to migrate.
+
+5. **Select destination** select "MySQL", fill in the destination database information in **Configuration** (Click **Test Connection** to verify the database information).
+
+6. Click on the left menu **Triggers > Run@once > Run now**, the corresponding table will be imported into the target database after execution.
 
 ## Configuration options{#configs}
 
