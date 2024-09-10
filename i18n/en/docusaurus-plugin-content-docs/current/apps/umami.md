@@ -7,23 +7,22 @@ tags:
   - Tracking Scripts
 ---
 
-import Meta from './_include/umami.md';
+import Meta from './\_include/umami.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Initial setup{#wizard}
+### Initial Setup {#wizard}
 
-1. When completed installation of Umami at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After completing the installation of Umami via the **Websoft9 Console**, retrieve the application's **Overview** and **Access** information from the **My Apps** section.
 
-2. After successfully logging in, go to **Users** to change the password
+2. Once logged in, navigate to the **Users** section to change the default password.
 
-## Configuration options{#configs}
+## Configuration Options {#configs}
 
-- Multilingual(✅)
+- **Multilingual (✅)**: Supports multiple languages.
 
-## Administer{#administrator}
+## Administration {#administrator}
 
-## Troubleshooting{#troubleshooting}
-
+## Troubleshooting {#troubleshooting}
