@@ -7,33 +7,34 @@ tags:
   - trivy
 ---
 
-import Meta from './_include/trivy.md';
+import Meta from './\_include/trivy.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Initial setup{#wizard}
+### Initial Setup {#wizard}
 
-1. When completed installation of Trivy at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After completing the installation of Trivy via the **Websoft9 Console**, retrieve the application's **Overview** and **Access** information from the **My Apps** section.
 
-2. Access Trivy container, start virus protection scanning
-  ```
-  trivy fs /scandir
-  ```
+2. To start a virus protection scan, access the Trivy container and run the following command:
+   ```bash
+   trivy fs /scandir
+   ```
 
-## Configuration options{#configs}
+## Configuration Options {#configs}
 
-- CLI (√): `trivy`
+- **CLI (√)**: `trivy`
 
-## Administer{#administrator}
+## Administration {#administrator}
 
-## Troubleshooting{#troubleshooting}
+## Troubleshooting {#troubleshooting}
 
-#### How to scan quickly?
+#### How to perform a quick scan?
 
-Access to Trivy container, run command as follow:
-  ```
-  apk add --no-cache python3 && ln -sf python3 /usr/bin/python 
-  trivy fs  --scanners vuln /tmp/usr/share 
-  ```
+Access the Trivy container and run the following commands:
+
+```bash
+apk add --no-cache python3 && ln -sf python3 /usr/bin/python
+trivy fs --scanners vuln /tmp/usr/share
+```
