@@ -16,30 +16,30 @@ import Meta from './_include/mysql.md';
 
 ### Initial setup{#wizard}
 
-1. When completed installation of MySQL at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. When completing the installation of MySQL in the **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
 ### Testing Availability {#wizard}
 
-1. Enter the CLI of the MySQL container and log in to test the availability
+1. Access the CLI of the MySQL container and log in to test availability
    ```
    mysql -u root -p
    ```
-2. Successful login will enter MySQL CLI
+2. A successful login will take you to the MySQL CLI
 
 ### Graphical tools
 
-Websoft9 App Store installs [phpMyAdmin](./phpmyadmin) or [CloudBeaver](./cloudbeaver#verify-cloudbeaver-installation), you can manage MySQL **without opening an external network**.
+The Websoft9 App Store provides [phpMyAdmin](./phpmyadmin) and [CloudBeaver](./cloudbeaver#verify-cloudbeaver-installation) for managing MySQL, **without opening an external network**.
 
 ## Configuration options{#configs}
 
 - Configuration file directory (mounted): /etc/mysql/conf.d
 - Initialization script directory (mounted): /docker-entrypoint-initdb.d
 - Port: 3306
-- Master-slave replication (√): DDL and DML operations are replicated to the slave repository by binary logs, supporting one master and multiple slaves
+- Master-slave replication (√): DDL and DML operations are replicated to the slave repository using binary logs, supporting one master and multiple slaves
 - Database hostname: Container name
 - External network port: user-defined selection during installation
 - [Connectors and APIs](https://dev.mysql.com/doc/index-connectors.html)
-- CLI
+- CLI tools:
   * mysql
   * mysqladmin
   * mysqldump 
@@ -54,7 +54,7 @@ Websoft9 App Store installs [phpMyAdmin](./phpmyadmin) or [CloudBeaver](./cloudb
 
 ### Setting up Binary Log
 
-MySQL does not enable Binary Log enabled by default. Modify the relevant entries in [MySQL Configuration File](#configs).
+Binary Log is not enabled by default in MySQL. Modify the relevant entries in the [MySQL Configuration File](#configs).
 
 ```
 log_bin = mysql-bin # enable Binary Log
@@ -64,7 +64,7 @@ expire_logs_days = 7 # Binary log expire time
 
 ### Setting up MySQL remote access {#remote}
 
-Enter the CLI of the MySQL container and set up MySQL remote access:
+Access the CLI of the MySQL container and set up remote access:
 
 ```
 # Enable remote access
@@ -72,41 +72,41 @@ mysql> use mysql;
 mysql> update user set host = '%' where user = 'root';
 ```
 
-### Change the password.
+### Changing the password.
 
-Execute the command as follows:
+To change the password, execute the following command:
 ```
 mysqladmin -u username -p old password password 'new password' 
 ```
-### Reset password
+### Resetting the Password
 
 To reset the password through a temporary container
 
-1. Stop current MySQL container and run new MySQL container sharing storage with the old container.
-2. Change the password in the new container and delete the new container.
+1. Stop the current MySQL container and run a new MySQL container sharing storage with the old container.
+2. Change the password in the new container and then delete the new container.
 3. Resume the original MySQL container
 
 
 ### Backup (export) 
 
-- It is recommended to use a visualization tool such as phpMyAdmin, [Export](./phpmyadmin#manage-database) database (SQL format recommended)
+- It is recommended to use a visualization tool such as phpMyAdmin to [Export](./phpmyadmin#manage-database) the database (SQL format is recommended)
 
-- Developers can use **mysqldump** tool to export (more efficient and versatile)
+- Developers can use the **mysqldump** tool for exporting, which is more efficient and versatile:
    ```
    mysqldump -uroot -p databasename>databasename.sql
    ```
 
 ### Recover (import)
 
-1. Login to phpMyAdmin, select  the **Import** at the top, and follow the wizard to start the import.
+1. Log in to phpMyAdmin, select **Import** at the top, and follow the wizard to start the import.
 
 2. Database character set incompatibility may occur during the import process, requiring manual intervention. 
 
 ### Migration {#migration}
 
-MySQL to MySQL migration can usually be quickly accomplished by **importing and exporting** data.    
+Migrating from MySQL to MySQL is usually accomplished quickly by **importing and exporting** data.    
 
-However, other DBMS to MySQL migrations are best accomplished using a migration tool such as [MySQL Workbench: Database Migration](https://www.mysql.com/products/workbench/migrate/)
+However, migrations from other DBMS to MySQL are best handled using a migration tool such as [MySQL Workbench: Database Migration](https://www.mysql.com/products/workbench/migrate/)
 
 
 ### Audit
@@ -118,28 +118,28 @@ However, other DBMS to MySQL migrations are best accomplished using a migration 
 
 #### How to analyze database logs?
 
-Mariadb logs are files that record daily operations and error messages for the MariaDB database and can be categorized into:
+MariaDB logs include files that record daily operations and error messages, categorized as follows:
 
-* Binary log (Binlog):  Log all database operations for database recovery. 
-* Error log: for diagnosing problems
-* Slow Query Log: records query statements that are executed inefficiently
-* Generic Query Log: records all query operations
+* Binary log (Binlog):  Log all database operations for recovery. 
+* Error log: For diagnosing problems
+* Slow Query Log: Records inefficiently executed query statements.
+* Generic Query Log: Records all query operations
 
-From a troubleshooting perspective, error logs and slow query logs are the key log  to consider
+From a troubleshooting perspective, focus on error logs and slow query logs.
 
 #### Importing a database reports an error?
 
-Check the script to see if it contains a database creation script.
+Check the script to ensure it includes a database creation script.
 
 #### Database service cannot start?
 
-The main reasons why MySQL fails to start are:
+Common reasons for MySQL startup failure include:
 
-* Insufficient disk space (binary log file size is growing too fast)
-* Deadlock
-* MySQL configuration file error
+* Insufficient disk space (binary log file size is growing too quickly)
+* Deadlocks
+* MySQL configuration file errors
 
-It is recommended that you troubleshoot the problem by using the following commands  
+Use the following commands to troubleshoot:
 
 ```shell
 # View disk space
@@ -155,27 +155,27 @@ docker logs container_name
 #### Logs causing low disk space? {#binlogexceed}
 
 - Clean up logs manually
-- Consider commenting out configuration file entries `#log_bin=mysql-bin` Turn off binlogs
+- Consider commenting out `#log_bin=mysql-bin` in the configuration file to turn off binary logs
 
 #### Data files exceeding upper limit?
 
-When a single file exceeds the upper limit, it can cause the database to fail to start. In this case, add disk or add a new datafile address
+When a single file exceeds the upper limit, it can prevent the database from starting. In such cases, add disk space or specify a new data file path:
 ```
 innodb_data_file_path= /data/mysql/data1:2000M;/data2/mysql/data2:2000M:autoextend
 ```
 
 #### MySQL container cannot be accessed remotely?
 
-There are three possible reasons:
+Possible reasons include:
 
-1. the port mapping is set incorrectly, resulting in the container not having a network
+1. Incorrect port mapping, resulting in no network access for the container.
 2. The container does not have remote access privileges enabled
-3. MySQL 8.0 special setting requirements.
+3. Special setting requirements for MySQL 8.0.
 
-#### mysqladmin command reports an error ?
+#### `mysqladmin` Command reports an error ?
 
 Error: “Access denied; you need the SUPER privilege for this operation”  
-Reason: The mysqlamdin command requires SUPER privilege, which is not available to normal users by default.    
+Reason: The `mysqlamdin` command requires SUPER privilege, which is not available to normal users by default.    
 
 #### Cannot delete all tables?
 
@@ -183,9 +183,9 @@ Some tables cannot be deleted due to **Foreign Key Constraints** between tables.
 
 #### Deadlock in database?
 
-Deadlocks are usually caused by application design problems, among which transaction operations are more likely to have deadlocks.  
+Deadlocks are typically caused by application design issues, particularly with transaction operations. 
 
-Once a deadlock occurs, you can use the following commands to confirm the cause of the deadlock:
+To confirm the cause of a deadlock, use the following command:
 
 ```
 MariaDB [(none)]> show innodb status \G;

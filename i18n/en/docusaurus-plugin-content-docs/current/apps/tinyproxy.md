@@ -7,29 +7,27 @@ tags:
   - tinyproxy
 ---
 
-import Meta from './_include/tinyproxy.md';
+import Meta from './\_include/tinyproxy.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Using git clone through a proxy
+### Using Git Clone Through a Proxy
 
-Here's how to use Tinyproxy to implement git clone: 
+Follow these steps to use Tinyproxy for `git clone`:
 
-1. Modify ALLOWED in .env file through console, and changes will take effect after rebuilding the application.
+1. Modify the `ALLOWED` field in the `.env` file via the console. The changes will take effect after you rebuild the application.
 
-2. Use the following git clone command:
-    ```
-    git -c http.proxy=http://TinyproxyURL:Port clone --depth=1 https://github.com/Websoft9/docker-library
-    ```
+2. Use the following command to clone the repository through Tinyproxy:
+   ```bash
+   git -c http.proxy=http://TinyproxyURL:Port clone --depth=1 https://github.com/Websoft9/docker-library
+   ```
 
+## Configuration Options {#configs}
 
-## Configuration options{#configs}
+- **Whitelist Setup**: To allow specific IP addresses, edit the `ALLOWED` field in the `.env` file. Using `0.0.0.0/0` will allow all IPs to access. Separate multiple IP addresses with spaces.
 
-- Whitelist Setup: Edit the ALLOWED in the .env file, setting 0.0.0.0/0 means all IP are allowed to access. Separate all IP by spaces.
+## Administration {#administrator}
 
-## Administer{#administrator}
-
-## Troubleshooting{#troubleshooting}
-
+## Troubleshooting {#troubleshooting}

@@ -15,9 +15,9 @@ import Meta from './_include/mongodb.md';
 
 ### Initial setup{#wizard}
 
-1. When completed installation of MongoDB at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After completing the installation of MongoDB in the **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
-2. Complete the install wizard step by step
+2. Follow the installation wizard step by step
 
 ### CLI connection
 
@@ -41,7 +41,7 @@ import Meta from './_include/mongodb.md';
 
 ### Graphical Web 
 
-Websoft9 provides a web-based application to access the [MongoDB Compass](./mongocompass#wizard) 
+Websoft9 provides a web-based application to access   [MongoDB Compass](./mongocompass#wizard) 
 
 ### Commands
 
@@ -132,23 +132,23 @@ Successfully added user: { "user" : "webs_admin", "roles" : [ "userAdminAnyDatab
 
 - [Configuration file](https://docs.mongodb.com/v4.0/reference/configuration-options/#conf-file) (mounted): */etc/mongod.conf*  
 
-- Enable public access: Modify the field `bindIp: 0.0.0.0` in the configuration file
+- Enable public access: Modify the `bindIp: 0.0.0.0` field in the configuration file
 
 - Server command: `mongod`
 
 - Client command: `mongo`
 
-- Commands: mongod is the server-side management command for MongoDB, mongo is the client used to access the MongoDB service
+- Commands: `mongod` is the server-side management command for MongoDB, while `mongo` is the client used to access the MongoDB service
 
-- No authentication access (√): refer to [Access Control](https://docs.mongodb.com/manual/tutorial/enable-authentication/) setting
+- No authentication access (√): refer to [Access Control](https://docs.mongodb.com/manual/tutorial/enable-authentication/) settings
 
-- Default database admin: database users with global administrative privileges must be stored in this admin database
+- Default database admin: database users with global administrative privileges are stored in the admin database
 
 ## Administer{#administrator}
 
-- **Shut down MongoDB access authentication**: From Websoft9 console select **My Apps > Compose > Go to Edit Repository > .env**, comments the environment variable with prefix  **MONGO_INITDB_**, and rebuild.
+- **Shut down MongoDB access authentication**: From the Websoft9 console, select **My Apps > Compose > Go to Edit Repository > .env**, comment out the environment variable with the prefix  **MONGO_INITDB_**, and rebuild.
 
-- **Forgot administrator password**: After turn off MongoDB access authentication, enter the container and run the reset command, then restore. 
+- **Forgot administrator password**: After disabling MongoDB access authentication, enter the container and run the reset command, then restore the password. 
    ```
    mongo
    > db = db.getSiblingDB('admin')
@@ -156,7 +156,7 @@ Successfully added user: { "user" : "webs_admin", "roles" : [ "userAdminAnyDatab
    > db.changeUserPassword(“root”, “NEWPASSWORD”)
    ```
 
-- Backups: **mongodump** and **mongorestore** are the included MongoDB backup and recovery tools ([MongoDB Backup Methods](https://docs.mongodb.com/manual/core/backups/))
+- Backups: Use **mongodump** and **mongorestore** for MongoDB backup and recovery. For more details, refer to ([MongoDB Backup Methods](https://docs.mongodb.com/manual/core/backups/))
   ```
    # Backup
    mongodump --authenticationDatabase admin --username root --password PASSWORD -d DATABASE_NAME -h localhost

@@ -18,7 +18,7 @@ import Meta from './_include/mediawiki.md';
 
 ### Initial setup{#wizard}
 
-1. When completed installation of Mediawiki at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. When completing the installation of Mediawiki in the **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
 ### Quick setup
  
@@ -26,13 +26,13 @@ import Meta from './_include/mediawiki.md';
 - Visual Editor: [Help:Starting_a_new_page](https://www.mediawiki.org/wiki/Help:VisualEditor/User_guide/zh)
 - File Upload: [Help:FAQ:Enabling File Upload](https://www.mediawiki.org/wiki/Manual:FAQ/zh#如何启用文件上传?)
 - Language Settings: [Help:FAQ:Language Settings](https://www.mediawiki.org/wiki/Manual:FAQ/zh#我如何更改界面语言?)
-- Interface Customization: [Help:FAQ:Customize Interface](https://www.mediawiki.org/wiki/Manual:FAQ/zh#定制界面), modify Logo, set navigation bar, modify CSS, etc
+- Interface Customization: [Help:FAQ:Customize Interface](https://www.mediawiki.org/wiki/Manual:FAQ/zh#定制界面), including modifying the logo, setting up the navigation bar, and customizing CSS.
 
 ### Setting up SMTP{#smtp}
 
 1. Edit the `/bitnami/mediawiki LocalSettings.php` configuration file.
 
-2. Find the variable $wgSMTP and set it as follows: 
+2. Locate the variable $wgSMTP and configure it as follows: 
    
    ```
     $wgSMTP = array(
@@ -52,14 +52,14 @@ import Meta from './_include/mediawiki.md';
    ```
 
 
-4. Find the following variables and set its values to the sender's email address.
+4. Locate the following variables and set their values to the sender's email address.
    
    ```
     $wgEmergencyContact = "websoft9@163.com";
     $wgPasswordSender = "websoft9@163.com";
    ```
 
-5. After setting, restart the application to take effect.
+5. After making these changes, restart the application for the settings to take effect.
 
 ## Configuration options{#configs}
 

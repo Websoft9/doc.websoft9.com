@@ -15,9 +15,9 @@ import Meta from './_include/influxdb.md';
 
 ### Initial setup{#wizard}
 
-1. When completed installation of InfluxDB at Websoft9 console, get the applicaiton's overview and access information from **My Apps**  
+1. When completing the installation of InfluxDB in the Websoft9 console, get the applicaiton's overview and access information from **My Apps**  
 
-2. Create organizations, users, and buckets according to the installation wizard, and click **Get Started** to enter the dashboard and start using them 
+2. Create organizations, users, and buckets as instructed by the installation wizard, and click **Get Started** to enter the dashboard and begin using them 
 
 ## Configuration options{#configs}
 
@@ -27,7 +27,7 @@ import Meta from './_include/influxdb.md';
 
   - Container configuration file: */etc/influxdb2/config.yml*
   - Container environment variables
-  - Command in docker-compose.yml file (highest priority) 
+  - Command in the docker-compose.yml file (highest priority) 
 
 ## Administer{#administrator}
 

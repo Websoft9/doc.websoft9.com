@@ -8,26 +8,28 @@ tags:
   - Gateway
 ---
 
-import Meta from './_include/traefik.md';
+import Meta from './\_include/traefik.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Initial setup{#wizard}
+### Initial Setup {#wizard}
 
-1. When completed installation of Traefix at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After completing the installation of Traefik via the **Websoft9 Console**, retrieve the application's **Overview** and **Access** information from the **My Apps** section.
 
-2. Optional: Forward Traefik Dashboard port 8080 to extranet by Websoft9 gateway
+2. (Optional) Forward the Traefik Dashboard port (8080) to the external network using the Websoft9 gateway.
 
-## Configuration options{#configs}
+## Configuration Options {#configs}
 
-- Container ports: 80 is the HTTP service port, 8080 is the Dashboard port
+- **Container Ports**:
+  - `80`: HTTP service port
+  - `8080`: Dashboard port
 
-## Administer{#administrator}
+## Administration {#administrator}
 
-## Troubleshooting{#troubleshooting}
+## Troubleshooting {#troubleshooting}
 
-#### Can't access Traefik Dashboard?
+#### Can't access the Traefik Dashboard?
 
-Port 8080 is not directly mapped to the host for security reasons.
+Port 8080 is not mapped directly to the host for security reasons.

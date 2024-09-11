@@ -7,10 +7,10 @@ tags:
   - Tomcat
 ---
 
-import Meta from './_include/tomcat.md';
+import Meta from './\_include/tomcat.md';
 
 <Meta name="meta" />
 
 ## Documentation {#guide}
 
-Refer to: [JAVA Documentation](./java)
+For further details, refer to the [Java Documentation](./java).

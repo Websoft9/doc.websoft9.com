@@ -8,31 +8,31 @@ tags:
   - Algolia
 ---
 
-import Meta from './_include/typesense.md';
+import Meta from './\_include/typesense.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Initial setup{#wizard}
+### Initial Setup {#wizard}
 
-1. When completed installation of Typesense at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After completing the installation of Typesense via the **Websoft9 Console**, retrieve the application's **Overview** and **Access** information from the **My Apps** section.
 
-2. Browser access: append the **/health** path to the URL to check if the Typesense service is normal startup
-    ```
-    # test health
-    curl "http://URL/health"
+2. To check if the Typesense service has started correctly, append the **/health** path to the URL:
 
-    # test collections
-    curl "http://URL/collections" -H "X-TYPESENSE-API-KEY: f324f596-f07b-XP7bz4lUmA@Ln6XH"
-    ```
+   ```bash
+   # Test service health
+   curl "http://URL/health"
 
-## Configuration options{#configs}
+   # Test collections
+   curl "http://URL/collections" -H "X-TYPESENSE-API-KEY: f324f596-f07b-XP7bz4lUmA@Ln6XH"
+   ```
 
-- Scraper Config File configuration: environment variables **CONFIG** for the typesense-scraper container in docker-compose.yml
-- Architecture: typesense-scraper is the data crawler, typesense is the data store and search engine
+## Configuration Options {#configs}
 
-## Administer{#administrator}
+- **Scraper Config File**: Configure the environment variables **CONFIG** for the `typesense-scraper` container in `docker-compose.yml`.
+- **Architecture**: `typesense-scraper` serves as the data crawler, while `typesense` is the data store and search engine.
 
-## Troubleshooting{#troubleshooting}
+## Administration {#administrator}
 
+## Troubleshooting {#troubleshooting}
