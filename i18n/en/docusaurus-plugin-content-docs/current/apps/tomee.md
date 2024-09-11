@@ -7,10 +7,10 @@ tags:
   - Tomee
 ---
 
-import Meta from './_include/tomee.md';
+import Meta from './\_include/tomee.md';
 
 <Meta name="meta" />
 
 ## Documentation {#guide}
 
-Refer to: [JAVA Documentation](./java)
+For further details, refer to the [Java Documentation](./java).

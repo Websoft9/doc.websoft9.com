@@ -7,22 +7,22 @@ tags:
   - ToolJet
 ---
 
-import Meta from './_include/tooljet.md';
+import Meta from './\_include/tooljet.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Initial setup{#wizard}
+### Initial Setup {#wizard}
 
-1. When completed installation of Tooljet at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After completing the installation of ToolJet via the **Websoft9 Console**, retrieve the application's **Overview** and **Access** information from the **My Apps** section.
 
-2. After logining to the ToolJet console, start creating the application
+2. Once logged into the ToolJet console, you can start creating applications.
 
-## Configuration options{#configs}
+## Configuration Options {#configs}
 
-- Multilingual(×): English only
+- **Multilingual (×)**: Supports only English.
 
-## Administer{#administrator}
+## Administration {#administrator}
 
-## Troubleshooting{#troubleshooting}
+## Troubleshooting {#troubleshooting}
