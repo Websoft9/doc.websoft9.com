@@ -22,7 +22,7 @@ import Meta from './_include/passbolt.md';
 
 2. Create an administrator account with the command, and generate a **path string** after the command is executed.
 
-    ``
+    ```
     docker exec "The **main container** from step1" su -m -c "bin/cake passbolt register_user -u "YOUR_EMAIL" -f "YOUR_NAME" -l "YOUR_LASTNAME" -r admin" -s /bin/sh www- data
     ```
 
