@@ -6,18 +6,18 @@ tags:
   - Cloud Database
 ---
 
-import Meta from './_include/sqlite.md';
+import Meta from './\_include/sqlite.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Initial setup{#wizard}
+### Initial Setup {#wizard}
 
-1. When completed installation of SQLite at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After completing the installation of SQLite in the **Websoft9 Console**, retrieve the application's **Overview** and **Access** information from **My Apps**.
 
-2. Enter the command mode of the SQLite container and run the `sqlite3` command.
-   ```
+2. Enter the command mode of the SQLite container and run the `sqlite3` command:
+   ```bash
    [root@VM-0-11-centos ~]# sqlite3
    SQLite version 3.29.0 2019-07-10 17:32:03
    Enter ".help" for usage hints.
@@ -26,13 +26,12 @@ import Meta from './_include/sqlite.md';
    sqlite>
    ```
 
-## Configuration options{#configs}
+## Configuration Options {#configs}
 
 - CLI: `sqlite3 --help`
 
-## Administer{#administrator}
+## Administration {#administrator}
 
-- Upgrade: Binary Replacement and  sqlite3.conf Migration
+- Upgrade: Binary Replacement and `sqlite3.conf` Migration
 
-## Troubleshooting{#troubleshooting}
-
+## Troubleshooting {#troubleshooting}

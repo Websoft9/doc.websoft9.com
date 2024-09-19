@@ -7,30 +7,28 @@ tags:
   - Snapdrop
 ---
 
-import Meta from './_include/snapdrop.md';
+import Meta from './\_include/snapdrop.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Initial setup{#wizard}
+### Initial Setup {#wizard}
 
-1. When completed installation of Snapdrop at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After completing the installation of Snapdrop in the **Websoft9 Console**, retrieve the application's **Overview** and **Access** information from **My Apps**.
 
+### File Sharing
 
-### File sharing
+1. After completing the installation of Snapdrop in the Websoft9 Console, retrieve the application's overview and access credentials from **My Apps**.
 
-1. Completed installation Snapdrop at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
+2. When multiple users visit a Snapdrop URL in their browsers, they will see other users.
 
-2. When multiple users visit a Snapdrop URL in their browsers, they can all see other users.
-
-3. Identify the user, drag-and-drop the file, and they can download it.
+3. Identify the user, drag and drop the file, and they will be able to download it.
 
    > You can also send a message to the target user.
 
-## Configuration options{#configs}
+## Configuration Options {#configs}
 
-## Administer{#administrator}
+## Administration {#administrator}
 
-## Troubleshooting{#troubleshooting}
-
+## Troubleshooting {#troubleshooting}
