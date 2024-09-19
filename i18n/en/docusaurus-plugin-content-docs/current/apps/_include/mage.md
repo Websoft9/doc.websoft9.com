@@ -1,4 +1,4 @@
-[Mage](https://www.mage.ai/) is **Open-source data pipeline tool**, used for Data Collection Database Management Tools . Build, run, and manage data pipelines for integrating and transforming data.
+[Mage](https://www.mage.ai/) is **Open-source data pipeline tool**, used for Database Management Tools ETL & ELT . Build, run, and manage data pipelines for integrating and transforming data.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mage/mage-gui-websoft9.png)
