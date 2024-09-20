@@ -17,26 +17,26 @@ import Meta from './_include/passbolt.md';
 
 1. Once you have completed the installation of Passbolt in the **Websoft9 Console**, retrieve the application information from **My Apps**.
 
-    - Get the access URL in the **Access** tab.
-    - Get the **Main Container** in the **Container**.
+    - Get the **access URL** in the **Access** tab.
+    - Get the **App Id** in the **Overview**.
 
-2. Create an administrator account with the command, and generate a **path string** after the command is executed.
+2. Run the following command to create an admin account and get the initial **installation URL suffix**:
 
     ```
-    docker exec "The **main container** from step1" su -m -c "bin/cake passbolt register_user -u "YOUR_EMAIL" -f "YOUR_NAME" -l "YOUR_LASTNAME" -r admin" -s /bin/sh www- data
+    docker exec <App Id> su -m -c "bin/cake passbolt register_user -u "YOUR_EMAIL" -f "YOUR_NAME" -l "YOUR_LASTNAME" -r admin" -s /bin/sh www-data
     ```
 
-3. Use your local browser to access the "URL in step1 + **path string** in step2".
+3. Use your local browser to visit `http://URL/installation URL suffix` and go to the initialization wizard to complete it in order:
 
-4. Follow the prompts to install the Passbolt client plugin and set the master password.
+   - Install the Passbolt browser plugin
+   - Set the administrator password
 
-5. After logging in, set the SMTP configuration in **Administration > Email Server**.
-
-6. After the administrator adds a new user, the new user will receive the authentication code via email to register and log in.
+4. After completing the initialization, log in to the Passbolt console and set up SMTP before inviting other users to enroll via email.
 
 ## Configuration options{#configs}
 
 - Multilingual (×): not support Chinese
+- SMTP: Console **administration > Email server**
 
 ## Administer{#administrator}
 
