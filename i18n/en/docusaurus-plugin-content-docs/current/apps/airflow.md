@@ -2,8 +2,9 @@
 title: Airflow
 slug: /airflow
 tags:
-  - console
-  - other
+  - Airflow
+  - Workflow Orchestration
+  - Data Pipelines
 ---
 
 import Meta from './_include/airflow.md';
@@ -11,12 +12,6 @@ import Meta from './_include/airflow.md';
 <Meta name="meta" />
 
 ## Getting started{#guide}
-
-### Initial setup{#wizard}
-
-1. When completed installation of Airflow at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
-
-2. Complete the install wizard step by step
 
 ### Login verification{#verification}
 
@@ -27,17 +22,7 @@ import Meta from './_include/airflow.md';
 ## Configuration options{#configs}
 
 - CLI
-- Multilingual (√)
-- SMTP (√)
 
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?
