@@ -2,8 +2,9 @@
 title: Jitsi
 slug: /jitsi
 tags:
-  - console
-  - other
+  - Jitsi
+  - Web Conferencing
+  - Videoconferencing
 ---
 
 import Meta from './_include/jitsi.md';
@@ -12,32 +13,18 @@ import Meta from './_include/jitsi.md';
 
 ## Getting started{#guide}
 
-### Initial setup{#wizard}
+### Login console{#verification}
 
-1. When completed installation of Jitsi at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. **Set up HTTPS**:
+   - Log in to the Websoft9 Console, go to **Gateway** in the left menu, and follow the steps to configure HTTPS for Jitsi (**Required**).
 
-2. Complete the install wizard step by step
-
-### Login verification{#verification}
-
-1. Completed installation Jitsi at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
-
-2. Starting to verify it
+2. **Application Overview**:
+   - After completing the installation of Jitsi in the Websoft9 Console, retrieve the application's **Overview** and **Access** information from **My Apps**.
 
 ## Configuration options{#configs}
 
-- CLI
 - Multilingual (√)
-- SMTP (√)
 
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?
