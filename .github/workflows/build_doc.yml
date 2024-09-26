@@ -3,7 +3,9 @@ name: Docs Build and Upload to Cloudflare
 on: 
   workflow_dispatch:
   push:
-    branches: [ main ]
+    branches:
+      - dev
+      - main
     paths: 
       - 'docs/**'
       - 'versioned_docs/**'
@@ -32,6 +34,28 @@ jobs:
     - name: Debug
       run: ls
 
+    - name: Create apidocs directory and add files
+      run: |
+        mkdir -p build/apidocs
+        cd build/apidocs
+        wget -O redoc.standalone.js https://cdn.redoc.ly/redoc/latest/bundles/redoc.standalone.js
+        wget -O README.md https://websoft9.github.io/websoft9/apphub/apidocs/README.md
+        wget -O index.html https://websoft9.github.io/websoft9/apphub/apidocs/index.html
+        docker run -d --name apphub -p 8080:8080 websoft9dev/apphub:latest
+          sleep 5
+          max_attempts=10
+          url="http://localhost:8080/openapi.json"
+          for attempt in $(seq 1 $max_attempts); do
+            echo "Attempt #$attempt to download $url..."
+            if wget -O openapi.json "$url"; then
+              echo "Successfully downloaded $url"
+              break
+            else
+              echo "Failed to download $url. Waiting for 5 seconds before retry..."
+              sleep 5
+            fi
+          done
+
     - name: Publish to Cloudflare Pages
       uses: cloudflare/pages-action@v1
       with:
@@ -43,4 +67,4 @@ jobs:
         gitHubToken: ${{ secrets.GITHUB_TOKEN }}
         # Optional: Switch what branch you are publishing to.
         # By default this will be the branch which triggered this workflow
-        branch: main
+        # branch: dev

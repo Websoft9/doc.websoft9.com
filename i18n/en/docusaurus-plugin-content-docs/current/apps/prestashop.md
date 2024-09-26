@@ -21,7 +21,7 @@ import Meta from './\_include/prestashop.md';
 2. Log in to the PrestaShop backend:
    ![](./assets/prestashop-backend-websoft9.png)
 
-3. Navigate to **Shop Parameters** in the left-hand menu and scroll down to the **Set Shop URL** section.
+3. Click on the **Shop Parameters > Traffic & SEO > SEO & URLs** item on the left menu and scroll down to the **Set shop URL** on the page
 
 4. If you access PrestaShop through a domain name, remove the port from the default URL and **Save** the changes to apply them.
 

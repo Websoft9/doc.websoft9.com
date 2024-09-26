@@ -35,21 +35,8 @@ import Meta from './\_include/xwiki.md';
    - Assign roles and permissions to different users based on their responsibilities.
 
 2. **Extension Manager**:
-   - Install and manage extensions through XWiki’s Extension Manager to expand functionality.
+   - Install and manage extensions through XWiki’s [Extension](https://extensions.xwiki.org/xwiki/bin/view/Extension/) Manager to expand functionality.
    - Keep extensions updated for security and performance improvements.
 
 ## Troubleshooting {#troubleshooting}
 
-1. **XWiki Initialization Issues**:
-
-   - **Symptom**: XWiki setup wizard fails or hangs during initialization.
-   - **Solution**: Ensure that sufficient server resources are available. Restart the XWiki container via the Websoft9 Console and retry the initialization.
-
-2. **Admin Account Setup Issues**:
-
-   - **Symptom**: Issues encountered during the admin account setup.
-   - **Solution**: Double-check the database connection and ensure that all required services are running.
-
-3. **Performance Issues**:
-   - **Symptom**: XWiki is running slowly after installation.
-   - **Solution**: Review the installed extensions and remove any that are not necessary. Additionally, check the server resources and optimize them if needed.

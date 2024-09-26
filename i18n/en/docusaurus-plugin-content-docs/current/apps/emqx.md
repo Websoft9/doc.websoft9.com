@@ -20,7 +20,7 @@ Refer to: [MQTTX](./mqttx).
 
 ## Configuration options{#configs}
 
-- Configuration file: EMQX supports to convert the configuration files into environment variables.
+- Configuration File: EMQX supports converting configuration files into environment variables.
 
 ## Administer{#administrator}
 

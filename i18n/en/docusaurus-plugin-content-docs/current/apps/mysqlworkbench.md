@@ -16,7 +16,7 @@ import Meta from './_include/mysqlworkbench.md';
 
 ### Initial setup{#wizard}
 
-1. When completed installation of Mysqlworkbench at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. When completing the installation of Mysqlworkbench in the **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
 ## Configuration options{#configs}
 

@@ -1,4 +1,4 @@
-[Mage](https://www.mage.ai/) is **Open-source data pipeline tool**, used for Data Collection . Mage is an open source tool for building and managing data pipelines and machine learning workflows.
+[Mage](https://www.mage.ai/) is **Open-source data pipeline tool**, used for Database Management Tools ETL & ELT . Build, run, and manage data pipelines for integrating and transforming data.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mage/mage-gui-websoft9.png)
@@ -10,6 +10,6 @@ When referring to this document to use **Mage**, please read and ensure the foll
 
 - This application is installed by Websoft9 console.
 
-- Please check the application's usage license agreement to ensure compliance.
+- The purpose of this application complies with the [apache2](https://opensource.org/licenses/Apache-2.0) open source license agreement.
 
 - [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

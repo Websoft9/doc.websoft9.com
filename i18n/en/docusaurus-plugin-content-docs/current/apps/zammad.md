@@ -23,18 +23,12 @@ import Meta from './\_include/zammad.md';
 
 ## Administration {#administrator}
 
-- **User Management**: Add and manage users through the Zammad admin dashboard.
-
-- **Ticket Management**: Configure ticket queues, response times, and assign support agents to specific tickets.
-
 ## Troubleshooting {#troubleshooting}
 
 #### Can't connect after replacing the database?
 
-- **Issue**: Zammad database connection does not support hostnames containing an underscore ("\_").
-- **Solution**: Ensure that the replacement database hostname does not contain any underscores to meet the connection requirements.
+Zammad database connection does not support hostnames containing an underscore ("\_"), Ensure that the replacement database hostname does not contain any underscores to meet the connection requirements.
 
 #### Slow Initialization?
 
-- **Issue**: Zammad is taking longer than expected to initialize.
-- **Solution**: Check your server resources and ensure sufficient CPU and memory are allocated to support Zammad’s initialization process.
+Zammad is taking longer than expected to initialize, Check your server resources and ensure sufficient CPU and memory are allocated to support Zammad’s initialization process.

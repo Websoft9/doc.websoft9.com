@@ -1,4 +1,4 @@
-[Kodbox](https://kodcloud.com/) is **Enterprsie files collaboration and share KODBOX**, used for Document Collaboration . KodCloud（可道云）是类似 Windows 体验的集在线文件管理、多云存储和协同办公于一体的开源系统。
+[Kodbox](https://kodcloud.com/) is **Enterprsie files collaboration and share KODBOX**, used for Document Collaboration . KodCloud (Kodo Cloud) is an open source system that integrates online file management, multi-cloud storage and collaborative work in a Windows-like experience.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kodcloud/kodcloud-gui-websoft9.png)
