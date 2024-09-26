@@ -8,70 +8,70 @@ tags:
   - Cross-border e-commerce
 ---
 
-import Meta from './_include/prestashop.md';
+import Meta from './\_include/prestashop.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Initial setup{#wizard}
+### Initial Setup {#wizard}
 
-1. When completed installation of Prestashop at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After completing the installation of PrestaShop on the **Websoft9 Console**, retrieve the application's **Overview** and **Access** information from **My Apps**.
 
-2. Login to the Prestashop backend
+2. Log in to the PrestaShop backend:
    ![](./assets/prestashop-backend-websoft9.png)
 
 3. Click on the **Shop Parameters > Traffic & SEO > SEO & URLs** item on the left menu and scroll down to the **Set shop URL** on the page
 
-4. If you access Prestashop by domain name, remove the port in default URL, and **Save** it to take effect
+4. If you access PrestaShop through a domain name, remove the port from the default URL and **Save** the changes to apply them.
 
-### Installing extensions from Marketplace
+### Installing Extensions from the Marketplace
 
-Prestashop 8.0 does not support backend online connection to Marketplace, so to install extensions from Marketplace, you need to: **Purchase > Download Extensions > Import Backend**
+PrestaShop 8.0 does not support direct online connection to the Marketplace via the backend. To install extensions, follow these steps: **Purchase > Download Extensions > Import into Backend**.
 
-## Configuration options{#configs}
+## Configuration Options {#configs}
 
-- Maintenance mode(✅): **Shop Parameters > General > Maintenance**
-- Extended Marketplace(✅)
-- SMTP(✅): **Advanced Parameters > Email**
-- Demo Data Import(✅): **Advanced Parameters > Import**
-- Online Installation of Extensions(✅): Supports online installation, uninstallation and upgrading of extensions
-- Multilingual(✅)
-- Import languages online(✅): **International > Translations > Add / Update a language**, no **Chinese** import option available at this time
-- Developer mode(✅)
-- URL update: left menu **Shop Parameters** item, scroll down to **Set shop URL** setting item in the page.
-- Background login address: viewed through Websoft9 console My Applications
-- CLI
+- Maintenance Mode (✅): **Shop Parameters > General > Maintenance**
+- Extended Marketplace (✅)
+- SMTP (✅): **Advanced Parameters > Email**
+- Demo Data Import (✅): **Advanced Parameters > Import**
+- Online Installation of Extensions (✅): Supports online installation, uninstallation, and upgrading of extensions.
+- Multilingual Support (✅)
+- Import Languages Online (✅): **International > Translations > Add / Update a Language**. Note: **Chinese** is not available for import at this time.
+- Developer Mode (✅)
+- URL Update: Navigate to **Shop Parameters** in the left menu, scroll down to the **Set Shop URL** section.
+- Background Login Address: Accessible through Websoft9 Console under My Applications.
+- CLI Commands:
+
   ```
-  # list all cli
+  # List all available CLI commands
   php bin/console list
 
-  # get help of prestashop:config
+  # Get help for prestashop:config
   php bin/console prestashop:config -h
   ```
 
-## Administer{#administrator}
+## Administration {#administrator}
 
-- **Database Backup**: PrestaShop provides a backend database backup function: **Advanced Parameters > SQL Manager**
+- **Database Backup**: PrestaShop offers a backend database backup feature: **Advanced Parameters > SQL Manager**.
 
-- **Online Upgrade**: In PrestaShop Module Manager, install and enable **1-Click Upgrade**
+- **Online Upgrade**: Use PrestaShop's Module Manager to install and enable the **1-Click Upgrade** module for seamless updates.
 
-## Troubleshooting{#troubleshooting}
+## Troubleshooting {#troubleshooting}
 
-#### Access to PrestaShop always appear port?
+### Why does the PrestaShop URL always display the port number?
 
-You need to login to the backend and then click Fix URL
+You need to log in to the backend, then navigate to **Fix URL** to resolve this issue.
 
-#### Failed to access frontend after configuring HTTPS? 
+### Can't access the frontend after configuring HTTPS?
 
-Set database table ps_configuration properties PS_SSL_ENABLED_EVERYWHERE and PS_SSL_ENABLED to 1
+In the database, set the `ps_configuration` properties `PS_SSL_ENABLED_EVERYWHERE` and `PS_SSL_ENABLED` to 1.
 
-#### Prestashop redirection error?
+### Experiencing a PrestaShop redirection error?
 
-Redirection errors are common in multiple languages. For example, opening the Chinese version of your Prestashop store will lead to a redirection
+Redirection errors are common in multilingual setups. For example, opening the Chinese version of your PrestaShop store may result in a redirection error.
 
-Solution:
+**Solution:**
 
-1. Analyze the `.htaccess` file in the root directory of your website to see if there are any deadlocks.
-2. Remove the self-installed language pack. Re-import again, Prestashop will automatically generate pseudo-static rules to overwrite the original `.htaccess` file.
-
+1. Check the `.htaccess` file in the root directory of your website for any misconfigurations or deadlocks.
+2. Remove the self-installed language pack and re-import it. PrestaShop will automatically generate new pseudo-static rules that overwrite the original `.htaccess` file.
