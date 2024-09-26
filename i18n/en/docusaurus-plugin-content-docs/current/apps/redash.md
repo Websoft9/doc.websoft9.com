@@ -7,25 +7,25 @@ tags:
   - redash
 ---
 
-import Meta from './_include/redash.md';
+import Meta from './\_include/redash.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Initial setup{#wizard}
+### Initial Setup {#wizard}
 
-1. When completed installation of Redash at **Websoft9 console**, get the applicaiton's overview and access information from **My Apps**  
+1. After completing the installation of Redash in the **Websoft9 Console**, retrieve the application's overview and access details from **My Apps**.
 
-2. In the initialization wizard, set the user, email, and password, and complete the registration
+2. In the initialization wizard, set your username, email, and password to complete the registration process.
 
-3. Login Redash dashboard to use it
+3. Log in to the Redash dashboard to begin using the application.
    ![](./assets/redash-backend-websoft9.png)
-   
-## Configuration options{#configs}
 
-- Multilingual (×)
+## Configuration Options {#configs}
 
-## Administer{#administrator}
+- Multilingual Support: Not available (×)
 
-## Troubleshooting{#troubleshooting}
+## Administration {#administrator}
+
+## Troubleshooting {#troubleshooting}
