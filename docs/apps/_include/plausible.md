@@ -1,4 +1,4 @@
-[Plausible](https://plausible.io/) 是一个 **易于使用和隐私友好的谷歌分析替代方案**，它被用于 访问统计  等场景。Plausible是直观，轻量级和开源的网络分析。没有 cookie，完全符合 GDPR、CCPA 和 PECR。在欧盟制造和托管，由欧洲拥有的云基础设施🇪🇺提供支持
+[Plausible](https://plausible.io/) 是一个 **易于使用和隐私友好的谷歌分析替代方案**，它被用于 网站访问分析  等场景。Plausible是直观，轻量级和开源的网络分析。没有 cookie，完全符合 GDPR、CCPA 和 PECR。在欧盟制造和托管，由欧洲拥有的云基础设施🇪🇺提供支持
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/plausible/plausible-gui-websoft9.webp)

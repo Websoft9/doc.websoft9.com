@@ -1,4 +1,4 @@
-[Mage](https://www.mage.ai/) 是一个 **开源数据管道工具**，它被用于 数据库工具 数据连接与集成  等场景。构建、运行和管理用于集成和转换数据的数据管道
+[Mage](https://www.mage.ai/) 是一个 **开源数据管道工具**，它被用于 数据库工具 数据采集/编排/集成  等场景。构建、运行和管理用于集成和转换数据的数据管道
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mage/mage-gui-websoft9.png)

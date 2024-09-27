@@ -1,4 +1,4 @@
-[ClickHouse](https://clickhouse.com/) is **Open-source OLAP database for real-time apps and analytics**, used for NewSQL Database Data Warehouse . ClickHouse supports all the data sources you need to power your apps and use cases that require exceptional performance.
+[ClickHouse](https://clickhouse.com/) is **Open-source OLAP database for real-time apps and analytics**, used for NewSQL Database Data Warehouse and Lake . ClickHouse supports all the data sources you need to power your apps and use cases that require exceptional performance.
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/clickhouse/clickhouse-gui-websoft9.png)

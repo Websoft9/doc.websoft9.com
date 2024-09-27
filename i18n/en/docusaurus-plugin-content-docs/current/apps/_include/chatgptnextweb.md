@@ -1,4 +1,4 @@
-[ChatGPT Next Web](https://chatgpt1.nextweb.fun/) is **Well-designed cross-platform ChatGPT web UI**, used for AIGC . A well-designed cross-platform ChatGPT UI (Web / PWA / Linux / Win / MacOS)
+[ChatGPT Next Web](https://chatgpt1.nextweb.fun/) is **Well-designed cross-platform ChatGPT web UI**, used for Generative AI . A well-designed cross-platform ChatGPT UI (Web / PWA / Linux / Win / MacOS)
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/chatgptnextweb/chatgptnextweb-gui-websoft9.png)
