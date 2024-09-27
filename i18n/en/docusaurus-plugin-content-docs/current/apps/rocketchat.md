@@ -7,29 +7,27 @@ tags:
   - Team Communication
 ---
 
-import Meta from './_include/rocketchat.md';
+import Meta from './\_include/rocketchat.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Initial setup{#wizard}
+### Initial Setup {#wizard}
 
-1. When completed installation of Rocket.Chat at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After completing the installation of Rocket.Chat in the **Websoft9 Console**, retrieve the application's **Overview** and **Access** information from **My Apps**.
 
-2. Visit the URL using your local computer browser and go to the initialization page.
+2. Use a browser on your local computer to visit the URL and access the initialization page.
 
-3. Follow the guide to create: Administrator Account/Organization Creation/Workspace, etc.
+3. Follow the guide to create: Administrator Account, Organization, and Workspace, etc.
 
 4. After verifying the Workspace email address, go to the backend.
    ![](./assets/rocketchat-backend-websoft9.png)
 
+## Configuration Options {#configs}
 
-## Configuration options{#configs}
+- SMTP (✅): Console **Administration > Workspace > Settings > Email > SMTP**
 
-- SMTP(✅): Console **Administration > Workspace > Settings > Email > SMTP**
+## Administration {#administrator}
 
-## Administer{#administrator}
-
-## Troubleshooting{#troubleshooting}
-
+## Troubleshooting {#troubleshooting}

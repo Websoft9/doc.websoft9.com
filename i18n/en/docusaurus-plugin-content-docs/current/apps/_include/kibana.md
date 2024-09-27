@@ -1,4 +1,4 @@
-[Elastic Kibana](https://www.elastic.co/kibana) is **Elasticsearch Dashboard**, used for Data Application and Visualization . Kibana is a powerful tool for data analysis, visualization, and discovery on any data from any source. 
+[Elastic Kibana](https://www.elastic.co/kibana) is **Elasticsearch Dashboard**, used for Data Insights & BI . Kibana is a powerful tool for data analysis, visualization, and discovery on any data from any source. 
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kibana/kibana-gui-websoft9.png)

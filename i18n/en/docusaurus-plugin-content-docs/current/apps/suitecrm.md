@@ -6,31 +6,30 @@ tags:
   - CRM
 ---
 
-import Meta from './_include/suitecrm.md';
+import Meta from './\_include/suitecrm.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Initial setup{#wizard}
+### Initial Setup {#wizard}
 
-1. When completed installation of SuiteCRM at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After completing the installation of SuiteCRM in the **Websoft9 Console**, retrieve the application's **Overview** and **Access** information from **My Apps**.
 
-2. Local browser access, enter the landing page
+2. Use a local browser to access the landing page.
 
-3. According to the guide prompts, select **Next** initialization settings
+3. Follow the guide prompts and select **Next** to proceed with the initialization settings.
 
-4. Initialization settings completed, start experiencing the backend
+4. Once initialization is complete, you can start exploring the backend.
 
-## Configuration options{#configs}
+## Configuration Options {#configs}
 
-- Multilingual(✅): You need to download [Language Packs](https://crowdin.com/project/suitecrmtranslations/zh-CN) and then upload the installation, please refer to [Install New Languages](https://docs.suitecrm.com/admin/installation-guide/languages/install-a-new-language/)
-- SMTP(✅): **Administartor > Admin > Email > Email Setting**
+- Multilingual (✅): You need to download [Language Packs](https://crowdin.com/project/suitecrmtranslations/zh-CN) and then upload them for installation. For detailed steps, refer to [Install New Languages](https://docs.suitecrm.com/admin/installation-guide/languages/install-a-new-language/).
+- SMTP (✅): Navigate to **Administrator > Admin > Email > Email Setting**.
 
-## Administer{#administrator}
+## Administration {#administrator}
 
 - [SuiteCRM Backup](https://docs.suitecrm.com/developer/best-practices/#_backup)
 - [SuiteCRM Upgrade](https://docs.suitecrm.com/admin/installation-guide/upgrading/)
 
-## Troubleshooting{#troubleshooting}
-
+## Troubleshooting {#troubleshooting}

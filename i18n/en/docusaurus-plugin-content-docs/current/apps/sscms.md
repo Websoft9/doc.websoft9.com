@@ -7,29 +7,26 @@ tags:
   - sscms
 ---
 
-import Meta from './_include/sscms.md';
+import Meta from './\_include/sscms.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Initial setup{#wizard}
+### Initial Setup {#wizard}
 
-1. When completed installation of SSCMS at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After completing the installation of SSCMS in the **Websoft9 Console**, retrieve the application's **Overview** and **Access** information from **My Apps**.
 
 2. Access the **ss-admin** path to enter the backend and follow the installation guide for initialization.
 
+## Configuration Options {#configs}
 
-## Configuration options{#configs}
+- Multilingual (✅)
 
-- Multilingual(✅)
+## Administration {#administrator}
 
-## Administer{#administrator}
-
-
-## Troubleshooting{#troubleshooting}
-
+## Troubleshooting {#troubleshooting}
 
 #### Failed to initialize MySQL connection?
 
-Requires MySQL version 8.0 or higher.
+Make sure you are using MySQL version 8.0 or higher.

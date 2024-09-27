@@ -1,4 +1,4 @@
-[Redash](https://redash.io/) 是一个 **查询、可视化和共享您的数据**，它被用于 数据应用与可视化  等场景。使用Redash连接到任何数据源（PostgreSQL，MySQL，Redshift，BigQuery，MongoDB和许多其他数据源），查询，可视化和共享您的数据，使您的公司数据驱动。
+[Redash](https://redash.io/) 是一个 **查询、可视化和共享您的数据**，它被用于 BI与数据可视化  等场景。使用Redash连接到任何数据源（PostgreSQL，MySQL，Redshift，BigQuery，MongoDB和许多其他数据源），查询，可视化和共享您的数据，使您的公司数据驱动。
 
 
 ![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/redash/redash-gui-websoft9.png)

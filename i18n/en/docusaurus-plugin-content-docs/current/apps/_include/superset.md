@@ -1,4 +1,4 @@
-[SuperSet](https://superset.apache.org/) is **A modern, enterprise-ready business intelligence web application**, used for Data Application and Visualization . Apache Superset is a modern data exploration and visualization platform.
+[SuperSet](https://superset.apache.org/) is **A modern, enterprise-ready business intelligence web application**, used for Data Insights & BI . Apache Superset is a modern data exploration and visualization platform.
 
 
 ![superset](https://libs.websoft9.com/Websoft9/DocsPicture/en/superset/superset-dash-websoft9.png)

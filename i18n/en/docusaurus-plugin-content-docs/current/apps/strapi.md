@@ -2,49 +2,49 @@
 title: Strapi
 slug: /strapi
 tags:
-  - Backend as a Service 
+  - Backend as a Service
   - Headless CMS
   - strapi
 ---
 
-import Meta from './_include/strapi.md';
+import Meta from './\_include/strapi.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Initial setup{#wizard}
+### Initial Setup {#wizard}
 
-1. When completed installation of Strapi at **Websoft9 console**, get the applicaiton's overview and access information from **My Apps**  
+1. After completing the installation of Strapi in the **Websoft9 Console**, retrieve the application's overview and access information from **My Apps**.
 
-2. Wait for Strapi container starting: At the first time starting, Strapi will pull external software packages online and wait for a few minutes before entering the initial page
+2. Wait for the Strapi container to start: The first time Strapi starts, it will pull external software packages online, so you may need to wait a few minutes before accessing the initial page.
 
-### Create your Data model
+### Create Your Data Model
 
-1. Login to Strapi, go to **Plugins > Content-type Builder** Add a dataset, if named: `websoft9`
+1. Log in to Strapi, then go to **Plugins > Content-type Builder** and add a dataset. For example, name it `websoft9`.
 
-2. Add a user under the **Users** and set the role to `public` 
+2. Add a user under **Users** and set the role to `public`.
 
-3. Go to **Settings > USERS & PERMISSIONS PLUGIN > Roles**, and edit public role to grant access to the `websoft9` dataset 
+3. Navigate to **Settings > USERS & PERMISSIONS PLUGIN > Roles**, edit the public role to grant access to the `websoft9` dataset.
 
-4. Access the following URL to obtain data 
-    ``` 
-    #Get all data 
-    http://URL/websoft9 
-        
-    #Get the first piece of data 
-    http://URL/websoft9/1 
-    ```
+4. Access the following URLs to obtain data:
+   ```bash
+   # Get all data
+   http://URL/websoft9
 
-## Configuration options{#configs}
+   # Get the first piece of data
+   http://URL/websoft9/1
+   ```
+
+## Configuration Options {#configs}
 
 - Multilingual (√)
 
-## Administer{#administrator}
+## Administration {#administrator}
 
-## Troubleshooting{#troubleshooting}
+## Troubleshooting {#troubleshooting}
 
-#### Strapi first startup error?
+#### Strapi First Startup Error?
 
-**Reason**: When Strapi is first launched, it will install some **Node.js** packages from Github, which may fail due to network issues    
-**Solution**: Ensure that the server can smoothly access the npm repository and Github
+**Reason**: When Strapi is first launched, it installs some **Node.js** packages from GitHub, which may fail due to network issues.  
+**Solution**: Ensure that the server has smooth access to the npm repository and GitHub.

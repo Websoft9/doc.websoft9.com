@@ -1,4 +1,4 @@
-[Appsmith](https://www.appsmith.com/) 是一个 **快速构建内部工具的开源低代码平台**，它被用于 企业主数据 低代码/零代码  等场景。Appsmith 是一个开源框架，可让您的团队更快、更协作地构建自定义内部应用程序，如仪表板、管理面板、CRUD 应用程序
+[Appsmith](https://www.appsmith.com/) 是一个 **快速构建内部工具的开源低代码平台**，它被用于 主数据管理 低代码/零代码  等场景。Appsmith 是一个开源框架，可让您的团队更快、更协作地构建自定义内部应用程序，如仪表板、管理面板、CRUD 应用程序
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/appsmith/appsmith-gui-websoft9.png)

@@ -7,28 +7,26 @@ tags:
   - Runbook
 ---
 
-import Meta from './_include/rundeck.md';
+import Meta from './\_include/rundeck.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Initial setup{#wizard}
+### Initial Setup {#wizard}
 
-1. When completed installation of Rundeck at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After completing the installation of Rundeck in the **Websoft9 Console**, retrieve the application's **Overview** and **Access** information from **My Apps**.
 
-2. Change password immediately after logining
+2. Change the password immediately after logging in.
 
+## Configuration Options {#configs}
 
-## Configuration options{#configs}
+- Multilingual (✅)
 
-- Multilingual(✅)
+## Administration {#administrator}
 
-## Administer{#administrator}
-
-## Troubleshooting{#troubleshooting}
+## Troubleshooting {#troubleshooting}
 
 #### Can't access Rundeck through IP?
 
-You need to change the environment variable **RUNDECK_GRAILS_URL** to http://$W9_URL:W9_HTTP_PORT_SET , and rebuild the application to take effect.
-
+You need to change the environment variable **RUNDECK_GRAILS_URL** to `http://$W9_URL:$W9_HTTP_PORT_SET`, and rebuild the application for the changes to take effect.

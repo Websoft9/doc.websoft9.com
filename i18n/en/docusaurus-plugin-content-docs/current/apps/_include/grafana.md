@@ -1,4 +1,4 @@
-[Grafana](https://grafana.com/) is **The leading open source project for visualizing metrics**, used for Data Application and Visualization Log Management Device Management and Monitor . A leading open source project for visualizing metrics. Supporting rich integration for every popular database.
+[Grafana](https://grafana.com/) is **The leading open source project for visualizing metrics**, used for Data Insights & BI Log Analytics Device Management and Monitor . A leading open source project for visualizing metrics. Supporting rich integration for every popular database.
 
 
 ![dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/en/grafana/grafana-dashboard-websoft9.png)

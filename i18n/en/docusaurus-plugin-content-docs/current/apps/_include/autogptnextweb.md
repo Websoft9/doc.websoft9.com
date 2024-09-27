@@ -1,4 +1,4 @@
-[AutoGPT.NextWeb](https://github.com/ConnectAI-E/AutoGPT-Next-Web) is **Well-designed cross-platform AutoGPT web UI**, used for AIGC . Assemble, configure, and deploy autonomous AI Agents in your browser.
+[AutoGPT.NextWeb](https://github.com/ConnectAI-E/AutoGPT-Next-Web) is **Well-designed cross-platform AutoGPT web UI**, used for Generative AI . Assemble, configure, and deploy autonomous AI Agents in your browser.
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/autogptnextweb/autogptnextweb-gui-websoft9.png)

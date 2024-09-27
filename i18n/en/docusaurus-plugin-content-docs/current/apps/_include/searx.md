@@ -1,4 +1,4 @@
-[searx](https://searx.github.io/searx/) is **Privacy-respecting, hackable metasearch engine**, used for Search Engine . Searx is a free internet metasearch engine which aggregates results from more than 70 search services. Users are neither tracked nor profiled. Additionally, searx can be used over Tor for online anonymity.
+[searx](https://searx.github.io/searx/) is **Privacy-respecting, hackable metasearch engine**, used for Data Search Engine . Searx is a free internet metasearch engine which aggregates results from more than 70 search services. Users are neither tracked nor profiled. Additionally, searx can be used over Tor for online anonymity.
 
 
 ![Site](https://libs.websoft9.com/Websoft9/DocsPicture/zh/searx/searx-gui-websoft9.png)

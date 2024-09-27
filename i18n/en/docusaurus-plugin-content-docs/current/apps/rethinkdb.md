@@ -6,59 +6,61 @@ tags:
   - Cloud Native Database
 ---
 
-import Meta from './_include/rethinkdb.md';
+import Meta from './\_include/rethinkdb.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Initial setup{#wizard}
+### Initial Setup {#wizard}
 
-1. When completed installation of RethinkDB at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After completing the installation of RethinkDB in the **Websoft9 Console**, retrieve the application's **Overview** and **Access** information from **My Apps**.
 
-   - The username and password displayed on the page are the database account, not the console account
-   - The console does not need account authentication
+   - The username and password displayed are for the database account, not the console account.
+   - The console does not require account authentication.
 
-2. Use the browser on your local computer and go to the RethinkDB console
+2. Use a browser on your local computer to access the RethinkDB console:
    ![](./assets/rethinkdb-gui-websoft9.png)
 
-### Running commands in Data Explorer 
+### Running Commands in Data Explorer
 
-Most of the operations can be achieved by running the ReQL command directly Data Explorer interface in the console :
+Most operations can be performed by running ReQL commands directly in the Data Explorer interface of the console:
 
 - Change password:
-  ```
+  ```bash
   r.db('rethinkdb').table('users').get('admin').update({password: 'newpassword'})
   ```
 - Clear password:
-  ```
-  r.db('rethinkdb').table('users').get('admin').update({password: 'newpassword'})
+  ```bash
+  r.db('rethinkdb').table('users').get('admin').update({password: ''})
   ```
 - Add a user:
-  ```
-   r.db('rethinkdb').table('users').insert({
+  ```bash
+  r.db('rethinkdb').table('users').insert({
       id: 'new_username',
       password: 'new_password'
-   })
+  })
   ```
 
-## Configuration options{#configs}
+## Configuration Options {#configs}
 
 - Server CLI: `rethinkdb -h`
 
 - Backup and Restore:
+
   - `rethinkdb export abc.db`
   - `rethinkdb dump [options]`
   - `rethinkdb import -d [options]`
 
-- Client command line: The client CLI is not provided, only the development package is provided [RethinkDB client drivers](https://rethinkdb.com/docs/install-drivers/)  
-- Configuration file:
-  - Input personalized configuration through command in docker-compose.yml file (recommended)
-  - Container */etc/rethinkdb/instances.d/instance.conf* increase the configuration file of instance.conf
+- Client Command Line: The client CLI is not provided, only the development package is available [RethinkDB client drivers](https://rethinkdb.com/docs/install-drivers/).
 
-- Query language: [ReQL](https://rethinkdb.com/docs/introduction-to-reql/) 
+- Configuration File:
 
-## Administer{#administrator}
+  - Input personalized configuration through commands in the docker-compose.yml file (recommended).
+  - Container path: `/etc/rethinkdb/instances.d/instance.conf` for the instance configuration file.
 
-## Troubleshooting{#troubleshooting}
+- Query Language: [ReQL](https://rethinkdb.com/docs/introduction-to-reql/)
 
+## Administration {#administrator}
+
+## Troubleshooting {#troubleshooting}
