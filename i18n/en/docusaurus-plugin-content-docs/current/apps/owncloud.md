@@ -8,69 +8,70 @@ tags:
   - Team Collaboration
 ---
 
-import Meta from './_include/owncloud.md';
+import Meta from './\_include/owncloud.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Initial setup{#wizard}
+### Initial Setup {#wizard}
 
-1. When completed installation of OwnCloud at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. Once you have completed the installation of OwnCloud via the **Websoft9 Console**, retrieve the application's **Overview** and **Access** information from **My Apps**.
 
-
-2. Visit the URL of OwnCloud, login to the backend and start using it
+2. Visit the URL of OwnCloud, log in to the backend, and begin using it.  
    ![](./assets/owncloud-backend-websoft9.png)
 
-### Document preview and editing ONLYOFFICE {#onlyoffice}
+### Document Preview and Editing with ONLYOFFICE {#onlyoffice}
 
-1. Optional: Websoft9 console **App Store**, install ONLYOFFICE
+1. (Optional) Go to the **App Store** in the Websoft9 console and install ONLYOFFICE.
 
-2. Install ONLYOFFICE in the OwnCloud Backend Market
+2. Install ONLYOFFICE via the OwnCloud Backend Market.
 
-3. After installation, **settings > Admin > additional** to set ONLYOFFICE connection
+3. After installation, navigate to **Settings > Admin > Additional** to configure the ONLYOFFICE connection.  
    ![](./assets/owncloud-onlyoffice-websoft9.png)
 
+### Connecting to External Storage {#oss}
 
-### Connecting to external storage {#oss}
+- In the OwnCloud backend: You can set up external storage via **Settings > Admin > Storage**.
+- Requires S3 support, which can be installed from the Market under **External Storage: S3**.
 
-- ownCloud backend: You can setup external storage by **settings > admin > Storage**  
-- Requires S3 support, need to be installed in Market **External Storage: S3** 
+### Rebuilding Indexes
 
-### Rebuild Indexes
+If you move or copy your OwnCloud data directory to a new location, run the following command to rebuild the index:
 
-After moving or copying your ownCloud data directory to another location, you need to run `occ files:scan --all` to rebuild the index
+```bash
+occ files:scan --all
+```
 
-## Configuration options{#configs}
+## Configuration Options {#configs}
 
-- [Marketplace](https://marketplace.owncloud.com/) 
+- [Marketplace](https://marketplace.owncloud.com/)
 
-- SMTP(✅): **settings > admin > Email server**
+- SMTP (✅): Configured under **Settings > Admin > Email Server**.
 
-- Support third-party storage(✅)
+- Support for third-party storage (✅).
 
-- Multilingual(✅): OwnCloud background **Personal > General** to set the language
+- Multilingual (✅): Configure language settings via **Personal > General** in the OwnCloud backend.
 
-- Mobile: OwnCloud Desktop Client, OwnCloud Android App, OwnCloud iOS App
+- Mobile: Available through the OwnCloud Desktop Client, OwnCloud Android App, and OwnCloud iOS App.
 
 - Document Editing and Preview: Integration with [ONLYOFFICE Docs](./onlyofficedocs) and other third-party middleware.
 
-- Configuration file (mounted): */mnt/data/config/config.php*
+- Configuration File (mounted): `/mnt/data/config/config.php`.
 
-- CLI: [ownCloudcmd](https://doc.ownCloud.com/desktop/next/advanced_usage/command_line_client.html)
+- CLI: [ownCloudcmd](https://doc.owncloud.com/desktop/next/advanced_usage/command_line_client.html).
 
-- [API](https://doc.ownCloud.com/server/next/developer_manual/core/apis/provisioning-api.html)
+- [API Documentation](https://doc.owncloud.com/server/next/developer_manual/core/apis/provisioning-api.html).
 
-## Administer{#administrator}
+## Administration {#administrator}
 
-- **Modify URL**: Modify OWNCLOUD_DOMAIN and OWNCLOUD_TRUSTED_DOMAINS [environment variables](https://doc.owncloud.com/server/10.13/admin_manual/configuration/server/config_sample_php_parameters.html#define-list-of-trusted-domains-that-users-can-log-into), changing config.php will not work
+- **Modify URL**: Change the OWNCLOUD_DOMAIN and OWNCLOUD_TRUSTED_DOMAINS environment variables as needed. Modifying the `config.php` file alone will not work. More details can be found [here](https://doc.owncloud.com/server/10.13/admin_manual/configuration/server/config_sample_php_parameters.html#define-list-of-trusted-domains-that-users-can-log-into).
 
-- **Online Backup**: Online Backup by **[OwnBackup](https://en.websoft9.com/xdocs/owncloud-image-guide/#using-apps)** application
+- **Online Backup**: Enable online backups using the **[OwnBackup](https://en.websoft9.com/xdocs/owncloud-image-guide/#using-apps)** application.
 
-## Troubleshooting{#troubleshooting}
+## Troubleshooting {#troubleshooting}
 
-#### untrusted domain?
+#### Untrusted Domain?
 
-Description: Initialization prompt You are accessing the server from an untrusted domain  
-Solution: Apply OWNCLOUD_DOMAIN and OWNCLOUD_TRUSTED_DOMAINS as real URLs in the compose file .env
-
+**Description**: You are receiving an initialization prompt indicating that you are accessing the server from an untrusted domain.  
+**Solution**: Apply real URLs to the `OWNCLOUD_DOMAIN` and `OWNCLOUD_TRUSTED_DOMAINS` variables in the compose file `.env`.
