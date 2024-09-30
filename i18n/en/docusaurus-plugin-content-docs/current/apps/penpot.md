@@ -16,7 +16,7 @@ import Meta from './\_include/penpot.md';
 
 ### Initial Setup {#wizard}
 
-When completed installation of Penpot at **Websoft9 Console**, get the application's **Overview** and **Access** information from **My Apps**.
+After installing Penpot via the **Websoft9 Console**, retrieve the application's **Overview** and **Access** information from **My Apps**.
 
 ## Configuration Options {#configs}
 
