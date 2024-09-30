@@ -7,26 +7,26 @@ tags:
   - Database Management
 ---
 
-import Meta from './_include/pmm.md';
+import Meta from './\_include/pmm.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Connect to the database
+### Connect to the Database
 
-1. Login to Websoft9 Console and click **Gateway** of left menu to [Set HTTPS for Vaultwarden](./domain-https#console) (**Required**)
+1. Log in to the Websoft9 Console and click **Gateway** from the left menu to [Set HTTPS for Vaultwarden](./domain-https#console) (**Required**).
 
-2. When completed installation of PMM at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps** 
+2. After completing the installation of PMM via the **Websoft9 Console**, retrieve the application's **Overview** and **Access** information from **My Apps**.
 
-3. Login to PMM console
+3. Log in to the PMM console.
 
-4. Then click **PMM > PMM Add Instance** to start add your database
+4. Click **PMM > PMM Add Instance** to start adding your database.
 
-## Configuration options{#configs}
+## Configuration Options {#configs}
 
 - Multilingual (√)
 
-## Administer{#administrator}
+## Administration {#administrator}
 
-## Troubleshooting{#troubleshooting}
+## Troubleshooting {#troubleshooting}
