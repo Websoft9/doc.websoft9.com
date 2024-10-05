@@ -43,11 +43,3 @@ import Meta from './\_include/zabbix.md';
 
 ## Troubleshooting {#troubleshooting}
 
-1. **Connection Issues**:
-
-   - **Symptom**: Unable to connect to the Zabbix server or dashboard.
-   - **Solution**: Check that the necessary ports are open and the Zabbix components are properly configured.
-
-2. **Agent Not Showing in Host List**:
-   - **Symptom**: The Zabbix-Agent host is not appearing in the host list.
-   - **Solution**: Verify the agent is correctly installed on the target host and the connection details are accurate.

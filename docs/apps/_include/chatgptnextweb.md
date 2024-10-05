@@ -1,4 +1,4 @@
-[ChatGPT Next Web](https://chatgpt1.nextweb.fun/) 是一个 **ChatGPT 私有化应用**，它被用于 AIGC  等场景。一键拥有你自己的跨平台 ChatGPT 应用 (Web / PWA / Linux / Win / MacOS)
+[ChatGPT Next Web](https://chatgpt1.nextweb.fun/) 是一个 **ChatGPT 私有化应用**，它被用于 生成式 AI  等场景。一键拥有你自己的跨平台 ChatGPT 应用 (Web / PWA / Linux / Win / MacOS)
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/chatgptnextweb/chatgptnextweb-gui-websoft9.png)

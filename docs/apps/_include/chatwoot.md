@@ -1,4 +1,4 @@
-[Chatwoot](https://www.chatwoot.com/) 是一个 **全渠道客户沟通平台**，它被用于 客服/售后 团队聊天  等场景。Chatwoot 为您提供了从一个地方管理对话、建立关系和取悦客户的所有工具。
+[Chatwoot](https://www.chatwoot.com/) 是一个 **全渠道客户沟通平台**，它被用于 客服/售后/支持 团队聊天  等场景。Chatwoot 为您提供了从一个地方管理对话、建立关系和取悦客户的所有工具。
 
 
 ![Console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/chatwoot/chatwoot-gui-websoft9.webp)

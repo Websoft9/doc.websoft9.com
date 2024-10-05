@@ -1,4 +1,4 @@
-[CKAN](https://ckan.org/) 是一个 **开源大数据分享与发布平台**，它被用于 数据应用与可视化 网站  等场景。CKAN是一个开源DMS（数据管理系统），用于为数据中心和数据门户提供支持。CKAN 使发布、共享和使用数据变得容易。它为全球数百个数据门户提供支持。
+[CKAN](https://ckan.org/) 是一个 **开源大数据分享与发布平台**，它被用于 BI与数据可视化 数据门户  等场景。CKAN是一个开源DMS（数据管理系统），用于为数据中心和数据门户提供支持。CKAN 使发布、共享和使用数据变得容易。它为全球数百个数据门户提供支持。
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/ckan/ckan-gui-websoft9.png)

@@ -1,4 +1,4 @@
-[OpenSearch](https://opensearch.org/) is **Open source fork of Elasticsearch and Kibana**, used for Data Storage Data Warehouse Data Application and Visualization Search Engine . OpenSearch is a scalable, flexible, and extensible open-source software suite for search, analytics, and observability applications
+[OpenSearch](https://opensearch.org/) is **Open source fork of Elasticsearch and Kibana**, used for Real-time Streaming Analysis Data Insights & BI Data Search Engine . OpenSearch is a scalable, flexible, and extensible open-source software suite for search, analytics, and observability applications
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/opensearch/opensearch-gui-websoft9.png)

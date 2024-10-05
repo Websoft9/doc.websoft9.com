@@ -18,13 +18,19 @@ import Meta from './_include/mage.md';
 
 ### 运行 Pipelines 范例{#pipelines}
 
-1. 左侧菜单点击 **Pipelines > example_pipeline**， 进入 **Triggers** 页面
+下面将通过 MySQL 数据表 的迁移来运行 Pipelines：
 
-2. 点击 **New Triggers**，设置好触发器各种属性
+1. 准备好两个数据库： 源数据库和目标数据库
 
-3. 点击 **Enable Triggers**，触发器激活，会在指定时间运行
+2. 点击 **New Pipelines > Data intergration**， 输入名称后创建 pipline
 
-4. 点击 **Run@once**，会立即运行 Pipelines 范例
+3. **Select source** 选择 "MySQL"，在 **Configuration** 填写原数据库的信息（可以通过 **Test connection** 来验证数据库信息是否正确）
+
+4. **Select stream** 中选中你想要迁移的表
+
+5. **Select destination** 选择 "MySQL"，在 **Configuration** 填写目标数据库的信息（可以通过 **Test connection** 来验证数据库信息是否正确）
+
+6. 点击左侧菜单 **Triggers > Run@once > Run now**, 执行完成后对应的表已经导入目标库
 
 ## 配置选项{#configs}
 

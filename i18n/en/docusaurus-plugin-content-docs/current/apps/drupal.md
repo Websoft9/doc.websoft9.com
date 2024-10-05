@@ -15,11 +15,26 @@ import Meta from './_include/drupal.md';
 
 ### Login verification{#verification}
 
-1. After Completing the installation Drupal in the Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
+1. After Completing the installation Drupal in the Websoft9 console, 
 
-2. Complete the install wizard step by step
-   - Select **My Apps > Database** and **My Apps > Compose > Go to Edit Repository > docker-compose.yml** to confirm database connection information
-   - When selecting a non-English language, the translation will take a few minutes.
+  - Obtain the applicaiton's access URL from **Access** tab
+  - Obtain **Intranet Host** and **Password** from **Database** tab
+
+2. Local computer browser to access URL, starting the Drupal install wizard
+
+3. The default Database configuration for you with:
+
+   ![druapl](./assets/drupal-connectdb-websoft9.png)
+
+      - Database type: `MySQL`
+      - Database name: `drupal`
+      - Database username: `drupal`
+      - Database password: **Password** from step1
+      - Advanced options > Host: **Intranet Host** from step1
+
+   > You can fill other cloud database if you don't want to use the default
+
+4. Complete the next steps
 
 ### Setting up multilingual{#setlang}
 

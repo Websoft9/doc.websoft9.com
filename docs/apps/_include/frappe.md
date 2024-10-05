@@ -1,4 +1,4 @@
-[Frappe](https://frappeframework.com/) 是一个 **企业管理软件低代码开发框架**，它被用于 企业主数据 低代码/零代码  等场景。21 世纪 Python 和 Javascript 中的低代码、开源、Web 框架。消除 97.42% 的软件开发工作
+[Frappe](https://frappeframework.com/) 是一个 **企业管理软件低代码开发框架**，它被用于 主数据管理 低代码/零代码  等场景。21 世纪 Python 和 Javascript 中的低代码、开源、Web 框架。消除 97.42% 的软件开发工作
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/frappe/frappe-gui-websoft9.png)

@@ -1,4 +1,4 @@
-[Elasticsearch](https://www.elastic.co/) is **Distributed, free and open search and analytics engine**, used for Data Storage Data Warehouse Data Application and Visualization Search Engine . Elasticsearch is a distributed, free and open search and analytics engine for all types of data, including textual, numerical, geospatial, structured, and unstructured. 
+[Elasticsearch](https://www.elastic.co/) is **Distributed, free and open search and analytics engine**, used for Data Search Engine Real-time Streaming Analysis . Elasticsearch is a distributed, free and open search and analytics engine for all types of data, including textual, numerical, geospatial, structured, and unstructured. 
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-gui-websoft9.gif)

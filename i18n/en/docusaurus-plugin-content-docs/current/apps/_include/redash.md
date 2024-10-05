@@ -1,4 +1,4 @@
-[Redash](https://redash.io/) is **Helps you make sense of your data**, used for Data Application and Visualization . Use Redash to connect to any data source (PostgreSQL, MySQL, Redshift, BigQuery, MongoDB and many others), query, visualize and share your data to make your company data driven.
+[Redash](https://redash.io/) is **Helps you make sense of your data**, used for Data Insights & BI . Use Redash to connect to any data source (PostgreSQL, MySQL, Redshift, BigQuery, MongoDB and many others), query, visualize and share your data to make your company data driven.
 
 
 ![Console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/redash/redash-gui-websoft9.png)

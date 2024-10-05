@@ -26,7 +26,7 @@ import Meta from './\_include/zentao.md';
 
 - **Multilingual (✅)**: Supports backend language switching.
 - **Command Line**: Use the [Initialization Admin Script](https://www.zentao.net/book/zentaopmshelp/35.html).
-- **Plugin Marketplace (✅)**: [Register](https://www.zentao.net/user-register.html) for an official account to install plugins online.
+- **Plugin Marketplace (✅)**: [Register](https://www.zentao.net/extension-browse.html) for an official account to install plugins online.
 - **Client (✅)**: Available for Zentao Pro and Enterprise Edition users.
 - **Zentao Directory**: Already mounted at `/data`.
 - **Plugin Path**: Already mounted at `/data/module`.

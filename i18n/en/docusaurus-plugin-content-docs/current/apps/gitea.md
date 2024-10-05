@@ -15,16 +15,16 @@ import Meta from './_include/gitea.md';
 
 ### Initial setup{#wizard}
 
-1. After installing Gitea in the **Websoft9 console**, view the application details through **My Applications** and get the login information in the **Access** tab.
+1. After installing Gitea through the **Websoft9 console**, view the application details in the **My Applications** section and get the login information from the **Access** tab.
 
-2. Follow the installation wizard to complete the initialization, and do not modify any parameters in the **General Settings**.
+2. Follow the installation wizard to complete the initialization without modifying any parameters in the **General Settings**.
 
-   - Base URL: The installation wizard program automatically gets the browser URL to fill in.
-   - HTTP Service Port: This is the container port and cannot be changed.
-   - SSH service port: This is the container port and the corresponding host port, which has been set by environment variables and cannot be changed.
-   - Database Setting: Please choose SQLite, if you choose other database, you need to prepare the available database in advance.
+   - Base URL: The installation wizard will automatically detect and fill in the browser URL.
+   - HTTP Service Port: This port is set for the container and cannot be changed.
+   - SSH Service port: This port is set for both the container and the corresponding host port via environment variables and cannot be altered.
+   - Database Setting: Choose SQLite. If you select a different database, ensure it is prepared and available in advance.
 
-3. Administrator account settings or Register the first account after login (both are administrator accounts)
+3. Set up the administrator account or register the first account after loggin in. (Both options will create administrator accounts)
 
 
 ## Configuration options{#configs}

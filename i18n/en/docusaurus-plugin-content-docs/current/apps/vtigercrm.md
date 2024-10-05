@@ -41,10 +41,6 @@ import Meta from './\_include/vtiger.md';
 
 ## Administration {#administrator}
 
-1. **User Management**: Add or remove users and assign roles through the **Settings** menu in the Vtiger CRM backend.
-
-2. **Security Configuration**: Set up **Two-Factor Authentication (2FA)** for secure access to Vtiger CRM.
-
 ## Troubleshooting {#troubleshooting}
 
 #### Can't access Vtiger CRM after changing the domain name?

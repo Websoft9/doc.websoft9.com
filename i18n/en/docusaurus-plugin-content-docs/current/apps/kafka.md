@@ -19,7 +19,7 @@ Install the [Redpanda Console](./redpandaconsole) from the **Websoft9 App Store*
 
 ## Configuration options{#configs}
 
-- Authentication and Authorization Control: Kafka mirrors supports various authentication and authorization mechanisms, which need to be configured manually.
+- Authentication and Authorization Control: Kafka mirrors support various authentication and authorization mechanisms, which need to be configured manually.
 - Custom Configuration: It is recommended to set up through environment variables.
 - CLI
   ```
@@ -34,7 +34,7 @@ Install the [Redpanda Console](./redpandaconsole) from the **Websoft9 App Store*
 
 ## Administer{#administrator}
 
-Refer to: [Bitnami Kafka Docs](https://github.com/bitnami/containers/tree/main/bitnami/kafka)
+Refer to the [Bitnami Kafka Docs](https://github.com/bitnami/containers/tree/main/bitnami/kafka) for additional information
 
 ## Troubleshooting{#troubleshooting}
 

@@ -21,7 +21,7 @@ import Meta from './_include/prestashop.md';
 2. 登录到 Prestashop 后台
    ![](./assets/prestashop-backend-websoft9.png)
 
-3. 点击左侧菜单 **Shop Parameters** 项，在页面中下拉到 **Set shop URL** 设置项
+3. 点击左侧菜单 **Shop Parameters > Traffic & SEO > SEO & URLs**，在页面中下拉到 **Set shop URL** 设置项
 
 ### 从 Marketplace 安装扩展
 
