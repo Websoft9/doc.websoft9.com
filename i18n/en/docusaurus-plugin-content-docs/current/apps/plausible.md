@@ -8,24 +8,23 @@ tags:
   - Conversion Rate
 ---
 
-import Meta from './_include/plausible.md';
+import Meta from './\_include/plausible.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Initial setup{#wizard}
+### Initial Setup {#wizard}
 
-1. When completed installation of Plausible at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After completing the installation of Plausible via the **Websoft9 Console**, retrieve the application's **Overview** and **Access** information from **My Apps**.  
    ![](./assets/plausible-register-websoft9.png)
 
-2. Follow the guide to complete the steps: account settings, setting the URL of the website to be statistically analyzed, etc
+2. Follow the guide to complete the steps: account settings, setting the URL of the website to be statistically analyzed, etc.
 
-## Configuration options{#configs}
+## Configuration Options {#configs}
 
-- Multi-site monitoring(✅)
+- Multi-site monitoring (✅)
 
-## Administer{#administrator}
+## Administration {#administrator}
 
-## Troubleshooting{#troubleshooting}
-
+## Troubleshooting {#troubleshooting}

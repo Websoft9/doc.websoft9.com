@@ -7,28 +7,28 @@ tags:
   - opensearch
 ---
 
-import Meta from './_include/opensearch.md';
+import Meta from './\_include/opensearch.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Initial setup{#wizard}
+### Initial Setup {#wizard}
 
-1. When completed installation of OpenSearch at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After successfully installing OpenSearch from the **Websoft9 Console**, retrieve the application's **Overview** and **Access** details from **My Apps**.
 
-## Configuration options{#configs}
+## Configuration Options {#configs}
 
-- [vm.max_map_count=262144](https://opensearch.org/docs/latest/opensearch/install/important-settings/) on Linux (set automatically at application startup)
+- Ensure the host parameter [vm.max_map_count=262144](https://opensearch.org/docs/latest/opensearch/install/important-settings/) is set on Linux. This setting is automatically applied at application startup.
 
-## Administer{#administrator}
+## Administration {#administrator}
 
-## Troubleshooting{#troubleshooting}
+## Troubleshooting {#troubleshooting}
 
-#### OpenSearch not starting?
+#### OpenSearch Not Starting?
 
-Ensure host parameters [vm.max_map_count=262144](https://opensearch.org/docs/latest/opensearch/install/important-settings/) 
+Ensure that the host parameter [vm.max_map_count=262144](https://opensearch.org/docs/latest/opensearch/install/important-settings/) is correctly configured.
 
-#### Panel can't connect to OpenSearch?
+#### Panel Can't Connect to OpenSearch?
 
-Make sure OPENSEARCH_HOSTS does not contain an underscore _
+Check that `OPENSEARCH_HOSTS` does not include an underscore (`_`) in the hostname.
