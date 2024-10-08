@@ -7,23 +7,23 @@ tags:
   - nocodb
 ---
 
-import Meta from './_include/nocodb.md';
+import Meta from './\_include/nocodb.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Login verification{#verification}
+### Login Verification {#verification}
 
-1. Completed installation NocoDB at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
+1. After completing the installation of NocoDB via the Websoft9 console, retrieve the application's overview and access credentials from **My Apps**.
 
-2. Access the URL to enter the first registration page, register and login to the backend
+2. Access the URL to enter the first registration page, register, and log in to the backend.
    ![](./assets/nocodb-backend-websoft9.png)
-## Configuration options{#configs}
+
+## Configuration Options {#configs}
 
 - Multilingual (√)
 
-## Administer{#administrator}
+## Administration {#administrator}
 
-## Troubleshooting{#troubleshooting}
-
+## Troubleshooting {#troubleshooting}
