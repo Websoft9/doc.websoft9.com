@@ -7,24 +7,23 @@ tags:
   - nocobase
 ---
 
-import Meta from './_include/nocobase.md';
+import Meta from './\_include/nocobase.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Login verification{#verification}
+### Login Verification {#verification}
 
-1. Completed installation Nocobase at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
+1. After completing the installation of Nocobase via the Websoft9 console, retrieve the application's overview and access credentials from **My Apps**.
 
-2. Login to the Nocobase backend, change your password  and start
+2. Log in to the Nocobase backend, change your password, and start using the application.
    ![](./assets/nocobase-mpass-websoft9.png)
 
-## Configuration options{#configs}
+## Configuration Options {#configs}
 
 - Multilingual (√)
 
-## Administer{#administrator}
+## Administration {#administrator}
 
-## Troubleshooting{#troubleshooting}
-
+## Troubleshooting {#troubleshooting}
