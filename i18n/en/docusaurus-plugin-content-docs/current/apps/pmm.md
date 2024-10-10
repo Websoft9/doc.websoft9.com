@@ -7,13 +7,13 @@ tags:
   - Database Management
 ---
 
-import Meta from './_include/pmm.md';
+import Meta from './\_include/pmm.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Connect to the database
+### Connect to the Database
 
 1. When completed installation of PMM at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps** 
 
@@ -21,10 +21,10 @@ import Meta from './_include/pmm.md';
 
 3. Then click **PMM > PMM Add Instance** to start add your database
 
-## Configuration options{#configs}
+## Configuration Options {#configs}
 
 - Multilingual (√)
 
-## Administer{#administrator}
+## Administration {#administrator}
 
-## Troubleshooting{#troubleshooting}
+## Troubleshooting {#troubleshooting}

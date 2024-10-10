@@ -6,42 +6,40 @@ tags:
   - Customer Experience
 ---
 
-import Meta from './_include/nopcommerce.md';
+import Meta from './\_include/nopcommerce.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Initial setup{#wizard}
+### Initial Setup {#wizard}
 
-1. When completed installation of nopCommerce at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After completing the installation of nopCommerce via the **Websoft9 Console**, retrieve the application's **Overview** and **Access** information from **My Apps**.
 
-   - Getting database information in the **Database**
+   - Get the database information from **Database**.
      ![](./assets/nopcommerce-getdbconns-websoft9.png)
-   
-   - Getting the access URL in the **Access**
 
-2. Access URL and start the initialization, set administrator account.
+   - Get the access URL from **Access**.
 
-3. Fill in the database information carefully.
+2. Access the URL and start the initialization, setting up the administrator account.
 
-   - Database type: **MySQL**, and select **Create database if it doesn't exist**.
-   - Server name: the intranet host that you checked in step one.
-   - Database Name: `nopcommerce`
-   - Database username: `root`
+3. Carefully fill in the database information:
 
-   ![](./assets/nopcommerce-setdbconns-websoft9.png)
-    
-2. Wait for the installation and nopCommerce automatic restart  (1-2 minutes).
+   - **Database Type**: MySQL, and select **Create database if it doesn't exist**.
+   - **Server Name**: The intranet host that you checked in step one.
+   - **Database Name**: `nopcommerce`
+   - **Database Username**: `root`
+     ![](./assets/nopcommerce-setdbconns-websoft9.png)
 
-3. Once the frontend page is accessible, login to the backend.
+4. Wait for the installation and nopCommerce automatic restart (1-2 minutes).
+
+5. Once the frontend page is accessible, log in to the backend.
    ![](./assets/nopcommerce-backend-websoft9.png)
 
-## Configuration options{#configs}
+## Configuration Options {#configs}
 
 - Multilingual (√)
 
-## Administer{#administrator}
+## Administration {#administrator}
 
-## Troubleshooting{#troubleshooting}
-
+## Troubleshooting {#troubleshooting}

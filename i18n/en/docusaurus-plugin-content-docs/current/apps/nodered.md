@@ -7,23 +7,23 @@ tags:
   - nodered
 ---
 
-import Meta from './_include/nodered.md';
+import Meta from './\_include/nodered.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Login Verification{#verification}
+### Login Verification {#verification}
 
-1. Completed installation Node-RED at Websoft9 console, get the applicaiton's overview and access information from "My Apps"  
+1. After completing the installation of Node-RED via the Websoft9 console, retrieve the application's overview and access information from "My Apps".
 
-2. Starting to verify it
+2. Start the verification process.
 
-## Configuration options{#configs}
+## Configuration Options {#configs}
 
-- Configuration file(mounted): */data/settings.js*  
+- Configuration file (mounted): `/data/settings.js`
 - Multilingual (√)
 
-## Administer{#administrator}
+## Administration {#administrator}
 
-## Troubleshooting{#troubleshooting}
+## Troubleshooting {#troubleshooting}
