@@ -1,4 +1,4 @@
-[Gladys](https://gladysassistant.com/) is **open-source home assistant**, used for . GladysAssistant is an open source home assistant for smart home automation.
+[Gladys](https://gladysassistant.com/) is **Smart Home Assistant for equipment management and automation**, used for Device Management and Monitor . GladysAssistant is an open source home assistant for smart home automation.
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gladys/gladys-gui-websoft9.png)

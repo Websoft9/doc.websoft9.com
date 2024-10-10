@@ -1,4 +1,4 @@
-[Jetty](https://hub.docker.com/_/jetty) is **Jetty and JRE runtime for web application**, used for Java . This is multiply verion Jetty/JRE runtime for web application powered by Websoft9, it based on offcial Docker image. You can custom it by yourself very easy
+[Jetty](https://hub.docker.com/_/jetty) is **Jetty and JRE runtime for deploying Java web application**, used for Java . This is multiply verion Jetty/JRE runtime for web application powered by Websoft9, it based on offcial Docker image. You can custom it by yourself very easy
 
 
 ![Architecture](https://libs.websoft9.com/Websoft9/DocsPicture/en/runtime/runtime-web-websoft9.png)

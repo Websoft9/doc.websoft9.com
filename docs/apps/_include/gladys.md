@@ -1,4 +1,4 @@
-[Gladys](https://gladysassistant.com/) 是一个 **开源家庭助理**，它被用于  等场景。GladysAssistant 是一个开源家庭助理，用于智能家居自动化。
+[Gladys](https://gladysassistant.com/) 是一个 **智能家居集成与自动化平台**，它被用于 设备管理与监控  等场景。GladysAssistant 是一个开源家庭助理，用于智能家居自动化。
 
 
 ![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gladys/gladys-gui-websoft9.png)
