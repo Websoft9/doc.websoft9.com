@@ -11,16 +11,15 @@ const darkTheme = themes.dracula;
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Websoft9',
-  tagline: '重新定义开源服务，让云原生应用快速普及',
+  tagline: '多应用自托管平台，可视化一键部署软件',
   url: 'https://support.websoft9.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
-  trailingSlash: true,
   onDuplicateRoutes: 'throw',
   favicon: 'img/favicon.ico',
   organizationName: 'Websoft9', // Usually your GitHub org/user name.
-  deploymentBranch: 'gh-pages',
+  deploymentBranch: 'main',
   projectName: 'doc.websoft9.com', // Usually your repo name.
   i18n: {
     defaultLocale: 'zh-cn',
@@ -31,6 +30,12 @@ const config = {
     [
       '@docusaurus/plugin-client-redirects',
       {
+        createRedirects(existingPath) {
+          if (existingPath.endsWith('/')) {
+            return [existingPath.slice(0, -1)];
+          }
+          return [];
+        },
         redirects: [
           {
             to: '/docs/next/elasticsearch', 
