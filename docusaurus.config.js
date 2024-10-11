@@ -19,6 +19,7 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
+  trailingSlash: false, 
   onDuplicateRoutes: 'throw',
   favicon: 'img/favicon.ico',
   organizationName: 'Websoft9', // Usually your GitHub org/user name.
@@ -33,25 +34,6 @@ const config = {
     [
       '@docusaurus/plugin-client-redirects',
       {
-        createRedirects(existingPath) {
-          console.log(`Processing path: ${existingPath}`);
-          
-          if (existingPath && existingPath !== '/' && existingPath.endsWith('/')) {
-            const newPath = existingPath.slice(0, -1);
-            if (newPath) {
-              const redirectFilePath = path.join(__dirname, 'build', newPath, 'index.html');
-              // 检查目标文件是否存在
-              if (fs.existsSync(redirectFilePath)) {
-                console.log(`Skipping redirect from ${existingPath} to ${newPath} because ${redirectFilePath} already exists.`);
-                return [];
-              } else {
-                console.log(`Redirecting from ${existingPath} to ${newPath}`);
-                return [newPath];
-              }
-            }
-          }
-          return [];
-        },
         redirects: [
           {
             to: '/docs/next/elasticsearch', 
