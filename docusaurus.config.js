@@ -8,6 +8,9 @@ const { themes } = require('prism-react-renderer');
 const lightTheme = themes.github;
 const darkTheme = themes.dracula;
 
+const fs = require('fs');
+const path = require('path'); // 确保引入 path 模块
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Websoft9',
