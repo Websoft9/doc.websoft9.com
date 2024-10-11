@@ -31,17 +31,20 @@ const config = {
       '@docusaurus/plugin-client-redirects',
       {
         createRedirects(existingPath) {
-          // 打印调试信息
           console.log(`Processing path: ${existingPath}`);
           
-          // 检查路径是否有效且不为根路径 '/'，并且以 '/' 结尾
           if (existingPath && existingPath !== '/' && existingPath.endsWith('/')) {
-            // 去掉末尾的 '/' 并返回新的路径
             const newPath = existingPath.slice(0, -1);
-            // 确保新的路径不是空的
             if (newPath) {
-              console.log(`Redirecting from ${existingPath} to ${newPath}`);
-              return [newPath];
+              const redirectFilePath = path.join(__dirname, 'build', newPath, 'index.html');
+              // 检查目标文件是否存在
+              if (fs.existsSync(redirectFilePath)) {
+                console.log(`Skipping redirect from ${existingPath} to ${newPath} because ${redirectFilePath} already exists.`);
+                return [];
+              } else {
+                console.log(`Redirecting from ${existingPath} to ${newPath}`);
+                return [newPath];
+              }
             }
           }
           return [];
