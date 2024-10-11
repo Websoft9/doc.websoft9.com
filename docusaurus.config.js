@@ -31,8 +31,14 @@ const config = {
       '@docusaurus/plugin-client-redirects',
       {
         createRedirects(existingPath) {
-          if (existingPath.endsWith('/')) {
-            return [existingPath.slice(0, -1)];
+          // 检查路径是否有效且以 '/' 结尾
+          if (existingPath && existingPath.endsWith('/')) {
+            // 去掉末尾的 '/' 并返回新的路径
+            const newPath = existingPath.slice(0, -1);
+            // 确保新的路径不是空的
+            if (newPath) {
+              return [newPath];
+            }
           }
           return [];
         },
