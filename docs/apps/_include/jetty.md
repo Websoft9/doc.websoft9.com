@@ -1,4 +1,4 @@
-[Jetty](https://hub.docker.com/_/jetty) 是一个 **Jetty 容器环境，支持多个 Jetty/JRE 版本**，它被用于 Java  等场景。这是一个支持多版本 Jetty/JRE 运行环境，它由 Websoft9 基于 Docker 官方的 Jetty 镜像制作，用户可以非常方便的对它进行客户化的设置。
+[Jetty](https://hub.docker.com/_/jetty) 是一个 **部署 Java 应用的容器环境，支持 Jetty 和 JRE 多版本**，它被用于 Java  等场景。这是一个支持多版本 Jetty/JRE 运行环境，它由 Websoft9 基于 Docker 官方的 Jetty 镜像制作，用户可以非常方便的对它进行客户化的设置。
 
 
 ![架构图](https://libs.websoft9.com/Websoft9/DocsPicture/zh/runtime/runtime-web-websoft9.png)
