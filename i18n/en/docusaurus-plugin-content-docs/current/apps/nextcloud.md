@@ -7,121 +7,122 @@ tags:
   - Teamwork
 ---
 
-import Meta from './_include/nextcloud.md';
+import Meta from './\_include/nextcloud.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Login verification{#verification}
+### Login Verification {#verification}
 
-1. When completed installation of Nextcloud at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After completing the installation of Nextcloud via the **Websoft9 Console**, retrieve the application's **Overview** and **Access** information from **My Apps**.
 
-2. Access Nextcloud URL and login to the backend to start.
+2. Access the Nextcloud URL and log in to the backend to get started.
    ![](./assets/nextcloud-backend-websoft9.png)
 
-### Document preview and edit {#onlyoffice}
+### Document Preview and Edit {#onlyoffice}
 
 #### Integration of Nextcloud Office
 
-Nextcloud has built-in Nextcloud Office (based on Collabora Online Development Edition, or CODE). Install the CODE plugin to enable
+Nextcloud has built-in Nextcloud Office (based on Collabora Online Development Edition, or CODE). Install the CODE plugin to enable it.
 
 #### Integration with ONLYOFFICE Docs
 
-1. Optional: Websoft9 console **App Store**, install ONLYOFFICE
+1. (Optional) In the Websoft9 console **App Store**, install ONLYOFFICE.
 
-2. Nextcloud console top right gear icon, select **+Apps > Office & text**, install ONLYOFFICE and enable it.
+2. In the Nextcloud console, click the top-right gear icon, select **+Apps > Office & Text**, and install ONLYOFFICE.
 
-3. Nextcloud console upper right corner gear icon, select **Administration Settings**, find ONLYOFFICE settings, [Integration](https://api.onlyoffice.com/editors/nextcloud) ONLYOFFICE
+3. In the Nextcloud console, click the top-right gear icon, select **Administration Settings**, and find ONLYOFFICE settings. Follow the [Integration Guide](https://api.onlyoffice.com/editors/nextcloud) for ONLYOFFICE.
    ![](./assets/nextcloud-setonlyoffice-websoft9.png)
 
-4. After the installation completed, locate the **SETUP** page and configure ONLYOFFICE as shown ([refer to the official documentation](https://api.onlyoffice.com/editors/nextcloud))
+4. After the installation is complete, locate the **SETUP** page and configure ONLYOFFICE as shown ([refer to the official documentation](https://api.onlyoffice.com/editors/nextcloud)).
 
-### Install the application offline {#offline}
+### Install the Application Offline {#offline}
 
-1. From Nextcloud [App Market](https://apps.nextcloud.com/) find the app package URL and download to server.
+1. From the Nextcloud [App Market](https://apps.nextcloud.com/), find the app package URL and download it to the server.
 
-2. Extract it to the Nextcloud container */var/www/html/apps* directory.
+2. Extract it to the Nextcloud container's _/var/www/html/apps_ directory.
 
-3. Enter the container CLI and change the permissions of the apps directory.
+3. Enter the container CLI and change the permissions of the apps directory:
+
    ```
    chown -R www-data:www-data /var/www/html/apps/appname
-   ``` 
+   ```
 
-4. Login to the Nextcloud backend, enter the application center, and enable the extension.
+4. Log in to the Nextcloud backend, enter the application center, and enable the extension.
 
-### WebDAV service
+### WebDAV Service
 
-WebDAV is used to establish a mapping between local computer and Nextcloud:
+WebDAV is used to establish a connection between a local computer and Nextcloud:
 
-1. NextCloud console **File > File Settings**, get the WebDav URL.  
-2. Local Windows PC configure [WebDAV client](https://www.thewindowsclub.com/how-to-map-webdav-in-windows)
+1. In the Nextcloud console, go to **File > File Settings** to get the WebDAV URL.
+2. On a local Windows PC, configure the [WebDAV client](https://www.thewindowsclub.com/how-to-map-webdav-in-windows).
 
-### Connecting to external storage {#oss}
+### Connecting to External Storage {#oss}
 
-Nextcloud supports many popular enterprise storage services, the steps to use them are as follows:
+Nextcloud supports many popular enterprise storage services. The steps to use them are as follows:
 
-1. Login to Nextcloud background, select **Apps > Your Apps**, find and enable **External storage support**.  
+1. Log in to the Nextcloud backend, select **Apps > Your Apps**, and enable **External storage support**.
 
-2. In **Administration Settings** of Nextcloud backend, set up external storage, S3 compatibility protocol settings:
+2. In **Administration Settings** of the Nextcloud backend, set up external storage with S3 compatibility protocol settings:
 
-   - Bucket: corresponds to the storage bucket of some vendors.
-   - Hostname: corresponds to the Endpoint of some vendors
+   - Bucket: Corresponds to the storage bucket of some vendors.
+   - Hostname: Corresponds to the Endpoint of some vendors.
    - Access Key: Generally required.
 
    ![](./assets/nextcloud-s3-websoft9.png)
 
 ### Rebuild Indexes
 
-After moving or copying the Nextcloud data directory to another location, you need to run `occ files:scan --all` to rebuild the index.
+After moving or copying the Nextcloud data directory to another location, run `occ files:scan --all` to rebuild the index.
 
-### Secure use of HTTPS
+### Secure Use of HTTPS
 
-1. In the Websoft9 console, select **Gateway**, edit the proxy for the Nextcloud application, clear **Custom Nginx Configuration** in **Advance** and save it. 
+1. In the Websoft9 console, select **Gateway**, edit the proxy for the Nextcloud application, clear **Custom Nginx Configuration** in **Advanced**, and save it.
 
-2. select **My Apps > Compose > Go to Edit Repository > .env** and uncomment the line **OVERWRITEPROTOCOL** to rebuild the application.
+2. Select **My Apps > Compose > Go to Edit Repository > .env** and uncomment the line **OVERWRITEPROTOCOL** to rebuild the application.
 
-## Configuration options{#configs}
+## Configuration Options {#configs}
 
-- [App Market](https://apps.nextcloud.com/) (✅):
+- [App Market](https://apps.nextcloud.com/) (✅)
 
-- Configuration file (mounted):*/var/www/html/config/config.php*
+- Configuration file (mounted): `/var/www/html/config/config.php`
 
-- multilingual (✅): Configured through “Personal Settings”.
+- Multilingual (✅): Configured through **Personal Settings**.
 
 - SMTP (✅): Configured via **Administration Settings > Basic Settings > Email Servers**
 
 - [LDAP](https://docs.nextcloud.com/server/latest/admin_manual/configuration_user/user_auth_ldap.html)
 
-- [Mainstream External Storage Service](https://docs.nextcloud.com/server/latest/admin_manual/configuration_files/external_storage_configuration_gui.html#) storage-configuration): Amazon S3, Dropbox, FTP, Google Drive, SMB, WebDAV, SFTP, etc.
+- [Mainstream External Storage Service](https://docs.nextcloud.com/server/latest/admin_manual/configuration_files/external_storage_configuration_gui.html): Amazon S3, Dropbox, FTP, Google Drive, SMB, WebDAV, SFTP, etc.
 
-- Mobile (✅): Nextcloud Desktop Client, Nextcloud Android App, Nextcloud iOS App
+- Mobile (✅): Nextcloud Desktop Client, Nextcloud Android App, Nextcloud iOS App.
 
-- CLI: `occ` for installing and upgrading Nextcloud, managing users, managing password and more. 
+- CLI: `occ` for installing and upgrading Nextcloud, managing users, managing passwords, and more.
 
 - [Basic APIs](https://docs.nextcloud.com/server/latest/developer_manual/client_apis/WebDAV/basic.html)
 
-## Administer{#administrator}
+## Administration {#administrator}
 
-- **Modify URL**: configuration file parameter `overwrite.cli.url`, defaults to wildcard, which can automatically any URL change
+- **Modify URL**: The configuration file parameter `overwrite.cli.url` defaults to wildcard, which can automatically apply to any URL change.
 
-- **Online Backup**: install **[OwnBackup](https://apps.nextcloud.com/apps/ownbackup)** to achieve online backup.
+- **Online Backup**: Install **[OwnBackup](https://apps.nextcloud.com/apps/ownbackup)** to achieve online backup.
 
-## Troubleshooting{#troubleshooting}
+## Troubleshooting {#troubleshooting}
 
-#### Disable ONLYOFFICE certificate validation?
+#### Disable ONLYOFFICE Certificate Validation?
 
-If Nextcloud is HTTPS, ONLYOFFICE also needs HTTPS, otherwise the connection will be abnormal.    
+If Nextcloud is using HTTPS, ONLYOFFICE must also use HTTPS, or the connection will fail.
 
-You can disable certificate verification by setting in Nextcloud backend plugin or adding the following paragraph in configuration file:  
+You can disable certificate verification by configuring the Nextcloud backend plugin or adding the following to the configuration file:
 
 ```
 'onlyoffice' =>
 array (
 'verify_peer_off' => TRUE,
-), 
+),
 ```
 
-#### Can't install apps due to network timeout?
+#### Can't Install Apps Due to Network Timeout?
 
-Please refer to the [Install apps offline](#offline) scenario
+Refer to the [Install Apps Offline](#offline) scenario.
