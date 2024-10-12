@@ -7,21 +7,20 @@ tags:
   - netdata
 ---
 
-import Meta from './_include/netdata.md';
+import Meta from './\_include/netdata.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Initial setup{#wizard}
+### Initial Setup {#wizard}
 
-1. When completed installation of Netdata at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After completing the installation of Netdata via the **Websoft9 Console**, retrieve the application's **Overview** and **Access** information from **My Apps**.
 
-2. Complete the install wizard step by step
+2. Complete the installation wizard step by step.
 
-## Configuration options{#configs}
+## Configuration Options {#configs}
 
-## Administer{#administrator}
+## Administration {#administrator}
 
-## Troubleshooting{#troubleshooting}
-
+## Troubleshooting {#troubleshooting}
