@@ -4,25 +4,25 @@ slug: /n8n
 tags:
   - workflow
   - task automation
-  - n8n 
+  - n8n
 ---
 
-import Meta from './_include/n8n.md';
+import Meta from './\_include/n8n.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Initial setup{#wizard}
+### Initial Setup {#wizard}
 
-1. When completed installation of n8n at Websoft9 console, get the applicaiton's overview and access information from "My Apps"  
+1. After completing the installation of n8n via the Websoft9 console, retrieve the application's overview and access information from **My Apps**.
 
-2. Complete the user registration, you can use it
+2. Complete the user registration, and you can start using it.
 
-## Configuration options{#configs}
+## Configuration Options {#configs}
 
-- Configuration file at container (have named volumed to server): */home/node/.n8n/my-config.json*
+- Configuration file (in container, with named volume to server): `/home/node/.n8n/my-config.json`
 
-## Administer{#administrator}
+## Administration {#administrator}
 
-## Troubleshooting{#troubleshooting}
+## Troubleshooting {#troubleshooting}
