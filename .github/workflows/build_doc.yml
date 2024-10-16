@@ -1,3 +1,6 @@
+# This workflow is triggered on pushes and pull requests to any branch.
+# The job name includes the branch name dynamically.
+
 name: Docs Build and Upload to Cloudflare
 
 on: 
@@ -17,6 +20,7 @@ on:
 
 jobs:
   build:
+    name: Build on branch ${{ github.ref_name }}
     runs-on: ubuntu-latest
     #if: false # stop steps
     steps:
