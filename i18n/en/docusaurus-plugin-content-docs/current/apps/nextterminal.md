@@ -7,21 +7,20 @@ tags:
   - nextterminal
 ---
 
-import Meta from './_include/nextterminal.md';
+import Meta from './\_include/nextterminal.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Initial setup{#wizard}
+### Initial Setup {#wizard}
 
-1. When completed installation of Next Terminal at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After completing the installation of Next Terminal via the **Websoft9 Console**, retrieve the application's **Overview** and **Access** information from **My Apps**.
 
-## Configuration options{#configs}
+## Configuration Options {#configs}
 
-- Two-Factor Authentication (√): select **Personal Center > Two-Step Authentication**
+- Two-Factor Authentication (✅): Select **Personal Center > Two-Step Authentication**
 
-## Administer{#administrator}
+## Administration {#administrator}
 
-## Troubleshooting{#troubleshooting}
-
+## Troubleshooting {#troubleshooting}
