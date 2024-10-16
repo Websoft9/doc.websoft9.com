@@ -24,6 +24,7 @@
 - [产品生命周期](https://www.websoft9.com/apps/plm)
 - [企业主数据](https://www.websoft9.com/apps/master-data)
 - [区块链](https://www.websoft9.com/apps/blockchain)
+- [业务自动化](https://www.websoft9.com/apps/business-automation)
 ## 设计创作
 
 - [虚拟仿真](https://www.websoft9.com/apps/virtual-reality)
@@ -59,8 +60,9 @@
 ## 自动化
 
 - [流程机器人](https://www.websoft9.com/apps/rpa)
-- [流水线](https://www.websoft9.com/apps/pipeline)
-- [工作流](https://www.websoft9.com/apps/workflowauto)
+- [CI/CD 流水线](https://www.websoft9.com/apps/pipeline)
+- [运维自动化](https://www.websoft9.com/apps/opsauto)
+- [业务自动化](https://www.websoft9.com/apps/business-automation)
 ## 数据库
 
 - [SQL 数据库/关系数据库](https://www.websoft9.com/apps/rds)
@@ -71,7 +73,7 @@
 - [缓存数据库](https://www.websoft9.com/apps/memorydb)
 - [数据仓库](https://www.websoft9.com/apps/data-warehouse)
 - [数据湖](https://www.websoft9.com/apps/data-lake)
-- [数据库管理工具](https://www.websoft9.com/apps/dbtools)
+- [数据库工具](https://www.websoft9.com/apps/dbtools)
 ## 运行环境
 
 - [.NET](https://www.websoft9.com/apps/dotnet)
@@ -105,7 +107,7 @@
 - [Web 开发框架](https://www.websoft9.com/apps/webframework)
 - [源码仓库](https://www.websoft9.com/apps/repository)
 - [制品仓库](https://www.websoft9.com/apps/artifact-repository)
-- [流水线](https://www.websoft9.com/apps/pipeline)
+- [CI/CD 流水线](https://www.websoft9.com/apps/pipeline)
 - [测试管理](https://www.websoft9.com/apps/testing)
 - [应用编排](https://www.websoft9.com/apps/orchestration)
 - [在线 IDE](https://www.websoft9.com/apps/ide)
@@ -142,6 +144,7 @@
 - [全面监控](https://www.websoft9.com/apps/fullmonitor)
 - [备份恢复](https://www.websoft9.com/apps/backup)
 - [应用性能分析](https://www.websoft9.com/apps/apm)
+- [运维自动化](https://www.websoft9.com/apps/opsauto)
 ## IT 安全
 
 - [密码管理](https://www.websoft9.com/apps/teampassm)

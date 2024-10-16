@@ -24,6 +24,7 @@
 - [PLM & PDM](https://www.websoft9.com/apps/plm)
 - [Master Data](https://www.websoft9.com/apps/master-data)
 - [Blockchain](https://www.websoft9.com/apps/blockchain)
+- [Business automation](https://www.websoft9.com/apps/business-automation)
 ## Design & Create
 
 - [Virtual Reality](https://www.websoft9.com/apps/virtual-reality)
@@ -59,8 +60,9 @@
 ## Automation
 
 - [RPA](https://www.websoft9.com/apps/rpa)
-- [Pipeline](https://www.websoft9.com/apps/pipeline)
-- [Workflow automation](https://www.websoft9.com/apps/workflowauto)
+- [CI/CD Pipeline](https://www.websoft9.com/apps/pipeline)
+- [Operations Automation](https://www.websoft9.com/apps/opsauto)
+- [Business automation](https://www.websoft9.com/apps/business-automation)
 ## Databases
 
 - [Relational Databases](https://www.websoft9.com/apps/rds)
@@ -105,7 +107,7 @@
 - [Web Framework](https://www.websoft9.com/apps/webframework)
 - [Code Repository](https://www.websoft9.com/apps/repository)
 - [Artifact Repository](https://www.websoft9.com/apps/artifact-repository)
-- [Pipeline](https://www.websoft9.com/apps/pipeline)
+- [CI/CD Pipeline](https://www.websoft9.com/apps/pipeline)
 - [TestPlan](https://www.websoft9.com/apps/testing)
 - [Application orchestration](https://www.websoft9.com/apps/orchestration)
 - [Web IDE](https://www.websoft9.com/apps/ide)
@@ -142,6 +144,7 @@
 - [Full Monitoring](https://www.websoft9.com/apps/fullmonitor)
 - [Backup & Restore](https://www.websoft9.com/apps/backup)
 - [APM](https://www.websoft9.com/apps/apm)
+- [Operations Automation](https://www.websoft9.com/apps/opsauto)
 ## IT Security
 
 - [Password Management](https://www.websoft9.com/apps/teampassm)
