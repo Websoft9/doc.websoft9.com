@@ -1,6 +1,6 @@
 ---
 title: ChatGPT Next Web
-slug: /chatgptnextweb
+slug: chatgptnextweb
 tags:
   - ChatGPT
   - AI
