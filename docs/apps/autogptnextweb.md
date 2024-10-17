@@ -1,6 +1,6 @@
 ---
 title: AutoGPT.NextWeb
-slug: /autogptnextweb
+slug: autogptnextweb
 tags:
   - LLM
   - 大模型
