@@ -5,8 +5,8 @@ This is JS repository for CloudFlare worker
 ## Build
 
 ```
-cp -f docs/reference/_include/dockerhub-proxy.md build/cloudflare/src/backends.md
-cd build/cloudflare
+cp -f docs/reference/_include/dockerhub-proxy.md builds/cloudflare/src/backends.md
+cd builds/cloudflare
 npm install --save-dev webpack webpack-cli raw-loader
 npm run build
 ```
