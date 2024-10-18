@@ -1,0 +1,12 @@
+name: Create or update dockerthub proxy URLs
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Spellcheck
+    runs-on: ubuntu-latest
+    steps:
+    # The checkout step
+    - uses: actions/checkout@v3
