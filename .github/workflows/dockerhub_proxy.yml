@@ -9,4 +9,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     # The checkout step
-    - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
+
+
+      - name: Create dockerthub proxy file to docs/reference/_include/dockerhub-proxy.md
+        run: |
+           echo "run build/gen_dockerhub_proxy.py"
+
+      - name: Build JS for CloudFlare
+        run: |
+          cp -f docs/reference/_include/dockerhub-proxy.md build/cloudflare/src/backends.md
+          cd build/cloudflare
+          npm install --save-dev webpack webpack-cli raw-loader
+          npm run build
+
+      - name: Deploy to cloudflare
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          preCommands: cd build/cloudflare
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: update dockerthub proxy URLs
