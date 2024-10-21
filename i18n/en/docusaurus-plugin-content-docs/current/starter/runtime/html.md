@@ -1,10 +1,10 @@
 ---
 sidebar_position: 3.0
-slug: /runtime/html
+slug: /html
 tags:
-  - 运行环境
+  - container
   - runtime
-  - 静态网站
+  - website
   - Static
   - HTML/JS
 ---
@@ -13,18 +13,18 @@ tags:
 
 Websoft9 帮助用户使用 Apache 或 NGINX 或 Caddy 等容器实现 HTML/JS 静态网站的部署。   
 
-## 配置选项{#configs}
+## Configuration options{#configs}
 
-- [Apache 配置选项](../apache#configs)
-- [Caddy  配置选项](../caddy#configs)
-- [NGINX 配置选项](../nginx#configs)
+- [Apache configuration options](../apache#use-special-port-for-apache)
+- [Caddy  configuration options](../caddy#configure-caddy-by-api)
+- [NGINX configuration options](../nginx#nginx-configure-wizard)
 
-## 部署网站{#deploy}
+## Deploy a HTML/JS application{#deploy}
 
-参考：[App Runtime 入门指南](../runtime#quick)
+Refer to: [App Runtime tutorials](./runtime)
 
-## 问题与故障
+## Troubleshoot
 
-#### 部署 HMTL vs PHP 网站？
+### Can this deploy a static site generator?
 
-从部署的流程和逻辑，两者是一模一样的。PHP 可能会需要安装更多的依赖，甚至需要编译软件包。  
+No, this only deploy HTML/JS files

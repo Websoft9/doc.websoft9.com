@@ -44,7 +44,7 @@ Websoft9 控制台安装 ONLYOFFICE Workspace 后，通过 "我的应用" 查看
 
 ## 配置选项{#configs}
 
-- 修改密码：Administrator > 个人资料
+- 修改密码：**Administrator > 个人资料 > Log out from all active connections**
 - 多语言（✅）
 - 邮件服务器（可选）
 - [Compare Community Edition and Enterprise Edition](https://github.com/ONLYOFFICE/CommunityServer#compare-community-edition-and-enterprise-edition)
@@ -52,3 +52,7 @@ Websoft9 控制台安装 ONLYOFFICE Workspace 后，通过 "我的应用" 查看
 ## 管理维护{#administrator}
 
 ## 故障
+
+#### RockyLinux 下无法启动？
+
+Onlyoffice 官方反馈目前不支持 RockyLinux，已提交 [Issue](https://github.com/ONLYOFFICE/CommunityServer/issues/509)

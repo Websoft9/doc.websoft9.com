@@ -1,4 +1,4 @@
-[Harness CI (aka Drone)](https://drone.io/) is ** Container-Native Continuous Delivery Platform**, used for Container Pipeline . Drone is a continuous delivery system built on container technology. Drone uses a simple YAML build file, to define and execute build pipelines inside Docker containers.
+[Harness CI (aka Drone)](https://drone.io/) is ** Container-Native Continuous Delivery Platform**, used for Container CI/CD Pipeline . Drone is a continuous delivery system built on container technology. Drone uses a simple YAML build file, to define and execute build pipelines inside Docker containers.
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drone/drone-gui-websoft9.png)

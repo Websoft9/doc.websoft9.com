@@ -8,24 +8,23 @@ tags:
   - WebRTC
 ---
 
-import Meta from './_include/screego.md';
+import Meta from './\_include/screego.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Initial setup{#wizard}
+### Initial Setup {#wizard}
 
-1. When completed installation of screego at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After completing the installation of screego in the **Websoft9 Console**, retrieve the application's **Overview** and **Access** information from **My Apps**.
 
-2. Login to the Websoft9 console and set up HTTPS access for the screego application.
+2. Log in to the Websoft9 console and set up HTTPS access for the screego application.
 
    > The domain name must be configured during installation for screego to work.
 
-3. Use an external TURN server to start the port as appropriate (optional)
+3. Optionally, use an external TURN server to start the port as appropriate.
 
-
-### Use it now
+### Use it Now
 
 1. Go to the main screen of screego and click on **CREATE OR JOIN A ROOM** to create a room.
 
@@ -33,13 +32,11 @@ import Meta from './_include/screego.md';
 
 3. Other clients open the URL and start using it.
 
+## Configuration Options {#configs}
 
-## Configuration options{#configs}
+- Used by more than two people (✅)
+- STUN/TURN relay server (built-in): The client (browser) first tries **direct connection**. If a direct connection is not possible, the STUN server is used for **penetration**, and if penetration is not possible, the TURN server is used for **relay**.
 
-- Used by more than two people(✅)
-- STUN/TURN relay server (built-in): the client (browser) first tries **direct connection**. If direct connection is not possible, the STUN server is used for **penetration**, and if penetration is not possible, the TURN server is used for **relay**.
+## Administration {#administrator}
 
-## Administer{#administrator}
-
-## Troubleshooting{#troubleshooting}
-
+## Troubleshooting {#troubleshooting}

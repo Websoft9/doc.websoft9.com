@@ -7,7 +7,8 @@ tags:
   - PhotoPrism
 ---
 
-import Meta from './\_include/photoprism.md';
+
+import Meta from './_include/photoprism.md';
 
 <Meta name="meta" />
 

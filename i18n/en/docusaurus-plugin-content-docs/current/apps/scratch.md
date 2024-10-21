@@ -6,40 +6,39 @@ tags:
   - Programming for Children and Teens
 ---
 
-import Meta from './_include/scratch.md';
+import Meta from './\_include/scratch.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Initial setup{#wizard}
+### Initial Setup {#wizard}
 
-1. When completed installation of Scratch at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After completing the installation of Scratch in the **Websoft9 Console**, retrieve the application's **Overview** and **Access** information from **My Apps**.
 
-2. Direct browser access takes you to Scratch
-  ![Scratch Initialization Page](./assets/scratch-gui-websoft9.png)
+2. Direct browser access takes you to Scratch.
+   ![Scratch Initialization Page](./assets/scratch-gui-websoft9.png)
 
-3. The first time Scratch loads more than 20M of data, if your network bandwidth is inadequate, the loading process will be extremely slow. Please wait patiently!
+3. The first time Scratch loads, it requires more than 20MB of data. If your network bandwidth is inadequate, the loading process will be extremely slow. Please wait patiently!
 
+## Configuration Options {#configs}
 
-## Configuration options{#configs}
+- Multilingual (✅): Switchable
+- Backend Login (❌)
 
-- Multilingual(✅): Switchable
-- Backend Login(❌)
+## Administration {#administrator}
 
-## Administer{#administrator}
-
-## Troubleshooting{#troubleshooting}
+## Troubleshooting {#troubleshooting}
 
 #### Not loading or very slow to access? {#slowy}
 
-The first time Scratch loads data over 20M. e.g. if you are using 2M bandwidth, then ideally the loading time would be: 20000k/(128k/s x 2) = 78s. Obviously if the bandwidth is insufficient, it will be very slow.  
+The first time Scratch loads, it requires over 20MB of data. For example, if you are using 2Mbps bandwidth, the estimated loading time would be:
+20000kB / (128kB/s x 2) ≈ 78 seconds. If the bandwidth is insufficient, it will be very slow.
 
-Additionally, Scratch loads Google Stats resources, which can also lead to anomalous or slower access.  
+Additionally, Scratch loads Google Stats resources, which may lead to anomalous or slower access.
 
 #### Background and character icons not loading? {#assets}
 
-Reason: Scratch pre-made character icons and background images are stored in the official server, and there are network limitations when getting them online.  
+Reason: Scratch's pre-made character icons and background images are stored on the official server, and there may be network limitations when retrieving them.
 
-Solution: [Download](https://libs.websoft9.com/apps/scratch/asset.zip) to your local computer and use it by **uploading**. 
-
+Solution: [Download](https://libs.websoft9.com/apps/scratch/asset.zip) the assets to your local computer and use them by **uploading**.

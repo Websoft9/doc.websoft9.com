@@ -18,38 +18,38 @@ import Meta from './_include/cloudbeaver.md';
 
 ### Prepare the database
 
-CloudBeaver is a tool for managing databases. If you don't have a database, you can install it through the Websoft9. 
+CloudBeaver is a tool for managing databases. If you don't have a database yet, you can install one through the Websoft9. 
 
-- The Websoft9 provides one-click installation templates for databases, including MySQL/PostgreSQL/SQLite/SQLServer/Oracle.
-- Databases installed through Websoft9 can connect with CloudBeaver through the container ID as Host without opening the external network port.
+- The Websoft9 provides one-click installation templates for various databases, including MySQL, PostgreSQL, SQLite, SQLServer, and Oracle.
+- Databases installed through Websoft9 can be connected to CloudBeaver using the container ID as the Host without the need to open an external network port.
 
-### Verify CloudBeaver
+### Verify CloudBeaver Installation
 
-When completed installation of CloudBeaver at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+After completing the installation of CloudBeaver in the **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from the **My Apps** section.  
 
-1. Visit the URL using your local computer's browser, complete the install wizard step by step.
+1. Open your local computer's browser and visit the URL to complete the installation wizard step by step.
    ![Initialize CloudBeaver](./assets/cloudbeaver-wizard001-websoft9.png)
 
-2.  Select **Administrator > Connection Management**, delete **SQLite-Chinook (Sample)** to avoid SQL injection attack.
+2.  Navigate to **Administrator > Connection Management**, and delete the **SQLite-Chinook (Sample)** connection to prevent potential SQL injection attacks.
    ![Initialize CloudBeaver](./assets/cloudbeaver-wizard005-websoft9.png)
 
-3. Go back to the homepage, the default SQLite demo connection no longer exists.
+3. Go back to the homepage, the default SQLite demo connection should no longer exist.
 
 ### Managing Databases
 
-1. CloudBeaver console, select **Settings > Administration > Connection Management**, add the required database connection.
+1. Navigate to **Settings > Administration > Connection Management** in the CloudBeaver console, and add the required database connection.
    ![](./assets/cloudbeaver-connection-websoft9.png)
 
-2. Set the connection information: host address, port, account password, and then click [Save].
+2. Enter the connection information, including the host address, port, account password, and then click **Save**.
 
 3. Test the connection availability.
 
 
 ### Shared Data Connection
 
-Shared Data Connection is a shared connection access that the administrator can grant to a team of users by changing the connection configuration.
+A Shared Data Connection allows an administrator to grant access to a team of users by modifying the connection configuration.
 
-1. Configure the connection as shared
+1. Configure the connection to be shared
 
    ![](./assets/cloudbeaver-share-set-websoft9.png)
 
@@ -61,7 +61,7 @@ Shared Data Connection is a shared connection access that the administrator can 
 
 - Multilingual(✅): Chinese not supported
 - Database connection driver: JDBC
-- Configuration file: /path/GlobalConfiguration/.dbeaver/data-sources.json
+- Configuration file: */opt/cloudbeaver/workspace/GlobalConfiguration/.dbeaver/data-sources.json*
 - [Supported databases](https://dbeaver.com/databases/)
 - Export data(✅): only table export is supported
 

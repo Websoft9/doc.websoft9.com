@@ -7,47 +7,48 @@ tags:
   - Pipeline
 ---
 
-import Meta from './_include/teamcity.md';
+import Meta from './\_include/teamcity.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Initial setup{#wizard}
+### Initial Setup {#wizard}
 
-1. When completed installation of TeamCity at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
-   - Get the access URL in the **Access**.
-   - Get the database information in the **Database**.  
+1. After completing the installation of TeamCity in the **Websoft9 Console**, retrieve the application's **Overview** and **Access** information from **My Apps**.
 
-2. Access the URL to the initialization page and select **proceed** to start the next steps.
+   - Access the URL in the **Access** section.
+   - Retrieve the database information from the **Database** section.
 
-3. Fill in the database the application in **Database connection setup**:
+2. Access the URL to reach the initialization page and select **proceed** to start the next steps.
 
-   - Database type: MySQL (Select and click the link to download the JDBC driver)   
-   - Database host: Get from the TeamCity application management page.
+3. Fill in the database information in the **Database Connection Setup**:
+
+   - Database Type: MySQL (Select and click the link to download the JDBC driver)
+   - Database Host: Retrieve this from the TeamCity application management page.
    - Database Name: `teamcity`
-   - User name: `teamcity` or `root`
-   - Password: Get from the TeamCity application management page.
+   - Username: `teamcity` or `root`
+   - Password: Retrieve this from the TeamCity application management page.
 
-5. After completing the account creation steps, login to the TeamCity backend.
+4. After completing the account creation steps, log in to the TeamCity backend.
    ![](./assets/teamcity-main-websoft9.png)
 
-6. Edit the Server URL：Select **TeamCity console > Administration > Global Settings**.
+5. Edit the Server URL: Go to **TeamCity Console > Administration > Global Settings**.
 
 ### Connect the TeamCity Agent
 
-The TeamCity Agent is launched by default in the TeamCity.  
+The TeamCity Agent is launched by default within TeamCity.
 
-Select **TeamCity console > Agents > UNAUTHORIZED AGENTS > Authorize**, to connect to TeamCity Agent.
+Go to **TeamCity Console > Agents > UNAUTHORIZED AGENTS > Authorize** to connect to the TeamCity Agent.
 
-## Configuration options{#configs}
+## Configuration Options {#configs}
 
-- Configure Server URL：Select **TeamCity console > Administration > Global Settings**
+- Configure Server URL: Go to **TeamCity Console > Administration > Global Settings**.
 
-## Administer{#administrator}
+## Administration {#administrator}
 
-## Troubleshooting{#troubleshooting}
+## Troubleshooting {#troubleshooting}
 
-#### Agent cannot connect to TeamCity?
+#### Agent Cannot Connect to TeamCity?
 
-Ensure TeamCity Agent hostname has no "_" when connecting to TeamCity.
+Ensure that the TeamCity Agent hostname does not contain an underscore ("\_") when connecting to TeamCity.

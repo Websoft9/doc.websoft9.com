@@ -1,4 +1,4 @@
-[ClickHouse](https://clickhouse.com/) 是一个 **面向实时应用程序与分析的 OLAP**，它被用于 NewSQL 数据库 数据仓库  等场景。ClickHouse支持您需要的所有数据源，为您的应用程序和需要卓越性能的用例提供支持。
+[ClickHouse](https://clickhouse.com/) 是一个 **面向实时应用程序与分析的 OLAP**，它被用于 NewSQL 数据库 数据仓库/数据湖  等场景。ClickHouse支持您需要的所有数据源，为您的应用程序和需要卓越性能的用例提供支持。
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/clickhouse/clickhouse-gui-websoft9.png)

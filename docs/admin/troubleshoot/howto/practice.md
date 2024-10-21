@@ -17,7 +17,7 @@ slug: /troubleshoot/practice
 
 - 阅读官方文档
 - 保护问题现场
-- [分析日志](../linux#logs)
+- [分析日志](../linux)
 - 尝试让问题重现
 - 多人访谈与讨论
 
@@ -27,7 +27,7 @@ slug: /troubleshoot/practice
 
 根据证据，得出一个符合逻辑的初步结论。然后，再对初步结论进行交叉分析，分析其适应性。
 
-1. [什么类型的问题？](./method/type)
+1. [什么类型的问题？](../faq)      <!-- (./method/type)-->
 2. 问题流程逻辑
 3. 交叉分析
 

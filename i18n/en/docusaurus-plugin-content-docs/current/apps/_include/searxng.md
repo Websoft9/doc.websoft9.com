@@ -1,4 +1,4 @@
-[SearXNG](https://docs.searxng.org/) is **Internet metasearch engine**, used for Search Engine . SearXNG is a free internet metasearch engine which aggregates results from more than 70 search services. 
+[SearXNG](https://docs.searxng.org/) is **Internet metasearch engine**, used for Data Search Engine . SearXNG is a free internet metasearch engine which aggregates results from more than 70 search services. 
 
 
 ![Site](https://libs.websoft9.com/Websoft9/DocsPicture/zh/searxng/searxng-gui-websoft9.png)

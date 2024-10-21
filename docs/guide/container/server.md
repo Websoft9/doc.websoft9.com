@@ -22,7 +22,7 @@ wget -O - https://websoft9.github.io/websoft9/install/install_docker.sh | bash
 
 Docker 默认从 Dockerhub 下载镜像。如果想更换仓库地址，请参考如下步骤：
 
-1. 自行准备新的仓库地址或选择[第三方镜像仓库](./imagehub)
+1. 自行准备新的仓库地址或选择[第三方镜像仓库](./software-repos#docker)
 
 
 2. 向 Docker 配置文件（不存在需新建） */etc/docker/daemon.json* 中插入仓库地址（支持多个）
@@ -56,7 +56,7 @@ Docker 默认从 Dockerhub 下载镜像。如果想更换仓库地址，请参�
 ## 相关内容
 
 - [Docker 服务端配置参数](./parameter#path)
-- [Docker 命令行](./parameter#cmd)
+- [Docker 命令行](./parameter)
 - [开启 Docker API 外部访问](https://docs.docker.com/reference/cli/dockerd/#daemon-socket-option)
 
 ## 参考文档

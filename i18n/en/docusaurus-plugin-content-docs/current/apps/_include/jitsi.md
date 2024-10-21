@@ -1,4 +1,4 @@
-[Jitsi Meet](https://jitsi.org/) is **Open Source video conferencing platforms with state-of-the-art video quality and features.**, used for Education Meeting . Jitsi Meet - Secure, Simple and Scalable Video Conferences that you use as a standalone app or embed in your web application.
+[Jitsi Meet](https://jitsi.org/) is **Open Source video conferencing platforms with state-of-the-art video quality and features**, used for Education Meeting . Jitsi Meet - Secure, Simple and Scalable Video Conferences that you use as a standalone app or embed in your web application.
 
 
 ![Create meeting](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jitsi/jitsi-gui-websoft9.png)

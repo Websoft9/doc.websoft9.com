@@ -15,21 +15,21 @@ import Meta from './_include/budibase.md';
 
 ### Initial setup{#wizard}
 
-1. When completed installation of Budibase at Websoft9 console, get the applicaiton's overview and access information from **My Apps**   
+1. After completing the installation of Budibase in the Websoft9 console, get the applicaiton's overview and access information from **My Apps**   
 
-2. First time to accesss, need to register administrator user
+2. On first access, you need to register an administrator user
    
    ![Budibase](./assets/budibase-installadmin-websoft9.png)
 
-3. Choose to create based on an existing template or a completely new approach to start creating the application
+3. Choose between creating the application based on an existing template or starting from scratch with a completely new approach
 
    ![Budibase](./assets/budibase-createapp-websoft9.png)
 
 ### Core components
 
-- Data: Manage data sources, support Budibase to build internal tables for data modeling, also support connecting to external data sources.
-- Design: page design, Budibase provides rich controls to build pages, data controls are used for data binding and rendering.
-- Automate: Used to automate the execution of the design process, trigger conditions support data changes, Webhook, App Action and Cron.
+- Data: Manage data sources, support Budibase for building internal tables for data modeling, and also support connections to external data sources.
+- Design: Page design. Budibase provides rich controls to build page. Data controls are used for data binding and rendering.
+- Automate: Used to automate the execution of the design process. Trigger conditions support data changes, Webhook, App Action and Cron jobs.
 
 ## Configuration options{#configs}
 

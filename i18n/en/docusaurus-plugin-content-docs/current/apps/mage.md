@@ -6,7 +6,8 @@ tags:
   - Mage
 ---
 
-import Meta from './\_include/mage.md';
+
+import Meta from './_include/mage.md';
 
 <Meta name="meta" />
 

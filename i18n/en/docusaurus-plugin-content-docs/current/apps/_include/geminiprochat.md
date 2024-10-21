@@ -1,4 +1,4 @@
-[GeminiProChat](https://github.com/babaohuang/GeminiProChat) is **Minimal web UI for GeminiPro**, used for AIGC . Minimal web UI for GeminiPro
+[GeminiProChat](https://github.com/babaohuang/GeminiProChat) is **Minimal web UI for GeminiPro**, used for Generative AI . Minimal web UI for GeminiPro
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/geminiprochat/geminiprochat-gui-websoft9.png)

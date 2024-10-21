@@ -7,7 +7,8 @@ tags:
   - Team Communications
 ---
 
-import Meta from './\_include/zulip.md';
+
+import Meta from './_include/zulip.md';
 
 <Meta name="meta" />
 

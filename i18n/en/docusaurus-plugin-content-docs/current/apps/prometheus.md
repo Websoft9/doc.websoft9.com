@@ -6,33 +6,35 @@ tags:
   - other
 ---
 
-import Meta from './_include/prometheus.md';
+import Meta from './\_include/prometheus.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Login Verification{#verification}
+### Login Verification {#verification}
 
-1. Completed installation Prometheus at Websoft9 console, get the applicaiton's overview and access information from "My Apps"  
+1. After completing the installation of Prometheus in the **Websoft9 Console**, retrieve the application's overview and access details from **My Apps**.
 
-2. Prometheus can be accessed without authentication.   
+2. Prometheus can be accessed without authentication by default.
 
    ![](./assets/prometheus-backend-websoft9.png)
-   
-4. Optional: If want to control access, please set it up through the **Websoft9 Gateway**
 
-### Integrate Grafana{#grafana}
+3. (Optional) If you want to control access, you can configure it through the **Websoft9 Gateway**.
 
-Grafana is visual tool for Prometheus, detail refer to: [GRAFANA SUPPORT FOR PROMETHEUS](https://prometheus.io/docs/visualization/grafana/)
+### Integrating Grafana {#grafana}
 
-## Configuration options{#configs}
+Grafana is a powerful visualization tool for Prometheus. For detailed instructions, refer to: [Grafana Support for Prometheus](https://prometheus.io/docs/visualization/grafana/).
 
-- Configuration file in container (have mounted to server): */etc/prometheus/prometheus.yml* 
-- Data collection method: Pull directly from datasource and Pushgateway to receive push data
-- [Basic Auth](https://prometheus.io/docs/guides/basic-auth/#hashing-a-password)
-- Connecting Alertmanager and Pushgateway: requires adding configuration files to implement the connection
+## Configuration Options {#configs}
 
-## Administer{#administrator}
+- Configuration file location (mounted to the server): `/etc/prometheus/prometheus.yml`
+- Data collection methods:
+  - **Pull**: Directly pull data from the datasource.
+  - **Push**: Use Pushgateway to receive pushed data.
+- [Basic Authentication](https://prometheus.io/docs/guides/basic-auth/#hashing-a-password)
+- Connecting **Alertmanager** and **Pushgateway**: Requires adding configuration files to establish the connection.
 
-## Troubleshooting{#troubleshooting}
+## Administration {#administrator}
+
+## Troubleshooting {#troubleshooting}

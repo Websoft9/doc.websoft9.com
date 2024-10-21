@@ -26,7 +26,7 @@ Websoft9 控制台安装 Mediawiki 后，通过 "我的应用" 查看应用详�
 
 ### 设置 SMTP{#smtp}
 
-1. 编辑/bitnami/mediawiki目录下的 `LocalSettings.php` 配置文件
+1. 编辑*/bitnami/mediawiki*目录下的 `LocalSettings.php` 配置文件
 
 2. 找到变量 $wgSMTP，并设置它
    
@@ -41,10 +41,10 @@ Websoft9 控制台安装 Mediawiki 后，通过 "我的应用" 查看应用详�
     );
    ```
 
-3. 找到变量 $ wgEnableEmail，设置其值为 true
+3. 找到变量 $wgEnableEmail，设置其值为 true
    
    ```
-    $ wgEnableEmail = true
+    $wgEnableEmail = true
    ```
 
 
@@ -60,7 +60,7 @@ Websoft9 控制台安装 Mediawiki 后，通过 "我的应用" 查看应用详�
 
 ## 配置选项{#configs}
 
-- 配置文件（已挂载）：/bitnami/mediawiki/LocalSettings.php
+- 配置文件（已挂载）：*/bitnami/mediawiki/LocalSettings.php*
 - [API:Main_page](https://www.mediawiki.org/wiki/API:Main_page/zh)
 - 多语言（✅）
 - 多媒体文件（✅）

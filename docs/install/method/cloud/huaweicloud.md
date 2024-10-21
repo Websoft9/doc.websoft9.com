@@ -19,7 +19,7 @@ Websoft9 在华为云和 HUAWEICLOUD 都提供了预制镜像，用户可以通�
 
 ## 规划虚拟机配置
 
-先阅读 [Websoft9 安装要求](./requirements)，了解所需的服务器规格、SSD 存储和带宽要求。 
+先阅读 [Websoft9 安装要求](./install-requirements)，了解所需的服务器规格、SSD 存储和带宽要求。 
 
 ## 安装 Websoft9
 
@@ -29,7 +29,7 @@ Websoft9 在华为云和 HUAWEICLOUD 都提供了预制镜像，用户可以通�
 
 1. 本地浏览器访问华为云上的 [Websoft9 多应用托管平台](https://marketplace.huaweicloud.com/contents/29458a42-64b7-4637-aa7c-8bfddea1fb72) 产品页
 
-2. 进入产品详情页后，点击 "立即购买" 或 "自定义云主机" 按钮
+2. 进入产品详情页后，点击 **立即购买** 或 **自定义云主机** 按钮
    ![Websoft9 华为云商店](./assets/websoft9-offer-huaweicloud.png)
 
 3. 根据向导提示，完成服务器购买过程，包括：选择计费方式、实例类型、网络和安全组等设置
@@ -44,11 +44,11 @@ Websoft9 在华为云和 HUAWEICLOUD 都提供了预制镜像，用户可以通�
 1. 华为云控制台，进入 ECS 管理界面
 
    - 购买 ECS
-   - 或对目标 ECS 进行 "切换操作系统" 操作
+   - 或对目标 ECS 进行 **切换操作系统** 操作
 
 2. 在镜像来源设置中，选择 **市场镜像**
 
-3. 然后搜索关键件词 “websoft9 托管平台”，选择对应的镜像
+3. 然后搜索关键件词 **websoft9 托管平台**，选择对应的镜像
 
 4. 根据向导提示，完成服务器购买过程，包括：选择计费方式、实例类型、网络和安全组等设置
 
@@ -83,4 +83,4 @@ Websoft9 在华为云和 HUAWEICLOUD 都提供了预制镜像，用户可以通�
 
 ## 后续配置 Websoft9
 
-ECS 可用之后，还需要[完成配置域名等后续操作](./setup)，方可使用更好的使用 Websoft9
+ECS 可用之后，还需要[完成配置域名等后续操作](./domain-set)，方可使用更好的使用 Websoft9

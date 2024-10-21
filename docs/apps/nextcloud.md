@@ -30,9 +30,9 @@ Nextcloud 内置 Nextcloud Office（基于 Collabora Online 开发版，简称 C
 
 1. 可选：Websoft9 控制台的 “应用商店”，安装 ONLYOFFICE
 
-2. Nextcloud 控制台右上角齿轮图标，点击 "+应用"，在应用市场 Files 类目，安装 ONLYOFFICE 并启用
+2. Nextcloud 控制台右上角齿轮图标，点击 **+应用**，在应用市场 Files 类目，安装 ONLYOFFICE 并启用
 
-3. Nextcloud 控制台右上角齿轮图标，点击 "管理设置"，找到 ONLYOFFICE 设置项，[集成](https://api.onlyoffice.com/editors/nextcloud) ONLYOFFICE
+3. Nextcloud 控制台右上角齿轮图标，点击 **管理设置**，找到 ONLYOFFICE 设置项，[集成](https://api.onlyoffice.com/editors/nextcloud) ONLYOFFICE
    ![](./assets/nextcloud-setonlyoffice-websoft9.png)
 
 4. 安装完成后，找到**设置**页面，对 ONLYOFFICE 进行如图所示的设置（[参考官方文档](https://api.onlyoffice.com/editors/nextcloud)）
@@ -54,16 +54,16 @@ Nextcloud 内置 Nextcloud Office（基于 Collabora Online 开发版，简称 C
 
 WebDAV 用于本地电脑与 Nextcloud 建立一个映射关系：
 
-1. NextCloud 控制台 "文件" > "文件设置"，获取 WebDav URL
+1. NextCloud 控制台 **文件 > 文件设置**，获取 WebDav URL
 2. 本地 Windows 电脑配置 [WebDAV 客户端](https://www.thewindowsclub.com/how-to-map-webdav-in-windows)
 
 ### 连接外部存储{#oss}
 
 Nextcloud 支持多种流行的企业存储服务，具体使用步骤如下：
 
-1. 登录 Nextcloud 后台，打开 "应用" > "您的应用"，找到并启用 **External storage support** 
+1. 登录 Nextcloud 后台，打开 **应用 > 您的应用**，找到并启用 **External storage support** 
 
-2. Nextcloud 后台的 "管理设置" 中设置外部存储，S3 兼容协议设置范例：
+2. Nextcloud 后台的 **管理设置** 中设置外部存储，S3 兼容协议设置范例：
 
    - Bucket：对应部分厂商的存储桶
    - 主机名：对应部分厂商的 Endpoint
@@ -77,7 +77,7 @@ Nextcloud 支持多种流行的企业存储服务，具体使用步骤如下：
 
 ### 安全使用 HTTPS
 
-1. Websoft9 控制台进入 “网关” 菜单，编辑 Nextcloud 应用的代理，将 “Advance” 中 “Custom Nginx Configuration” 清空后保存
+1. Websoft9 控制台进入 **网关** 菜单，编辑 Nextcloud 应用的代理，将 **Advance** 中 **Custom Nginx Configuration** 清空后保存
 
 2. 修改应用的编排文件 **.env** ，取消 **OVERWRITEPROTOCOL** 行的注释，重建应用生效
 
@@ -87,9 +87,9 @@ Nextcloud 支持多种流行的企业存储服务，具体使用步骤如下：
 
 - 配置文件（已挂载）：*/var/www/html/config/config.php*
 
-- 多语言（✅）：通过 "个人设置" 配置
+- 多语言（✅）：通过 **个人设置** 配置
 
-- SMTP（✅）：通过 "管理设置" > "基本设置" > "电子邮件服务器" 配置
+- SMTP（✅）：通过 **管理设置 > 基本设置 > 电子邮件服务器** 配置
 
 - [LDAP](https://docs.nextcloud.com/server/latest/admin_manual/configuration_user/user_auth_ldap.html)
 

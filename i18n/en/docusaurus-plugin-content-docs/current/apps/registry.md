@@ -2,27 +2,25 @@
 title: Registry
 slug: /registry
 tags:
-  - Mirror warehouse 
+  - Mirror warehouse
   - Docker warehouse
   - registry
 ---
 
-import Meta from './_include/registry.md';
+import Meta from './\_include/registry.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Login Verification{#verification}
+### Login Verification {#verification}
 
-1. Completed installation Registry at Websoft9 console, get the applicaiton's overview and access credentials from "My Apps"  
+1. Complete the installation of the registry at the **Websoft9 console**. Retrieve the application's overview and access credentials from **My Apps**.
 
-2. Starting to verify it
+## Configuration Options {#configs}
 
-## Configuration options{#configs}
+- The configuration file is located in the container (already mounted): `/etc/docker/registry/config.yml`
 
-- Configure file at container(Have mounted): */etc/docker/registry/config.yml*
+## Administration {#administrator}
 
-## Administer{#administrator}
-
-## Troubleshooting{#troubleshooting}
+## Troubleshooting {#troubleshooting}

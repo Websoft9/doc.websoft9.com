@@ -1,8 +1,8 @@
 ---
-slug: /runtime/python
+slug: /python
 sidebar_position: 1.3
 tags:
-  - 运行环境
+  - container
   - runtime
   - Python
 ---
@@ -19,7 +19,7 @@ tags:
 
 ## Deploy a Python application{#deploy}
 
-Refer to: [App Runtime tutorials](../runtime#quick)
+Refer to: [App Runtime tutorials](./runtime)
 
 ## Manage runtime{#administrator}
 

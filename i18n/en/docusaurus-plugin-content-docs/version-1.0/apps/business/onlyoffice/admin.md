@@ -69,7 +69,7 @@ Up to 20 Simultaneous connections
 
 #### ONLYOFFICE Docs What is the number of concurrent connections?
 
-See: [ONLYOFFICE Docs](../onlyofficedocs/admin#onlyofficedocsmaxconn) related documentation
+See: [ONLYOFFICE Docs](../onlyofficedocs/admin) related documentation
 
 #### Does ONLYOFFICE support document editing and previewing by default?
 

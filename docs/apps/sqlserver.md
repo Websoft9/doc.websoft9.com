@@ -22,10 +22,10 @@ import Meta from './_include/sqlserver.md';
 
 产品 License 清单： 
 
-* [license_Expr_2005.rtf](./assets/license/license_Expr_2005.rtf)
-* [license_Expr_2008R2.rtf](./assets/license/license_Expr_2008R2.rtf)
-* [license_Expr_2008.rtf](./assets/license/license_Expr_2008.rtf)
-* [license_Expr_2012.rtf](./assets/license/license_Expr_2012.rtf)
+* [license_Expr_2005.rtf](./assets/sqlserver/license_Expr_2005.rtf)
+* [license_Expr_2008R2.rtf](./assets/sqlserver/license_Expr_2008R2.rtf)
+* [license_Expr_2008.rtf](./assets/sqlserver/license_Expr_2008.rtf)
+* [license_Expr_2012.rtf](./assets/sqlserver/license_Expr_2012.rtf)
 
 Express版本与企业版相比，功能更少（例：[SQLServer 2016 各个版本功能对比](https://docs.microsoft.com/zh-cn/sql/sql-server/editions-and-components-of-sql-server-2016?view=sql-server-ver15#Cross-BoxScaleLimits)）。  
 
@@ -36,11 +36,11 @@ Express版本与企业版相比，功能更少（例：[SQLServer 2016 各个版
 ### 企业管理器连接
 
 1. 使用本地电脑的 **远程桌面**工具，登录到服务器 
-2. 获取服务器名称："我的电脑" > "属性" 中的计算机名即服务器名称
-3. 打开 **SQLServer企业管理器**，填写服务器名称，并以 "Windows身份验证" 登录数据库  
+2. 获取服务器名称：**我的电脑 > 属性** 中的计算机名即服务器名称
+3. 打开 **SQLServer企业管理器**，填写服务器名称，并以 **Windows身份验证** 登录数据库  
 
    - 服务器名称：填写为 `.` 或 `(local)` 或上一步获取的名称，也可以点击 **浏览更多...** 获取
-   - 身份验证：选择 "Windows身份验证"
+   - 身份验证：选择 **Windows身份验证**
      ![](./assets/sqlserver-getsqlserver-websoft9.png)
 
 ### 客户端远程连接
@@ -59,15 +59,15 @@ Windows 和 Linux 下安装的 SQL Server，只要服务器端允许，都可以
 
 #### SQLServer 服务端{#remotess}
 
-1. 打开**SQLServer企业管理器**工具，在服务器【连接】属性中，勾选【允许远程连接到本服务器】
+1. 打开**SQLServer企业管理器**工具，在服务器**连接**属性中，勾选**允许远程连接到本服务器**
    ![](./assets/sqlserver-remote1-websoft9.png)
    
-2. 打开**SQL Server 配置管理器**工具，在网络配置中，启用【TCP/IP】协议
+2. 打开**SQL Server 配置管理器**工具，在网络配置中，启用**TCP/IP**协议
    ![](./assets/sqlserver-remote2-websoft9.png)
 
 #### Windows 系统端{#remotefirewall}
    
-1. Windows 系统中的 "Windows防火墙"，为 SQL Server 配置防火墙 **允许** 策略  
+1. Windows 系统中的 **Windows防火墙**，为 SQL Server 配置防火墙 **允许** 策略  
 
 2. 在云控制台中，开启服务器安全组的**1433端口**  
 
@@ -75,10 +75,10 @@ Windows 和 Linux 下安装的 SQL Server，只要服务器端允许，都可以
 
 Windows 下的 SQL Server 启用 sa 密码的步骤：
 
-1. SQL Server 企业管理器："属性" > "安全性"，勾选 **SQLServer 和 Windows 身份验证模式(s)**  
+1. SQL Server 企业管理器：**属性 > 安全性**，勾选 **SQLServer 和 Windows 身份验证模式(s)**  
    ![](./assets/sqlserver-winlogin-pw1-websoft9.png)
 
-2. SQL Server 企业管理器 "安全性" > "登陆名" 菜单下，右键打开 `sa` 账号的属性，设置 sa 的密码
+2. SQL Server 企业管理器 **安全性 > 登陆名** 菜单下，右键打开 `sa` 账号的属性，设置 sa 的密码
    ![](./assets/sqlserver-winlogin-pw2-websoft9.png)
 
 3. 重启 SQL Server 服务后生效
@@ -102,7 +102,7 @@ Windows 下的 SQL Server 启用 sa 密码的步骤：
 
 - 命令行：[mssql-cli](https://docs.microsoft.com/en-us/sql/tools/mssql-cli)
 
-- 更换数据库路径：SQL Server 企业管理器 "属性" 下，打开 "数据库设置" 标签页下的 “数据库默认位置”
+- 更换数据库路径：SQL Server 企业管理器 **属性** 下，打开 **数据库设置** 标签页下的 **数据库默认位置**
 
 - [Express 升级到 SQL Server 的其他版本](https://docs.microsoft.com/zh-cn/sql/database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup?view=sql-server-ver15)
 
@@ -113,7 +113,7 @@ Windows 下的 SQL Server 启用 sa 密码的步骤：
 
 通用的手动备份操作步骤如下：
 
-1. SQL Server企业管理器：右键点击目标数据库，选择 "任务" > "备份"，弹出备份数据库窗口。 
+1. SQL Server企业管理器：右键点击目标数据库，选择 **任务 > 备份**，弹出备份数据库窗口。 
 
 2. 根据备份向导逐步完成备份工作
 
@@ -137,7 +137,7 @@ SQL Server Express 没有 SQL Server Agent 服务，即无法直接使用 SQL Se
 
 #### SQLServer 本地连接失败？
 
-请检查服务器名称是否正确：在【服务器名称】中通过【浏览更多...】选择正确的服务器
+请检查服务器名称是否正确：在**服务器名称**中通过**浏览更多...**选择正确的服务器
 
 #### 备份失败：确保正确的介质...？
 

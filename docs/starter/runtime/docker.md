@@ -1,7 +1,7 @@
 ---
 title: Docker
 sidebar_position: 3.1
-slug: /runtime/docker
+slug: /docker
 tags:
   - 运行环境
   - runtime
@@ -14,7 +14,7 @@ tags:
 
 通过 Websoft9 应用商店安装 Docker 模板环境后，便自动创建一个 **可以被 Websoft9 控制台管理的应用 Demo**，这是它的逻辑。  
 
-接下来，用户的工作便是通过[Docker 应用个性化编排](./runtime#dockercompose)，将 Demo 转变成自己真正所需的应用
+接下来，用户的工作便是通过[Docker 应用个性化编排](./app-compose)，将 Demo 转变成自己真正所需的应用
 
 
 ## 配置选项{#configs}
@@ -23,6 +23,6 @@ tags:
 
 ## 部署网站{#deploy}
 
-参考：[Web Runtime 入门指南](../runtime#quick)
+参考：[Web Runtime 入门指南](./runtime)
 
 ## 问题与故障

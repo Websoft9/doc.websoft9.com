@@ -1,4 +1,4 @@
-[Discourse](https://www.discourse.org/) is **The online home for your community**, used for Support & Customer Success Online Community . Discourse is modern forum software for your community. Use it as a mailing list, discussion forum, long-form chat room, and more。Discourse will not work from an IP address, you must own a domain name such as example.com to proceed.
+[Discourse](https://www.discourse.org/) is **The online home for your community**, used for Support & Customer Success Online Community . Discourse is modern forum software for your community. Use it as a mailing list, discussion forum, long-form chat room, and more. Discourse will not work from an IP address, you must own a domain name such as example.com to proceed.
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discourse/discourse-gui-websoft9.webp)

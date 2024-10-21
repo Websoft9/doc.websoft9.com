@@ -27,10 +27,10 @@ CloudBeaver 是用于管理数据库的工具，如果没有数据库，可以�
 
 Websoft9 控制台安装 CloudBeaver 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
 
-1. 使用本地电脑浏览器访问 URL，登录后点击 "NEXT" 按钮，直至 "FINISH" 完成
+1. 使用本地电脑浏览器访问 URL，登录后点击 **NEXT** 按钮，直至 **FINISH** 完成
    ![初始化 CloudBeaver](./assets/cloudbeaver-wizard001-websoft9.png)
 
-2. 通过：【Administrator】>【Connection Management】，删除【SQLite - Chinook (Sample)】，避免遭受 SQL 注入攻击
+2. 通过：**Administrator > Connection Management**，删除 **SQLite - Chinook (Sample)**，避免遭受 SQL 注入攻击
    ![初始化 CloudBeaver](./assets/cloudbeaver-wizard005-websoft9.png)
 
 3. 再回到主页，默认的 SQLite 演示连接已经不存在
@@ -38,10 +38,10 @@ Websoft9 控制台安装 CloudBeaver 后，通过 "我的应用" 查看应用详
 
 ### 管理数据库
 
-1. CloudBeaver 控制台，右上角【Settings】>【Administration】>【Connection Management】，添加所需的数据库连接。
+1. CloudBeaver 控制台，右上角**Settings > Administration > Connection Management**，添加所需的数据库连接。
    ![](./assets/cloudbeaver-connection-websoft9.png)
 
-2. 设置连接信息：主机地址、端口、账号密码（可以勾选是否保存），然后点击【Save】
+2. 设置连接信息：主机地址、端口、账号密码（可以勾选是否保存），然后点击**Save**
 
 3. 测试连接可用性
 
@@ -63,7 +63,7 @@ Websoft9 控制台安装 CloudBeaver 后，通过 "我的应用" 查看应用详
 
 - 多语言（✅）：不支持中文
 - 数据库连接驱动：JDBC
-- 配置文件：/path/GlobalConfiguration/.dbeaver/data-sources.json
+- 配置文件：*/path/GlobalConfiguration/.dbeaver/data-sources.json*
 - [支持的数据库](https://dbeaver.com/databases/)
 - 导出数据（✅）：仅支持表格导出
 

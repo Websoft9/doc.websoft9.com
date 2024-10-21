@@ -9,7 +9,7 @@ Websoft9 Inc. (“Websoft9”, “we”, “our” and “us”) understands how
 
 Content means software (including machine images), data, text, audio, video, or images that you process, store, or host by our products or services in connection with your account, and any computational results that you derive from the foregoing, when you use our products or services. This does not include account information that you provide to us in connection with the creation or administration of your account. Please refer to the links below to see your rights and obligations of Content and how we handle your Content.
 
-**What personal data do we collect?**
+## What personal data do we collect?
 
 In the context of rendering our Services, be it online or offline, we may collect information about you. This information regularly includes the following:
 
@@ -21,7 +21,7 @@ In the context of rendering our Services, be it online or offline, we may collec
 - If you run the Websoft9 Support in relation to a support request about a downloaded, pulled or deployed instance: System Information (such as operating system details, IP address, CPU and memory details), stack information (such as name, version, installation directory and user), and configuration and log files.
 - If you merely visit our websites: IP address, browser data, browser type, device type, device ID, Uniform Resource Locators (URL), operating system, language preferences, information on your usage of our websites and online activities.
 
-**How Websoft9 Processes Your Personal Data**
+## How Websoft9 Processes Your Personal Data
 
 We may use your personal data only limited for:
 
@@ -44,7 +44,7 @@ We may not disclose your personal data to a third party except in the following 
 
 We only disclose your personal data to the extent permitted by applicable laws and regulations and pursuant to this Statement. We do not provide, sell, and rent your personal data for or to any third party unconcerned unless otherwise permitted by you or specified in this Statement.
 
-**How Websoft9 Uses Cookies**
+##  How Websoft9 Uses Cookies
 
 To ensure our website works correctly, we may at times place a small piece of data known as a cookie on your computer or mobile device. A cookie is a text file stored by a web server on a computer or mobile device. The content of a cookie can be retrieved or read only by the server that creates the cookie. The text in a cookie often consists of identifiers, site names, and some numbers and characters. Cookies are unique to the browsers or mobile applications you use, and enable websites to store data such as your preferences.
 
@@ -58,7 +58,7 @@ Like many other websites or Internet service providers, we use cookies to improv
 
 Third parties may set their cookies on our Website, like Google and Baidu. They use these cookies to learn about your interaction with our Website. You can learn more about how these third parties use cookies by visiting their sites.
 
-**How Websoft9 Protects Your Personal Data**
+##  How Websoft9 Protects Your Personal Data
 
 We take personal data security seriously. We will take appropriate physical, organizational, and technical measures to protect your personal data against unauthorized access, disclosure, use, modification, damage or loss. For example, we use encryption to ensure data confidentiality; we use trusted protection mechanisms to prevent malicious data attacks; we deploy access control mechanisms to ensure that only authorized personnel can access personal data; and we raise awareness among employees about the importance of protecting personal data through security and privacy protection training sessions. While we take the utmost care to protect your personal data, please note that no security measures are completely infallible.
 
@@ -70,7 +70,7 @@ If you find your account or password is used by others without your permission t
 
 In case of any data breaches we found on your personal data we collected, stored and processed, we may inform you and/or the competent authority through publishing an announcement on Websoft9 website, sending you an email or other reasonable means according to the requirements of applicable laws and/or from competent authority. If your personal information is leaked due to reasons attributable to us, we will make reasonable efforts to notify you in a timely manner after confirming the consequence and root causes of the data breach.
 
-**How to Access and Control Your Personal Data**
+##  How to Access and Control Your Personal Data
 
 It is your responsibility to ensure that all personal data submitted to us is correct. We are dedicated to maintaining the accuracy and completeness of personal data and keeping the data up-to-date.
 
@@ -82,7 +82,7 @@ Here are some instructions for you to control your personal data collected by us
 - Cookies: Regarding the management of Cookies
 - Message: Please go to the Website and follow steps: Log in>My Account> Message Receiving Management.
 
-**How Websoft9 Handles Personal Data of Children**
+##  How Websoft9 Handles Personal Data of Children
 
 Our products, websites, and services are primarily intended for adults. Children are not allowed to create their own user account without the consent of parents or guardians. Where a child’s personal data is collected with parental consent, we will only use or disclose this data if applicable laws and regulations permit it, if explicit permission is given by parents or guardians, or if it is necessary to protect the child.
 
@@ -90,20 +90,20 @@ If children provide us with their personal data without their parental consent, 
 
 If we learn that it has collected a child’s personal data without first obtaining verifiable parental consent, we will take steps to delete the data within the shortest possible time period.
 
-**Third Party Providers and Their Services**
+##  Third Party Providers and Their Services
 
 To improve your service experience, you may be served content or web links from third parties other than us. We do not have control over such third parties. You can choose whether or not to access or use links, content, products, and services offered by third parties.
 
 We have no control over the privacy and data protection policies of third parties, which are not governed by this Statement. Before submitting your personal data to third parties, please refer to their respective privacy protection policies.
 
-**How Your Personal Data Is Transferred Internationally**
+##  How Your Personal Data Is Transferred Internationally
 
 In order to provide or improve services to you, we store your personal data in countries/regions where Websoft9, Websoft9 associated companies, or Websoft9’s service providers or subcontractors are located. This means your personal data may be transferred to countries or regions where you are located, or jurisdictions which are outside the places where we collect your personal data, and be accessed and stored in the jurisdictions. These jurisdictions may have different data protection laws. In such cases, we will ensure that an adequate level of protection is afforded to your data as required by applicable laws and regulations where the data is located, as well as this Statement.
 
-**How to contact us**
+##  How to contact us
 
 If you have any questions or concerns about our Privacy Policy or if you want to exercise your rights, please send an email to legal@websoft9.com
 
-**Online Privacy Policy Updates**
+##  Online Privacy Policy Updates
 
 We may make changes to our privacy policy from time to time. Please review our policies regularly as updated policies will apply to your future use of our Services.

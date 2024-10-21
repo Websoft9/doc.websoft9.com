@@ -1,4 +1,4 @@
-[chat2DB](https://chat2db.ai/) 是一个 **AI SQL 多数据库管理工具**，它被用于 数据库管理工具  等场景。智能的通用数据库SQL客户端和报表工具
+[chat2DB](https://chat2db.ai/) 是一个 **AI SQL 多数据库管理工具**，它被用于 数据库工具  等场景。智能的通用数据库SQL客户端和报表工具
 
 
 ![Connect DB](https://libs.websoft9.com/Websoft9/DocsPicture/zh/chat2db/chat2db-gui-websoft9.png)

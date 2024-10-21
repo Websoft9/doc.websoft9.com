@@ -17,4 +17,4 @@ slug: /administrator/migration_db
 
 * [SQL Server Migration](../sqlserver/admin#migration)
 * [MySQL/MariaDB Migration](../mysql/admin#migration)
-* [PostgreSQL Migration](../postgresql/admin#migration)
+* [PostgreSQL Migration](../postgresql/admin)

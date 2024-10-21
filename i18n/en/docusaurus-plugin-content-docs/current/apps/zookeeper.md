@@ -7,47 +7,54 @@ tags:
   - Microservice
 ---
 
-import Meta from './_include/zookeeper.md';
+import Meta from './\_include/zookeeper.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-Completed installation Zookeeper at Websoft9 console, get the applicaiton's overview and access information from "My Apps"  
+After installing Zookeeper via the **Websoft9 console**, retrieve the application’s overview and access information from **My Apps**.
 
-### Client connection 
+### Client Connection
 
-1. Get the container name for Zookeeper, assuming `zk_name` 
+1. Obtain the container name for Zookeeper, referred to as `zk_name`.
 
-2. Run the following command to connect and start the client connection (replace `zk_name` with the actual value) 
-    ``` 
-    docker run -it --rm --net=container:zk_name zookeeper zkCli.sh -server zookeeper 
-    ``` 
+2. Connect to the client by running the following command (replace `zk_name` with the actual value):
 
-3. After successful connection, run 'ls/' to query znode
+   ```bash
+   docker run -it --rm --net=container:zk_name zookeeper zkCli.sh -server zookeeper
+   ```
 
-### Setup super_digest authentication
+3. Once connected, run `ls /` to query the znodes.
 
-1. When the client connects to the Zookeeper node and runs' getAcl/', it will see the following information, indicating that the node is open to any user 
-    ``` 
-    [zk: zookeeper (CONNECTED) 3] getAcl/ 
-    'world,'anyone
-    : cdrwa 
-    ``` 
+### Setup Super Digest Authentication
 
-2. Run the following command to modify permissions 
-    ``` 
-    addauth digest super:yourpassword 
-    setAcl / digest:super:password:cdrwa 
-    ``` 
+1. Upon connection, running `getAcl /` will show the following, indicating open access:
 
-3. If you run `getAcl/` again, you will find that **Insufficient permission : /**
+   ```bash
+   [zk: zookeeper (CONNECTED) 3] getAcl /
+   'world,'anyone
+   : cdrwa
+   ```
 
-## Configuration options{#configs}
+2. Modify permissions with:
 
-- ACL authentication mode(√) 
-- Configuration file(√): Not enabled by default, using environment variable settings
+   ```bash
+   addauth digest super:yourpassword
+   setAcl / digest:super:yourpassword:cdrwa
+   ```
 
-## Administer{#administrator}
+3. Running `getAcl /` again should now result in **Insufficient permission : /**.
 
-## Troubleshooting{#troubleshooting}
+## Configuration Options {#configs}
+
+- **ACL Authentication Mode**: Enabled (√)
+- **Configuration File**: Not enabled by default; configured via environment variables.
+
+## Administration {#administrator}
+
+- **Manage via Websoft9 Console**: Administer and monitor Zookeeper through the Websoft9 interface.
+
+## Troubleshooting {#troubleshooting}
+
+- **Common Issues**: Review the official Zookeeper documentation for known issues and their resolutions.

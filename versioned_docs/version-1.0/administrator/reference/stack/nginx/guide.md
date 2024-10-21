@@ -59,7 +59,7 @@ Nginx 配置文件可以通过[此工具](https://www.digitalocean.com/community
 
 1. 确保已经安装Rewrite模块。
 2. 在服务器目录 */etc/nginx/conf.d/rewrite* 下新建你网站的[伪静态规则](https://github.com/Websoft9/role_nginx/tree/main/files/rewrite)文件（例如：wordpress.conf）
-3. 在网站的[虚拟主机配置段](##wwwtemplate) **server{ }** 中将伪静态规则文件 include 进来
+3. 在网站的[虚拟主机配置段](#wwwtemplate) **server{ }** 中将伪静态规则文件 include 进来
    ```text
    server
    {

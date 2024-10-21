@@ -7,34 +7,32 @@ tags:
   - Remote device management
 ---
 
-import Meta from './_include/thingsboard.md';
+import Meta from './\_include/thingsboard.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Login Verification{#verification}
+### Login Verification {#verification}
 
-1. Completed installation Thingsboard at Websoft9 console, get the applicaiton's overview and access credentials from "My Apps"  
+1. After installing ThingsBoard via the **Websoft9 Console**, go to **My Applications** to view the application details and access login information.
 
-2. Starting to verify it  
+2. ThingsBoard comes with three default accounts. Make sure to log in and change the passwords for these accounts:
 
-3. ThingsBoard has three default accounts, please be sure to login and change their passwords  
+   - **System Administrator**: `sysadmin@thingsboard.org / sysadmin`
+   - **Tenant Administrator**: `tenant@thingsboard.org / tenant`
+   - **Customer User**: `customer@thingsboard.org / customer`
 
-   - System Administrator: `sysadmin@thingsboard.org / sysadmin`
-   - Tenant Administrator: `tenant@thingsboard.org / tenant`
-   - Customer User: `customer@thingsboard.org / customer`
+### Add Equipment
 
-### Add equipment 
+Log in as the **Tenant Administrator** to manage devices within the ThingsBoard console.
 
-Login to the console as a Tenant Administrator to manage devices
+## Configuration Options {#configs}
 
-## Configuration options{#configs}
+## Administration {#administrator}
 
-## Administer{#administrator}
+## Troubleshooting {#troubleshooting}
 
-## Troubleshooting{#troubleshooting}
+#### Can't find the device management menu after logging in?
 
-#### Can't find the menu for managing devices after logging in?  
-
-If logging in as System Administrator, there is no Devices menu available.
+If you're logged in as the **System Administrator**, the **Devices** menu is not available.

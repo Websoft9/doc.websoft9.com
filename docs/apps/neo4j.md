@@ -19,7 +19,7 @@ import Meta from './_include/neo4j.md';
 2. 本地浏览器访问 Neo4j Browser，填写准确的 Connection URL、账号和密码，即可登录成功
    ![Neo4j 控制台](./assets/neo4j-ssui-websoft9.png)
 
-3. 左侧 Neo4j Browser Sync 菜单，点击 "Clear local data" 退出登录
+3. 左侧 Neo4j Browser Sync 菜单，点击 **Clear local data** 退出登录
 
 ### 命令行 Cypher Shell
 

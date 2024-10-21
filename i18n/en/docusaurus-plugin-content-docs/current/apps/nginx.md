@@ -8,7 +8,8 @@ tags:
   - Static Sites
 ---
 
-import Meta from './\_include/nginx.md';
+
+import Meta from './_include/nginx.md';
 
 <Meta name="meta" />
 

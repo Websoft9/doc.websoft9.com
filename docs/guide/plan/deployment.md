@@ -22,7 +22,7 @@ Websoft9 应用部署它与同类产品相比，极具创新性：
 
 ## 准备
 
-- 若通过**域名访问**应用，需[准备域名](./domain-prepare)和[配置全局域名](./domain-set#global-domain)
+- 若通过**域名访问**应用，需[准备域名](./domain-prepare)和[配置全局域名](./domain-set)
 
 - 若通过**端口访问**应用，需服务器的安全组入方向开放端口：9001-9999
 
@@ -60,7 +60,7 @@ Websoft9 **应用商店** 内置 Java、Python、Node.js、PHP、Go、Ruby、HTM
 
 ## 从应用商店部署镜像类应用{#image}
 
-如果基于 Docker 镜像启动应用容器，先阅读[基本原理](./runtime/docker)，再参考如下的步骤：
+如果基于 Docker 镜像启动应用容器，先阅读[基本原理](./docker)，再参考如下的步骤：
 
 1. Websoft9 **应用商店** 中进入 "运行环境" 下的 "Docker" 子类
 
@@ -69,7 +69,7 @@ Websoft9 **应用商店** 内置 Java、Python、Node.js、PHP、Go、Ruby、HTM
 
 3. 填写安装参数时，务必准确填写目标应用的容器端口（后续步骤被网关转发访问）
 
-4. 待应用运行后，通过 [Docker 个性化编排](./runtime#dockercompose) 实现个性化镜像部署
+4. 待应用运行后，通过 [Docker 个性化编排](./app-compose) 实现个性化镜像部署
 
 ## 手动在操作系统上部署应用{#os}
 

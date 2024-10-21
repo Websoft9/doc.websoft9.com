@@ -1,4 +1,4 @@
-[Knowage](https://www.knowage-suite.com/site/) is **The full capabilities open source suite for modern business analytics**, used for Data Application and Visualization . Knowage is the full capabilities open source suite for modern business analytics over traditional sources and big data systems.
+[Knowage](https://www.knowage-suite.com/site/) is **The full capabilities open source suite for modern business analytics**, used for Data Insights & BI . Knowage is the full capabilities open source suite for modern business analytics over traditional sources and big data systems.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/en/knowage/knowage-gui-websoft9.png)

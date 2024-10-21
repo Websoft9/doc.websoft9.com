@@ -20,7 +20,7 @@ Websoft9 在阿里云和 Alibaba Cloud 都提供了预制镜像，用户可以�
 
 ## 规划虚拟机配置
 
-先阅读 [Websoft9 安装要求](./requirements)，了解所需的服务器规格、存储和带宽要求。 
+先阅读 [Websoft9 安装要求](./install-requirements)，了解所需的服务器规格、存储和带宽要求。 
 
 另外，在 阿里云 上部署 Websoft9 时，需要填写重要的配置参数，下面先提前说明：
 
@@ -37,7 +37,7 @@ Websoft9 在阿里云和 Alibaba Cloud 都提供了预制镜像，用户可以�
 
 1. 访问 [Websoft9 云市场店铺](https://shop658hlt17.market.aliyun.com/)，找到所需安装的商品
 
-2. 进入产品详情页后点击 "立即购买" 按钮
+2. 进入产品详情页后点击 **立即购买** 按钮
 
 3. 根据向导提示，完成服务器购买过程，包括：选择计费方式、实例类型、网络和安全组等设置
 
@@ -51,7 +51,7 @@ Websoft9 在阿里云和 Alibaba Cloud 都提供了预制镜像，用户可以�
 1. 阿里云控制台，进入 ECS 管理界面
 
    - 创建一个新的 ECS
-   - 或对目标 ECS 进行 "更换系统盘" 操作
+   - 或对目标 ECS 进行 **更换系统盘** 操作
 
 2. 在镜像来源设置中，选择：镜像市场 > 从镜像市场获取更多选择（含操作系统）
    ![更换系统盘](./assets/aliyun-ecsbuy-mkimage-websoft9.png)
@@ -86,4 +86,4 @@ Websoft9 在阿里云和 Alibaba Cloud 都提供了预制镜像，用户可以�
 
 ## 后续配置 Websoft9
 
-ECS 可用之后，还需要[完成配置域名等后续操作](./setup)，方可使用更好的使用 Websoft9
+ECS 可用之后，还需要[完成配置域名等后续操作](./domain-set)，方可使用更好的使用 Websoft9

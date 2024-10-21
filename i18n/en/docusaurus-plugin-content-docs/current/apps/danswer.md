@@ -7,7 +7,7 @@ tags:
   - Danswer
 ---
 
-import Meta from './\_include/danswer.md';
+import Meta from './_include/danswer.md';
 
 <Meta name="meta" />
 

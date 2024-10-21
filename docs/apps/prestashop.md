@@ -21,25 +21,23 @@ import Meta from './_include/prestashop.md';
 2. 登录到 Prestashop 后台
    ![](./assets/prestashop-backend-websoft9.png)
 
-3. 点击左侧菜单 "Shop Parameters" 项，在页面中下拉到 "Set shop URL" 设置项
-
-4. 如果是域名访问 Prestashop，请去掉默认 URL 中的端口，"保存" 后生效
+3. 点击左侧菜单 **Shop Parameters > Traffic & SEO > SEO & URLs**，在页面中下拉到 **Set shop URL** 设置项
 
 ### 从 Marketplace 安装扩展
 
-Prestashop8.0 不支持后台在线连接 Marketplace，故安装市场的扩展需：购买 > 下载扩展包 > 后台导入
+Prestashop8.0 不支持后台在线连接 Marketplace，故安装市场的扩展需：**购买 > 下载扩展包 > 后台导入**
 
 ## 配置选项{#configs}
 
-- 维护模式（√）："Shop Parameters" > "General" >  "Maintenance"
+- 维护模式（√）：**Shop Parameters > General > Maintenance**
 - 扩展市场（√）
-- SMTP（√）："Advanced Parameters" > "Email"
-- 演示数据导入（√）："Advanced Parameters" > "Import"
+- SMTP（√）：**Advanced Parameters > Email**
+- 演示数据导入（√）：**Advanced Parameters > Import**
 - 在线安装扩展（√）：支持在线安装、卸载和升级扩展
 - 多语言（√）
-- 在线导入语言（√）："International" > "Translations" >  "Add / Update a language"，暂无**中文**导入选型
+- 在线导入语言（√）：**International > Translations > Add / Update a language**，暂无**中文**导入选型
 - 开发者模式（√）
-- URL 更新：左侧菜单 "Shop Parameters" 项，在页面中下拉到 "Set shop URL" 设置项
+- URL 更新：左侧菜单 **Shop Parameters** 项，在页面中下拉到 **Set shop URL** 设置项
 - 后台登录地址：通过 Websoft9 控制台我的应用查看
 - CLI
   ```
@@ -52,7 +50,7 @@ Prestashop8.0 不支持后台在线连接 Marketplace，故安装市场的扩展
 
 ## 管理维护{#administrator}
      
-- **数据库备份**：PrestaShop 提供了后台数据库备份功能："Advanced Parameters" > "SQL Manager"
+- **数据库备份**：PrestaShop 提供了后台数据库备份功能：**Advanced Parameters > SQL Manager**
 
 - **在线升级**：PrestaShop 模块管理中，安装并启用 **1-Click Upgrade**
 

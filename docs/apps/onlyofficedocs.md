@@ -25,7 +25,7 @@ import Meta from './_include/onlyofficedocs.md';
 
 * [ownCloud 集成  ONLYOFFICE Docs](./owncloud#onlyoffice)
 * [Nextcloud 集成  ONLYOFFICE Docs](./nextcloud#onlyoffice)
-* [Seafile 集成  ONLYOFFICE Docs](./seafile#onlyoffice)
+* [Seafile 集成  ONLYOFFICE Docs](./seafile)
 
 ### 增加字体{#addfonts}
 
@@ -49,7 +49,7 @@ ONLYOFFICE Docs [自签名的证书](https://helpcenter.onlyoffice.com/installat
    wget -N -P /var/www/onlyoffice/Data https://websoft9.github.io/docker-library/apps/onlyofficedocs/src/createCA.sh
    bash /var/www/onlyoffice/Data/createCA.sh
    ```
-3. Modify the container configuration file
+3. 修改容器的配置文件
    ```
    sed -i 's/"rejectUnauthorized": true/"rejectUnauthorized": false/g' /etc/onlyoffice/documentserver/default.json
    supervisorctl restart all
@@ -63,7 +63,7 @@ ONLYOFFICE Docs [自签名的证书](https://helpcenter.onlyoffice.com/installat
 Websoft9 是 ONLYOFFICE Docs [全球的合作伙伴](https://www.onlyoffice.com/search.aspx?search=websoft9)，中国的技术支持中心之一。 通过 Websoft9 采购，可以帮助用户：
 
 - 采购收费版本，最少 10% 的折扣
-- 更全面的产品支持
+- 更全面的产品支持，协助[提交工单](https://www.onlyoffice.com/support-contact-form.aspx)
 - 与网盘、云存储等更多技术的集成技术解决方案 
 
 ### 同时连接数规则{#onlyofficedocsmaxconn}

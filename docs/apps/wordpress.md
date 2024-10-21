@@ -44,7 +44,7 @@ Websoft9 控制台安装 WordPress 后，通过 "我的应用" 查看应用详�
 
 - 集成第三方网站统计软件（推荐），下面是使用范例：
 
-  1. Websoft9 应用商店安装开源网站统计软件 [Matomo](#./matomo)
+  1. Websoft9 应用商店安装开源网站统计软件 [Matomo](./matomo)
   2. Wordpress 安装 [WP-Matomo](https://wordpress.org/plugins/wp-piwik/) 插件，然后连接 Matomo 服务端
 
 - 使用 WordPress 网站统计相关的插件
@@ -155,7 +155,7 @@ Websoft9 控制台安装 WordPress 后，通过 "我的应用" 查看应用详�
 
 - 在线升级（√）
 
-- 多站点（√）：默认已允许多站点，通过 WordPress 控制台 "工具" > "配置网络" 实现
+- 多站点（√）：默认已允许多站点，通过 WordPress 控制台 **工具 > 配置网络** 实现
 
 ## 管理维护{#administrator}
 
@@ -174,6 +174,21 @@ Websoft9 控制台安装 WordPress 后，通过 "我的应用" 查看应用详�
 - **SSL**：通过 Websoft9 网关实现，请勿安装任何 WordPress SSL 相关插件
 
 - **禁用 Google 字体**：先尝试安装 Disable Gooogle Fonts 插件，如果插件无法解决问题，可以在 Websoft9 网关中处理
+
+- **支持多域名**：修改容器内 *wp-config.php* 文件可避免追加域名后修改 ROOT_URL 的问题
+
+    ```
+    # 在 define('WP_DEBUG', false)行后追加如下内容
+    if (true) {
+      $http_prefix = (!empty($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) !== 'off') ? 'https://' : 'http://';
+      //多域名支持
+      define('WP_SITEURL', $http_prefix . $_SERVER['HTTP_HOST']);
+      define('WP_HOME', $http_prefix . $_SERVER['HTTP_HOST']);
+      //媒体路径使用相对路径 如果使用第三方云储存 将下面这段附件路径地址注释即可
+      define('WP_CONTENT_URL', '/wp-content');
+    }
+
+    ```
 
 ## 故障
 
@@ -211,7 +226,7 @@ Websoft9 控制台安装 WordPress 后，通过 "我的应用" 查看应用详�
 #### 管理员无法正常登录后台？
 
 问题描述：网站可以正常访问，管理员无法正常登录后台  
-原因分析：数据库中权限配置被破会
+原因分析：数据库中权限配置被破坏
 解决方案：修改 wp_users 和 wp_usermeta 表中与权限有关的字段 wp_user_level, wp_capabilities 等
 
 

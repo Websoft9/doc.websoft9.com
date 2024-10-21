@@ -6,11 +6,9 @@ tags:
   - WordPress
 ---
 
-import Meta from './_include/woocommerce.md';
+## Getting Started {#guide}
 
-<Meta name="meta" />
-
-## Getting started{#guide}
+1. After completing the installation of Wordpress via the **Websoft9 Console**, retrieve the application’s **Overview** and **Access** information from **My Apps**.
 
 ### Initial setup{#wizard}
 
@@ -22,4 +20,3 @@ import Meta from './_include/woocommerce.md';
 ## Administer{#administrator}
 
 ## Troubleshooting{#troubleshooting}
-

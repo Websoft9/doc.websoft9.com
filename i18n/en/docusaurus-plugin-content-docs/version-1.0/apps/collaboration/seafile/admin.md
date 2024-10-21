@@ -85,7 +85,7 @@ Container internal connection, container orchestration
 
 #### How can Seafile view & edit file online?
 
-You should complete the [OnlyOffice setting](../ownCloud/solution#onlyoffice) on your Nextcloud.
+You should complete the [OnlyOffice setting](../owncloud/solution#onlyoffice) on your Nextcloud.
 
 #### Seafile 支持手机客户端吗？
 

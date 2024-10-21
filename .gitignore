@@ -1,5 +1,7 @@
 # Dependencies
 /node_modules
+/builds/cloudflare/node_modules
+/builds/cloudflare/dist
 
 # Production
 /build

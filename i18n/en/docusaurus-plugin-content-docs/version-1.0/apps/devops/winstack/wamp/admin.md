@@ -21,7 +21,7 @@ tags:
 
 1. 将申请的证书、秘钥文件上传到 *C:\wwwroot\cert * 目录
 
-3. 打开 [bitnami-apps-vhosts.conf（虚拟主机配置配置文件）](../wamp#apache)
+3. 打开 [bitnami-apps-vhosts.conf（虚拟主机配置配置文件）](../wamp)
 
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wamp/wamp-addmorevhostconfig-websoft9.png)
 
@@ -111,14 +111,14 @@ tags:
 
 以将原目录 *c:\wwwroot* 下的 **mysite1** 迁移到 *d:\www* 目录下为例，具体步骤如下：
 
-1. 使用 **远程桌面** 连接服务器，停止 [Apache 服务](#apache)
+1. 使用 **远程桌面** 连接服务器，停止 [Apache 服务](../apache#service)
 2. 将 ***mysite1*** 文件夹整体拷贝到目标位置 *d:\www*
 3. 修改 [虚拟主机配置文件](../wamp#apache) 中 mysite1 这个网站对应的 VirtualHost 配置段 DocumentRoot, Directory 项的值，并保存它
 
    原地址：c:\wwwroot\mysite1  
    目标地址：d:\www\mysite1
 
-4. 重启 [Apache 服务](#apache)
+4. 重启 [Apache 服务](../apache#service)
 5. 测试迁移后的结果，成功后可以删除原来的 *mysite1* 文件夹
 
 #### 迁移数据库文件（本地）
@@ -152,7 +152,7 @@ tags:
 
 3. 通过 phpMyAdmin **导出**原服务器上的数据库，然后在目的服务器上**导入**数据库。
 
-4. 把原服务器上的 [虚拟主机配置文件](#apache) 配置文件内容，完整拷贝到目的服务器的 [虚拟主机配置文件](#apache) 中，保存之。
+4. 把原服务器上的 [虚拟主机配置文件](../wamp#apache) 配置文件内容，完整拷贝到目的服务器的 [虚拟主机配置文件](../wamp#apache) 中，保存之。
 
 5. 重启 Apache 服务。
 
@@ -192,7 +192,7 @@ prefork
 
 #### 如何将 phpMyAdmin 限制为本地访问？
 
-参考：[Apache Require](../apache#require)
+参考：[Apache Require](../apache)
 
 #### 上传的文件是否需修改拥有者权限？
 

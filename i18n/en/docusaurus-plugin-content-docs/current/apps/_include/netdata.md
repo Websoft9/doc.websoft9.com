@@ -1,4 +1,4 @@
-[Netdata](https://www.netdata.cloud/) is **Real-Time data collection and visualizatio**, used for Log Management Full Monitoring . Netdata is a distributed, real-time, performance and health monitoring platform for systems, hardware, containers and applications, collecting thousands of useful metrics with zero configuration needed.
+[Netdata](https://www.netdata.cloud/) is **Real-Time data collection and visualizatio**, used for Log Analytics Full Monitoring . Netdata is a distributed, real-time, performance and health monitoring platform for systems, hardware, containers and applications, collecting thousands of useful metrics with zero configuration needed.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/netdata/netdata-gui-websoft9.png)

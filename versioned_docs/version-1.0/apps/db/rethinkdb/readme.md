@@ -52,7 +52,7 @@ tags:
 
 ### 控制台密码管理
 
-RethinkDB 控制台默认没有提供登录认证，本部署方案采用了  [Nginx auth_bacic](./nginx#auth_basic) 作为登录认证方案
+RethinkDB 控制台默认没有提供登录认证，本部署方案采用了  [Nginx auth_bacic](./nginx#authbasic) 作为登录认证方案
 
 ### 远程访问{#remote}
 

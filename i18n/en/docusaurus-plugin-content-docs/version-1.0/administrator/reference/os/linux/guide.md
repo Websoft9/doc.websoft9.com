@@ -158,6 +158,6 @@ Cron是一个Linux下的定时执行工具，可以在无需人工干预的情�
 
 日志是诊断故障的关键，大部分的问题都会在日志中留下“蛛丝马迹”。所以，学会分析日志是运维中最重要的技能之一。  
 
-参考：[Linux 日志诊断](./troubleshoot#linux)
+参考：[Linux 日志诊断](./troubleshoot#troubleshoot-tools)
 
 ## Troubleshoot{#troubleshoot}

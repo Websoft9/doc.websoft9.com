@@ -14,14 +14,14 @@ import Meta from './_include/koishi.md';
 
 ### Chat test {#test}
 
-1. Koishi console page,select **沙盒 > 添加用户** to add a user 
+1. In the Koishi console page, select **Sandbox > Add User** to add a user 
 
-2. Type `help` to get a chat response
+2. Type `help` to receive a chat response
 
 ## Configuration options{#configs}
 
 - Plugin (✅)
-- Command: Add by **command** command
+- Command: Add users by using the **command** 
 ## Administer{#administrator}
 
 ## Troubleshooting{#troubleshooting}

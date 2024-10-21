@@ -9,14 +9,14 @@ slug: /automation-devops
 
 ## 条件
 
-- n8n 控制台，"Credentials" 页面中新增 DevOps 流程中计算节点的账号
+- n8n 控制台，**Credentials** 页面中新增 DevOps 流程中计算节点的账号
 - 准备基于 git 仓库的项目
 
 ## 创建 Git 工作流{#git}
 
 1. 登录到 n8n 控制台，新建一个 Workflow
 
-2. 在 **Add first step** 时，选择 "On a schedule" 作为任务的时间周期设置
+2. 在 **Add first step** 时，选择 **On a schedule** 作为任务的时间周期设置
 
 3. 接下来选择 **Github** 或 **GitLab** 等作为工作流任务模板
 

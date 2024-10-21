@@ -19,27 +19,27 @@ Websoft9 provides Apache applications for two purposes:
 - Running static websites
 - Reverse proxy service (Not recommended)
 
-The Apache container does not contain PHP, so if you want to deploy a PHP website, run the [PHP](./runtime/php) container through the Websoft9 console.  
+The Apache container does not include PHP, so if you want to deploy a PHP website, run the [PHP](./php) container through the Websoft9 console.  
 
 ### Deploy a static website
 
-1. After installing Apache in the Websoft9 Console, view the application details through **My Apps** and get the access information in the **Access** tab.
+1. After installing Apache via the Websoft9 Console, view the application details under **My Apps** and get the access information from the **Access** tab.
 
-2. Click on the URL to see a static page for demo.
+2. Click on the URL to see a static page for demo purposes.
 
 3. Refer to: [Deploying Applications Based on Program Environment](./runtime) to deploy a static website.
 
 ### Mount the httpd.conf configuration file
 
-Apache configuration file can be modified with the `sed` command, but recommended that it be mounted outside the container:
+The Apache configuration file can be modified with the `sed` command, but it is recommended to mount it outside the container:
 
 1. Enter the Apache container and copy the contents of the file: */usr/local/apache2/conf/httpd.conf*
 
-2. Select **My apps > Apache > Compose**, then enter to Git repository page of your Apache application
+2. Select **My apps > Apache > Compose**, then access the Git repository page of your Apache application.
 
-3. Paste the copied `httpd.conf` contents into *./src/httpd.conf*, and then modify the **docker-compose.yml** volume mount settings
+3. Paste the copied `httpd.conf` contents into *./src/httpd.conf*, and then modify the **docker-compose.yml** volume mount settings.
 
-4. **Rebuild** the container to take effect
+4. **Rebuild** the container to apply the changes.
 
 ## Configuration options{#configs}
 
@@ -55,15 +55,15 @@ Apache configuration file can be modified with the `sed` command, but recommende
 
 #### You don't have permission...?
 
-Error details: You don't have permission to access/on this server  
+Error details: You don't have permission to access this server  
 Solution:
 
 1. Check the permissions of the web directory
-2. Check whether the Apache configuration file has "AllowOverride All Require all granted" related content.
+2. Verify that the Apache configuration file includes **AllowOverride All Require all granted** directives.
 
-#### Apache Frequent 403 Errors?
+#### Frequent 403 Errors in Apache?
 
-A 403 error is a type of error message during website access that indicates access is prohibited or service is denied. There are two scenarios when a 403 error occurs:
+A 403 error indicates that access is prohibited or denied. This error can occur in two scenarios:
 
-- The server has been passively attacked by a human-saturated DoS or DDoS malicious attack, resulting in the server being unable to provide normal service.
-- The server's active defense measures (Apache's mod_evasive module), when a short period of time, an IP continuously send requests to the server, the server to start the DoS defense policy, the use of preset rules to actively refuse to provide services to a certain IP
+- The server has been passively attacked by a high volume of requests (DoS or DDoS attack), causing the server to be unable to provide normal service.
+- The server's active defense measures (such as Apache's mod_evasive module) have triggered. This may happen if an IP address sends a high number of requests in a short period, causing the server to implement its DoS defense policy and refuse service to that IP address.

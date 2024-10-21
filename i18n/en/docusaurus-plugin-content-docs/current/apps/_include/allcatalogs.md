@@ -1,18 +1,26 @@
 ## AI + Machine Learning
 
-- [AI Simulation](https://www.websoft9.com/apps/aiapps)
-- [Machine Vision](https://www.websoft9.com/apps/mvi)
-- [AI Gateway](https://www.websoft9.com/apps/ai-gateway)
-- [Training Framework](https://www.websoft9.com/apps/dl)
-- [AIGC](https://www.websoft9.com/apps/aigc)
+- [Digital twins](https://www.websoft9.com/apps/digital-twins)
+- [Data Labeling Tools](https://www.websoft9.com/apps/ai-labeling)
+- [Generative AI](https://www.websoft9.com/apps/genai)
+- [AI for Image + Machine Vision](https://www.websoft9.com/apps/ai-image)
+- [AI for Video and Audio](https://www.websoft9.com/apps/ai-for-video)
+- [AI for NLP](https://www.websoft9.com/apps/ai-for-nlp)
+- [AI for Developer](https://www.websoft9.com/apps/ai-for-developer)
+- [ML & Framework & Development](https://www.websoft9.com/apps/ai-develop)
+- [Open Source LLM](https://www.websoft9.com/apps/open-llm)
 - [AIOps](https://www.websoft9.com/apps/aiops)
 ## Data Analytics
 
-- [Data Application and Visualization](https://www.websoft9.com/apps/bi)
-- [Search Engine](https://www.websoft9.com/apps/search)
-- [Data Storage](https://www.websoft9.com/apps/storage)
-- [ETL & ELT](https://www.websoft9.com/apps/etl)
-- [Data Collection](https://www.websoft9.com/apps/data-collection)
+- [Log Analytics](https://www.websoft9.com/apps/logs-Analytics)
+- [Data Insights & BI](https://www.websoft9.com/apps/dinsights)
+- [Data Search Engine](https://www.websoft9.com/apps/dataengine)
+- [Real-time Streaming Analysis](https://www.websoft9.com/apps/dstreaming )
+- [Data Orchestration and Integration](https://www.websoft9.com/apps/dintegration)
+- [Data Catalog](https://www.websoft9.com/apps/data-catalog)
+- [Data Warehouse and Lake](https://www.websoft9.com/apps/data-warehouse)
+- [Master Data](https://www.websoft9.com/apps/master-data)
+- [Web Analytics](https://www.websoft9.com/apps/web-analytics)
 ## Business Operation
 
 - [Support & Customer Success](https://www.websoft9.com/apps/helpdesk)
@@ -24,6 +32,7 @@
 - [PLM & PDM](https://www.websoft9.com/apps/plm)
 - [Master Data](https://www.websoft9.com/apps/master-data)
 - [Blockchain](https://www.websoft9.com/apps/blockchain)
+- [Business automation](https://www.websoft9.com/apps/business-automation)
 ## Design & Create
 
 - [Virtual Reality](https://www.websoft9.com/apps/virtual-reality)
@@ -59,8 +68,9 @@
 ## Automation
 
 - [RPA](https://www.websoft9.com/apps/rpa)
-- [Pipeline](https://www.websoft9.com/apps/pipeline)
-- [Workflow automation](https://www.websoft9.com/apps/workflowauto)
+- [CI/CD Pipeline](https://www.websoft9.com/apps/pipeline)
+- [Operations Automation](https://www.websoft9.com/apps/opsauto)
+- [Business automation](https://www.websoft9.com/apps/business-automation)
 ## Databases
 
 - [Relational Databases](https://www.websoft9.com/apps/rds)
@@ -68,11 +78,11 @@
 - [NewSQL Database](https://www.websoft9.com/apps/newsql)
 - [Time Series Database](https://www.websoft9.com/apps/timedbs)
 - [Graph Databases](https://www.websoft9.com/apps/graphdb)
+- [Vector Databases](https://www.websoft9.com/apps/vector-databases)
 - [In-memory Database](https://www.websoft9.com/apps/memorydb)
-- [Data Warehouse](https://www.websoft9.com/apps/data-warehouse)
-- [Data Lake](https://www.websoft9.com/apps/data-lake)
+- [Data Warehouse and Lake](https://www.websoft9.com/apps/data-warehouse)
 - [Database Management Tools](https://www.websoft9.com/apps/dbtools)
-## Web Runtime
+## App Runtime
 
 - [.NET](https://www.websoft9.com/apps/dotnet)
 - [PHP](https://www.websoft9.com/apps/php)
@@ -105,7 +115,7 @@
 - [Web Framework](https://www.websoft9.com/apps/webframework)
 - [Code Repository](https://www.websoft9.com/apps/repository)
 - [Artifact Repository](https://www.websoft9.com/apps/artifact-repository)
-- [Pipeline](https://www.websoft9.com/apps/pipeline)
+- [CI/CD Pipeline](https://www.websoft9.com/apps/pipeline)
 - [TestPlan](https://www.websoft9.com/apps/testing)
 - [Application orchestration](https://www.websoft9.com/apps/orchestration)
 - [Web IDE](https://www.websoft9.com/apps/ide)
@@ -120,7 +130,7 @@
 - [Message Queue](https://www.websoft9.com/apps/mq)
 - [Container](https://www.websoft9.com/apps/container)
 - [Object Storage](https://www.websoft9.com/apps/oss)
-- [Search Engine](https://www.websoft9.com/apps/search)
+- [Data Search Engine](https://www.websoft9.com/apps/dataengine)
 - [API Gateway](https://www.websoft9.com/apps/api)
 - [Email Server](https://www.websoft9.com/apps/email)
 - [Load Balancer](https://www.websoft9.com/apps/balancer)
@@ -138,10 +148,11 @@
 - [Linux Desktop](https://www.websoft9.com/apps/desktop)
 - [Multicloud Management](https://www.websoft9.com/apps/cpm)
 - [Cloud Infrastructure Monitoring](https://www.websoft9.com/apps/itsm)
-- [Log Management](https://www.websoft9.com/apps/logs)
+- [Log Analytics](https://www.websoft9.com/apps/logs-Analytics)
 - [Full Monitoring](https://www.websoft9.com/apps/fullmonitor)
 - [Backup & Restore](https://www.websoft9.com/apps/backup)
 - [APM](https://www.websoft9.com/apps/apm)
+- [Operations Automation](https://www.websoft9.com/apps/opsauto)
 ## IT Security
 
 - [Password Management](https://www.websoft9.com/apps/teampassm)

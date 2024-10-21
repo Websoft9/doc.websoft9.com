@@ -1,4 +1,4 @@
-[Apache Airflow](https://airflow.apache.org/) is **Platform to programmatically author, schedule and monitor workflows.**, used for Workflow automation . Apache Airflow (or simply Airflow) is a platform to programmatically author, schedule, and monitor workflows.
+[Apache Airflow](https://airflow.apache.org/) is **Platform to programmatically author, schedule and monitor workflows.**, used for Operations Automation . Apache Airflow (or simply Airflow) is a platform to programmatically author, schedule, and monitor workflows.
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/airflow/airflow-gui-websoft9.png)

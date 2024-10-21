@@ -26,7 +26,7 @@ We open source most of our core projects and components on GitHub, so feel free 
 ## Cummunity{#community}
 
 - Social Media: [Linkedin](https://www.linkedin.com/company/websoft9)
-- Chat Groups: [WeChat Group](https://libs.websoft9.com/Websoft9/feature/icon-userchatgroup-websoft9.png)
+- Chat Groups: [Slack](https://websoft9-hq.slack.com/), [WeChat Group](https://libs.websoft9.com/Websoft9/feature/icon-userchatgroup-websoft9.png)
 - Technical Community: [Github discusssion](https://github.com/Websoft9/websoft9/discussions)
 
 ## Sponsorships

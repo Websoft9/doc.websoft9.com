@@ -21,12 +21,12 @@ Websoft9 控制台安装 Pydio Cells 后，通过 "我的应用" 查看应用详
 1. 登录后，默认显示用户的操作界面
    ![](./assets/pydio-userconsole-websoft9.png)
 
-2. 右上角 Admin > Cells Console，切换到管理员设置界面
+2. 右上角 **Admin > Cells Console**，切换到管理员设置界面
    ![](./assets/pydio-adminconsole-websoft9.png)
 
 ### 外部存储
 
-通过 Pydio 控制台 > Cells Console > Storage 进入存储管理界面，点击 "+datasource" 增加数据源
+通过 **Pydio 控制台 > Cells Console > Storage** 进入存储管理界面，点击 **+datasource** 增加数据源
 
 ### 文档编辑与预览{#docs}
 
@@ -38,7 +38,7 @@ Pydio 提供了对 [Collabora Online](./collabora) 和 [ONLYOFFICE](./onlyoffice
 
 ## 配置选项{#configs}
 
-- 插件市场（√）："Application Parameters" > "All Plugins"，企业版拥有更多插件
+- 插件市场（√）：**Application Parameters > All Plugins**，企业版拥有更多插件
 - 兼容的外部存储：S3, Minio
 - [Cells Client](https://pydio.com/en/docs/developer-guide/cells-client)
 - [API Documentation](https://pydio.com/en/docs/developer-guide)

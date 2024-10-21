@@ -20,32 +20,32 @@ jobs:
 
       - name: Download and unzip JSON files
         run: |
-          curl -L -o media-latest.zip https://w9artifact.blob.core.windows.net/release/websoft9/plugin/media/media-latest.zip
+          curl -L -o media-latest.zip https://artifact.websoft9.com/release/websoft9/plugin/media/media-latest.zip
           unzip media-latest.zip "media/json/product_zh.json" "media/json/product_en.json" "media/json/catalog_zh.json" "media/json/catalog_en.json" -d ./extracted
 
       - name: Generate Markdown for app catalog README.mdx(zh)
         run: |
-          python build/json2md.py --json_file ./extracted/media/json/product_zh.json --output_file docs/apps/README.mdx
+          python builds/json2md.py --json_file ./extracted/media/json/product_zh.json --output_file docs/apps/README.mdx
 
       - name: Generate Markdown for app catalog README.mdx(en)
         run: |
-          python build/json2md.py --json_file ./extracted/media/json/product_en.json --output_file i18n/en/docusaurus-plugin-content-docs/current/apps/README.mdx
+          python builds/json2md.py --json_file ./extracted/media/json/product_en.json --output_file i18n/en/docusaurus-plugin-content-docs/current/apps/README.mdx
 
       - name: Generate Markdown for allcatalogs.md(zh)
         run: |
-          python build/gen_allcatalogs.py --json_file ./extracted/media/json/catalog_zh.json --output_file docs/apps/_include/allcatalogs.md
+          python builds/gen_allcatalogs.py --json_file ./extracted/media/json/catalog_zh.json --output_file docs/apps/_include/allcatalogs.md
 
       - name: Generate Markdown for allcatalogs.md(en)
         run: |
-          python build/gen_allcatalogs.py --json_file ./extracted/media/json/catalog_en.json --output_file i18n/en/docusaurus-plugin-content-docs/current/apps/_include/allcatalogs.md
+          python builds/gen_allcatalogs.py --json_file ./extracted/media/json/catalog_en.json --output_file i18n/en/docusaurus-plugin-content-docs/current/apps/_include/allcatalogs.md
 
       - name: Generate Markdown for allapps.md(zh)
         run: |
-          python build/gen_allapps.py --json_file ./extracted/media/json/product_zh.json --output_file docs/apps/_include/allapps.md
+          python builds/gen_allapps.py --json_file ./extracted/media/json/product_zh.json --output_file docs/apps/_include/allapps.md
 
       - name: Generate Markdown for allapps.md(en)
         run: |
-          python build/gen_allapps.py --json_file ./extracted/media/json/product_en.json --output_file i18n/en/docusaurus-plugin-content-docs/current/apps/_include/allapps.md
+          python builds/gen_allapps.py --json_file ./extracted/media/json/product_en.json --output_file i18n/en/docusaurus-plugin-content-docs/current/apps/_include/allapps.md
 
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v4

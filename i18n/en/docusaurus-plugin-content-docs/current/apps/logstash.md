@@ -16,25 +16,25 @@ import Meta from './_include/logstash.md';
 
 ### Initial setup{#wizard}
 
-1. When completed installation of Logstash at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. When completing the installation of Logstash in the **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
 ### Capturing (Input) Data
 
-In Logstash's configuration file, you need to specify one or more input plugins to define the source of your data. Logstash provides a variety of built-in input plugins, such as File, TCP, UDP, HTTP, and more. You can choose the appropriate input plugin based on your needs and configure its parameters.
+In Logstash's configuration file, specify one or more input plugins to define the source of your data. Logstash provides a variety of built-in input plugins, such as File, TCP, UDP, HTTP, and more. Choose the appropriate input plugin based on your needs and configure its parameters.
 
 ### Filtering data
-For data processing, configure filtering plugins (for example, grok, mutate, date) to parse, modify, or enrich data based on its structure and your needs.
+For data processing, configure filtering plugins (for example, grok, mutate, date) to parse, modify, or enrich data based on its structure and your requirements.
 
 ### Exporting data
 
-#### to Elasticsearch 
+#### To Elasticsearch 
 
 Refer to: [Elasticsearch Connection Logstash](./elasticsearch#logstash)
 
-#### to Kafka
+#### To Kafka
 
 1. Install the Kafka plugin.
-2. Adding Connection Configuration to the Configuration File. 
+2. Add the connection configuration to the configuration file. 
    ```
    output {
       kafka {

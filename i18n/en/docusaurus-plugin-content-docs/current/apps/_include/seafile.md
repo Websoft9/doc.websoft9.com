@@ -1,4 +1,4 @@
-[Seafile](https://www.seafile.com/home/) is **Reliable and Performant File Sync and Share Solution**, used for Document Collaboration . Seafile is an open source file sync&share solution designed for high reliability, performance and productivity. 
+[Seafile](https://www.seafile.com/home/) is **Open Source File Sync&Share and Document Collaboration Platform**, used for Document Collaboration . Seafile is an open source file sync&share solution designed for high reliability, performance and productivity. 
 
 
 ![seafile](https://libs.websoft9.com/Websoft9/DocsPicture/en/seafile/seafile-gui-websoft9.png)

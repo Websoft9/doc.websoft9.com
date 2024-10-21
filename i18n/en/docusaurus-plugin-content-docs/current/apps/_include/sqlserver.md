@@ -1,4 +1,4 @@
-[SQL Server Express](https://www.sqlserver.com/) is **SQLServer Express edition is the entry-level, free database **, used for Relational Databases . SQLServer Express Express edition is the entry-level, free database and is ideal for learning and building desktop and small server data-driven applications. 
+[SQL Server Express](https://www.sqlserver.com/) is **SQLServer Express edition is the entry-level, free database**, used for Relational Databases . SQLServer Express Express edition is the entry-level, free database and is ideal for learning and building desktop and small server data-driven applications.
 
 
 ![sqlserver](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlserver/microsoft-sql-server-express.png)

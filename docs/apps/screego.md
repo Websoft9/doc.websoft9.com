@@ -27,7 +27,7 @@ Websoft9 控制台安装 screego 后，通过 "我的应用" 查看应用详情�
 
 ### 立即使用
 
-1. 访问 screego 的主界面，点击 " CREATE OR JOIN A ROOM" 创建一个房间
+1. 访问 screego 的主界面，点击 **CREATE OR JOIN A ROOM** 创建一个房间
 
 2. 将新房间的 URL 发给需要共享屏幕的其他客户端
 

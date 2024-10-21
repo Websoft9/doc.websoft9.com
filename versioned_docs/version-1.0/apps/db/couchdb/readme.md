@@ -123,7 +123,7 @@ CouchDB 日志目录： */data/apps/couchdb/data/couchdb_log*
 docker exec -i couchdb cat /opt/couchdb/releases/RELEASES  |sed -n 2p | awk -F '"' '{print $4}'
 ```
 
-### 服务
+### 服务 {#service}
 
 ```shell
 sudo docker start | stop | restart couchdb

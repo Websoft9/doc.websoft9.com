@@ -3,7 +3,17 @@ sidebar_position: 3
 slug: /software-repos
 ---
 
+import Meta from './_include/dockerhub-proxy.md';
+
+
 # 软件仓库
+
+## DockerHub 代理加速{#dockerhub-proxy}
+
+Docker Hub **代理加速地址**用于加速镜像下载，提高速度和可靠性，解决镜像访问问题。  
+
+<Meta name="meta" />
+
 
 ## 容器镜像{#docker}
 

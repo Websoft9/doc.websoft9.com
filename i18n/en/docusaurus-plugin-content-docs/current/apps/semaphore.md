@@ -8,7 +8,8 @@ tags:
   - semaphore
 ---
 
-import Meta from './\_include/semaphore.md';
+
+import Meta from './_include/semaphore.md';
 
 <Meta name="meta" />
 
@@ -28,3 +29,4 @@ import Meta from './\_include/semaphore.md';
 ## Administration {#administrator}
 
 ## Troubleshooting {#troubleshooting}
+

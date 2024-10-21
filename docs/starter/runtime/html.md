@@ -1,7 +1,7 @@
 ---
 title: HTML
 sidebar_position: 3.0
-slug: /runtime/html
+slug: /html
 tags:
   - 运行环境
   - runtime
@@ -14,13 +14,13 @@ Websoft9 帮助用户使用 Apache 或 NGINX 或 Caddy 等容器实现 HTML/JS �
 
 ## 配置选项{#configs}
 
-- [Apache 配置选项](../apache#configs)
-- [Caddy  配置选项](../caddy#configs)
-- [NGINX 配置选项](../nginx#configs)
+- [Apache 配置选项](../apache)
+- [Caddy  配置选项](../caddy)
+- [NGINX 配置选项](../nginx)
 
 ## 部署网站{#deploy}
 
-参考：[Web Runtime 入门指南](../runtime#quick)
+参考：[Web Runtime 入门指南](./runtime)
 
 ## 问题与故障
 

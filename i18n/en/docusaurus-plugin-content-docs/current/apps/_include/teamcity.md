@@ -1,4 +1,4 @@
-[TeamCity](https://www.jetbrains.com.cn/en-us/teamcity/) is **self-contained, open source automation server**, used for Pipeline . TeamCity is a general-purpose CI/CD software platform that allows for flexible workflows, collaboration and development practices.
+[TeamCity](https://www.jetbrains.com.cn/en-us/teamcity/) is **self-contained, open source automation server**, used for CI/CD Pipeline . TeamCity is a general-purpose CI/CD software platform that allows for flexible workflows, collaboration and development practices.
 
 
 ![devops](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teamcity/teamcity-gui-websoft9.webp)

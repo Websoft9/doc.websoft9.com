@@ -7,25 +7,24 @@ tags:
   - Panel
 ---
 
-import Meta from './_include/uptimekuma.md';
+import Meta from './\_include/uptimekuma.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Initial setup{#wizard}
+### Initial Setup {#wizard}
 
-1. When completed installation of Uptime Kuma at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**.   
+1. After completing the installation of Uptime Kuma via the **Websoft9 Console**, retrieve the application's **Overview** and **Access** information from the **My Apps** section.
 
-2. Complete account registration according to the initialization wizard.  
+2. Follow the initialization wizard to complete the account registration.
 
-3. Add monitoring objects, e.g., enterprise website URL (no other settings).  
+3. Add monitoring targets, such as the enterprise website URL (no additional settings required).
 
-## Configuration options{#configs}
+## Configuration Options {#configs}
 
-- Multilingual(✅)
+- **Multilingual (✅)**: Supports multiple languages.
 
-## Administer{#administrator}
+## Administration {#administrator}
 
-## Troubleshooting{#troubleshooting}
-
+## Troubleshooting {#troubleshooting}

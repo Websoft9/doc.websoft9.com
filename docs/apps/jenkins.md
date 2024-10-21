@@ -44,11 +44,11 @@ Websoft9 控制台安装 Jenkins 后，通过 "我的应用" 查看应用详情�
 
 ## 配置选项{#configs}
 
-- 安装与管理插件："Manage Jenkin" > "Plugins"
+- 安装与管理插件：**Manage Jenkin > Plugins**
 
 - [多语言](https://www.jenkins.io/doc/book/using/using-local-language/)（✅）
 
-- SMTP：先安装 Jenkins 插件 [Email Extension](https://plugins.jenkins.io/email-ext/)，然后【Manage Jenkins】>【Configure System】
+- SMTP：先安装 Jenkins 插件 [Email Extension](https://plugins.jenkins.io/email-ext/)，然后**Manage Jenkins > Configure System**
 
 - [Jenkins CLI](https://www.jenkins.io/zh/doc/book/managing/cli/) 
    ```

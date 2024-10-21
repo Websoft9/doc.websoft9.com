@@ -1,6 +1,6 @@
 ---
 title: PHP
-slug: /runtime/php
+slug: /php
 sidebar_position: 1.4
 tags:
   - 运行环境
@@ -28,7 +28,7 @@ tags:
 
 ## 部署网站{#deploy}
 
-参考：[Web Runtime 入门指南](../runtime#quick)
+参考：[Web Runtime 入门指南](./runtime)
 
 ## 环境管理{#administrator}
 

@@ -17,8 +17,8 @@ import Meta from './_include/vtiger.md';
 
 1. Websoft9 控制台安装 Vtiger CRM 后，通过 "我的应用" 查看应用详情
 
-   - 在 "访问" 标签页中获取访问信息
-   - 在 "数据库" 标签页中获取**数据库账号** 
+   - 在 **访问** 标签页中获取访问信息
+   - 在 **数据库** 标签页中获取**数据库账号** 
 
 2. 进入 Vtiger CRM 安装向导，当环境检测步骤通过后，开始填写数据库参数
 
@@ -36,11 +36,11 @@ import Meta from './_include/vtiger.md';
 
 - 多语言（√）：需先下载 [Language Pack](https://marketplace.vtiger.com/app/listings)，然后在后台作为 Modules 导入
 
-- 模块导入（√）："Setting" > "CRM Setting" > "Module Management"
+- 模块导入（√）：**Setting > CRM Setting > Module Management**
 
-- 在线 Marketplace：后台设置 "Extension Store" 进入市场，注册登录后可以在线安装
+- 在线 Marketplace：后台设置 **Extension Store** 进入市场，注册登录后可以在线安装
 
-- SMTP（√）： Settings > CRM Settings > CONFIGURATION > Outgoing Server
+- SMTP（√）： **Settings > CRM Settings > CONFIGURATION > Outgoing Server**
 
 ## 管理维护{#administrator}
 

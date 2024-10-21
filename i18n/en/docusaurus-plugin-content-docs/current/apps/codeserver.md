@@ -18,12 +18,12 @@ import Meta from './_include/codeserver.md';
 
 ### Verification test{#wizard}
 
-Completed installation code-server at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
+After completing the installation of code-server in the Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
 
-1. Use your local browser to access the URL and go to the login page.
+1. Use your local browser to access the URL and navigate to the login page.
    ![code-server login screen](./assets/codeserver-login-websoft9.png)
 
-2. Successfully login to the code-server backend 
+2. Successfully log in to the code-server backend 
    ![code-server backend](./assets/codeserver-consolegui-websoft9.png)
 
 3. In the code-server backend, select **File > Open Folder > /config/workspace/**.
@@ -34,7 +34,7 @@ Completed installation code-server at Websoft9 console, get the applicaiton's ov
 
 ### Installing the environment
 
-code-sever does not install Python, Node, Java, etc. by default, so you need to `sudo su` in the **Terminal** area and switch to Administrator to start installing the environment. 
+Code-server does not come with Python, Node, Java, etc. pre-installed. To install these environments, use `sudo su` in the **Terminal** area to switch to Administrator mode and start the installation.
 
 #### Node.js
 
@@ -65,9 +65,9 @@ java -version
 ```
 ### Program development example
 
-The following is an example of how to use code-server with Python development:
+Here is an example of how to use code-server for Python development:
 
-1. Login to code-server, create a new folder and file named: myfile.py, and copy the following Python example code.
+1. Log in to code-server, create a new folder and file named: myfile.py, and copy the following Python example code into the file.
    ```
    /usr/bin/env /usr/bin/env python2
    #! /usr/bin/env python3
@@ -82,26 +82,26 @@ The following is an example of how to use code-server with Python development:
 2. Run the Python program by executing the command `python myfile.py` in the terminal.
    ![](./assets/codeserver-runpython-websoft9.png)
 
-3. See the output
+3. View the output
 
 ### Publishing to the Internet
 
-To publish an application to the Internet, code-server proceed as follows:
+To publish an application to the Internet using code-server, follow these steps:
 
 1. Assume that the application is running on port 3002 of the container with the following command.
    ```
    npm run start --host 0.0.0.0 --port 3002
    ```
 
-2. Add a Proxy Hosts to forward to the application port in the container on the Websoft9 console's **Gateway**.
+2. Add a Proxy Host to forward to the application port in the container on the Websoft9 console's **Gateway**.
 
 ### Multi-developer
 
-code-server does not support multi-user collaboration. For multi-developers, simply install multiple code-servers applications through the Websoft9 console.
+Code-server does not support multi-user collaboration natively. For multi-developers, install multiple instances of code-server applications through the Websoft9 console.
 
 ## Configuration options{#configs}
 
-- sudo password in Terminal: same as code-server console password
+- Sudo password in Terminal: same as the code-server console password
 - Code compilation build(✅)
 
 ## Administer{#administrator}
@@ -110,24 +110,24 @@ code-server does not support multi-user collaboration. For multi-developers, sim
 
 #### Insufficient file permissions?
 
-Description: After change to the root, git clone project, code-server does not have enough permissions to modify or delete project files.    
-Reason: The default user of the code-server container is abc, so it is not possible to modify files with root privileges.  
-Solution: `chown -R abc:abc /config/workspace` to fix the problem.  
+Description: After switching to the root user and cloning a project, code-server may not have enough permissions to modify or delete project files.
+Reason: The default user of the code-server container is `abc`, so it is not possible to modify files with root privileges.
+Solution: Use the command `chown -R abc:abc /config/workspace` to fix the problem.
 
 #### Terminal installing components with insufficient permissions?
 
-`sudo su` change to root.
+Switch to root using `sudo su`.
 
 #### Can't copy commands to Terminal?
 
-ctrl+V
+Ctrl+V
 
 #### Conflict with remote pending pull when git push?
 
-Description: git push conflicts with code to be pulled.  
+Description: `git push` conflicts with code to be pulled.  
 Reason: others have also submitted code  
-Solution: `git pull --rebase origin main`
+Solution: Use `git pull --rebase origin main`
 
 #### How do I delete a running process?
 
-Run `ps aux` to see, then run `kill -9 PID`.
+Run `ps aux` to see the running processes, then use `kill -9 PID` to terminate the desired process.

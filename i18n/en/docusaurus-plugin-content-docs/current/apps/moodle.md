@@ -16,38 +16,38 @@ import Meta from './_include/moodle.md';
 
 ### Login Verification{#verification}
 
-1. Completed installation Moodle at Websoft9 console, get the applicaiton's overview and access credentials from "My Apps"  
+1. After completing the installation of Moodle in the Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**
 
-2. Starting to verify it
+2. Verify the installation
    ![](./assets/moodle-backend-websoft9.png)
    
 ### Install plugin{#plugin}
  
-1. Login to the Moodle backend as an administrator  
+1. Log in to the Moodle backend as an administrator  
 
-2. Open "Site administration" > "Plugins" in order to view or install plugins  
+2. Open **Site administration > Plugins** to view or install plugins  
 
-3. Supports two installation methods for plugins: 
+3. Moodle supports two methods for installing plugins: 
     
-   - Online installation: Install plugins from the Moodle plugin directory 
-   - Offline installation: Upload zip file for installation
+   - Online installation: Install plugins directly from the Moodle plugin directory 
+   - Offline installation: Upload a ZIP file to install the plugin.
 
 ### Install Theme{#theme}  
 
-1. The Moodle theme is actually a plugin, which can be installed first through the "install Plugin" method
+1. A Moodle theme is essentially a type of plugin. You can install it using the **install Plugin** method
 
-2. Open "Site administration" > "Appearance" > "Theme selector" to change the theme
+2. To change the theme, navigate to **Site administration > Appearance > Theme selector**
 
 ## Configuration options{#configs}
 
-- [Plugin](https://moodle.org/plugins/)(✅) : Install plugin online need register Moodle website member from your Moodle console "Site administration" > "registration" 
-- [Topic](https://moodle.org/plugins/)(✅):Theme is also a type of plugin 
-- Configuration file at container (have mounted): */bitnami/modle/config.php* 
-- PHP configuration modification: Modify related variable environments at `.env` file
+- [Plugin](https://moodle.org/plugins/)(✅) : Install plugin online. Note that registration on the Moodle website is required. Go to "Site administration" > "Registration" in your Moodle console.
+- [Topic](https://moodle.org/plugins/)(✅): Themes are also considered plugins.
+- Configuration file: Located in the container at /bitnami/moodle/config.php (mounted).
+- PHP configuration modification: Modify related variables in the `.env` file
 - Media files(✅) 
-- Multilingual(✅): "Site administration" > "Language" > "Language Packs"  
-- SMTP(✅): "Site administration" > "Server" > "Email" > "Sending Email Settings"  
-- Mobile end(✅): "Site administration" > "Mobile Applications" > "Mobile Device Settings" > "Enable Network Services for Mobile Devices" 
+- Multilingual(✅): Enable via "Site administration" > "Language" > "Language Packs"  
+- SMTP(✅): Configure through "Site administration" > "Server" > "Email" > "Sending Email Settings"  
+- Mobile Support(✅): Configure via "Site administration" > "Mobile Applications" > "Mobile Device Settings" > "Enable Network Services for Mobile Devices" 
 - [Plugins](https://docs.moodle.org/37/en/Installing_plugins) 
 - [Administration via command line]( https://docs.moodle.org/311/en/Administration_via_command_line ) 
    ``` 
@@ -55,10 +55,10 @@ import Meta from './_include/moodle.md';
    $sudo - u Apache/usr/bin/php admin/cli/install.php -- help 
    ``` 
 - [Core APIs](https://docs.moodle.org/dev/Core_APIs) 
-- Online backup: "Website Management" > "Courses" > "Automated backup setup"
+- Online backup: Set up automated backups via "Website Management" > "Courses" > "Automated backup setup"
 
 ## Administer{#administrator}
 
-- **Retrieve Password**: Modify the *mdl_user* table in the Moodle database, replace the value of the `password` field with `21232f297a57a5a743894a0e4a801fc3`, and reset the password to `admin`
+- **Retrieve Password**: To reset the administrator password, modify the `mdl_user` table in the Moodle database. Replace the value of the `password` field with `21232f297a57a5a743894a0e4a801fc3` (the hashed value for admin), then reset the password to `admin`.
 
 ## Troubleshooting{#troubleshooting}

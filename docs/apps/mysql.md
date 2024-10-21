@@ -26,13 +26,13 @@ Websoft9 控制台安装 MySQL/MariaDB 后，通过 "我的应用" 查看应用�
 
 ### 图形化工具
 
-Websoft9 应用商店安装 [phpMyAdmin](./phpmyadmin) 或 [CloudBeaver](./cloudbeaver#mysql) 后，可以在**不需要开启外网**的情况下管理 MySQL
+Websoft9 应用商店安装 [phpMyAdmin](./phpmyadmin) 或 [CloudBeaver](./cloudbeaver) 后，可以在**不需要开启外网**的情况下管理 MySQL
 
 
 ## 配置选项{#configs}
 
-- 配置文件目录（已挂载）：/etc/mysql/conf.d
-- 初始化脚步目录（已挂载）：/docker-entrypoint-initdb.d
+- 配置文件目录（已挂载）：*/etc/mysql/conf.d*
+- 初始化脚本目录（已挂载）：*/docker-entrypoint-initdb.d*
 - 端口：3306
 - 主从复制（√）：DDL 和 DML 操作通过二进制日志复传到从库，支持一主多从
 - 数据库主机名：容器名
@@ -53,7 +53,7 @@ Websoft9 应用商店安装 [phpMyAdmin](./phpmyadmin) 或 [CloudBeaver](./cloud
 
 ### 设置 Binary Log
 
-MySQL默认没有开启 Binary Log，修改 [MySQL 配置文件] (#configs)相关项
+MySQL默认没有开启 Binary Log，修改 [MySQL 配置文件](#configs)相关项
 
 ```
 log_bin = mysql-bin      # enable Binary log
@@ -89,7 +89,7 @@ mysqladmin -u 用户名 -p 旧密码 password '新密码'
 
 ### 备份（导出）
 
-- 推荐使用 phpMyAdmin等可视化工具，[导出](./phpmyadmin#exportimport)数据库（建议SQL格式）
+- 推荐使用 phpMyAdmin等可视化工具，[导出](./phpmyadmin)数据库（建议SQL格式）
 
 - 开发者可以使用 **mysqldump** 工具导出（效率更高，通用性更强）
    ```
@@ -98,7 +98,7 @@ mysqladmin -u 用户名 -p 旧密码 password '新密码'
 
 ### 恢复（导入）
 
-1. 登录 phpMyAdmin，打开顶部的【导入】标签页，根据向导开始导入
+1. 登录 phpMyAdmin，打开顶部的**导入**标签页，根据向导开始导入
 
 2. 导入过程中可能会出现数据库字符集不兼容的情况，需要人工干预处理
 
@@ -176,7 +176,7 @@ innodb_data_file_path= /data/mysql/data1:2000M;/data2/mysql/data2:2000M:autoexte
 
 #### mysqladmin 命令报错 ？
 
-错误："Access denied; you need the SUPER privilege for this operation"  
+错误：**Access denied; you need the SUPER privilege for this operation**  
 原因：mysqlamdin 命令需 SUPER 权限，而普通用户默认没有这个权限。    
 
 #### 无法删除所有表？

@@ -19,7 +19,7 @@ Websoft9 提供的 Apache 应用两个用途：
 - 直接运行静态网站
 - 作为反向代理服务（不推荐使用 Apache 反向代理）
 
-Apache 容器中不包含 PHP，如果想部署 PHP 网站，通过 Websoft9 控制台运行 [PHP](./runtime/php) 容器。  
+Apache 容器中不包含 PHP，如果想部署 PHP 网站，通过 Websoft9 控制台运行 [PHP](./php) 容器。  
 
 ### 部署静态网站
 
@@ -82,7 +82,7 @@ Apache 容器中不包含 PHP，如果想部署 PHP 网站，通过 Websoft9 控
 解决办法：
 
 1.  检查网站目录的权限
-2.  检查 Apache 配置文件是否有 "AllowOverride All   Require all granted" 相关内容
+2.  检查 Apache 配置文件是否有 **AllowOverride All   Require all granted** 相关内容
 
 #### Apache 频繁 403 错误？
 

@@ -41,7 +41,7 @@ Below is for you to solve problem, and you can contact **[Websoft9 Support](./he
 
 **Superset password is correct, but login still fails**
 
-refer to [here](./Superset/admin#loginfail)
+refer to [here](./superset/admin#loginfail)
 
 ## Superset QuickStart
 

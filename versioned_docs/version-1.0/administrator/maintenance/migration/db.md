@@ -17,4 +17,4 @@ slug: /administrator/migration_db
 
 * [SQL Server 迁移](../sqlserver/admin#migration)
 * [MySQL/MariaDB 迁移](../mysql/admin#migration)
-* [PostgreSQL 迁移](../postgresql/admin#migration)
+* [PostgreSQL 迁移](../postgresql/admin)
