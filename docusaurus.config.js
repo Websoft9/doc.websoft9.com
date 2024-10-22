@@ -8,10 +8,13 @@ const { themes } = require('prism-react-renderer');
 const lightTheme = themes.github;
 const darkTheme = themes.dracula;
 
+const fs = require('fs');
+const path = require('path'); // 确保引入 path 模块
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Websoft9',
-  tagline: '重新定义开源服务，让云原生应用快速普及',
+  tagline: '多应用自托管平台，可视化一键部署软件',
   url: 'https://support.websoft9.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -19,7 +22,7 @@ const config = {
   onDuplicateRoutes: 'throw',
   favicon: 'img/favicon.ico',
   organizationName: 'Websoft9', // Usually your GitHub org/user name.
-  deploymentBranch: 'gh-pages',
+  deploymentBranch: 'main',
   projectName: 'doc.websoft9.com', // Usually your repo name.
   i18n: {
     defaultLocale: 'zh-cn',
