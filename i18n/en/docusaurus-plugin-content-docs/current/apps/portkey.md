@@ -7,18 +7,20 @@ tags:
   - Portkey
 ---
 
+
 import Meta from './_include/portkey.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
 ### Using Portkey
 
 Refer to [AI Gateway](https://docs.portkey.ai/docs/product/ai-gateway).
 
-## Configuration options{#configs}
+## Configuration Options {#configs}
 
-## Administer{#administrator}
+## Administration {#administrator}
 
-## Troubleshooting{#troubleshooting}
+## Troubleshooting {#troubleshooting}
+
