@@ -8,7 +8,7 @@ on:
   push:
     branches:
       - dev
-
+      
 jobs:
   ProxyCheck:
     name: ProxyCheck
@@ -21,8 +21,8 @@ jobs:
         # Read the file and process each line
         urls=()
         while IFS= read -r line; do
-          # Remove '- https://' prefix and append to urls array
-          url="${line/- https:\/\//}"
+          # Remove '- https://' prefix and any trailing whitespace, and append to urls array
+          url=$(echo "${line/- https:\/\//}" | tr -d '\r')
           urls+=("$url")
         done < docs/reference/_include/dockerhub-proxy.md
 
@@ -33,7 +33,7 @@ jobs:
         urls_json=$(printf '%s\n' "${urls[@]}" | jq -R . | jq -s .)
 
         # Save the JSON array to the outputs
-        echo "::set-output name=urls::${urls_json}"
+        echo "::set-output name=urls::$urls_json"
 
     - name: Docker pull from proxies
       run: |
@@ -89,6 +89,7 @@ jobs:
 
           echo "--------------Final pull rate($url): $pull_rate MB/s-------------"
         done
+
 
 
   # Spellcheck:
