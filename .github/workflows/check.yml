@@ -5,7 +5,10 @@ name: Check Action
 
 on: 
   workflow_dispatch:
-
+  push:
+    branches:
+      - dev
+      
 jobs:
   ProxyCheck:
     name: ProxyCheck
