@@ -1,14 +1,22 @@
-name: Spellcheck Action
+# ProxyCheck: Read dockerhub proxy URL from docs/reference/_include/dockerhub-proxy.md and test the network speed
+# Spellcheck
+
+name: Check Action
 
 on: 
   workflow_dispatch:
 
 jobs:
-  build:
+  ProxyCheck:
+    name: ProxyCheck
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+  Spellcheck:
     name: Spellcheck
     runs-on: ubuntu-latest
     steps:
-    # The checkout step
     - uses: actions/checkout@v3
     - uses: rojopolis/spellcheck-github-actions@0.41.0
       name: Spellcheck
@@ -16,6 +24,7 @@ jobs:
         source_files: i18n/en/docusaurus-plugin-content-docs/current/**/*.md
         task_name: Markdown
         output_file: spellcheck-output.txt
+
     - uses: actions/upload-artifact@v3
       if: '!cancelled()' # Do not upload artifact if job was cancelled
       with:

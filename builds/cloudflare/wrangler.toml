@@ -1,6 +1,0 @@
-name = "dockerhub"
-type = "javascript"
-account_id = "eb79f13320db531d8cf1f3720966b695"
-
-[site]
-bucket = "./dist"
