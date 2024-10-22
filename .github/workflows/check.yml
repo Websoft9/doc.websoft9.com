@@ -14,32 +14,31 @@ jobs:
     name: ProxyCheck
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
     - name: Read and process dockerhub-proxy.md
       id: read_file
       run: |
         # Read the file and process each line
         urls=()
         while IFS= read -r line; do
-          # Remove '- https://' prefix and any trailing whitespace, and append to urls array
-          url=$(echo "${line/- https:\/\//}" | tr -d '\r')
+          # Remove '- https://' prefix and append to urls array
+          url="${line/- https:\/\//}"
           urls+=("$url")
         done < docs/reference/_include/dockerhub-proxy.md
 
         # Print the array for debugging
         echo "Processed URLs: ${urls[@]}"
 
-        # Convert the array to a JSON array string
-        urls_json=$(printf '%s\n' "${urls[@]}" | jq -R . | jq -s .)
-
-        # Save the JSON array to the outputs
-        echo "::set-output name=urls::$urls_json"
+        # Save the array to the outputs
+        echo "::set-output name=urls::${urls[*]}"
 
     - name: Docker pull from proxies
       run: |
         # Read the URLs from the previous step
-        urls_json="${{ steps.read_file.outputs.urls }}"
-        url_array=($(echo $urls_json | jq -r '.[]'))
+        urls="${{ steps.read_file.outputs.urls }}"
+        IFS=' ' read -r -a url_array <<< "$urls"
 
         # Define the size of the image in MB
         image_size_mb=501
@@ -89,8 +88,6 @@ jobs:
 
           echo "--------------Final pull rate($url): $pull_rate MB/s-------------"
         done
-
-
 
   # Spellcheck:
   #   name: Spellcheck
