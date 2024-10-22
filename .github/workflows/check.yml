@@ -14,25 +14,26 @@ jobs:
     name: ProxyCheck
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-
+    - uses: actions/checkout@v3
     - name: Read and process dockerhub-proxy.md
       id: read_file
       run: |
         # Read the file and process each line
         urls=()
         while IFS= read -r line; do
-          # Remove '- https://' prefix and append to urls array
-          url="${line/- https:\/\//}"
+          # Remove '- https://' prefix and any trailing whitespace, and append to urls array
+          url=$(echo "${line/- https:\/\//}" | tr -d '\r')
           urls+=("$url")
         done < docs/reference/_include/dockerhub-proxy.md
 
         # Print the array for debugging
         echo "Processed URLs: ${urls[@]}"
 
-        # Save the array to the outputs
-        echo "::set-output name=urls::${urls[*]}"
+        # Join the array elements with a space to form a single string
+        urls_string=$(IFS=' '; echo "${urls[*]}")
+
+        # Save the string to the outputs
+        echo "::set-output name=urls::$urls_string"
 
     - name: Docker pull from proxies
       run: |
