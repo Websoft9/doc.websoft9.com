@@ -6,36 +6,37 @@ tags:
   - Mage
 ---
 
+
 import Meta from './_include/mage.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Initial setup{#wizard}
+### Initial Setup {#wizard}
 
-1. When completing the installation of Mage in the **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After completing the installation of Mage via the **Websoft9 Console**, retrieve the application's **Overview** and **Access** information from **My Apps**.
 
-### Run pipelines {#pipelines}
+### Run Pipelines {#pipelines}
 
-The following is how to run pipelines by migrating MySQL data tables:
+The following steps explain how to run pipelines by migrating MySQL data tables:
 
 1. Prepare two databases: the source database and the target database.
 
-2. Click **New Pipelines > Data Integration**, enter a name and create the pipeline.
+2. Click **New Pipelines > Data Integration**, enter a name, and create the pipeline.
 
-3. Choose **Select Source**, select "MySQL", fill in the original database information in **Configuration** (Click **Test Connection** to verify the database information).
+3. Choose **Select Source**, select "MySQL", and fill in the source database information in **Configuration** (Click **Test Connection** to verify the database information).
 
-4. **Select the table you want to migrate.
+4. **Select the table** you want to migrate.
 
-5. **Select destination** select "MySQL", fill in the destination database information in **Configuration** (Click **Test Connection** to verify the database information).
+5. **Select Destination**, choose "MySQL", and fill in the destination database information in **Configuration** (Click **Test Connection** to verify the database information).
 
-6. Click on the left menu **Triggers > Run@once > Run now**, the corresponding table will be imported into the target database after execution.
+6. In the left menu, click **Triggers > Run@once > Run now**, and the corresponding table will be imported into the target database after execution.
 
-## Configuration options{#configs}
+## Configuration Options {#configs}
 
 - Multilingual (×)
 
-## Administer{#administrator}
+## Administration {#administrator}
 
-## Troubleshooting{#troubleshooting}
+## Troubleshooting {#troubleshooting}

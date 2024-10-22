@@ -8,23 +8,25 @@ tags:
   - semaphore
 ---
 
+
 import Meta from './_include/semaphore.md';
 
 <Meta name="meta" />
 
-## Getting started{#guide}
+## Getting Started {#guide}
 
-### Login verification{#verification}
+### Login Verification {#verification}
 
-1. Completed installation Ansible Semaphore at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
+1. After completing the installation of Ansible Semaphore via the Websoft9 console, retrieve the application's overview and access credentials from **My Apps**.
 
-2. Starting to verify it
+2. Start the verification process.
 
-## Configuration options{#configs}
+## Configuration Options {#configs}
 
-- Multilingual (√)
-- Plugin (√)
+- Multilingual (✅)
+- Plugin (✅)
 
-## Administer{#administrator}
+## Administration {#administrator}
 
-## Troubleshooting{#troubleshooting}
+## Troubleshooting {#troubleshooting}
+
