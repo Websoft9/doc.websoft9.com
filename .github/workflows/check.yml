@@ -11,12 +11,10 @@ on:
 
 jobs:
   ProxyCheck:
+    name: ProxyCheck
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-
+    - uses: actions/checkout@v3
     - name: Read and process dockerhub-proxy.md
       id: read_file
       run: |
@@ -31,14 +29,17 @@ jobs:
         # Print the array for debugging
         echo "Processed URLs: ${urls[@]}"
 
-        # Save the array to the outputs
-        echo "::set-output name=urls::${urls[*]}"
+        # Convert the array to a JSON array string
+        urls_json=$(printf '%s\n' "${urls[@]}" | jq -R . | jq -s .)
+
+        # Save the JSON array to the outputs
+        echo "::set-output name=urls::${urls_json}"
 
     - name: Docker pull from proxies
       run: |
         # Read the URLs from the previous step
-        urls="${{ steps.read_file.outputs.urls }}"
-        IFS=' ' read -r -a url_array <<< "$urls"
+        urls_json="${{ steps.read_file.outputs.urls }}"
+        url_array=($(echo $urls_json | jq -r '.[]'))
 
         # Define the size of the image in MB
         image_size_mb=501
