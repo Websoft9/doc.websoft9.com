@@ -22,24 +22,33 @@ import Meta from './_include/redmine.md';
 
 ### Manage plugins  
 
-Manage Redmine plugin is manage plugin sources at Redmine container directory */usr/src/redmine/plugins* and need restart Redmine container takes effect
+Redmine plugin is at container directory */usr/src/redmine/plugins*  
 
-- Install Plugins: Run below commands at Redmine container
+#### Install plugins
+
+Run below commands at Redmine container
+
    ``` 
    apt update -y && apt install unzip 
    curl -L -o plugin_name.zip  https://url/plugin_name.zip 
    unzip rplugin_name.zip -d /usr/src/redmine/plugins 
    ``` 
-- Uninstall Plugin: Delete the plugin directory  
+> Plugin version mismatch will cause the container can not start, need to uninstall the plugin
 
-- After downloading and unzipping the plug-in, restart the container to take effect
+#### Uninstall plugin
 
-- Plugin version mismatch will cause the container can not start, need to uninstall the plugin
+Delete the plugin directory will uninstall it
+
+#### Migrate plugin
+
+When [Upgrading Redmine](https://www.redmine.org/projects/redmine/wiki/RedmineUpgrade) you should remove and backup them to other directory.   
+
+If Redmine upgrade successful, you can move plugins to container one by one.      
 
 ### Set SMTP{#smtp}  
 
 1. Prepare the your SMTP  
-2. Modify the `configuration. yml` file in the Redmine container and add below SMTP configurations at **production**:  
+2. Modify the `.src/configuration. yml` file at git repository and add below SMTP configurations at **production**:  
      ``` 
      production: 
      delivery_method: smtp 
@@ -58,11 +67,10 @@ Manage Redmine plugin is manage plugin sources at Redmine container directory */
 
 ## Configuration options{#configs}
 
-- [Plugin Center](https://www.redmine.org/plugins)(✅)  
+- [Plugin](https://www.redmine.org/plugins) directory in container: */usr/src/redmine/plugins*
 - Multilingual(✅): Support project multilingualism and user multilingualism  
-- Site directory in container(Have mounted): */usr/src/redmine*  
-- Configuration directory in container(Have mounted): */usr/src/redmine/configure*  
-- Configuration file in container (Have mounted): */usr/src/redmine/configuration/configuration.yml*  
+- Site directory in container(Have mounted): */usr/src/redmine/files*  
+- Configuration file in container(Have mounted): */usr/src/redmine/configuration/configuration.yml*  
 - [CLI](https://pypi.org/project/Redmine-CLI/)  
 - [API](https://www.redmine.org/projects/redmine/wiki/Rest_api)  
 - [SMTP](https://www.redmine.org/projects/redmine/wiki/EmailConfiguration) (✅) 
