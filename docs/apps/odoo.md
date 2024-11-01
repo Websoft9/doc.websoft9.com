@@ -38,6 +38,12 @@ import Meta from './_include/odoo.md';
 
 开发者模式开启方式：**Settings > Developer Tools > Active the developer mode**
 
+### 导入第三方应用
+
+1. 登录 Odoo 控制台，激活开发者模式
+2. 上传插件到 Odoo 容器的 `/mnt/extra-addons` 目录（自行决定是否挂载到宿主机）
+3. 重启 Odoo 容器后，第三方应用便显示在应用列表中
+
 ### 导出 PDF
 
 安装 Invoice、Purchase 等模块可以测试 **print to PDF** 功能
@@ -57,6 +63,7 @@ Websoft9 提供 Odoo 企业版的采购、交付和全面托管服务：
 - 企业内部管理的 Odoo 低代码开发 
 
 ## 配置选项{#configs}
+
 
 - [Odoo Apps 市场](https://www.odoo.com/apps/modules)（✅）
 

@@ -22,21 +22,34 @@ import Meta from './_include/redmine.md';
 
 ### 管理插件
 
-获取匹配的插件版本后，将插件下载解压到 Redmine 容器目录 */usr/src/redmine/plugins* 中，即安装插件
+获取匹配的插件版本后，将插件下载解压到 Redmine 容器目录 */usr/src/redmine/plugins* 中，重启 Redmine 容器后生效：
 
-- 容器内下载解压插件的命令范例：
+#### 安装插件
+
+容器内下载解压插件的命令范例：
   ```
   apt update -y && apt install unzip
   curl -L -o plugin_name.zip https://url/plugin_name.zip
   unzip rplugin_name.zip -d /usr/src/redmine/plugins
   ```
-- 删除插件目录即卸载插件
-- 下载解压插件后，重启容器生效
-- 插件版本不匹配会导致容器无法启动，需卸载插件
+> 插件版本不匹配会导致容器无法启动，需立即删除插件
+
+#### 删除插件
+
+删除插件目录即卸载插件
+
+#### 迁移插件
+
+Redmine 官方文档表示[升级 Redmine](https://www.redmine.org/projects/redmine/wiki/RedmineUpgrade) 时，需要将插件目录移动到其他位置作为备份。待 Redmine 升级成功后，方可将插件逐一拷贝到插件目录。    
+
+其原因是 Redmine 插件的 ruby 版本以及 gem 包依赖可能会与 Redmine 主程序产生冲突，导致 Redmine 无法启动。    
+
+因此，Websoft9 标准的 Redmine 启动程序并没有将容器中的插件目录挂载到宿主机。   
+
 
 ### 设置 SMTP{#smtp}
 
-1. Redmine 容器中修改 `configuration.yml` 文件，在 production 下添加 SMTP:  
+1. Redmine 编排模式下，修改 `configuration.yml` 文件中的 [SMTP](https://www.redmine.org/projects/redmine/wiki/EmailConfiguration) 相关参数
 
    - 确保 SMTP 主机/账号/密码等准确无误
    - 注意缩进/空格，否则 Redmine 报错
@@ -54,7 +67,7 @@ import Meta from './_include/redmine.md';
          password: ********
       ```
 
-2. 重启 Redmine 容器服务后生效
+2. 重启 Redmine 容器后生效
 
 3. Redmine 控制台设置 SMTP：**管理 > 配置 > 邮件通知**
 
@@ -62,15 +75,13 @@ import Meta from './_include/redmine.md';
 
 - [插件中心](https://www.redmine.org/plugins)（✅）
 - 多语言（✅）：支持项目多语言和用户多语言
-- 站点目录（已挂载）：*/usr/src/redmine*  
-- 配置目录（已挂载）：*/usr/src/redmine/config*  
-- 配置文件（已挂载）：*/usr/src/redmine/config/configuration.yml*  
+- 容器数据目录（已挂载）：*/usr/src/redmine/files*  
+- 容器配置文件（已挂载）：*/usr/src/redmine/config/configuration.yml*  
+- 容器插件目录：*/usr/src/redmine/files/plugins*  
 - [CLI](https://pypi.org/project/Redmine-CLI/)
-- [API](https://www.redmine.org/projects/redmine/wiki/Rest_api)
 - [SMTP](https://www.redmine.org/projects/redmine/wiki/EmailConfiguration)
 
 ## 管理维护{#administrator}
-
 
 - 备份与恢复：[《RedmineBackupRestore》](https://redmine.org/projects/redmine/wiki/RedmineBackupRestore)
 
@@ -83,4 +94,9 @@ import Meta from './_include/redmine.md';
 #### 新注册用户不能登录？
 
 需管理员在后台激活，方可登陆
+
+#### 安装插件导致 Redmine 无法启动？
+
+问题分析：这个现象是正常的，因为安装插件可能会改变依赖包版本，使得 Redmine 主程序无法启动。   
+解决方案：删除插件目录，重启 Redmine
 

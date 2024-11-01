@@ -38,6 +38,12 @@ import Meta from './\_include/odoo.md';
 
 How to enable developer mode: Select **Settings > Developer Tools > Activate the developer mode**.
 
+### Active your extra addons
+
+1. Login to Odoo console, and enable developer mode
+2. Upload your code to container path `/mnt/extra-addons`(You can mount this directory to host machine by yourself)
+3. Then restart Odoo container and you can see your extra Apps
+
 ### Export PDF
 
 Install Invoice, Purchase, and other modules to test the **Print to PDF** function.

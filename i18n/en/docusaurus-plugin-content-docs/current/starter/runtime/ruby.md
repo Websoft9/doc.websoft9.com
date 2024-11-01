@@ -34,3 +34,7 @@ Refer to: [App Runtime tutorials](./runtime)
   bundle config mirror.https://rubygems.org https://gems.ruby-china.com
   ```
 ## Troubleshoot
+
+#### Gem package install error for Linux dependency?
+
+This phenomenon is normal. Some `gem` packages depend on Linux packages (declared in `extconf.rb`). Therefore, when there is such a gem package in the `Gemfile`, there will be multi-level dependencies to the operating system.
