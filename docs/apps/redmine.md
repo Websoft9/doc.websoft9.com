@@ -22,29 +22,39 @@ import Meta from './_include/redmine.md';
 
 ### 管理插件
 
-获取匹配的插件版本后，将插件下载解压到 Redmine 容器目录 */usr/src/redmine/plugins* 中，重启 Redmine 容器后生效：
+获取匹配的插件版本后，两个步骤即可安装插件：
 
-#### 安装插件
+1. 将插件下载解压（或 git clone）到 Redmine 容器目录 */usr/src/redmine/plugins* 中
+2. 重启 Redmine 容器后生效
 
-容器内下载解压插件的命令范例：
-  ```
-  apt update -y && apt install unzip
-  curl -L -o plugin_name.zip https://url/plugin_name.zip
-  unzip rplugin_name.zip -d /usr/src/redmine/plugins
-  ```
 > 插件版本不匹配会导致容器无法启动，需立即删除插件
 
-#### 删除插件
+#### 下载插件范例
 
-删除插件目录即卸载插件
+```
+# 下载并解压插件
+apt update -y && apt install unzip
+curl -L -o plugin_name.zip https://url/plugin_name.zip
+unzip plugin_name.zip -d /usr/src/redmine/plugins
+
+# git clone 插件
+cd /usr/src/redmine/plugins
+git clone https://github.com/Ilogeek/redmine_issue_dynamic_edit.git
+```
+
+#### 卸载插件
+
+删除插件目录，即卸载插件
 
 #### 迁移插件
 
-Redmine 官方文档表示[升级 Redmine](https://www.redmine.org/projects/redmine/wiki/RedmineUpgrade) 时，需要将插件目录移动到其他位置作为备份。待 Redmine 升级成功后，方可将插件逐一拷贝到插件目录。    
+如果 Redmine 容器中的插件目录已经挂载到宿主机，那么[升级 Redmine](https://www.redmine.org/projects/redmine/wiki/RedmineUpgrade) 时，插件可能无法适用新的 Redmine 版本而导致 Redmine 升级失败。    
 
-其原因是 Redmine 插件的 ruby 版本以及 gem 包依赖可能会与 Redmine 主程序产生冲突，导致 Redmine 无法启动。    
+Redmine 插件的 ruby 版本以及 gem 包依赖可能会与 Redmine 主程序产生冲突，导致 Redmine 无法启动。    
 
-因此，Websoft9 标准的 Redmine 启动程序并没有将容器中的插件目录挂载到宿主机。   
+因此，Websoft9 标准的 Redmine 启动程序并没有将容器中的插件目录挂载到宿主机。    
+
+正确的做法是：在升级 Redmine 之前，需要将插件目录移动到其他位置作为备份，待 Redmine 升级成功后，方可将插件逐一拷贝到插件目录。    
 
 
 ### 设置 SMTP{#smtp}
@@ -55,16 +65,16 @@ Redmine 官方文档表示[升级 Redmine](https://www.redmine.org/projects/redm
    - 注意缩进/空格，否则 Redmine 报错
       ```
       production:
-      delivery_method: :smtp
-      smtp_settings:
-         address: smtp.exmail.qq.com
-         port: 465
-         ssl: true
-         enable_starttls_auto: true
-         domain: websoft9.com
-         authentication: :login
-         user_name: help@websoft9.com
-         password: ********
+        delivery_method: :smtp
+        smtp_settings:
+          address: smtp.exmail.qq.com
+          port: 465
+          ssl: true
+          enable_starttls_auto: true
+          domain: websoft9.com
+          authentication: :login
+          user_name: help@websoft9.com
+          password: ********
       ```
 
 2. 重启 Redmine 容器后生效
