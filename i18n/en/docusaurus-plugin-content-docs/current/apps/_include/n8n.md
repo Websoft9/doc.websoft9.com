@@ -8,8 +8,14 @@
 
 When referring to this document to use **n8n**, please read and ensure the following points:
 
+- [Login to Websoft9 Console](./login-console) and find or install n8n:
+  - Go to **My Apps** listing applications 
+  - Go to **App Store** installing target application
+
 - This application is installed by Websoft9 console.
 
+
 - The purpose of this application complies with the [sustainable-use-license-1.0](https://github.com/n8n-io/n8n/blob/master/LICENSE.md) open source license agreement.
+
 
 - [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

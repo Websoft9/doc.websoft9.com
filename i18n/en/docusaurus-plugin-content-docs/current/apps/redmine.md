@@ -51,16 +51,16 @@ If Redmine upgrade successful, you can move plugins to container one by one.
 2. Modify the `.src/configuration. yml` file at git repository and add below SMTP configurations at **production**:  
      ``` 
      production: 
-     delivery_method: smtp 
-     smtp_settings: 
-        address: smtp.exmail.qq.com 
-        port: 465 
-        ssl: true 
-        enable_starttls_auto: true 
-        domain: websoft9.com 
-        authentication: :login 
-        user_name:  help@websoft9.com 
-        password: ******** 
+      delivery_method: smtp 
+      smtp_settings: 
+         address: smtp.exmail.qq.com 
+         port: 465 
+         ssl: true 
+         enable_starttls_auto: true 
+         domain: websoft9.com 
+         authentication: :login 
+         user_name:  help@websoft9.com 
+         password: ******** 
      ``` 
 2. It works after restarting the Redmine container
 3. Redmine Console Settings for SMTP: **Administration > Configuration > Email Notification**

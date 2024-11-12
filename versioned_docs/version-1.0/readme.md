@@ -25,22 +25,22 @@ Websoft9 是一个以应用为中心的开源 PaaS 平台，也是云原生的�
 
 | 章节              | 描述                                                     |
 | ----------------- | -------------------------------------------------------- |
-| [安装](./install) | 安装以及安装后的[账号密码](./user/credentials)获取、HTTPS 配置、域名绑定等指引 |
-| [应用中心](./apps) |  100+ 个开源应用的快速入门和配置指南  |
-| [解决方案](./solution)  |    基于多个开源应用的集成化解决方案，满足行业和业务场景需求  |
-| [购买与支持](./business)   |  付费使用 Websoft9 产品，获得企业级商业支持服务 |
-| [用户指南](./administrator)   |  应用生命周期管理、数据库管理以及云资源管理  |
-| [管理员指南](./administrator)   |  升级、备份等运维指南，数据、存储和安全配置指南  |
-| [故障问题](./faq)        |    常见的技术技术和故障问题   |
+| [安装](/docs/install) | 安装以及安装后的[账号密码](/docs/user/credentials)获取、HTTPS 配置、域名绑定等指引 |
+| [应用中心](/docs/apps) |  100+ 个开源应用的快速入门和配置指南  |
+| [解决方案](/docs/solution)  |    基于多个开源应用的集成化解决方案，满足行业和业务场景需求  |
+| [购买与支持](/docs/business)   |  付费使用 Websoft9 产品，获得企业级商业支持服务 |
+| [用户指南](/docs/administrator)   |  应用生命周期管理、数据库管理以及云资源管理  |
+| [管理员指南](/docs/administrator)   |  升级、备份等运维指南，数据、存储和安全配置指南  |
+| [故障问题](/docs/faq)        |    常见的技术技术和故障问题   |
 
 ## 热门话题
 
-* [账号密码是什么？](./user/credentials)
-* [如何配置 HTTPS？](./administrator/domain_https)
-* [联系人工支持](./helpdesk)
+* [账号密码是什么？](/docs/user/credentials)
+* [如何配置 HTTPS？](/docs/administrator/domain_https)
+* [联系人工支持](/docs/helpdesk)
 
 ## 迁移至 Websoft9
 
 企业数字化的成功离不开灵活的使用各种开源技术和成熟的软件产品。  
 
-如果您的 IT 团队无法进行有效的技术支持，[订阅](./buy/subscription) Websoft9 的服务，享受商业级支持给您带来的效率提升和保障吧。  
+如果您的 IT 团队无法进行有效的技术支持，[订阅](/docs/buy/subscription) Websoft9 的服务，享受商业级支持给您带来的效率提升和保障吧。  
