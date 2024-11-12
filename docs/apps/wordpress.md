@@ -87,6 +87,26 @@ Websoft9 控制台安装 WordPress 后，通过 "我的应用" 查看应用详�
 
 2. Wordpress 安装 [Media Cloud](https://mediacloud.press/) 或 OSS Upload插件，然后连接到对象存储服务
 
+### 启用 Redis 缓存{#redis}
+
+为 WordPress 配置 Redis 可以提升网站访问的速度和性能，具体步骤：
+
+1. 登录 Websoft9 控制台，在 **应用商店** 安装一个 Redis 应用 
+
+2. 将如下的连接配置段增加到 WordPress 的配置文件，修改 WP_REDIS_HOST, WP_CACHE_KEY_SALT 等必要字段
+    ```
+    define( 'WP_CACHE', true );
+    define('WP_CACHE_KEY_SALT', 'yourdomain.com');
+    define('WP_REDIS_HOST', 'redis_3ay7i');
+    define('WP_REDIS_PORT', '6379');
+    define('WP_REDIS_TIMEOUT', '1');
+    define('WP_REDIS_READ_TIMEOUT', '2');
+    define('WP_REDIS_DATABASE', '0');
+    ```
+3. 登录 WordPress 后台，安装 **Redis Object Cache** 插件并启用它
+
+4. 在 **Redis Object Cache** 的设置界面启用缓存，观察它是否与 Redis 建立了正确的连接
+
 ###  维护 WordPress 的三大原则
 
 为了使 WordPress 运行更有效率，方便维护、方便迁移，我们在实践中总结三个重要原则：

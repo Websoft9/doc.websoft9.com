@@ -73,6 +73,26 @@ To improve performance, move media files to an external object storage system:
 1. Prepare a third-party object storage service or install [MinIO](./minio).
 2. Install the [Media Cloud](https://mediacloud.press/) or OSS Upload plugin in WordPress to connect to the object storage service.
 
+### Enabling Redis for cache{#redis}
+
+You can enable Redis cache for your WordPress by below steps:
+
+1. Login to Websoft9 Console, and install Redis from **Apps Store** 
+
+2. Add below segment to WordPress configuration file and modify `WP_REDIS_HOST`, `WP_CACHE_KEY_SALT` by yourself
+    ```
+    define( 'WP_CACHE', true );
+    define('WP_CACHE_KEY_SALT', 'yourdomain.com');
+    define('WP_REDIS_HOST', 'redis_3ay7i');
+    define('WP_REDIS_PORT', '6379');
+    define('WP_REDIS_TIMEOUT', '1');
+    define('WP_REDIS_READ_TIMEOUT', '2');
+    define('WP_REDIS_DATABASE', '0');
+    ```
+3. Login to Websoft9 Console, install **Redis Object Cache** plugin and enable it
+
+4. Set your **Redis Object Cache** plugin and make sure it have successful connection with Redis
+
 ## Three Principles for Maintaining WordPress
 
 1. **Efficiency First**:
