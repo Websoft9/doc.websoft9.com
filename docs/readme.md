@@ -13,7 +13,6 @@ slug: /
 | ----------------- | -------------------------------------------------------- |
 | [安装](/docs/next/install) | 安装 Websoft9 控制台到服务器 |
 | [登录控制台](/docs/next/login-console)   |  登录 Websoft9 控制台，交互式体验托管平台  |
-
 | [快速入门](/docs/next/starter)   |  使用 Websoft9 快速部署各种类型的应用，包括一键模板部署和自定义部署等  |
 | [指南](/docs/next/guide)   |  使用 Websoft9 的部署、发布和管理应用的各种应用场景  |
 | [管理员](/docs/next/admin)   |  面向管理员用户的[用户管理](/docs/next/credentials)、升级、备份、数据、存储和安全配置等运维指南  |
