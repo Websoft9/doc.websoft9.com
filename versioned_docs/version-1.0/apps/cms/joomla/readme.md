@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-slug: joomla
+slug: /joomla
 tags:
   - Joomla
   - CMS
