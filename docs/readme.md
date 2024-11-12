@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+slug: /docs/next/
 ---
 
 # 介绍
