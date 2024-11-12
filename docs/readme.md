@@ -114,7 +114,7 @@ Websoft9 来自开源，也回馈开源。开源对 Websoft9 生态的好处是�
 
 Websoft9 控制台支持的可一键安装的 [应用部署模板](/docs/next/apps) 如下：
 
-import Meta from '/docs/next/apps/_include/allapps.md';
+import Meta from './apps/_include/allapps.md';
 
 <Meta name="meta" />
 

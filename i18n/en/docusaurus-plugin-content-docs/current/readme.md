@@ -68,7 +68,7 @@ Websoft9 supports multiple hosting options:
 
 The Websoft9 Console supports the following [application deployment templates](/docs/next/apps) that can be installed with one click:
 
-import Meta from '/docs/next/apps/_include/allapps.md';
+import Meta from './apps/_include/allapps.md';
 
 <Meta name="meta" />
 
