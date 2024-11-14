@@ -38,6 +38,10 @@ const config = {
             to: '/docs/next/elasticsearch', 
             from: ['/docs/next/elk','/docs/next/elastic'], 
           },
+          {
+            to: '/docs/next/php', 
+            from: ['/docs/next/elk','/docs/next/phpfpm'], 
+          }
         ],
       },
     ],

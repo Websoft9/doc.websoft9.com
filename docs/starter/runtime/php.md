@@ -9,22 +9,58 @@ tags:
 ---
 
 
+Websoft9 将 Docker 官方的 [php](https://hub.docker.com/_/php) 镜像以模板化的方式，集成到 Websoft9 控制台，实现自动化的部署和发布 PHP 应用程序。   
+
+主要的功能包括：
+
+- 100% 可视化操作
+- 配置文件和应用程序数据持久化
+- 提供了 **PHP + Apache(mod-php)** 和 **PHP-FPM + NGINX** 两个可选的运行环境
+- 支持 Dockerfile 编写和自动构建、运行
+- 预制容器启动后运行的脚本 cmd.sh，便于用户实现自动化部署
+- 支持 php 模块以及 apt 包的申明式安装
+- [phar](https://www.php.net/manual/zh/intro.phar.php) 包支持
+- 支持的缓存扩展：OPcache, XCache, APCU, eAccelerator
+- 框架：Symfony, Laravel, CodeIgniter, Yii 等
+- 应用：WordPress, Joomla, Drupal 等
+- 支持 PHP 多版本切换
+
 ## 配置选项{#configs}
 
-- PHP 大版本切换（√）：切换后需重建容器，并根据需要重新安装 PHP 扩展
-- 多应用支持：一个 PHP 容器仅支持一个应用，多个应用建议运行多个 PHP 容器
-- 应用根目录：*/var/www/html*
-- 应用目录用户：**www-data**
-- php-fpm（×）
-- PHP 额外配置文件目录：*/usr/local/etc/php/conf.d*
-- Apache 配置文件：*/etc/apache2/sites-available/000-default.conf* 
-- 查询已安装的 PHP 扩展：`php -m`
-- PHP 扩展安装管理器：`install-php-extensions` 
-- 容器中安装操作系统包： 以安装 git 为例，安装命令为 `apt update -y && apt install git -y`
-- 命令行：`composer`, `php`
-- [phar](https://www.php.net/manual/zh/intro.phar.php) 包支持（？）
-- 支持的缓存扩展：OPcache, XCache, APCU, eAccelerator
-- 框架：Symfony, Laravel, CodeIgniter, Yii
+### 配置文件路径和修改{#modify-configs}
+
+PHP 程序环境对应的主要路径与配置文件一览表如下：
+
+  | 项                 | 容器内路径                                      | 挂载路径                               |
+  | ------------------ | ----------------------------------------------- | -------------------------------------- |
+  | **应用根目录**        | */var/www/html*                                 | 名称为 `source` 的 Docker 卷           |
+  | **自动化脚本文件**     | */usr/local/bin/cmd.sh*                         | 应用 Git 仓库下 `src/cmd.sh`           |
+  | **PHP 配置文件**       | */usr/local/etc/php/conf.d/php_extra.ini*       | 应用 Git 仓库下 `src/php_extra.ini     |
+  | **扩展申明式配置文件** | Dockerfile 构建时解析配置并安装包               | 应用 Git 仓库下 `src/extensions.ini    |
+  | **Apache 配置文件**    | */etc/apache2/sites-available/000-default.conf* | 应用 Git 仓库下 `src/000-default.conf* |
+  | **NGINX 配置文件**     | */etc/nginx/sites-available/default*            | 应用 Git 仓库下 `src/nginx.conf`       |
+  | **NGINX 配置目录**     | */etc/nginx/conf.d*                             | 名称为 `nginx_conf` 的 Docker 卷       |
+  | **PHP-FPM 配置文件**   | */usr/local/etc/php-fpm.d*/fpm_extra.conf       | 应用 Git 仓库下 `src/fpm_extra.conf    |
+
+  - 挂载到应用 Git 仓库下的配置文件，请选择一种配置方式：
+
+    - 在 Websoft9 控制台通过 **编排** 操作进行修改，重建应用后**持久生效**
+    - 在 Websoft9 控制台 exec 到容器，通过 vim 命令修改可**临时生效**，重建应用后会丢失配置
+
+  - 挂载到 Docker 卷的配置项目，请在对应的目录中增加配置文件，重启应用后持久生效
+  
+
+### 其他配置说明
+
+- **应用目录用户**：**www-data**
+- **PHP 大版本切换（√）**：切换后需重建容器，并根据需要重新安装 PHP 扩展
+- **多应用支持**：一个 PHP 容器仅支持一个应用，多个应用建议运行多个 PHP 容器
+- **php-fpm 和 mod-php 容器可选**
+- **命令行**：
+  - `php`：PHP 标准命令，例如 `php -m` 查看已安装的 PHP 扩展
+  - `composer`：PHP 包管理器命令
+  - `install-php-extensions`：安装 PHP 扩展的命令行，它支持[数百种 php 包](https://github.com/mlocati/docker-php-extension-installer?tab=readme-ov-file#supported-php-extensions)，首选推荐它
+  - `docker-php-ext-install`, `pecl`：其他包管理工具
 
 ## 部署网站{#deploy}
 
@@ -32,74 +68,32 @@ tags:
 
 ## 环境管理{#administrator}
 
-### PHP 扩展管理器
+### 数据持久化
 
-[PHP 原生容器](https://hub.docker.com/_/php) 仅包含 PHP 核心，而部署应用可能需要额外安装 PHP 扩展包，故掌握安装系统包和 PHP 扩展是必须的工作。  
+由于 Websoft9 PHP Runtime 是基于 Docker 容器，故用户需要特别注意数据的持久化问题：
 
-#### 下载扩展管理器{#download-extension-installer}
+- 所有的配置均以声明式的方式存放到 PHP 应用的对应的 Git 仓库中，虽然它们是持久化的，但需重建应用才可将更改在容器中生效
+- 通过修改 `cmd.sh` 脚本实现自动化部署时，用户需编写应用重建时数据可迁移的程序段
 
-下载 Docker 官方推荐的 [PHP 扩展安装管理器](https://github.com/mlocati/docker-php-extension-installer) 到容器，实现安装和管理扩展。
+### 安装 PHP 扩展
 
-1. Websoft9 控制台进入容器的命令模式后，下载 PHP 扩展安装管理器到容器：
-    ```
-    curl -o /usr/local/bin/install-php-extensions -L https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions
-    chmod 0755 /usr/local/bin/install-php-extensions
-    ```
-2. 测试 install-php-extensions 可用性
+Websoft9 提供了申明式安装 PHP 扩展以及操作系统包的功能，大大简化用户安装包的困扰：
 
-#### 安装所需的 PHP 扩展
+1. 登录 Websoft9 控制台，对正在运行的 PHP 容器应用进行 **编排** 操作
 
-1. Websoft9 控制台进入容器的命令模式后，安装所需的扩展
+2. 修改 `src/extensions.ini` 文件，根据扩展安装方式，向其中增加所需的扩展名称
 
-   ```
-   install-php-extensions mysqli jd
-   ```
+   - install-php-extensions：这是 Websoft9首选推荐的方式。先[查询支持的 php 包名](https://github.com/mlocati/docker-php-extension-installer?tab=readme-ov-file#supported-php-extensions) ，然后将包名称增加到此配置项中
 
-2. 运行 `php -m` 查看扩展的安装情况
+   - docker-php-ext-install 和 pecl 两种包安装方式，请参考 [php 官方镜像](https://hub.docker.com/_/php) 的使用方法。
+
+3. 重建应用后生成新的镜像，并基于新镜像启动容器
+
+4. 运行 `php -m` 查看扩展的安装情况
 
 
-#### 安装 PHP Composer
+> 也可以 docker exec 到 php 容器后，运行 `install-php-extensions mysqli jd` 命令直接安装扩展。但是，容器重建后扩展会丢失。  
 
-1. 确保已经下载 [PHP 扩展安装管理器](#download-extension-installer) 
-
-2. Websoft9 控制台进入容器的命令模式后，安装所需的 Composer
-
-    ```
-    # Install the latest version
-    install-php-extensions @composer
-
-    # Install the latest 1.x version
-    install-php-extensions @composer-1
-    # Install a specific version
-    install-php-extensions @composer-2.0.2
-    ```
-
-### 修改 PHP 配置文件
-
-PHP 容器通过 */usr/local/etc/php/conf.d* 目录增加自己所需的配置文件，Websoft9 已经将配置文件挂载到容器。  
-
-有两种修改它的方式：
-
-- 在 Websoft9 控制台 exec 到容器，通过 vim 命令修改
-- 在 Websoft9 控制台 修改 PHP 应用的编排文件 src/php_extra.ini，重建应用后生效
-
-> 重建应用会删除已经安装的扩展，需慎重使用
-
-
-### 其他 PHP 扩展安装方法
-
-本容器还支持[其他扩展安装](https://hub.docker.com/_/php)的命令：
-
-- docker-php-ext-install：内置命令，安装 PHP 扩展时对操作系统包有依赖
-- pecl install redis-5.3.7; docker-php-ext-enable redis：内置命令
-- Websoft9 提供的一键安装 PHP 扩展脚本（这个脚本中包含了常见的扩展包，适应于许多 PHP 热门应用）
-   ```
-   # install some OS packages
-   curl -sS https://websoft9.github.io/docker-library/apps/php/src/os_packages.sh | bash
-
-   # install some PHP extension
-   curl -sS https://websoft9.github.io/docker-library/apps/php/src/php_extension.sh | bash
-   ```
 
 ## 问题与故障
 
@@ -119,13 +113,9 @@ PHP 容器通过 */usr/local/etc/php/conf.d* 目录增加自己所需的配置�
 
 容器中运行 `chown -R www-data:www-data /var/www/html` 修正权限即可
 
-#### 如何修改 Apache 配置？
+#### 应用根目录可更换吗？
 
-建议在容器中运行命令修改 Apache 配置，下面是范例：
-
-```
-sed -i 's|DocumentRoot /var/www/html|DocumentRoot /var/www/html/laravel/public|' /etc/apache2/sites-available/000-default.conf
-```
+修改 Apache 配置文件中的 **DocumentRoot** 项，即可更换目录。但是新的目录必须是 */var/www/html* 的子目录，例如：*/var/www/html/laravel/public*
 
 #### 支持应用 .htaccess 中修改 php.ini？
 
