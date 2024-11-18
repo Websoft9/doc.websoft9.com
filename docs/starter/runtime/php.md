@@ -15,9 +15,9 @@ Websoft9 将 Docker 官方的 [php](https://hub.docker.com/_/php) 镜像以模�
 
 - 100% 可视化操作
 - 配置文件和应用程序数据持久化
-- 提供了 **PHP + Apache(mod-php)** 和 **PHP-FPM + NGINX** 两个可选的运行环境
+- 提供了 **PHP + Apache(mod-php)** 、**PHP-FPM + NGINX** 和 **PHP-FPM + Apache** 三个可选的运行环境
 - 支持 Dockerfile 编写和自动构建、运行
-- 预制容器启动后运行的脚本 cmd.sh，便于用户实现自动化部署
+- 预制容器启动后运行的脚本 `cmd.sh`，便于用户实现自动化部署
 - 支持 php 模块以及 apt 包的申明式安装
 - [phar](https://www.php.net/manual/zh/intro.phar.php) 包支持
 - 支持的缓存扩展：OPcache, XCache, APCU, eAccelerator
@@ -124,7 +124,3 @@ Websoft9 提供了申明式安装 PHP 扩展以及操作系统包的功能，大
 #### PHP 扩展为何对操作系统有依赖？
 
 PHP 的扩展（extension）这里应称为“模块（module）”是 C、C++ 编写的功能合集，扩展大多以动态链接 .dll、.so 形式加载。php扩展是php核心并不支持的功能，然后可以通过扩展的方式进行扩展PHP的功能，常见的扩展如MySQL，gb2等等。
-
-#### 如何引入 PHP 包？
-
-包则是直接引入通过 require/include 方式加载
