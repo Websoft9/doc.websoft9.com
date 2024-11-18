@@ -40,7 +40,7 @@ const config = {
           },
           {
             to: '/docs/next/php', 
-            from: ['/docs/next/elk','/docs/next/phpfpm'], 
+            from: ['/docs/next/phpfpmapache','/docs/next/phpfpmnginx'], 
           }
         ],
       },
