@@ -35,12 +35,12 @@ PHP 程序环境对应的主要路径与配置文件一览表如下：
   | ------------------ | ----------------------------------------------- | -------------------------------------- |
   | **应用根目录**        | */var/www/html*                                 | 名称为 `source` 的 Docker 卷           |
   | **自动化脚本文件**     | */usr/local/bin/cmd.sh*                         | 应用 Git 仓库下 `src/cmd.sh`           |
-  | **PHP 配置文件**       | */usr/local/etc/php/conf.d/php_extra.ini*       | 应用 Git 仓库下 `src/php_extra.ini     |
-  | **扩展申明式配置文件** | Dockerfile 构建时解析配置并安装包               | 应用 Git 仓库下 `src/extensions.ini    |
-  | **Apache 配置文件**    | */etc/apache2/sites-available/000-default.conf* | 应用 Git 仓库下 `src/000-default.conf* |
+  | **PHP 配置文件**       | */usr/local/etc/php/conf.d/php_extra.ini*       | 应用 Git 仓库下 `src/php_extra.ini`     |
+  | **扩展申明式配置文件** | Dockerfile 构建时解析配置并安装包               | 应用 Git 仓库下 `src/extensions.ini`    |
+  | **Apache 配置文件**    | */etc/apache2/sites-available/000-default.conf* | 应用 Git 仓库下 `src/000-default.conf` |
   | **NGINX 配置文件**     | */etc/nginx/sites-available/default*            | 应用 Git 仓库下 `src/nginx.conf`       |
   | **NGINX 配置目录**     | */etc/nginx/conf.d*                             | 名称为 `nginx_conf` 的 Docker 卷       |
-  | **PHP-FPM 配置文件**   | */usr/local/etc/php-fpm.d*/fpm_extra.conf       | 应用 Git 仓库下 `src/fpm_extra.conf    |
+  | **PHP-FPM 配置文件**   | */usr/local/etc/php-fpm.d*/fpm_extra.conf       | 应用 Git 仓库下 `src/fpm_extra.conf`    |
 
   - 挂载到应用 Git 仓库下的配置文件，请选择一种配置方式：
 
