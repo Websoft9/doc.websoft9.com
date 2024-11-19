@@ -14,6 +14,40 @@ import Meta from './_include/mediawiki.md';
 
 ## 入门指南{#guide}
 
+### 初始化
+
+1. Websoft9 控制台安装 MediaWiki 后，通过 "我的应用" 查看应用详情
+
+  - 在 **访问** 标签页中获取访问 URL 
+  - 在 **数据库** 标签页中获取 **内网主机** 和 **密码** 
+
+2. 本地浏览器访问 URL，进入 Mediawiki 初始化向导
+
+3. 默认提供的数据库配置如下：
+
+   ![mediawiki 连接数据库](./assets/mediawiki-connectdb-websoft9.png)
+
+      - 数据库类型：`MySQL`
+      - 数据库主机：步骤 1 获取的  **内网主机**
+      - 数据库名称：`mediawiki`
+      - 数据库用户名：`mediawiki`
+      - 数据库密码：步骤 1 获取的  **密码** 
+
+   > 信息填写完毕后选择立即安装wiki即可
+
+4. MediaWiki 安装完成后，下载安装程序生成的 LocalSettings.php 文件
+
+5. 返回 Websoft9 控制台，通过 "我的应用" 查看应用详情，在 **编排** 标签页中点击 **马上修改** ，进入 */src* 目录下，点击 **添加文件**，选择 **上传文件** ，将 LocalSettings.php 文件上传，点击 **提交变更** 
+
+6. 回到 */src* 目录的上一级目录，进入 docker-compose.yml 文件，取消如下代码注释，之后点击 **提交变更** 
+   ```
+   # - ./src/LocalSettings.php:/var/www/html/LocalSettings.php
+   ```
+
+7. 返回 "我的应用"，在 **编排** 标签页中点击 **重建应用** 或者点击右上角 **重建应用** 图标重建应用
+
+8. 再次通过本地浏览器访问 URL 即可登录
+
 ### 快速设置
 
 Websoft9 控制台安装 Mediawiki 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
