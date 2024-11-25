@@ -94,6 +94,22 @@ Websoft9 提供了申明式安装 PHP 扩展以及操作系统包的功能，大
 
 > 也可以 docker exec 到 php 容器后，运行 `install-php-extensions mysqli jd` 命令直接安装扩展。但是，容器重建后扩展会丢失。  
 
+### Command 示例
+
+```
+# Install the latest version
+install-php-extensions mysqli jd
+install-php-extensions @composer
+
+# Install the latest 1.x version
+install-php-extensions @composer-1
+
+# Install a specific version
+install-php-extensions @composer-2.0.2
+
+# pecl install extensions
+pecl install redis-5.3.7; docker-php-ext-enable redis
+```
 
 ## 问题与故障
 

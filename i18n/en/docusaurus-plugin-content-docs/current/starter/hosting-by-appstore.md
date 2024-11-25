@@ -30,9 +30,7 @@ For more information, see the related chapter:
 
 Websoft9 pulls images online from DockerHub when deploying templated applications. You will need to set up [docker registry-mirrors](https://docs.docker.com/docker-hub/mirror/) if the server is having network issues accessing DockerHub.  
 
-For more information, see the related chapter: 
-
-- [Set Docker registry-mirrors](./docker-server#imagespeed)
+The best simple method to set it by: **Websoft9 Console > Settings > System Settings > Registry-mirrors**
 
 ## Step3: Launch your Application
 
