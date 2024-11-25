@@ -42,7 +42,17 @@ Using multiple reasons can cause login failure:
 * Websoft9 installation failed
 * Network access failed for your instance
 * Local browser's cookie or session
+* Websoft9 Console(Cockpit) port is reset to **9090**
 * Your Linux not allowed password login
+
+#### Cockpit console port is reset to 9090?
+
+When user running `yum update` or `apt upgrade`, Cockpit may be reset to **9090** port and you can not login to Websoft9 Console
+
+1. Login to Websoft9 Console by `http://IP:9090`
+2. Set port to **9090** by **Settings > System Settings**
+
+> You can set port by repeating step2 to your default port
 
 ### websoft9.service starting failed?
 

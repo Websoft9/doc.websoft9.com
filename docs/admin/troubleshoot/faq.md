@@ -31,10 +31,18 @@ docker exec -it websoft9-apphub cat /websoft9/apphub/logs/apphub_error.log
 * 您的服务器[安全组](./security-firewall#security) **9000** 端口没有开启（**最常见因素**）
 * 安装的不是 Websoft9 的产品
 * 你的服务器网络故障
+* Websoft9 控制台端口被重置为 **9090**
 * 产品本身的故障导致
 * 其他
 
 不管哪种原因，一旦无法出现问题，请第一时刻联系：[人工支持](./helpdesk)  
+
+#### Cokpit 控制台端口被重置为 9090？
+
+用户使用 `yum update` or `apt upgrade` 升级操作系统后，可能会导致 Cockpit 的端口被重置为 9090，怎么办？
+
+1. 以 9090 端口登录到 Websoft9 控制台
+2. **设置 > 系统设置** 中将端口改为 9090
 
 #### Websoft9 服务无法启动？
 
