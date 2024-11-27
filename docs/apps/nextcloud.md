@@ -5,6 +5,8 @@ tags:
   - 网盘
   - 知识管理
   - 团队协作
+  - 视频会议
+  - 聊天
 ---
 
 import Meta from './_include/nextcloud.md';
@@ -19,6 +21,14 @@ import Meta from './_include/nextcloud.md';
 
 2. 访问 Nextcloud 的 URL，登录后台开始使用
    ![](./assets/nextcloud-backend-websoft9.png)
+
+3. Nextcloud 控制台右上角齿轮图标，点击 **+应用**，启用 Talk, Assistant 等核心模块
+
+### 启用视频会议{#talk}
+
+1. 在 **Websoft9 网关**中为 Nextcloud 设置 HTTPS 访问（必需）
+2. 登录 Nextcloud 控制台，在 **应用** 管理界面中，启用 **Nextcloud Talk** 模块
+3. 进入 **Talk** 功能区，新建 Talk， 并将链接发送给与会人员
 
 ### 文档预览与编辑{#onlyoffice}
 
