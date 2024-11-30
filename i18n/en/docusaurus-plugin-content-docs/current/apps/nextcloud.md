@@ -20,6 +20,14 @@ import Meta from './\_include/nextcloud.md';
 2. Access the Nextcloud URL and log in to the backend to get started.
    ![](./assets/nextcloud-backend-websoft9.png)
 
+### Enable Online meetings{#talk}
+
+1. Set HTTPS for your Nextcloud on your **Websoft9 Gateway**
+
+2. Login to Nextcloud Console, and enable **Nextcloud Talk** at **App Store**
+
+3. Create a talk and send links for users
+
 ### Document Preview and Edit {#onlyoffice}
 
 #### Integration of Nextcloud Office
@@ -109,6 +117,10 @@ After moving or copying the Nextcloud data directory to another location, run `o
 - **Online Backup**: Install **[OwnBackup](https://apps.nextcloud.com/apps/ownbackup)** to achieve online backup.
 
 ## Troubleshooting {#troubleshooting}
+
+#### Not find Talk and Assistant of Nextcloud?
+
+You should enable these modules after your first starting Nextcloud. 
 
 #### Disable ONLYOFFICE Certificate Validation?
 
