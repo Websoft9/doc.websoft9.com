@@ -5,7 +5,7 @@ slug: /install-alibabacloud
 
 # Alibaba Cloud
 
-For users of the Alibaba Cloud, Websoft9 has a pre-configured offering in the [Alibaba Cloud Marketplace](https://marketplace.alibabacloud.com/products/56680002/sgcmjj00034195.html). This tutorial describes installing Websoft9 Enterprise Edition in a single Virtual Machine (ECS).   
+For users of the Alibaba Cloud, Websoft9 has a pre-configured offering in the [Alibaba Cloud Marketplace](https://marketplace.alibabacloud.com/products/201072001/sgcmjj00034378.html). This tutorial describes installing Websoft9 Enterprise Edition in a single Virtual Machine (ECS).   
 
 ## Prerequisite
 

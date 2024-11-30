@@ -5,7 +5,7 @@ slug: /install-huaweicloud
 
 # HUAWEICLOUD
 
-For users of the HUAWEICLOUD, Websoft9 has a pre-configured offering in the [HUAWEICLOUD Cloud Marketplace](https://marketplace.huaweicloud.com/contents/29458a42-64b7-4637-aa7c-8bfddea1fb72). This tutorial describes installing Websoft9 Enterprise Edition in a single Virtual Machine (ECS).   
+For users of the HUAWEICLOUD, Websoft9 has a pre-configured offering in the [HUAWEICLOUD Cloud Marketplace](https://marketplace.huaweicloud.com/intl/contents/bf4480ae-d0af-422c-b246-e2ec67743f4e). This tutorial describes installing Websoft9 Enterprise Edition in a single Virtual Machine (ECS).   
 
 ## Prerequisite
 
@@ -24,7 +24,7 @@ Before deployment, you should understand ECS [requirements](./install-requiremen
 
 ### From HUAWEICLOUD Marketplace
 
-1. Open the product [Websoft9 applications hosting platform](https://marketplace.huaweicloud.com/contents/29458a42-64b7-4637-aa7c-8bfddea1fb72) at [HUAWEICLOUD Marketplace](https://marketplace.huaweicloud.com/seller/b8f57c06a0f7e39f4e206560e71afd76)
+1. Open the product [Websoft9 applications hosting platform](https://marketplace.huaweicloud.com/intl/contents/bf4480ae-d0af-422c-b246-e2ec67743f4e) at [HUAWEICLOUD Marketplace](https://marketplace.huaweicloud.com/intl/seller/791bea8ce08849cf9ae4ec61c27e8435)
 
 2. Click **Continue to Submit** to start deploy Websoft9
 

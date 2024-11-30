@@ -5,7 +5,7 @@ slug: /install-azure
 
 # Azure
 
-For users of the Microsoft Azure business cloud, Websoft9 has a pre-configured offering in the [Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=vmlab&page=1). This tutorial describes installing Websoft9 Enterprise Edition in a single Virtual Machine (VM).   
+For users of the Microsoft Azure business cloud, Websoft9 has a pre-configured offering in the [Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/websoft9inc.websoft9). This tutorial describes installing Websoft9 Enterprise Edition in a single Virtual Machine (VM).   
 
 ## Prerequisite
 
@@ -24,7 +24,7 @@ Regardless of which deployment method you choose, Azure will initiate the deploy
 
 ### From Azure Marketplace
 
-1. Login to [Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps), input the key "websoft9" to search image of Websoft9
+1. Access [Websoft9 on Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/websoft9inc.websoft9), you can see Websoft9 offer detail below
   ![search websoft9](./assets/azure-mkss-websoft9.png)
 
 2. Select the target offer and click "GET IT NOW" button on product details page
@@ -37,10 +37,10 @@ Regardless of which deployment method you choose, Azure will initiate the deploy
 
 Azure Portal provides two entry points for deploying offer based on image
 
-  - **Portal > Create a resource**, search Websoft9 image and deploy it
+  - **Portal > Create a resource**, enter the key words `Websoft9 Application Hosting Platform` to search Websoft9 image and deploy it
     ![Azure Portal search websoft9](./assets/azure-portalmk-websoft9.png)
 
-  - **Portal > Visual Machines > + Add** to create VM, and select "websoft9" image for this VM
+  - **Portal > Visual Machines > + Add** to create VM, and enter the key words `Websoft9 Application Hosting Platform` to search Websoft9 image and deploy it
     ![](./assets/azure-vmimage-websoft9.png)
 
 
