@@ -77,3 +77,38 @@ The reason for the restart status must be differentiated:
 
 - If application is deployed for the first time or in startup, this restarting status is reasonable
 - If application is running after startup, this restarting status is abnormal
+
+
+## Auto restart container{#autorestart}
+
+The application's container restart policy is set to `unless-stopped` or `always` by default, but it only takes effect when the container is in the exited state.   
+
+When the container's state looks normal, but the service stopped (which can be called the **unhealth** state), how can the container be restarted automatically?   
+
+In this case, you need to add [Docker Autoheal](https://github.com/willfarrell/docker-autoheal ) as an external container in the application orchestration file, and combine it with the **healthcheck** policy of the application container, then you can realize the automatic restart.  
+
+Here is a typical example:
+
+```
+services:
+
+  wordpress:
+    image: wordpress:latest
+    container_name: wordpress
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost"]
+      start_period: 40s
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  autoheal:
+    image: willfarrell/autoheal
+    container_name: autoheal
+    restart: always
+    environment:
+      - AUTOHEAL_CONTAINER_LABEL=all
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+```
