@@ -12,14 +12,22 @@ import Meta from './_include/graylog.md';
 
 ## Getting started{#guide}
 
-### Login to the backend {#wizard}
+### Initial setup{#wizard}
 
-After installing Graylog in the **Websoft9 console**, view the application details through **My Applications** and get the login information from the **Access** tab.  
+1. After installing Graylog in the **Websoft9 console**, view the application details through **My Applications** 
 
-- Login screen
-  ![](./assets/graylog-login-websoft9.png)
+   - Get the **Access URL** and **Login User and Password** in the **Access** tab
+   - Get the **Main Container Name** in the **Container** tab
 
-- Backend Screen
+2. View the logs of the **Main Container** to get the user and initial password
+
+3. Enter **Access URL** in your browser, and enter the user and initial password obtained in step2 to enter the initial page.
+
+4. Click **Create CA** and follow the prompts to complete the initialization
+
+5. After the initialization is complete, enter the login page and input the **Login User and Password** obtained in step1
+
+6. Successfully log in to the Graylog backend interface
   ![](./assets/graylog-console-websoft9.png)
 
 ## Enterprise Edition
