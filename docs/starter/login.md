@@ -28,6 +28,8 @@ slug: /login-console
    - 用户名：Websoft9 所在的 [服务器的账号](./credentials)，首次使用建议 `root`
    - 密码：服务器密码
 
+  > 目前新版本的 Websoft9 强制使用 HTTPS 协议进行访问。对于使用 Firefox 浏览器的用户，请访问 https://服务器公网IP，以进入 Websoft9 引导页面。根据引导页面的提示，您将能够顺利进入 Websoft9 登录界面。
+
 2. 登录成功后，进入控制台概述页面，显示服务器的状态信息
    ![](./assets/websoft9-console-index.png)
 
