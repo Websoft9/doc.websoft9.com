@@ -15,7 +15,7 @@ To install Websoft9, you need root access; otherwise, use `sudo su` before runni
 
 ```
 # Installation with default parameters
-wget -O install.sh https://websoft9.github.io/websoft9/install/install.sh && bash install.sh
+wget -O install.sh https://artifact.websoft9.com/release/websoft9/install.sh && bash install.sh
 
 # Custom Parameter Installation
 # -- channel release | dev
@@ -23,7 +23,7 @@ wget -O install.sh https://websoft9.github.io/websoft9/install/install.sh && bas
 # --version
 # --path
 
-wget -O install.sh https://websoft9.github.io/websoft9/install/install.sh && bash install.sh --port 9000 --channel release --path "/data/websoft9/source" --version "latest"
+wget -O install.sh https://artifact.websoft9.com/release/websoft9/install.sh && bash install.sh --port 9000 --channel release --path "/data/websoft9/source" --version "latest"
 ```
 
 > Upgrade Websoft9 by running the same script.  
