@@ -1,4 +1,4 @@
-[Joomla](https://www.joomla.org/) is **An award-winning content management system (CMS)**, used for Website Builder eCommerce . Joomla! is an award-winning content management system (CMS), which enables you to build Web sites and powerful online applications.
+[Joomla](https://www.joomla.org/) is **An award-winning content management system (CMS)**, used for Website Builder eCommerce Content Marketing . Joomla! is an award-winning content management system (CMS), which enables you to build Web sites and powerful online applications.
 
 
 ![login](https://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-wizard6-websoft9.png)

@@ -1,4 +1,4 @@
-[Magento](https://business.adobe.com/products/magento/open-source.html) is **one of the world's most popular ecommerce platforms**, used for eCommerce . Magento delivers the features you need to build and grow a unique online store from the ground up.
+[Magento](https://business.adobe.com/products/magento/open-source.html) is **one of the world's most popular ecommerce platforms**, used for eCommerce Content Marketing . Magento delivers the features you need to build and grow a unique online store from the ground up.
 
 
 ![mall](http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-mall-websoft9.png)

@@ -1,4 +1,4 @@
-[YouTrack](https://www.jetbrains.com/youtrack/) is **project management for all your teams**, used for Cloud Infrastructure Monitoring Agile Boards . YouTrack is a project management and issue tracking tool developed by JetBrains.
+[YouTrack](https://www.jetbrains.com/youtrack/) is **project management for all your teams**, used for Agile Boards Project and Task All-in-one DevOps . YouTrack is a project management and issue tracking tool developed by JetBrains.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/youtrack/youtrack-gui-websoft9.png)

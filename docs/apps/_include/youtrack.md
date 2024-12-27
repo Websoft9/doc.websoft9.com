@@ -1,4 +1,4 @@
-[YouTrack](https://www.jetbrains.com/youtrack/) 是一个 **团队项目管理系统**，它被用于 云设施监控 需求/看板/缺陷  等场景。YouTrack 是一款由 JetBrains 开发的项目管理和问题跟踪工具。
+[YouTrack](https://www.jetbrains.com/youtrack/) 是一个 **团队项目管理系统**，它被用于 需求/看板/缺陷 项目/任务/流程 一站式 DevOps 应用  等场景。YouTrack 是一款由 JetBrains 开发的项目管理和问题跟踪工具。
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/youtrack/youtrack-gui-websoft9.png)

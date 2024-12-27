@@ -1,4 +1,4 @@
-[Home Assistant](https://www.home-assistant.io/) is **Home Open-source IoT Platform**, used for Device Management and Monitor . Open source home automation that puts local control and privacy first.
+[Home Assistant](https://www.home-assistant.io/) is **Home Open-source IoT Platform**, used for Device Management and Monitor Home Server . Open source home automation that puts local control and privacy first.
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/homeassistant/homeassistant-gui-websoft9.png)

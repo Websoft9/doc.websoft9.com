@@ -1,4 +1,4 @@
-[Docker registry](https://github.com/distribution/distribution/) is **Stores and distribute container images**, used for Artifact Repository . The Registry is a stateless, highly scalable server side application that stores and lets you distribute container images and other content. 
+[Docker registry](https://github.com/distribution/distribution/) is **Stores and distribute container images**, used for Artifact Repository All-in-one DevOps . The Registry is a stateless, highly scalable server side application that stores and lets you distribute container images and other content. 
 
 
 ![Architecture](https://libs.websoft9.com/Websoft9/DocsPicture/zh/docker/docker-registry-gui.webp)

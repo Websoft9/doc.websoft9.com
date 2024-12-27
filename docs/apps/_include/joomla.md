@@ -1,4 +1,4 @@
-[Joomla](https://www.joomla.org/) 是一个 **网站内容管理系统**，它被用于 企业建站 电子商务  等场景。Joomla是全球三大开源内容管理系统之一 (CMS)，占据全球5%的建站市场。其拥有高度的可定制性和电子商务方面的优势。
+[Joomla](https://www.joomla.org/) 是一个 **网站内容管理系统**，它被用于 企业建站 电子商务 内容营销技术  等场景。Joomla是全球三大开源内容管理系统之一 (CMS)，占据全球5%的建站市场。其拥有高度的可定制性和电子商务方面的优势。
 
 
 ![login](https://libs.websoft9.com/Websoft9/DocsPicture/zh/joomla/joomla-wizard7-websoft9.png)

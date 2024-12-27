@@ -1,4 +1,4 @@
-[Docker registry](https://github.com/distribution/distribution/) 是一个 **镜像仓库系统，DockerHub 背后的平台**，它被用于 制品仓库  等场景。注册表是一个无状态、高度可伸缩的服务器端应用程序，用于存储 并允许您分发容器映像和其他内容。
+[Docker registry](https://github.com/distribution/distribution/) 是一个 **镜像仓库系统，DockerHub 背后的平台**，它被用于 制品仓库 一站式 DevOps 应用  等场景。注册表是一个无状态、高度可伸缩的服务器端应用程序，用于存储 并允许您分发容器映像和其他内容。
 
 
 ![架构图](https://libs.websoft9.com/Websoft9/DocsPicture/zh/docker/docker-registry-gui.webp)

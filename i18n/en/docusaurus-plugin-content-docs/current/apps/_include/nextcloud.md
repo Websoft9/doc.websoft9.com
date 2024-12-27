@@ -1,4 +1,4 @@
-[Nextcloud ](https://nextcloud.com/) is **An open source file sync and share software for everyone**, used for Document Collaboration . Nextcloud is an open source file sync and share software for everyone, provides a safe, secure, and compliant file synchronization and sharing solution on servers that you control.
+[Nextcloud Hub](https://nextcloud.com/) is **Integrates the four key Nextcloud products Files, Talk, Groupware and Office into a single platform**, used for Document Collaboration Chat Agile Boards Home Server Enterprise content management . Nextcloud offers a modern, on-premises content collaboration platform with real-time document editing, Generative AI, video chat & groupware on mobile, desktop and web.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/nextcloud/nextcloud-gui-websoft9.png)
@@ -6,9 +6,9 @@
 
 ## Prepare
 
-When referring to this document to use **Nextcloud **, please read and ensure the following points:
+When referring to this document to use **Nextcloud Hub**, please read and ensure the following points:
 
-- [Login to Websoft9 Console](./login-console) and find or install Nextcloud :
+- [Login to Websoft9 Console](./login-console) and find or install Nextcloud Hub:
   - Go to **My Apps** listing applications 
   - Go to **App Store** installing target application
 

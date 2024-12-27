@@ -1,4 +1,4 @@
-[code-server](https://coder.com/) 是一个 **浏览器版本的 VS Code**，它被用于 源码仓库 在线 IDE  等场景。code-server 是Web 版 VS Code，后端运行在服务器中，开发者基于浏览器运行 IDE。
+[code-server](https://coder.com/) 是一个 **浏览器版本的 VS Code**，它被用于 源码仓库 在线 IDE 一站式 DevOps 应用  等场景。code-server 是Web 版 VS Code，后端运行在服务器中，开发者基于浏览器运行 IDE。
 
 
 ![ui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/codeserver/codeserver-consolegui-websoft9.png)

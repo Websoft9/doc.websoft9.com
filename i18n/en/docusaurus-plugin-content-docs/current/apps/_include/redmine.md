@@ -1,4 +1,4 @@
-[Redmine](https://www.redmine.org/) is **A web-based project management and issue tracking tool**, used for Cloud Infrastructure Monitoring Agile Boards . Redmine is a flexible project management web application. Written using the Ruby on Rails framework, it is cross-platform and cross-database.
+[Redmine](https://www.redmine.org/) is **A web-based project management and issue tracking tool**, used for Agile Boards Project and Task All-in-one DevOps . Redmine is a flexible project management web application. Written using the Ruby on Rails framework, it is cross-platform and cross-database.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/redmine/redmine-gui-websoft9.jpg)

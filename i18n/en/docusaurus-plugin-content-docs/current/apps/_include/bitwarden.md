@@ -1,4 +1,4 @@
-[Bitwarden](https://bitwarden.com/) is **Open source password management solutions**, used for Password Management . Open source password management solutions for individuals, teams, and business organizations.
+[Bitwarden](https://bitwarden.com/) is **Open source password management solutions**, used for Team Password Management Home Server . Open source password management solutions for individuals, teams, and business organizations.
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/bitwarden/bitwarden-gui-websoft9.webp)

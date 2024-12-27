@@ -1,4 +1,4 @@
-[Gogs](https://gogs.io/) is **A painless self-hosted Git service**, used for Code Repository . A painless self-hosted Git service. Aims to build a simple, stable and extensible self-hosted Git service.
+[Gogs](https://gogs.io/) is **A painless self-hosted Git service**, used for Code Repository All-in-one DevOps . A painless self-hosted Git service. Aims to build a simple, stable and extensible self-hosted Git service.
 
 
 ![gui start](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-guistart-websoft9.png)

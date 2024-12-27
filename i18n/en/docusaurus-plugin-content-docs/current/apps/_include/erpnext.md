@@ -1,4 +1,4 @@
-[ERPNext](https://erpnext.com/) is **An open source ERP**, used for ERP & Finance Supply Chain & Manufacturing & Logistic CRM & Distribution & Order . ERPNext can help users manage their project management concerns, accounting tasks, and HR responsibilities within a single interface.
+[ERPNext](https://erpnext.com/) is **An open source ERP**, used for ERP & Finance Supply Chain & Manufacturing & Logistic CRM & Distribution & Order Digtal for SCM and Operation . ERPNext can help users manage their project management concerns, accounting tasks, and HR responsibilities within a single interface.
 
 
 ![ui](http://libs.websoft9.com/Websoft9/DocsPicture/en/erpnext/erpnext-adminui-websoft9.png)

@@ -1,4 +1,4 @@
-[Akaunting](https://akaunting.com/) 是一个 **会计与记账系统**，它被用于 ERP/财税/后勤  等场景。Akaunting是一款免费的开源在线会计软件，专为小型企业和自由职业者设计。
+[Akaunting](https://akaunting.com/) 是一个 **会计与记账系统**，它被用于 ERP/财税/后勤 运营与供应链数字化  等场景。Akaunting是一款免费的开源在线会计软件，专为小型企业和自由职业者设计。
 
 
 ![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/akaunting/akaunting-gui-websoft9.png)

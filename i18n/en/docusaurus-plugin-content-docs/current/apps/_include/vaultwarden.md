@@ -1,4 +1,4 @@
-[Vaultwarden](https://www.vaultwarden.net/) is **Open source password manager**, used for Password Management . Vaultwarden is a lightweight Bitwarden server implementation for managing and storing passwords.
+[Vaultwarden](https://www.vaultwarden.net/) is **Open source password manager**, used for Team Password Management . Vaultwarden is a lightweight Bitwarden server implementation for managing and storing passwords.
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/vaultwarden/vaultwarden-gui-websoft9.png)

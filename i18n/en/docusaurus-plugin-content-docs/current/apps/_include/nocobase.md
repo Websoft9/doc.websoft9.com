@@ -1,4 +1,4 @@
-[Nocobase](https://www.nocobase.com/) is **Open-source no-code development platform**, used for Low Code and No Code . NocoBase is a scalability-first, open-source no-code/low-code platform to build internal tools.
+[Nocobase](https://www.nocobase.com/) is **Open-source no-code development platform**, used for Low Code and No Code Digtal for SCM and Operation . NocoBase is a scalability-first, open-source no-code/low-code platform to build internal tools.
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/nocobase/nocobase-gui-websoft9.png)

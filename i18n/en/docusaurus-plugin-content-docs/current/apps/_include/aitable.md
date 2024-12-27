@@ -1,4 +1,4 @@
-[AITable](https://aitable.ai/) is **Custom ChatGPT with Table in 1-Click**, used for Low Code and No Code Software Platform . By using AITable, every individual, team, and company should be able to access and manipulate databases and data in ways never possible before, helping people save countless hours every day.
+[AITable](https://aitable.ai/) is **Custom ChatGPT with Table in 1-Click**, used for Low Code and No Code Digtal for SCM and Operation . By using AITable, every individual, team, and company should be able to access and manipulate databases and data in ways never possible before, helping people save countless hours every day.
 
 
 ![apitable](https://libs.websoft9.com/Websoft9/DocsPicture/en/aitable/aitable-websoft9.png)

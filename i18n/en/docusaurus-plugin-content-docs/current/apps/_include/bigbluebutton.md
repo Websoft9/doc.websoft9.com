@@ -1,4 +1,4 @@
-[BigBlueButton](https://bigbluebutton.org/) is **Virtual Classroom Software**, used for Education Meeting . BigBlueButton is a purpose-built virtual classroom that empowers teachers to teach and learners to learn.
+[BigBlueButton](https://bigbluebutton.org/) is **Virtual Classroom Software**, used for Software Labs for High Education Meeting . BigBlueButton is a purpose-built virtual classroom that empowers teachers to teach and learners to learn.
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/bigbluebutton/bigbluebutton-gui-websoft9.png)

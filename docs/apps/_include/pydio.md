@@ -1,4 +1,4 @@
-[Pydio Cells](https://pydio.com/) 是一个 **安全可靠的文档共享和协作平台**，它被用于 文档协作  等场景。安全、云原生、可扩展、自托管、开放核心的文档共享和协作，而不会使数据面临风险。
+[Pydio Cells](https://pydio.com/) 是一个 **安全可靠的文档共享和协作平台**，它被用于 文档协作/企业网盘 企业文档与知识共享  等场景。安全、云原生、可扩展、自托管、开放核心的文档共享和协作，而不会使数据面临风险。
 
 
 ![GUI](http://libs.websoft9.com/Websoft9/DocsPicture/en/cells/cells-gui-websoft9.png)

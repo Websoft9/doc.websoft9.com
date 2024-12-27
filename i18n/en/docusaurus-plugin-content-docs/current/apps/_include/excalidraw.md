@@ -1,4 +1,4 @@
-[Excalidraw](https://github.com/excalidraw/excalidraw) is **Virtual whiteboard for sketching hand-drawn like diagrams**, used for Whiteboard and Note Task Collaboration . Excalidraw is an open source virtual hand-drawn style whiteboard. It can help you to create collaborative and end-to-end encrypted diagrams.
+[Excalidraw](https://github.com/excalidraw/excalidraw) is **Virtual whiteboard for sketching hand-drawn like diagrams**, used for Whiteboard and Note Project and Task . Excalidraw is an open source virtual hand-drawn style whiteboard. It can help you to create collaborative and end-to-end encrypted diagrams.
 
 
 

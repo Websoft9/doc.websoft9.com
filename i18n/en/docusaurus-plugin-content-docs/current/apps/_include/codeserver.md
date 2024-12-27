@@ -1,4 +1,4 @@
-[code-server](https://coder.com/) is **a web based IDE that run VS Code**, used for Code Repository Web IDE . code-server is a web based IDE, it help you run VS Code on any machine anywhere and access it in the browser. 
+[code-server](https://coder.com/) is **a web based IDE that run VS Code**, used for Code Repository Web IDE All-in-one DevOps . code-server is a web based IDE, it help you run VS Code on any machine anywhere and access it in the browser. 
 
 
 ![ui](https://libs.websoft9.com/Websoft9/DocsPicture/en/codeserver/codeserver-consolegui-websoft9.png)

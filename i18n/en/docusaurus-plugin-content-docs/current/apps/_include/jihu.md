@@ -1,4 +1,4 @@
-[Jihu GitLab](https://gitlab.cn/) is **A GitLab distribution for needs of Chinese users**, used for Code Repository CI/CD Pipeline DevOps All Artifact Repository Agile Boards Software supply chain . Jihu GitLab is the Chinese distribution of the GitLab DevOps platform, which focuses on addressing the needs of Chinese users.
+[Jihu GitLab](https://gitlab.cn/) is **A GitLab distribution for needs of Chinese users**, used for Code Repository CI/CD Pipeline DevOps All Artifact Repository Agile Boards Software supply chain Project and Task . Jihu GitLab is the Chinese distribution of the GitLab DevOps platform, which focuses on addressing the needs of Chinese users.
 
 
 ![console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/jihu-gitlab-gui-websoft9.png)

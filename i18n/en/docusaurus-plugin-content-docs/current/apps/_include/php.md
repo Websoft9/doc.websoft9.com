@@ -1,4 +1,4 @@
-[PHP](https://hub.docker.com/_/php) is **PHP language runtime for web application**, used for PHP . This is multiply verion PHP language runtime for web application powered by Websoft9, it based on offcial Docker image. You can custom it by yourself very easy
+[PHP](https://hub.docker.com/_/php) is **PHP language runtime with Apache for web application**, used for PHP . This is multiply verion PHP language runtime with Apache for web application powered by Websoft9, it based on offcial Docker image. You can custom it by yourself very easy
 
 
 ![Architecture](https://libs.websoft9.com/Websoft9/DocsPicture/zh/php/php-gui-websoft9.jpg)

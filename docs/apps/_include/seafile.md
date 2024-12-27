@@ -1,4 +1,4 @@
-[Seafile](https://www.seafile.com/home/) 是一个 **开源企业云盘和文档协作平台**，它被用于 文档协作  等场景。Seafile 是一款开源的企业云盘，注重可靠性和性能。支持 Windows, Mac, Linux, iOS, Android 平台。支持文件同步或者直接挂载到本地访问。
+[Seafile](https://www.seafile.com/home/) 是一个 **开源企业云盘和文档协作平台**，它被用于 文档协作/企业网盘 企业文档与知识共享  等场景。Seafile 是一款开源的企业云盘，注重可靠性和性能。支持 Windows, Mac, Linux, iOS, Android 平台。支持文件同步或者直接挂载到本地访问。
 
 
 ![seafile](https://libs.websoft9.com/Websoft9/DocsPicture/zh/seafile/seafile-gui-websoft9.png)

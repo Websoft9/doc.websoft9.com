@@ -1,4 +1,4 @@
-[Gitea](https://about.gitea.cn/) is **The lite DevOps platform**, used for Code Repository CI/CD Pipeline . Gitea is a private, fast, reliable DevOps platform that brings teams and developers high-efficiency but easy operations from planning to production.
+[Gitea](https://about.gitea.cn/) is **The lite DevOps platform**, used for Code Repository CI/CD Pipeline All-in-one DevOps . Gitea is a private, fast, reliable DevOps platform that brings teams and developers high-efficiency but easy operations from planning to production.
 
 
 ![Gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitea/gitea-gui-websoft9.png)

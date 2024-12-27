@@ -1,4 +1,4 @@
-[Budibase](https://budibase.com/) is **Internal tools made easy**, used for Master Data Low Code and No Code . Budibase saves teams 100s of hours building tools that integrate perfectly with any workflow
+[Budibase](https://budibase.com/) is **Internal tools made easy**, used for Master Data Low Code and No Code Digtal for SCM and Operation Data survey and collection . Budibase saves teams 100s of hours building tools that integrate perfectly with any workflow
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/budibase/budibase-main-websoft9.png)

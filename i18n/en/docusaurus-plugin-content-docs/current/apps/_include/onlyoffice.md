@@ -1,4 +1,4 @@
-[ONLYOFFICE Workspace](https://www.onlyoffice.com/) is **A free open-source collaborative system**, used for Document Collaboration Project and Task . ONLYOFFICE is a multifunctional portal for business collaboration, document and project management. 
+[ONLYOFFICE Workspace](https://www.onlyoffice.com/) is **A free open-source collaborative system**, used for Document Collaboration Project and Task Home Server . ONLYOFFICE is a multifunctional portal for business collaboration, document and project management. 
 
 
 ![ui](https://libs.websoft9.com/Websoft9/DocsPicture/en/onlyoffice/onlyoffice-websoft9-002.png)

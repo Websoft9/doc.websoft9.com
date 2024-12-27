@@ -1,4 +1,4 @@
-[Discuz](https://www.discuz.net/) is **面向全球用户的论坛系统**, used for Website Builder Online Community . Discuz 是一个以社区为基础的专业建站平台，帮助网站实现一站式服务
+[Discuz](https://www.discuz.net/) is **面向全球用户的论坛系统**, used for Website Builder Online Community Content Marketing . Discuz 是一个以社区为基础的专业建站平台，帮助网站实现一站式服务
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/discuz/discuz-gui-websoft9.png)

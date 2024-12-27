@@ -1,4 +1,4 @@
-[Focalboard](https://www.focalboard.com/) is **Open source project management for technical teams**, used for Agile Boards Project and Task . Focalboard is an open source project management for technical teams. Keep everything and everyone on track, all in the Mattermost platform.
+[Focalboard](https://www.focalboard.com/) is **Open source project management for technical teams**, used for Agile Boards Project and Task All-in-one DevOps . Focalboard is an open source project management for technical teams. Keep everything and everyone on track, all in the Mattermost platform.
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/focalboard/focalboard-gui-websoft9.png)

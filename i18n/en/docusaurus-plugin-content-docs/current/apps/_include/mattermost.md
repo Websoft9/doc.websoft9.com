@@ -1,4 +1,4 @@
-[Mattermost](https://mattermost.com/) is **A self-hosted Slack-alternative, collaboration for Mission-Critical Work**, used for Chat Project and Task Task Collaboration . Mattermost is a self-hosted Slack-alternative, flexible, messaging platform that enables secure team collaboration.
+[Mattermost](https://mattermost.com/) is **A self-hosted Slack-alternative, collaboration for Mission-Critical Work**, used for Chat Project and Task Home Server . Mattermost is a self-hosted Slack-alternative, flexible, messaging platform that enables secure team collaboration.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mattermost/mattermost-gui-websoft9.webp)

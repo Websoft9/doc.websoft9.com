@@ -1,4 +1,4 @@
-[Moodle](https://moodle.com/) is **An online learning platform**, used for eLearning . Moodle™ LMS is a learning platform designed to provide educators, administrators and learners
+[Moodle](https://moodle.com/) is **An online learning platform**, used for eLearning Software Labs for High Education . Moodle™ LMS is a learning platform designed to provide educators, administrators and learners
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/moodle/moodlegui-websoft9.jpg)
