@@ -21,6 +21,9 @@ import Meta from './_include/photoprism.md';
 
 ## 配置选项{#configs}
 
+- 多语言（√）
+- Cli （√）
+
 ## 管理维护{#administrator}
 
 ## 故障
