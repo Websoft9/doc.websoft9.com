@@ -19,6 +19,8 @@ Websoft9 控制台安装 MLflow 后，通过 **我的应用** 查看应用详情
 
 ## 配置选项{#configs}
 
+- Cli （√）
+
 ## 管理维护{#administrator}
 
 ## 故障

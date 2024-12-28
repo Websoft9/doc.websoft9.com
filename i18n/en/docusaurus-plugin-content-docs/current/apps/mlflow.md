@@ -21,6 +21,8 @@ import Meta from './_include/mlflow.md';
 
 ## Configuration options{#configs}
 
+- Cli (√)
+
 ## Administer{#administrator}
 
 ## Troubleshooting{#troubleshooting}
