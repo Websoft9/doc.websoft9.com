@@ -19,7 +19,7 @@ import Meta from './_include/docuseal.md';
 
 2. 在本地浏览器输入访问 URL，根据提示完成初始化
 
-#### 电子签名
+### 实现文件的电子签名
 
 1. 在首页上点击 **CREATE**，创建一个新的文档模板
 
