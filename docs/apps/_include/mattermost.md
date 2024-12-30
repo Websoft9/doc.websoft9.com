@@ -1,4 +1,4 @@
-[Mattermost](https://mattermost.com/) 是一个 **团队聊天和信息协作系统**，它被用于 团队聊天 项目/任务 任务协作  等场景。Mattermost是一个 Slack 的开源替代品，基于团队聊天为核心，集成音视频、文件、邮件等，把各种碎片化的企业沟通和协作集中到一起。
+[Mattermost](https://mattermost.com/) 是一个 **团队聊天和信息协作系统**，它被用于 团队聊天 项目/任务/流程 家庭服务器  等场景。Mattermost是一个 Slack 的开源替代品，基于团队聊天为核心，集成音视频、文件、邮件等，把各种碎片化的企业沟通和协作集中到一起。
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mattermost/mattermost-gui-websoft9.webp)

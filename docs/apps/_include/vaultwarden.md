@@ -1,4 +1,4 @@
-[Vaultwarden](https://www.vaultwarden.net/) 是一个 **开源团队密码管理器**，它被用于 密码管理  等场景。Vaultwarden 是一个轻量级的 Bitwarden 服务器实现，用于管理和存储密码。
+[Vaultwarden](https://www.vaultwarden.net/) 是一个 **开源团队密码管理器**，它被用于 团队密码共享  等场景。Vaultwarden 是一个轻量级的 Bitwarden 服务器实现，用于管理和存储密码。
 
 
 ![管理面板](https://libs.websoft9.com/Websoft9/DocsPicture/zh/vaultwarden/vaultwarden-gui-websoft9.png)

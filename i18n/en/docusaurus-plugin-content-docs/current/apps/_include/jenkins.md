@@ -1,4 +1,4 @@
-[Jenkins](https://www.jenkins.io/) is **self-contained, open source automation server**, used for CI/CD Pipeline . Jenkins is an automation server for supporting practically every tool as a part of the delivery pipelines.
+[Jenkins](https://www.jenkins.io/) is **self-contained, open source automation server**, used for CI/CD Pipeline All-in-one DevOps . Jenkins is an automation server for supporting practically every tool as a part of the delivery pipelines.
 
 
 ![devops](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jenkins/jenkins_is_the_hub_CD_Devops.png)

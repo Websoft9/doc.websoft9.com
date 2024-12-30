@@ -1,4 +1,4 @@
-[Confluence](https://www.atlassian.com/zh/software/confluence) is **Create, organise and discuss work with your team**, used for Agile Boards Task Collaboration Project and Task . Confluence Server is where you create, organise and discuss work with your team. Give every team, project, or department its own space to create the things they need, whether it's meeting notes, product requirements, file lists, or project plans, you can get more done in Confluence.
+[Confluence](https://www.atlassian.com/zh/software/confluence) is **Create, organise and discuss work with your team**, used for Agile Boards Project and Task . Confluence Server is where you create, organise and discuss work with your team. Give every team, project, or department its own space to create the things they need, whether it's meeting notes, product requirements, file lists, or project plans, you can get more done in Confluence.
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/confluence/confluence-gui-websoft9.png)

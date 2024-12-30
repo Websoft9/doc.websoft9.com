@@ -1,4 +1,4 @@
-[Immich](https://immich.app/) 是一个 **照片和视频管理解决方案**，它被用于 视频音频  等场景。开源照片和视频备份、管理、共享平台。
+[Immich](https://immich.app/) 是一个 **照片和视频管理解决方案**，它被用于 视频音频 家庭服务器  等场景。开源照片和视频备份、管理、共享平台。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/immich/immich-gui-websoft9.png)

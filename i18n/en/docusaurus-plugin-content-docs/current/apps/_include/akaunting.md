@@ -1,4 +1,4 @@
-[Akaunting](https://akaunting.com/) is **Open Source and online accounting software**, used for ERP & Finance . Akaunting is a free, open source and online accounting software designed for small businesses and freelancers. 
+[Akaunting](https://akaunting.com/) is **Open Source and online accounting software**, used for ERP & Finance Digtal for SCM and Operation . Akaunting is a free, open source and online accounting software designed for small businesses and freelancers. 
 
 
 ![Console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/akaunting/akaunting-gui-websoft9.png)

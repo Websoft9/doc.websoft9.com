@@ -1,4 +1,4 @@
-[Collabora Online Development Edition](https://collaboraonline.github.io/) is **Office suite integrated into your own infrastructure**, used for Document Service Document Collaboration . Collabora Online is a powerful collaborative Office suite that supports all major document, spreadsheet and presentation file formats, which you can integrate into your own infrastructure. 
+[Collabora Online Development Edition](https://collaboraonline.github.io/) is **Office suite integrated into your own infrastructure**, used for Document Service Document Collaboration Enterprise content management . Collabora Online is a powerful collaborative Office suite that supports all major document, spreadsheet and presentation file formats, which you can integrate into your own infrastructure. 
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/collabora/collabora-gui-websoft9.png)

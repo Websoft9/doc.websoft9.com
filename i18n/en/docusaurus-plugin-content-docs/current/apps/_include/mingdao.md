@@ -1,4 +1,4 @@
-[Mingdao](https://www.mingdao.com/) is **leader of APaaS, No Code Platform**, used for Low Code and No Code Software Platform . Provide rapid development Tool and middle-ground application solution for enterprise customer.
+[Mingdao](https://www.mingdao.com/) is **leader of APaaS, No Code Platform**, used for Low Code and No Code All-in-one DevOps . Provide rapid development Tool and middle-ground application solution for enterprise customer.
 
 
 ![mdfeature](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mingdao/mingdao-tables-websoft9.jpg)

@@ -22,6 +22,9 @@ import Meta from './_include/photoprism.md';
 
 ## Configuration Options {#configs}
 
+- Multilingual (√)
+- Cli (√)
+
 ## Administration {#administrator}
 
 ## Troubleshooting {#troubleshooting}

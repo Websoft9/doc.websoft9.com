@@ -1,4 +1,4 @@
-[nopCommerce](https://www.nopcommerce.com/) 是一个 **开源电子商务系统**，它被用于 电子商务  等场景。基于微软技术的全球受欢迎的 ASP.NET 电商系统
+[nopCommerce](https://www.nopcommerce.com/) 是一个 **开源电子商务系统**，它被用于 电子商务 内容营销技术  等场景。基于微软技术的全球受欢迎的 ASP.NET 电商系统
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/en/nopcommerce/nopcommerce-devices.png)

@@ -14,10 +14,10 @@ Websoft9 目前仅支持在 Linux 主机下安装。
 
 ```
 # 快速安装
-wget -O install.sh https://websoft9.github.io/websoft9/install/install.sh && bash install.sh
+wget -O install.sh https://artifact.websoft9.com/release/websoft9/install.sh && bash install.sh
 
 # 自定义参数安装。-- channel 有 release 和 dev 两个可选项，分别代表生产版和测试版，默认值为 release
-wget -O install.sh https://websoft9.github.io/websoft9/install/install.sh && bash install.sh --port 9000 --channel release --path "/data/websoft9/source" --version "latest"
+wget -O install.sh https://artifact.websoft9.com/release/websoft9/install.sh && bash install.sh --port 9000 --channel release --path "/data/websoft9/source" --version "latest"
 ```
 
 > 升级 Websoft9 也只需要运行上面的脚本。  

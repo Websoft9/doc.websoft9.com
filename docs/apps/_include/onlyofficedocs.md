@@ -1,4 +1,4 @@
-[ONLYOFFICE Docs](https://www.onlyoffice.com/) 是一个 **为网盘系统提供文档在线编辑与预览服务的中间件**，它被用于 文档服务  等场景。ONLYOFFICE Document Server是一个在线文档编辑和预览系统，可供第三方网盘软件或开发者实现文档的在线编辑和预览。
+[ONLYOFFICE Docs](https://www.onlyoffice.com/) 是一个 **为网盘系统提供文档在线编辑与预览服务的中间件**，它被用于 文档服务 企业文档与知识共享  等场景。ONLYOFFICE Document Server是一个在线文档编辑和预览系统，可供第三方网盘软件或开发者实现文档的在线编辑和预览。
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/onlyoffice/onlyofficedocs-gui-websoft9.png)

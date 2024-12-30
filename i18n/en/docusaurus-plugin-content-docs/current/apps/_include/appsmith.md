@@ -1,4 +1,4 @@
-[Appsmith](https://www.appsmith.com/) is **Appsmith | Open-source Workbench for Internal Tools**, used for Master Data Low Code and No Code . Stop grappling with data, scouring for the perfect React library, and coding everything from scratch. Build internal tools 10X faster with Appsmith.
+[Appsmith](https://www.appsmith.com/) is **Appsmith | Open-source Workbench for Internal Tools**, used for Master Data Low Code and No Code Digtal for SCM and Operation Data survey and collection . Stop grappling with data, scouring for the perfect React library, and coding everything from scratch. Build internal tools 10X faster with Appsmith.
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/appsmith/appsmith-gui-websoft9.png)

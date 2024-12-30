@@ -1,4 +1,4 @@
-[Directus](https://directus.io/) is **Created  application based on many Database**, used for Low Code and No Code Master Data Headless CMS Database Management Tools . Directus is a real-time API and App dashboard for managing SQL database content or create low-code application
+[Directus](https://directus.io/) is **Created  application based on many Database**, used for Low Code and No Code Master Data Headless CMS Database Management Tools All-in-one DevOps . Directus is a real-time API and App dashboard for managing SQL database content or create low-code application
 
 
 ![architecture](https://libs.websoft9.com/Websoft9/DocsPicture/zh/directus/directus-arch-websoft9.svg)

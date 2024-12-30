@@ -1,4 +1,4 @@
-[APEX](https://apex.oracle.com/) is **Enterprise low-code application platform**, used for Low Code and No Code . Oracle APEX is the world's most popular low-code platform for enterprise apps.
+[APEX](https://apex.oracle.com/) is **Enterprise low-code application platform**, used for Low Code and No Code Digtal for SCM and Operation . Oracle APEX is the world's most popular low-code platform for enterprise apps.
 
 
 ![apex](https://libs.websoft9.com/Websoft9/DocsPicture/zh/apex/apex-oracle-wordpress.png)

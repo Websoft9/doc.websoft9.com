@@ -23,6 +23,8 @@ Below steps is need:
 1. Access via local browser: `http://server-public-IP:9000`, the Websoft9 login page
    ![Websoft9 Login page](./assets/websoft9-loginpage.png)
 
+   > The latest version of Websoft9 enforces access via the HTTPS protocol. For users utilizing the Firefox browser, please visit https://InternetIP to access the Websoft9 boot page. Follow the instructions provided on the boot page to smoothly navigate to the Websoft9 login interface.
+
 2. Input the server's [username and password](./credentials), after a successful login, you will be directed to the console default page.  
  
    - **User name**: The server's administrator account, it is recommended to use `root` for the first login. 

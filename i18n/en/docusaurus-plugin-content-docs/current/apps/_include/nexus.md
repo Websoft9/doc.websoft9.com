@@ -1,4 +1,4 @@
-[Sonatype Nexus Repository](https://www.sonatype.com/products/sonatype-nexus-repository) is **Artifact repository manager**, used for Software supply chain Container Artifact Repository . Sonatype Nexus  can build and distribute software fast Build quickly and reliably Publish and cache components in a central repository that connects natively to all popular package managers. 
+[Sonatype Nexus Repository](https://www.sonatype.com/products/sonatype-nexus-repository) is **Artifact repository manager**, used for Software supply chain Container Artifact Repository All-in-one DevOps . Sonatype Nexus  can build and distribute software fast Build quickly and reliably Publish and cache components in a central repository that connects natively to all popular package managers. 
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/nexus/nexus-gui-websoft9.webp)

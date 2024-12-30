@@ -1,4 +1,4 @@
-[SSCMS](https://sscms.com/) is **CMS based on Microsoft for multiple websites**, used for Website Builder Education . SSCMS is a cross-platform, distributed deployment of the product can run on all kinds of operating systems, while supporting MySql, SqlServer, PostgreSql, SQLite and domestic Damon database.
+[SSCMS](https://sscms.com/) is **CMS based on Microsoft for multiple websites**, used for Website Builder Content Marketing . SSCMS is a cross-platform, distributed deployment of the product can run on all kinds of operating systems, while supporting MySql, SqlServer, PostgreSql, SQLite and domestic Damon database.
 
 
 ![template](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sscms/sscms-gui-websoft9.png)
@@ -15,7 +15,7 @@ When referring to this document to use **SSCMS**, please read and ensure the fol
 - This application is installed by Websoft9 console.
 
 
-- The purpose of this application complies with the [AGPL-3.0](https://opensource.org/licenses/AGPL-3.0) open source license agreement.
+- The purpose of this application complies with the [GPL-3.0](https://opensource.org/licenses/GPL-3.0) open source license agreement.
 
 
 - [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.

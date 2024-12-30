@@ -1,4 +1,4 @@
-[Passbolt](https://www.passbolt.com/) is **Self-Hosted Password Manager**, used for Password Management Key Management . Keep full ownership of your data. With passbolt pro's ability to self host it's the perfect sidekick for those who value privacy or more control.
+[Passbolt](https://www.passbolt.com/) is **Self-Hosted Password Manager**, used for Team Password Management Key Management . Keep full ownership of your data. With passbolt pro's ability to self host it's the perfect sidekick for those who value privacy or more control.
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/passbolt/passbolt-gui-websoft9.webp)

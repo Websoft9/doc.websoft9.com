@@ -1,4 +1,4 @@
-[Alfresco](https://www.alfresco.com/) is **An open source Enterprise Content Management software**, used for Document Collaboration . Alfresco Community Edition is open source Enterprise Content Management software that handles any type of content, allowing users to easily share and collaborate on content.
+[Alfresco](https://www.alfresco.com/) is **An open source Enterprise Content Management software**, used for Document Collaboration Enterprise content management . Alfresco Community Edition is open source Enterprise Content Management software that handles any type of content, allowing users to easily share and collaborate on content.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/en/alfresco/alfresco-arcgui-websoft9.png)

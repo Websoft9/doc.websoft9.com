@@ -1,4 +1,4 @@
-[Immich ](https://immich.app/) is **photo and video management solution**, used for Media System . Open source photo and video backup, management, and sharing platform.
+[Immich ](https://immich.app/) is **photo and video management solution**, used for Media System Home Server . Open source photo and video backup, management, and sharing platform.
 
 
 ![Interface](https://libs.websoft9.com/Websoft9/DocsPicture/zh/immich/immich-gui-websoft9.png)

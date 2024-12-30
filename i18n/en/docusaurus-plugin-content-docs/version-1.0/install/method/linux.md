@@ -11,7 +11,16 @@ slug: /install/linux
 If you do not have the Docker, Git, Ansible and other environments required above, it is recommended to use our **Automatic installation** below:  
 
 ```
-sudo wget -N https://raw.githubusercontent.com/Websoft9/StackHub/main/docker-installer.sh; sudo bash docker-installer.sh -r akeneo
+# Installation with default parameters
+wget -O install.sh https://artifact.websoft9.com/release/websoft9/install.sh && bash install.sh
+
+# Custom Parameter Installation
+# -- channel release | dev
+# --port
+# --version
+# --path
+
+wget -O install.sh https://artifact.websoft9.com/release/websoft9/install.sh && bash install.sh --port 9000 --channel release --path "/data/websoft9/source" --version "latest"
 ```
 
 ## Manual installation

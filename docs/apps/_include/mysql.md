@@ -1,4 +1,4 @@
-[MySQL](https://www.mysql.com/) 是一个 **流行的关系型数据库管理系统**，它被用于 SQL 数据库/关系数据库  等场景。MySQL 是流行的关系型数据库管理系统之一，在 WEB 应用方面，MySQL是出色的 RDBMS (关系数据库管理系统) 应用软件。
+[MySQL](https://www.mysql.com/) 是一个 **流行的关系型数据库管理系统**，它被用于 SQL 数据库/关系数据库 高校软件实训  等场景。MySQL 是流行的关系型数据库管理系统之一，在 WEB 应用方面，MySQL是出色的 RDBMS (关系数据库管理系统) 应用软件。
 
 
 ![dbgui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/mysql-dbgui-websoft9.png)

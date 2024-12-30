@@ -12,14 +12,23 @@ import Meta from './_include/graylog.md';
 
 ## 入门指南{#guide}
 
-### 登陆后台{#wizard}
+### 初始化{#wizard}
 
-Websoft9 控制台安装 Graylog 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
+1. Websoft9 控制台安装 Graylog 后，通过 "我的应用" 查看应用详情  
 
-- 登陆界面
-  ![](./assets/graylog-login-websoft9.png)
 
-- 后台界面
+   - 在 **访问** 标签页中获取 **访问URL** 和 **登陆用户和密码**
+   - 在 **容器** 标签页中获取 **主容器名称** 
+
+2. 查看 **主容器** 的日志，获取用户和初始密码
+
+3. 浏览器输入 **访问URL**，输入步骤2获取的用户和初始密码进入初始页面
+
+4. 点击 **Create CA**，根据提示完成初始化
+
+5. 初始化完成后，进入登陆页面，输入步骤1获取的  **登陆用户和密码**
+
+6. 成功登陆 Graylog 后台界面
   ![](./assets/graylog-console-websoft9.png)
 
 ## 企业版

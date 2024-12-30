@@ -1,4 +1,4 @@
-[Nextcloud ](https://nextcloud.com/) 是一个 **用于自建私有网盘的云存储开源软件，功能类似百度云盘**，它被用于 文档协作  等场景。Nextcloud是一款用于自建私有网盘的云存储开源软件，采用PHP+MySQL开发，功能类似百度云盘，提供了PC、IOS和Android三个同步客户端支持多种设备访问
+[Nextcloud Hub](https://nextcloud.com/) 是一个 **面向组织的在线协作生产力工具，包括：文件存储和同步平台、日历邮件群组、在线会议聊天以及生成式 AI 功能**，它被用于 文档协作/企业网盘 团队聊天 需求/看板/缺陷 家庭服务器 企业文档与知识共享  等场景。Nextcloud提供了一个现代化的本地内容协作平台，具有实时文档编辑、视频聊天、生成式 AI 和群组软件功能，可在移动设备、桌面和网络上进行。
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/nextcloud/nextcloud-gui-websoft9.png)
@@ -6,9 +6,9 @@
 
 ## 准备
 
-在参阅本文档使用 Nextcloud  时，需要确保如下几点：
+在参阅本文档使用 Nextcloud Hub 时，需要确保如下几点：
 
-- [登录 Websoft9 控制台](./login-console)，然后找到（或安装）Nextcloud ：
+- [登录 Websoft9 控制台](./login-console)，然后找到（或安装）Nextcloud Hub：
   - **我的应用** 菜单找到应用 
   - **应用商店** 菜单部署应用
 

@@ -1,4 +1,4 @@
-[Jitsi Meet](https://jitsi.org/) 是一个 **高视频质量和功能的视频会议平台**，它被用于 教育 会议/直播  等场景。Jitsi Meet 是一个完全加密的 100% 开源视频会议解决方案，您可以全天免费使用，无需帐户。
+[Jitsi Meet](https://jitsi.org/) 是一个 **高视频质量和功能的视频会议平台**，它被用于 会议/直播 家庭服务器  等场景。Jitsi Meet 是一个完全加密的 100% 开源视频会议解决方案，您可以全天免费使用，无需帐户。
 
 
 ![创建会议](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jitsi/jitsi-gui-websoft9.png)

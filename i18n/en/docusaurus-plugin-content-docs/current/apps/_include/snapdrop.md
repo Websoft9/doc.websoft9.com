@@ -1,4 +1,4 @@
-[Snapdrop](https://snapdrop.net/) is **File sharing in your browser**, used for Files Management . local file sharing in your browser. Inspired by Apple's Airdrop.
+[Snapdrop](https://snapdrop.net/) is **File sharing in your browser**, used for Files Management Enterprise content management . local file sharing in your browser. Inspired by Apple's Airdrop.
 
 
 ![Console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/snapdrop/snapdrop-gui-websoft9.png)

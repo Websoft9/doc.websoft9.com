@@ -1,4 +1,4 @@
-[Jellyfin](https://jellyfin.org/) is **The Free Software Media System**, used for Video Server Media System . Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media.  It is an alternative to the proprietary Emby and Plex, to provide media from a dedicated server to end-user devices via multiple apps. 
+[Jellyfin](https://jellyfin.org/) is **The Free Software Media System**, used for Video Server Media System Home Server . Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media.  It is an alternative to the proprietary Emby and Plex, to provide media from a dedicated server to end-user devices via multiple apps. 
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/jellyfin/jellyfin-gui-websoft9.png)

@@ -1,4 +1,4 @@
-[Odoo](https://www.odoo.com/) is **A suite of web based open source business apps**, used for ERP & Finance CRM & Distribution & Order Supply Chain & Manufacturing & Logistic Strategy & Legal & HR Support & Customer Success PLM & PDM Marketing Website Builder Project and Task . Odoo is a suite of web based open source business apps. Odoo Apps can be used as stand-alone applications, but they also integrate seamlessly so you get a full-featured Open Source ERP when you install several Apps.
+[Odoo](https://www.odoo.com/) is **A suite of web based open source business apps**, used for ERP & Finance CRM & Distribution & Order Supply Chain & Manufacturing & Logistic Strategy & Legal & HR Support & Customer Success PLM & PDM Marketing Website Builder Project and Task Digtal for SCM and Operation Content Marketing . Odoo is a suite of web based open source business apps. Odoo Apps can be used as stand-alone applications, but they also integrate seamlessly so you get a full-featured Open Source ERP when you install several Apps.
 
 
 ![ui](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odooui-websoft9.png)

@@ -1,4 +1,4 @@
-[Plausible](https://plausible.io/) is **Easy to use and privacy-friendly Google Analytics alternative**, used for Web Analytics . Plausible is intuitive, lightweight and open source web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. Made and hosted in the EU, powered by European-owned cloud infrastructure 🇪🇺
+[Plausible](https://plausible.io/) is **Easy to use and privacy-friendly Google Analytics alternative**, used for Web Analytics Content Marketing . Plausible is intuitive, lightweight and open source web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. Made and hosted in the EU, powered by European-owned cloud infrastructure 🇪🇺
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/plausible/plausible-gui-websoft9.webp)

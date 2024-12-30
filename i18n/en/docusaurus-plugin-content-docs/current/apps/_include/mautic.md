@@ -1,4 +1,4 @@
-[Mautic](https://www.mautic.org/) is **Open Source Marketing Automation Software**, used for Marketing . Mautic provides free and open source marketing automation software available to everyone. Free email marketing software, lead management software and more
+[Mautic](https://www.mautic.org/) is **Open Source Marketing Automation Software**, used for Marketing Content Marketing . Mautic provides free and open source marketing automation software available to everyone. Free email marketing software, lead management software and more
 
 
 ![Console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mautic/mautic-gui-websoft9.jpg)
