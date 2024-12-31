@@ -2,8 +2,8 @@
 title: Tiny Tiny RSS
 slug: /ttrss
 tags:
-  - console
-  - other
+  - RSS aggregator
+  - Tiny Tiny RSS
 ---
 
 import Meta from './_include/ttrss.md';
@@ -11,12 +11,6 @@ import Meta from './_include/ttrss.md';
 <Meta name="meta" />
 
 ## Getting started{#guide}
-
-### Initial setup{#wizard}
-
-1. When completed installation of Tiny Tiny RSS at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
-
-2. Complete the install wizard step by step
 
 ### Login verification{#verification}
 
@@ -26,18 +20,9 @@ import Meta from './_include/ttrss.md';
 
 ## Configuration options{#configs}
 
-- CLI
 - Multilingual (√)
-- SMTP (√)
+- Multiply users (√)
 
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?
