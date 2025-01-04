@@ -80,6 +80,12 @@ docker exec -it websoft9-apphub cat /websoft9/apphub/logs/apphub_error.log
 
 如果错误日志是  Unit docker.socket entered failed state，表明系统缺少 docker 用户组，运行 `groupadd docker` 增加用户组  
 
+#### 创建应用报错 `data.forward_port should be >= 1`?
+
+问题现象：重建应用时报错 `data.forward_port should be >= 1`，但应用重建时成功的  
+问题原因：重建应用时可能删除 .env 文件中的 `W9_URL` 和 `W9_HTTP_PORT` 环境变量，导致重建应用时尝试更新 Websoft9 网关 
+解决方案：如果应用不需要发布，可以删除应用在 Websoft9 网关中对应的记录 
+
 ## 应用问题
 
 #### 访问应用出现 502 错误？{#nginx502}
