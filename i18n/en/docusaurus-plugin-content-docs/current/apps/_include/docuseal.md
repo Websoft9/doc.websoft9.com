@@ -1,6 +1,8 @@
 [DocuSeal](https://www.docuseal.co/) is **document filling and signing**, used for Document Service . DocuSeal is an open source electronic signature and document management tool.
 
 
+![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/docuseal/docuseal-gui-websoft9.png)
+
 
 ## Prepare
 
