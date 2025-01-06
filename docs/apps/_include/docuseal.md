@@ -1,6 +1,8 @@
 [DocuSeal](https://www.docuseal.co/) 是一个 **文档数字签名工具**，它被用于 文档服务  等场景。DocuSeal 是一个开源的电子签名和文档管理工具。
 
 
+![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/docuseal/docuseal-gui-websoft9.png)
+
 
 ## 准备
 

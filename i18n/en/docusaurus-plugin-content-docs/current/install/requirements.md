@@ -59,8 +59,7 @@ Websoft9 supports the following web browsers:
 - Microsoft Edge
 - Google Chrome
 - Mozilla Firefox
-- Apple Safari
-- Chromium
+- Safari 18.2 or above
 
 ## Related topics
 

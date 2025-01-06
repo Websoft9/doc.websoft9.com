@@ -41,6 +41,7 @@ Python 是安装 Websoft9 的必选项，所需版本：Python 3.8 以上 + pip�
 - Chrome
 - Edge
 - Firefox
+- Safari 18.2 或以上
 
 ## 相关阅读
 

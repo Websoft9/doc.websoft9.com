@@ -89,6 +89,9 @@ Running `netstat -tunlp` to check which process is using port 9000, then free th
 
 Running `systemctl status docker` and `journalctl -xe` to check error logs
 
+### Recreate App error: data.forward_port should be >= 1
+
+The reason is that you have delete `W9_URL` and `W9_HTTP_PORT` that exist `.env`, if don't need to publish your App, you should delete Proxy related one record at **Websoft9 Gateway**
 
 ## Applications
 
