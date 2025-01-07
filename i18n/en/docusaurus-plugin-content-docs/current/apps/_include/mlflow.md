@@ -1,4 +1,4 @@
-[MLflow](https://mlflow.org/) is **Unified platform for both traditional ML and GenAI applications**, used for ML & Framework & Development . Machine learning experiment management and model tracking tool with version control support.
+[MLflow](https://mlflow.org/) is **Unified platform for both traditional ML and GenAI applications**, used for ML Framework & Development . Machine learning experiment management and model tracking tool with version control support.
 
 
 ![ui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mlflow/mlflow-ui-websoft9.png)

@@ -1,4 +1,4 @@
-[LibreChat]() is **All-In-One AI Conversations with LibreChat**, used for Chat Generative AI . LibreChat brings together the future of assistant AIs with the revolutionary technology of OpenAI's ChatGPT.
+[LibreChat]() is **All-In-One AI Conversations with LibreChat**, used for Chat AI User Interface . LibreChat brings together the future of assistant AIs with the revolutionary technology of OpenAI's ChatGPT.
 
 
 ![gui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/librechat/librechat-gui-websoft9.png)

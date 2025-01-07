@@ -1,4 +1,4 @@
-[HuggingChat](https://huggingface.co) is **Open source chat interface for Hugging Face**, used for Chat Generative AI . HuggingChat is an open-source chatbot based on natural language processing technology that supports conversation generation in multiple languages.
+[HuggingChat](https://huggingface.co) is **Open source chat interface for Hugging Face**, used for Chat AI User Interface . HuggingChat is an open-source chatbot based on natural language processing technology that supports conversation generation in multiple languages.
 
 
 ![gui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/huggingchat/huggingchat-gui-websoft9.png)

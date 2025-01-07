@@ -1,4 +1,4 @@
-[Open WebUI](https://openwebui.com) 是一个 **可扩展、自托管的人工智能界面**，它被用于 生成式 AI  等场景。Open WebUI 是一个可扩展、功能丰富、用户友好的自托管人工智能平台，可完全离线运行。它支持各种 LLM 运行程序，如 Ollama 和 OpenAI 兼容 API，并内置 RAG 推理引擎，是一个强大的人工智能部署解决方案。
+[Open WebUI](https://openwebui.com) 是一个 **可扩展、自托管的人工智能界面**，它被用于 AI 交互界面  等场景。Open WebUI 是一个可扩展、功能丰富、用户友好的自托管人工智能平台，可完全离线运行。它支持各种 LLM 运行程序，如 Ollama 和 OpenAI 兼容 API，并内置 RAG 推理引擎，是一个强大的人工智能部署解决方案。
 
 
 ![界面](http://libs.websoft9.com/Websoft9/DocsPicture/zh/openwebui/openwebui-gui-websoft9.png)

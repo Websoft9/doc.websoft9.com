@@ -1,4 +1,4 @@
-[NextChat](https://nextchat.dev) is **Well-designed cross-platform ChatGPT web UI**, used for Generative AI . A well-designed cross-platform ChatGPT UI (Web / PWA / Linux / Win / MacOS)
+[NextChat](https://nextchat.dev) is **Well-designed cross-platform ChatGPT web UI**, used for AI User Interface . A well-designed cross-platform ChatGPT UI (Web / PWA / Linux / Win / MacOS)
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/nextchat/nextchat-gui-websoft9.png)

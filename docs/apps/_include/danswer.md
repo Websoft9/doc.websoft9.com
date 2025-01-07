@@ -1,4 +1,4 @@
-[Danswer](https://www.danswer.ai/) 是一个 **Danswer AI 助手**，它被用于 生成式 AI  等场景。Danswer 是一个为团队设计的生成式 AI 聊天平台。
+[Danswer](https://www.danswer.ai/) 是一个 **Danswer AI 助手**，它被用于 AI 交互界面  等场景。Danswer 是一个为团队设计的生成式 AI 聊天平台。
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/danswer/danswer-gui-websoft9.png)
