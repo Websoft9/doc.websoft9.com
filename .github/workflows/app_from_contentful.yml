@@ -29,7 +29,7 @@ jobs:
         python builds/gen_md_from_contenful.py template/meta/zh_head.jinja2  docs/apps/_include --override true
         python builds/gen_md_from_contenful.py template/meta/en_head.jinja2 i18n/en/docusaurus-plugin-content-docs/current/apps/_include --override true
         python builds/gen_md_from_contenful.py template/meta/zh_app.jinja2  docs/apps --override false
-        python builds/gen_md_from_contenful.py template/meta/en_app.jinja2 i18n/en/docusaurus-plugin-content-docs/current/apps --override true
+        python builds/gen_md_from_contenful.py template/meta/en_app.jinja2 i18n/en/docusaurus-plugin-content-docs/current/apps --override false
         
     - name: Commit and push changes
       uses: stefanzweifel/git-auto-commit-action@v4
