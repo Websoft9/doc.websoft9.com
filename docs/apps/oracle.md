@@ -37,9 +37,25 @@ import Meta from './_include/oracle.md';
      docker pull container-registry.oracle.com/database/enterprise:tag
      ```
 
-#### 安装应用
+#### 安装 Oracle Database
 
-Websoft9 控制台安装 Oracle Database 应用，然后再 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
+提供两种安装 Oracle Database 的方式：
+
+- 已部署 Websoft9 控制台，请通过控制台的 **应用商店** 找到 Oracle Database 并一键部署它
+
+- 未部署 Websoft9 控制台，请 SSH 连接到服务器后，运行如下的安装命令：
+  ```
+  #1 获取一键部署模板到服务器目录 /opt/oracledb
+  wget https://artifact.websoft9.com/release/websoft9/plugin/library/library-latest.zip && unzip -o library-latest.zip && sudo cp -rf library/apps/oracle /opt/oracledb
+
+  #2 通过修改 .env 文件中的 W9_VERSION 的值指定目标数据库版本
+  
+  #3 开始安装数据库
+  ## 安装企业版或标准版
+  cd /opt/oracledb && docker compose -f docker-compose-enterprise.yml up -d
+  ## 安装 XE 版
+  cd /opt/oracledb && docker compose up -d
+  ```
 
 #### Oracle EM 连接数据库
 

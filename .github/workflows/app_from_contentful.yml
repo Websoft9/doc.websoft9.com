@@ -1,4 +1,4 @@
-name: Generate Apps header file
+name: Generate Apps header and appdocs files
 
 on:
   workflow_dispatch:
@@ -26,9 +26,11 @@ jobs:
       env:
         CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_GRAPHQLTOKEN }}
       run: |
-        python builds/gen_md_header.py template/meta/zh.jinja2
-        python builds/gen_md_header.py template/meta/en.jinja2
-
+        python builds/gen_md_from_contenful.py template/meta/zh_head.jinja2  docs/apps/_include --override true
+        python builds/gen_md_from_contenful.py template/meta/en_head.jinja2 i18n/en/docusaurus-plugin-content-docs/current/apps/_include --override true
+        python builds/gen_md_from_contenful.py template/meta/zh_app.jinja2  docs/apps --override false
+        python builds/gen_md_from_contenful.py template/meta/en_app.jinja2 i18n/en/docusaurus-plugin-content-docs/current/apps --override true
+        
     - name: Commit and push changes
       uses: stefanzweifel/git-auto-commit-action@v4
       with:

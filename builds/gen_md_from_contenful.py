@@ -6,6 +6,8 @@ import argparse
 # 解析命令行参数
 parser = argparse.ArgumentParser(description='Generate Markdown files from Contentful entries based on a template file.')
 parser.add_argument('template_file', help='The template file to use for generating the Markdown files.')
+parser.add_argument('output_dir', help='The output directory for the generated Markdown files.')
+parser.add_argument('--override', action='store_true', help='Override existing files if they exist.')
 args = parser.parse_args()
 
 # 设置 Jinja2 模板环境
@@ -18,10 +20,7 @@ template = env.get_template(TEMPLATE_FILE)
 locale = 'zh-CN' if 'zh' in TEMPLATE_FILE else 'en-US'
 
 # 设置 Markdown 文件的输出目录
-if locale == 'zh-CN':
-    OUTPUT_DIR = 'docs/apps/_include'
-else:
-    OUTPUT_DIR = 'i18n/en/docusaurus-plugin-content-docs/current/apps/_include'
+OUTPUT_DIR = args.output_dir
 
 CONTENTFUL_SPACE_ID = "ffrhttfighww"
 CONTENTFUL_ACCESS_TOKEN = os.environ['CONTENTFUL_ACCESS_TOKEN']
@@ -92,6 +91,11 @@ while True:
         
         # 完整的文件路径
         md_file_path = os.path.join(OUTPUT_DIR, md_filename)
+        
+        # 检查文件是否存在
+        if os.path.exists(md_file_path) and not args.override:
+            print(f"File {md_file_path} already exists and override is set to False. Skipping.")
+            continue
         
         # 渲染模板，直接传递 fields 字典给模板
         rendered_content = template.render(**fields)
