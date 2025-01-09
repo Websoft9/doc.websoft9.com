@@ -26,10 +26,10 @@ jobs:
       env:
         CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_GRAPHQLTOKEN }}
       run: |
-        # python builds/gen_md_from_contenful.py template/meta/zh_head.jinja2  docs/apps/_include --override
-        # python builds/gen_md_from_contenful.py template/meta/en_head.jinja2 i18n/en/docusaurus-plugin-content-docs/current/apps/_include --override
-        python builds/gen_md_from_contenful.py template/meta/zh_app.jinja2  docs/apps --ignore-list template/meta/skip_file.json
-        # python builds/gen_md_from_contenful.py template/meta/en_app.jinja2 i18n/en/docusaurus-plugin-content-docs/current/apps
+        python builds/gen_md_from_contenful.py template/meta/zh_head.jinja2  docs/apps/_include --override
+        python builds/gen_md_from_contenful.py template/meta/en_head.jinja2 i18n/en/docusaurus-plugin-content-docs/current/apps/_include --override
+        python builds/gen_md_from_contenful.py template/meta/zh_app.jinja2  docs/apps
+        python builds/gen_md_from_contenful.py template/meta/en_app.jinja2 i18n/en/docusaurus-plugin-content-docs/current/apps
         
     - name: Commit and push changes
       uses: stefanzweifel/git-auto-commit-action@v4
