@@ -21,8 +21,8 @@ import Meta from './_include/opengauss.md';
 2. 进入 openGauss 容器的命令模式，使用 gsql 连接数据库
 
     ```
-    root@58ddfa53f5a8:/# su - omm
-    omm@58ddfa53f5a8:~$ gsql -d postgres -U gaussdb
+    $ su - omm
+    $ gsql -d postgres -U gaussdb
     # 输入访问标签页中获取密码
     Password for user gaussdb: 
     gsql ((openGauss 6.0.0 build aee4abd5) compiled at 2024-09-29 19:14:27 commit 0 last mr  )

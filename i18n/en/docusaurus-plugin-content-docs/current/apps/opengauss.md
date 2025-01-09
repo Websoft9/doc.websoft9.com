@@ -20,8 +20,8 @@ import Meta from './_include/opengauss.md';
 2. Enter the command mode of the openGauss container and use gsql to connect to the database:
 
     ```
-    root@58ddfa53f5a8:/# su - omm
-    omm@58ddfa53f5a8:~$ gsql -d postgres -U gaussdb
+    $ su - omm
+    $ gsql -d postgres -U gaussdb
     # Get passwords in the input access tab
     Password for user gaussdb: 
     gsql ((openGauss 6.0.0 build aee4abd5) compiled at 2024-09-29 19:14:27 commit 0 last mr  )
