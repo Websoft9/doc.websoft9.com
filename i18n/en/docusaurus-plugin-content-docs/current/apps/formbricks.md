@@ -2,8 +2,9 @@
 title: Formbricks
 slug: /formbricks
 tags:
-  - console
-  - other
+  - Data Collection
+  - Form Building
+  - Formbricks
 ---
 
 import Meta from './_include/formbricks.md';
@@ -18,26 +19,10 @@ import Meta from './_include/formbricks.md';
 
 2. Complete the install wizard step by step
 
-### Login verification{#verification}
-
-1. Completed installation Formbricks at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
-
-2. Starting to verify it
-
 ## Configuration options{#configs}
 
-- CLI
 - Multilingual (√)
-- SMTP (√)
 
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?
