@@ -1,4 +1,4 @@
-[SonarQube]() 是一个 **持续检查您的代码**，它被用于 CI/CD 流水线 一站式 DevOps 应用  等场景。SonarQube是代码质量管理工具
+[SonarQube](https://www.sonarsource.com) 是一个 **持续检查您的代码**，它被用于 CI/CD 流水线 一站式 DevOps 应用  等场景。SonarQube是代码质量管理工具
 
 
 ![界面](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sonarqube/sonarqube-gui-websoft9.png)
