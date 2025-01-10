@@ -1,4 +1,4 @@
-[Danswer](https://www.danswer.ai/) is **Danswer AI Assistant**, used for Generative AI . Danswer is a generative AI chat platform for teams.
+[Danswer](https://www.danswer.ai/) is **Danswer AI Assistant**, used for AI User Interface . Danswer is a generative AI chat platform for teams.
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/danswer/danswer-gui-websoft9.png)

@@ -1,4 +1,4 @@
-[AnythingLLM](https://anythingllm.com/) is **all-in-one AI application**, used for Open Source LLM . AnythingLLM is a versatile language model that supports a wide range of tasks and applications, providing intelligent dialog and text generation.
+[AnythingLLM](https://anythingllm.com/) is **all-in-one AI application**, used for LLMs and Service . AnythingLLM is a versatile language model that supports a wide range of tasks and applications, providing intelligent dialog and text generation.
 
 
 ![gui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/anythingllm/anythingllm-gui-websoft9.png)

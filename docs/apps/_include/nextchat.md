@@ -1,4 +1,4 @@
-[NextChat](https://nextchat.dev) 是一个 **ChatGPT 私有化应用**，它被用于 生成式 AI  等场景。一键拥有你自己的跨平台 ChatGPT 应用 (Web / PWA / Linux / Win / MacOS)
+[NextChat](https://nextchat.dev) 是一个 **ChatGPT 私有化应用**，它被用于 AI 交互界面  等场景。一键拥有你自己的跨平台 ChatGPT 应用 (Web / PWA / Linux / Win / MacOS)
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/nextchat/nextchat-gui-websoft9.png)

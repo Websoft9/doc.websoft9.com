@@ -1,4 +1,4 @@
-[Khoj](https://khoj.dev) is **Khoj is an open-source personalized AI assistant designed to be your 'second brain'**, used for Generative AI . The core functions of Khoj include note taking and document intelligent assistant, real-time Internet information access, fast and accurate semantic search, personalized image generation and voice understanding, and open source self hosting to protect privacy.
+[Khoj](https://khoj.dev) is **Khoj is an open-source personalized AI assistant designed to be your 'second brain'**, used for AI User Interface . The core functions of Khoj include note taking and document intelligent assistant, real-time Internet information access, fast and accurate semantic search, personalized image generation and voice understanding, and open source self hosting to protect privacy.
 
 
 ![gui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/khoj/khoj-gui-websoft9.png)

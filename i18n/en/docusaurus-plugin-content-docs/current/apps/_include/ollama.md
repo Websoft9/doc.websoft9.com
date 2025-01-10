@@ -1,4 +1,4 @@
-[Ollama](https://ollama.com/) is **large language models**, used for Open Source LLM . Ollama is an open source tool that simplifies the deployment and management of machine learning models, supporting multiple model formats.
+[Ollama](https://ollama.com/) is **large language models**, used for LLMs and Service . Ollama is an open source tool that simplifies the deployment and management of machine learning models, supporting multiple model formats.
 
 
 ![gui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/ollama/ollama-gui-websoft9.png)

@@ -2,13 +2,21 @@ from contentful import Client
 from jinja2 import Environment, FileSystemLoader
 import os
 import argparse
+import json
 
 # 解析命令行参数
 parser = argparse.ArgumentParser(description='Generate Markdown files from Contentful entries based on a template file.')
 parser.add_argument('template_file', help='The template file to use for generating the Markdown files.')
 parser.add_argument('output_dir', help='The output directory for the generated Markdown files.')
 parser.add_argument('--override', action='store_true', help='Override existing files if they exist.')
+parser.add_argument('--ignore-list', help='JSON file containing keys to ignore.')
 args = parser.parse_args()
+
+# 解析忽略列表
+ignore_list = []
+if args.ignore_list:
+    with open(args.ignore_list, 'r', encoding='utf-8') as f:
+        ignore_list = json.load(f)
 
 # 设置 Jinja2 模板环境
 TEMPLATE_DIR = os.path.dirname(args.template_file)
@@ -87,6 +95,12 @@ while True:
         
         # 获取 key 作为文件名
         key = fields.get('key', entry.sys['id'])
+        
+        # 检查 key 是否在忽略列表中
+        if key in ignore_list:
+            print(f"Key {key} is in the ignore list. Skipping.")
+            continue
+        
         md_filename = f"{key}.md"
         
         # 完整的文件路径

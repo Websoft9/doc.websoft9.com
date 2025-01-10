@@ -1,4 +1,4 @@
-[Paperless-ngx]() 是一个 **文档管理系统，将您的物理文档转换为可搜索的在线存档**，它被用于 文档协作/企业网盘 文件共享与传输  等场景。Paperless-ngx 是开源文档管理系统，支持文档扫描、OCR、分类和搜索，提升管理效率。
+[Paperless-ngx](https://docs.paperless-ngx.com ) 是一个 **文档管理系统，将您的物理文档转换为可搜索的在线存档**，它被用于 文档协作/企业网盘 文件共享与传输  等场景。Paperless-ngx 是开源文档管理系统，支持文档扫描、OCR、分类和搜索，提升管理效率。
 
 
 ![界面](http://libs.websoft9.com/Websoft9/DocsPicture/zh/paperlessngx/paperlessngx-gui-websoft9.png)

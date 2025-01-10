@@ -1,4 +1,4 @@
-[Dashy]() is **A self-hostable personal dashboard built for you**, used for Home Server . Dashy is an open source, highly customizable, easy to use, privacy-respecting dashboard app.
+[Dashy](https://dashy.to) is **A self-hostable personal dashboard built for you**, used for Home Server . Dashy is an open source, highly customizable, easy to use, privacy-respecting dashboard app.
 
 
 ![gui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/dashy/dashy-gui-websoft9.png)

@@ -1,4 +1,4 @@
-[AutoGPT.NextWeb](https://github.com/ConnectAI-E/AutoGPT-Next-Web) 是一个 **AutoGPT 私有化应用**，它被用于 生成式 AI  等场景。一键免费部署你的私人AutoGPT 网页应用
+[AutoGPT.NextWeb](https://github.com/ConnectAI-E/AutoGPT-Next-Web) 是一个 **AutoGPT 私有化应用**，它被用于 AI 交互界面  等场景。一键免费部署你的私人AutoGPT 网页应用
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/autogptnextweb/autogptnextweb-gui-websoft9.png)

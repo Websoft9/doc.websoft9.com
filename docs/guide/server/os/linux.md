@@ -14,8 +14,8 @@ Websoft9 为企业用户提供个性化的 Linux 系统托管技术支持服务�
 
 目前支持个性化的操作系统包括：
 
-- 纯净版的操作系统，例如：Oracle Linux, Rocky Linux, CentOS7.x
-- 含桌面的操作系统，例如：Oracle Linux with Gnome
+- 纯净版的操作系统，例如：[Oracle Linux](https://market.aliyun.com/products?k=websoft9+oracle+linux&scene=market), Rocky Linux, CentOS7.x
+- 含桌面的操作系统，例如：[Oracle Linux with Gnome](https://market.aliyun.com/products?k=oracle+linux+websoft9+gnome&scene=market)
 - 含软件包的操作系统，例如：Ubuntu with Docker, Ubuntu with AI 大模型
 
 ### Oracle Linux
