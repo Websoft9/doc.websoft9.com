@@ -8,5 +8,7 @@
   "nodejs",
   "php",
   "python",
-  "ruby"
+  "ruby",
+  "phpfpmapache",
+  "phpfpmnginx"
 ]
