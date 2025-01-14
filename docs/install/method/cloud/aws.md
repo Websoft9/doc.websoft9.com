@@ -69,6 +69,61 @@ Websoft9 在 AWS 提供了预制[云市场镜像](https://aws.amazon.com/marketp
 
 2. 登录 AWS 门户，将部署模板导入运行
 
+### 基于 AWS Terraform  安装
+
+在 AWS 的 CloudShell 运行 [Terraform](https://developer.hashicorp.com/terraform/tutorials/aws) 部署 Websoft9 的步骤：
+
+1. 安装 Terraform （CloudShell默认使用Amazon Linux）
+   ```
+   sudo yum install -y yum-utils
+   sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+   sudo yum -y install terraform
+   terraform -install-autocomplete
+   ```
+
+2. 在 AWS 平台准备：密钥对，安全组等资源，然后编写如下的 `main.tf`，并运行 `terraform fmt` 和 `terraform validate` 检测代码
+   ```
+   terraform {
+   required_version = ">= 1.4.0"
+   required_providers {
+      aws = {
+      source  = "hashicorp/aws"
+      version = ">= 5.0.0"
+      }
+   }
+   }
+
+   provider "aws" {
+   region = "us-east-1"   #区域
+   }
+
+   resource "aws_instance" "example" {              # 资源名称
+   ami             = "ami-06409e015d6e1bf5c"        # Websoft9 平台的AMI
+   instance_type   = "t2.micro"                     # 实例类型
+   key_name        = "websoft9_auto"                # 密钥对名称
+   vpc_security_group_ids = ["sg-1240356f"]         # 安全组ID
+   tags = {                                           
+      Name = "Websoft9  Platform"
+      }
+   }
+
+   ```
+
+3. CloudShell 运行部署相关命令
+   ```
+   # init 
+   terraform init
+
+   # deploy
+   terraform apply
+
+   # destory
+   terraform destroy
+
+   # query status
+   terraform show
+   ```
+
 ## 完成虚拟机部署
 
 选用以上任意安装方式，AWS 都会开始部署新的 EC2。  

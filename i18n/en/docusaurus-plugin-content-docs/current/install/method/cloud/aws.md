@@ -66,6 +66,67 @@ Then you can follow below steps to deploy Websoft9:
    - Login to AWS Dashboard, load that AWS CloudFormation template and run it
    - Use AWS CLI/API to load that AWS CloudFormation template and run it
 
+
+### From AWS Terraform
+
+You can running Websoft8 by **AWS CloudShell** with [Terraform](https://developer.hashicorp.com/terraform/tutorials/aws) below:  
+
+1. Install Terraform at your AWS CloudShell
+   ```
+   sudo yum install -y yum-utils
+   sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+   sudo yum -y install terraform
+   terraform -install-autocomplete
+   ```
+
+2. Prepare your Terraform `main.tf` and running commands `terraform fmt` and `terraform validate` to check it
+
+   - key_name
+   - vpc_security_group_ids
+
+   ```
+   terraform {
+   required_version = ">= 1.4.0"
+   required_providers {
+      aws = {
+      source  = "hashicorp/aws"
+      version = ">= 5.0.0"
+      }
+   }
+   }
+
+   provider "aws" {
+   region = "us-east-1" 
+   }
+
+   resource "aws_instance" "example" {             
+   ami             = "ami-06409e015d6e1bf5c"        # Websoft9 ami at AWS
+   instance_type   = "t2.micro"                    
+   key_name        = "websoft9_auto"               
+   vpc_security_group_ids = ["sg-1240356f"]         
+   tags = {                                           
+      Name = "Websoft9  Platform"
+      }
+   }
+
+   ```
+
+3. Running terraform cli at your AWS CloudShell
+   ```
+   # init 
+   terraform init
+
+   # deploy
+   terraform apply
+
+   # destory
+   terraform destroy
+
+   # query status
+   terraform show
+   ```
+
+
 ## After deployment
 
 The deployment process will take a few minutes to complete. Once finished, you can:
@@ -77,4 +138,3 @@ The deployment process will take a few minutes to complete. Once finished, you c
    passwd
    ```
 3. [Login to Websoft9 Console](./login-console) and refer to [Post-Installation Setup](./install-setup) for next steps
-
