@@ -34,7 +34,12 @@ import Meta from './_include/opengauss.md';
 
 ## 配置选项{#configs}
 
-- CLI
+- CLI: 需要切换用户 `su - omm` 使用 
+
+   - 客户端 cli: `gsql`, 
+   - 服务端 cli: `gs_ctl, gs_dump, gs_restore ...`
+
+- pgadmin：支持，但需要使用普通用户登陆
 
 ## 管理维护{#administrator}
 
