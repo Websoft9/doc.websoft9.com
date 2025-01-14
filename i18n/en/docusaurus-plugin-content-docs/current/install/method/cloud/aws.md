@@ -79,10 +79,18 @@ You can running Websoft8 by **AWS CloudShell** with [Terraform](https://develope
    terraform -install-autocomplete
    ```
 
-2. Prepare your Terraform `main.tf` and running commands `terraform fmt` and `terraform validate` to check it
+2. Get the *ami** of Websoft9 product at AWS
+   ```
+   aws ec2 describe-images \
+     --filters "Name=product-code,Values=e5khuz6bgm3khfdzxa1q9fs99" \
+     --region us-east-1
+   ```
+
+3. Prepare your Terraform `main.tf` and running commands `terraform fmt` and `terraform validate` to check it
 
    - key_name
    - vpc_security_group_ids
+   - ami
 
    ```
    terraform {
@@ -111,7 +119,7 @@ You can running Websoft8 by **AWS CloudShell** with [Terraform](https://develope
 
    ```
 
-3. Running terraform cli at your AWS CloudShell
+4. Running terraform cli at your AWS CloudShell
    ```
    # init 
    terraform init

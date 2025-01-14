@@ -81,7 +81,14 @@ Websoft9 在 AWS 提供了预制[云市场镜像](https://aws.amazon.com/marketp
    terraform -install-autocomplete
    ```
 
-2. 在 AWS 平台准备：密钥对，安全组等资源，然后编写如下的 `main.tf`，并运行 `terraform fmt` 和 `terraform validate` 检测代码
+2. 通过 AWS CLI 命令获取目标区域的 Websoft9 商品的镜像 ID
+   ```
+   aws ec2 describe-images \
+     --filters "Name=product-code,Values=e5khuz6bgm3khfdzxa1q9fs99" \
+     --region us-east-1
+   ```
+
+3. 在 AWS 平台准备：密钥对，安全组等资源，然后编写如下的 `main.tf`，并运行 `terraform fmt` 和 `terraform validate` 检测代码
    ```
    terraform {
    required_version = ">= 1.4.0"
@@ -109,7 +116,7 @@ Websoft9 在 AWS 提供了预制[云市场镜像](https://aws.amazon.com/marketp
 
    ```
 
-3. CloudShell 运行部署相关命令
+4. CloudShell 运行部署相关命令
    ```
    # init 
    terraform init
