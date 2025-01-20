@@ -2,8 +2,9 @@
 title: NodeBB
 slug: /nodebb
 tags:
-  - console
-  - other
+  - Forum Software
+  - Community Management
+  - NodeBB
 ---
 
 import Meta from './_include/nodebb.md';
@@ -14,30 +15,26 @@ import Meta from './_include/nodebb.md';
 
 ### Initial setup{#wizard}
 
-1. When completed installation of NodeBB at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. When completed installation of NodeBB at **Websoft9 Console**, get the applicaiton's  information from **My Apps**:  
 
-2. Complete the install wizard step by step
+    - Get the access URL in the **Access** tab
+    - Get the main container name in the **Container** tab
+    - Get the Intranet Host and password in the **Database** tab
 
-### Login verification{#verification}
+2. Local browser to access the URL, according to the prompts to fill in the initialization content, in which the database configuration is as follows:
+   
+    - **Database Type**: Postgresql
+    - **Host IP or address of your PostgreSQL instance**: the Intranet Host obtained in 1.
+    - **Host port of your PostgreSQL instance**: 5432
+    - **PostgreSQL username**: nodebb
+    - **Password of your PostgreSQL database**: The password obtained in 1.
+    - **PostgreSQL database name**: nodebb
+    - **Enable SSL for PostgreSQL database access**: false
 
-1. Completed installation NodeBB at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
-
-2. Starting to verify it
+3. Click **Install NodeBB** and wait a few minutes for the installation to complete.
 
 ## Configuration options{#configs}
 
-- CLI
-- Multilingual (√)
-- SMTP (√)
-
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?

@@ -33,7 +33,12 @@ import Meta from './_include/opengauss.md';
 
 ## Configuration options{#configs}
 
-- CLI
+- CLI: should `su - omm` change user to use them
+
+   - client cli: `gsql`, 
+   - server cli: `gs_ctl, gs_dump, gs_restore ...`
+
+- pgadmin: supported, but requires a normal user login
 
 ## Administer{#administrator}
 
