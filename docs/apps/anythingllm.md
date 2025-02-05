@@ -23,9 +23,9 @@ import Meta from './_include/anythingllm.md';
 
 4. 浏览器访问 URL，进入 AnythingLLM 设置界面，选择在线 LLM（OpenAI）或之前安装的 Ollama
 
-5. 为工作区设置 LLM 工作区
+5. 为工作区设置 LLM 提供商
 
-6. 现在就可以与 LLM 聊天
+6. 设置完成就可以与 LLM 聊天了
 
 ## 配置选项{#configs}
 
