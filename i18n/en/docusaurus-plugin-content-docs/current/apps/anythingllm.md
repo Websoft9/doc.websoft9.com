@@ -2,8 +2,9 @@
 title: AnythingLLM
 slug: /anythingllm
 tags:
-  - console
-  - other
+  - AI Models
+  - Machine Learning
+  - AnythingLLM
 ---
 
 import Meta from './_include/anythingllm.md';
@@ -16,28 +17,20 @@ import Meta from './_include/anythingllm.md';
 
 1. When completed installation of AnythingLLM at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
-2. Complete the install wizard step by step
+2. Prepare your online LLM or create Ollama application at Websoft9 Console
 
-### Login verification{#verification}
+3. Docker exec to Ollama container and running command `ollama run tinydolphin` to create model
 
-1. Completed installation AnythingLLM at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
+4. Access AnythingLLM setup interface and select online LLM(OpenAI) or Ollama installed before
 
-2. Starting to verify it
+5. Setting LLM provider for your workspace
+
+6. You can chat with LLM now
 
 ## Configuration options{#configs}
 
-- CLI
 - Multilingual (√)
-- SMTP (√)
 
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?

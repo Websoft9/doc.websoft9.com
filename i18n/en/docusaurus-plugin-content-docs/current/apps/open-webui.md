@@ -2,8 +2,9 @@
 title: Open WebUI
 slug: /open-webui
 tags:
-  - console
-  - other
+  - AI Models
+  - Machine Learning
+  - Open WebUI
 ---
 
 import Meta from './_include/open-webui.md';
@@ -16,28 +17,25 @@ import Meta from './_include/open-webui.md';
 
 1. When completed installation of Open WebUI at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
-2. Complete the install wizard step by step
+2. Follow the wizard to create an administrator account
 
-### Login verification{#verification}
+3. In the upper left corner **choose a model**, search for `tinydolphin`, click on it to download the model
 
-1. Completed installation Open WebUI at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
+4. Select the `tinydolphin` model to start using the chat
 
-2. Starting to verify it
+### Running with GPU?
+
+1. Select version **cuda** when create this application
+
+2. Select **Compose > Go to Edit Repository** and change `docker-compose-gpu.yml` to `docker-compose.yml`
+
+3. Recreate this application
 
 ## Configuration options{#configs}
 
-- CLI
 - Multilingual (√)
-- SMTP (√)
+- Config Ollama URL: **Settings > Admin Settings**
 
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?

@@ -2,9 +2,9 @@
 title: AnythingLLM
 slug: /anythingllm
 tags:
-  - Web 面板
-  - 可视化
-  - GUI
+  - AI模型
+  - 机器学习
+  - AnythingLLM
 ---
 
 import Meta from './_include/anythingllm.md';
@@ -15,29 +15,22 @@ import Meta from './_include/anythingllm.md';
 
 ### 初始化{#wizard}
 
-Websoft9 控制台安装 AnythingLLM 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
+1. Websoft9 控制台安装 AnythingLLM 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取访问 URL
 
-### 登录后台{#console}
+2. 准备在线 LLM 或在 Websoft9 控制台创建 Ollama 应用程序
 
-Websoft9 控制台安装 AnythingLLM 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
+3. 进入 Ollama 容器并运行命令 `ollama run tinydolphin` 来创建模型
 
-### 安装插件{#plugin}
+4. 浏览器访问 URL，进入 AnythingLLM 设置界面，选择在线 LLM（OpenAI）或之前安装的 Ollama
+
+5. 为工作区设置 LLM 提供商
+
+6. 设置完成就可以与 LLM 聊天了
 
 ## 配置选项{#configs}
 
-- CLI
 - 多语言（√）
-- SMTP（√）
-- 插件市场（√）
 
 ## 管理维护{#administrator}
 
-- **重置管理员密码**
-- **更换 URL**
-- **HTTPS 额外设置**
-- **在线备份**
-- **在线升级**
-
 ## 故障
-
-#### 更改域名导致无法访问 ？
