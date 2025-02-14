@@ -20,7 +20,7 @@ import Meta from './_include/ollama.md';
 
 ### 使用可视化界面与 Ollama 聊天
 
-通过 Websoft9 控制台部署 **[AnythingLLM](./anythingllm)** 和 **[Open WebUI](./open-webui)** 等 AI 可视化工具，连接 Ollama 后即可聊天
+通过 Websoft9 控制台部署 **[AnythingLLM](./anythingllm)** 和 **[Open WebUI](./openwebui)** 等 AI 可视化工具，连接 Ollama 后即可聊天
 
 
 ## 配置选项{#configs}

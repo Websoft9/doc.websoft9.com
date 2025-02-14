@@ -21,7 +21,7 @@ import Meta from './_include/ollama.md';
 
 ### WebUI chat with Ollama
 
-You can install Web AI tools like **[AnythingLLM](./anythingllm)** and **[Open WebUI](./open-webui)** at Websoft9 Console to connect Ollama for chat
+You can install Web AI tools like **[AnythingLLM](./anythingllm)** and **[Open WebUI](./openwebui)** at Websoft9 Console to connect Ollama for chat
 
 ## Configuration options{#configs}
 
