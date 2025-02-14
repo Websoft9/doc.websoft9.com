@@ -1,13 +1,13 @@
 ---
 title: Open WebUI
-slug: /open-webui
+slug: /openwebui
 tags:
   - AI模型
   - 机器学习
   - Open WebUI
 ---
 
-import Meta from './_include/open-webui.md';
+import Meta from './_include/openwebui.md';
 
 <Meta name="meta" />
 
