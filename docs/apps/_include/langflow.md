@@ -1,4 +1,4 @@
-[Langflow](https://www.langflow.org) 是一个 **构建人工智能代理和工作流程的低代码工具**，它被用于 低代码/零代码 AI 开发者工具  等场景。Langflow 是一款面向开发人员的低代码工具，它能让开发人员更轻松地构建强大的人工智能代理和工作流，这些代理和工作流可以使用任何 API、模型或数据库。
+[Langflow](https://www.langflow.org) 是一个 **构建人工智能代理和工作流程的低代码工具**，它被用于 低代码/零代码 AI DevOps AI 智能体/聊天/知识检索  等场景。Langflow 是一款面向开发人员的低代码工具，它能让开发人员更轻松地构建强大的人工智能代理和工作流，这些代理和工作流可以使用任何 API、模型或数据库。
 
 
 ![界面](http://libs.websoft9.com/Websoft9/DocsPicture/zh/langflow/langflow-gui-websoft9.png)

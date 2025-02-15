@@ -1,4 +1,4 @@
-[Koishi](https://koishi.chat) 是一个 **开箱即用的聊天机器人框架**，它被用于 AI 交互界面  等场景。Koishi 是一个跨平台、可扩展、高性能的聊天机器人框架
+[Koishi](https://koishi.chat) 是一个 **开箱即用的聊天机器人框架**，它被用于 团队聊天  等场景。Koishi 是一个跨平台、可扩展、高性能的聊天机器人框架
 
 
 ![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/koishi/koishi-gui-websoft9.png)

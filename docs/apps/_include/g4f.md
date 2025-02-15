@@ -1,4 +1,4 @@
-[GPT4Free](https://github.com/xtekky/gpt4free) 是一个 **用于文本和图像生成的开源AI **，它被用于 AI 自然语言处理 AI 图像处理/机器视觉  等场景。GPT4Free 是一个开源AI API包，支持多提供者文本和图像生成、负载平衡和流量控制.
+[GPT4Free](https://github.com/xtekky/gpt4free) 是一个 **用于文本和图像生成的开源AI **，它被用于 AI 写作与创意内容生成 AI 智能体/聊天/知识检索  等场景。GPT4Free 是一个开源AI API包，支持多提供者文本和图像生成、负载平衡和流量控制.
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/g4f/g4f-gui-websoft9.png)

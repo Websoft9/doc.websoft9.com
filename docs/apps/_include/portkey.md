@@ -1,4 +1,4 @@
-[Portkey](https://portkey.ai/) 是一个 **AI 大模型网关**，它被用于 AI 管理运维 应用网关 API 网关  等场景。使用单一的、一致的 API 进行连接、负载均衡、设置回退并无缝管理 100+ AI 模型。
+[Portkey](https://portkey.ai/) 是一个 **AI 大模型网关**，它被用于 应用网关 API 网关 AI DevOps  等场景。使用单一的、一致的 API 进行连接、负载均衡、设置回退并无缝管理 100+ AI 模型。
 
 
 ![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/portkey/portkey-dashboard-websoft9.png)

@@ -1,4 +1,4 @@
-[Koishi](https://koishi.chat) is **Cross-platform chatbot framework**, used for AI User Interface . Koishi is a cross-platform, extensive, high-performance chatbot framework
+[Koishi](https://koishi.chat) is **Cross-platform chatbot framework**, used for Chat . Koishi is a cross-platform, extensive, high-performance chatbot framework
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/koishi/koishi-gui-websoft9.png)

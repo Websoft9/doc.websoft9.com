@@ -1,4 +1,4 @@
-[LibreChat](https://www.librechat.ai) is **All-In-One AI Conversations with LibreChat**, used for Chat AI User Interface . LibreChat brings together the future of assistant AIs with the revolutionary technology of OpenAI's ChatGPT.
+[LibreChat](https://www.librechat.ai) is **All-In-One AI Conversations with LLMs**, used for AI Models Unified Interface AI Agents/Chatbots/RAG AI Writing and Creative Content Generation . LibreChat is the ultimate open-source app for all your AI conversations, fully customizable and compatible with any AI provider — all in one sleek interface
 
 
 ![gui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/librechat/librechat-gui-websoft9.png)

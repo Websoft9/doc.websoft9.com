@@ -1,4 +1,4 @@
-[LibreChat](https://www.librechat.ai) 是一个 **与LibreChat的多功能AI对话**，它被用于 团队聊天 AI 交互界面  等场景。LibreChat将助理人工智能的未来与OpenAI的ChatGPT的革命性技术结合在一起。
+[LibreChat](https://www.librechat.ai) 是一个 **支持多模型的 AI 对话系统**，它被用于 AI 多模型统一交互界面 AI 智能体/聊天/知识检索 AI 写作与创意内容生成  等场景。LibreChat 是一款终极开源应用，专为满足您所有的人工智能对话需求而设计，具备完全的可定制性，并与任何人工智能提供商兼容——所有功能都集成在一个简洁的界面中。
 
 
 ![界面](http://libs.websoft9.com/Websoft9/DocsPicture/zh/librechat/librechat-gui-websoft9.png)

@@ -1,4 +1,4 @@
-[LobeChat](https://lobechat.com/) 是一个 **一个开源、现代设计的聊天 GPT/LLM 框架**，它被用于 AI 交互界面  等场景。LobeChat是一款智能聊天工具，利用AI技术提供自然对话和个性化互动体验。
+[LobeChat](https://lobechat.com/) 是一个 **一个开源、现代设计的聊天 GPT/LLM 框架**，它被用于 AI 多模型统一交互界面  等场景。LobeChat是一款智能聊天工具，利用AI技术提供自然对话和个性化互动体验。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/lobechat/lobechat-gui-websoft9.png)
