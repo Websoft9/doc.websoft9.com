@@ -2,9 +2,9 @@
 title: Nexterm
 slug: /nexterm
 tags:
-  - Web 面板
-  - 可视化
-  - GUI
+  - Remote connect
+  - VNC
+  - Nexterm
 ---
 
 import Meta from './_include/nexterm.md';
@@ -15,29 +15,12 @@ import Meta from './_include/nexterm.md';
 
 ### 初始化{#wizard}
 
-Websoft9 控制台安装 Nexterm 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
+1. Websoft9 控制台安装 Nexterm 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取访问 URL
 
-### 登录后台{#console}
-
-Websoft9 控制台安装 Nexterm 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
-
-### 安装插件{#plugin}
+2. 本地浏览器输入访问 URL，根据向导提示完成注册即可使用
 
 ## 配置选项{#configs}
 
-- CLI
-- 多语言（√）
-- SMTP（√）
-- 插件市场（√）
-
 ## 管理维护{#administrator}
 
-- **重置管理员密码**
-- **更换 URL**
-- **HTTPS 额外设置**
-- **在线备份**
-- **在线升级**
-
 ## 故障
-
-#### 更改域名导致无法访问 ？

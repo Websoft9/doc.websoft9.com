@@ -2,8 +2,8 @@
 title: Glance
 slug: /glance
 tags:
-  - console
-  - other
+  - RSS feeds
+  - Glance
 ---
 
 import Meta from './_include/glance.md';
@@ -11,12 +11,6 @@ import Meta from './_include/glance.md';
 <Meta name="meta" />
 
 ## Getting started{#guide}
-
-### Initial setup{#wizard}
-
-1. When completed installation of Glance at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
-
-2. Complete the install wizard step by step
 
 ### Login verification{#verification}
 
@@ -26,18 +20,6 @@ import Meta from './_include/glance.md';
 
 ## Configuration options{#configs}
 
-- CLI
-- Multilingual (√)
-- SMTP (√)
-
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?
