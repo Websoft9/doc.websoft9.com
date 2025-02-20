@@ -1,4 +1,4 @@
-[Flowise](https://flowiseai.com/) is **Low-code tool for developers to build customized LLM apps**, used for AI User Interface Low Code and No Code Web Framework . Open source low-code tool for developers to build customized LLM orchestration flow & AI agents
+[Flowise](https://flowiseai.com/) is **Low-code tool for developers to build customized LLM apps**, used for Low Code and No Code AI Agents/Chatbots/RAG AI DevOps . Open source low-code tool for developers to build customized LLM orchestration flow & AI agents
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/flowise/flowise-gui-websoft9.png)

@@ -1,4 +1,4 @@
-[Portkey](https://portkey.ai/) is **AI Gateway for LLM integrations**, used for AIOps Application Gateway API Gateway . Connect, load balance, setup fallbacks and seamlessly manage 100+ AI models using a single consistent API.
+[Portkey](https://portkey.ai/) is **AI Gateway for LLM integrations**, used for Application Gateway API Gateway AI DevOps . Connect, load balance, setup fallbacks and seamlessly manage 100+ AI models using a single consistent API.
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/portkey/portkey-dashboard-websoft9.png)

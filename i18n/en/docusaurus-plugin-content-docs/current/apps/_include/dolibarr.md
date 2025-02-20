@@ -1,4 +1,4 @@
-[Dolibarr](https://www.dolibarr.org/) is **A  ERP & CRM software**, used for ERP & Finance CRM & Distribution & Order Supply Chain & Manufacturing & Logistic . Dolibarr is a software suite for small and micro enterprises, freelancers and other enterprises, which used for resource planning and customer relationship management. 
+[Dolibarr](https://www.dolibarr.org/) is **A  ERP & CRM software**, used for ERP & Finance CRM & Distribution & Order Supply Chain & Manufacturing & Logistic Digtal for SCM and Operation . Dolibarr is a software suite for small and micro enterprises, freelancers and other enterprises, which used for resource planning and customer relationship management. 
 
 
 ![ui](http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/dolibarr-gui-websoft9.png)

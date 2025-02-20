@@ -1,4 +1,4 @@
-[Khoj](https://khoj.dev) 是一个 **Khoj是一款开源的个人化AI助手，旨在成为您的“第二大脑”**，它被用于 AI 交互界面  等场景。Khoj的核心功能包括笔记和文档智能助手、实时互联网信息接入、快速准确的语义搜索、个性化图像生成和语音理解以及开源自托管保护隐私。
+[Khoj](https://khoj.dev) 是一个 **Khoj是一款开源的个人化AI助手，旨在成为您的“第二大脑”**，它被用于 AI 智能体/聊天/知识检索 AI 多模型统一交互界面 AI 写作与创意内容生成 AI DevOps  等场景。Khoj的核心功能包括笔记和文档智能助手、实时互联网信息接入、快速准确的语义搜索、个性化图像生成和语音理解以及开源自托管保护隐私。
 
 
 ![界面](http://libs.websoft9.com/Websoft9/DocsPicture/zh/khoj/khoj-gui-websoft9.png)

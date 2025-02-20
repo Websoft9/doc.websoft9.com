@@ -1,4 +1,4 @@
-[LocalAI](https://localai.io) is **Self-hosted AI running on consumer-grade hardware**, used for AI for Developer . Local AI is an open-source platform that supports local deployment of AI models, protects data privacy, and enables efficient AI application development.
+[LocalAI](https://localai.io) is **Self-hosted AI running on consumer-grade hardware**, used for AI DevOps AI Models Unified Interface Local AI model Service and Runtime . Local AI is an open-source platform that supports local deployment of AI models, protects data privacy, and enables efficient AI application development.
 
 
 ![gui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/localai/localai-gui-websoft9.png)

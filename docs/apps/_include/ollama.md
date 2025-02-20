@@ -1,4 +1,4 @@
-[Ollama](https://ollama.com/) 是一个 **大型语言模型**，它被用于 开源大模型/服务  等场景。Ollama 是一个开源工具，简化了机器学习模型的部署和管理，支持多种模型格式。
+[Ollama](https://ollama.com/) 是一个 **开源大模型运行与管理工具**，它被用于 本地 AI 模型服务  等场景。Ollama 是一个开源工具，简化了机器学习模型的部署和管理，支持多种模型格式。
 
 
 ![界面](http://libs.websoft9.com/Websoft9/DocsPicture/zh/ollama/ollama-gui-websoft9.png)

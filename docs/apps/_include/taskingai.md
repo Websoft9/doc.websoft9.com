@@ -1,4 +1,4 @@
-[TaskingAI](https://www.tasking.ai) 是一个 **协调人工智能应用，真正了解您的业务的AI**，它被用于 AI 开发者工具  等场景。TaskingAI是一个创新平台，使企业能够创建可定制的AI应用，满足其需求，功能包括聊天助手、网页小部件和知识库.
+[TaskingAI](https://www.tasking.ai) 是一个 **协调人工智能应用，真正了解您的业务的AI**，它被用于 AI DevOps AI 智能体/聊天/知识检索  等场景。TaskingAI是一个创新平台，使企业能够创建可定制的AI应用，满足其需求，功能包括聊天助手、网页小部件和知识库.
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/taskingai/taskingai-gui-websoft9.png)

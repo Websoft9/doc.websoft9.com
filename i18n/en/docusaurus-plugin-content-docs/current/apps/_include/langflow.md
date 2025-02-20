@@ -1,4 +1,4 @@
-[Langflow](https://www.langflow.org) is **a low-code tool to build AI agents and workflows**, used for Low Code and No Code AI for Developer . Langflow is a low-code tool for developers that makes it easier to build powerful AI agents and workflows that can use any API, model, or database.
+[Langflow](https://www.langflow.org) is **a low-code tool to build AI agents and workflows**, used for Low Code and No Code AI DevOps AI Agents/Chatbots/RAG . Langflow is a low-code tool for developers that makes it easier to build powerful AI agents and workflows that can use any API, model, or database.
 
 
 ![gui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/langflow/langflow-gui-websoft9.png)

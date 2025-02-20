@@ -1,4 +1,4 @@
-[LobeChat](https://lobechat.com/) is **An open-source, modern-design ChatGPT/LLMs UI/Framework**, used for AI User Interface . LobeChat is an intelligent chat tool that uses AI technology to provide natural dialogue and personalized interactive experience.
+[LobeChat](https://lobechat.com/) is **An open-source, modern-design ChatGPT/LLMs UI/Framework**, used for AI Models Unified Interface . LobeChat is an intelligent chat tool that uses AI technology to provide natural dialogue and personalized interactive experience.
 
 
 ![Interface](https://libs.websoft9.com/Websoft9/DocsPicture/zh/lobechat/lobechat-gui-websoft9.png)

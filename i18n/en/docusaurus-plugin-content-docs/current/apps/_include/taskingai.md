@@ -1,4 +1,4 @@
-[TaskingAI](https://www.tasking.ai) is **Orchestrating Artificial Intelligence Applications, the AI that really understands your business**, used for AI for Developer . TaskingAI is an innovative platform that enables businesses to create customizable AI applications tailored to their needs, with features like chat assistants, web widgets, and knowledge bases.
+[TaskingAI](https://www.tasking.ai) is **Orchestrating Artificial Intelligence Applications, the AI that really understands your business**, used for AI DevOps AI Agents/Chatbots/RAG . TaskingAI is an innovative platform that enables businesses to create customizable AI applications tailored to their needs, with features like chat assistants, web widgets, and knowledge bases.
 
 
 ![ui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/taskingai/taskingai-gui-websoft9.png)
