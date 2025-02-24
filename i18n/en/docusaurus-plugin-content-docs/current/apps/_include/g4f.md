@@ -1,4 +1,4 @@
-[GPT4Free](https://github.com/xtekky/gpt4free) is **Open Source AI API for Text and Image Generation**, used for AI for NLP AI for Image + Machine Vision . GPT4Free is an open source AI API package that enables text and image generation with multi-provider support, load balancing, and flow control.
+[GPT4Free](https://github.com/xtekky/gpt4free) is **Open Source AI API for Text and Image Generation**, used for AI Writing and Creative Content Generation AI Agents/Chatbots/RAG . GPT4Free is an open source AI API package that enables text and image generation with multi-provider support, load balancing, and flow control.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/g4f/g4f-gui-websoft9.png)

@@ -1,4 +1,4 @@
-[HuggingChat](https://huggingface.co) 是一个 **Hugging Face的开源聊天界面**，它被用于 团队聊天 AI 交互界面  等场景。HuggingChat 是一个开源聊天机器人，基于自然语言处理技术，支持多种语言的对话生成。
+[HuggingChat](https://huggingface.co) 是一个 **Hugging Face的开源聊天界面**，它被用于 AI 多模型统一交互界面 AI 智能体/聊天/知识检索  等场景。HuggingChat 是一个开源聊天机器人，基于自然语言处理技术，支持多种语言的对话生成。
 
 
 ![界面](http://libs.websoft9.com/Websoft9/DocsPicture/zh/huggingchat/huggingchat-gui-websoft9.png)
