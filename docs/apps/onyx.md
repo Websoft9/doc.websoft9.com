@@ -2,9 +2,9 @@
 title: Onyx
 slug: /onyx
 tags:
-  - Web 面板
-  - 可视化
-  - GUI
+  - GPT
+  - 自然语言问答
+  - Onyx
 ---
 
 import Meta from './_include/onyx.md';
@@ -15,29 +15,24 @@ import Meta from './_include/onyx.md';
 
 ### 初始化{#wizard}
 
-Websoft9 控制台安装 Onyx 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
+1. Websoft9 控制台安装 Onyx 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取访问 URL。
 
-### 登录后台{#console}
+2. 本地浏览器访问 URL，设置邮件和登陆密码。
 
-Websoft9 控制台安装 Onyx 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
+3. 根据向导提示，选择 LLM 模型并设置相关参数后即可使用 Chat 功能  
 
-### 安装插件{#plugin}
+###  设置 Search 功能
+
+Onyx 除了 Chat 功能，同时支持 Search 功能，通过配置网页作为搜索源来展示流程：
+
+1. 菜单点击 **Add Connector > Other > Web**
+
+2. 根据页面提示添加搜索源网址
+
+3. 点击 **Back to Onyx**，使用搜索功能时会将网页作为参考来源
 
 ## 配置选项{#configs}
 
-- CLI
-- 多语言（√）
-- SMTP（√）
-- 插件市场（√）
-
 ## 管理维护{#administrator}
 
-- **重置管理员密码**
-- **更换 URL**
-- **HTTPS 额外设置**
-- **在线备份**
-- **在线升级**
-
 ## 故障
-
-#### 更改域名导致无法访问 ？
