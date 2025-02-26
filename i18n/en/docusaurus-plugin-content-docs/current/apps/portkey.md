@@ -20,6 +20,8 @@ Refer to [AI Gateway](https://docs.portkey.ai/docs/product/ai-gateway).
 
 ## Configuration Options {#configs}
 
+- Console: Access from: `http://URL/public`
+
 ## Administration {#administrator}
 
 ## Troubleshooting {#troubleshooting}
