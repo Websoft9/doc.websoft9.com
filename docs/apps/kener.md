@@ -2,9 +2,9 @@
 title: Kener
 slug: /kener
 tags:
-  - Web 面板
-  - 可视化
-  - GUI
+  - 状态页面
+  - SvelteKit
+  - Kener
 ---
 
 import Meta from './_include/kener.md';
@@ -15,29 +15,16 @@ import Meta from './_include/kener.md';
 
 ### 初始化{#wizard}
 
-Websoft9 控制台安装 Kener 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
+1. Websoft9 控制台安装 Kener 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取 访问URL
 
-### 登录后台{#console}
+2. 本地浏览器访问 URL，根据提示设置完成初始化
 
-Websoft9 控制台安装 Kener 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
+### 监控网站
 
-### 安装插件{#plugin}
+**Manage Kener > monitors > Add Monitor**，即可增加一个监控的网站
 
 ## 配置选项{#configs}
 
-- CLI
-- 多语言（√）
-- SMTP（√）
-- 插件市场（√）
-
 ## 管理维护{#administrator}
 
-- **重置管理员密码**
-- **更换 URL**
-- **HTTPS 额外设置**
-- **在线备份**
-- **在线升级**
-
 ## 故障
-
-#### 更改域名导致无法访问 ？
