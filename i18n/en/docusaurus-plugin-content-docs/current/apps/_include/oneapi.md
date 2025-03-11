@@ -1,4 +1,4 @@
-[One API](https://openai.justsong.cn) is **One API is an LLM API interface management and distribution system that helps you better manage and use LLM APIs from major vendors.**, used for AI Models Unified Interface AI Agents/Chatbots/RAG AI Writing and Creative Content Generation . One API is an LLM API interface management and distribution system that helps you better manage and use LLM APIs from major vendors.
+[One API](https://openai.justsong.cn) is ** LLM API Interface Management and Distribution System**, used for AI Models Unified Interface AI Agents/Chatbots/RAG AI Writing and Creative Content Generation . One API is an LLM API interface management and distribution system that helps you better manage and use LLM APIs from major vendors.
 
 
 ![gui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/oneapi/oneapi-gui-websoft9.png)

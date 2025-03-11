@@ -1,4 +1,4 @@
-[One API](https://openai.justsong.cn) 是一个 **One API 是一个 LLM API 接口管理和分发系统，可以帮助您更好地管理和使用各大厂商的 LLM API。**，它被用于 AI 多模型统一交互界面 AI 智能体/聊天/知识检索 AI 写作与创意内容生成  等场景。One API 是一个 LLM API 接口管理和分发系统，可以帮助您更好地管理和使用各大厂商的 LLM API。
+[One API](https://openai.justsong.cn) 是一个 ** LLM API 接口管理和分发系统**，它被用于 AI 多模型统一交互界面 AI 智能体/聊天/知识检索 AI 写作与创意内容生成  等场景。One API 是一个 LLM API 接口管理和分发系统，可以帮助您更好地管理和使用各大厂商的 LLM API。
 
 
 ![界面](http://libs.websoft9.com/Websoft9/DocsPicture/zh/oneapi/oneapi-gui-websoft9.png)
