@@ -38,6 +38,15 @@ import Meta from './_include/moodle.md';
 
 2. To change the theme, navigate to **Site administration > Appearance > Theme selector**
 
+### AI integration
+
+Moodle can connect OpenAI API or [OpenAI API-compatible](https://docs.moodle.org/405/en/AI_providers)
+
+1. Login to Moodle and, open **Site administration**
+2. Select **OpenAI API provider** and set key
+3. And then set the **Actions** at the same page, it can set LLM version and endpoint URL
+
+
 ## Configuration options{#configs}
 
 - [Plugin](https://moodle.org/plugins/)(✅) : Install plugin online. Note that registration on the Moodle website is required. Go to "Site administration" > "Registration" in your Moodle console.

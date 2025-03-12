@@ -47,6 +47,14 @@ Moodle 初始化之后，建议向 Moodle 官方注册会员，便于在线安�
 
 2. 打开 **网站管理 > 外观 > 主题选择器**，更换主题
 
+### AI integration
+
+Moodle 支持直接连接 OpenAI API 或其[兼容格式](https://docs.moodle.org/405/en/AI_providers)
+
+1. 登录到 Moodle 管理界面，打开 **Site administration**
+2. 选择 **OpenAI API provider**，填写 Key
+3. 然后往下设置具体的 **Actions**，其中可以填写模型的版本和端点 URL
+
 
 ## 配置选项{#configs}
 

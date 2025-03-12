@@ -19,6 +19,8 @@ import Meta from './_include/portkey.md';
 
 ## 配置选项{#configs}
 
+- 控制台：访问 `http://URL/public`
+
 ## 管理维护{#administrator}
 
 ## 故障

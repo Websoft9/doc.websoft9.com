@@ -2,9 +2,9 @@
 title: MATLAB
 slug: /matlab
 tags:
-  - Web 面板
-  - 可视化
-  - GUI
+  - 数值计算
+  - 数据分析
+  - MATLAB
 ---
 
 import Meta from './_include/matlab.md';
@@ -15,29 +15,16 @@ import Meta from './_include/matlab.md';
 
 ### 初始化{#wizard}
 
-Websoft9 控制台安装 MATLAB 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
+1. Websoft9 控制台安装 MATLAB 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取访问 URL
 
-### 登录后台{#console}
+2. 到[证书中心](https://www.mathworks.com/licensecenter/?s_tid=hp_ff_s_license)注册一个30天的临时 license
 
-Websoft9 控制台安装 MATLAB 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
-
-### 安装插件{#plugin}
+3. 使用注册的账号激活即可使用
 
 ## 配置选项{#configs}
 
-- CLI
 - 多语言（√）
-- SMTP（√）
-- 插件市场（√）
 
 ## 管理维护{#administrator}
 
-- **重置管理员密码**
-- **更换 URL**
-- **HTTPS 额外设置**
-- **在线备份**
-- **在线升级**
-
 ## 故障
-
-#### 更改域名导致无法访问 ？

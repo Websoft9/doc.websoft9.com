@@ -2,8 +2,9 @@
 title: Big-AGI
 slug: /bigagi
 tags:
-  - console
-  - other
+  - General Artificial Intelligence
+  - Intelligent Chat
+  - Big-AGI
 ---
 
 import Meta from './_include/bigagi.md';
@@ -16,28 +17,14 @@ import Meta from './_include/bigagi.md';
 
 1. When completed installation of Big-AGI at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
-2. Complete the install wizard step by step
+2. Local browser to access the URL, set the public model `API Key` or self-deploy Ollama host to use it.
 
-### Login verification{#verification}
+### Enable credentials
 
-1. Completed installation Big-AGI at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
-
-2. Starting to verify it
+To enable credentials, you need to [rebuild the docker image](https://github.com/enricoros/big-AGI/blob/v2-dev/docs/deploy-authentication.md#http-authentication) and set up the environment
 
 ## Configuration options{#configs}
 
-- CLI
-- Multilingual (√)
-- SMTP (√)
-
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?
