@@ -2,8 +2,9 @@
 title: Rancher
 slug: /rancher
 tags:
-  - console
-  - other
+  - Container Management
+  - Multi-Cluster Support
+  - Rancher
 ---
 
 import Meta from './_include/rancher.md';
@@ -14,30 +15,16 @@ import Meta from './_include/rancher.md';
 
 ### Initial setup{#wizard}
 
-1. When completed installation of Rancher at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. When completed installation of Rancher at **Websoft9 Console**, Setting the domain name and configuring the SSL certificate at the **Gateway** 
 
-2. Complete the install wizard step by step
+2. Get the applicaiton's **Overview** and **Access** information from **My Apps**
 
-### Login verification{#verification}
+3. Execute the command **Get administrator password** on the terminal to get the password.
 
-1. Completed installation Rancher at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
-
-2. Starting to verify it
+4. Enter the **Access** URL in your local browser, enter the password and follow the wizard to complete the initialization.
 
 ## Configuration options{#configs}
 
-- CLI
-- Multilingual (√)
-- SMTP (√)
-
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?
