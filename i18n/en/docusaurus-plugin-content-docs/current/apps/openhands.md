@@ -2,8 +2,9 @@
 title: OpenHands
 slug: /openhands
 tags:
-  - console
-  - other
+  - Collaboration Features
+  - Security
+  - OpenHands
 ---
 
 import Meta from './_include/openhands.md';
@@ -16,28 +17,10 @@ import Meta from './_include/openhands.md';
 
 1. When completed installation of OpenHands at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
-2. Complete the install wizard step by step
-
-### Login verification{#verification}
-
-1. Completed installation OpenHands at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
-
-2. Starting to verify it
+2. Local browser to access the URL, set the LLM Model and API Key to start using it
 
 ## Configuration options{#configs}
 
-- CLI
-- Multilingual (√)
-- SMTP (√)
-
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?

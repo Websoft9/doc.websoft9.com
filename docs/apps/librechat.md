@@ -2,9 +2,9 @@
 title: LibreChat
 slug: /librechat
 tags:
-  - Web 面板
-  - 可视化
-  - GUI
+  - 人工智能模型
+  - 聊天机器人
+  - LibreChat
 ---
 
 import Meta from './_include/librechat.md';
@@ -15,29 +15,16 @@ import Meta from './_include/librechat.md';
 
 ### 初始化{#wizard}
 
-Websoft9 控制台安装 LibreChat 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
+1. Websoft9 控制台安装 LibreChat 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录访问 URL
 
-### 登录后台{#console}
+2. 本地浏览器访问 URL，点击**注册**完成后即可使用
 
-Websoft9 控制台安装 LibreChat 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
+### 使用 Postgres 数据库
 
-### 安装插件{#plugin}
+[ID-based RAG FastAPI](https://github.com/danny-avila/rag_api/pkgs/container/librechat-rag-api-dev-lite) 有 DB 连接环境，如果您想使用个人 Postgres 设置，可以对其进行设置，否则 rag-api 容器无法连接 Postgres。
 
 ## 配置选项{#configs}
 
-- CLI
-- 多语言（√）
-- SMTP（√）
-- 插件市场（√）
-
 ## 管理维护{#administrator}
 
-- **重置管理员密码**
-- **更换 URL**
-- **HTTPS 额外设置**
-- **在线备份**
-- **在线升级**
-
 ## 故障
-
-#### 更改域名导致无法访问 ？
