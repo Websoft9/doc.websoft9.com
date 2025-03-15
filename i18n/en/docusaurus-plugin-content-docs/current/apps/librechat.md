@@ -2,8 +2,9 @@
 title: LibreChat
 slug: /librechat
 tags:
-  - console
-  - other
+  - Artificial Intelligence Models
+  - Chatbots
+  - LibreChat
 ---
 
 import Meta from './_include/librechat.md';
@@ -16,28 +17,14 @@ import Meta from './_include/librechat.md';
 
 1. When completed installation of LibreChat at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
-2. Complete the install wizard step by step
+2. Visit the URL in your local browser and click **Register** to complete the process.
 
-### Login verification{#verification}
+### Using the Postgres database
 
-1. Completed installation LibreChat at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
-
-2. Starting to verify it
+[ID-based RAG FastAPI](https://github.com/danny-avila/rag_api/pkgs/container/librechat-rag-api-dev-lite) have DB connections environments that can set  if you want to use personal Postgres settings which can not modify otherwise rag-api container can not connect postgres.
 
 ## Configuration options{#configs}
 
-- CLI
-- Multilingual (√)
-- SMTP (√)
-
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?

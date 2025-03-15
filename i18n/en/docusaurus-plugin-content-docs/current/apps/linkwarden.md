@@ -2,8 +2,9 @@
 title: Linkwarden
 slug: /linkwarden
 tags:
-  - console
-  - other
+  - Learning Resources
+  - Work Programs
+  - Linkwarden
 ---
 
 import Meta from './_include/linkwarden.md';
@@ -16,28 +17,12 @@ import Meta from './_include/linkwarden.md';
 
 1. When completed installation of Linkwarden at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
-2. Complete the install wizard step by step
-
-### Login verification{#verification}
-
-1. Completed installation Linkwarden at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
-
-2. Starting to verify it
+2. Visit the URL in your local browser and register to use it.
 
 ## Configuration options{#configs}
 
-- CLI
 - Multilingual (√)
-- SMTP (√)
 
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?

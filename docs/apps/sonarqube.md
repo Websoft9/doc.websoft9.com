@@ -2,9 +2,9 @@
 title: SonarQube
 slug: /sonarqube
 tags:
-  - Web 面板
-  - 可视化
-  - GUI
+  - 代码分析
+  - CI/CD
+  - SonarQube
 ---
 
 import Meta from './_include/sonarqube.md';
@@ -17,27 +17,12 @@ import Meta from './_include/sonarqube.md';
 
 Websoft9 控制台安装 SonarQube 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
 
-### 登录后台{#console}
-
-Websoft9 控制台安装 SonarQube 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
-
-### 安装插件{#plugin}
-
 ## 配置选项{#configs}
-
-- CLI
-- 多语言（√）
-- SMTP（√）
-- 插件市场（√）
 
 ## 管理维护{#administrator}
 
-- **重置管理员密码**
-- **更换 URL**
-- **HTTPS 额外设置**
-- **在线备份**
-- **在线升级**
-
 ## 故障
 
-#### 更改域名导致无法访问 ？
+#### SonarQube 启动失败， 错误类似 `high disk watermark [95%] exceeded on...`?
+
+必须预留足够的磁盘空间，详细请参照 [SonarQube 服务器主机要求和建议](https://docs.sonarsource.com/sonarqube-server/latest/setup-and-upgrade/installation-requirements/server-host/)
