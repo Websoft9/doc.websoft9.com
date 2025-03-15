@@ -13,11 +13,11 @@ import Meta from './_include/duplicati.md';
 
 ## Getting started{#guide}
 
-### Initial setup{#wizard}
+### Login verification{#verification}
 
-1. After completing the installation of Duplicati in the **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. Completed installation Duplicati at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
 
-2. **Account** can be set for initial access
+2. Starting to verify it
 
 ### Backup guide
 
