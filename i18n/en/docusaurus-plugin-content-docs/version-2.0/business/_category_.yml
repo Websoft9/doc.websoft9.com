@@ -1,0 +1,5 @@
+position: 8
+label: "Subscription"
+collapsible: true
+collapsed: true
+className: "red"
