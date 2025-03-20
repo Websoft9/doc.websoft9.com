@@ -13,7 +13,7 @@ slug: /migration-to-websoft9
 
 2. 备份现有的 HTTP 虚拟主机配置，供迁移至 Websoft9 后使用
 
-3. [安装](../install) Websoft9 到现有服务器
+3. [安装](./install) Websoft9 到现有服务器
 
 ## 迁移
 
@@ -40,7 +40,7 @@ slug: /migration-to-websoft9
    yum erase httpd
    ```
 
-2. [安装](../install) Websoft9 到现有服务器
+2. [安装](./install) Websoft9 到现有服务器
 
 3. 在 Websoft9 应用商店中安装 WordPress 和 phpMyAdmin 两个应用，确保能正确运行
 

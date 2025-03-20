@@ -35,12 +35,12 @@ const config = {
       {
         redirects: [
           {
-            to: '/docs/next/elasticsearch',
-            from: ['/docs/next/elk', '/docs/next/elastic'],
+            to: '/docs/elasticsearch',
+            from: ['/docs/elk', '/docs/elastic'],
           },
           {
-            to: '/docs/next/php',
-            from: ['/docs/next/phpfpmapache', '/docs/next/phpfpmnginx'],
+            to: '/docs/php',
+            from: ['/docs/phpfpmapache', '/docs/phpfpmnginx'],
           }
         ],
       },
@@ -56,6 +56,7 @@ const config = {
         docs: {
           showLastUpdateTime: true,
           sidebarPath: require.resolve('./sidebars.js'),
+          lastVersion: '2.0',
           includeCurrentVersion: false,
           // Please change this to your repo.
           editUrl: 'https://github.com/websoft9/doc.websoft9.com/tree/dev',

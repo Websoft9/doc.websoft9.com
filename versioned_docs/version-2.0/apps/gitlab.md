@@ -106,7 +106,7 @@ GitLab CE（社区版）和 GitLab EE（企业版）之间的转换[关系](http
 
 **原因分析**：GitLab 有一个 rack-attack 安全机制。某种条件下（例如：公司大量并发访问 GitLab）rack-attack 安全将你的 IP 错误地拦截，导致了从此不能访问 GitLab   
 
-**解决方案**：修改 [Gitlab 配置文件](../gitlab#path) 的 rack-attack 相关项
+**解决方案**：修改 [Gitlab 配置文件](./gitlab#path) 的 rack-attack 相关项
 
 
 #### 访问 GitLab 出现 502 错误？{#502}

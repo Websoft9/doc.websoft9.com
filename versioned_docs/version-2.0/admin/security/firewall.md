@@ -19,11 +19,11 @@ slug: /security-firewall
 
 安全组配置最常见的操作就是开启某一个端口，比如：TCP:80，详细设置参考：    
 
-* [Azure 安全组设置](../azure#securitygroup)
-* [AWS 安全组设置](../aws#securitygroup)
-* [阿里云 安全组设置](../alibabacloud#securitygroup)
-* [腾讯云 安全组设置](../tencentcloud#securitygroup)
-* [华为云 安全组设置](../huaweicloud#securitygroup)
+* [Azure 安全组设置](./iaas-azure#security-group)
+* [AWS 安全组设置](./iaas-aws#security-group)
+* [阿里云 安全组设置](./iaas-alibabacloud#security-group)
+* [腾讯云 安全组设置](./iaas-tencentcloud#security-group)
+* [华为云 安全组设置](./iaas-huaweicloud#security-group)
 
 ## 问题解答
 

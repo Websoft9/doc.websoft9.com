@@ -11,16 +11,16 @@ It provides you with the best practices for self-hosting multiple applications.
 
 | Section              | Description                                                     |
 | ----------------- | -------------------------------------------------------- |
-| [Installation](/docs/next/install) | Install the Websoft9 Console on your Server |
-| [Login to Websoft9](/docs/next/login-console)   |  Log in to the Websoft9 console to interactively experience the hosting platform  |
-| [Getting started](/docs/next/starter)   |  Use Websoft9 to quickly deploy various types of applications, including one-click template deployment and customized deployment, etc.  |
-| [User guide](/docs/next/guide)   | Deploying, publishing, and managing applications using Websoft9  |
-| [Administrator](/docs/next/admin)   |  Operations and maintenance guides for administrator users for user management, upgrades, backups, data, storage, and security configurations  |
-| [Applications](/docs/next/apps) |  Websoft9 App Store 200+ One-Click Deployment Templates Quick Start and Configuration Guide  |
-| [App Runtime](/docs/next/runtime) |  App runtime for your Java, Python, Node.js, PHP, Go, Ruby, and .NET applications  |
-| [Subscription](/docs/next/business)   |  Paid use of Websoft9 products for enterprise-level business support services |
-| [Support](/docs/next/helpdesk)   |  Get any support from Websoft9 Customer Success Team |
-| [Troubleshooting](/docs/next/faq)        |  Technical problems and failures   |
+| [Installation](/docs/install) | Install the Websoft9 Console on your Server |
+| [Login to Websoft9](/docs/login-console)   |  Log in to the Websoft9 console to interactively experience the hosting platform  |
+| [Getting started](/docs/starter)   |  Use Websoft9 to quickly deploy various types of applications, including one-click template deployment and customized deployment, etc.  |
+| [User guide](/docs/guide)   | Deploying, publishing, and managing applications using Websoft9  |
+| [Administrator](/docs/admin)   |  Operations and maintenance guides for administrator users for user management, upgrades, backups, data, storage, and security configurations  |
+| [Applications](/docs/apps) |  Websoft9 App Store 200+ One-Click Deployment Templates Quick Start and Configuration Guide  |
+| [App Runtime](/docs/runtime) |  App runtime for your Java, Python, Node.js, PHP, Go, Ruby, and .NET applications  |
+| [Subscription](/docs/business)   |  Paid use of Websoft9 products for enterprise-level business support services |
+| [Support](/docs/helpdesk)   |  Get any support from Websoft9 Customer Success Team |
+| [Troubleshooting](/docs/faq)        |  Technical problems and failures   |
 
 ## About Websoft9
 
@@ -66,7 +66,7 @@ Websoft9 supports multiple hosting options:
 
 ## Deployment Templates
 
-The Websoft9 Console supports the following [application deployment templates](/docs/next/apps) that can be installed with one click:
+The Websoft9 Console supports the following [application deployment templates](/docs/apps) that can be installed with one click:
 
 import Meta from './apps/_include/allapps.md';
 

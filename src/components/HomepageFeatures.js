@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './HomepageFeatures.module.css';
 import Link from '@docusaurus/Link';
-import Translate, {translate} from '@docusaurus/Translate';
+import Translate, { translate } from '@docusaurus/Translate';
 
 const FeatureList = [
   {
@@ -17,7 +17,7 @@ const FeatureList = [
   },
   {
     title: <Translate>云安装</Translate>,
-    url: '/docs/install/cloud',
+    url: '/docs/install-cloud',
     Svg: require('../../static/img/undraw_server.svg').default,
     description: (
       <Translate>
@@ -39,7 +39,7 @@ const FeatureList = [
 
 ];
 
-function Feature({Svg, title, url, description}) {
+function Feature({ Svg, title, url, description }) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">

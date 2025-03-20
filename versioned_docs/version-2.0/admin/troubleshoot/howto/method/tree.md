@@ -79,7 +79,7 @@ mtr websoft9.com
 典型范例：  
 
 * [无法访问 Websoft9 控制台？](../faq#blank)
-* [应用网络超时？](../../faq#timeout)
+* [应用网络超时？](../faq#timeout)
 * [域名解析迟迟没有生效？](../domain-prepare#effect)
 
 #### 组件失效

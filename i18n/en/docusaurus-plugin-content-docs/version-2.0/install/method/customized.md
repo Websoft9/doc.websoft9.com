@@ -17,4 +17,4 @@ Custom installation often means software installation, configuration, testing, a
 - **Process Integration**: Integrating deployment into strict DevOps processes.
 - **Multi-Tenant Environment**: Deployment for multiple classrooms, like in higher education.
 
-You can discuss non-standard deployments use cases with **[Websoft9 Customer Success Team](../helpdesk)** 
+You can discuss non-standard deployments use cases with **[Websoft9 Customer Success Team](./helpdesk)** 
