@@ -1,0 +1,227 @@
+---
+title: Web Runtime
+slug: /runtime
+tags:
+  - 运行环境
+  - runtime
+  - 多语言环境
+  - PaaS
+---
+
+import DocCardList from '@theme/DocCardList';
+import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
+
+
+# 基于程序环境部署应用
+
+Websoft9 程序语言环境（Web Runtime）提供一个可靠的程序语言和应用服务器环境模板，以方便用户**自行部署**应用程序。它支持多种主流的开发语言，如 Java、Python、Node.js、PHP、Go、Ruby 和 .NET 等，也支持 Docker 镜像和静态网站部署。  
+
+![](./assets/runtime-web-websoft9.png)
+
+## 快速了解
+
+在使用 Web Runtime 部署应用之前，需了解环境的分类和基本配置参数： 
+
+### 场景分类
+
+Websoft9 程序环境类应用包括如下几个类型：
+
+| 模板类型                                           | 应用场景                   |    同时是应用吗？          |
+| -------------------------------------------------- | ---------------------- | ----------- |
+| PHP, Node.js, Java, Python, Ruby 等程序环境        | Web应用；Web 开发框架  |       否     |
+| Apache, Nginx, Caddy 等 HTTP Server 模板           | 免构建的 HTML 静态网站 |      否      |
+| Docker 环境模板                                    | Docker 应用    |      否      |
+| Hugo, Jekyll, Gatsby, Hexo, Next.js 等静态网站模板 | 需构建的静态网站       |     是       |
+| Laravel, Django 等开发框架模板                     | Web 开发框架           |     是       |
+
+其中静态网站模板和开发框架模板本质上是应用，它们都是运行了一个供用户直接使用的程序。  
+
+### 工作原理
+
+以上所有的程序环境类模板，都采用 GitOps 流程实现自动化部署，部署逻辑和使用方式是一致的：
+
+- 程序环境模板运行起来之后，Websoft9 为之创建三个部署核心资源：**Git 仓库，容器，网关域名配置项**
+- 遵循 “先运行，后修改” 的工作逻辑，即先将程序环境模板运行起来，然后再通过编排的方式配置部署的个性化设置
+
+
+### 通用参数
+
+- 编排方式：**docker compose**
+- 容器端口：8080
+- Dockerfile（√）：请参考 PHP 应用的 Dockerfile 模板
+- 容器中手工运行命令（√）
+- 自定义自动化命令：存储在编排文件 *./src/cmd.sh*，挂载到容器的 */usr/local/bin/cmd.sh* 目录
+- 字符集：UTF-8
+- 多版本：每个语言都支持多版本，合计有几十个可选的版本
+- 应用根目录：进入容器后的默认的位置即应用根目录，可运行 `pwd` 查询
+
+  - PHP：*/var/www/html*
+  - Jetty: */var/lib/jetty/webapps*
+  - Tomee：*/usr/local/tomee*
+  - Tomee：*/usr/local/tomcat*
+  - Nginx：*/usr/share/nginx/html*
+  - Caddy：*/srv*
+  - Apache HTTP Server：*/usr/local/apache2/htdocs*
+  - 其他环境：*/usr/src/app*
+
+### 个性配置
+
+Web Runtime 不同的语言环境拥有更多个性的配置：程序根目录、包管理器、安装扩展、编译、命令行、容器操作系统等。
+
+<DocCardList items={useCurrentSidebarCategory().items}/>
+
+## 部署应用指南{#guide}
+
+Web Runtime 在 Websoft9 的技术体系中，也是作为一个应用对待，它与 WordPress 这种应用没有本质差异。  
+
+如果已经安装 Websoft9，且绑定了全局域名，那么通过 Web Runtime 运行程序及其简单：
+
+### 启动环境
+
+1. 登录 Websoft9 控制台，打开："应用商店" 的 **运行环境** 类目
+   ![](./assets/runtime-catalog-websoft9.png)
+
+2. 任选一个环境应用，点击 "安装"  
+
+3. 待安装完成后，一个基于 **容器** 的程序运行环境已经启动。此时，Websoft9 为它创建了三个资源：
+
+   - 1 个环境容器
+   - 1 个网关中的虚拟主机配置，将容器的 **8080** 端口转发到域名
+   - 1 个 Git 仓库
+
+### 修改环境（可选）{#dockercompose}
+
+启动环境后，可以根据需求对环境进行定制修改（也称之为应用编排），常见的场景包括：
+
+   - 替换 docker-compose.yml 默认容器的**镜像标签**，替换 demo 容器，运行目标容器
+   - 向 docker-compose.yml 中增加其他容器配置
+   - 向 .env 中增加环境变量，并保护前缀为 **W9_** 的环境变量不被破坏
+   - 修改 .env 文件中的 W9_VERSION 的值，启用模板化安装中不可选的版本
+
+定制修改后，重建应用后方可生效。
+
+### 准备安装包
+
+Web Runtime 需要 **所有安装包都可以被下载**，不建议使用 FTP 或 SFTP 上传代码的方式，这样做的好处：
+
+- 消除了服务器上的文件操作，避免文件权限问题，更安全可靠
+- 便于实现部署自动化
+
+若软件包没有下载地址，需为之创建下载地址。参考教程：[手动创建 Git 仓库以存储软件包](./plan-git#create) 
+
+### 部署安装包
+
+部署安装包从流程上看，主要是围绕目标容器，通过运行命令，完成以下三个步骤：
+
+1. **上传代码**：建议将程序代码以压缩包方式下载、解压到容器中的应用根目录
+2. **编译构建**：运行程序所需的编译或构建命令（[提前准备制品安装包](./plan-package)，避免编译操作）
+3. **启动程序**：运行程序的启动命令（确保运行在容器的 8080 端口，并允许外网访问）
+
+Websoft9 为用户提供了两种运行命令的方式，对应两种部署模式：  
+
+#### 手工交互式部署
+
+手动进入容器中并逐一执行部署命令时，这种操作一般被称为 “交互式部署” 或 “手动部署”：
+
+1. [进入容器的命令模式](./inner-container#docker-exec)
+
+2. 在容器中运行上传代码、编译构建等准备工作，具体范例参考：
+
+   - [PHP](https://websoft9.github.io/docker-library/apps/php/src/cmd.sh)
+   - [Python](https://websoft9.github.io/docker-library/apps/python/src/cmd.sh)
+   - [Ruby](https://websoft9.github.io/docker-library/apps/ruby/src/cmd.sh)
+   - [Go](https://websoft9.github.io/docker-library/apps/go/src/cmd.sh)
+   - [Node.js](https://websoft9.github.io/docker-library/apps/nodejs/src/cmd.sh)
+   - [.NET](https://websoft9.github.io/docker-library/apps/dotnet/src/cmd.sh)
+   - [Java with OpenJDK](https://websoft9.github.io/docker-library/apps/openjdk/src/cmd.sh)
+   - [Java with Tomcat](https://websoft9.github.io/docker-library/apps/tomcat/src/cmd.sh)
+   - [Java with Tomee](https://websoft9.github.io/docker-library/apps/tomee/src/cmd.sh)
+   - [Java with Maven](https://websoft9.github.io/docker-library/apps/maven/src/cmd.sh)
+   - [Java with Jetty](https://websoft9.github.io/docker-library/apps/jetty/src/cmd.sh)
+
+
+3. 以 **后台方式启动应用程序** ：nohup **Your Command** > output.log 2>&1 &
+
+   - **Your Command** 用实际命令替换，例如：`nohup python manage.py runserver 0.0.0.0:8080 > output.log 2>&1 &`
+   - nohup 表示以后台运行，> output.log 2>&1 & 是指定日志路径
+   - 程序在后台运行后，可以通过 `cat output.log` 查看日志
+
+4. 如果重启容器，需重新执行第 3 步命令
+
+#### 自动化脚本部署{#auto}
+
+自动化脚本部署是通过预先编写的脚本自动执行一系列部署任务，无需人工干预：
+
+1. 登录 Websoft9 控制台，进入应用的管理界面的 [编排](./app-compose) 标签页
+   ![](./assets/runtime-editcompose-websoft9.png)
+
+2. 修改编排文件的 *src/cmd.sh* 脚本（它包含范例），**插入个性化命令**或**去掉范例的注释**，
+  ![](./assets/runtime-composeedit-cmd-websoft9.png)
+
+3. 启动**重建应用**操作后，脚本被推送到容器中自动运行，直至部署完成。
+
+  > 自动化脚本部署后重启容器会再次执行 *src/cmd.sh* 中的内容，用户应该保证脚本的健壮性防止重启容器时发生错误。
+
+## 管理您的部署
+
+部署完成后，并不会一成不变。相反，用户需要适应业务的需求做出对应的改变：
+
+### 版本变更
+
+Web Runtime 中修改版本极其方便：
+
+1. 通过编排文件的 variables.json 查询所有的版本
+
+2. 修改编排文件中 .env 中的 W9_VERSION 的值，重建应用生效。  
+
+### 转变为开发环境
+
+Web Runtime 基于 GitOps 思想，故很容器基于程序环境转变为开发者所需的 DevOps 工作流程：
+
+1. 进入 Websoft9 控制台的 **仓库** 功能模块， [新增一个用户](./plan-git#user)
+
+2. 赋予新用户管理程序环境对应的仓库（Repository）的权限
+
+3. 使用 Git，将开发源码同步到仓库的指定目录中（例如：resouce 目录）
+
+4. 优化应用编排，典型的操作包括以下：
+
+   - docker-compose.yml 中增加 source 目录的 volume 挂载
+   - cmd.sh 中的编译构建脚本
+
+## 问题与故障
+
+#### 容器镜像来源？
+
+所有的容器镜像采用的是 Docker 官方维护或程序原厂提供的镜像，100% 原生性，没有做出任何修改。 
+
+#### 如何实现部署的个性化？
+
+可以修改编排文件的：.env, docker-compose.yml, src/cmd.sh 实现
+
+#### 环境容器可以运行多个应用吗？
+
+理论上是可以的，但不建议部署多个应用程序。
+
+#### 如何修改上传的文件权限?
+
+运行 `chown -R owner:owner /path`，owner 和 path 替换为环境模板实际的值
+
+#### 没有数据库怎么办？
+
+可以通过 Websoft9 控制台安装数据库
+
+#### 如何将程序的启动命令设置到容器中？
+
+有两种方式：
+
+- 将启动命令设置到编排文件 src/cmd.sh 中
+- 进入容器的命令模式，以后台方式运行启动命令（将运行程序的命令改成 `nohup  Your CMD here  > output.log 2>&1 &` ）
+
+#### 如何查看通过 nohup 运行的命令？
+
+运行 `jobs` 即可
+
+#### 如何删除容器中正在运行的进程？
+
+先运行 `ps aux` 命令查看，再运行 `kill -9 PID`

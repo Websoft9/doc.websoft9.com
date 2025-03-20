@@ -11,16 +11,16 @@ slug: /
 
 | 章节              | 描述                                                     |
 | ----------------- | -------------------------------------------------------- |
-| [安装](/docs/next/install) | 安装 Websoft9 控制台到服务器 |
-| [登录控制台](/docs/next/login-console)   |  登录 Websoft9 控制台，交互式体验托管平台  |
-| [快速入门](/docs/next/starter)   |  使用 Websoft9 快速部署各种类型的应用，包括一键模板部署和自定义部署等  |
-| [指南](/docs/next/guide)   |  使用 Websoft9 的部署、发布和管理应用的各种应用场景  |
-| [管理员](/docs/next/admin)   |  面向管理员用户的[用户管理](/docs/next/credentials)、升级、备份、数据、存储和安全配置等运维指南  |
-| [应用](/docs/next/apps) |  Websoft9 应用商店 200+ 一键部署模板的快速入门和配置指南  |
-| [程序环境](/docs/next/runtime) |  自行部署 Java、Python、Node.js、PHP、Go、Ruby和 .NET 程序的环境  |
-| [购买与支持](/docs/next/business)   |  付费使用 Websoft9 产品，获得企业级商业支持服务 |
-| [故障问题](/docs/next/faq)        |    技术问题与故障   |
-| [开发者](/docs/next/development)        |    为 Websoft9 产品、文档提出建议并做出贡献   |
+| [安装](/docs/install) | 安装 Websoft9 控制台到服务器 |
+| [登录控制台](/docs/login-console)   |  登录 Websoft9 控制台，交互式体验托管平台  |
+| [快速入门](/docs/starter)   |  使用 Websoft9 快速部署各种类型的应用，包括一键模板部署和自定义部署等  |
+| [指南](/docs/guide)   |  使用 Websoft9 的部署、发布和管理应用的各种应用场景  |
+| [管理员](/docs/admin)   |  面向管理员用户的[用户管理](/docs/credentials)、升级、备份、数据、存储和安全配置等运维指南  |
+| [应用](/docs/apps) |  Websoft9 应用商店 200+ 一键部署模板的快速入门和配置指南  |
+| [程序环境](/docs/runtime) |  自行部署 Java、Python、Node.js、PHP、Go、Ruby和 .NET 程序的环境  |
+| [购买与支持](/docs/business)   |  付费使用 Websoft9 产品，获得企业级商业支持服务 |
+| [故障问题](/docs/faq)        |    技术问题与故障   |
+| [开发者](/docs/development)        |    为 Websoft9 产品、文档提出建议并做出贡献   |
 
 ## 关于 Websoft9
 
@@ -112,7 +112,7 @@ Websoft9 来自开源，也回馈开源。开源对 Websoft9 生态的好处是�
 
 ## 部署模板{#apps}
 
-Websoft9 控制台支持的可一键安装的 [应用部署模板](/docs/next/apps) 如下：
+Websoft9 控制台支持的可一键安装的 [应用部署模板](/docs/apps) 如下：
 
 import Meta from './apps/_include/allapps.md';
 

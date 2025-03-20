@@ -13,12 +13,11 @@ import Meta from './_include/duplicati.md';
 
 ## 入门指南{#guide}
 
-### 初始化{#wizard}
+### 登录后台{#console}
 
 1. Websoft9 控制台安装 Duplicati 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息
 
-2. 初次进入时可设置 **账号密码**
-
+2. 本地浏览器访问 URL，输入管理员密码后即可使用
 
 ### 备份指南
 
