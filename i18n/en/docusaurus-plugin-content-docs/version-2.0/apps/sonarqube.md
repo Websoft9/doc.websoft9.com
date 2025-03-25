@@ -2,8 +2,9 @@
 title: SonarQube
 slug: /sonarqube
 tags:
-  - console
-  - other
+  - Code Analysis
+  - CI/CD
+  - SonarQube
 ---
 
 import Meta from './_include/sonarqube.md';
@@ -11,12 +12,6 @@ import Meta from './_include/sonarqube.md';
 <Meta name="meta" />
 
 ## Getting started{#guide}
-
-### Initial setup{#wizard}
-
-1. When completed installation of SonarQube at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
-
-2. Complete the install wizard step by step
 
 ### Login verification{#verification}
 
@@ -26,18 +21,10 @@ import Meta from './_include/sonarqube.md';
 
 ## Configuration options{#configs}
 
-- CLI
-- Multilingual (√)
-- SMTP (√)
-
 ## Administer{#administrator}
-
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
 
 ## Troubleshooting{#troubleshooting}
 
-#### 502 failed code?
+#### SonarQube starting failed, and error like `high disk watermark [90%] exceeded on...`
+
+Sufficient disk space must be reserved, refer to [SonarQube Server host requirements and recommendations](https://docs.sonarsource.com/sonarqube-server/latest/setup-and-upgrade/installation-requirements/server-host/)

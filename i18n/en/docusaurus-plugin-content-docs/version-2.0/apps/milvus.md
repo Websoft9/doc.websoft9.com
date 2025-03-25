@@ -2,8 +2,9 @@
 title: Milvus
 slug: /milvus
 tags:
-  - console
-  - other
+  - Vector Database
+  - Machine Learning
+  - Milvus
 ---
 
 import Meta from './_include/milvus.md';
@@ -11,12 +12,6 @@ import Meta from './_include/milvus.md';
 <Meta name="meta" />
 
 ## Getting started{#guide}
-
-### Initial setup{#wizard}
-
-1. When completed installation of Milvus at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
-
-2. Complete the install wizard step by step
 
 ### Login verification{#verification}
 
@@ -26,18 +21,10 @@ import Meta from './_include/milvus.md';
 
 ## Configuration options{#configs}
 
-- CLI
-- Multilingual (√)
-- SMTP (√)
-
 ## Administer{#administrator}
-
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
 
 ## Troubleshooting{#troubleshooting}
 
-#### 502 failed code?
+#### Error: LD_PRELOAD cannot be preloaded?
+
+refer to: https://github.com/milvus-io/milvus/discussions/38702

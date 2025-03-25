@@ -2,9 +2,11 @@
 title: NextChat
 slug: /nextchat
 tags:
-  - Web 面板
-  - 可视化
-  - GUI
+  - ChatGPT
+  - AI
+  - OpenAI
+  - 人工智能
+  - 聊天
 ---
 
 import Meta from './_include/nextchat.md';
@@ -15,29 +17,47 @@ import Meta from './_include/nextchat.md';
 
 ### 初始化{#wizard}
 
-Websoft9 控制台安装 NextChat 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
+Websoft9 控制台安装 NextChat 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。  
 
-### 登录后台{#console}
+1. 点击 NextChat 左下角的 **设置** 按钮
 
-Websoft9 控制台安装 NextChat 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
+2. 找到设置项的 **访问密码**，设置从 Websoft9 控制台获得的密码
 
-### 安装插件{#plugin}
+3. 模型（Model）列表中选择一个所需的项
+
+3. 开始使用
+
+### 切换 Azure 服务
+
+Azure 提供了优化后的 OpenAPi 服务，NextChat 支持 Azure AI 的接入
+
+1. 编辑 NextChat 编排文件 .env
+
+2. 删除 OpenAI 的相关变量，输入 Azure 相关的信息
+   ```
+   AZURE_URL=
+   AZURE_API_KEY=
+   AZURE_API_VERSION=2023-12-01-preview
+   ```
+
+3. 重建应用后生效
+
+### 节省成本
+
+- 尽量使用**新的聊天**，减少不必要的连续对话：连续对话会消耗大量算力
+- 设置合适的**附带历史消息数量**：设置太大会消耗大量算力
+- 选用 preview 模型：preview 是官方提供的预览版模型，定价是正式版的1/5
+
+## 购买 OpenAI 
+
+Websoft9 可以代理采购 Azure 提供的 OpenAI API 服务，有需要请联系我们的 [客户成功团队](./helpdesk)
 
 ## 配置选项{#configs}
 
-- CLI
 - 多语言（√）
-- SMTP（√）
-- 插件市场（√）
-
-## 管理维护{#administrator}
-
-- **重置管理员密码**
-- **更换 URL**
-- **HTTPS 额外设置**
-- **在线备份**
-- **在线升级**
+- 多模型提供商（√）
+- OpenAI 多版本（√）
+- 多用户（√）
+- 移动端（√）
 
 ## 故障
-
-#### 更改域名导致无法访问 ？

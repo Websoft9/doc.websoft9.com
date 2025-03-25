@@ -2,8 +2,9 @@
 title: PocketBase
 slug: /pocketbase
 tags:
-  - console
-  - other
+  - Backend Development
+  - Real-Time Database
+  - PocketBase
 ---
 
 import Meta from './_include/pocketbase.md';
@@ -16,28 +17,12 @@ import Meta from './_include/pocketbase.md';
 
 1. When completed installation of PocketBase at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
-2. Complete the install wizard step by step
+2. Execute the command **Get Administrator Password** on the server terminal.
 
-### Login verification{#verification}
-
-1. Completed installation PocketBase at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
-
-2. Starting to verify it
+3. Access the backend URL in your local browser and log in with your **Initial Account** information.
 
 ## Configuration options{#configs}
 
-- CLI
-- Multilingual (√)
-- SMTP (√)
-
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?

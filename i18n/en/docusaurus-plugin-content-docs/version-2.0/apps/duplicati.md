@@ -17,7 +17,7 @@ import Meta from './_include/duplicati.md';
 
 1. After completing the installation of Duplicati in the **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
-2. **Account** can be set for initial access
+2. Starting to verify it
 
 ### Backup guide
 
