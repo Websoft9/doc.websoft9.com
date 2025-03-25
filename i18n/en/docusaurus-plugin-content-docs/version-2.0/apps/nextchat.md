@@ -2,8 +2,11 @@
 title: NextChat
 slug: /nextchat
 tags:
-  - console
-  - other
+  - ChatGPT
+  - AI
+  - OpenAI
+  - Artificial Intelligence
+  - Chat
 ---
 
 import Meta from './_include/nextchat.md';
@@ -14,30 +17,38 @@ import Meta from './_include/nextchat.md';
 
 ### Initial setup{#wizard}
 
-1. When completed installation of NextChat at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After completing the installation of NextChat in the Websoft9 console, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
-2. Complete the install wizard step by step
+2. Open the **Settings** at the bottom left corner of NextChat.
 
-### Login verification{#verification}
+3. Set the password from the Websoft9 Console for the **Access Password** in the Settings section.
 
-1. Completed installation NextChat at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
+4. Select an item from the Model list.
 
-2. Starting to verify it
+5. Start using the application
+
+### Switch Azure Services
+
+Azure provides optimized OpenAPi services, and NextChat supports access to Azure AI.
+
+1. Go to **My Apps > NextChat > Compose > Go to Edit Repository**, and edit the file *.env*  
+
+2. Delete OpenAI-related variables and enter Azure-related information  
+   ```
+   AZURE_URL=
+   AZURE_API_KEY=
+   AZURE_API_VERSION=2023-12-01-preview
+   ```
+3. Redeploy the application to apply the changes 
 
 ## Configuration options{#configs}
 
-- CLI
 - Multilingual (√)
-- SMTP (√)
+- Multi-model provider (√)
+- OpenAI Multiple versions (√)
+- Multi-user (√)
+- Mobile (√)
 
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?
