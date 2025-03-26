@@ -1,4 +1,4 @@
-[Kener](https://kener.ing/) 是一个 **Kener 是一个采用 SvelteKit 和 NodeJS 构建的时尚轻量级状态页面系统。**，它被用于 全面监控  等场景。Kener 是一个采用 SvelteKit 和 NodeJS 构建的时尚轻量级状态页面系统。
+[Kener](https://kener.ing/) 是一个 **网站/API 状态监控系统**，它被用于 全面监控  等场景。Kener 是一个采用 SvelteKit 和 NodeJS 构建的时尚轻量级状态页面系统。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kener/kener-gui-websoft9.png)

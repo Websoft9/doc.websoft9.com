@@ -1,4 +1,4 @@
-[Rancher](https://www.rancher.com) is **Rancher is a complete software stack for teams adopting containers.**, used for Operations Automation . Rancher is a complete software stack for teams adopting containers.
+[Rancher](https://www.rancher.com) is **Enterprise Kubernetes Management**, used for Operations Automation . Rancher is a complete software stack for teams adopting containers.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rancher/rancher-gui-websoft9.png)

@@ -1,4 +1,4 @@
-[Unleash](https://getunleash.io) 是一个 **Unleash 是一个开源功能管理平台，支持渐进式发布和实验。**，它被用于 源码仓库 CI/CD 流水线  等场景。Unleash 是一个开源功能管理平台，支持渐进式发布和实验。
+[Unleash](https://getunleash.io) 是一个 **功能管理平台，LaunchDarkly 的开源替代品**，它被用于 源码仓库 CI/CD 流水线  等场景。Unleash 是一个开源功能管理平台，支持渐进式发布和实验。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/unleash/unleash-gui-websoft9.png)

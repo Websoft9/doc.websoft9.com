@@ -1,4 +1,4 @@
-[frp](https://gofrp.org) is **内网穿透代理工具**, used for Networking . FRP is a high-performance reverse proxy tool mainly used for intranet penetration to help users securely expose intranet services to the public network.
+[frp](https://gofrp.org) is **Internal network penetration proxy tool**, used for Networking . FRP is a high-performance reverse proxy tool mainly used for intranet penetration to help users securely expose intranet services to the public network.
 
 
 ![gui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/frp/frp-gui-websoft9.png)

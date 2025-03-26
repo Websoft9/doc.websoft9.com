@@ -1,4 +1,4 @@
-[frp](https://gofrp.org) 是一个 **Internal network penetration proxy tool**，它被用于 网络  等场景。FRP 是一款高性能的反向代理工具，主要用于内网穿透，帮助用户将内网服务安全地暴露到公网上。
+[frp](https://gofrp.org) 是一个 **内网穿透代理工具**，它被用于 网络  等场景。FRP 是一款高性能的反向代理工具，主要用于内网穿透，帮助用户将内网服务安全地暴露到公网上。
 
 
 ![界面](http://libs.websoft9.com/Websoft9/DocsPicture/zh/frp/frp-gui-websoft9.png)

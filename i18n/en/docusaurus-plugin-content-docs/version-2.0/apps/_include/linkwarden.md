@@ -1,4 +1,4 @@
-[Linkwarden](https://linkwarden.app) is **an open-source collaborative bookmark manager to collect, organize and preserve webpages.**, used for Content Management Files Management . Self-hosted collaborative bookmark manager to collect, organize, and preserve webpages, articles, and documents.
+[Linkwarden](https://linkwarden.app) is **An open-source collaborative bookmark manager to collect, organize and preserve webpages.**, used for Content Management Files Management . Self-hosted collaborative bookmark manager to collect, organize, and preserve webpages, articles, and documents.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/linkwarden/linkwarden-gui-websoft9.png)

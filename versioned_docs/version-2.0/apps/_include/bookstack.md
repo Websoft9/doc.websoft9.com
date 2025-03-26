@@ -1,4 +1,4 @@
-[BookStack](https://www.bookstackapp.com) 是一个 **BookStack 是一个简单、自托管、易于使用的信息组织和存储平台。**，它被用于 文档协作/企业网盘  等场景。BookStack 是一个简单、自托管、易于使用的信息组织和存储平台。
+[BookStack](https://www.bookstackapp.com) 是一个 **文档型 CMS，支持 Markdown**，它被用于 文档协作/企业网盘  等场景。BookStack 是一个简单、自托管、易于使用的信息组织和存储平台。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/bookstack/bookstack-gui-websoft9.png)

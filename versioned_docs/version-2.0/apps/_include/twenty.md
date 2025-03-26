@@ -1,4 +1,4 @@
-[Twenty](https://twenty.com) 是一个 **开源CRM**，它被用于 CRM/分销/订单  等场景。Twenty CRM 是一款客户关系管理软件，帮助企业管理客户信息、销售流程和客户互动，提高业务效率。
+[Twenty](https://twenty.com) 是一个 **开源 CRM**，它被用于 CRM/分销/订单  等场景。Twenty CRM 是一款客户关系管理软件，帮助企业管理客户信息、销售流程和客户互动，提高业务效率。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/twenty/twenty-gui-websoft9.png)

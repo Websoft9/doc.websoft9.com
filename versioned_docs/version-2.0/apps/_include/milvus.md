@@ -1,4 +1,4 @@
-[Milvus](https://milvus.io/) 是一个 **矢量数据库**，它被用于 矢量数据库  等场景。AI向量数据库，支持高效相似搜索和大规模数据管理。
+[Milvus](https://milvus.io/) 是一个 **开源 AI 向量数据库**，它被用于 矢量数据库  等场景。AI向量数据库，支持高效相似搜索和大规模数据管理。
 
 
 ![gui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/milvus/milvus-ui-websoft9.png)

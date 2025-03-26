@@ -1,4 +1,4 @@
-[Milvus](https://milvus.io/) is **vector database**, used for Vector Databases . AI vector database that supports efficient similarity search and large-scale data management.
+[Milvus](https://milvus.io/) is **Open Source AI Vector Database**, used for Vector Databases . AI vector database that supports efficient similarity search and large-scale data management.
 
 
 ![gui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/milvus/milvus-ui-websoft9.png)

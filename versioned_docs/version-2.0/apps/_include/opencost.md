@@ -1,4 +1,4 @@
-[OpenCost](https://opencost.io) 是一个 **OpenCost 是一个开源工具，用于 Kubernetes 集群的成本监控和管理。**，它被用于 云设施监控  等场景。OpenCost 是一个开源工具，用于 Kubernetes 集群的成本监控和管理。
+[OpenCost](https://opencost.io) 是一个 **Kubernetes 集群的成本监控和管理**，它被用于 云设施监控  等场景。OpenCost 是一个开源工具，用于 Kubernetes 集群的成本监控和管理。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/opencost/opencost-gui-websoft9.png)

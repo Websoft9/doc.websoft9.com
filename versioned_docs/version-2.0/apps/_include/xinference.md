@@ -1,4 +1,4 @@
-[Xinference](https://inference.readthedocs.io/) 是一个 **Intelligent Reasoning Platform**，它被用于 AI 多模型统一交互界面 AI 智能体/聊天/知识检索  等场景。Xinference 是一个智能推理平台，利用先进算法分析数据，提供洞察和决策支持，提升业务效率。
+[Xinference](https://inference.readthedocs.io/) 是一个 **智能推理平台**，它被用于 AI 多模型统一交互界面 AI 智能体/聊天/知识检索  等场景。Xinference 是一个智能推理平台，利用先进算法分析数据，提供洞察和决策支持，提升业务效率。
 
 
 ![界面](http://libs.websoft9.com/Websoft9/DocsPicture/zh/xinference/xinference-gui-websoft9.png)

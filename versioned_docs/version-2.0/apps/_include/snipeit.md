@@ -1,4 +1,4 @@
-[Snipe-IT](https://snipeitapp.com) 是一个 **Snipe-IT 是一个开源资产管理软件，帮助组织跟踪和管理硬件、软件和许可证的使用情况。**，它被用于 设备管理与监控  等场景。Snipe-IT 是一个开源资产管理软件，帮助组织跟踪和管理硬件、软件和许可证的使用情况。
+[Snipe-IT](https://snipeitapp.com) 是一个 **开源 IT 资产/许可证管理系统**，它被用于 设备管理与监控  等场景。Snipe-IT 是一个开源资产管理软件，帮助组织跟踪和管理硬件、软件和许可证的使用情况。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/snipeit/snipeit-gui-websoft9.png)

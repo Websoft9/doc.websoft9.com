@@ -1,4 +1,4 @@
-[Cal.com](https://cal.com) 是一个 **智能排程平台**，它被用于 运维自动化 业务自动化  等场景。Cal.com为个人和企业提供完全可定制的排程体验，通过先进的功能和集成简化会议协调流程。
+[Cal.com](https://cal.com) 是一个 **安排会议与日程预约管理的工具，Calendly 的开源替代品**，它被用于 项目/任务/流程 业务自动化  等场景。Cal.com为个人和企业提供完全可定制的排程体验，通过先进的功能和集成简化会议协调流程。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/calcom/calcom-gui-websoft9.png)
