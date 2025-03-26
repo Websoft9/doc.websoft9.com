@@ -1,15 +1,21 @@
+## 场景
+
+- [家庭服务器](https://www.websoft9.com/apps/home-server)
+- [企业文档与知识共享](https://www.websoft9.com/apps/ecms)
+- [一站式 DevOps 应用](https://www.websoft9.com/apps/devop-case)
+- [高校软件实训](https://www.websoft9.com/apps/education)
+- [运营与供应链数字化](https://www.websoft9.com/apps/operation)
+- [调研投票与数据采集](https://www.websoft9.com/apps/survey)
+- [内容营销技术](https://www.websoft9.com/apps/marktech)
 ## 人工智能
 
-- [Digital twins](https://www.websoft9.com/apps/digital-twins)
-- [数据自动标识](https://www.websoft9.com/apps/ai-labeling)
-- [生成式 AI](https://www.websoft9.com/apps/genai)
-- [AI 图像处理/机器视觉](https://www.websoft9.com/apps/ai-image)
-- [AI 音视频处理](https://www.websoft9.com/apps/ai-for-video)
-- [AI 自然语言处理](https://www.websoft9.com/apps/ai-for-nlp)
-- [AI 开发者工具](https://www.websoft9.com/apps/ai-for-developer)
-- [框架/模型/开发工具](https://www.websoft9.com/apps/ai-develop)
-- [开源大模型](https://www.websoft9.com/apps/open-llm)
-- [AI 管理运维](https://www.websoft9.com/apps/aiops)
+- [AI 多模型统一交互界面](https://www.websoft9.com/apps/aiui)
+- [AI 写作与创意内容生成](https://www.websoft9.com/apps/ai-for-video)
+- [AI 智能体/聊天/知识检索](https://www.websoft9.com/apps/ai-agent-chat)
+- [机器视觉与工业 AI 应用](https://www.websoft9.com/apps/ai-industry)
+- [本地 AI 模型服务](https://www.websoft9.com/apps/open-llm)
+- [机器学习与模型训练](https://www.websoft9.com/apps/ai-ml)
+- [AI DevOps](https://www.websoft9.com/apps/ai-devops)
 ## 数据分析
 
 - [日志分析](https://www.websoft9.com/apps/logs-Analytics)
@@ -40,7 +46,7 @@
 - [白板/笔记](https://www.websoft9.com/apps/whiteboard-and-note)
 - [数字创意](https://www.websoft9.com/apps/dcreativity)
 - [低代码/零代码](https://www.websoft9.com/apps/low-code)
-## 网站
+## 网站与内容聚合
 
 - [企业建站](https://www.websoft9.com/apps/website)
 - [博客](https://www.websoft9.com/apps/blog)
@@ -49,6 +55,7 @@
 - [社交/论坛](https://www.websoft9.com/apps/community)
 - [在线学习](https://www.websoft9.com/apps/elearning)
 - [视频音频](https://www.websoft9.com/apps/media-system)
+- [文章聚合](https://www.websoft9.com/apps/news-feed)
 - [无头 CMS](https://www.websoft9.com/apps/headless-cms)
 - [网站访问分析](https://www.websoft9.com/apps/web-analytics)
 ## 通信联络
@@ -58,16 +65,15 @@
 - [会议/直播](https://www.websoft9.com/apps/meeting)
 ## 协作办公
 
-- [任务协作](https://www.websoft9.com/apps/task)
-- [文档协作](https://www.websoft9.com/apps/document)
-- [项目/任务](https://www.websoft9.com/apps/pm-task)
-- [密码管理](https://www.websoft9.com/apps/teampassm)
-- [需求/看板/缺陷](https://www.websoft9.com/apps/agile)
-- [文件管理](https://www.websoft9.com/apps/files)
+- [文档协作/企业网盘](https://www.websoft9.com/apps/document)
+- [项目/任务/流程](https://www.websoft9.com/apps/pm-task)
+- [团队密码共享](https://www.websoft9.com/apps/teampassm)
+- [文件共享与传输](https://www.websoft9.com/apps/files)
 - [云桌面](https://www.websoft9.com/apps/cloud-workspaces)
 ## 自动化
 
 - [流程机器人](https://www.websoft9.com/apps/rpa)
+- [AI 智能体/聊天/知识检索](https://www.websoft9.com/apps/ai-agent-chat)
 - [CI/CD 流水线](https://www.websoft9.com/apps/pipeline)
 - [运维自动化](https://www.websoft9.com/apps/opsauto)
 - [业务自动化](https://www.websoft9.com/apps/business-automation)
@@ -95,6 +101,7 @@
 - [Docker](https://www.websoft9.com/apps/docker)
 ## 物联网
 
+- [Digital twins](https://www.websoft9.com/apps/digital-twins)
 - [MQTT](https://www.websoft9.com/apps/mqtt)
 - [设备安全](https://www.websoft9.com/apps/device-security)
 - [设备管理与监控](https://www.websoft9.com/apps/device-management)
@@ -155,17 +162,9 @@
 - [运维自动化](https://www.websoft9.com/apps/opsauto)
 ## IT 安全
 
-- [密码管理](https://www.websoft9.com/apps/teampassm)
+- [团队密码共享](https://www.websoft9.com/apps/teampassm)
 - [访问控制](https://www.websoft9.com/apps/access-control)
 - [扫描监测](https://www.websoft9.com/apps/security-detection)
 - [防火墙](https://www.websoft9.com/apps/firewall)
 - [堡垒机](https://www.websoft9.com/apps/pam)
 - [软件供应链](https://www.websoft9.com/apps/softwarechain)
-## 行业
-
-- [生命科学](https://www.websoft9.com/apps/life)
-- [软件与平台](https://www.websoft9.com/apps/software-platform)
-- [教育](https://www.websoft9.com/apps/education)
-- [汽车](https://www.websoft9.com/apps/automotive)
-- [工业设备](https://www.websoft9.com/apps/industrial-equipment)
-- [建筑](https://www.websoft9.com/apps/construction)

@@ -1,15 +1,21 @@
+## Use Case
+
+- [Home Server](https://www.websoft9.com/apps/home-server)
+- [Enterprise content management](https://www.websoft9.com/apps/ecms)
+- [All-in-one DevOps](https://www.websoft9.com/apps/devop-case)
+- [Software Labs for High Education](https://www.websoft9.com/apps/education)
+- [Digtal for SCM and Operation](https://www.websoft9.com/apps/operation)
+- [Data survey and collection](https://www.websoft9.com/apps/survey)
+- [Content Marketing](https://www.websoft9.com/apps/marktech)
 ## AI + Machine Learning
 
-- [Digital twins](https://www.websoft9.com/apps/digital-twins)
-- [Data Labeling Tools](https://www.websoft9.com/apps/ai-labeling)
-- [Generative AI](https://www.websoft9.com/apps/genai)
-- [AI for Image + Machine Vision](https://www.websoft9.com/apps/ai-image)
-- [AI for Video and Audio](https://www.websoft9.com/apps/ai-for-video)
-- [AI for NLP](https://www.websoft9.com/apps/ai-for-nlp)
-- [AI for Developer](https://www.websoft9.com/apps/ai-for-developer)
-- [ML & Framework & Development](https://www.websoft9.com/apps/ai-develop)
-- [Open Source LLM](https://www.websoft9.com/apps/open-llm)
-- [AIOps](https://www.websoft9.com/apps/aiops)
+- [AI Models Unified Interface](https://www.websoft9.com/apps/aiui)
+- [AI Writing and Creative Content Generation](https://www.websoft9.com/apps/ai-for-video)
+- [AI Agents/Chatbots/RAG](https://www.websoft9.com/apps/ai-agent-chat)
+- [Machine Vision and Industrial AI Applications](https://www.websoft9.com/apps/ai-industry)
+- [Local AI model Service and Runtime](https://www.websoft9.com/apps/open-llm)
+- [Machine Learning and Model Training](https://www.websoft9.com/apps/ai-ml)
+- [AI DevOps](https://www.websoft9.com/apps/ai-devops)
 ## Data Analytics
 
 - [Log Analytics](https://www.websoft9.com/apps/logs-Analytics)
@@ -49,6 +55,7 @@
 - [Online Community](https://www.websoft9.com/apps/community)
 - [eLearning](https://www.websoft9.com/apps/elearning)
 - [Media System](https://www.websoft9.com/apps/media-system)
+- [News Feed](https://www.websoft9.com/apps/news-feed)
 - [Headless CMS](https://www.websoft9.com/apps/headless-cms)
 - [Web Analytics](https://www.websoft9.com/apps/web-analytics)
 ## Communication
@@ -58,16 +65,15 @@
 - [Meeting](https://www.websoft9.com/apps/meeting)
 ## Collaboration & Office
 
-- [Task Collaboration](https://www.websoft9.com/apps/task)
 - [Document Collaboration](https://www.websoft9.com/apps/document)
 - [Project and Task](https://www.websoft9.com/apps/pm-task)
-- [Password Management](https://www.websoft9.com/apps/teampassm)
-- [Agile Boards](https://www.websoft9.com/apps/agile)
+- [Team Password Management](https://www.websoft9.com/apps/teampassm)
 - [Files Management](https://www.websoft9.com/apps/files)
 - [Cloud Workspaces](https://www.websoft9.com/apps/cloud-workspaces)
 ## Automation
 
 - [RPA](https://www.websoft9.com/apps/rpa)
+- [AI Agents/Chatbots/RAG](https://www.websoft9.com/apps/ai-agent-chat)
 - [CI/CD Pipeline](https://www.websoft9.com/apps/pipeline)
 - [Operations Automation](https://www.websoft9.com/apps/opsauto)
 - [Business automation](https://www.websoft9.com/apps/business-automation)
@@ -95,6 +101,7 @@
 - [Docker](https://www.websoft9.com/apps/docker)
 ## IoT
 
+- [Digital twins](https://www.websoft9.com/apps/digital-twins)
 - [MQTT](https://www.websoft9.com/apps/mqtt)
 - [Device Security](https://www.websoft9.com/apps/device-security)
 - [Device Management and Monitor](https://www.websoft9.com/apps/device-management)
@@ -155,17 +162,9 @@
 - [Operations Automation](https://www.websoft9.com/apps/opsauto)
 ## IT Security
 
-- [Password Management](https://www.websoft9.com/apps/teampassm)
+- [Team Password Management](https://www.websoft9.com/apps/teampassm)
 - [Access Control](https://www.websoft9.com/apps/access-control)
 - [Detection and Monitor](https://www.websoft9.com/apps/security-detection)
 - [Firewall](https://www.websoft9.com/apps/firewall)
 - [Privileged Access Management](https://www.websoft9.com/apps/pam)
 - [Software supply chain](https://www.websoft9.com/apps/softwarechain)
-## Industries 
-
-- [Life sciences](https://www.websoft9.com/apps/life)
-- [Software Platform](https://www.websoft9.com/apps/software-platform)
-- [Education](https://www.websoft9.com/apps/education)
-- [Automotive](https://www.websoft9.com/apps/automotive)
-- [Industrial Equipment](https://www.websoft9.com/apps/industrial-equipment)
-- [Construction](https://www.websoft9.com/apps/construction)
