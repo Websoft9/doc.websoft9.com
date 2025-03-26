@@ -35,12 +35,12 @@ const config = {
       {
         redirects: [
           {
-            to: '/docs/elasticsearch',
-            from: ['/docs/elk', '/docs/elastic'],
+            to: './elasticsearch',
+            from: ['./elk', './elastic'],
           },
           {
-            to: '/docs/php',
-            from: ['/docs/phpfpmapache', '/docs/phpfpmnginx'],
+            to: './php',
+            from: ['./phpfpmapache', './phpfpmnginx'],
           }
         ],
       },
