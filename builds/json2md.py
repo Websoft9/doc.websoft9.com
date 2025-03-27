@@ -6,7 +6,7 @@ import argparse
 parser = argparse.ArgumentParser(description='Convert JSON to Markdown.')
 parser.add_argument('--json_file', type=str, help='Path to the JSON file', required=True)
 parser.add_argument('--output_file', type=str, help='Path to the output Markdown file', required=True)
-
+parser.add_argument('--ignore-list', help='JSON file containing keys to ignore.')
 # 解析命令行参数
 args = parser.parse_args()
 
@@ -33,6 +33,11 @@ else:
 with open(args.json_file) as json_file:
     data = json.load(json_file)
 
+ignore_list = []
+if args.ignore_list:
+    with open(args.ignore_list, 'r', encoding='utf-8') as f:
+        ignore_list = json.load(f)
+
 # Create a dictionary to hold the titles and their corresponding keys, trademarks, and positions
 catalog_dict = {}
 
@@ -40,6 +45,8 @@ catalog_dict = {}
 for entry in data:
     try:
         parent_key = entry['key']  # This is the key for the parent item
+        if parent_key in ignore_list:
+            continue
         trademark = entry['trademark']
         items = entry['catalogCollection']['items']
         for item in items:
