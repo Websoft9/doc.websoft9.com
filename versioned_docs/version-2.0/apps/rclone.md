@@ -2,9 +2,9 @@
 title: Rclone
 slug: /rclone
 tags:
-  - Web 面板
-  - 可视化
-  - GUI
+  - 云存储
+  - 文件同步
+  - Rclone
 ---
 
 import Meta from './_include/rclone.md';
@@ -15,23 +15,20 @@ import Meta from './_include/rclone.md';
 
 ### 初始化{#wizard}
 
-Websoft9 控制台安装 Rclone 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
+1. Websoft9 控制台安装 Rclone 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息
 
-### 登录后台{#console}
+2. 本地浏览器访问 URL，输入登陆验证信息后即可使用
+ 
+### 执行同步
 
-Websoft9 控制台安装 Rclone 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
+在可视化界面可以来源和目标的配置，但是不可以执行同步，需要进入容器执行如下命令:
 
-### 安装插件{#plugin}
+   ```
+   rclone sync <Source's Config_Name>:<bucket_name>  <Destination's Config_Name>:<bucket_name>
+   ```
 
 ## 配置选项{#configs}
-
-- CLI
-- 多语言（√）
-- SMTP（√）
-- 插件市场（√）
 
 ## 管理维护{#administrator}
 
 ## 故障
-
-#### 更改域名导致无法访问 ？
