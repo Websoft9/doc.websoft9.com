@@ -25,11 +25,11 @@ jobs:
 
       - name: Generate Markdown for app catalog README.mdx(zh)
         run: |
-          python builds/json2md.py --json_file ./extracted/media/json/product_zh.json --output_file versioned_docs/version-2.0/apps/README.mdx
+          python builds/json2md.py --json_file ./extracted/media/json/product_zh.json --output_file versioned_docs/version-2.0/apps/README.mdx --ignore-list template/meta/skip_applink.json
 
       - name: Generate Markdown for app catalog README.mdx(en)
         run: |
-          python builds/json2md.py --json_file ./extracted/media/json/product_en.json --output_file i18n/en/docusaurus-plugin-content-docs/version-2.0/apps/README.mdx
+          python builds/json2md.py --json_file ./extracted/media/json/product_en.json --output_file i18n/en/docusaurus-plugin-content-docs/version-2.0/apps/README.mdx --ignore-list template/meta/skip_applink.json
 
       - name: Generate Markdown for allcatalogs.md(zh)
         run: |
