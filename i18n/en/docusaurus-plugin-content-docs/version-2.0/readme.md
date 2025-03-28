@@ -5,9 +5,7 @@ slug: /
 
 # Introduction
 
-This is the documentation for the next generation of Websoft9, which has been released and will replace the old version.  
-
-It provides you with the best practices for self-hosting multiple applications.
+This is the documentation of Websoft9, it provides you with the best practices for self-hosting multiple applications.
 
 | Section              | Description                                                     |
 | ----------------- | -------------------------------------------------------- |
@@ -16,7 +14,7 @@ It provides you with the best practices for self-hosting multiple applications.
 | [Getting started](/docs/starter)   |  Use Websoft9 to quickly deploy various types of applications, including one-click template deployment and customized deployment, etc.  |
 | [User guide](/docs/guide)   | Deploying, publishing, and managing applications using Websoft9  |
 | [Administrator](/docs/admin)   |  Operations and maintenance guides for administrator users for user management, upgrades, backups, data, storage, and security configurations  |
-| [Applications](/docs/apps) |  Websoft9 App Store 200+ One-Click Deployment Templates Quick Start and Configuration Guide  |
+| [Applications](/docs/apps) |  Websoft9 App Store 300+ One-Click Deployment Templates Quick Start and Configuration Guide  |
 | [App Runtime](/docs/runtime) |  App runtime for your Java, Python, Node.js, PHP, Go, Ruby, and .NET applications  |
 | [Subscription](/docs/business)   |  Paid use of Websoft9 products for enterprise-level business support services |
 | [Support](/docs/helpdesk)   |  Get any support from Websoft9 Customer Success Team |
@@ -28,7 +26,7 @@ Websoft9 is a **Self-Hosting platform (Lite PaaS)** that can deploy multiple app
 
 It brings the extremely simple user experience of deploying an application with just a few clicks into a cloud provider of your choice, whether that is Azure, AWS, GCP, or AlibabaCloud. 
 
-Websoft9 comes with 200+ [one-click deployment templates](https://www.websoft9.com/apps) pre-built and supports users' customized deployment of programs such as Java, Python, Node.js, PHP, Go, Ruby and dotNET.
+Websoft9 comes with 300+ [one-click deployment templates](https://www.websoft9.com/apps) pre-built and supports users' customized deployment of programs such as Java, Python, Node.js, PHP, Go, Ruby and dotNET.
 
 ![](/img/websoft9-appstore.png)
 
@@ -36,7 +34,7 @@ Websoft9 comes with 200+ [one-click deployment templates](https://www.websoft9.c
 
 - Open source and free for starter
 - Web-based interface, easy to use
-- Inner App Store have [200+ one-click deployment application templates](http://github.com/websoft9/docker-library)
+- Inner App Store have [300+ one-click deployment application templates](http://github.com/websoft9/docker-library)
 - It is a tool implementing GitOps and Infrastructure as Code (IaC)principles, support continue deployment
 - Supports customized deployment of programs such as Java, Python, Node.js, PHP, Go, Ruby and dotNET
 - Hosting services from deployment to operation, monitoring, and support for high availability, scalability, backup and recovery, and security compliance.

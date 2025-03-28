@@ -5,7 +5,7 @@ slug: /install-setup
 
 # Post-Installation Setup
 
-After installing Websoft9 Console, start to **Configure Domain**, **Deploying Applications** and **System Management**
+After installing Websoft9 Console, make sure you can [login to Websoft9 Console](./login-console) first, then start to **Configure Domain**, **Deploying Applications** and **System Management**
 
 ## Configure Domain
 

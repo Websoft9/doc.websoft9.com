@@ -9,4 +9,9 @@ slug: /security-ddos
 
 DDoS 防御常见的方案是增设 DDoS 防护服务，除此之外也可以在自己的网关层面（HTTP Server）做一定的控制：  
 
-Websoft9 网关是基于 Nginx 的，Nginx 的 DDoS 防御参考官方博客：[Mitigating DDoS Attacks with NGINX and NGINX Plus](https://www.nginx.com/blog/mitigating-ddos-attacks-with-nginx-and-nginx-plus)
+- 部署 WAF 服务
+- [在 Websoft9 网关中设置应用的客户端并发](./domain-auth#conns)
+
+Websoft9 网关是基于 Nginx 的，更多 Nginx 的 DDoS 防御参考官方博客：[Mitigating DDoS Attacks with NGINX and NGINX Plus](https://www.nginx.com/blog/mitigating-ddos-attacks-with-nginx-and-nginx-plus)
+
+

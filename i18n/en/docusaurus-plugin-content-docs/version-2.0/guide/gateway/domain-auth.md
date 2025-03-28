@@ -26,7 +26,7 @@ Application access control is crucial for network security. It ensures only auth
 7. **User Experience**: Customized access permissions enhance user experience by showing only needed functions.
 
 
-## Step1: Setting access control{#allow}
+## Setting access control{#allow}
 
 You can create access control strategy Whitelist and account password access at Websoft9 Gateway.
 
@@ -39,7 +39,7 @@ You can create access control strategy Whitelist and account password access at 
    - Authorization: Username and password
    - Access：allow your [Whitelist](https://nginx.org/en/docs/http/ngx_http_access_module.html#allow), e.g `0.0.0.0/0` allowed all IP access
 
-## Step2: Enable access control for Proxy Host
+## Enable access control for Proxy Host
 
 Once you have create access control strategy, you can attach it to your Proxy Host
 
@@ -47,3 +47,19 @@ Once you have create access control strategy, you can attach it to your Proxy Ho
 
 2. Select one strategy for **Access List** at **Details** tab
    ![设置 Access](./assets/websoft9-gateway-setaccess.png)
+
+
+## Limiting the Rate of Requests {#conns}
+
+A Distributed Denial‑of‑Service (DDoS) attack or excessive web scraping will make attempt to make a service, usually a website, unavailable by bombarding it with so much traffic from multiple machines that the server providing the service is no longer able to function correctly because of resource exhaustion.
+
+1. Go to Gateway interface of Websoft9 Console, edit the target **Proxy Host**
+
+2. Add below configurations at the **Advanced** tabs
+   ```
+   # 在 server 块中使用 limit_req 和 limit_conn
+   limit_req zone=w9_limit_req_zone burst=300 nodelay;
+   limit_conn w9_limit_conn_zone 30;
+   ```
+
+   > `limit_req` and `limit_conn` is definde at file `/data/nginx/custom/http.conf` of Websoft9
