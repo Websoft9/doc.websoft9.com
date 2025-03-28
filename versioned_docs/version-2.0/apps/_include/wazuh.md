@@ -1,4 +1,4 @@
-[Wazuh](https://wazuh.com) 是一个 **Wazuh 是一个用于威胁预防、检测和响应的免费开源平台。它能够保护企业内部、虚拟化、容器化和云环境中的工作负载。**，它被用于 扫描监测  等场景。Wazuh 是一个用于威胁预防、检测和响应的免费开源平台。它能够保护企业内部、虚拟化、容器化和云环境中的工作负载。
+[Wazuh](https://wazuh.com) 是一个 **威胁预防、安全监控平台**，它被用于 扫描监测  等场景。Wazuh 是一个用于威胁预防、检测和响应的免费开源平台。它能够保护企业内部、虚拟化、容器化和云环境中的工作负载。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wazuh/wazuh-gui-websoft9.png)

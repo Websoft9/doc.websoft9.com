@@ -1,4 +1,4 @@
-[Selenium](https://www.selenium.dev) 是一个 **Selenium 是一个开源自动化测试工具，用于Web应用程序的浏览器自动化。**，它被用于 运维自动化  等场景。Selenium 是一个开源自动化测试工具，用于Web应用程序的浏览器自动化。
+[Selenium](https://www.selenium.dev) 是一个 **自动化测试工具，模拟浏览器操作**，它被用于 运维自动化  等场景。Selenium 是一个开源自动化测试工具，用于Web应用程序的浏览器自动化。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/selenium/selenium-gui-websoft9.png)

@@ -1,4 +1,4 @@
-[LiteLLM](https://www.litellm.ai) 是一个 **LLM Gateway 可在 100 多个 LLM 中提供模型访问、回退和支出跟踪。全部采用 OpenAI 格式。**，它被用于 AI 智能体/聊天/知识检索 AI 多模型统一交互界面 AI 写作与创意内容生成  等场景。LLM Gateway 可在 100 多个 LLM 中提供模型访问、回退和支出跟踪。全部采用 OpenAI 格式。
+[LiteLLM](https://www.litellm.ai) 是一个 **统一多语言模型工具，支持100+ LLM **，它被用于 AI 智能体/聊天/知识检索 AI 多模型统一交互界面 AI 写作与创意内容生成  等场景。LLM Gateway 可在 100 多个 LLM 中提供模型访问、回退和支出跟踪。全部采用 OpenAI 格式。
 
 
 ![界面](http://libs.websoft9.com/Websoft9/DocsPicture/zh/litellm/litellm-gui-websoft9.png)

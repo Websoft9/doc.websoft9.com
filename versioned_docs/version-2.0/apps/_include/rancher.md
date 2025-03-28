@@ -1,4 +1,4 @@
-[Rancher](https://www.rancher.com) 是一个 **Rancher 是适用于采用容器的团队的完整软件栈。**，它被用于 运维自动化  等场景。Rancher 是适用于采用容器的团队的完整软件栈。
+[Rancher](https://www.rancher.com) 是一个 **企业级 Kubernetes 可视化管理**，它被用于 运维自动化  等场景。Rancher 是适用于采用容器的团队的完整软件栈。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rancher/rancher-gui-websoft9.png)

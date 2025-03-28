@@ -1,4 +1,4 @@
-[WordPress](https://wordpress.com/) is **WordPress is open source software you can use to create a beautiful website, blog, or app**, used for Website Builder Low Code and No Code eCommerce Marketing Blog Digtal for SCM and Operation Software Labs for High Education Content Marketing Home Server . 42% of the web is built on WordPress. More bloggers, small businesses, and Fortune 500 companies use WordPress than all other options combined. Join the millions of people that call WordPress.com home.
+[WordPress](https://wordpress.com/) is **The open source publishing platform of choice for millions of websites worldwide**, used for Website Builder Low Code and No Code eCommerce Marketing Blog Digtal for SCM and Operation Software Labs for High Education Content Marketing Home Server . 42% of the web is built on WordPress. More bloggers, small businesses, and Fortune 500 companies use WordPress than all other options combined. Join the millions of people that call WordPress.com home.
 
 
 ![addsite](https://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-add-site-websoft9.png)

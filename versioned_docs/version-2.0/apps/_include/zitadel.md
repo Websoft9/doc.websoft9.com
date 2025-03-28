@@ -1,4 +1,4 @@
-[ZITADEL](https://zitadel.com/) 是一个 **ZITADEL 是一个开源身份和访问管理平台，支持用户认证和授权。**，它被用于 团队密码共享  等场景。ZITADEL 是一个开源身份和访问管理平台，支持用户认证和授权。
+[ZITADEL](https://zitadel.com/) 是一个 **统一身份认证与授权平台**，它被用于 团队密码共享  等场景。ZITADEL 是一个开源身份和访问管理平台，支持用户认证和授权。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zitadel/zitadel-gui-websoft9.png)

@@ -1,4 +1,4 @@
-[OpenProject](https://www.openproject.org/) 是一个 **用户友好的人工智能界面**，它被用于 项目/任务/流程  等场景。OpenProject 是一个开源项目管理软件，支持团队协作、任务跟踪、时间管理和进度监控，适合各种项目。
+[OpenProject](https://www.openproject.org/) 是一个 **开源项目管理软件**，它被用于 项目/任务/流程  等场景。OpenProject 是一个开源项目管理软件，支持团队协作、任务跟踪、时间管理和进度监控，适合各种项目。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/openproject/openproject-gui-websoft9.png)

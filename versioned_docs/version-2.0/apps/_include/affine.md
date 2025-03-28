@@ -1,4 +1,4 @@
-[AFFiNE](https://affine.pro/) 是一个 **Notion  开源替代品 **，它被用于 项目/任务/流程 白板/笔记  等场景。AFFiNE is a next-gen knowledge base that brings planning, sorting and creating all together.
+[AFFiNE](https://affine.pro/) 是一个 **文档、白板写作工具**，它被用于 项目/任务/流程 白板/笔记  等场景。AFFiNE is a next-gen knowledge base that brings planning, sorting and creating all together.
 Privacy first, open-source, customizable and ready to use - a free replacement for Notion & Miro.
 
 

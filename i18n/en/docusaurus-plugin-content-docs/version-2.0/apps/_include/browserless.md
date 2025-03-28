@@ -1,4 +1,4 @@
-[Browserless](https://www.browserless.io/) is **Browserless is a headless browser service that supports automated web crawling, testing and PDF generation for developers.**, used for Operations Automation Data survey and collection . Browserless is a headless browser service that supports automated web crawling, testing and PDF generation for developers.
+[Browserless](https://www.browserless.io/) is **Scrape and automate any site**, used for Operations Automation Data survey and collection . Browserless is a headless browser service that supports automated web crawling, testing and PDF generation for developers.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/browserless/browserless-gui-websoft9.png)

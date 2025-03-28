@@ -1,4 +1,4 @@
-[Kestra](https://kestra.io) 是一个 **统一协调平台可简化关键业务工作流，并以代码形式从用户界面对其进行管理。**，它被用于 运维自动化 业务自动化  等场景。Kestra 是一个开源工作流自动化平台，支持数据管道管理、任务调度和可视化，提升数据处理效率。
+[Kestra](https://kestra.io) 是一个 **开源的工作流自动化平台**，它被用于 运维自动化 业务自动化  等场景。Kestra 是一个开源工作流自动化平台，支持数据管道管理、任务调度和可视化，提升数据处理效率。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kestra/kestra-gui-websoft9.png)

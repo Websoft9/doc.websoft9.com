@@ -1,4 +1,4 @@
-[AFFiNE](https://affine.pro/) is **The Next-Gen Collaborative Knowledge Base**, used for Project and Task Whiteboard and Note . AFFiNE is a next-gen knowledge base that brings planning, sorting and creating all together.
+[AFFiNE](https://affine.pro/) is **Workspace with fully merged docs, whiteboards**, used for Project and Task Whiteboard and Note . AFFiNE is a next-gen knowledge base that brings planning, sorting and creating all together.
 Privacy first, open-source, customizable and ready to use - a free replacement for Notion & Miro.
 
 

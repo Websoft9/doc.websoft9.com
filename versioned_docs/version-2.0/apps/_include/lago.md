@@ -1,4 +1,4 @@
-[Lago](https://getlago.com) 是一个 **企业托管平台**，它被用于 运维自动化  等场景。Lago is a flexible billing platform that supports both self-hosted and cloud-based architectures, focusing on usage billing and resource management to help enterprises operate efficiently.
+[Lago](https://getlago.com) 是一个 **订阅计费管理平台**，它被用于 订阅计费 业务自动化  等场景。Lago是一款灵活的计费平台，支持自托管和云端架构，专注于用量计费和资源管理，助力企业高效运营。
 
 
 ![界面](http://libs.websoft9.com/Websoft9/DocsPicture/zh/lago/lago-gui-websoft9.png)

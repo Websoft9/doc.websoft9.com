@@ -1,4 +1,4 @@
-[Keila](https://www.keila.io) 是一个 **开源通讯工具**，它被用于 文章聚合 文档协作/企业网盘  等场景。管理和扩充联系人列表，设计和发送个性化时事通讯活动，比以往任何时候都更轻松。
+[Keila](https://www.keila.io) 是一个 **开源通讯工具**，它被用于 市场营销  等场景。管理和扩充联系人列表，设计和发送个性化时事通讯活动，比以往任何时候都更轻松。
 
 
 ![界面](http://libs.websoft9.com/Websoft9/DocsPicture/zh/keila/keila-gui-websoft9.png)

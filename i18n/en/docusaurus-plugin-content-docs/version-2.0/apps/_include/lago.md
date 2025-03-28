@@ -1,4 +1,4 @@
-[Lago](https://getlago.com) is **enterprise hosting platform**, used for Operations Automation . Lago是一款灵活的计费平台，支持自托管和云端架构，专注于用量计费和资源管理，助力企业高效运营。
+[Lago](https://getlago.com) is **The usage-based billing and metering solution**, used for Subscriptions and billing Business automation . Lago is a flexible billing platform that supports both self-hosted and cloud-based architectures, focusing on usage billing and resource management to help enterprises operate efficiently.
 
 
 ![gui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/lago/lago-gui-websoft9.png)

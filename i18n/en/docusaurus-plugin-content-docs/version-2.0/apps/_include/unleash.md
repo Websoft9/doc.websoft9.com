@@ -1,4 +1,4 @@
-[Unleash](https://getunleash.io) is **Unleash is an open source feature management platform that supports incremental releases and experimentation.**, used for Code Repository CI/CD Pipeline . Unleash is an open source feature management platform that supports incremental releases and experimentation.
+[Unleash](https://getunleash.io) is **Open-source feature management platform**, used for Code Repository CI/CD Pipeline . Unleash is an open source feature management platform that supports incremental releases and experimentation.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/unleash/unleash-gui-websoft9.png)
