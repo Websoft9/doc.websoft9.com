@@ -19,12 +19,13 @@ import Meta from './_include/rclone.md';
 
 2. Starting to verify it
 
-### Perform synchronization
+### Execute synchronization
 
-You can configure the source and target in the visual interface, but you can't perform synchronization, you need to go into the container and execute the following command:.
+You can configure the source and target in the visual interface, but you can't perform synchronization, you need to go into the container and execute the following command:
 
-   ``
+   ```
    rclone sync <Source's Config_Name>:<bucket_name> <Destination's Config_Name>:<bucket_name>
+   ```
 
 ## Configuration options{#configs}
 
