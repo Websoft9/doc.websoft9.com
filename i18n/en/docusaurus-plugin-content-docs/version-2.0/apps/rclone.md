@@ -2,8 +2,9 @@
 title: Rclone
 slug: /rclone
 tags:
-  - console
-  - other
+  - Cloud Storage
+  - File Synchronization
+  - Rclone
 ---
 
 import Meta from './_include/rclone.md';
@@ -12,32 +13,22 @@ import Meta from './_include/rclone.md';
 
 ## Getting started{#guide}
 
-### Initial setup{#wizard}
-
-1. When completed installation of Rclone at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
-
-2. Complete the install wizard step by step
-
 ### Login verification{#verification}
 
 1. Completed installation Rclone at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
 
 2. Starting to verify it
 
-## Configuration options{#configs}
+### Execute synchronization
 
-- CLI
-- Multilingual (√)
-- SMTP (√)
+You can configure the source and target in the visual interface, but you can't perform synchronization, you need to go into the container and execute the following command:
+
+   ```
+   rclone sync <Source's Config_Name>:<bucket_name> <Destination's Config_Name>:<bucket_name>
+   ```
+
+## Configuration options{#configs}
 
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?
