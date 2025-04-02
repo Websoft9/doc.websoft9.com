@@ -74,7 +74,7 @@ const config = {
       }),
     ],
   ],
-  themes: ['docusaurus-theme-search-typesense'],
+  // themes: ['docusaurus-theme-search-typesense'],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -115,25 +115,58 @@ const config = {
           },
         ],
       },
-      typesense: {
-        typesenseCollectionName: 'websoft9', // Replace with your own doc site's name. Should match the collection name in the scraper settings.
-        // typesenseCollectionName: 'docusaurus-2',
-        typesenseServerConfig: {
-          nodes: [
-            {
-              host: 'search.www.websoft9.com',
-              port: 443,
-              protocol: 'https',
-            },
-          ],
-          apiKey: 'cJ9XqddokC3OCRdx1SFQRv+uFj5QHYOT',
-        },
-        // Optional: Typesense search parameters: https://typesense.org/docs/0.21.0/api/documents.md#search-parameters
-        typesenseSearchParameters: {},
+      // typesense: {
+      //   typesenseCollectionName: 'websoft9', // Replace with your own doc site's name. Should match the collection name in the scraper settings.
+      //   // typesenseCollectionName: 'docusaurus-2',
+      //   typesenseServerConfig: {
+      //     nodes: [
+      //       {
+      //         host: 'search.www.websoft9.com',
+      //         port: 443,
+      //         protocol: 'https',
+      //       },
+      //     ],
+      //     apiKey: 'cJ9XqddokC3OCRdx1SFQRv+uFj5QHYOT',
+      //   },
+      //   // Optional: Typesense search parameters: https://typesense.org/docs/0.21.0/api/documents.md#search-parameters
+      //   typesenseSearchParameters: {},
 
-        // Optional
+      //   // Optional
+      //   contextualSearch: true,
+      // },
+      algolia: {
+        // The application ID provided by Algolia
+        appId: 'NA4GDUSQ4H',
+
+        // Public API key: it is safe to commit it
+        apiKey: 'b08bd00265bc22ae49e3a6acd38868c8',
+
+        indexName: 'support-websoft9',
+
+        // Optional: see doc section below
         contextualSearch: true,
+
+        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+        externalUrlRegex: 'external\\.com|domain\\.com',
+
+        // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+        replaceSearchResultPathname: {
+          from: '/docs/', // or as RegExp: /\/docs\//
+          to: '/',
+        },
+
+        // Optional: Algolia search parameters
+        searchParameters: {},
+
+        // Optional: path for search page that enabled by default (`false` to disable it)
+        searchPagePath: 'search',
+
+        // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
+        insights: false,
+
+        //... other Algolia params
       },
+
 
       footer: {
         style: 'dark',
