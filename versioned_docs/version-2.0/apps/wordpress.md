@@ -254,3 +254,10 @@ Websoft9 控制台安装 WordPress 后，通过 "我的应用" 查看应用详�
 
 问题描述：数据库连接信息完全正确，但仍然显示 Database connection error    
 可能原因：容器版 WordPress 不支持 www.abc.com 这种数据库名称  
+
+## WordPress 定制伙伴推荐
+
+Websoft9 作为专业的 WordPress 托管平台提供商，我们与定制伙伴一起服务客户，为客户提供端到端的解决方案：
+
+- [点金主题网](https://www.dianjin123.com/)
+- [小兽 WordPress](https://www.seo628.com/)
