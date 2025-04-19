@@ -1,4 +1,4 @@
-[HeyForm](https://heyform.net/) 是一个 **吸引人的表格工具**，它被用于 协作办公  等场景。HeyForm 是一款简单但功能强大的软件，适合中小企业轻松创建吸引人的表单。它具有现代化的功能，可通过自定义表单收集和分析数据，与各种应用程序集成，并简化工作流程。
+[HeyForm](https://heyform.net/) 是一个 **交互式表单收集和分析工具**，它被用于 文档协作/企业网盘  等场景。HeyForm 是一款简单但功能强大的软件，适合中小企业轻松创建吸引人的表单。它具有现代化的功能，可通过自定义表单收集和分析数据，与各种应用程序集成，并简化工作流程。
 
 
 ![界面](http://libs.websoft9.com/Websoft9/DocsPicture/zh/heyform/heyform-gui-websoft9.png)

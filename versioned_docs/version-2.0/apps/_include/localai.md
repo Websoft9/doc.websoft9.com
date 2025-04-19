@@ -1,4 +1,4 @@
-[LocalAI](https://localai.io) 是一个 **在消费级硬件上运行的自托管AI**，它被用于 AI DevOps AI 多模型统一交互界面 本地 AI 模型服务  等场景。Local AI 是开源平台，支持本地部署 AI 模型，保护数据隐私，实现高效 AI 应用开发。
+[LocalAI](https://localai.io) 是一个 **聊天机器人，OpenAI 替代品**，它被用于 AI DevOps AI 多模型统一交互界面 本地 AI 模型服务  等场景。Local AI 是开源平台，支持本地部署 AI 模型，保护数据隐私，实现高效 AI 应用开发。
 
 
 ![界面](http://libs.websoft9.com/Websoft9/DocsPicture/zh/localai/localai-gui-websoft9.png)

@@ -1,4 +1,4 @@
-[Formbricks](https://formbricks.com) 是一个 **表单构建和管理平台**，它被用于 协作办公  等场景。Formbricks是一个开源表单构建平台，简化数据收集与管理，支持自定义和实时数据分析。
+[Formbricks](https://formbricks.com) 是一个 **表单构建和管理平台**，它被用于 文档协作/企业网盘  等场景。Formbricks是一个开源表单构建平台，简化数据收集与管理，支持自定义和实时数据分析。
 
 
 ![界面](http://libs.websoft9.com/Websoft9/DocsPicture/zh/formbricks/formbricks-gui-websoft9.png)

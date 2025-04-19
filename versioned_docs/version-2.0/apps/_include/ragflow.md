@@ -1,4 +1,4 @@
-[RAGFlow](https://ragflow.io) 是一个 **RAGFlow 是一个基于深度文档理解的开源 RAG（检索-增强生成）引擎。**，它被用于 业务自动化 运维自动化  等场景。RAGFlow 是一个基于深度文档理解的开源 RAG（检索-增强生成）引擎。
+[RAGFlow](https://ragflow.io) 是一个 **开源 RAG 引擎，能结合知识库和 AI 模型**，它被用于 业务自动化 运维自动化  等场景。RAGFlow 是一个基于深度文档理解的开源 RAG（检索-增强生成）引擎。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/ragflow/ragflow-gui-websoft9.png)

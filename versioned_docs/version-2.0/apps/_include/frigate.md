@@ -1,4 +1,4 @@
-[Frigate](https://frigate.video) 是一个 **为 IP 摄像机配备实时本地对象检测功能的 NVR**，它被用于 视频音频  等场景。Frigate 是一款完整的本地 NVR，专为家庭助理设计，具有 AI 物体检测功能。它使用 OpenCV 和 Tensorflow 对本地 IP 摄像头进行实时物体检测。
+[Frigate](https://frigate.video) 是一个 **AI 物体检测工具，图像识别**，它被用于 视频音频  等场景。Frigate 是一款完整的本地 NVR，专为家庭助理设计，具有 AI 物体检测功能。它使用 OpenCV 和 Tensorflow 对本地 IP 摄像头进行实时物体检测。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/frigate/frigate-gui-websoft9.png)

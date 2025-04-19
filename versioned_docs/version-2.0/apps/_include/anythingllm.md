@@ -1,4 +1,4 @@
-[AnythingLLM](https://anythingllm.com/) 是一个 **一体化人工智能应用程序**，它被用于 AI 智能体/聊天/知识检索 AI 多模型统一交互界面 AI 写作与创意内容生成  等场景。AnythingLLM是一个多功能的语言模型，支持多种任务和应用，提供智能对话和文本生成。
+[AnythingLLM](https://anythingllm.com/) 是一个 **企业级 AI 问答系统，支持多种 AI 大模型**，它被用于 AI 智能体/聊天/知识检索 AI 多模型统一交互界面 AI 写作与创意内容生成  等场景。AnythingLLM是一个多功能的语言模型，支持多种任务和应用，提供智能对话和文本生成。
 
 
 ![gui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/anythingllm/anythingllm-gui-websoft9.png)
