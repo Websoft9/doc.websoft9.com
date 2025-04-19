@@ -1,4 +1,4 @@
-[Lemmy](https://join-lemmy.org) is **Lemmy是一个自托管的社交链接聚合与讨论平台**, used for Online Community . Lemmy是一个自托管的社交链接聚合与讨论平台。
+[Lemmy](https://join-lemmy.org) is **Lemmy is a self-hosted social link aggregation and discussion platform**, used for Online Community . Lemmy is a self-hosted social link aggregation and discussion platform.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/lemmy/lemmy-gui-websoft9.png)

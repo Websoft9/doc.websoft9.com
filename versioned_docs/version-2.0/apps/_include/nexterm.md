@@ -1,4 +1,4 @@
-[Nexterm](https://docs.nexterm.dev) 是一个 **服务器管理**，它被用于 系统面板  等场景。用于 SSH、VNC 和 RDP 的开源服务器管理软件。
+[Nexterm](https://docs.nexterm.dev) 是一个 **开源服务器管理工具，支持 SSH、VNC 和 RDP**，它被用于 系统面板  等场景。用于 SSH、VNC 和 RDP 的开源服务器管理软件。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/nexterm/nexterm-gui-websoft9.png)

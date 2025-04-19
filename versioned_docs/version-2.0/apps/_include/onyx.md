@@ -1,4 +1,4 @@
-[Onyx](https://www.onyx.app/) 是一个 **Onyx AI 助手**，它被用于 AI 智能体/聊天/知识检索  等场景。Onyx 是一个为团队设计的生成式 AI 聊天平台。
+[Onyx](https://www.onyx.app/) 是一个 **聊天机器人，企业搜索和问答平台**，它被用于 AI 智能体/聊天/知识检索  等场景。Onyx 是一个为团队设计的生成式 AI 聊天平台。
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/onyx/onyx-gui-websoft9.png)

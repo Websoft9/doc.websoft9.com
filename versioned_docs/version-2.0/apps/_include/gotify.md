@@ -1,4 +1,4 @@
-[Gotify](https://gotify.net) 是一个 **开源消息服务器**，它被用于 企业邮箱  等场景。Gotify是一个免费开源的消息服务器，允许用户通过REST API和WebSocket连接发送和接收消息。它被设计为简单易用，并且注重跨平台兼容性。
+[Gotify](https://gotify.net) 是一个 **轻量级消息中间件**，它被用于 企业邮箱  等场景。Gotify是一个免费开源的消息服务器，允许用户通过REST API和WebSocket连接发送和接收消息。它被设计为简单易用，并且注重跨平台兼容性。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gotify/gotify-gui-websoft9.png)

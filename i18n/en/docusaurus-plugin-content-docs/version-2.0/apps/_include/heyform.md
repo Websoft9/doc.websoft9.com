@@ -1,4 +1,4 @@
-[HeyForm](https://heyform.net/) is **a engaging forms tool**, used for Collaboration & Office . HeyForm is a simple yet powerful software for SMEs to create engaging forms with ease. It offers modern features to collect and analyze data through customizable forms, integrate with various applications, and simplify workflows.
+[HeyForm](https://heyform.net/) is **Collect and analyze data through customizable forms**, used for Document Collaboration . HeyForm is a simple yet powerful software for SMEs to create engaging forms with ease. It offers modern features to collect and analyze data through customizable forms, integrate with various applications, and simplify workflows.
 
 
 ![gui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/heyform/heyform-gui-websoft9.png)

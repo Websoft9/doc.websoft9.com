@@ -1,4 +1,4 @@
-[Chroma](https://www.trychroma.com) 是一个 **Chroma 是一个开源的 AI 应用数据库，旨在帮助开发者管理和发现 AI 应用。**，它被用于 数据采集/编排/集成  等场景。Chroma 是一个开源的 AI 应用数据库，旨在帮助开发者管理和发现 AI 应用。
+[Chroma](https://www.trychroma.com) 是一个 **开源的 AI 应用数据库，支持向量搜索**，它被用于 数据采集/编排/集成  等场景。Chroma 是一个开源的 AI 应用数据库，旨在帮助开发者管理和发现 AI 应用。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/chroma/chroma-gui-websoft9.png)

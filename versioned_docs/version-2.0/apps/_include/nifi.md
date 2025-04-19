@@ -1,4 +1,4 @@
-[Apache NiFi](https://nifi.apache.org/) 是一个 **易于使用、功能强大且可靠的数据处理和分发系统**，它被用于 BI与数据可视化 运维自动化  等场景。Apache NiFi 是一个强大的数据流管理工具，支持数据集成、处理、监控和可视化，简化数据流动。
+[Apache NiFi](https://nifi.apache.org/) 是一个 **数据流自动化和可视化，支持 ETL**，它被用于 BI与数据可视化 运维自动化  等场景。Apache NiFi 是一个强大的数据流管理工具，支持数据集成、处理、监控和可视化，简化数据流动。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/nifi/nifi-gui-websoft9.png)

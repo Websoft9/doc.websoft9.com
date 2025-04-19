@@ -1,4 +1,4 @@
-[supertokens](https://supertokens.com) 是一个 **SuperTokens提供快速、可定制的开源用户认证解决方案，降低成本并增强各种规模应用的安全性。**，它被用于 数据采集/编排/集成  等场景。SuperTokens是一个开源用户认证平台，旨在帮助开发者轻松高效地构建和维护他们的认证系统。支持自定义密码策略、会话限制和预构建UI，它支持与25+框架快速设置和集成。SuperTokens使企业能够降低成本、增强安全性，并根据特定需求定制认证流程。
+[supertokens](https://supertokens.com) 是一个 **开源认证解决方案**，它被用于 数据采集/编排/集成  等场景。SuperTokens是一个开源用户认证平台，旨在帮助开发者轻松高效地构建和维护他们的认证系统。支持自定义密码策略、会话限制和预构建UI，它支持与25+框架快速设置和集成。SuperTokens使企业能够降低成本、增强安全性，并根据特定需求定制认证流程。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/supertokens/supertokens-gui-websoft9.png)

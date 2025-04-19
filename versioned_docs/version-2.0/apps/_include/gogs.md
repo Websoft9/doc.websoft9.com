@@ -1,4 +1,4 @@
-[Gogs](https://gogs.io/) 是一个 **一款易搭建的轻量级自助 Git 仓库系统**，它被用于 源码仓库 一站式 DevOps 应用  等场景。极易搭建的自助 Git 仓库系统，能够通过独立的二进制分发，并且支持 Go 语言支持的所有平台
+[Gogs](https://gogs.io/) 是一个 **轻量级自托管 Git 仓库系统**，它被用于 源码仓库 一站式 DevOps 应用  等场景。极易搭建的自助 Git 仓库系统，能够通过独立的二进制分发，并且支持 Go 语言支持的所有平台
 
 
 ![gui start](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gogs/gogs-guistart-websoft9.png)

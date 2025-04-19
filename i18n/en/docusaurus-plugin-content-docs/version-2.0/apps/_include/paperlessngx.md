@@ -1,4 +1,4 @@
-[Paperless-ngx](https://docs.paperless-ngx.com ) is **Document management system that transforms your physical documents into a searchable online archive**, used for Document Collaboration Files Management . Paperless-ngx is an open source document management system that supports document scanning, OCR, categorization and search to improve management efficiency.
+[Paperless-ngx](https://docs.paperless-ngx.com) is **Document management system that transforms your physical documents into a searchable online archive**, used for Document Collaboration Files Management . Paperless-ngx is an open source document management system that supports document scanning, OCR, categorization and search to improve management efficiency.
 
 
 ![gui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/paperlessngx/paperlessngx-gui-websoft9.png)
