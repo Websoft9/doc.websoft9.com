@@ -1,4 +1,4 @@
-[Formbricks](https://formbricks.com) is **Forms building and management platform**, used for Collaboration & Office . Formbricks is an open source form building platform that simplifies data collection and management, supporting customization and real-time data analysis.
+[Formbricks](https://formbricks.com) is **Forms building and management platform**, used for Document Collaboration . Formbricks is an open source form building platform that simplifies data collection and management, supporting customization and real-time data analysis.
 
 
 ![gui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/formbricks/formbricks-gui-websoft9.png)

@@ -1,4 +1,4 @@
-[Linkwarden](https://linkwarden.app) 是一个 **网页收藏、组织与快照存档的协作工具**，它被用于 网站与内容聚合 文件共享与传输  等场景。自托管协作书签管理器，用于收集、组织和保存网页、文章和文档。
+[Linkwarden](https://linkwarden.app) 是一个 **网页收藏、组织与快照存档的协作工具**，它被用于 文件共享与传输  等场景。自托管协作书签管理器，用于收集、组织和保存网页、文章和文档。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/linkwarden/linkwarden-gui-websoft9.png)
