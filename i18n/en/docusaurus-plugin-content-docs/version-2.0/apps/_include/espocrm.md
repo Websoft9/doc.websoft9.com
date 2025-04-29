@@ -1,4 +1,4 @@
-[EspoCRM](https://www.espocrm.com/) is **An open-source Customer Relationship Management helps businesses grow**, used for CRM & Distribution & Order Digtal for SCM and Operation . EspoCRM is a web-based CRM solution, lightning fast and easily customizable. It provide you with the tools to understand your consumers’ behavior and cater your products and services specifically to their needs.
+[EspoCRM](https://www.espocrm.com/) is **Self-hosted Open Source CRM System**, used for CRM & Distribution & Order Digtal for SCM and Operation . EspoCRM is a web-based CRM solution, lightning fast and easily customizable. It provide you with the tools to understand your consumers’ behavior and cater your products and services specifically to their needs.
 
 
 ![gui](http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/espocrm-gui-websoft9.jpg)

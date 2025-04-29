@@ -1,4 +1,4 @@
-[HAProxy](http://www.haproxy.org/) is **a free, very fast and reliable solution offering high availability, load balancing, and proxying for TCP and HTTP-based applications**, used for Load Balancer . Provides a high availability load balancer and proxy server for TCP and HTTP-based applications.
+[HAProxy](http://www.haproxy.org/) is **High-performance TCP/HTTP Load Balancing System**, used for Load Balancer . Provides a high availability load balancer and proxy server for TCP and HTTP-based applications.
 
 
 ![configuration](https://libs.websoft9.com/Websoft9/DocsPicture/zh/haproxy/HAProxy-configuration.png)

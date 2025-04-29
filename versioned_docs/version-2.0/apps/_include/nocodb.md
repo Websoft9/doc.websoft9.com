@@ -1,4 +1,4 @@
-[NocoDB](https://www.nocodb.com/) 是一个 **Airtable 开源替代系统**，它被用于 低代码/零代码  等场景。NocoDB是一个开源 NoCode 平台，可将任何数据库转换为智能电子表格。
+[NocoDB](https://www.nocodb.com/) 是一个 **零代码在线电子表格数据协作系统**，它被用于 低代码/零代码  等场景。NocoDB是一个开源 NoCode 平台，可将任何数据库转换为智能电子表格。
 
 
 ![控制面板](https://libs.websoft9.com/Websoft9/DocsPicture/zh/nocodb/nocodb-gui-websoft9.png)

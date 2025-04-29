@@ -1,4 +1,4 @@
-[Tiny Tiny RSS](https://tt-rss.org) is **a web-based news feed reader and aggregator**, used for News Feed . Tiny Tiny RSS is an open source self-hosted RSS reader that supports multiple feed management and offline reading.
+[Tiny Tiny RSS](https://tt-rss.org) is **News & Blog  Content Aggregation and Reading Tool**, used for News Feed . Tiny Tiny RSS is an open source self-hosted RSS reader that supports multiple feed management and offline reading.
 
 
 ![Interface](https://libs.websoft9.com/Websoft9/DocsPicture/zh/ttrss/ttrss-gui-websoft9.png)

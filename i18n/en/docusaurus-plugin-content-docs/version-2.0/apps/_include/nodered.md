@@ -1,4 +1,4 @@
-[Node-RED](https://nodered.org/) is **Manage all types of time series data in a single, purpose-built database. **, used for Device Management and Monitor Operations Automation Low Code and No Code . Low-code programming for event-driven applications
+[Node-RED](https://nodered.org/) is **Automated Workflow Orchestration Tool**, used for Device Management and Monitor Operations Automation Low Code and No Code . Low-code programming for event-driven applications
 
 
 ![Console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/nodered/nodered-gui-websoft9.png)

@@ -1,4 +1,4 @@
-[Automatisch](https://automatisch.io) is **Automatisch is an automation tool designed to streamline task execution and process management, increase productivity and reduce human error.**, used for Operations Automation Business automation . Automatisch is an automation tool designed to streamline task execution and process management, increase productivity and reduce human error.
+[Automatisch](https://automatisch.io) is **iPaaS Automated  Business Process Platform**, used for Operations Automation Business automation . Automatisch is an automation tool designed to streamline task execution and process management, increase productivity and reduce human error.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/automatisch/automatisch-gui-websoft9.png)

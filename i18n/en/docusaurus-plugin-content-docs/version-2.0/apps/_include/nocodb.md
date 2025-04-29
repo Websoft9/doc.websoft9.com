@@ -1,4 +1,4 @@
-[NocoDB](https://www.nocodb.com/) is **The Open Source Airtable Alternative**, used for Low Code and No Code . NocoDB is an open source #NoCode platform that turns any database into a smart spreadsheet.
+[NocoDB](https://www.nocodb.com/) is **No-code Online Spreadsheet Data Collaboration System**, used for Low Code and No Code . NocoDB is an open source #NoCode platform that turns any database into a smart spreadsheet.
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/nocodb/nocodb-gui-websoft9.png)

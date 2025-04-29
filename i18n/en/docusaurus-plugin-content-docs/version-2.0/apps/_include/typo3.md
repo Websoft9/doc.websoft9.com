@@ -1,4 +1,4 @@
-[Typo3](https://typo3.org/) is **The Professional, Flexible Content Management System**, used for Website Builder eCommerce Content Marketing . TYPO3 CMS is an Open Source Enterprise Content Management System with a large global community, backed by the approximately 900 members of the TYPO3 Association.
+[Typo3](https://typo3.org/) is **Enterprise Content Management System**, used for Website Builder eCommerce Content Marketing . TYPO3 CMS is an Open Source Enterprise Content Management System with a large global community, backed by the approximately 900 members of the TYPO3 Association.
 
 
 ![ui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/typo3/typo3-gui-websoft9.png)

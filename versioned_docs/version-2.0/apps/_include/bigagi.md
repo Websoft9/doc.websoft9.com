@@ -1,4 +1,4 @@
-[Big-AGI](https://big-agi.com/) 是一个 **开创性的人工智能套件**，它被用于 AI 多模型统一交互界面 AI 智能体/聊天/知识检索 AI 写作与创意内容生成  等场景。Big-AGI 是一个开源项目，旨在构建通用人工智能系统，促进智能自动化和决策支持。
+[Big-AGI](https://big-agi.com/) 是一个 **支持多模型的 AI 对话系统**，它被用于 AI 多模型统一交互界面 AI 智能体/聊天/知识检索 AI 写作与创意内容生成  等场景。Big-AGI 是一个开源项目，旨在构建通用人工智能系统，促进智能自动化和决策支持。
 
 
 ![界面](http://libs.websoft9.com/Websoft9/DocsPicture/zh/bigagi/bigagi-gui-websoft9.png)

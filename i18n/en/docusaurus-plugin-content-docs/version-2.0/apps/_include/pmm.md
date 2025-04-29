@@ -1,4 +1,4 @@
-[PMM](https://www.percona.com/) is **Percona Monitoring and Management**, used for Database Management Tools . Percona Monitoring and Management is an open-source database monitoring, management, and observability solution for MySQL, PostgreSQL, and MongoDB.
+[PMM](https://www.percona.com/) is **Visual Database Monitoring & Management Tool**, used for Database Management Tools . Percona Monitoring and Management is an open-source database monitoring, management, and observability solution for MySQL, PostgreSQL, and MongoDB.
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/pmm/pmm-dashboard-websoft9.png)

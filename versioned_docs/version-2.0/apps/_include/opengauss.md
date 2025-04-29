@@ -1,4 +1,4 @@
-[openGauss](https://opengauss.org) 是一个 **企业级开源关系型数据库管理系统**，它被用于 数据库工具 SQL 数据库/关系数据库  等场景。Overview (Chinese): openGauss是一个开源关系型数据库管理系统，融合了多年的数据库领域经验，为企业提供高可靠性、高性能和高安全的解决方案。具备小于10秒的故障切换时间、双路鲲鹏性能超过150万tpmC，以及端到端的安全防护措施，openGauss还拥有基于AI的智能参数调优功能，便于运维管理。加入openGauss社区，探索其能力并为其发展做出贡献。
+[openGauss](https://opengauss.org) 是一个 **兼容 Postgres 的开源数据库**，它被用于 数据库工具 SQL 数据库/关系数据库  等场景。Overview (Chinese): openGauss是一个开源关系型数据库管理系统，融合了多年的数据库领域经验，为企业提供高可靠性、高性能和高安全的解决方案。具备小于10秒的故障切换时间、双路鲲鹏性能超过150万tpmC，以及端到端的安全防护措施，openGauss还拥有基于AI的智能参数调优功能，便于运维管理。加入openGauss社区，探索其能力并为其发展做出贡献。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/opengauss/opengauss-gui-websoft9.png)

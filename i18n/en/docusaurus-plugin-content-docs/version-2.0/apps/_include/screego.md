@@ -1,4 +1,4 @@
-[screego](https://app.screego.net) is **Screen sharing by browser**, used for Meeting . Screego is a screen sharing tool that allows users to share their screens with others over the web.
+[screego](https://app.screego.net) is **Browser-based Screen Sharing Tool**, used for Meeting . Screego is a screen sharing tool that allows users to share their screens with others over the web.
 
 
 ![Console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/screego/screego-gui-websoft9.png)

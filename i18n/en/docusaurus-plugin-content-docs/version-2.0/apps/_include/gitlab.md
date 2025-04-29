@@ -1,4 +1,4 @@
-[GitLab](https://about.gitlab.com/) is **An integrated product that unifies issues, code review, CI and CD into a single UI**, used for Code Repository CI/CD Pipeline DevOps All Artifact Repository Agile Boards Software supply chain Project and Task All-in-one DevOps Digtal for SCM and Operation . GitLab CE is an integrated product that unifies issues, code review, CI and CD into a single UI. 
+[GitLab](https://about.gitlab.com/) is **Leading AI-driven  DevSecOps Platform**, used for Code Repository CI/CD Pipeline DevOps All Artifact Repository Agile Boards Software supply chain Project and Task All-in-one DevOps Digtal for SCM and Operation . GitLab CE is an integrated product that unifies issues, code review, CI and CD into a single UI. 
 
 
 ![devops](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-devopsall-websoft9.png)

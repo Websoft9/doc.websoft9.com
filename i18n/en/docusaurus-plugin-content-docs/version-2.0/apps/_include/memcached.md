@@ -1,4 +1,4 @@
-[memcached](https://www.memcached.org/) is **a free & open source, high-performance, distributed memory object caching system**, used for In-memory Database . Memcached is an in-memory key-value store for small chunks of arbitrary data (strings, objects) from results of database calls, API calls, or page rendering. 
+[memcached](https://www.memcached.org/) is **High-performance  Caching Database System**, used for In-memory Database . Memcached is an in-memory key-value store for small chunks of arbitrary data (strings, objects) from results of database calls, API calls, or page rendering. 
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/en/memcached/memcached-gui-websoft9.png)

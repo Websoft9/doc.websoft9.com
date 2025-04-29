@@ -1,4 +1,4 @@
-[Nexterm](https://docs.nexterm.dev) is **Server management**, used for Linux Desktop . The open source server management software for SSH, VNC & RDP.
+[Nexterm](https://docs.nexterm.dev) is **SSH/VNC/RDP-supported  Web Terminal Tool**, used for Linux Desktop . The open source server management software for SSH, VNC & RDP.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/nexterm/nexterm-gui-websoft9.png)

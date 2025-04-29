@@ -1,4 +1,4 @@
-[InfluxDB](https://www.influxdata.com/) is **Manage all types of time series data in a single, purpose-built database. **, used for Time Series Database Device Management and Monitor . InfluxDB is a strong database built specifically for time series data. It has made working with such data seamless and easy.
+[InfluxDB](https://www.influxdata.com/) is **High-performance Time Series Database**, used for Time Series Database Device Management and Monitor . InfluxDB is a strong database built specifically for time series data. It has made working with such data seamless and easy.
 
 
 ![arch](https://libs.websoft9.com/Websoft9/DocsPicture/zh/influxdb/influxdb-gui-websoft9.png)

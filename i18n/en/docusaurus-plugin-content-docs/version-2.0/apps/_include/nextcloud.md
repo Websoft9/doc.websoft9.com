@@ -1,4 +1,4 @@
-[Nextcloud Hub](https://nextcloud.com/) is **Integrates the four key Nextcloud products Files, Talk, Groupware and Office into a single platform**, used for Document Collaboration Chat Agile Boards Home Server Enterprise content management . Nextcloud offers a modern, on-premises content collaboration platform with real-time document editing, Generative AI, video chat & groupware on mobile, desktop and web.
+[Nextcloud Hub](https://nextcloud.com/) is **Team Content & Office Collaboration Platform**, used for Document Collaboration Chat Agile Boards Home Server Enterprise content management . Nextcloud offers a modern, on-premises content collaboration platform with real-time document editing, Generative AI, video chat & groupware on mobile, desktop and web.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/nextcloud/nextcloud-gui-websoft9.png)

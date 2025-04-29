@@ -1,4 +1,4 @@
-[Zabbix](https://www.zabbix.com/) 是一个 **开源的企业级监控解决方案**，它被用于 全面监控  等场景。zabbix 是一个基于WEB界面的提供分布式系统监视以及网络监视功能的企业级的开源解决方案。
+[Zabbix](https://www.zabbix.com/) 是一个 **企业级IT基础架构全面监控平台**，它被用于 全面监控  等场景。zabbix 是一个基于WEB界面的提供分布式系统监视以及网络监视功能的企业级的开源解决方案。
 
 
 ![zabbix](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zabbix/zabbix-gui-websoft9.png)

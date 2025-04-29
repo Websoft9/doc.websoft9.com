@@ -1,4 +1,4 @@
-[Prestashop](https://www.prestashop.com/en) is **A popular ecommerce platforms**, used for eCommerce Content Marketing . PrestaShop is one of the world's most popular ecommerce platforms, and most successful open source projects.
+[Prestashop](https://www.prestashop.com/en) is **Open Source  E-commerce Platform**, used for eCommerce Content Marketing . PrestaShop is one of the world's most popular ecommerce platforms, and most successful open source projects.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/prestashop/pretashopui-websoft9.png)

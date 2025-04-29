@@ -1,4 +1,4 @@
-[Zabbix](https://www.zabbix.com/) is **Enterprise-class open source distributed monitoring solution.**, used for Full Monitoring . Zabbix is the ultimate enterprise-level software designed for real-time monitoring of millions of metrics collected from tens of thousands of servers, virtual machines and network devices.
+[Zabbix](https://www.zabbix.com/) is **Enterprise-level IT  Infrastructure Comprehensive Monitoring Platform**, used for Full Monitoring . Zabbix is the ultimate enterprise-level software designed for real-time monitoring of millions of metrics collected from tens of thousands of servers, virtual machines and network devices.
 
 
 ![zabbix](https://libs.websoft9.com/Websoft9/DocsPicture/en/zabbix/zabbix-gui-websoft9.png)

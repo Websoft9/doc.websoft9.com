@@ -1,4 +1,4 @@
-[Next Terminal](https://next-terminal.typesafe.cn/) is **The open source access platform**, used for Privileged Access Management . Next Terminal 用真实身份取代了传统账号，为连接到基础设施的每位工程师提供防钓鱼的零信任访问方案。
+[Next Terminal](https://next-terminal.typesafe.cn/) is **The open source access platform**, used for Privileged Access Management . Next Terminal replaces traditional accounts with real identities, providing every engineer connected to the infrastructure with a phishing-resistant zero-trust access solution.
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/nexterminal/nexterminal-gui-websoft9.png)

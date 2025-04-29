@@ -1,4 +1,4 @@
-[Strapi](https://strapi.io/) is **Open source Node.js Headless CMS**, used for Low Code and No Code Master Data Headless CMS All-in-one DevOps . Strapi is the next-gen headless CMS, open-source, javascript, enabling content-rich experiences to be created, managed and exposed to any digital device.
+[Strapi](https://strapi.io/) is **Backend Content-as-a-Service Platform**, used for Low Code and No Code Master Data Headless CMS All-in-one DevOps . Strapi is the next-gen headless CMS, open-source, javascript, enabling content-rich experiences to be created, managed and exposed to any digital device.
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/strapi/strapi-gui-websoft9.png)

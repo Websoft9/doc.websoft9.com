@@ -1,4 +1,4 @@
-[Nextcloud Hub](https://nextcloud.com/) 是一个 **面向组织的在线协作生产力工具，包括：文件存储和同步平台、日历邮件群组、在线会议聊天以及生成式 AI 功能**，它被用于 文档协作/企业网盘 团队聊天 需求/看板/缺陷 家庭服务器 企业文档与知识共享  等场景。Nextcloud提供了一个现代化的本地内容协作平台，具有实时文档编辑、视频聊天、生成式 AI 和群组软件功能，可在移动设备、桌面和网络上进行。
+[Nextcloud Hub](https://nextcloud.com/) 是一个 **团队内容与办公协作平台**，它被用于 文档协作/企业网盘 团队聊天 需求/看板/缺陷 家庭服务器 企业文档与知识共享  等场景。Nextcloud提供了一个现代化的本地内容协作平台，具有实时文档编辑、视频聊天、生成式 AI 和群组软件功能，可在移动设备、桌面和网络上进行。
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/nextcloud/nextcloud-gui-websoft9.png)

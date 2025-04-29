@@ -1,4 +1,4 @@
-[Apache Answer](https://answer.apache.org/) is **Q&A platform software for teams at any scales**, used for Online Community . A Q&A platform software for teams at any scales. Whether it’s a community forum, help center, or knowledge management platform, you can always count on Answer.
+[Apache Answer](https://answer.apache.org/) is **Q&A & Forum System**, used for Online Community . A Q&A platform software for teams at any scales. Whether it’s a community forum, help center, or knowledge management platform, you can always count on Answer.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/answer/answer-gui-websoft9.png)

@@ -1,4 +1,4 @@
-[SonarQube](https://www.sonarsource.com) is **Continuous Inspection for your code**, used for CI/CD Pipeline All-in-one DevOps . SonarQube is a code quality management tool
+[SonarQube](https://www.sonarsource.com) is **Code Quality &  Security Analysis Platform**, used for CI/CD Pipeline All-in-one DevOps . SonarQube is a code quality management tool
 
 
 ![gui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/sonarqube/sonarqube-gui-websoft9.png)

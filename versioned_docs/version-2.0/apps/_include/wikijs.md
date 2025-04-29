@@ -1,4 +1,4 @@
-[Wiki.js](https://js.wiki) 是一个 **可扩展的开源维基软件**，它被用于 知识管理  等场景。Wiki.js是一款强大且可定制的开源维基软件，它拥有美观直观的界面，让编写文档成为一种乐趣，并且兼容多种数据库和平台。
+[Wiki.js](https://js.wiki) 是一个 **在线文档与企业知识库协作平台**，它被用于 知识管理  等场景。Wiki.js是一款强大且可定制的开源维基软件，它拥有美观直观的界面，让编写文档成为一种乐趣，并且兼容多种数据库和平台。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wikijs/wikijs-gui-websoft9.png)

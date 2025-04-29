@@ -1,4 +1,4 @@
-[Typo3](https://typo3.org/) 是一个 **企业级内容管理系统 Typo3**，它被用于 企业建站 电子商务 内容营销技术  等场景。TYPO3 CMS是一个开源企业内容管理系统，拥有庞大的全球社区，由TYPO900协会的约3名成员提供支持。
+[Typo3](https://typo3.org/) 是一个 **企业级内容管理系统**，它被用于 企业建站 电子商务 内容营销技术  等场景。TYPO3 CMS是一个开源企业内容管理系统，拥有庞大的全球社区，由TYPO900协会的约3名成员提供支持。
 
 
 ![ui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/typo3/typo3-gui-websoft9.png)

@@ -1,4 +1,4 @@
-[CloudBeaver](https://cloudbeaver.io/) 是一个 **开源的 Web 数据库可视化管理工具**，它被用于 数据库工具  等场景。CloudBeaver是一个开源的 Web 数据库可视化管理工具，支持 PostgreSQL, MySQL, MariaDB, SQL Server, Oracle, DB2, Firebird, H2, Trino 等数据库。
+[CloudBeaver](https://cloudbeaver.io/) 是一个 **支持多种数据库的可视化管理工具**，它被用于 数据库工具  等场景。CloudBeaver是一个开源的 Web 数据库可视化管理工具，支持 PostgreSQL, MySQL, MariaDB, SQL Server, Oracle, DB2, Firebird, H2, Trino 等数据库。
 
 
 ![ui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-demogui-websoft9.png)

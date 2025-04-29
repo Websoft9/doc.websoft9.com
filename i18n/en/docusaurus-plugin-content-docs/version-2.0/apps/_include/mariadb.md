@@ -1,4 +1,4 @@
-[MariaDB](https://mariadb.org/) is **A branch of MySQL**, used for Relational Databases . MariaDB is designed to be fully compatible with MySQL, including APIs and command lines, making it easy to be a replacement for MySQL.
+[MariaDB](https://mariadb.org/) is **MySQL-compatible Database System**, used for Relational Databases . MariaDB is designed to be fully compatible with MySQL, including APIs and command lines, making it easy to be a replacement for MySQL.
 
 
 ![gui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mariadb/mariadb-gui-websoft9.png)

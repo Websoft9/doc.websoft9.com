@@ -1,4 +1,4 @@
-[Wiki.js](https://js.wiki) is **The Extensible Open Source Wiki Software**, used for Knowledge Management . Wiki.js is a powerful and customizable open source wiki software that makes documentation a joy to write with its beautiful and intuitive interface, compatible with various databases and platforms.
+[Wiki.js](https://js.wiki) is **Online Document & Enterprise Knowledge Base Collaboration Platform**, used for Knowledge Management . Wiki.js is a powerful and customizable open source wiki software that makes documentation a joy to write with its beautiful and intuitive interface, compatible with various databases and platforms.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/wikijs/wikijs-gui-websoft9.png)

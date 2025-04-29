@@ -1,4 +1,4 @@
-[Scratch](https://scratch.mit.edu/) 是一个 **少儿编程工具**，它被用于 低代码/零代码  等场景。Scratch 是一款由麻省理工学院设计开发的少儿编程工具。使用 Scratch，你可以编写属于你的互动程序，像是故事、游戏、动画，然后将你的创意分享给全世界。
+[Scratch](https://scratch.mit.edu/) 是一个 **少儿趣味编程工具**，它被用于 低代码/零代码  等场景。Scratch 是一款由麻省理工学院设计开发的少儿编程工具。使用 Scratch，你可以编写属于你的互动程序，像是故事、游戏、动画，然后将你的创意分享给全世界。
 
 
 ![scratch](https://libs.websoft9.com/Websoft9/DocsPicture/zh/scratch/scratch-gui-websoft9.png)

@@ -1,4 +1,4 @@
-[PMM](https://www.percona.com/) 是一个 **Percona 监控和管理**，它被用于 数据库工具  等场景。PMM 是一款开源数据库监控、管理和可观察性解决方案，适用于 MySQL、PostgreSQL 和 MongoDB。
+[PMM](https://www.percona.com/) 是一个 **可视化数据库监控和管理工具**，它被用于 数据库工具  等场景。PMM 是一款开源数据库监控、管理和可观察性解决方案，适用于 MySQL、PostgreSQL 和 MongoDB。
 
 
 ![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/pmm/pmm-dashboard-websoft9.png)

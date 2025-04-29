@@ -1,4 +1,4 @@
-[RethinkDB](https://rethinkdb.com/) 是一个 **开源文档（JSON）数据库**，它被用于 NoSQL 数据库  等场景。RethinkDB是一个开源文档（JASON）数据库，支持多种数据类型，提供可视化的控制台，很方便部署和构建集群。
+[RethinkDB](https://rethinkdb.com/) 是一个 **开源文档（JASON）数据库**，它被用于 NoSQL 数据库  等场景。RethinkDB是一个开源文档（JASON）数据库，支持多种数据类型，提供可视化的控制台，很方便部署和构建集群。
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rethinkdb/rethinkdb-gui-websoft9.png)

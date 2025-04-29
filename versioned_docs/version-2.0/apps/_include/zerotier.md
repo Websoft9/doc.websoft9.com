@@ -1,4 +1,4 @@
-[ZeroTier](https://www.zerotier.com) 是一个 **虚拟网络平台，虚拟以太网交换机**，它被用于 虚拟网络  等场景。ZeroTier 是地球上的智能可编程以太网交换机。它允许所有联网设备、虚拟机、容器和应用程序进行通信，就像它们都位于同一个物理数据中心或云区域中一样。
+[ZeroTier](https://www.zerotier.com) 是一个 **异地设备虚拟组网工具**，它被用于 虚拟网络  等场景。ZeroTier 是地球上的智能可编程以太网交换机。它允许所有联网设备、虚拟机、容器和应用程序进行通信，就像它们都位于同一个物理数据中心或云区域中一样。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zerotier/zerotier-gui-websoft9.png)

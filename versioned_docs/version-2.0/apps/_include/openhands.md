@@ -1,4 +1,4 @@
-[OpenHands](https://www.all-hands.dev) 是一个 **利用AI解决问题的开发者社区**，它被用于 AI DevOps AI 智能体/聊天/知识检索  等场景。OpenHands AI工程师通过集成先进的AI能力，革新软件开发，解决复杂的编码任务。加入利用AI解决超过一半SWE-bench验证问题的开发者社区，专注于创造性挑战。
+[OpenHands](https://www.all-hands.dev) 是一个 **开发者 AI Agent，自然语言编写代码**，它被用于 AI DevOps AI 智能体/聊天/知识检索  等场景。OpenHands AI工程师通过集成先进的AI能力，革新软件开发，解决复杂的编码任务。加入利用AI解决超过一半SWE-bench验证问题的开发者社区，专注于创造性挑战。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/openhands/openhands-gui-websoft9.png)

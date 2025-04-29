@@ -1,4 +1,4 @@
-[Cal.com](https://cal.com) is **The better way to schedule your meeting**, used for Project and Task Business automation . Cal.com offers a fully customizable scheduling experience for individuals and businesses, simplifying the process of meeting coordination with advanced features and integrations.
+[Cal.com](https://cal.com) is **Meeting Scheduling & Calendar Booking Tool**, used for Project and Task Business automation . Cal.com offers a fully customizable scheduling experience for individuals and businesses, simplifying the process of meeting coordination with advanced features and integrations.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/calcom/calcom-gui-websoft9.png)

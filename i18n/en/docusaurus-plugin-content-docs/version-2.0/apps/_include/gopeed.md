@@ -1,4 +1,4 @@
-[Gopeed](https://gopeed.com/) is **Web-based download software**, used for Files Management . Gopeed (full name Go Speed) is a high-speed downloader developed by Golang + Flutter, which supports (HTTP, BitTorrent, Magnet) protocol download.
+[Gopeed](https://gopeed.com/) is **Lightweight Web  Download Tool**, used for Files Management . Gopeed (full name Go Speed) is a high-speed downloader developed by Golang + Flutter, which supports (HTTP, BitTorrent, Magnet) protocol download.
 
 
 ![Console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gopeed/gopeed-gui-websoft9.webp)

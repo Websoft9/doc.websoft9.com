@@ -1,4 +1,4 @@
-[BunkerWeb](https://www.bunkerweb.io) is **Next-Generation Open-Source WAF and Full-Featured Web Server**, used for IT Security . BunkerWeb是一个安全的在线平台，提供数据存储和管理服务，确保用户信息的隐私和安全。
+[BunkerWeb](https://www.bunkerweb.io) is **Next-Generation Open-Source WAF and Full-Featured Web Server**, used for IT Security . BunkerWeb is a secure online platform that provides data storage and management services, ensuring the privacy and security of user information.
 
 
 ![gui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/bunkerweb/bunkerweb-gui-websoft9.png)

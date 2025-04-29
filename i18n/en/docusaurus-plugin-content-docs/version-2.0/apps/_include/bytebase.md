@@ -1,4 +1,4 @@
-[Bytebase](https://www.bytebase.com/) is **Open-source database DevOps tool**, used for Database Management Tools . Bytebase is GitLab/GitHub for Database DevOps, built for developers, DBAs and platform teams.
+[Bytebase](https://www.bytebase.com/) is **Database DevOps Tool**, used for Database Management Tools . Bytebase is GitLab/GitHub for Database DevOps, built for developers, DBAs and platform teams.
 
 
 ![Architecture](https://libs.websoft9.com/Websoft9/DocsPicture/zh/bytebase/bytebase-arch-websoft9.webp)

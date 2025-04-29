@@ -1,4 +1,4 @@
-[aria2](https://aria2.github.io/) 是一个 **超快的在线下载工具**，它被用于 文件共享与传输  等场景。Aria2 是一个轻量级的多协议和多源、跨平台下载实用程序，在命令行中运行。它支持 HTTP/HTTPS、FTP、SFTP、BitTorrent 和 Metalink。
+[aria2](https://aria2.github.io/) 是一个 **多连接、多协议下载工具**，它被用于 文件共享与传输  等场景。Aria2 是一个轻量级的多协议和多源、跨平台下载实用程序，在命令行中运行。它支持 HTTP/HTTPS、FTP、SFTP、BitTorrent 和 Metalink。
 
 
 ![Webui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/aria2/aria2-gui-websoft9.png)

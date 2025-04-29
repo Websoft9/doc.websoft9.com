@@ -1,4 +1,4 @@
-[Kodbox](https://kodcloud.com/) is **Enterprsie files collaboration and share KODBOX**, used for Document Collaboration Enterprise content management . KodCloud (Kodo Cloud) is an open source system that integrates online file management, multi-cloud storage and collaborative work in a Windows-like experience.
+[Kodbox](https://kodcloud.com/) is **Enterprise Cloud  Storage & Collaborative Office System**, used for Document Collaboration Enterprise content management . KodCloud (Kodo Cloud) is an open source system that integrates online file management, multi-cloud storage and collaborative work in a Windows-like experience.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kodcloud/kodcloud-gui-websoft9.png)

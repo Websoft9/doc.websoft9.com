@@ -1,4 +1,4 @@
-[Glance](https://github.com/glanceapp/glance) is **One-stop information aggregation and fast browsing tool**, used for News Feed . Glance is an information aggregator that provides quick access to news, social media and personalized content to enhance the user experience.
+[Glance](https://github.com/glanceapp/glance) is **Content Aggregation & Reading Tool**, used for News Feed . Glance is an information aggregator that provides quick access to news, social media and personalized content to enhance the user experience.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/glance/glance-gui-websoft9.png)

@@ -1,4 +1,4 @@
-[ERPNext](https://erpnext.com/) 是一个 **开源ERP系统**，它被用于 ERP/财税/后勤 供应链/采购/生产/物流 CRM/分销/订单 运营与供应链数字化  等场景。ERPNext是一个 基于 Python 和 Node 开发的开源ERP系统 ，它功能全面，非常合适作为 SAP 的替代品。
+[ERPNext](https://erpnext.com/) 是一个 **开源 ERP 系统**，它被用于 ERP/财税/后勤 供应链/采购/生产/物流 CRM/分销/订单 运营与供应链数字化  等场景。ERPNext是一个 基于 Python 和 Node 开发的开源ERP系统 ，它功能全面，非常合适作为 SAP 的替代品。
 
 
 ![ui](http://libs.websoft9.com/Websoft9/DocsPicture/en/erpnext/erpnext-adminui-websoft9.png)

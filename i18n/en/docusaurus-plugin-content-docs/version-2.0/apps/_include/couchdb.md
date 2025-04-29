@@ -1,4 +1,4 @@
-[CouchDB](https://couchdb.apache.org/) is **A terrific single-node database**, used for NoSQL Database . CouchDB is a terrific single-node database that works just like any other database behind an application server of your choice.
+[CouchDB](https://couchdb.apache.org/) is **Native HTTP/JSON API-driven Database**, used for NoSQL Database . CouchDB is a terrific single-node database that works just like any other database behind an application server of your choice.
 
 
 ![ui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/couchdb/couchdb-gui-websoft9.png)
