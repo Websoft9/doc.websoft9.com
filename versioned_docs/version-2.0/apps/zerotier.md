@@ -2,9 +2,9 @@
 title: ZeroTier
 slug: /zerotier
 tags:
-  - Web 面板
-  - 可视化
-  - GUI
+  - VPN
+  - 认证网络
+  - ZeroTier
 ---
 
 import Meta from './_include/zerotier.md';
@@ -13,31 +13,19 @@ import Meta from './_include/zerotier.md';
 
 ## 入门指南{#guide}
 
-### 初始化{#wizard}
+### 快速开始
 
-Websoft9 控制台安装 ZeroTier 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
+1. 在 [my.zerotier.com](https://my.zerotier.com/) 注册账户，创建一个虚拟网络并获取**网络 ID**
 
-### 登录后台{#console}
+2. 从 Websoft9 AppStore 安装 Zerotier，安装前需要输入**网络 ID**
 
-Websoft9 控制台安装 ZeroTier 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
+3. 登录 [my.zerotier.com](https://my.zerotier.com/) 和[在网络上授权您的设备](https://docs.zerotier.com/start/#authorize-your-device-on-your-network)
 
-### 安装插件{#plugin}
+4. 从**my.zerotier.com**控制台获取设备的**受管 IP**，并通过此 IP 互相连接
+
 
 ## 配置选项{#configs}
 
-- CLI
-- 多语言（√）
-- SMTP（√）
-- 插件市场（√）
-
 ## 管理维护{#administrator}
 
-- **重置管理员密码**
-- **更换 URL**
-- **HTTPS 额外设置**
-- **在线备份**
-- **在线升级**
-
 ## 故障
-
-#### 更改域名导致无法访问 ？
