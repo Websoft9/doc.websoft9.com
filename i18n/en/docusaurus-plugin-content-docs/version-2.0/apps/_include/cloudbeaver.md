@@ -1,4 +1,4 @@
-[CloudBeaver](https://cloudbeaver.io/) is **a web-based database GUI tool**, used for Database Management Tools . CloudBeaver is a web-based database GUI tool which provides rich web interface. You can use it to manage PostgreSQL, MySQL, MariaDB, SQL Server, Oracle, DB2, Firebird, H2, Trino
+[CloudBeaver](https://cloudbeaver.io/) is **Multi-database  Supported Visualization Management Tool**, used for Database Management Tools . CloudBeaver is a web-based database GUI tool which provides rich web interface. You can use it to manage PostgreSQL, MySQL, MariaDB, SQL Server, Oracle, DB2, Firebird, H2, Trino
 
 
 ![ui](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-demogui-websoft9.png)

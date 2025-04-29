@@ -1,4 +1,4 @@
-[n8n](https://n8n.io) is **Workflow automation for technical people**, used for Operations Automation Business automation Home Server . n8n allows you to build flexible workflows focused on deep data integration. And with sharable templates and a user-friendly UI, the less technical people on your team can collaborate on them too. 
+[n8n](https://n8n.io) is **AI-driven Workflow  & Task Automation Tool**, used for Operations Automation Business automation Home Server . n8n allows you to build flexible workflows focused on deep data integration. And with sharable templates and a user-friendly UI, the less technical people on your team can collaborate on them too. 
 
 
 ![process](https://libs.websoft9.com/Websoft9/DocsPicture/zh/n8n/n8n-gui-websoft9.png)

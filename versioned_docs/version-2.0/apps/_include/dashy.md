@@ -1,4 +1,4 @@
-[Dashy](https://dashy.to) 是一个 **为您打造的自助式个人仪表板**，它被用于 家庭服务器  等场景。Dashy是一款开源、高度可定制、易于使用、尊重隐私的仪表板应用程序。
+[Dashy](https://dashy.to) 是一个 **可定制的网站收藏与仪表盘工具**，它被用于 家庭服务器  等场景。Dashy是一款开源、高度可定制、易于使用、尊重隐私的仪表板应用程序。
 
 
 ![界面](http://libs.websoft9.com/Websoft9/DocsPicture/zh/dashy/dashy-gui-websoft9.png)

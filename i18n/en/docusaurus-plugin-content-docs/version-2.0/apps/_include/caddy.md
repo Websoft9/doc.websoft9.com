@@ -1,4 +1,4 @@
-[Caddy](https://caddyserver.com/) is **The Ultimate Server with Automatic HTTPS**, used for HTTP Server HTML . Caddy 2 is a powerful, enterprise-ready, open source web server with automatic HTTPS written in Go
+[Caddy](https://caddyserver.com/) is **HTTPS-first Web  Server**, used for HTTP Server HTML . Caddy 2 is a powerful, enterprise-ready, open source web server with automatic HTTPS written in Go
 
 
 ![architecture](https://libs.websoft9.com/Websoft9/DocsPicture/zh/caddy/caddy-arch-websoft9.svg)

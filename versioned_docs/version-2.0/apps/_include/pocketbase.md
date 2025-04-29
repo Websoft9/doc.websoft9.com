@@ -1,4 +1,4 @@
-[PocketBase](https://pocketbase.io) 是一个 **轻量级 BaaS 平台**，它被用于 低代码/零代码  等场景。PocketBase 是轻量级开源后端服务，提供实时数据库、用户认证和文件存储，简化应用开发流程。
+[PocketBase](https://pocketbase.io) 是一个 **轻量级后端即服务平台**，它被用于 低代码/零代码  等场景。PocketBase 是轻量级开源后端服务，提供实时数据库、用户认证和文件存储，简化应用开发流程。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/pocketbase/pocketbase-gui-websoft9.png)

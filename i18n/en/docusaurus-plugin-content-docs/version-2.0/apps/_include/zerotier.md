@@ -1,4 +1,4 @@
-[ZeroTier](https://www.zerotier.com) is **programmable ethernet switch**, used for Virtual networking . ZeroTier is a smart programmable Ethernet switch for planet Earth. It allows all networked devices, VMs, containers, and applications to communicate as if they all reside in the same physical data center or cloud region.
+[ZeroTier](https://www.zerotier.com) is **Smart programmable Ethernet switch for planet Earth**, used for Virtual networking . ZeroTier is a smart programmable Ethernet switch for planet Earth. It allows all networked devices, VMs, containers, and applications to communicate as if they all reside in the same physical data center or cloud region.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zerotier/zerotier-gui-websoft9.png)

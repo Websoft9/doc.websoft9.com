@@ -1,4 +1,4 @@
-[Teleport](https://goteleport.com/) is **The open source access platform used by DevSecOps teams**, used for Privileged Access Management Database Management Tools . The open source access platform used by DevSecOps teams for SSH, Kubernetes, databases, internal web applications and Windows.
+[Teleport](https://goteleport.com/) is **Open Source Bastion  Host, Infrastructure Secure Access Platform**, used for Privileged Access Management Database Management Tools . The open source access platform used by DevSecOps teams for SSH, Kubernetes, databases, internal web applications and Windows.
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/teleport/teleport-gui-websoft9.png)

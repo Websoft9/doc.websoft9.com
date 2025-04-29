@@ -1,4 +1,4 @@
-[Mixpost](https://mixpost.app) 是一个 **社交媒体管理工具**，它被用于 视频音频  等场景。Mixpost是一种社交媒体平台，允许用户分享和发现多种内容形式。
+[Mixpost](https://mixpost.app) 是一个 **社交媒体内容统一管理与发布平台**，它被用于 视频音频  等场景。Mixpost是一种社交媒体平台，允许用户分享和发现多种内容形式。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mixpost/mixpost-gui-websoft9.png)

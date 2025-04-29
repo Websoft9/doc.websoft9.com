@@ -1,4 +1,4 @@
-[Mixpost](https://mixpost.app) is **Social media management platform**, used for Media System . Mixpost is a social media platform that allows users to share and discover multiple forms of content.
+[Mixpost](https://mixpost.app) is **Social Media Content  Unified Management & Publishing Platform**, used for Media System . Mixpost is a social media platform that allows users to share and discover multiple forms of content.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mixpost/mixpost-gui-websoft9.png)

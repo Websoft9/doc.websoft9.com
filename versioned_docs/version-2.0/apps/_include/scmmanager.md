@@ -1,4 +1,4 @@
-[SCM-Manager](https://scm-manager.org) 是一个 **源代码管理工具，版本控制**，它被用于 源码仓库 CI/CD 流水线 一站式 DevOps 应用  等场景。SCM-Manager 是一款开源工具，用于简化和管理软件项目的源代码和版本控制。
+[SCM-Manager](https://scm-manager.org) 是一个 **可视化  Git/Mercurial/SVN 版本管理工具**，它被用于 源码仓库 CI/CD 流水线 一站式 DevOps 应用  等场景。SCM-Manager 是一款开源工具，用于简化和管理软件项目的源代码和版本控制。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/scmmanager/scmmanager-gui-websoft9.png)

@@ -1,4 +1,4 @@
-[Glance](https://github.com/glanceapp/glance) 是一个 **一站式信息聚合与快速浏览工具**，它被用于 文章聚合  等场景。Glance是一款信息聚合软件，提供快速浏览新闻、社交媒体和个性化内容，提升用户体验。
+[Glance](https://github.com/glanceapp/glance) 是一个 **内容信息聚合与阅读工具**，它被用于 文章聚合  等场景。Glance是一款信息聚合软件，提供快速浏览新闻、社交媒体和个性化内容，提升用户体验。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/glance/glance-gui-websoft9.png)

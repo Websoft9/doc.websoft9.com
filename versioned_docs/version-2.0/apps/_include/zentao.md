@@ -1,4 +1,4 @@
-[Zentao](https://www.zentao.net/) 是一个 **ZenTao（禅道） 是一款优秀的研发项目管理软件**，它被用于 需求/看板/缺陷 项目/任务/流程 一站式 DevOps 应用  等场景。ZenTao 是一款开源项目管理软件，集产品管理、项目管理、质量管理、文档管理和事物管理于一体。
+[Zentao](https://www.zentao.net/) 是一个 **项目研发测试管理工具**，它被用于 需求/看板/缺陷 项目/任务/流程 一站式 DevOps 应用  等场景。ZenTao 是一款开源项目管理软件，集产品管理、项目管理、质量管理、文档管理和事物管理于一体。
 
 
 ![zentao](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zentao/zentao-gui-websoft9.png)

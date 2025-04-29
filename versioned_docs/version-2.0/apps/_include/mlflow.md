@@ -1,4 +1,4 @@
-[MLflow](https://mlflow.org/) 是一个 **适用于传统 ML 和 GenAI 应用的统一平台**，它被用于 机器学习与模型训练  等场景。机器学习实验管理和模型跟踪工具，支持版本控制。
+[MLflow](https://mlflow.org/) 是一个 **开源 MLOps 平台**，它被用于 机器学习与模型训练  等场景。机器学习实验管理和模型跟踪工具，支持版本控制。
 
 
 ![ui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/mlflow/mlflow-ui-websoft9.png)

@@ -1,4 +1,4 @@
-[Metabase](https://www.metabase.com/) is **a user-contributed database of biological databases**, used for Data Insights & BI Software Labs for High Education . Metabase is a user-contributed database of biological databases, listing all the biological databases currently available on the internet. 
+[Metabase](https://www.metabase.com/) is **Open Source BI & Database Visualization Tool**, used for Data Insights & BI Software Labs for High Education . Metabase is a user-contributed database of biological databases, listing all the biological databases currently available on the internet. 
 
 
 ![ui](https://libs.websoft9.com/Websoft9/DocsPicture/en/metabase/metabase-product-screenshot.png)

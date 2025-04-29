@@ -1,4 +1,4 @@
-[Kasmweb](https://www.kasmweb.com/) is **The Container Streaming Platform**, used for Cloud Workspaces Container . Streaming containerized apps and desktops to end-users. The Workspaces platform provides enterprise-class orchestration, data loss prevention, and web streaming technology to enable the delivery of containerized workloads to your browser.
+[Kasmweb](https://www.kasmweb.com/) is **Containerized Virtual Desktop**, used for Cloud Workspaces Container . Streaming containerized apps and desktops to end-users. The Workspaces platform provides enterprise-class orchestration, data loss prevention, and web streaming technology to enable the delivery of containerized workloads to your browser.
 
 
 ![Console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kasmweb/kasmweb-gui-websoft9.webp)

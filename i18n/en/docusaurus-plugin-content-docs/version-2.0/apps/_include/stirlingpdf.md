@@ -1,4 +1,4 @@
-[Stirling PDF](https://stirlingpdf.io) is **Your locally hosted one-stop-shop for all your PDF needs.**, used for Document Collaboration . Stirling PDF is a powerful and Docker based locally hosted web tool specifically designed for processing PDF files.
+[Stirling PDF](https://stirlingpdf.io) is **All-in-One PDF Toolkit**, used for Document Collaboration . Stirling PDF is a powerful and Docker based locally hosted web tool specifically designed for processing PDF files.
 
 
 ![gui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/stirlingpdf/stirlingpdf-gui-websoft9.png)

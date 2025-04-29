@@ -1,4 +1,4 @@
-[PostgREST](https://postgrest.org) is **Web server turns PostgreSQL into a RESTful API**, used for Relational Databases Database Management Tools BaaS . PostgREST is a standalone web server that turns your PostgreSQL database directly into a RESTful API. The structural constraints and permissions in the database determine the API endpoints and operations.
+[PostgREST](https://postgrest.org) is **Postgres Database API Conversion Middleware**, used for Relational Databases Database Management Tools BaaS . PostgREST is a standalone web server that turns your PostgreSQL database directly into a RESTful API. The structural constraints and permissions in the database determine the API endpoints and operations.
 
 
 ![gui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/postgrest/postgrest-gui-websoft9.png)

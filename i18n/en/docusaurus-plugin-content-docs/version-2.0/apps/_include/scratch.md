@@ -1,4 +1,4 @@
-[Scratch](https://scratch.mit.edu/) is **Scratch is  coding community for children and a coding language **, used for Low Code and No Code . Scratch is  coding community for children and a coding language with a simple visual interface that allows young people to create digital stories, games, and animations.
+[Scratch](https://scratch.mit.edu/) is **Kids' Fun Programming  Tool**, used for Low Code and No Code . Scratch is  coding community for children and a coding language with a simple visual interface that allows young people to create digital stories, games, and animations.
 
 
 ![scratch](https://libs.websoft9.com/Websoft9/DocsPicture/en/scratch/scratch-gui-websoft9.png)

@@ -1,4 +1,4 @@
-[Automatisch](https://automatisch.io) 是一个 **流程自动化， Zapier 的开源替代方案**，它被用于 运维自动化 业务自动化  等场景。Automatisch 是一个自动化工具，旨在简化任务执行和流程管理，提高工作效率和减少人为错误。
+[Automatisch](https://automatisch.io) 是一个 **iPaaS 自动化业务流程平台**，它被用于 运维自动化 业务自动化  等场景。Automatisch 是一个自动化工具，旨在简化任务执行和流程管理，提高工作效率和减少人为错误。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/automatisch/automatisch-gui-websoft9.png)

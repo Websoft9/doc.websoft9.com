@@ -1,4 +1,4 @@
-[pgAdmin](https://www.pgadmin.org/) is **Web-based GUI tool for PostgreSQL**, used for Database Management Tools . pgAdmin is a popular and feature rich Open Source administration and development platform for PostgreSQL, the advanced Open Source database in the world.
+[pgAdmin](https://www.pgadmin.org/) is **Postgres Visualization Management Tool**, used for Database Management Tools . pgAdmin is a popular and feature rich Open Source administration and development platform for PostgreSQL, the advanced Open Source database in the world.
 
 
 ![gui](http://libs.websoft9.com/Websoft9/DocsPicture/zh/postgresql/pgadmin4-websoft9.png)

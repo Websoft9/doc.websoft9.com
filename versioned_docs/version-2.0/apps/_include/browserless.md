@@ -1,4 +1,4 @@
-[Browserless](https://www.browserless.io/) 是一个 **无头浏览器，网页抓取工具**，它被用于 运维自动化 调研投票与数据采集  等场景。Browserless 是一个无头浏览器服务，支持自动化网页抓取、测试和生成 PDF，适用于开发者。
+[Browserless](https://www.browserless.io/) 是一个 **无头浏览器与网站自动化工具**，它被用于 运维自动化 调研投票与数据采集  等场景。Browserless 是一个无头浏览器服务，支持自动化网页抓取、测试和生成 PDF，适用于开发者。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/browserless/browserless-gui-websoft9.png)

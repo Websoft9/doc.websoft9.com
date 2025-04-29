@@ -1,4 +1,4 @@
-[SSCMS](https://sscms.com/) is **CMS based on Microsoft for multiple websites**, used for Website Builder Content Marketing . SSCMS is a cross-platform, distributed deployment of the product can run on all kinds of operating systems, while supporting MySql, SqlServer, PostgreSql, SQLite and domestic Damon database.
+[SSCMS](https://sscms.com/) is **.NET-based Multi-site CMS**, used for Website Builder Content Marketing . SSCMS is a cross-platform, distributed deployment of the product can run on all kinds of operating systems, while supporting MySql, SqlServer, PostgreSql, SQLite and domestic Damon database.
 
 
 ![template](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sscms/sscms-gui-websoft9.png)

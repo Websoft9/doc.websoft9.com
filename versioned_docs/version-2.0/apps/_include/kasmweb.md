@@ -1,4 +1,4 @@
-[Kasm Workspaces](https://www.kasmweb.com/) 是一个 **容器化应用程序和桌面流 Kasm Workspaces**，它被用于 云桌面 容器  等场景。将容器化应用程序和桌面流式传输到最终用户。Workspaces 平台提供企业级编排、数据丢失防护和 Web 流技术，支持将容器化工作负载交付到浏览器。
+[Kasm Workspaces](https://www.kasmweb.com/) 是一个 **容器化虚拟桌面**，它被用于 云桌面 容器  等场景。将容器化应用程序和桌面流式传输到最终用户。Workspaces 平台提供企业级编排、数据丢失防护和 Web 流技术，支持将容器化工作负载交付到浏览器。
 
 
 ![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kasmweb/kasmweb-gui-websoft9.webp)

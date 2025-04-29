@@ -1,4 +1,4 @@
-[Stirling PDF](https://stirlingpdf.io) 是一个 **您本地托管的一站式服务，满足您所有的PDF需求。**，它被用于 文档协作/企业网盘  等场景。Stirling-PDF是一个强大且基于Docker的本地托管Web工具，专门用于处理PDF文件。
+[Stirling PDF](https://stirlingpdf.io) 是一个 **一站式 PDF 工具集**，它被用于 文档协作/企业网盘  等场景。Stirling-PDF是一个强大且基于Docker的本地托管Web工具，专门用于处理PDF文件。
 
 
 ![界面](http://libs.websoft9.com/Websoft9/DocsPicture/zh/stirlingpdf/stirlingpdf-gui-websoft9.png)

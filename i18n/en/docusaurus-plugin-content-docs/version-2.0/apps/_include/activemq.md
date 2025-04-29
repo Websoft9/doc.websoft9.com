@@ -1,4 +1,4 @@
-[ActiveMQ](https://activemq.apache.org/) is **An open source messaging and Integration Patterns server**, used for Message Queue . Apache ActiveMQ is the most popular and powerful open source messaging and Integration Patterns server. 
+[ActiveMQ](https://activemq.apache.org/) is **Popular Open Source Message Middleware**, used for Message Queue . Apache ActiveMQ is the most popular and powerful open source messaging and Integration Patterns server. 
 
 
 ![login](http://libs.websoft9.com/Websoft9/DocsPicture/zh/activemq/activemq-login-websoft9.png)

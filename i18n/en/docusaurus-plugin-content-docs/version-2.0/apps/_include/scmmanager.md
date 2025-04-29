@@ -1,4 +1,4 @@
-[SCM-Manager](https://scm-manager.org) is **SCM-Manager is an open source tool for simplifying and managing source code and version control of software projects.**, used for Code Repository CI/CD Pipeline All-in-one DevOps . SCM-Manager is an open source tool for simplifying and managing source code and version control of software projects.
+[SCM-Manager](https://scm-manager.org) is **Visual Git/Mercurial/SVN Version Management Tool**, used for Code Repository CI/CD Pipeline All-in-one DevOps . SCM-Manager is an open source tool for simplifying and managing source code and version control of software projects.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/scmmanager/scmmanager-gui-websoft9.png)

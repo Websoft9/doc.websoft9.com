@@ -1,4 +1,4 @@
-[Kavita](https://www.kavitareader.com) is **Kavita is a fast, feature rich, cross-platform reading server.**, used for News Feed Document Collaboration . Kavita is a fast, feature rich, cross platform reading server. Built with the goal of being a full solution for all your reading needs. Setup your own server and share your reading collection with your friends and family.
+[Kavita](https://www.kavitareader.com) is **Self-hosted Digital  Reading Content Library**, used for News Feed Document Collaboration . Kavita is a fast, feature rich, cross platform reading server. Built with the goal of being a full solution for all your reading needs. Setup your own server and share your reading collection with your friends and family.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kavita/kavita-gui-websoft9.png)

@@ -1,4 +1,4 @@
-[ONLYOFFICE Docs](https://www.onlyoffice.com/) is **A powerful online editor for ECM**, used for Document Service Enterprise content management . ONLYOFFICE Document Server Community is a free collaborative online office suite
+[ONLYOFFICE Docs](https://www.onlyoffice.com/) is **Online Document Editing & Preview Middleware**, used for Document Service Enterprise content management . ONLYOFFICE Document Server Community is a free collaborative online office suite
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/onlyoffice/onlyofficedocs-gui-websoft9.png)

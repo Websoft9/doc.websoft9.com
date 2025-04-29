@@ -1,4 +1,4 @@
-[ThingsBoard](https://thingsboard.io/) is **Open-source IoT Platform**, used for Device Management and Monitor Home Server . Device management, data collection, processing and visualization for your IoT solution
+[ThingsBoard](https://thingsboard.io/) is **Visualized IoT Device  Management Platform**, used for Device Management and Monitor Home Server . Device management, data collection, processing and visualization for your IoT solution
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/thingsboard/thingsboard-gui-websoft9.png)

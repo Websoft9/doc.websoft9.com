@@ -1,4 +1,4 @@
-[OpenHands](https://www.all-hands.dev) is **A developer community that utilizes AI to solve problems**, used for AI DevOps AI Agents/Chatbots/RAG . OpenHands AI engineers revolutionize software development by integrating advanced AI capabilities to solve complex coding tasks. Join the developer community that utilizes AI to solve over half of SWE bench validation problems, focusing on creative challenges.
+[OpenHands](https://www.all-hands.dev) is **Developer AI Agent, Natural Language Code Generation**, used for AI DevOps AI Agents/Chatbots/RAG . OpenHands AI engineers revolutionize software development by integrating advanced AI capabilities to solve complex coding tasks. Join the developer community that utilizes AI to solve over half of SWE bench validation problems, focusing on creative challenges.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/openhands/openhands-gui-websoft9.png)

@@ -1,4 +1,4 @@
-[SuperSet](https://superset.apache.org/) 是一个 **开源的商业智能web应用软件，用户可以轻松实现对商业数据进行可视化分析**，它被用于 BI与数据可视化  等场景。Apache Superset 是一个开源的数据探查与可视化平台（曾用名 Panoramix、Caravel ），该工具在可视化、易用性和交互性上非常有特色，用户可以轻松对数据进行可视化分析。
+[SuperSet](https://superset.apache.org/) 是一个 **可视化数据分析工具**，它被用于 BI与数据可视化  等场景。Apache Superset 是一个开源的数据探查与可视化平台（曾用名 Panoramix、Caravel ），该工具在可视化、易用性和交互性上非常有特色，用户可以轻松对数据进行可视化分析。
 
 
 ![superset](https://libs.websoft9.com/Websoft9/DocsPicture/en/superset/superset-dash-websoft9.png)

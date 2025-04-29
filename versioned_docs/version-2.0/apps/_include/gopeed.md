@@ -1,4 +1,4 @@
-[Gopeed](https://gopeed.com/) 是一个 **基于浏览器运行的下载工具**，它被用于 文件共享与传输  等场景。Gopeed（全称 Go Speed）是一款由 Golang + Flutter 开发的高速下载器，支持（HTTP、BitTorrent、Magnet）协议下载。
+[Gopeed](https://gopeed.com/) 是一个 **轻量级 Web 下载工具**，它被用于 文件共享与传输  等场景。Gopeed（全称 Go Speed）是一款由 Golang + Flutter 开发的高速下载器，支持（HTTP、BitTorrent、Magnet）协议下载。
 
 
 ![控制台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gopeed/gopeed-gui-websoft9.webp)

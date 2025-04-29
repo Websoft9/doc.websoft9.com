@@ -1,4 +1,4 @@
-[CouchDB](https://couchdb.apache.org/) 是一个 **原生 HTTP/JSON API 驱动的文档数据库**，它被用于 NoSQL 数据库  等场景。Apache CouchDB™ 是一个原生 HTTP/JSON API 驱动的文档数据库，可以作为后端即服务使用。
+[CouchDB](https://couchdb.apache.org/) 是一个 **原生HTTP/JSON API 驱动的数据库**，它被用于 NoSQL 数据库  等场景。Apache CouchDB™ 是一个原生 HTTP/JSON API 驱动的文档数据库，可以作为后端即服务使用。
 
 
 ![ui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/couchdb/couchdb-gui-websoft9.png)
