@@ -2,8 +2,9 @@
 title: ZeroTier
 slug: /zerotier
 tags:
-  - console
-  - other
+  - VPN
+  - Certification network
+  - ZeroTier
 ---
 
 import Meta from './_include/zerotier.md';
@@ -14,30 +15,16 @@ import Meta from './_include/zerotier.md';
 
 ### Initial setup{#wizard}
 
-1. When completed installation of ZeroTier at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. Register account at [my.zerotier.com](https://my.zerotier.com/) and create a vitual network and get the **Network ID**
 
-2. Complete the install wizard step by step
+2. Install Zerotier from at Websoft9 AppStore where need to input **Network ID** before installation
 
-### Login verification{#verification}
+3. Logint to [my.zerotier.com](https://my.zerotier.com/) and [Authorize your device on your network](https://docs.zerotier.com/start/#authorize-your-device-on-your-network)
 
-1. Completed installation ZeroTier at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
-
-2. Starting to verify it
+4. Get **Managed IPs** of your device from **my.zerotier.com** console, and connect each other by this IPs  
 
 ## Configuration options{#configs}
 
-- CLI
-- Multilingual (√)
-- SMTP (√)
-
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?
