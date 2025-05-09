@@ -2,8 +2,9 @@
 title: Firecrawl
 slug: /firecrawl
 tags:
-  - console
-  - other
+  - Data Collection
+  - Web Crawler
+  - Firecrawl
 ---
 
 import Meta from './_include/firecrawl.md';
@@ -16,28 +17,13 @@ import Meta from './_include/firecrawl.md';
 
 1. When completed installation of Firecrawl at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
-2. Complete the install wizard step by step
+2. Browser to `URL/admin/<BULL_AUTH_KEY>/queues`, enter UI interface
 
-### Login verification{#verification}
+   > <BULL_AUTH_KEY> is the value of environment variable BULL_AUTH_KEY in .env, default is CHANGEME.
 
-1. Completed installation Firecrawl at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
-
-2. Starting to verify it
 
 ## Configuration options{#configs}
 
-- CLI
-- Multilingual (√)
-- SMTP (√)
-
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?
