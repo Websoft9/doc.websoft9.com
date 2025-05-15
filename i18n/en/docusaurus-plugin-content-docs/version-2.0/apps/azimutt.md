@@ -2,8 +2,9 @@
 title: Azimutt
 slug: /azimutt
 tags:
-  - console
-  - other
+  - Database Visualization
+  - Data Modeling
+  - Azimutt
 ---
 
 import Meta from './_include/azimutt.md';
@@ -14,30 +15,14 @@ import Meta from './_include/azimutt.md';
 
 ### Initial setup{#wizard}
 
-1. When completed installation of Azimutt at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. Log in to the Websoft9 Console, go to **Gateway** in the left menu, and follow the steps to configure HTTPS for Azimutt (**Required**).
 
-2. Complete the install wizard step by step
+2. When completed installation of Azimutt at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
-### Login verification{#verification}
-
-1. Completed installation Azimutt at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
-
-2. Starting to verify it
+3. Complete the install wizard step by step
 
 ## Configuration options{#configs}
 
-- CLI
-- Multilingual (√)
-- SMTP (√)
-
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?
