@@ -12,32 +12,21 @@ import Meta from './_include/coredns.md';
 
 ## Getting started{#guide}
 
-### Initial setup{#wizard}
+### Config your DNS{#wizard}
 
-1. When completed installation of CoreDNS at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. When completed installation of CoreDNS at **Websoft9 Console**, start to edit settings files from **Compose** tab of **My Apps**  
 
 2. Complete the install wizard step by step
 
-### Login verification{#verification}
+3. Make sure value of **W9_INNERIP_SET** is Intranet IP of your host machine runing for CoreDNS
 
-1. Completed installation CoreDNS at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
+4. There have two default config files:
 
-2. Starting to verify it
+   - Corefile: main config file that include hosts map and includes other files
+   - db.demo.inner：[Zone file](https://coredns.io/plugins/file/) template show a wildcard sample
 
 ## Configuration options{#configs}
 
-- CLI
-- Multilingual (√)
-- SMTP (√)
-
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?
