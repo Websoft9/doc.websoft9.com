@@ -21,7 +21,7 @@ import Meta from './_include/kasmweb.md';
 
 ## Configuration options{#configs}
 
-- Chinese direct input: Direct input in Chinese is not supported; you will need to use the clipboard for text input.
+- Chinese direct input: Enter the desktop, click [Settings] - [Enable Local Input Method] to realize Chinese input.
 
 ## Administer{#administrator}
 

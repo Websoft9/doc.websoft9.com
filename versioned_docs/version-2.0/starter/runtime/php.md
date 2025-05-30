@@ -140,3 +140,14 @@ pecl install redis-5.3.7; docker-php-ext-enable redis
 #### PHP 扩展为何对操作系统有依赖？
 
 PHP 的扩展（extension）这里应称为“模块（module）”是 C、C++ 编写的功能合集，扩展大多以动态链接 .dll、.so 形式加载。php扩展是php核心并不支持的功能，然后可以通过扩展的方式进行扩展PHP的功能，常见的扩展如MySQL，gb2等等。
+
+#### docker-php-ext-install gd 不可用？
+
+问题描述： `docker-php-ext-install gd` 后，`php -m` 查询有 gd 模块，但是通过 `<?php phpinfo(); ?>`  无法显示 gd 模块安装成功的结果  
+问题原因： docker-php-ext-install gd 这个命令依赖于操作系统的包，需要提前安装相关的图形包
+    ```
+    apt-get update && apt-get install -y \
+		libfreetype-dev \
+		libjpeg62-turbo-dev \
+		libpng-dev
+    ```
