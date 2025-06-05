@@ -2,7 +2,9 @@ name: Generate Apps list for docs
 
 on:
   workflow_dispatch:
-
+  repository_dispatch:
+    types: [applist_dev_event]
+    
 jobs:
   build:
     runs-on: ubuntu-latest
