@@ -110,6 +110,7 @@
 - [API Gateway](https://www.websoft9.com/apps/api)
 - [Load Balancer](https://www.websoft9.com/apps/balancer)
 - [HTTP Server](https://www.websoft9.com/apps/httpserver)
+- [Virtual networking](https://www.websoft9.com/apps/virtual-networking)
 - [DNS Server](https://www.websoft9.com/apps/dns)
 - [Application Gateway](https://www.websoft9.com/apps/application-gateway)
 ## Games
