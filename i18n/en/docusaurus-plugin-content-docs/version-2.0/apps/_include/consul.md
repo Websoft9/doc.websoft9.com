@@ -1,4 +1,4 @@
-[Consul](https://www.consul.io) is **Consul is a datacenter runtime that provides service discovery, configuration, and orchestration.**, used for Application Service . Consul is a datacenter runtime that provides service discovery, configuration, and orchestration.
+[Consul](https://www.consul.io) is **Consul is a datacenter runtime that provides service discovery, configuration, and orchestration.**, used for API Gateway . Consul is a datacenter runtime that provides service discovery, configuration, and orchestration.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/consul/consul-gui-websoft9.png)
