@@ -103,6 +103,7 @@ Code-server does not support multi-user collaboration natively. For multi-develo
 
 - Sudo password in Terminal: same as the code-server console password
 - Code compilation build(✅)
+- Install extensions(✅)
 
 ## Administer{#administrator}
 
