@@ -241,3 +241,40 @@ Linux visual machine (VM) is the same with instance at cloud platform
 ## Websoft9 Console
 
 Use **Websoft9 Console** as a whole, Console is ambiguous when used on its own
+
+## IT Operations
+
+Operations (IT Operation) refers to the management and maintenance of IT systems to ensure their stable and efficient operation.
+
+## Automated Operations
+
+Automated operations utilize tools and technologies to automatically execute operational tasks, reducing manual intervention and improving efficiency and accuracy.
+
+## GitOps
+
+[GitOps](https://www.gitops.tech/) is a Git-based operational method that achieves automated deployment and management by storing infrastructure and application configurations in a Git repository. It leverages Git's version control and auditing features to ensure environmental consistency and traceability, simplifying continuous delivery and infrastructure management processes.
+
+## IaC
+
+IaC (Infrastructure as Code) is a method for managing and configuring computing infrastructure by defining and managing infrastructure resources, such as servers, networks, and storage, through code. IaC enables the automation and repeatability of infrastructure deployment, updates, and version control, improving efficiency and consistency.
+
+## AIOps
+
+AIOps (Artificial Intelligence for IT Operations) enhances IT operations capabilities by utilizing artificial intelligence and machine learning technologies. It analyzes large amounts of data to automatically identify and resolve issues, optimize system performance, and improve operational efficiency, helping teams respond more quickly to faults and changes.
+
+## Cloud Platform
+
+A cloud platform (IaaS) is an online environment that provides computing resources, storage, networking, and application services, allowing users to access and manage these resources on demand via the internet. It enables businesses and individuals to flexibly scale resources up or down, reducing IT costs and improving efficiency. Common cloud platforms include AWS, Azure, Google Cloud, Alibaba Cloud, and HUAWEICLOUD.
+
+Cloud platforms are typically categorized based on their geography and ownership:
+
+- **Public Cloud** is shared cloud resources provided by third-party service providers, suitable for a wide range of users.
+- **Private Cloud** is a cloud environment dedicated to a single organization, offering higher security and control.
+- **Hybrid Cloud** combines the advantages of both public and private clouds, allowing data and applications to move flexibly between the two.
+
+## Domain Name
+
+A domain name is an address used to identify a website on the internet, making it easier for users to access. It typically consists of two parts:
+
+- **Domain Binding** is the association of a domain name with a server's IP address.
+- **Domain Resolution** is the process of converting a domain name into an IP address.
