@@ -105,6 +105,7 @@ java -version
 
 - Terminal 中 sudo 密码：与 code-server 控制台密码相同
 - 代码编译构建（✅）
+- 安装扩展（✅）
 
 
 ## 管理维护{#administrator}

@@ -1,4 +1,4 @@
-[RustDesk ](https://rustdesk.com/) is **Virtual and Remote desktop infrastructure **, used for Cloud Workspaces . Remote desktop software and supporting registration/relay servers are plug and play, requiring no configuration. You have complete control over your data without worrying about security. An open-source alternative to TeamViewer / Citrix.
+[RustDesk ](https://rustdesk.com/) is **Virtual and Remote desktop infrastructure **, used for Cloud Workspaces . RustDesk is an open source remote desktop software that supports cross-platform connectivity and provides secure, fast remote access and control, an alternative to TeamViewer or Citrix.
 
 
 ![Console](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rustdesk/rustdesk-gui-websoft9.jpg)

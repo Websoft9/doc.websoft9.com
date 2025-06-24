@@ -1,4 +1,4 @@
-[Consul](https://www.consul.io) 是一个 **服务发现、配置和协调管理软件**，它被用于 应用服务  等场景。Consul 是一种数据中心运行时，可提供服务发现、配置和协调功能。
+[Consul](https://www.consul.io) 是一个 **服务发现、配置和协调管理软件**，它被用于 API 网关  等场景。Consul 是一种数据中心运行时，可提供服务发现、配置和协调功能。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/consul/consul-gui-websoft9.png)
