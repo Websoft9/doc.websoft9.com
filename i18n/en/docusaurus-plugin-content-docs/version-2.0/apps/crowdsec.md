@@ -2,8 +2,9 @@
 title: CrowdSec
 slug: /crowdsec
 tags:
-  - console
-  - other
+  - Network Protection
+  - Intrusion Prevention
+  - CrowdSec
 ---
 
 import Meta from './_include/crowdsec.md';
@@ -12,32 +13,18 @@ import Meta from './_include/crowdsec.md';
 
 ## Getting started{#guide}
 
-### Initial setup{#wizard}
+### Register to the CrowdSec Console
 
-1. When completed installation of CrowdSec at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. [CrowdSec official website](https://app.crowdsec.net/security-engines) to register an account
 
-2. Complete the install wizard step by step
+2. After logging in to the official website, **Security Engines > Installation >** copy the key enrollment command: `sudo cscli console enroll -e context <your_key>`.
 
-### Login verification{#verification}
-
-1. Completed installation CrowdSec at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
-
-2. Starting to verify it
+3. Enter the CrowdSec container and execute copied command to view the global attack statistics.
 
 ## Configuration options{#configs}
 
 - CLI
-- Multilingual (√)
-- SMTP (√)
 
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?
