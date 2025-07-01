@@ -2,9 +2,9 @@
 title: Varnish
 slug: /varnish
 tags:
-  - Web 面板
-  - 可视化
-  - GUI
+  - HTTP 缓存
+  - 反向代理
+  - Varnish
 ---
 
 import Meta from './_include/varnish.md';
@@ -13,31 +13,18 @@ import Meta from './_include/varnish.md';
 
 ## 入门指南{#guide}
 
-### 初始化{#wizard}
+### 反向代理应用
 
-Websoft9 控制台安装 Varnish 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
+1. Websoft9 控制台安装 Varnish 后，通过 **我的应用** 查看应用详情
 
-### 登录后台{#console}
+2. 点击**我的应用 > 编排 > 马上修改**，编辑 `src/default.vcl`
 
-Websoft9 控制台安装 Varnish 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
+3. 修改.host和.port 分别为 Websoft9 控制台安装应用的容器ID和容器内部端口
 
-### 安装插件{#plugin}
+4. 重建应用，HTTP 缓存生效，访问应用速度大大加快
 
 ## 配置选项{#configs}
 
-- CLI
-- 多语言（√）
-- SMTP（√）
-- 插件市场（√）
-
 ## 管理维护{#administrator}
 
-- **重置管理员密码**
-- **更换 URL**
-- **HTTPS 额外设置**
-- **在线备份**
-- **在线升级**
-
 ## 故障
-
-#### 更改域名导致无法访问 ？

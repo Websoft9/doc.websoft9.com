@@ -2,8 +2,9 @@
 title: Varnish
 slug: /varnish
 tags:
-  - console
-  - other
+  - HTTP Caching
+  - Reverse Proxy
+  - Varnish
 ---
 
 import Meta from './_include/varnish.md';
@@ -12,32 +13,18 @@ import Meta from './_include/varnish.md';
 
 ## Getting started{#guide}
 
-### Initial setup{#wizard}
+### Reverse proxy application
 
-1. When completed installation of Varnish at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After installing Varnish in the Websoft9 console, view the application details in **My Applications**.
 
-2. Complete the install wizard step by step
+2. Click **My Apps > Varnish app > Compose > Go to Edit Repository** and edit `src/default.vcl`. 
 
-### Login verification{#verification}
+3. Change .host and .port to the container ID and internal port of the Websoft9 console installation.
 
-1. Completed installation Varnish at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
-
-2. Starting to verify it
+4. Rebuild the application, the HTTP cache takes effect, and the speed of accessing the application is greatly accelerated.
 
 ## Configuration options{#configs}
 
-- CLI
-- Multilingual (√)
-- SMTP (√)
-
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?
