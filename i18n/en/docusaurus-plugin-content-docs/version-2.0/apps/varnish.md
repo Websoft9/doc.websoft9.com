@@ -31,6 +31,9 @@ import Meta from './_include/varnish.md';
 
 ## Configuration options{#configs}
 
+- Cache size: set via VARNISH_SIZE environment variable
+- Configuration file: `. /src/default.vcl`
+
 ## Administer{#administrator}
 
 ## Troubleshooting{#troubleshooting}
