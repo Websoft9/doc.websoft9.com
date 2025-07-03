@@ -2,8 +2,9 @@
 title: Tyk
 slug: /tky
 tags:
-  - console
-  - other
+  - API Management
+  - API Gateway
+  - Tyk
 ---
 
 import Meta from './_include/tky.md';
@@ -12,32 +13,14 @@ import Meta from './_include/tky.md';
 
 ## Getting started{#guide}
 
-### Initial setup{#wizard}
+### Verify Tyk
 
-1. When completed installation of Tyk at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After installing Tyk in the Websoft9 console, view the application details through **My Applications** and get the access URL in the **Access** tab.
 
-2. Complete the install wizard step by step
-
-### Login verification{#verification}
-
-1. Completed installation Tyk at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
-
-2. Starting to verify it
+2. Verify that Tyk status is available by typing `http://URL/hello` in your browser.
 
 ## Configuration options{#configs}
 
-- CLI
-- Multilingual (√)
-- SMTP (√)
-
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?
