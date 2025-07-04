@@ -2,8 +2,9 @@
 title: Miniflux
 slug: /miniflux
 tags:
-  - console
-  - other
+  - RSS Reader
+  - News
+  - Miniflux
 ---
 
 import Meta from './_include/miniflux.md';
@@ -11,12 +12,6 @@ import Meta from './_include/miniflux.md';
 <Meta name="meta" />
 
 ## Getting started{#guide}
-
-### Initial setup{#wizard}
-
-1. When completed installation of Miniflux at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
-
-2. Complete the install wizard step by step
 
 ### Login verification{#verification}
 
@@ -26,18 +21,8 @@ import Meta from './_include/miniflux.md';
 
 ## Configuration options{#configs}
 
-- CLI
 - Multilingual (√)
-- SMTP (√)
 
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?
