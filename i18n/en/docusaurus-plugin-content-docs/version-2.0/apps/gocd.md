@@ -2,8 +2,9 @@
 title: GoCD
 slug: /gocd
 tags:
-  - console
-  - other
+  - DevOps
+  - CD/CI
+  - GoCD
 ---
 
 import Meta from './_include/gocd.md';
@@ -12,32 +13,16 @@ import Meta from './_include/gocd.md';
 
 ## Getting started{#guide}
 
-### Initial setup{#wizard}
+### Agent Authorization
 
-1. When completed installation of GoCD at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After installing GoCD on the Websoft9 console, view the application details through **My Applications** and get the access URL in the **Access** tab.
 
-2. Complete the install wizard step by step
+2. Access the URL in your local browser and click **AGTENS**
 
-### Login verification{#verification}
-
-1. Completed installation GoCD at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
-
-2. Starting to verify it
+3. After selecting AGENT, click **ENABLE**, the status will change to Idle and you can start running the pipeline.
 
 ## Configuration options{#configs}
 
-- CLI
-- Multilingual (√)
-- SMTP (√)
-
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?

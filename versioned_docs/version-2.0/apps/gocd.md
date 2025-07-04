@@ -2,9 +2,10 @@
 title: GoCD
 slug: /gocd
 tags:
-  - Web 面板
-  - 可视化
-  - GUI
+  - DevOps
+  - CD/CI
+  - 持续集成
+  - GoCD
 ---
 
 import Meta from './_include/gocd.md';
@@ -13,31 +14,16 @@ import Meta from './_include/gocd.md';
 
 ## 入门指南{#guide}
 
-### 初始化{#wizard}
+### Agent 授权
 
-Websoft9 控制台安装 GoCD 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
+1. Websoft9 控制台安装 GoCD 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取访问 URL
 
-### 登录后台{#console}
+2. 本地浏览器访问 URL，点击 **AGTENS**
 
-Websoft9 控制台安装 GoCD 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
-
-### 安装插件{#plugin}
+3. 选定 AGENT 后，点击 **ENABLE**后，状态变为 Idle 即可用，可以开始运行流水线了
 
 ## 配置选项{#configs}
 
-- CLI
-- 多语言（√）
-- SMTP（√）
-- 插件市场（√）
-
 ## 管理维护{#administrator}
 
-- **重置管理员密码**
-- **更换 URL**
-- **HTTPS 额外设置**
-- **在线备份**
-- **在线升级**
-
 ## 故障
-
-#### 更改域名导致无法访问 ？

@@ -2,9 +2,9 @@
 title: CrowdSec
 slug: /crowdsec
 tags:
-  - Web 面板
-  - 可视化
-  - GUI
+  - 网络防护
+  - 入侵防御
+  - CrowdSec
 ---
 
 import Meta from './_include/crowdsec.md';
@@ -13,31 +13,18 @@ import Meta from './_include/crowdsec.md';
 
 ## 入门指南{#guide}
 
-### 初始化{#wizard}
+### 注册到  CrowdSec 官方控制台
 
-Websoft9 控制台安装 CrowdSec 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
+1. [CrowdSec官网](https://app.crowdsec.net/security-engines)注册账号
 
-### 登录后台{#console}
+2. 登陆官网后，**Security Engines > Installation >** 下复制密钥注册命令：`sudo cscli console enroll -e context <your_key>`
 
-Websoft9 控制台安装 CrowdSec 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
-
-### 安装插件{#plugin}
+3. 进入 CrowdSec 容器执行2的命令后，即可查看全局攻击统计
 
 ## 配置选项{#configs}
 
 - CLI
-- 多语言（√）
-- SMTP（√）
-- 插件市场（√）
 
 ## 管理维护{#administrator}
 
-- **重置管理员密码**
-- **更换 URL**
-- **HTTPS 额外设置**
-- **在线备份**
-- **在线升级**
-
 ## 故障
-
-#### 更改域名导致无法访问 ？

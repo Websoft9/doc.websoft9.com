@@ -2,8 +2,9 @@
 title: Lemmy
 slug: /lemmy
 tags:
-  - console
-  - other
+  - BBS
+  - Community Forums
+  - Lemmy
 ---
 
 import Meta from './_include/lemmy.md';
@@ -18,26 +19,12 @@ import Meta from './_include/lemmy.md';
 
 2. Complete the install wizard step by step
 
-### Login verification{#verification}
-
-1. Completed installation Lemmy at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
-
-2. Starting to verify it
-
 ## Configuration options{#configs}
 
-- CLI
 - Multilingual (√)
 - SMTP (√)
+- Subject (√)
 
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?
