@@ -2,8 +2,9 @@
 title: supertokens
 slug: /supertokens
 tags:
-  - console
-  - other
+  - Authentication
+  - User management
+  - supertokens
 ---
 
 import Meta from './_include/supertokens.md';
@@ -12,32 +13,14 @@ import Meta from './_include/supertokens.md';
 
 ## Getting started{#guide}
 
-### Initial setup{#wizard}
+### Authentication service
 
-1. When completed installation of supertokens at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After installing supertokens on the Websoft9 console, view the application details through **My Applications** and get the access URL in the **Access** tab.
 
-2. Complete the install wizard step by step
-
-### Login verification{#verification}
-
-1. Completed installation supertokens at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
-
-2. Starting to verify it
+2. Local browser accesses the URL and returns `Hello` indicating that the service is up and running.
 
 ## Configuration options{#configs}
 
-- CLI
-- Multilingual (√)
-- SMTP (√)
-
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?

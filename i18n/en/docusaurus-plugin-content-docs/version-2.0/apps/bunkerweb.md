@@ -2,8 +2,9 @@
 title: BunkerWeb
 slug: /bunkerweb
 tags:
-  - console
-  - other
+  - WAF
+  - Security Platform
+  - BunkerWeb
 ---
 
 import Meta from './_include/bunkerweb.md';
@@ -16,28 +17,14 @@ import Meta from './_include/bunkerweb.md';
 
 1. When completed installation of BunkerWeb at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
-2. Complete the install wizard step by step
+2. Bind a domain name to BunkerWeb and set up HTTPS access (**necessarily**)
 
-### Login verification{#verification}
-
-1. Completed installation BunkerWeb at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
-
-2. Starting to verify it
+3. Local browser to access the domain name, complete the initialization can be used
 
 ## Configuration options{#configs}
 
-- CLI
 - Multilingual (√)
-- SMTP (√)
 
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?
