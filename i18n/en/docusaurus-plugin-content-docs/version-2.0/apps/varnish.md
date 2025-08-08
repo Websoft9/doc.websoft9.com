@@ -29,6 +29,18 @@ import Meta from './_include/varnish.md';
 
 4. Visiting the domain that Varnish is bound to, you can see that the access speed is greatly improved! 
 
+### Varnish blocks crawler access
+
+1. Edit the relevant parameters in the Varnish application's `./src/default.vcl` file and add the following content, replacing `Sogou web spider` with the name of the crawler you want to block:
+   ```
+   sub vcl_recv {
+      if (req.http.user-agent ~ “Sogou web spider”) {
+         return (synth(403, “Forbidden”));
+      }
+   }
+   ```
+2. After rebuilding the Varnish application, Varnish has been disabled for the crawler.
+
 ## Configuration options{#configs}
 
 - Cache size: set via VARNISH_SIZE environment variable
