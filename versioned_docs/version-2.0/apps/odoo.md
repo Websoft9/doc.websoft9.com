@@ -98,3 +98,7 @@ Websoft9 提供 Odoo 企业版的采购、交付和全面托管服务：
 
 需通过 Websoft9 网关中配置 `client_max_body_size 0`，解除文件限制。
 
+#### 使用 ** 我的应用 > 数据库 ** 中 `postgres` 用户无法连接Postgresql数据库?
+
+Odoo 不能直接使用  `postgres` 用户，你可以 **我的应用 > 概览**中的 `应用Id` 即是具有管理员权限的数据库用户名
+
