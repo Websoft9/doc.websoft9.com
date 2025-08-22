@@ -15,13 +15,13 @@ import Meta from './_include/rancher.md';
 
 ### Initial setup{#wizard}
 
-1. When completed installation of Rancher at **Websoft9 Console**, Setting the domain name and configuring the SSL certificate at the **Gateway** 
+1. When completed installation of Rancher at **Websoft9 Console**, binding domain and set HTTPS by **Gateway** 
 
-2. Get the applicaiton's **Overview** and **Access** information from **My Apps**
+2. Go to this application management interface from **My Apps**, get the `access URL` and `command for get init password`
 
-3. Execute the command **Get administrator password** on the terminal to get the password.
+3. Execute the that command to get the password from **Terminal** of Websoft9 console
 
-4. Enter the **Access** URL in your local browser, enter the password and follow the wizard to complete the initialization.
+4. Enter the **Access URL** by HTTPS in your local browser, enter the password and follow the wizard to complete the initialization.
 
 ## Configuration options{#configs}
 
