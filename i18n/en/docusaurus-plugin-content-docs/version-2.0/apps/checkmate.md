@@ -26,3 +26,9 @@ import Meta from './_include/checkmate.md';
 ## Administer{#administrator}
 
 ## Troubleshooting{#troubleshooting}
+
+#### MongoDB Container Keeps Restarting, Application Unavailable?
+
+Description: MongoDB fails to start normally. Logs indicate lack of AVX instruction set support.
+Reason: MongoDB 4.2 and later require CPU support for the AVX instruction set to start.
+Solution: Deploy using a CPU that supports the AVX instruction set. 

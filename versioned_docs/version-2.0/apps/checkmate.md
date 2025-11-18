@@ -26,3 +26,9 @@ import Meta from './_include/checkmate.md';
 ## 管理维护{#administrator}
 
 ## 故障
+
+#### MongoDB 容器不断重启，应用无法正常访问？
+
+故障描述：MongoDB 无法正常启动，查看日志提示对AVX指令集不支持 
+问题原因：MongoDB 4.2 及以上版本需要 CPU 支持 AVX 指令集，否则无法启动  
+解决方案：更换支持 AVX 指令集的 CPU 进行部署 
