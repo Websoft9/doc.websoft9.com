@@ -1,4 +1,4 @@
-[Varnish](https://varnish-cache.org) 是一个 **高性能HTTP缓存​​**，它被用于 HTTP 服务器  等场景。Varnish 是高性能 HTTP 反向代理和缓存加速器，提升网站速度。​​
+[Varnish](https://varnish-cache.org) 是一个 **高性能 HTTP 缓存​​**，它被用于 HTTP 服务器  等场景。Varnish 是高性能 HTTP 反向代理和缓存加速器，提升网站速度。​​
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/varnish/varnish-gui-websoft9.png)

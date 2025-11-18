@@ -1,4 +1,4 @@
-[BunkerWeb](https://www.bunkerweb.io) 是一个 **下一代开源 WAF 和全功能网络服务器**，它被用于 IT 安全  等场景。BunkerWeb is a secure online platform that provides data storage and management services to ensure the privacy and security of user information.
+[BunkerWeb](https://www.bunkerweb.io) 是一个 **下一代开源 WAF 和全功能网络服务器**，它被用于 IT 安全  等场景。BunkerWeb 是一个安全的在线平台，提供数据存储和管理服务，以确保用户信息的隐私和安全。
 
 
 ![界面](http://libs.websoft9.com/Websoft9/DocsPicture/zh/bunkerweb/bunkerweb-gui-websoft9.png)
