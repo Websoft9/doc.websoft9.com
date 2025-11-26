@@ -94,3 +94,8 @@ There is no easy tool to delete demo data.
 #### 413 Request Entity Too Large?
 
 You need to configure `client_max_body_size 0` in the Websoft9 gateway to lift the file size limit.
+
+
+#### Using **My Apps > Database**, the `postgres` user cannot connect to the Postgresql database?
+
+Odoo cannot directly use the  `postgres` user. You can find the database username with administrator privileges in **My Apps > Overview** under `App Id`.

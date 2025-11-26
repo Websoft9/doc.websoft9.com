@@ -55,9 +55,10 @@ Websoft9 的网关具备为此类应用设置密码或白名单访问，具体�
 
 1. Websoft9 控制台进入 **网关** 功能模块，编辑目标 **Proxy Host**
 
-2. 在 **Advanced** 标签页中，增加下面的配置即可
+2. 在 **Advanced** 标签页中，增加下面的配置即可（全局请求控制与单个 IP 请求控制）
    ```
    # 在 server 块中使用 limit_req 和 limit_conn
+   limit_req zone=w9_global_limit burst=500 nodelay; 
    limit_req zone=w9_limit_req_zone burst=300 nodelay;
    limit_conn w9_limit_conn_zone 30;
    ```

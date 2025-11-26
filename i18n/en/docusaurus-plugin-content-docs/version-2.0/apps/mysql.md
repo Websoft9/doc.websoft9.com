@@ -108,6 +108,15 @@ Migrating from MySQL to MySQL is usually accomplished quickly by **importing and
 
 However, migrations from other DBMS to MySQL are best handled using a migration tool such as [MySQL Workbench: Database Migration](https://www.mysql.com/products/workbench/migrate/)
 
+### Performance Optimization
+
+Proper parameter configuration is critical for MySQL performance. The following core parameters can significantly enhance database response speed and processing capacity:
+
+- **`max_connections`** 
+- **`innodb_buffer_pool_size`** 
+- **`innodb_log_file_size`** 
+- **`innodb_flush_log_at_trx_commit`** 
+- **`innodb_io_capacity`**
 
 ### Audit
 

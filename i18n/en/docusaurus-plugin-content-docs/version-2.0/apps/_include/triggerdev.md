@@ -1,0 +1,21 @@
+[Trigger.dev](https://trigger.dev/) is **AI-driven workflow and automation management tools**, used for Operations Automation Business automation . Trigger.dev is an automation platform that helps developers simplify workflows and integrate applications through triggers and events.
+
+
+![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/triggerdev/triggerdev-gui-websoft9.png)
+
+
+## Prepare
+
+When referring to this document to use **Trigger.dev**, please read and ensure the following points:
+
+- [Login to Websoft9 Console](./login-console) and find or install Trigger.dev:
+  - Go to **My Apps** listing applications 
+  - Go to **App Store** installing target application
+
+- This application is installed by Websoft9 console.
+
+
+- The purpose of this application complies with the [apache2](https://opensource.org/licenses/Apache-2.0) open source license agreement.
+
+
+- [Configure the domain name](./domain-set) or **server security group** opens external network ports for application access.
