@@ -2,8 +2,9 @@
 title: Windmill
 slug: /windmill
 tags:
-  - console
-  - other
+  - Business automation
+  - Workflow
+  - Windmill
 ---
 
 import Meta from './_include/windmill.md';
@@ -11,12 +12,6 @@ import Meta from './_include/windmill.md';
 <Meta name="meta" />
 
 ## Getting started{#guide}
-
-### Initial setup{#wizard}
-
-1. When completed installation of Windmill at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
-
-2. Complete the install wizard step by step
 
 ### Login verification{#verification}
 
@@ -26,18 +21,8 @@ import Meta from './_include/windmill.md';
 
 ## Configuration options{#configs}
 
-- CLI
 - Multilingual (√)
-- SMTP (√)
 
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?
