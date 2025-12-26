@@ -2,8 +2,9 @@
 title: Coze
 slug: /coze
 tags:
-  - console
-  - other
+  - Programming Assistant
+  - AI Agent
+  - Coze
 ---
 
 import Meta from './_include/coze.md';
@@ -18,26 +19,25 @@ import Meta from './_include/coze.md';
 
 2. Complete the install wizard step by step
 
-### Login verification{#verification}
+### Setting Up AI Models
 
-1. Completed installation Coze at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
+The Coze installed via the Websoft9 console cannot yet utilize its core functionality. Follow these steps:
 
-2. Starting to verify it
+1. [Orchestrate the HuggingChat application](https://support.websoft9.com/docs/app-compose#dynamic), edit the `.env` file, and set the following variables (using the Deepseek model as an example):
+
+   ```
+   MODEL_PROTOCOL_0=“ark”
+   MODEL_OPENCOZE_ID_0="100001"
+   MODEL_NAME_0="deepseek"                      # Model name (customizable)
+   MODEL_ID_0="deepseek-reasoner"               # Model ID provided by the vendor
+   MODEL_API_KEY_0=“sk-xxxxxxxxxxxxxxxxxxxxxxx” # API key
+   MODEL_BASE_URL_0="https://api.deepseek.com"  # Model base URL
+   ```
+
+2. After rebuilding the application, create an AI agent to begin operations.
 
 ## Configuration options{#configs}
 
-- CLI
-- Multilingual (√)
-- SMTP (√)
-
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?
