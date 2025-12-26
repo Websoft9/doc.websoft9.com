@@ -18,7 +18,7 @@ import Meta from './_include/adguardhome.md';
 1. When completed installation of AdguardHome at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
 2. Access the `DASHBOARD` page via your browser and complete the initial setup as prompted.
-   - http://ip or domain:DASHBOARD_PORT
+    - http://your_domain_or_ip:DASHBOARD_PORT
 
 3. After initialization, the dashboard page will become inaccessible. Enter the URL in the browser's address bar to access the admin interface.
 
