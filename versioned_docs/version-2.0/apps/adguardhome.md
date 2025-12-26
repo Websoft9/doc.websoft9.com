@@ -2,9 +2,9 @@
 title: AdguardHome
 slug: /adguardhome
 tags:
-  - Web 面板
-  - 可视化
-  - GUI
+  - 广告拦截
+  - 自托管DNS
+  - AdguardHome
 ---
 
 import Meta from './_include/adguardhome.md';
@@ -15,29 +15,17 @@ import Meta from './_include/adguardhome.md';
 
 ### 初始化{#wizard}
 
-Websoft9 控制台安装 AdguardHome 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
+1. Websoft9 控制台安装 AdguardHome 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
 
-### 登录后台{#console}
+2. 浏览器访问 `DASHBOARD` 页面，根据提示完成初始化
+   - http://ip或域名:DASHBOARD_PORT
 
-Websoft9 控制台安装 AdguardHome 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
-
-### 安装插件{#plugin}
+3. 初始化完成后，面板页面不能再访问，浏览器输入访问标签页中的 URL 可进入后台页面
 
 ## 配置选项{#configs}
 
-- CLI
 - 多语言（√）
-- SMTP（√）
-- 插件市场（√）
 
 ## 管理维护{#administrator}
 
-- **重置管理员密码**
-- **更换 URL**
-- **HTTPS 额外设置**
-- **在线备份**
-- **在线升级**
-
 ## 故障
-
-#### 更改域名导致无法访问 ？

@@ -2,8 +2,9 @@
 title: AdguardHome
 slug: /adguardhome
 tags:
-  - console
-  - other
+  - Ad Blocking
+  - Self-Hosted DNS
+  - AdguardHome
 ---
 
 import Meta from './_include/adguardhome.md';
@@ -16,28 +17,15 @@ import Meta from './_include/adguardhome.md';
 
 1. When completed installation of AdguardHome at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
 
-2. Complete the install wizard step by step
+2. Access the `DASHBOARD` page via your browser and complete the initial setup as prompted.
+   - http://ip or domain:DASHBOARD_PORT
 
-### Login verification{#verification}
-
-1. Completed installation AdguardHome at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
-
-2. Starting to verify it
+3. After initialization, the dashboard page will become inaccessible. Enter the URL in the browser's address bar to access the admin interface.
 
 ## Configuration options{#configs}
 
-- CLI
 - Multilingual (√)
-- SMTP (√)
 
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?
