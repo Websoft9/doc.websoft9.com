@@ -2,8 +2,9 @@
 title: Apache Traffic Server
 slug: /trafficserver
 tags:
-  - console
-  - other
+  - HTTP Caching
+  - Reverse Proxy
+  - rafficserver
 ---
 
 import Meta from './_include/trafficserver.md';
@@ -12,32 +13,21 @@ import Meta from './_include/trafficserver.md';
 
 ## Getting started{#guide}
 
-### Initial setup{#wizard}
+### Configuring WordPress Caching with Apache Traffic Server
 
-1. When completed installation of Apache Traffic Server at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. Install both WordPress and Apache Traffic Server applications in the Websoft9 console
+   > Ensure the domain configured for Apache Traffic Server is the final domain accessible to users
 
-2. Complete the install wizard step by step
+2. Edit relevant parameters in the Apache Traffic Server application's `remap.config` file, using the WordPress container name as the connection point
+   ```
+    map / http://wordpress_7l1io/
+   ```
+3. After rebuilding the Apache Traffic Server application, WordPress is now cached by Apache Traffic Server
 
-### Login verification{#verification}
-
-1. Completed installation Apache Traffic Server at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
-
-2. Starting to verify it
+4. Access the domain name bound to Apache Traffic Server to observe significantly improved access speeds 
 
 ## Configuration options{#configs}
 
-- CLI
-- Multilingual (√)
-- SMTP (√)
-
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?
