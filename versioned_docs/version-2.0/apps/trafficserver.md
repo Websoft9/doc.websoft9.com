@@ -2,9 +2,9 @@
 title: Apache Traffic Server
 slug: /trafficserver
 tags:
-  - Web 面板
-  - 可视化
-  - GUI
+  - HTTP 缓存
+  - 反向代理
+  - trafficserver
 ---
 
 import Meta from './_include/trafficserver.md';
@@ -13,31 +13,22 @@ import Meta from './_include/trafficserver.md';
 
 ## 入门指南{#guide}
 
-### 初始化{#wizard}
+### WordPress 设置 Apache Traffic Server 缓存
 
-Websoft9 控制台安装 Apache Traffic Server 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
+1. 分别在 Websoft9 控制台安装 WordPress 和 Apache Traffic Server 两个应用
+   > 确保 Apache Traffic Server 配置的域名是最终提供给用户访问的域名
 
-### 登录后台{#console}
+2. 编辑 Apache Traffic Server 应用的 `remap.config` 文件中相关参数，将 WordPress 容器名作为连接点
+   ```
+    map / http://wordpress_7l1io/
+   ```
 
-Websoft9 控制台安装 Apache Traffic Server 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
+3. 重建 Apache Traffic Server 应用后，Apache Traffic Server 已经将 WordPress 缓存
 
-### 安装插件{#plugin}
+4. 访问 Apache Traffic Server 所绑定的域名，便发现访问速度大大提升   
 
 ## 配置选项{#configs}
 
-- CLI
-- 多语言（√）
-- SMTP（√）
-- 插件市场（√）
-
 ## 管理维护{#administrator}
 
-- **重置管理员密码**
-- **更换 URL**
-- **HTTPS 额外设置**
-- **在线备份**
-- **在线升级**
-
 ## 故障
-
-#### 更改域名导致无法访问 ？
