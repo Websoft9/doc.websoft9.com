@@ -2,8 +2,9 @@
 title: SigNoz
 slug: /signoz
 tags:
-  - console
-  - other
+  - Cloud Native APM 
+  - Observability Platform 
+  - SigNoz
 ---
 
 import Meta from './_include/signoz.md';
@@ -18,26 +19,18 @@ import Meta from './_include/signoz.md';
 
 2. Complete the install wizard step by step
 
-### Login verification{#verification}
+### Monitoring Application 
 
-1. Completed installation SigNoz at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
+1. [Compose SigNoz Application](https://support.websoft9.com/docs/app-compose#dynamic), edit the `docker-compose.yml` file to map the otel-collector ports to the external network 
 
-2. Starting to verify it
+2. Integrate the OpenTelemetry SDK into your application 
+
+3. Configure the OTLP exporter to point to 
+    - gRPC: `http://yourip:4317` 
+    - HTTP: `http://yourip:4318`
 
 ## Configuration options{#configs}
 
-- CLI
-- Multilingual (√)
-- SMTP (√)
-
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?
