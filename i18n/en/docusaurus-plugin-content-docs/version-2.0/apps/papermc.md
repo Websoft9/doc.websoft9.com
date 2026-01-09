@@ -2,8 +2,9 @@
 title: PaperMC
 slug: /papermc
 tags:
-  - console
-  - other
+  - MC private server 
+  - Minecraft 
+  - PaperMC
 ---
 
 import Meta from './_include/papermc.md';
@@ -12,32 +13,18 @@ import Meta from './_include/papermc.md';
 
 ## Getting started{#guide}
 
-### Initial setup{#wizard}
+### Connection Usage 
 
-1. When completed installation of PaperMC at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After installing PaperMC on the Websoft9 console, view the application details through **My Applications**, and obtain the login information in the **Access** tab
 
-2. Complete the install wizard step by step
+2. Install the [PCL](https://pcl.ruanmao.net/) client on your local computer
 
-### Login verification{#verification}
+3. Run the same client version of the starting server on the PCL platform and select to join the **multiplayer** mode 
 
-1. Completed installation PaperMC at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
-
-2. Starting to verify it
+4. Enter the `public IP:port of the server`, click [Join Server], and you can enter the game
 
 ## Configuration options{#configs}
 
-- CLI
-- Multilingual (√)
-- SMTP (√)
-
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?
