@@ -2,8 +2,9 @@
 title: Plex Media Server
 slug: /plex
 tags:
-  - console
-  - other
+  - Media Management Platform 
+  - Online Cinema 
+  - Plex
 ---
 
 import Meta from './_include/plex.md';
@@ -14,30 +15,14 @@ import Meta from './_include/plex.md';
 
 ### Initial setup{#wizard}
 
-1. When completed installation of Plex Media Server at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After installing Plex Media Server on the Websoft9 console, view the application details through **My Applications** and obtain the access URL in the **Access** tab 
 
-2. Complete the install wizard step by step
+2. When accessing the URL in a local browser, it will redirect to the [Plex official website](https://app.plex.tv) to guide you through registration 
 
-### Login verification{#verification}
-
-1. Completed installation Plex Media Server at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
-
-2. Starting to verify it
+3. After completing the registration, you can watch TV and movie programs
 
 ## Configuration options{#configs}
 
-- CLI
-- Multilingual (√)
-- SMTP (√)
-
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?

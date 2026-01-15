@@ -2,8 +2,9 @@
 title: Meilisearch
 slug: /meilisearch
 tags:
-  - console
-  - other
+  - Fuzzy search 
+  - Real-time Indexing 
+  - Meilisearch
 ---
 
 import Meta from './_include/meilisearch.md';
@@ -12,32 +13,30 @@ import Meta from './_include/meilisearch.md';
 
 ## Getting started{#guide}
 
-### Initial setup{#wizard}
+### Add Index 
 
-1. When completed installation of Meilisearch at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After installing Meilisearch on the Websoft9 console, view the application details through **My Applications** and obtain the access URL in the **Access** tab 
 
-2. Complete the install wizard step by step
+2. The browser accesses the URL and currently has no Index 
 
-### Login verification{#verification}
+3. Use the following command to send an index data 
+    ``` 
+    curl \ 
+    -X POST ' http://IP:Port/indexes/movies/documents ' \ 
+    -H 'Content-Type: application/json' \ 
+    --data-binary '[ 
+    { "id": 1, "title": "Justice League", "genre": ["Action", "Adventure"] }, 
+    { "id": 2, "title": "Wonder Woman", "genre": ["Action", "Fantasy"] }, 
+    { "id": 3, "title": "The Avengers", "genre": ["Action", "Sci-Fi"] }, 
+    { "id": 4, "title": "Inception", "genre": ["Action", "Sci-Fi", "Thriller"] }, 
+    { "id": 5, "title": "The Dark Knight", "genre": ["Action", "Crime", "Drama"] } 
+    ]' 
+    ``` 
 
-1. Completed installation Meilisearch at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
-
-2. Starting to verify it
+4. Returning to the page again, the index data can be displayed normally
 
 ## Configuration options{#configs}
 
-- CLI
-- Multilingual (√)
-- SMTP (√)
-
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?
