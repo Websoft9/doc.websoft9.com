@@ -4,7 +4,7 @@ slug: /safeline
 tags:
   - Web 防火墙
   - Web 安全
-  - SafeLine
+  - 雷池
 ---
 
 import Meta from './_include/safeline.md';
