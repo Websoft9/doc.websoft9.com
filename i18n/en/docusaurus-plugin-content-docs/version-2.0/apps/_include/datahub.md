@@ -1,4 +1,4 @@
-[DataHub](https://datahubproject.io/) is **The Metadata Platform for the Modern Data Stack**, used for Master Data . DataHub's extensible metadata platform enables data discovery, data observability and federated governance that helps tame the complexity of your data ecosystem.
+[DataHub](https://datahubproject.io/) is **The Metadata Platform for the Modern Data Stack**, used for Master Data . DataHub is an open-source platform that supports data discovery, governance, and sharing, promoting data transparency and collaboration while enhancing data utilization efficiency.
 
 
 ![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/datahub/datahub-gui-websoft9.png)

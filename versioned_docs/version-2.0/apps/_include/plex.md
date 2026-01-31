@@ -1,4 +1,4 @@
-[Plex Media Server](https://www.plex.tv/media-server-downloads) 是一个 **您的个人媒体流平台**，它被用于 视频服务  等场景。 Plex是一个个人媒体流平台，让您能够跨多个设备组织、流式传输和享受您的媒体收藏，包括直播电视、免费电影和高级DVR功能。
+[Plex Media Server](https://www.plex.tv/media-server-downloads) 是一个 **个人媒体流平台**，它被用于 视频服务  等场景。 Plex是一个个人媒体流平台，让您能够跨多个设备组织、流式传输和享受您的媒体收藏，包括直播电视、免费电影和高级DVR功能。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/plex/plex-gui-websoft9.png)

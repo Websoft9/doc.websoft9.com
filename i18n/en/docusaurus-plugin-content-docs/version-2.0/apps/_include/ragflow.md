@@ -1,4 +1,4 @@
-[RAGFlow](https://ragflow.io) is **RAGFlow is an open-source RAG (Retrieval-Augmented Generation) engine based on deep document understanding.**, used for Business automation Operations Automation . RAGFlow is an open-source RAG (Retrieval-Augmented Generation) engine based on deep document understanding.
+[RAGFlow](https://ragflow.io) is **open-source RAG (Retrieval-Augmented Generation) engine based on deep document understanding**, used for Business automation Operations Automation . RAGFlow is an open-source RAG (Retrieval-Augmented Generation) engine based on deep document understanding.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/ragflow/ragflow-gui-websoft9.png)

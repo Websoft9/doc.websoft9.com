@@ -1,7 +1,7 @@
 [Dify](https://dify.ai/) 是一个 **LLM 应用程序开发平台**，它被用于 AI 智能体/聊天/知识检索 AI DevOps  等场景。Dify 的直观界面结合了 AI 工作流程、RAG 管道、代理功能、模型管理、可观测性功能等，让您可以快速从原型到生产。
 
 
-![Dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/dify/dify-gui-websoft9.webp)
+![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/dify/dify-gui-websoft9.webp)
 
 
 ## 准备
