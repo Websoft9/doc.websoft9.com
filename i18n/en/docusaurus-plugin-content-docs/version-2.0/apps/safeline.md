@@ -2,8 +2,9 @@
 title: SafeLine
 slug: /safeline
 tags:
-  - console
-  - other
+  - Web Firewall 
+  - Web Security 
+  - SafeLine
 ---
 
 import Meta from './_include/safeline.md';
@@ -12,32 +13,16 @@ import Meta from './_include/safeline.md';
 
 ## Getting started{#guide}
 
-### Initial setup{#wizard}
-
-1. When completed installation of SafeLine at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
-
-2. Complete the install wizard step by step
-
 ### Login verification{#verification}
 
 1. Completed installation SafeLine at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
 
-2. Starting to verify it
+2. Enter the SafeLine main container and execute `resetadmin` to view the username and password 
+
+3. Enter the URL in the browser and log in to access the SafeLine console
 
 ## Configuration options{#configs}
 
-- CLI
-- Multilingual (√)
-- SMTP (√)
-
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?

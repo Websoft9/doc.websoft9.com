@@ -2,9 +2,9 @@
 title: SafeLine
 slug: /safeline
 tags:
-  - Web 面板
-  - 可视化
-  - GUI
+  - Web 防火墙
+  - Web 安全
+  - SafeLine
 ---
 
 import Meta from './_include/safeline.md';
@@ -13,31 +13,16 @@ import Meta from './_include/safeline.md';
 
 ## 入门指南{#guide}
 
-### 初始化{#wizard}
+### 登录控制台{#console}
 
-Websoft9 控制台安装 SafeLine 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
+1. Websoft9 控制台安装 SafeLine 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取访问 URL
 
-### 登录后台{#console}
+2. 进入 SafeLine 主容器，执行 `resetadmin`查看用户名和密码
 
-Websoft9 控制台安装 SafeLine 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
-
-### 安装插件{#plugin}
+3. 浏览器输入访问 URL，登陆即可使用 SafeLine 控制台
 
 ## 配置选项{#configs}
 
-- CLI
-- 多语言（√）
-- SMTP（√）
-- 插件市场（√）
-
 ## 管理维护{#administrator}
 
-- **重置管理员密码**
-- **更换 URL**
-- **HTTPS 额外设置**
-- **在线备份**
-- **在线升级**
-
 ## 故障
-
-#### 更改域名导致无法访问 ？
