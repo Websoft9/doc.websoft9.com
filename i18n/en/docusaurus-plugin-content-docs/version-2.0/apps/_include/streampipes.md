@@ -1,4 +1,4 @@
-[Apache StreamPipes](https://streampipes.apache.org/) is **Connect, analyze and explore IoT data streams**, used for IoT . Apache StreamPipes is a self-service Industrial IoT toolbox to enable non-technical users to connect, analyze and explore IoT data streams.
+[Apache StreamPipes](https://streampipes.apache.org/) is **Connect, analyze and explore IoT data streams**, used for Device Management and Monitor . Apache StreamPipes is a self-service Industrial IoT toolbox to enable non-technical users to connect, analyze and explore IoT data streams.
 
 
 ![gui](https://libs.websoft9.com/Websoft9/DocsPicture/zh/streampipes/streampipes-gui-websoft9.png)

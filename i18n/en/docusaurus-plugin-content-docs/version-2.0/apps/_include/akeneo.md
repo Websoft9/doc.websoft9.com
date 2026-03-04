@@ -1,4 +1,4 @@
-[Akeneo](https://www.akeneo.com/) is **Effective management of product information**, used for Master Data eCommerce . Enable small and medium-sized businesses to start centralizing, managing, enriching, and distributing their product information at low cost.
+[Akeneo](https://www.akeneo.com/) is **Effective management of product information**, used for Master Data eCommerce . Akeneo is an open-source Product Information Management (PIM) system that helps businesses centrally manage and optimize product information.
 
 
 ![GUI](https://libs.websoft9.com/Websoft9/DocsPicture/zh/akeneo/akeneo-main-websoft9.png)

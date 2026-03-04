@@ -2,9 +2,9 @@
 title: SigNoz
 slug: /signoz
 tags:
-  - Web 面板
-  - 可视化
-  - GUI
+  - 云原生 APM
+  - 观测性平台
+  - SigNoz
 ---
 
 import Meta from './_include/signoz.md';
@@ -15,29 +15,22 @@ import Meta from './_include/signoz.md';
 
 ### 初始化{#wizard}
 
-Websoft9 控制台安装 SigNoz 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
+1. Websoft9 控制台安装 SigNoz 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取 URL  
 
-### 登录后台{#console}
+2. 本地浏览器访问 URL，注册后即可使用
 
-Websoft9 控制台安装 SigNoz 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
+### 监控应用
 
-### 安装插件{#plugin}
+1. [编排 SigNoz 应用](https://support.websoft9.com/docs/app-compose#dynamic)，编辑 `docker-compose.yml`文件，映射 otel-collector 的端口到外网
+
+2. 使用 OpenTelemetry SDK [集成](https://signoz.io/docs/instrumentation/)到你的应用中
+
+3. 配置 OTLP 导出器指向
+    - gRPC: `http://yourip:4317`
+    - HTTP: `http://yourip:4318`
 
 ## 配置选项{#configs}
 
-- CLI
-- 多语言（√）
-- SMTP（√）
-- 插件市场（√）
-
 ## 管理维护{#administrator}
 
-- **重置管理员密码**
-- **更换 URL**
-- **HTTPS 额外设置**
-- **在线备份**
-- **在线升级**
-
 ## 故障
-
-#### 更改域名导致无法访问 ？

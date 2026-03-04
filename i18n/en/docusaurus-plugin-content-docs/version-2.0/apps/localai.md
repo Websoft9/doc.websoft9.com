@@ -2,8 +2,9 @@
 title: LocalAI
 slug: /localai
 tags:
-  - console
-  - other
+  - Smart Assistant
+  - Chatbot
+  - LocalAI
 ---
 
 import Meta from './_include/localai.md';
@@ -12,32 +13,18 @@ import Meta from './_include/localai.md';
 
 ## Getting started{#guide}
 
-### Initial setup{#wizard}
+### Configuring the AI Model
 
-1. When completed installation of LocalAI at **Websoft9 Console**, get the applicaiton's **Overview** and **Access** information from **My Apps**  
+1. After installing LocalAI in the Websoft9 console, view the application details under **My Applications**. Obtain the access URL from the **Access** tab.
 
-2. Complete the install wizard step by step
+2. Enter the access URL in your browser. You cannot start AI chat immediately upon entering; you must configure the AI model first.
 
-### Login verification{#verification}
+3. Click the [Browse Model Gallery] button on the page, select a model to download and install (recommended: lfm2.5-1.2b-nova-function-calling—it's compact and ideal for demonstrations).
 
-1. Completed installation LocalAI at Websoft9 console, get the applicaiton's overview and access credentials from **My Apps**  
-
-2. Starting to verify it
+4. Once configured, you can begin chatting.
 
 ## Configuration options{#configs}
 
-- CLI
-- Multilingual (√)
-- SMTP (√)
-
 ## Administer{#administrator}
 
-- **Password recover**
-- **Change URL**
-- **HTTPS**
-- **Online backup**
-- **Online upgrade**
-
 ## Troubleshooting{#troubleshooting}
-
-#### 502 failed code?

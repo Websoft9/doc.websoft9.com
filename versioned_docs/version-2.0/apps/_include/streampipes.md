@@ -1,4 +1,4 @@
-[Apache StreamPipes](https://streampipes.apache.org/) 是一个 **工业物联网数据流工具**，它被用于 物联网  等场景。Apache StreamPipes 是一个自助式工业物联网工具箱，使非技术用户能够连接、分析和探索物联网数据流。
+[Apache StreamPipes](https://streampipes.apache.org/) 是一个 **工业物联网数据流工具**，它被用于 设备管理与监控  等场景。Apache StreamPipes 是一个自助式工业物联网工具箱，使非技术用户能够连接、分析和探索物联网数据流。
 
 
 ![界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/streampipes/streampipes-gui-websoft9.png)

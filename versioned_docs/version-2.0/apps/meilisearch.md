@@ -2,9 +2,9 @@
 title: Meilisearch
 slug: /meilisearch
 tags:
-  - Web 面板
-  - 可视化
-  - GUI
+  - 模糊搜索
+  - 实时索引
+  - Meilisearch
 ---
 
 import Meta from './_include/meilisearch.md';
@@ -13,31 +13,31 @@ import Meta from './_include/meilisearch.md';
 
 ## 入门指南{#guide}
 
-### 初始化{#wizard}
+### 添加索引
 
-Websoft9 控制台安装 Meilisearch 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
+1. Websoft9 控制台安装 Meilisearch 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取访问 URL
 
-### 登录后台{#console}
+2. 浏览器访问 URL，目前还没有任何 Index
 
-Websoft9 控制台安装 Meilisearch 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
+3. 使用下列命令发送一个索引数据
 
-### 安装插件{#plugin}
+    ```
+    curl \
+      -X POST 'http://IP:Port/indexes/movies/documents' \
+      -H 'Content-Type: application/json' \
+      --data-binary '[
+        { "id": 1, "title": "Justice League", "genre": ["Action", "Adventure"] },
+        { "id": 2, "title": "Wonder Woman", "genre": ["Action", "Fantasy"] },
+        { "id": 3, "title": "The Avengers", "genre": ["Action", "Sci-Fi"] },
+        { "id": 4, "title": "Inception", "genre": ["Action", "Sci-Fi", "Thriller"] },
+        { "id": 5, "title": "The Dark Knight", "genre": ["Action", "Crime", "Drama"] }
+      ]'
+    ```
+
+4. 再次回到页面，索引数据可以正常显示了
 
 ## 配置选项{#configs}
 
-- CLI
-- 多语言（√）
-- SMTP（√）
-- 插件市场（√）
-
 ## 管理维护{#administrator}
 
-- **重置管理员密码**
-- **更换 URL**
-- **HTTPS 额外设置**
-- **在线备份**
-- **在线升级**
-
 ## 故障
-
-#### 更改域名导致无法访问 ？

@@ -2,9 +2,9 @@
 title: PaperMC
 slug: /papermc
 tags:
-  - Web 面板
-  - 可视化
-  - GUI
+  - MC私服
+  - 我的世界
+  - PaperMC
 ---
 
 import Meta from './_include/papermc.md';
@@ -13,31 +13,18 @@ import Meta from './_include/papermc.md';
 
 ## 入门指南{#guide}
 
-### 初始化{#wizard}
+### 连接使用
 
-Websoft9 控制台安装 PaperMC 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
+1. Websoft9 控制台安装 PaperMC 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。
 
-### 登录后台{#console}
+2. 本地电脑安装 [PCL](https://pcl.ruanmao.net/) 客户端
 
-Websoft9 控制台安装 PaperMC 后，通过 **我的应用** 查看应用详情，在 **访问** 标签页中获取登录信息。  
+3. 在 PCL 平台上运行启动服务器相同的客户端版本， 选择加入**多人游戏** 模式
 
-### 安装插件{#plugin}
+4. 输入 `服务器公网 IP:port` ，点击[加入服务器] 即可进入游戏
 
 ## 配置选项{#configs}
 
-- CLI
-- 多语言（√）
-- SMTP（√）
-- 插件市场（√）
-
 ## 管理维护{#administrator}
 
-- **重置管理员密码**
-- **更换 URL**
-- **HTTPS 额外设置**
-- **在线备份**
-- **在线升级**
-
 ## 故障
-
-#### 更改域名导致无法访问 ？
