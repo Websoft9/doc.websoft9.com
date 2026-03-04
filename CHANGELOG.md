@@ -32,6 +32,6 @@
 
 ---
 
-<!-- 版本链接占位 -->
-[Unreleased]: https://github.com/Websoft9/doc.websoft9.com/compare/HEAD...HEAD
+<!-- 版本链接：在发布第一个 release tag 后补充，格式如下 -->
+<!-- [Unreleased]: https://github.com/Websoft9/doc.websoft9.com/compare/v1.0.0...HEAD -->
 

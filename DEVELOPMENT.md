@@ -157,7 +157,7 @@ git checkout dev
 git pull origin dev
 
 # 生成 App 文档骨架（根据现有模板创建文件）
-python template/create_app.py {appname}
+python3 template/create_app.py --appname {appname} --trademark {AppTrademark} --i18n zh
 ```
 
 生成的文件：

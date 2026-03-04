@@ -31,7 +31,7 @@ jobs:
             --exclude-path build
             versioned_docs/
             i18n/
-          fail: false
+          fail: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

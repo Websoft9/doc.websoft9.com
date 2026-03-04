@@ -29,6 +29,7 @@ on:
       - 'src/**'
       - 'static/**'
       - '**.js'
+      - '.github/workflows/**'
       - '!docs/_list'
 
 concurrency:
