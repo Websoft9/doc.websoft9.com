@@ -1,44 +1,57 @@
-# This workflow is triggered on pushes and pull requests to any branch.
-# The job name includes the branch name dynamically.
+# 文档构建与部署工作流
+# - dev 分支：只构建，不部署（用于验证 PR 不破坏构建）
+# - main 分支：构建 + 部署到 Cloudflare Pages（生产环境）
 
 name: Docs Build and Upload to Cloudflare
 
-on: 
+on:
   workflow_dispatch:
   push:
     branches:
       - dev
       - main
-    paths: 
+    paths:
       - 'docs/**'
       - 'versioned_docs/**'
       - 'i18n/**'
       - 'src/**'
       - 'static/**'
       - '**.js'
+      - '.github/workflows/**'
       - '!docs/_list'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
     name: Build on branch ${{ github.ref_name }}
     runs-on: ubuntu-latest
-    #if: false # stop steps
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v4
+
     - uses: actions/setup-node@v4
       with:
-        node-version: 20        
+        node-version: 20
+
+    - name: Cache yarn dependencies
+      uses: actions/cache@v4
+      with:
+        path: node_modules
+        key: ${{ runner.os }}-yarn-${{ hashFiles('**/package.json') }}
+        restore-keys: |
+          ${{ runner.os }}-yarn-
+
     - name: Docusaurus build
       run: |
         yarn install
         yarn run build
       env:
         CI: true
-        
-    - name: Debug
-      run: ls
 
     - name: Create apidocs directory and add files
+      continue-on-error: true
       run: |
         mkdir -p build/apidocs
         cd build/apidocs
@@ -46,29 +59,26 @@ jobs:
         wget -O README.md https://websoft9.github.io/websoft9/apphub/apidocs/README.md
         wget -O index.html https://websoft9.github.io/websoft9/apphub/apidocs/index.html
         docker run -d --name apphub -p 8080:8080 websoft9dev/apphub:latest
-          sleep 5
-          max_attempts=10
-          url="http://localhost:8080/openapi.json"
-          for attempt in $(seq 1 $max_attempts); do
-            echo "Attempt #$attempt to download $url..."
-            if wget -O openapi.json "$url"; then
-              echo "Successfully downloaded $url"
-              break
-            else
-              echo "Failed to download $url. Waiting for 5 seconds before retry..."
-              sleep 5
-            fi
-          done
+        sleep 5
+        max_attempts=10
+        url="http://localhost:8080/openapi.json"
+        for attempt in $(seq 1 $max_attempts); do
+          echo "Attempt #$attempt to download $url..."
+          if wget -O openapi.json "$url"; then
+            echo "Successfully downloaded $url"
+            break
+          else
+            echo "Failed to download $url. Waiting for 5 seconds before retry..."
+            sleep 5
+          fi
+        done
 
     - name: Publish to Cloudflare Pages
+      if: github.ref == 'refs/heads/main'
       uses: cloudflare/pages-action@v1
       with:
         apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         accountId: eb79f13320db531d8cf1f3720966b695
         projectName: doc-websoft9-com
         directory: build
-        # Optional: Enable this if you want to have GitHub Deployments triggered
         gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-        # Optional: Switch what branch you are publishing to.
-        # By default this will be the branch which triggered this workflow
-        # branch: dev
