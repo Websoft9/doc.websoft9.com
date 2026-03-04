@@ -64,7 +64,7 @@ template/
 
 ### 1. Jinja2 App 模板（`template/meta/`）
 
-由 `app_from_contentful.yml` 自动调用，从 Contentful CMS 生成 App 文档的 `_include/` 元数据片段和 App 文档骨架。
+由 `sync-contentful.yml` 自动调用，从 Contentful CMS 生成 App 文档的 `_include/` 元数据片段和 App 文档骨架。
 
 - `zh_head.jinja2` / `en_head.jinja2` — 生成 `apps/_include/{appname}.md`
 - `zh_app.jinja2` / `en_app.jinja2` — 生成 `apps/{appname}.md` 骨架
@@ -83,16 +83,16 @@ template/
 
 | 工作流 | 触发条件 | 用途 |
 |--------|----------|------|
-| `build_doc.yml` | push to `dev`/`main`，`workflow_dispatch` | 构建文档并部署到 Cloudflare Pages（main 分支）|
-| `check.yml` | push to `dev`，PR to `dev`，`workflow_dispatch` | broken-links 检查（PR 质量门）|
-| `app_from_contentful.yml` | `workflow_dispatch`（管理员手动触发）| 从 Contentful 生成 App 元数据文档 |
-| `json2md.yml` | `workflow_dispatch`，`repository_dispatch: applist_dev_event` | 从制品生成 App 目录列表（由主仓库 release 触发）|
-| `update.yml` | `workflow_dispatch` | 升级 Docusaurus 依赖并创建 PR |
+| `ci.yml` | push to `dev`/`main`，PR to `dev`，`workflow_dispatch` | CI 主流程：外链检查（check job）+ 文档构建（build job）；main 分支额外部署到 Cloudflare Pages |
+| `sync-contentful.yml` | `workflow_dispatch`（管理员手动触发）| 从 Contentful CMS 生成 App 元数据文档（`_include/`）和文档骨架 |
+| `sync-catalog.yml` | `workflow_dispatch`，`repository_dispatch: applist_dev_event` | 从制品生成 App 目录列表（由主仓库 release 触发）|
 
-**分支行为差异（`build_doc.yml`）：**
+**分支行为差异（`ci.yml`）：**
 
-- `dev` 分支：执行构建验证，**不部署**到生产环境
-- `main` 分支：构建 + 部署到 Cloudflare Pages
+- `dev` 分支 / PR：先运行 `check` job（lychee 外链检查），通过后运行 `build` job（构建验证），**不部署**
+- `main` 分支：跳过 `check` job，直接运行 `build` job + 部署到 Cloudflare Pages
+
+> **注**：Docusaurus 依赖升级由 [Dependabot](https://docs.github.com/en/code-security/dependabot) 自动管理（每周一提 PR），无需手动触发。
 
 ---
 
@@ -143,7 +143,7 @@ graph LR
 > **此步骤需要仓库 Write 权限 + `CONTENTFUL_ACCESS_TOKEN`，普通贡献者无法自行完成。**
 
 1. 在 [Contentful CMS](https://app.contentful.com/) 中录入新 App 的产品数据
-2. 在 GitHub Actions 页面手动触发 `app_from_contentful.yml`
+2. 在 GitHub Actions 页面手动触发 `sync-contentful.yml`
 3. 确认以下两个文件已自动生成并 commit 到 `dev` 分支：
    - `versioned_docs/version-2.0/apps/_include/{appname}.md`
    - `i18n/en/docusaurus-plugin-content-docs/version-2.0/apps/_include/{appname}.md`

@@ -2,7 +2,7 @@
 # 触发方式：手动触发 或 repository_dispatch（事件名: applist_dev_event）。
 # repository_dispatch 由 Websoft9 主仓库 release 时自动触发。
 
-name: Generate Apps list for docs
+name: Sync App Catalog
 
 on:
   workflow_dispatch:
@@ -10,7 +10,7 @@ on:
     types: [applist_dev_event]
 
 jobs:
-  build:
+  generate:
     runs-on: ubuntu-latest
 
     steps:
@@ -31,32 +31,18 @@ jobs:
             -o media-latest.zip https://artifact.websoft9.com/release/websoft9/plugin/media/media-latest.zip
           unzip media-latest.zip "media/json/product_zh.json" "media/json/product_en.json" "media/json/catalog_zh.json" "media/json/catalog_en.json" -d ./extracted
 
-      - name: Generate Markdown for app catalog README.mdx(zh)
+      - name: Generate all Markdown files
         run: |
-          python builds/json2md.py --json_file ./extracted/media/json/product_zh.json --output_file versioned_docs/version-2.0/apps/README.mdx --ignore-list template/meta/skip_applink.json
-
-      - name: Generate Markdown for app catalog README.mdx(en)
-        run: |
-          python builds/json2md.py --json_file ./extracted/media/json/product_en.json --output_file i18n/en/docusaurus-plugin-content-docs/version-2.0/apps/README.mdx --ignore-list template/meta/skip_applink.json
-
-      - name: Generate Markdown for allcatalogs.md(zh)
-        run: |
+          # zh
+          python builds/gen_app_index.py --json_file ./extracted/media/json/product_zh.json --output_file versioned_docs/version-2.0/apps/README.mdx --ignore-list template/meta/skip_applink.json
           python builds/gen_allcatalogs.py --json_file ./extracted/media/json/catalog_zh.json --output_file versioned_docs/version-2.0/apps/_include/allcatalogs.md
-
-      - name: Generate Markdown for allcatalogs.md(en)
-        run: |
-          python builds/gen_allcatalogs.py --json_file ./extracted/media/json/catalog_en.json --output_file i18n/en/docusaurus-plugin-content-docs/version-2.0/apps/_include/allcatalogs.md
-
-      - name: Generate Markdown for allapps.md(zh)
-        run: |
           python builds/gen_allapps.py --json_file ./extracted/media/json/product_zh.json --output_file versioned_docs/version-2.0/apps/_include/allapps.md
-
-      - name: Generate Markdown for allapps.md(en)
-        run: |
+          # en
+          python builds/gen_app_index.py --json_file ./extracted/media/json/product_en.json --output_file i18n/en/docusaurus-plugin-content-docs/version-2.0/apps/README.mdx --ignore-list template/meta/skip_applink.json
+          python builds/gen_allcatalogs.py --json_file ./extracted/media/json/catalog_en.json --output_file i18n/en/docusaurus-plugin-content-docs/version-2.0/apps/_include/allcatalogs.md
           python builds/gen_allapps.py --json_file ./extracted/media/json/product_en.json --output_file i18n/en/docusaurus-plugin-content-docs/version-2.0/apps/_include/allapps.md
 
       - name: Commit and push changes
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Update Product Catalog Markdown
-
