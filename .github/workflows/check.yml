@@ -1,30 +1,45 @@
-# ProxyCheck: Read dockerhub proxy URL from docs/reference/_include/dockerhub-proxy.md and test the network speed
-# Spellcheck
+# 文档质量检查工作流
+# - push 到 dev 分支时触发
+# - 向 dev 分支提 PR 时触发（作为合并前的强制质量门）
+# 功能：使用 lychee 检查文档中的 broken links，结果输出为 artifact
 
 name: Check Action
 
-on: 
+on:
   workflow_dispatch:
   push:
     branches:
       - dev
-      
+  pull_request:
+    branches:
+      - dev
+
 jobs:
+  broken-links:
+    name: Broken Links Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
 
-  # Spellcheck:
-  #   name: Spellcheck
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #   - uses: actions/checkout@v3
-  #   - uses: rojopolis/spellcheck-github-actions@0.41.0
-  #     name: Spellcheck
-  #     with:
-  #       source_files: i18n/en/docusaurus-plugin-content-docs/current/**/*.md
-  #       task_name: Markdown
-  #       output_file: spellcheck-output.txt
+      - name: Check broken links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --verbose
+            --no-progress
+            --exclude-path node_modules
+            --exclude-path build
+            versioned_docs/
+            i18n/
+          fail: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  #   - uses: actions/upload-artifact@v3
-  #     if: '!cancelled()' # Do not upload artifact if job was cancelled
-  #     with:
-  #       name: Spellcheck Output
-  #       path: spellcheck-output.txt
+      - name: Upload lychee results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lychee-report
+          path: lychee/out.md
+          retention-days: 7
+
