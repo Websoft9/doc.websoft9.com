@@ -19,7 +19,7 @@
 
 - `README.md` 全面重写：新增 CI badge、Tech Stack badge、快速开始、项目结构和文档链接
 - `docs/readme.md` 更新为 next 版本说明
-- `build_doc.yml`：升级 `checkout@master` → `@v4`，新增 yarn cache、concurrency 控制，删除调试步骤，修复 Docker 缩进，区分 dev/main 分支部署行为，apidocs 步骤设为 `continue-on-error: true`
+- `build_doc.yml`：升级 `checkout@master` → `@v4`，新增 yarn cache、concurrency 控制，删除调试步骤，修复 Docker 缩进，区分 dev/main 分支部署行为，apidocs 步骤设为 `continue-on-error: true`，新增 `pull_request` 触发（PR 构建质量门）
 - `check.yml`：全量重写，恢复 broken-links 检查（`lychee-action@v2`），新增 PR 触发
 - `app_from_contentful.yml`：升级 `checkout@v2` → `@v4`、`setup-python@v2` → `@v5`，新增 pip cache，移除 `--override` 参数
 - `json2md.yml`：升级 `checkout@v2` → `@v4`、`setup-python@v2` → `@v5`，新增 pip cache，curl 新增重试参数

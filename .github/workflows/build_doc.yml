@@ -19,6 +19,17 @@ on:
       - '**.js'
       - '.github/workflows/**'
       - '!docs/_list'
+  pull_request:
+    branches:
+      - dev
+    paths:
+      - 'docs/**'
+      - 'versioned_docs/**'
+      - 'i18n/**'
+      - 'src/**'
+      - 'static/**'
+      - '**.js'
+      - '!docs/_list'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
