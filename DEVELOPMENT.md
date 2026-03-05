@@ -40,7 +40,7 @@ yarn run write-translations -- --locale zh-cn
 yarn upgrade @docusaurus/core@latest @docusaurus/preset-classic@latest
 ```
 
-> **注意**：`yarn.lock` 已在 `.gitignore` 中，**不提交**。CI 使用 `package.json` hash 作为缓存键。
+> **注意**：`yarn.lock` 已在 `.gitignore` 中，**不提交**。CI 通过 `actions/cache@v4` + `hashFiles('**/package.json')` 缓存 `node_modules/`。
 
 ---
 
