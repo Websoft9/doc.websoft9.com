@@ -18,7 +18,7 @@ import Meta from './\_include/prestashop.md';
 
 1. After completing the installation of PrestaShop on the **Websoft9 Console**, retrieve the application's **Overview** and **Access** information from **My Apps**.
 
-2. Log in to the PrestaShop backend:
+2. Log in to the PrestaShop backend(/psadmin):
    ![](./assets/prestashop-backend-websoft9.png)
 
 3. Click on the **Shop Parameters > Traffic & SEO > SEO & URLs** item on the left menu and scroll down to the **Set shop URL** on the page
