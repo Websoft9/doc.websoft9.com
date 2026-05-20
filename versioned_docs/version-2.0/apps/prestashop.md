@@ -18,7 +18,7 @@ import Meta from './_include/prestashop.md';
 
 1. Websoft9 控制台安装 Prestashop 后，通过 "我的应用" 查看应用详情，在 "访问" 标签页中获取登录信息。 
 
-2. 登录到 Prestashop 后台
+2. 登录到 Prestashop 后台(/psadmin)
    ![](./assets/prestashop-backend-websoft9.png)
 
 3. 点击左侧菜单 **Shop Parameters > Traffic & SEO > SEO & URLs**，在页面中下拉到 **Set shop URL** 设置项
