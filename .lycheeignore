@@ -1,0 +1,19 @@
+# lychee broken-links 检查排除规则
+# 以下 pattern 匹配的链接将不被检查
+
+# 本地开发地址
+localhost
+127.0.0.1
+
+# CDN 图片域名（外网请求不稳定，大量图片链接）
+libs.websoft9.com
+
+# Algolia 搜索相关（动态 URL 中出现的 appId 和 indexName）
+NA4GDUSQ4H
+support-websoft9
+
+# 内部支持站点
+support.websoft9.com
+
+# 文档模板占位链接
+example.com

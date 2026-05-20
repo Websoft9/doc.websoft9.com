@@ -1,3 +1,7 @@
+# 从 Contentful CMS 自动生成 App 应用的元数据文档（_include/）和 App 文档骨架。
+# 触发方式：管理员手动触发（workflow_dispatch），需要仓库 Write 权限 + CONTENTFUL_ACCESS_TOKEN。
+# 注意：该 workflow 生成的 _include/ 文件不应手工修改，属于自动管理内容。
+
 name: Generate Apps header and appdocs files
 
 on:
@@ -8,12 +12,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
       with:
         fetch-depth: 0
 
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v5
       with:
         python-version: '3.x'
 
@@ -26,9 +30,9 @@ jobs:
       env:
         CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_GRAPHQLTOKEN }}
       run: |
-        python builds/gen_md_from_contenful.py template/meta/zh_head.jinja2  versioned_docs/version-2.0/apps/_include --override
-        python builds/gen_md_from_contenful.py template/meta/en_head.jinja2 i18n/en/docusaurus-plugin-content-docs/version-2.0/apps/_include --override
-        python builds/gen_md_from_contenful.py template/meta/zh_app.jinja2  versioned_docs/version-2.0/apps --ignore-list template/meta/skip_file.json
+        python builds/gen_md_from_contenful.py template/meta/zh_head.jinja2 versioned_docs/version-2.0/apps/_include
+        python builds/gen_md_from_contenful.py template/meta/en_head.jinja2 i18n/en/docusaurus-plugin-content-docs/version-2.0/apps/_include
+        python builds/gen_md_from_contenful.py template/meta/zh_app.jinja2 versioned_docs/version-2.0/apps --ignore-list template/meta/skip_file.json
         python builds/gen_md_from_contenful.py template/meta/en_app.jinja2 i18n/en/docusaurus-plugin-content-docs/version-2.0/apps --ignore-list template/meta/skip_file.json
         
     - name: Commit and push changes

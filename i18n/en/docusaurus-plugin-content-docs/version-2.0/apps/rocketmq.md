@@ -15,7 +15,7 @@ import Meta from './\_include/rocketmq.md';
 
 ### RocketMQ Verification {#verification}
 
-1. After completing the installation of RocketMQ in the **Websoft9 Console**, retrieve the application's **Overview** and **Container** information from **My Apps**.
+1. Open TCP port 8080 and 8081 on the server.‌After completing the installation of RocketMQ in the **Websoft9 Console**, retrieve the application's **Overview** and **Container** information from **My Apps**.
 
 2. Access the **nameserver** container and run the following command to view the cluster list:
 
