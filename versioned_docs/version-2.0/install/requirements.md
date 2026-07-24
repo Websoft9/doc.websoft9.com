@@ -17,7 +17,7 @@ title: 要求
 
 ## 操作系统{#os}
 
-Websoft9 支持在 Red Hat, CentOS, Debian, Ubuntu 等[主流 Linux 发行版](https://websoft9.github.io/websoft9/version.json)上安装。
+Websoft9 支持在 Red Hat, CentOS, Debian, Ubuntu 等[主流 Linux 发行版](https://artifact.websoft9.com/websoft9/release/version.json)上安装。
 
 > 暂不支持 Windows 和 macOS 等操作系统  
 
@@ -30,9 +30,7 @@ Websoft9 支持[全局域名](./domain-set#wildcard)。它一次设置后，所�
 
 ## 软件
 
-Python 是安装 Websoft9 的必选项，所需版本：Python 3.8 以上 + pip。  
-
-其他组件均通过在线安装脚本自动安装。   
+安装脚本会自动处理所需依赖（Docker 等），无需手动安装额外软件。
 
 ## 客户端浏览器
 

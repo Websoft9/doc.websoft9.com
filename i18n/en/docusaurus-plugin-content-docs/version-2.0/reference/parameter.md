@@ -11,11 +11,9 @@ Various parameters such as server, network, port and path involved in Websoft9 a
 
 ### Websoft9 Console
 
-- **Websoft9 installation configuration directory**: */data/websoft9/source*
-- **Websoft9 Docker Compose directory**: */data/websoft9/source/docker*
-- **Websoft9 Systemd configuration directory**: */opt/websoft9  
-- **Websoft9 plugin directory**: */usr/share/cockpit  
-- **Websoft9 backup directory**: */data/websoft9/vl_backup
+- **Websoft9 installation directory**: */opt/websoft9*
+- **Websoft9 data directory**: */opt/websoft9/data*  
+- **Websoft9 backup directory**: */opt/websoft9/data/backups*
 - **Websoft9 application persistent storage directory**: */var/lib/docker/volumes* 
 
 ### Docker on the server
@@ -61,24 +59,19 @@ You need to know Systemd and Docker services for administrator.
 
 ### Systemd{#systemd}
 
-Three Systemd services: **websoft9, docker, cockpit**
+Websoft9 runs as a Docker container. The main Systemd service is Docker:
 
 ```
-sudo systemctl start | top | restart | status docker
-sudo systemctl start | top | restart | status cockpit
-sudo systemctl start | top | restart | status websoft9
+sudo systemctl start | stop | restart | status docker
 ```
 
 ### Docker{#docker-services}
 
-The **Containers** function module of the Websoft9 Console hides the Websoft9 containers, so you need to query them with the command `docker ps | grep websoft9-`. 
+Websoft9 runs as a single container. Query it with `docker ps | grep websoft9`:
 
 ```
-$ docker ps | grep websoft9-
-8039d81eb0a1   websoft9dev/apphub:0.0.6                 "/websoft9/script/en…"   32 hours ago   Up 32 hours             8080-8081/tcp                                                                      websoft9-apphub
-cc55650540e6   websoft9dev/deployment:2.19.0            "/init_portainer"        32 hours ago   Up 32 hours (healthy)   8000/tcp, 9000/tcp, 9443/tcp                                                       websoft9-deployment
-527a07615809   websoft9dev/git:1.20.4                   "/usr/bin/entrypoint…"   32 hours ago   Up 32 hours             22/tcp, 3000/tcp                                                                   websoft9-git
-bbea45d00358   websoft9dev/proxy:2.10.4                 "/init /bin/sh -c '/…"   32 hours ago   Up 32 hours             0.0.0.0:80->80/tcp, :::80->80/tcp, 0.0.0.0:443->443/tcp, :::443->443/tcp, 81/tcp   websoft9-proxy
+$ docker ps | grep websoft9
+abc123def456   websoft9dev/websoft9:latest   ...   Up 2 hours   0.0.0.0:80->80/tcp, 0.0.0.0:443->443/tcp, 0.0.0.0:9000->9000/tcp   websoft9
 ```
 
 ## CLI{#cli}

@@ -15,7 +15,7 @@ slug: /docker-server
 如果您的服务器尚未安装 Docker，请使用如下命令安装它：
 
 ```
-wget -O - https://websoft9.github.io/websoft9/install/install_docker.sh | bash
+wget -O - https://artifact.websoft9.com/websoft9/release/install_docker.sh | sudo bash
 ```
 
 ### 更换默认镜像仓库{#imagespeed}

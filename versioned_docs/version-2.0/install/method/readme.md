@@ -6,7 +6,7 @@ slug: /install
 
 # 安装
 
-Websoft9 可以在[大多数](https://websoft9.github.io/websoft9/version.json) GNU/Linux 发行版中安装，也支持各种[公有云平台](./install-cloud)和私有云技术栈。   
+Websoft9 可以在[大多数](https://artifact.websoft9.com/websoft9/release/version.json) GNU/Linux 发行版中安装，也支持各种[公有云平台](./install-cloud)和私有云技术栈。   
 
 安装 Websoft9 之前，需评估性能、可靠性、易于管理（备份、升级和故障排除）以及托管成本。   
 

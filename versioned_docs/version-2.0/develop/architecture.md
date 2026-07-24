@@ -23,17 +23,38 @@ Websoft9 是一个以应用为中心的微服务架构模式，它入门极简�
 
 ## 架构图
 
-我们采用的技术要素包括：Linux, Docker, K8s, API 网关，服务发现，应用网关，应用编排，Git等。  
+Websoft9 采用**单容器集成控制平面**架构，所有核心服务运行在一个 Docker 容器内。
 
-对应的产品架构图如下：  
+```mermaid
+graph TB
+    subgraph Host["宿主机"]
+        subgraph Container["Websoft9 容器"]
+            Console["Console<br/>React 19 + TS + MUI<br/>:9000"]
+            AppHub["AppHub<br/>Python FastAPI<br/>/api"]
+            Gitea["Gitea<br/>Git 仓库"]
+            Portainer["Portainer<br/>容器管理"]
+            NPM["Nginx Proxy Manager<br/>反向代理 & SSL<br/>:80 :443"]
+        end
+        DockerSocket["Docker Socket<br/>/var/run/docker.sock"]
+        DataVolumes["数据卷<br/>/opt/websoft9/data"]
+    end
 
-![](/img/websoft9-architecture.png)
+    User["用户浏览器"] -->|":9000"| Console
+    Console -->|"/api/*"| AppHub
+    AppHub --> Portainer
+    AppHub --> NPM
+    AppHub --> Gitea
+    AppHub --> DockerSocket
+    NPM -->|":80/:443"| Internet["外部网络"]
+```
 
+### 核心组件
 
-- Apphub：应用管理服务，负责应用整个生命周期
-- Git：应用安装模板的仓库，实现先申明、再部署的模式
-- Deployment：负责与 Docker, K8s 交付的部署工作模块，同时提供可视化的管理容器的界面
-- App Gateway：发布和控制应用的访问
+- **Console**：基于 React 19 + TypeScript + Vite + MUI 构建的 Web 管理界面，通过 `9000` 端口提供服务
+- **AppHub**：基于 Python FastAPI 的业务逻辑 API，负责应用管理、认证、代理、备份等核心功能
+- **Gitea**：内嵌的 Git 仓库服务，用于托管应用模板和代码
+- **Portainer**：内嵌的容器管理服务，负责 Docker 容器和栈的生命周期管理
+- **Nginx Proxy Manager**：反向代理服务，处理域名绑定、SSL 证书管理（Let's Encrypt），绑定 `80` 和 `443` 端口
 
 ## 开放兼容
 

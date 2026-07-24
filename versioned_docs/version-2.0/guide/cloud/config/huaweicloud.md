@@ -74,7 +74,7 @@ Websoft9 为华为云 Flexus 服务器开机即用的[专属 Websoft9 镜像](ht
 Websoft9 应用商店预制 phpMyAdmin，pgAdmin，CloudBeaver 等 Web 数据库管理工具。如果 Flexus 服务器内置的 Websoft9 控制台 **应用商店** 没有展现这些应用时，请通过 SSH 工具连接到服务器，运行下面的命令让它们可以被应用商店呈现：
 
 ```
-docker exec -i websoft9-apphub apphub setconfig --section initial_apps --key keys --value $(docker exec -i websoft9-apphub apphub getconfig --section initial_apps --key keys),phpmyadmin,cloudbeaver,pgadmin
+docker exec -i websoft9 websoft9 setconfig --section initial_apps --key keys --value $(docker exec -i websoft9 websoft9 getconfig --section initial_apps --key keys),phpmyadmin,cloudbeaver,pgadmin
 ```
 
 接下来，就可以在应用商店安装这些工具了。   

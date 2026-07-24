@@ -9,21 +9,6 @@ slug: /faq
 
 ## Websoft9 问题
 
-#### 500 Internal Server Error?
-
-问题描述：查看 websoft9-apphub 容器的日志，出现 500 Internal Server Error  
-原因分析：websoft9-apphub 容器工作异常或它与被连接的其他微服务通讯异常，运行下面的命令查看错误原因   
-```
-docker exec -it websoft9-apphub cat /websoft9/apphub/logs/apphub_error.log
-```
-
-#### Websoft9 核心功能不可用？
-
-当 Websoft9 控制台可以登录，但无法访问应用商店、容器、网关等核心功能时，最大的原因可能是网关工作异常导致应用之间的连接与集成出现了问题。  
-
-可运行 `docker logs websoft9-proxy` 进行诊断。  
-
-
 #### 无法访问 Websoft9 控制台？{#blank}
 
 常见的原因如下：
@@ -31,18 +16,21 @@ docker exec -it websoft9-apphub cat /websoft9/apphub/logs/apphub_error.log
 * 您的服务器[安全组](./security-firewall#security) **9000** 端口没有开启（**最常见因素**）
 * 安装的不是 Websoft9 的产品
 * 你的服务器网络故障
-* Websoft9 控制台端口被重置为 **9090**
 * 产品本身的故障导致
-* 其他
 
-不管哪种原因，一旦无法出现问题，请第一时刻联系：[人工支持](./helpdesk)  
+不管哪种原因，一旦无法解决问题，请第一时刻联系：[人工支持](./helpdesk)  
 
-#### Cokpit 控制台端口被重置为 9090？
+#### 控制台可访问但功能异常？
 
-用户使用 `yum update` or `apt upgrade` 升级操作系统后，可能会导致 Cockpit 的端口被重置为 9090，怎么办？
+当 Websoft9 控制台可以登录，但无法访问应用商店、容器、网关等核心功能时，可运行以下命令进行诊断：
 
-1. 以 9090 端口登录到 Websoft9 控制台
-2. **设置 > 系统设置** 中将端口改为 9090
+```
+# 查看 Websoft9 容器日志
+docker logs websoft9
+
+# 查看容器健康状态
+docker ps --filter "name=websoft9"
+```
 
 #### Websoft9 服务无法启动？
 
@@ -57,29 +45,20 @@ docker exec -it websoft9-apphub cat /websoft9/apphub/logs/apphub_error.log
     # 查看内存使用
     free -lh
     ```
-2. 再查看错误日志 
+2. 查看 Websoft9 容器日志
     ```shell
-    # 查看 Websoft9 服务容器日志
-    docker logs websoft9-apphub
-    docker logs websoft9-git
-    docker logs websoft9-proxy
-
-    # 查看 Websoft9 服务状态和日志
-    systemctl status websoft9
-    journalctl -u websoft9
+    docker logs websoft9
     ```
 3. 根据错误日志进行诊断
 
-#### Websoft9 默认端口被占用？{#portconflict}
+#### 如何重置管理员密码？
 
-运行 `netstat -tunlp` 命令，查看服务器上已经使用的端口情况。 
-
-#### Docker service 无法启动？{#dockernotstart}
-
-先通过 `systemctl status docker` 和 `journalctl -xe` 查看错误日志。
-
-如果错误日志是  Unit docker.socket entered failed state，表明系统缺少 docker 用户组，运行 `groupadd docker` 增加用户组  
-
+```bash
+rm -f /opt/websoft9/data/config/product-auth/product-auth.sqlite
+rm -f /opt/websoft9/data/config/setup-wizard/state.json
+docker restart websoft9
+```
+重启后进入设置向导重新创建管理员账户。
 #### 创建应用报错 `data.forward_port should be >= 1`?
 
 问题现象：重建应用时报错 `data.forward_port should be >= 1`，但应用重建时成功的  
