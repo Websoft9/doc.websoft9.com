@@ -11,7 +11,7 @@ Websoft9 currently only supports installation on Linux hosts.
 
 ## Install & Upgrade
 
-The install script supports both **fresh install** and **upgrade**, and auto-detects the current environment. Back up your data before upgrading.
+The install script supports both **fresh install** and **upgrade**, and auto-detects the current environment. [Back up your data](/backup) before upgrading.
 
 ```
 # Quick install
