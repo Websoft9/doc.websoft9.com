@@ -5,7 +5,7 @@ slug: /faq
 
 # FAQs
 
-Please refer to the FAQ below to resolve your issue, if you cannot find the solution, please contact [Websoft9 support](/helpdesk). 
+Please refer to the FAQ below to resolve your issue, if you cannot find the solution, please contact [Websoft9 support](./helpdesk). 
 
 ## Websoft9 Console
 
@@ -18,7 +18,7 @@ Common causes include:
 * Network access failed for your server
 * Product failure itself
 
-If none of the above solves your issue, contact [Support](/helpdesk).
+If none of the above solves your issue, contact [Support](./helpdesk).
 
 ### Console accessible but features not working?
 
