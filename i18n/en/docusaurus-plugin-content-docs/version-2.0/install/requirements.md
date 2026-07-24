@@ -33,7 +33,7 @@ Websoft9 requires internet access with stable bandwidth not less than **100M/s**
 
 ## Operating system{#os}
 
-Websoft9 supports major [Linux distributions](https://websoft9.github.io/websoft9/version.json) like Red Hat, CentOS Steam, RockyLinux, Oracle Linux, Debian, and Ubuntu.  
+Websoft9 supports major [Linux distributions](https://artifact.websoft9.com/websoft9/release/version.json) like Red Hat, CentOS Steam, RockyLinux, Oracle Linux, Debian, and Ubuntu.  
 
 If you want to install Websoft9 at [Windows or macOS](./install-windows), you need to install VM software fist.  
 

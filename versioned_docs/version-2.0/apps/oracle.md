@@ -46,7 +46,7 @@ import Meta from './_include/oracle.md';
 - 未部署 Websoft9 控制台，请 SSH 连接到服务器后，运行如下的安装命令：
   ```
   #1 获取一键部署模板到服务器目录 /opt/oracledb
-  wget https://artifact.websoft9.com/release/websoft9/plugin/library/library-latest.zip && unzip -o library-latest.zip && sudo cp -rf library/apps/oracle /opt/oracledb
+  wget https://artifact.websoft9.com/websoft9/release/plugin/library/library-latest.zip && unzip -o library-latest.zip && sudo cp -rf library/apps/oracle /opt/oracledb
 
   #2 通过修改 .env 文件中的 W9_VERSION 的值指定目标数据库版本
   

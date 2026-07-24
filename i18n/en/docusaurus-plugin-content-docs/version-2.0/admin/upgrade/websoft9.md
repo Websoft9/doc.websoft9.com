@@ -11,7 +11,7 @@ The **Settings** page of the Websoft9 Console provides an automated online upgra
 
 You can also use below upgrade script: 
 ```
-wget -O install.sh https://websoft9.github.io/websoft9/install/install.sh && bash install.sh --execute_mode "upgrade"
+wget -O install.sh https://artifact.websoft9.com/websoft9/release/install.sh && sudo bash install.sh
 ```
 
 ## Troubleshoot

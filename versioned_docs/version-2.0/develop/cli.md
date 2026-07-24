@@ -5,22 +5,35 @@ sidebar_position: 1.2
 
 # CLI
 
-Websoft9 的核心微服务 AppHub 提供了一个可以管理应用的 CLI。  
+Websoft9 提供了命令行工具，用于配置管理和运维操作。  
 
-进入到 Apphub 容器的命令模式下，即可使用：
+进入 Websoft9 容器即可使用：
 
 ```
-$ docker exec -it websoft9-apphub bash
-$ apphub --help
+$ docker exec -it websoft9 bash
+$ websoft9 --help
 
-Usage: apphub [OPTIONS] COMMAND [ARGS]...
+Usage: websoft9 [OPTIONS] COMMAND [ARGS]...
 
 Options:
   --help  Show this message and exit.
 
 Commands:
-  genkey     Generate a new API key
-  getconfig  Get a config value
-  getkey     Get the API key
-  setconfig  Set a config value
+  getconfig     获取配置项
+  setconfig     设置配置项
+  setsysconfig  设置系统配置项
+  upgrade       升级应用商店资源
+```
+
+### 常用示例
+
+```bash
+# 查看所有配置
+docker exec -it websoft9 websoft9 getconfig
+
+# 同步应用商店最新资源
+docker exec -it websoft9 websoft9 upgrade apps
+
+# 重置管理员密码（交互式输入新密码）
+docker exec -it websoft9 websoft9 resetpwd
 ```

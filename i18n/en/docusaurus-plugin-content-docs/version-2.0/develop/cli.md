@@ -5,22 +5,35 @@ sidebar_position: 1.2
 
 # CLI
 
-AppHub, the core microservice of Microsoft9, provides a CLI for managing applications.  
+Websoft9 provides a command-line tool for configuration management and operations.
 
-To use it, enter the Apphub container in command mode:
+Enter the Websoft9 container to use it:
 
 ```
-$ docker exec -it websoft9-apphub bash
-$ apphub --help
+$ docker exec -it websoft9 bash
+$ websoft9 --help
 
-Usage: apphub [OPTIONS] COMMAND [ARGS]...
+Usage: websoft9 [OPTIONS] COMMAND [ARGS]...
 
 Options:
   --help  Show this message and exit.
 
 Commands:
-  genkey     Generate a new API key
-  getconfig  Get a config value
-  getkey     Get the API key
-  setconfig  Set a config value
+  getconfig     Get config values
+  setconfig     Set a config value
+  setsysconfig  Set a system config value
+  upgrade       Upgrade App Store resources
+```
+
+### Common Examples
+
+```bash
+# View all configuration
+docker exec -it websoft9 websoft9 getconfig
+
+# Sync latest App Store resources
+docker exec -it websoft9 websoft9 upgrade apps
+
+# Reset admin password (interactive prompt)
+docker exec -it websoft9 websoft9 resetpwd
 ```

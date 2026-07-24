@@ -9,54 +9,32 @@ Please refer to the FAQ below to resolve your issue, if you cannot find the solu
 
 ## Websoft9 Console
 
-### 500 Internal Server Error?
+### Can't access Websoft9 Console?{#blank}
 
-**Description**: When checking the logs of websoft9-apphub container, 500 Internal Server Error appears.  
+Common causes include:
 
-**Reason**: The websoft9-apphub container is working abnormally or it can not connect other websoft9 containers  
-
-**Solution**: Run the following commands to check the cause of the error   
-
-    ```
-    docker exec -it websoft9-apphub cat /websoft9/apphub/logs/apphub_error.log
-    ```
-
-### Can not open App Store or My Apps?
-
-**Description**: I can login Websoft9 Console, but can not open "App Store" or "My Apps" interface   
-
-**Reason**: websoft9 containers working abnormally or **80** port not enabled
-
-**Solution**: Run the following commands to check the cause of the error   
-
-    ```
-    docker logs websoft9-proxy
-    docker exec -it websoft9-apphub cat /websoft9/apphub/logs/apphub_error.log
-    ```
-
-### Login Websoft9 failed{#login}
-
-Using multiple reasons can cause login failure:
-
-* Security Group port **9000** not enabled
+* Security Group port **9000** not enabled (**most common cause**)
 * Websoft9 installation failed
-* Network access failed for your instance
-* Local browser's cookie or session
-* Websoft9 Console(Cockpit) port is reset to **9090**
-* Your Linux not allowed password login
+* Network access failed for your server
+* Product failure itself
 
-#### Cockpit console port is reset to 9090?
+If none of the above solves your issue, contact [Support](./helpdesk).
 
-When user running `yum update` or `apt upgrade`, Cockpit may be reset to **9090** port and you can not login to Websoft9 Console
+### Console accessible but features not working?
 
-1. Login to Websoft9 Console by `http://IP:9090`
-2. Set port to **9090** by **Settings > System Settings**
+When you can log in but cannot access App Store, My Apps, or other core features, run the following commands to diagnose:
 
-> You can set port by repeating step2 to your default port
+```
+# View Websoft9 container logs
+docker logs websoft9
 
-### websoft9.service starting failed?
+# Check container health
+docker ps --filter "name=websoft9"
+```
 
-1. Troubleshooting compute resource limit
+### Websoft9 service fails to start?
+
+1. Check compute resource limits
     ```shell
     # View processes
     ps aux
@@ -68,16 +46,25 @@ When user running `yum update` or `apt upgrade`, Cockpit may be reset to **9090*
     free -lh
     ```
 
-2. Check the error logs
+2. Check Websoft9 container logs
     ```shell
-    # View the Websoft9 service container logs
-    docker logs websoft9-apphub
-    docker logs websoft9-git
-    docker logs websoft9-proxy
-    docker logs websoft9-deployment
+    docker logs websoft9
+    ```
 
-    # View Websoft9 service status and logs
-    systemctl status websoft9
+3. Diagnose based on error logs
+
+### How to reset admin password?
+
+```bash
+rm -f /opt/websoft9/data/config/product-auth/product-auth.sqlite
+rm -f /opt/websoft9/data/config/setup-wizard/state.json
+docker restart websoft9
+```
+After restart, the setup wizard will launch to create a new administrator account.
+
+### Websoft9 default port conflict?{#portconflict}
+
+Run `netstat -tunlp` to check which ports are already in use on the server.
     journalctl -u websoft9
     ``
 

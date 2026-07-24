@@ -6,7 +6,7 @@ slug: /install
 
 # Installation methods
 
-You can install Websoft9 on most [GNU/Linux distributions](https://websoft9.github.io/websoft9/version.json), on several [cloud providers](./install-cloud), and in private cloud.   
+You can install Websoft9 on most [GNU/Linux distributions](https://artifact.websoft9.com/websoft9/release/version.json), on several [cloud providers](./install-cloud), and in private cloud.   
 
 Before installing Websoft9, you should balance performance, reliability, ease of administration (backups, upgrades, and troubleshooting) with the cost of hosting.
 

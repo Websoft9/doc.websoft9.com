@@ -11,7 +11,7 @@ Websoft9 控制台的【设置】页面提供了自动化的在线升级方案�
 
 也可以使用下面的一键升级脚本:
 ```
-wget -O install.sh https://websoft9.github.io/websoft9/install/install.sh && bash install.sh --execute_mode "upgrade"
+wget -O install.sh https://artifact.websoft9.com/websoft9/release/install.sh && sudo bash install.sh
 ```
 
 ## 故障处理

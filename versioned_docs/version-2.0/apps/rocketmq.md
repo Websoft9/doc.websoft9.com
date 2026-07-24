@@ -15,7 +15,7 @@ import Meta from './_include/rocketmq.md';
 
 ### 验证 RocketMQ{#verification}
 
-1. Websoft9 控制台安装 RocketMQ 后，通过 **我的应用** 查看应用详情，在 **访问** 和 **容器** 标签页中获取相关信息。
+1. 开放服务器TCP协议8080,8081端口。Websoft9 控制台安装 RocketMQ 后，通过 **我的应用** 查看应用详情，在 **访问** 和 **容器** 标签页中获取相关信息。
 
 2. 进入 **nameserver** 容器运行下列命令， 查看集群列表。  
     ```

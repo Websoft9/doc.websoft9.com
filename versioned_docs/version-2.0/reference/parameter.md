@@ -11,11 +11,9 @@ Websoft9 所涉及的服务器、网络、端口和路径等各种参数如下�
 
 Websoft9 控制台相关目录以及路径说明如下：
 
-- **Websoft9 安装配置目录**：*/data/websoft9/source*
-- **Websoft9 容器编排文件目录**：*/data/websoft9/source/docker*
-- **Websoft9 系统配置目录**：*/opt/websoft9*  
-- **Websoft9 插件目录**： */usr/share/cockpit*  
-- **Websoft9 备份目录**： */data/websoft9/vl_backup*
+- **Websoft9 安装目录**：*/opt/websoft9*
+- **Websoft9 数据持久化目录**：*/opt/websoft9/data*  
+- **Websoft9 备份目录**： */opt/websoft9/data/backups*
 - **Websoft9 应用持久化存储目录**： */var/lib/docker/volumes* 
 
 Docker 相关的目录：
@@ -60,24 +58,19 @@ Docker 相关的目录：
 
 ### Systemd 服务{#systemd}
 
-包含：websoft9, docker, cockpit 三个 Systemd 服务：  
+Websoft9 以 Docker 容器方式运行，涉及的 Systemd 服务主要是 Docker：  
 
 ```
-sudo systemctl start | top | restart | status docker
-sudo systemctl start | top | restart | status cockpit
-sudo systemctl start | top | restart | status websoft9
+sudo systemctl start | stop | restart | status docker
 ```
 
 ### Docker 服务{#docker-services}
 
-Websoft9 控制台的**容器管理界面**隐藏了对 Websoft9 容器的管理。故，通过 `docker ps | grep websoft9-` 命令查询：
+Websoft9 以单容器方式运行，通过 `docker ps | grep websoft9` 命令查询：
 
 ```
-$ docker ps | grep websoft9-
-8039d81eb0a1   websoft9dev/apphub:0.0.6                 "/websoft9/script/en…"   32 hours ago   Up 32 hours             8080-8081/tcp                                                                      websoft9-apphub
-cc55650540e6   websoft9dev/deployment:2.19.0            "/init_portainer"        32 hours ago   Up 32 hours (healthy)   8000/tcp, 9000/tcp, 9443/tcp                                                       websoft9-deployment
-527a07615809   websoft9dev/git:1.20.4                   "/usr/bin/entrypoint…"   32 hours ago   Up 32 hours             22/tcp, 3000/tcp                                                                   websoft9-git
-bbea45d00358   websoft9dev/proxy:2.10.4                 "/init /bin/sh -c '/…"   32 hours ago   Up 32 hours             0.0.0.0:80->80/tcp, :::80->80/tcp, 0.0.0.0:443->443/tcp, :::443->443/tcp, 81/tcp   websoft9-proxy
+$ docker ps | grep websoft9
+abc123def456   websoft9dev/websoft9:latest   ...   Up 2 hours   0.0.0.0:80->80/tcp, 0.0.0.0:443->443/tcp, 0.0.0.0:9000->9000/tcp   websoft9
 ```
 
 ## 命令行

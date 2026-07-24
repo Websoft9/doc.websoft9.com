@@ -119,7 +119,7 @@ Yes, you can pull application's all images before installation. Take **wordpress
 
 ```
 # Copy docker compose library to host machine
-docker cp websoft9-apphub:/websoft9/library  /tmp/applibary
+docker cp websoft9:/websoft9/library  /tmp/applibary
 
 # list all applications
 ls /tmp/applibary
