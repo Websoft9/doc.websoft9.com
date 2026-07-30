@@ -22,17 +22,38 @@ Websoft9 is an application-centric microservices architecture.
 
 ## Architecture diagram
 
-The technical elements used by Websoft9 include Linux, Docker, Gateway, service discovery, application orchestration, Git.  
+Websoft9 uses a **single-container integrated control plane** architecture. All core services run inside one Docker container.
 
-The corresponding product architecture diagram is shown below:  
+```mermaid
+graph TB
+    subgraph Host["Host Machine"]
+        subgraph Container["Websoft9 Container"]
+            Console["Console<br/>React 19 + TS + MUI<br/>:9000"]
+            AppHub["AppHub<br/>Python FastAPI<br/>/api"]
+            Gitea["Gitea<br/>Git Repository"]
+            Portainer["Portainer<br/>Container Mgmt"]
+            NPM["Nginx Proxy Manager<br/>Reverse Proxy & SSL<br/>:80 :443"]
+        end
+        DockerSocket["Docker Socket<br/>/var/run/docker.sock"]
+        DataVolumes["Data Volumes<br/>/opt/websoft9/data"]
+    end
 
-![](/img/websoft9-architecture.png)
+    User["Browser"] -->|":9000"| Console
+    Console -->|"/api/*"| AppHub
+    AppHub --> Portainer
+    AppHub --> NPM
+    AppHub --> Gitea
+    AppHub --> DockerSocket
+    NPM -->|":80/:443"| Internet["External Network"]
+```
 
+### Core Components
 
-- **Apphub**: Application management service, responsible for the entire life cycle of the application
-- **Git**: Git acts as the single source of truth for system state at GitOps
-- **Deployment**: Continuous deployment
-- **Gateway**: Publishing and controlling access to the application.
+- **Console**: Web management UI built with React 19 + TypeScript + Vite + MUI, served at port `9000`
+- **AppHub**: Business logic API built with Python FastAPI, handles app management, auth, proxy, backup, and settings
+- **Gitea**: Embedded Git repository service for hosting application templates and code
+- **Portainer**: Embedded container management service for Docker container and stack lifecycle
+- **Nginx Proxy Manager**: Reverse proxy handling domain binding and Let's Encrypt SSL certificates, bound to ports `80` and `443`
 
 ## Open Souce
 

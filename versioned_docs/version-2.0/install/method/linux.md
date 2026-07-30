@@ -8,19 +8,19 @@ slug: /install-linux
 
 Websoft9 目前仅支持在 Linux 主机下安装。  
 
-## 在线安装
+## 在线安装与升级
 
-安装 Websoft9 需要您具有操作系统的 root 权限，否则需要 *sudo su* 进行提权后再运行如下的脚本：
+安装脚本同时支持**全新安装**和**升级**，会自动检测当前环境。升级前建议先备份数据。
 
 ```
 # 快速安装
-wget -O install.sh https://artifact.websoft9.com/release/websoft9/install.sh && bash install.sh
+wget -O install.sh https://artifact.websoft9.com/websoft9/release/install.sh && sudo bash install.sh
 
-# 自定义参数安装。-- channel 有 release 和 dev 两个可选项，分别代表生产版和测试版，默认值为 release
-wget -O install.sh https://artifact.websoft9.com/release/websoft9/install.sh && bash install.sh --port 9000 --channel release --path "/data/websoft9/source" --version "latest"
+# 自定义参数
+sudo bash install.sh --console-port 9000 --path "/data/websoft9/source" --version "latest"
 ```
 
-> 升级 Websoft9 也只需要运行上面的脚本。  
+> 升级过程不会影响已部署的应用。
 
 ## 离线安装
 
@@ -28,16 +28,12 @@ wget -O install.sh https://artifact.websoft9.com/release/websoft9/install.sh && 
 
 ## 卸载
 
-Websoft9 支持[卸载](https://github.com/Websoft9/websoft9?tab=readme-ov-file#uninstall)，且卸载后不会在服务器中存留数据。
+Websoft9 支持卸载，默认**保留所有数据**。如需彻底清除，可使用 `--purge` 模式。
 
 ```
-curl https://websoft9.github.io/websoft9/install/uninstall.sh | bash
+# 卸载（保留数据）
+curl -fsSL https://artifact.websoft9.com/websoft9/release/uninstall.sh | sudo bash
+
+# 彻底清除所有数据
+sudo bash uninstall.sh --purge --yes
 ```
-
-## 安装问题
-
-#### 安装成功，应用商店显示网络错误？
-
-这个问题的出现的常见原因有：
-
-- polkit.service 无法启动会导致 Cockpit 异常

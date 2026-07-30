@@ -7,7 +7,7 @@ slug: /monitor-logs
 
 ## Application logs
 
-Excuse command `docker logs websoft9-apphub` to get application logs
+Excuse command `docker logs websoft9` to get application logs
 
 ## Container logs 
 

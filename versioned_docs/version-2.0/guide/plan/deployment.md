@@ -118,7 +118,7 @@ Websoft9 在设计的时候，充分考量了用户自主在服务器上直接�
 
 ```
 # 拷贝应用清单到服务器
-docker cp websoft9-apphub:/websoft9/library  /path/applibary
+docker cp websoft9:/websoft9/library  /path/applibary
 
 # 查看应用名录
 ls /path/applibary

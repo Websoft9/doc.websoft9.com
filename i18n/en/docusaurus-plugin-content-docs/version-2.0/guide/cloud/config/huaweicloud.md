@@ -43,7 +43,7 @@ Websoft9 image for Flexus is not display all applications at **App Store**.
 
 Below commands is the example for you to enable applications **phpMyAdmin，pgAdmin，CloudBeaver** to display at Websoft9 App Store.  
 ```
-docker exec -i websoft9-apphub apphub setconfig --section initial_apps --key keys --value $(docker exec -i websoft9-apphub apphub getconfig --section initial_apps --key keys),phpmyadmin,cloudbeaver,pgadmin
+docker exec -i websoft9 websoft9 setconfig --section initial_apps --key keys --value $(docker exec -i websoft9 websoft9 getconfig --section initial_apps --key keys),phpmyadmin,cloudbeaver,pgadmin
 ```
 
 Then, you can install them by one-click

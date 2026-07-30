@@ -7,42 +7,34 @@ title: "For Linux"
 
 # Installation for Linux
 
-The Linux package has different container services and tools required to run Websoft9. Most users can install it without laborious configuration.
+Websoft9 currently only supports installation on Linux hosts.
 
-## Automatic installation
+## Install & Upgrade
 
-To install Websoft9, you need root access; otherwise, use `sudo su` before running the script:
-
-```
-# Installation with default parameters
-wget -O install.sh https://artifact.websoft9.com/release/websoft9/install.sh && bash install.sh
-
-# Custom Parameter Installation
-# -- channel release | dev
-# --port
-# --version
-# --path
-
-wget -O install.sh https://artifact.websoft9.com/release/websoft9/install.sh && bash install.sh --port 9000 --channel release --path "/data/websoft9/source" --version "latest"
-```
-
-> Upgrade Websoft9 by running the same script.  
-
-## Offline installation
-
-Computers in an offline environment are isolated from the public internet as a security measure.   
-
-If you plan to deploy Websoft9 on a physically-isolated and offline network, please contact [Websoft9 Support Team](./helpdesk).
-
-
-## Uninstall 
-
-Websoft9 supports uninstallation and allows users to choose whether to keep data.  
+The install script supports both **fresh install** and **upgrade**, and auto-detects the current environment. Back up your data before upgrading.
 
 ```
-curl https://websoft9.github.io/websoft9/install/uninstall.sh | bash
+# Quick install
+wget -O install.sh https://artifact.websoft9.com/websoft9/release/install.sh && sudo bash install.sh
+
+# Custom options
+sudo bash install.sh --console-port 9000 --path "/data/websoft9/source" --version "latest"
 ```
 
-## Troubleshoot
+> Upgrade does not affect deployed applications.
 
-For troubleshooting details, see [Troubleshooting Websoft9](./faq#websoft9-console) issues.
+## Offline Installation
+
+For air-gapped environments without internet access, please contact [Websoft9 Support Team](./helpdesk).
+
+## Uninstall
+
+Websoft9 supports uninstallation. Data is **retained by default**. To fully purge, use `--purge` mode.
+
+```
+# Uninstall (keep data)
+curl -fsSL https://artifact.websoft9.com/websoft9/release/uninstall.sh | sudo bash
+
+# Full purge
+sudo bash uninstall.sh --purge --yes
+```

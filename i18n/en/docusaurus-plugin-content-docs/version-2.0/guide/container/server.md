@@ -15,7 +15,7 @@ You may need to set your Docker when using Websoft9 for applications hosting.
 If there not have Docker on your server, please run below command to install it.
 
 ```
-wget -O - https://websoft9.github.io/websoft9/install/install_docker.sh | bash
+wget -O - https://artifact.websoft9.com/websoft9/release/install_docker.sh | sudo bash
 ```
 
 ### Add your registry-mirrors{#imagespeed}
