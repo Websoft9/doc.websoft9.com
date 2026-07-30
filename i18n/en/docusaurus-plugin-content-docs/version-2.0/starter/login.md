@@ -3,48 +3,58 @@ sidebar_position: 0.1
 slug: /login-console
 ---
 
-# Login Websoft9 Console
+# Login to Websoft9 Console
 
-After installing the Websoft9, the next step is to login to the Websoft9 Console.
+After [installing](./install) Websoft9, you can log in to the Websoft9 Console for configuration and management.
 
-## Prepare
+## Prerequisites
 
-Below steps is need:  
+Before logging in, ensure the following:
 
-- Open the inbound ports of Server at your Cloud security group:
+1. **Open inbound ports** on your cloud security group:
 
-   - Required ports: **80, 443, 22, 9000**
-   - Optional ports (for application access): **9001-9999**
+   - **Required**: 80, 443, 9000
+   - **Optional** (for app access): 9001-9999
 
-- Get the Server's [credentials](./credentials) that is shared with Websoft9 Console
+## First Visit
 
-## Login
+1. Open your browser and visit: `http://<server-public-IP>:9000`
+2. On first visit, the **Setup Wizard** will guide you to create an administrator account and configure basic settings
+3. After setup, log in with the administrator account you just created
 
-1. Access via local browser: `http://server-public-IP:9000`, the Websoft9 login page
-   ![Websoft9 Login page](./assets/websoft9-loginpage.png)
+> Websoft9 uses its own user system. The administrator account is created in the Setup Wizard and is independent of the server's operating system accounts.
 
-   > The latest version of Websoft9 enforces access via the HTTPS protocol. For users utilizing the Firefox browser, please visit https://InternetIP to access the Websoft9 boot page. Follow the instructions provided on the boot page to smoothly navigate to the Websoft9 login interface.
+## Console Overview
 
-2. Input the server's [username and password](./credentials), after a successful login, you will be directed to the console default page.  
- 
-   - **User name**: The server's administrator account, it is recommended to use `root` for the first login. 
-   - **Password**: The server's administrator password.
+After logging in, you will see the console dashboard:
 
-   ![](./assets/websoft9-console-index.png)
+![Websoft9 Console Dashboard](./assets/websoft9-console-index.png)
 
-3. Click on **App Store** to view all available application templates.
-   ![](./assets/websoft9-appstore.png)
+The left sidebar menu is organized into two sections:
 
-4. Click on **My Apps**to view the list of installed applications.
-   ![](./assets/websoft9-myapps.png)
+**Workspace**
+| Menu | Description |
+|------|-------------|
+| Overview | Server status dashboard |
+| Apps › My Apps | Manage installed applications (start, stop, restart, redeploy, backup, compose, etc.) |
+| Apps › App Store | Browse and install 200+ open source app templates |
+| Apps › Deploy | Custom Docker Compose deployment |
+| Containers | Manage Docker containers and images |
+| Gateway | Domain binding, reverse proxy, and SSL certificate management |
+| Repository | Git repository hosting and code management |
+
+**System**
+| Menu | Description |
+|------|-------------|
+| Terminal | Browser-based SSH terminal and file manager |
+| Services | Core service status monitoring |
+| Logs | Structured log viewer |
+| Users | Multi-user accounts with role-based access control |
+| Settings | Platform parameters, mirror acceleration, certificates, and global configuration |
 
 ## Related Topics
 
-- [User account and credentials](./credentials)
-- [Set Global domains for Websoft9](./domain-set#wildcard)
-
-## FAQ
-
-#### Can login Websoft9 using key pair?
-
-No, you should set password for user account and cany keep key pair for SSH
+- [Set Global Domain for Websoft9](./domain-set#wildcard)
+- [Deploy App via App Store](./appstore-guide)
+- [Deploy App via Runtime](./runtime)
+- [User Accounts & Credentials](./credentials)
