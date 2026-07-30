@@ -20,7 +20,9 @@ Before logging in, ensure the following:
 
 1. Open your browser and visit: `http://<server-public-IP>:9000`
 2. On first visit, the **Setup Wizard** will guide you to create an administrator account and configure basic settings
+   ![Websoft9 Setup Wizard](./assets/websoft9-setupwizard.png)
 3. After setup, log in with the administrator account you just created
+   ![Websoft9 Login Page](./assets/websoft9-loginpage.png)
 
 > Websoft9 uses its own user system. The administrator account is created in the Setup Wizard and is independent of the server's operating system accounts.
 
