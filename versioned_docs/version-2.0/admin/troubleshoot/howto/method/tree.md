@@ -70,7 +70,7 @@ ping websoft9.com
 traceroute websoft9.com
 
 # Telnet
-telnet websoft9.com 9090
+telnet websoft9.com 9000
 
 # Ping 与 traceroute 组合
 mtr websoft9.com
