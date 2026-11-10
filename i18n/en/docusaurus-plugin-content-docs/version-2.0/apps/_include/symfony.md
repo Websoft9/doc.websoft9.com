@@ -1,0 +1,1 @@
+[Symfony](https://symfony.com/) is a PHP application framework. The Websoft9 image is based on the official Symfony source and PHP 8.5 FrankenPHP runtime, with application data persisted in `/var/www/html`.
