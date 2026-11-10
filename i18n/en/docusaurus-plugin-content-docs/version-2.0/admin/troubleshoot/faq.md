@@ -68,7 +68,7 @@ Run `netstat -tunlp` to check which ports are already in use on the server.
     journalctl -u websoft9
     ``
 
-### Websoft9 can not running at 9000 port?{#portconflict}
+### Websoft9 can not running at 9000 port?{#console-port-9000}
 
 Running `netstat -tunlp` to check which process is using port 9000, then free the port with `kill -9 PID`.
 

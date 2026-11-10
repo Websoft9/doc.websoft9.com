@@ -32,6 +32,10 @@ docker logs websoft9
 docker ps --filter "name=websoft9"
 ```
 
+#### Websoft9 默认端口被占用？{#portconflict}
+
+运行 `netstat -tunlp` 查看服务器上已被占用的端口，并确认占用进程，避免 Websoft9 服务与其他服务使用同一端口。
+
 #### Websoft9 服务无法启动？
 
 1. 先排查计算资源是否异常
