@@ -86,10 +86,9 @@ jobs:
 
     - name: Publish to Cloudflare Pages
       if: github.ref == 'refs/heads/main'
-      uses: cloudflare/pages-action@v1
+      uses: cloudflare/wrangler-action@v4
       with:
         apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         accountId: eb79f13320db531d8cf1f3720966b695
-        projectName: doc-websoft9-com
-        directory: build
+        command: pages deploy build --project-name=doc-websoft9-com
         gitHubToken: ${{ secrets.GITHUB_TOKEN }}
